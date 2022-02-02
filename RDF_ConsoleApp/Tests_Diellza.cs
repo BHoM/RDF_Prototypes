@@ -76,13 +76,10 @@ namespace BH.oM.CodeAnalysis.ConsoleApp
             var rdfsRange = g.CreateUriNode("rdfs:range");
             var rdfsSubPropertyOf = g.CreateUriNode("rdfs:subPropertyOf");
 
-
             var perimeter = g.CreateUriNode("rdfs:literal");
             var rdfsLiteral = g.CreateUriNode("rdfs:literal");
 
-
             //var rdfsSubclassOf = g.CreateUriNode("rdfs:subclassOf");
-
 
             IUriNode Structure_oM_Elements_Bar = g.CreateUriNode(UriFactory.Create("https://github.com/BHoM/BHoM/blob/main/Structure_oM/Elements/Bar.cs"));
             g.Assert(Structure_oM_Elements_Bar, a, owlClass);
