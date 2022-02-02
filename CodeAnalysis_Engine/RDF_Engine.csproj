@@ -35,7 +35,7 @@
       <HintPath>C:\ProgramData\BHoM\Assemblies\BHoM.dll</HintPath>
     </Reference>
     <Reference Include="BHoM_Engine">
-      <HintPath>..\..\..\..\..\ProgramData\BHoM\Assemblies\BHoM_Engine.dll</HintPath>
+      <HintPath>C:\ProgramData\BHoM\Assemblies\BHoM_Engine.dll</HintPath>
     </Reference>
     <Reference Include="dotNetRDF, Version=2.7.2.0, Culture=neutral, PublicKeyToken=6055ffe4c97cc780, processorArchitecture=MSIL">
       <HintPath>..\packages\dotNetRDF.2.7.2\lib\net40\dotNetRDF.dll</HintPath>
@@ -66,10 +66,16 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Compute\WriteToJsonFile.cs" />
+    <Compile Include="Compute\WriteToXMLFile.cs" />
     <Compile Include="Compute\LoadAssembliesInDirectory.cs" />
     <Compile Include="Query\IsBHoMSubtype.cs" />
     <Compile Include="Query\ConcatenateDictionaryValues.cs" />
     <Compile Include="Query\HasBHoMCopyright.cs" />
+    <Compile Include="Query\IsToolkitAssembly.cs" />
+    <Compile Include="Query\ToolkitAssemblies.cs" />
+    <Compile Include="Modify\CreateUriNode.cs" />
+    <Compile Include="Query\UriFromType.cs" />
     <Compile Include="Query\TryGetAssemblyTypes.cs" />
     <Compile Include="Query\InnermostType.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

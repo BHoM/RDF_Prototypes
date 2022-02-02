@@ -7,18 +7,23 @@ using System.Linq;
 using System.Reflection;
 using System.Text;
 using System.Threading.Tasks;
-using log = BH.Engine.Base.Compute;
+using log = BH.oM.RDF.Log;
 
-namespace BH.Engine.External.RDF
+namespace BH.Engine.RDF
 {
     public static partial class Compute
     {
+        private static List<Assembly> m_cachedAssemblies = null;
+
         [Description("Loads all the assemblies in a directory. Allows to only load BHoM assemblies and/or oM assemblies.")]
         public static List<Assembly> LoadAssembliesInDirectory(string dllDirectory = @"C:\ProgramData\BHoM\Assemblies", 
             bool onlyoMAssemblies = false, 
             bool onlyBHoMAssemblies = true, 
             bool tryLoadWithoutDependencies = false)
         {
+            if (m_cachedAssemblies != null)
+                return m_cachedAssemblies;
+
             var assemblyFiles = Directory.GetFiles(dllDirectory, "*.dll").ToList();
 
             if (onlyoMAssemblies)
@@ -46,12 +51,14 @@ namespace BH.Engine.External.RDF
             if (onlyBHoMAssemblies)
                 assemblies = assemblies.Where(assembly => Query.HasBHoMCopyright(assembly)).ToList();
 
+            m_cachedAssemblies = assemblies;
+
             return assemblies;
         }
 
         // ------------------------------------- //
 
-        public static List<Assembly> LoadAssembliesInDirectory(bool onlyoMAssemblies = false,
+        public static List<Assembly> LoadAssembliesInDirectory(bool onlyoMAssemblies = true,
           bool onlyBHoMAssemblies = true,
           bool tryLoadWithoutDependencies = false)
         {
@@ -62,7 +69,7 @@ namespace BH.Engine.External.RDF
 
         private static bool TryLoadAssemblyFile(string assemblyFile, out Assembly assembly)
         {
-            Console.Write($"\nTrying to load {assemblyFile} with dependencies (LoadFrom): ");
+            Console.Write($"\nLoading {assemblyFile} with dependencies (LoadFrom): ");
 
             assembly = null;
             try

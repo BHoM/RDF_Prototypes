@@ -1,5 +1,4 @@
 ﻿using BH.oM.Base;
-
 using System;
 using System.Collections;
 using System.Collections.Generic;
@@ -9,7 +8,7 @@ using System.Reflection;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace BH.Engine.External.RDF
+namespace BH.Engine.RDF
 {
     public static partial class Query
     {
