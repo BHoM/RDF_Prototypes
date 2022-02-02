@@ -92,6 +92,9 @@ namespace BH.oM.CodeAnalysis.ConsoleApp
             g.Assert(isPartOf, rdfsDomain, BHoM_Architecture_oM_Elements_Room);
             g.Assert(isPartOf, rdfsRange, Structure_oM_Elements_Bar);
 
+            RdfXmlWriter rdfxmlwriter = new RdfXmlWriter();
+            rdfxmlwriter.Save(g, "BHoMGraph.rdf");
+
             g.WriteToXMLFile(_fileDirectory, "RoomWithBar.rdf");
         }
 
@@ -113,6 +116,9 @@ namespace BH.oM.CodeAnalysis.ConsoleApp
             g.Assert(column, rdfsSubclassOf, iObject);
 
             g.WriteToXMLFile(_fileDirectory, "RoomColumnSubclassOfIObject.rdf");
+
+            RdfXmlWriter rdfxmlwriter = new RdfXmlWriter();
+            rdfxmlwriter.Save(g, "RoomColumnSubclassOfI.rdf");
         }
 
         public static void RoomColumn()
