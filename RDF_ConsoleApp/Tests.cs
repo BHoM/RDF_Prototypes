@@ -14,6 +14,7 @@ using VDS.RDF.Writing;
 using BH.oM.Architecture.Elements;
 using BH.oM.Physical.Elements;
 using BH.oM.RDF;
+using System.ComponentModel;
 
 namespace BH.oM.CodeAnalysis.ConsoleApp
 {
@@ -21,6 +22,7 @@ namespace BH.oM.CodeAnalysis.ConsoleApp
     {
         private static string _fileDirectory = @"C:\temp\RDF_Prototypes_test";
 
+        [Description("Writes a `Hello World` test JSON ontology file, as per the dotnetrdf.org tutorial example.")]
         public static void HelloWorld_Test_Json()
         {
             IGraph g = new Graph();
@@ -36,6 +38,7 @@ namespace BH.oM.CodeAnalysis.ConsoleApp
             g.WriteToJsonFile(_fileDirectory, "HelloWorld_Test_Json.json");
         }
 
+        [Description("Tests a new type of BHoM class called `Triple`. This is a prototype for a possible way of defining relations, kind of abandoned now.")]
         public static void Triple_Test_XML()
         {
             HasElement hasElementRelation = new HasElement();
@@ -59,7 +62,7 @@ namespace BH.oM.CodeAnalysis.ConsoleApp
             g.WriteToXMLFile(_fileDirectory, "Triple_Test_XML.rdf");
         }
 
-        // Code from Diellza
+        [Description("Code from Diellza. TODO: write description.")]
         public static void RoomWithBar()
         {
             IGraph g = new Graph();
@@ -98,6 +101,8 @@ namespace BH.oM.CodeAnalysis.ConsoleApp
             g.WriteToXMLFile(_fileDirectory, "RoomWithBar.rdf");
         }
 
+        [Description("Tries to create an ontology with a `Room` and `Column` class, to say that they both are subclass of `IObject`." +
+            "TODO: This currently does not visualise in WebVOWL. Find out how to make it work.")]
         public static void RoomColumnSubClassOfIObject()
         {
             IGraph g = new Graph();
@@ -119,38 +124,6 @@ namespace BH.oM.CodeAnalysis.ConsoleApp
 
             RdfXmlWriter rdfxmlwriter = new RdfXmlWriter();
             rdfxmlwriter.Save(g, "RoomColumnSubclassOfI.rdf");
-        }
-
-        public static void RoomColumn()
-        {
-            IGraph g = new Graph();
-
-            // Set the namespace of our Ontology
-            g.NamespaceMap.AddNamespace("bhom", UriFactory.Create("http://visualdataweb.org/newOntology/"));
-            g.NamespaceMap.AddNamespace("owl", UriFactory.Create("http://www.w3.org/2002/07/owl"));
-
-            var a = g.CreateUriNode("rdf:type");
-            var owlObjectProperty = g.CreateUriNode("owl:ObjectProperty");
-            var rdfsLabel = g.CreateUriNode("rdfs:label");
-            var rdfsDomain = g.CreateUriNode("rdfs:domain");
-            var rdfsRange = g.CreateUriNode("rdfs:range");
-            var rdfsSubclassOf = g.CreateUriNode("rdfs:subclassOf");
-            var rdfsCharac = g.CreateUriNode("rdfs:charac");
-
-            IUriNode room = g.CreateUriNode(typeof(Room));
-            IUriNode column = g.CreateUriNode(typeof(Column));
-
-            IUriNode Structure_oM_Elements_Bar = g.CreateUriNode(UriFactory.Create("https://github.com/BHoM/BHoM/blob/main/Structure_oM/Elements/Bar.cs"));
-            g.Assert(Structure_oM_Elements_Bar, rdfsLabel, g.CreateLiteralNode("Structure_oM_Elements_Bar", "en"));
-
-            // Relation
-            IUriNode isPartOf = g.CreateUriNode("rdf:type");
-            g.Assert(isPartOf, a, owlObjectProperty);
-            g.Assert(isPartOf, rdfsLabel, g.CreateLiteralNode("isPartOf", "en"));
-            g.Assert(isPartOf, rdfsDomain, room);
-            g.Assert(isPartOf, rdfsRange, Structure_oM_Elements_Bar);
-
-            g.WriteToXMLFile(@"C:\temp\RDF_Prototypes_test\RoomColumn.rdf");
         }
     }
 }
