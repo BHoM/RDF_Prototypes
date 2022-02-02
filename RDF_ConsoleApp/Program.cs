@@ -25,8 +25,11 @@ namespace BH.oM.CodeAnalysis.ConsoleApp
 
             // HashSet<TypeInfo> oMTypes = new HashSet<TypeInfo>(oMassemblies.SelectMany(a => a.DefinedTypes));
 
-            // Invoke all static methods in `Tests` class
-            typeof(Tests).GetMethods().Where(mi => mi.IsStatic).ToList().ForEach(mi => mi.Invoke(null, null));
+            // Invoke all static methods in `Tests_Alessio` class
+            typeof(Tests_Alessio).GetMethods().Where(mi => mi.IsStatic).ToList().ForEach(mi => mi.Invoke(null, null));
+
+            // Invoke all static methods in `Tests_Diellza` class
+            typeof(Tests_Diellza).GetMethods().Where(mi => mi.IsStatic).ToList().ForEach(mi => mi.Invoke(null, null));
         }
     }
 }
