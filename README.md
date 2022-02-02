@@ -7,7 +7,7 @@ This project is developed as part of a research project of the [Cluster of Excel
 ## Team
 
 ### University of Stuttgart 
-Diellza Elshani1, Tenure-Track Prof. Dr. Thomas Wortmann, Chair for Computing in Architecture, [Institute for Computational Design and Construction (ICD)](https://www.icd.uni-stuttgart.de/), University of Stuttgart 
+Diellza Elshani, Tenure-Track Prof. Dr. Thomas Wortmann, Chair for Computing in Architecture, [Institute for Computational Design and Construction (ICD)](https://www.icd.uni-stuttgart.de/), University of Stuttgart 
 
 Prof. Dr. Steffen Staab, Department for Analytic Computing (AC), [Institute for Parallel and Distributed Systems](https://www.ipvs.uni-stuttgart.de/), University of Stuttgart 
 
