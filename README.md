@@ -1,5 +1,5 @@
 # BHoM RDF Prototypes
-This project is developed as part of a research project of the Cluster of Excellence Integrative Computational Design and Construction for Architecture (IntCDC) https://www.intcdc.uni-stuttgart.de/
+This project is developed as part of a research project of the Cluster of Excellence Integrative Computational Design and Construction for Architecture (IntCDC) [(IntCDC)](https://www.intcdc.uni-stuttgart.de/) https://www.intcdc.uni-stuttgart.de/
 
 **Project Name**: Knowledge Representation for Multi-Disciplinary Co-Design of Buildings. https://www.intcdc.uni-stuttgart.de/research/research-projects/rp-20/
 
