@@ -81,13 +81,13 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\CodeAnalysis_oM\RDF_oM.csproj">
-      <Project>{35CB5890-7BC1-4F9C-A63F-771F71124D6A}</Project>
-      <Name>RDF_oM</Name>
-    </ProjectReference>
+    <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="packages.config" />
+    <ProjectReference Include="..\RDF_oM\RDF_oM.csproj">
+      <Project>{35cb5890-7bc1-4f9c-a63f-771f71124d6a}</Project>
+      <Name>RDF_oM</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
