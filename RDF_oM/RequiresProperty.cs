@@ -8,11 +8,12 @@ using System.Threading.Tasks;
 
 namespace BH.oM.RDF
 {
-    public class HasElement : IRelation
+    [Description("Describes a property that subclasses of a thing must own. Typically represents properties of a C# interface.")]
+    public class RequiresProperty : IRelation
     {
-        [Description("Element that owns by the other element.")]
+        [Description("Thing that requires any subclass of itself to own a certain property.")]
         public object Subject { get; set; }
-        [Description("Element that is owned by the other element.")]
+        [Description("The property that must be owned by subclasses of the thing.")]
         public object Object { get; set; }
 
         public bool IsBidirectional { get; set; } = false;

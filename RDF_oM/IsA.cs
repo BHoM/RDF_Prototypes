@@ -8,11 +8,12 @@ using System.Threading.Tasks;
 
 namespace BH.oM.RDF
 {
-    public class HasElement : IRelation
+    [Description("Describes that a thing is equivalent to another thing. Typically used to describe C# interface implementations.")]
+    public class IsA : IRelation
     {
-        [Description("Element that owns by the other element.")]
+        [Description("Thing that owns a certain property.")]
         public object Subject { get; set; }
-        [Description("Element that is owned by the other element.")]
+        [Description("The property owned by the thing.")]
         public object Object { get; set; }
 
         public bool IsBidirectional { get; set; } = false;

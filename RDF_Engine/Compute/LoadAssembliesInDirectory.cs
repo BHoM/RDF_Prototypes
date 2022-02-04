@@ -27,7 +27,7 @@ namespace BH.Engine.RDF
             var assemblyFiles = Directory.GetFiles(dllDirectory, "*.dll").ToList();
 
             if (onlyoMAssemblies)
-                assemblyFiles = assemblyFiles.Where(name => name.EndsWith("_oM.dll")).ToList();
+                assemblyFiles = assemblyFiles.Where(name => name.EndsWith("_oM.dll") || name.EndsWith("BHoM.dll")).ToList();
 
             List<Assembly> assemblies = new List<Assembly>();
 

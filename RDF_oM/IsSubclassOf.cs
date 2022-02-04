@@ -1,25 +1,20 @@
 ﻿using BH.oM.Analytical.Elements;
 using System;
 using System.Collections.Generic;
+using System.ComponentModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
 namespace BH.oM.RDF
 {
-    // Subject, Predicate, Object
-
-    public class BHoMTriple
+    public class IsSubclassOf : IRelation
     {
+        [Description("The parent.")]
         public object Subject { get; set; }
-        public Predicates Predicate { get; set; } = Predicates.HasElement;
+        [Description("The child.")]
         public object Object { get; set; }
-    }
 
-    public enum Predicates
-    {
-        HasElement,
-        IsSubClass,
-        IsParent,
+        public bool IsBidirectional { get; set; } = false;
     }
 }
