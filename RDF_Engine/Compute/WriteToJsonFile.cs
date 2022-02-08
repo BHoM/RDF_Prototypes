@@ -33,6 +33,8 @@ namespace BH.Engine.RDF
 
         public static void WriteToJsonFile(this string text, string filename = "RDF_Prototypes_test.rdf", string directory = @"C:\temp\RDF_Prototypes_test")
         {
+            Directory.CreateDirectory(directory);
+
             File.WriteAllText(Path.Combine(directory, filename), text);
         }
     }

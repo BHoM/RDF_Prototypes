@@ -73,7 +73,7 @@ namespace BH.Engine.RDF
 
                 // 3) PROPERTY
                 // To determine what kind of relation we want to set, we check the type of the RDF "Object" (or "range").
-                if ((relation.Object as Type)?.IsPrimitive ?? false)
+                if (((relation.Object as PropertyInfo)?.PropertyType ?? relation.Object as Type)?.IsPrimitive ?? false)
                     propertyArray.AddToIdTypeArray(relationId, "owl:DatatypeProperty");
                 else
                     propertyArray.AddToIdTypeArray(relationId, "owl:ObjectProperty");
@@ -108,17 +108,7 @@ namespace BH.Engine.RDF
 
             string label = $"{propertyName} ({subjectOrObjectType.Name})";
 
-            if ((Type)subjectOrObject == typeof(string) || subjectOrObjectType.IsNumeric())
-            {
-                subjectOrObjectNodeId = relation.WebVOWLNodeId();
-
-                classArray.AddToIdTypeArray(subjectOrObjectNodeId, "rdfs:Datatype");
-
-                classAttributeArray.AddToAttributeArray(subjectOrObjectNodeId, @"http://www.w3.org/2001/XMLSchema#", label, null, new List<string>() { "datatype" });
-
-                propertyAttributes = new List<string>() { "datatype" };
-            }
-            else if (subjectOrObjectType.IsBHoMType())
+            if (subjectOrObjectType.IsBHoMType())
             {
                 subjectOrObjectNodeId = subjectOrObjectType.FullName.OnlyAlphabeticAndDots();
 
@@ -131,16 +121,26 @@ namespace BH.Engine.RDF
 
                 propertyAttributes = new List<string>() { "object" };
             }
-            else
+            else //if (subjectOrObject is string || subjectOrObjectType.IsNumeric())
             {
                 subjectOrObjectNodeId = relation.WebVOWLNodeId();
 
-                classArray.AddToIdTypeArray(relationId, "rdfs:Literal");
+                classArray.AddToIdTypeArray(subjectOrObjectNodeId, "rdfs:Datatype");
 
-                classAttributeArray.AddToAttributeArray(relationId, @"http://www.w3.org/2001/XMLSchema#", label);
+                classAttributeArray.AddToAttributeArray(subjectOrObjectNodeId, @"http://www.w3.org/2001/XMLSchema#", label, null, new List<string>() { "datatype" });
 
-                // literal node has no property attribute
+                propertyAttributes = new List<string>() { "datatype" };
             }
+            //else
+            //{
+            //    subjectOrObjectNodeId = relation.WebVOWLNodeId();
+
+            //    classArray.AddToIdTypeArray(subjectOrObjectNodeId, "rdfs:Literal");
+
+            //    classAttributeArray.AddToAttributeArray(subjectOrObjectNodeId, @"http://www.w3.org/2001/XMLSchema#", label);
+
+            //    // literal node has no property attribute
+            //}
 
             return subjectOrObjectNodeId;
         }
@@ -204,7 +204,7 @@ namespace BH.Engine.RDF
         public static JProperty ToJProperty(this List<string> list, string propertyName)
         {
             if (list == null)
-                return null;
+                return new JProperty(propertyName, new JArray());
 
             if (list.Count() == 1)
                 return new JProperty(propertyName, list.FirstOrDefault());
@@ -216,6 +216,9 @@ namespace BH.Engine.RDF
 
         public static JArray ToJArray(this List<string> list)
         {
+            if (list == null)
+                return new JArray();
+
             JArray arr = new JArray();
             list.ForEach(d => arr.Add(d));
 
