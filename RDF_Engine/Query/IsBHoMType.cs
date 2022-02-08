@@ -16,6 +16,14 @@ namespace BH.Engine.RDF
         [Description("Checks whether a type is a bhom type.")]
         public static bool IsBHoMType(this Type t)
         {
+            if (t == null)
+                return false;
+
+            // Guard against dynamically loaded assemblies from external locations
+            if (!typeof(IObject).Module.FullyQualifiedName.Contains("C:\\ProgramData\\BHoM\\Assemblies") ||
+                !typeof(BHoMAdapter).Module.FullyQualifiedName.Contains("C:\\ProgramData\\BHoM\\Assemblies"))
+                return t.FullName?.StartsWith("BH.oM.") ?? false;
+
             return typeof(IObject).IsAssignableFrom(t) || typeof(BHoMAdapter).IsAssignableFrom(t);
         }
     }

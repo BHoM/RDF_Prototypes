@@ -8,12 +8,13 @@ using System.Threading.Tasks;
 
 namespace BH.oM.RDF
 {
-    [Description("Describes that a thing is equivalent to another thing. Typically used to describe C# interface implementations.")]
+    [Description("Can be used to describe that a thing belongs to a class; or that a thing is equivalent to another thing. " +
+        "When used for BHoM types, this describes C# interface implementation.")]
     public class IsA : IRelation
     {
-        [Description("Thing that owns a certain property.")]
+        [Description("Thing that can be included in the class, or that is equivalent to something else.")]
         public object Subject { get; set; }
-        [Description("The property owned by the thing.")]
+        [Description("The class that can include the thing, or another thing that is equivalent to the thing.")]
         public object Object { get; set; }
 
         public bool IsBidirectional { get; set; } = false;
