@@ -121,7 +121,7 @@ namespace BH.Engine.RDF
 
                 propertyAttributes = new List<string>() { "object" };
             }
-            else //if (subjectOrObject is string || subjectOrObjectType.IsNumeric())
+            else //if (subjectOrObject is string || subjectOrObjectType.IsNumeric()) // Un-comment if we want to create `Literal` nodes for non-primitive, non-BHoM types.
             {
                 subjectOrObjectNodeId = relation.WebVOWLNodeId();
 
@@ -131,6 +131,7 @@ namespace BH.Engine.RDF
 
                 propertyAttributes = new List<string>() { "datatype" };
             }
+            // Un-comment if we want to create `Literal` nodes for non-primitive, non-BHoM types.
             //else
             //{
             //    subjectOrObjectNodeId = relation.WebVOWLNodeId();
