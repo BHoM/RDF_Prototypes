@@ -26,13 +26,17 @@ namespace BH.oM.CodeAnalysis.ConsoleApp
             List<Assembly> oMassemblies = BH.Engine.RDF.Compute.LoadAssembliesInDirectory(true);
 
             // Remove duplicate classes in the same file, e.g. `BH.oM.Base.Output` which has many generics replicas.
-            List<TypeInfo> oMTypes = new List<TypeInfo>(oMassemblies.SelectMany(a => a.DefinedTypes).GroupBy(t => t.FullName.OnlyAlphabeticAndDots()).Select(g => g.First()));
+            List<TypeInfo> oMTypes = new List<TypeInfo>(oMassemblies
+                .SelectMany(a => a.DefinedTypes)
+                .Where(t => t.NameValidChars().Count() > 1) // removes those 'c<>' generics types that appear as duplicates
+                .GroupBy(t => t.FullName.OnlyAlphabeticAndDots())
+                .Select(g => g.First()));
 
             // Take a subset of the types avaialble to reduce the size of the output graph. This can become a Filter function.
             IEnumerable<TypeInfo> onlyBaseOmTypes = oMTypes.Where(t => t != null && t.Namespace != null && t.Namespace.EndsWith("BH.oM.Base")).ToList();
             //onlyBaseOmTypes = onlyBaseOmTypes.Where(t => t.Name == "NamedNumericTolerance" || t.Name == "IObject");
             //onlyBaseOmTypes = onlyBaseOmTypes.Where(t => t.Name.Contains("Output"));
-            onlyBaseOmTypes = onlyBaseOmTypes.Where(t => t.Name.Contains("ComparisonConfig"));
+            //onlyBaseOmTypes = onlyBaseOmTypes.Where(t => t.Name.Contains("ComparisonConfig"));
 
             // Extract a dictionary representation of the BHoM Ontology Graph
             Dictionary<Type, List<IRelation>> dictionaryGraph = onlyBaseOmTypes.DictionaryGraphFromTypes();

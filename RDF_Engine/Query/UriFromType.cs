@@ -31,7 +31,7 @@ namespace BH.Engine.RDF
 
                 string relativeUri = @"BHoM/blob/main/"
                     + string.Join("/", fullPathSplit)
-                    + $"/{t.Name.OnlyAlphabetic()}.cs";
+                    + $"/{t.NameValidChars()}.cs";
 
                 result = baseUri + relativeUri;
             }
@@ -43,14 +43,14 @@ namespace BH.Engine.RDF
 
                 string relativeUri = toolkitName + @"BHoM/blob/main/"
                     + string.Join("/", fullPathSplit)
-                    + $"/{t.Name.OnlyAlphabetic()}.cs";
+                    + $"/{t.NameValidChars()}.cs";
 
                 // Corrections for out-of-convention file paths
                 if (relativeUri.Contains("Base_oM") && t.IsInterface)
                     relativeUri = toolkitName + @"BHoM/blob/main/"
                     + string.Join("/", fullPathSplit)
                     + $"/Interface"
-                    + $"/{t.Name.OnlyAlphabetic()}.cs";
+                    + $"/{t.NameValidChars()}.cs";
 
                 relativeUri = relativeUri.Replace("Base_oM", "BHoM");
 

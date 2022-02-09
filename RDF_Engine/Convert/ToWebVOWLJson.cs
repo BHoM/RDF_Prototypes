@@ -41,13 +41,13 @@ namespace BH.Engine.RDF
             // Iterate the Types in the dictionary. Each type will be a node in the graph.
             foreach (Type type in dictionaryGraph.Keys)
             {
-                string typeId = type.FullName.OnlyAlphabeticAndDots();
+                string typeId = type.FullNameValidChars();
 
                 // 1) CLASS
                 classArray.AddToIdTypeArray(typeId, "owl:Class");
 
                 // 2) CLASS ATTRIBUTE
-                classAttributeArray.AddToAttributeArray(typeId, type.UriFromType(), type.Name.OnlyAlphabeticAndDots() + $" ({type.FullName.OnlyAlphabeticAndDots()})");
+                classAttributeArray.AddToAttributeArray(typeId, type.UriFromType(), type.DescriptiveName(true));
             }
 
             // There could be Types that were not gathered yet and that could emerge from the targets of the Relations.
@@ -68,12 +68,14 @@ namespace BH.Engine.RDF
                 List<string> subjectPropertyAttribute = new List<string>(); // unused
                 List<string> objectPropertyAttribute = new List<string>(); // this is the determinant in the relationship's attributes
 
-                string subjectNodeId = PopulateClassNodes(classArray, classAttributeArray, addedTypes, relation, relationId, relation.Subject, out subjectPropertyAttribute);
-                string objectNodeId = PopulateClassNodes(classArray, classAttributeArray, addedTypes, relation, relationId, relation.Object, out objectPropertyAttribute);
+                string subjectNodeId = PopulateClassNodesFromRelation(classArray, classAttributeArray, addedTypes, relation, relationId, relation.Subject, out subjectPropertyAttribute);
+                string objectNodeId = PopulateClassNodesFromRelation(classArray, classAttributeArray, addedTypes, relation, relationId, relation.Object, out objectPropertyAttribute);
 
                 // 3) PROPERTY
                 // To determine what kind of relation we want to set, we check the type of the RDF "Object" (or "range").
-                if (((relation.Object as PropertyInfo)?.PropertyType ?? relation.Object as Type)?.IsPrimitive ?? false)
+                // If the "Object" is a BHoM type, we can consider it an "owl:ObjectProperty", otherwise we consider it a "owl:DatatypeProperty".
+                bool isDatatypeProperty = !((relation.Object as PropertyInfo)?.PropertyType ?? relation.Object as Type)?.InnermostType().IsBHoMType() ?? true;
+                if (isDatatypeProperty)
                     propertyArray.AddToIdTypeArray(relationId, "owl:DatatypeProperty");
                 else
                     propertyArray.AddToIdTypeArray(relationId, "owl:ObjectProperty");
@@ -94,7 +96,7 @@ namespace BH.Engine.RDF
         /**** Private Methods                           ****/
         /***************************************************/
 
-        private static string PopulateClassNodes(JArray classArray, JArray classAttributeArray, HashSet<Type> addedTypes, IRelation relation, string relationId, object subjectOrObject, out List<string> propertyAttributes)
+        private static string PopulateClassNodesFromRelation(JArray classArray, JArray classAttributeArray, HashSet<Type> addedTypes, IRelation relation, string relationId, object subjectOrObject, out List<string> propertyAttributes)
         {
             propertyAttributes = null;
 
@@ -106,11 +108,15 @@ namespace BH.Engine.RDF
             string propertyName = (subjectOrObject as PropertyInfo)?.Name ?? "";
             Type subjectOrObjectType = (subjectOrObject as PropertyInfo)?.PropertyType ?? subjectOrObject as Type;
 
-            string label = $"{propertyName} ({subjectOrObjectType.Name})";
+            //Type subjectOrObjectType = (subjectOrObject as PropertyInfo)?.PropertyType ?? subjectOrObject as Type;
+            //string label = (subjectOrObject as PropertyInfo)?.DescriptiveName() ?? $"{subjectOrObjectType.NameValidChars()} ({subjectOrObjectType.FullNameValidChars()})";
+
+            string label = subjectOrObject.DescriptiveName();
 
             if (subjectOrObjectType.IsBHoMType())
             {
-                subjectOrObjectNodeId = subjectOrObjectType.FullName.OnlyAlphabeticAndDots();
+                // If the Type is a BHoMType, the node id is the type full name.
+                subjectOrObjectNodeId = subjectOrObjectType.FullNameValidChars();
 
                 if (!addedTypes.Contains(subjectOrObjectType))
                 {
@@ -120,18 +126,29 @@ namespace BH.Engine.RDF
                 }
 
                 propertyAttributes = new List<string>() { "object" };
+
+                return subjectOrObjectNodeId;
             }
-            else //if (subjectOrObject is string || subjectOrObjectType.IsNumeric()) // Un-comment if we want to create `Literal` nodes for non-primitive, non-BHoM types.
+            else if (!(relation is HasProperty))
             {
-                subjectOrObjectNodeId = relation.WebVOWLNodeId();
-
-                classArray.AddToIdTypeArray(subjectOrObjectNodeId, "rdfs:Datatype");
-
-                classAttributeArray.AddToAttributeArray(subjectOrObjectNodeId, @"http://www.w3.org/2001/XMLSchema#", label, null, new List<string>() { "datatype" });
-
-                propertyAttributes = new List<string>() { "datatype" };
+                // If the subject or Object type is not a BHoM type, and the Relation is not a HasProperty relation,
+                // we do not want to be adding another class node.
+                // This is because we do not want to make ontological class nodes for C# classes, like Dictionary, IEnumerable etc.
+                return "";
             }
+
+            // if (subjectOrObject is string || subjectOrObjectType.IsNumeric()) { // Un-comment if we want to create `Literal` nodes for non-primitive, non-BHoM types.
+
+            subjectOrObjectNodeId = relation.WebVOWLNodeId();
+
+            classArray.AddToIdTypeArray(subjectOrObjectNodeId, "rdfs:Datatype");
+
+            classAttributeArray.AddToAttributeArray(subjectOrObjectNodeId, @"http://www.w3.org/2001/XMLSchema#", label, null, new List<string>() { "datatype" });
+
+            propertyAttributes = new List<string>() { "datatype" };
             // Un-comment if we want to create `Literal` nodes for non-primitive, non-BHoM types.
+
+            // }
             //else
             //{
             //    subjectOrObjectNodeId = relation.WebVOWLNodeId();
@@ -191,11 +208,15 @@ namespace BH.Engine.RDF
             // // - Attributes
             attributeArrayObj.Add(attributes.ToJProperty("attributes"));
 
-            // // - Domain
-            attributeArrayObj.Add(domain.ToJProperty("domain"));
+            // // - Domain and range
+            domain = domain?.Where(s => !string.IsNullOrWhiteSpace(s)).ToList();
+            range = range?.Where(s => !string.IsNullOrWhiteSpace(s)).ToList();
 
-            // // - Range
-            attributeArrayObj.Add(range.ToJProperty("range"));
+            if ((domain?.Any() ?? false) && (range?.Any() ?? false))
+            {
+                attributeArrayObj.Add(domain.ToJProperty("domain"));
+                attributeArrayObj.Add(range.ToJProperty("range"));
+            }
 
             attributeArray.Add(attributeArrayObj);
         }
