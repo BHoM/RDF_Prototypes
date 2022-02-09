@@ -1,0 +1,4100 @@
+{
+  "comment": "Generated from BHoM RDF_Prototypes",
+  "namespace": [],
+  "class": [
+    {
+      "id": "BH.oM.Graphics.ColourFragment",
+      "type": "owl:Class"
+    },
+    {
+      "id": "BH.oM.Graphics.Gradient",
+      "type": "owl:Class"
+    },
+    {
+      "id": "BH.oM.Graphics.IRender",
+      "type": "owl:Class"
+    },
+    {
+      "id": "BH.oM.Graphics.RenderGeometry",
+      "type": "owl:Class"
+    },
+    {
+      "id": "BH.oM.Graphics.RenderMesh",
+      "type": "owl:Class"
+    },
+    {
+      "id": "BH.oM.Graphics.RenderMeshOptions",
+      "type": "owl:Class"
+    },
+    {
+      "id": "BH.oM.Graphics.RenderPoint",
+      "type": "owl:Class"
+    },
+    {
+      "id": "BH.oM.Graphics.RenderText",
+      "type": "owl:Class"
+    },
+    {
+      "id": "BH.oM.Graphics.RepresentationOptions",
+      "type": "owl:Class"
+    },
+    {
+      "id": "BH.oM.Graphics.SVGDocument",
+      "type": "owl:Class"
+    },
+    {
+      "id": "BH.oM.Graphics.SVGObject",
+      "type": "owl:Class"
+    },
+    {
+      "id": "BH.oM.Graphics.SVGStyle",
+      "type": "owl:Class"
+    },
+    {
+      "id": "BH.oM.Graphics.Views.DependencyChart",
+      "type": "owl:Class"
+    },
+    {
+      "id": "BH.oM.Graphics.Views.IView",
+      "type": "owl:Class"
+    },
+    {
+      "id": "BH.oM.Graphics.Views.ViewConfig",
+      "type": "owl:Class"
+    },
+    {
+      "id": "BH.oM.Graphics.Scales.IScale",
+      "type": "owl:Class"
+    },
+    {
+      "id": "BH.oM.Graphics.Scales.ScaleLinear",
+      "type": "owl:Class"
+    },
+    {
+      "id": "BH.oM.Graphics.Scales.ScaleOrdinal",
+      "type": "owl:Class"
+    },
+    {
+      "id": "BH.oM.Graphics.Misc.Padding",
+      "type": "owl:Class"
+    },
+    {
+      "id": "BH.oM.Graphics.Fragments.EntityRepresentation",
+      "type": "owl:Class"
+    },
+    {
+      "id": "BH.oM.Graphics.Fragments.GraphRepresentation",
+      "type": "owl:Class"
+    },
+    {
+      "id": "BH.oM.Graphics.Fragments.GroupRepresentation",
+      "type": "owl:Class"
+    },
+    {
+      "id": "BH.oM.Graphics.Fragments.IRepresentationFragment",
+      "type": "owl:Class"
+    },
+    {
+      "id": "BH.oM.Graphics.Fragments.RelationRepresentation",
+      "type": "owl:Class"
+    },
+    {
+      "id": "BH.oM.Graphics.Enums.GradientCenteringOptions",
+      "type": "owl:Class"
+    },
+    {
+      "id": "BH.oM.Graphics.Components.BasicArrowMarker",
+      "type": "owl:Class"
+    },
+    {
+      "id": "BH.oM.Graphics.Components.Boxes",
+      "type": "owl:Class"
+    },
+    {
+      "id": "BH.oM.Graphics.Components.IComponent",
+      "type": "owl:Class"
+    },
+    {
+      "id": "BH.oM.Graphics.Components.IMarker",
+      "type": "owl:Class"
+    },
+    {
+      "id": "BH.oM.Graphics.Components.Links",
+      "type": "owl:Class"
+    },
+    {
+      "id": "BH.oM.Graphics.Colours.GradientOptions",
+      "type": "owl:Class"
+    },
+    {
+      "id": "Colour-2b8f80d6-14a1-4af8-b63f-3633ea7c6b3d-ColourFragment-HasProperty",
+      "type": "rdfs:Datatype"
+    },
+    {
+      "id": "BH.oM.Base.IFragment",
+      "type": "owl:Class"
+    },
+    {
+      "id": "BH.oM.Base.IObject",
+      "type": "owl:Class"
+    },
+    {
+      "id": "Markers-a5b92786-fe60-483b-a46f-a590a4f0d427-Gradient-HasProperty",
+      "type": "rdfs:Datatype"
+    },
+    {
+      "id": "BH.oM.Base.IBHoMObject",
+      "type": "owl:Class"
+    },
+    {
+      "id": "BH.oM.Base.IObject",
+      "type": "owl:Class"
+    },
+    {
+      "id": "BH.oM.Base.BHoMObject",
+      "type": "owl:Class"
+    },
+    {
+      "id": "BH.oM.Base.IObject",
+      "type": "owl:Class"
+    },
+    {
+      "id": "BH.oM.Geometry.IGeometry",
+      "type": "owl:Class"
+    },
+    {
+      "id": "Colour-63f14552-a08a-4363-8110-d0938d56d5d4-RenderGeometry-HasProperty",
+      "type": "rdfs:Datatype"
+    },
+    {
+      "id": "BH.oM.Base.IObject",
+      "type": "owl:Class"
+    },
+    {
+      "id": "Vertices-029eb40c-5c46-4ea1-bd07-cd8a5ffc1b9d-RenderMesh-HasProperty",
+      "type": "rdfs:Datatype"
+    },
+    {
+      "id": "Faces-bd907867-82ee-4495-9d48-842d270a7c48-RenderMesh-HasProperty",
+      "type": "rdfs:Datatype"
+    },
+    {
+      "id": "BH.oM.Geometry.IGeometry",
+      "type": "owl:Class"
+    },
+    {
+      "id": "BH.oM.Base.IObject",
+      "type": "owl:Class"
+    },
+    {
+      "id": "BH.oM.Base.IFragment",
+      "type": "owl:Class"
+    },
+    {
+      "id": "Element1DRefinement-4a1861f8-d0ab-4e7e-bde2-24a13f92aa2c-RenderMeshOptions-HasProperty",
+      "type": "rdfs:Datatype"
+    },
+    {
+      "id": "Element2DRefinement-ce072925-8446-4be4-85b2-d52f6bfcc7f2-RenderMeshOptions-HasProperty",
+      "type": "rdfs:Datatype"
+    },
+    {
+      "id": "CustomDataColorKey-120ecb62-7c19-4eb5-a5ec-c67d60709ded-RenderMeshOptions-HasProperty",
+      "type": "rdfs:Datatype"
+    },
+    {
+      "id": "BH.oM.Base.IBHoMObject",
+      "type": "owl:Class"
+    },
+    {
+      "id": "BH.oM.Base.IObject",
+      "type": "owl:Class"
+    },
+    {
+      "id": "BH.oM.Base.BHoMObject",
+      "type": "owl:Class"
+    },
+    {
+      "id": "BH.oM.Geometry.Point",
+      "type": "owl:Class"
+    },
+    {
+      "id": "Colour-8aac8c57-160a-4b76-86c2-9bc1997f51f8-RenderPoint-HasProperty",
+      "type": "rdfs:Datatype"
+    },
+    {
+      "id": "BH.oM.Geometry.IGeometry",
+      "type": "owl:Class"
+    },
+    {
+      "id": "BH.oM.Base.IObject",
+      "type": "owl:Class"
+    },
+    {
+      "id": "BH.oM.Dimensional.IElement0D",
+      "type": "owl:Class"
+    },
+    {
+      "id": "BH.oM.Dimensional.IElement",
+      "type": "owl:Class"
+    },
+    {
+      "id": "Text-81bfaa2c-190a-40b0-8228-f0d199f0c080-RenderText-HasProperty",
+      "type": "rdfs:Datatype"
+    },
+    {
+      "id": "BH.oM.Geometry.CoordinateSystem.Cartesian",
+      "type": "owl:Class"
+    },
+    {
+      "id": "Height-e634ae96-ad50-48e5-b10e-e93c4d1e69d5-RenderText-HasProperty",
+      "type": "rdfs:Datatype"
+    },
+    {
+      "id": "FontName-0cae0729-3b43-42db-a09b-cbf693887211-RenderText-HasProperty",
+      "type": "rdfs:Datatype"
+    },
+    {
+      "id": "Colour-f3800585-9add-4ce8-a062-a10eb0715393-RenderText-HasProperty",
+      "type": "rdfs:Datatype"
+    },
+    {
+      "id": "BH.oM.Base.IObject",
+      "type": "owl:Class"
+    },
+    {
+      "id": "Detailed0DElements-5c4c223e-5c0a-459e-a096-e0a136aaea46-RepresentationOptions-HasProperty",
+      "type": "rdfs:Datatype"
+    },
+    {
+      "id": "Element0DScale-0429b321-4de3-4421-b415-27102311c885-RepresentationOptions-HasProperty",
+      "type": "rdfs:Datatype"
+    },
+    {
+      "id": "Detailed1DElements-b6a49e98-1ed5-4a9b-a6c6-624b9a744b33-RepresentationOptions-HasProperty",
+      "type": "rdfs:Datatype"
+    },
+    {
+      "id": "Element1DScale-fc9ffb88-d97d-4086-91e7-1cfc646faff3-RepresentationOptions-HasProperty",
+      "type": "rdfs:Datatype"
+    },
+    {
+      "id": "Cap1DElements-3a8b1d67-380c-4559-8497-f3cf3be765fe-RepresentationOptions-HasProperty",
+      "type": "rdfs:Datatype"
+    },
+    {
+      "id": "Detailed2DElements-525a31e3-d06f-403c-a9a2-2c6399581bed-RepresentationOptions-HasProperty",
+      "type": "rdfs:Datatype"
+    },
+    {
+      "id": "BH.oM.Base.IBHoMObject",
+      "type": "owl:Class"
+    },
+    {
+      "id": "BH.oM.Base.IObject",
+      "type": "owl:Class"
+    },
+    {
+      "id": "BH.oM.Base.BHoMObject",
+      "type": "owl:Class"
+    },
+    {
+      "id": "SVGObjects-ecf0aeaa-7d74-4f54-aaa9-0b1bca79e407-SVGDocument-HasProperty",
+      "type": "rdfs:Datatype"
+    },
+    {
+      "id": "BH.oM.Geometry.BoundingBox",
+      "type": "owl:Class"
+    },
+    {
+      "id": "BH.oM.Base.IBHoMObject",
+      "type": "owl:Class"
+    },
+    {
+      "id": "BH.oM.Base.IObject",
+      "type": "owl:Class"
+    },
+    {
+      "id": "BH.oM.Base.BHoMObject",
+      "type": "owl:Class"
+    },
+    {
+      "id": "Shapes-44d98617-3bcb-4e0e-ab1d-4d8859d1885b-SVGObject-HasProperty",
+      "type": "rdfs:Datatype"
+    },
+    {
+      "id": "BH.oM.Base.IBHoMObject",
+      "type": "owl:Class"
+    },
+    {
+      "id": "BH.oM.Base.IObject",
+      "type": "owl:Class"
+    },
+    {
+      "id": "BH.oM.Base.BHoMObject",
+      "type": "owl:Class"
+    },
+    {
+      "id": "StrokeWidth-f79637b5-5251-487b-be0d-7930dd5ca42b-SVGStyle-HasProperty",
+      "type": "rdfs:Datatype"
+    },
+    {
+      "id": "StrokeColor-a056a7ac-19df-4c74-82e8-c41cf3d5cb2e-SVGStyle-HasProperty",
+      "type": "rdfs:Datatype"
+    },
+    {
+      "id": "FillColor-e744e640-21ab-49cb-b7a3-aad747257433-SVGStyle-HasProperty",
+      "type": "rdfs:Datatype"
+    },
+    {
+      "id": "StrokeOpacity-cd363fa0-290b-4312-92bb-ca6c75a189d2-SVGStyle-HasProperty",
+      "type": "rdfs:Datatype"
+    },
+    {
+      "id": "FillOpacity-a035778c-cce9-4937-9597-6e4b7df0e411-SVGStyle-HasProperty",
+      "type": "rdfs:Datatype"
+    },
+    {
+      "id": "StrokeDash-fb2a672e-e9f0-4ea4-b904-a8ee91c32802-SVGStyle-HasProperty",
+      "type": "rdfs:Datatype"
+    },
+    {
+      "id": "BH.oM.Base.IBHoMObject",
+      "type": "owl:Class"
+    },
+    {
+      "id": "BH.oM.Base.IObject",
+      "type": "owl:Class"
+    },
+    {
+      "id": "BH.oM.Base.BHoMObject",
+      "type": "owl:Class"
+    },
+    {
+      "id": "BH.oM.Base.IBHoMObject",
+      "type": "owl:Class"
+    },
+    {
+      "id": "BH.oM.Base.IObject",
+      "type": "owl:Class"
+    },
+    {
+      "id": "BH.oM.Base.BHoMObject",
+      "type": "owl:Class"
+    },
+    {
+      "id": "BH.oM.Base.IBHoMObject",
+      "type": "owl:Class"
+    },
+    {
+      "id": "BH.oM.Base.IObject",
+      "type": "owl:Class"
+    },
+    {
+      "id": "Width-dcc50f64-8743-4235-8a58-314ae583f340-ViewConfig-HasProperty",
+      "type": "rdfs:Datatype"
+    },
+    {
+      "id": "Height-36af01e9-8274-4c34-98d2-675e83dff9f0-ViewConfig-HasProperty",
+      "type": "rdfs:Datatype"
+    },
+    {
+      "id": "BH.oM.Base.IBHoMObject",
+      "type": "owl:Class"
+    },
+    {
+      "id": "BH.oM.Base.IObject",
+      "type": "owl:Class"
+    },
+    {
+      "id": "BH.oM.Base.BHoMObject",
+      "type": "owl:Class"
+    },
+    {
+      "id": "BH.oM.Base.IObject",
+      "type": "owl:Class"
+    },
+    {
+      "id": "BH.oM.Data.Collections.Domain",
+      "type": "owl:Class"
+    },
+    {
+      "id": "BH.oM.Data.Collections.Domain",
+      "type": "owl:Class"
+    },
+    {
+      "id": "Clamp-6b25ddb9-d40b-4eb9-8736-78aafe0db6df-ScaleLinear-HasProperty",
+      "type": "rdfs:Datatype"
+    },
+    {
+      "id": "Nice-781de077-bda8-4d8c-8ddf-8a40c7266dbb-ScaleLinear-HasProperty",
+      "type": "rdfs:Datatype"
+    },
+    {
+      "id": "Name-d979f290-0010-487b-bd7b-c055dfc5d52d-ScaleLinear-HasProperty",
+      "type": "rdfs:Datatype"
+    },
+    {
+      "id": "BH.oM.Base.IObject",
+      "type": "owl:Class"
+    },
+    {
+      "id": "Domain-695a36cd-beb0-445f-a81f-3fd9802c6bb0-ScaleOrdinal-HasProperty",
+      "type": "rdfs:Datatype"
+    },
+    {
+      "id": "Range-f0e7305a-9216-4c98-a0d3-5924bbb8eb09-ScaleOrdinal-HasProperty",
+      "type": "rdfs:Datatype"
+    },
+    {
+      "id": "Name-a2baf807-2fcc-4bdc-bd01-2e6805ff9407-ScaleOrdinal-HasProperty",
+      "type": "rdfs:Datatype"
+    },
+    {
+      "id": "BH.oM.Base.IObject",
+      "type": "owl:Class"
+    },
+    {
+      "id": "Top-abbccb32-62b5-458a-8f5d-fb495e6f8f47-Padding-HasProperty",
+      "type": "rdfs:Datatype"
+    },
+    {
+      "id": "Bottom-f7a6af61-6afa-41f0-80bc-ad7378fef346-Padding-HasProperty",
+      "type": "rdfs:Datatype"
+    },
+    {
+      "id": "Left-3514c384-bb7e-4357-8f23-8e7523ca7e26-Padding-HasProperty",
+      "type": "rdfs:Datatype"
+    },
+    {
+      "id": "Right-8cd53c45-4172-4806-84a1-7d613ad85cd4-Padding-HasProperty",
+      "type": "rdfs:Datatype"
+    },
+    {
+      "id": "BH.oM.Base.IBHoMObject",
+      "type": "owl:Class"
+    },
+    {
+      "id": "BH.oM.Base.IObject",
+      "type": "owl:Class"
+    },
+    {
+      "id": "BH.oM.Base.BHoMObject",
+      "type": "owl:Class"
+    },
+    {
+      "id": "BH.oM.Geometry.ICurve",
+      "type": "owl:Class"
+    },
+    {
+      "id": "Text-419d6ba4-5178-4f98-8c38-ee5410bf5b16-EntityRepresentation-HasProperty",
+      "type": "rdfs:Datatype"
+    },
+    {
+      "id": "BH.oM.Geometry.Point",
+      "type": "owl:Class"
+    },
+    {
+      "id": "BH.oM.Geometry.Vector",
+      "type": "owl:Class"
+    },
+    {
+      "id": "BH.oM.Geometry.Point",
+      "type": "owl:Class"
+    },
+    {
+      "id": "BH.oM.Geometry.Point",
+      "type": "owl:Class"
+    },
+    {
+      "id": "Colour-96c3091b-8c76-4dba-88c1-878e1252fef7-EntityRepresentation-HasProperty",
+      "type": "rdfs:Datatype"
+    },
+    {
+      "id": "BH.oM.Base.IFragment",
+      "type": "owl:Class"
+    },
+    {
+      "id": "BH.oM.Base.IObject",
+      "type": "owl:Class"
+    },
+    {
+      "id": "Groups-61bb62c0-6900-408f-89d2-f86222c97ff9-GraphRepresentation-HasProperty",
+      "type": "rdfs:Datatype"
+    },
+    {
+      "id": "Text-48632cae-80a9-4da0-92d0-1ed2106e950c-GraphRepresentation-HasProperty",
+      "type": "rdfs:Datatype"
+    },
+    {
+      "id": "BH.oM.Geometry.Point",
+      "type": "owl:Class"
+    },
+    {
+      "id": "BH.oM.Geometry.Vector",
+      "type": "owl:Class"
+    },
+    {
+      "id": "Colour-330bcbf0-4c9d-4380-8904-62ac84f50508-GraphRepresentation-HasProperty",
+      "type": "rdfs:Datatype"
+    },
+    {
+      "id": "BH.oM.Base.IFragment",
+      "type": "owl:Class"
+    },
+    {
+      "id": "BH.oM.Base.IObject",
+      "type": "owl:Class"
+    },
+    {
+      "id": "BH.oM.Geometry.ICurve",
+      "type": "owl:Class"
+    },
+    {
+      "id": "Text-d25efbbf-7b6a-412b-8517-a17e868f1bf9-GroupRepresentation-HasProperty",
+      "type": "rdfs:Datatype"
+    },
+    {
+      "id": "BH.oM.Geometry.Point",
+      "type": "owl:Class"
+    },
+    {
+      "id": "BH.oM.Geometry.Vector",
+      "type": "owl:Class"
+    },
+    {
+      "id": "Colour-b4126d0b-3ae5-4996-beda-fb9675247f75-GroupRepresentation-HasProperty",
+      "type": "rdfs:Datatype"
+    },
+    {
+      "id": "BH.oM.Base.IFragment",
+      "type": "owl:Class"
+    },
+    {
+      "id": "BH.oM.Base.IObject",
+      "type": "owl:Class"
+    },
+    {
+      "id": "BH.oM.Base.IFragment",
+      "type": "owl:Class"
+    },
+    {
+      "id": "BH.oM.Base.IObject",
+      "type": "owl:Class"
+    },
+    {
+      "id": "Curves-068aeb3d-62fc-4337-b1e4-2726dbfee3ba-RelationRepresentation-HasProperty",
+      "type": "rdfs:Datatype"
+    },
+    {
+      "id": "Text-8081855a-588e-488d-a114-2c43bf6823b9-RelationRepresentation-HasProperty",
+      "type": "rdfs:Datatype"
+    },
+    {
+      "id": "BH.oM.Geometry.Point",
+      "type": "owl:Class"
+    },
+    {
+      "id": "BH.oM.Geometry.Vector",
+      "type": "owl:Class"
+    },
+    {
+      "id": "Colour-189c048c-c700-481d-938e-cd69373090fa-RelationRepresentation-HasProperty",
+      "type": "rdfs:Datatype"
+    },
+    {
+      "id": "BH.oM.Base.IFragment",
+      "type": "owl:Class"
+    },
+    {
+      "id": "BH.oM.Base.IObject",
+      "type": "owl:Class"
+    },
+    {
+      "id": "HeadLength-4b1940f7-1bb5-45c5-979c-b395b40657e6-BasicArrowMarker-HasProperty",
+      "type": "rdfs:Datatype"
+    },
+    {
+      "id": "BaseWidth-1cfa5bf9-5d37-4684-8a88-4e9e2718cffc-BasicArrowMarker-HasProperty",
+      "type": "rdfs:Datatype"
+    },
+    {
+      "id": "Closed-c09267d5-fcef-4c63-81fd-1984710a3f27-BasicArrowMarker-HasProperty",
+      "type": "rdfs:Datatype"
+    },
+    {
+      "id": "BH.oM.Base.IBHoMObject",
+      "type": "owl:Class"
+    },
+    {
+      "id": "BH.oM.Base.IObject",
+      "type": "owl:Class"
+    },
+    {
+      "id": "BH.oM.Base.BHoMObject",
+      "type": "owl:Class"
+    },
+    {
+      "id": "Text-34573c33-16b9-4781-bd6e-2c45b05809f8-Boxes-HasProperty",
+      "type": "rdfs:Datatype"
+    },
+    {
+      "id": "Colour-5b45c37d-91a7-4182-a234-2947fa4c3850-Boxes-HasProperty",
+      "type": "rdfs:Datatype"
+    },
+    {
+      "id": "Group-41c1a038-5cf5-408f-ba3c-9b9b40c9f88a-Boxes-HasProperty",
+      "type": "rdfs:Datatype"
+    },
+    {
+      "id": "GroupOrder-5e93743c-ae13-4212-9e7a-30ac7ceb44ea-Boxes-HasProperty",
+      "type": "rdfs:Datatype"
+    },
+    {
+      "id": "Padding-30609aa8-ebaa-438a-988a-70058433aead-Boxes-HasProperty",
+      "type": "rdfs:Datatype"
+    },
+    {
+      "id": "IsHorizontal-d97d02b1-d8df-4933-b0f9-3f109b612b2e-Boxes-HasProperty",
+      "type": "rdfs:Datatype"
+    },
+    {
+      "id": "GroupsToIgnore-ef873825-9117-43d4-92f8-0831fd29c75c-Boxes-HasProperty",
+      "type": "rdfs:Datatype"
+    },
+    {
+      "id": "BH.oM.Base.IBHoMObject",
+      "type": "owl:Class"
+    },
+    {
+      "id": "BH.oM.Base.IObject",
+      "type": "owl:Class"
+    },
+    {
+      "id": "BH.oM.Base.BHoMObject",
+      "type": "owl:Class"
+    },
+    {
+      "id": "BH.oM.Base.IBHoMObject",
+      "type": "owl:Class"
+    },
+    {
+      "id": "BH.oM.Base.IObject",
+      "type": "owl:Class"
+    },
+    {
+      "id": "BH.oM.Base.IBHoMObject",
+      "type": "owl:Class"
+    },
+    {
+      "id": "BH.oM.Base.IObject",
+      "type": "owl:Class"
+    },
+    {
+      "id": "Text-97ceb674-e4ea-420a-9021-a783eb7a1715-Links-HasProperty",
+      "type": "rdfs:Datatype"
+    },
+    {
+      "id": "Start-99e682e1-1da7-4a7b-9bed-70efc823b226-Links-HasProperty",
+      "type": "rdfs:Datatype"
+    },
+    {
+      "id": "End-3b753e9a-5ab3-43b4-9c85-4d24b5b3d018-Links-HasProperty",
+      "type": "rdfs:Datatype"
+    },
+    {
+      "id": "Colour-754d9c4b-0097-4614-8c9f-2dcb2042f704-Links-HasProperty",
+      "type": "rdfs:Datatype"
+    },
+    {
+      "id": "BH.oM.Base.IBHoMObject",
+      "type": "owl:Class"
+    },
+    {
+      "id": "BH.oM.Base.IObject",
+      "type": "owl:Class"
+    },
+    {
+      "id": "BH.oM.Base.BHoMObject",
+      "type": "owl:Class"
+    },
+    {
+      "id": "LowerBound-2b763a30-3422-4718-8bb6-df264fc4b643-GradientOptions-HasProperty",
+      "type": "rdfs:Datatype"
+    },
+    {
+      "id": "UpperBound-94783771-1d4e-4db5-812d-10b24f407573-GradientOptions-HasProperty",
+      "type": "rdfs:Datatype"
+    },
+    {
+      "id": "BH.oM.Base.IObject",
+      "type": "owl:Class"
+    }
+  ],
+  "classAttribute": [
+    {
+      "id": "BH.oM.Graphics.ColourFragment",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/Graphics_oM/ColourFragment.cs",
+      "label": "ColourFragment (BH.oM.Graphics)",
+      "attributes": []
+    },
+    {
+      "id": "BH.oM.Graphics.Gradient",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/Graphics_oM/Gradient.cs",
+      "label": "Gradient (BH.oM.Graphics)",
+      "attributes": []
+    },
+    {
+      "id": "BH.oM.Graphics.IRender",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/Graphics_oM/IRender.cs",
+      "label": "IRender (BH.oM.Graphics)",
+      "attributes": []
+    },
+    {
+      "id": "BH.oM.Graphics.RenderGeometry",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/Graphics_oM/RenderGeometry.cs",
+      "label": "RenderGeometry (BH.oM.Graphics)",
+      "attributes": []
+    },
+    {
+      "id": "BH.oM.Graphics.RenderMesh",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/Graphics_oM/RenderMesh.cs",
+      "label": "RenderMesh (BH.oM.Graphics)",
+      "attributes": []
+    },
+    {
+      "id": "BH.oM.Graphics.RenderMeshOptions",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/Graphics_oM/RenderMeshOptions.cs",
+      "label": "RenderMeshOptions (BH.oM.Graphics)",
+      "attributes": []
+    },
+    {
+      "id": "BH.oM.Graphics.RenderPoint",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/Graphics_oM/RenderPoint.cs",
+      "label": "RenderPoint (BH.oM.Graphics)",
+      "attributes": []
+    },
+    {
+      "id": "BH.oM.Graphics.RenderText",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/Graphics_oM/RenderText.cs",
+      "label": "RenderText (BH.oM.Graphics)",
+      "attributes": []
+    },
+    {
+      "id": "BH.oM.Graphics.RepresentationOptions",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/Graphics_oM/RepresentationOptions.cs",
+      "label": "RepresentationOptions (BH.oM.Graphics)",
+      "attributes": []
+    },
+    {
+      "id": "BH.oM.Graphics.SVGDocument",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/Graphics_oM/SVGDocument.cs",
+      "label": "SVGDocument (BH.oM.Graphics)",
+      "attributes": []
+    },
+    {
+      "id": "BH.oM.Graphics.SVGObject",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/Graphics_oM/SVGObject.cs",
+      "label": "SVGObject (BH.oM.Graphics)",
+      "attributes": []
+    },
+    {
+      "id": "BH.oM.Graphics.SVGStyle",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/Graphics_oM/SVGStyle.cs",
+      "label": "SVGStyle (BH.oM.Graphics)",
+      "attributes": []
+    },
+    {
+      "id": "BH.oM.Graphics.Views.DependencyChart",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/Graphics_oM/Views/DependencyChart.cs",
+      "label": "DependencyChart (BH.oM.Graphics.Views)",
+      "attributes": []
+    },
+    {
+      "id": "BH.oM.Graphics.Views.IView",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/Graphics_oM/Views/IView.cs",
+      "label": "IView (BH.oM.Graphics.Views)",
+      "attributes": []
+    },
+    {
+      "id": "BH.oM.Graphics.Views.ViewConfig",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/Graphics_oM/Views/ViewConfig.cs",
+      "label": "ViewConfig (BH.oM.Graphics.Views)",
+      "attributes": []
+    },
+    {
+      "id": "BH.oM.Graphics.Scales.IScale",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/Graphics_oM/Scales/IScale.cs",
+      "label": "IScale (BH.oM.Graphics.Scales)",
+      "attributes": []
+    },
+    {
+      "id": "BH.oM.Graphics.Scales.ScaleLinear",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/Graphics_oM/Scales/ScaleLinear.cs",
+      "label": "ScaleLinear (BH.oM.Graphics.Scales)",
+      "attributes": []
+    },
+    {
+      "id": "BH.oM.Graphics.Scales.ScaleOrdinal",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/Graphics_oM/Scales/ScaleOrdinal.cs",
+      "label": "ScaleOrdinal (BH.oM.Graphics.Scales)",
+      "attributes": []
+    },
+    {
+      "id": "BH.oM.Graphics.Misc.Padding",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/Graphics_oM/Misc/Padding.cs",
+      "label": "Padding (BH.oM.Graphics.Misc)",
+      "attributes": []
+    },
+    {
+      "id": "BH.oM.Graphics.Fragments.EntityRepresentation",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/Graphics_oM/Fragments/EntityRepresentation.cs",
+      "label": "EntityRepresentation (BH.oM.Graphics.Fragments)",
+      "attributes": []
+    },
+    {
+      "id": "BH.oM.Graphics.Fragments.GraphRepresentation",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/Graphics_oM/Fragments/GraphRepresentation.cs",
+      "label": "GraphRepresentation (BH.oM.Graphics.Fragments)",
+      "attributes": []
+    },
+    {
+      "id": "BH.oM.Graphics.Fragments.GroupRepresentation",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/Graphics_oM/Fragments/GroupRepresentation.cs",
+      "label": "GroupRepresentation (BH.oM.Graphics.Fragments)",
+      "attributes": []
+    },
+    {
+      "id": "BH.oM.Graphics.Fragments.IRepresentationFragment",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/Graphics_oM/Fragments/IRepresentationFragment.cs",
+      "label": "IRepresentationFragment (BH.oM.Graphics.Fragments)",
+      "attributes": []
+    },
+    {
+      "id": "BH.oM.Graphics.Fragments.RelationRepresentation",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/Graphics_oM/Fragments/RelationRepresentation.cs",
+      "label": "RelationRepresentation (BH.oM.Graphics.Fragments)",
+      "attributes": []
+    },
+    {
+      "id": "BH.oM.Graphics.Enums.GradientCenteringOptions",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/Graphics_oM/Enums/GradientCenteringOptions.cs",
+      "label": "GradientCenteringOptions (BH.oM.Graphics.Enums)",
+      "attributes": []
+    },
+    {
+      "id": "BH.oM.Graphics.Components.BasicArrowMarker",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/Graphics_oM/Components/BasicArrowMarker.cs",
+      "label": "BasicArrowMarker (BH.oM.Graphics.Components)",
+      "attributes": []
+    },
+    {
+      "id": "BH.oM.Graphics.Components.Boxes",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/Graphics_oM/Components/Boxes.cs",
+      "label": "Boxes (BH.oM.Graphics.Components)",
+      "attributes": []
+    },
+    {
+      "id": "BH.oM.Graphics.Components.IComponent",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/Graphics_oM/Components/IComponent.cs",
+      "label": "IComponent (BH.oM.Graphics.Components)",
+      "attributes": []
+    },
+    {
+      "id": "BH.oM.Graphics.Components.IMarker",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/Graphics_oM/Components/IMarker.cs",
+      "label": "IMarker (BH.oM.Graphics.Components)",
+      "attributes": []
+    },
+    {
+      "id": "BH.oM.Graphics.Components.Links",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/Graphics_oM/Components/Links.cs",
+      "label": "Links (BH.oM.Graphics.Components)",
+      "attributes": []
+    },
+    {
+      "id": "BH.oM.Graphics.Colours.GradientOptions",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/Graphics_oM/Colours/GradientOptions.cs",
+      "label": "GradientOptions (BH.oM.Graphics.Colours)",
+      "attributes": []
+    },
+    {
+      "id": "Colour-2b8f80d6-14a1-4af8-b63f-3633ea7c6b3d-ColourFragment-HasProperty",
+      "iri": "http://www.w3.org/2001/XMLSchema#",
+      "label": "Colour (Color)",
+      "attributes": "datatype"
+    },
+    {
+      "id": "BH.oM.Base.IFragment",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/BHoM/Interface/IFragment.cs",
+      "label": "IFragment",
+      "attributes": []
+    },
+    {
+      "id": "BH.oM.Base.IObject",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/BHoM/Interface/IObject.cs",
+      "label": "IObject",
+      "attributes": []
+    },
+    {
+      "id": "Markers-a5b92786-fe60-483b-a46f-a590a4f0d427-Gradient-HasProperty",
+      "iri": "http://www.w3.org/2001/XMLSchema#",
+      "label": "Markers (SortedDictionary<Decimal,Color>)",
+      "attributes": "datatype"
+    },
+    {
+      "id": "BH.oM.Base.IBHoMObject",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/BHoM/Interface/IBHoMObject.cs",
+      "label": "IBHoMObject",
+      "attributes": []
+    },
+    {
+      "id": "BH.oM.Base.IObject",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/BHoM/Interface/IObject.cs",
+      "label": "IObject",
+      "attributes": []
+    },
+    {
+      "id": "BH.oM.Base.BHoMObject",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/BHoM/BHoMObject.cs",
+      "label": "BHoMObject",
+      "attributes": []
+    },
+    {
+      "id": "BH.oM.Base.IObject",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/BHoM/Interface/IObject.cs",
+      "label": "IObject",
+      "attributes": []
+    },
+    {
+      "id": "BH.oM.Geometry.IGeometry",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/Geometry_oM/IGeometry.cs",
+      "label": "Geometry (IGeometry)",
+      "attributes": []
+    },
+    {
+      "id": "Colour-63f14552-a08a-4363-8110-d0938d56d5d4-RenderGeometry-HasProperty",
+      "iri": "http://www.w3.org/2001/XMLSchema#",
+      "label": "Colour (Color)",
+      "attributes": "datatype"
+    },
+    {
+      "id": "BH.oM.Base.IObject",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/BHoM/Interface/IObject.cs",
+      "label": "IObject",
+      "attributes": []
+    },
+    {
+      "id": "Vertices-029eb40c-5c46-4ea1-bd07-cd8a5ffc1b9d-RenderMesh-HasProperty",
+      "iri": "http://www.w3.org/2001/XMLSchema#",
+      "label": "Vertices (List<RenderPoint>)",
+      "attributes": "datatype"
+    },
+    {
+      "id": "Faces-bd907867-82ee-4495-9d48-842d270a7c48-RenderMesh-HasProperty",
+      "iri": "http://www.w3.org/2001/XMLSchema#",
+      "label": "Faces (List<Face>)",
+      "attributes": "datatype"
+    },
+    {
+      "id": "BH.oM.Geometry.IGeometry",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/Geometry_oM/IGeometry.cs",
+      "label": "IGeometry",
+      "attributes": []
+    },
+    {
+      "id": "BH.oM.Base.IObject",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/BHoM/Interface/IObject.cs",
+      "label": "IObject",
+      "attributes": []
+    },
+    {
+      "id": "BH.oM.Base.IFragment",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/BHoM/Interface/IFragment.cs",
+      "label": "IFragment",
+      "attributes": []
+    },
+    {
+      "id": "Element1DRefinement-4a1861f8-d0ab-4e7e-bde2-24a13f92aa2c-RenderMeshOptions-HasProperty",
+      "iri": "http://www.w3.org/2001/XMLSchema#",
+      "label": "Element1DRefinement (Double)",
+      "attributes": "datatype"
+    },
+    {
+      "id": "Element2DRefinement-ce072925-8446-4be4-85b2-d52f6bfcc7f2-RenderMeshOptions-HasProperty",
+      "iri": "http://www.w3.org/2001/XMLSchema#",
+      "label": "Element2DRefinement (Double)",
+      "attributes": "datatype"
+    },
+    {
+      "id": "CustomDataColorKey-120ecb62-7c19-4eb5-a5ec-c67d60709ded-RenderMeshOptions-HasProperty",
+      "iri": "http://www.w3.org/2001/XMLSchema#",
+      "label": "CustomDataColorKey (String)",
+      "attributes": "datatype"
+    },
+    {
+      "id": "BH.oM.Base.IBHoMObject",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/BHoM/Interface/IBHoMObject.cs",
+      "label": "IBHoMObject",
+      "attributes": []
+    },
+    {
+      "id": "BH.oM.Base.IObject",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/BHoM/Interface/IObject.cs",
+      "label": "IObject",
+      "attributes": []
+    },
+    {
+      "id": "BH.oM.Base.BHoMObject",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/BHoM/BHoMObject.cs",
+      "label": "BHoMObject",
+      "attributes": []
+    },
+    {
+      "id": "BH.oM.Geometry.Point",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/Geometry_oM/Point.cs",
+      "label": "Point (Point)",
+      "attributes": []
+    },
+    {
+      "id": "Colour-8aac8c57-160a-4b76-86c2-9bc1997f51f8-RenderPoint-HasProperty",
+      "iri": "http://www.w3.org/2001/XMLSchema#",
+      "label": "Colour (Color)",
+      "attributes": "datatype"
+    },
+    {
+      "id": "BH.oM.Geometry.IGeometry",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/Geometry_oM/IGeometry.cs",
+      "label": "IGeometry",
+      "attributes": []
+    },
+    {
+      "id": "BH.oM.Base.IObject",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/BHoM/Interface/IObject.cs",
+      "label": "IObject",
+      "attributes": []
+    },
+    {
+      "id": "BH.oM.Dimensional.IElement0D",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/Dimensional_oM/IElement0D.cs",
+      "label": "IElement0D",
+      "attributes": []
+    },
+    {
+      "id": "BH.oM.Dimensional.IElement",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/Dimensional_oM/IElement.cs",
+      "label": "IElement",
+      "attributes": []
+    },
+    {
+      "id": "Text-81bfaa2c-190a-40b0-8228-f0d199f0c080-RenderText-HasProperty",
+      "iri": "http://www.w3.org/2001/XMLSchema#",
+      "label": "Text (String)",
+      "attributes": "datatype"
+    },
+    {
+      "id": "BH.oM.Geometry.CoordinateSystem.Cartesian",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/Geometry_oM/CoordinateSystem/Cartesian.cs",
+      "label": "Cartesian (Cartesian)",
+      "attributes": []
+    },
+    {
+      "id": "Height-e634ae96-ad50-48e5-b10e-e93c4d1e69d5-RenderText-HasProperty",
+      "iri": "http://www.w3.org/2001/XMLSchema#",
+      "label": "Height (Double)",
+      "attributes": "datatype"
+    },
+    {
+      "id": "FontName-0cae0729-3b43-42db-a09b-cbf693887211-RenderText-HasProperty",
+      "iri": "http://www.w3.org/2001/XMLSchema#",
+      "label": "FontName (String)",
+      "attributes": "datatype"
+    },
+    {
+      "id": "Colour-f3800585-9add-4ce8-a062-a10eb0715393-RenderText-HasProperty",
+      "iri": "http://www.w3.org/2001/XMLSchema#",
+      "label": "Colour (Color)",
+      "attributes": "datatype"
+    },
+    {
+      "id": "BH.oM.Base.IObject",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/BHoM/Interface/IObject.cs",
+      "label": "IObject",
+      "attributes": []
+    },
+    {
+      "id": "Detailed0DElements-5c4c223e-5c0a-459e-a096-e0a136aaea46-RepresentationOptions-HasProperty",
+      "iri": "http://www.w3.org/2001/XMLSchema#",
+      "label": "Detailed0DElements (Boolean)",
+      "attributes": "datatype"
+    },
+    {
+      "id": "Element0DScale-0429b321-4de3-4421-b415-27102311c885-RepresentationOptions-HasProperty",
+      "iri": "http://www.w3.org/2001/XMLSchema#",
+      "label": "Element0DScale (Double)",
+      "attributes": "datatype"
+    },
+    {
+      "id": "Detailed1DElements-b6a49e98-1ed5-4a9b-a6c6-624b9a744b33-RepresentationOptions-HasProperty",
+      "iri": "http://www.w3.org/2001/XMLSchema#",
+      "label": "Detailed1DElements (Boolean)",
+      "attributes": "datatype"
+    },
+    {
+      "id": "Element1DScale-fc9ffb88-d97d-4086-91e7-1cfc646faff3-RepresentationOptions-HasProperty",
+      "iri": "http://www.w3.org/2001/XMLSchema#",
+      "label": "Element1DScale (Double)",
+      "attributes": "datatype"
+    },
+    {
+      "id": "Cap1DElements-3a8b1d67-380c-4559-8497-f3cf3be765fe-RepresentationOptions-HasProperty",
+      "iri": "http://www.w3.org/2001/XMLSchema#",
+      "label": "Cap1DElements (Boolean)",
+      "attributes": "datatype"
+    },
+    {
+      "id": "Detailed2DElements-525a31e3-d06f-403c-a9a2-2c6399581bed-RepresentationOptions-HasProperty",
+      "iri": "http://www.w3.org/2001/XMLSchema#",
+      "label": "Detailed2DElements (Boolean)",
+      "attributes": "datatype"
+    },
+    {
+      "id": "BH.oM.Base.IBHoMObject",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/BHoM/Interface/IBHoMObject.cs",
+      "label": "IBHoMObject",
+      "attributes": []
+    },
+    {
+      "id": "BH.oM.Base.IObject",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/BHoM/Interface/IObject.cs",
+      "label": "IObject",
+      "attributes": []
+    },
+    {
+      "id": "BH.oM.Base.BHoMObject",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/BHoM/BHoMObject.cs",
+      "label": "BHoMObject",
+      "attributes": []
+    },
+    {
+      "id": "SVGObjects-ecf0aeaa-7d74-4f54-aaa9-0b1bca79e407-SVGDocument-HasProperty",
+      "iri": "http://www.w3.org/2001/XMLSchema#",
+      "label": "SVGObjects (List<SVGObject>)",
+      "attributes": "datatype"
+    },
+    {
+      "id": "BH.oM.Geometry.BoundingBox",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/Geometry_oM/BoundingBox.cs",
+      "label": "Canvas (BoundingBox)",
+      "attributes": []
+    },
+    {
+      "id": "BH.oM.Base.IBHoMObject",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/BHoM/Interface/IBHoMObject.cs",
+      "label": "IBHoMObject",
+      "attributes": []
+    },
+    {
+      "id": "BH.oM.Base.IObject",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/BHoM/Interface/IObject.cs",
+      "label": "IObject",
+      "attributes": []
+    },
+    {
+      "id": "BH.oM.Base.BHoMObject",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/BHoM/BHoMObject.cs",
+      "label": "BHoMObject",
+      "attributes": []
+    },
+    {
+      "id": "Shapes-44d98617-3bcb-4e0e-ab1d-4d8859d1885b-SVGObject-HasProperty",
+      "iri": "http://www.w3.org/2001/XMLSchema#",
+      "label": "Shapes (List<IGeometry>)",
+      "attributes": "datatype"
+    },
+    {
+      "id": "BH.oM.Base.IBHoMObject",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/BHoM/Interface/IBHoMObject.cs",
+      "label": "IBHoMObject",
+      "attributes": []
+    },
+    {
+      "id": "BH.oM.Base.IObject",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/BHoM/Interface/IObject.cs",
+      "label": "IObject",
+      "attributes": []
+    },
+    {
+      "id": "BH.oM.Base.BHoMObject",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/BHoM/BHoMObject.cs",
+      "label": "BHoMObject",
+      "attributes": []
+    },
+    {
+      "id": "StrokeWidth-f79637b5-5251-487b-be0d-7930dd5ca42b-SVGStyle-HasProperty",
+      "iri": "http://www.w3.org/2001/XMLSchema#",
+      "label": "StrokeWidth (Double)",
+      "attributes": "datatype"
+    },
+    {
+      "id": "StrokeColor-a056a7ac-19df-4c74-82e8-c41cf3d5cb2e-SVGStyle-HasProperty",
+      "iri": "http://www.w3.org/2001/XMLSchema#",
+      "label": "StrokeColor (String)",
+      "attributes": "datatype"
+    },
+    {
+      "id": "FillColor-e744e640-21ab-49cb-b7a3-aad747257433-SVGStyle-HasProperty",
+      "iri": "http://www.w3.org/2001/XMLSchema#",
+      "label": "FillColor (String)",
+      "attributes": "datatype"
+    },
+    {
+      "id": "StrokeOpacity-cd363fa0-290b-4312-92bb-ca6c75a189d2-SVGStyle-HasProperty",
+      "iri": "http://www.w3.org/2001/XMLSchema#",
+      "label": "StrokeOpacity (Double)",
+      "attributes": "datatype"
+    },
+    {
+      "id": "FillOpacity-a035778c-cce9-4937-9597-6e4b7df0e411-SVGStyle-HasProperty",
+      "iri": "http://www.w3.org/2001/XMLSchema#",
+      "label": "FillOpacity (Double)",
+      "attributes": "datatype"
+    },
+    {
+      "id": "StrokeDash-fb2a672e-e9f0-4ea4-b904-a8ee91c32802-SVGStyle-HasProperty",
+      "iri": "http://www.w3.org/2001/XMLSchema#",
+      "label": "StrokeDash (List<Double>)",
+      "attributes": "datatype"
+    },
+    {
+      "id": "BH.oM.Base.IBHoMObject",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/BHoM/Interface/IBHoMObject.cs",
+      "label": "IBHoMObject",
+      "attributes": []
+    },
+    {
+      "id": "BH.oM.Base.IObject",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/BHoM/Interface/IObject.cs",
+      "label": "IObject",
+      "attributes": []
+    },
+    {
+      "id": "BH.oM.Base.BHoMObject",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/BHoM/BHoMObject.cs",
+      "label": "BHoMObject",
+      "attributes": []
+    },
+    {
+      "id": "BH.oM.Base.IBHoMObject",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/BHoM/Interface/IBHoMObject.cs",
+      "label": "IBHoMObject",
+      "attributes": []
+    },
+    {
+      "id": "BH.oM.Base.IObject",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/BHoM/Interface/IObject.cs",
+      "label": "IObject",
+      "attributes": []
+    },
+    {
+      "id": "BH.oM.Base.BHoMObject",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/BHoM/BHoMObject.cs",
+      "label": "BHoMObject",
+      "attributes": []
+    },
+    {
+      "id": "BH.oM.Base.IBHoMObject",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/BHoM/Interface/IBHoMObject.cs",
+      "label": "IBHoMObject",
+      "attributes": []
+    },
+    {
+      "id": "BH.oM.Base.IObject",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/BHoM/Interface/IObject.cs",
+      "label": "IObject",
+      "attributes": []
+    },
+    {
+      "id": "Width-dcc50f64-8743-4235-8a58-314ae583f340-ViewConfig-HasProperty",
+      "iri": "http://www.w3.org/2001/XMLSchema#",
+      "label": "Width (Double)",
+      "attributes": "datatype"
+    },
+    {
+      "id": "Height-36af01e9-8274-4c34-98d2-675e83dff9f0-ViewConfig-HasProperty",
+      "iri": "http://www.w3.org/2001/XMLSchema#",
+      "label": "Height (Double)",
+      "attributes": "datatype"
+    },
+    {
+      "id": "BH.oM.Base.IBHoMObject",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/BHoM/Interface/IBHoMObject.cs",
+      "label": "IBHoMObject",
+      "attributes": []
+    },
+    {
+      "id": "BH.oM.Base.IObject",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/BHoM/Interface/IObject.cs",
+      "label": "IObject",
+      "attributes": []
+    },
+    {
+      "id": "BH.oM.Base.BHoMObject",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/BHoM/BHoMObject.cs",
+      "label": "BHoMObject",
+      "attributes": []
+    },
+    {
+      "id": "BH.oM.Base.IObject",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/BHoM/Interface/IObject.cs",
+      "label": "IObject",
+      "attributes": []
+    },
+    {
+      "id": "BH.oM.Data.Collections.Domain",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/Data_oM/Collections/Domain.cs",
+      "label": "Domain (Domain)",
+      "attributes": []
+    },
+    {
+      "id": "BH.oM.Data.Collections.Domain",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/Data_oM/Collections/Domain.cs",
+      "label": "Range (Domain)",
+      "attributes": []
+    },
+    {
+      "id": "Clamp-6b25ddb9-d40b-4eb9-8736-78aafe0db6df-ScaleLinear-HasProperty",
+      "iri": "http://www.w3.org/2001/XMLSchema#",
+      "label": "Clamp (Boolean)",
+      "attributes": "datatype"
+    },
+    {
+      "id": "Nice-781de077-bda8-4d8c-8ddf-8a40c7266dbb-ScaleLinear-HasProperty",
+      "iri": "http://www.w3.org/2001/XMLSchema#",
+      "label": "Nice (Boolean)",
+      "attributes": "datatype"
+    },
+    {
+      "id": "Name-d979f290-0010-487b-bd7b-c055dfc5d52d-ScaleLinear-HasProperty",
+      "iri": "http://www.w3.org/2001/XMLSchema#",
+      "label": "Name (String)",
+      "attributes": "datatype"
+    },
+    {
+      "id": "BH.oM.Base.IObject",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/BHoM/Interface/IObject.cs",
+      "label": "IObject",
+      "attributes": []
+    },
+    {
+      "id": "Domain-695a36cd-beb0-445f-a81f-3fd9802c6bb0-ScaleOrdinal-HasProperty",
+      "iri": "http://www.w3.org/2001/XMLSchema#",
+      "label": "Domain (List<String>)",
+      "attributes": "datatype"
+    },
+    {
+      "id": "Range-f0e7305a-9216-4c98-a0d3-5924bbb8eb09-ScaleOrdinal-HasProperty",
+      "iri": "http://www.w3.org/2001/XMLSchema#",
+      "label": "Range (List<Object>)",
+      "attributes": "datatype"
+    },
+    {
+      "id": "Name-a2baf807-2fcc-4bdc-bd01-2e6805ff9407-ScaleOrdinal-HasProperty",
+      "iri": "http://www.w3.org/2001/XMLSchema#",
+      "label": "Name (String)",
+      "attributes": "datatype"
+    },
+    {
+      "id": "BH.oM.Base.IObject",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/BHoM/Interface/IObject.cs",
+      "label": "IObject",
+      "attributes": []
+    },
+    {
+      "id": "Top-abbccb32-62b5-458a-8f5d-fb495e6f8f47-Padding-HasProperty",
+      "iri": "http://www.w3.org/2001/XMLSchema#",
+      "label": "Top (Double)",
+      "attributes": "datatype"
+    },
+    {
+      "id": "Bottom-f7a6af61-6afa-41f0-80bc-ad7378fef346-Padding-HasProperty",
+      "iri": "http://www.w3.org/2001/XMLSchema#",
+      "label": "Bottom (Double)",
+      "attributes": "datatype"
+    },
+    {
+      "id": "Left-3514c384-bb7e-4357-8f23-8e7523ca7e26-Padding-HasProperty",
+      "iri": "http://www.w3.org/2001/XMLSchema#",
+      "label": "Left (Double)",
+      "attributes": "datatype"
+    },
+    {
+      "id": "Right-8cd53c45-4172-4806-84a1-7d613ad85cd4-Padding-HasProperty",
+      "iri": "http://www.w3.org/2001/XMLSchema#",
+      "label": "Right (Double)",
+      "attributes": "datatype"
+    },
+    {
+      "id": "BH.oM.Base.IBHoMObject",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/BHoM/Interface/IBHoMObject.cs",
+      "label": "IBHoMObject",
+      "attributes": []
+    },
+    {
+      "id": "BH.oM.Base.IObject",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/BHoM/Interface/IObject.cs",
+      "label": "IObject",
+      "attributes": []
+    },
+    {
+      "id": "BH.oM.Base.BHoMObject",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/BHoM/BHoMObject.cs",
+      "label": "BHoMObject",
+      "attributes": []
+    },
+    {
+      "id": "BH.oM.Geometry.ICurve",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/Geometry_oM/ICurve.cs",
+      "label": "Boundary (ICurve)",
+      "attributes": []
+    },
+    {
+      "id": "Text-419d6ba4-5178-4f98-8c38-ee5410bf5b16-EntityRepresentation-HasProperty",
+      "iri": "http://www.w3.org/2001/XMLSchema#",
+      "label": "Text (String)",
+      "attributes": "datatype"
+    },
+    {
+      "id": "BH.oM.Geometry.Point",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/Geometry_oM/Point.cs",
+      "label": "TextPosition (Point)",
+      "attributes": []
+    },
+    {
+      "id": "BH.oM.Geometry.Vector",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/Geometry_oM/Vector.cs",
+      "label": "TextDirection (Vector)",
+      "attributes": []
+    },
+    {
+      "id": "BH.oM.Geometry.Point",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/Geometry_oM/Point.cs",
+      "label": "IncomingRelationPoint (Point)",
+      "attributes": []
+    },
+    {
+      "id": "BH.oM.Geometry.Point",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/Geometry_oM/Point.cs",
+      "label": "OutgoingRelationPoint (Point)",
+      "attributes": []
+    },
+    {
+      "id": "Colour-96c3091b-8c76-4dba-88c1-878e1252fef7-EntityRepresentation-HasProperty",
+      "iri": "http://www.w3.org/2001/XMLSchema#",
+      "label": "Colour (Color)",
+      "attributes": "datatype"
+    },
+    {
+      "id": "BH.oM.Base.IFragment",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/BHoM/Interface/IFragment.cs",
+      "label": "IFragment",
+      "attributes": []
+    },
+    {
+      "id": "BH.oM.Base.IObject",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/BHoM/Interface/IObject.cs",
+      "label": "IObject",
+      "attributes": []
+    },
+    {
+      "id": "Groups-61bb62c0-6900-408f-89d2-f86222c97ff9-GraphRepresentation-HasProperty",
+      "iri": "http://www.w3.org/2001/XMLSchema#",
+      "label": "Groups (List<GroupRepresentation>)",
+      "attributes": "datatype"
+    },
+    {
+      "id": "Text-48632cae-80a9-4da0-92d0-1ed2106e950c-GraphRepresentation-HasProperty",
+      "iri": "http://www.w3.org/2001/XMLSchema#",
+      "label": "Text (String)",
+      "attributes": "datatype"
+    },
+    {
+      "id": "BH.oM.Geometry.Point",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/Geometry_oM/Point.cs",
+      "label": "TextPosition (Point)",
+      "attributes": []
+    },
+    {
+      "id": "BH.oM.Geometry.Vector",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/Geometry_oM/Vector.cs",
+      "label": "TextDirection (Vector)",
+      "attributes": []
+    },
+    {
+      "id": "Colour-330bcbf0-4c9d-4380-8904-62ac84f50508-GraphRepresentation-HasProperty",
+      "iri": "http://www.w3.org/2001/XMLSchema#",
+      "label": "Colour (Color)",
+      "attributes": "datatype"
+    },
+    {
+      "id": "BH.oM.Base.IFragment",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/BHoM/Interface/IFragment.cs",
+      "label": "IFragment",
+      "attributes": []
+    },
+    {
+      "id": "BH.oM.Base.IObject",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/BHoM/Interface/IObject.cs",
+      "label": "IObject",
+      "attributes": []
+    },
+    {
+      "id": "BH.oM.Geometry.ICurve",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/Geometry_oM/ICurve.cs",
+      "label": "Boundary (ICurve)",
+      "attributes": []
+    },
+    {
+      "id": "Text-d25efbbf-7b6a-412b-8517-a17e868f1bf9-GroupRepresentation-HasProperty",
+      "iri": "http://www.w3.org/2001/XMLSchema#",
+      "label": "Text (String)",
+      "attributes": "datatype"
+    },
+    {
+      "id": "BH.oM.Geometry.Point",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/Geometry_oM/Point.cs",
+      "label": "TextPosition (Point)",
+      "attributes": []
+    },
+    {
+      "id": "BH.oM.Geometry.Vector",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/Geometry_oM/Vector.cs",
+      "label": "TextDirection (Vector)",
+      "attributes": []
+    },
+    {
+      "id": "Colour-b4126d0b-3ae5-4996-beda-fb9675247f75-GroupRepresentation-HasProperty",
+      "iri": "http://www.w3.org/2001/XMLSchema#",
+      "label": "Colour (Color)",
+      "attributes": "datatype"
+    },
+    {
+      "id": "BH.oM.Base.IFragment",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/BHoM/Interface/IFragment.cs",
+      "label": "IFragment",
+      "attributes": []
+    },
+    {
+      "id": "BH.oM.Base.IObject",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/BHoM/Interface/IObject.cs",
+      "label": "IObject",
+      "attributes": []
+    },
+    {
+      "id": "BH.oM.Base.IFragment",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/BHoM/Interface/IFragment.cs",
+      "label": "IFragment",
+      "attributes": []
+    },
+    {
+      "id": "BH.oM.Base.IObject",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/BHoM/Interface/IObject.cs",
+      "label": "IObject",
+      "attributes": []
+    },
+    {
+      "id": "Curves-068aeb3d-62fc-4337-b1e4-2726dbfee3ba-RelationRepresentation-HasProperty",
+      "iri": "http://www.w3.org/2001/XMLSchema#",
+      "label": "Curves (List<ICurve>)",
+      "attributes": "datatype"
+    },
+    {
+      "id": "Text-8081855a-588e-488d-a114-2c43bf6823b9-RelationRepresentation-HasProperty",
+      "iri": "http://www.w3.org/2001/XMLSchema#",
+      "label": "Text (String)",
+      "attributes": "datatype"
+    },
+    {
+      "id": "BH.oM.Geometry.Point",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/Geometry_oM/Point.cs",
+      "label": "TextPosition (Point)",
+      "attributes": []
+    },
+    {
+      "id": "BH.oM.Geometry.Vector",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/Geometry_oM/Vector.cs",
+      "label": "TextDirection (Vector)",
+      "attributes": []
+    },
+    {
+      "id": "Colour-189c048c-c700-481d-938e-cd69373090fa-RelationRepresentation-HasProperty",
+      "iri": "http://www.w3.org/2001/XMLSchema#",
+      "label": "Colour (Color)",
+      "attributes": "datatype"
+    },
+    {
+      "id": "BH.oM.Base.IFragment",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/BHoM/Interface/IFragment.cs",
+      "label": "IFragment",
+      "attributes": []
+    },
+    {
+      "id": "BH.oM.Base.IObject",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/BHoM/Interface/IObject.cs",
+      "label": "IObject",
+      "attributes": []
+    },
+    {
+      "id": "HeadLength-4b1940f7-1bb5-45c5-979c-b395b40657e6-BasicArrowMarker-HasProperty",
+      "iri": "http://www.w3.org/2001/XMLSchema#",
+      "label": "HeadLength (Double)",
+      "attributes": "datatype"
+    },
+    {
+      "id": "BaseWidth-1cfa5bf9-5d37-4684-8a88-4e9e2718cffc-BasicArrowMarker-HasProperty",
+      "iri": "http://www.w3.org/2001/XMLSchema#",
+      "label": "BaseWidth (Double)",
+      "attributes": "datatype"
+    },
+    {
+      "id": "Closed-c09267d5-fcef-4c63-81fd-1984710a3f27-BasicArrowMarker-HasProperty",
+      "iri": "http://www.w3.org/2001/XMLSchema#",
+      "label": "Closed (Boolean)",
+      "attributes": "datatype"
+    },
+    {
+      "id": "BH.oM.Base.IBHoMObject",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/BHoM/Interface/IBHoMObject.cs",
+      "label": "IBHoMObject",
+      "attributes": []
+    },
+    {
+      "id": "BH.oM.Base.IObject",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/BHoM/Interface/IObject.cs",
+      "label": "IObject",
+      "attributes": []
+    },
+    {
+      "id": "BH.oM.Base.BHoMObject",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/BHoM/BHoMObject.cs",
+      "label": "BHoMObject",
+      "attributes": []
+    },
+    {
+      "id": "Text-34573c33-16b9-4781-bd6e-2c45b05809f8-Boxes-HasProperty",
+      "iri": "http://www.w3.org/2001/XMLSchema#",
+      "label": "Text (String)",
+      "attributes": "datatype"
+    },
+    {
+      "id": "Colour-5b45c37d-91a7-4182-a234-2947fa4c3850-Boxes-HasProperty",
+      "iri": "http://www.w3.org/2001/XMLSchema#",
+      "label": "Colour (String)",
+      "attributes": "datatype"
+    },
+    {
+      "id": "Group-41c1a038-5cf5-408f-ba3c-9b9b40c9f88a-Boxes-HasProperty",
+      "iri": "http://www.w3.org/2001/XMLSchema#",
+      "label": "Group (String)",
+      "attributes": "datatype"
+    },
+    {
+      "id": "GroupOrder-5e93743c-ae13-4212-9e7a-30ac7ceb44ea-Boxes-HasProperty",
+      "iri": "http://www.w3.org/2001/XMLSchema#",
+      "label": "GroupOrder (String)",
+      "attributes": "datatype"
+    },
+    {
+      "id": "Padding-30609aa8-ebaa-438a-988a-70058433aead-Boxes-HasProperty",
+      "iri": "http://www.w3.org/2001/XMLSchema#",
+      "label": "Padding (Double)",
+      "attributes": "datatype"
+    },
+    {
+      "id": "IsHorizontal-d97d02b1-d8df-4933-b0f9-3f109b612b2e-Boxes-HasProperty",
+      "iri": "http://www.w3.org/2001/XMLSchema#",
+      "label": "IsHorizontal (Boolean)",
+      "attributes": "datatype"
+    },
+    {
+      "id": "GroupsToIgnore-ef873825-9117-43d4-92f8-0831fd29c75c-Boxes-HasProperty",
+      "iri": "http://www.w3.org/2001/XMLSchema#",
+      "label": "GroupsToIgnore (List<String>)",
+      "attributes": "datatype"
+    },
+    {
+      "id": "BH.oM.Base.IBHoMObject",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/BHoM/Interface/IBHoMObject.cs",
+      "label": "IBHoMObject",
+      "attributes": []
+    },
+    {
+      "id": "BH.oM.Base.IObject",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/BHoM/Interface/IObject.cs",
+      "label": "IObject",
+      "attributes": []
+    },
+    {
+      "id": "BH.oM.Base.BHoMObject",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/BHoM/BHoMObject.cs",
+      "label": "BHoMObject",
+      "attributes": []
+    },
+    {
+      "id": "BH.oM.Base.IBHoMObject",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/BHoM/Interface/IBHoMObject.cs",
+      "label": "IBHoMObject",
+      "attributes": []
+    },
+    {
+      "id": "BH.oM.Base.IObject",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/BHoM/Interface/IObject.cs",
+      "label": "IObject",
+      "attributes": []
+    },
+    {
+      "id": "BH.oM.Base.IBHoMObject",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/BHoM/Interface/IBHoMObject.cs",
+      "label": "IBHoMObject",
+      "attributes": []
+    },
+    {
+      "id": "BH.oM.Base.IObject",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/BHoM/Interface/IObject.cs",
+      "label": "IObject",
+      "attributes": []
+    },
+    {
+      "id": "Text-97ceb674-e4ea-420a-9021-a783eb7a1715-Links-HasProperty",
+      "iri": "http://www.w3.org/2001/XMLSchema#",
+      "label": "Text (String)",
+      "attributes": "datatype"
+    },
+    {
+      "id": "Start-99e682e1-1da7-4a7b-9bed-70efc823b226-Links-HasProperty",
+      "iri": "http://www.w3.org/2001/XMLSchema#",
+      "label": "Start (String)",
+      "attributes": "datatype"
+    },
+    {
+      "id": "End-3b753e9a-5ab3-43b4-9c85-4d24b5b3d018-Links-HasProperty",
+      "iri": "http://www.w3.org/2001/XMLSchema#",
+      "label": "End (String)",
+      "attributes": "datatype"
+    },
+    {
+      "id": "Colour-754d9c4b-0097-4614-8c9f-2dcb2042f704-Links-HasProperty",
+      "iri": "http://www.w3.org/2001/XMLSchema#",
+      "label": "Colour (String)",
+      "attributes": "datatype"
+    },
+    {
+      "id": "BH.oM.Base.IBHoMObject",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/BHoM/Interface/IBHoMObject.cs",
+      "label": "IBHoMObject",
+      "attributes": []
+    },
+    {
+      "id": "BH.oM.Base.IObject",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/BHoM/Interface/IObject.cs",
+      "label": "IObject",
+      "attributes": []
+    },
+    {
+      "id": "BH.oM.Base.BHoMObject",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/BHoM/BHoMObject.cs",
+      "label": "BHoMObject",
+      "attributes": []
+    },
+    {
+      "id": "LowerBound-2b763a30-3422-4718-8bb6-df264fc4b643-GradientOptions-HasProperty",
+      "iri": "http://www.w3.org/2001/XMLSchema#",
+      "label": "LowerBound (Double)",
+      "attributes": "datatype"
+    },
+    {
+      "id": "UpperBound-94783771-1d4e-4db5-812d-10b24f407573-GradientOptions-HasProperty",
+      "iri": "http://www.w3.org/2001/XMLSchema#",
+      "label": "UpperBound (Double)",
+      "attributes": "datatype"
+    },
+    {
+      "id": "BH.oM.Base.IObject",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/BHoM/Interface/IObject.cs",
+      "label": "IObject",
+      "attributes": []
+    }
+  ],
+  "property": [
+    {
+      "id": "ac42589e-0683-404b-be3f-e025ac195dc8",
+      "type": "owl:DatatypeProperty"
+    },
+    {
+      "id": "b4589c07-e3ed-4e88-8103-29a1d3736a56",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "9246f849-f98a-4db7-894a-e5375b2afe46",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "82c26363-e6be-4ee2-bf92-5a98112dc060",
+      "type": "owl:DatatypeProperty"
+    },
+    {
+      "id": "3e3cfa43-fed6-43d8-aa86-32173fd4f49a",
+      "type": "owl:DatatypeProperty"
+    },
+    {
+      "id": "a00c4822-f513-4472-96d3-6c3d7a134f52",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "bcee656f-dcce-40c3-8f0c-7c8d9e1f8a70",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "88f2e601-9e94-4459-9360-49f36d81e30c",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "9726bc8f-bf2d-407c-82f5-64aec433cad1",
+      "type": "owl:DatatypeProperty"
+    },
+    {
+      "id": "ccce3f02-cc41-4cd9-bdca-aea842c7e672",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "066c03f4-5c96-4797-9af5-b78bd1d6260f",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "1c9a00e7-86a3-411c-bce0-56862c8a109f",
+      "type": "owl:DatatypeProperty"
+    },
+    {
+      "id": "7d52c0df-f22f-4e08-843c-4e507a6f8921",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "11c3b487-ae35-4d62-9226-71f9c53e4367",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "7fc491c3-7a70-4e0f-bd99-8cc094703254",
+      "type": "owl:DatatypeProperty"
+    },
+    {
+      "id": "673a9c44-30c5-4ea9-8bca-62416ed78bdb",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "7adefb27-5b33-407c-84f8-03a263b98552",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "6af79c24-50db-4801-b8c8-f79de2d4bd13",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "0abb33fb-cd0d-45b4-b6f7-eb9862cdd502",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "efa158bf-8e55-4a86-9991-11986d9dd439",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "55474c6f-3fe0-4d96-8cd3-a130f97b89ea",
+      "type": "owl:DatatypeProperty"
+    },
+    {
+      "id": "4578f8ac-e7e7-4606-9daa-98a251238d13",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "95c041c5-cc53-49cc-97d4-7560b8e220a7",
+      "type": "owl:DatatypeProperty"
+    },
+    {
+      "id": "57dd2ee5-9631-4818-9f54-384857293895",
+      "type": "owl:DatatypeProperty"
+    },
+    {
+      "id": "be65e816-1c43-4279-8dea-920c50d995b6",
+      "type": "owl:DatatypeProperty"
+    },
+    {
+      "id": "326c8b93-9f56-49aa-bbc6-26d121ac47e6",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "b314507c-8145-4030-88df-534c1613ced2",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "a03e7720-d9dd-4bd4-8bdb-6565d7ae22b5",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "f0071bba-93fa-4a47-86f1-f9f6eff05eb5",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "6253acec-5d71-49ef-a1cd-9ee8fca5e550",
+      "type": "owl:DatatypeProperty"
+    },
+    {
+      "id": "8a74b334-2d6c-42da-904f-231a7fdfd366",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "69298f3a-a52a-4d5e-a4df-ceec64bb4b7e",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "a6728916-2604-41df-91e4-efbfc6e1b396",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "67ea084c-28e2-4a8a-98eb-be61ffaf3e7b",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "ce74146e-1e00-4230-998a-724121c35b42",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "4a920897-5b7a-4bce-b507-740728d835ba",
+      "type": "owl:DatatypeProperty"
+    },
+    {
+      "id": "b42bd5c1-4b89-4fd4-a79c-5b52dc1f41a8",
+      "type": "owl:DatatypeProperty"
+    },
+    {
+      "id": "ec937d8a-8a8c-4878-8436-65ba9542e5b6",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "57c7c2a2-1cdc-4244-9670-0c779abdf643",
+      "type": "owl:DatatypeProperty"
+    },
+    {
+      "id": "4c607272-28a1-4b18-9968-00cc0ac83aad",
+      "type": "owl:DatatypeProperty"
+    },
+    {
+      "id": "45c00c09-a329-4d7b-a064-22af322c4ca8",
+      "type": "owl:DatatypeProperty"
+    },
+    {
+      "id": "b20c1191-238a-4da4-af01-de620a0e192a",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "e55027c2-239c-41d6-80d3-60314a6abcf2",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "4a232b43-207d-4ecd-ae94-67b2371f6fa6",
+      "type": "owl:DatatypeProperty"
+    },
+    {
+      "id": "7248840d-2eb3-4a9d-87f0-b6d4632d53a5",
+      "type": "owl:DatatypeProperty"
+    },
+    {
+      "id": "32ae4603-1083-44d1-9644-03fd26ea4fa2",
+      "type": "owl:DatatypeProperty"
+    },
+    {
+      "id": "4d76b634-8186-477e-8177-4d0f52e4e052",
+      "type": "owl:DatatypeProperty"
+    },
+    {
+      "id": "2cba0645-21d5-476f-abc9-b12c87a12c08",
+      "type": "owl:DatatypeProperty"
+    },
+    {
+      "id": "a47e84d7-f993-4d8b-92f5-65ebdde11ffa",
+      "type": "owl:DatatypeProperty"
+    },
+    {
+      "id": "9fe3863f-cdb7-4809-8f9d-800765d9a4f1",
+      "type": "owl:DatatypeProperty"
+    },
+    {
+      "id": "5c486c3a-5cf0-42c7-aedf-3c6edfdc364e",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "01ea2f04-3875-4ef5-8e8a-2aaeae93b439",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "cfbba6b5-02c8-4780-8cf4-8b93d3a667d8",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "1417df91-52bc-4ce2-9b63-ade4903da839",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "2d46ea08-9043-4285-a332-4c33edeea645",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "1489a47a-481c-4da3-981e-b5e4033b8914",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "95afdee3-c871-4a34-b61d-fadf4e0e8875",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "bc65b5b2-dc42-4ebe-91b6-47bdccc086e5",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "dc1df949-7d2d-43aa-8234-aa74efc3e9a4",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "200b4eb2-bdf9-4a4d-bc5d-a6a045d4510e",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "cd21f43d-1dfd-43a2-b818-868dfb6ca5e6",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "7eea5b82-1bac-4f12-833f-969d28631aa4",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "6ea0150e-e1cc-4bf1-a15a-baf74b40a671",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "28c6b9c5-c453-472d-945f-6c77da960222",
+      "type": "owl:DatatypeProperty"
+    },
+    {
+      "id": "b7ea29d9-5349-40c3-9b31-ac199ef175bd",
+      "type": "owl:DatatypeProperty"
+    },
+    {
+      "id": "80ac7eef-9bcb-44ba-8d71-cdce49585aa6",
+      "type": "owl:DatatypeProperty"
+    },
+    {
+      "id": "c6586093-55c6-4481-801d-fe8ca52568c8",
+      "type": "owl:DatatypeProperty"
+    },
+    {
+      "id": "fe3e11b5-5dd4-426a-af29-68b366e67f7b",
+      "type": "owl:DatatypeProperty"
+    },
+    {
+      "id": "e5b2e3d8-9e10-4fe9-b106-60df42d666a7",
+      "type": "owl:DatatypeProperty"
+    },
+    {
+      "id": "a6a19406-b71a-4397-8dd2-c637625b05e2",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "d4cd0e25-fd25-476b-8ed4-87e5ece7303b",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "22f342b0-c7f3-4829-b8a9-54b7799334e7",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "2103bbf2-00c5-4661-9761-63fe26d0522b",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "1eed6b86-b189-4f2c-90e3-b97cd019839b",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "b746611d-f2c0-46dc-8596-013f5db5206b",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "3858a436-bee7-476e-ad6e-0b2c0b05b257",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "b908a684-ace3-4a0c-8401-17db111f2b4e",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "2205a8d4-7469-4015-904c-af3373ca8384",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "4cd6de1b-9844-41ec-b6ec-7d4e3da1cb24",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "5b00ef13-81a0-41ee-a973-416f7892da0e",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "b365c27b-53a6-421b-af5c-24a102d644d5",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "0adf779d-f0e5-432e-a0b8-8c2310270454",
+      "type": "owl:DatatypeProperty"
+    },
+    {
+      "id": "67ad6281-00f9-44a5-aa33-05c26cd84afb",
+      "type": "owl:DatatypeProperty"
+    },
+    {
+      "id": "a1a5ea44-1bb7-41bb-8598-40e6ce2038b3",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "2faebdc9-903c-4cb4-8068-e42e2df0e4f2",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "9d480053-50b8-4c22-83e6-b988fd81bb5d",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "299c1897-969c-47c0-8d82-afa799757e61",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "8a67b935-49a9-4dd6-a663-a4d4f710014c",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "85618f84-5bc9-476f-a9e3-4ce3f26c5c33",
+      "type": "owl:DatatypeProperty"
+    },
+    {
+      "id": "ba1133a9-d948-49f5-8c6c-138b29593986",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "4e34fadb-3933-4254-97a2-9142c7f7e10b",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "fdf9e418-793e-4e17-ad6a-d55e5363ea61",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "b0406401-93cb-4c2f-9550-9b52d9cbfe7d",
+      "type": "owl:DatatypeProperty"
+    },
+    {
+      "id": "7faf2768-d6f6-4548-9184-a2ce97b3fd1c",
+      "type": "owl:DatatypeProperty"
+    },
+    {
+      "id": "b8a3c5dc-0673-4667-b597-f642a196b6cb",
+      "type": "owl:DatatypeProperty"
+    },
+    {
+      "id": "55bfa499-f69a-49c7-b86f-971c6a5ff7bd",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "40c2474e-df14-43c7-9c48-12b5f64f714b",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "28ed90eb-44ed-43e4-968d-a5c0bcb5f528",
+      "type": "owl:DatatypeProperty"
+    },
+    {
+      "id": "1f496808-3d8b-4d0f-aba3-5b0d024f00c3",
+      "type": "owl:DatatypeProperty"
+    },
+    {
+      "id": "e15268a2-35a1-47e3-b42a-479b7d445910",
+      "type": "owl:DatatypeProperty"
+    },
+    {
+      "id": "5a378182-d342-4a7d-867f-453ad5eb13c8",
+      "type": "owl:DatatypeProperty"
+    },
+    {
+      "id": "a94863cf-30cd-4519-8863-bf09a05b87ba",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "678086ef-fc9b-4ac3-a666-9f54f0466dd0",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "defac310-643f-4229-99c8-10652092fdaf",
+      "type": "owl:DatatypeProperty"
+    },
+    {
+      "id": "ae86846c-4986-4104-ba0e-25bf5ce6606a",
+      "type": "owl:DatatypeProperty"
+    },
+    {
+      "id": "3b920514-bc64-41bb-b8aa-188bc37d4243",
+      "type": "owl:DatatypeProperty"
+    },
+    {
+      "id": "ed0a8a13-129a-46a9-ab8e-939d487adea4",
+      "type": "owl:DatatypeProperty"
+    },
+    {
+      "id": "936d7c4f-62c3-488c-ae8d-e52c0b8d9bd0",
+      "type": "owl:DatatypeProperty"
+    },
+    {
+      "id": "df020209-789d-48e4-8c6b-5e00a64ae16c",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "de0348dc-d30a-4e42-a193-e90db51a33ef",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "bbced444-901c-4317-912b-eb231cd13f02",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "2ba7ed3f-2831-4fe6-b4d4-ba4bf6d3eaab",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "134bea7d-b05a-4849-9d27-a1e9299faea3",
+      "type": "owl:DatatypeProperty"
+    },
+    {
+      "id": "e6c14cf9-80e3-4475-a6be-7410a2201c33",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "453c070b-5b96-4e4b-9e85-ddd64528389c",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "b137dfb3-6995-4329-9352-7cb023255cb7",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "e1c88c94-b398-432c-a654-26624489862f",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "2337e036-cde8-4f7e-8de1-7996f1ba9ec1",
+      "type": "owl:DatatypeProperty"
+    },
+    {
+      "id": "693cab86-fc80-44f7-984d-7de54e41f98c",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "62295aff-dc09-4f90-acb3-d7454218dabb",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "aa928be4-fd50-4be5-b267-5b1d3ff1b03d",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "dfa88baa-ea4d-4cf3-ab56-6b2f4927d683",
+      "type": "owl:DatatypeProperty"
+    },
+    {
+      "id": "94f4d660-26e9-4bc7-bd57-321d60ceb7fd",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "c524eaec-a883-4059-8e2e-806eb8af5976",
+      "type": "owl:DatatypeProperty"
+    },
+    {
+      "id": "5c5d7837-2833-4cf5-94d2-5aa39f981d63",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "31a47197-4612-480f-b659-a3f99335f905",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "4b2b9d47-9e70-476f-a499-77ef5360e2b9",
+      "type": "owl:DatatypeProperty"
+    },
+    {
+      "id": "d0064bf3-09bf-40cf-8ecb-6b5e93f08675",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "a66f05cb-404c-46b7-94d7-9979777ee930",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "198f1c10-0e5f-414a-9f08-01f34a6890c4",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "0f54841e-6839-40d1-8c25-28de4e52e722",
+      "type": "owl:DatatypeProperty"
+    },
+    {
+      "id": "5209abae-ca04-4e99-8a36-6f9079f3e77a",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "96c0dea5-26aa-421b-9b66-97e67a325e4d",
+      "type": "owl:DatatypeProperty"
+    },
+    {
+      "id": "959fa831-1652-450d-b0c9-acec198193eb",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "8a1db8dd-d80a-494b-a2c6-07af4c0c9e7c",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "51e99b14-dc1c-46e8-8bbc-f6af7b79f29f",
+      "type": "owl:DatatypeProperty"
+    },
+    {
+      "id": "00af7662-3922-4943-98fd-b8b56b57467f",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "2f9b6cd9-b96d-41b1-89d6-e282118764f2",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "380666f8-cbba-4fb0-a7b0-d09ddf999685",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "c145bdb1-6b79-468f-8d13-7630578396a3",
+      "type": "owl:DatatypeProperty"
+    },
+    {
+      "id": "2d05639c-c473-4f7a-9d96-2282065b321d",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "7238ff2e-7dde-470a-a9fd-6a7c341c0501",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "bccdc8ba-3fc0-4236-a452-2f4e5d4842a4",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "9d3e3531-deb1-436d-b171-c4ecceac43f0",
+      "type": "owl:DatatypeProperty"
+    },
+    {
+      "id": "5e58dddf-bc63-4757-9c32-8e8a2edf893f",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "da797c87-9d9d-44e6-9cc1-a172ff3b3033",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "9934536e-fb91-4e90-94b6-1554c54b9451",
+      "type": "owl:DatatypeProperty"
+    },
+    {
+      "id": "decba9a0-01f9-4404-9a1a-92669217855c",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "ba6cc2f8-3f59-4f4f-b90c-ec7293b9700c",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "31456dd8-6958-4059-ac4a-bcb24b153121",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "f6537658-a8d8-4394-a67d-48ad1b46762f",
+      "type": "owl:DatatypeProperty"
+    },
+    {
+      "id": "01b7566a-abed-46fa-932e-0799a0f58695",
+      "type": "owl:DatatypeProperty"
+    },
+    {
+      "id": "5473529c-2bd4-4c44-a932-6bcf6f5b09e6",
+      "type": "owl:DatatypeProperty"
+    },
+    {
+      "id": "f6fd8a58-63a4-4b7e-a0df-d5ef1169d628",
+      "type": "owl:DatatypeProperty"
+    },
+    {
+      "id": "3cb57750-0f05-4a20-9db3-44acaa2a00e2",
+      "type": "owl:DatatypeProperty"
+    },
+    {
+      "id": "1be57b8f-138c-4730-831f-81c2a21ad97a",
+      "type": "owl:DatatypeProperty"
+    },
+    {
+      "id": "8ad78260-3098-434e-8a7f-d0e846b98f2c",
+      "type": "owl:DatatypeProperty"
+    },
+    {
+      "id": "08a23ed6-01cb-4af8-8c98-c73908768a8c",
+      "type": "owl:DatatypeProperty"
+    },
+    {
+      "id": "efe15403-23be-4ed5-b06a-0cc749a29857",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "b24de2a0-2d33-423e-9fea-3c5b09070f73",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "8e31754d-f32c-4133-bbd1-bf17479ec2a5",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "509f1d0e-a6db-4631-9ef2-f920f33026bb",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "56dff957-cea5-4870-a455-55ffea2c5250",
+      "type": "owl:DatatypeProperty"
+    },
+    {
+      "id": "80b02790-841f-4b77-936e-31c0cdae2666",
+      "type": "owl:DatatypeProperty"
+    },
+    {
+      "id": "df8bef1c-664d-4c60-bf64-a6659366ed62",
+      "type": "owl:DatatypeProperty"
+    },
+    {
+      "id": "94b0b66d-8aa8-4fc1-b8f7-09d5924f3e68",
+      "type": "owl:DatatypeProperty"
+    },
+    {
+      "id": "e9b92db3-c907-4aa7-b686-1bfc9e2c245f",
+      "type": "owl:DatatypeProperty"
+    },
+    {
+      "id": "f24cc2a7-d72a-426d-a477-55fcfdc536aa",
+      "type": "owl:DatatypeProperty"
+    },
+    {
+      "id": "01265032-c141-4365-9ca4-9f2aaab60510",
+      "type": "owl:DatatypeProperty"
+    },
+    {
+      "id": "665a6a69-50c3-4fe3-8b71-8ac7d5d5413f",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "b1298521-802f-46c8-a136-417b02e9e979",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "88fe34b8-847c-45b0-bf03-8fe313a6d081",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "66b06868-6d8e-466c-aef4-e189c3cd9130",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "19085a7b-3b5b-4d82-9c33-1f0cbbde6bf2",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "f3aee5d2-43a2-4d51-8edb-0341ef7d0428",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "809a537a-ef4d-4c2d-864a-d10d5a323287",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "a08b126b-d017-4bd7-9364-058bc7bc03c8",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "fd90e72c-ca04-453f-8f61-71b29a30ed5b",
+      "type": "owl:DatatypeProperty"
+    },
+    {
+      "id": "43f783b4-f0ce-4ec3-b99b-ac7a29a1e219",
+      "type": "owl:DatatypeProperty"
+    },
+    {
+      "id": "9bc910d0-64bb-49d7-8c43-f0cfc5b54e95",
+      "type": "owl:DatatypeProperty"
+    },
+    {
+      "id": "ae09e74b-75c7-428b-818d-526f6a67ec18",
+      "type": "owl:DatatypeProperty"
+    },
+    {
+      "id": "c6c9e8c0-075f-42e8-924f-a0081a220526",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "7a387336-7c5f-4e03-b60f-1f225b60e4ec",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "10f4c7eb-45c4-4081-9a6c-a6a58cf2a184",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "aa749221-6a8b-42b7-94eb-5ade35c0fd9d",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "4e8da291-8550-4d41-83d0-3f139eda1ad2",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "78732fed-98fe-4906-b494-8363687ff68d",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "12c56ba2-ead6-4b51-890f-7e45a9a054b7",
+      "type": "owl:DatatypeProperty"
+    },
+    {
+      "id": "ebcb09b8-6aac-4788-b29f-6611be46cdc0",
+      "type": "owl:DatatypeProperty"
+    },
+    {
+      "id": "73d5d30f-ebaf-44c5-8f4f-6fe87e10c8fa",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "26c8d47f-fced-41a2-9602-ab5e1f9d9bc5",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "17b675e0-08ad-4974-a4ad-ea64a5943606",
+      "type": "owl:DatatypeProperty"
+    }
+  ],
+  "propertyAttribute": [
+    {
+      "id": "ac42589e-0683-404b-be3f-e025ac195dc8",
+      "iri": "http://visualdataweb.org/newOntology/ac42589e-0683-404b-be3f-e025ac195dc8",
+      "label": "HasProperty",
+      "attributes": "datatype",
+      "domain": "BH.oM.Graphics.ColourFragment",
+      "range": "Colour-2b8f80d6-14a1-4af8-b63f-3633ea7c6b3d-ColourFragment-HasProperty"
+    },
+    {
+      "id": "b4589c07-e3ed-4e88-8103-29a1d3736a56",
+      "iri": "http://visualdataweb.org/newOntology/b4589c07-e3ed-4e88-8103-29a1d3736a56",
+      "label": "IsA",
+      "attributes": "object",
+      "domain": "BH.oM.Graphics.ColourFragment",
+      "range": "BH.oM.Base.IFragment"
+    },
+    {
+      "id": "9246f849-f98a-4db7-894a-e5375b2afe46",
+      "iri": "http://visualdataweb.org/newOntology/9246f849-f98a-4db7-894a-e5375b2afe46",
+      "label": "IsA",
+      "attributes": "object",
+      "domain": "BH.oM.Graphics.ColourFragment",
+      "range": "BH.oM.Base.IObject"
+    },
+    {
+      "id": "82c26363-e6be-4ee2-bf92-5a98112dc060",
+      "iri": "http://visualdataweb.org/newOntology/82c26363-e6be-4ee2-bf92-5a98112dc060",
+      "label": "IsSubclassOf",
+      "attributes": []
+    },
+    {
+      "id": "3e3cfa43-fed6-43d8-aa86-32173fd4f49a",
+      "iri": "http://visualdataweb.org/newOntology/3e3cfa43-fed6-43d8-aa86-32173fd4f49a",
+      "label": "HasProperty",
+      "attributes": "datatype",
+      "domain": "BH.oM.Graphics.Gradient",
+      "range": "Markers-a5b92786-fe60-483b-a46f-a590a4f0d427-Gradient-HasProperty"
+    },
+    {
+      "id": "a00c4822-f513-4472-96d3-6c3d7a134f52",
+      "iri": "http://visualdataweb.org/newOntology/a00c4822-f513-4472-96d3-6c3d7a134f52",
+      "label": "IsA",
+      "attributes": "object",
+      "domain": "BH.oM.Graphics.Gradient",
+      "range": "BH.oM.Base.IBHoMObject"
+    },
+    {
+      "id": "bcee656f-dcce-40c3-8f0c-7c8d9e1f8a70",
+      "iri": "http://visualdataweb.org/newOntology/bcee656f-dcce-40c3-8f0c-7c8d9e1f8a70",
+      "label": "IsA",
+      "attributes": "object",
+      "domain": "BH.oM.Graphics.Gradient",
+      "range": "BH.oM.Base.IObject"
+    },
+    {
+      "id": "88f2e601-9e94-4459-9360-49f36d81e30c",
+      "iri": "http://visualdataweb.org/newOntology/88f2e601-9e94-4459-9360-49f36d81e30c",
+      "label": "IsSubclassOf",
+      "attributes": "object",
+      "domain": "BH.oM.Graphics.Gradient",
+      "range": "BH.oM.Base.BHoMObject"
+    },
+    {
+      "id": "9726bc8f-bf2d-407c-82f5-64aec433cad1",
+      "iri": "http://visualdataweb.org/newOntology/9726bc8f-bf2d-407c-82f5-64aec433cad1",
+      "label": "RequiresProperty",
+      "attributes": []
+    },
+    {
+      "id": "ccce3f02-cc41-4cd9-bdca-aea842c7e672",
+      "iri": "http://visualdataweb.org/newOntology/ccce3f02-cc41-4cd9-bdca-aea842c7e672",
+      "label": "IsA",
+      "attributes": "object",
+      "domain": "BH.oM.Graphics.IRender",
+      "range": "BH.oM.Base.IObject"
+    },
+    {
+      "id": "066c03f4-5c96-4797-9af5-b78bd1d6260f",
+      "iri": "http://visualdataweb.org/newOntology/066c03f4-5c96-4797-9af5-b78bd1d6260f",
+      "label": "HasProperty",
+      "attributes": "object",
+      "domain": "BH.oM.Graphics.RenderGeometry",
+      "range": "BH.oM.Geometry.IGeometry"
+    },
+    {
+      "id": "1c9a00e7-86a3-411c-bce0-56862c8a109f",
+      "iri": "http://visualdataweb.org/newOntology/1c9a00e7-86a3-411c-bce0-56862c8a109f",
+      "label": "HasProperty",
+      "attributes": "datatype",
+      "domain": "BH.oM.Graphics.RenderGeometry",
+      "range": "Colour-63f14552-a08a-4363-8110-d0938d56d5d4-RenderGeometry-HasProperty"
+    },
+    {
+      "id": "7d52c0df-f22f-4e08-843c-4e507a6f8921",
+      "iri": "http://visualdataweb.org/newOntology/7d52c0df-f22f-4e08-843c-4e507a6f8921",
+      "label": "IsA",
+      "attributes": "object",
+      "domain": "BH.oM.Graphics.RenderGeometry",
+      "range": "BH.oM.Graphics.IRender"
+    },
+    {
+      "id": "11c3b487-ae35-4d62-9226-71f9c53e4367",
+      "iri": "http://visualdataweb.org/newOntology/11c3b487-ae35-4d62-9226-71f9c53e4367",
+      "label": "IsA",
+      "attributes": "object",
+      "domain": "BH.oM.Graphics.RenderGeometry",
+      "range": "BH.oM.Base.IObject"
+    },
+    {
+      "id": "7fc491c3-7a70-4e0f-bd99-8cc094703254",
+      "iri": "http://visualdataweb.org/newOntology/7fc491c3-7a70-4e0f-bd99-8cc094703254",
+      "label": "IsSubclassOf",
+      "attributes": []
+    },
+    {
+      "id": "673a9c44-30c5-4ea9-8bca-62416ed78bdb",
+      "iri": "http://visualdataweb.org/newOntology/673a9c44-30c5-4ea9-8bca-62416ed78bdb",
+      "label": "HasProperty",
+      "attributes": "datatype",
+      "domain": "BH.oM.Graphics.RenderMesh",
+      "range": "Vertices-029eb40c-5c46-4ea1-bd07-cd8a5ffc1b9d-RenderMesh-HasProperty"
+    },
+    {
+      "id": "7adefb27-5b33-407c-84f8-03a263b98552",
+      "iri": "http://visualdataweb.org/newOntology/7adefb27-5b33-407c-84f8-03a263b98552",
+      "label": "HasProperty",
+      "attributes": "datatype",
+      "domain": "BH.oM.Graphics.RenderMesh",
+      "range": "Faces-bd907867-82ee-4495-9d48-842d270a7c48-RenderMesh-HasProperty"
+    },
+    {
+      "id": "6af79c24-50db-4801-b8c8-f79de2d4bd13",
+      "iri": "http://visualdataweb.org/newOntology/6af79c24-50db-4801-b8c8-f79de2d4bd13",
+      "label": "IsA",
+      "attributes": "object",
+      "domain": "BH.oM.Graphics.RenderMesh",
+      "range": "BH.oM.Geometry.IGeometry"
+    },
+    {
+      "id": "0abb33fb-cd0d-45b4-b6f7-eb9862cdd502",
+      "iri": "http://visualdataweb.org/newOntology/0abb33fb-cd0d-45b4-b6f7-eb9862cdd502",
+      "label": "IsA",
+      "attributes": "object",
+      "domain": "BH.oM.Graphics.RenderMesh",
+      "range": "BH.oM.Base.IObject"
+    },
+    {
+      "id": "efa158bf-8e55-4a86-9991-11986d9dd439",
+      "iri": "http://visualdataweb.org/newOntology/efa158bf-8e55-4a86-9991-11986d9dd439",
+      "label": "IsA",
+      "attributes": "object",
+      "domain": "BH.oM.Graphics.RenderMesh",
+      "range": "BH.oM.Base.IFragment"
+    },
+    {
+      "id": "55474c6f-3fe0-4d96-8cd3-a130f97b89ea",
+      "iri": "http://visualdataweb.org/newOntology/55474c6f-3fe0-4d96-8cd3-a130f97b89ea",
+      "label": "IsSubclassOf",
+      "attributes": []
+    },
+    {
+      "id": "4578f8ac-e7e7-4606-9daa-98a251238d13",
+      "iri": "http://visualdataweb.org/newOntology/4578f8ac-e7e7-4606-9daa-98a251238d13",
+      "label": "HasProperty",
+      "attributes": "object",
+      "domain": "BH.oM.Graphics.RenderMeshOptions",
+      "range": "BH.oM.Graphics.RepresentationOptions"
+    },
+    {
+      "id": "95c041c5-cc53-49cc-97d4-7560b8e220a7",
+      "iri": "http://visualdataweb.org/newOntology/95c041c5-cc53-49cc-97d4-7560b8e220a7",
+      "label": "HasProperty",
+      "attributes": "datatype",
+      "domain": "BH.oM.Graphics.RenderMeshOptions",
+      "range": "Element1DRefinement-4a1861f8-d0ab-4e7e-bde2-24a13f92aa2c-RenderMeshOptions-HasProperty"
+    },
+    {
+      "id": "57dd2ee5-9631-4818-9f54-384857293895",
+      "iri": "http://visualdataweb.org/newOntology/57dd2ee5-9631-4818-9f54-384857293895",
+      "label": "HasProperty",
+      "attributes": "datatype",
+      "domain": "BH.oM.Graphics.RenderMeshOptions",
+      "range": "Element2DRefinement-ce072925-8446-4be4-85b2-d52f6bfcc7f2-RenderMeshOptions-HasProperty"
+    },
+    {
+      "id": "be65e816-1c43-4279-8dea-920c50d995b6",
+      "iri": "http://visualdataweb.org/newOntology/be65e816-1c43-4279-8dea-920c50d995b6",
+      "label": "HasProperty",
+      "attributes": "datatype",
+      "domain": "BH.oM.Graphics.RenderMeshOptions",
+      "range": "CustomDataColorKey-120ecb62-7c19-4eb5-a5ec-c67d60709ded-RenderMeshOptions-HasProperty"
+    },
+    {
+      "id": "326c8b93-9f56-49aa-bbc6-26d121ac47e6",
+      "iri": "http://visualdataweb.org/newOntology/326c8b93-9f56-49aa-bbc6-26d121ac47e6",
+      "label": "IsA",
+      "attributes": "object",
+      "domain": "BH.oM.Graphics.RenderMeshOptions",
+      "range": "BH.oM.Base.IBHoMObject"
+    },
+    {
+      "id": "b314507c-8145-4030-88df-534c1613ced2",
+      "iri": "http://visualdataweb.org/newOntology/b314507c-8145-4030-88df-534c1613ced2",
+      "label": "IsA",
+      "attributes": "object",
+      "domain": "BH.oM.Graphics.RenderMeshOptions",
+      "range": "BH.oM.Base.IObject"
+    },
+    {
+      "id": "a03e7720-d9dd-4bd4-8bdb-6565d7ae22b5",
+      "iri": "http://visualdataweb.org/newOntology/a03e7720-d9dd-4bd4-8bdb-6565d7ae22b5",
+      "label": "IsSubclassOf",
+      "attributes": "object",
+      "domain": "BH.oM.Graphics.RenderMeshOptions",
+      "range": "BH.oM.Base.BHoMObject"
+    },
+    {
+      "id": "f0071bba-93fa-4a47-86f1-f9f6eff05eb5",
+      "iri": "http://visualdataweb.org/newOntology/f0071bba-93fa-4a47-86f1-f9f6eff05eb5",
+      "label": "HasProperty",
+      "attributes": "object",
+      "domain": "BH.oM.Graphics.RenderPoint",
+      "range": "BH.oM.Geometry.Point"
+    },
+    {
+      "id": "6253acec-5d71-49ef-a1cd-9ee8fca5e550",
+      "iri": "http://visualdataweb.org/newOntology/6253acec-5d71-49ef-a1cd-9ee8fca5e550",
+      "label": "HasProperty",
+      "attributes": "datatype",
+      "domain": "BH.oM.Graphics.RenderPoint",
+      "range": "Colour-8aac8c57-160a-4b76-86c2-9bc1997f51f8-RenderPoint-HasProperty"
+    },
+    {
+      "id": "8a74b334-2d6c-42da-904f-231a7fdfd366",
+      "iri": "http://visualdataweb.org/newOntology/8a74b334-2d6c-42da-904f-231a7fdfd366",
+      "label": "IsA",
+      "attributes": "object",
+      "domain": "BH.oM.Graphics.RenderPoint",
+      "range": "BH.oM.Geometry.IGeometry"
+    },
+    {
+      "id": "69298f3a-a52a-4d5e-a4df-ceec64bb4b7e",
+      "iri": "http://visualdataweb.org/newOntology/69298f3a-a52a-4d5e-a4df-ceec64bb4b7e",
+      "label": "IsA",
+      "attributes": "object",
+      "domain": "BH.oM.Graphics.RenderPoint",
+      "range": "BH.oM.Base.IObject"
+    },
+    {
+      "id": "a6728916-2604-41df-91e4-efbfc6e1b396",
+      "iri": "http://visualdataweb.org/newOntology/a6728916-2604-41df-91e4-efbfc6e1b396",
+      "label": "IsA",
+      "attributes": "object",
+      "domain": "BH.oM.Graphics.RenderPoint",
+      "range": "BH.oM.Dimensional.IElement0D"
+    },
+    {
+      "id": "67ea084c-28e2-4a8a-98eb-be61ffaf3e7b",
+      "iri": "http://visualdataweb.org/newOntology/67ea084c-28e2-4a8a-98eb-be61ffaf3e7b",
+      "label": "IsA",
+      "attributes": "object",
+      "domain": "BH.oM.Graphics.RenderPoint",
+      "range": "BH.oM.Dimensional.IElement"
+    },
+    {
+      "id": "ce74146e-1e00-4230-998a-724121c35b42",
+      "iri": "http://visualdataweb.org/newOntology/ce74146e-1e00-4230-998a-724121c35b42",
+      "label": "IsA",
+      "attributes": "object",
+      "domain": "BH.oM.Graphics.RenderPoint",
+      "range": "BH.oM.Graphics.IRender"
+    },
+    {
+      "id": "4a920897-5b7a-4bce-b507-740728d835ba",
+      "iri": "http://visualdataweb.org/newOntology/4a920897-5b7a-4bce-b507-740728d835ba",
+      "label": "IsSubclassOf",
+      "attributes": []
+    },
+    {
+      "id": "b42bd5c1-4b89-4fd4-a79c-5b52dc1f41a8",
+      "iri": "http://visualdataweb.org/newOntology/b42bd5c1-4b89-4fd4-a79c-5b52dc1f41a8",
+      "label": "HasProperty",
+      "attributes": "datatype",
+      "domain": "BH.oM.Graphics.RenderText",
+      "range": "Text-81bfaa2c-190a-40b0-8228-f0d199f0c080-RenderText-HasProperty"
+    },
+    {
+      "id": "ec937d8a-8a8c-4878-8436-65ba9542e5b6",
+      "iri": "http://visualdataweb.org/newOntology/ec937d8a-8a8c-4878-8436-65ba9542e5b6",
+      "label": "HasProperty",
+      "attributes": "object",
+      "domain": "BH.oM.Graphics.RenderText",
+      "range": "BH.oM.Geometry.CoordinateSystem.Cartesian"
+    },
+    {
+      "id": "57c7c2a2-1cdc-4244-9670-0c779abdf643",
+      "iri": "http://visualdataweb.org/newOntology/57c7c2a2-1cdc-4244-9670-0c779abdf643",
+      "label": "HasProperty",
+      "attributes": "datatype",
+      "domain": "BH.oM.Graphics.RenderText",
+      "range": "Height-e634ae96-ad50-48e5-b10e-e93c4d1e69d5-RenderText-HasProperty"
+    },
+    {
+      "id": "4c607272-28a1-4b18-9968-00cc0ac83aad",
+      "iri": "http://visualdataweb.org/newOntology/4c607272-28a1-4b18-9968-00cc0ac83aad",
+      "label": "HasProperty",
+      "attributes": "datatype",
+      "domain": "BH.oM.Graphics.RenderText",
+      "range": "FontName-0cae0729-3b43-42db-a09b-cbf693887211-RenderText-HasProperty"
+    },
+    {
+      "id": "45c00c09-a329-4d7b-a064-22af322c4ca8",
+      "iri": "http://visualdataweb.org/newOntology/45c00c09-a329-4d7b-a064-22af322c4ca8",
+      "label": "HasProperty",
+      "attributes": "datatype",
+      "domain": "BH.oM.Graphics.RenderText",
+      "range": "Colour-f3800585-9add-4ce8-a062-a10eb0715393-RenderText-HasProperty"
+    },
+    {
+      "id": "b20c1191-238a-4da4-af01-de620a0e192a",
+      "iri": "http://visualdataweb.org/newOntology/b20c1191-238a-4da4-af01-de620a0e192a",
+      "label": "IsA",
+      "attributes": "object",
+      "domain": "BH.oM.Graphics.RenderText",
+      "range": "BH.oM.Graphics.IRender"
+    },
+    {
+      "id": "e55027c2-239c-41d6-80d3-60314a6abcf2",
+      "iri": "http://visualdataweb.org/newOntology/e55027c2-239c-41d6-80d3-60314a6abcf2",
+      "label": "IsA",
+      "attributes": "object",
+      "domain": "BH.oM.Graphics.RenderText",
+      "range": "BH.oM.Base.IObject"
+    },
+    {
+      "id": "4a232b43-207d-4ecd-ae94-67b2371f6fa6",
+      "iri": "http://visualdataweb.org/newOntology/4a232b43-207d-4ecd-ae94-67b2371f6fa6",
+      "label": "IsSubclassOf",
+      "attributes": []
+    },
+    {
+      "id": "7248840d-2eb3-4a9d-87f0-b6d4632d53a5",
+      "iri": "http://visualdataweb.org/newOntology/7248840d-2eb3-4a9d-87f0-b6d4632d53a5",
+      "label": "HasProperty",
+      "attributes": "datatype",
+      "domain": "BH.oM.Graphics.RepresentationOptions",
+      "range": "Detailed0DElements-5c4c223e-5c0a-459e-a096-e0a136aaea46-RepresentationOptions-HasProperty"
+    },
+    {
+      "id": "32ae4603-1083-44d1-9644-03fd26ea4fa2",
+      "iri": "http://visualdataweb.org/newOntology/32ae4603-1083-44d1-9644-03fd26ea4fa2",
+      "label": "HasProperty",
+      "attributes": "datatype",
+      "domain": "BH.oM.Graphics.RepresentationOptions",
+      "range": "Element0DScale-0429b321-4de3-4421-b415-27102311c885-RepresentationOptions-HasProperty"
+    },
+    {
+      "id": "4d76b634-8186-477e-8177-4d0f52e4e052",
+      "iri": "http://visualdataweb.org/newOntology/4d76b634-8186-477e-8177-4d0f52e4e052",
+      "label": "HasProperty",
+      "attributes": "datatype",
+      "domain": "BH.oM.Graphics.RepresentationOptions",
+      "range": "Detailed1DElements-b6a49e98-1ed5-4a9b-a6c6-624b9a744b33-RepresentationOptions-HasProperty"
+    },
+    {
+      "id": "2cba0645-21d5-476f-abc9-b12c87a12c08",
+      "iri": "http://visualdataweb.org/newOntology/2cba0645-21d5-476f-abc9-b12c87a12c08",
+      "label": "HasProperty",
+      "attributes": "datatype",
+      "domain": "BH.oM.Graphics.RepresentationOptions",
+      "range": "Element1DScale-fc9ffb88-d97d-4086-91e7-1cfc646faff3-RepresentationOptions-HasProperty"
+    },
+    {
+      "id": "a47e84d7-f993-4d8b-92f5-65ebdde11ffa",
+      "iri": "http://visualdataweb.org/newOntology/a47e84d7-f993-4d8b-92f5-65ebdde11ffa",
+      "label": "HasProperty",
+      "attributes": "datatype",
+      "domain": "BH.oM.Graphics.RepresentationOptions",
+      "range": "Cap1DElements-3a8b1d67-380c-4559-8497-f3cf3be765fe-RepresentationOptions-HasProperty"
+    },
+    {
+      "id": "9fe3863f-cdb7-4809-8f9d-800765d9a4f1",
+      "iri": "http://visualdataweb.org/newOntology/9fe3863f-cdb7-4809-8f9d-800765d9a4f1",
+      "label": "HasProperty",
+      "attributes": "datatype",
+      "domain": "BH.oM.Graphics.RepresentationOptions",
+      "range": "Detailed2DElements-525a31e3-d06f-403c-a9a2-2c6399581bed-RepresentationOptions-HasProperty"
+    },
+    {
+      "id": "5c486c3a-5cf0-42c7-aedf-3c6edfdc364e",
+      "iri": "http://visualdataweb.org/newOntology/5c486c3a-5cf0-42c7-aedf-3c6edfdc364e",
+      "label": "IsA",
+      "attributes": "object",
+      "domain": "BH.oM.Graphics.RepresentationOptions",
+      "range": "BH.oM.Base.IBHoMObject"
+    },
+    {
+      "id": "01ea2f04-3875-4ef5-8e8a-2aaeae93b439",
+      "iri": "http://visualdataweb.org/newOntology/01ea2f04-3875-4ef5-8e8a-2aaeae93b439",
+      "label": "IsA",
+      "attributes": "object",
+      "domain": "BH.oM.Graphics.RepresentationOptions",
+      "range": "BH.oM.Base.IObject"
+    },
+    {
+      "id": "cfbba6b5-02c8-4780-8cf4-8b93d3a667d8",
+      "iri": "http://visualdataweb.org/newOntology/cfbba6b5-02c8-4780-8cf4-8b93d3a667d8",
+      "label": "IsSubclassOf",
+      "attributes": "object",
+      "domain": "BH.oM.Graphics.RepresentationOptions",
+      "range": "BH.oM.Base.BHoMObject"
+    },
+    {
+      "id": "1417df91-52bc-4ce2-9b63-ade4903da839",
+      "iri": "http://visualdataweb.org/newOntology/1417df91-52bc-4ce2-9b63-ade4903da839",
+      "label": "HasProperty",
+      "attributes": "datatype",
+      "domain": "BH.oM.Graphics.SVGDocument",
+      "range": "SVGObjects-ecf0aeaa-7d74-4f54-aaa9-0b1bca79e407-SVGDocument-HasProperty"
+    },
+    {
+      "id": "2d46ea08-9043-4285-a332-4c33edeea645",
+      "iri": "http://visualdataweb.org/newOntology/2d46ea08-9043-4285-a332-4c33edeea645",
+      "label": "HasProperty",
+      "attributes": "object",
+      "domain": "BH.oM.Graphics.SVGDocument",
+      "range": "BH.oM.Geometry.BoundingBox"
+    },
+    {
+      "id": "1489a47a-481c-4da3-981e-b5e4033b8914",
+      "iri": "http://visualdataweb.org/newOntology/1489a47a-481c-4da3-981e-b5e4033b8914",
+      "label": "IsA",
+      "attributes": "object",
+      "domain": "BH.oM.Graphics.SVGDocument",
+      "range": "BH.oM.Base.IBHoMObject"
+    },
+    {
+      "id": "95afdee3-c871-4a34-b61d-fadf4e0e8875",
+      "iri": "http://visualdataweb.org/newOntology/95afdee3-c871-4a34-b61d-fadf4e0e8875",
+      "label": "IsA",
+      "attributes": "object",
+      "domain": "BH.oM.Graphics.SVGDocument",
+      "range": "BH.oM.Base.IObject"
+    },
+    {
+      "id": "bc65b5b2-dc42-4ebe-91b6-47bdccc086e5",
+      "iri": "http://visualdataweb.org/newOntology/bc65b5b2-dc42-4ebe-91b6-47bdccc086e5",
+      "label": "IsSubclassOf",
+      "attributes": "object",
+      "domain": "BH.oM.Graphics.SVGDocument",
+      "range": "BH.oM.Base.BHoMObject"
+    },
+    {
+      "id": "dc1df949-7d2d-43aa-8234-aa74efc3e9a4",
+      "iri": "http://visualdataweb.org/newOntology/dc1df949-7d2d-43aa-8234-aa74efc3e9a4",
+      "label": "HasProperty",
+      "attributes": "datatype",
+      "domain": "BH.oM.Graphics.SVGObject",
+      "range": "Shapes-44d98617-3bcb-4e0e-ab1d-4d8859d1885b-SVGObject-HasProperty"
+    },
+    {
+      "id": "200b4eb2-bdf9-4a4d-bc5d-a6a045d4510e",
+      "iri": "http://visualdataweb.org/newOntology/200b4eb2-bdf9-4a4d-bc5d-a6a045d4510e",
+      "label": "HasProperty",
+      "attributes": "object",
+      "domain": "BH.oM.Graphics.SVGObject",
+      "range": "BH.oM.Graphics.SVGStyle"
+    },
+    {
+      "id": "cd21f43d-1dfd-43a2-b818-868dfb6ca5e6",
+      "iri": "http://visualdataweb.org/newOntology/cd21f43d-1dfd-43a2-b818-868dfb6ca5e6",
+      "label": "IsA",
+      "attributes": "object",
+      "domain": "BH.oM.Graphics.SVGObject",
+      "range": "BH.oM.Base.IBHoMObject"
+    },
+    {
+      "id": "7eea5b82-1bac-4f12-833f-969d28631aa4",
+      "iri": "http://visualdataweb.org/newOntology/7eea5b82-1bac-4f12-833f-969d28631aa4",
+      "label": "IsA",
+      "attributes": "object",
+      "domain": "BH.oM.Graphics.SVGObject",
+      "range": "BH.oM.Base.IObject"
+    },
+    {
+      "id": "6ea0150e-e1cc-4bf1-a15a-baf74b40a671",
+      "iri": "http://visualdataweb.org/newOntology/6ea0150e-e1cc-4bf1-a15a-baf74b40a671",
+      "label": "IsSubclassOf",
+      "attributes": "object",
+      "domain": "BH.oM.Graphics.SVGObject",
+      "range": "BH.oM.Base.BHoMObject"
+    },
+    {
+      "id": "28c6b9c5-c453-472d-945f-6c77da960222",
+      "iri": "http://visualdataweb.org/newOntology/28c6b9c5-c453-472d-945f-6c77da960222",
+      "label": "HasProperty",
+      "attributes": "datatype",
+      "domain": "BH.oM.Graphics.SVGStyle",
+      "range": "StrokeWidth-f79637b5-5251-487b-be0d-7930dd5ca42b-SVGStyle-HasProperty"
+    },
+    {
+      "id": "b7ea29d9-5349-40c3-9b31-ac199ef175bd",
+      "iri": "http://visualdataweb.org/newOntology/b7ea29d9-5349-40c3-9b31-ac199ef175bd",
+      "label": "HasProperty",
+      "attributes": "datatype",
+      "domain": "BH.oM.Graphics.SVGStyle",
+      "range": "StrokeColor-a056a7ac-19df-4c74-82e8-c41cf3d5cb2e-SVGStyle-HasProperty"
+    },
+    {
+      "id": "80ac7eef-9bcb-44ba-8d71-cdce49585aa6",
+      "iri": "http://visualdataweb.org/newOntology/80ac7eef-9bcb-44ba-8d71-cdce49585aa6",
+      "label": "HasProperty",
+      "attributes": "datatype",
+      "domain": "BH.oM.Graphics.SVGStyle",
+      "range": "FillColor-e744e640-21ab-49cb-b7a3-aad747257433-SVGStyle-HasProperty"
+    },
+    {
+      "id": "c6586093-55c6-4481-801d-fe8ca52568c8",
+      "iri": "http://visualdataweb.org/newOntology/c6586093-55c6-4481-801d-fe8ca52568c8",
+      "label": "HasProperty",
+      "attributes": "datatype",
+      "domain": "BH.oM.Graphics.SVGStyle",
+      "range": "StrokeOpacity-cd363fa0-290b-4312-92bb-ca6c75a189d2-SVGStyle-HasProperty"
+    },
+    {
+      "id": "fe3e11b5-5dd4-426a-af29-68b366e67f7b",
+      "iri": "http://visualdataweb.org/newOntology/fe3e11b5-5dd4-426a-af29-68b366e67f7b",
+      "label": "HasProperty",
+      "attributes": "datatype",
+      "domain": "BH.oM.Graphics.SVGStyle",
+      "range": "FillOpacity-a035778c-cce9-4937-9597-6e4b7df0e411-SVGStyle-HasProperty"
+    },
+    {
+      "id": "e5b2e3d8-9e10-4fe9-b106-60df42d666a7",
+      "iri": "http://visualdataweb.org/newOntology/e5b2e3d8-9e10-4fe9-b106-60df42d666a7",
+      "label": "HasProperty",
+      "attributes": "datatype",
+      "domain": "BH.oM.Graphics.SVGStyle",
+      "range": "StrokeDash-fb2a672e-e9f0-4ea4-b904-a8ee91c32802-SVGStyle-HasProperty"
+    },
+    {
+      "id": "a6a19406-b71a-4397-8dd2-c637625b05e2",
+      "iri": "http://visualdataweb.org/newOntology/a6a19406-b71a-4397-8dd2-c637625b05e2",
+      "label": "IsA",
+      "attributes": "object",
+      "domain": "BH.oM.Graphics.SVGStyle",
+      "range": "BH.oM.Base.IBHoMObject"
+    },
+    {
+      "id": "d4cd0e25-fd25-476b-8ed4-87e5ece7303b",
+      "iri": "http://visualdataweb.org/newOntology/d4cd0e25-fd25-476b-8ed4-87e5ece7303b",
+      "label": "IsA",
+      "attributes": "object",
+      "domain": "BH.oM.Graphics.SVGStyle",
+      "range": "BH.oM.Base.IObject"
+    },
+    {
+      "id": "22f342b0-c7f3-4829-b8a9-54b7799334e7",
+      "iri": "http://visualdataweb.org/newOntology/22f342b0-c7f3-4829-b8a9-54b7799334e7",
+      "label": "IsSubclassOf",
+      "attributes": "object",
+      "domain": "BH.oM.Graphics.SVGStyle",
+      "range": "BH.oM.Base.BHoMObject"
+    },
+    {
+      "id": "2103bbf2-00c5-4661-9761-63fe26d0522b",
+      "iri": "http://visualdataweb.org/newOntology/2103bbf2-00c5-4661-9761-63fe26d0522b",
+      "label": "HasProperty",
+      "attributes": "object",
+      "domain": "BH.oM.Graphics.Views.DependencyChart",
+      "range": "BH.oM.Graphics.Components.Boxes"
+    },
+    {
+      "id": "1eed6b86-b189-4f2c-90e3-b97cd019839b",
+      "iri": "http://visualdataweb.org/newOntology/1eed6b86-b189-4f2c-90e3-b97cd019839b",
+      "label": "HasProperty",
+      "attributes": "object",
+      "domain": "BH.oM.Graphics.Views.DependencyChart",
+      "range": "BH.oM.Graphics.Components.Links"
+    },
+    {
+      "id": "b746611d-f2c0-46dc-8596-013f5db5206b",
+      "iri": "http://visualdataweb.org/newOntology/b746611d-f2c0-46dc-8596-013f5db5206b",
+      "label": "HasProperty",
+      "attributes": "object",
+      "domain": "BH.oM.Graphics.Views.DependencyChart",
+      "range": "BH.oM.Graphics.Views.ViewConfig"
+    },
+    {
+      "id": "3858a436-bee7-476e-ad6e-0b2c0b05b257",
+      "iri": "http://visualdataweb.org/newOntology/3858a436-bee7-476e-ad6e-0b2c0b05b257",
+      "label": "IsA",
+      "attributes": "object",
+      "domain": "BH.oM.Graphics.Views.DependencyChart",
+      "range": "BH.oM.Base.IBHoMObject"
+    },
+    {
+      "id": "b908a684-ace3-4a0c-8401-17db111f2b4e",
+      "iri": "http://visualdataweb.org/newOntology/b908a684-ace3-4a0c-8401-17db111f2b4e",
+      "label": "IsA",
+      "attributes": "object",
+      "domain": "BH.oM.Graphics.Views.DependencyChart",
+      "range": "BH.oM.Base.IObject"
+    },
+    {
+      "id": "2205a8d4-7469-4015-904c-af3373ca8384",
+      "iri": "http://visualdataweb.org/newOntology/2205a8d4-7469-4015-904c-af3373ca8384",
+      "label": "IsA",
+      "attributes": "object",
+      "domain": "BH.oM.Graphics.Views.DependencyChart",
+      "range": "BH.oM.Graphics.Views.IView"
+    },
+    {
+      "id": "4cd6de1b-9844-41ec-b6ec-7d4e3da1cb24",
+      "iri": "http://visualdataweb.org/newOntology/4cd6de1b-9844-41ec-b6ec-7d4e3da1cb24",
+      "label": "IsSubclassOf",
+      "attributes": "object",
+      "domain": "BH.oM.Graphics.Views.DependencyChart",
+      "range": "BH.oM.Base.BHoMObject"
+    },
+    {
+      "id": "5b00ef13-81a0-41ee-a973-416f7892da0e",
+      "iri": "http://visualdataweb.org/newOntology/5b00ef13-81a0-41ee-a973-416f7892da0e",
+      "label": "IsA",
+      "attributes": "object",
+      "domain": "BH.oM.Graphics.Views.IView",
+      "range": "BH.oM.Base.IBHoMObject"
+    },
+    {
+      "id": "b365c27b-53a6-421b-af5c-24a102d644d5",
+      "iri": "http://visualdataweb.org/newOntology/b365c27b-53a6-421b-af5c-24a102d644d5",
+      "label": "IsA",
+      "attributes": "object",
+      "domain": "BH.oM.Graphics.Views.IView",
+      "range": "BH.oM.Base.IObject"
+    },
+    {
+      "id": "0adf779d-f0e5-432e-a0b8-8c2310270454",
+      "iri": "http://visualdataweb.org/newOntology/0adf779d-f0e5-432e-a0b8-8c2310270454",
+      "label": "HasProperty",
+      "attributes": "datatype",
+      "domain": "BH.oM.Graphics.Views.ViewConfig",
+      "range": "Width-dcc50f64-8743-4235-8a58-314ae583f340-ViewConfig-HasProperty"
+    },
+    {
+      "id": "67ad6281-00f9-44a5-aa33-05c26cd84afb",
+      "iri": "http://visualdataweb.org/newOntology/67ad6281-00f9-44a5-aa33-05c26cd84afb",
+      "label": "HasProperty",
+      "attributes": "datatype",
+      "domain": "BH.oM.Graphics.Views.ViewConfig",
+      "range": "Height-36af01e9-8274-4c34-98d2-675e83dff9f0-ViewConfig-HasProperty"
+    },
+    {
+      "id": "a1a5ea44-1bb7-41bb-8598-40e6ce2038b3",
+      "iri": "http://visualdataweb.org/newOntology/a1a5ea44-1bb7-41bb-8598-40e6ce2038b3",
+      "label": "HasProperty",
+      "attributes": "object",
+      "domain": "BH.oM.Graphics.Views.ViewConfig",
+      "range": "BH.oM.Graphics.Misc.Padding"
+    },
+    {
+      "id": "2faebdc9-903c-4cb4-8068-e42e2df0e4f2",
+      "iri": "http://visualdataweb.org/newOntology/2faebdc9-903c-4cb4-8068-e42e2df0e4f2",
+      "label": "IsA",
+      "attributes": "object",
+      "domain": "BH.oM.Graphics.Views.ViewConfig",
+      "range": "BH.oM.Base.IBHoMObject"
+    },
+    {
+      "id": "9d480053-50b8-4c22-83e6-b988fd81bb5d",
+      "iri": "http://visualdataweb.org/newOntology/9d480053-50b8-4c22-83e6-b988fd81bb5d",
+      "label": "IsA",
+      "attributes": "object",
+      "domain": "BH.oM.Graphics.Views.ViewConfig",
+      "range": "BH.oM.Base.IObject"
+    },
+    {
+      "id": "299c1897-969c-47c0-8d82-afa799757e61",
+      "iri": "http://visualdataweb.org/newOntology/299c1897-969c-47c0-8d82-afa799757e61",
+      "label": "IsA",
+      "attributes": "object",
+      "domain": "BH.oM.Graphics.Views.ViewConfig",
+      "range": "BH.oM.Graphics.Views.IView"
+    },
+    {
+      "id": "8a67b935-49a9-4dd6-a663-a4d4f710014c",
+      "iri": "http://visualdataweb.org/newOntology/8a67b935-49a9-4dd6-a663-a4d4f710014c",
+      "label": "IsSubclassOf",
+      "attributes": "object",
+      "domain": "BH.oM.Graphics.Views.ViewConfig",
+      "range": "BH.oM.Base.BHoMObject"
+    },
+    {
+      "id": "85618f84-5bc9-476f-a9e3-4ce3f26c5c33",
+      "iri": "http://visualdataweb.org/newOntology/85618f84-5bc9-476f-a9e3-4ce3f26c5c33",
+      "label": "RequiresProperty",
+      "attributes": []
+    },
+    {
+      "id": "ba1133a9-d948-49f5-8c6c-138b29593986",
+      "iri": "http://visualdataweb.org/newOntology/ba1133a9-d948-49f5-8c6c-138b29593986",
+      "label": "IsA",
+      "attributes": "object",
+      "domain": "BH.oM.Graphics.Scales.IScale",
+      "range": "BH.oM.Base.IObject"
+    },
+    {
+      "id": "4e34fadb-3933-4254-97a2-9142c7f7e10b",
+      "iri": "http://visualdataweb.org/newOntology/4e34fadb-3933-4254-97a2-9142c7f7e10b",
+      "label": "HasProperty",
+      "attributes": "object",
+      "domain": "BH.oM.Graphics.Scales.ScaleLinear",
+      "range": "BH.oM.Data.Collections.Domain"
+    },
+    {
+      "id": "fdf9e418-793e-4e17-ad6a-d55e5363ea61",
+      "iri": "http://visualdataweb.org/newOntology/fdf9e418-793e-4e17-ad6a-d55e5363ea61",
+      "label": "HasProperty",
+      "attributes": "object",
+      "domain": "BH.oM.Graphics.Scales.ScaleLinear",
+      "range": "BH.oM.Data.Collections.Domain"
+    },
+    {
+      "id": "b0406401-93cb-4c2f-9550-9b52d9cbfe7d",
+      "iri": "http://visualdataweb.org/newOntology/b0406401-93cb-4c2f-9550-9b52d9cbfe7d",
+      "label": "HasProperty",
+      "attributes": "datatype",
+      "domain": "BH.oM.Graphics.Scales.ScaleLinear",
+      "range": "Clamp-6b25ddb9-d40b-4eb9-8736-78aafe0db6df-ScaleLinear-HasProperty"
+    },
+    {
+      "id": "7faf2768-d6f6-4548-9184-a2ce97b3fd1c",
+      "iri": "http://visualdataweb.org/newOntology/7faf2768-d6f6-4548-9184-a2ce97b3fd1c",
+      "label": "HasProperty",
+      "attributes": "datatype",
+      "domain": "BH.oM.Graphics.Scales.ScaleLinear",
+      "range": "Nice-781de077-bda8-4d8c-8ddf-8a40c7266dbb-ScaleLinear-HasProperty"
+    },
+    {
+      "id": "b8a3c5dc-0673-4667-b597-f642a196b6cb",
+      "iri": "http://visualdataweb.org/newOntology/b8a3c5dc-0673-4667-b597-f642a196b6cb",
+      "label": "HasProperty",
+      "attributes": "datatype",
+      "domain": "BH.oM.Graphics.Scales.ScaleLinear",
+      "range": "Name-d979f290-0010-487b-bd7b-c055dfc5d52d-ScaleLinear-HasProperty"
+    },
+    {
+      "id": "55bfa499-f69a-49c7-b86f-971c6a5ff7bd",
+      "iri": "http://visualdataweb.org/newOntology/55bfa499-f69a-49c7-b86f-971c6a5ff7bd",
+      "label": "IsA",
+      "attributes": "object",
+      "domain": "BH.oM.Graphics.Scales.ScaleLinear",
+      "range": "BH.oM.Graphics.Scales.IScale"
+    },
+    {
+      "id": "40c2474e-df14-43c7-9c48-12b5f64f714b",
+      "iri": "http://visualdataweb.org/newOntology/40c2474e-df14-43c7-9c48-12b5f64f714b",
+      "label": "IsA",
+      "attributes": "object",
+      "domain": "BH.oM.Graphics.Scales.ScaleLinear",
+      "range": "BH.oM.Base.IObject"
+    },
+    {
+      "id": "28ed90eb-44ed-43e4-968d-a5c0bcb5f528",
+      "iri": "http://visualdataweb.org/newOntology/28ed90eb-44ed-43e4-968d-a5c0bcb5f528",
+      "label": "IsSubclassOf",
+      "attributes": []
+    },
+    {
+      "id": "1f496808-3d8b-4d0f-aba3-5b0d024f00c3",
+      "iri": "http://visualdataweb.org/newOntology/1f496808-3d8b-4d0f-aba3-5b0d024f00c3",
+      "label": "HasProperty",
+      "attributes": "datatype",
+      "domain": "BH.oM.Graphics.Scales.ScaleOrdinal",
+      "range": "Domain-695a36cd-beb0-445f-a81f-3fd9802c6bb0-ScaleOrdinal-HasProperty"
+    },
+    {
+      "id": "e15268a2-35a1-47e3-b42a-479b7d445910",
+      "iri": "http://visualdataweb.org/newOntology/e15268a2-35a1-47e3-b42a-479b7d445910",
+      "label": "HasProperty",
+      "attributes": "datatype",
+      "domain": "BH.oM.Graphics.Scales.ScaleOrdinal",
+      "range": "Range-f0e7305a-9216-4c98-a0d3-5924bbb8eb09-ScaleOrdinal-HasProperty"
+    },
+    {
+      "id": "5a378182-d342-4a7d-867f-453ad5eb13c8",
+      "iri": "http://visualdataweb.org/newOntology/5a378182-d342-4a7d-867f-453ad5eb13c8",
+      "label": "HasProperty",
+      "attributes": "datatype",
+      "domain": "BH.oM.Graphics.Scales.ScaleOrdinal",
+      "range": "Name-a2baf807-2fcc-4bdc-bd01-2e6805ff9407-ScaleOrdinal-HasProperty"
+    },
+    {
+      "id": "a94863cf-30cd-4519-8863-bf09a05b87ba",
+      "iri": "http://visualdataweb.org/newOntology/a94863cf-30cd-4519-8863-bf09a05b87ba",
+      "label": "IsA",
+      "attributes": "object",
+      "domain": "BH.oM.Graphics.Scales.ScaleOrdinal",
+      "range": "BH.oM.Graphics.Scales.IScale"
+    },
+    {
+      "id": "678086ef-fc9b-4ac3-a666-9f54f0466dd0",
+      "iri": "http://visualdataweb.org/newOntology/678086ef-fc9b-4ac3-a666-9f54f0466dd0",
+      "label": "IsA",
+      "attributes": "object",
+      "domain": "BH.oM.Graphics.Scales.ScaleOrdinal",
+      "range": "BH.oM.Base.IObject"
+    },
+    {
+      "id": "defac310-643f-4229-99c8-10652092fdaf",
+      "iri": "http://visualdataweb.org/newOntology/defac310-643f-4229-99c8-10652092fdaf",
+      "label": "IsSubclassOf",
+      "attributes": []
+    },
+    {
+      "id": "ae86846c-4986-4104-ba0e-25bf5ce6606a",
+      "iri": "http://visualdataweb.org/newOntology/ae86846c-4986-4104-ba0e-25bf5ce6606a",
+      "label": "HasProperty",
+      "attributes": "datatype",
+      "domain": "BH.oM.Graphics.Misc.Padding",
+      "range": "Top-abbccb32-62b5-458a-8f5d-fb495e6f8f47-Padding-HasProperty"
+    },
+    {
+      "id": "3b920514-bc64-41bb-b8aa-188bc37d4243",
+      "iri": "http://visualdataweb.org/newOntology/3b920514-bc64-41bb-b8aa-188bc37d4243",
+      "label": "HasProperty",
+      "attributes": "datatype",
+      "domain": "BH.oM.Graphics.Misc.Padding",
+      "range": "Bottom-f7a6af61-6afa-41f0-80bc-ad7378fef346-Padding-HasProperty"
+    },
+    {
+      "id": "ed0a8a13-129a-46a9-ab8e-939d487adea4",
+      "iri": "http://visualdataweb.org/newOntology/ed0a8a13-129a-46a9-ab8e-939d487adea4",
+      "label": "HasProperty",
+      "attributes": "datatype",
+      "domain": "BH.oM.Graphics.Misc.Padding",
+      "range": "Left-3514c384-bb7e-4357-8f23-8e7523ca7e26-Padding-HasProperty"
+    },
+    {
+      "id": "936d7c4f-62c3-488c-ae8d-e52c0b8d9bd0",
+      "iri": "http://visualdataweb.org/newOntology/936d7c4f-62c3-488c-ae8d-e52c0b8d9bd0",
+      "label": "HasProperty",
+      "attributes": "datatype",
+      "domain": "BH.oM.Graphics.Misc.Padding",
+      "range": "Right-8cd53c45-4172-4806-84a1-7d613ad85cd4-Padding-HasProperty"
+    },
+    {
+      "id": "df020209-789d-48e4-8c6b-5e00a64ae16c",
+      "iri": "http://visualdataweb.org/newOntology/df020209-789d-48e4-8c6b-5e00a64ae16c",
+      "label": "IsA",
+      "attributes": "object",
+      "domain": "BH.oM.Graphics.Misc.Padding",
+      "range": "BH.oM.Base.IBHoMObject"
+    },
+    {
+      "id": "de0348dc-d30a-4e42-a193-e90db51a33ef",
+      "iri": "http://visualdataweb.org/newOntology/de0348dc-d30a-4e42-a193-e90db51a33ef",
+      "label": "IsA",
+      "attributes": "object",
+      "domain": "BH.oM.Graphics.Misc.Padding",
+      "range": "BH.oM.Base.IObject"
+    },
+    {
+      "id": "bbced444-901c-4317-912b-eb231cd13f02",
+      "iri": "http://visualdataweb.org/newOntology/bbced444-901c-4317-912b-eb231cd13f02",
+      "label": "IsSubclassOf",
+      "attributes": "object",
+      "domain": "BH.oM.Graphics.Misc.Padding",
+      "range": "BH.oM.Base.BHoMObject"
+    },
+    {
+      "id": "2ba7ed3f-2831-4fe6-b4d4-ba4bf6d3eaab",
+      "iri": "http://visualdataweb.org/newOntology/2ba7ed3f-2831-4fe6-b4d4-ba4bf6d3eaab",
+      "label": "HasProperty",
+      "attributes": "object",
+      "domain": "BH.oM.Graphics.Fragments.EntityRepresentation",
+      "range": "BH.oM.Geometry.ICurve"
+    },
+    {
+      "id": "134bea7d-b05a-4849-9d27-a1e9299faea3",
+      "iri": "http://visualdataweb.org/newOntology/134bea7d-b05a-4849-9d27-a1e9299faea3",
+      "label": "HasProperty",
+      "attributes": "datatype",
+      "domain": "BH.oM.Graphics.Fragments.EntityRepresentation",
+      "range": "Text-419d6ba4-5178-4f98-8c38-ee5410bf5b16-EntityRepresentation-HasProperty"
+    },
+    {
+      "id": "e6c14cf9-80e3-4475-a6be-7410a2201c33",
+      "iri": "http://visualdataweb.org/newOntology/e6c14cf9-80e3-4475-a6be-7410a2201c33",
+      "label": "HasProperty",
+      "attributes": "object",
+      "domain": "BH.oM.Graphics.Fragments.EntityRepresentation",
+      "range": "BH.oM.Geometry.Point"
+    },
+    {
+      "id": "453c070b-5b96-4e4b-9e85-ddd64528389c",
+      "iri": "http://visualdataweb.org/newOntology/453c070b-5b96-4e4b-9e85-ddd64528389c",
+      "label": "HasProperty",
+      "attributes": "object",
+      "domain": "BH.oM.Graphics.Fragments.EntityRepresentation",
+      "range": "BH.oM.Geometry.Vector"
+    },
+    {
+      "id": "b137dfb3-6995-4329-9352-7cb023255cb7",
+      "iri": "http://visualdataweb.org/newOntology/b137dfb3-6995-4329-9352-7cb023255cb7",
+      "label": "HasProperty",
+      "attributes": "object",
+      "domain": "BH.oM.Graphics.Fragments.EntityRepresentation",
+      "range": "BH.oM.Geometry.Point"
+    },
+    {
+      "id": "e1c88c94-b398-432c-a654-26624489862f",
+      "iri": "http://visualdataweb.org/newOntology/e1c88c94-b398-432c-a654-26624489862f",
+      "label": "HasProperty",
+      "attributes": "object",
+      "domain": "BH.oM.Graphics.Fragments.EntityRepresentation",
+      "range": "BH.oM.Geometry.Point"
+    },
+    {
+      "id": "2337e036-cde8-4f7e-8de1-7996f1ba9ec1",
+      "iri": "http://visualdataweb.org/newOntology/2337e036-cde8-4f7e-8de1-7996f1ba9ec1",
+      "label": "HasProperty",
+      "attributes": "datatype",
+      "domain": "BH.oM.Graphics.Fragments.EntityRepresentation",
+      "range": "Colour-96c3091b-8c76-4dba-88c1-878e1252fef7-EntityRepresentation-HasProperty"
+    },
+    {
+      "id": "693cab86-fc80-44f7-984d-7de54e41f98c",
+      "iri": "http://visualdataweb.org/newOntology/693cab86-fc80-44f7-984d-7de54e41f98c",
+      "label": "IsA",
+      "attributes": "object",
+      "domain": "BH.oM.Graphics.Fragments.EntityRepresentation",
+      "range": "BH.oM.Graphics.Fragments.IRepresentationFragment"
+    },
+    {
+      "id": "62295aff-dc09-4f90-acb3-d7454218dabb",
+      "iri": "http://visualdataweb.org/newOntology/62295aff-dc09-4f90-acb3-d7454218dabb",
+      "label": "IsA",
+      "attributes": "object",
+      "domain": "BH.oM.Graphics.Fragments.EntityRepresentation",
+      "range": "BH.oM.Base.IFragment"
+    },
+    {
+      "id": "aa928be4-fd50-4be5-b267-5b1d3ff1b03d",
+      "iri": "http://visualdataweb.org/newOntology/aa928be4-fd50-4be5-b267-5b1d3ff1b03d",
+      "label": "IsA",
+      "attributes": "object",
+      "domain": "BH.oM.Graphics.Fragments.EntityRepresentation",
+      "range": "BH.oM.Base.IObject"
+    },
+    {
+      "id": "dfa88baa-ea4d-4cf3-ab56-6b2f4927d683",
+      "iri": "http://visualdataweb.org/newOntology/dfa88baa-ea4d-4cf3-ab56-6b2f4927d683",
+      "label": "IsSubclassOf",
+      "attributes": []
+    },
+    {
+      "id": "94f4d660-26e9-4bc7-bd57-321d60ceb7fd",
+      "iri": "http://visualdataweb.org/newOntology/94f4d660-26e9-4bc7-bd57-321d60ceb7fd",
+      "label": "HasProperty",
+      "attributes": "datatype",
+      "domain": "BH.oM.Graphics.Fragments.GraphRepresentation",
+      "range": "Groups-61bb62c0-6900-408f-89d2-f86222c97ff9-GraphRepresentation-HasProperty"
+    },
+    {
+      "id": "c524eaec-a883-4059-8e2e-806eb8af5976",
+      "iri": "http://visualdataweb.org/newOntology/c524eaec-a883-4059-8e2e-806eb8af5976",
+      "label": "HasProperty",
+      "attributes": "datatype",
+      "domain": "BH.oM.Graphics.Fragments.GraphRepresentation",
+      "range": "Text-48632cae-80a9-4da0-92d0-1ed2106e950c-GraphRepresentation-HasProperty"
+    },
+    {
+      "id": "5c5d7837-2833-4cf5-94d2-5aa39f981d63",
+      "iri": "http://visualdataweb.org/newOntology/5c5d7837-2833-4cf5-94d2-5aa39f981d63",
+      "label": "HasProperty",
+      "attributes": "object",
+      "domain": "BH.oM.Graphics.Fragments.GraphRepresentation",
+      "range": "BH.oM.Geometry.Point"
+    },
+    {
+      "id": "31a47197-4612-480f-b659-a3f99335f905",
+      "iri": "http://visualdataweb.org/newOntology/31a47197-4612-480f-b659-a3f99335f905",
+      "label": "HasProperty",
+      "attributes": "object",
+      "domain": "BH.oM.Graphics.Fragments.GraphRepresentation",
+      "range": "BH.oM.Geometry.Vector"
+    },
+    {
+      "id": "4b2b9d47-9e70-476f-a499-77ef5360e2b9",
+      "iri": "http://visualdataweb.org/newOntology/4b2b9d47-9e70-476f-a499-77ef5360e2b9",
+      "label": "HasProperty",
+      "attributes": "datatype",
+      "domain": "BH.oM.Graphics.Fragments.GraphRepresentation",
+      "range": "Colour-330bcbf0-4c9d-4380-8904-62ac84f50508-GraphRepresentation-HasProperty"
+    },
+    {
+      "id": "d0064bf3-09bf-40cf-8ecb-6b5e93f08675",
+      "iri": "http://visualdataweb.org/newOntology/d0064bf3-09bf-40cf-8ecb-6b5e93f08675",
+      "label": "IsA",
+      "attributes": "object",
+      "domain": "BH.oM.Graphics.Fragments.GraphRepresentation",
+      "range": "BH.oM.Graphics.Fragments.IRepresentationFragment"
+    },
+    {
+      "id": "a66f05cb-404c-46b7-94d7-9979777ee930",
+      "iri": "http://visualdataweb.org/newOntology/a66f05cb-404c-46b7-94d7-9979777ee930",
+      "label": "IsA",
+      "attributes": "object",
+      "domain": "BH.oM.Graphics.Fragments.GraphRepresentation",
+      "range": "BH.oM.Base.IFragment"
+    },
+    {
+      "id": "198f1c10-0e5f-414a-9f08-01f34a6890c4",
+      "iri": "http://visualdataweb.org/newOntology/198f1c10-0e5f-414a-9f08-01f34a6890c4",
+      "label": "IsA",
+      "attributes": "object",
+      "domain": "BH.oM.Graphics.Fragments.GraphRepresentation",
+      "range": "BH.oM.Base.IObject"
+    },
+    {
+      "id": "0f54841e-6839-40d1-8c25-28de4e52e722",
+      "iri": "http://visualdataweb.org/newOntology/0f54841e-6839-40d1-8c25-28de4e52e722",
+      "label": "IsSubclassOf",
+      "attributes": []
+    },
+    {
+      "id": "5209abae-ca04-4e99-8a36-6f9079f3e77a",
+      "iri": "http://visualdataweb.org/newOntology/5209abae-ca04-4e99-8a36-6f9079f3e77a",
+      "label": "HasProperty",
+      "attributes": "object",
+      "domain": "BH.oM.Graphics.Fragments.GroupRepresentation",
+      "range": "BH.oM.Geometry.ICurve"
+    },
+    {
+      "id": "96c0dea5-26aa-421b-9b66-97e67a325e4d",
+      "iri": "http://visualdataweb.org/newOntology/96c0dea5-26aa-421b-9b66-97e67a325e4d",
+      "label": "HasProperty",
+      "attributes": "datatype",
+      "domain": "BH.oM.Graphics.Fragments.GroupRepresentation",
+      "range": "Text-d25efbbf-7b6a-412b-8517-a17e868f1bf9-GroupRepresentation-HasProperty"
+    },
+    {
+      "id": "959fa831-1652-450d-b0c9-acec198193eb",
+      "iri": "http://visualdataweb.org/newOntology/959fa831-1652-450d-b0c9-acec198193eb",
+      "label": "HasProperty",
+      "attributes": "object",
+      "domain": "BH.oM.Graphics.Fragments.GroupRepresentation",
+      "range": "BH.oM.Geometry.Point"
+    },
+    {
+      "id": "8a1db8dd-d80a-494b-a2c6-07af4c0c9e7c",
+      "iri": "http://visualdataweb.org/newOntology/8a1db8dd-d80a-494b-a2c6-07af4c0c9e7c",
+      "label": "HasProperty",
+      "attributes": "object",
+      "domain": "BH.oM.Graphics.Fragments.GroupRepresentation",
+      "range": "BH.oM.Geometry.Vector"
+    },
+    {
+      "id": "51e99b14-dc1c-46e8-8bbc-f6af7b79f29f",
+      "iri": "http://visualdataweb.org/newOntology/51e99b14-dc1c-46e8-8bbc-f6af7b79f29f",
+      "label": "HasProperty",
+      "attributes": "datatype",
+      "domain": "BH.oM.Graphics.Fragments.GroupRepresentation",
+      "range": "Colour-b4126d0b-3ae5-4996-beda-fb9675247f75-GroupRepresentation-HasProperty"
+    },
+    {
+      "id": "00af7662-3922-4943-98fd-b8b56b57467f",
+      "iri": "http://visualdataweb.org/newOntology/00af7662-3922-4943-98fd-b8b56b57467f",
+      "label": "IsA",
+      "attributes": "object",
+      "domain": "BH.oM.Graphics.Fragments.GroupRepresentation",
+      "range": "BH.oM.Graphics.Fragments.IRepresentationFragment"
+    },
+    {
+      "id": "2f9b6cd9-b96d-41b1-89d6-e282118764f2",
+      "iri": "http://visualdataweb.org/newOntology/2f9b6cd9-b96d-41b1-89d6-e282118764f2",
+      "label": "IsA",
+      "attributes": "object",
+      "domain": "BH.oM.Graphics.Fragments.GroupRepresentation",
+      "range": "BH.oM.Base.IFragment"
+    },
+    {
+      "id": "380666f8-cbba-4fb0-a7b0-d09ddf999685",
+      "iri": "http://visualdataweb.org/newOntology/380666f8-cbba-4fb0-a7b0-d09ddf999685",
+      "label": "IsA",
+      "attributes": "object",
+      "domain": "BH.oM.Graphics.Fragments.GroupRepresentation",
+      "range": "BH.oM.Base.IObject"
+    },
+    {
+      "id": "c145bdb1-6b79-468f-8d13-7630578396a3",
+      "iri": "http://visualdataweb.org/newOntology/c145bdb1-6b79-468f-8d13-7630578396a3",
+      "label": "IsSubclassOf",
+      "attributes": []
+    },
+    {
+      "id": "2d05639c-c473-4f7a-9d96-2282065b321d",
+      "iri": "http://visualdataweb.org/newOntology/2d05639c-c473-4f7a-9d96-2282065b321d",
+      "label": "IsA",
+      "attributes": "object",
+      "domain": "BH.oM.Graphics.Fragments.IRepresentationFragment",
+      "range": "BH.oM.Base.IFragment"
+    },
+    {
+      "id": "7238ff2e-7dde-470a-a9fd-6a7c341c0501",
+      "iri": "http://visualdataweb.org/newOntology/7238ff2e-7dde-470a-a9fd-6a7c341c0501",
+      "label": "IsA",
+      "attributes": "object",
+      "domain": "BH.oM.Graphics.Fragments.IRepresentationFragment",
+      "range": "BH.oM.Base.IObject"
+    },
+    {
+      "id": "bccdc8ba-3fc0-4236-a452-2f4e5d4842a4",
+      "iri": "http://visualdataweb.org/newOntology/bccdc8ba-3fc0-4236-a452-2f4e5d4842a4",
+      "label": "HasProperty",
+      "attributes": "datatype",
+      "domain": "BH.oM.Graphics.Fragments.RelationRepresentation",
+      "range": "Curves-068aeb3d-62fc-4337-b1e4-2726dbfee3ba-RelationRepresentation-HasProperty"
+    },
+    {
+      "id": "9d3e3531-deb1-436d-b171-c4ecceac43f0",
+      "iri": "http://visualdataweb.org/newOntology/9d3e3531-deb1-436d-b171-c4ecceac43f0",
+      "label": "HasProperty",
+      "attributes": "datatype",
+      "domain": "BH.oM.Graphics.Fragments.RelationRepresentation",
+      "range": "Text-8081855a-588e-488d-a114-2c43bf6823b9-RelationRepresentation-HasProperty"
+    },
+    {
+      "id": "5e58dddf-bc63-4757-9c32-8e8a2edf893f",
+      "iri": "http://visualdataweb.org/newOntology/5e58dddf-bc63-4757-9c32-8e8a2edf893f",
+      "label": "HasProperty",
+      "attributes": "object",
+      "domain": "BH.oM.Graphics.Fragments.RelationRepresentation",
+      "range": "BH.oM.Geometry.Point"
+    },
+    {
+      "id": "da797c87-9d9d-44e6-9cc1-a172ff3b3033",
+      "iri": "http://visualdataweb.org/newOntology/da797c87-9d9d-44e6-9cc1-a172ff3b3033",
+      "label": "HasProperty",
+      "attributes": "object",
+      "domain": "BH.oM.Graphics.Fragments.RelationRepresentation",
+      "range": "BH.oM.Geometry.Vector"
+    },
+    {
+      "id": "9934536e-fb91-4e90-94b6-1554c54b9451",
+      "iri": "http://visualdataweb.org/newOntology/9934536e-fb91-4e90-94b6-1554c54b9451",
+      "label": "HasProperty",
+      "attributes": "datatype",
+      "domain": "BH.oM.Graphics.Fragments.RelationRepresentation",
+      "range": "Colour-189c048c-c700-481d-938e-cd69373090fa-RelationRepresentation-HasProperty"
+    },
+    {
+      "id": "decba9a0-01f9-4404-9a1a-92669217855c",
+      "iri": "http://visualdataweb.org/newOntology/decba9a0-01f9-4404-9a1a-92669217855c",
+      "label": "IsA",
+      "attributes": "object",
+      "domain": "BH.oM.Graphics.Fragments.RelationRepresentation",
+      "range": "BH.oM.Graphics.Fragments.IRepresentationFragment"
+    },
+    {
+      "id": "ba6cc2f8-3f59-4f4f-b90c-ec7293b9700c",
+      "iri": "http://visualdataweb.org/newOntology/ba6cc2f8-3f59-4f4f-b90c-ec7293b9700c",
+      "label": "IsA",
+      "attributes": "object",
+      "domain": "BH.oM.Graphics.Fragments.RelationRepresentation",
+      "range": "BH.oM.Base.IFragment"
+    },
+    {
+      "id": "31456dd8-6958-4059-ac4a-bcb24b153121",
+      "iri": "http://visualdataweb.org/newOntology/31456dd8-6958-4059-ac4a-bcb24b153121",
+      "label": "IsA",
+      "attributes": "object",
+      "domain": "BH.oM.Graphics.Fragments.RelationRepresentation",
+      "range": "BH.oM.Base.IObject"
+    },
+    {
+      "id": "f6537658-a8d8-4394-a67d-48ad1b46762f",
+      "iri": "http://visualdataweb.org/newOntology/f6537658-a8d8-4394-a67d-48ad1b46762f",
+      "label": "IsSubclassOf",
+      "attributes": []
+    },
+    {
+      "id": "01b7566a-abed-46fa-932e-0799a0f58695",
+      "iri": "http://visualdataweb.org/newOntology/01b7566a-abed-46fa-932e-0799a0f58695",
+      "label": "IsA",
+      "attributes": []
+    },
+    {
+      "id": "5473529c-2bd4-4c44-a932-6bcf6f5b09e6",
+      "iri": "http://visualdataweb.org/newOntology/5473529c-2bd4-4c44-a932-6bcf6f5b09e6",
+      "label": "IsA",
+      "attributes": []
+    },
+    {
+      "id": "f6fd8a58-63a4-4b7e-a0df-d5ef1169d628",
+      "iri": "http://visualdataweb.org/newOntology/f6fd8a58-63a4-4b7e-a0df-d5ef1169d628",
+      "label": "IsA",
+      "attributes": []
+    },
+    {
+      "id": "3cb57750-0f05-4a20-9db3-44acaa2a00e2",
+      "iri": "http://visualdataweb.org/newOntology/3cb57750-0f05-4a20-9db3-44acaa2a00e2",
+      "label": "IsSubclassOf",
+      "attributes": []
+    },
+    {
+      "id": "1be57b8f-138c-4730-831f-81c2a21ad97a",
+      "iri": "http://visualdataweb.org/newOntology/1be57b8f-138c-4730-831f-81c2a21ad97a",
+      "label": "HasProperty",
+      "attributes": "datatype",
+      "domain": "BH.oM.Graphics.Components.BasicArrowMarker",
+      "range": "HeadLength-4b1940f7-1bb5-45c5-979c-b395b40657e6-BasicArrowMarker-HasProperty"
+    },
+    {
+      "id": "8ad78260-3098-434e-8a7f-d0e846b98f2c",
+      "iri": "http://visualdataweb.org/newOntology/8ad78260-3098-434e-8a7f-d0e846b98f2c",
+      "label": "HasProperty",
+      "attributes": "datatype",
+      "domain": "BH.oM.Graphics.Components.BasicArrowMarker",
+      "range": "BaseWidth-1cfa5bf9-5d37-4684-8a88-4e9e2718cffc-BasicArrowMarker-HasProperty"
+    },
+    {
+      "id": "08a23ed6-01cb-4af8-8c98-c73908768a8c",
+      "iri": "http://visualdataweb.org/newOntology/08a23ed6-01cb-4af8-8c98-c73908768a8c",
+      "label": "HasProperty",
+      "attributes": "datatype",
+      "domain": "BH.oM.Graphics.Components.BasicArrowMarker",
+      "range": "Closed-c09267d5-fcef-4c63-81fd-1984710a3f27-BasicArrowMarker-HasProperty"
+    },
+    {
+      "id": "efe15403-23be-4ed5-b06a-0cc749a29857",
+      "iri": "http://visualdataweb.org/newOntology/efe15403-23be-4ed5-b06a-0cc749a29857",
+      "label": "IsA",
+      "attributes": "object",
+      "domain": "BH.oM.Graphics.Components.BasicArrowMarker",
+      "range": "BH.oM.Base.IBHoMObject"
+    },
+    {
+      "id": "b24de2a0-2d33-423e-9fea-3c5b09070f73",
+      "iri": "http://visualdataweb.org/newOntology/b24de2a0-2d33-423e-9fea-3c5b09070f73",
+      "label": "IsA",
+      "attributes": "object",
+      "domain": "BH.oM.Graphics.Components.BasicArrowMarker",
+      "range": "BH.oM.Base.IObject"
+    },
+    {
+      "id": "8e31754d-f32c-4133-bbd1-bf17479ec2a5",
+      "iri": "http://visualdataweb.org/newOntology/8e31754d-f32c-4133-bbd1-bf17479ec2a5",
+      "label": "IsA",
+      "attributes": "object",
+      "domain": "BH.oM.Graphics.Components.BasicArrowMarker",
+      "range": "BH.oM.Graphics.Components.IMarker"
+    },
+    {
+      "id": "509f1d0e-a6db-4631-9ef2-f920f33026bb",
+      "iri": "http://visualdataweb.org/newOntology/509f1d0e-a6db-4631-9ef2-f920f33026bb",
+      "label": "IsSubclassOf",
+      "attributes": "object",
+      "domain": "BH.oM.Graphics.Components.BasicArrowMarker",
+      "range": "BH.oM.Base.BHoMObject"
+    },
+    {
+      "id": "56dff957-cea5-4870-a455-55ffea2c5250",
+      "iri": "http://visualdataweb.org/newOntology/56dff957-cea5-4870-a455-55ffea2c5250",
+      "label": "HasProperty",
+      "attributes": "datatype",
+      "domain": "BH.oM.Graphics.Components.Boxes",
+      "range": "Text-34573c33-16b9-4781-bd6e-2c45b05809f8-Boxes-HasProperty"
+    },
+    {
+      "id": "80b02790-841f-4b77-936e-31c0cdae2666",
+      "iri": "http://visualdataweb.org/newOntology/80b02790-841f-4b77-936e-31c0cdae2666",
+      "label": "HasProperty",
+      "attributes": "datatype",
+      "domain": "BH.oM.Graphics.Components.Boxes",
+      "range": "Colour-5b45c37d-91a7-4182-a234-2947fa4c3850-Boxes-HasProperty"
+    },
+    {
+      "id": "df8bef1c-664d-4c60-bf64-a6659366ed62",
+      "iri": "http://visualdataweb.org/newOntology/df8bef1c-664d-4c60-bf64-a6659366ed62",
+      "label": "HasProperty",
+      "attributes": "datatype",
+      "domain": "BH.oM.Graphics.Components.Boxes",
+      "range": "Group-41c1a038-5cf5-408f-ba3c-9b9b40c9f88a-Boxes-HasProperty"
+    },
+    {
+      "id": "94b0b66d-8aa8-4fc1-b8f7-09d5924f3e68",
+      "iri": "http://visualdataweb.org/newOntology/94b0b66d-8aa8-4fc1-b8f7-09d5924f3e68",
+      "label": "HasProperty",
+      "attributes": "datatype",
+      "domain": "BH.oM.Graphics.Components.Boxes",
+      "range": "GroupOrder-5e93743c-ae13-4212-9e7a-30ac7ceb44ea-Boxes-HasProperty"
+    },
+    {
+      "id": "e9b92db3-c907-4aa7-b686-1bfc9e2c245f",
+      "iri": "http://visualdataweb.org/newOntology/e9b92db3-c907-4aa7-b686-1bfc9e2c245f",
+      "label": "HasProperty",
+      "attributes": "datatype",
+      "domain": "BH.oM.Graphics.Components.Boxes",
+      "range": "Padding-30609aa8-ebaa-438a-988a-70058433aead-Boxes-HasProperty"
+    },
+    {
+      "id": "f24cc2a7-d72a-426d-a477-55fcfdc536aa",
+      "iri": "http://visualdataweb.org/newOntology/f24cc2a7-d72a-426d-a477-55fcfdc536aa",
+      "label": "HasProperty",
+      "attributes": "datatype",
+      "domain": "BH.oM.Graphics.Components.Boxes",
+      "range": "IsHorizontal-d97d02b1-d8df-4933-b0f9-3f109b612b2e-Boxes-HasProperty"
+    },
+    {
+      "id": "01265032-c141-4365-9ca4-9f2aaab60510",
+      "iri": "http://visualdataweb.org/newOntology/01265032-c141-4365-9ca4-9f2aaab60510",
+      "label": "HasProperty",
+      "attributes": "datatype",
+      "domain": "BH.oM.Graphics.Components.Boxes",
+      "range": "GroupsToIgnore-ef873825-9117-43d4-92f8-0831fd29c75c-Boxes-HasProperty"
+    },
+    {
+      "id": "665a6a69-50c3-4fe3-8b71-8ac7d5d5413f",
+      "iri": "http://visualdataweb.org/newOntology/665a6a69-50c3-4fe3-8b71-8ac7d5d5413f",
+      "label": "IsA",
+      "attributes": "object",
+      "domain": "BH.oM.Graphics.Components.Boxes",
+      "range": "BH.oM.Base.IBHoMObject"
+    },
+    {
+      "id": "b1298521-802f-46c8-a136-417b02e9e979",
+      "iri": "http://visualdataweb.org/newOntology/b1298521-802f-46c8-a136-417b02e9e979",
+      "label": "IsA",
+      "attributes": "object",
+      "domain": "BH.oM.Graphics.Components.Boxes",
+      "range": "BH.oM.Base.IObject"
+    },
+    {
+      "id": "88fe34b8-847c-45b0-bf03-8fe313a6d081",
+      "iri": "http://visualdataweb.org/newOntology/88fe34b8-847c-45b0-bf03-8fe313a6d081",
+      "label": "IsA",
+      "attributes": "object",
+      "domain": "BH.oM.Graphics.Components.Boxes",
+      "range": "BH.oM.Graphics.Components.IComponent"
+    },
+    {
+      "id": "66b06868-6d8e-466c-aef4-e189c3cd9130",
+      "iri": "http://visualdataweb.org/newOntology/66b06868-6d8e-466c-aef4-e189c3cd9130",
+      "label": "IsSubclassOf",
+      "attributes": "object",
+      "domain": "BH.oM.Graphics.Components.Boxes",
+      "range": "BH.oM.Base.BHoMObject"
+    },
+    {
+      "id": "19085a7b-3b5b-4d82-9c33-1f0cbbde6bf2",
+      "iri": "http://visualdataweb.org/newOntology/19085a7b-3b5b-4d82-9c33-1f0cbbde6bf2",
+      "label": "IsA",
+      "attributes": "object",
+      "domain": "BH.oM.Graphics.Components.IComponent",
+      "range": "BH.oM.Base.IBHoMObject"
+    },
+    {
+      "id": "f3aee5d2-43a2-4d51-8edb-0341ef7d0428",
+      "iri": "http://visualdataweb.org/newOntology/f3aee5d2-43a2-4d51-8edb-0341ef7d0428",
+      "label": "IsA",
+      "attributes": "object",
+      "domain": "BH.oM.Graphics.Components.IComponent",
+      "range": "BH.oM.Base.IObject"
+    },
+    {
+      "id": "809a537a-ef4d-4c2d-864a-d10d5a323287",
+      "iri": "http://visualdataweb.org/newOntology/809a537a-ef4d-4c2d-864a-d10d5a323287",
+      "label": "IsA",
+      "attributes": "object",
+      "domain": "BH.oM.Graphics.Components.IMarker",
+      "range": "BH.oM.Base.IBHoMObject"
+    },
+    {
+      "id": "a08b126b-d017-4bd7-9364-058bc7bc03c8",
+      "iri": "http://visualdataweb.org/newOntology/a08b126b-d017-4bd7-9364-058bc7bc03c8",
+      "label": "IsA",
+      "attributes": "object",
+      "domain": "BH.oM.Graphics.Components.IMarker",
+      "range": "BH.oM.Base.IObject"
+    },
+    {
+      "id": "fd90e72c-ca04-453f-8f61-71b29a30ed5b",
+      "iri": "http://visualdataweb.org/newOntology/fd90e72c-ca04-453f-8f61-71b29a30ed5b",
+      "label": "HasProperty",
+      "attributes": "datatype",
+      "domain": "BH.oM.Graphics.Components.Links",
+      "range": "Text-97ceb674-e4ea-420a-9021-a783eb7a1715-Links-HasProperty"
+    },
+    {
+      "id": "43f783b4-f0ce-4ec3-b99b-ac7a29a1e219",
+      "iri": "http://visualdataweb.org/newOntology/43f783b4-f0ce-4ec3-b99b-ac7a29a1e219",
+      "label": "HasProperty",
+      "attributes": "datatype",
+      "domain": "BH.oM.Graphics.Components.Links",
+      "range": "Start-99e682e1-1da7-4a7b-9bed-70efc823b226-Links-HasProperty"
+    },
+    {
+      "id": "9bc910d0-64bb-49d7-8c43-f0cfc5b54e95",
+      "iri": "http://visualdataweb.org/newOntology/9bc910d0-64bb-49d7-8c43-f0cfc5b54e95",
+      "label": "HasProperty",
+      "attributes": "datatype",
+      "domain": "BH.oM.Graphics.Components.Links",
+      "range": "End-3b753e9a-5ab3-43b4-9c85-4d24b5b3d018-Links-HasProperty"
+    },
+    {
+      "id": "ae09e74b-75c7-428b-818d-526f6a67ec18",
+      "iri": "http://visualdataweb.org/newOntology/ae09e74b-75c7-428b-818d-526f6a67ec18",
+      "label": "HasProperty",
+      "attributes": "datatype",
+      "domain": "BH.oM.Graphics.Components.Links",
+      "range": "Colour-754d9c4b-0097-4614-8c9f-2dcb2042f704-Links-HasProperty"
+    },
+    {
+      "id": "c6c9e8c0-075f-42e8-924f-a0081a220526",
+      "iri": "http://visualdataweb.org/newOntology/c6c9e8c0-075f-42e8-924f-a0081a220526",
+      "label": "HasProperty",
+      "attributes": "object",
+      "domain": "BH.oM.Graphics.Components.Links",
+      "range": "BH.oM.Graphics.Components.IMarker"
+    },
+    {
+      "id": "7a387336-7c5f-4e03-b60f-1f225b60e4ec",
+      "iri": "http://visualdataweb.org/newOntology/7a387336-7c5f-4e03-b60f-1f225b60e4ec",
+      "label": "IsA",
+      "attributes": "object",
+      "domain": "BH.oM.Graphics.Components.Links",
+      "range": "BH.oM.Base.IBHoMObject"
+    },
+    {
+      "id": "10f4c7eb-45c4-4081-9a6c-a6a58cf2a184",
+      "iri": "http://visualdataweb.org/newOntology/10f4c7eb-45c4-4081-9a6c-a6a58cf2a184",
+      "label": "IsA",
+      "attributes": "object",
+      "domain": "BH.oM.Graphics.Components.Links",
+      "range": "BH.oM.Base.IObject"
+    },
+    {
+      "id": "aa749221-6a8b-42b7-94eb-5ade35c0fd9d",
+      "iri": "http://visualdataweb.org/newOntology/aa749221-6a8b-42b7-94eb-5ade35c0fd9d",
+      "label": "IsA",
+      "attributes": "object",
+      "domain": "BH.oM.Graphics.Components.Links",
+      "range": "BH.oM.Graphics.Components.IComponent"
+    },
+    {
+      "id": "4e8da291-8550-4d41-83d0-3f139eda1ad2",
+      "iri": "http://visualdataweb.org/newOntology/4e8da291-8550-4d41-83d0-3f139eda1ad2",
+      "label": "IsSubclassOf",
+      "attributes": "object",
+      "domain": "BH.oM.Graphics.Components.Links",
+      "range": "BH.oM.Base.BHoMObject"
+    },
+    {
+      "id": "78732fed-98fe-4906-b494-8363687ff68d",
+      "iri": "http://visualdataweb.org/newOntology/78732fed-98fe-4906-b494-8363687ff68d",
+      "label": "HasProperty",
+      "attributes": "object",
+      "domain": "BH.oM.Graphics.Colours.GradientOptions",
+      "range": "BH.oM.Graphics.Gradient"
+    },
+    {
+      "id": "12c56ba2-ead6-4b51-890f-7e45a9a054b7",
+      "iri": "http://visualdataweb.org/newOntology/12c56ba2-ead6-4b51-890f-7e45a9a054b7",
+      "label": "HasProperty",
+      "attributes": "datatype",
+      "domain": "BH.oM.Graphics.Colours.GradientOptions",
+      "range": "LowerBound-2b763a30-3422-4718-8bb6-df264fc4b643-GradientOptions-HasProperty"
+    },
+    {
+      "id": "ebcb09b8-6aac-4788-b29f-6611be46cdc0",
+      "iri": "http://visualdataweb.org/newOntology/ebcb09b8-6aac-4788-b29f-6611be46cdc0",
+      "label": "HasProperty",
+      "attributes": "datatype",
+      "domain": "BH.oM.Graphics.Colours.GradientOptions",
+      "range": "UpperBound-94783771-1d4e-4db5-812d-10b24f407573-GradientOptions-HasProperty"
+    },
+    {
+      "id": "73d5d30f-ebaf-44c5-8f4f-6fe87e10c8fa",
+      "iri": "http://visualdataweb.org/newOntology/73d5d30f-ebaf-44c5-8f4f-6fe87e10c8fa",
+      "label": "HasProperty",
+      "attributes": "object",
+      "domain": "BH.oM.Graphics.Colours.GradientOptions",
+      "range": "BH.oM.Graphics.Enums.GradientCenteringOptions"
+    },
+    {
+      "id": "26c8d47f-fced-41a2-9602-ab5e1f9d9bc5",
+      "iri": "http://visualdataweb.org/newOntology/26c8d47f-fced-41a2-9602-ab5e1f9d9bc5",
+      "label": "IsA",
+      "attributes": "object",
+      "domain": "BH.oM.Graphics.Colours.GradientOptions",
+      "range": "BH.oM.Base.IObject"
+    },
+    {
+      "id": "17b675e0-08ad-4974-a4ad-ea64a5943606",
+      "iri": "http://visualdataweb.org/newOntology/17b675e0-08ad-4974-a4ad-ea64a5943606",
+      "label": "IsSubclassOf",
+      "attributes": []
+    }
+  ]
+}

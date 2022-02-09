@@ -1,0 +1,1834 @@
+{
+  "comment": "Generated from BHoM RDF_Prototypes",
+  "namespace": [],
+  "class": [
+    {
+      "id": "BH.oM.Planning.Branch",
+      "type": "owl:Class"
+    },
+    {
+      "id": "BH.oM.Planning.CodeAssembly",
+      "type": "owl:Class"
+    },
+    {
+      "id": "BH.oM.Planning.Commit",
+      "type": "owl:Class"
+    },
+    {
+      "id": "BH.oM.Planning.ConstructionPhase",
+      "type": "owl:Class"
+    },
+    {
+      "id": "BH.oM.Planning.ItemState",
+      "type": "owl:Class"
+    },
+    {
+      "id": "BH.oM.Planning.IPhase",
+      "type": "owl:Class"
+    },
+    {
+      "id": "BH.oM.Planning.Issue",
+      "type": "owl:Class"
+    },
+    {
+      "id": "BH.oM.Planning.Label",
+      "type": "owl:Class"
+    },
+    {
+      "id": "BH.oM.Planning.Milestone",
+      "type": "owl:Class"
+    },
+    {
+      "id": "BH.oM.Planning.PullRequest",
+      "type": "owl:Class"
+    },
+    {
+      "id": "BH.oM.Planning.Repository",
+      "type": "owl:Class"
+    },
+    {
+      "id": "LastPusher-6e082a36-8b1e-458c-bf25-996444775111-Branch-HasProperty",
+      "type": "rdfs:Datatype"
+    },
+    {
+      "id": "Title-afa62f0c-88f3-4f62-ba4b-d5236a4ce6bb-Branch-HasProperty",
+      "type": "rdfs:Datatype"
+    },
+    {
+      "id": "RepoName-840d0d6c-489e-4e78-8d44-6627621f632a-Branch-HasProperty",
+      "type": "rdfs:Datatype"
+    },
+    {
+      "id": "Protected-a90c528d-049f-4867-822e-d8eed3201e4d-Branch-HasProperty",
+      "type": "rdfs:Datatype"
+    },
+    {
+      "id": "LastCommitDate-928fc381-7bd2-4e5b-a5ec-ef4c44d6d64c-Branch-HasProperty",
+      "type": "rdfs:Datatype"
+    },
+    {
+      "id": "BH.oM.Base.IBHoMObject",
+      "type": "owl:Class"
+    },
+    {
+      "id": "BH.oM.Base.IObject",
+      "type": "owl:Class"
+    },
+    {
+      "id": "BH.oM.Base.BHoMObject",
+      "type": "owl:Class"
+    },
+    {
+      "id": "Repository-01ac3f30-f69e-4938-9ed7-75b0b76c29c1-CodeAssembly-HasProperty",
+      "type": "rdfs:Datatype"
+    },
+    {
+      "id": "References-1709fc5a-6077-4a36-81a4-7c21cf606a68-CodeAssembly-HasProperty",
+      "type": "rdfs:Datatype"
+    },
+    {
+      "id": "BH.oM.Base.IBHoMObject",
+      "type": "owl:Class"
+    },
+    {
+      "id": "BH.oM.Base.IObject",
+      "type": "owl:Class"
+    },
+    {
+      "id": "BH.oM.Base.BHoMObject",
+      "type": "owl:Class"
+    },
+    {
+      "id": "RepoName-20d30513-c4df-46b6-92c5-471aa1b2dfd3-Commit-HasProperty",
+      "type": "rdfs:Datatype"
+    },
+    {
+      "id": "Date-0886e133-302d-4345-acac-2637eec56e57-Commit-HasProperty",
+      "type": "rdfs:Datatype"
+    },
+    {
+      "id": "Author-dad4475c-8617-467f-8c01-937913893bdd-Commit-HasProperty",
+      "type": "rdfs:Datatype"
+    },
+    {
+      "id": "Committer-c06b58c1-83f9-48ec-92c7-9a6d40f5fcd7-Commit-HasProperty",
+      "type": "rdfs:Datatype"
+    },
+    {
+      "id": "Additions-cb4a51f8-e60f-442d-864a-ae9a5986476a-Commit-HasProperty",
+      "type": "rdfs:Datatype"
+    },
+    {
+      "id": "Deletions-2c7c84e7-0acd-459a-994b-81052763d857-Commit-HasProperty",
+      "type": "rdfs:Datatype"
+    },
+    {
+      "id": "TotalChanges-7dfd0aa3-32b2-49ad-ae49-8c375f543edd-Commit-HasProperty",
+      "type": "rdfs:Datatype"
+    },
+    {
+      "id": "BH.oM.Base.IBHoMObject",
+      "type": "owl:Class"
+    },
+    {
+      "id": "BH.oM.Base.IObject",
+      "type": "owl:Class"
+    },
+    {
+      "id": "BH.oM.Base.BHoMObject",
+      "type": "owl:Class"
+    },
+    {
+      "id": "StartTime-67c5ccb2-fb17-4f7d-9913-c1702c9adccf-ConstructionPhase-HasProperty",
+      "type": "rdfs:Datatype"
+    },
+    {
+      "id": "EndTime-24293e01-19a8-4d7c-a44c-0f2bb4fcde38-ConstructionPhase-HasProperty",
+      "type": "rdfs:Datatype"
+    },
+    {
+      "id": "BH.oM.Base.IBHoMObject",
+      "type": "owl:Class"
+    },
+    {
+      "id": "BH.oM.Base.IObject",
+      "type": "owl:Class"
+    },
+    {
+      "id": "BH.oM.Base.BHoMObject",
+      "type": "owl:Class"
+    },
+    {
+      "id": "BH.oM.Base.IBHoMObject",
+      "type": "owl:Class"
+    },
+    {
+      "id": "BH.oM.Base.IObject",
+      "type": "owl:Class"
+    },
+    {
+      "id": "Creator-dea01bc0-0f92-4044-828e-64892893ee42-Issue-HasProperty",
+      "type": "rdfs:Datatype"
+    },
+    {
+      "id": "Assignees-e97dbbb5-59d9-4412-b60b-8eccae0a45f9-Issue-HasProperty",
+      "type": "rdfs:Datatype"
+    },
+    {
+      "id": "Title-af7924ff-fc80-4fc3-a9cf-f51ad22e8359-Issue-HasProperty",
+      "type": "rdfs:Datatype"
+    },
+    {
+      "id": "RepoName-130396fb-657e-4ec4-bb5e-df5444e78adc-Issue-HasProperty",
+      "type": "rdfs:Datatype"
+    },
+    {
+      "id": "Number-da9f8764-7c0f-4913-9d25-1100d5802390-Issue-HasProperty",
+      "type": "rdfs:Datatype"
+    },
+    {
+      "id": "CreationDate-67c64e91-85c3-464d-a37f-ea79fcc5de52-Issue-HasProperty",
+      "type": "rdfs:Datatype"
+    },
+    {
+      "id": "MilestoneName-8fbdd8bb-30b4-4d21-8a75-d42e57f1a9a4-Issue-HasProperty",
+      "type": "rdfs:Datatype"
+    },
+    {
+      "id": "PullRequested-68bd9ec4-3496-4d15-912e-fb46a1615856-Issue-HasProperty",
+      "type": "rdfs:Datatype"
+    },
+    {
+      "id": "Labels-547cf96d-f8ce-4126-a184-b8718be31bc8-Issue-HasProperty",
+      "type": "rdfs:Datatype"
+    },
+    {
+      "id": "Url-60495349-d33e-4167-8494-ef5ce288c856-Issue-HasProperty",
+      "type": "rdfs:Datatype"
+    },
+    {
+      "id": "BH.oM.Base.IBHoMObject",
+      "type": "owl:Class"
+    },
+    {
+      "id": "BH.oM.Base.IObject",
+      "type": "owl:Class"
+    },
+    {
+      "id": "BH.oM.Base.BHoMObject",
+      "type": "owl:Class"
+    },
+    {
+      "id": "Colour-85ec3f84-f296-4678-8f83-965c836ad9a1-Label-HasProperty",
+      "type": "rdfs:Datatype"
+    },
+    {
+      "id": "BH.oM.Base.IBHoMObject",
+      "type": "owl:Class"
+    },
+    {
+      "id": "BH.oM.Base.IObject",
+      "type": "owl:Class"
+    },
+    {
+      "id": "BH.oM.Base.BHoMObject",
+      "type": "owl:Class"
+    },
+    {
+      "id": "DueOn-6a66c175-4380-4756-8934-df0aaee5eb23-Milestone-HasProperty",
+      "type": "rdfs:Datatype"
+    },
+    {
+      "id": "Description-9aaf0819-ed0f-4191-ae1a-d2f833b27cc0-Milestone-HasProperty",
+      "type": "rdfs:Datatype"
+    },
+    {
+      "id": "BH.oM.Base.IBHoMObject",
+      "type": "owl:Class"
+    },
+    {
+      "id": "BH.oM.Base.IObject",
+      "type": "owl:Class"
+    },
+    {
+      "id": "BH.oM.Base.BHoMObject",
+      "type": "owl:Class"
+    },
+    {
+      "id": "Creator-5995a1bf-922b-4f1a-a0ec-9ee45a991d23-PullRequest-HasProperty",
+      "type": "rdfs:Datatype"
+    },
+    {
+      "id": "Title-3211d3be-b2bb-44d8-83a7-96bfb8ab828d-PullRequest-HasProperty",
+      "type": "rdfs:Datatype"
+    },
+    {
+      "id": "Body-b1a1e1ae-80f0-464e-8b9e-06a930b31d77-PullRequest-HasProperty",
+      "type": "rdfs:Datatype"
+    },
+    {
+      "id": "HtmlUrl-93dad66f-9fd5-4336-af8d-38cd6736efd1-PullRequest-HasProperty",
+      "type": "rdfs:Datatype"
+    },
+    {
+      "id": "RepoName-ab3c37f3-b7b7-4f13-9cab-32704ea1c855-PullRequest-HasProperty",
+      "type": "rdfs:Datatype"
+    },
+    {
+      "id": "BranchName-2aa7c957-463e-4f0b-96cb-89cc5595a4ee-PullRequest-HasProperty",
+      "type": "rdfs:Datatype"
+    },
+    {
+      "id": "Number-bbe95135-1b07-4a26-96a9-0c7b1182d41f-PullRequest-HasProperty",
+      "type": "rdfs:Datatype"
+    },
+    {
+      "id": "CreationDate-6ed8538e-000e-4f9f-ad1c-7aa66e75f61e-PullRequest-HasProperty",
+      "type": "rdfs:Datatype"
+    },
+    {
+      "id": "MilestoneName-8f412243-1c52-43a1-8c19-f5e3af3893a3-PullRequest-HasProperty",
+      "type": "rdfs:Datatype"
+    },
+    {
+      "id": "Additions-c2e0d937-3ec2-4cb6-926a-5a52561420ae-PullRequest-HasProperty",
+      "type": "rdfs:Datatype"
+    },
+    {
+      "id": "Deletions-0f04f8a3-7ada-465e-81f5-94db77cd3c23-PullRequest-HasProperty",
+      "type": "rdfs:Datatype"
+    },
+    {
+      "id": "Reviewers-5b92444c-3461-483a-a346-35578e24d8bb-PullRequest-HasProperty",
+      "type": "rdfs:Datatype"
+    },
+    {
+      "id": "BH.oM.Base.IBHoMObject",
+      "type": "owl:Class"
+    },
+    {
+      "id": "BH.oM.Base.IObject",
+      "type": "owl:Class"
+    },
+    {
+      "id": "BH.oM.Base.BHoMObject",
+      "type": "owl:Class"
+    },
+    {
+      "id": "OpenIssues-ea05b447-4068-4ba3-8718-5541b42bb099-Repository-HasProperty",
+      "type": "rdfs:Datatype"
+    },
+    {
+      "id": "OpenPullRequests-f6de3613-8715-4544-ac98-863aca1d4a43-Repository-HasProperty",
+      "type": "rdfs:Datatype"
+    },
+    {
+      "id": "ClosedIssues-1cb57d50-bab8-430d-839d-682f3758c466-Repository-HasProperty",
+      "type": "rdfs:Datatype"
+    },
+    {
+      "id": "ClosedPullRequests-740dff5f-3619-4e2b-a740-445a38bc9e0f-Repository-HasProperty",
+      "type": "rdfs:Datatype"
+    },
+    {
+      "id": "BH.oM.Base.IBHoMObject",
+      "type": "owl:Class"
+    },
+    {
+      "id": "BH.oM.Base.IObject",
+      "type": "owl:Class"
+    },
+    {
+      "id": "BH.oM.Base.BHoMObject",
+      "type": "owl:Class"
+    }
+  ],
+  "classAttribute": [
+    {
+      "id": "BH.oM.Planning.Branch",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/Planning_oM/Branch.cs",
+      "label": "Branch (BH.oM.Planning)",
+      "attributes": []
+    },
+    {
+      "id": "BH.oM.Planning.CodeAssembly",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/Planning_oM/CodeAssembly.cs",
+      "label": "CodeAssembly (BH.oM.Planning)",
+      "attributes": []
+    },
+    {
+      "id": "BH.oM.Planning.Commit",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/Planning_oM/Commit.cs",
+      "label": "Commit (BH.oM.Planning)",
+      "attributes": []
+    },
+    {
+      "id": "BH.oM.Planning.ConstructionPhase",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/Planning_oM/ConstructionPhase.cs",
+      "label": "ConstructionPhase (BH.oM.Planning)",
+      "attributes": []
+    },
+    {
+      "id": "BH.oM.Planning.ItemState",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/Planning_oM/ItemState.cs",
+      "label": "ItemState (BH.oM.Planning)",
+      "attributes": []
+    },
+    {
+      "id": "BH.oM.Planning.IPhase",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/Planning_oM/IPhase.cs",
+      "label": "IPhase (BH.oM.Planning)",
+      "attributes": []
+    },
+    {
+      "id": "BH.oM.Planning.Issue",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/Planning_oM/Issue.cs",
+      "label": "Issue (BH.oM.Planning)",
+      "attributes": []
+    },
+    {
+      "id": "BH.oM.Planning.Label",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/Planning_oM/Label.cs",
+      "label": "Label (BH.oM.Planning)",
+      "attributes": []
+    },
+    {
+      "id": "BH.oM.Planning.Milestone",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/Planning_oM/Milestone.cs",
+      "label": "Milestone (BH.oM.Planning)",
+      "attributes": []
+    },
+    {
+      "id": "BH.oM.Planning.PullRequest",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/Planning_oM/PullRequest.cs",
+      "label": "PullRequest (BH.oM.Planning)",
+      "attributes": []
+    },
+    {
+      "id": "BH.oM.Planning.Repository",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/Planning_oM/Repository.cs",
+      "label": "Repository (BH.oM.Planning)",
+      "attributes": []
+    },
+    {
+      "id": "LastPusher-6e082a36-8b1e-458c-bf25-996444775111-Branch-HasProperty",
+      "iri": "http://www.w3.org/2001/XMLSchema#",
+      "label": "LastPusher (String)",
+      "attributes": "datatype"
+    },
+    {
+      "id": "Title-afa62f0c-88f3-4f62-ba4b-d5236a4ce6bb-Branch-HasProperty",
+      "iri": "http://www.w3.org/2001/XMLSchema#",
+      "label": "Title (String)",
+      "attributes": "datatype"
+    },
+    {
+      "id": "RepoName-840d0d6c-489e-4e78-8d44-6627621f632a-Branch-HasProperty",
+      "iri": "http://www.w3.org/2001/XMLSchema#",
+      "label": "RepoName (String)",
+      "attributes": "datatype"
+    },
+    {
+      "id": "Protected-a90c528d-049f-4867-822e-d8eed3201e4d-Branch-HasProperty",
+      "iri": "http://www.w3.org/2001/XMLSchema#",
+      "label": "Protected (Boolean)",
+      "attributes": "datatype"
+    },
+    {
+      "id": "LastCommitDate-928fc381-7bd2-4e5b-a5ec-ef4c44d6d64c-Branch-HasProperty",
+      "iri": "http://www.w3.org/2001/XMLSchema#",
+      "label": "LastCommitDate (DateTimeOffset)",
+      "attributes": "datatype"
+    },
+    {
+      "id": "BH.oM.Base.IBHoMObject",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/BHoM/Interface/IBHoMObject.cs",
+      "label": "IBHoMObject",
+      "attributes": []
+    },
+    {
+      "id": "BH.oM.Base.IObject",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/BHoM/Interface/IObject.cs",
+      "label": "IObject",
+      "attributes": []
+    },
+    {
+      "id": "BH.oM.Base.BHoMObject",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/BHoM/BHoMObject.cs",
+      "label": "BHoMObject",
+      "attributes": []
+    },
+    {
+      "id": "Repository-01ac3f30-f69e-4938-9ed7-75b0b76c29c1-CodeAssembly-HasProperty",
+      "iri": "http://www.w3.org/2001/XMLSchema#",
+      "label": "Repository (String)",
+      "attributes": "datatype"
+    },
+    {
+      "id": "References-1709fc5a-6077-4a36-81a4-7c21cf606a68-CodeAssembly-HasProperty",
+      "iri": "http://www.w3.org/2001/XMLSchema#",
+      "label": "References (List<String>)",
+      "attributes": "datatype"
+    },
+    {
+      "id": "BH.oM.Base.IBHoMObject",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/BHoM/Interface/IBHoMObject.cs",
+      "label": "IBHoMObject",
+      "attributes": []
+    },
+    {
+      "id": "BH.oM.Base.IObject",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/BHoM/Interface/IObject.cs",
+      "label": "IObject",
+      "attributes": []
+    },
+    {
+      "id": "BH.oM.Base.BHoMObject",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/BHoM/BHoMObject.cs",
+      "label": "BHoMObject",
+      "attributes": []
+    },
+    {
+      "id": "RepoName-20d30513-c4df-46b6-92c5-471aa1b2dfd3-Commit-HasProperty",
+      "iri": "http://www.w3.org/2001/XMLSchema#",
+      "label": "RepoName (String)",
+      "attributes": "datatype"
+    },
+    {
+      "id": "Date-0886e133-302d-4345-acac-2637eec56e57-Commit-HasProperty",
+      "iri": "http://www.w3.org/2001/XMLSchema#",
+      "label": "Date (DateTimeOffset)",
+      "attributes": "datatype"
+    },
+    {
+      "id": "Author-dad4475c-8617-467f-8c01-937913893bdd-Commit-HasProperty",
+      "iri": "http://www.w3.org/2001/XMLSchema#",
+      "label": "Author (String)",
+      "attributes": "datatype"
+    },
+    {
+      "id": "Committer-c06b58c1-83f9-48ec-92c7-9a6d40f5fcd7-Commit-HasProperty",
+      "iri": "http://www.w3.org/2001/XMLSchema#",
+      "label": "Committer (String)",
+      "attributes": "datatype"
+    },
+    {
+      "id": "Additions-cb4a51f8-e60f-442d-864a-ae9a5986476a-Commit-HasProperty",
+      "iri": "http://www.w3.org/2001/XMLSchema#",
+      "label": "Additions (Int)",
+      "attributes": "datatype"
+    },
+    {
+      "id": "Deletions-2c7c84e7-0acd-459a-994b-81052763d857-Commit-HasProperty",
+      "iri": "http://www.w3.org/2001/XMLSchema#",
+      "label": "Deletions (Int)",
+      "attributes": "datatype"
+    },
+    {
+      "id": "TotalChanges-7dfd0aa3-32b2-49ad-ae49-8c375f543edd-Commit-HasProperty",
+      "iri": "http://www.w3.org/2001/XMLSchema#",
+      "label": "TotalChanges (Int)",
+      "attributes": "datatype"
+    },
+    {
+      "id": "BH.oM.Base.IBHoMObject",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/BHoM/Interface/IBHoMObject.cs",
+      "label": "IBHoMObject",
+      "attributes": []
+    },
+    {
+      "id": "BH.oM.Base.IObject",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/BHoM/Interface/IObject.cs",
+      "label": "IObject",
+      "attributes": []
+    },
+    {
+      "id": "BH.oM.Base.BHoMObject",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/BHoM/BHoMObject.cs",
+      "label": "BHoMObject",
+      "attributes": []
+    },
+    {
+      "id": "StartTime-67c5ccb2-fb17-4f7d-9913-c1702c9adccf-ConstructionPhase-HasProperty",
+      "iri": "http://www.w3.org/2001/XMLSchema#",
+      "label": "StartTime (DateTime)",
+      "attributes": "datatype"
+    },
+    {
+      "id": "EndTime-24293e01-19a8-4d7c-a44c-0f2bb4fcde38-ConstructionPhase-HasProperty",
+      "iri": "http://www.w3.org/2001/XMLSchema#",
+      "label": "EndTime (DateTime)",
+      "attributes": "datatype"
+    },
+    {
+      "id": "BH.oM.Base.IBHoMObject",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/BHoM/Interface/IBHoMObject.cs",
+      "label": "IBHoMObject",
+      "attributes": []
+    },
+    {
+      "id": "BH.oM.Base.IObject",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/BHoM/Interface/IObject.cs",
+      "label": "IObject",
+      "attributes": []
+    },
+    {
+      "id": "BH.oM.Base.BHoMObject",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/BHoM/BHoMObject.cs",
+      "label": "BHoMObject",
+      "attributes": []
+    },
+    {
+      "id": "BH.oM.Base.IBHoMObject",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/BHoM/Interface/IBHoMObject.cs",
+      "label": "IBHoMObject",
+      "attributes": []
+    },
+    {
+      "id": "BH.oM.Base.IObject",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/BHoM/Interface/IObject.cs",
+      "label": "IObject",
+      "attributes": []
+    },
+    {
+      "id": "Creator-dea01bc0-0f92-4044-828e-64892893ee42-Issue-HasProperty",
+      "iri": "http://www.w3.org/2001/XMLSchema#",
+      "label": "Creator (String)",
+      "attributes": "datatype"
+    },
+    {
+      "id": "Assignees-e97dbbb5-59d9-4412-b60b-8eccae0a45f9-Issue-HasProperty",
+      "iri": "http://www.w3.org/2001/XMLSchema#",
+      "label": "Assignees (List<String>)",
+      "attributes": "datatype"
+    },
+    {
+      "id": "Title-af7924ff-fc80-4fc3-a9cf-f51ad22e8359-Issue-HasProperty",
+      "iri": "http://www.w3.org/2001/XMLSchema#",
+      "label": "Title (String)",
+      "attributes": "datatype"
+    },
+    {
+      "id": "RepoName-130396fb-657e-4ec4-bb5e-df5444e78adc-Issue-HasProperty",
+      "iri": "http://www.w3.org/2001/XMLSchema#",
+      "label": "RepoName (String)",
+      "attributes": "datatype"
+    },
+    {
+      "id": "Number-da9f8764-7c0f-4913-9d25-1100d5802390-Issue-HasProperty",
+      "iri": "http://www.w3.org/2001/XMLSchema#",
+      "label": "Number (Int)",
+      "attributes": "datatype"
+    },
+    {
+      "id": "CreationDate-67c64e91-85c3-464d-a37f-ea79fcc5de52-Issue-HasProperty",
+      "iri": "http://www.w3.org/2001/XMLSchema#",
+      "label": "CreationDate (DateTimeOffset)",
+      "attributes": "datatype"
+    },
+    {
+      "id": "MilestoneName-8fbdd8bb-30b4-4d21-8a75-d42e57f1a9a4-Issue-HasProperty",
+      "iri": "http://www.w3.org/2001/XMLSchema#",
+      "label": "MilestoneName (String)",
+      "attributes": "datatype"
+    },
+    {
+      "id": "PullRequested-68bd9ec4-3496-4d15-912e-fb46a1615856-Issue-HasProperty",
+      "iri": "http://www.w3.org/2001/XMLSchema#",
+      "label": "PullRequested (Boolean)",
+      "attributes": "datatype"
+    },
+    {
+      "id": "Labels-547cf96d-f8ce-4126-a184-b8718be31bc8-Issue-HasProperty",
+      "iri": "http://www.w3.org/2001/XMLSchema#",
+      "label": "Labels (List<String>)",
+      "attributes": "datatype"
+    },
+    {
+      "id": "Url-60495349-d33e-4167-8494-ef5ce288c856-Issue-HasProperty",
+      "iri": "http://www.w3.org/2001/XMLSchema#",
+      "label": "Url (String)",
+      "attributes": "datatype"
+    },
+    {
+      "id": "BH.oM.Base.IBHoMObject",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/BHoM/Interface/IBHoMObject.cs",
+      "label": "IBHoMObject",
+      "attributes": []
+    },
+    {
+      "id": "BH.oM.Base.IObject",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/BHoM/Interface/IObject.cs",
+      "label": "IObject",
+      "attributes": []
+    },
+    {
+      "id": "BH.oM.Base.BHoMObject",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/BHoM/BHoMObject.cs",
+      "label": "BHoMObject",
+      "attributes": []
+    },
+    {
+      "id": "Colour-85ec3f84-f296-4678-8f83-965c836ad9a1-Label-HasProperty",
+      "iri": "http://www.w3.org/2001/XMLSchema#",
+      "label": "Colour (String)",
+      "attributes": "datatype"
+    },
+    {
+      "id": "BH.oM.Base.IBHoMObject",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/BHoM/Interface/IBHoMObject.cs",
+      "label": "IBHoMObject",
+      "attributes": []
+    },
+    {
+      "id": "BH.oM.Base.IObject",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/BHoM/Interface/IObject.cs",
+      "label": "IObject",
+      "attributes": []
+    },
+    {
+      "id": "BH.oM.Base.BHoMObject",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/BHoM/BHoMObject.cs",
+      "label": "BHoMObject",
+      "attributes": []
+    },
+    {
+      "id": "DueOn-6a66c175-4380-4756-8934-df0aaee5eb23-Milestone-HasProperty",
+      "iri": "http://www.w3.org/2001/XMLSchema#",
+      "label": "DueOn (Nullable<DateTimeOffset>)",
+      "attributes": "datatype"
+    },
+    {
+      "id": "Description-9aaf0819-ed0f-4191-ae1a-d2f833b27cc0-Milestone-HasProperty",
+      "iri": "http://www.w3.org/2001/XMLSchema#",
+      "label": "Description (String)",
+      "attributes": "datatype"
+    },
+    {
+      "id": "BH.oM.Base.IBHoMObject",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/BHoM/Interface/IBHoMObject.cs",
+      "label": "IBHoMObject",
+      "attributes": []
+    },
+    {
+      "id": "BH.oM.Base.IObject",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/BHoM/Interface/IObject.cs",
+      "label": "IObject",
+      "attributes": []
+    },
+    {
+      "id": "BH.oM.Base.BHoMObject",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/BHoM/BHoMObject.cs",
+      "label": "BHoMObject",
+      "attributes": []
+    },
+    {
+      "id": "Creator-5995a1bf-922b-4f1a-a0ec-9ee45a991d23-PullRequest-HasProperty",
+      "iri": "http://www.w3.org/2001/XMLSchema#",
+      "label": "Creator (String)",
+      "attributes": "datatype"
+    },
+    {
+      "id": "Title-3211d3be-b2bb-44d8-83a7-96bfb8ab828d-PullRequest-HasProperty",
+      "iri": "http://www.w3.org/2001/XMLSchema#",
+      "label": "Title (String)",
+      "attributes": "datatype"
+    },
+    {
+      "id": "Body-b1a1e1ae-80f0-464e-8b9e-06a930b31d77-PullRequest-HasProperty",
+      "iri": "http://www.w3.org/2001/XMLSchema#",
+      "label": "Body (String)",
+      "attributes": "datatype"
+    },
+    {
+      "id": "HtmlUrl-93dad66f-9fd5-4336-af8d-38cd6736efd1-PullRequest-HasProperty",
+      "iri": "http://www.w3.org/2001/XMLSchema#",
+      "label": "HtmlUrl (String)",
+      "attributes": "datatype"
+    },
+    {
+      "id": "RepoName-ab3c37f3-b7b7-4f13-9cab-32704ea1c855-PullRequest-HasProperty",
+      "iri": "http://www.w3.org/2001/XMLSchema#",
+      "label": "RepoName (String)",
+      "attributes": "datatype"
+    },
+    {
+      "id": "BranchName-2aa7c957-463e-4f0b-96cb-89cc5595a4ee-PullRequest-HasProperty",
+      "iri": "http://www.w3.org/2001/XMLSchema#",
+      "label": "BranchName (String)",
+      "attributes": "datatype"
+    },
+    {
+      "id": "Number-bbe95135-1b07-4a26-96a9-0c7b1182d41f-PullRequest-HasProperty",
+      "iri": "http://www.w3.org/2001/XMLSchema#",
+      "label": "Number (Int)",
+      "attributes": "datatype"
+    },
+    {
+      "id": "CreationDate-6ed8538e-000e-4f9f-ad1c-7aa66e75f61e-PullRequest-HasProperty",
+      "iri": "http://www.w3.org/2001/XMLSchema#",
+      "label": "CreationDate (DateTimeOffset)",
+      "attributes": "datatype"
+    },
+    {
+      "id": "MilestoneName-8f412243-1c52-43a1-8c19-f5e3af3893a3-PullRequest-HasProperty",
+      "iri": "http://www.w3.org/2001/XMLSchema#",
+      "label": "MilestoneName (String)",
+      "attributes": "datatype"
+    },
+    {
+      "id": "Additions-c2e0d937-3ec2-4cb6-926a-5a52561420ae-PullRequest-HasProperty",
+      "iri": "http://www.w3.org/2001/XMLSchema#",
+      "label": "Additions (Int)",
+      "attributes": "datatype"
+    },
+    {
+      "id": "Deletions-0f04f8a3-7ada-465e-81f5-94db77cd3c23-PullRequest-HasProperty",
+      "iri": "http://www.w3.org/2001/XMLSchema#",
+      "label": "Deletions (Int)",
+      "attributes": "datatype"
+    },
+    {
+      "id": "Reviewers-5b92444c-3461-483a-a346-35578e24d8bb-PullRequest-HasProperty",
+      "iri": "http://www.w3.org/2001/XMLSchema#",
+      "label": "Reviewers (List<String>)",
+      "attributes": "datatype"
+    },
+    {
+      "id": "BH.oM.Base.IBHoMObject",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/BHoM/Interface/IBHoMObject.cs",
+      "label": "IBHoMObject",
+      "attributes": []
+    },
+    {
+      "id": "BH.oM.Base.IObject",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/BHoM/Interface/IObject.cs",
+      "label": "IObject",
+      "attributes": []
+    },
+    {
+      "id": "BH.oM.Base.BHoMObject",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/BHoM/BHoMObject.cs",
+      "label": "BHoMObject",
+      "attributes": []
+    },
+    {
+      "id": "OpenIssues-ea05b447-4068-4ba3-8718-5541b42bb099-Repository-HasProperty",
+      "iri": "http://www.w3.org/2001/XMLSchema#",
+      "label": "OpenIssues (Int)",
+      "attributes": "datatype"
+    },
+    {
+      "id": "OpenPullRequests-f6de3613-8715-4544-ac98-863aca1d4a43-Repository-HasProperty",
+      "iri": "http://www.w3.org/2001/XMLSchema#",
+      "label": "OpenPullRequests (Int)",
+      "attributes": "datatype"
+    },
+    {
+      "id": "ClosedIssues-1cb57d50-bab8-430d-839d-682f3758c466-Repository-HasProperty",
+      "iri": "http://www.w3.org/2001/XMLSchema#",
+      "label": "ClosedIssues (Int)",
+      "attributes": "datatype"
+    },
+    {
+      "id": "ClosedPullRequests-740dff5f-3619-4e2b-a740-445a38bc9e0f-Repository-HasProperty",
+      "iri": "http://www.w3.org/2001/XMLSchema#",
+      "label": "ClosedPullRequests (Int)",
+      "attributes": "datatype"
+    },
+    {
+      "id": "BH.oM.Base.IBHoMObject",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/BHoM/Interface/IBHoMObject.cs",
+      "label": "IBHoMObject",
+      "attributes": []
+    },
+    {
+      "id": "BH.oM.Base.IObject",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/BHoM/Interface/IObject.cs",
+      "label": "IObject",
+      "attributes": []
+    },
+    {
+      "id": "BH.oM.Base.BHoMObject",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/BHoM/BHoMObject.cs",
+      "label": "BHoMObject",
+      "attributes": []
+    }
+  ],
+  "property": [
+    {
+      "id": "6a87412c-1f61-4212-98d9-86077aa8434e",
+      "type": "owl:DatatypeProperty"
+    },
+    {
+      "id": "70e97aec-6b2d-40af-95be-41afd24c04fb",
+      "type": "owl:DatatypeProperty"
+    },
+    {
+      "id": "98161db9-6fa3-403c-8122-1180fd610877",
+      "type": "owl:DatatypeProperty"
+    },
+    {
+      "id": "d7a38ee5-2248-441c-aa9f-dcfc01f5981f",
+      "type": "owl:DatatypeProperty"
+    },
+    {
+      "id": "0ece0436-2f91-424d-9d77-6fe923123e9a",
+      "type": "owl:DatatypeProperty"
+    },
+    {
+      "id": "08f8a351-43ad-421d-980c-12ec31f9bd26",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "f9f63ce4-de81-42cf-a15d-a7e55d7fe049",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "8ad1a604-1f0b-45a4-9a46-97046c537215",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "aed6e7d3-9f6e-484c-99c2-c355b7669301",
+      "type": "owl:DatatypeProperty"
+    },
+    {
+      "id": "94f1a5b0-cab2-420c-bbd9-3490f1507246",
+      "type": "owl:DatatypeProperty"
+    },
+    {
+      "id": "fc8f3152-eaec-46ce-bc35-1c9832b20619",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "578140ab-8c7a-4580-84ba-734b777346cb",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "bdc4bb25-cbcb-4755-9653-b29292562e71",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "c09b054d-6e2a-4fed-af11-bd51da8b1a67",
+      "type": "owl:DatatypeProperty"
+    },
+    {
+      "id": "0415a98a-8408-4244-bda9-3f41cf79439a",
+      "type": "owl:DatatypeProperty"
+    },
+    {
+      "id": "7960826a-3d2e-4304-ab50-f0ff1f635b7f",
+      "type": "owl:DatatypeProperty"
+    },
+    {
+      "id": "80770794-56b0-49a6-a8f4-d556c4e08136",
+      "type": "owl:DatatypeProperty"
+    },
+    {
+      "id": "bf7b0e5c-fd12-4a68-85aa-bbcad70639e9",
+      "type": "owl:DatatypeProperty"
+    },
+    {
+      "id": "6c7ad9f7-0e66-4edc-a3a4-4469c3c66077",
+      "type": "owl:DatatypeProperty"
+    },
+    {
+      "id": "9aac0ec3-4fc9-47f3-8e09-7f579d492948",
+      "type": "owl:DatatypeProperty"
+    },
+    {
+      "id": "2f3610a7-cf0a-481b-acf7-e05954e7c0c6",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "03536056-ed6e-4a3e-90bb-12ebd89bc1fb",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "9f260181-5b5e-41a0-991e-80b0757251c2",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "87d2041c-003f-4416-aed0-b4fb73ddadca",
+      "type": "owl:DatatypeProperty"
+    },
+    {
+      "id": "caf2d8f8-0f83-4d6a-9391-ffa1ff1c9567",
+      "type": "owl:DatatypeProperty"
+    },
+    {
+      "id": "271581ce-3295-4bbe-819e-43c080f46fac",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "ff00a92d-1f47-4fb5-b82e-11de8cfffc96",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "5715e984-b677-40ec-be96-492753ce20ee",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "22d8a984-5f42-476b-9c4b-937bbca43b75",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "15e3313f-55fb-4f78-a21a-ed970a4552f5",
+      "type": "owl:DatatypeProperty"
+    },
+    {
+      "id": "813ba706-7391-406e-9204-c4ee4c9c722c",
+      "type": "owl:DatatypeProperty"
+    },
+    {
+      "id": "0635835e-e1d6-440e-b33a-6737d5301ace",
+      "type": "owl:DatatypeProperty"
+    },
+    {
+      "id": "da0a1da9-dc40-4131-8103-97a50475ded5",
+      "type": "owl:DatatypeProperty"
+    },
+    {
+      "id": "cd6a233c-aaef-4fc4-9f1c-e8902e69bb4a",
+      "type": "owl:DatatypeProperty"
+    },
+    {
+      "id": "09124baa-b44c-4ff1-8019-5720d38eb5cd",
+      "type": "owl:DatatypeProperty"
+    },
+    {
+      "id": "c84eb30b-911f-4743-8792-4f1bb0a3a80b",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "b64d0b45-3e2a-4d89-8244-dce98c8b5746",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "3e8cfbe6-b979-4909-a512-b7137e159968",
+      "type": "owl:DatatypeProperty"
+    },
+    {
+      "id": "b021c27a-d444-4ad8-8eaa-01f2905af618",
+      "type": "owl:DatatypeProperty"
+    },
+    {
+      "id": "125aed19-b6ef-4fd9-8533-44b69548e12c",
+      "type": "owl:DatatypeProperty"
+    },
+    {
+      "id": "06c3acc5-f58e-48c9-98da-322a866bebca",
+      "type": "owl:DatatypeProperty"
+    },
+    {
+      "id": "f7c55f1a-5c9f-4960-afe9-f361b1021a52",
+      "type": "owl:DatatypeProperty"
+    },
+    {
+      "id": "a91156df-68fc-43f8-99bc-51bbdafe3c3c",
+      "type": "owl:DatatypeProperty"
+    },
+    {
+      "id": "9e78a03b-d179-432a-92ae-aaa7960daf08",
+      "type": "owl:DatatypeProperty"
+    },
+    {
+      "id": "486b0b88-dd67-4c6f-9e04-06d382abb043",
+      "type": "owl:DatatypeProperty"
+    },
+    {
+      "id": "6465a273-ed8a-4e46-9d10-4bc1619527c0",
+      "type": "owl:DatatypeProperty"
+    },
+    {
+      "id": "b930bbe9-fe78-489c-b621-3c3ce4d7e6c2",
+      "type": "owl:DatatypeProperty"
+    },
+    {
+      "id": "4be9fa84-5071-4a0a-95c0-7c416c7b6306",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "c3a86a5b-6863-48af-b015-06d2361309ce",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "5b602f55-f69a-4fa1-b651-325345414dba",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "3fd5d06f-ef21-487f-a894-6e94da4591b8",
+      "type": "owl:DatatypeProperty"
+    },
+    {
+      "id": "70ef7302-ecc6-4dff-a7d1-d925d65ef4ba",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "aeab5c77-9025-49bb-ab2b-b1351cbf6b0f",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "7dbeffa9-e6a0-44e6-8c85-52a703c4bc27",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "80412610-2572-4e59-be0e-57a93571dbd9",
+      "type": "owl:DatatypeProperty"
+    },
+    {
+      "id": "ca8a2bde-1ac1-4f72-a34d-bdb3e952e6a2",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "ed03cc05-5dc7-4368-aa73-fc82d5eb7f51",
+      "type": "owl:DatatypeProperty"
+    },
+    {
+      "id": "1145ea29-99fb-4235-975a-536f4b8f0021",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "a4db9bd6-c47b-4743-922f-df0803c1a0fa",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "bdb70c1e-24c1-44a6-a025-c0efc29a9df0",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "73398b4a-be8d-48c9-8ad1-615669592eec",
+      "type": "owl:DatatypeProperty"
+    },
+    {
+      "id": "7c51c76f-b184-4476-96b0-2bc2012f1554",
+      "type": "owl:DatatypeProperty"
+    },
+    {
+      "id": "3283c2c1-5f40-44d3-8401-b7238844d1f0",
+      "type": "owl:DatatypeProperty"
+    },
+    {
+      "id": "07299378-8cf6-4a20-8131-3b510172772b",
+      "type": "owl:DatatypeProperty"
+    },
+    {
+      "id": "af73b3cb-7af6-497e-9a24-9e30c4937bd7",
+      "type": "owl:DatatypeProperty"
+    },
+    {
+      "id": "bb1ed775-a069-4b21-9cdd-4cb43872c3b3",
+      "type": "owl:DatatypeProperty"
+    },
+    {
+      "id": "caed6101-faed-4716-9c6c-514033fc2513",
+      "type": "owl:DatatypeProperty"
+    },
+    {
+      "id": "ce76ba1e-fae1-4f38-99a7-5135a3f21334",
+      "type": "owl:DatatypeProperty"
+    },
+    {
+      "id": "46977d26-6a4b-48dc-a72c-ec756a94191e",
+      "type": "owl:DatatypeProperty"
+    },
+    {
+      "id": "df7b631d-14d7-42a0-8df3-cda166291301",
+      "type": "owl:DatatypeProperty"
+    },
+    {
+      "id": "1dadc723-66a5-4ffd-9fe9-01244c20ccc5",
+      "type": "owl:DatatypeProperty"
+    },
+    {
+      "id": "ae715140-8ca7-4373-bc59-d638445ce9ac",
+      "type": "owl:DatatypeProperty"
+    },
+    {
+      "id": "0c235aa9-0824-451e-b984-15a59f2838a1",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "c445ef9c-2e00-4568-a7ef-8d6b3bb6de0e",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "1cd8e165-322f-4889-be87-70f12f8639bc",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "e8cde60f-2394-46f4-9004-27c54a8d4488",
+      "type": "owl:DatatypeProperty"
+    },
+    {
+      "id": "109335ae-2005-43f2-adb5-7e6fbb9615e9",
+      "type": "owl:DatatypeProperty"
+    },
+    {
+      "id": "1ff7c6f6-1496-4a0b-8f01-6c68a682e633",
+      "type": "owl:DatatypeProperty"
+    },
+    {
+      "id": "d7a73f1e-8e85-4919-8b0e-68b40fd22655",
+      "type": "owl:DatatypeProperty"
+    },
+    {
+      "id": "d3bed497-2503-4e75-a2ef-051a1d767550",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "f52d54c3-0734-4dc7-9aad-b0c3678a1783",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "6d0852d8-64b2-48b2-a80a-3dccde328894",
+      "type": "owl:ObjectProperty"
+    }
+  ],
+  "propertyAttribute": [
+    {
+      "id": "6a87412c-1f61-4212-98d9-86077aa8434e",
+      "iri": "http://visualdataweb.org/newOntology/6a87412c-1f61-4212-98d9-86077aa8434e",
+      "label": "HasProperty",
+      "attributes": "datatype",
+      "domain": "BH.oM.Planning.Branch",
+      "range": "LastPusher-6e082a36-8b1e-458c-bf25-996444775111-Branch-HasProperty"
+    },
+    {
+      "id": "70e97aec-6b2d-40af-95be-41afd24c04fb",
+      "iri": "http://visualdataweb.org/newOntology/70e97aec-6b2d-40af-95be-41afd24c04fb",
+      "label": "HasProperty",
+      "attributes": "datatype",
+      "domain": "BH.oM.Planning.Branch",
+      "range": "Title-afa62f0c-88f3-4f62-ba4b-d5236a4ce6bb-Branch-HasProperty"
+    },
+    {
+      "id": "98161db9-6fa3-403c-8122-1180fd610877",
+      "iri": "http://visualdataweb.org/newOntology/98161db9-6fa3-403c-8122-1180fd610877",
+      "label": "HasProperty",
+      "attributes": "datatype",
+      "domain": "BH.oM.Planning.Branch",
+      "range": "RepoName-840d0d6c-489e-4e78-8d44-6627621f632a-Branch-HasProperty"
+    },
+    {
+      "id": "d7a38ee5-2248-441c-aa9f-dcfc01f5981f",
+      "iri": "http://visualdataweb.org/newOntology/d7a38ee5-2248-441c-aa9f-dcfc01f5981f",
+      "label": "HasProperty",
+      "attributes": "datatype",
+      "domain": "BH.oM.Planning.Branch",
+      "range": "Protected-a90c528d-049f-4867-822e-d8eed3201e4d-Branch-HasProperty"
+    },
+    {
+      "id": "0ece0436-2f91-424d-9d77-6fe923123e9a",
+      "iri": "http://visualdataweb.org/newOntology/0ece0436-2f91-424d-9d77-6fe923123e9a",
+      "label": "HasProperty",
+      "attributes": "datatype",
+      "domain": "BH.oM.Planning.Branch",
+      "range": "LastCommitDate-928fc381-7bd2-4e5b-a5ec-ef4c44d6d64c-Branch-HasProperty"
+    },
+    {
+      "id": "08f8a351-43ad-421d-980c-12ec31f9bd26",
+      "iri": "http://visualdataweb.org/newOntology/08f8a351-43ad-421d-980c-12ec31f9bd26",
+      "label": "IsA",
+      "attributes": "object",
+      "domain": "BH.oM.Planning.Branch",
+      "range": "BH.oM.Base.IBHoMObject"
+    },
+    {
+      "id": "f9f63ce4-de81-42cf-a15d-a7e55d7fe049",
+      "iri": "http://visualdataweb.org/newOntology/f9f63ce4-de81-42cf-a15d-a7e55d7fe049",
+      "label": "IsA",
+      "attributes": "object",
+      "domain": "BH.oM.Planning.Branch",
+      "range": "BH.oM.Base.IObject"
+    },
+    {
+      "id": "8ad1a604-1f0b-45a4-9a46-97046c537215",
+      "iri": "http://visualdataweb.org/newOntology/8ad1a604-1f0b-45a4-9a46-97046c537215",
+      "label": "IsSubclassOf",
+      "attributes": "object",
+      "domain": "BH.oM.Planning.Branch",
+      "range": "BH.oM.Base.BHoMObject"
+    },
+    {
+      "id": "aed6e7d3-9f6e-484c-99c2-c355b7669301",
+      "iri": "http://visualdataweb.org/newOntology/aed6e7d3-9f6e-484c-99c2-c355b7669301",
+      "label": "HasProperty",
+      "attributes": "datatype",
+      "domain": "BH.oM.Planning.CodeAssembly",
+      "range": "Repository-01ac3f30-f69e-4938-9ed7-75b0b76c29c1-CodeAssembly-HasProperty"
+    },
+    {
+      "id": "94f1a5b0-cab2-420c-bbd9-3490f1507246",
+      "iri": "http://visualdataweb.org/newOntology/94f1a5b0-cab2-420c-bbd9-3490f1507246",
+      "label": "HasProperty",
+      "attributes": "datatype",
+      "domain": "BH.oM.Planning.CodeAssembly",
+      "range": "References-1709fc5a-6077-4a36-81a4-7c21cf606a68-CodeAssembly-HasProperty"
+    },
+    {
+      "id": "fc8f3152-eaec-46ce-bc35-1c9832b20619",
+      "iri": "http://visualdataweb.org/newOntology/fc8f3152-eaec-46ce-bc35-1c9832b20619",
+      "label": "IsA",
+      "attributes": "object",
+      "domain": "BH.oM.Planning.CodeAssembly",
+      "range": "BH.oM.Base.IBHoMObject"
+    },
+    {
+      "id": "578140ab-8c7a-4580-84ba-734b777346cb",
+      "iri": "http://visualdataweb.org/newOntology/578140ab-8c7a-4580-84ba-734b777346cb",
+      "label": "IsA",
+      "attributes": "object",
+      "domain": "BH.oM.Planning.CodeAssembly",
+      "range": "BH.oM.Base.IObject"
+    },
+    {
+      "id": "bdc4bb25-cbcb-4755-9653-b29292562e71",
+      "iri": "http://visualdataweb.org/newOntology/bdc4bb25-cbcb-4755-9653-b29292562e71",
+      "label": "IsSubclassOf",
+      "attributes": "object",
+      "domain": "BH.oM.Planning.CodeAssembly",
+      "range": "BH.oM.Base.BHoMObject"
+    },
+    {
+      "id": "c09b054d-6e2a-4fed-af11-bd51da8b1a67",
+      "iri": "http://visualdataweb.org/newOntology/c09b054d-6e2a-4fed-af11-bd51da8b1a67",
+      "label": "HasProperty",
+      "attributes": "datatype",
+      "domain": "BH.oM.Planning.Commit",
+      "range": "RepoName-20d30513-c4df-46b6-92c5-471aa1b2dfd3-Commit-HasProperty"
+    },
+    {
+      "id": "0415a98a-8408-4244-bda9-3f41cf79439a",
+      "iri": "http://visualdataweb.org/newOntology/0415a98a-8408-4244-bda9-3f41cf79439a",
+      "label": "HasProperty",
+      "attributes": "datatype",
+      "domain": "BH.oM.Planning.Commit",
+      "range": "Date-0886e133-302d-4345-acac-2637eec56e57-Commit-HasProperty"
+    },
+    {
+      "id": "7960826a-3d2e-4304-ab50-f0ff1f635b7f",
+      "iri": "http://visualdataweb.org/newOntology/7960826a-3d2e-4304-ab50-f0ff1f635b7f",
+      "label": "HasProperty",
+      "attributes": "datatype",
+      "domain": "BH.oM.Planning.Commit",
+      "range": "Author-dad4475c-8617-467f-8c01-937913893bdd-Commit-HasProperty"
+    },
+    {
+      "id": "80770794-56b0-49a6-a8f4-d556c4e08136",
+      "iri": "http://visualdataweb.org/newOntology/80770794-56b0-49a6-a8f4-d556c4e08136",
+      "label": "HasProperty",
+      "attributes": "datatype",
+      "domain": "BH.oM.Planning.Commit",
+      "range": "Committer-c06b58c1-83f9-48ec-92c7-9a6d40f5fcd7-Commit-HasProperty"
+    },
+    {
+      "id": "bf7b0e5c-fd12-4a68-85aa-bbcad70639e9",
+      "iri": "http://visualdataweb.org/newOntology/bf7b0e5c-fd12-4a68-85aa-bbcad70639e9",
+      "label": "HasProperty",
+      "attributes": "datatype",
+      "domain": "BH.oM.Planning.Commit",
+      "range": "Additions-cb4a51f8-e60f-442d-864a-ae9a5986476a-Commit-HasProperty"
+    },
+    {
+      "id": "6c7ad9f7-0e66-4edc-a3a4-4469c3c66077",
+      "iri": "http://visualdataweb.org/newOntology/6c7ad9f7-0e66-4edc-a3a4-4469c3c66077",
+      "label": "HasProperty",
+      "attributes": "datatype",
+      "domain": "BH.oM.Planning.Commit",
+      "range": "Deletions-2c7c84e7-0acd-459a-994b-81052763d857-Commit-HasProperty"
+    },
+    {
+      "id": "9aac0ec3-4fc9-47f3-8e09-7f579d492948",
+      "iri": "http://visualdataweb.org/newOntology/9aac0ec3-4fc9-47f3-8e09-7f579d492948",
+      "label": "HasProperty",
+      "attributes": "datatype",
+      "domain": "BH.oM.Planning.Commit",
+      "range": "TotalChanges-7dfd0aa3-32b2-49ad-ae49-8c375f543edd-Commit-HasProperty"
+    },
+    {
+      "id": "2f3610a7-cf0a-481b-acf7-e05954e7c0c6",
+      "iri": "http://visualdataweb.org/newOntology/2f3610a7-cf0a-481b-acf7-e05954e7c0c6",
+      "label": "IsA",
+      "attributes": "object",
+      "domain": "BH.oM.Planning.Commit",
+      "range": "BH.oM.Base.IBHoMObject"
+    },
+    {
+      "id": "03536056-ed6e-4a3e-90bb-12ebd89bc1fb",
+      "iri": "http://visualdataweb.org/newOntology/03536056-ed6e-4a3e-90bb-12ebd89bc1fb",
+      "label": "IsA",
+      "attributes": "object",
+      "domain": "BH.oM.Planning.Commit",
+      "range": "BH.oM.Base.IObject"
+    },
+    {
+      "id": "9f260181-5b5e-41a0-991e-80b0757251c2",
+      "iri": "http://visualdataweb.org/newOntology/9f260181-5b5e-41a0-991e-80b0757251c2",
+      "label": "IsSubclassOf",
+      "attributes": "object",
+      "domain": "BH.oM.Planning.Commit",
+      "range": "BH.oM.Base.BHoMObject"
+    },
+    {
+      "id": "87d2041c-003f-4416-aed0-b4fb73ddadca",
+      "iri": "http://visualdataweb.org/newOntology/87d2041c-003f-4416-aed0-b4fb73ddadca",
+      "label": "HasProperty",
+      "attributes": "datatype",
+      "domain": "BH.oM.Planning.ConstructionPhase",
+      "range": "StartTime-67c5ccb2-fb17-4f7d-9913-c1702c9adccf-ConstructionPhase-HasProperty"
+    },
+    {
+      "id": "caf2d8f8-0f83-4d6a-9391-ffa1ff1c9567",
+      "iri": "http://visualdataweb.org/newOntology/caf2d8f8-0f83-4d6a-9391-ffa1ff1c9567",
+      "label": "HasProperty",
+      "attributes": "datatype",
+      "domain": "BH.oM.Planning.ConstructionPhase",
+      "range": "EndTime-24293e01-19a8-4d7c-a44c-0f2bb4fcde38-ConstructionPhase-HasProperty"
+    },
+    {
+      "id": "271581ce-3295-4bbe-819e-43c080f46fac",
+      "iri": "http://visualdataweb.org/newOntology/271581ce-3295-4bbe-819e-43c080f46fac",
+      "label": "IsA",
+      "attributes": "object",
+      "domain": "BH.oM.Planning.ConstructionPhase",
+      "range": "BH.oM.Base.IBHoMObject"
+    },
+    {
+      "id": "ff00a92d-1f47-4fb5-b82e-11de8cfffc96",
+      "iri": "http://visualdataweb.org/newOntology/ff00a92d-1f47-4fb5-b82e-11de8cfffc96",
+      "label": "IsA",
+      "attributes": "object",
+      "domain": "BH.oM.Planning.ConstructionPhase",
+      "range": "BH.oM.Base.IObject"
+    },
+    {
+      "id": "5715e984-b677-40ec-be96-492753ce20ee",
+      "iri": "http://visualdataweb.org/newOntology/5715e984-b677-40ec-be96-492753ce20ee",
+      "label": "IsA",
+      "attributes": "object",
+      "domain": "BH.oM.Planning.ConstructionPhase",
+      "range": "BH.oM.Planning.IPhase"
+    },
+    {
+      "id": "22d8a984-5f42-476b-9c4b-937bbca43b75",
+      "iri": "http://visualdataweb.org/newOntology/22d8a984-5f42-476b-9c4b-937bbca43b75",
+      "label": "IsSubclassOf",
+      "attributes": "object",
+      "domain": "BH.oM.Planning.ConstructionPhase",
+      "range": "BH.oM.Base.BHoMObject"
+    },
+    {
+      "id": "15e3313f-55fb-4f78-a21a-ed970a4552f5",
+      "iri": "http://visualdataweb.org/newOntology/15e3313f-55fb-4f78-a21a-ed970a4552f5",
+      "label": "IsA",
+      "attributes": []
+    },
+    {
+      "id": "813ba706-7391-406e-9204-c4ee4c9c722c",
+      "iri": "http://visualdataweb.org/newOntology/813ba706-7391-406e-9204-c4ee4c9c722c",
+      "label": "IsA",
+      "attributes": []
+    },
+    {
+      "id": "0635835e-e1d6-440e-b33a-6737d5301ace",
+      "iri": "http://visualdataweb.org/newOntology/0635835e-e1d6-440e-b33a-6737d5301ace",
+      "label": "IsA",
+      "attributes": []
+    },
+    {
+      "id": "da0a1da9-dc40-4131-8103-97a50475ded5",
+      "iri": "http://visualdataweb.org/newOntology/da0a1da9-dc40-4131-8103-97a50475ded5",
+      "label": "IsSubclassOf",
+      "attributes": []
+    },
+    {
+      "id": "cd6a233c-aaef-4fc4-9f1c-e8902e69bb4a",
+      "iri": "http://visualdataweb.org/newOntology/cd6a233c-aaef-4fc4-9f1c-e8902e69bb4a",
+      "label": "RequiresProperty",
+      "attributes": []
+    },
+    {
+      "id": "09124baa-b44c-4ff1-8019-5720d38eb5cd",
+      "iri": "http://visualdataweb.org/newOntology/09124baa-b44c-4ff1-8019-5720d38eb5cd",
+      "label": "RequiresProperty",
+      "attributes": []
+    },
+    {
+      "id": "c84eb30b-911f-4743-8792-4f1bb0a3a80b",
+      "iri": "http://visualdataweb.org/newOntology/c84eb30b-911f-4743-8792-4f1bb0a3a80b",
+      "label": "IsA",
+      "attributes": "object",
+      "domain": "BH.oM.Planning.IPhase",
+      "range": "BH.oM.Base.IBHoMObject"
+    },
+    {
+      "id": "b64d0b45-3e2a-4d89-8244-dce98c8b5746",
+      "iri": "http://visualdataweb.org/newOntology/b64d0b45-3e2a-4d89-8244-dce98c8b5746",
+      "label": "IsA",
+      "attributes": "object",
+      "domain": "BH.oM.Planning.IPhase",
+      "range": "BH.oM.Base.IObject"
+    },
+    {
+      "id": "3e8cfbe6-b979-4909-a512-b7137e159968",
+      "iri": "http://visualdataweb.org/newOntology/3e8cfbe6-b979-4909-a512-b7137e159968",
+      "label": "HasProperty",
+      "attributes": "datatype",
+      "domain": "BH.oM.Planning.Issue",
+      "range": "Creator-dea01bc0-0f92-4044-828e-64892893ee42-Issue-HasProperty"
+    },
+    {
+      "id": "b021c27a-d444-4ad8-8eaa-01f2905af618",
+      "iri": "http://visualdataweb.org/newOntology/b021c27a-d444-4ad8-8eaa-01f2905af618",
+      "label": "HasProperty",
+      "attributes": "datatype",
+      "domain": "BH.oM.Planning.Issue",
+      "range": "Assignees-e97dbbb5-59d9-4412-b60b-8eccae0a45f9-Issue-HasProperty"
+    },
+    {
+      "id": "125aed19-b6ef-4fd9-8533-44b69548e12c",
+      "iri": "http://visualdataweb.org/newOntology/125aed19-b6ef-4fd9-8533-44b69548e12c",
+      "label": "HasProperty",
+      "attributes": "datatype",
+      "domain": "BH.oM.Planning.Issue",
+      "range": "Title-af7924ff-fc80-4fc3-a9cf-f51ad22e8359-Issue-HasProperty"
+    },
+    {
+      "id": "06c3acc5-f58e-48c9-98da-322a866bebca",
+      "iri": "http://visualdataweb.org/newOntology/06c3acc5-f58e-48c9-98da-322a866bebca",
+      "label": "HasProperty",
+      "attributes": "datatype",
+      "domain": "BH.oM.Planning.Issue",
+      "range": "RepoName-130396fb-657e-4ec4-bb5e-df5444e78adc-Issue-HasProperty"
+    },
+    {
+      "id": "f7c55f1a-5c9f-4960-afe9-f361b1021a52",
+      "iri": "http://visualdataweb.org/newOntology/f7c55f1a-5c9f-4960-afe9-f361b1021a52",
+      "label": "HasProperty",
+      "attributes": "datatype",
+      "domain": "BH.oM.Planning.Issue",
+      "range": "Number-da9f8764-7c0f-4913-9d25-1100d5802390-Issue-HasProperty"
+    },
+    {
+      "id": "a91156df-68fc-43f8-99bc-51bbdafe3c3c",
+      "iri": "http://visualdataweb.org/newOntology/a91156df-68fc-43f8-99bc-51bbdafe3c3c",
+      "label": "HasProperty",
+      "attributes": "datatype",
+      "domain": "BH.oM.Planning.Issue",
+      "range": "CreationDate-67c64e91-85c3-464d-a37f-ea79fcc5de52-Issue-HasProperty"
+    },
+    {
+      "id": "9e78a03b-d179-432a-92ae-aaa7960daf08",
+      "iri": "http://visualdataweb.org/newOntology/9e78a03b-d179-432a-92ae-aaa7960daf08",
+      "label": "HasProperty",
+      "attributes": "datatype",
+      "domain": "BH.oM.Planning.Issue",
+      "range": "MilestoneName-8fbdd8bb-30b4-4d21-8a75-d42e57f1a9a4-Issue-HasProperty"
+    },
+    {
+      "id": "486b0b88-dd67-4c6f-9e04-06d382abb043",
+      "iri": "http://visualdataweb.org/newOntology/486b0b88-dd67-4c6f-9e04-06d382abb043",
+      "label": "HasProperty",
+      "attributes": "datatype",
+      "domain": "BH.oM.Planning.Issue",
+      "range": "PullRequested-68bd9ec4-3496-4d15-912e-fb46a1615856-Issue-HasProperty"
+    },
+    {
+      "id": "6465a273-ed8a-4e46-9d10-4bc1619527c0",
+      "iri": "http://visualdataweb.org/newOntology/6465a273-ed8a-4e46-9d10-4bc1619527c0",
+      "label": "HasProperty",
+      "attributes": "datatype",
+      "domain": "BH.oM.Planning.Issue",
+      "range": "Labels-547cf96d-f8ce-4126-a184-b8718be31bc8-Issue-HasProperty"
+    },
+    {
+      "id": "b930bbe9-fe78-489c-b621-3c3ce4d7e6c2",
+      "iri": "http://visualdataweb.org/newOntology/b930bbe9-fe78-489c-b621-3c3ce4d7e6c2",
+      "label": "HasProperty",
+      "attributes": "datatype",
+      "domain": "BH.oM.Planning.Issue",
+      "range": "Url-60495349-d33e-4167-8494-ef5ce288c856-Issue-HasProperty"
+    },
+    {
+      "id": "4be9fa84-5071-4a0a-95c0-7c416c7b6306",
+      "iri": "http://visualdataweb.org/newOntology/4be9fa84-5071-4a0a-95c0-7c416c7b6306",
+      "label": "IsA",
+      "attributes": "object",
+      "domain": "BH.oM.Planning.Issue",
+      "range": "BH.oM.Base.IBHoMObject"
+    },
+    {
+      "id": "c3a86a5b-6863-48af-b015-06d2361309ce",
+      "iri": "http://visualdataweb.org/newOntology/c3a86a5b-6863-48af-b015-06d2361309ce",
+      "label": "IsA",
+      "attributes": "object",
+      "domain": "BH.oM.Planning.Issue",
+      "range": "BH.oM.Base.IObject"
+    },
+    {
+      "id": "5b602f55-f69a-4fa1-b651-325345414dba",
+      "iri": "http://visualdataweb.org/newOntology/5b602f55-f69a-4fa1-b651-325345414dba",
+      "label": "IsSubclassOf",
+      "attributes": "object",
+      "domain": "BH.oM.Planning.Issue",
+      "range": "BH.oM.Base.BHoMObject"
+    },
+    {
+      "id": "3fd5d06f-ef21-487f-a894-6e94da4591b8",
+      "iri": "http://visualdataweb.org/newOntology/3fd5d06f-ef21-487f-a894-6e94da4591b8",
+      "label": "HasProperty",
+      "attributes": "datatype",
+      "domain": "BH.oM.Planning.Label",
+      "range": "Colour-85ec3f84-f296-4678-8f83-965c836ad9a1-Label-HasProperty"
+    },
+    {
+      "id": "70ef7302-ecc6-4dff-a7d1-d925d65ef4ba",
+      "iri": "http://visualdataweb.org/newOntology/70ef7302-ecc6-4dff-a7d1-d925d65ef4ba",
+      "label": "IsA",
+      "attributes": "object",
+      "domain": "BH.oM.Planning.Label",
+      "range": "BH.oM.Base.IBHoMObject"
+    },
+    {
+      "id": "aeab5c77-9025-49bb-ab2b-b1351cbf6b0f",
+      "iri": "http://visualdataweb.org/newOntology/aeab5c77-9025-49bb-ab2b-b1351cbf6b0f",
+      "label": "IsA",
+      "attributes": "object",
+      "domain": "BH.oM.Planning.Label",
+      "range": "BH.oM.Base.IObject"
+    },
+    {
+      "id": "7dbeffa9-e6a0-44e6-8c85-52a703c4bc27",
+      "iri": "http://visualdataweb.org/newOntology/7dbeffa9-e6a0-44e6-8c85-52a703c4bc27",
+      "label": "IsSubclassOf",
+      "attributes": "object",
+      "domain": "BH.oM.Planning.Label",
+      "range": "BH.oM.Base.BHoMObject"
+    },
+    {
+      "id": "80412610-2572-4e59-be0e-57a93571dbd9",
+      "iri": "http://visualdataweb.org/newOntology/80412610-2572-4e59-be0e-57a93571dbd9",
+      "label": "HasProperty",
+      "attributes": "datatype",
+      "domain": "BH.oM.Planning.Milestone",
+      "range": "DueOn-6a66c175-4380-4756-8934-df0aaee5eb23-Milestone-HasProperty"
+    },
+    {
+      "id": "ca8a2bde-1ac1-4f72-a34d-bdb3e952e6a2",
+      "iri": "http://visualdataweb.org/newOntology/ca8a2bde-1ac1-4f72-a34d-bdb3e952e6a2",
+      "label": "HasProperty",
+      "attributes": "object",
+      "domain": "BH.oM.Planning.Milestone",
+      "range": "BH.oM.Planning.ItemState"
+    },
+    {
+      "id": "ed03cc05-5dc7-4368-aa73-fc82d5eb7f51",
+      "iri": "http://visualdataweb.org/newOntology/ed03cc05-5dc7-4368-aa73-fc82d5eb7f51",
+      "label": "HasProperty",
+      "attributes": "datatype",
+      "domain": "BH.oM.Planning.Milestone",
+      "range": "Description-9aaf0819-ed0f-4191-ae1a-d2f833b27cc0-Milestone-HasProperty"
+    },
+    {
+      "id": "1145ea29-99fb-4235-975a-536f4b8f0021",
+      "iri": "http://visualdataweb.org/newOntology/1145ea29-99fb-4235-975a-536f4b8f0021",
+      "label": "IsA",
+      "attributes": "object",
+      "domain": "BH.oM.Planning.Milestone",
+      "range": "BH.oM.Base.IBHoMObject"
+    },
+    {
+      "id": "a4db9bd6-c47b-4743-922f-df0803c1a0fa",
+      "iri": "http://visualdataweb.org/newOntology/a4db9bd6-c47b-4743-922f-df0803c1a0fa",
+      "label": "IsA",
+      "attributes": "object",
+      "domain": "BH.oM.Planning.Milestone",
+      "range": "BH.oM.Base.IObject"
+    },
+    {
+      "id": "bdb70c1e-24c1-44a6-a025-c0efc29a9df0",
+      "iri": "http://visualdataweb.org/newOntology/bdb70c1e-24c1-44a6-a025-c0efc29a9df0",
+      "label": "IsSubclassOf",
+      "attributes": "object",
+      "domain": "BH.oM.Planning.Milestone",
+      "range": "BH.oM.Base.BHoMObject"
+    },
+    {
+      "id": "73398b4a-be8d-48c9-8ad1-615669592eec",
+      "iri": "http://visualdataweb.org/newOntology/73398b4a-be8d-48c9-8ad1-615669592eec",
+      "label": "HasProperty",
+      "attributes": "datatype",
+      "domain": "BH.oM.Planning.PullRequest",
+      "range": "Creator-5995a1bf-922b-4f1a-a0ec-9ee45a991d23-PullRequest-HasProperty"
+    },
+    {
+      "id": "7c51c76f-b184-4476-96b0-2bc2012f1554",
+      "iri": "http://visualdataweb.org/newOntology/7c51c76f-b184-4476-96b0-2bc2012f1554",
+      "label": "HasProperty",
+      "attributes": "datatype",
+      "domain": "BH.oM.Planning.PullRequest",
+      "range": "Title-3211d3be-b2bb-44d8-83a7-96bfb8ab828d-PullRequest-HasProperty"
+    },
+    {
+      "id": "3283c2c1-5f40-44d3-8401-b7238844d1f0",
+      "iri": "http://visualdataweb.org/newOntology/3283c2c1-5f40-44d3-8401-b7238844d1f0",
+      "label": "HasProperty",
+      "attributes": "datatype",
+      "domain": "BH.oM.Planning.PullRequest",
+      "range": "Body-b1a1e1ae-80f0-464e-8b9e-06a930b31d77-PullRequest-HasProperty"
+    },
+    {
+      "id": "07299378-8cf6-4a20-8131-3b510172772b",
+      "iri": "http://visualdataweb.org/newOntology/07299378-8cf6-4a20-8131-3b510172772b",
+      "label": "HasProperty",
+      "attributes": "datatype",
+      "domain": "BH.oM.Planning.PullRequest",
+      "range": "HtmlUrl-93dad66f-9fd5-4336-af8d-38cd6736efd1-PullRequest-HasProperty"
+    },
+    {
+      "id": "af73b3cb-7af6-497e-9a24-9e30c4937bd7",
+      "iri": "http://visualdataweb.org/newOntology/af73b3cb-7af6-497e-9a24-9e30c4937bd7",
+      "label": "HasProperty",
+      "attributes": "datatype",
+      "domain": "BH.oM.Planning.PullRequest",
+      "range": "RepoName-ab3c37f3-b7b7-4f13-9cab-32704ea1c855-PullRequest-HasProperty"
+    },
+    {
+      "id": "bb1ed775-a069-4b21-9cdd-4cb43872c3b3",
+      "iri": "http://visualdataweb.org/newOntology/bb1ed775-a069-4b21-9cdd-4cb43872c3b3",
+      "label": "HasProperty",
+      "attributes": "datatype",
+      "domain": "BH.oM.Planning.PullRequest",
+      "range": "BranchName-2aa7c957-463e-4f0b-96cb-89cc5595a4ee-PullRequest-HasProperty"
+    },
+    {
+      "id": "caed6101-faed-4716-9c6c-514033fc2513",
+      "iri": "http://visualdataweb.org/newOntology/caed6101-faed-4716-9c6c-514033fc2513",
+      "label": "HasProperty",
+      "attributes": "datatype",
+      "domain": "BH.oM.Planning.PullRequest",
+      "range": "Number-bbe95135-1b07-4a26-96a9-0c7b1182d41f-PullRequest-HasProperty"
+    },
+    {
+      "id": "ce76ba1e-fae1-4f38-99a7-5135a3f21334",
+      "iri": "http://visualdataweb.org/newOntology/ce76ba1e-fae1-4f38-99a7-5135a3f21334",
+      "label": "HasProperty",
+      "attributes": "datatype",
+      "domain": "BH.oM.Planning.PullRequest",
+      "range": "CreationDate-6ed8538e-000e-4f9f-ad1c-7aa66e75f61e-PullRequest-HasProperty"
+    },
+    {
+      "id": "46977d26-6a4b-48dc-a72c-ec756a94191e",
+      "iri": "http://visualdataweb.org/newOntology/46977d26-6a4b-48dc-a72c-ec756a94191e",
+      "label": "HasProperty",
+      "attributes": "datatype",
+      "domain": "BH.oM.Planning.PullRequest",
+      "range": "MilestoneName-8f412243-1c52-43a1-8c19-f5e3af3893a3-PullRequest-HasProperty"
+    },
+    {
+      "id": "df7b631d-14d7-42a0-8df3-cda166291301",
+      "iri": "http://visualdataweb.org/newOntology/df7b631d-14d7-42a0-8df3-cda166291301",
+      "label": "HasProperty",
+      "attributes": "datatype",
+      "domain": "BH.oM.Planning.PullRequest",
+      "range": "Additions-c2e0d937-3ec2-4cb6-926a-5a52561420ae-PullRequest-HasProperty"
+    },
+    {
+      "id": "1dadc723-66a5-4ffd-9fe9-01244c20ccc5",
+      "iri": "http://visualdataweb.org/newOntology/1dadc723-66a5-4ffd-9fe9-01244c20ccc5",
+      "label": "HasProperty",
+      "attributes": "datatype",
+      "domain": "BH.oM.Planning.PullRequest",
+      "range": "Deletions-0f04f8a3-7ada-465e-81f5-94db77cd3c23-PullRequest-HasProperty"
+    },
+    {
+      "id": "ae715140-8ca7-4373-bc59-d638445ce9ac",
+      "iri": "http://visualdataweb.org/newOntology/ae715140-8ca7-4373-bc59-d638445ce9ac",
+      "label": "HasProperty",
+      "attributes": "datatype",
+      "domain": "BH.oM.Planning.PullRequest",
+      "range": "Reviewers-5b92444c-3461-483a-a346-35578e24d8bb-PullRequest-HasProperty"
+    },
+    {
+      "id": "0c235aa9-0824-451e-b984-15a59f2838a1",
+      "iri": "http://visualdataweb.org/newOntology/0c235aa9-0824-451e-b984-15a59f2838a1",
+      "label": "IsA",
+      "attributes": "object",
+      "domain": "BH.oM.Planning.PullRequest",
+      "range": "BH.oM.Base.IBHoMObject"
+    },
+    {
+      "id": "c445ef9c-2e00-4568-a7ef-8d6b3bb6de0e",
+      "iri": "http://visualdataweb.org/newOntology/c445ef9c-2e00-4568-a7ef-8d6b3bb6de0e",
+      "label": "IsA",
+      "attributes": "object",
+      "domain": "BH.oM.Planning.PullRequest",
+      "range": "BH.oM.Base.IObject"
+    },
+    {
+      "id": "1cd8e165-322f-4889-be87-70f12f8639bc",
+      "iri": "http://visualdataweb.org/newOntology/1cd8e165-322f-4889-be87-70f12f8639bc",
+      "label": "IsSubclassOf",
+      "attributes": "object",
+      "domain": "BH.oM.Planning.PullRequest",
+      "range": "BH.oM.Base.BHoMObject"
+    },
+    {
+      "id": "e8cde60f-2394-46f4-9004-27c54a8d4488",
+      "iri": "http://visualdataweb.org/newOntology/e8cde60f-2394-46f4-9004-27c54a8d4488",
+      "label": "HasProperty",
+      "attributes": "datatype",
+      "domain": "BH.oM.Planning.Repository",
+      "range": "OpenIssues-ea05b447-4068-4ba3-8718-5541b42bb099-Repository-HasProperty"
+    },
+    {
+      "id": "109335ae-2005-43f2-adb5-7e6fbb9615e9",
+      "iri": "http://visualdataweb.org/newOntology/109335ae-2005-43f2-adb5-7e6fbb9615e9",
+      "label": "HasProperty",
+      "attributes": "datatype",
+      "domain": "BH.oM.Planning.Repository",
+      "range": "OpenPullRequests-f6de3613-8715-4544-ac98-863aca1d4a43-Repository-HasProperty"
+    },
+    {
+      "id": "1ff7c6f6-1496-4a0b-8f01-6c68a682e633",
+      "iri": "http://visualdataweb.org/newOntology/1ff7c6f6-1496-4a0b-8f01-6c68a682e633",
+      "label": "HasProperty",
+      "attributes": "datatype",
+      "domain": "BH.oM.Planning.Repository",
+      "range": "ClosedIssues-1cb57d50-bab8-430d-839d-682f3758c466-Repository-HasProperty"
+    },
+    {
+      "id": "d7a73f1e-8e85-4919-8b0e-68b40fd22655",
+      "iri": "http://visualdataweb.org/newOntology/d7a73f1e-8e85-4919-8b0e-68b40fd22655",
+      "label": "HasProperty",
+      "attributes": "datatype",
+      "domain": "BH.oM.Planning.Repository",
+      "range": "ClosedPullRequests-740dff5f-3619-4e2b-a740-445a38bc9e0f-Repository-HasProperty"
+    },
+    {
+      "id": "d3bed497-2503-4e75-a2ef-051a1d767550",
+      "iri": "http://visualdataweb.org/newOntology/d3bed497-2503-4e75-a2ef-051a1d767550",
+      "label": "IsA",
+      "attributes": "object",
+      "domain": "BH.oM.Planning.Repository",
+      "range": "BH.oM.Base.IBHoMObject"
+    },
+    {
+      "id": "f52d54c3-0734-4dc7-9aad-b0c3678a1783",
+      "iri": "http://visualdataweb.org/newOntology/f52d54c3-0734-4dc7-9aad-b0c3678a1783",
+      "label": "IsA",
+      "attributes": "object",
+      "domain": "BH.oM.Planning.Repository",
+      "range": "BH.oM.Base.IObject"
+    },
+    {
+      "id": "6d0852d8-64b2-48b2-a80a-3dccde328894",
+      "iri": "http://visualdataweb.org/newOntology/6d0852d8-64b2-48b2-a80a-3dccde328894",
+      "label": "IsSubclassOf",
+      "attributes": "object",
+      "domain": "BH.oM.Planning.Repository",
+      "range": "BH.oM.Base.BHoMObject"
+    }
+  ]
+}

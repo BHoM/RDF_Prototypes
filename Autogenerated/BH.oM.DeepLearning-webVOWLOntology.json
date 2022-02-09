@@ -1,0 +1,3470 @@
+{
+  "comment": "Generated from BHoM RDF_Prototypes",
+  "namespace": [],
+  "class": [
+    {
+      "id": "BH.oM.DeepLearning.ImageFormat",
+      "type": "owl:Class"
+    },
+    {
+      "id": "BH.oM.DeepLearning.InterpolationMethod",
+      "type": "owl:Class"
+    },
+    {
+      "id": "BH.oM.DeepLearning.Reduce",
+      "type": "owl:Class"
+    },
+    {
+      "id": "BH.oM.DeepLearning.IModule",
+      "type": "owl:Class"
+    },
+    {
+      "id": "BH.oM.DeepLearning.IShape",
+      "type": "owl:Class"
+    },
+    {
+      "id": "BH.oM.DeepLearning.Shape2d",
+      "type": "owl:Class"
+    },
+    {
+      "id": "BH.oM.DeepLearning.Optimisers.Adam",
+      "type": "owl:Class"
+    },
+    {
+      "id": "BH.oM.DeepLearning.Optimisers.IOptimiser",
+      "type": "owl:Class"
+    },
+    {
+      "id": "BH.oM.DeepLearning.Optimisers.SGD",
+      "type": "owl:Class"
+    },
+    {
+      "id": "BH.oM.DeepLearning.Models.Graph",
+      "type": "owl:Class"
+    },
+    {
+      "id": "BH.oM.DeepLearning.Models.Sequential",
+      "type": "owl:Class"
+    },
+    {
+      "id": "BH.oM.DeepLearning.Losses.BCEWithSigmoid",
+      "type": "owl:Class"
+    },
+    {
+      "id": "BH.oM.DeepLearning.Losses.BinaryCrossEntropy",
+      "type": "owl:Class"
+    },
+    {
+      "id": "BH.oM.DeepLearning.Losses.CrossEntropy",
+      "type": "owl:Class"
+    },
+    {
+      "id": "BH.oM.DeepLearning.Losses.MeanSquareError",
+      "type": "owl:Class"
+    },
+    {
+      "id": "BH.oM.DeepLearning.Losses.NegativeLogLikelihood",
+      "type": "owl:Class"
+    },
+    {
+      "id": "BH.oM.DeepLearning.Layers.AvgPooling2d",
+      "type": "owl:Class"
+    },
+    {
+      "id": "BH.oM.DeepLearning.Layers.Convolution2d",
+      "type": "owl:Class"
+    },
+    {
+      "id": "BH.oM.DeepLearning.Layers.GRU",
+      "type": "owl:Class"
+    },
+    {
+      "id": "BH.oM.DeepLearning.Layers.Linear",
+      "type": "owl:Class"
+    },
+    {
+      "id": "BH.oM.DeepLearning.Layers.LSTM",
+      "type": "owl:Class"
+    },
+    {
+      "id": "BH.oM.DeepLearning.Layers.MaxPooling2d",
+      "type": "owl:Class"
+    },
+    {
+      "id": "BH.oM.DeepLearning.Layers.MaxUnPooling2d",
+      "type": "owl:Class"
+    },
+    {
+      "id": "BH.oM.DeepLearning.Layers.TransposedConvolution2d",
+      "type": "owl:Class"
+    },
+    {
+      "id": "BH.oM.DeepLearning.Activations.LeakyReLU",
+      "type": "owl:Class"
+    },
+    {
+      "id": "BH.oM.DeepLearning.Activations.LogSigmoid",
+      "type": "owl:Class"
+    },
+    {
+      "id": "BH.oM.DeepLearning.Activations.LogSoftmax",
+      "type": "owl:Class"
+    },
+    {
+      "id": "BH.oM.DeepLearning.Activations.ReLU",
+      "type": "owl:Class"
+    },
+    {
+      "id": "BH.oM.DeepLearning.Activations.Sigmoid",
+      "type": "owl:Class"
+    },
+    {
+      "id": "BH.oM.DeepLearning.Activations.Softmax",
+      "type": "owl:Class"
+    },
+    {
+      "id": "BH.oM.DeepLearning.Activations.Tanh",
+      "type": "owl:Class"
+    },
+    {
+      "id": "Dim1-e65eb258-6547-4620-9d57-4b0d1b1918c1-Shape2d-HasProperty",
+      "type": "rdfs:Datatype"
+    },
+    {
+      "id": "Dim2-61b86dcd-301e-4306-8f0b-73ec85990c50-Shape2d-HasProperty",
+      "type": "rdfs:Datatype"
+    },
+    {
+      "id": "BH.oM.Base.IBHoMObject",
+      "type": "owl:Class"
+    },
+    {
+      "id": "BH.oM.Base.IObject",
+      "type": "owl:Class"
+    },
+    {
+      "id": "BH.oM.Base.BHoMObject",
+      "type": "owl:Class"
+    },
+    {
+      "id": "LearningRate-ee90548f-7332-483b-a34c-a47edd97f031-Adam-HasProperty",
+      "type": "rdfs:Datatype"
+    },
+    {
+      "id": "Beta1-3006c6d1-c260-4314-a027-7580e139a1bf-Adam-HasProperty",
+      "type": "rdfs:Datatype"
+    },
+    {
+      "id": "Beta2-f816f185-8d9e-46dc-aa2d-a5aa49106e03-Adam-HasProperty",
+      "type": "rdfs:Datatype"
+    },
+    {
+      "id": "WeightDecay-982d6cdc-b516-4a35-a2f8-13f5b3118d23-Adam-HasProperty",
+      "type": "rdfs:Datatype"
+    },
+    {
+      "id": "BH.oM.Base.IBHoMObject",
+      "type": "owl:Class"
+    },
+    {
+      "id": "BH.oM.Base.IObject",
+      "type": "owl:Class"
+    },
+    {
+      "id": "BH.oM.Base.BHoMObject",
+      "type": "owl:Class"
+    },
+    {
+      "id": "LearningRate-50ad56b4-ef90-4d2f-906c-d27136507aeb-SGD-HasProperty",
+      "type": "rdfs:Datatype"
+    },
+    {
+      "id": "Momentum-ba1f4d05-4a61-41ab-9e0c-b68143b36092-SGD-HasProperty",
+      "type": "rdfs:Datatype"
+    },
+    {
+      "id": "Nesterov-25e27c67-58f9-4ebb-ac56-060a907392e4-SGD-HasProperty",
+      "type": "rdfs:Datatype"
+    },
+    {
+      "id": "WeightDecay-cca39fe3-24b1-453e-a23b-7780d5bb9a1f-SGD-HasProperty",
+      "type": "rdfs:Datatype"
+    },
+    {
+      "id": "BH.oM.Base.IBHoMObject",
+      "type": "owl:Class"
+    },
+    {
+      "id": "BH.oM.Base.IObject",
+      "type": "owl:Class"
+    },
+    {
+      "id": "BH.oM.Base.BHoMObject",
+      "type": "owl:Class"
+    },
+    {
+      "id": "BH.oM.Data.Collections.Tree1BH.oM.DeepLearning.IModuleDeepLearningoMVersion5.0.0.0CultureneutralPublicKeyTokennull",
+      "type": "owl:Class"
+    },
+    {
+      "id": "BH.oM.Base.IBHoMObject",
+      "type": "owl:Class"
+    },
+    {
+      "id": "BH.oM.Base.IObject",
+      "type": "owl:Class"
+    },
+    {
+      "id": "BH.oM.Base.BHoMObject",
+      "type": "owl:Class"
+    },
+    {
+      "id": "Modules-c99e99e4-6224-46b4-b947-eb9a39d6c4c8-Sequential-HasProperty",
+      "type": "rdfs:Datatype"
+    },
+    {
+      "id": "BH.oM.Base.IBHoMObject",
+      "type": "owl:Class"
+    },
+    {
+      "id": "BH.oM.Base.IObject",
+      "type": "owl:Class"
+    },
+    {
+      "id": "BH.oM.Base.BHoMObject",
+      "type": "owl:Class"
+    },
+    {
+      "id": "ClassWeights-55233689-7e92-4f5a-a505-e7ce626d2f66-BCEWithSigmoid-HasProperty",
+      "type": "rdfs:Datatype"
+    },
+    {
+      "id": "BH.oM.Base.IBHoMObject",
+      "type": "owl:Class"
+    },
+    {
+      "id": "BH.oM.Base.IObject",
+      "type": "owl:Class"
+    },
+    {
+      "id": "BH.oM.Base.BHoMObject",
+      "type": "owl:Class"
+    },
+    {
+      "id": "ClassWeights-550ba105-b13f-4c0e-b352-4dabf67ea43f-BinaryCrossEntropy-HasProperty",
+      "type": "rdfs:Datatype"
+    },
+    {
+      "id": "BH.oM.Base.IBHoMObject",
+      "type": "owl:Class"
+    },
+    {
+      "id": "BH.oM.Base.IObject",
+      "type": "owl:Class"
+    },
+    {
+      "id": "BH.oM.Base.BHoMObject",
+      "type": "owl:Class"
+    },
+    {
+      "id": "ClassWeights-5e1e64d7-fdbc-4f6e-91e5-27e5d8723c70-CrossEntropy-HasProperty",
+      "type": "rdfs:Datatype"
+    },
+    {
+      "id": "BH.oM.Base.IBHoMObject",
+      "type": "owl:Class"
+    },
+    {
+      "id": "BH.oM.Base.IObject",
+      "type": "owl:Class"
+    },
+    {
+      "id": "BH.oM.Base.BHoMObject",
+      "type": "owl:Class"
+    },
+    {
+      "id": "BH.oM.Base.IBHoMObject",
+      "type": "owl:Class"
+    },
+    {
+      "id": "BH.oM.Base.IObject",
+      "type": "owl:Class"
+    },
+    {
+      "id": "BH.oM.Base.BHoMObject",
+      "type": "owl:Class"
+    },
+    {
+      "id": "ClassWeights-dd8b7e3d-1b51-42d4-81d9-bf193def1595-NegativeLogLikelihood-HasProperty",
+      "type": "rdfs:Datatype"
+    },
+    {
+      "id": "BH.oM.Base.IBHoMObject",
+      "type": "owl:Class"
+    },
+    {
+      "id": "BH.oM.Base.IObject",
+      "type": "owl:Class"
+    },
+    {
+      "id": "BH.oM.Base.BHoMObject",
+      "type": "owl:Class"
+    },
+    {
+      "id": "BH.oM.Base.IBHoMObject",
+      "type": "owl:Class"
+    },
+    {
+      "id": "BH.oM.Base.IObject",
+      "type": "owl:Class"
+    },
+    {
+      "id": "BH.oM.Base.BHoMObject",
+      "type": "owl:Class"
+    },
+    {
+      "id": "FeaturesIn-da5c3179-04e3-40e5-a210-5adfeadc0f58-Convolution2d-HasProperty",
+      "type": "rdfs:Datatype"
+    },
+    {
+      "id": "FeaturesOut-cf1746a9-4eea-49fd-9e22-2b003192a589-Convolution2d-HasProperty",
+      "type": "rdfs:Datatype"
+    },
+    {
+      "id": "BH.oM.Base.IBHoMObject",
+      "type": "owl:Class"
+    },
+    {
+      "id": "BH.oM.Base.IObject",
+      "type": "owl:Class"
+    },
+    {
+      "id": "BH.oM.Base.BHoMObject",
+      "type": "owl:Class"
+    },
+    {
+      "id": "InputSize-f50fd3b6-97c7-4d47-b36b-d4f530d2ae6c-GRU-HasProperty",
+      "type": "rdfs:Datatype"
+    },
+    {
+      "id": "HiddenSize-97517556-e459-4d83-ab46-e2b1e065d246-GRU-HasProperty",
+      "type": "rdfs:Datatype"
+    },
+    {
+      "id": "NumberOfLayers-126c0940-a31f-4062-85f4-fdd5d9c600a8-GRU-HasProperty",
+      "type": "rdfs:Datatype"
+    },
+    {
+      "id": "BatchFirst-f43aab0d-4539-4ce8-9fc8-f5a3cf9fa86e-GRU-HasProperty",
+      "type": "rdfs:Datatype"
+    },
+    {
+      "id": "Dropout-36c589d8-7500-4d4f-b723-297d4ac20a94-GRU-HasProperty",
+      "type": "rdfs:Datatype"
+    },
+    {
+      "id": "Bidirectional-7deecfc4-3c51-4c2d-8716-785a161c72cd-GRU-HasProperty",
+      "type": "rdfs:Datatype"
+    },
+    {
+      "id": "BH.oM.Base.IBHoMObject",
+      "type": "owl:Class"
+    },
+    {
+      "id": "BH.oM.Base.IObject",
+      "type": "owl:Class"
+    },
+    {
+      "id": "BH.oM.Base.BHoMObject",
+      "type": "owl:Class"
+    },
+    {
+      "id": "FeaturesIn-6dba7d92-b546-4b95-9794-c26d2c9ecb55-Linear-HasProperty",
+      "type": "rdfs:Datatype"
+    },
+    {
+      "id": "FeaturesOut-c3b08f87-244a-4b8f-a5e8-c22b2b611d52-Linear-HasProperty",
+      "type": "rdfs:Datatype"
+    },
+    {
+      "id": "BH.oM.Base.IBHoMObject",
+      "type": "owl:Class"
+    },
+    {
+      "id": "BH.oM.Base.IObject",
+      "type": "owl:Class"
+    },
+    {
+      "id": "BH.oM.Base.BHoMObject",
+      "type": "owl:Class"
+    },
+    {
+      "id": "InputSize-a6de4f2a-c6b9-4653-9d3d-ad5b411784ba-LSTM-HasProperty",
+      "type": "rdfs:Datatype"
+    },
+    {
+      "id": "HiddenSize-59ef8dbf-f026-40e2-b4d4-dd42f9fe7c25-LSTM-HasProperty",
+      "type": "rdfs:Datatype"
+    },
+    {
+      "id": "NumberOfLayers-eff3834f-f9a2-4a4b-88b3-b60174234e7f-LSTM-HasProperty",
+      "type": "rdfs:Datatype"
+    },
+    {
+      "id": "BatchFirst-7882e769-a179-431f-b013-9875c9a4e8a4-LSTM-HasProperty",
+      "type": "rdfs:Datatype"
+    },
+    {
+      "id": "Dropout-67fb44f4-80c7-4ba7-a0f8-7c9b4212caa5-LSTM-HasProperty",
+      "type": "rdfs:Datatype"
+    },
+    {
+      "id": "Bidirectional-2eb5e19f-3b8d-4ace-b313-2025f7ef8063-LSTM-HasProperty",
+      "type": "rdfs:Datatype"
+    },
+    {
+      "id": "BH.oM.Base.IBHoMObject",
+      "type": "owl:Class"
+    },
+    {
+      "id": "BH.oM.Base.IObject",
+      "type": "owl:Class"
+    },
+    {
+      "id": "BH.oM.Base.BHoMObject",
+      "type": "owl:Class"
+    },
+    {
+      "id": "BH.oM.Base.IBHoMObject",
+      "type": "owl:Class"
+    },
+    {
+      "id": "BH.oM.Base.IObject",
+      "type": "owl:Class"
+    },
+    {
+      "id": "BH.oM.Base.BHoMObject",
+      "type": "owl:Class"
+    },
+    {
+      "id": "BH.oM.Base.IBHoMObject",
+      "type": "owl:Class"
+    },
+    {
+      "id": "BH.oM.Base.IObject",
+      "type": "owl:Class"
+    },
+    {
+      "id": "BH.oM.Base.BHoMObject",
+      "type": "owl:Class"
+    },
+    {
+      "id": "FeaturesIn-e579582c-ee2a-4d51-a25c-726874a41d06-TransposedConvolution2d-HasProperty",
+      "type": "rdfs:Datatype"
+    },
+    {
+      "id": "FeaturesOut-52c8723c-f566-4d2a-8f53-6bce2cde1e8a-TransposedConvolution2d-HasProperty",
+      "type": "rdfs:Datatype"
+    },
+    {
+      "id": "BH.oM.Base.IBHoMObject",
+      "type": "owl:Class"
+    },
+    {
+      "id": "BH.oM.Base.IObject",
+      "type": "owl:Class"
+    },
+    {
+      "id": "BH.oM.Base.BHoMObject",
+      "type": "owl:Class"
+    },
+    {
+      "id": "NegativeSlope-bfb5f508-facd-4728-93d1-b69d4a100960-LeakyReLU-HasProperty",
+      "type": "rdfs:Datatype"
+    },
+    {
+      "id": "BH.oM.Base.IBHoMObject",
+      "type": "owl:Class"
+    },
+    {
+      "id": "BH.oM.Base.IObject",
+      "type": "owl:Class"
+    },
+    {
+      "id": "BH.oM.Base.BHoMObject",
+      "type": "owl:Class"
+    },
+    {
+      "id": "BH.oM.Base.IBHoMObject",
+      "type": "owl:Class"
+    },
+    {
+      "id": "BH.oM.Base.IObject",
+      "type": "owl:Class"
+    },
+    {
+      "id": "BH.oM.Base.BHoMObject",
+      "type": "owl:Class"
+    },
+    {
+      "id": "Dimension-e89bdfec-bce9-480d-be7a-35c018e9f6c9-LogSoftmax-HasProperty",
+      "type": "rdfs:Datatype"
+    },
+    {
+      "id": "BH.oM.Base.IBHoMObject",
+      "type": "owl:Class"
+    },
+    {
+      "id": "BH.oM.Base.IObject",
+      "type": "owl:Class"
+    },
+    {
+      "id": "BH.oM.Base.BHoMObject",
+      "type": "owl:Class"
+    },
+    {
+      "id": "BH.oM.Base.IBHoMObject",
+      "type": "owl:Class"
+    },
+    {
+      "id": "BH.oM.Base.IObject",
+      "type": "owl:Class"
+    },
+    {
+      "id": "BH.oM.Base.BHoMObject",
+      "type": "owl:Class"
+    },
+    {
+      "id": "BH.oM.Base.IBHoMObject",
+      "type": "owl:Class"
+    },
+    {
+      "id": "BH.oM.Base.IObject",
+      "type": "owl:Class"
+    },
+    {
+      "id": "BH.oM.Base.BHoMObject",
+      "type": "owl:Class"
+    },
+    {
+      "id": "Dimension-674f696b-1eed-4bba-8100-ca4d26e1af96-Softmax-HasProperty",
+      "type": "rdfs:Datatype"
+    },
+    {
+      "id": "BH.oM.Base.IBHoMObject",
+      "type": "owl:Class"
+    },
+    {
+      "id": "BH.oM.Base.IObject",
+      "type": "owl:Class"
+    },
+    {
+      "id": "BH.oM.Base.BHoMObject",
+      "type": "owl:Class"
+    },
+    {
+      "id": "BH.oM.Base.IBHoMObject",
+      "type": "owl:Class"
+    },
+    {
+      "id": "BH.oM.Base.IObject",
+      "type": "owl:Class"
+    },
+    {
+      "id": "BH.oM.Base.BHoMObject",
+      "type": "owl:Class"
+    }
+  ],
+  "classAttribute": [
+    {
+      "id": "BH.oM.DeepLearning.ImageFormat",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/DeepLearning_oM/ImageFormat.cs",
+      "label": "ImageFormat (BH.oM.DeepLearning)",
+      "attributes": []
+    },
+    {
+      "id": "BH.oM.DeepLearning.InterpolationMethod",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/DeepLearning_oM/InterpolationMethod.cs",
+      "label": "InterpolationMethod (BH.oM.DeepLearning)",
+      "attributes": []
+    },
+    {
+      "id": "BH.oM.DeepLearning.Reduce",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/DeepLearning_oM/Reduce.cs",
+      "label": "Reduce (BH.oM.DeepLearning)",
+      "attributes": []
+    },
+    {
+      "id": "BH.oM.DeepLearning.IModule",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/DeepLearning_oM/IModule.cs",
+      "label": "IModule (BH.oM.DeepLearning)",
+      "attributes": []
+    },
+    {
+      "id": "BH.oM.DeepLearning.IShape",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/DeepLearning_oM/IShape.cs",
+      "label": "IShape (BH.oM.DeepLearning)",
+      "attributes": []
+    },
+    {
+      "id": "BH.oM.DeepLearning.Shape2d",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/DeepLearning_oM/Shape2d.cs",
+      "label": "Shape2d (BH.oM.DeepLearning)",
+      "attributes": []
+    },
+    {
+      "id": "BH.oM.DeepLearning.Optimisers.Adam",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/DeepLearning_oM/Optimisers/Adam.cs",
+      "label": "Adam (BH.oM.DeepLearning.Optimisers)",
+      "attributes": []
+    },
+    {
+      "id": "BH.oM.DeepLearning.Optimisers.IOptimiser",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/DeepLearning_oM/Optimisers/IOptimiser.cs",
+      "label": "IOptimiser (BH.oM.DeepLearning.Optimisers)",
+      "attributes": []
+    },
+    {
+      "id": "BH.oM.DeepLearning.Optimisers.SGD",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/DeepLearning_oM/Optimisers/SGD.cs",
+      "label": "SGD (BH.oM.DeepLearning.Optimisers)",
+      "attributes": []
+    },
+    {
+      "id": "BH.oM.DeepLearning.Models.Graph",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/DeepLearning_oM/Models/Graph.cs",
+      "label": "Graph (BH.oM.DeepLearning.Models)",
+      "attributes": []
+    },
+    {
+      "id": "BH.oM.DeepLearning.Models.Sequential",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/DeepLearning_oM/Models/Sequential.cs",
+      "label": "Sequential (BH.oM.DeepLearning.Models)",
+      "attributes": []
+    },
+    {
+      "id": "BH.oM.DeepLearning.Losses.BCEWithSigmoid",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/DeepLearning_oM/Losses/BCEWithSigmoid.cs",
+      "label": "BCEWithSigmoid (BH.oM.DeepLearning.Losses)",
+      "attributes": []
+    },
+    {
+      "id": "BH.oM.DeepLearning.Losses.BinaryCrossEntropy",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/DeepLearning_oM/Losses/BinaryCrossEntropy.cs",
+      "label": "BinaryCrossEntropy (BH.oM.DeepLearning.Losses)",
+      "attributes": []
+    },
+    {
+      "id": "BH.oM.DeepLearning.Losses.CrossEntropy",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/DeepLearning_oM/Losses/CrossEntropy.cs",
+      "label": "CrossEntropy (BH.oM.DeepLearning.Losses)",
+      "attributes": []
+    },
+    {
+      "id": "BH.oM.DeepLearning.Losses.MeanSquareError",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/DeepLearning_oM/Losses/MeanSquareError.cs",
+      "label": "MeanSquareError (BH.oM.DeepLearning.Losses)",
+      "attributes": []
+    },
+    {
+      "id": "BH.oM.DeepLearning.Losses.NegativeLogLikelihood",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/DeepLearning_oM/Losses/NegativeLogLikelihood.cs",
+      "label": "NegativeLogLikelihood (BH.oM.DeepLearning.Losses)",
+      "attributes": []
+    },
+    {
+      "id": "BH.oM.DeepLearning.Layers.AvgPooling2d",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/DeepLearning_oM/Layers/AvgPooling2d.cs",
+      "label": "AvgPooling2d (BH.oM.DeepLearning.Layers)",
+      "attributes": []
+    },
+    {
+      "id": "BH.oM.DeepLearning.Layers.Convolution2d",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/DeepLearning_oM/Layers/Convolution2d.cs",
+      "label": "Convolution2d (BH.oM.DeepLearning.Layers)",
+      "attributes": []
+    },
+    {
+      "id": "BH.oM.DeepLearning.Layers.GRU",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/DeepLearning_oM/Layers/GRU.cs",
+      "label": "GRU (BH.oM.DeepLearning.Layers)",
+      "attributes": []
+    },
+    {
+      "id": "BH.oM.DeepLearning.Layers.Linear",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/DeepLearning_oM/Layers/Linear.cs",
+      "label": "Linear (BH.oM.DeepLearning.Layers)",
+      "attributes": []
+    },
+    {
+      "id": "BH.oM.DeepLearning.Layers.LSTM",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/DeepLearning_oM/Layers/LSTM.cs",
+      "label": "LSTM (BH.oM.DeepLearning.Layers)",
+      "attributes": []
+    },
+    {
+      "id": "BH.oM.DeepLearning.Layers.MaxPooling2d",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/DeepLearning_oM/Layers/MaxPooling2d.cs",
+      "label": "MaxPooling2d (BH.oM.DeepLearning.Layers)",
+      "attributes": []
+    },
+    {
+      "id": "BH.oM.DeepLearning.Layers.MaxUnPooling2d",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/DeepLearning_oM/Layers/MaxUnPooling2d.cs",
+      "label": "MaxUnPooling2d (BH.oM.DeepLearning.Layers)",
+      "attributes": []
+    },
+    {
+      "id": "BH.oM.DeepLearning.Layers.TransposedConvolution2d",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/DeepLearning_oM/Layers/TransposedConvolution2d.cs",
+      "label": "TransposedConvolution2d (BH.oM.DeepLearning.Layers)",
+      "attributes": []
+    },
+    {
+      "id": "BH.oM.DeepLearning.Activations.LeakyReLU",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/DeepLearning_oM/Activations/LeakyReLU.cs",
+      "label": "LeakyReLU (BH.oM.DeepLearning.Activations)",
+      "attributes": []
+    },
+    {
+      "id": "BH.oM.DeepLearning.Activations.LogSigmoid",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/DeepLearning_oM/Activations/LogSigmoid.cs",
+      "label": "LogSigmoid (BH.oM.DeepLearning.Activations)",
+      "attributes": []
+    },
+    {
+      "id": "BH.oM.DeepLearning.Activations.LogSoftmax",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/DeepLearning_oM/Activations/LogSoftmax.cs",
+      "label": "LogSoftmax (BH.oM.DeepLearning.Activations)",
+      "attributes": []
+    },
+    {
+      "id": "BH.oM.DeepLearning.Activations.ReLU",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/DeepLearning_oM/Activations/ReLU.cs",
+      "label": "ReLU (BH.oM.DeepLearning.Activations)",
+      "attributes": []
+    },
+    {
+      "id": "BH.oM.DeepLearning.Activations.Sigmoid",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/DeepLearning_oM/Activations/Sigmoid.cs",
+      "label": "Sigmoid (BH.oM.DeepLearning.Activations)",
+      "attributes": []
+    },
+    {
+      "id": "BH.oM.DeepLearning.Activations.Softmax",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/DeepLearning_oM/Activations/Softmax.cs",
+      "label": "Softmax (BH.oM.DeepLearning.Activations)",
+      "attributes": []
+    },
+    {
+      "id": "BH.oM.DeepLearning.Activations.Tanh",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/DeepLearning_oM/Activations/Tanh.cs",
+      "label": "Tanh (BH.oM.DeepLearning.Activations)",
+      "attributes": []
+    },
+    {
+      "id": "Dim1-e65eb258-6547-4620-9d57-4b0d1b1918c1-Shape2d-HasProperty",
+      "iri": "http://www.w3.org/2001/XMLSchema#",
+      "label": "Dim1 (Int)",
+      "attributes": "datatype"
+    },
+    {
+      "id": "Dim2-61b86dcd-301e-4306-8f0b-73ec85990c50-Shape2d-HasProperty",
+      "iri": "http://www.w3.org/2001/XMLSchema#",
+      "label": "Dim2 (Int)",
+      "attributes": "datatype"
+    },
+    {
+      "id": "BH.oM.Base.IBHoMObject",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/BHoM/Interface/IBHoMObject.cs",
+      "label": "IBHoMObject",
+      "attributes": []
+    },
+    {
+      "id": "BH.oM.Base.IObject",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/BHoM/Interface/IObject.cs",
+      "label": "IObject",
+      "attributes": []
+    },
+    {
+      "id": "BH.oM.Base.BHoMObject",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/BHoM/BHoMObject.cs",
+      "label": "BHoMObject",
+      "attributes": []
+    },
+    {
+      "id": "LearningRate-ee90548f-7332-483b-a34c-a47edd97f031-Adam-HasProperty",
+      "iri": "http://www.w3.org/2001/XMLSchema#",
+      "label": "LearningRate (Double)",
+      "attributes": "datatype"
+    },
+    {
+      "id": "Beta1-3006c6d1-c260-4314-a027-7580e139a1bf-Adam-HasProperty",
+      "iri": "http://www.w3.org/2001/XMLSchema#",
+      "label": "Beta1 (Double)",
+      "attributes": "datatype"
+    },
+    {
+      "id": "Beta2-f816f185-8d9e-46dc-aa2d-a5aa49106e03-Adam-HasProperty",
+      "iri": "http://www.w3.org/2001/XMLSchema#",
+      "label": "Beta2 (Double)",
+      "attributes": "datatype"
+    },
+    {
+      "id": "WeightDecay-982d6cdc-b516-4a35-a2f8-13f5b3118d23-Adam-HasProperty",
+      "iri": "http://www.w3.org/2001/XMLSchema#",
+      "label": "WeightDecay (Double)",
+      "attributes": "datatype"
+    },
+    {
+      "id": "BH.oM.Base.IBHoMObject",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/BHoM/Interface/IBHoMObject.cs",
+      "label": "IBHoMObject",
+      "attributes": []
+    },
+    {
+      "id": "BH.oM.Base.IObject",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/BHoM/Interface/IObject.cs",
+      "label": "IObject",
+      "attributes": []
+    },
+    {
+      "id": "BH.oM.Base.BHoMObject",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/BHoM/BHoMObject.cs",
+      "label": "BHoMObject",
+      "attributes": []
+    },
+    {
+      "id": "LearningRate-50ad56b4-ef90-4d2f-906c-d27136507aeb-SGD-HasProperty",
+      "iri": "http://www.w3.org/2001/XMLSchema#",
+      "label": "LearningRate (Double)",
+      "attributes": "datatype"
+    },
+    {
+      "id": "Momentum-ba1f4d05-4a61-41ab-9e0c-b68143b36092-SGD-HasProperty",
+      "iri": "http://www.w3.org/2001/XMLSchema#",
+      "label": "Momentum (Double)",
+      "attributes": "datatype"
+    },
+    {
+      "id": "Nesterov-25e27c67-58f9-4ebb-ac56-060a907392e4-SGD-HasProperty",
+      "iri": "http://www.w3.org/2001/XMLSchema#",
+      "label": "Nesterov (Boolean)",
+      "attributes": "datatype"
+    },
+    {
+      "id": "WeightDecay-cca39fe3-24b1-453e-a23b-7780d5bb9a1f-SGD-HasProperty",
+      "iri": "http://www.w3.org/2001/XMLSchema#",
+      "label": "WeightDecay (Double)",
+      "attributes": "datatype"
+    },
+    {
+      "id": "BH.oM.Base.IBHoMObject",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/BHoM/Interface/IBHoMObject.cs",
+      "label": "IBHoMObject",
+      "attributes": []
+    },
+    {
+      "id": "BH.oM.Base.IObject",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/BHoM/Interface/IObject.cs",
+      "label": "IObject",
+      "attributes": []
+    },
+    {
+      "id": "BH.oM.Base.BHoMObject",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/BHoM/BHoMObject.cs",
+      "label": "BHoMObject",
+      "attributes": []
+    },
+    {
+      "id": "BH.oM.Data.Collections.Tree1BH.oM.DeepLearning.IModuleDeepLearningoMVersion5.0.0.0CultureneutralPublicKeyTokennull",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/Data_oM/Collections/Tree`1[[/DeepLearning/IModule, DeepLearning_oM, Version=5/0/0/Tree.cs",
+      "label": "Modules (Tree<IModule>)",
+      "attributes": []
+    },
+    {
+      "id": "BH.oM.Base.IBHoMObject",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/BHoM/Interface/IBHoMObject.cs",
+      "label": "IBHoMObject",
+      "attributes": []
+    },
+    {
+      "id": "BH.oM.Base.IObject",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/BHoM/Interface/IObject.cs",
+      "label": "IObject",
+      "attributes": []
+    },
+    {
+      "id": "BH.oM.Base.BHoMObject",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/BHoM/BHoMObject.cs",
+      "label": "BHoMObject",
+      "attributes": []
+    },
+    {
+      "id": "Modules-c99e99e4-6224-46b4-b947-eb9a39d6c4c8-Sequential-HasProperty",
+      "iri": "http://www.w3.org/2001/XMLSchema#",
+      "label": "Modules (List<IModule>)",
+      "attributes": "datatype"
+    },
+    {
+      "id": "BH.oM.Base.IBHoMObject",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/BHoM/Interface/IBHoMObject.cs",
+      "label": "IBHoMObject",
+      "attributes": []
+    },
+    {
+      "id": "BH.oM.Base.IObject",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/BHoM/Interface/IObject.cs",
+      "label": "IObject",
+      "attributes": []
+    },
+    {
+      "id": "BH.oM.Base.BHoMObject",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/BHoM/BHoMObject.cs",
+      "label": "BHoMObject",
+      "attributes": []
+    },
+    {
+      "id": "ClassWeights-55233689-7e92-4f5a-a505-e7ce626d2f66-BCEWithSigmoid-HasProperty",
+      "iri": "http://www.w3.org/2001/XMLSchema#",
+      "label": "ClassWeights (List<Double>)",
+      "attributes": "datatype"
+    },
+    {
+      "id": "BH.oM.Base.IBHoMObject",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/BHoM/Interface/IBHoMObject.cs",
+      "label": "IBHoMObject",
+      "attributes": []
+    },
+    {
+      "id": "BH.oM.Base.IObject",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/BHoM/Interface/IObject.cs",
+      "label": "IObject",
+      "attributes": []
+    },
+    {
+      "id": "BH.oM.Base.BHoMObject",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/BHoM/BHoMObject.cs",
+      "label": "BHoMObject",
+      "attributes": []
+    },
+    {
+      "id": "ClassWeights-550ba105-b13f-4c0e-b352-4dabf67ea43f-BinaryCrossEntropy-HasProperty",
+      "iri": "http://www.w3.org/2001/XMLSchema#",
+      "label": "ClassWeights (List<Double>)",
+      "attributes": "datatype"
+    },
+    {
+      "id": "BH.oM.Base.IBHoMObject",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/BHoM/Interface/IBHoMObject.cs",
+      "label": "IBHoMObject",
+      "attributes": []
+    },
+    {
+      "id": "BH.oM.Base.IObject",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/BHoM/Interface/IObject.cs",
+      "label": "IObject",
+      "attributes": []
+    },
+    {
+      "id": "BH.oM.Base.BHoMObject",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/BHoM/BHoMObject.cs",
+      "label": "BHoMObject",
+      "attributes": []
+    },
+    {
+      "id": "ClassWeights-5e1e64d7-fdbc-4f6e-91e5-27e5d8723c70-CrossEntropy-HasProperty",
+      "iri": "http://www.w3.org/2001/XMLSchema#",
+      "label": "ClassWeights (List<Double>)",
+      "attributes": "datatype"
+    },
+    {
+      "id": "BH.oM.Base.IBHoMObject",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/BHoM/Interface/IBHoMObject.cs",
+      "label": "IBHoMObject",
+      "attributes": []
+    },
+    {
+      "id": "BH.oM.Base.IObject",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/BHoM/Interface/IObject.cs",
+      "label": "IObject",
+      "attributes": []
+    },
+    {
+      "id": "BH.oM.Base.BHoMObject",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/BHoM/BHoMObject.cs",
+      "label": "BHoMObject",
+      "attributes": []
+    },
+    {
+      "id": "BH.oM.Base.IBHoMObject",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/BHoM/Interface/IBHoMObject.cs",
+      "label": "IBHoMObject",
+      "attributes": []
+    },
+    {
+      "id": "BH.oM.Base.IObject",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/BHoM/Interface/IObject.cs",
+      "label": "IObject",
+      "attributes": []
+    },
+    {
+      "id": "BH.oM.Base.BHoMObject",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/BHoM/BHoMObject.cs",
+      "label": "BHoMObject",
+      "attributes": []
+    },
+    {
+      "id": "ClassWeights-dd8b7e3d-1b51-42d4-81d9-bf193def1595-NegativeLogLikelihood-HasProperty",
+      "iri": "http://www.w3.org/2001/XMLSchema#",
+      "label": "ClassWeights (List<Double>)",
+      "attributes": "datatype"
+    },
+    {
+      "id": "BH.oM.Base.IBHoMObject",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/BHoM/Interface/IBHoMObject.cs",
+      "label": "IBHoMObject",
+      "attributes": []
+    },
+    {
+      "id": "BH.oM.Base.IObject",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/BHoM/Interface/IObject.cs",
+      "label": "IObject",
+      "attributes": []
+    },
+    {
+      "id": "BH.oM.Base.BHoMObject",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/BHoM/BHoMObject.cs",
+      "label": "BHoMObject",
+      "attributes": []
+    },
+    {
+      "id": "BH.oM.Base.IBHoMObject",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/BHoM/Interface/IBHoMObject.cs",
+      "label": "IBHoMObject",
+      "attributes": []
+    },
+    {
+      "id": "BH.oM.Base.IObject",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/BHoM/Interface/IObject.cs",
+      "label": "IObject",
+      "attributes": []
+    },
+    {
+      "id": "BH.oM.Base.BHoMObject",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/BHoM/BHoMObject.cs",
+      "label": "BHoMObject",
+      "attributes": []
+    },
+    {
+      "id": "FeaturesIn-da5c3179-04e3-40e5-a210-5adfeadc0f58-Convolution2d-HasProperty",
+      "iri": "http://www.w3.org/2001/XMLSchema#",
+      "label": "FeaturesIn (Int)",
+      "attributes": "datatype"
+    },
+    {
+      "id": "FeaturesOut-cf1746a9-4eea-49fd-9e22-2b003192a589-Convolution2d-HasProperty",
+      "iri": "http://www.w3.org/2001/XMLSchema#",
+      "label": "FeaturesOut (Int)",
+      "attributes": "datatype"
+    },
+    {
+      "id": "BH.oM.Base.IBHoMObject",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/BHoM/Interface/IBHoMObject.cs",
+      "label": "IBHoMObject",
+      "attributes": []
+    },
+    {
+      "id": "BH.oM.Base.IObject",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/BHoM/Interface/IObject.cs",
+      "label": "IObject",
+      "attributes": []
+    },
+    {
+      "id": "BH.oM.Base.BHoMObject",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/BHoM/BHoMObject.cs",
+      "label": "BHoMObject",
+      "attributes": []
+    },
+    {
+      "id": "InputSize-f50fd3b6-97c7-4d47-b36b-d4f530d2ae6c-GRU-HasProperty",
+      "iri": "http://www.w3.org/2001/XMLSchema#",
+      "label": "InputSize (Int)",
+      "attributes": "datatype"
+    },
+    {
+      "id": "HiddenSize-97517556-e459-4d83-ab46-e2b1e065d246-GRU-HasProperty",
+      "iri": "http://www.w3.org/2001/XMLSchema#",
+      "label": "HiddenSize (Int)",
+      "attributes": "datatype"
+    },
+    {
+      "id": "NumberOfLayers-126c0940-a31f-4062-85f4-fdd5d9c600a8-GRU-HasProperty",
+      "iri": "http://www.w3.org/2001/XMLSchema#",
+      "label": "NumberOfLayers (Int)",
+      "attributes": "datatype"
+    },
+    {
+      "id": "BatchFirst-f43aab0d-4539-4ce8-9fc8-f5a3cf9fa86e-GRU-HasProperty",
+      "iri": "http://www.w3.org/2001/XMLSchema#",
+      "label": "BatchFirst (Boolean)",
+      "attributes": "datatype"
+    },
+    {
+      "id": "Dropout-36c589d8-7500-4d4f-b723-297d4ac20a94-GRU-HasProperty",
+      "iri": "http://www.w3.org/2001/XMLSchema#",
+      "label": "Dropout (Double)",
+      "attributes": "datatype"
+    },
+    {
+      "id": "Bidirectional-7deecfc4-3c51-4c2d-8716-785a161c72cd-GRU-HasProperty",
+      "iri": "http://www.w3.org/2001/XMLSchema#",
+      "label": "Bidirectional (Boolean)",
+      "attributes": "datatype"
+    },
+    {
+      "id": "BH.oM.Base.IBHoMObject",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/BHoM/Interface/IBHoMObject.cs",
+      "label": "IBHoMObject",
+      "attributes": []
+    },
+    {
+      "id": "BH.oM.Base.IObject",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/BHoM/Interface/IObject.cs",
+      "label": "IObject",
+      "attributes": []
+    },
+    {
+      "id": "BH.oM.Base.BHoMObject",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/BHoM/BHoMObject.cs",
+      "label": "BHoMObject",
+      "attributes": []
+    },
+    {
+      "id": "FeaturesIn-6dba7d92-b546-4b95-9794-c26d2c9ecb55-Linear-HasProperty",
+      "iri": "http://www.w3.org/2001/XMLSchema#",
+      "label": "FeaturesIn (Int)",
+      "attributes": "datatype"
+    },
+    {
+      "id": "FeaturesOut-c3b08f87-244a-4b8f-a5e8-c22b2b611d52-Linear-HasProperty",
+      "iri": "http://www.w3.org/2001/XMLSchema#",
+      "label": "FeaturesOut (Int)",
+      "attributes": "datatype"
+    },
+    {
+      "id": "BH.oM.Base.IBHoMObject",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/BHoM/Interface/IBHoMObject.cs",
+      "label": "IBHoMObject",
+      "attributes": []
+    },
+    {
+      "id": "BH.oM.Base.IObject",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/BHoM/Interface/IObject.cs",
+      "label": "IObject",
+      "attributes": []
+    },
+    {
+      "id": "BH.oM.Base.BHoMObject",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/BHoM/BHoMObject.cs",
+      "label": "BHoMObject",
+      "attributes": []
+    },
+    {
+      "id": "InputSize-a6de4f2a-c6b9-4653-9d3d-ad5b411784ba-LSTM-HasProperty",
+      "iri": "http://www.w3.org/2001/XMLSchema#",
+      "label": "InputSize (Int)",
+      "attributes": "datatype"
+    },
+    {
+      "id": "HiddenSize-59ef8dbf-f026-40e2-b4d4-dd42f9fe7c25-LSTM-HasProperty",
+      "iri": "http://www.w3.org/2001/XMLSchema#",
+      "label": "HiddenSize (Int)",
+      "attributes": "datatype"
+    },
+    {
+      "id": "NumberOfLayers-eff3834f-f9a2-4a4b-88b3-b60174234e7f-LSTM-HasProperty",
+      "iri": "http://www.w3.org/2001/XMLSchema#",
+      "label": "NumberOfLayers (Int)",
+      "attributes": "datatype"
+    },
+    {
+      "id": "BatchFirst-7882e769-a179-431f-b013-9875c9a4e8a4-LSTM-HasProperty",
+      "iri": "http://www.w3.org/2001/XMLSchema#",
+      "label": "BatchFirst (Boolean)",
+      "attributes": "datatype"
+    },
+    {
+      "id": "Dropout-67fb44f4-80c7-4ba7-a0f8-7c9b4212caa5-LSTM-HasProperty",
+      "iri": "http://www.w3.org/2001/XMLSchema#",
+      "label": "Dropout (Double)",
+      "attributes": "datatype"
+    },
+    {
+      "id": "Bidirectional-2eb5e19f-3b8d-4ace-b313-2025f7ef8063-LSTM-HasProperty",
+      "iri": "http://www.w3.org/2001/XMLSchema#",
+      "label": "Bidirectional (Boolean)",
+      "attributes": "datatype"
+    },
+    {
+      "id": "BH.oM.Base.IBHoMObject",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/BHoM/Interface/IBHoMObject.cs",
+      "label": "IBHoMObject",
+      "attributes": []
+    },
+    {
+      "id": "BH.oM.Base.IObject",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/BHoM/Interface/IObject.cs",
+      "label": "IObject",
+      "attributes": []
+    },
+    {
+      "id": "BH.oM.Base.BHoMObject",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/BHoM/BHoMObject.cs",
+      "label": "BHoMObject",
+      "attributes": []
+    },
+    {
+      "id": "BH.oM.Base.IBHoMObject",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/BHoM/Interface/IBHoMObject.cs",
+      "label": "IBHoMObject",
+      "attributes": []
+    },
+    {
+      "id": "BH.oM.Base.IObject",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/BHoM/Interface/IObject.cs",
+      "label": "IObject",
+      "attributes": []
+    },
+    {
+      "id": "BH.oM.Base.BHoMObject",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/BHoM/BHoMObject.cs",
+      "label": "BHoMObject",
+      "attributes": []
+    },
+    {
+      "id": "BH.oM.Base.IBHoMObject",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/BHoM/Interface/IBHoMObject.cs",
+      "label": "IBHoMObject",
+      "attributes": []
+    },
+    {
+      "id": "BH.oM.Base.IObject",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/BHoM/Interface/IObject.cs",
+      "label": "IObject",
+      "attributes": []
+    },
+    {
+      "id": "BH.oM.Base.BHoMObject",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/BHoM/BHoMObject.cs",
+      "label": "BHoMObject",
+      "attributes": []
+    },
+    {
+      "id": "FeaturesIn-e579582c-ee2a-4d51-a25c-726874a41d06-TransposedConvolution2d-HasProperty",
+      "iri": "http://www.w3.org/2001/XMLSchema#",
+      "label": "FeaturesIn (Int)",
+      "attributes": "datatype"
+    },
+    {
+      "id": "FeaturesOut-52c8723c-f566-4d2a-8f53-6bce2cde1e8a-TransposedConvolution2d-HasProperty",
+      "iri": "http://www.w3.org/2001/XMLSchema#",
+      "label": "FeaturesOut (Int)",
+      "attributes": "datatype"
+    },
+    {
+      "id": "BH.oM.Base.IBHoMObject",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/BHoM/Interface/IBHoMObject.cs",
+      "label": "IBHoMObject",
+      "attributes": []
+    },
+    {
+      "id": "BH.oM.Base.IObject",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/BHoM/Interface/IObject.cs",
+      "label": "IObject",
+      "attributes": []
+    },
+    {
+      "id": "BH.oM.Base.BHoMObject",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/BHoM/BHoMObject.cs",
+      "label": "BHoMObject",
+      "attributes": []
+    },
+    {
+      "id": "NegativeSlope-bfb5f508-facd-4728-93d1-b69d4a100960-LeakyReLU-HasProperty",
+      "iri": "http://www.w3.org/2001/XMLSchema#",
+      "label": "NegativeSlope (Double)",
+      "attributes": "datatype"
+    },
+    {
+      "id": "BH.oM.Base.IBHoMObject",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/BHoM/Interface/IBHoMObject.cs",
+      "label": "IBHoMObject",
+      "attributes": []
+    },
+    {
+      "id": "BH.oM.Base.IObject",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/BHoM/Interface/IObject.cs",
+      "label": "IObject",
+      "attributes": []
+    },
+    {
+      "id": "BH.oM.Base.BHoMObject",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/BHoM/BHoMObject.cs",
+      "label": "BHoMObject",
+      "attributes": []
+    },
+    {
+      "id": "BH.oM.Base.IBHoMObject",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/BHoM/Interface/IBHoMObject.cs",
+      "label": "IBHoMObject",
+      "attributes": []
+    },
+    {
+      "id": "BH.oM.Base.IObject",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/BHoM/Interface/IObject.cs",
+      "label": "IObject",
+      "attributes": []
+    },
+    {
+      "id": "BH.oM.Base.BHoMObject",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/BHoM/BHoMObject.cs",
+      "label": "BHoMObject",
+      "attributes": []
+    },
+    {
+      "id": "Dimension-e89bdfec-bce9-480d-be7a-35c018e9f6c9-LogSoftmax-HasProperty",
+      "iri": "http://www.w3.org/2001/XMLSchema#",
+      "label": "Dimension (Int)",
+      "attributes": "datatype"
+    },
+    {
+      "id": "BH.oM.Base.IBHoMObject",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/BHoM/Interface/IBHoMObject.cs",
+      "label": "IBHoMObject",
+      "attributes": []
+    },
+    {
+      "id": "BH.oM.Base.IObject",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/BHoM/Interface/IObject.cs",
+      "label": "IObject",
+      "attributes": []
+    },
+    {
+      "id": "BH.oM.Base.BHoMObject",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/BHoM/BHoMObject.cs",
+      "label": "BHoMObject",
+      "attributes": []
+    },
+    {
+      "id": "BH.oM.Base.IBHoMObject",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/BHoM/Interface/IBHoMObject.cs",
+      "label": "IBHoMObject",
+      "attributes": []
+    },
+    {
+      "id": "BH.oM.Base.IObject",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/BHoM/Interface/IObject.cs",
+      "label": "IObject",
+      "attributes": []
+    },
+    {
+      "id": "BH.oM.Base.BHoMObject",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/BHoM/BHoMObject.cs",
+      "label": "BHoMObject",
+      "attributes": []
+    },
+    {
+      "id": "BH.oM.Base.IBHoMObject",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/BHoM/Interface/IBHoMObject.cs",
+      "label": "IBHoMObject",
+      "attributes": []
+    },
+    {
+      "id": "BH.oM.Base.IObject",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/BHoM/Interface/IObject.cs",
+      "label": "IObject",
+      "attributes": []
+    },
+    {
+      "id": "BH.oM.Base.BHoMObject",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/BHoM/BHoMObject.cs",
+      "label": "BHoMObject",
+      "attributes": []
+    },
+    {
+      "id": "Dimension-674f696b-1eed-4bba-8100-ca4d26e1af96-Softmax-HasProperty",
+      "iri": "http://www.w3.org/2001/XMLSchema#",
+      "label": "Dimension (Int)",
+      "attributes": "datatype"
+    },
+    {
+      "id": "BH.oM.Base.IBHoMObject",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/BHoM/Interface/IBHoMObject.cs",
+      "label": "IBHoMObject",
+      "attributes": []
+    },
+    {
+      "id": "BH.oM.Base.IObject",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/BHoM/Interface/IObject.cs",
+      "label": "IObject",
+      "attributes": []
+    },
+    {
+      "id": "BH.oM.Base.BHoMObject",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/BHoM/BHoMObject.cs",
+      "label": "BHoMObject",
+      "attributes": []
+    },
+    {
+      "id": "BH.oM.Base.IBHoMObject",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/BHoM/Interface/IBHoMObject.cs",
+      "label": "IBHoMObject",
+      "attributes": []
+    },
+    {
+      "id": "BH.oM.Base.IObject",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/BHoM/Interface/IObject.cs",
+      "label": "IObject",
+      "attributes": []
+    },
+    {
+      "id": "BH.oM.Base.BHoMObject",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/BHoM/BHoMObject.cs",
+      "label": "BHoMObject",
+      "attributes": []
+    }
+  ],
+  "property": [
+    {
+      "id": "17dfd696-1543-4c76-a16b-e8bfc644bd54",
+      "type": "owl:DatatypeProperty"
+    },
+    {
+      "id": "6d1e4e1e-6a44-4a90-a1a8-9b2920716871",
+      "type": "owl:DatatypeProperty"
+    },
+    {
+      "id": "e868437e-5707-4d5c-8411-6170255bdc5b",
+      "type": "owl:DatatypeProperty"
+    },
+    {
+      "id": "cd2bdb44-262c-4fc0-a708-94769287973e",
+      "type": "owl:DatatypeProperty"
+    },
+    {
+      "id": "dc578698-8639-41bf-85c6-fdb9e022efcc",
+      "type": "owl:DatatypeProperty"
+    },
+    {
+      "id": "27e947bd-d4ea-49e8-803d-58ae69a90dea",
+      "type": "owl:DatatypeProperty"
+    },
+    {
+      "id": "d5a4d9f6-7163-403a-afff-8f5588f6901b",
+      "type": "owl:DatatypeProperty"
+    },
+    {
+      "id": "744aaf70-42bb-4e42-becb-607dd9c4cf65",
+      "type": "owl:DatatypeProperty"
+    },
+    {
+      "id": "797775f8-d47a-44b5-b5a1-82f6de7740c2",
+      "type": "owl:DatatypeProperty"
+    },
+    {
+      "id": "6b516495-542e-4c12-8455-bc12922998de",
+      "type": "owl:DatatypeProperty"
+    },
+    {
+      "id": "2e769d42-58aa-42a7-a327-c7528926a555",
+      "type": "owl:DatatypeProperty"
+    },
+    {
+      "id": "e0a28dd0-d734-4a42-8c8a-853c2c4465ce",
+      "type": "owl:DatatypeProperty"
+    },
+    {
+      "id": "53922e14-ea93-4113-9750-3f62426fc169",
+      "type": "owl:DatatypeProperty"
+    },
+    {
+      "id": "15ffd9db-c1b5-49a6-bbfe-4a6a05d77f12",
+      "type": "owl:DatatypeProperty"
+    },
+    {
+      "id": "ccd24de4-e788-40d9-bfe8-f3011b187137",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "00f17130-b22c-4d44-8bb9-0c6023c258c0",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "49739542-f7af-45a1-9168-e74c74175ae1",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "00dd5969-56a6-47f9-92ee-c78cbd5dec55",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "6aaab11b-86e9-4022-b974-2c170fbb9c10",
+      "type": "owl:DatatypeProperty"
+    },
+    {
+      "id": "cb13eefd-6529-4f52-bb9e-cf2318b554f2",
+      "type": "owl:DatatypeProperty"
+    },
+    {
+      "id": "19333985-e350-47db-95d1-2cce872f3a6b",
+      "type": "owl:DatatypeProperty"
+    },
+    {
+      "id": "f872359f-1a44-4289-bbfa-ee8056c0c0f8",
+      "type": "owl:DatatypeProperty"
+    },
+    {
+      "id": "3350eb93-7e7d-420f-9973-420b9ac4282d",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "e4cec21b-1ac0-4e4c-a2e8-64bd35ae8024",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "1a6610f8-7be8-42ad-a9eb-5756d8873179",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "5f393843-8e0c-4103-927a-dc9c85a13fe0",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "07101f0b-3717-427e-ab38-5aab4b64b198",
+      "type": "owl:DatatypeProperty"
+    },
+    {
+      "id": "b1fc3f72-3085-4ee4-a52c-c161b8749a91",
+      "type": "owl:DatatypeProperty"
+    },
+    {
+      "id": "711730d4-084f-4a14-88ab-ea450a6d41a0",
+      "type": "owl:DatatypeProperty"
+    },
+    {
+      "id": "75f6bc6c-1dbd-4cd2-9a56-46537e9c15c7",
+      "type": "owl:DatatypeProperty"
+    },
+    {
+      "id": "42cecca9-f446-418b-90d6-80861a92e583",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "a3cb3422-8fe8-4c59-9dc0-1ed90cc56f2b",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "3982e9a0-5225-4dd3-b4bb-faa57f32c5ff",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "4f96a6de-f3df-4809-8ef3-d68a44904afd",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "ade75929-702e-47ce-a96c-9dddf5917811",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "7b8487c6-e6e1-4233-926e-26238828da9b",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "966871d3-7d03-462d-8a92-9c57150c2e42",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "82b1d3a3-7a56-445c-addd-0ac194be3776",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "dcac2384-aaba-4a95-b799-fec4f2b94f6e",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "1bb67d86-936e-4f7e-b5fc-4cb81cb6659c",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "41f474cf-7361-4a79-bc6c-de8fcab59f3a",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "93b701d4-5cd4-4895-862a-bae9c08668e6",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "261b45ff-7bf3-48a9-9b29-2c08845a44d0",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "31be9ce3-25f7-4d0b-a44c-e54028c2103c",
+      "type": "owl:DatatypeProperty"
+    },
+    {
+      "id": "f32e6597-6c39-4955-9b35-6f42833be551",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "89faa4ac-fed6-40bb-a893-75a0ebd5a78e",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "453ed92d-9a87-458b-83d3-04560d59a50b",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "3f416ef0-a8d6-4071-a676-c3e19089f4dc",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "fddbb2a0-0c2e-4418-b1e5-3c1d168d6ecf",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "ba6f0dd8-72da-4997-98ab-bd24ab682fd6",
+      "type": "owl:DatatypeProperty"
+    },
+    {
+      "id": "93975576-55ac-443f-b040-0808b642cf23",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "b7b01ff0-4285-41d3-b4a2-c8987c4a0cfc",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "12a2177b-9279-4de3-b02b-6c613b6bc190",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "60ecebe9-e21c-450d-908c-0615d9c4780f",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "f260d9e8-220c-4ff4-8713-fcba663b7297",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "a1590ebb-ba68-4b14-ad4e-69f18bf83269",
+      "type": "owl:DatatypeProperty"
+    },
+    {
+      "id": "0388f942-9cc8-478d-a15c-dcd51b4944af",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "b2ea8f79-db83-4499-866b-f1d52aa517ae",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "915f3cde-4ca8-4359-9b3c-fc9b97d49463",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "323158bb-b25b-4626-8df7-800282f8d69a",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "efd12ba3-ac5c-45db-a3fe-00919c03b547",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "f41f7199-cf39-4fd7-a197-d76db09511ce",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "ff68700a-67d7-46ae-b1e4-c2261c0044cb",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "aa88abdd-b61a-44f0-a50a-9ddfeaafdfc6",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "a8733d9c-60ce-41d1-acca-d3203f08f741",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "7c53fb91-65f2-4100-8f45-911aec69ad17",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "60ffc0f5-4e9b-4002-918c-90550ec91af3",
+      "type": "owl:DatatypeProperty"
+    },
+    {
+      "id": "5ae37cdf-0445-453d-bcfb-64746c8a5eaa",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "388e645c-7395-4665-a21a-4fefe9c57fc2",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "c28aea3b-b607-47f4-a36b-74080411633a",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "04961a1a-8560-42d9-947e-509d77f48091",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "2d169b1f-bcee-4b88-bd76-ee3231350c34",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "f6eef02f-810b-43ff-be01-086d001e0098",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "a0297b66-ba0c-4935-a8cd-9fab27fe9550",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "d320b4dc-e1e0-4e53-8a81-c013b5c7813f",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "8ef65ded-b451-4551-af5d-d3757b8e82aa",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "6ed9af94-bd38-449b-a190-da5d7f446afe",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "f78a8f5b-e826-46c2-8c16-f4967f1dbb34",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "da6756ab-bff4-43a2-89a8-331e0da8af1e",
+      "type": "owl:DatatypeProperty"
+    },
+    {
+      "id": "2ab46b42-ff5c-48e0-a104-3d4a27a6388f",
+      "type": "owl:DatatypeProperty"
+    },
+    {
+      "id": "1121ecf4-9b1b-4b20-bfda-f069659c7af1",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "322db49f-577e-4990-aa89-0a4ed2ecaa8b",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "d4468755-b704-4afa-a512-16cc7d30d0b8",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "36cb4b16-3293-4951-b7b9-88fe35603a45",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "f8e97fdf-eb4e-485b-b59e-dd0c3a134475",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "cf5bafc6-dedd-401a-b15e-10fb03ac5e5b",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "6da8f8ab-59c3-4db6-b86d-e245c524c137",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "7bf9a7f2-4c37-4470-bf34-ec3129c14d57",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "c8209a50-1327-4ba0-9f4e-f5a26a840cd4",
+      "type": "owl:DatatypeProperty"
+    },
+    {
+      "id": "442f65b7-4217-4d91-aa40-2b5c3dca6cd8",
+      "type": "owl:DatatypeProperty"
+    },
+    {
+      "id": "b6391d77-296a-4048-8fcb-416359306e0f",
+      "type": "owl:DatatypeProperty"
+    },
+    {
+      "id": "94ce8117-684d-4225-83cc-62ec0e1fddf4",
+      "type": "owl:DatatypeProperty"
+    },
+    {
+      "id": "96dec9d6-1042-4114-a165-746ed318c295",
+      "type": "owl:DatatypeProperty"
+    },
+    {
+      "id": "fca2d667-2687-4072-aff7-495aea23eab2",
+      "type": "owl:DatatypeProperty"
+    },
+    {
+      "id": "c3235983-c709-45cb-b4d7-98511c53f705",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "446fd4c0-b57d-4679-9b6c-b9022f6e85f4",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "cd5b106e-3235-4925-b45d-076786968935",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "6ca81b8c-b61b-4bcf-bf63-29bed5b11994",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "a8dcd939-1507-4ce4-820f-1ae073b73938",
+      "type": "owl:DatatypeProperty"
+    },
+    {
+      "id": "883a01c2-7077-4fa9-ad5b-1292e465ff90",
+      "type": "owl:DatatypeProperty"
+    },
+    {
+      "id": "2b6fa10b-4352-47f6-bb29-4115374b8003",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "d047a231-81de-499e-b100-d50c95c4bbef",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "644661bf-c1f5-4a02-adbf-7a1034378d56",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "c9575289-a310-445a-8668-ba6ad3779c89",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "317dfb6a-9d87-480a-92af-4ce5cbe49573",
+      "type": "owl:DatatypeProperty"
+    },
+    {
+      "id": "b17ac234-23a8-45bd-afe8-8b0964b60e30",
+      "type": "owl:DatatypeProperty"
+    },
+    {
+      "id": "77c375a0-5606-4dc7-8adc-a58a854c3e17",
+      "type": "owl:DatatypeProperty"
+    },
+    {
+      "id": "3133a5bc-339e-4182-a585-45bff6160ac4",
+      "type": "owl:DatatypeProperty"
+    },
+    {
+      "id": "595c3616-ba77-4bd6-ac97-b8d8d0f84850",
+      "type": "owl:DatatypeProperty"
+    },
+    {
+      "id": "037749f5-5ac5-4b1f-8dc5-57776a7e354b",
+      "type": "owl:DatatypeProperty"
+    },
+    {
+      "id": "a3f1abcf-078b-4094-82b9-8563f024323f",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "a9056fce-4d62-4724-81a9-a4c73bad596f",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "3b01b1da-f66f-4f4b-8f2e-7a690ad48283",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "7921097d-b5ca-4fc1-912d-ace2c1387014",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "fd515f2b-e046-4d11-a7b0-807711ba5d01",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "baea7809-ba39-411e-afb5-815f78e84bab",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "f11f4e65-03bb-4a9a-b0c9-f037159aebb7",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "cf3d9954-671c-48e2-9cc8-3c7a3158750d",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "2ecb779e-233f-4be5-80d5-a30b5e945d8d",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "5805bebb-f680-4228-ae1a-24dc94881587",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "033c2e47-89aa-42ae-aff4-b4a2793b6b8b",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "bea2cf25-ab17-414f-825f-eefd60aa01ad",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "5631b267-1a90-4a8f-a226-6e062f2ff0e6",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "0e4b72b2-8d87-44d6-91e2-184dcab39c7e",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "1a893f88-edcf-47ef-912f-e40920941e36",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "49ab740b-509d-4170-80e8-627dd0a2061c",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "b2cec79a-8511-430e-982a-f4e46eeaae77",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "a3e93571-f7ed-413a-b9ef-3bee3cb71017",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "0e1a5b9d-7745-42e8-bf50-ab63b72ec7fc",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "d2138887-96ed-4345-8e14-18ca0f782870",
+      "type": "owl:DatatypeProperty"
+    },
+    {
+      "id": "de1f19d6-9703-47da-937a-019a41fbba63",
+      "type": "owl:DatatypeProperty"
+    },
+    {
+      "id": "fa354ef6-f774-4fd5-bf6a-204fd265cdb6",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "3fcc7a76-6247-4d3e-a7ba-21dec8f7953d",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "ebaf80b9-4687-4f2a-a050-7c2f823f327b",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "e5af428a-448b-4b3a-b36d-a1de04893dc3",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "7ebbd90e-3921-4b67-937b-360bd3014f63",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "1b1ee3ee-e33b-4df3-b0c4-6303b09de095",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "500fc5fd-d631-46a9-b6bc-471dd3ce40cf",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "0f76b29c-0bac-4701-a41d-13081759a249",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "210a852b-c22c-4d03-9346-f774df1a83e7",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "85edc1b7-cd96-4c2a-9942-43a0dc4a89e8",
+      "type": "owl:DatatypeProperty"
+    },
+    {
+      "id": "0ad58737-c4ca-43e2-a856-dc75cedc3212",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "a8f8cf65-a2d9-408d-b13c-55efbf0390d4",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "caec2be8-e198-493e-bc04-a5a1d018a8e7",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "97d86141-c9c8-4f5c-ba63-058d2cbc4889",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "06a496e0-3093-44a2-a273-3d781ac1383a",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "7f0d4a86-27fc-4be9-98e1-a0cbef292bc6",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "03288887-8eb5-45db-8ada-da9e09853c8e",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "67316803-82b7-4d91-adb7-04ef43630ad5",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "87a1488a-9218-4a7d-9a83-9a49d9b5b883",
+      "type": "owl:DatatypeProperty"
+    },
+    {
+      "id": "7d5029cc-5274-4397-9c02-cf080e595140",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "ae0b0aa2-7dd2-4aa7-b9dd-5a84481ad3b5",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "5bfe1607-dc1f-4524-9e62-63b671d2e28c",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "903a998b-c972-427d-bce9-c23a2547aa66",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "4d0fba2d-5836-40c1-aec4-99df36d66bb5",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "8d5fd9cc-04b4-4ee5-b996-90826df5073a",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "45b74098-f867-4287-9b5e-fb0523b34483",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "e52a394f-af14-4faa-8e2f-c6fc2f187227",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "49574d9a-22a7-4fe0-ae96-ba307023e3ea",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "5ff599f9-4146-4105-8d59-9b2687b30000",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "1212f782-2004-4517-9abc-5e3b781a25ed",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "ce1fa4a0-a847-4865-a9e2-604aba9c5233",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "fad8425a-a08e-471b-879f-5ddce61dd6f4",
+      "type": "owl:DatatypeProperty"
+    },
+    {
+      "id": "d0873acd-7be0-4fb5-91f2-e3e84659577f",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "76c024ab-d035-4101-b489-1148cca71204",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "79c06ab8-f390-491b-8ef2-44d4f3f7d62c",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "f69add10-09d3-4c67-9307-bf2c6ad629be",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "1837d35d-bc03-4909-b551-1c9e4e09aaa7",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "b0a28f29-7032-47c1-87e9-e642119397a0",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "9a21ef2c-275a-4b4c-836a-b297e49a7273",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "71cba1b6-1c37-482f-9f9a-3aa81ea1912c",
+      "type": "owl:ObjectProperty"
+    }
+  ],
+  "propertyAttribute": [
+    {
+      "id": "17dfd696-1543-4c76-a16b-e8bfc644bd54",
+      "iri": "http://visualdataweb.org/newOntology/17dfd696-1543-4c76-a16b-e8bfc644bd54",
+      "label": "IsA",
+      "attributes": []
+    },
+    {
+      "id": "6d1e4e1e-6a44-4a90-a1a8-9b2920716871",
+      "iri": "http://visualdataweb.org/newOntology/6d1e4e1e-6a44-4a90-a1a8-9b2920716871",
+      "label": "IsA",
+      "attributes": []
+    },
+    {
+      "id": "e868437e-5707-4d5c-8411-6170255bdc5b",
+      "iri": "http://visualdataweb.org/newOntology/e868437e-5707-4d5c-8411-6170255bdc5b",
+      "label": "IsA",
+      "attributes": []
+    },
+    {
+      "id": "cd2bdb44-262c-4fc0-a708-94769287973e",
+      "iri": "http://visualdataweb.org/newOntology/cd2bdb44-262c-4fc0-a708-94769287973e",
+      "label": "IsSubclassOf",
+      "attributes": []
+    },
+    {
+      "id": "dc578698-8639-41bf-85c6-fdb9e022efcc",
+      "iri": "http://visualdataweb.org/newOntology/dc578698-8639-41bf-85c6-fdb9e022efcc",
+      "label": "IsA",
+      "attributes": []
+    },
+    {
+      "id": "27e947bd-d4ea-49e8-803d-58ae69a90dea",
+      "iri": "http://visualdataweb.org/newOntology/27e947bd-d4ea-49e8-803d-58ae69a90dea",
+      "label": "IsA",
+      "attributes": []
+    },
+    {
+      "id": "d5a4d9f6-7163-403a-afff-8f5588f6901b",
+      "iri": "http://visualdataweb.org/newOntology/d5a4d9f6-7163-403a-afff-8f5588f6901b",
+      "label": "IsA",
+      "attributes": []
+    },
+    {
+      "id": "744aaf70-42bb-4e42-becb-607dd9c4cf65",
+      "iri": "http://visualdataweb.org/newOntology/744aaf70-42bb-4e42-becb-607dd9c4cf65",
+      "label": "IsSubclassOf",
+      "attributes": []
+    },
+    {
+      "id": "797775f8-d47a-44b5-b5a1-82f6de7740c2",
+      "iri": "http://visualdataweb.org/newOntology/797775f8-d47a-44b5-b5a1-82f6de7740c2",
+      "label": "IsA",
+      "attributes": []
+    },
+    {
+      "id": "6b516495-542e-4c12-8455-bc12922998de",
+      "iri": "http://visualdataweb.org/newOntology/6b516495-542e-4c12-8455-bc12922998de",
+      "label": "IsA",
+      "attributes": []
+    },
+    {
+      "id": "2e769d42-58aa-42a7-a327-c7528926a555",
+      "iri": "http://visualdataweb.org/newOntology/2e769d42-58aa-42a7-a327-c7528926a555",
+      "label": "IsA",
+      "attributes": []
+    },
+    {
+      "id": "e0a28dd0-d734-4a42-8c8a-853c2c4465ce",
+      "iri": "http://visualdataweb.org/newOntology/e0a28dd0-d734-4a42-8c8a-853c2c4465ce",
+      "label": "IsSubclassOf",
+      "attributes": []
+    },
+    {
+      "id": "53922e14-ea93-4113-9750-3f62426fc169",
+      "iri": "http://visualdataweb.org/newOntology/53922e14-ea93-4113-9750-3f62426fc169",
+      "label": "HasProperty",
+      "attributes": "datatype",
+      "domain": "BH.oM.DeepLearning.Shape2d",
+      "range": "Dim1-e65eb258-6547-4620-9d57-4b0d1b1918c1-Shape2d-HasProperty"
+    },
+    {
+      "id": "15ffd9db-c1b5-49a6-bbfe-4a6a05d77f12",
+      "iri": "http://visualdataweb.org/newOntology/15ffd9db-c1b5-49a6-bbfe-4a6a05d77f12",
+      "label": "HasProperty",
+      "attributes": "datatype",
+      "domain": "BH.oM.DeepLearning.Shape2d",
+      "range": "Dim2-61b86dcd-301e-4306-8f0b-73ec85990c50-Shape2d-HasProperty"
+    },
+    {
+      "id": "ccd24de4-e788-40d9-bfe8-f3011b187137",
+      "iri": "http://visualdataweb.org/newOntology/ccd24de4-e788-40d9-bfe8-f3011b187137",
+      "label": "IsA",
+      "attributes": "object",
+      "domain": "BH.oM.DeepLearning.Shape2d",
+      "range": "BH.oM.Base.IBHoMObject"
+    },
+    {
+      "id": "00f17130-b22c-4d44-8bb9-0c6023c258c0",
+      "iri": "http://visualdataweb.org/newOntology/00f17130-b22c-4d44-8bb9-0c6023c258c0",
+      "label": "IsA",
+      "attributes": "object",
+      "domain": "BH.oM.DeepLearning.Shape2d",
+      "range": "BH.oM.Base.IObject"
+    },
+    {
+      "id": "49739542-f7af-45a1-9168-e74c74175ae1",
+      "iri": "http://visualdataweb.org/newOntology/49739542-f7af-45a1-9168-e74c74175ae1",
+      "label": "IsA",
+      "attributes": "object",
+      "domain": "BH.oM.DeepLearning.Shape2d",
+      "range": "BH.oM.DeepLearning.IShape"
+    },
+    {
+      "id": "00dd5969-56a6-47f9-92ee-c78cbd5dec55",
+      "iri": "http://visualdataweb.org/newOntology/00dd5969-56a6-47f9-92ee-c78cbd5dec55",
+      "label": "IsSubclassOf",
+      "attributes": "object",
+      "domain": "BH.oM.DeepLearning.Shape2d",
+      "range": "BH.oM.Base.BHoMObject"
+    },
+    {
+      "id": "6aaab11b-86e9-4022-b974-2c170fbb9c10",
+      "iri": "http://visualdataweb.org/newOntology/6aaab11b-86e9-4022-b974-2c170fbb9c10",
+      "label": "HasProperty",
+      "attributes": "datatype",
+      "domain": "BH.oM.DeepLearning.Optimisers.Adam",
+      "range": "LearningRate-ee90548f-7332-483b-a34c-a47edd97f031-Adam-HasProperty"
+    },
+    {
+      "id": "cb13eefd-6529-4f52-bb9e-cf2318b554f2",
+      "iri": "http://visualdataweb.org/newOntology/cb13eefd-6529-4f52-bb9e-cf2318b554f2",
+      "label": "HasProperty",
+      "attributes": "datatype",
+      "domain": "BH.oM.DeepLearning.Optimisers.Adam",
+      "range": "Beta1-3006c6d1-c260-4314-a027-7580e139a1bf-Adam-HasProperty"
+    },
+    {
+      "id": "19333985-e350-47db-95d1-2cce872f3a6b",
+      "iri": "http://visualdataweb.org/newOntology/19333985-e350-47db-95d1-2cce872f3a6b",
+      "label": "HasProperty",
+      "attributes": "datatype",
+      "domain": "BH.oM.DeepLearning.Optimisers.Adam",
+      "range": "Beta2-f816f185-8d9e-46dc-aa2d-a5aa49106e03-Adam-HasProperty"
+    },
+    {
+      "id": "f872359f-1a44-4289-bbfa-ee8056c0c0f8",
+      "iri": "http://visualdataweb.org/newOntology/f872359f-1a44-4289-bbfa-ee8056c0c0f8",
+      "label": "HasProperty",
+      "attributes": "datatype",
+      "domain": "BH.oM.DeepLearning.Optimisers.Adam",
+      "range": "WeightDecay-982d6cdc-b516-4a35-a2f8-13f5b3118d23-Adam-HasProperty"
+    },
+    {
+      "id": "3350eb93-7e7d-420f-9973-420b9ac4282d",
+      "iri": "http://visualdataweb.org/newOntology/3350eb93-7e7d-420f-9973-420b9ac4282d",
+      "label": "IsA",
+      "attributes": "object",
+      "domain": "BH.oM.DeepLearning.Optimisers.Adam",
+      "range": "BH.oM.Base.IBHoMObject"
+    },
+    {
+      "id": "e4cec21b-1ac0-4e4c-a2e8-64bd35ae8024",
+      "iri": "http://visualdataweb.org/newOntology/e4cec21b-1ac0-4e4c-a2e8-64bd35ae8024",
+      "label": "IsA",
+      "attributes": "object",
+      "domain": "BH.oM.DeepLearning.Optimisers.Adam",
+      "range": "BH.oM.Base.IObject"
+    },
+    {
+      "id": "1a6610f8-7be8-42ad-a9eb-5756d8873179",
+      "iri": "http://visualdataweb.org/newOntology/1a6610f8-7be8-42ad-a9eb-5756d8873179",
+      "label": "IsA",
+      "attributes": "object",
+      "domain": "BH.oM.DeepLearning.Optimisers.Adam",
+      "range": "BH.oM.DeepLearning.Optimisers.IOptimiser"
+    },
+    {
+      "id": "5f393843-8e0c-4103-927a-dc9c85a13fe0",
+      "iri": "http://visualdataweb.org/newOntology/5f393843-8e0c-4103-927a-dc9c85a13fe0",
+      "label": "IsSubclassOf",
+      "attributes": "object",
+      "domain": "BH.oM.DeepLearning.Optimisers.Adam",
+      "range": "BH.oM.Base.BHoMObject"
+    },
+    {
+      "id": "07101f0b-3717-427e-ab38-5aab4b64b198",
+      "iri": "http://visualdataweb.org/newOntology/07101f0b-3717-427e-ab38-5aab4b64b198",
+      "label": "HasProperty",
+      "attributes": "datatype",
+      "domain": "BH.oM.DeepLearning.Optimisers.SGD",
+      "range": "LearningRate-50ad56b4-ef90-4d2f-906c-d27136507aeb-SGD-HasProperty"
+    },
+    {
+      "id": "b1fc3f72-3085-4ee4-a52c-c161b8749a91",
+      "iri": "http://visualdataweb.org/newOntology/b1fc3f72-3085-4ee4-a52c-c161b8749a91",
+      "label": "HasProperty",
+      "attributes": "datatype",
+      "domain": "BH.oM.DeepLearning.Optimisers.SGD",
+      "range": "Momentum-ba1f4d05-4a61-41ab-9e0c-b68143b36092-SGD-HasProperty"
+    },
+    {
+      "id": "711730d4-084f-4a14-88ab-ea450a6d41a0",
+      "iri": "http://visualdataweb.org/newOntology/711730d4-084f-4a14-88ab-ea450a6d41a0",
+      "label": "HasProperty",
+      "attributes": "datatype",
+      "domain": "BH.oM.DeepLearning.Optimisers.SGD",
+      "range": "Nesterov-25e27c67-58f9-4ebb-ac56-060a907392e4-SGD-HasProperty"
+    },
+    {
+      "id": "75f6bc6c-1dbd-4cd2-9a56-46537e9c15c7",
+      "iri": "http://visualdataweb.org/newOntology/75f6bc6c-1dbd-4cd2-9a56-46537e9c15c7",
+      "label": "HasProperty",
+      "attributes": "datatype",
+      "domain": "BH.oM.DeepLearning.Optimisers.SGD",
+      "range": "WeightDecay-cca39fe3-24b1-453e-a23b-7780d5bb9a1f-SGD-HasProperty"
+    },
+    {
+      "id": "42cecca9-f446-418b-90d6-80861a92e583",
+      "iri": "http://visualdataweb.org/newOntology/42cecca9-f446-418b-90d6-80861a92e583",
+      "label": "IsA",
+      "attributes": "object",
+      "domain": "BH.oM.DeepLearning.Optimisers.SGD",
+      "range": "BH.oM.Base.IBHoMObject"
+    },
+    {
+      "id": "a3cb3422-8fe8-4c59-9dc0-1ed90cc56f2b",
+      "iri": "http://visualdataweb.org/newOntology/a3cb3422-8fe8-4c59-9dc0-1ed90cc56f2b",
+      "label": "IsA",
+      "attributes": "object",
+      "domain": "BH.oM.DeepLearning.Optimisers.SGD",
+      "range": "BH.oM.Base.IObject"
+    },
+    {
+      "id": "3982e9a0-5225-4dd3-b4bb-faa57f32c5ff",
+      "iri": "http://visualdataweb.org/newOntology/3982e9a0-5225-4dd3-b4bb-faa57f32c5ff",
+      "label": "IsA",
+      "attributes": "object",
+      "domain": "BH.oM.DeepLearning.Optimisers.SGD",
+      "range": "BH.oM.DeepLearning.Optimisers.IOptimiser"
+    },
+    {
+      "id": "4f96a6de-f3df-4809-8ef3-d68a44904afd",
+      "iri": "http://visualdataweb.org/newOntology/4f96a6de-f3df-4809-8ef3-d68a44904afd",
+      "label": "IsSubclassOf",
+      "attributes": "object",
+      "domain": "BH.oM.DeepLearning.Optimisers.SGD",
+      "range": "BH.oM.Base.BHoMObject"
+    },
+    {
+      "id": "ade75929-702e-47ce-a96c-9dddf5917811",
+      "iri": "http://visualdataweb.org/newOntology/ade75929-702e-47ce-a96c-9dddf5917811",
+      "label": "HasProperty",
+      "attributes": "object",
+      "domain": "BH.oM.DeepLearning.Models.Graph",
+      "range": "BH.oM.Data.Collections.Tree1BH.oM.DeepLearning.IModuleDeepLearningoMVersion5.0.0.0CultureneutralPublicKeyTokennull"
+    },
+    {
+      "id": "7b8487c6-e6e1-4233-926e-26238828da9b",
+      "iri": "http://visualdataweb.org/newOntology/7b8487c6-e6e1-4233-926e-26238828da9b",
+      "label": "IsA",
+      "attributes": "object",
+      "domain": "BH.oM.DeepLearning.Models.Graph",
+      "range": "BH.oM.Base.IBHoMObject"
+    },
+    {
+      "id": "966871d3-7d03-462d-8a92-9c57150c2e42",
+      "iri": "http://visualdataweb.org/newOntology/966871d3-7d03-462d-8a92-9c57150c2e42",
+      "label": "IsA",
+      "attributes": "object",
+      "domain": "BH.oM.DeepLearning.Models.Graph",
+      "range": "BH.oM.Base.IObject"
+    },
+    {
+      "id": "82b1d3a3-7a56-445c-addd-0ac194be3776",
+      "iri": "http://visualdataweb.org/newOntology/82b1d3a3-7a56-445c-addd-0ac194be3776",
+      "label": "IsSubclassOf",
+      "attributes": "object",
+      "domain": "BH.oM.DeepLearning.Models.Graph",
+      "range": "BH.oM.Base.BHoMObject"
+    },
+    {
+      "id": "dcac2384-aaba-4a95-b799-fec4f2b94f6e",
+      "iri": "http://visualdataweb.org/newOntology/dcac2384-aaba-4a95-b799-fec4f2b94f6e",
+      "label": "HasProperty",
+      "attributes": "datatype",
+      "domain": "BH.oM.DeepLearning.Models.Sequential",
+      "range": "Modules-c99e99e4-6224-46b4-b947-eb9a39d6c4c8-Sequential-HasProperty"
+    },
+    {
+      "id": "1bb67d86-936e-4f7e-b5fc-4cb81cb6659c",
+      "iri": "http://visualdataweb.org/newOntology/1bb67d86-936e-4f7e-b5fc-4cb81cb6659c",
+      "label": "IsA",
+      "attributes": "object",
+      "domain": "BH.oM.DeepLearning.Models.Sequential",
+      "range": "BH.oM.Base.IBHoMObject"
+    },
+    {
+      "id": "41f474cf-7361-4a79-bc6c-de8fcab59f3a",
+      "iri": "http://visualdataweb.org/newOntology/41f474cf-7361-4a79-bc6c-de8fcab59f3a",
+      "label": "IsA",
+      "attributes": "object",
+      "domain": "BH.oM.DeepLearning.Models.Sequential",
+      "range": "BH.oM.Base.IObject"
+    },
+    {
+      "id": "93b701d4-5cd4-4895-862a-bae9c08668e6",
+      "iri": "http://visualdataweb.org/newOntology/93b701d4-5cd4-4895-862a-bae9c08668e6",
+      "label": "IsSubclassOf",
+      "attributes": "object",
+      "domain": "BH.oM.DeepLearning.Models.Sequential",
+      "range": "BH.oM.Base.BHoMObject"
+    },
+    {
+      "id": "261b45ff-7bf3-48a9-9b29-2c08845a44d0",
+      "iri": "http://visualdataweb.org/newOntology/261b45ff-7bf3-48a9-9b29-2c08845a44d0",
+      "label": "HasProperty",
+      "attributes": "object",
+      "domain": "BH.oM.DeepLearning.Losses.BCEWithSigmoid",
+      "range": "BH.oM.DeepLearning.Reduce"
+    },
+    {
+      "id": "31be9ce3-25f7-4d0b-a44c-e54028c2103c",
+      "iri": "http://visualdataweb.org/newOntology/31be9ce3-25f7-4d0b-a44c-e54028c2103c",
+      "label": "HasProperty",
+      "attributes": "datatype",
+      "domain": "BH.oM.DeepLearning.Losses.BCEWithSigmoid",
+      "range": "ClassWeights-55233689-7e92-4f5a-a505-e7ce626d2f66-BCEWithSigmoid-HasProperty"
+    },
+    {
+      "id": "f32e6597-6c39-4955-9b35-6f42833be551",
+      "iri": "http://visualdataweb.org/newOntology/f32e6597-6c39-4955-9b35-6f42833be551",
+      "label": "IsA",
+      "attributes": "object",
+      "domain": "BH.oM.DeepLearning.Losses.BCEWithSigmoid",
+      "range": "BH.oM.Base.IBHoMObject"
+    },
+    {
+      "id": "89faa4ac-fed6-40bb-a893-75a0ebd5a78e",
+      "iri": "http://visualdataweb.org/newOntology/89faa4ac-fed6-40bb-a893-75a0ebd5a78e",
+      "label": "IsA",
+      "attributes": "object",
+      "domain": "BH.oM.DeepLearning.Losses.BCEWithSigmoid",
+      "range": "BH.oM.Base.IObject"
+    },
+    {
+      "id": "453ed92d-9a87-458b-83d3-04560d59a50b",
+      "iri": "http://visualdataweb.org/newOntology/453ed92d-9a87-458b-83d3-04560d59a50b",
+      "label": "IsA",
+      "attributes": "object",
+      "domain": "BH.oM.DeepLearning.Losses.BCEWithSigmoid",
+      "range": "BH.oM.DeepLearning.IModule"
+    },
+    {
+      "id": "3f416ef0-a8d6-4071-a676-c3e19089f4dc",
+      "iri": "http://visualdataweb.org/newOntology/3f416ef0-a8d6-4071-a676-c3e19089f4dc",
+      "label": "IsSubclassOf",
+      "attributes": "object",
+      "domain": "BH.oM.DeepLearning.Losses.BCEWithSigmoid",
+      "range": "BH.oM.Base.BHoMObject"
+    },
+    {
+      "id": "fddbb2a0-0c2e-4418-b1e5-3c1d168d6ecf",
+      "iri": "http://visualdataweb.org/newOntology/fddbb2a0-0c2e-4418-b1e5-3c1d168d6ecf",
+      "label": "HasProperty",
+      "attributes": "object",
+      "domain": "BH.oM.DeepLearning.Losses.BinaryCrossEntropy",
+      "range": "BH.oM.DeepLearning.Reduce"
+    },
+    {
+      "id": "ba6f0dd8-72da-4997-98ab-bd24ab682fd6",
+      "iri": "http://visualdataweb.org/newOntology/ba6f0dd8-72da-4997-98ab-bd24ab682fd6",
+      "label": "HasProperty",
+      "attributes": "datatype",
+      "domain": "BH.oM.DeepLearning.Losses.BinaryCrossEntropy",
+      "range": "ClassWeights-550ba105-b13f-4c0e-b352-4dabf67ea43f-BinaryCrossEntropy-HasProperty"
+    },
+    {
+      "id": "93975576-55ac-443f-b040-0808b642cf23",
+      "iri": "http://visualdataweb.org/newOntology/93975576-55ac-443f-b040-0808b642cf23",
+      "label": "IsA",
+      "attributes": "object",
+      "domain": "BH.oM.DeepLearning.Losses.BinaryCrossEntropy",
+      "range": "BH.oM.Base.IBHoMObject"
+    },
+    {
+      "id": "b7b01ff0-4285-41d3-b4a2-c8987c4a0cfc",
+      "iri": "http://visualdataweb.org/newOntology/b7b01ff0-4285-41d3-b4a2-c8987c4a0cfc",
+      "label": "IsA",
+      "attributes": "object",
+      "domain": "BH.oM.DeepLearning.Losses.BinaryCrossEntropy",
+      "range": "BH.oM.Base.IObject"
+    },
+    {
+      "id": "12a2177b-9279-4de3-b02b-6c613b6bc190",
+      "iri": "http://visualdataweb.org/newOntology/12a2177b-9279-4de3-b02b-6c613b6bc190",
+      "label": "IsA",
+      "attributes": "object",
+      "domain": "BH.oM.DeepLearning.Losses.BinaryCrossEntropy",
+      "range": "BH.oM.DeepLearning.IModule"
+    },
+    {
+      "id": "60ecebe9-e21c-450d-908c-0615d9c4780f",
+      "iri": "http://visualdataweb.org/newOntology/60ecebe9-e21c-450d-908c-0615d9c4780f",
+      "label": "IsSubclassOf",
+      "attributes": "object",
+      "domain": "BH.oM.DeepLearning.Losses.BinaryCrossEntropy",
+      "range": "BH.oM.Base.BHoMObject"
+    },
+    {
+      "id": "f260d9e8-220c-4ff4-8713-fcba663b7297",
+      "iri": "http://visualdataweb.org/newOntology/f260d9e8-220c-4ff4-8713-fcba663b7297",
+      "label": "HasProperty",
+      "attributes": "object",
+      "domain": "BH.oM.DeepLearning.Losses.CrossEntropy",
+      "range": "BH.oM.DeepLearning.Reduce"
+    },
+    {
+      "id": "a1590ebb-ba68-4b14-ad4e-69f18bf83269",
+      "iri": "http://visualdataweb.org/newOntology/a1590ebb-ba68-4b14-ad4e-69f18bf83269",
+      "label": "HasProperty",
+      "attributes": "datatype",
+      "domain": "BH.oM.DeepLearning.Losses.CrossEntropy",
+      "range": "ClassWeights-5e1e64d7-fdbc-4f6e-91e5-27e5d8723c70-CrossEntropy-HasProperty"
+    },
+    {
+      "id": "0388f942-9cc8-478d-a15c-dcd51b4944af",
+      "iri": "http://visualdataweb.org/newOntology/0388f942-9cc8-478d-a15c-dcd51b4944af",
+      "label": "IsA",
+      "attributes": "object",
+      "domain": "BH.oM.DeepLearning.Losses.CrossEntropy",
+      "range": "BH.oM.Base.IBHoMObject"
+    },
+    {
+      "id": "b2ea8f79-db83-4499-866b-f1d52aa517ae",
+      "iri": "http://visualdataweb.org/newOntology/b2ea8f79-db83-4499-866b-f1d52aa517ae",
+      "label": "IsA",
+      "attributes": "object",
+      "domain": "BH.oM.DeepLearning.Losses.CrossEntropy",
+      "range": "BH.oM.Base.IObject"
+    },
+    {
+      "id": "915f3cde-4ca8-4359-9b3c-fc9b97d49463",
+      "iri": "http://visualdataweb.org/newOntology/915f3cde-4ca8-4359-9b3c-fc9b97d49463",
+      "label": "IsA",
+      "attributes": "object",
+      "domain": "BH.oM.DeepLearning.Losses.CrossEntropy",
+      "range": "BH.oM.DeepLearning.IModule"
+    },
+    {
+      "id": "323158bb-b25b-4626-8df7-800282f8d69a",
+      "iri": "http://visualdataweb.org/newOntology/323158bb-b25b-4626-8df7-800282f8d69a",
+      "label": "IsSubclassOf",
+      "attributes": "object",
+      "domain": "BH.oM.DeepLearning.Losses.CrossEntropy",
+      "range": "BH.oM.Base.BHoMObject"
+    },
+    {
+      "id": "efd12ba3-ac5c-45db-a3fe-00919c03b547",
+      "iri": "http://visualdataweb.org/newOntology/efd12ba3-ac5c-45db-a3fe-00919c03b547",
+      "label": "HasProperty",
+      "attributes": "object",
+      "domain": "BH.oM.DeepLearning.Losses.MeanSquareError",
+      "range": "BH.oM.DeepLearning.Reduce"
+    },
+    {
+      "id": "f41f7199-cf39-4fd7-a197-d76db09511ce",
+      "iri": "http://visualdataweb.org/newOntology/f41f7199-cf39-4fd7-a197-d76db09511ce",
+      "label": "IsA",
+      "attributes": "object",
+      "domain": "BH.oM.DeepLearning.Losses.MeanSquareError",
+      "range": "BH.oM.Base.IBHoMObject"
+    },
+    {
+      "id": "ff68700a-67d7-46ae-b1e4-c2261c0044cb",
+      "iri": "http://visualdataweb.org/newOntology/ff68700a-67d7-46ae-b1e4-c2261c0044cb",
+      "label": "IsA",
+      "attributes": "object",
+      "domain": "BH.oM.DeepLearning.Losses.MeanSquareError",
+      "range": "BH.oM.Base.IObject"
+    },
+    {
+      "id": "aa88abdd-b61a-44f0-a50a-9ddfeaafdfc6",
+      "iri": "http://visualdataweb.org/newOntology/aa88abdd-b61a-44f0-a50a-9ddfeaafdfc6",
+      "label": "IsA",
+      "attributes": "object",
+      "domain": "BH.oM.DeepLearning.Losses.MeanSquareError",
+      "range": "BH.oM.DeepLearning.IModule"
+    },
+    {
+      "id": "a8733d9c-60ce-41d1-acca-d3203f08f741",
+      "iri": "http://visualdataweb.org/newOntology/a8733d9c-60ce-41d1-acca-d3203f08f741",
+      "label": "IsSubclassOf",
+      "attributes": "object",
+      "domain": "BH.oM.DeepLearning.Losses.MeanSquareError",
+      "range": "BH.oM.Base.BHoMObject"
+    },
+    {
+      "id": "7c53fb91-65f2-4100-8f45-911aec69ad17",
+      "iri": "http://visualdataweb.org/newOntology/7c53fb91-65f2-4100-8f45-911aec69ad17",
+      "label": "HasProperty",
+      "attributes": "object",
+      "domain": "BH.oM.DeepLearning.Losses.NegativeLogLikelihood",
+      "range": "BH.oM.DeepLearning.Reduce"
+    },
+    {
+      "id": "60ffc0f5-4e9b-4002-918c-90550ec91af3",
+      "iri": "http://visualdataweb.org/newOntology/60ffc0f5-4e9b-4002-918c-90550ec91af3",
+      "label": "HasProperty",
+      "attributes": "datatype",
+      "domain": "BH.oM.DeepLearning.Losses.NegativeLogLikelihood",
+      "range": "ClassWeights-dd8b7e3d-1b51-42d4-81d9-bf193def1595-NegativeLogLikelihood-HasProperty"
+    },
+    {
+      "id": "5ae37cdf-0445-453d-bcfb-64746c8a5eaa",
+      "iri": "http://visualdataweb.org/newOntology/5ae37cdf-0445-453d-bcfb-64746c8a5eaa",
+      "label": "IsA",
+      "attributes": "object",
+      "domain": "BH.oM.DeepLearning.Losses.NegativeLogLikelihood",
+      "range": "BH.oM.Base.IBHoMObject"
+    },
+    {
+      "id": "388e645c-7395-4665-a21a-4fefe9c57fc2",
+      "iri": "http://visualdataweb.org/newOntology/388e645c-7395-4665-a21a-4fefe9c57fc2",
+      "label": "IsA",
+      "attributes": "object",
+      "domain": "BH.oM.DeepLearning.Losses.NegativeLogLikelihood",
+      "range": "BH.oM.Base.IObject"
+    },
+    {
+      "id": "c28aea3b-b607-47f4-a36b-74080411633a",
+      "iri": "http://visualdataweb.org/newOntology/c28aea3b-b607-47f4-a36b-74080411633a",
+      "label": "IsA",
+      "attributes": "object",
+      "domain": "BH.oM.DeepLearning.Losses.NegativeLogLikelihood",
+      "range": "BH.oM.DeepLearning.IModule"
+    },
+    {
+      "id": "04961a1a-8560-42d9-947e-509d77f48091",
+      "iri": "http://visualdataweb.org/newOntology/04961a1a-8560-42d9-947e-509d77f48091",
+      "label": "IsSubclassOf",
+      "attributes": "object",
+      "domain": "BH.oM.DeepLearning.Losses.NegativeLogLikelihood",
+      "range": "BH.oM.Base.BHoMObject"
+    },
+    {
+      "id": "2d169b1f-bcee-4b88-bd76-ee3231350c34",
+      "iri": "http://visualdataweb.org/newOntology/2d169b1f-bcee-4b88-bd76-ee3231350c34",
+      "label": "HasProperty",
+      "attributes": "object",
+      "domain": "BH.oM.DeepLearning.Layers.AvgPooling2d",
+      "range": "BH.oM.DeepLearning.Shape2d"
+    },
+    {
+      "id": "f6eef02f-810b-43ff-be01-086d001e0098",
+      "iri": "http://visualdataweb.org/newOntology/f6eef02f-810b-43ff-be01-086d001e0098",
+      "label": "HasProperty",
+      "attributes": "object",
+      "domain": "BH.oM.DeepLearning.Layers.AvgPooling2d",
+      "range": "BH.oM.DeepLearning.Shape2d"
+    },
+    {
+      "id": "a0297b66-ba0c-4935-a8cd-9fab27fe9550",
+      "iri": "http://visualdataweb.org/newOntology/a0297b66-ba0c-4935-a8cd-9fab27fe9550",
+      "label": "HasProperty",
+      "attributes": "object",
+      "domain": "BH.oM.DeepLearning.Layers.AvgPooling2d",
+      "range": "BH.oM.DeepLearning.Shape2d"
+    },
+    {
+      "id": "d320b4dc-e1e0-4e53-8a81-c013b5c7813f",
+      "iri": "http://visualdataweb.org/newOntology/d320b4dc-e1e0-4e53-8a81-c013b5c7813f",
+      "label": "IsA",
+      "attributes": "object",
+      "domain": "BH.oM.DeepLearning.Layers.AvgPooling2d",
+      "range": "BH.oM.Base.IBHoMObject"
+    },
+    {
+      "id": "8ef65ded-b451-4551-af5d-d3757b8e82aa",
+      "iri": "http://visualdataweb.org/newOntology/8ef65ded-b451-4551-af5d-d3757b8e82aa",
+      "label": "IsA",
+      "attributes": "object",
+      "domain": "BH.oM.DeepLearning.Layers.AvgPooling2d",
+      "range": "BH.oM.Base.IObject"
+    },
+    {
+      "id": "6ed9af94-bd38-449b-a190-da5d7f446afe",
+      "iri": "http://visualdataweb.org/newOntology/6ed9af94-bd38-449b-a190-da5d7f446afe",
+      "label": "IsA",
+      "attributes": "object",
+      "domain": "BH.oM.DeepLearning.Layers.AvgPooling2d",
+      "range": "BH.oM.DeepLearning.IModule"
+    },
+    {
+      "id": "f78a8f5b-e826-46c2-8c16-f4967f1dbb34",
+      "iri": "http://visualdataweb.org/newOntology/f78a8f5b-e826-46c2-8c16-f4967f1dbb34",
+      "label": "IsSubclassOf",
+      "attributes": "object",
+      "domain": "BH.oM.DeepLearning.Layers.AvgPooling2d",
+      "range": "BH.oM.Base.BHoMObject"
+    },
+    {
+      "id": "da6756ab-bff4-43a2-89a8-331e0da8af1e",
+      "iri": "http://visualdataweb.org/newOntology/da6756ab-bff4-43a2-89a8-331e0da8af1e",
+      "label": "HasProperty",
+      "attributes": "datatype",
+      "domain": "BH.oM.DeepLearning.Layers.Convolution2d",
+      "range": "FeaturesIn-da5c3179-04e3-40e5-a210-5adfeadc0f58-Convolution2d-HasProperty"
+    },
+    {
+      "id": "2ab46b42-ff5c-48e0-a104-3d4a27a6388f",
+      "iri": "http://visualdataweb.org/newOntology/2ab46b42-ff5c-48e0-a104-3d4a27a6388f",
+      "label": "HasProperty",
+      "attributes": "datatype",
+      "domain": "BH.oM.DeepLearning.Layers.Convolution2d",
+      "range": "FeaturesOut-cf1746a9-4eea-49fd-9e22-2b003192a589-Convolution2d-HasProperty"
+    },
+    {
+      "id": "1121ecf4-9b1b-4b20-bfda-f069659c7af1",
+      "iri": "http://visualdataweb.org/newOntology/1121ecf4-9b1b-4b20-bfda-f069659c7af1",
+      "label": "HasProperty",
+      "attributes": "object",
+      "domain": "BH.oM.DeepLearning.Layers.Convolution2d",
+      "range": "BH.oM.DeepLearning.Shape2d"
+    },
+    {
+      "id": "322db49f-577e-4990-aa89-0a4ed2ecaa8b",
+      "iri": "http://visualdataweb.org/newOntology/322db49f-577e-4990-aa89-0a4ed2ecaa8b",
+      "label": "HasProperty",
+      "attributes": "object",
+      "domain": "BH.oM.DeepLearning.Layers.Convolution2d",
+      "range": "BH.oM.DeepLearning.Shape2d"
+    },
+    {
+      "id": "d4468755-b704-4afa-a512-16cc7d30d0b8",
+      "iri": "http://visualdataweb.org/newOntology/d4468755-b704-4afa-a512-16cc7d30d0b8",
+      "label": "HasProperty",
+      "attributes": "object",
+      "domain": "BH.oM.DeepLearning.Layers.Convolution2d",
+      "range": "BH.oM.DeepLearning.Shape2d"
+    },
+    {
+      "id": "36cb4b16-3293-4951-b7b9-88fe35603a45",
+      "iri": "http://visualdataweb.org/newOntology/36cb4b16-3293-4951-b7b9-88fe35603a45",
+      "label": "HasProperty",
+      "attributes": "object",
+      "domain": "BH.oM.DeepLearning.Layers.Convolution2d",
+      "range": "BH.oM.DeepLearning.Shape2d"
+    },
+    {
+      "id": "f8e97fdf-eb4e-485b-b59e-dd0c3a134475",
+      "iri": "http://visualdataweb.org/newOntology/f8e97fdf-eb4e-485b-b59e-dd0c3a134475",
+      "label": "IsA",
+      "attributes": "object",
+      "domain": "BH.oM.DeepLearning.Layers.Convolution2d",
+      "range": "BH.oM.Base.IBHoMObject"
+    },
+    {
+      "id": "cf5bafc6-dedd-401a-b15e-10fb03ac5e5b",
+      "iri": "http://visualdataweb.org/newOntology/cf5bafc6-dedd-401a-b15e-10fb03ac5e5b",
+      "label": "IsA",
+      "attributes": "object",
+      "domain": "BH.oM.DeepLearning.Layers.Convolution2d",
+      "range": "BH.oM.Base.IObject"
+    },
+    {
+      "id": "6da8f8ab-59c3-4db6-b86d-e245c524c137",
+      "iri": "http://visualdataweb.org/newOntology/6da8f8ab-59c3-4db6-b86d-e245c524c137",
+      "label": "IsA",
+      "attributes": "object",
+      "domain": "BH.oM.DeepLearning.Layers.Convolution2d",
+      "range": "BH.oM.DeepLearning.IModule"
+    },
+    {
+      "id": "7bf9a7f2-4c37-4470-bf34-ec3129c14d57",
+      "iri": "http://visualdataweb.org/newOntology/7bf9a7f2-4c37-4470-bf34-ec3129c14d57",
+      "label": "IsSubclassOf",
+      "attributes": "object",
+      "domain": "BH.oM.DeepLearning.Layers.Convolution2d",
+      "range": "BH.oM.Base.BHoMObject"
+    },
+    {
+      "id": "c8209a50-1327-4ba0-9f4e-f5a26a840cd4",
+      "iri": "http://visualdataweb.org/newOntology/c8209a50-1327-4ba0-9f4e-f5a26a840cd4",
+      "label": "HasProperty",
+      "attributes": "datatype",
+      "domain": "BH.oM.DeepLearning.Layers.GRU",
+      "range": "InputSize-f50fd3b6-97c7-4d47-b36b-d4f530d2ae6c-GRU-HasProperty"
+    },
+    {
+      "id": "442f65b7-4217-4d91-aa40-2b5c3dca6cd8",
+      "iri": "http://visualdataweb.org/newOntology/442f65b7-4217-4d91-aa40-2b5c3dca6cd8",
+      "label": "HasProperty",
+      "attributes": "datatype",
+      "domain": "BH.oM.DeepLearning.Layers.GRU",
+      "range": "HiddenSize-97517556-e459-4d83-ab46-e2b1e065d246-GRU-HasProperty"
+    },
+    {
+      "id": "b6391d77-296a-4048-8fcb-416359306e0f",
+      "iri": "http://visualdataweb.org/newOntology/b6391d77-296a-4048-8fcb-416359306e0f",
+      "label": "HasProperty",
+      "attributes": "datatype",
+      "domain": "BH.oM.DeepLearning.Layers.GRU",
+      "range": "NumberOfLayers-126c0940-a31f-4062-85f4-fdd5d9c600a8-GRU-HasProperty"
+    },
+    {
+      "id": "94ce8117-684d-4225-83cc-62ec0e1fddf4",
+      "iri": "http://visualdataweb.org/newOntology/94ce8117-684d-4225-83cc-62ec0e1fddf4",
+      "label": "HasProperty",
+      "attributes": "datatype",
+      "domain": "BH.oM.DeepLearning.Layers.GRU",
+      "range": "BatchFirst-f43aab0d-4539-4ce8-9fc8-f5a3cf9fa86e-GRU-HasProperty"
+    },
+    {
+      "id": "96dec9d6-1042-4114-a165-746ed318c295",
+      "iri": "http://visualdataweb.org/newOntology/96dec9d6-1042-4114-a165-746ed318c295",
+      "label": "HasProperty",
+      "attributes": "datatype",
+      "domain": "BH.oM.DeepLearning.Layers.GRU",
+      "range": "Dropout-36c589d8-7500-4d4f-b723-297d4ac20a94-GRU-HasProperty"
+    },
+    {
+      "id": "fca2d667-2687-4072-aff7-495aea23eab2",
+      "iri": "http://visualdataweb.org/newOntology/fca2d667-2687-4072-aff7-495aea23eab2",
+      "label": "HasProperty",
+      "attributes": "datatype",
+      "domain": "BH.oM.DeepLearning.Layers.GRU",
+      "range": "Bidirectional-7deecfc4-3c51-4c2d-8716-785a161c72cd-GRU-HasProperty"
+    },
+    {
+      "id": "c3235983-c709-45cb-b4d7-98511c53f705",
+      "iri": "http://visualdataweb.org/newOntology/c3235983-c709-45cb-b4d7-98511c53f705",
+      "label": "IsA",
+      "attributes": "object",
+      "domain": "BH.oM.DeepLearning.Layers.GRU",
+      "range": "BH.oM.Base.IBHoMObject"
+    },
+    {
+      "id": "446fd4c0-b57d-4679-9b6c-b9022f6e85f4",
+      "iri": "http://visualdataweb.org/newOntology/446fd4c0-b57d-4679-9b6c-b9022f6e85f4",
+      "label": "IsA",
+      "attributes": "object",
+      "domain": "BH.oM.DeepLearning.Layers.GRU",
+      "range": "BH.oM.Base.IObject"
+    },
+    {
+      "id": "cd5b106e-3235-4925-b45d-076786968935",
+      "iri": "http://visualdataweb.org/newOntology/cd5b106e-3235-4925-b45d-076786968935",
+      "label": "IsA",
+      "attributes": "object",
+      "domain": "BH.oM.DeepLearning.Layers.GRU",
+      "range": "BH.oM.DeepLearning.IModule"
+    },
+    {
+      "id": "6ca81b8c-b61b-4bcf-bf63-29bed5b11994",
+      "iri": "http://visualdataweb.org/newOntology/6ca81b8c-b61b-4bcf-bf63-29bed5b11994",
+      "label": "IsSubclassOf",
+      "attributes": "object",
+      "domain": "BH.oM.DeepLearning.Layers.GRU",
+      "range": "BH.oM.Base.BHoMObject"
+    },
+    {
+      "id": "a8dcd939-1507-4ce4-820f-1ae073b73938",
+      "iri": "http://visualdataweb.org/newOntology/a8dcd939-1507-4ce4-820f-1ae073b73938",
+      "label": "HasProperty",
+      "attributes": "datatype",
+      "domain": "BH.oM.DeepLearning.Layers.Linear",
+      "range": "FeaturesIn-6dba7d92-b546-4b95-9794-c26d2c9ecb55-Linear-HasProperty"
+    },
+    {
+      "id": "883a01c2-7077-4fa9-ad5b-1292e465ff90",
+      "iri": "http://visualdataweb.org/newOntology/883a01c2-7077-4fa9-ad5b-1292e465ff90",
+      "label": "HasProperty",
+      "attributes": "datatype",
+      "domain": "BH.oM.DeepLearning.Layers.Linear",
+      "range": "FeaturesOut-c3b08f87-244a-4b8f-a5e8-c22b2b611d52-Linear-HasProperty"
+    },
+    {
+      "id": "2b6fa10b-4352-47f6-bb29-4115374b8003",
+      "iri": "http://visualdataweb.org/newOntology/2b6fa10b-4352-47f6-bb29-4115374b8003",
+      "label": "IsA",
+      "attributes": "object",
+      "domain": "BH.oM.DeepLearning.Layers.Linear",
+      "range": "BH.oM.Base.IBHoMObject"
+    },
+    {
+      "id": "d047a231-81de-499e-b100-d50c95c4bbef",
+      "iri": "http://visualdataweb.org/newOntology/d047a231-81de-499e-b100-d50c95c4bbef",
+      "label": "IsA",
+      "attributes": "object",
+      "domain": "BH.oM.DeepLearning.Layers.Linear",
+      "range": "BH.oM.Base.IObject"
+    },
+    {
+      "id": "644661bf-c1f5-4a02-adbf-7a1034378d56",
+      "iri": "http://visualdataweb.org/newOntology/644661bf-c1f5-4a02-adbf-7a1034378d56",
+      "label": "IsA",
+      "attributes": "object",
+      "domain": "BH.oM.DeepLearning.Layers.Linear",
+      "range": "BH.oM.DeepLearning.IModule"
+    },
+    {
+      "id": "c9575289-a310-445a-8668-ba6ad3779c89",
+      "iri": "http://visualdataweb.org/newOntology/c9575289-a310-445a-8668-ba6ad3779c89",
+      "label": "IsSubclassOf",
+      "attributes": "object",
+      "domain": "BH.oM.DeepLearning.Layers.Linear",
+      "range": "BH.oM.Base.BHoMObject"
+    },
+    {
+      "id": "317dfb6a-9d87-480a-92af-4ce5cbe49573",
+      "iri": "http://visualdataweb.org/newOntology/317dfb6a-9d87-480a-92af-4ce5cbe49573",
+      "label": "HasProperty",
+      "attributes": "datatype",
+      "domain": "BH.oM.DeepLearning.Layers.LSTM",
+      "range": "InputSize-a6de4f2a-c6b9-4653-9d3d-ad5b411784ba-LSTM-HasProperty"
+    },
+    {
+      "id": "b17ac234-23a8-45bd-afe8-8b0964b60e30",
+      "iri": "http://visualdataweb.org/newOntology/b17ac234-23a8-45bd-afe8-8b0964b60e30",
+      "label": "HasProperty",
+      "attributes": "datatype",
+      "domain": "BH.oM.DeepLearning.Layers.LSTM",
+      "range": "HiddenSize-59ef8dbf-f026-40e2-b4d4-dd42f9fe7c25-LSTM-HasProperty"
+    },
+    {
+      "id": "77c375a0-5606-4dc7-8adc-a58a854c3e17",
+      "iri": "http://visualdataweb.org/newOntology/77c375a0-5606-4dc7-8adc-a58a854c3e17",
+      "label": "HasProperty",
+      "attributes": "datatype",
+      "domain": "BH.oM.DeepLearning.Layers.LSTM",
+      "range": "NumberOfLayers-eff3834f-f9a2-4a4b-88b3-b60174234e7f-LSTM-HasProperty"
+    },
+    {
+      "id": "3133a5bc-339e-4182-a585-45bff6160ac4",
+      "iri": "http://visualdataweb.org/newOntology/3133a5bc-339e-4182-a585-45bff6160ac4",
+      "label": "HasProperty",
+      "attributes": "datatype",
+      "domain": "BH.oM.DeepLearning.Layers.LSTM",
+      "range": "BatchFirst-7882e769-a179-431f-b013-9875c9a4e8a4-LSTM-HasProperty"
+    },
+    {
+      "id": "595c3616-ba77-4bd6-ac97-b8d8d0f84850",
+      "iri": "http://visualdataweb.org/newOntology/595c3616-ba77-4bd6-ac97-b8d8d0f84850",
+      "label": "HasProperty",
+      "attributes": "datatype",
+      "domain": "BH.oM.DeepLearning.Layers.LSTM",
+      "range": "Dropout-67fb44f4-80c7-4ba7-a0f8-7c9b4212caa5-LSTM-HasProperty"
+    },
+    {
+      "id": "037749f5-5ac5-4b1f-8dc5-57776a7e354b",
+      "iri": "http://visualdataweb.org/newOntology/037749f5-5ac5-4b1f-8dc5-57776a7e354b",
+      "label": "HasProperty",
+      "attributes": "datatype",
+      "domain": "BH.oM.DeepLearning.Layers.LSTM",
+      "range": "Bidirectional-2eb5e19f-3b8d-4ace-b313-2025f7ef8063-LSTM-HasProperty"
+    },
+    {
+      "id": "a3f1abcf-078b-4094-82b9-8563f024323f",
+      "iri": "http://visualdataweb.org/newOntology/a3f1abcf-078b-4094-82b9-8563f024323f",
+      "label": "IsA",
+      "attributes": "object",
+      "domain": "BH.oM.DeepLearning.Layers.LSTM",
+      "range": "BH.oM.Base.IBHoMObject"
+    },
+    {
+      "id": "a9056fce-4d62-4724-81a9-a4c73bad596f",
+      "iri": "http://visualdataweb.org/newOntology/a9056fce-4d62-4724-81a9-a4c73bad596f",
+      "label": "IsA",
+      "attributes": "object",
+      "domain": "BH.oM.DeepLearning.Layers.LSTM",
+      "range": "BH.oM.Base.IObject"
+    },
+    {
+      "id": "3b01b1da-f66f-4f4b-8f2e-7a690ad48283",
+      "iri": "http://visualdataweb.org/newOntology/3b01b1da-f66f-4f4b-8f2e-7a690ad48283",
+      "label": "IsA",
+      "attributes": "object",
+      "domain": "BH.oM.DeepLearning.Layers.LSTM",
+      "range": "BH.oM.DeepLearning.IModule"
+    },
+    {
+      "id": "7921097d-b5ca-4fc1-912d-ace2c1387014",
+      "iri": "http://visualdataweb.org/newOntology/7921097d-b5ca-4fc1-912d-ace2c1387014",
+      "label": "IsSubclassOf",
+      "attributes": "object",
+      "domain": "BH.oM.DeepLearning.Layers.LSTM",
+      "range": "BH.oM.Base.BHoMObject"
+    },
+    {
+      "id": "fd515f2b-e046-4d11-a7b0-807711ba5d01",
+      "iri": "http://visualdataweb.org/newOntology/fd515f2b-e046-4d11-a7b0-807711ba5d01",
+      "label": "HasProperty",
+      "attributes": "object",
+      "domain": "BH.oM.DeepLearning.Layers.MaxPooling2d",
+      "range": "BH.oM.DeepLearning.Shape2d"
+    },
+    {
+      "id": "baea7809-ba39-411e-afb5-815f78e84bab",
+      "iri": "http://visualdataweb.org/newOntology/baea7809-ba39-411e-afb5-815f78e84bab",
+      "label": "HasProperty",
+      "attributes": "object",
+      "domain": "BH.oM.DeepLearning.Layers.MaxPooling2d",
+      "range": "BH.oM.DeepLearning.Shape2d"
+    },
+    {
+      "id": "f11f4e65-03bb-4a9a-b0c9-f037159aebb7",
+      "iri": "http://visualdataweb.org/newOntology/f11f4e65-03bb-4a9a-b0c9-f037159aebb7",
+      "label": "HasProperty",
+      "attributes": "object",
+      "domain": "BH.oM.DeepLearning.Layers.MaxPooling2d",
+      "range": "BH.oM.DeepLearning.Shape2d"
+    },
+    {
+      "id": "cf3d9954-671c-48e2-9cc8-3c7a3158750d",
+      "iri": "http://visualdataweb.org/newOntology/cf3d9954-671c-48e2-9cc8-3c7a3158750d",
+      "label": "HasProperty",
+      "attributes": "object",
+      "domain": "BH.oM.DeepLearning.Layers.MaxPooling2d",
+      "range": "BH.oM.DeepLearning.Shape2d"
+    },
+    {
+      "id": "2ecb779e-233f-4be5-80d5-a30b5e945d8d",
+      "iri": "http://visualdataweb.org/newOntology/2ecb779e-233f-4be5-80d5-a30b5e945d8d",
+      "label": "IsA",
+      "attributes": "object",
+      "domain": "BH.oM.DeepLearning.Layers.MaxPooling2d",
+      "range": "BH.oM.Base.IBHoMObject"
+    },
+    {
+      "id": "5805bebb-f680-4228-ae1a-24dc94881587",
+      "iri": "http://visualdataweb.org/newOntology/5805bebb-f680-4228-ae1a-24dc94881587",
+      "label": "IsA",
+      "attributes": "object",
+      "domain": "BH.oM.DeepLearning.Layers.MaxPooling2d",
+      "range": "BH.oM.Base.IObject"
+    },
+    {
+      "id": "033c2e47-89aa-42ae-aff4-b4a2793b6b8b",
+      "iri": "http://visualdataweb.org/newOntology/033c2e47-89aa-42ae-aff4-b4a2793b6b8b",
+      "label": "IsA",
+      "attributes": "object",
+      "domain": "BH.oM.DeepLearning.Layers.MaxPooling2d",
+      "range": "BH.oM.DeepLearning.IModule"
+    },
+    {
+      "id": "bea2cf25-ab17-414f-825f-eefd60aa01ad",
+      "iri": "http://visualdataweb.org/newOntology/bea2cf25-ab17-414f-825f-eefd60aa01ad",
+      "label": "IsSubclassOf",
+      "attributes": "object",
+      "domain": "BH.oM.DeepLearning.Layers.MaxPooling2d",
+      "range": "BH.oM.Base.BHoMObject"
+    },
+    {
+      "id": "5631b267-1a90-4a8f-a226-6e062f2ff0e6",
+      "iri": "http://visualdataweb.org/newOntology/5631b267-1a90-4a8f-a226-6e062f2ff0e6",
+      "label": "HasProperty",
+      "attributes": "object",
+      "domain": "BH.oM.DeepLearning.Layers.MaxUnPooling2d",
+      "range": "BH.oM.DeepLearning.Shape2d"
+    },
+    {
+      "id": "0e4b72b2-8d87-44d6-91e2-184dcab39c7e",
+      "iri": "http://visualdataweb.org/newOntology/0e4b72b2-8d87-44d6-91e2-184dcab39c7e",
+      "label": "HasProperty",
+      "attributes": "object",
+      "domain": "BH.oM.DeepLearning.Layers.MaxUnPooling2d",
+      "range": "BH.oM.DeepLearning.Shape2d"
+    },
+    {
+      "id": "1a893f88-edcf-47ef-912f-e40920941e36",
+      "iri": "http://visualdataweb.org/newOntology/1a893f88-edcf-47ef-912f-e40920941e36",
+      "label": "HasProperty",
+      "attributes": "object",
+      "domain": "BH.oM.DeepLearning.Layers.MaxUnPooling2d",
+      "range": "BH.oM.DeepLearning.Shape2d"
+    },
+    {
+      "id": "49ab740b-509d-4170-80e8-627dd0a2061c",
+      "iri": "http://visualdataweb.org/newOntology/49ab740b-509d-4170-80e8-627dd0a2061c",
+      "label": "IsA",
+      "attributes": "object",
+      "domain": "BH.oM.DeepLearning.Layers.MaxUnPooling2d",
+      "range": "BH.oM.Base.IBHoMObject"
+    },
+    {
+      "id": "b2cec79a-8511-430e-982a-f4e46eeaae77",
+      "iri": "http://visualdataweb.org/newOntology/b2cec79a-8511-430e-982a-f4e46eeaae77",
+      "label": "IsA",
+      "attributes": "object",
+      "domain": "BH.oM.DeepLearning.Layers.MaxUnPooling2d",
+      "range": "BH.oM.Base.IObject"
+    },
+    {
+      "id": "a3e93571-f7ed-413a-b9ef-3bee3cb71017",
+      "iri": "http://visualdataweb.org/newOntology/a3e93571-f7ed-413a-b9ef-3bee3cb71017",
+      "label": "IsA",
+      "attributes": "object",
+      "domain": "BH.oM.DeepLearning.Layers.MaxUnPooling2d",
+      "range": "BH.oM.DeepLearning.IModule"
+    },
+    {
+      "id": "0e1a5b9d-7745-42e8-bf50-ab63b72ec7fc",
+      "iri": "http://visualdataweb.org/newOntology/0e1a5b9d-7745-42e8-bf50-ab63b72ec7fc",
+      "label": "IsSubclassOf",
+      "attributes": "object",
+      "domain": "BH.oM.DeepLearning.Layers.MaxUnPooling2d",
+      "range": "BH.oM.Base.BHoMObject"
+    },
+    {
+      "id": "d2138887-96ed-4345-8e14-18ca0f782870",
+      "iri": "http://visualdataweb.org/newOntology/d2138887-96ed-4345-8e14-18ca0f782870",
+      "label": "HasProperty",
+      "attributes": "datatype",
+      "domain": "BH.oM.DeepLearning.Layers.TransposedConvolution2d",
+      "range": "FeaturesIn-e579582c-ee2a-4d51-a25c-726874a41d06-TransposedConvolution2d-HasProperty"
+    },
+    {
+      "id": "de1f19d6-9703-47da-937a-019a41fbba63",
+      "iri": "http://visualdataweb.org/newOntology/de1f19d6-9703-47da-937a-019a41fbba63",
+      "label": "HasProperty",
+      "attributes": "datatype",
+      "domain": "BH.oM.DeepLearning.Layers.TransposedConvolution2d",
+      "range": "FeaturesOut-52c8723c-f566-4d2a-8f53-6bce2cde1e8a-TransposedConvolution2d-HasProperty"
+    },
+    {
+      "id": "fa354ef6-f774-4fd5-bf6a-204fd265cdb6",
+      "iri": "http://visualdataweb.org/newOntology/fa354ef6-f774-4fd5-bf6a-204fd265cdb6",
+      "label": "HasProperty",
+      "attributes": "object",
+      "domain": "BH.oM.DeepLearning.Layers.TransposedConvolution2d",
+      "range": "BH.oM.DeepLearning.Shape2d"
+    },
+    {
+      "id": "3fcc7a76-6247-4d3e-a7ba-21dec8f7953d",
+      "iri": "http://visualdataweb.org/newOntology/3fcc7a76-6247-4d3e-a7ba-21dec8f7953d",
+      "label": "HasProperty",
+      "attributes": "object",
+      "domain": "BH.oM.DeepLearning.Layers.TransposedConvolution2d",
+      "range": "BH.oM.DeepLearning.Shape2d"
+    },
+    {
+      "id": "ebaf80b9-4687-4f2a-a050-7c2f823f327b",
+      "iri": "http://visualdataweb.org/newOntology/ebaf80b9-4687-4f2a-a050-7c2f823f327b",
+      "label": "HasProperty",
+      "attributes": "object",
+      "domain": "BH.oM.DeepLearning.Layers.TransposedConvolution2d",
+      "range": "BH.oM.DeepLearning.Shape2d"
+    },
+    {
+      "id": "e5af428a-448b-4b3a-b36d-a1de04893dc3",
+      "iri": "http://visualdataweb.org/newOntology/e5af428a-448b-4b3a-b36d-a1de04893dc3",
+      "label": "HasProperty",
+      "attributes": "object",
+      "domain": "BH.oM.DeepLearning.Layers.TransposedConvolution2d",
+      "range": "BH.oM.DeepLearning.Shape2d"
+    },
+    {
+      "id": "7ebbd90e-3921-4b67-937b-360bd3014f63",
+      "iri": "http://visualdataweb.org/newOntology/7ebbd90e-3921-4b67-937b-360bd3014f63",
+      "label": "HasProperty",
+      "attributes": "object",
+      "domain": "BH.oM.DeepLearning.Layers.TransposedConvolution2d",
+      "range": "BH.oM.DeepLearning.Shape2d"
+    },
+    {
+      "id": "1b1ee3ee-e33b-4df3-b0c4-6303b09de095",
+      "iri": "http://visualdataweb.org/newOntology/1b1ee3ee-e33b-4df3-b0c4-6303b09de095",
+      "label": "IsA",
+      "attributes": "object",
+      "domain": "BH.oM.DeepLearning.Layers.TransposedConvolution2d",
+      "range": "BH.oM.Base.IBHoMObject"
+    },
+    {
+      "id": "500fc5fd-d631-46a9-b6bc-471dd3ce40cf",
+      "iri": "http://visualdataweb.org/newOntology/500fc5fd-d631-46a9-b6bc-471dd3ce40cf",
+      "label": "IsA",
+      "attributes": "object",
+      "domain": "BH.oM.DeepLearning.Layers.TransposedConvolution2d",
+      "range": "BH.oM.Base.IObject"
+    },
+    {
+      "id": "0f76b29c-0bac-4701-a41d-13081759a249",
+      "iri": "http://visualdataweb.org/newOntology/0f76b29c-0bac-4701-a41d-13081759a249",
+      "label": "IsA",
+      "attributes": "object",
+      "domain": "BH.oM.DeepLearning.Layers.TransposedConvolution2d",
+      "range": "BH.oM.DeepLearning.IModule"
+    },
+    {
+      "id": "210a852b-c22c-4d03-9346-f774df1a83e7",
+      "iri": "http://visualdataweb.org/newOntology/210a852b-c22c-4d03-9346-f774df1a83e7",
+      "label": "IsSubclassOf",
+      "attributes": "object",
+      "domain": "BH.oM.DeepLearning.Layers.TransposedConvolution2d",
+      "range": "BH.oM.Base.BHoMObject"
+    },
+    {
+      "id": "85edc1b7-cd96-4c2a-9942-43a0dc4a89e8",
+      "iri": "http://visualdataweb.org/newOntology/85edc1b7-cd96-4c2a-9942-43a0dc4a89e8",
+      "label": "HasProperty",
+      "attributes": "datatype",
+      "domain": "BH.oM.DeepLearning.Activations.LeakyReLU",
+      "range": "NegativeSlope-bfb5f508-facd-4728-93d1-b69d4a100960-LeakyReLU-HasProperty"
+    },
+    {
+      "id": "0ad58737-c4ca-43e2-a856-dc75cedc3212",
+      "iri": "http://visualdataweb.org/newOntology/0ad58737-c4ca-43e2-a856-dc75cedc3212",
+      "label": "IsA",
+      "attributes": "object",
+      "domain": "BH.oM.DeepLearning.Activations.LeakyReLU",
+      "range": "BH.oM.Base.IBHoMObject"
+    },
+    {
+      "id": "a8f8cf65-a2d9-408d-b13c-55efbf0390d4",
+      "iri": "http://visualdataweb.org/newOntology/a8f8cf65-a2d9-408d-b13c-55efbf0390d4",
+      "label": "IsA",
+      "attributes": "object",
+      "domain": "BH.oM.DeepLearning.Activations.LeakyReLU",
+      "range": "BH.oM.Base.IObject"
+    },
+    {
+      "id": "caec2be8-e198-493e-bc04-a5a1d018a8e7",
+      "iri": "http://visualdataweb.org/newOntology/caec2be8-e198-493e-bc04-a5a1d018a8e7",
+      "label": "IsA",
+      "attributes": "object",
+      "domain": "BH.oM.DeepLearning.Activations.LeakyReLU",
+      "range": "BH.oM.DeepLearning.IModule"
+    },
+    {
+      "id": "97d86141-c9c8-4f5c-ba63-058d2cbc4889",
+      "iri": "http://visualdataweb.org/newOntology/97d86141-c9c8-4f5c-ba63-058d2cbc4889",
+      "label": "IsSubclassOf",
+      "attributes": "object",
+      "domain": "BH.oM.DeepLearning.Activations.LeakyReLU",
+      "range": "BH.oM.Base.BHoMObject"
+    },
+    {
+      "id": "06a496e0-3093-44a2-a273-3d781ac1383a",
+      "iri": "http://visualdataweb.org/newOntology/06a496e0-3093-44a2-a273-3d781ac1383a",
+      "label": "IsA",
+      "attributes": "object",
+      "domain": "BH.oM.DeepLearning.Activations.LogSigmoid",
+      "range": "BH.oM.Base.IBHoMObject"
+    },
+    {
+      "id": "7f0d4a86-27fc-4be9-98e1-a0cbef292bc6",
+      "iri": "http://visualdataweb.org/newOntology/7f0d4a86-27fc-4be9-98e1-a0cbef292bc6",
+      "label": "IsA",
+      "attributes": "object",
+      "domain": "BH.oM.DeepLearning.Activations.LogSigmoid",
+      "range": "BH.oM.Base.IObject"
+    },
+    {
+      "id": "03288887-8eb5-45db-8ada-da9e09853c8e",
+      "iri": "http://visualdataweb.org/newOntology/03288887-8eb5-45db-8ada-da9e09853c8e",
+      "label": "IsA",
+      "attributes": "object",
+      "domain": "BH.oM.DeepLearning.Activations.LogSigmoid",
+      "range": "BH.oM.DeepLearning.IModule"
+    },
+    {
+      "id": "67316803-82b7-4d91-adb7-04ef43630ad5",
+      "iri": "http://visualdataweb.org/newOntology/67316803-82b7-4d91-adb7-04ef43630ad5",
+      "label": "IsSubclassOf",
+      "attributes": "object",
+      "domain": "BH.oM.DeepLearning.Activations.LogSigmoid",
+      "range": "BH.oM.Base.BHoMObject"
+    },
+    {
+      "id": "87a1488a-9218-4a7d-9a83-9a49d9b5b883",
+      "iri": "http://visualdataweb.org/newOntology/87a1488a-9218-4a7d-9a83-9a49d9b5b883",
+      "label": "HasProperty",
+      "attributes": "datatype",
+      "domain": "BH.oM.DeepLearning.Activations.LogSoftmax",
+      "range": "Dimension-e89bdfec-bce9-480d-be7a-35c018e9f6c9-LogSoftmax-HasProperty"
+    },
+    {
+      "id": "7d5029cc-5274-4397-9c02-cf080e595140",
+      "iri": "http://visualdataweb.org/newOntology/7d5029cc-5274-4397-9c02-cf080e595140",
+      "label": "IsA",
+      "attributes": "object",
+      "domain": "BH.oM.DeepLearning.Activations.LogSoftmax",
+      "range": "BH.oM.Base.IBHoMObject"
+    },
+    {
+      "id": "ae0b0aa2-7dd2-4aa7-b9dd-5a84481ad3b5",
+      "iri": "http://visualdataweb.org/newOntology/ae0b0aa2-7dd2-4aa7-b9dd-5a84481ad3b5",
+      "label": "IsA",
+      "attributes": "object",
+      "domain": "BH.oM.DeepLearning.Activations.LogSoftmax",
+      "range": "BH.oM.Base.IObject"
+    },
+    {
+      "id": "5bfe1607-dc1f-4524-9e62-63b671d2e28c",
+      "iri": "http://visualdataweb.org/newOntology/5bfe1607-dc1f-4524-9e62-63b671d2e28c",
+      "label": "IsA",
+      "attributes": "object",
+      "domain": "BH.oM.DeepLearning.Activations.LogSoftmax",
+      "range": "BH.oM.DeepLearning.IModule"
+    },
+    {
+      "id": "903a998b-c972-427d-bce9-c23a2547aa66",
+      "iri": "http://visualdataweb.org/newOntology/903a998b-c972-427d-bce9-c23a2547aa66",
+      "label": "IsSubclassOf",
+      "attributes": "object",
+      "domain": "BH.oM.DeepLearning.Activations.LogSoftmax",
+      "range": "BH.oM.Base.BHoMObject"
+    },
+    {
+      "id": "4d0fba2d-5836-40c1-aec4-99df36d66bb5",
+      "iri": "http://visualdataweb.org/newOntology/4d0fba2d-5836-40c1-aec4-99df36d66bb5",
+      "label": "IsA",
+      "attributes": "object",
+      "domain": "BH.oM.DeepLearning.Activations.ReLU",
+      "range": "BH.oM.Base.IBHoMObject"
+    },
+    {
+      "id": "8d5fd9cc-04b4-4ee5-b996-90826df5073a",
+      "iri": "http://visualdataweb.org/newOntology/8d5fd9cc-04b4-4ee5-b996-90826df5073a",
+      "label": "IsA",
+      "attributes": "object",
+      "domain": "BH.oM.DeepLearning.Activations.ReLU",
+      "range": "BH.oM.Base.IObject"
+    },
+    {
+      "id": "45b74098-f867-4287-9b5e-fb0523b34483",
+      "iri": "http://visualdataweb.org/newOntology/45b74098-f867-4287-9b5e-fb0523b34483",
+      "label": "IsA",
+      "attributes": "object",
+      "domain": "BH.oM.DeepLearning.Activations.ReLU",
+      "range": "BH.oM.DeepLearning.IModule"
+    },
+    {
+      "id": "e52a394f-af14-4faa-8e2f-c6fc2f187227",
+      "iri": "http://visualdataweb.org/newOntology/e52a394f-af14-4faa-8e2f-c6fc2f187227",
+      "label": "IsSubclassOf",
+      "attributes": "object",
+      "domain": "BH.oM.DeepLearning.Activations.ReLU",
+      "range": "BH.oM.Base.BHoMObject"
+    },
+    {
+      "id": "49574d9a-22a7-4fe0-ae96-ba307023e3ea",
+      "iri": "http://visualdataweb.org/newOntology/49574d9a-22a7-4fe0-ae96-ba307023e3ea",
+      "label": "IsA",
+      "attributes": "object",
+      "domain": "BH.oM.DeepLearning.Activations.Sigmoid",
+      "range": "BH.oM.Base.IBHoMObject"
+    },
+    {
+      "id": "5ff599f9-4146-4105-8d59-9b2687b30000",
+      "iri": "http://visualdataweb.org/newOntology/5ff599f9-4146-4105-8d59-9b2687b30000",
+      "label": "IsA",
+      "attributes": "object",
+      "domain": "BH.oM.DeepLearning.Activations.Sigmoid",
+      "range": "BH.oM.Base.IObject"
+    },
+    {
+      "id": "1212f782-2004-4517-9abc-5e3b781a25ed",
+      "iri": "http://visualdataweb.org/newOntology/1212f782-2004-4517-9abc-5e3b781a25ed",
+      "label": "IsA",
+      "attributes": "object",
+      "domain": "BH.oM.DeepLearning.Activations.Sigmoid",
+      "range": "BH.oM.DeepLearning.IModule"
+    },
+    {
+      "id": "ce1fa4a0-a847-4865-a9e2-604aba9c5233",
+      "iri": "http://visualdataweb.org/newOntology/ce1fa4a0-a847-4865-a9e2-604aba9c5233",
+      "label": "IsSubclassOf",
+      "attributes": "object",
+      "domain": "BH.oM.DeepLearning.Activations.Sigmoid",
+      "range": "BH.oM.Base.BHoMObject"
+    },
+    {
+      "id": "fad8425a-a08e-471b-879f-5ddce61dd6f4",
+      "iri": "http://visualdataweb.org/newOntology/fad8425a-a08e-471b-879f-5ddce61dd6f4",
+      "label": "HasProperty",
+      "attributes": "datatype",
+      "domain": "BH.oM.DeepLearning.Activations.Softmax",
+      "range": "Dimension-674f696b-1eed-4bba-8100-ca4d26e1af96-Softmax-HasProperty"
+    },
+    {
+      "id": "d0873acd-7be0-4fb5-91f2-e3e84659577f",
+      "iri": "http://visualdataweb.org/newOntology/d0873acd-7be0-4fb5-91f2-e3e84659577f",
+      "label": "IsA",
+      "attributes": "object",
+      "domain": "BH.oM.DeepLearning.Activations.Softmax",
+      "range": "BH.oM.Base.IBHoMObject"
+    },
+    {
+      "id": "76c024ab-d035-4101-b489-1148cca71204",
+      "iri": "http://visualdataweb.org/newOntology/76c024ab-d035-4101-b489-1148cca71204",
+      "label": "IsA",
+      "attributes": "object",
+      "domain": "BH.oM.DeepLearning.Activations.Softmax",
+      "range": "BH.oM.Base.IObject"
+    },
+    {
+      "id": "79c06ab8-f390-491b-8ef2-44d4f3f7d62c",
+      "iri": "http://visualdataweb.org/newOntology/79c06ab8-f390-491b-8ef2-44d4f3f7d62c",
+      "label": "IsA",
+      "attributes": "object",
+      "domain": "BH.oM.DeepLearning.Activations.Softmax",
+      "range": "BH.oM.DeepLearning.IModule"
+    },
+    {
+      "id": "f69add10-09d3-4c67-9307-bf2c6ad629be",
+      "iri": "http://visualdataweb.org/newOntology/f69add10-09d3-4c67-9307-bf2c6ad629be",
+      "label": "IsSubclassOf",
+      "attributes": "object",
+      "domain": "BH.oM.DeepLearning.Activations.Softmax",
+      "range": "BH.oM.Base.BHoMObject"
+    },
+    {
+      "id": "1837d35d-bc03-4909-b551-1c9e4e09aaa7",
+      "iri": "http://visualdataweb.org/newOntology/1837d35d-bc03-4909-b551-1c9e4e09aaa7",
+      "label": "IsA",
+      "attributes": "object",
+      "domain": "BH.oM.DeepLearning.Activations.Tanh",
+      "range": "BH.oM.Base.IBHoMObject"
+    },
+    {
+      "id": "b0a28f29-7032-47c1-87e9-e642119397a0",
+      "iri": "http://visualdataweb.org/newOntology/b0a28f29-7032-47c1-87e9-e642119397a0",
+      "label": "IsA",
+      "attributes": "object",
+      "domain": "BH.oM.DeepLearning.Activations.Tanh",
+      "range": "BH.oM.Base.IObject"
+    },
+    {
+      "id": "9a21ef2c-275a-4b4c-836a-b297e49a7273",
+      "iri": "http://visualdataweb.org/newOntology/9a21ef2c-275a-4b4c-836a-b297e49a7273",
+      "label": "IsA",
+      "attributes": "object",
+      "domain": "BH.oM.DeepLearning.Activations.Tanh",
+      "range": "BH.oM.DeepLearning.IModule"
+    },
+    {
+      "id": "71cba1b6-1c37-482f-9f9a-3aa81ea1912c",
+      "iri": "http://visualdataweb.org/newOntology/71cba1b6-1c37-482f-9f9a-3aa81ea1912c",
+      "label": "IsSubclassOf",
+      "attributes": "object",
+      "domain": "BH.oM.DeepLearning.Activations.Tanh",
+      "range": "BH.oM.Base.BHoMObject"
+    }
+  ]
+}

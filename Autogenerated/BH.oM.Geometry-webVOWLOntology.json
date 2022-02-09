@@ -1,0 +1,4664 @@
+{
+  "comment": "Generated from BHoM RDF_Prototypes",
+  "namespace": [],
+  "class": [
+    {
+      "id": "BH.oM.Geometry.Arc",
+      "type": "owl:Class"
+    },
+    {
+      "id": "BH.oM.Geometry.Circle",
+      "type": "owl:Class"
+    },
+    {
+      "id": "BH.oM.Geometry.Ellipse",
+      "type": "owl:Class"
+    },
+    {
+      "id": "BH.oM.Geometry.ICurve",
+      "type": "owl:Class"
+    },
+    {
+      "id": "BH.oM.Geometry.Line",
+      "type": "owl:Class"
+    },
+    {
+      "id": "BH.oM.Geometry.NurbsCurve",
+      "type": "owl:Class"
+    },
+    {
+      "id": "BH.oM.Geometry.PolyCurve",
+      "type": "owl:Class"
+    },
+    {
+      "id": "BH.oM.Geometry.Polyline",
+      "type": "owl:Class"
+    },
+    {
+      "id": "BH.oM.Geometry.IGeometry",
+      "type": "owl:Class"
+    },
+    {
+      "id": "BH.oM.Geometry.IntegrationSlice",
+      "type": "owl:Class"
+    },
+    {
+      "id": "BH.oM.Geometry.CellRelation",
+      "type": "owl:Class"
+    },
+    {
+      "id": "BH.oM.Geometry.Face",
+      "type": "owl:Class"
+    },
+    {
+      "id": "BH.oM.Geometry.Mesh",
+      "type": "owl:Class"
+    },
+    {
+      "id": "BH.oM.Geometry.Mesh3D",
+      "type": "owl:Class"
+    },
+    {
+      "id": "BH.oM.Geometry.BoundingBox",
+      "type": "owl:Class"
+    },
+    {
+      "id": "BH.oM.Geometry.CompositeGeometry",
+      "type": "owl:Class"
+    },
+    {
+      "id": "BH.oM.Geometry.Quaternion",
+      "type": "owl:Class"
+    },
+    {
+      "id": "BH.oM.Geometry.SurfaceTrim",
+      "type": "owl:Class"
+    },
+    {
+      "id": "BH.oM.Geometry.Tolerance",
+      "type": "owl:Class"
+    },
+    {
+      "id": "BH.oM.Geometry.TransformMatrix",
+      "type": "owl:Class"
+    },
+    {
+      "id": "BH.oM.Geometry.BoundaryRepresentation",
+      "type": "owl:Class"
+    },
+    {
+      "id": "BH.oM.Geometry.Cone",
+      "type": "owl:Class"
+    },
+    {
+      "id": "BH.oM.Geometry.Cuboid",
+      "type": "owl:Class"
+    },
+    {
+      "id": "BH.oM.Geometry.Cylinder",
+      "type": "owl:Class"
+    },
+    {
+      "id": "BH.oM.Geometry.ISolid",
+      "type": "owl:Class"
+    },
+    {
+      "id": "BH.oM.Geometry.Sphere",
+      "type": "owl:Class"
+    },
+    {
+      "id": "BH.oM.Geometry.Torus",
+      "type": "owl:Class"
+    },
+    {
+      "id": "BH.oM.Geometry.Extrusion",
+      "type": "owl:Class"
+    },
+    {
+      "id": "BH.oM.Geometry.ISurface",
+      "type": "owl:Class"
+    },
+    {
+      "id": "BH.oM.Geometry.Loft",
+      "type": "owl:Class"
+    },
+    {
+      "id": "BH.oM.Geometry.NurbsSurface",
+      "type": "owl:Class"
+    },
+    {
+      "id": "BH.oM.Geometry.Pipe",
+      "type": "owl:Class"
+    },
+    {
+      "id": "BH.oM.Geometry.PlanarSurface",
+      "type": "owl:Class"
+    },
+    {
+      "id": "BH.oM.Geometry.PolySurface",
+      "type": "owl:Class"
+    },
+    {
+      "id": "BH.oM.Geometry.Basis",
+      "type": "owl:Class"
+    },
+    {
+      "id": "BH.oM.Geometry.Plane",
+      "type": "owl:Class"
+    },
+    {
+      "id": "BH.oM.Geometry.Point",
+      "type": "owl:Class"
+    },
+    {
+      "id": "BH.oM.Geometry.Vector",
+      "type": "owl:Class"
+    },
+    {
+      "id": "BH.oM.Geometry.CoordinateSystem.Cartesian",
+      "type": "owl:Class"
+    },
+    {
+      "id": "BH.oM.Geometry.NurbsCurvecDisplayClass",
+      "type": "owl:Class"
+    },
+    {
+      "id": "Radius-b286e695-2f16-423c-a17c-213b54819150-Arc-HasProperty",
+      "type": "rdfs:Datatype"
+    },
+    {
+      "id": "StartAngle-598eeed3-460e-44a9-b11e-048f56c18802-Arc-HasProperty",
+      "type": "rdfs:Datatype"
+    },
+    {
+      "id": "EndAngle-994b936d-bf08-4d72-9999-87894d00e6e4-Arc-HasProperty",
+      "type": "rdfs:Datatype"
+    },
+    {
+      "id": "BH.oM.Base.IObject",
+      "type": "owl:Class"
+    },
+    {
+      "id": "BH.oM.Dimensional.IElement1D",
+      "type": "owl:Class"
+    },
+    {
+      "id": "BH.oM.Dimensional.IElement",
+      "type": "owl:Class"
+    },
+    {
+      "id": "Radius-4c2720ac-c2b0-4a98-a1e6-f875622f2682-Circle-HasProperty",
+      "type": "rdfs:Datatype"
+    },
+    {
+      "id": "BH.oM.Base.IObject",
+      "type": "owl:Class"
+    },
+    {
+      "id": "BH.oM.Dimensional.IElement1D",
+      "type": "owl:Class"
+    },
+    {
+      "id": "BH.oM.Dimensional.IElement",
+      "type": "owl:Class"
+    },
+    {
+      "id": "Radius1-51cdcb48-f000-4adb-a582-03b5f2a997bf-Ellipse-HasProperty",
+      "type": "rdfs:Datatype"
+    },
+    {
+      "id": "Radius2-ca07e901-1f39-4ac9-8408-9c2c40b87a7e-Ellipse-HasProperty",
+      "type": "rdfs:Datatype"
+    },
+    {
+      "id": "BH.oM.Base.IObject",
+      "type": "owl:Class"
+    },
+    {
+      "id": "BH.oM.Dimensional.IElement1D",
+      "type": "owl:Class"
+    },
+    {
+      "id": "BH.oM.Dimensional.IElement",
+      "type": "owl:Class"
+    },
+    {
+      "id": "BH.oM.Base.IObject",
+      "type": "owl:Class"
+    },
+    {
+      "id": "BH.oM.Dimensional.IElement1D",
+      "type": "owl:Class"
+    },
+    {
+      "id": "BH.oM.Dimensional.IElement",
+      "type": "owl:Class"
+    },
+    {
+      "id": "Infinite-3417186d-c35a-4cc1-8731-0baf26fe40b1-Line-HasProperty",
+      "type": "rdfs:Datatype"
+    },
+    {
+      "id": "BH.oM.Base.IObject",
+      "type": "owl:Class"
+    },
+    {
+      "id": "BH.oM.Dimensional.IElement1D",
+      "type": "owl:Class"
+    },
+    {
+      "id": "BH.oM.Dimensional.IElement",
+      "type": "owl:Class"
+    },
+    {
+      "id": "ControlPoints-05a906c6-8445-4db1-873b-414a54cbe8ef-NurbsCurve-HasProperty",
+      "type": "rdfs:Datatype"
+    },
+    {
+      "id": "Weights-9f05c2f5-1eb9-4ad6-96d5-8ef0617013e2-NurbsCurve-HasProperty",
+      "type": "rdfs:Datatype"
+    },
+    {
+      "id": "Knots-45432060-9efb-4430-b87e-64041f7682dd-NurbsCurve-HasProperty",
+      "type": "rdfs:Datatype"
+    },
+    {
+      "id": "BH.oM.Base.IObject",
+      "type": "owl:Class"
+    },
+    {
+      "id": "BH.oM.Dimensional.IElement1D",
+      "type": "owl:Class"
+    },
+    {
+      "id": "BH.oM.Dimensional.IElement",
+      "type": "owl:Class"
+    },
+    {
+      "id": "Curves-5944dd2d-486c-40e4-a2aa-46a0c59a3937-PolyCurve-HasProperty",
+      "type": "rdfs:Datatype"
+    },
+    {
+      "id": "BH.oM.Base.IObject",
+      "type": "owl:Class"
+    },
+    {
+      "id": "BH.oM.Dimensional.IElement1D",
+      "type": "owl:Class"
+    },
+    {
+      "id": "BH.oM.Dimensional.IElement",
+      "type": "owl:Class"
+    },
+    {
+      "id": "ControlPoints-c4655ed1-4f16-4e88-89b7-bc52b67923bd-Polyline-HasProperty",
+      "type": "rdfs:Datatype"
+    },
+    {
+      "id": "BH.oM.Base.IObject",
+      "type": "owl:Class"
+    },
+    {
+      "id": "BH.oM.Dimensional.IElement1D",
+      "type": "owl:Class"
+    },
+    {
+      "id": "BH.oM.Dimensional.IElement",
+      "type": "owl:Class"
+    },
+    {
+      "id": "BH.oM.Base.IObject",
+      "type": "owl:Class"
+    },
+    {
+      "id": "Width-d926d0cc-9831-497b-98c6-b1485265024d-IntegrationSlice-HasProperty",
+      "type": "rdfs:Datatype"
+    },
+    {
+      "id": "Length-245dd239-1d39-4144-ad3a-a11e861487e3-IntegrationSlice-HasProperty",
+      "type": "rdfs:Datatype"
+    },
+    {
+      "id": "Centre-538f8971-0f72-40fb-8351-5f5b2ae14c0a-IntegrationSlice-HasProperty",
+      "type": "rdfs:Datatype"
+    },
+    {
+      "id": "Placement-d7936c20-2e28-4dff-b113-4812fa631962-IntegrationSlice-HasProperty",
+      "type": "rdfs:Datatype"
+    },
+    {
+      "id": "BH.oM.Base.IObject",
+      "type": "owl:Class"
+    },
+    {
+      "id": "FromCell-dd708189-63f7-4557-9c40-8d7df8a485fd-CellRelation-HasProperty",
+      "type": "rdfs:Datatype"
+    },
+    {
+      "id": "ToCell-32a5f71b-e276-4c5d-82ae-9763fc3aa6c2-CellRelation-HasProperty",
+      "type": "rdfs:Datatype"
+    },
+    {
+      "id": "BH.oM.Base.IObject",
+      "type": "owl:Class"
+    },
+    {
+      "id": "A-7807bb0e-72b5-4454-a6e3-2841d8b7d0a7-Face-HasProperty",
+      "type": "rdfs:Datatype"
+    },
+    {
+      "id": "B-5c20587e-3fb3-459e-a513-2a7adcdb769f-Face-HasProperty",
+      "type": "rdfs:Datatype"
+    },
+    {
+      "id": "C-75dccbdb-2a38-48c1-8580-baac4e573a9c-Face-HasProperty",
+      "type": "rdfs:Datatype"
+    },
+    {
+      "id": "D-0f6980ca-5b93-460a-9463-27a1aa493384-Face-HasProperty",
+      "type": "rdfs:Datatype"
+    },
+    {
+      "id": "BH.oM.Base.IObject",
+      "type": "owl:Class"
+    },
+    {
+      "id": "Vertices-3ab6502e-8055-4e1e-afaf-b9a185209a4e-Mesh-HasProperty",
+      "type": "rdfs:Datatype"
+    },
+    {
+      "id": "Faces-a6e73c23-f698-48ad-b1f8-8e1871a09208-Mesh-HasProperty",
+      "type": "rdfs:Datatype"
+    },
+    {
+      "id": "BH.oM.Base.IObject",
+      "type": "owl:Class"
+    },
+    {
+      "id": "Vertices-8b3db319-6895-4eb0-b957-0a1098bed9ec-Mesh3D-HasProperty",
+      "type": "rdfs:Datatype"
+    },
+    {
+      "id": "Faces-c16da590-b446-4731-b095-8cc588c40242-Mesh3D-HasProperty",
+      "type": "rdfs:Datatype"
+    },
+    {
+      "id": "CellRelation-c6e5daaf-d5ef-4a32-9cdf-6cf50cabf825-Mesh3D-HasProperty",
+      "type": "rdfs:Datatype"
+    },
+    {
+      "id": "BH.oM.Base.IObject",
+      "type": "owl:Class"
+    },
+    {
+      "id": "BH.oM.Base.IImmutable",
+      "type": "owl:Class"
+    },
+    {
+      "id": "BH.oM.Base.IObject",
+      "type": "owl:Class"
+    },
+    {
+      "id": "Elements-1d92deb4-aa91-48d7-8ea1-1cb927a8a969-CompositeGeometry-HasProperty",
+      "type": "rdfs:Datatype"
+    },
+    {
+      "id": "BH.oM.Base.IObject",
+      "type": "owl:Class"
+    },
+    {
+      "id": "X-28cb5a14-df8c-40e9-9684-8d8dd6f08496-Quaternion-HasProperty",
+      "type": "rdfs:Datatype"
+    },
+    {
+      "id": "Y-97d7324e-e41d-4c9e-8ff0-3cea1db3bc71-Quaternion-HasProperty",
+      "type": "rdfs:Datatype"
+    },
+    {
+      "id": "Z-af043155-c00e-407a-882f-06637e0779b8-Quaternion-HasProperty",
+      "type": "rdfs:Datatype"
+    },
+    {
+      "id": "W-ce52d49a-ad46-45a4-96fa-6ef1f4877d47-Quaternion-HasProperty",
+      "type": "rdfs:Datatype"
+    },
+    {
+      "id": "BH.oM.Base.IObject",
+      "type": "owl:Class"
+    },
+    {
+      "id": "BH.oM.Base.IObject",
+      "type": "owl:Class"
+    },
+    {
+      "id": "BH.oM.Base.IImmutable",
+      "type": "owl:Class"
+    },
+    {
+      "id": "Matrix-ac632ab8-1ed0-4bc5-9ed5-2be2ff9c5cce-TransformMatrix-HasProperty",
+      "type": "rdfs:Datatype"
+    },
+    {
+      "id": "BH.oM.Base.IObject",
+      "type": "owl:Class"
+    },
+    {
+      "id": "Surfaces-14e3839e-806a-4d1b-b06e-291ca9da32ef-BoundaryRepresentation-HasProperty",
+      "type": "rdfs:Datatype"
+    },
+    {
+      "id": "Volume-ea5e0993-5547-4abe-8beb-8902d715dcf6-BoundaryRepresentation-HasProperty",
+      "type": "rdfs:Datatype"
+    },
+    {
+      "id": "BH.oM.Base.IObject",
+      "type": "owl:Class"
+    },
+    {
+      "id": "BH.oM.Base.IImmutable",
+      "type": "owl:Class"
+    },
+    {
+      "id": "Radius-3c1ba7df-00e6-4d1f-b37b-356517262fe6-Cone-HasProperty",
+      "type": "rdfs:Datatype"
+    },
+    {
+      "id": "Height-104f174e-0317-4008-92f9-7a2379417dae-Cone-HasProperty",
+      "type": "rdfs:Datatype"
+    },
+    {
+      "id": "BH.oM.Base.IObject",
+      "type": "owl:Class"
+    },
+    {
+      "id": "Length-f3a41a56-94f6-4b68-8590-131f395a757e-Cuboid-HasProperty",
+      "type": "rdfs:Datatype"
+    },
+    {
+      "id": "Depth-77e5bea5-f714-4f8b-bffc-af9d972ae3c2-Cuboid-HasProperty",
+      "type": "rdfs:Datatype"
+    },
+    {
+      "id": "Height-2b4148b7-f6e9-4a83-bb13-fa96adb89945-Cuboid-HasProperty",
+      "type": "rdfs:Datatype"
+    },
+    {
+      "id": "BH.oM.Base.IObject",
+      "type": "owl:Class"
+    },
+    {
+      "id": "Radius-d26f1778-06fe-46eb-b569-b4df03fb5c94-Cylinder-HasProperty",
+      "type": "rdfs:Datatype"
+    },
+    {
+      "id": "Height-a7ed71d9-d1d9-4618-8f1d-d6faffd23606-Cylinder-HasProperty",
+      "type": "rdfs:Datatype"
+    },
+    {
+      "id": "BH.oM.Base.IObject",
+      "type": "owl:Class"
+    },
+    {
+      "id": "BH.oM.Base.IObject",
+      "type": "owl:Class"
+    },
+    {
+      "id": "Radius-c0aca2da-1af6-4276-93f6-b125e20cccbb-Sphere-HasProperty",
+      "type": "rdfs:Datatype"
+    },
+    {
+      "id": "BH.oM.Base.IObject",
+      "type": "owl:Class"
+    },
+    {
+      "id": "RadiusMajor-271a5e3d-c9d0-422c-bf77-b3b9df505fb6-Torus-HasProperty",
+      "type": "rdfs:Datatype"
+    },
+    {
+      "id": "RadiusMinor-593fbcea-11ac-4985-b32e-2f1081ad3468-Torus-HasProperty",
+      "type": "rdfs:Datatype"
+    },
+    {
+      "id": "BH.oM.Base.IObject",
+      "type": "owl:Class"
+    },
+    {
+      "id": "Capped-6dc32c5e-6ef2-494e-8d8b-8ff385f3fa75-Extrusion-HasProperty",
+      "type": "rdfs:Datatype"
+    },
+    {
+      "id": "BH.oM.Base.IObject",
+      "type": "owl:Class"
+    },
+    {
+      "id": "BH.oM.Base.IObject",
+      "type": "owl:Class"
+    },
+    {
+      "id": "Curves-47add643-7774-4a1a-bba8-e3c48115906a-Loft-HasProperty",
+      "type": "rdfs:Datatype"
+    },
+    {
+      "id": "BH.oM.Base.IObject",
+      "type": "owl:Class"
+    },
+    {
+      "id": "ControlPoints-1b01b0fd-f1fd-43ae-a406-74484b92bd9b-NurbsSurface-HasProperty",
+      "type": "rdfs:Datatype"
+    },
+    {
+      "id": "Weights-be4c11d3-790e-49f7-9200-ea8dcd475bf3-NurbsSurface-HasProperty",
+      "type": "rdfs:Datatype"
+    },
+    {
+      "id": "UKnots-f49c2918-96c7-47bd-bf4a-1c86f90f508b-NurbsSurface-HasProperty",
+      "type": "rdfs:Datatype"
+    },
+    {
+      "id": "VKnots-a74276c0-c762-4bad-89bc-717b319e7fb0-NurbsSurface-HasProperty",
+      "type": "rdfs:Datatype"
+    },
+    {
+      "id": "UDegree-bf54758c-2e1e-455c-bcc8-6ebe75e59602-NurbsSurface-HasProperty",
+      "type": "rdfs:Datatype"
+    },
+    {
+      "id": "VDegree-266af85f-c79c-4b26-b162-9c2e3083e158-NurbsSurface-HasProperty",
+      "type": "rdfs:Datatype"
+    },
+    {
+      "id": "InnerTrims-6114e44c-ad14-48bc-a7cb-a280e50c080c-NurbsSurface-HasProperty",
+      "type": "rdfs:Datatype"
+    },
+    {
+      "id": "OuterTrims-49934a49-b651-41b8-965a-81b1b0aff639-NurbsSurface-HasProperty",
+      "type": "rdfs:Datatype"
+    },
+    {
+      "id": "BH.oM.Base.IObject",
+      "type": "owl:Class"
+    },
+    {
+      "id": "BH.oM.Base.IImmutable",
+      "type": "owl:Class"
+    },
+    {
+      "id": "Radius-98d14978-1e9b-4962-ad91-f15ddf02ce15-Pipe-HasProperty",
+      "type": "rdfs:Datatype"
+    },
+    {
+      "id": "Capped-a4dbd28e-6d1a-452e-bea1-3043d8840343-Pipe-HasProperty",
+      "type": "rdfs:Datatype"
+    },
+    {
+      "id": "BH.oM.Base.IObject",
+      "type": "owl:Class"
+    },
+    {
+      "id": "InternalBoundaries-cda1e6e4-9445-45e2-8b66-13ee3b5c5d84-PlanarSurface-HasProperty",
+      "type": "rdfs:Datatype"
+    },
+    {
+      "id": "BH.oM.Base.IObject",
+      "type": "owl:Class"
+    },
+    {
+      "id": "BH.oM.Base.IImmutable",
+      "type": "owl:Class"
+    },
+    {
+      "id": "Surfaces-a4c23ba6-0ff4-4ee8-bb6c-a1bbfe1e24c9-PolySurface-HasProperty",
+      "type": "rdfs:Datatype"
+    },
+    {
+      "id": "BH.oM.Base.IObject",
+      "type": "owl:Class"
+    },
+    {
+      "id": "BH.oM.Base.IObject",
+      "type": "owl:Class"
+    },
+    {
+      "id": "BH.oM.Base.IImmutable",
+      "type": "owl:Class"
+    },
+    {
+      "id": "BH.oM.Base.IObject",
+      "type": "owl:Class"
+    },
+    {
+      "id": "X-eed47de0-5ed3-49d1-a492-c2a5972dc368-Point-HasProperty",
+      "type": "rdfs:Datatype"
+    },
+    {
+      "id": "Y-1f1e6e5f-9e2a-45e3-b4f9-fe4aa3bcc432-Point-HasProperty",
+      "type": "rdfs:Datatype"
+    },
+    {
+      "id": "Z-a3d1fc26-bf49-4e07-bab4-5851147db6a2-Point-HasProperty",
+      "type": "rdfs:Datatype"
+    },
+    {
+      "id": "BH.oM.Base.IObject",
+      "type": "owl:Class"
+    },
+    {
+      "id": "BH.oM.Dimensional.IElement0D",
+      "type": "owl:Class"
+    },
+    {
+      "id": "BH.oM.Dimensional.IElement",
+      "type": "owl:Class"
+    },
+    {
+      "id": "X-b643238a-010b-4c21-9234-c67c8fabedd7-Vector-HasProperty",
+      "type": "rdfs:Datatype"
+    },
+    {
+      "id": "Y-1f7a4f2e-4ab8-4239-ab86-7f4aafbe01ce-Vector-HasProperty",
+      "type": "rdfs:Datatype"
+    },
+    {
+      "id": "Z-1ecbc88a-9b8b-4624-ab9c-16c909f20864-Vector-HasProperty",
+      "type": "rdfs:Datatype"
+    },
+    {
+      "id": "BH.oM.Base.IObject",
+      "type": "owl:Class"
+    },
+    {
+      "id": "BH.oM.Base.IObject",
+      "type": "owl:Class"
+    },
+    {
+      "id": "BH.oM.Base.IImmutable",
+      "type": "owl:Class"
+    }
+  ],
+  "classAttribute": [
+    {
+      "id": "BH.oM.Geometry.Arc",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/Geometry_oM/Arc.cs",
+      "label": "Arc (BH.oM.Geometry)",
+      "attributes": []
+    },
+    {
+      "id": "BH.oM.Geometry.Circle",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/Geometry_oM/Circle.cs",
+      "label": "Circle (BH.oM.Geometry)",
+      "attributes": []
+    },
+    {
+      "id": "BH.oM.Geometry.Ellipse",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/Geometry_oM/Ellipse.cs",
+      "label": "Ellipse (BH.oM.Geometry)",
+      "attributes": []
+    },
+    {
+      "id": "BH.oM.Geometry.ICurve",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/Geometry_oM/ICurve.cs",
+      "label": "ICurve (BH.oM.Geometry)",
+      "attributes": []
+    },
+    {
+      "id": "BH.oM.Geometry.Line",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/Geometry_oM/Line.cs",
+      "label": "Line (BH.oM.Geometry)",
+      "attributes": []
+    },
+    {
+      "id": "BH.oM.Geometry.NurbsCurve",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/Geometry_oM/NurbsCurve.cs",
+      "label": "NurbsCurve (BH.oM.Geometry)",
+      "attributes": []
+    },
+    {
+      "id": "BH.oM.Geometry.PolyCurve",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/Geometry_oM/PolyCurve.cs",
+      "label": "PolyCurve (BH.oM.Geometry)",
+      "attributes": []
+    },
+    {
+      "id": "BH.oM.Geometry.Polyline",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/Geometry_oM/Polyline.cs",
+      "label": "Polyline (BH.oM.Geometry)",
+      "attributes": []
+    },
+    {
+      "id": "BH.oM.Geometry.IGeometry",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/Geometry_oM/IGeometry.cs",
+      "label": "IGeometry (BH.oM.Geometry)",
+      "attributes": []
+    },
+    {
+      "id": "BH.oM.Geometry.IntegrationSlice",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/Geometry_oM/IntegrationSlice.cs",
+      "label": "IntegrationSlice (BH.oM.Geometry)",
+      "attributes": []
+    },
+    {
+      "id": "BH.oM.Geometry.CellRelation",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/Geometry_oM/CellRelation.cs",
+      "label": "CellRelation (BH.oM.Geometry)",
+      "attributes": []
+    },
+    {
+      "id": "BH.oM.Geometry.Face",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/Geometry_oM/Face.cs",
+      "label": "Face (BH.oM.Geometry)",
+      "attributes": []
+    },
+    {
+      "id": "BH.oM.Geometry.Mesh",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/Geometry_oM/Mesh.cs",
+      "label": "Mesh (BH.oM.Geometry)",
+      "attributes": []
+    },
+    {
+      "id": "BH.oM.Geometry.Mesh3D",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/Geometry_oM/Mesh3D.cs",
+      "label": "Mesh3D (BH.oM.Geometry)",
+      "attributes": []
+    },
+    {
+      "id": "BH.oM.Geometry.BoundingBox",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/Geometry_oM/BoundingBox.cs",
+      "label": "BoundingBox (BH.oM.Geometry)",
+      "attributes": []
+    },
+    {
+      "id": "BH.oM.Geometry.CompositeGeometry",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/Geometry_oM/CompositeGeometry.cs",
+      "label": "CompositeGeometry (BH.oM.Geometry)",
+      "attributes": []
+    },
+    {
+      "id": "BH.oM.Geometry.Quaternion",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/Geometry_oM/Quaternion.cs",
+      "label": "Quaternion (BH.oM.Geometry)",
+      "attributes": []
+    },
+    {
+      "id": "BH.oM.Geometry.SurfaceTrim",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/Geometry_oM/SurfaceTrim.cs",
+      "label": "SurfaceTrim (BH.oM.Geometry)",
+      "attributes": []
+    },
+    {
+      "id": "BH.oM.Geometry.Tolerance",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/Geometry_oM/Tolerance.cs",
+      "label": "Tolerance (BH.oM.Geometry)",
+      "attributes": []
+    },
+    {
+      "id": "BH.oM.Geometry.TransformMatrix",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/Geometry_oM/TransformMatrix.cs",
+      "label": "TransformMatrix (BH.oM.Geometry)",
+      "attributes": []
+    },
+    {
+      "id": "BH.oM.Geometry.BoundaryRepresentation",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/Geometry_oM/BoundaryRepresentation.cs",
+      "label": "BoundaryRepresentation (BH.oM.Geometry)",
+      "attributes": []
+    },
+    {
+      "id": "BH.oM.Geometry.Cone",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/Geometry_oM/Cone.cs",
+      "label": "Cone (BH.oM.Geometry)",
+      "attributes": []
+    },
+    {
+      "id": "BH.oM.Geometry.Cuboid",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/Geometry_oM/Cuboid.cs",
+      "label": "Cuboid (BH.oM.Geometry)",
+      "attributes": []
+    },
+    {
+      "id": "BH.oM.Geometry.Cylinder",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/Geometry_oM/Cylinder.cs",
+      "label": "Cylinder (BH.oM.Geometry)",
+      "attributes": []
+    },
+    {
+      "id": "BH.oM.Geometry.ISolid",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/Geometry_oM/ISolid.cs",
+      "label": "ISolid (BH.oM.Geometry)",
+      "attributes": []
+    },
+    {
+      "id": "BH.oM.Geometry.Sphere",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/Geometry_oM/Sphere.cs",
+      "label": "Sphere (BH.oM.Geometry)",
+      "attributes": []
+    },
+    {
+      "id": "BH.oM.Geometry.Torus",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/Geometry_oM/Torus.cs",
+      "label": "Torus (BH.oM.Geometry)",
+      "attributes": []
+    },
+    {
+      "id": "BH.oM.Geometry.Extrusion",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/Geometry_oM/Extrusion.cs",
+      "label": "Extrusion (BH.oM.Geometry)",
+      "attributes": []
+    },
+    {
+      "id": "BH.oM.Geometry.ISurface",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/Geometry_oM/ISurface.cs",
+      "label": "ISurface (BH.oM.Geometry)",
+      "attributes": []
+    },
+    {
+      "id": "BH.oM.Geometry.Loft",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/Geometry_oM/Loft.cs",
+      "label": "Loft (BH.oM.Geometry)",
+      "attributes": []
+    },
+    {
+      "id": "BH.oM.Geometry.NurbsSurface",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/Geometry_oM/NurbsSurface.cs",
+      "label": "NurbsSurface (BH.oM.Geometry)",
+      "attributes": []
+    },
+    {
+      "id": "BH.oM.Geometry.Pipe",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/Geometry_oM/Pipe.cs",
+      "label": "Pipe (BH.oM.Geometry)",
+      "attributes": []
+    },
+    {
+      "id": "BH.oM.Geometry.PlanarSurface",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/Geometry_oM/PlanarSurface.cs",
+      "label": "PlanarSurface (BH.oM.Geometry)",
+      "attributes": []
+    },
+    {
+      "id": "BH.oM.Geometry.PolySurface",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/Geometry_oM/PolySurface.cs",
+      "label": "PolySurface (BH.oM.Geometry)",
+      "attributes": []
+    },
+    {
+      "id": "BH.oM.Geometry.Basis",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/Geometry_oM/Basis.cs",
+      "label": "Basis (BH.oM.Geometry)",
+      "attributes": []
+    },
+    {
+      "id": "BH.oM.Geometry.Plane",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/Geometry_oM/Plane.cs",
+      "label": "Plane (BH.oM.Geometry)",
+      "attributes": []
+    },
+    {
+      "id": "BH.oM.Geometry.Point",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/Geometry_oM/Point.cs",
+      "label": "Point (BH.oM.Geometry)",
+      "attributes": []
+    },
+    {
+      "id": "BH.oM.Geometry.Vector",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/Geometry_oM/Vector.cs",
+      "label": "Vector (BH.oM.Geometry)",
+      "attributes": []
+    },
+    {
+      "id": "BH.oM.Geometry.CoordinateSystem.Cartesian",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/Geometry_oM/CoordinateSystem/Cartesian.cs",
+      "label": "Cartesian (BH.oM.Geometry.CoordinateSystem)",
+      "attributes": []
+    },
+    {
+      "id": "BH.oM.Geometry.NurbsCurvecDisplayClass",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/Geometry_oM/cDisplayClass.cs",
+      "label": "cDisplayClass (BH.oM.Geometry)",
+      "attributes": []
+    },
+    {
+      "id": "Radius-b286e695-2f16-423c-a17c-213b54819150-Arc-HasProperty",
+      "iri": "http://www.w3.org/2001/XMLSchema#",
+      "label": "Radius (Double)",
+      "attributes": "datatype"
+    },
+    {
+      "id": "StartAngle-598eeed3-460e-44a9-b11e-048f56c18802-Arc-HasProperty",
+      "iri": "http://www.w3.org/2001/XMLSchema#",
+      "label": "StartAngle (Double)",
+      "attributes": "datatype"
+    },
+    {
+      "id": "EndAngle-994b936d-bf08-4d72-9999-87894d00e6e4-Arc-HasProperty",
+      "iri": "http://www.w3.org/2001/XMLSchema#",
+      "label": "EndAngle (Double)",
+      "attributes": "datatype"
+    },
+    {
+      "id": "BH.oM.Base.IObject",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/BHoM/Interface/IObject.cs",
+      "label": "IObject",
+      "attributes": []
+    },
+    {
+      "id": "BH.oM.Dimensional.IElement1D",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/Dimensional_oM/IElement1D.cs",
+      "label": "IElement1D",
+      "attributes": []
+    },
+    {
+      "id": "BH.oM.Dimensional.IElement",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/Dimensional_oM/IElement.cs",
+      "label": "IElement",
+      "attributes": []
+    },
+    {
+      "id": "Radius-4c2720ac-c2b0-4a98-a1e6-f875622f2682-Circle-HasProperty",
+      "iri": "http://www.w3.org/2001/XMLSchema#",
+      "label": "Radius (Double)",
+      "attributes": "datatype"
+    },
+    {
+      "id": "BH.oM.Base.IObject",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/BHoM/Interface/IObject.cs",
+      "label": "IObject",
+      "attributes": []
+    },
+    {
+      "id": "BH.oM.Dimensional.IElement1D",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/Dimensional_oM/IElement1D.cs",
+      "label": "IElement1D",
+      "attributes": []
+    },
+    {
+      "id": "BH.oM.Dimensional.IElement",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/Dimensional_oM/IElement.cs",
+      "label": "IElement",
+      "attributes": []
+    },
+    {
+      "id": "Radius1-51cdcb48-f000-4adb-a582-03b5f2a997bf-Ellipse-HasProperty",
+      "iri": "http://www.w3.org/2001/XMLSchema#",
+      "label": "Radius1 (Double)",
+      "attributes": "datatype"
+    },
+    {
+      "id": "Radius2-ca07e901-1f39-4ac9-8408-9c2c40b87a7e-Ellipse-HasProperty",
+      "iri": "http://www.w3.org/2001/XMLSchema#",
+      "label": "Radius2 (Double)",
+      "attributes": "datatype"
+    },
+    {
+      "id": "BH.oM.Base.IObject",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/BHoM/Interface/IObject.cs",
+      "label": "IObject",
+      "attributes": []
+    },
+    {
+      "id": "BH.oM.Dimensional.IElement1D",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/Dimensional_oM/IElement1D.cs",
+      "label": "IElement1D",
+      "attributes": []
+    },
+    {
+      "id": "BH.oM.Dimensional.IElement",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/Dimensional_oM/IElement.cs",
+      "label": "IElement",
+      "attributes": []
+    },
+    {
+      "id": "BH.oM.Base.IObject",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/BHoM/Interface/IObject.cs",
+      "label": "IObject",
+      "attributes": []
+    },
+    {
+      "id": "BH.oM.Dimensional.IElement1D",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/Dimensional_oM/IElement1D.cs",
+      "label": "IElement1D",
+      "attributes": []
+    },
+    {
+      "id": "BH.oM.Dimensional.IElement",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/Dimensional_oM/IElement.cs",
+      "label": "IElement",
+      "attributes": []
+    },
+    {
+      "id": "Infinite-3417186d-c35a-4cc1-8731-0baf26fe40b1-Line-HasProperty",
+      "iri": "http://www.w3.org/2001/XMLSchema#",
+      "label": "Infinite (Boolean)",
+      "attributes": "datatype"
+    },
+    {
+      "id": "BH.oM.Base.IObject",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/BHoM/Interface/IObject.cs",
+      "label": "IObject",
+      "attributes": []
+    },
+    {
+      "id": "BH.oM.Dimensional.IElement1D",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/Dimensional_oM/IElement1D.cs",
+      "label": "IElement1D",
+      "attributes": []
+    },
+    {
+      "id": "BH.oM.Dimensional.IElement",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/Dimensional_oM/IElement.cs",
+      "label": "IElement",
+      "attributes": []
+    },
+    {
+      "id": "ControlPoints-05a906c6-8445-4db1-873b-414a54cbe8ef-NurbsCurve-HasProperty",
+      "iri": "http://www.w3.org/2001/XMLSchema#",
+      "label": "ControlPoints (List<Point>)",
+      "attributes": "datatype"
+    },
+    {
+      "id": "Weights-9f05c2f5-1eb9-4ad6-96d5-8ef0617013e2-NurbsCurve-HasProperty",
+      "iri": "http://www.w3.org/2001/XMLSchema#",
+      "label": "Weights (List<Double>)",
+      "attributes": "datatype"
+    },
+    {
+      "id": "Knots-45432060-9efb-4430-b87e-64041f7682dd-NurbsCurve-HasProperty",
+      "iri": "http://www.w3.org/2001/XMLSchema#",
+      "label": "Knots (List<Double>)",
+      "attributes": "datatype"
+    },
+    {
+      "id": "BH.oM.Base.IObject",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/BHoM/Interface/IObject.cs",
+      "label": "IObject",
+      "attributes": []
+    },
+    {
+      "id": "BH.oM.Dimensional.IElement1D",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/Dimensional_oM/IElement1D.cs",
+      "label": "IElement1D",
+      "attributes": []
+    },
+    {
+      "id": "BH.oM.Dimensional.IElement",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/Dimensional_oM/IElement.cs",
+      "label": "IElement",
+      "attributes": []
+    },
+    {
+      "id": "Curves-5944dd2d-486c-40e4-a2aa-46a0c59a3937-PolyCurve-HasProperty",
+      "iri": "http://www.w3.org/2001/XMLSchema#",
+      "label": "Curves (List<ICurve>)",
+      "attributes": "datatype"
+    },
+    {
+      "id": "BH.oM.Base.IObject",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/BHoM/Interface/IObject.cs",
+      "label": "IObject",
+      "attributes": []
+    },
+    {
+      "id": "BH.oM.Dimensional.IElement1D",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/Dimensional_oM/IElement1D.cs",
+      "label": "IElement1D",
+      "attributes": []
+    },
+    {
+      "id": "BH.oM.Dimensional.IElement",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/Dimensional_oM/IElement.cs",
+      "label": "IElement",
+      "attributes": []
+    },
+    {
+      "id": "ControlPoints-c4655ed1-4f16-4e88-89b7-bc52b67923bd-Polyline-HasProperty",
+      "iri": "http://www.w3.org/2001/XMLSchema#",
+      "label": "ControlPoints (List<Point>)",
+      "attributes": "datatype"
+    },
+    {
+      "id": "BH.oM.Base.IObject",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/BHoM/Interface/IObject.cs",
+      "label": "IObject",
+      "attributes": []
+    },
+    {
+      "id": "BH.oM.Dimensional.IElement1D",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/Dimensional_oM/IElement1D.cs",
+      "label": "IElement1D",
+      "attributes": []
+    },
+    {
+      "id": "BH.oM.Dimensional.IElement",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/Dimensional_oM/IElement.cs",
+      "label": "IElement",
+      "attributes": []
+    },
+    {
+      "id": "BH.oM.Base.IObject",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/BHoM/Interface/IObject.cs",
+      "label": "IObject",
+      "attributes": []
+    },
+    {
+      "id": "Width-d926d0cc-9831-497b-98c6-b1485265024d-IntegrationSlice-HasProperty",
+      "iri": "http://www.w3.org/2001/XMLSchema#",
+      "label": "Width (Double)",
+      "attributes": "datatype"
+    },
+    {
+      "id": "Length-245dd239-1d39-4144-ad3a-a11e861487e3-IntegrationSlice-HasProperty",
+      "iri": "http://www.w3.org/2001/XMLSchema#",
+      "label": "Length (Double)",
+      "attributes": "datatype"
+    },
+    {
+      "id": "Centre-538f8971-0f72-40fb-8351-5f5b2ae14c0a-IntegrationSlice-HasProperty",
+      "iri": "http://www.w3.org/2001/XMLSchema#",
+      "label": "Centre (Double)",
+      "attributes": "datatype"
+    },
+    {
+      "id": "Placement-d7936c20-2e28-4dff-b113-4812fa631962-IntegrationSlice-HasProperty",
+      "iri": "http://www.w3.org/2001/XMLSchema#",
+      "label": "Placement (Double)",
+      "attributes": "datatype"
+    },
+    {
+      "id": "BH.oM.Base.IObject",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/BHoM/Interface/IObject.cs",
+      "label": "IObject",
+      "attributes": []
+    },
+    {
+      "id": "FromCell-dd708189-63f7-4557-9c40-8d7df8a485fd-CellRelation-HasProperty",
+      "iri": "http://www.w3.org/2001/XMLSchema#",
+      "label": "FromCell (Int)",
+      "attributes": "datatype"
+    },
+    {
+      "id": "ToCell-32a5f71b-e276-4c5d-82ae-9763fc3aa6c2-CellRelation-HasProperty",
+      "iri": "http://www.w3.org/2001/XMLSchema#",
+      "label": "ToCell (Int)",
+      "attributes": "datatype"
+    },
+    {
+      "id": "BH.oM.Base.IObject",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/BHoM/Interface/IObject.cs",
+      "label": "IObject",
+      "attributes": []
+    },
+    {
+      "id": "A-7807bb0e-72b5-4454-a6e3-2841d8b7d0a7-Face-HasProperty",
+      "iri": "http://www.w3.org/2001/XMLSchema#",
+      "label": "A (Int)",
+      "attributes": "datatype"
+    },
+    {
+      "id": "B-5c20587e-3fb3-459e-a513-2a7adcdb769f-Face-HasProperty",
+      "iri": "http://www.w3.org/2001/XMLSchema#",
+      "label": "B (Int)",
+      "attributes": "datatype"
+    },
+    {
+      "id": "C-75dccbdb-2a38-48c1-8580-baac4e573a9c-Face-HasProperty",
+      "iri": "http://www.w3.org/2001/XMLSchema#",
+      "label": "C (Int)",
+      "attributes": "datatype"
+    },
+    {
+      "id": "D-0f6980ca-5b93-460a-9463-27a1aa493384-Face-HasProperty",
+      "iri": "http://www.w3.org/2001/XMLSchema#",
+      "label": "D (Int)",
+      "attributes": "datatype"
+    },
+    {
+      "id": "BH.oM.Base.IObject",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/BHoM/Interface/IObject.cs",
+      "label": "IObject",
+      "attributes": []
+    },
+    {
+      "id": "Vertices-3ab6502e-8055-4e1e-afaf-b9a185209a4e-Mesh-HasProperty",
+      "iri": "http://www.w3.org/2001/XMLSchema#",
+      "label": "Vertices (List<Point>)",
+      "attributes": "datatype"
+    },
+    {
+      "id": "Faces-a6e73c23-f698-48ad-b1f8-8e1871a09208-Mesh-HasProperty",
+      "iri": "http://www.w3.org/2001/XMLSchema#",
+      "label": "Faces (List<Face>)",
+      "attributes": "datatype"
+    },
+    {
+      "id": "BH.oM.Base.IObject",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/BHoM/Interface/IObject.cs",
+      "label": "IObject",
+      "attributes": []
+    },
+    {
+      "id": "Vertices-8b3db319-6895-4eb0-b957-0a1098bed9ec-Mesh3D-HasProperty",
+      "iri": "http://www.w3.org/2001/XMLSchema#",
+      "label": "Vertices (IReadOnlyList<Point>)",
+      "attributes": "datatype"
+    },
+    {
+      "id": "Faces-c16da590-b446-4731-b095-8cc588c40242-Mesh3D-HasProperty",
+      "iri": "http://www.w3.org/2001/XMLSchema#",
+      "label": "Faces (IReadOnlyList<Face>)",
+      "attributes": "datatype"
+    },
+    {
+      "id": "CellRelation-c6e5daaf-d5ef-4a32-9cdf-6cf50cabf825-Mesh3D-HasProperty",
+      "iri": "http://www.w3.org/2001/XMLSchema#",
+      "label": "CellRelation (IReadOnlyList<CellRelation>)",
+      "attributes": "datatype"
+    },
+    {
+      "id": "BH.oM.Base.IObject",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/BHoM/Interface/IObject.cs",
+      "label": "IObject",
+      "attributes": []
+    },
+    {
+      "id": "BH.oM.Base.IImmutable",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/BHoM/Interface/IImmutable.cs",
+      "label": "IImmutable",
+      "attributes": []
+    },
+    {
+      "id": "BH.oM.Base.IObject",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/BHoM/Interface/IObject.cs",
+      "label": "IObject",
+      "attributes": []
+    },
+    {
+      "id": "Elements-1d92deb4-aa91-48d7-8ea1-1cb927a8a969-CompositeGeometry-HasProperty",
+      "iri": "http://www.w3.org/2001/XMLSchema#",
+      "label": "Elements (List<IGeometry>)",
+      "attributes": "datatype"
+    },
+    {
+      "id": "BH.oM.Base.IObject",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/BHoM/Interface/IObject.cs",
+      "label": "IObject",
+      "attributes": []
+    },
+    {
+      "id": "X-28cb5a14-df8c-40e9-9684-8d8dd6f08496-Quaternion-HasProperty",
+      "iri": "http://www.w3.org/2001/XMLSchema#",
+      "label": "X (Double)",
+      "attributes": "datatype"
+    },
+    {
+      "id": "Y-97d7324e-e41d-4c9e-8ff0-3cea1db3bc71-Quaternion-HasProperty",
+      "iri": "http://www.w3.org/2001/XMLSchema#",
+      "label": "Y (Double)",
+      "attributes": "datatype"
+    },
+    {
+      "id": "Z-af043155-c00e-407a-882f-06637e0779b8-Quaternion-HasProperty",
+      "iri": "http://www.w3.org/2001/XMLSchema#",
+      "label": "Z (Double)",
+      "attributes": "datatype"
+    },
+    {
+      "id": "W-ce52d49a-ad46-45a4-96fa-6ef1f4877d47-Quaternion-HasProperty",
+      "iri": "http://www.w3.org/2001/XMLSchema#",
+      "label": "W (Double)",
+      "attributes": "datatype"
+    },
+    {
+      "id": "BH.oM.Base.IObject",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/BHoM/Interface/IObject.cs",
+      "label": "IObject",
+      "attributes": []
+    },
+    {
+      "id": "BH.oM.Base.IObject",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/BHoM/Interface/IObject.cs",
+      "label": "IObject",
+      "attributes": []
+    },
+    {
+      "id": "BH.oM.Base.IImmutable",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/BHoM/Interface/IImmutable.cs",
+      "label": "IImmutable",
+      "attributes": []
+    },
+    {
+      "id": "Matrix-ac632ab8-1ed0-4bc5-9ed5-2be2ff9c5cce-TransformMatrix-HasProperty",
+      "iri": "http://www.w3.org/2001/XMLSchema#",
+      "label": "Matrix (Double)",
+      "attributes": "datatype"
+    },
+    {
+      "id": "BH.oM.Base.IObject",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/BHoM/Interface/IObject.cs",
+      "label": "IObject",
+      "attributes": []
+    },
+    {
+      "id": "Surfaces-14e3839e-806a-4d1b-b06e-291ca9da32ef-BoundaryRepresentation-HasProperty",
+      "iri": "http://www.w3.org/2001/XMLSchema#",
+      "label": "Surfaces (ReadOnlyCollection<ISurface>)",
+      "attributes": "datatype"
+    },
+    {
+      "id": "Volume-ea5e0993-5547-4abe-8beb-8902d715dcf6-BoundaryRepresentation-HasProperty",
+      "iri": "http://www.w3.org/2001/XMLSchema#",
+      "label": "Volume (Double)",
+      "attributes": "datatype"
+    },
+    {
+      "id": "BH.oM.Base.IObject",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/BHoM/Interface/IObject.cs",
+      "label": "IObject",
+      "attributes": []
+    },
+    {
+      "id": "BH.oM.Base.IImmutable",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/BHoM/Interface/IImmutable.cs",
+      "label": "IImmutable",
+      "attributes": []
+    },
+    {
+      "id": "Radius-3c1ba7df-00e6-4d1f-b37b-356517262fe6-Cone-HasProperty",
+      "iri": "http://www.w3.org/2001/XMLSchema#",
+      "label": "Radius (Double)",
+      "attributes": "datatype"
+    },
+    {
+      "id": "Height-104f174e-0317-4008-92f9-7a2379417dae-Cone-HasProperty",
+      "iri": "http://www.w3.org/2001/XMLSchema#",
+      "label": "Height (Double)",
+      "attributes": "datatype"
+    },
+    {
+      "id": "BH.oM.Base.IObject",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/BHoM/Interface/IObject.cs",
+      "label": "IObject",
+      "attributes": []
+    },
+    {
+      "id": "Length-f3a41a56-94f6-4b68-8590-131f395a757e-Cuboid-HasProperty",
+      "iri": "http://www.w3.org/2001/XMLSchema#",
+      "label": "Length (Double)",
+      "attributes": "datatype"
+    },
+    {
+      "id": "Depth-77e5bea5-f714-4f8b-bffc-af9d972ae3c2-Cuboid-HasProperty",
+      "iri": "http://www.w3.org/2001/XMLSchema#",
+      "label": "Depth (Double)",
+      "attributes": "datatype"
+    },
+    {
+      "id": "Height-2b4148b7-f6e9-4a83-bb13-fa96adb89945-Cuboid-HasProperty",
+      "iri": "http://www.w3.org/2001/XMLSchema#",
+      "label": "Height (Double)",
+      "attributes": "datatype"
+    },
+    {
+      "id": "BH.oM.Base.IObject",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/BHoM/Interface/IObject.cs",
+      "label": "IObject",
+      "attributes": []
+    },
+    {
+      "id": "Radius-d26f1778-06fe-46eb-b569-b4df03fb5c94-Cylinder-HasProperty",
+      "iri": "http://www.w3.org/2001/XMLSchema#",
+      "label": "Radius (Double)",
+      "attributes": "datatype"
+    },
+    {
+      "id": "Height-a7ed71d9-d1d9-4618-8f1d-d6faffd23606-Cylinder-HasProperty",
+      "iri": "http://www.w3.org/2001/XMLSchema#",
+      "label": "Height (Double)",
+      "attributes": "datatype"
+    },
+    {
+      "id": "BH.oM.Base.IObject",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/BHoM/Interface/IObject.cs",
+      "label": "IObject",
+      "attributes": []
+    },
+    {
+      "id": "BH.oM.Base.IObject",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/BHoM/Interface/IObject.cs",
+      "label": "IObject",
+      "attributes": []
+    },
+    {
+      "id": "Radius-c0aca2da-1af6-4276-93f6-b125e20cccbb-Sphere-HasProperty",
+      "iri": "http://www.w3.org/2001/XMLSchema#",
+      "label": "Radius (Double)",
+      "attributes": "datatype"
+    },
+    {
+      "id": "BH.oM.Base.IObject",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/BHoM/Interface/IObject.cs",
+      "label": "IObject",
+      "attributes": []
+    },
+    {
+      "id": "RadiusMajor-271a5e3d-c9d0-422c-bf77-b3b9df505fb6-Torus-HasProperty",
+      "iri": "http://www.w3.org/2001/XMLSchema#",
+      "label": "RadiusMajor (Double)",
+      "attributes": "datatype"
+    },
+    {
+      "id": "RadiusMinor-593fbcea-11ac-4985-b32e-2f1081ad3468-Torus-HasProperty",
+      "iri": "http://www.w3.org/2001/XMLSchema#",
+      "label": "RadiusMinor (Double)",
+      "attributes": "datatype"
+    },
+    {
+      "id": "BH.oM.Base.IObject",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/BHoM/Interface/IObject.cs",
+      "label": "IObject",
+      "attributes": []
+    },
+    {
+      "id": "Capped-6dc32c5e-6ef2-494e-8d8b-8ff385f3fa75-Extrusion-HasProperty",
+      "iri": "http://www.w3.org/2001/XMLSchema#",
+      "label": "Capped (Boolean)",
+      "attributes": "datatype"
+    },
+    {
+      "id": "BH.oM.Base.IObject",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/BHoM/Interface/IObject.cs",
+      "label": "IObject",
+      "attributes": []
+    },
+    {
+      "id": "BH.oM.Base.IObject",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/BHoM/Interface/IObject.cs",
+      "label": "IObject",
+      "attributes": []
+    },
+    {
+      "id": "Curves-47add643-7774-4a1a-bba8-e3c48115906a-Loft-HasProperty",
+      "iri": "http://www.w3.org/2001/XMLSchema#",
+      "label": "Curves (List<ICurve>)",
+      "attributes": "datatype"
+    },
+    {
+      "id": "BH.oM.Base.IObject",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/BHoM/Interface/IObject.cs",
+      "label": "IObject",
+      "attributes": []
+    },
+    {
+      "id": "ControlPoints-1b01b0fd-f1fd-43ae-a406-74484b92bd9b-NurbsSurface-HasProperty",
+      "iri": "http://www.w3.org/2001/XMLSchema#",
+      "label": "ControlPoints (ReadOnlyCollection<Point>)",
+      "attributes": "datatype"
+    },
+    {
+      "id": "Weights-be4c11d3-790e-49f7-9200-ea8dcd475bf3-NurbsSurface-HasProperty",
+      "iri": "http://www.w3.org/2001/XMLSchema#",
+      "label": "Weights (ReadOnlyCollection<Double>)",
+      "attributes": "datatype"
+    },
+    {
+      "id": "UKnots-f49c2918-96c7-47bd-bf4a-1c86f90f508b-NurbsSurface-HasProperty",
+      "iri": "http://www.w3.org/2001/XMLSchema#",
+      "label": "UKnots (ReadOnlyCollection<Double>)",
+      "attributes": "datatype"
+    },
+    {
+      "id": "VKnots-a74276c0-c762-4bad-89bc-717b319e7fb0-NurbsSurface-HasProperty",
+      "iri": "http://www.w3.org/2001/XMLSchema#",
+      "label": "VKnots (ReadOnlyCollection<Double>)",
+      "attributes": "datatype"
+    },
+    {
+      "id": "UDegree-bf54758c-2e1e-455c-bcc8-6ebe75e59602-NurbsSurface-HasProperty",
+      "iri": "http://www.w3.org/2001/XMLSchema#",
+      "label": "UDegree (Int)",
+      "attributes": "datatype"
+    },
+    {
+      "id": "VDegree-266af85f-c79c-4b26-b162-9c2e3083e158-NurbsSurface-HasProperty",
+      "iri": "http://www.w3.org/2001/XMLSchema#",
+      "label": "VDegree (Int)",
+      "attributes": "datatype"
+    },
+    {
+      "id": "InnerTrims-6114e44c-ad14-48bc-a7cb-a280e50c080c-NurbsSurface-HasProperty",
+      "iri": "http://www.w3.org/2001/XMLSchema#",
+      "label": "InnerTrims (ReadOnlyCollection<SurfaceTrim>)",
+      "attributes": "datatype"
+    },
+    {
+      "id": "OuterTrims-49934a49-b651-41b8-965a-81b1b0aff639-NurbsSurface-HasProperty",
+      "iri": "http://www.w3.org/2001/XMLSchema#",
+      "label": "OuterTrims (ReadOnlyCollection<SurfaceTrim>)",
+      "attributes": "datatype"
+    },
+    {
+      "id": "BH.oM.Base.IObject",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/BHoM/Interface/IObject.cs",
+      "label": "IObject",
+      "attributes": []
+    },
+    {
+      "id": "BH.oM.Base.IImmutable",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/BHoM/Interface/IImmutable.cs",
+      "label": "IImmutable",
+      "attributes": []
+    },
+    {
+      "id": "Radius-98d14978-1e9b-4962-ad91-f15ddf02ce15-Pipe-HasProperty",
+      "iri": "http://www.w3.org/2001/XMLSchema#",
+      "label": "Radius (Double)",
+      "attributes": "datatype"
+    },
+    {
+      "id": "Capped-a4dbd28e-6d1a-452e-bea1-3043d8840343-Pipe-HasProperty",
+      "iri": "http://www.w3.org/2001/XMLSchema#",
+      "label": "Capped (Boolean)",
+      "attributes": "datatype"
+    },
+    {
+      "id": "BH.oM.Base.IObject",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/BHoM/Interface/IObject.cs",
+      "label": "IObject",
+      "attributes": []
+    },
+    {
+      "id": "InternalBoundaries-cda1e6e4-9445-45e2-8b66-13ee3b5c5d84-PlanarSurface-HasProperty",
+      "iri": "http://www.w3.org/2001/XMLSchema#",
+      "label": "InternalBoundaries (List<ICurve>)",
+      "attributes": "datatype"
+    },
+    {
+      "id": "BH.oM.Base.IObject",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/BHoM/Interface/IObject.cs",
+      "label": "IObject",
+      "attributes": []
+    },
+    {
+      "id": "BH.oM.Base.IImmutable",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/BHoM/Interface/IImmutable.cs",
+      "label": "IImmutable",
+      "attributes": []
+    },
+    {
+      "id": "Surfaces-a4c23ba6-0ff4-4ee8-bb6c-a1bbfe1e24c9-PolySurface-HasProperty",
+      "iri": "http://www.w3.org/2001/XMLSchema#",
+      "label": "Surfaces (List<ISurface>)",
+      "attributes": "datatype"
+    },
+    {
+      "id": "BH.oM.Base.IObject",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/BHoM/Interface/IObject.cs",
+      "label": "IObject",
+      "attributes": []
+    },
+    {
+      "id": "BH.oM.Base.IObject",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/BHoM/Interface/IObject.cs",
+      "label": "IObject",
+      "attributes": []
+    },
+    {
+      "id": "BH.oM.Base.IImmutable",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/BHoM/Interface/IImmutable.cs",
+      "label": "IImmutable",
+      "attributes": []
+    },
+    {
+      "id": "BH.oM.Base.IObject",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/BHoM/Interface/IObject.cs",
+      "label": "IObject",
+      "attributes": []
+    },
+    {
+      "id": "X-eed47de0-5ed3-49d1-a492-c2a5972dc368-Point-HasProperty",
+      "iri": "http://www.w3.org/2001/XMLSchema#",
+      "label": "X (Double)",
+      "attributes": "datatype"
+    },
+    {
+      "id": "Y-1f1e6e5f-9e2a-45e3-b4f9-fe4aa3bcc432-Point-HasProperty",
+      "iri": "http://www.w3.org/2001/XMLSchema#",
+      "label": "Y (Double)",
+      "attributes": "datatype"
+    },
+    {
+      "id": "Z-a3d1fc26-bf49-4e07-bab4-5851147db6a2-Point-HasProperty",
+      "iri": "http://www.w3.org/2001/XMLSchema#",
+      "label": "Z (Double)",
+      "attributes": "datatype"
+    },
+    {
+      "id": "BH.oM.Base.IObject",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/BHoM/Interface/IObject.cs",
+      "label": "IObject",
+      "attributes": []
+    },
+    {
+      "id": "BH.oM.Dimensional.IElement0D",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/Dimensional_oM/IElement0D.cs",
+      "label": "IElement0D",
+      "attributes": []
+    },
+    {
+      "id": "BH.oM.Dimensional.IElement",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/Dimensional_oM/IElement.cs",
+      "label": "IElement",
+      "attributes": []
+    },
+    {
+      "id": "X-b643238a-010b-4c21-9234-c67c8fabedd7-Vector-HasProperty",
+      "iri": "http://www.w3.org/2001/XMLSchema#",
+      "label": "X (Double)",
+      "attributes": "datatype"
+    },
+    {
+      "id": "Y-1f7a4f2e-4ab8-4239-ab86-7f4aafbe01ce-Vector-HasProperty",
+      "iri": "http://www.w3.org/2001/XMLSchema#",
+      "label": "Y (Double)",
+      "attributes": "datatype"
+    },
+    {
+      "id": "Z-1ecbc88a-9b8b-4624-ab9c-16c909f20864-Vector-HasProperty",
+      "iri": "http://www.w3.org/2001/XMLSchema#",
+      "label": "Z (Double)",
+      "attributes": "datatype"
+    },
+    {
+      "id": "BH.oM.Base.IObject",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/BHoM/Interface/IObject.cs",
+      "label": "IObject",
+      "attributes": []
+    },
+    {
+      "id": "BH.oM.Base.IObject",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/BHoM/Interface/IObject.cs",
+      "label": "IObject",
+      "attributes": []
+    },
+    {
+      "id": "BH.oM.Base.IImmutable",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/BHoM/Interface/IImmutable.cs",
+      "label": "IImmutable",
+      "attributes": []
+    }
+  ],
+  "property": [
+    {
+      "id": "3ab188a6-47da-497e-a5b6-d2efeef83917",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "37654567-152b-4d13-b707-a6feb8c1ddc5",
+      "type": "owl:DatatypeProperty"
+    },
+    {
+      "id": "8095c156-e5b3-48a1-a3b4-2dcc5d367971",
+      "type": "owl:DatatypeProperty"
+    },
+    {
+      "id": "21e5e754-db76-44e5-a2b0-cd7b11a4a0d6",
+      "type": "owl:DatatypeProperty"
+    },
+    {
+      "id": "7bf904ae-0400-4099-a45e-223175b8559e",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "f94a9064-7d22-4935-9b1c-810d875e8006",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "97016f5f-4e32-4924-adbb-54a835f93aac",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "0fc85032-68ca-455b-8b86-b48e43581b70",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "6e995595-fec2-4d29-9bd9-595c3a66e977",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "9dbfaecf-6f20-414f-9d90-67e6f259c4ec",
+      "type": "owl:DatatypeProperty"
+    },
+    {
+      "id": "3574972f-49a2-4d92-b858-83f1930a2e55",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "9e8dd2f4-c588-4643-afbb-741f8f9101ea",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "7730492a-8d6f-443c-9ca3-138017883026",
+      "type": "owl:DatatypeProperty"
+    },
+    {
+      "id": "e2889848-7a97-4ac8-a6f3-a287c82ace75",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "63000f53-563c-48eb-801c-705f5c8605ab",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "a8d6958c-87f5-469d-8d7e-f1f5d5e288ad",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "06782e18-de97-4373-97b1-95485950d5ef",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "1985d18b-7d43-4ae7-a3d0-5d560f20a3bc",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "8ffe9e4c-13c0-4581-9204-dd0b31f4cc58",
+      "type": "owl:DatatypeProperty"
+    },
+    {
+      "id": "9e557fa4-dc9a-44a1-ae13-1396dcf7374b",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "f92a44a8-4fc9-49ab-b8ed-dfdf16717798",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "adcc35c3-50c8-493d-b0c5-e66c7387485c",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "37864c50-5623-4da7-9fb0-a24bcc3274a9",
+      "type": "owl:DatatypeProperty"
+    },
+    {
+      "id": "97380155-e4cf-4082-8063-83654b0b84a3",
+      "type": "owl:DatatypeProperty"
+    },
+    {
+      "id": "81c5a348-73ce-4f1a-8cd3-cdbe8c3daba5",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "82c8e00d-323a-41e1-b81a-058c1983bb7e",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "eeb894ae-8c4a-403d-8bbb-8b85c72418e9",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "a5b45ef1-9abe-44b5-928c-050922fb7347",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "c17c268b-60a8-4644-8bd7-d790560df329",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "360cc7b0-24b1-4764-8910-a4fecf61f7cf",
+      "type": "owl:DatatypeProperty"
+    },
+    {
+      "id": "6dd910ba-7fa0-4d74-99b0-01b24f23a7c1",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "7ba3e6dc-eeb8-468e-bc3d-c3e7d388a604",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "863deb24-5189-4ab7-ad5f-a3d8564510f0",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "9746d16b-9e73-4707-a916-9f70a873358f",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "52beadd4-a3e7-466b-9fc8-428ded067d5b",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "2c763030-bb28-4883-95b9-67f0acc3b367",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "ee9b0f00-d3b3-4c4b-943c-5e519d1cba0b",
+      "type": "owl:DatatypeProperty"
+    },
+    {
+      "id": "6e32f8f3-c4ea-4f96-b2dc-8012766bd1a6",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "9ccc74d0-d03b-46f9-8229-3d1392337faf",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "91096976-f43d-4177-a93c-d75b2c14429c",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "36265456-4e88-4fc3-ae4d-55489eabc981",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "ddd486cb-d06e-488a-b518-a9cc9379572e",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "85eb54bf-89a0-47d4-ac8d-45be0d7d4e32",
+      "type": "owl:DatatypeProperty"
+    },
+    {
+      "id": "a195c96c-e8bb-41f7-9c5d-710fa6d49689",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "c4128d28-c751-4d04-ba4a-625ce6f9f40b",
+      "type": "owl:DatatypeProperty"
+    },
+    {
+      "id": "dbb724cc-088b-4ea2-8c7f-9b1644426ed0",
+      "type": "owl:DatatypeProperty"
+    },
+    {
+      "id": "8407a227-9f8e-4e91-901e-b2cb8480d760",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "fdfa2f9f-b786-4d8d-9138-34fa07b9f35b",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "66048890-8d88-4fdb-9773-4fb61332eebd",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "cb5657d6-a961-4e07-a447-25baab58c52a",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "1d10150d-7479-4f54-b460-db0af3e52c2a",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "1a79d04b-4eea-441e-92b1-37959fa430e7",
+      "type": "owl:DatatypeProperty"
+    },
+    {
+      "id": "4a2e1dab-42a8-4059-91e8-370d6ed158eb",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "6a5adcaa-7148-41fb-8afe-920d4dadee40",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "45e5eb13-d9c7-4ca1-90a3-7b89b7e1efbf",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "2d088183-be19-4185-a203-e9cb8918a49d",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "ffd345d1-c323-499d-b223-6223787bf940",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "cef2b743-6f10-44a4-bfe0-4c77b00852cb",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "fcecdd28-54e4-4961-9c86-6e9d50862eca",
+      "type": "owl:DatatypeProperty"
+    },
+    {
+      "id": "6d31286d-a5cb-4527-a341-95c0b16597b5",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "73d5e06e-4e61-4c35-bcba-82af77b519dd",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "c29d2ac1-8848-4db6-8b21-b060028fda7b",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "64959b2c-3a11-4b10-80ce-93611e83723f",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "03e82eb6-ed87-4ec7-8c10-cd499c7761da",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "6069e75d-d573-4f63-b422-dc798b7519b5",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "678cfe51-df7b-4dff-bee3-f0e8a99b6d9e",
+      "type": "owl:DatatypeProperty"
+    },
+    {
+      "id": "0af5693f-1010-456e-ae2e-8ec84ec92f22",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "58fb3e09-754f-4c8e-80e4-6e9c73b3661e",
+      "type": "owl:DatatypeProperty"
+    },
+    {
+      "id": "308c86b3-fbc7-4cfa-8e6c-40e28546fcd8",
+      "type": "owl:DatatypeProperty"
+    },
+    {
+      "id": "9a838136-22e1-449f-a3c6-49390e65b051",
+      "type": "owl:DatatypeProperty"
+    },
+    {
+      "id": "c70b17d3-7865-47e0-a18b-62da8550006e",
+      "type": "owl:DatatypeProperty"
+    },
+    {
+      "id": "808559e6-957b-4e5c-be75-fa4093eb32fc",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "04bdc0bd-9ef2-4b60-a66c-dfc337a041c6",
+      "type": "owl:DatatypeProperty"
+    },
+    {
+      "id": "cece1f1f-1f8e-449a-8288-54e4b206b8f7",
+      "type": "owl:DatatypeProperty"
+    },
+    {
+      "id": "8506a9b7-9fdb-429a-a39a-0f9b04900f7c",
+      "type": "owl:DatatypeProperty"
+    },
+    {
+      "id": "8bb6bdf9-65a2-471b-b9b5-ba85f861d806",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "587ae497-c454-4cd2-953a-6dc60c0e8679",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "5dcaf9f4-f9a2-4042-b08b-796dda9a8288",
+      "type": "owl:DatatypeProperty"
+    },
+    {
+      "id": "21350e8a-df82-4345-bfee-9d362d95b805",
+      "type": "owl:DatatypeProperty"
+    },
+    {
+      "id": "c85ff080-afa4-48d1-824d-72d3f4c71fce",
+      "type": "owl:DatatypeProperty"
+    },
+    {
+      "id": "c4d0b871-c139-4416-90fb-0d66c29c1860",
+      "type": "owl:DatatypeProperty"
+    },
+    {
+      "id": "5ae6e5cc-60cd-43bc-b4c6-154d7fbd6ab6",
+      "type": "owl:DatatypeProperty"
+    },
+    {
+      "id": "47731535-921f-430f-b4e7-8619a5dd88b1",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "40c07ed3-0433-43ce-a411-9a3a7e1fea5f",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "b9901e6d-b45c-4a47-b6c2-a4ec1ab80932",
+      "type": "owl:DatatypeProperty"
+    },
+    {
+      "id": "f4ca9cf3-86db-4d36-b009-d29afde7b01f",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "7220ee73-feff-471f-a01a-a0ae19baf5cd",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "9d416860-c13f-40cc-b66b-72f8b3ac9bae",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "94960e24-35c0-4e9c-8be2-0daa764a39cf",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "408eb34d-1a03-4fe7-88b8-5184cc78ffde",
+      "type": "owl:DatatypeProperty"
+    },
+    {
+      "id": "e9200516-6ac5-457b-9e2b-467f5871534b",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "97c5e87f-7dd7-4db1-9881-e95141686100",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "defd97ae-e02d-4e82-bcb5-17b0c1084276",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "07780dcd-5aa1-4614-867c-27067f3e24aa",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "94c15e5c-4217-44d4-b7ce-94dc95cb2044",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "d128b7a9-7b98-467b-8769-ee9d71ff2406",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "14583fa4-4a66-41c6-9cc4-d90f7f3fc49b",
+      "type": "owl:DatatypeProperty"
+    },
+    {
+      "id": "1244eb10-f2ed-4d5f-93ba-3bcb5de1a200",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "690da127-3c38-46a3-aff2-2b74d48d9bb4",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "28dc9f78-9bb1-455b-80f8-07c0537cde36",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "0f984acd-311e-4cc0-a4dd-3ef69f4d9ea6",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "ad6d7989-d668-4462-a0f7-8a605a603368",
+      "type": "owl:DatatypeProperty"
+    },
+    {
+      "id": "7a87b088-ea57-486b-a19e-8c5dce4611e9",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "06e7b196-ba9f-46d0-a66f-5cde548efc12",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "016eb9c4-ce44-485d-abf0-facd896a7555",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "8359822a-7091-4e5d-a126-6009329c7468",
+      "type": "owl:DatatypeProperty"
+    },
+    {
+      "id": "5144ae69-97d1-4836-85ee-a87cc5c3dcef",
+      "type": "owl:DatatypeProperty"
+    },
+    {
+      "id": "f6c9d448-2ef3-40db-827d-1c6fc3fd6992",
+      "type": "owl:DatatypeProperty"
+    },
+    {
+      "id": "37fc28ab-9724-4f56-bb4a-1a9c736c33bd",
+      "type": "owl:DatatypeProperty"
+    },
+    {
+      "id": "859d719f-6efe-43a1-9da5-d208d97625bf",
+      "type": "owl:DatatypeProperty"
+    },
+    {
+      "id": "4f31b8fd-1f65-4afa-94a5-d4c6287844fa",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "9770c11e-9d4f-4210-bb85-3bb7353acc38",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "2631402d-d886-44f1-b9e9-f766a923cfbb",
+      "type": "owl:DatatypeProperty"
+    },
+    {
+      "id": "21bb466f-1a5e-40db-8122-b16957e61a98",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "d5713703-3e27-4656-8f73-f0f252192588",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "095869b8-63ef-41e2-9dee-b60aa532f150",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "ebb1aaa4-bc25-4747-9f77-4db4bca841b5",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "143d72ff-8a98-499d-a24c-66b2bb05dcd4",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "9b549288-a2c0-4224-849b-77dbefa49ca9",
+      "type": "owl:DatatypeProperty"
+    },
+    {
+      "id": "18dff813-5251-4f08-b80b-4e3c0713d3bd",
+      "type": "owl:DatatypeProperty"
+    },
+    {
+      "id": "1058011a-cb9e-4b04-90c8-c249cda40dde",
+      "type": "owl:DatatypeProperty"
+    },
+    {
+      "id": "4cb2e81a-375a-4cca-808a-65a1297d195d",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "146aa37f-2505-4030-97f5-f71a60fae55a",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "8578cb67-d3d9-42c8-8d3f-65a762097a24",
+      "type": "owl:DatatypeProperty"
+    },
+    {
+      "id": "d32d96d1-cf1e-4ba8-afd5-5dca08a341ba",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "7dcd952f-2d33-4e78-9e0b-bf5e26e6bfff",
+      "type": "owl:DatatypeProperty"
+    },
+    {
+      "id": "d408e6f4-020c-455e-a2c0-9364d001d97d",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "3c33875e-6d24-4d6d-a38d-d5ba6d8f635a",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "8007a131-a164-45b6-a3e7-ba9a5e465751",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "700d13d6-9503-48ed-bab4-d0c5660135f8",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "89a857ff-54d6-4b7b-92ea-65fff9e59bce",
+      "type": "owl:DatatypeProperty"
+    },
+    {
+      "id": "4f769826-fd3d-4149-9b31-f28f9f15fdae",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "7bcf9083-4ade-483d-900f-c44bca4d9d3c",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "8cba0884-df6f-487e-a372-311def2fe685",
+      "type": "owl:DatatypeProperty"
+    },
+    {
+      "id": "91d65f2b-76ca-4c44-8b58-0c171ec93b67",
+      "type": "owl:DatatypeProperty"
+    },
+    {
+      "id": "e4f667e4-4868-4d98-8e1b-a2cab6cd033a",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "4d6bf8cf-cc12-4dac-82c1-3b4a342a9aa5",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "7028a694-a642-4ca8-8f9a-dfc201c440bd",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "b7b3f93c-068b-499f-91a0-7269bde752f8",
+      "type": "owl:DatatypeProperty"
+    },
+    {
+      "id": "6798f67d-ed2c-482f-8195-1a13ae3f3704",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "fc0d5fcf-578f-4141-ad24-45efc25b7419",
+      "type": "owl:DatatypeProperty"
+    },
+    {
+      "id": "55d278fa-2f30-443e-91d2-a963a22bc277",
+      "type": "owl:DatatypeProperty"
+    },
+    {
+      "id": "2ef8d9c1-00e5-4368-81f5-4680e54db6c2",
+      "type": "owl:DatatypeProperty"
+    },
+    {
+      "id": "18180b03-a63b-493e-931d-c47f8af79975",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "3fe732ba-41c7-46fc-9f53-7af99ee69ba5",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "e326a918-9d42-4118-a901-11987f5c0751",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "437fdf59-d55b-4687-91ae-afcf97e6c30e",
+      "type": "owl:DatatypeProperty"
+    },
+    {
+      "id": "b9abd0bc-09a3-49e7-b00c-441df1fe0547",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "13ee28df-852f-4dbc-b127-e9af7432a791",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "bf489020-a90c-4642-a55e-e291006bc7c6",
+      "type": "owl:DatatypeProperty"
+    },
+    {
+      "id": "4ee18c84-6840-4019-a120-9687cee2f7c2",
+      "type": "owl:DatatypeProperty"
+    },
+    {
+      "id": "4c6ac732-4928-46db-87b5-bf721a7aa524",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "1aa577e8-bb7a-41f2-9427-73e1cbf631c4",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "be19c726-87a4-41de-bd2e-56df82ccc9fe",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "1b7023a5-3dcb-46cd-b967-01e931bc11fd",
+      "type": "owl:DatatypeProperty"
+    },
+    {
+      "id": "04ed6075-51a2-4a76-bb8a-22bf8466a495",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "763fcf3b-a04e-4350-b0b8-8f2cf47e4055",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "a2fe4b5e-608d-468f-a32b-954ca905b28c",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "513496ab-8d01-41c0-9205-919de1d87a04",
+      "type": "owl:DatatypeProperty"
+    },
+    {
+      "id": "8b185533-5246-4440-8c79-883ec11c7d35",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "120fb6a6-a18a-4e99-98f7-b0d6657fdff5",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "88b5e635-05cf-4a77-b09a-9a5e27be5976",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "4589e358-8e67-4dfc-a23f-8a4b5e4215a3",
+      "type": "owl:DatatypeProperty"
+    },
+    {
+      "id": "34787a88-0812-4c37-b45d-75b121164573",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "a311111c-ca76-44fd-8969-0a95061a958f",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "c7fc00cc-dfc1-4d52-bcd9-10432003534e",
+      "type": "owl:DatatypeProperty"
+    },
+    {
+      "id": "99a9b25f-6977-479a-8639-5b54e5b85745",
+      "type": "owl:DatatypeProperty"
+    },
+    {
+      "id": "2b778173-370f-4c8f-b6d8-86e8d2a42c36",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "349cc378-4b0d-458c-a896-d748eb52d639",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "f0786774-bea5-4661-b825-bcf22398e613",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "7e0bf765-2e74-4659-8f1d-8ff632879675",
+      "type": "owl:DatatypeProperty"
+    },
+    {
+      "id": "5a389199-a1c7-404e-b15b-05b69ec36c1b",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "aac63119-d4cb-4ccc-b271-43c717d551ba",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "1a4d6fb7-ad80-4068-8410-5ecb37eea04d",
+      "type": "owl:DatatypeProperty"
+    },
+    {
+      "id": "f3933626-3e2b-4486-ae0b-681d17776fd7",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "900c2e62-b627-4e6c-82c8-707e9e938759",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "f35d3a97-c801-4a7b-b8a5-8bbbed6424a1",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "dc4869b8-227f-4685-9bc0-3bc335af4662",
+      "type": "owl:DatatypeProperty"
+    },
+    {
+      "id": "198e853e-942e-4588-9d08-0e2cd465a267",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "ff244f69-64ed-4699-ba36-bb69d49c6b2c",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "ff383553-045d-43d3-bb27-f722533ba242",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "29b61b11-feba-4d41-bf32-9e05c0fbb184",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "01d7f40c-6560-4ada-b67b-cf655e61eac0",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "98574e69-06f0-4fb4-9827-ecdb29b2dbea",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "27bbebea-98fe-400f-9b5e-1bc22b320519",
+      "type": "owl:DatatypeProperty"
+    },
+    {
+      "id": "f9d6fa87-2cf2-4f05-b3d4-09364e8b7961",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "1c4a7cb6-c22c-45fe-a3dd-3d1c82f23dc1",
+      "type": "owl:DatatypeProperty"
+    },
+    {
+      "id": "e4b848f4-c290-4d91-832e-37241ec324e0",
+      "type": "owl:DatatypeProperty"
+    },
+    {
+      "id": "b6275540-6309-43e5-a35e-47b7f170f9b5",
+      "type": "owl:DatatypeProperty"
+    },
+    {
+      "id": "cf9039f5-fc1c-4d41-858f-a300497a1e5f",
+      "type": "owl:DatatypeProperty"
+    },
+    {
+      "id": "016eb60d-0310-4ad2-8218-0d611a86f445",
+      "type": "owl:DatatypeProperty"
+    },
+    {
+      "id": "032323bb-a60b-4758-80d6-ef786280356f",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "8df3d644-7b1c-4596-a2f5-af2fbd04cede",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "3e0ecfb2-2f84-432b-ae9d-92a3ca339f5c",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "04f1f9f8-f9e1-41e6-8ad8-6cba8a488f44",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "30e05b32-e32a-498c-88ae-8e2189c2d3dc",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "b15ac908-fc71-4286-a500-325d0f583fb1",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "6362fdca-1311-4819-ba86-08e900055481",
+      "type": "owl:DatatypeProperty"
+    },
+    {
+      "id": "9ebb4fdd-151c-44e2-a3a6-9cd878e402b0",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "35cf4810-945e-41a6-b221-fe8a9edd221c",
+      "type": "owl:DatatypeProperty"
+    },
+    {
+      "id": "9af0c04f-3bea-47fc-8d4a-4d8434cffb52",
+      "type": "owl:DatatypeProperty"
+    },
+    {
+      "id": "2d49a3ab-6b08-4244-aa19-403ebf1ba9bd",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "662ed17f-eeac-4b8b-9d91-94842d02cf98",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "d6a666ce-e60b-49a1-b652-fda05bf08f31",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "39699dfc-1b69-4db5-acad-ea7c7553f01f",
+      "type": "owl:DatatypeProperty"
+    },
+    {
+      "id": "1f1b3332-f7ef-4a3e-871f-11e4c6dd0e9f",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "e560c7f0-9394-4a8a-a8ee-959cbae7d72a",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "3ef152c3-0f95-43d2-9160-51edf37c46af",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "12454909-51c6-44c5-ae37-49bfc84ec54d",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "f885407a-5a40-4227-ae93-f4500f6ec377",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "03449a50-c671-473a-a7e4-027d6491b46a",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "4c129883-c931-403c-830c-bc670c26a89b",
+      "type": "owl:DatatypeProperty"
+    },
+    {
+      "id": "c42af69c-fe13-4f9b-8865-1998d23b0d88",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "5c51db4d-6d17-42c4-bec9-8827ae106c95",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "ffac8750-908c-4ef8-aef4-d5c882875883",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "22c27d21-ecb1-4e55-98f4-c5a01f7c5f36",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "58e0d098-6a1c-407a-981b-7194c3e99207",
+      "type": "owl:DatatypeProperty"
+    },
+    {
+      "id": "b8cbbbed-d983-4030-adb4-1ad5fa898fd5",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "7422642c-2342-4fca-be56-b9cc91884968",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "851c0593-34e4-4e0b-b604-9cedefdb2367",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "b2db82bf-2745-49f1-95c5-20ad28d2d0b8",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "648b743f-30f7-432c-926e-834553db2608",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "6698ed38-f517-4506-882f-717084694bf6",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "b40641d3-c14f-437a-9bc4-d2a6f4dcaef9",
+      "type": "owl:DatatypeProperty"
+    },
+    {
+      "id": "53cab89f-144b-4012-aae7-ffc67a599c53",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "f5b13381-99a1-45c3-b817-41582f3822bc",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "7d28fbc8-31fd-4c93-9a28-27439c8e050e",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "7cc0cb74-11b7-4d2a-994b-1e3ed60554e4",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "5932bbad-688c-4586-9463-2a61a0800ce7",
+      "type": "owl:DatatypeProperty"
+    },
+    {
+      "id": "4d5f67c7-afbd-433f-8820-0363b55b340e",
+      "type": "owl:DatatypeProperty"
+    },
+    {
+      "id": "1c1a90b3-6e71-4b55-85b8-ac267e7e2926",
+      "type": "owl:DatatypeProperty"
+    },
+    {
+      "id": "b07a9a90-5aa5-4ebe-8290-572cbfdf0b8b",
+      "type": "owl:DatatypeProperty"
+    },
+    {
+      "id": "2c8e9102-f146-4db5-96bb-494add4aad3e",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "e58cb5b5-8517-44a4-84e7-607592e55ab4",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "7004ebe2-e98c-4cb2-9b34-2585509a58fb",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "bb420478-ae9a-4664-bd9e-830e4d946bee",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "f185d2c8-2550-4582-a191-f0565950f831",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "7ae39aa7-105d-42ca-8a73-37e835dbc387",
+      "type": "owl:DatatypeProperty"
+    },
+    {
+      "id": "2b522e28-a90d-4752-a59a-b6c62edd4f6c",
+      "type": "owl:DatatypeProperty"
+    },
+    {
+      "id": "99b9dd5e-edc6-4311-8d2d-63007c4c5206",
+      "type": "owl:DatatypeProperty"
+    },
+    {
+      "id": "2d37306c-30ad-4863-8217-293bbe0753c8",
+      "type": "owl:DatatypeProperty"
+    },
+    {
+      "id": "93cf5053-b0ac-4c5b-b598-1b871c39a31f",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "422881f1-1c42-4687-900c-3646266f218b",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "79a94455-74e0-465c-8aea-4b89ffa7d64b",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "d50d736d-53f6-4485-9c59-1ba1a8b48e19",
+      "type": "owl:DatatypeProperty"
+    },
+    {
+      "id": "f953999a-8b4d-4526-9d3c-76270a6321f1",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "6c52dcd3-f1be-4875-a730-44906b87383e",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "ba8ba2cb-e949-48f5-97cc-af2ef5c2eeb2",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "2fbf8a02-f371-4167-934b-50fb1669f367",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "56849840-e563-4011-9b1e-263e094baefb",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "ac4a16ac-f0e4-42df-aead-4655db32597d",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "e77a5d7a-8b27-4283-8c88-01bb9be8eeca",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "55a2994a-0c78-49c6-8887-f98d27d35b7f",
+      "type": "owl:DatatypeProperty"
+    },
+    {
+      "id": "1290eefb-5dd7-4f31-918b-da03d1824fdc",
+      "type": "owl:DatatypeProperty"
+    }
+  ],
+  "propertyAttribute": [
+    {
+      "id": "3ab188a6-47da-497e-a5b6-d2efeef83917",
+      "iri": "http://visualdataweb.org/newOntology/3ab188a6-47da-497e-a5b6-d2efeef83917",
+      "label": "HasProperty",
+      "attributes": "object",
+      "domain": "BH.oM.Geometry.Arc",
+      "range": "BH.oM.Geometry.CoordinateSystem.Cartesian"
+    },
+    {
+      "id": "37654567-152b-4d13-b707-a6feb8c1ddc5",
+      "iri": "http://visualdataweb.org/newOntology/37654567-152b-4d13-b707-a6feb8c1ddc5",
+      "label": "HasProperty",
+      "attributes": "datatype",
+      "domain": "BH.oM.Geometry.Arc",
+      "range": "Radius-b286e695-2f16-423c-a17c-213b54819150-Arc-HasProperty"
+    },
+    {
+      "id": "8095c156-e5b3-48a1-a3b4-2dcc5d367971",
+      "iri": "http://visualdataweb.org/newOntology/8095c156-e5b3-48a1-a3b4-2dcc5d367971",
+      "label": "HasProperty",
+      "attributes": "datatype",
+      "domain": "BH.oM.Geometry.Arc",
+      "range": "StartAngle-598eeed3-460e-44a9-b11e-048f56c18802-Arc-HasProperty"
+    },
+    {
+      "id": "21e5e754-db76-44e5-a2b0-cd7b11a4a0d6",
+      "iri": "http://visualdataweb.org/newOntology/21e5e754-db76-44e5-a2b0-cd7b11a4a0d6",
+      "label": "HasProperty",
+      "attributes": "datatype",
+      "domain": "BH.oM.Geometry.Arc",
+      "range": "EndAngle-994b936d-bf08-4d72-9999-87894d00e6e4-Arc-HasProperty"
+    },
+    {
+      "id": "7bf904ae-0400-4099-a45e-223175b8559e",
+      "iri": "http://visualdataweb.org/newOntology/7bf904ae-0400-4099-a45e-223175b8559e",
+      "label": "IsA",
+      "attributes": "object",
+      "domain": "BH.oM.Geometry.Arc",
+      "range": "BH.oM.Geometry.ICurve"
+    },
+    {
+      "id": "f94a9064-7d22-4935-9b1c-810d875e8006",
+      "iri": "http://visualdataweb.org/newOntology/f94a9064-7d22-4935-9b1c-810d875e8006",
+      "label": "IsA",
+      "attributes": "object",
+      "domain": "BH.oM.Geometry.Arc",
+      "range": "BH.oM.Geometry.IGeometry"
+    },
+    {
+      "id": "97016f5f-4e32-4924-adbb-54a835f93aac",
+      "iri": "http://visualdataweb.org/newOntology/97016f5f-4e32-4924-adbb-54a835f93aac",
+      "label": "IsA",
+      "attributes": "object",
+      "domain": "BH.oM.Geometry.Arc",
+      "range": "BH.oM.Base.IObject"
+    },
+    {
+      "id": "0fc85032-68ca-455b-8b86-b48e43581b70",
+      "iri": "http://visualdataweb.org/newOntology/0fc85032-68ca-455b-8b86-b48e43581b70",
+      "label": "IsA",
+      "attributes": "object",
+      "domain": "BH.oM.Geometry.Arc",
+      "range": "BH.oM.Dimensional.IElement1D"
+    },
+    {
+      "id": "6e995595-fec2-4d29-9bd9-595c3a66e977",
+      "iri": "http://visualdataweb.org/newOntology/6e995595-fec2-4d29-9bd9-595c3a66e977",
+      "label": "IsA",
+      "attributes": "object",
+      "domain": "BH.oM.Geometry.Arc",
+      "range": "BH.oM.Dimensional.IElement"
+    },
+    {
+      "id": "9dbfaecf-6f20-414f-9d90-67e6f259c4ec",
+      "iri": "http://visualdataweb.org/newOntology/9dbfaecf-6f20-414f-9d90-67e6f259c4ec",
+      "label": "IsSubclassOf",
+      "attributes": []
+    },
+    {
+      "id": "3574972f-49a2-4d92-b858-83f1930a2e55",
+      "iri": "http://visualdataweb.org/newOntology/3574972f-49a2-4d92-b858-83f1930a2e55",
+      "label": "HasProperty",
+      "attributes": "object",
+      "domain": "BH.oM.Geometry.Circle",
+      "range": "BH.oM.Geometry.Point"
+    },
+    {
+      "id": "9e8dd2f4-c588-4643-afbb-741f8f9101ea",
+      "iri": "http://visualdataweb.org/newOntology/9e8dd2f4-c588-4643-afbb-741f8f9101ea",
+      "label": "HasProperty",
+      "attributes": "object",
+      "domain": "BH.oM.Geometry.Circle",
+      "range": "BH.oM.Geometry.Vector"
+    },
+    {
+      "id": "7730492a-8d6f-443c-9ca3-138017883026",
+      "iri": "http://visualdataweb.org/newOntology/7730492a-8d6f-443c-9ca3-138017883026",
+      "label": "HasProperty",
+      "attributes": "datatype",
+      "domain": "BH.oM.Geometry.Circle",
+      "range": "Radius-4c2720ac-c2b0-4a98-a1e6-f875622f2682-Circle-HasProperty"
+    },
+    {
+      "id": "e2889848-7a97-4ac8-a6f3-a287c82ace75",
+      "iri": "http://visualdataweb.org/newOntology/e2889848-7a97-4ac8-a6f3-a287c82ace75",
+      "label": "IsA",
+      "attributes": "object",
+      "domain": "BH.oM.Geometry.Circle",
+      "range": "BH.oM.Geometry.ICurve"
+    },
+    {
+      "id": "63000f53-563c-48eb-801c-705f5c8605ab",
+      "iri": "http://visualdataweb.org/newOntology/63000f53-563c-48eb-801c-705f5c8605ab",
+      "label": "IsA",
+      "attributes": "object",
+      "domain": "BH.oM.Geometry.Circle",
+      "range": "BH.oM.Geometry.IGeometry"
+    },
+    {
+      "id": "a8d6958c-87f5-469d-8d7e-f1f5d5e288ad",
+      "iri": "http://visualdataweb.org/newOntology/a8d6958c-87f5-469d-8d7e-f1f5d5e288ad",
+      "label": "IsA",
+      "attributes": "object",
+      "domain": "BH.oM.Geometry.Circle",
+      "range": "BH.oM.Base.IObject"
+    },
+    {
+      "id": "06782e18-de97-4373-97b1-95485950d5ef",
+      "iri": "http://visualdataweb.org/newOntology/06782e18-de97-4373-97b1-95485950d5ef",
+      "label": "IsA",
+      "attributes": "object",
+      "domain": "BH.oM.Geometry.Circle",
+      "range": "BH.oM.Dimensional.IElement1D"
+    },
+    {
+      "id": "1985d18b-7d43-4ae7-a3d0-5d560f20a3bc",
+      "iri": "http://visualdataweb.org/newOntology/1985d18b-7d43-4ae7-a3d0-5d560f20a3bc",
+      "label": "IsA",
+      "attributes": "object",
+      "domain": "BH.oM.Geometry.Circle",
+      "range": "BH.oM.Dimensional.IElement"
+    },
+    {
+      "id": "8ffe9e4c-13c0-4581-9204-dd0b31f4cc58",
+      "iri": "http://visualdataweb.org/newOntology/8ffe9e4c-13c0-4581-9204-dd0b31f4cc58",
+      "label": "IsSubclassOf",
+      "attributes": []
+    },
+    {
+      "id": "9e557fa4-dc9a-44a1-ae13-1396dcf7374b",
+      "iri": "http://visualdataweb.org/newOntology/9e557fa4-dc9a-44a1-ae13-1396dcf7374b",
+      "label": "HasProperty",
+      "attributes": "object",
+      "domain": "BH.oM.Geometry.Ellipse",
+      "range": "BH.oM.Geometry.Point"
+    },
+    {
+      "id": "f92a44a8-4fc9-49ab-b8ed-dfdf16717798",
+      "iri": "http://visualdataweb.org/newOntology/f92a44a8-4fc9-49ab-b8ed-dfdf16717798",
+      "label": "HasProperty",
+      "attributes": "object",
+      "domain": "BH.oM.Geometry.Ellipse",
+      "range": "BH.oM.Geometry.Vector"
+    },
+    {
+      "id": "adcc35c3-50c8-493d-b0c5-e66c7387485c",
+      "iri": "http://visualdataweb.org/newOntology/adcc35c3-50c8-493d-b0c5-e66c7387485c",
+      "label": "HasProperty",
+      "attributes": "object",
+      "domain": "BH.oM.Geometry.Ellipse",
+      "range": "BH.oM.Geometry.Vector"
+    },
+    {
+      "id": "37864c50-5623-4da7-9fb0-a24bcc3274a9",
+      "iri": "http://visualdataweb.org/newOntology/37864c50-5623-4da7-9fb0-a24bcc3274a9",
+      "label": "HasProperty",
+      "attributes": "datatype",
+      "domain": "BH.oM.Geometry.Ellipse",
+      "range": "Radius1-51cdcb48-f000-4adb-a582-03b5f2a997bf-Ellipse-HasProperty"
+    },
+    {
+      "id": "97380155-e4cf-4082-8063-83654b0b84a3",
+      "iri": "http://visualdataweb.org/newOntology/97380155-e4cf-4082-8063-83654b0b84a3",
+      "label": "HasProperty",
+      "attributes": "datatype",
+      "domain": "BH.oM.Geometry.Ellipse",
+      "range": "Radius2-ca07e901-1f39-4ac9-8408-9c2c40b87a7e-Ellipse-HasProperty"
+    },
+    {
+      "id": "81c5a348-73ce-4f1a-8cd3-cdbe8c3daba5",
+      "iri": "http://visualdataweb.org/newOntology/81c5a348-73ce-4f1a-8cd3-cdbe8c3daba5",
+      "label": "IsA",
+      "attributes": "object",
+      "domain": "BH.oM.Geometry.Ellipse",
+      "range": "BH.oM.Geometry.ICurve"
+    },
+    {
+      "id": "82c8e00d-323a-41e1-b81a-058c1983bb7e",
+      "iri": "http://visualdataweb.org/newOntology/82c8e00d-323a-41e1-b81a-058c1983bb7e",
+      "label": "IsA",
+      "attributes": "object",
+      "domain": "BH.oM.Geometry.Ellipse",
+      "range": "BH.oM.Geometry.IGeometry"
+    },
+    {
+      "id": "eeb894ae-8c4a-403d-8bbb-8b85c72418e9",
+      "iri": "http://visualdataweb.org/newOntology/eeb894ae-8c4a-403d-8bbb-8b85c72418e9",
+      "label": "IsA",
+      "attributes": "object",
+      "domain": "BH.oM.Geometry.Ellipse",
+      "range": "BH.oM.Base.IObject"
+    },
+    {
+      "id": "a5b45ef1-9abe-44b5-928c-050922fb7347",
+      "iri": "http://visualdataweb.org/newOntology/a5b45ef1-9abe-44b5-928c-050922fb7347",
+      "label": "IsA",
+      "attributes": "object",
+      "domain": "BH.oM.Geometry.Ellipse",
+      "range": "BH.oM.Dimensional.IElement1D"
+    },
+    {
+      "id": "c17c268b-60a8-4644-8bd7-d790560df329",
+      "iri": "http://visualdataweb.org/newOntology/c17c268b-60a8-4644-8bd7-d790560df329",
+      "label": "IsA",
+      "attributes": "object",
+      "domain": "BH.oM.Geometry.Ellipse",
+      "range": "BH.oM.Dimensional.IElement"
+    },
+    {
+      "id": "360cc7b0-24b1-4764-8910-a4fecf61f7cf",
+      "iri": "http://visualdataweb.org/newOntology/360cc7b0-24b1-4764-8910-a4fecf61f7cf",
+      "label": "IsSubclassOf",
+      "attributes": []
+    },
+    {
+      "id": "6dd910ba-7fa0-4d74-99b0-01b24f23a7c1",
+      "iri": "http://visualdataweb.org/newOntology/6dd910ba-7fa0-4d74-99b0-01b24f23a7c1",
+      "label": "IsA",
+      "attributes": "object",
+      "domain": "BH.oM.Geometry.ICurve",
+      "range": "BH.oM.Geometry.IGeometry"
+    },
+    {
+      "id": "7ba3e6dc-eeb8-468e-bc3d-c3e7d388a604",
+      "iri": "http://visualdataweb.org/newOntology/7ba3e6dc-eeb8-468e-bc3d-c3e7d388a604",
+      "label": "IsA",
+      "attributes": "object",
+      "domain": "BH.oM.Geometry.ICurve",
+      "range": "BH.oM.Base.IObject"
+    },
+    {
+      "id": "863deb24-5189-4ab7-ad5f-a3d8564510f0",
+      "iri": "http://visualdataweb.org/newOntology/863deb24-5189-4ab7-ad5f-a3d8564510f0",
+      "label": "IsA",
+      "attributes": "object",
+      "domain": "BH.oM.Geometry.ICurve",
+      "range": "BH.oM.Dimensional.IElement1D"
+    },
+    {
+      "id": "9746d16b-9e73-4707-a916-9f70a873358f",
+      "iri": "http://visualdataweb.org/newOntology/9746d16b-9e73-4707-a916-9f70a873358f",
+      "label": "IsA",
+      "attributes": "object",
+      "domain": "BH.oM.Geometry.ICurve",
+      "range": "BH.oM.Dimensional.IElement"
+    },
+    {
+      "id": "52beadd4-a3e7-466b-9fc8-428ded067d5b",
+      "iri": "http://visualdataweb.org/newOntology/52beadd4-a3e7-466b-9fc8-428ded067d5b",
+      "label": "HasProperty",
+      "attributes": "object",
+      "domain": "BH.oM.Geometry.Line",
+      "range": "BH.oM.Geometry.Point"
+    },
+    {
+      "id": "2c763030-bb28-4883-95b9-67f0acc3b367",
+      "iri": "http://visualdataweb.org/newOntology/2c763030-bb28-4883-95b9-67f0acc3b367",
+      "label": "HasProperty",
+      "attributes": "object",
+      "domain": "BH.oM.Geometry.Line",
+      "range": "BH.oM.Geometry.Point"
+    },
+    {
+      "id": "ee9b0f00-d3b3-4c4b-943c-5e519d1cba0b",
+      "iri": "http://visualdataweb.org/newOntology/ee9b0f00-d3b3-4c4b-943c-5e519d1cba0b",
+      "label": "HasProperty",
+      "attributes": "datatype",
+      "domain": "BH.oM.Geometry.Line",
+      "range": "Infinite-3417186d-c35a-4cc1-8731-0baf26fe40b1-Line-HasProperty"
+    },
+    {
+      "id": "6e32f8f3-c4ea-4f96-b2dc-8012766bd1a6",
+      "iri": "http://visualdataweb.org/newOntology/6e32f8f3-c4ea-4f96-b2dc-8012766bd1a6",
+      "label": "IsA",
+      "attributes": "object",
+      "domain": "BH.oM.Geometry.Line",
+      "range": "BH.oM.Geometry.ICurve"
+    },
+    {
+      "id": "9ccc74d0-d03b-46f9-8229-3d1392337faf",
+      "iri": "http://visualdataweb.org/newOntology/9ccc74d0-d03b-46f9-8229-3d1392337faf",
+      "label": "IsA",
+      "attributes": "object",
+      "domain": "BH.oM.Geometry.Line",
+      "range": "BH.oM.Geometry.IGeometry"
+    },
+    {
+      "id": "91096976-f43d-4177-a93c-d75b2c14429c",
+      "iri": "http://visualdataweb.org/newOntology/91096976-f43d-4177-a93c-d75b2c14429c",
+      "label": "IsA",
+      "attributes": "object",
+      "domain": "BH.oM.Geometry.Line",
+      "range": "BH.oM.Base.IObject"
+    },
+    {
+      "id": "36265456-4e88-4fc3-ae4d-55489eabc981",
+      "iri": "http://visualdataweb.org/newOntology/36265456-4e88-4fc3-ae4d-55489eabc981",
+      "label": "IsA",
+      "attributes": "object",
+      "domain": "BH.oM.Geometry.Line",
+      "range": "BH.oM.Dimensional.IElement1D"
+    },
+    {
+      "id": "ddd486cb-d06e-488a-b518-a9cc9379572e",
+      "iri": "http://visualdataweb.org/newOntology/ddd486cb-d06e-488a-b518-a9cc9379572e",
+      "label": "IsA",
+      "attributes": "object",
+      "domain": "BH.oM.Geometry.Line",
+      "range": "BH.oM.Dimensional.IElement"
+    },
+    {
+      "id": "85eb54bf-89a0-47d4-ac8d-45be0d7d4e32",
+      "iri": "http://visualdataweb.org/newOntology/85eb54bf-89a0-47d4-ac8d-45be0d7d4e32",
+      "label": "IsSubclassOf",
+      "attributes": []
+    },
+    {
+      "id": "a195c96c-e8bb-41f7-9c5d-710fa6d49689",
+      "iri": "http://visualdataweb.org/newOntology/a195c96c-e8bb-41f7-9c5d-710fa6d49689",
+      "label": "HasProperty",
+      "attributes": "datatype",
+      "domain": "BH.oM.Geometry.NurbsCurve",
+      "range": "ControlPoints-05a906c6-8445-4db1-873b-414a54cbe8ef-NurbsCurve-HasProperty"
+    },
+    {
+      "id": "c4128d28-c751-4d04-ba4a-625ce6f9f40b",
+      "iri": "http://visualdataweb.org/newOntology/c4128d28-c751-4d04-ba4a-625ce6f9f40b",
+      "label": "HasProperty",
+      "attributes": "datatype",
+      "domain": "BH.oM.Geometry.NurbsCurve",
+      "range": "Weights-9f05c2f5-1eb9-4ad6-96d5-8ef0617013e2-NurbsCurve-HasProperty"
+    },
+    {
+      "id": "dbb724cc-088b-4ea2-8c7f-9b1644426ed0",
+      "iri": "http://visualdataweb.org/newOntology/dbb724cc-088b-4ea2-8c7f-9b1644426ed0",
+      "label": "HasProperty",
+      "attributes": "datatype",
+      "domain": "BH.oM.Geometry.NurbsCurve",
+      "range": "Knots-45432060-9efb-4430-b87e-64041f7682dd-NurbsCurve-HasProperty"
+    },
+    {
+      "id": "8407a227-9f8e-4e91-901e-b2cb8480d760",
+      "iri": "http://visualdataweb.org/newOntology/8407a227-9f8e-4e91-901e-b2cb8480d760",
+      "label": "IsA",
+      "attributes": "object",
+      "domain": "BH.oM.Geometry.NurbsCurve",
+      "range": "BH.oM.Geometry.ICurve"
+    },
+    {
+      "id": "fdfa2f9f-b786-4d8d-9138-34fa07b9f35b",
+      "iri": "http://visualdataweb.org/newOntology/fdfa2f9f-b786-4d8d-9138-34fa07b9f35b",
+      "label": "IsA",
+      "attributes": "object",
+      "domain": "BH.oM.Geometry.NurbsCurve",
+      "range": "BH.oM.Geometry.IGeometry"
+    },
+    {
+      "id": "66048890-8d88-4fdb-9773-4fb61332eebd",
+      "iri": "http://visualdataweb.org/newOntology/66048890-8d88-4fdb-9773-4fb61332eebd",
+      "label": "IsA",
+      "attributes": "object",
+      "domain": "BH.oM.Geometry.NurbsCurve",
+      "range": "BH.oM.Base.IObject"
+    },
+    {
+      "id": "cb5657d6-a961-4e07-a447-25baab58c52a",
+      "iri": "http://visualdataweb.org/newOntology/cb5657d6-a961-4e07-a447-25baab58c52a",
+      "label": "IsA",
+      "attributes": "object",
+      "domain": "BH.oM.Geometry.NurbsCurve",
+      "range": "BH.oM.Dimensional.IElement1D"
+    },
+    {
+      "id": "1d10150d-7479-4f54-b460-db0af3e52c2a",
+      "iri": "http://visualdataweb.org/newOntology/1d10150d-7479-4f54-b460-db0af3e52c2a",
+      "label": "IsA",
+      "attributes": "object",
+      "domain": "BH.oM.Geometry.NurbsCurve",
+      "range": "BH.oM.Dimensional.IElement"
+    },
+    {
+      "id": "1a79d04b-4eea-441e-92b1-37959fa430e7",
+      "iri": "http://visualdataweb.org/newOntology/1a79d04b-4eea-441e-92b1-37959fa430e7",
+      "label": "IsSubclassOf",
+      "attributes": []
+    },
+    {
+      "id": "4a2e1dab-42a8-4059-91e8-370d6ed158eb",
+      "iri": "http://visualdataweb.org/newOntology/4a2e1dab-42a8-4059-91e8-370d6ed158eb",
+      "label": "HasProperty",
+      "attributes": "datatype",
+      "domain": "BH.oM.Geometry.PolyCurve",
+      "range": "Curves-5944dd2d-486c-40e4-a2aa-46a0c59a3937-PolyCurve-HasProperty"
+    },
+    {
+      "id": "6a5adcaa-7148-41fb-8afe-920d4dadee40",
+      "iri": "http://visualdataweb.org/newOntology/6a5adcaa-7148-41fb-8afe-920d4dadee40",
+      "label": "IsA",
+      "attributes": "object",
+      "domain": "BH.oM.Geometry.PolyCurve",
+      "range": "BH.oM.Geometry.ICurve"
+    },
+    {
+      "id": "45e5eb13-d9c7-4ca1-90a3-7b89b7e1efbf",
+      "iri": "http://visualdataweb.org/newOntology/45e5eb13-d9c7-4ca1-90a3-7b89b7e1efbf",
+      "label": "IsA",
+      "attributes": "object",
+      "domain": "BH.oM.Geometry.PolyCurve",
+      "range": "BH.oM.Geometry.IGeometry"
+    },
+    {
+      "id": "2d088183-be19-4185-a203-e9cb8918a49d",
+      "iri": "http://visualdataweb.org/newOntology/2d088183-be19-4185-a203-e9cb8918a49d",
+      "label": "IsA",
+      "attributes": "object",
+      "domain": "BH.oM.Geometry.PolyCurve",
+      "range": "BH.oM.Base.IObject"
+    },
+    {
+      "id": "ffd345d1-c323-499d-b223-6223787bf940",
+      "iri": "http://visualdataweb.org/newOntology/ffd345d1-c323-499d-b223-6223787bf940",
+      "label": "IsA",
+      "attributes": "object",
+      "domain": "BH.oM.Geometry.PolyCurve",
+      "range": "BH.oM.Dimensional.IElement1D"
+    },
+    {
+      "id": "cef2b743-6f10-44a4-bfe0-4c77b00852cb",
+      "iri": "http://visualdataweb.org/newOntology/cef2b743-6f10-44a4-bfe0-4c77b00852cb",
+      "label": "IsA",
+      "attributes": "object",
+      "domain": "BH.oM.Geometry.PolyCurve",
+      "range": "BH.oM.Dimensional.IElement"
+    },
+    {
+      "id": "fcecdd28-54e4-4961-9c86-6e9d50862eca",
+      "iri": "http://visualdataweb.org/newOntology/fcecdd28-54e4-4961-9c86-6e9d50862eca",
+      "label": "IsSubclassOf",
+      "attributes": []
+    },
+    {
+      "id": "6d31286d-a5cb-4527-a341-95c0b16597b5",
+      "iri": "http://visualdataweb.org/newOntology/6d31286d-a5cb-4527-a341-95c0b16597b5",
+      "label": "HasProperty",
+      "attributes": "datatype",
+      "domain": "BH.oM.Geometry.Polyline",
+      "range": "ControlPoints-c4655ed1-4f16-4e88-89b7-bc52b67923bd-Polyline-HasProperty"
+    },
+    {
+      "id": "73d5e06e-4e61-4c35-bcba-82af77b519dd",
+      "iri": "http://visualdataweb.org/newOntology/73d5e06e-4e61-4c35-bcba-82af77b519dd",
+      "label": "IsA",
+      "attributes": "object",
+      "domain": "BH.oM.Geometry.Polyline",
+      "range": "BH.oM.Geometry.ICurve"
+    },
+    {
+      "id": "c29d2ac1-8848-4db6-8b21-b060028fda7b",
+      "iri": "http://visualdataweb.org/newOntology/c29d2ac1-8848-4db6-8b21-b060028fda7b",
+      "label": "IsA",
+      "attributes": "object",
+      "domain": "BH.oM.Geometry.Polyline",
+      "range": "BH.oM.Geometry.IGeometry"
+    },
+    {
+      "id": "64959b2c-3a11-4b10-80ce-93611e83723f",
+      "iri": "http://visualdataweb.org/newOntology/64959b2c-3a11-4b10-80ce-93611e83723f",
+      "label": "IsA",
+      "attributes": "object",
+      "domain": "BH.oM.Geometry.Polyline",
+      "range": "BH.oM.Base.IObject"
+    },
+    {
+      "id": "03e82eb6-ed87-4ec7-8c10-cd499c7761da",
+      "iri": "http://visualdataweb.org/newOntology/03e82eb6-ed87-4ec7-8c10-cd499c7761da",
+      "label": "IsA",
+      "attributes": "object",
+      "domain": "BH.oM.Geometry.Polyline",
+      "range": "BH.oM.Dimensional.IElement1D"
+    },
+    {
+      "id": "6069e75d-d573-4f63-b422-dc798b7519b5",
+      "iri": "http://visualdataweb.org/newOntology/6069e75d-d573-4f63-b422-dc798b7519b5",
+      "label": "IsA",
+      "attributes": "object",
+      "domain": "BH.oM.Geometry.Polyline",
+      "range": "BH.oM.Dimensional.IElement"
+    },
+    {
+      "id": "678cfe51-df7b-4dff-bee3-f0e8a99b6d9e",
+      "iri": "http://visualdataweb.org/newOntology/678cfe51-df7b-4dff-bee3-f0e8a99b6d9e",
+      "label": "IsSubclassOf",
+      "attributes": []
+    },
+    {
+      "id": "0af5693f-1010-456e-ae2e-8ec84ec92f22",
+      "iri": "http://visualdataweb.org/newOntology/0af5693f-1010-456e-ae2e-8ec84ec92f22",
+      "label": "IsA",
+      "attributes": "object",
+      "domain": "BH.oM.Geometry.IGeometry",
+      "range": "BH.oM.Base.IObject"
+    },
+    {
+      "id": "58fb3e09-754f-4c8e-80e4-6e9c73b3661e",
+      "iri": "http://visualdataweb.org/newOntology/58fb3e09-754f-4c8e-80e4-6e9c73b3661e",
+      "label": "HasProperty",
+      "attributes": "datatype",
+      "domain": "BH.oM.Geometry.IntegrationSlice",
+      "range": "Width-d926d0cc-9831-497b-98c6-b1485265024d-IntegrationSlice-HasProperty"
+    },
+    {
+      "id": "308c86b3-fbc7-4cfa-8e6c-40e28546fcd8",
+      "iri": "http://visualdataweb.org/newOntology/308c86b3-fbc7-4cfa-8e6c-40e28546fcd8",
+      "label": "HasProperty",
+      "attributes": "datatype",
+      "domain": "BH.oM.Geometry.IntegrationSlice",
+      "range": "Length-245dd239-1d39-4144-ad3a-a11e861487e3-IntegrationSlice-HasProperty"
+    },
+    {
+      "id": "9a838136-22e1-449f-a3c6-49390e65b051",
+      "iri": "http://visualdataweb.org/newOntology/9a838136-22e1-449f-a3c6-49390e65b051",
+      "label": "HasProperty",
+      "attributes": "datatype",
+      "domain": "BH.oM.Geometry.IntegrationSlice",
+      "range": "Centre-538f8971-0f72-40fb-8351-5f5b2ae14c0a-IntegrationSlice-HasProperty"
+    },
+    {
+      "id": "c70b17d3-7865-47e0-a18b-62da8550006e",
+      "iri": "http://visualdataweb.org/newOntology/c70b17d3-7865-47e0-a18b-62da8550006e",
+      "label": "HasProperty",
+      "attributes": "datatype",
+      "domain": "BH.oM.Geometry.IntegrationSlice",
+      "range": "Placement-d7936c20-2e28-4dff-b113-4812fa631962-IntegrationSlice-HasProperty"
+    },
+    {
+      "id": "808559e6-957b-4e5c-be75-fa4093eb32fc",
+      "iri": "http://visualdataweb.org/newOntology/808559e6-957b-4e5c-be75-fa4093eb32fc",
+      "label": "IsA",
+      "attributes": "object",
+      "domain": "BH.oM.Geometry.IntegrationSlice",
+      "range": "BH.oM.Base.IObject"
+    },
+    {
+      "id": "04bdc0bd-9ef2-4b60-a66c-dfc337a041c6",
+      "iri": "http://visualdataweb.org/newOntology/04bdc0bd-9ef2-4b60-a66c-dfc337a041c6",
+      "label": "IsSubclassOf",
+      "attributes": []
+    },
+    {
+      "id": "cece1f1f-1f8e-449a-8288-54e4b206b8f7",
+      "iri": "http://visualdataweb.org/newOntology/cece1f1f-1f8e-449a-8288-54e4b206b8f7",
+      "label": "HasProperty",
+      "attributes": "datatype",
+      "domain": "BH.oM.Geometry.CellRelation",
+      "range": "FromCell-dd708189-63f7-4557-9c40-8d7df8a485fd-CellRelation-HasProperty"
+    },
+    {
+      "id": "8506a9b7-9fdb-429a-a39a-0f9b04900f7c",
+      "iri": "http://visualdataweb.org/newOntology/8506a9b7-9fdb-429a-a39a-0f9b04900f7c",
+      "label": "HasProperty",
+      "attributes": "datatype",
+      "domain": "BH.oM.Geometry.CellRelation",
+      "range": "ToCell-32a5f71b-e276-4c5d-82ae-9763fc3aa6c2-CellRelation-HasProperty"
+    },
+    {
+      "id": "8bb6bdf9-65a2-471b-b9b5-ba85f861d806",
+      "iri": "http://visualdataweb.org/newOntology/8bb6bdf9-65a2-471b-b9b5-ba85f861d806",
+      "label": "IsA",
+      "attributes": "object",
+      "domain": "BH.oM.Geometry.CellRelation",
+      "range": "BH.oM.Geometry.IGeometry"
+    },
+    {
+      "id": "587ae497-c454-4cd2-953a-6dc60c0e8679",
+      "iri": "http://visualdataweb.org/newOntology/587ae497-c454-4cd2-953a-6dc60c0e8679",
+      "label": "IsA",
+      "attributes": "object",
+      "domain": "BH.oM.Geometry.CellRelation",
+      "range": "BH.oM.Base.IObject"
+    },
+    {
+      "id": "5dcaf9f4-f9a2-4042-b08b-796dda9a8288",
+      "iri": "http://visualdataweb.org/newOntology/5dcaf9f4-f9a2-4042-b08b-796dda9a8288",
+      "label": "IsSubclassOf",
+      "attributes": []
+    },
+    {
+      "id": "21350e8a-df82-4345-bfee-9d362d95b805",
+      "iri": "http://visualdataweb.org/newOntology/21350e8a-df82-4345-bfee-9d362d95b805",
+      "label": "HasProperty",
+      "attributes": "datatype",
+      "domain": "BH.oM.Geometry.Face",
+      "range": "A-7807bb0e-72b5-4454-a6e3-2841d8b7d0a7-Face-HasProperty"
+    },
+    {
+      "id": "c85ff080-afa4-48d1-824d-72d3f4c71fce",
+      "iri": "http://visualdataweb.org/newOntology/c85ff080-afa4-48d1-824d-72d3f4c71fce",
+      "label": "HasProperty",
+      "attributes": "datatype",
+      "domain": "BH.oM.Geometry.Face",
+      "range": "B-5c20587e-3fb3-459e-a513-2a7adcdb769f-Face-HasProperty"
+    },
+    {
+      "id": "c4d0b871-c139-4416-90fb-0d66c29c1860",
+      "iri": "http://visualdataweb.org/newOntology/c4d0b871-c139-4416-90fb-0d66c29c1860",
+      "label": "HasProperty",
+      "attributes": "datatype",
+      "domain": "BH.oM.Geometry.Face",
+      "range": "C-75dccbdb-2a38-48c1-8580-baac4e573a9c-Face-HasProperty"
+    },
+    {
+      "id": "5ae6e5cc-60cd-43bc-b4c6-154d7fbd6ab6",
+      "iri": "http://visualdataweb.org/newOntology/5ae6e5cc-60cd-43bc-b4c6-154d7fbd6ab6",
+      "label": "HasProperty",
+      "attributes": "datatype",
+      "domain": "BH.oM.Geometry.Face",
+      "range": "D-0f6980ca-5b93-460a-9463-27a1aa493384-Face-HasProperty"
+    },
+    {
+      "id": "47731535-921f-430f-b4e7-8619a5dd88b1",
+      "iri": "http://visualdataweb.org/newOntology/47731535-921f-430f-b4e7-8619a5dd88b1",
+      "label": "IsA",
+      "attributes": "object",
+      "domain": "BH.oM.Geometry.Face",
+      "range": "BH.oM.Geometry.IGeometry"
+    },
+    {
+      "id": "40c07ed3-0433-43ce-a411-9a3a7e1fea5f",
+      "iri": "http://visualdataweb.org/newOntology/40c07ed3-0433-43ce-a411-9a3a7e1fea5f",
+      "label": "IsA",
+      "attributes": "object",
+      "domain": "BH.oM.Geometry.Face",
+      "range": "BH.oM.Base.IObject"
+    },
+    {
+      "id": "b9901e6d-b45c-4a47-b6c2-a4ec1ab80932",
+      "iri": "http://visualdataweb.org/newOntology/b9901e6d-b45c-4a47-b6c2-a4ec1ab80932",
+      "label": "IsSubclassOf",
+      "attributes": []
+    },
+    {
+      "id": "f4ca9cf3-86db-4d36-b009-d29afde7b01f",
+      "iri": "http://visualdataweb.org/newOntology/f4ca9cf3-86db-4d36-b009-d29afde7b01f",
+      "label": "HasProperty",
+      "attributes": "datatype",
+      "domain": "BH.oM.Geometry.Mesh",
+      "range": "Vertices-3ab6502e-8055-4e1e-afaf-b9a185209a4e-Mesh-HasProperty"
+    },
+    {
+      "id": "7220ee73-feff-471f-a01a-a0ae19baf5cd",
+      "iri": "http://visualdataweb.org/newOntology/7220ee73-feff-471f-a01a-a0ae19baf5cd",
+      "label": "HasProperty",
+      "attributes": "datatype",
+      "domain": "BH.oM.Geometry.Mesh",
+      "range": "Faces-a6e73c23-f698-48ad-b1f8-8e1871a09208-Mesh-HasProperty"
+    },
+    {
+      "id": "9d416860-c13f-40cc-b66b-72f8b3ac9bae",
+      "iri": "http://visualdataweb.org/newOntology/9d416860-c13f-40cc-b66b-72f8b3ac9bae",
+      "label": "IsA",
+      "attributes": "object",
+      "domain": "BH.oM.Geometry.Mesh",
+      "range": "BH.oM.Geometry.IGeometry"
+    },
+    {
+      "id": "94960e24-35c0-4e9c-8be2-0daa764a39cf",
+      "iri": "http://visualdataweb.org/newOntology/94960e24-35c0-4e9c-8be2-0daa764a39cf",
+      "label": "IsA",
+      "attributes": "object",
+      "domain": "BH.oM.Geometry.Mesh",
+      "range": "BH.oM.Base.IObject"
+    },
+    {
+      "id": "408eb34d-1a03-4fe7-88b8-5184cc78ffde",
+      "iri": "http://visualdataweb.org/newOntology/408eb34d-1a03-4fe7-88b8-5184cc78ffde",
+      "label": "IsSubclassOf",
+      "attributes": []
+    },
+    {
+      "id": "e9200516-6ac5-457b-9e2b-467f5871534b",
+      "iri": "http://visualdataweb.org/newOntology/e9200516-6ac5-457b-9e2b-467f5871534b",
+      "label": "HasProperty",
+      "attributes": "datatype",
+      "domain": "BH.oM.Geometry.Mesh3D",
+      "range": "Vertices-8b3db319-6895-4eb0-b957-0a1098bed9ec-Mesh3D-HasProperty"
+    },
+    {
+      "id": "97c5e87f-7dd7-4db1-9881-e95141686100",
+      "iri": "http://visualdataweb.org/newOntology/97c5e87f-7dd7-4db1-9881-e95141686100",
+      "label": "HasProperty",
+      "attributes": "datatype",
+      "domain": "BH.oM.Geometry.Mesh3D",
+      "range": "Faces-c16da590-b446-4731-b095-8cc588c40242-Mesh3D-HasProperty"
+    },
+    {
+      "id": "defd97ae-e02d-4e82-bcb5-17b0c1084276",
+      "iri": "http://visualdataweb.org/newOntology/defd97ae-e02d-4e82-bcb5-17b0c1084276",
+      "label": "HasProperty",
+      "attributes": "datatype",
+      "domain": "BH.oM.Geometry.Mesh3D",
+      "range": "CellRelation-c6e5daaf-d5ef-4a32-9cdf-6cf50cabf825-Mesh3D-HasProperty"
+    },
+    {
+      "id": "07780dcd-5aa1-4614-867c-27067f3e24aa",
+      "iri": "http://visualdataweb.org/newOntology/07780dcd-5aa1-4614-867c-27067f3e24aa",
+      "label": "IsA",
+      "attributes": "object",
+      "domain": "BH.oM.Geometry.Mesh3D",
+      "range": "BH.oM.Geometry.IGeometry"
+    },
+    {
+      "id": "94c15e5c-4217-44d4-b7ce-94dc95cb2044",
+      "iri": "http://visualdataweb.org/newOntology/94c15e5c-4217-44d4-b7ce-94dc95cb2044",
+      "label": "IsA",
+      "attributes": "object",
+      "domain": "BH.oM.Geometry.Mesh3D",
+      "range": "BH.oM.Base.IObject"
+    },
+    {
+      "id": "d128b7a9-7b98-467b-8769-ee9d71ff2406",
+      "iri": "http://visualdataweb.org/newOntology/d128b7a9-7b98-467b-8769-ee9d71ff2406",
+      "label": "IsA",
+      "attributes": "object",
+      "domain": "BH.oM.Geometry.Mesh3D",
+      "range": "BH.oM.Base.IImmutable"
+    },
+    {
+      "id": "14583fa4-4a66-41c6-9cc4-d90f7f3fc49b",
+      "iri": "http://visualdataweb.org/newOntology/14583fa4-4a66-41c6-9cc4-d90f7f3fc49b",
+      "label": "IsSubclassOf",
+      "attributes": []
+    },
+    {
+      "id": "1244eb10-f2ed-4d5f-93ba-3bcb5de1a200",
+      "iri": "http://visualdataweb.org/newOntology/1244eb10-f2ed-4d5f-93ba-3bcb5de1a200",
+      "label": "HasProperty",
+      "attributes": "object",
+      "domain": "BH.oM.Geometry.BoundingBox",
+      "range": "BH.oM.Geometry.Point"
+    },
+    {
+      "id": "690da127-3c38-46a3-aff2-2b74d48d9bb4",
+      "iri": "http://visualdataweb.org/newOntology/690da127-3c38-46a3-aff2-2b74d48d9bb4",
+      "label": "HasProperty",
+      "attributes": "object",
+      "domain": "BH.oM.Geometry.BoundingBox",
+      "range": "BH.oM.Geometry.Point"
+    },
+    {
+      "id": "28dc9f78-9bb1-455b-80f8-07c0537cde36",
+      "iri": "http://visualdataweb.org/newOntology/28dc9f78-9bb1-455b-80f8-07c0537cde36",
+      "label": "IsA",
+      "attributes": "object",
+      "domain": "BH.oM.Geometry.BoundingBox",
+      "range": "BH.oM.Geometry.IGeometry"
+    },
+    {
+      "id": "0f984acd-311e-4cc0-a4dd-3ef69f4d9ea6",
+      "iri": "http://visualdataweb.org/newOntology/0f984acd-311e-4cc0-a4dd-3ef69f4d9ea6",
+      "label": "IsA",
+      "attributes": "object",
+      "domain": "BH.oM.Geometry.BoundingBox",
+      "range": "BH.oM.Base.IObject"
+    },
+    {
+      "id": "ad6d7989-d668-4462-a0f7-8a605a603368",
+      "iri": "http://visualdataweb.org/newOntology/ad6d7989-d668-4462-a0f7-8a605a603368",
+      "label": "IsSubclassOf",
+      "attributes": []
+    },
+    {
+      "id": "7a87b088-ea57-486b-a19e-8c5dce4611e9",
+      "iri": "http://visualdataweb.org/newOntology/7a87b088-ea57-486b-a19e-8c5dce4611e9",
+      "label": "HasProperty",
+      "attributes": "datatype",
+      "domain": "BH.oM.Geometry.CompositeGeometry",
+      "range": "Elements-1d92deb4-aa91-48d7-8ea1-1cb927a8a969-CompositeGeometry-HasProperty"
+    },
+    {
+      "id": "06e7b196-ba9f-46d0-a66f-5cde548efc12",
+      "iri": "http://visualdataweb.org/newOntology/06e7b196-ba9f-46d0-a66f-5cde548efc12",
+      "label": "IsA",
+      "attributes": "object",
+      "domain": "BH.oM.Geometry.CompositeGeometry",
+      "range": "BH.oM.Geometry.IGeometry"
+    },
+    {
+      "id": "016eb9c4-ce44-485d-abf0-facd896a7555",
+      "iri": "http://visualdataweb.org/newOntology/016eb9c4-ce44-485d-abf0-facd896a7555",
+      "label": "IsA",
+      "attributes": "object",
+      "domain": "BH.oM.Geometry.CompositeGeometry",
+      "range": "BH.oM.Base.IObject"
+    },
+    {
+      "id": "8359822a-7091-4e5d-a126-6009329c7468",
+      "iri": "http://visualdataweb.org/newOntology/8359822a-7091-4e5d-a126-6009329c7468",
+      "label": "IsSubclassOf",
+      "attributes": []
+    },
+    {
+      "id": "5144ae69-97d1-4836-85ee-a87cc5c3dcef",
+      "iri": "http://visualdataweb.org/newOntology/5144ae69-97d1-4836-85ee-a87cc5c3dcef",
+      "label": "HasProperty",
+      "attributes": "datatype",
+      "domain": "BH.oM.Geometry.Quaternion",
+      "range": "X-28cb5a14-df8c-40e9-9684-8d8dd6f08496-Quaternion-HasProperty"
+    },
+    {
+      "id": "f6c9d448-2ef3-40db-827d-1c6fc3fd6992",
+      "iri": "http://visualdataweb.org/newOntology/f6c9d448-2ef3-40db-827d-1c6fc3fd6992",
+      "label": "HasProperty",
+      "attributes": "datatype",
+      "domain": "BH.oM.Geometry.Quaternion",
+      "range": "Y-97d7324e-e41d-4c9e-8ff0-3cea1db3bc71-Quaternion-HasProperty"
+    },
+    {
+      "id": "37fc28ab-9724-4f56-bb4a-1a9c736c33bd",
+      "iri": "http://visualdataweb.org/newOntology/37fc28ab-9724-4f56-bb4a-1a9c736c33bd",
+      "label": "HasProperty",
+      "attributes": "datatype",
+      "domain": "BH.oM.Geometry.Quaternion",
+      "range": "Z-af043155-c00e-407a-882f-06637e0779b8-Quaternion-HasProperty"
+    },
+    {
+      "id": "859d719f-6efe-43a1-9da5-d208d97625bf",
+      "iri": "http://visualdataweb.org/newOntology/859d719f-6efe-43a1-9da5-d208d97625bf",
+      "label": "HasProperty",
+      "attributes": "datatype",
+      "domain": "BH.oM.Geometry.Quaternion",
+      "range": "W-ce52d49a-ad46-45a4-96fa-6ef1f4877d47-Quaternion-HasProperty"
+    },
+    {
+      "id": "4f31b8fd-1f65-4afa-94a5-d4c6287844fa",
+      "iri": "http://visualdataweb.org/newOntology/4f31b8fd-1f65-4afa-94a5-d4c6287844fa",
+      "label": "IsA",
+      "attributes": "object",
+      "domain": "BH.oM.Geometry.Quaternion",
+      "range": "BH.oM.Geometry.IGeometry"
+    },
+    {
+      "id": "9770c11e-9d4f-4210-bb85-3bb7353acc38",
+      "iri": "http://visualdataweb.org/newOntology/9770c11e-9d4f-4210-bb85-3bb7353acc38",
+      "label": "IsA",
+      "attributes": "object",
+      "domain": "BH.oM.Geometry.Quaternion",
+      "range": "BH.oM.Base.IObject"
+    },
+    {
+      "id": "2631402d-d886-44f1-b9e9-f766a923cfbb",
+      "iri": "http://visualdataweb.org/newOntology/2631402d-d886-44f1-b9e9-f766a923cfbb",
+      "label": "IsSubclassOf",
+      "attributes": []
+    },
+    {
+      "id": "21bb466f-1a5e-40db-8122-b16957e61a98",
+      "iri": "http://visualdataweb.org/newOntology/21bb466f-1a5e-40db-8122-b16957e61a98",
+      "label": "HasProperty",
+      "attributes": "object",
+      "domain": "BH.oM.Geometry.SurfaceTrim",
+      "range": "BH.oM.Geometry.ICurve"
+    },
+    {
+      "id": "d5713703-3e27-4656-8f73-f0f252192588",
+      "iri": "http://visualdataweb.org/newOntology/d5713703-3e27-4656-8f73-f0f252192588",
+      "label": "HasProperty",
+      "attributes": "object",
+      "domain": "BH.oM.Geometry.SurfaceTrim",
+      "range": "BH.oM.Geometry.ICurve"
+    },
+    {
+      "id": "095869b8-63ef-41e2-9dee-b60aa532f150",
+      "iri": "http://visualdataweb.org/newOntology/095869b8-63ef-41e2-9dee-b60aa532f150",
+      "label": "IsA",
+      "attributes": "object",
+      "domain": "BH.oM.Geometry.SurfaceTrim",
+      "range": "BH.oM.Geometry.IGeometry"
+    },
+    {
+      "id": "ebb1aaa4-bc25-4747-9f77-4db4bca841b5",
+      "iri": "http://visualdataweb.org/newOntology/ebb1aaa4-bc25-4747-9f77-4db4bca841b5",
+      "label": "IsA",
+      "attributes": "object",
+      "domain": "BH.oM.Geometry.SurfaceTrim",
+      "range": "BH.oM.Base.IObject"
+    },
+    {
+      "id": "143d72ff-8a98-499d-a24c-66b2bb05dcd4",
+      "iri": "http://visualdataweb.org/newOntology/143d72ff-8a98-499d-a24c-66b2bb05dcd4",
+      "label": "IsA",
+      "attributes": "object",
+      "domain": "BH.oM.Geometry.SurfaceTrim",
+      "range": "BH.oM.Base.IImmutable"
+    },
+    {
+      "id": "9b549288-a2c0-4224-849b-77dbefa49ca9",
+      "iri": "http://visualdataweb.org/newOntology/9b549288-a2c0-4224-849b-77dbefa49ca9",
+      "label": "IsSubclassOf",
+      "attributes": []
+    },
+    {
+      "id": "18dff813-5251-4f08-b80b-4e3c0713d3bd",
+      "iri": "http://visualdataweb.org/newOntology/18dff813-5251-4f08-b80b-4e3c0713d3bd",
+      "label": "IsSubclassOf",
+      "attributes": []
+    },
+    {
+      "id": "1058011a-cb9e-4b04-90c8-c249cda40dde",
+      "iri": "http://visualdataweb.org/newOntology/1058011a-cb9e-4b04-90c8-c249cda40dde",
+      "label": "HasProperty",
+      "attributes": "datatype",
+      "domain": "BH.oM.Geometry.TransformMatrix",
+      "range": "Matrix-ac632ab8-1ed0-4bc5-9ed5-2be2ff9c5cce-TransformMatrix-HasProperty"
+    },
+    {
+      "id": "4cb2e81a-375a-4cca-808a-65a1297d195d",
+      "iri": "http://visualdataweb.org/newOntology/4cb2e81a-375a-4cca-808a-65a1297d195d",
+      "label": "IsA",
+      "attributes": "object",
+      "domain": "BH.oM.Geometry.TransformMatrix",
+      "range": "BH.oM.Geometry.IGeometry"
+    },
+    {
+      "id": "146aa37f-2505-4030-97f5-f71a60fae55a",
+      "iri": "http://visualdataweb.org/newOntology/146aa37f-2505-4030-97f5-f71a60fae55a",
+      "label": "IsA",
+      "attributes": "object",
+      "domain": "BH.oM.Geometry.TransformMatrix",
+      "range": "BH.oM.Base.IObject"
+    },
+    {
+      "id": "8578cb67-d3d9-42c8-8d3f-65a762097a24",
+      "iri": "http://visualdataweb.org/newOntology/8578cb67-d3d9-42c8-8d3f-65a762097a24",
+      "label": "IsSubclassOf",
+      "attributes": []
+    },
+    {
+      "id": "d32d96d1-cf1e-4ba8-afd5-5dca08a341ba",
+      "iri": "http://visualdataweb.org/newOntology/d32d96d1-cf1e-4ba8-afd5-5dca08a341ba",
+      "label": "HasProperty",
+      "attributes": "datatype",
+      "domain": "BH.oM.Geometry.BoundaryRepresentation",
+      "range": "Surfaces-14e3839e-806a-4d1b-b06e-291ca9da32ef-BoundaryRepresentation-HasProperty"
+    },
+    {
+      "id": "7dcd952f-2d33-4e78-9e0b-bf5e26e6bfff",
+      "iri": "http://visualdataweb.org/newOntology/7dcd952f-2d33-4e78-9e0b-bf5e26e6bfff",
+      "label": "HasProperty",
+      "attributes": "datatype",
+      "domain": "BH.oM.Geometry.BoundaryRepresentation",
+      "range": "Volume-ea5e0993-5547-4abe-8beb-8902d715dcf6-BoundaryRepresentation-HasProperty"
+    },
+    {
+      "id": "d408e6f4-020c-455e-a2c0-9364d001d97d",
+      "iri": "http://visualdataweb.org/newOntology/d408e6f4-020c-455e-a2c0-9364d001d97d",
+      "label": "IsA",
+      "attributes": "object",
+      "domain": "BH.oM.Geometry.BoundaryRepresentation",
+      "range": "BH.oM.Geometry.ISolid"
+    },
+    {
+      "id": "3c33875e-6d24-4d6d-a38d-d5ba6d8f635a",
+      "iri": "http://visualdataweb.org/newOntology/3c33875e-6d24-4d6d-a38d-d5ba6d8f635a",
+      "label": "IsA",
+      "attributes": "object",
+      "domain": "BH.oM.Geometry.BoundaryRepresentation",
+      "range": "BH.oM.Geometry.IGeometry"
+    },
+    {
+      "id": "8007a131-a164-45b6-a3e7-ba9a5e465751",
+      "iri": "http://visualdataweb.org/newOntology/8007a131-a164-45b6-a3e7-ba9a5e465751",
+      "label": "IsA",
+      "attributes": "object",
+      "domain": "BH.oM.Geometry.BoundaryRepresentation",
+      "range": "BH.oM.Base.IObject"
+    },
+    {
+      "id": "700d13d6-9503-48ed-bab4-d0c5660135f8",
+      "iri": "http://visualdataweb.org/newOntology/700d13d6-9503-48ed-bab4-d0c5660135f8",
+      "label": "IsA",
+      "attributes": "object",
+      "domain": "BH.oM.Geometry.BoundaryRepresentation",
+      "range": "BH.oM.Base.IImmutable"
+    },
+    {
+      "id": "89a857ff-54d6-4b7b-92ea-65fff9e59bce",
+      "iri": "http://visualdataweb.org/newOntology/89a857ff-54d6-4b7b-92ea-65fff9e59bce",
+      "label": "IsSubclassOf",
+      "attributes": []
+    },
+    {
+      "id": "4f769826-fd3d-4149-9b31-f28f9f15fdae",
+      "iri": "http://visualdataweb.org/newOntology/4f769826-fd3d-4149-9b31-f28f9f15fdae",
+      "label": "HasProperty",
+      "attributes": "object",
+      "domain": "BH.oM.Geometry.Cone",
+      "range": "BH.oM.Geometry.Point"
+    },
+    {
+      "id": "7bcf9083-4ade-483d-900f-c44bca4d9d3c",
+      "iri": "http://visualdataweb.org/newOntology/7bcf9083-4ade-483d-900f-c44bca4d9d3c",
+      "label": "HasProperty",
+      "attributes": "object",
+      "domain": "BH.oM.Geometry.Cone",
+      "range": "BH.oM.Geometry.Vector"
+    },
+    {
+      "id": "8cba0884-df6f-487e-a372-311def2fe685",
+      "iri": "http://visualdataweb.org/newOntology/8cba0884-df6f-487e-a372-311def2fe685",
+      "label": "HasProperty",
+      "attributes": "datatype",
+      "domain": "BH.oM.Geometry.Cone",
+      "range": "Radius-3c1ba7df-00e6-4d1f-b37b-356517262fe6-Cone-HasProperty"
+    },
+    {
+      "id": "91d65f2b-76ca-4c44-8b58-0c171ec93b67",
+      "iri": "http://visualdataweb.org/newOntology/91d65f2b-76ca-4c44-8b58-0c171ec93b67",
+      "label": "HasProperty",
+      "attributes": "datatype",
+      "domain": "BH.oM.Geometry.Cone",
+      "range": "Height-104f174e-0317-4008-92f9-7a2379417dae-Cone-HasProperty"
+    },
+    {
+      "id": "e4f667e4-4868-4d98-8e1b-a2cab6cd033a",
+      "iri": "http://visualdataweb.org/newOntology/e4f667e4-4868-4d98-8e1b-a2cab6cd033a",
+      "label": "IsA",
+      "attributes": "object",
+      "domain": "BH.oM.Geometry.Cone",
+      "range": "BH.oM.Geometry.ISolid"
+    },
+    {
+      "id": "4d6bf8cf-cc12-4dac-82c1-3b4a342a9aa5",
+      "iri": "http://visualdataweb.org/newOntology/4d6bf8cf-cc12-4dac-82c1-3b4a342a9aa5",
+      "label": "IsA",
+      "attributes": "object",
+      "domain": "BH.oM.Geometry.Cone",
+      "range": "BH.oM.Geometry.IGeometry"
+    },
+    {
+      "id": "7028a694-a642-4ca8-8f9a-dfc201c440bd",
+      "iri": "http://visualdataweb.org/newOntology/7028a694-a642-4ca8-8f9a-dfc201c440bd",
+      "label": "IsA",
+      "attributes": "object",
+      "domain": "BH.oM.Geometry.Cone",
+      "range": "BH.oM.Base.IObject"
+    },
+    {
+      "id": "b7b3f93c-068b-499f-91a0-7269bde752f8",
+      "iri": "http://visualdataweb.org/newOntology/b7b3f93c-068b-499f-91a0-7269bde752f8",
+      "label": "IsSubclassOf",
+      "attributes": []
+    },
+    {
+      "id": "6798f67d-ed2c-482f-8195-1a13ae3f3704",
+      "iri": "http://visualdataweb.org/newOntology/6798f67d-ed2c-482f-8195-1a13ae3f3704",
+      "label": "HasProperty",
+      "attributes": "object",
+      "domain": "BH.oM.Geometry.Cuboid",
+      "range": "BH.oM.Geometry.CoordinateSystem.Cartesian"
+    },
+    {
+      "id": "fc0d5fcf-578f-4141-ad24-45efc25b7419",
+      "iri": "http://visualdataweb.org/newOntology/fc0d5fcf-578f-4141-ad24-45efc25b7419",
+      "label": "HasProperty",
+      "attributes": "datatype",
+      "domain": "BH.oM.Geometry.Cuboid",
+      "range": "Length-f3a41a56-94f6-4b68-8590-131f395a757e-Cuboid-HasProperty"
+    },
+    {
+      "id": "55d278fa-2f30-443e-91d2-a963a22bc277",
+      "iri": "http://visualdataweb.org/newOntology/55d278fa-2f30-443e-91d2-a963a22bc277",
+      "label": "HasProperty",
+      "attributes": "datatype",
+      "domain": "BH.oM.Geometry.Cuboid",
+      "range": "Depth-77e5bea5-f714-4f8b-bffc-af9d972ae3c2-Cuboid-HasProperty"
+    },
+    {
+      "id": "2ef8d9c1-00e5-4368-81f5-4680e54db6c2",
+      "iri": "http://visualdataweb.org/newOntology/2ef8d9c1-00e5-4368-81f5-4680e54db6c2",
+      "label": "HasProperty",
+      "attributes": "datatype",
+      "domain": "BH.oM.Geometry.Cuboid",
+      "range": "Height-2b4148b7-f6e9-4a83-bb13-fa96adb89945-Cuboid-HasProperty"
+    },
+    {
+      "id": "18180b03-a63b-493e-931d-c47f8af79975",
+      "iri": "http://visualdataweb.org/newOntology/18180b03-a63b-493e-931d-c47f8af79975",
+      "label": "IsA",
+      "attributes": "object",
+      "domain": "BH.oM.Geometry.Cuboid",
+      "range": "BH.oM.Geometry.ISolid"
+    },
+    {
+      "id": "3fe732ba-41c7-46fc-9f53-7af99ee69ba5",
+      "iri": "http://visualdataweb.org/newOntology/3fe732ba-41c7-46fc-9f53-7af99ee69ba5",
+      "label": "IsA",
+      "attributes": "object",
+      "domain": "BH.oM.Geometry.Cuboid",
+      "range": "BH.oM.Geometry.IGeometry"
+    },
+    {
+      "id": "e326a918-9d42-4118-a901-11987f5c0751",
+      "iri": "http://visualdataweb.org/newOntology/e326a918-9d42-4118-a901-11987f5c0751",
+      "label": "IsA",
+      "attributes": "object",
+      "domain": "BH.oM.Geometry.Cuboid",
+      "range": "BH.oM.Base.IObject"
+    },
+    {
+      "id": "437fdf59-d55b-4687-91ae-afcf97e6c30e",
+      "iri": "http://visualdataweb.org/newOntology/437fdf59-d55b-4687-91ae-afcf97e6c30e",
+      "label": "IsSubclassOf",
+      "attributes": []
+    },
+    {
+      "id": "b9abd0bc-09a3-49e7-b00c-441df1fe0547",
+      "iri": "http://visualdataweb.org/newOntology/b9abd0bc-09a3-49e7-b00c-441df1fe0547",
+      "label": "HasProperty",
+      "attributes": "object",
+      "domain": "BH.oM.Geometry.Cylinder",
+      "range": "BH.oM.Geometry.Point"
+    },
+    {
+      "id": "13ee28df-852f-4dbc-b127-e9af7432a791",
+      "iri": "http://visualdataweb.org/newOntology/13ee28df-852f-4dbc-b127-e9af7432a791",
+      "label": "HasProperty",
+      "attributes": "object",
+      "domain": "BH.oM.Geometry.Cylinder",
+      "range": "BH.oM.Geometry.Vector"
+    },
+    {
+      "id": "bf489020-a90c-4642-a55e-e291006bc7c6",
+      "iri": "http://visualdataweb.org/newOntology/bf489020-a90c-4642-a55e-e291006bc7c6",
+      "label": "HasProperty",
+      "attributes": "datatype",
+      "domain": "BH.oM.Geometry.Cylinder",
+      "range": "Radius-d26f1778-06fe-46eb-b569-b4df03fb5c94-Cylinder-HasProperty"
+    },
+    {
+      "id": "4ee18c84-6840-4019-a120-9687cee2f7c2",
+      "iri": "http://visualdataweb.org/newOntology/4ee18c84-6840-4019-a120-9687cee2f7c2",
+      "label": "HasProperty",
+      "attributes": "datatype",
+      "domain": "BH.oM.Geometry.Cylinder",
+      "range": "Height-a7ed71d9-d1d9-4618-8f1d-d6faffd23606-Cylinder-HasProperty"
+    },
+    {
+      "id": "4c6ac732-4928-46db-87b5-bf721a7aa524",
+      "iri": "http://visualdataweb.org/newOntology/4c6ac732-4928-46db-87b5-bf721a7aa524",
+      "label": "IsA",
+      "attributes": "object",
+      "domain": "BH.oM.Geometry.Cylinder",
+      "range": "BH.oM.Geometry.ISolid"
+    },
+    {
+      "id": "1aa577e8-bb7a-41f2-9427-73e1cbf631c4",
+      "iri": "http://visualdataweb.org/newOntology/1aa577e8-bb7a-41f2-9427-73e1cbf631c4",
+      "label": "IsA",
+      "attributes": "object",
+      "domain": "BH.oM.Geometry.Cylinder",
+      "range": "BH.oM.Geometry.IGeometry"
+    },
+    {
+      "id": "be19c726-87a4-41de-bd2e-56df82ccc9fe",
+      "iri": "http://visualdataweb.org/newOntology/be19c726-87a4-41de-bd2e-56df82ccc9fe",
+      "label": "IsA",
+      "attributes": "object",
+      "domain": "BH.oM.Geometry.Cylinder",
+      "range": "BH.oM.Base.IObject"
+    },
+    {
+      "id": "1b7023a5-3dcb-46cd-b967-01e931bc11fd",
+      "iri": "http://visualdataweb.org/newOntology/1b7023a5-3dcb-46cd-b967-01e931bc11fd",
+      "label": "IsSubclassOf",
+      "attributes": []
+    },
+    {
+      "id": "04ed6075-51a2-4a76-bb8a-22bf8466a495",
+      "iri": "http://visualdataweb.org/newOntology/04ed6075-51a2-4a76-bb8a-22bf8466a495",
+      "label": "IsA",
+      "attributes": "object",
+      "domain": "BH.oM.Geometry.ISolid",
+      "range": "BH.oM.Geometry.IGeometry"
+    },
+    {
+      "id": "763fcf3b-a04e-4350-b0b8-8f2cf47e4055",
+      "iri": "http://visualdataweb.org/newOntology/763fcf3b-a04e-4350-b0b8-8f2cf47e4055",
+      "label": "IsA",
+      "attributes": "object",
+      "domain": "BH.oM.Geometry.ISolid",
+      "range": "BH.oM.Base.IObject"
+    },
+    {
+      "id": "a2fe4b5e-608d-468f-a32b-954ca905b28c",
+      "iri": "http://visualdataweb.org/newOntology/a2fe4b5e-608d-468f-a32b-954ca905b28c",
+      "label": "HasProperty",
+      "attributes": "object",
+      "domain": "BH.oM.Geometry.Sphere",
+      "range": "BH.oM.Geometry.Point"
+    },
+    {
+      "id": "513496ab-8d01-41c0-9205-919de1d87a04",
+      "iri": "http://visualdataweb.org/newOntology/513496ab-8d01-41c0-9205-919de1d87a04",
+      "label": "HasProperty",
+      "attributes": "datatype",
+      "domain": "BH.oM.Geometry.Sphere",
+      "range": "Radius-c0aca2da-1af6-4276-93f6-b125e20cccbb-Sphere-HasProperty"
+    },
+    {
+      "id": "8b185533-5246-4440-8c79-883ec11c7d35",
+      "iri": "http://visualdataweb.org/newOntology/8b185533-5246-4440-8c79-883ec11c7d35",
+      "label": "IsA",
+      "attributes": "object",
+      "domain": "BH.oM.Geometry.Sphere",
+      "range": "BH.oM.Geometry.ISolid"
+    },
+    {
+      "id": "120fb6a6-a18a-4e99-98f7-b0d6657fdff5",
+      "iri": "http://visualdataweb.org/newOntology/120fb6a6-a18a-4e99-98f7-b0d6657fdff5",
+      "label": "IsA",
+      "attributes": "object",
+      "domain": "BH.oM.Geometry.Sphere",
+      "range": "BH.oM.Geometry.IGeometry"
+    },
+    {
+      "id": "88b5e635-05cf-4a77-b09a-9a5e27be5976",
+      "iri": "http://visualdataweb.org/newOntology/88b5e635-05cf-4a77-b09a-9a5e27be5976",
+      "label": "IsA",
+      "attributes": "object",
+      "domain": "BH.oM.Geometry.Sphere",
+      "range": "BH.oM.Base.IObject"
+    },
+    {
+      "id": "4589e358-8e67-4dfc-a23f-8a4b5e4215a3",
+      "iri": "http://visualdataweb.org/newOntology/4589e358-8e67-4dfc-a23f-8a4b5e4215a3",
+      "label": "IsSubclassOf",
+      "attributes": []
+    },
+    {
+      "id": "34787a88-0812-4c37-b45d-75b121164573",
+      "iri": "http://visualdataweb.org/newOntology/34787a88-0812-4c37-b45d-75b121164573",
+      "label": "HasProperty",
+      "attributes": "object",
+      "domain": "BH.oM.Geometry.Torus",
+      "range": "BH.oM.Geometry.Point"
+    },
+    {
+      "id": "a311111c-ca76-44fd-8969-0a95061a958f",
+      "iri": "http://visualdataweb.org/newOntology/a311111c-ca76-44fd-8969-0a95061a958f",
+      "label": "HasProperty",
+      "attributes": "object",
+      "domain": "BH.oM.Geometry.Torus",
+      "range": "BH.oM.Geometry.Vector"
+    },
+    {
+      "id": "c7fc00cc-dfc1-4d52-bcd9-10432003534e",
+      "iri": "http://visualdataweb.org/newOntology/c7fc00cc-dfc1-4d52-bcd9-10432003534e",
+      "label": "HasProperty",
+      "attributes": "datatype",
+      "domain": "BH.oM.Geometry.Torus",
+      "range": "RadiusMajor-271a5e3d-c9d0-422c-bf77-b3b9df505fb6-Torus-HasProperty"
+    },
+    {
+      "id": "99a9b25f-6977-479a-8639-5b54e5b85745",
+      "iri": "http://visualdataweb.org/newOntology/99a9b25f-6977-479a-8639-5b54e5b85745",
+      "label": "HasProperty",
+      "attributes": "datatype",
+      "domain": "BH.oM.Geometry.Torus",
+      "range": "RadiusMinor-593fbcea-11ac-4985-b32e-2f1081ad3468-Torus-HasProperty"
+    },
+    {
+      "id": "2b778173-370f-4c8f-b6d8-86e8d2a42c36",
+      "iri": "http://visualdataweb.org/newOntology/2b778173-370f-4c8f-b6d8-86e8d2a42c36",
+      "label": "IsA",
+      "attributes": "object",
+      "domain": "BH.oM.Geometry.Torus",
+      "range": "BH.oM.Geometry.ISolid"
+    },
+    {
+      "id": "349cc378-4b0d-458c-a896-d748eb52d639",
+      "iri": "http://visualdataweb.org/newOntology/349cc378-4b0d-458c-a896-d748eb52d639",
+      "label": "IsA",
+      "attributes": "object",
+      "domain": "BH.oM.Geometry.Torus",
+      "range": "BH.oM.Geometry.IGeometry"
+    },
+    {
+      "id": "f0786774-bea5-4661-b825-bcf22398e613",
+      "iri": "http://visualdataweb.org/newOntology/f0786774-bea5-4661-b825-bcf22398e613",
+      "label": "IsA",
+      "attributes": "object",
+      "domain": "BH.oM.Geometry.Torus",
+      "range": "BH.oM.Base.IObject"
+    },
+    {
+      "id": "7e0bf765-2e74-4659-8f1d-8ff632879675",
+      "iri": "http://visualdataweb.org/newOntology/7e0bf765-2e74-4659-8f1d-8ff632879675",
+      "label": "IsSubclassOf",
+      "attributes": []
+    },
+    {
+      "id": "5a389199-a1c7-404e-b15b-05b69ec36c1b",
+      "iri": "http://visualdataweb.org/newOntology/5a389199-a1c7-404e-b15b-05b69ec36c1b",
+      "label": "HasProperty",
+      "attributes": "object",
+      "domain": "BH.oM.Geometry.Extrusion",
+      "range": "BH.oM.Geometry.ICurve"
+    },
+    {
+      "id": "aac63119-d4cb-4ccc-b271-43c717d551ba",
+      "iri": "http://visualdataweb.org/newOntology/aac63119-d4cb-4ccc-b271-43c717d551ba",
+      "label": "HasProperty",
+      "attributes": "object",
+      "domain": "BH.oM.Geometry.Extrusion",
+      "range": "BH.oM.Geometry.Vector"
+    },
+    {
+      "id": "1a4d6fb7-ad80-4068-8410-5ecb37eea04d",
+      "iri": "http://visualdataweb.org/newOntology/1a4d6fb7-ad80-4068-8410-5ecb37eea04d",
+      "label": "HasProperty",
+      "attributes": "datatype",
+      "domain": "BH.oM.Geometry.Extrusion",
+      "range": "Capped-6dc32c5e-6ef2-494e-8d8b-8ff385f3fa75-Extrusion-HasProperty"
+    },
+    {
+      "id": "f3933626-3e2b-4486-ae0b-681d17776fd7",
+      "iri": "http://visualdataweb.org/newOntology/f3933626-3e2b-4486-ae0b-681d17776fd7",
+      "label": "IsA",
+      "attributes": "object",
+      "domain": "BH.oM.Geometry.Extrusion",
+      "range": "BH.oM.Geometry.ISurface"
+    },
+    {
+      "id": "900c2e62-b627-4e6c-82c8-707e9e938759",
+      "iri": "http://visualdataweb.org/newOntology/900c2e62-b627-4e6c-82c8-707e9e938759",
+      "label": "IsA",
+      "attributes": "object",
+      "domain": "BH.oM.Geometry.Extrusion",
+      "range": "BH.oM.Geometry.IGeometry"
+    },
+    {
+      "id": "f35d3a97-c801-4a7b-b8a5-8bbbed6424a1",
+      "iri": "http://visualdataweb.org/newOntology/f35d3a97-c801-4a7b-b8a5-8bbbed6424a1",
+      "label": "IsA",
+      "attributes": "object",
+      "domain": "BH.oM.Geometry.Extrusion",
+      "range": "BH.oM.Base.IObject"
+    },
+    {
+      "id": "dc4869b8-227f-4685-9bc0-3bc335af4662",
+      "iri": "http://visualdataweb.org/newOntology/dc4869b8-227f-4685-9bc0-3bc335af4662",
+      "label": "IsSubclassOf",
+      "attributes": []
+    },
+    {
+      "id": "198e853e-942e-4588-9d08-0e2cd465a267",
+      "iri": "http://visualdataweb.org/newOntology/198e853e-942e-4588-9d08-0e2cd465a267",
+      "label": "IsA",
+      "attributes": "object",
+      "domain": "BH.oM.Geometry.ISurface",
+      "range": "BH.oM.Geometry.IGeometry"
+    },
+    {
+      "id": "ff244f69-64ed-4699-ba36-bb69d49c6b2c",
+      "iri": "http://visualdataweb.org/newOntology/ff244f69-64ed-4699-ba36-bb69d49c6b2c",
+      "label": "IsA",
+      "attributes": "object",
+      "domain": "BH.oM.Geometry.ISurface",
+      "range": "BH.oM.Base.IObject"
+    },
+    {
+      "id": "ff383553-045d-43d3-bb27-f722533ba242",
+      "iri": "http://visualdataweb.org/newOntology/ff383553-045d-43d3-bb27-f722533ba242",
+      "label": "HasProperty",
+      "attributes": "datatype",
+      "domain": "BH.oM.Geometry.Loft",
+      "range": "Curves-47add643-7774-4a1a-bba8-e3c48115906a-Loft-HasProperty"
+    },
+    {
+      "id": "29b61b11-feba-4d41-bf32-9e05c0fbb184",
+      "iri": "http://visualdataweb.org/newOntology/29b61b11-feba-4d41-bf32-9e05c0fbb184",
+      "label": "IsA",
+      "attributes": "object",
+      "domain": "BH.oM.Geometry.Loft",
+      "range": "BH.oM.Geometry.ISurface"
+    },
+    {
+      "id": "01d7f40c-6560-4ada-b67b-cf655e61eac0",
+      "iri": "http://visualdataweb.org/newOntology/01d7f40c-6560-4ada-b67b-cf655e61eac0",
+      "label": "IsA",
+      "attributes": "object",
+      "domain": "BH.oM.Geometry.Loft",
+      "range": "BH.oM.Geometry.IGeometry"
+    },
+    {
+      "id": "98574e69-06f0-4fb4-9827-ecdb29b2dbea",
+      "iri": "http://visualdataweb.org/newOntology/98574e69-06f0-4fb4-9827-ecdb29b2dbea",
+      "label": "IsA",
+      "attributes": "object",
+      "domain": "BH.oM.Geometry.Loft",
+      "range": "BH.oM.Base.IObject"
+    },
+    {
+      "id": "27bbebea-98fe-400f-9b5e-1bc22b320519",
+      "iri": "http://visualdataweb.org/newOntology/27bbebea-98fe-400f-9b5e-1bc22b320519",
+      "label": "IsSubclassOf",
+      "attributes": []
+    },
+    {
+      "id": "f9d6fa87-2cf2-4f05-b3d4-09364e8b7961",
+      "iri": "http://visualdataweb.org/newOntology/f9d6fa87-2cf2-4f05-b3d4-09364e8b7961",
+      "label": "HasProperty",
+      "attributes": "datatype",
+      "domain": "BH.oM.Geometry.NurbsSurface",
+      "range": "ControlPoints-1b01b0fd-f1fd-43ae-a406-74484b92bd9b-NurbsSurface-HasProperty"
+    },
+    {
+      "id": "1c4a7cb6-c22c-45fe-a3dd-3d1c82f23dc1",
+      "iri": "http://visualdataweb.org/newOntology/1c4a7cb6-c22c-45fe-a3dd-3d1c82f23dc1",
+      "label": "HasProperty",
+      "attributes": "datatype",
+      "domain": "BH.oM.Geometry.NurbsSurface",
+      "range": "Weights-be4c11d3-790e-49f7-9200-ea8dcd475bf3-NurbsSurface-HasProperty"
+    },
+    {
+      "id": "e4b848f4-c290-4d91-832e-37241ec324e0",
+      "iri": "http://visualdataweb.org/newOntology/e4b848f4-c290-4d91-832e-37241ec324e0",
+      "label": "HasProperty",
+      "attributes": "datatype",
+      "domain": "BH.oM.Geometry.NurbsSurface",
+      "range": "UKnots-f49c2918-96c7-47bd-bf4a-1c86f90f508b-NurbsSurface-HasProperty"
+    },
+    {
+      "id": "b6275540-6309-43e5-a35e-47b7f170f9b5",
+      "iri": "http://visualdataweb.org/newOntology/b6275540-6309-43e5-a35e-47b7f170f9b5",
+      "label": "HasProperty",
+      "attributes": "datatype",
+      "domain": "BH.oM.Geometry.NurbsSurface",
+      "range": "VKnots-a74276c0-c762-4bad-89bc-717b319e7fb0-NurbsSurface-HasProperty"
+    },
+    {
+      "id": "cf9039f5-fc1c-4d41-858f-a300497a1e5f",
+      "iri": "http://visualdataweb.org/newOntology/cf9039f5-fc1c-4d41-858f-a300497a1e5f",
+      "label": "HasProperty",
+      "attributes": "datatype",
+      "domain": "BH.oM.Geometry.NurbsSurface",
+      "range": "UDegree-bf54758c-2e1e-455c-bcc8-6ebe75e59602-NurbsSurface-HasProperty"
+    },
+    {
+      "id": "016eb60d-0310-4ad2-8218-0d611a86f445",
+      "iri": "http://visualdataweb.org/newOntology/016eb60d-0310-4ad2-8218-0d611a86f445",
+      "label": "HasProperty",
+      "attributes": "datatype",
+      "domain": "BH.oM.Geometry.NurbsSurface",
+      "range": "VDegree-266af85f-c79c-4b26-b162-9c2e3083e158-NurbsSurface-HasProperty"
+    },
+    {
+      "id": "032323bb-a60b-4758-80d6-ef786280356f",
+      "iri": "http://visualdataweb.org/newOntology/032323bb-a60b-4758-80d6-ef786280356f",
+      "label": "HasProperty",
+      "attributes": "datatype",
+      "domain": "BH.oM.Geometry.NurbsSurface",
+      "range": "InnerTrims-6114e44c-ad14-48bc-a7cb-a280e50c080c-NurbsSurface-HasProperty"
+    },
+    {
+      "id": "8df3d644-7b1c-4596-a2f5-af2fbd04cede",
+      "iri": "http://visualdataweb.org/newOntology/8df3d644-7b1c-4596-a2f5-af2fbd04cede",
+      "label": "HasProperty",
+      "attributes": "datatype",
+      "domain": "BH.oM.Geometry.NurbsSurface",
+      "range": "OuterTrims-49934a49-b651-41b8-965a-81b1b0aff639-NurbsSurface-HasProperty"
+    },
+    {
+      "id": "3e0ecfb2-2f84-432b-ae9d-92a3ca339f5c",
+      "iri": "http://visualdataweb.org/newOntology/3e0ecfb2-2f84-432b-ae9d-92a3ca339f5c",
+      "label": "IsA",
+      "attributes": "object",
+      "domain": "BH.oM.Geometry.NurbsSurface",
+      "range": "BH.oM.Geometry.ISurface"
+    },
+    {
+      "id": "04f1f9f8-f9e1-41e6-8ad8-6cba8a488f44",
+      "iri": "http://visualdataweb.org/newOntology/04f1f9f8-f9e1-41e6-8ad8-6cba8a488f44",
+      "label": "IsA",
+      "attributes": "object",
+      "domain": "BH.oM.Geometry.NurbsSurface",
+      "range": "BH.oM.Geometry.IGeometry"
+    },
+    {
+      "id": "30e05b32-e32a-498c-88ae-8e2189c2d3dc",
+      "iri": "http://visualdataweb.org/newOntology/30e05b32-e32a-498c-88ae-8e2189c2d3dc",
+      "label": "IsA",
+      "attributes": "object",
+      "domain": "BH.oM.Geometry.NurbsSurface",
+      "range": "BH.oM.Base.IObject"
+    },
+    {
+      "id": "b15ac908-fc71-4286-a500-325d0f583fb1",
+      "iri": "http://visualdataweb.org/newOntology/b15ac908-fc71-4286-a500-325d0f583fb1",
+      "label": "IsA",
+      "attributes": "object",
+      "domain": "BH.oM.Geometry.NurbsSurface",
+      "range": "BH.oM.Base.IImmutable"
+    },
+    {
+      "id": "6362fdca-1311-4819-ba86-08e900055481",
+      "iri": "http://visualdataweb.org/newOntology/6362fdca-1311-4819-ba86-08e900055481",
+      "label": "IsSubclassOf",
+      "attributes": []
+    },
+    {
+      "id": "9ebb4fdd-151c-44e2-a3a6-9cd878e402b0",
+      "iri": "http://visualdataweb.org/newOntology/9ebb4fdd-151c-44e2-a3a6-9cd878e402b0",
+      "label": "HasProperty",
+      "attributes": "object",
+      "domain": "BH.oM.Geometry.Pipe",
+      "range": "BH.oM.Geometry.ICurve"
+    },
+    {
+      "id": "35cf4810-945e-41a6-b221-fe8a9edd221c",
+      "iri": "http://visualdataweb.org/newOntology/35cf4810-945e-41a6-b221-fe8a9edd221c",
+      "label": "HasProperty",
+      "attributes": "datatype",
+      "domain": "BH.oM.Geometry.Pipe",
+      "range": "Radius-98d14978-1e9b-4962-ad91-f15ddf02ce15-Pipe-HasProperty"
+    },
+    {
+      "id": "9af0c04f-3bea-47fc-8d4a-4d8434cffb52",
+      "iri": "http://visualdataweb.org/newOntology/9af0c04f-3bea-47fc-8d4a-4d8434cffb52",
+      "label": "HasProperty",
+      "attributes": "datatype",
+      "domain": "BH.oM.Geometry.Pipe",
+      "range": "Capped-a4dbd28e-6d1a-452e-bea1-3043d8840343-Pipe-HasProperty"
+    },
+    {
+      "id": "2d49a3ab-6b08-4244-aa19-403ebf1ba9bd",
+      "iri": "http://visualdataweb.org/newOntology/2d49a3ab-6b08-4244-aa19-403ebf1ba9bd",
+      "label": "IsA",
+      "attributes": "object",
+      "domain": "BH.oM.Geometry.Pipe",
+      "range": "BH.oM.Geometry.ISurface"
+    },
+    {
+      "id": "662ed17f-eeac-4b8b-9d91-94842d02cf98",
+      "iri": "http://visualdataweb.org/newOntology/662ed17f-eeac-4b8b-9d91-94842d02cf98",
+      "label": "IsA",
+      "attributes": "object",
+      "domain": "BH.oM.Geometry.Pipe",
+      "range": "BH.oM.Geometry.IGeometry"
+    },
+    {
+      "id": "d6a666ce-e60b-49a1-b652-fda05bf08f31",
+      "iri": "http://visualdataweb.org/newOntology/d6a666ce-e60b-49a1-b652-fda05bf08f31",
+      "label": "IsA",
+      "attributes": "object",
+      "domain": "BH.oM.Geometry.Pipe",
+      "range": "BH.oM.Base.IObject"
+    },
+    {
+      "id": "39699dfc-1b69-4db5-acad-ea7c7553f01f",
+      "iri": "http://visualdataweb.org/newOntology/39699dfc-1b69-4db5-acad-ea7c7553f01f",
+      "label": "IsSubclassOf",
+      "attributes": []
+    },
+    {
+      "id": "1f1b3332-f7ef-4a3e-871f-11e4c6dd0e9f",
+      "iri": "http://visualdataweb.org/newOntology/1f1b3332-f7ef-4a3e-871f-11e4c6dd0e9f",
+      "label": "HasProperty",
+      "attributes": "object",
+      "domain": "BH.oM.Geometry.PlanarSurface",
+      "range": "BH.oM.Geometry.ICurve"
+    },
+    {
+      "id": "e560c7f0-9394-4a8a-a8ee-959cbae7d72a",
+      "iri": "http://visualdataweb.org/newOntology/e560c7f0-9394-4a8a-a8ee-959cbae7d72a",
+      "label": "HasProperty",
+      "attributes": "datatype",
+      "domain": "BH.oM.Geometry.PlanarSurface",
+      "range": "InternalBoundaries-cda1e6e4-9445-45e2-8b66-13ee3b5c5d84-PlanarSurface-HasProperty"
+    },
+    {
+      "id": "3ef152c3-0f95-43d2-9160-51edf37c46af",
+      "iri": "http://visualdataweb.org/newOntology/3ef152c3-0f95-43d2-9160-51edf37c46af",
+      "label": "IsA",
+      "attributes": "object",
+      "domain": "BH.oM.Geometry.PlanarSurface",
+      "range": "BH.oM.Geometry.ISurface"
+    },
+    {
+      "id": "12454909-51c6-44c5-ae37-49bfc84ec54d",
+      "iri": "http://visualdataweb.org/newOntology/12454909-51c6-44c5-ae37-49bfc84ec54d",
+      "label": "IsA",
+      "attributes": "object",
+      "domain": "BH.oM.Geometry.PlanarSurface",
+      "range": "BH.oM.Geometry.IGeometry"
+    },
+    {
+      "id": "f885407a-5a40-4227-ae93-f4500f6ec377",
+      "iri": "http://visualdataweb.org/newOntology/f885407a-5a40-4227-ae93-f4500f6ec377",
+      "label": "IsA",
+      "attributes": "object",
+      "domain": "BH.oM.Geometry.PlanarSurface",
+      "range": "BH.oM.Base.IObject"
+    },
+    {
+      "id": "03449a50-c671-473a-a7e4-027d6491b46a",
+      "iri": "http://visualdataweb.org/newOntology/03449a50-c671-473a-a7e4-027d6491b46a",
+      "label": "IsA",
+      "attributes": "object",
+      "domain": "BH.oM.Geometry.PlanarSurface",
+      "range": "BH.oM.Base.IImmutable"
+    },
+    {
+      "id": "4c129883-c931-403c-830c-bc670c26a89b",
+      "iri": "http://visualdataweb.org/newOntology/4c129883-c931-403c-830c-bc670c26a89b",
+      "label": "IsSubclassOf",
+      "attributes": []
+    },
+    {
+      "id": "c42af69c-fe13-4f9b-8865-1998d23b0d88",
+      "iri": "http://visualdataweb.org/newOntology/c42af69c-fe13-4f9b-8865-1998d23b0d88",
+      "label": "HasProperty",
+      "attributes": "datatype",
+      "domain": "BH.oM.Geometry.PolySurface",
+      "range": "Surfaces-a4c23ba6-0ff4-4ee8-bb6c-a1bbfe1e24c9-PolySurface-HasProperty"
+    },
+    {
+      "id": "5c51db4d-6d17-42c4-bec9-8827ae106c95",
+      "iri": "http://visualdataweb.org/newOntology/5c51db4d-6d17-42c4-bec9-8827ae106c95",
+      "label": "IsA",
+      "attributes": "object",
+      "domain": "BH.oM.Geometry.PolySurface",
+      "range": "BH.oM.Geometry.ISurface"
+    },
+    {
+      "id": "ffac8750-908c-4ef8-aef4-d5c882875883",
+      "iri": "http://visualdataweb.org/newOntology/ffac8750-908c-4ef8-aef4-d5c882875883",
+      "label": "IsA",
+      "attributes": "object",
+      "domain": "BH.oM.Geometry.PolySurface",
+      "range": "BH.oM.Geometry.IGeometry"
+    },
+    {
+      "id": "22c27d21-ecb1-4e55-98f4-c5a01f7c5f36",
+      "iri": "http://visualdataweb.org/newOntology/22c27d21-ecb1-4e55-98f4-c5a01f7c5f36",
+      "label": "IsA",
+      "attributes": "object",
+      "domain": "BH.oM.Geometry.PolySurface",
+      "range": "BH.oM.Base.IObject"
+    },
+    {
+      "id": "58e0d098-6a1c-407a-981b-7194c3e99207",
+      "iri": "http://visualdataweb.org/newOntology/58e0d098-6a1c-407a-981b-7194c3e99207",
+      "label": "IsSubclassOf",
+      "attributes": []
+    },
+    {
+      "id": "b8cbbbed-d983-4030-adb4-1ad5fa898fd5",
+      "iri": "http://visualdataweb.org/newOntology/b8cbbbed-d983-4030-adb4-1ad5fa898fd5",
+      "label": "HasProperty",
+      "attributes": "object",
+      "domain": "BH.oM.Geometry.Basis",
+      "range": "BH.oM.Geometry.Vector"
+    },
+    {
+      "id": "7422642c-2342-4fca-be56-b9cc91884968",
+      "iri": "http://visualdataweb.org/newOntology/7422642c-2342-4fca-be56-b9cc91884968",
+      "label": "HasProperty",
+      "attributes": "object",
+      "domain": "BH.oM.Geometry.Basis",
+      "range": "BH.oM.Geometry.Vector"
+    },
+    {
+      "id": "851c0593-34e4-4e0b-b604-9cedefdb2367",
+      "iri": "http://visualdataweb.org/newOntology/851c0593-34e4-4e0b-b604-9cedefdb2367",
+      "label": "HasProperty",
+      "attributes": "object",
+      "domain": "BH.oM.Geometry.Basis",
+      "range": "BH.oM.Geometry.Vector"
+    },
+    {
+      "id": "b2db82bf-2745-49f1-95c5-20ad28d2d0b8",
+      "iri": "http://visualdataweb.org/newOntology/b2db82bf-2745-49f1-95c5-20ad28d2d0b8",
+      "label": "IsA",
+      "attributes": "object",
+      "domain": "BH.oM.Geometry.Basis",
+      "range": "BH.oM.Geometry.IGeometry"
+    },
+    {
+      "id": "648b743f-30f7-432c-926e-834553db2608",
+      "iri": "http://visualdataweb.org/newOntology/648b743f-30f7-432c-926e-834553db2608",
+      "label": "IsA",
+      "attributes": "object",
+      "domain": "BH.oM.Geometry.Basis",
+      "range": "BH.oM.Base.IObject"
+    },
+    {
+      "id": "6698ed38-f517-4506-882f-717084694bf6",
+      "iri": "http://visualdataweb.org/newOntology/6698ed38-f517-4506-882f-717084694bf6",
+      "label": "IsA",
+      "attributes": "object",
+      "domain": "BH.oM.Geometry.Basis",
+      "range": "BH.oM.Base.IImmutable"
+    },
+    {
+      "id": "b40641d3-c14f-437a-9bc4-d2a6f4dcaef9",
+      "iri": "http://visualdataweb.org/newOntology/b40641d3-c14f-437a-9bc4-d2a6f4dcaef9",
+      "label": "IsSubclassOf",
+      "attributes": []
+    },
+    {
+      "id": "53cab89f-144b-4012-aae7-ffc67a599c53",
+      "iri": "http://visualdataweb.org/newOntology/53cab89f-144b-4012-aae7-ffc67a599c53",
+      "label": "HasProperty",
+      "attributes": "object",
+      "domain": "BH.oM.Geometry.Plane",
+      "range": "BH.oM.Geometry.Point"
+    },
+    {
+      "id": "f5b13381-99a1-45c3-b817-41582f3822bc",
+      "iri": "http://visualdataweb.org/newOntology/f5b13381-99a1-45c3-b817-41582f3822bc",
+      "label": "HasProperty",
+      "attributes": "object",
+      "domain": "BH.oM.Geometry.Plane",
+      "range": "BH.oM.Geometry.Vector"
+    },
+    {
+      "id": "7d28fbc8-31fd-4c93-9a28-27439c8e050e",
+      "iri": "http://visualdataweb.org/newOntology/7d28fbc8-31fd-4c93-9a28-27439c8e050e",
+      "label": "IsA",
+      "attributes": "object",
+      "domain": "BH.oM.Geometry.Plane",
+      "range": "BH.oM.Geometry.IGeometry"
+    },
+    {
+      "id": "7cc0cb74-11b7-4d2a-994b-1e3ed60554e4",
+      "iri": "http://visualdataweb.org/newOntology/7cc0cb74-11b7-4d2a-994b-1e3ed60554e4",
+      "label": "IsA",
+      "attributes": "object",
+      "domain": "BH.oM.Geometry.Plane",
+      "range": "BH.oM.Base.IObject"
+    },
+    {
+      "id": "5932bbad-688c-4586-9463-2a61a0800ce7",
+      "iri": "http://visualdataweb.org/newOntology/5932bbad-688c-4586-9463-2a61a0800ce7",
+      "label": "IsSubclassOf",
+      "attributes": []
+    },
+    {
+      "id": "4d5f67c7-afbd-433f-8820-0363b55b340e",
+      "iri": "http://visualdataweb.org/newOntology/4d5f67c7-afbd-433f-8820-0363b55b340e",
+      "label": "HasProperty",
+      "attributes": "datatype",
+      "domain": "BH.oM.Geometry.Point",
+      "range": "X-eed47de0-5ed3-49d1-a492-c2a5972dc368-Point-HasProperty"
+    },
+    {
+      "id": "1c1a90b3-6e71-4b55-85b8-ac267e7e2926",
+      "iri": "http://visualdataweb.org/newOntology/1c1a90b3-6e71-4b55-85b8-ac267e7e2926",
+      "label": "HasProperty",
+      "attributes": "datatype",
+      "domain": "BH.oM.Geometry.Point",
+      "range": "Y-1f1e6e5f-9e2a-45e3-b4f9-fe4aa3bcc432-Point-HasProperty"
+    },
+    {
+      "id": "b07a9a90-5aa5-4ebe-8290-572cbfdf0b8b",
+      "iri": "http://visualdataweb.org/newOntology/b07a9a90-5aa5-4ebe-8290-572cbfdf0b8b",
+      "label": "HasProperty",
+      "attributes": "datatype",
+      "domain": "BH.oM.Geometry.Point",
+      "range": "Z-a3d1fc26-bf49-4e07-bab4-5851147db6a2-Point-HasProperty"
+    },
+    {
+      "id": "2c8e9102-f146-4db5-96bb-494add4aad3e",
+      "iri": "http://visualdataweb.org/newOntology/2c8e9102-f146-4db5-96bb-494add4aad3e",
+      "label": "IsA",
+      "attributes": "object",
+      "domain": "BH.oM.Geometry.Point",
+      "range": "BH.oM.Geometry.IGeometry"
+    },
+    {
+      "id": "e58cb5b5-8517-44a4-84e7-607592e55ab4",
+      "iri": "http://visualdataweb.org/newOntology/e58cb5b5-8517-44a4-84e7-607592e55ab4",
+      "label": "IsA",
+      "attributes": "object",
+      "domain": "BH.oM.Geometry.Point",
+      "range": "BH.oM.Base.IObject"
+    },
+    {
+      "id": "7004ebe2-e98c-4cb2-9b34-2585509a58fb",
+      "iri": "http://visualdataweb.org/newOntology/7004ebe2-e98c-4cb2-9b34-2585509a58fb",
+      "label": "IsA",
+      "attributes": []
+    },
+    {
+      "id": "bb420478-ae9a-4664-bd9e-830e4d946bee",
+      "iri": "http://visualdataweb.org/newOntology/bb420478-ae9a-4664-bd9e-830e4d946bee",
+      "label": "IsA",
+      "attributes": "object",
+      "domain": "BH.oM.Geometry.Point",
+      "range": "BH.oM.Dimensional.IElement0D"
+    },
+    {
+      "id": "f185d2c8-2550-4582-a191-f0565950f831",
+      "iri": "http://visualdataweb.org/newOntology/f185d2c8-2550-4582-a191-f0565950f831",
+      "label": "IsA",
+      "attributes": "object",
+      "domain": "BH.oM.Geometry.Point",
+      "range": "BH.oM.Dimensional.IElement"
+    },
+    {
+      "id": "7ae39aa7-105d-42ca-8a73-37e835dbc387",
+      "iri": "http://visualdataweb.org/newOntology/7ae39aa7-105d-42ca-8a73-37e835dbc387",
+      "label": "IsSubclassOf",
+      "attributes": []
+    },
+    {
+      "id": "2b522e28-a90d-4752-a59a-b6c62edd4f6c",
+      "iri": "http://visualdataweb.org/newOntology/2b522e28-a90d-4752-a59a-b6c62edd4f6c",
+      "label": "HasProperty",
+      "attributes": "datatype",
+      "domain": "BH.oM.Geometry.Vector",
+      "range": "X-b643238a-010b-4c21-9234-c67c8fabedd7-Vector-HasProperty"
+    },
+    {
+      "id": "99b9dd5e-edc6-4311-8d2d-63007c4c5206",
+      "iri": "http://visualdataweb.org/newOntology/99b9dd5e-edc6-4311-8d2d-63007c4c5206",
+      "label": "HasProperty",
+      "attributes": "datatype",
+      "domain": "BH.oM.Geometry.Vector",
+      "range": "Y-1f7a4f2e-4ab8-4239-ab86-7f4aafbe01ce-Vector-HasProperty"
+    },
+    {
+      "id": "2d37306c-30ad-4863-8217-293bbe0753c8",
+      "iri": "http://visualdataweb.org/newOntology/2d37306c-30ad-4863-8217-293bbe0753c8",
+      "label": "HasProperty",
+      "attributes": "datatype",
+      "domain": "BH.oM.Geometry.Vector",
+      "range": "Z-1ecbc88a-9b8b-4624-ab9c-16c909f20864-Vector-HasProperty"
+    },
+    {
+      "id": "93cf5053-b0ac-4c5b-b598-1b871c39a31f",
+      "iri": "http://visualdataweb.org/newOntology/93cf5053-b0ac-4c5b-b598-1b871c39a31f",
+      "label": "IsA",
+      "attributes": "object",
+      "domain": "BH.oM.Geometry.Vector",
+      "range": "BH.oM.Geometry.IGeometry"
+    },
+    {
+      "id": "422881f1-1c42-4687-900c-3646266f218b",
+      "iri": "http://visualdataweb.org/newOntology/422881f1-1c42-4687-900c-3646266f218b",
+      "label": "IsA",
+      "attributes": "object",
+      "domain": "BH.oM.Geometry.Vector",
+      "range": "BH.oM.Base.IObject"
+    },
+    {
+      "id": "79a94455-74e0-465c-8aea-4b89ffa7d64b",
+      "iri": "http://visualdataweb.org/newOntology/79a94455-74e0-465c-8aea-4b89ffa7d64b",
+      "label": "IsA",
+      "attributes": []
+    },
+    {
+      "id": "d50d736d-53f6-4485-9c59-1ba1a8b48e19",
+      "iri": "http://visualdataweb.org/newOntology/d50d736d-53f6-4485-9c59-1ba1a8b48e19",
+      "label": "IsSubclassOf",
+      "attributes": []
+    },
+    {
+      "id": "f953999a-8b4d-4526-9d3c-76270a6321f1",
+      "iri": "http://visualdataweb.org/newOntology/f953999a-8b4d-4526-9d3c-76270a6321f1",
+      "label": "HasProperty",
+      "attributes": "object",
+      "domain": "BH.oM.Geometry.CoordinateSystem.Cartesian",
+      "range": "BH.oM.Geometry.Vector"
+    },
+    {
+      "id": "6c52dcd3-f1be-4875-a730-44906b87383e",
+      "iri": "http://visualdataweb.org/newOntology/6c52dcd3-f1be-4875-a730-44906b87383e",
+      "label": "HasProperty",
+      "attributes": "object",
+      "domain": "BH.oM.Geometry.CoordinateSystem.Cartesian",
+      "range": "BH.oM.Geometry.Vector"
+    },
+    {
+      "id": "ba8ba2cb-e949-48f5-97cc-af2ef5c2eeb2",
+      "iri": "http://visualdataweb.org/newOntology/ba8ba2cb-e949-48f5-97cc-af2ef5c2eeb2",
+      "label": "HasProperty",
+      "attributes": "object",
+      "domain": "BH.oM.Geometry.CoordinateSystem.Cartesian",
+      "range": "BH.oM.Geometry.Vector"
+    },
+    {
+      "id": "2fbf8a02-f371-4167-934b-50fb1669f367",
+      "iri": "http://visualdataweb.org/newOntology/2fbf8a02-f371-4167-934b-50fb1669f367",
+      "label": "HasProperty",
+      "attributes": "object",
+      "domain": "BH.oM.Geometry.CoordinateSystem.Cartesian",
+      "range": "BH.oM.Geometry.Point"
+    },
+    {
+      "id": "56849840-e563-4011-9b1e-263e094baefb",
+      "iri": "http://visualdataweb.org/newOntology/56849840-e563-4011-9b1e-263e094baefb",
+      "label": "IsA",
+      "attributes": "object",
+      "domain": "BH.oM.Geometry.CoordinateSystem.Cartesian",
+      "range": "BH.oM.Geometry.IGeometry"
+    },
+    {
+      "id": "ac4a16ac-f0e4-42df-aead-4655db32597d",
+      "iri": "http://visualdataweb.org/newOntology/ac4a16ac-f0e4-42df-aead-4655db32597d",
+      "label": "IsA",
+      "attributes": "object",
+      "domain": "BH.oM.Geometry.CoordinateSystem.Cartesian",
+      "range": "BH.oM.Base.IObject"
+    },
+    {
+      "id": "e77a5d7a-8b27-4283-8c88-01bb9be8eeca",
+      "iri": "http://visualdataweb.org/newOntology/e77a5d7a-8b27-4283-8c88-01bb9be8eeca",
+      "label": "IsA",
+      "attributes": "object",
+      "domain": "BH.oM.Geometry.CoordinateSystem.Cartesian",
+      "range": "BH.oM.Base.IImmutable"
+    },
+    {
+      "id": "55a2994a-0c78-49c6-8887-f98d27d35b7f",
+      "iri": "http://visualdataweb.org/newOntology/55a2994a-0c78-49c6-8887-f98d27d35b7f",
+      "label": "IsSubclassOf",
+      "attributes": []
+    },
+    {
+      "id": "1290eefb-5dd7-4f31-918b-da03d1824fdc",
+      "iri": "http://visualdataweb.org/newOntology/1290eefb-5dd7-4f31-918b-da03d1824fdc",
+      "label": "IsSubclassOf",
+      "attributes": []
+    }
+  ]
+}

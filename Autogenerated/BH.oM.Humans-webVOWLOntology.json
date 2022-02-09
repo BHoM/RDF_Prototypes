@@ -1,0 +1,5070 @@
+{
+  "comment": "Generated from BHoM RDF_Prototypes",
+  "namespace": [],
+  "class": [
+    {
+      "id": "BH.oM.Humans.Employee",
+      "type": "owl:Class"
+    },
+    {
+      "id": "BH.oM.Humans.HandStateName",
+      "type": "owl:Class"
+    },
+    {
+      "id": "BH.oM.Humans.JointName",
+      "type": "owl:Class"
+    },
+    {
+      "id": "BH.oM.Humans.Human",
+      "type": "owl:Class"
+    },
+    {
+      "id": "BH.oM.Humans.IHumanRole",
+      "type": "owl:Class"
+    },
+    {
+      "id": "BH.oM.Humans.Skeleton",
+      "type": "owl:Class"
+    },
+    {
+      "id": "BH.oM.Humans.ViewQuality.Audience",
+      "type": "owl:Class"
+    },
+    {
+      "id": "BH.oM.Humans.ViewQuality.AvalueSettings",
+      "type": "owl:Class"
+    },
+    {
+      "id": "BH.oM.Humans.ViewQuality.CvalueFocalMethodEnum",
+      "type": "owl:Class"
+    },
+    {
+      "id": "BH.oM.Humans.ViewQuality.CvalueSettings",
+      "type": "owl:Class"
+    },
+    {
+      "id": "BH.oM.Humans.ViewQuality.EvalueSettings",
+      "type": "owl:Class"
+    },
+    {
+      "id": "BH.oM.Humans.ViewQuality.EvalueViewEnum",
+      "type": "owl:Class"
+    },
+    {
+      "id": "BH.oM.Humans.ViewQuality.EyePositionParameters",
+      "type": "owl:Class"
+    },
+    {
+      "id": "BH.oM.Humans.ViewQuality.Avalue",
+      "type": "owl:Class"
+    },
+    {
+      "id": "BH.oM.Humans.ViewQuality.Cvalue",
+      "type": "owl:Class"
+    },
+    {
+      "id": "BH.oM.Humans.ViewQuality.Evalue",
+      "type": "owl:Class"
+    },
+    {
+      "id": "BH.oM.Humans.ViewQuality.ViewQualityResult",
+      "type": "owl:Class"
+    },
+    {
+      "id": "BH.oM.Humans.ViewQuality.Spectator",
+      "type": "owl:Class"
+    },
+    {
+      "id": "BH.oM.Humans.Interfaces.ILineBodyPart",
+      "type": "owl:Class"
+    },
+    {
+      "id": "BH.oM.Humans.Interfaces.IPointBodyPart",
+      "type": "owl:Class"
+    },
+    {
+      "id": "BH.oM.Humans.BodyParts.Eye",
+      "type": "owl:Class"
+    },
+    {
+      "id": "BH.oM.Humans.BodyParts.Head",
+      "type": "owl:Class"
+    },
+    {
+      "id": "BH.oM.Humans.BodyParts.LeftFoot",
+      "type": "owl:Class"
+    },
+    {
+      "id": "BH.oM.Humans.BodyParts.LeftHand",
+      "type": "owl:Class"
+    },
+    {
+      "id": "BH.oM.Humans.BodyParts.LeftHip",
+      "type": "owl:Class"
+    },
+    {
+      "id": "BH.oM.Humans.BodyParts.LeftLowerArm",
+      "type": "owl:Class"
+    },
+    {
+      "id": "BH.oM.Humans.BodyParts.LeftLowerLeg",
+      "type": "owl:Class"
+    },
+    {
+      "id": "BH.oM.Humans.BodyParts.LeftShoulder",
+      "type": "owl:Class"
+    },
+    {
+      "id": "BH.oM.Humans.BodyParts.LeftThumb",
+      "type": "owl:Class"
+    },
+    {
+      "id": "BH.oM.Humans.BodyParts.LeftUpperArm",
+      "type": "owl:Class"
+    },
+    {
+      "id": "BH.oM.Humans.BodyParts.LeftUpperLeg",
+      "type": "owl:Class"
+    },
+    {
+      "id": "BH.oM.Humans.BodyParts.Neck",
+      "type": "owl:Class"
+    },
+    {
+      "id": "BH.oM.Humans.BodyParts.PairOfEyes",
+      "type": "owl:Class"
+    },
+    {
+      "id": "BH.oM.Humans.BodyParts.RightFoot",
+      "type": "owl:Class"
+    },
+    {
+      "id": "BH.oM.Humans.BodyParts.RightHand",
+      "type": "owl:Class"
+    },
+    {
+      "id": "BH.oM.Humans.BodyParts.RightHip",
+      "type": "owl:Class"
+    },
+    {
+      "id": "BH.oM.Humans.BodyParts.RightLowerArm",
+      "type": "owl:Class"
+    },
+    {
+      "id": "BH.oM.Humans.BodyParts.RightLowerLeg",
+      "type": "owl:Class"
+    },
+    {
+      "id": "BH.oM.Humans.BodyParts.RightShoulder",
+      "type": "owl:Class"
+    },
+    {
+      "id": "BH.oM.Humans.BodyParts.RightThumb",
+      "type": "owl:Class"
+    },
+    {
+      "id": "BH.oM.Humans.BodyParts.RightUpperArm",
+      "type": "owl:Class"
+    },
+    {
+      "id": "BH.oM.Humans.BodyParts.RightUpperLeg",
+      "type": "owl:Class"
+    },
+    {
+      "id": "BH.oM.Humans.BodyParts.Spine",
+      "type": "owl:Class"
+    },
+    {
+      "id": "Company-e6da0090-7e7a-4cf4-bae1-f5048e5b13da-Employee-HasProperty",
+      "type": "rdfs:Datatype"
+    },
+    {
+      "id": "Office-2d5c0a79-57f4-4e57-85d4-09602aa810f7-Employee-HasProperty",
+      "type": "rdfs:Datatype"
+    },
+    {
+      "id": "Discipline-ca7332aa-396b-4c39-99d8-f9cfec4291fe-Employee-HasProperty",
+      "type": "rdfs:Datatype"
+    },
+    {
+      "id": "Team-f09c6535-bf7d-41a4-8c5f-8103747e63c7-Employee-HasProperty",
+      "type": "rdfs:Datatype"
+    },
+    {
+      "id": "Grade-c421a91d-2591-4196-9d08-8f6b58b9b517-Employee-HasProperty",
+      "type": "rdfs:Datatype"
+    },
+    {
+      "id": "Email-37407616-212b-4cc2-924e-6bd5868fe7c5-Employee-HasProperty",
+      "type": "rdfs:Datatype"
+    },
+    {
+      "id": "Phone-6e321895-7426-4bbe-bc27-3dd132e00feb-Employee-HasProperty",
+      "type": "rdfs:Datatype"
+    },
+    {
+      "id": "CodeDevelopmentRole-9d37f717-0344-4d16-8595-edf1663b42dc-Employee-HasProperty",
+      "type": "rdfs:Datatype"
+    },
+    {
+      "id": "BusinessUnit-bde5976b-35f7-4724-8835-ed954cf8e1e8-Employee-HasProperty",
+      "type": "rdfs:Datatype"
+    },
+    {
+      "id": "BH.oM.Base.IBHoMObject",
+      "type": "owl:Class"
+    },
+    {
+      "id": "BH.oM.Base.IObject",
+      "type": "owl:Class"
+    },
+    {
+      "id": "BH.oM.Base.BHoMObject",
+      "type": "owl:Class"
+    },
+    {
+      "id": "Roles-23d5aab4-0d53-4bde-bfeb-8f3d1f88f591-Human-HasProperty",
+      "type": "rdfs:Datatype"
+    },
+    {
+      "id": "BH.oM.Base.IBHoMObject",
+      "type": "owl:Class"
+    },
+    {
+      "id": "BH.oM.Base.IObject",
+      "type": "owl:Class"
+    },
+    {
+      "id": "BH.oM.Base.BHoMObject",
+      "type": "owl:Class"
+    },
+    {
+      "id": "BH.oM.Base.IObject",
+      "type": "owl:Class"
+    },
+    {
+      "id": "BH.oM.Base.IBHoMObject",
+      "type": "owl:Class"
+    },
+    {
+      "id": "BH.oM.Base.IObject",
+      "type": "owl:Class"
+    },
+    {
+      "id": "BH.oM.Base.BHoMObject",
+      "type": "owl:Class"
+    },
+    {
+      "id": "Spectators-fcbbab24-2096-47dc-ae64-d1da354c7ebc-Audience-HasProperty",
+      "type": "rdfs:Datatype"
+    },
+    {
+      "id": "BH.oM.Base.IBHoMObject",
+      "type": "owl:Class"
+    },
+    {
+      "id": "BH.oM.Base.IObject",
+      "type": "owl:Class"
+    },
+    {
+      "id": "BH.oM.Base.BHoMObject",
+      "type": "owl:Class"
+    },
+    {
+      "id": "BH.oM.Geometry.Polyline",
+      "type": "owl:Class"
+    },
+    {
+      "id": "FarClippingPlaneDistance-12126a9c-02ee-436b-974c-4f454e9081c4-AvalueSettings-HasProperty",
+      "type": "rdfs:Datatype"
+    },
+    {
+      "id": "CalculateOcclusion-beb81456-9155-42d9-a124-06924138616e-AvalueSettings-HasProperty",
+      "type": "rdfs:Datatype"
+    },
+    {
+      "id": "EffectiveConeOfVisionWidth-66c0b590-a439-4276-8ee4-b357d0be50d1-AvalueSettings-HasProperty",
+      "type": "rdfs:Datatype"
+    },
+    {
+      "id": "EffectiveConeOfVisionHeight-ce037fa7-2a63-4cd5-a188-b4d7e7045e53-AvalueSettings-HasProperty",
+      "type": "rdfs:Datatype"
+    },
+    {
+      "id": "NearClippingPlaneDistance-6dbe16e7-8ef2-40ec-ada6-6ef182e99509-AvalueSettings-HasProperty",
+      "type": "rdfs:Datatype"
+    },
+    {
+      "id": "BH.oM.Geometry.Point",
+      "type": "owl:Class"
+    },
+    {
+      "id": "BH.oM.Base.IBHoMObject",
+      "type": "owl:Class"
+    },
+    {
+      "id": "BH.oM.Base.IObject",
+      "type": "owl:Class"
+    },
+    {
+      "id": "BH.oM.Base.BHoMObject",
+      "type": "owl:Class"
+    },
+    {
+      "id": "DefaultCValue-398f3815-ee6c-4ea4-a49b-a52cbb9aa659-CvalueSettings-HasProperty",
+      "type": "rdfs:Datatype"
+    },
+    {
+      "id": "FarClippingPlaneDistance-d0e5c4a7-a85d-4a83-9bd9-12b1887279db-CvalueSettings-HasProperty",
+      "type": "rdfs:Datatype"
+    },
+    {
+      "id": "ViewConeAngle-7c67b23f-ef10-414e-9739-3119b9ee4883-CvalueSettings-HasProperty",
+      "type": "rdfs:Datatype"
+    },
+    {
+      "id": "BH.oM.Base.IBHoMObject",
+      "type": "owl:Class"
+    },
+    {
+      "id": "BH.oM.Base.IObject",
+      "type": "owl:Class"
+    },
+    {
+      "id": "BH.oM.Base.BHoMObject",
+      "type": "owl:Class"
+    },
+    {
+      "id": "BH.oM.Base.IBHoMObject",
+      "type": "owl:Class"
+    },
+    {
+      "id": "BH.oM.Base.IObject",
+      "type": "owl:Class"
+    },
+    {
+      "id": "BH.oM.Base.BHoMObject",
+      "type": "owl:Class"
+    },
+    {
+      "id": "EyePositionZ-7878879e-843c-4c42-8a82-25ae35d03595-EyePositionParameters-HasProperty",
+      "type": "rdfs:Datatype"
+    },
+    {
+      "id": "EyePositionX-8b3d0eab-2b19-4a92-9696-496ef2e708c2-EyePositionParameters-HasProperty",
+      "type": "rdfs:Datatype"
+    },
+    {
+      "id": "WheelChairEyePositionZ-1fe82b7d-1c27-4ffd-bd4e-bfd71c92baa0-EyePositionParameters-HasProperty",
+      "type": "rdfs:Datatype"
+    },
+    {
+      "id": "WheelChairEyePositionX-d57f97bf-c3c4-4bab-a319-c0cfffbb85f3-EyePositionParameters-HasProperty",
+      "type": "rdfs:Datatype"
+    },
+    {
+      "id": "StandingEyePositionZ-c051633a-5abd-4588-850e-80e69d65934b-EyePositionParameters-HasProperty",
+      "type": "rdfs:Datatype"
+    },
+    {
+      "id": "StandingEyePositionX-153a7534-3c01-48c6-94eb-51c43e9e8545-EyePositionParameters-HasProperty",
+      "type": "rdfs:Datatype"
+    },
+    {
+      "id": "BH.oM.Base.IBHoMObject",
+      "type": "owl:Class"
+    },
+    {
+      "id": "BH.oM.Base.IObject",
+      "type": "owl:Class"
+    },
+    {
+      "id": "BH.oM.Base.BHoMObject",
+      "type": "owl:Class"
+    },
+    {
+      "id": "AValue-d95506f5-f383-4d1f-87cf-4c5ada814458-Avalue-HasProperty",
+      "type": "rdfs:Datatype"
+    },
+    {
+      "id": "Occulsion-a26ad718-b907-4eab-9ed3-fb238bc94bf9-Avalue-HasProperty",
+      "type": "rdfs:Datatype"
+    },
+    {
+      "id": "BH.oM.Geometry.Polyline",
+      "type": "owl:Class"
+    },
+    {
+      "id": "BH.oM.Geometry.Polyline",
+      "type": "owl:Class"
+    },
+    {
+      "id": "BH.oM.Geometry.Polyline",
+      "type": "owl:Class"
+    },
+    {
+      "id": "BH.oM.Geometry.Point",
+      "type": "owl:Class"
+    },
+    {
+      "id": "OccludingHeads-4220e04b-e968-4387-a734-3d17ff7d661d-Avalue-HasProperty",
+      "type": "rdfs:Datatype"
+    },
+    {
+      "id": "BH.oM.Analytical.Results.IObjectIdResult",
+      "type": "owl:Class"
+    },
+    {
+      "id": "BH.oM.Analytical.Results.IResult",
+      "type": "owl:Class"
+    },
+    {
+      "id": "BH.oM.Base.IObject",
+      "type": "owl:Class"
+    },
+    {
+      "id": "BH.oM.Base.IImmutable",
+      "type": "owl:Class"
+    },
+    {
+      "id": "BH.oM.Analytical.Results.ICasedResult",
+      "type": "owl:Class"
+    },
+    {
+      "id": "BH.oM.Analytical.Results.ITimeStepResult",
+      "type": "owl:Class"
+    },
+    {
+      "id": "CValue-3987c0c9-968b-499a-b370-98b3c097e382-Cvalue-HasProperty",
+      "type": "rdfs:Datatype"
+    },
+    {
+      "id": "HorizDist-0b535716-6489-433d-8d98-da8eb5b4ab67-Cvalue-HasProperty",
+      "type": "rdfs:Datatype"
+    },
+    {
+      "id": "HeightAbovePitch-39ad93c1-234b-4e3f-974d-944711832011-Cvalue-HasProperty",
+      "type": "rdfs:Datatype"
+    },
+    {
+      "id": "AbsoluteDist-f42cf32d-4f08-4a44-b549-1a140c9b842d-Cvalue-HasProperty",
+      "type": "rdfs:Datatype"
+    },
+    {
+      "id": "BH.oM.Geometry.Point",
+      "type": "owl:Class"
+    },
+    {
+      "id": "BH.oM.Analytical.Results.IObjectIdResult",
+      "type": "owl:Class"
+    },
+    {
+      "id": "BH.oM.Analytical.Results.IResult",
+      "type": "owl:Class"
+    },
+    {
+      "id": "BH.oM.Base.IObject",
+      "type": "owl:Class"
+    },
+    {
+      "id": "BH.oM.Base.IImmutable",
+      "type": "owl:Class"
+    },
+    {
+      "id": "BH.oM.Analytical.Results.ICasedResult",
+      "type": "owl:Class"
+    },
+    {
+      "id": "BH.oM.Analytical.Results.ITimeStepResult",
+      "type": "owl:Class"
+    },
+    {
+      "id": "Torsion-e4807982-e7cf-4941-b3e6-8f9a7e08fcba-Evalue-HasProperty",
+      "type": "rdfs:Datatype"
+    },
+    {
+      "id": "HorizViewAng-f948d33a-8417-4c0d-8cd5-d45ba6dfbce5-Evalue-HasProperty",
+      "type": "rdfs:Datatype"
+    },
+    {
+      "id": "BH.oM.Geometry.Vector",
+      "type": "owl:Class"
+    },
+    {
+      "id": "BH.oM.Geometry.Vector",
+      "type": "owl:Class"
+    },
+    {
+      "id": "VertViewAng-4fde8521-ae99-4d06-b6b2-ceec1c823ce0-Evalue-HasProperty",
+      "type": "rdfs:Datatype"
+    },
+    {
+      "id": "BH.oM.Analytical.Results.IObjectIdResult",
+      "type": "owl:Class"
+    },
+    {
+      "id": "BH.oM.Analytical.Results.IResult",
+      "type": "owl:Class"
+    },
+    {
+      "id": "BH.oM.Base.IObject",
+      "type": "owl:Class"
+    },
+    {
+      "id": "BH.oM.Base.IImmutable",
+      "type": "owl:Class"
+    },
+    {
+      "id": "BH.oM.Analytical.Results.ICasedResult",
+      "type": "owl:Class"
+    },
+    {
+      "id": "BH.oM.Analytical.Results.ITimeStepResult",
+      "type": "owl:Class"
+    },
+    {
+      "id": "ObjectId-ac9f1765-4903-4119-b476-84a6b54b6dbe-ViewQualityResult-HasProperty",
+      "type": "rdfs:Datatype"
+    },
+    {
+      "id": "ResultCase-dd9dc471-8e85-4584-973d-88e6d79c93d6-ViewQualityResult-HasProperty",
+      "type": "rdfs:Datatype"
+    },
+    {
+      "id": "TimeStep-559417e4-f94b-4161-85e2-03913b09dcfc-ViewQualityResult-HasProperty",
+      "type": "rdfs:Datatype"
+    },
+    {
+      "id": "BH.oM.Analytical.Results.IObjectIdResult",
+      "type": "owl:Class"
+    },
+    {
+      "id": "BH.oM.Analytical.Results.IResult",
+      "type": "owl:Class"
+    },
+    {
+      "id": "BH.oM.Base.IObject",
+      "type": "owl:Class"
+    },
+    {
+      "id": "BH.oM.Base.IImmutable",
+      "type": "owl:Class"
+    },
+    {
+      "id": "BH.oM.Analytical.Results.ICasedResult",
+      "type": "owl:Class"
+    },
+    {
+      "id": "BH.oM.Analytical.Results.ITimeStepResult",
+      "type": "owl:Class"
+    },
+    {
+      "id": "BH.oM.Geometry.Polyline",
+      "type": "owl:Class"
+    },
+    {
+      "id": "BH.oM.Base.IBHoMObject",
+      "type": "owl:Class"
+    },
+    {
+      "id": "BH.oM.Base.IObject",
+      "type": "owl:Class"
+    },
+    {
+      "id": "BH.oM.Base.BHoMObject",
+      "type": "owl:Class"
+    },
+    {
+      "id": "BH.oM.Geometry.Line",
+      "type": "owl:Class"
+    },
+    {
+      "id": "BH.oM.Base.IObject",
+      "type": "owl:Class"
+    },
+    {
+      "id": "BH.oM.Geometry.Point",
+      "type": "owl:Class"
+    },
+    {
+      "id": "BH.oM.Base.IObject",
+      "type": "owl:Class"
+    },
+    {
+      "id": "BH.oM.Geometry.Point",
+      "type": "owl:Class"
+    },
+    {
+      "id": "BH.oM.Base.IObject",
+      "type": "owl:Class"
+    },
+    {
+      "id": "BH.oM.Geometry.Point",
+      "type": "owl:Class"
+    },
+    {
+      "id": "BH.oM.Base.IObject",
+      "type": "owl:Class"
+    },
+    {
+      "id": "BH.oM.Geometry.Line",
+      "type": "owl:Class"
+    },
+    {
+      "id": "BH.oM.Base.IObject",
+      "type": "owl:Class"
+    },
+    {
+      "id": "BH.oM.Geometry.Point",
+      "type": "owl:Class"
+    },
+    {
+      "id": "BH.oM.Geometry.Line",
+      "type": "owl:Class"
+    },
+    {
+      "id": "BH.oM.Base.IObject",
+      "type": "owl:Class"
+    },
+    {
+      "id": "BH.oM.Geometry.Line",
+      "type": "owl:Class"
+    },
+    {
+      "id": "BH.oM.Base.IObject",
+      "type": "owl:Class"
+    },
+    {
+      "id": "BH.oM.Geometry.Line",
+      "type": "owl:Class"
+    },
+    {
+      "id": "BH.oM.Base.IObject",
+      "type": "owl:Class"
+    },
+    {
+      "id": "BH.oM.Geometry.Line",
+      "type": "owl:Class"
+    },
+    {
+      "id": "BH.oM.Base.IObject",
+      "type": "owl:Class"
+    },
+    {
+      "id": "BH.oM.Geometry.Line",
+      "type": "owl:Class"
+    },
+    {
+      "id": "BH.oM.Base.IObject",
+      "type": "owl:Class"
+    },
+    {
+      "id": "BH.oM.Geometry.Point",
+      "type": "owl:Class"
+    },
+    {
+      "id": "BH.oM.Geometry.Line",
+      "type": "owl:Class"
+    },
+    {
+      "id": "BH.oM.Base.IObject",
+      "type": "owl:Class"
+    },
+    {
+      "id": "BH.oM.Geometry.Line",
+      "type": "owl:Class"
+    },
+    {
+      "id": "BH.oM.Base.IObject",
+      "type": "owl:Class"
+    },
+    {
+      "id": "BH.oM.Geometry.Line",
+      "type": "owl:Class"
+    },
+    {
+      "id": "BH.oM.Base.IObject",
+      "type": "owl:Class"
+    },
+    {
+      "id": "BH.oM.Geometry.Line",
+      "type": "owl:Class"
+    },
+    {
+      "id": "BH.oM.Base.IObject",
+      "type": "owl:Class"
+    },
+    {
+      "id": "BH.oM.Geometry.Point",
+      "type": "owl:Class"
+    },
+    {
+      "id": "BH.oM.Geometry.Point",
+      "type": "owl:Class"
+    },
+    {
+      "id": "BH.oM.Geometry.Vector",
+      "type": "owl:Class"
+    },
+    {
+      "id": "BH.oM.Base.IObject",
+      "type": "owl:Class"
+    },
+    {
+      "id": "BH.oM.Geometry.Line",
+      "type": "owl:Class"
+    },
+    {
+      "id": "BH.oM.Base.IObject",
+      "type": "owl:Class"
+    },
+    {
+      "id": "BH.oM.Geometry.Point",
+      "type": "owl:Class"
+    },
+    {
+      "id": "BH.oM.Geometry.Line",
+      "type": "owl:Class"
+    },
+    {
+      "id": "BH.oM.Base.IObject",
+      "type": "owl:Class"
+    },
+    {
+      "id": "BH.oM.Geometry.Line",
+      "type": "owl:Class"
+    },
+    {
+      "id": "BH.oM.Base.IObject",
+      "type": "owl:Class"
+    },
+    {
+      "id": "BH.oM.Geometry.Line",
+      "type": "owl:Class"
+    },
+    {
+      "id": "BH.oM.Base.IObject",
+      "type": "owl:Class"
+    },
+    {
+      "id": "BH.oM.Geometry.Line",
+      "type": "owl:Class"
+    },
+    {
+      "id": "BH.oM.Base.IObject",
+      "type": "owl:Class"
+    },
+    {
+      "id": "BH.oM.Geometry.Line",
+      "type": "owl:Class"
+    },
+    {
+      "id": "BH.oM.Base.IObject",
+      "type": "owl:Class"
+    },
+    {
+      "id": "BH.oM.Geometry.Point",
+      "type": "owl:Class"
+    },
+    {
+      "id": "BH.oM.Geometry.Line",
+      "type": "owl:Class"
+    },
+    {
+      "id": "BH.oM.Base.IObject",
+      "type": "owl:Class"
+    },
+    {
+      "id": "BH.oM.Geometry.Line",
+      "type": "owl:Class"
+    },
+    {
+      "id": "BH.oM.Base.IObject",
+      "type": "owl:Class"
+    },
+    {
+      "id": "BH.oM.Geometry.Line",
+      "type": "owl:Class"
+    },
+    {
+      "id": "BH.oM.Base.IObject",
+      "type": "owl:Class"
+    },
+    {
+      "id": "BH.oM.Geometry.Line",
+      "type": "owl:Class"
+    },
+    {
+      "id": "BH.oM.Base.IObject",
+      "type": "owl:Class"
+    }
+  ],
+  "classAttribute": [
+    {
+      "id": "BH.oM.Humans.Employee",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/Humans_oM/Employee.cs",
+      "label": "Employee (BH.oM.Humans)",
+      "attributes": []
+    },
+    {
+      "id": "BH.oM.Humans.HandStateName",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/Humans_oM/HandStateName.cs",
+      "label": "HandStateName (BH.oM.Humans)",
+      "attributes": []
+    },
+    {
+      "id": "BH.oM.Humans.JointName",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/Humans_oM/JointName.cs",
+      "label": "JointName (BH.oM.Humans)",
+      "attributes": []
+    },
+    {
+      "id": "BH.oM.Humans.Human",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/Humans_oM/Human.cs",
+      "label": "Human (BH.oM.Humans)",
+      "attributes": []
+    },
+    {
+      "id": "BH.oM.Humans.IHumanRole",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/Humans_oM/IHumanRole.cs",
+      "label": "IHumanRole (BH.oM.Humans)",
+      "attributes": []
+    },
+    {
+      "id": "BH.oM.Humans.Skeleton",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/Humans_oM/Skeleton.cs",
+      "label": "Skeleton (BH.oM.Humans)",
+      "attributes": []
+    },
+    {
+      "id": "BH.oM.Humans.ViewQuality.Audience",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/Humans_oM/ViewQuality/Audience.cs",
+      "label": "Audience (BH.oM.Humans.ViewQuality)",
+      "attributes": []
+    },
+    {
+      "id": "BH.oM.Humans.ViewQuality.AvalueSettings",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/Humans_oM/ViewQuality/AvalueSettings.cs",
+      "label": "AvalueSettings (BH.oM.Humans.ViewQuality)",
+      "attributes": []
+    },
+    {
+      "id": "BH.oM.Humans.ViewQuality.CvalueFocalMethodEnum",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/Humans_oM/ViewQuality/CvalueFocalMethodEnum.cs",
+      "label": "CvalueFocalMethodEnum (BH.oM.Humans.ViewQuality)",
+      "attributes": []
+    },
+    {
+      "id": "BH.oM.Humans.ViewQuality.CvalueSettings",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/Humans_oM/ViewQuality/CvalueSettings.cs",
+      "label": "CvalueSettings (BH.oM.Humans.ViewQuality)",
+      "attributes": []
+    },
+    {
+      "id": "BH.oM.Humans.ViewQuality.EvalueSettings",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/Humans_oM/ViewQuality/EvalueSettings.cs",
+      "label": "EvalueSettings (BH.oM.Humans.ViewQuality)",
+      "attributes": []
+    },
+    {
+      "id": "BH.oM.Humans.ViewQuality.EvalueViewEnum",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/Humans_oM/ViewQuality/EvalueViewEnum.cs",
+      "label": "EvalueViewEnum (BH.oM.Humans.ViewQuality)",
+      "attributes": []
+    },
+    {
+      "id": "BH.oM.Humans.ViewQuality.EyePositionParameters",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/Humans_oM/ViewQuality/EyePositionParameters.cs",
+      "label": "EyePositionParameters (BH.oM.Humans.ViewQuality)",
+      "attributes": []
+    },
+    {
+      "id": "BH.oM.Humans.ViewQuality.Avalue",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/Humans_oM/ViewQuality/Avalue.cs",
+      "label": "Avalue (BH.oM.Humans.ViewQuality)",
+      "attributes": []
+    },
+    {
+      "id": "BH.oM.Humans.ViewQuality.Cvalue",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/Humans_oM/ViewQuality/Cvalue.cs",
+      "label": "Cvalue (BH.oM.Humans.ViewQuality)",
+      "attributes": []
+    },
+    {
+      "id": "BH.oM.Humans.ViewQuality.Evalue",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/Humans_oM/ViewQuality/Evalue.cs",
+      "label": "Evalue (BH.oM.Humans.ViewQuality)",
+      "attributes": []
+    },
+    {
+      "id": "BH.oM.Humans.ViewQuality.ViewQualityResult",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/Humans_oM/ViewQuality/ViewQualityResult.cs",
+      "label": "ViewQualityResult (BH.oM.Humans.ViewQuality)",
+      "attributes": []
+    },
+    {
+      "id": "BH.oM.Humans.ViewQuality.Spectator",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/Humans_oM/ViewQuality/Spectator.cs",
+      "label": "Spectator (BH.oM.Humans.ViewQuality)",
+      "attributes": []
+    },
+    {
+      "id": "BH.oM.Humans.Interfaces.ILineBodyPart",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/Humans_oM/Interfaces/ILineBodyPart.cs",
+      "label": "ILineBodyPart (BH.oM.Humans.Interfaces)",
+      "attributes": []
+    },
+    {
+      "id": "BH.oM.Humans.Interfaces.IPointBodyPart",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/Humans_oM/Interfaces/IPointBodyPart.cs",
+      "label": "IPointBodyPart (BH.oM.Humans.Interfaces)",
+      "attributes": []
+    },
+    {
+      "id": "BH.oM.Humans.BodyParts.Eye",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/Humans_oM/BodyParts/Eye.cs",
+      "label": "Eye (BH.oM.Humans.BodyParts)",
+      "attributes": []
+    },
+    {
+      "id": "BH.oM.Humans.BodyParts.Head",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/Humans_oM/BodyParts/Head.cs",
+      "label": "Head (BH.oM.Humans.BodyParts)",
+      "attributes": []
+    },
+    {
+      "id": "BH.oM.Humans.BodyParts.LeftFoot",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/Humans_oM/BodyParts/LeftFoot.cs",
+      "label": "LeftFoot (BH.oM.Humans.BodyParts)",
+      "attributes": []
+    },
+    {
+      "id": "BH.oM.Humans.BodyParts.LeftHand",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/Humans_oM/BodyParts/LeftHand.cs",
+      "label": "LeftHand (BH.oM.Humans.BodyParts)",
+      "attributes": []
+    },
+    {
+      "id": "BH.oM.Humans.BodyParts.LeftHip",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/Humans_oM/BodyParts/LeftHip.cs",
+      "label": "LeftHip (BH.oM.Humans.BodyParts)",
+      "attributes": []
+    },
+    {
+      "id": "BH.oM.Humans.BodyParts.LeftLowerArm",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/Humans_oM/BodyParts/LeftLowerArm.cs",
+      "label": "LeftLowerArm (BH.oM.Humans.BodyParts)",
+      "attributes": []
+    },
+    {
+      "id": "BH.oM.Humans.BodyParts.LeftLowerLeg",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/Humans_oM/BodyParts/LeftLowerLeg.cs",
+      "label": "LeftLowerLeg (BH.oM.Humans.BodyParts)",
+      "attributes": []
+    },
+    {
+      "id": "BH.oM.Humans.BodyParts.LeftShoulder",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/Humans_oM/BodyParts/LeftShoulder.cs",
+      "label": "LeftShoulder (BH.oM.Humans.BodyParts)",
+      "attributes": []
+    },
+    {
+      "id": "BH.oM.Humans.BodyParts.LeftThumb",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/Humans_oM/BodyParts/LeftThumb.cs",
+      "label": "LeftThumb (BH.oM.Humans.BodyParts)",
+      "attributes": []
+    },
+    {
+      "id": "BH.oM.Humans.BodyParts.LeftUpperArm",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/Humans_oM/BodyParts/LeftUpperArm.cs",
+      "label": "LeftUpperArm (BH.oM.Humans.BodyParts)",
+      "attributes": []
+    },
+    {
+      "id": "BH.oM.Humans.BodyParts.LeftUpperLeg",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/Humans_oM/BodyParts/LeftUpperLeg.cs",
+      "label": "LeftUpperLeg (BH.oM.Humans.BodyParts)",
+      "attributes": []
+    },
+    {
+      "id": "BH.oM.Humans.BodyParts.Neck",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/Humans_oM/BodyParts/Neck.cs",
+      "label": "Neck (BH.oM.Humans.BodyParts)",
+      "attributes": []
+    },
+    {
+      "id": "BH.oM.Humans.BodyParts.PairOfEyes",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/Humans_oM/BodyParts/PairOfEyes.cs",
+      "label": "PairOfEyes (BH.oM.Humans.BodyParts)",
+      "attributes": []
+    },
+    {
+      "id": "BH.oM.Humans.BodyParts.RightFoot",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/Humans_oM/BodyParts/RightFoot.cs",
+      "label": "RightFoot (BH.oM.Humans.BodyParts)",
+      "attributes": []
+    },
+    {
+      "id": "BH.oM.Humans.BodyParts.RightHand",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/Humans_oM/BodyParts/RightHand.cs",
+      "label": "RightHand (BH.oM.Humans.BodyParts)",
+      "attributes": []
+    },
+    {
+      "id": "BH.oM.Humans.BodyParts.RightHip",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/Humans_oM/BodyParts/RightHip.cs",
+      "label": "RightHip (BH.oM.Humans.BodyParts)",
+      "attributes": []
+    },
+    {
+      "id": "BH.oM.Humans.BodyParts.RightLowerArm",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/Humans_oM/BodyParts/RightLowerArm.cs",
+      "label": "RightLowerArm (BH.oM.Humans.BodyParts)",
+      "attributes": []
+    },
+    {
+      "id": "BH.oM.Humans.BodyParts.RightLowerLeg",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/Humans_oM/BodyParts/RightLowerLeg.cs",
+      "label": "RightLowerLeg (BH.oM.Humans.BodyParts)",
+      "attributes": []
+    },
+    {
+      "id": "BH.oM.Humans.BodyParts.RightShoulder",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/Humans_oM/BodyParts/RightShoulder.cs",
+      "label": "RightShoulder (BH.oM.Humans.BodyParts)",
+      "attributes": []
+    },
+    {
+      "id": "BH.oM.Humans.BodyParts.RightThumb",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/Humans_oM/BodyParts/RightThumb.cs",
+      "label": "RightThumb (BH.oM.Humans.BodyParts)",
+      "attributes": []
+    },
+    {
+      "id": "BH.oM.Humans.BodyParts.RightUpperArm",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/Humans_oM/BodyParts/RightUpperArm.cs",
+      "label": "RightUpperArm (BH.oM.Humans.BodyParts)",
+      "attributes": []
+    },
+    {
+      "id": "BH.oM.Humans.BodyParts.RightUpperLeg",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/Humans_oM/BodyParts/RightUpperLeg.cs",
+      "label": "RightUpperLeg (BH.oM.Humans.BodyParts)",
+      "attributes": []
+    },
+    {
+      "id": "BH.oM.Humans.BodyParts.Spine",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/Humans_oM/BodyParts/Spine.cs",
+      "label": "Spine (BH.oM.Humans.BodyParts)",
+      "attributes": []
+    },
+    {
+      "id": "Company-e6da0090-7e7a-4cf4-bae1-f5048e5b13da-Employee-HasProperty",
+      "iri": "http://www.w3.org/2001/XMLSchema#",
+      "label": "Company (String)",
+      "attributes": "datatype"
+    },
+    {
+      "id": "Office-2d5c0a79-57f4-4e57-85d4-09602aa810f7-Employee-HasProperty",
+      "iri": "http://www.w3.org/2001/XMLSchema#",
+      "label": "Office (String)",
+      "attributes": "datatype"
+    },
+    {
+      "id": "Discipline-ca7332aa-396b-4c39-99d8-f9cfec4291fe-Employee-HasProperty",
+      "iri": "http://www.w3.org/2001/XMLSchema#",
+      "label": "Discipline (String)",
+      "attributes": "datatype"
+    },
+    {
+      "id": "Team-f09c6535-bf7d-41a4-8c5f-8103747e63c7-Employee-HasProperty",
+      "iri": "http://www.w3.org/2001/XMLSchema#",
+      "label": "Team (String)",
+      "attributes": "datatype"
+    },
+    {
+      "id": "Grade-c421a91d-2591-4196-9d08-8f6b58b9b517-Employee-HasProperty",
+      "iri": "http://www.w3.org/2001/XMLSchema#",
+      "label": "Grade (String)",
+      "attributes": "datatype"
+    },
+    {
+      "id": "Email-37407616-212b-4cc2-924e-6bd5868fe7c5-Employee-HasProperty",
+      "iri": "http://www.w3.org/2001/XMLSchema#",
+      "label": "Email (String)",
+      "attributes": "datatype"
+    },
+    {
+      "id": "Phone-6e321895-7426-4bbe-bc27-3dd132e00feb-Employee-HasProperty",
+      "iri": "http://www.w3.org/2001/XMLSchema#",
+      "label": "Phone (String)",
+      "attributes": "datatype"
+    },
+    {
+      "id": "CodeDevelopmentRole-9d37f717-0344-4d16-8595-edf1663b42dc-Employee-HasProperty",
+      "iri": "http://www.w3.org/2001/XMLSchema#",
+      "label": "CodeDevelopmentRole (String)",
+      "attributes": "datatype"
+    },
+    {
+      "id": "BusinessUnit-bde5976b-35f7-4724-8835-ed954cf8e1e8-Employee-HasProperty",
+      "iri": "http://www.w3.org/2001/XMLSchema#",
+      "label": "BusinessUnit (String)",
+      "attributes": "datatype"
+    },
+    {
+      "id": "BH.oM.Base.IBHoMObject",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/BHoM/Interface/IBHoMObject.cs",
+      "label": "IBHoMObject",
+      "attributes": []
+    },
+    {
+      "id": "BH.oM.Base.IObject",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/BHoM/Interface/IObject.cs",
+      "label": "IObject",
+      "attributes": []
+    },
+    {
+      "id": "BH.oM.Base.BHoMObject",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/BHoM/BHoMObject.cs",
+      "label": "BHoMObject",
+      "attributes": []
+    },
+    {
+      "id": "Roles-23d5aab4-0d53-4bde-bfeb-8f3d1f88f591-Human-HasProperty",
+      "iri": "http://www.w3.org/2001/XMLSchema#",
+      "label": "Roles (List<IHumanRole>)",
+      "attributes": "datatype"
+    },
+    {
+      "id": "BH.oM.Base.IBHoMObject",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/BHoM/Interface/IBHoMObject.cs",
+      "label": "IBHoMObject",
+      "attributes": []
+    },
+    {
+      "id": "BH.oM.Base.IObject",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/BHoM/Interface/IObject.cs",
+      "label": "IObject",
+      "attributes": []
+    },
+    {
+      "id": "BH.oM.Base.BHoMObject",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/BHoM/BHoMObject.cs",
+      "label": "BHoMObject",
+      "attributes": []
+    },
+    {
+      "id": "BH.oM.Base.IObject",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/BHoM/Interface/IObject.cs",
+      "label": "IObject",
+      "attributes": []
+    },
+    {
+      "id": "BH.oM.Base.IBHoMObject",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/BHoM/Interface/IBHoMObject.cs",
+      "label": "IBHoMObject",
+      "attributes": []
+    },
+    {
+      "id": "BH.oM.Base.IObject",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/BHoM/Interface/IObject.cs",
+      "label": "IObject",
+      "attributes": []
+    },
+    {
+      "id": "BH.oM.Base.BHoMObject",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/BHoM/BHoMObject.cs",
+      "label": "BHoMObject",
+      "attributes": []
+    },
+    {
+      "id": "Spectators-fcbbab24-2096-47dc-ae64-d1da354c7ebc-Audience-HasProperty",
+      "iri": "http://www.w3.org/2001/XMLSchema#",
+      "label": "Spectators (List<Spectator>)",
+      "attributes": "datatype"
+    },
+    {
+      "id": "BH.oM.Base.IBHoMObject",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/BHoM/Interface/IBHoMObject.cs",
+      "label": "IBHoMObject",
+      "attributes": []
+    },
+    {
+      "id": "BH.oM.Base.IObject",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/BHoM/Interface/IObject.cs",
+      "label": "IObject",
+      "attributes": []
+    },
+    {
+      "id": "BH.oM.Base.BHoMObject",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/BHoM/BHoMObject.cs",
+      "label": "BHoMObject",
+      "attributes": []
+    },
+    {
+      "id": "BH.oM.Geometry.Polyline",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/Geometry_oM/Polyline.cs",
+      "label": "EffectiveConeOfVision (Polyline)",
+      "attributes": []
+    },
+    {
+      "id": "FarClippingPlaneDistance-12126a9c-02ee-436b-974c-4f454e9081c4-AvalueSettings-HasProperty",
+      "iri": "http://www.w3.org/2001/XMLSchema#",
+      "label": "FarClippingPlaneDistance (Double)",
+      "attributes": "datatype"
+    },
+    {
+      "id": "CalculateOcclusion-beb81456-9155-42d9-a124-06924138616e-AvalueSettings-HasProperty",
+      "iri": "http://www.w3.org/2001/XMLSchema#",
+      "label": "CalculateOcclusion (Boolean)",
+      "attributes": "datatype"
+    },
+    {
+      "id": "EffectiveConeOfVisionWidth-66c0b590-a439-4276-8ee4-b357d0be50d1-AvalueSettings-HasProperty",
+      "iri": "http://www.w3.org/2001/XMLSchema#",
+      "label": "EffectiveConeOfVisionWidth (Double)",
+      "attributes": "datatype"
+    },
+    {
+      "id": "EffectiveConeOfVisionHeight-ce037fa7-2a63-4cd5-a188-b4d7e7045e53-AvalueSettings-HasProperty",
+      "iri": "http://www.w3.org/2001/XMLSchema#",
+      "label": "EffectiveConeOfVisionHeight (Double)",
+      "attributes": "datatype"
+    },
+    {
+      "id": "NearClippingPlaneDistance-6dbe16e7-8ef2-40ec-ada6-6ef182e99509-AvalueSettings-HasProperty",
+      "iri": "http://www.w3.org/2001/XMLSchema#",
+      "label": "NearClippingPlaneDistance (Double)",
+      "attributes": "datatype"
+    },
+    {
+      "id": "BH.oM.Geometry.Point",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/Geometry_oM/Point.cs",
+      "label": "FocalPoint (Point)",
+      "attributes": []
+    },
+    {
+      "id": "BH.oM.Base.IBHoMObject",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/BHoM/Interface/IBHoMObject.cs",
+      "label": "IBHoMObject",
+      "attributes": []
+    },
+    {
+      "id": "BH.oM.Base.IObject",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/BHoM/Interface/IObject.cs",
+      "label": "IObject",
+      "attributes": []
+    },
+    {
+      "id": "BH.oM.Base.BHoMObject",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/BHoM/BHoMObject.cs",
+      "label": "BHoMObject",
+      "attributes": []
+    },
+    {
+      "id": "DefaultCValue-398f3815-ee6c-4ea4-a49b-a52cbb9aa659-CvalueSettings-HasProperty",
+      "iri": "http://www.w3.org/2001/XMLSchema#",
+      "label": "DefaultCValue (Double)",
+      "attributes": "datatype"
+    },
+    {
+      "id": "FarClippingPlaneDistance-d0e5c4a7-a85d-4a83-9bd9-12b1887279db-CvalueSettings-HasProperty",
+      "iri": "http://www.w3.org/2001/XMLSchema#",
+      "label": "FarClippingPlaneDistance (Double)",
+      "attributes": "datatype"
+    },
+    {
+      "id": "ViewConeAngle-7c67b23f-ef10-414e-9739-3119b9ee4883-CvalueSettings-HasProperty",
+      "iri": "http://www.w3.org/2001/XMLSchema#",
+      "label": "ViewConeAngle (Double)",
+      "attributes": "datatype"
+    },
+    {
+      "id": "BH.oM.Base.IBHoMObject",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/BHoM/Interface/IBHoMObject.cs",
+      "label": "IBHoMObject",
+      "attributes": []
+    },
+    {
+      "id": "BH.oM.Base.IObject",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/BHoM/Interface/IObject.cs",
+      "label": "IObject",
+      "attributes": []
+    },
+    {
+      "id": "BH.oM.Base.BHoMObject",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/BHoM/BHoMObject.cs",
+      "label": "BHoMObject",
+      "attributes": []
+    },
+    {
+      "id": "BH.oM.Base.IBHoMObject",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/BHoM/Interface/IBHoMObject.cs",
+      "label": "IBHoMObject",
+      "attributes": []
+    },
+    {
+      "id": "BH.oM.Base.IObject",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/BHoM/Interface/IObject.cs",
+      "label": "IObject",
+      "attributes": []
+    },
+    {
+      "id": "BH.oM.Base.BHoMObject",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/BHoM/BHoMObject.cs",
+      "label": "BHoMObject",
+      "attributes": []
+    },
+    {
+      "id": "EyePositionZ-7878879e-843c-4c42-8a82-25ae35d03595-EyePositionParameters-HasProperty",
+      "iri": "http://www.w3.org/2001/XMLSchema#",
+      "label": "EyePositionZ (Double)",
+      "attributes": "datatype"
+    },
+    {
+      "id": "EyePositionX-8b3d0eab-2b19-4a92-9696-496ef2e708c2-EyePositionParameters-HasProperty",
+      "iri": "http://www.w3.org/2001/XMLSchema#",
+      "label": "EyePositionX (Double)",
+      "attributes": "datatype"
+    },
+    {
+      "id": "WheelChairEyePositionZ-1fe82b7d-1c27-4ffd-bd4e-bfd71c92baa0-EyePositionParameters-HasProperty",
+      "iri": "http://www.w3.org/2001/XMLSchema#",
+      "label": "WheelChairEyePositionZ (Double)",
+      "attributes": "datatype"
+    },
+    {
+      "id": "WheelChairEyePositionX-d57f97bf-c3c4-4bab-a319-c0cfffbb85f3-EyePositionParameters-HasProperty",
+      "iri": "http://www.w3.org/2001/XMLSchema#",
+      "label": "WheelChairEyePositionX (Double)",
+      "attributes": "datatype"
+    },
+    {
+      "id": "StandingEyePositionZ-c051633a-5abd-4588-850e-80e69d65934b-EyePositionParameters-HasProperty",
+      "iri": "http://www.w3.org/2001/XMLSchema#",
+      "label": "StandingEyePositionZ (Double)",
+      "attributes": "datatype"
+    },
+    {
+      "id": "StandingEyePositionX-153a7534-3c01-48c6-94eb-51c43e9e8545-EyePositionParameters-HasProperty",
+      "iri": "http://www.w3.org/2001/XMLSchema#",
+      "label": "StandingEyePositionX (Double)",
+      "attributes": "datatype"
+    },
+    {
+      "id": "BH.oM.Base.IBHoMObject",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/BHoM/Interface/IBHoMObject.cs",
+      "label": "IBHoMObject",
+      "attributes": []
+    },
+    {
+      "id": "BH.oM.Base.IObject",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/BHoM/Interface/IObject.cs",
+      "label": "IObject",
+      "attributes": []
+    },
+    {
+      "id": "BH.oM.Base.BHoMObject",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/BHoM/BHoMObject.cs",
+      "label": "BHoMObject",
+      "attributes": []
+    },
+    {
+      "id": "AValue-d95506f5-f383-4d1f-87cf-4c5ada814458-Avalue-HasProperty",
+      "iri": "http://www.w3.org/2001/XMLSchema#",
+      "label": "AValue (Double)",
+      "attributes": "datatype"
+    },
+    {
+      "id": "Occulsion-a26ad718-b907-4eab-9ed3-fb238bc94bf9-Avalue-HasProperty",
+      "iri": "http://www.w3.org/2001/XMLSchema#",
+      "label": "Occulsion (Double)",
+      "attributes": "datatype"
+    },
+    {
+      "id": "BH.oM.Geometry.Polyline",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/Geometry_oM/Polyline.cs",
+      "label": "FullActivityArea (Polyline)",
+      "attributes": []
+    },
+    {
+      "id": "BH.oM.Geometry.Polyline",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/Geometry_oM/Polyline.cs",
+      "label": "ClippedActivityArea (Polyline)",
+      "attributes": []
+    },
+    {
+      "id": "BH.oM.Geometry.Polyline",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/Geometry_oM/Polyline.cs",
+      "label": "ConeOfVision (Polyline)",
+      "attributes": []
+    },
+    {
+      "id": "BH.oM.Geometry.Point",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/Geometry_oM/Point.cs",
+      "label": "ReferencePoint (Point)",
+      "attributes": []
+    },
+    {
+      "id": "OccludingHeads-4220e04b-e968-4387-a734-3d17ff7d661d-Avalue-HasProperty",
+      "iri": "http://www.w3.org/2001/XMLSchema#",
+      "label": "OccludingHeads (List<Polyline>)",
+      "attributes": "datatype"
+    },
+    {
+      "id": "BH.oM.Analytical.Results.IObjectIdResult",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/Analytical_oM/Results/IObjectIdResult.cs",
+      "label": "IObjectIdResult",
+      "attributes": []
+    },
+    {
+      "id": "BH.oM.Analytical.Results.IResult",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/Analytical_oM/Results/IResult.cs",
+      "label": "IResult",
+      "attributes": []
+    },
+    {
+      "id": "BH.oM.Base.IObject",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/BHoM/Interface/IObject.cs",
+      "label": "IObject",
+      "attributes": []
+    },
+    {
+      "id": "BH.oM.Base.IImmutable",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/BHoM/Interface/IImmutable.cs",
+      "label": "IImmutable",
+      "attributes": []
+    },
+    {
+      "id": "BH.oM.Analytical.Results.ICasedResult",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/Analytical_oM/Results/ICasedResult.cs",
+      "label": "ICasedResult",
+      "attributes": []
+    },
+    {
+      "id": "BH.oM.Analytical.Results.ITimeStepResult",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/Analytical_oM/Results/ITimeStepResult.cs",
+      "label": "ITimeStepResult",
+      "attributes": []
+    },
+    {
+      "id": "CValue-3987c0c9-968b-499a-b370-98b3c097e382-Cvalue-HasProperty",
+      "iri": "http://www.w3.org/2001/XMLSchema#",
+      "label": "CValue (Double)",
+      "attributes": "datatype"
+    },
+    {
+      "id": "HorizDist-0b535716-6489-433d-8d98-da8eb5b4ab67-Cvalue-HasProperty",
+      "iri": "http://www.w3.org/2001/XMLSchema#",
+      "label": "HorizDist (Double)",
+      "attributes": "datatype"
+    },
+    {
+      "id": "HeightAbovePitch-39ad93c1-234b-4e3f-974d-944711832011-Cvalue-HasProperty",
+      "iri": "http://www.w3.org/2001/XMLSchema#",
+      "label": "HeightAbovePitch (Double)",
+      "attributes": "datatype"
+    },
+    {
+      "id": "AbsoluteDist-f42cf32d-4f08-4a44-b549-1a140c9b842d-Cvalue-HasProperty",
+      "iri": "http://www.w3.org/2001/XMLSchema#",
+      "label": "AbsoluteDist (Double)",
+      "attributes": "datatype"
+    },
+    {
+      "id": "BH.oM.Geometry.Point",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/Geometry_oM/Point.cs",
+      "label": "Focalpoint (Point)",
+      "attributes": []
+    },
+    {
+      "id": "BH.oM.Analytical.Results.IObjectIdResult",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/Analytical_oM/Results/IObjectIdResult.cs",
+      "label": "IObjectIdResult",
+      "attributes": []
+    },
+    {
+      "id": "BH.oM.Analytical.Results.IResult",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/Analytical_oM/Results/IResult.cs",
+      "label": "IResult",
+      "attributes": []
+    },
+    {
+      "id": "BH.oM.Base.IObject",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/BHoM/Interface/IObject.cs",
+      "label": "IObject",
+      "attributes": []
+    },
+    {
+      "id": "BH.oM.Base.IImmutable",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/BHoM/Interface/IImmutable.cs",
+      "label": "IImmutable",
+      "attributes": []
+    },
+    {
+      "id": "BH.oM.Analytical.Results.ICasedResult",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/Analytical_oM/Results/ICasedResult.cs",
+      "label": "ICasedResult",
+      "attributes": []
+    },
+    {
+      "id": "BH.oM.Analytical.Results.ITimeStepResult",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/Analytical_oM/Results/ITimeStepResult.cs",
+      "label": "ITimeStepResult",
+      "attributes": []
+    },
+    {
+      "id": "Torsion-e4807982-e7cf-4941-b3e6-8f9a7e08fcba-Evalue-HasProperty",
+      "iri": "http://www.w3.org/2001/XMLSchema#",
+      "label": "Torsion (Double)",
+      "attributes": "datatype"
+    },
+    {
+      "id": "HorizViewAng-f948d33a-8417-4c0d-8cd5-d45ba6dfbce5-Evalue-HasProperty",
+      "iri": "http://www.w3.org/2001/XMLSchema#",
+      "label": "HorizViewAng (Double)",
+      "attributes": "datatype"
+    },
+    {
+      "id": "BH.oM.Geometry.Vector",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/Geometry_oM/Vector.cs",
+      "label": "HorizViewVectors (Vector)",
+      "attributes": []
+    },
+    {
+      "id": "BH.oM.Geometry.Vector",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/Geometry_oM/Vector.cs",
+      "label": "VertViewVectors (Vector)",
+      "attributes": []
+    },
+    {
+      "id": "VertViewAng-4fde8521-ae99-4d06-b6b2-ceec1c823ce0-Evalue-HasProperty",
+      "iri": "http://www.w3.org/2001/XMLSchema#",
+      "label": "VertViewAng (Double)",
+      "attributes": "datatype"
+    },
+    {
+      "id": "BH.oM.Analytical.Results.IObjectIdResult",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/Analytical_oM/Results/IObjectIdResult.cs",
+      "label": "IObjectIdResult",
+      "attributes": []
+    },
+    {
+      "id": "BH.oM.Analytical.Results.IResult",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/Analytical_oM/Results/IResult.cs",
+      "label": "IResult",
+      "attributes": []
+    },
+    {
+      "id": "BH.oM.Base.IObject",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/BHoM/Interface/IObject.cs",
+      "label": "IObject",
+      "attributes": []
+    },
+    {
+      "id": "BH.oM.Base.IImmutable",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/BHoM/Interface/IImmutable.cs",
+      "label": "IImmutable",
+      "attributes": []
+    },
+    {
+      "id": "BH.oM.Analytical.Results.ICasedResult",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/Analytical_oM/Results/ICasedResult.cs",
+      "label": "ICasedResult",
+      "attributes": []
+    },
+    {
+      "id": "BH.oM.Analytical.Results.ITimeStepResult",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/Analytical_oM/Results/ITimeStepResult.cs",
+      "label": "ITimeStepResult",
+      "attributes": []
+    },
+    {
+      "id": "ObjectId-ac9f1765-4903-4119-b476-84a6b54b6dbe-ViewQualityResult-HasProperty",
+      "iri": "http://www.w3.org/2001/XMLSchema#",
+      "label": "ObjectId (IComparable)",
+      "attributes": "datatype"
+    },
+    {
+      "id": "ResultCase-dd9dc471-8e85-4584-973d-88e6d79c93d6-ViewQualityResult-HasProperty",
+      "iri": "http://www.w3.org/2001/XMLSchema#",
+      "label": "ResultCase (IComparable)",
+      "attributes": "datatype"
+    },
+    {
+      "id": "TimeStep-559417e4-f94b-4161-85e2-03913b09dcfc-ViewQualityResult-HasProperty",
+      "iri": "http://www.w3.org/2001/XMLSchema#",
+      "label": "TimeStep (Double)",
+      "attributes": "datatype"
+    },
+    {
+      "id": "BH.oM.Analytical.Results.IObjectIdResult",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/Analytical_oM/Results/IObjectIdResult.cs",
+      "label": "IObjectIdResult",
+      "attributes": []
+    },
+    {
+      "id": "BH.oM.Analytical.Results.IResult",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/Analytical_oM/Results/IResult.cs",
+      "label": "IResult",
+      "attributes": []
+    },
+    {
+      "id": "BH.oM.Base.IObject",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/BHoM/Interface/IObject.cs",
+      "label": "IObject",
+      "attributes": []
+    },
+    {
+      "id": "BH.oM.Base.IImmutable",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/BHoM/Interface/IImmutable.cs",
+      "label": "IImmutable",
+      "attributes": []
+    },
+    {
+      "id": "BH.oM.Analytical.Results.ICasedResult",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/Analytical_oM/Results/ICasedResult.cs",
+      "label": "ICasedResult",
+      "attributes": []
+    },
+    {
+      "id": "BH.oM.Analytical.Results.ITimeStepResult",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/Analytical_oM/Results/ITimeStepResult.cs",
+      "label": "ITimeStepResult",
+      "attributes": []
+    },
+    {
+      "id": "BH.oM.Geometry.Polyline",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/Geometry_oM/Polyline.cs",
+      "label": "HeadOutline (Polyline)",
+      "attributes": []
+    },
+    {
+      "id": "BH.oM.Base.IBHoMObject",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/BHoM/Interface/IBHoMObject.cs",
+      "label": "IBHoMObject",
+      "attributes": []
+    },
+    {
+      "id": "BH.oM.Base.IObject",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/BHoM/Interface/IObject.cs",
+      "label": "IObject",
+      "attributes": []
+    },
+    {
+      "id": "BH.oM.Base.BHoMObject",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/BHoM/BHoMObject.cs",
+      "label": "BHoMObject",
+      "attributes": []
+    },
+    {
+      "id": "BH.oM.Geometry.Line",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/Geometry_oM/Line.cs",
+      "label": "TrackingLine (Line)",
+      "attributes": []
+    },
+    {
+      "id": "BH.oM.Base.IObject",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/BHoM/Interface/IObject.cs",
+      "label": "IObject",
+      "attributes": []
+    },
+    {
+      "id": "BH.oM.Geometry.Point",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/Geometry_oM/Point.cs",
+      "label": "TrackingPoint (Point)",
+      "attributes": []
+    },
+    {
+      "id": "BH.oM.Base.IObject",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/BHoM/Interface/IObject.cs",
+      "label": "IObject",
+      "attributes": []
+    },
+    {
+      "id": "BH.oM.Geometry.Point",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/Geometry_oM/Point.cs",
+      "label": "TrackingPoint (Point)",
+      "attributes": []
+    },
+    {
+      "id": "BH.oM.Base.IObject",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/BHoM/Interface/IObject.cs",
+      "label": "IObject",
+      "attributes": []
+    },
+    {
+      "id": "BH.oM.Geometry.Point",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/Geometry_oM/Point.cs",
+      "label": "TrackingPoint (Point)",
+      "attributes": []
+    },
+    {
+      "id": "BH.oM.Base.IObject",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/BHoM/Interface/IObject.cs",
+      "label": "IObject",
+      "attributes": []
+    },
+    {
+      "id": "BH.oM.Geometry.Line",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/Geometry_oM/Line.cs",
+      "label": "TrackingLine (Line)",
+      "attributes": []
+    },
+    {
+      "id": "BH.oM.Base.IObject",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/BHoM/Interface/IObject.cs",
+      "label": "IObject",
+      "attributes": []
+    },
+    {
+      "id": "BH.oM.Geometry.Point",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/Geometry_oM/Point.cs",
+      "label": "TrackingPoint (Point)",
+      "attributes": []
+    },
+    {
+      "id": "BH.oM.Geometry.Line",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/Geometry_oM/Line.cs",
+      "label": "TrackingLine (Line)",
+      "attributes": []
+    },
+    {
+      "id": "BH.oM.Base.IObject",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/BHoM/Interface/IObject.cs",
+      "label": "IObject",
+      "attributes": []
+    },
+    {
+      "id": "BH.oM.Geometry.Line",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/Geometry_oM/Line.cs",
+      "label": "TrackingLine (Line)",
+      "attributes": []
+    },
+    {
+      "id": "BH.oM.Base.IObject",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/BHoM/Interface/IObject.cs",
+      "label": "IObject",
+      "attributes": []
+    },
+    {
+      "id": "BH.oM.Geometry.Line",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/Geometry_oM/Line.cs",
+      "label": "TrackingLine (Line)",
+      "attributes": []
+    },
+    {
+      "id": "BH.oM.Base.IObject",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/BHoM/Interface/IObject.cs",
+      "label": "IObject",
+      "attributes": []
+    },
+    {
+      "id": "BH.oM.Geometry.Line",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/Geometry_oM/Line.cs",
+      "label": "TrackingLine (Line)",
+      "attributes": []
+    },
+    {
+      "id": "BH.oM.Base.IObject",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/BHoM/Interface/IObject.cs",
+      "label": "IObject",
+      "attributes": []
+    },
+    {
+      "id": "BH.oM.Geometry.Line",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/Geometry_oM/Line.cs",
+      "label": "TrackingLine (Line)",
+      "attributes": []
+    },
+    {
+      "id": "BH.oM.Base.IObject",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/BHoM/Interface/IObject.cs",
+      "label": "IObject",
+      "attributes": []
+    },
+    {
+      "id": "BH.oM.Geometry.Point",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/Geometry_oM/Point.cs",
+      "label": "TrackingPoint (Point)",
+      "attributes": []
+    },
+    {
+      "id": "BH.oM.Geometry.Line",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/Geometry_oM/Line.cs",
+      "label": "TrackingLine (Line)",
+      "attributes": []
+    },
+    {
+      "id": "BH.oM.Base.IObject",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/BHoM/Interface/IObject.cs",
+      "label": "IObject",
+      "attributes": []
+    },
+    {
+      "id": "BH.oM.Geometry.Line",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/Geometry_oM/Line.cs",
+      "label": "TrackingLine (Line)",
+      "attributes": []
+    },
+    {
+      "id": "BH.oM.Base.IObject",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/BHoM/Interface/IObject.cs",
+      "label": "IObject",
+      "attributes": []
+    },
+    {
+      "id": "BH.oM.Geometry.Line",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/Geometry_oM/Line.cs",
+      "label": "TrackingLine (Line)",
+      "attributes": []
+    },
+    {
+      "id": "BH.oM.Base.IObject",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/BHoM/Interface/IObject.cs",
+      "label": "IObject",
+      "attributes": []
+    },
+    {
+      "id": "BH.oM.Geometry.Line",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/Geometry_oM/Line.cs",
+      "label": "TrackingLine (Line)",
+      "attributes": []
+    },
+    {
+      "id": "BH.oM.Base.IObject",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/BHoM/Interface/IObject.cs",
+      "label": "IObject",
+      "attributes": []
+    },
+    {
+      "id": "BH.oM.Geometry.Point",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/Geometry_oM/Point.cs",
+      "label": "TrackingPoint (Point)",
+      "attributes": []
+    },
+    {
+      "id": "BH.oM.Geometry.Point",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/Geometry_oM/Point.cs",
+      "label": "ReferenceLocation (Point)",
+      "attributes": []
+    },
+    {
+      "id": "BH.oM.Geometry.Vector",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/Geometry_oM/Vector.cs",
+      "label": "ViewDirection (Vector)",
+      "attributes": []
+    },
+    {
+      "id": "BH.oM.Base.IObject",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/BHoM/Interface/IObject.cs",
+      "label": "IObject",
+      "attributes": []
+    },
+    {
+      "id": "BH.oM.Geometry.Line",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/Geometry_oM/Line.cs",
+      "label": "TrackingLine (Line)",
+      "attributes": []
+    },
+    {
+      "id": "BH.oM.Base.IObject",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/BHoM/Interface/IObject.cs",
+      "label": "IObject",
+      "attributes": []
+    },
+    {
+      "id": "BH.oM.Geometry.Point",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/Geometry_oM/Point.cs",
+      "label": "TrackingPoint (Point)",
+      "attributes": []
+    },
+    {
+      "id": "BH.oM.Geometry.Line",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/Geometry_oM/Line.cs",
+      "label": "TrackingLine (Line)",
+      "attributes": []
+    },
+    {
+      "id": "BH.oM.Base.IObject",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/BHoM/Interface/IObject.cs",
+      "label": "IObject",
+      "attributes": []
+    },
+    {
+      "id": "BH.oM.Geometry.Line",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/Geometry_oM/Line.cs",
+      "label": "TrackingLine (Line)",
+      "attributes": []
+    },
+    {
+      "id": "BH.oM.Base.IObject",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/BHoM/Interface/IObject.cs",
+      "label": "IObject",
+      "attributes": []
+    },
+    {
+      "id": "BH.oM.Geometry.Line",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/Geometry_oM/Line.cs",
+      "label": "TrackingLine (Line)",
+      "attributes": []
+    },
+    {
+      "id": "BH.oM.Base.IObject",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/BHoM/Interface/IObject.cs",
+      "label": "IObject",
+      "attributes": []
+    },
+    {
+      "id": "BH.oM.Geometry.Line",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/Geometry_oM/Line.cs",
+      "label": "TrackingLine (Line)",
+      "attributes": []
+    },
+    {
+      "id": "BH.oM.Base.IObject",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/BHoM/Interface/IObject.cs",
+      "label": "IObject",
+      "attributes": []
+    },
+    {
+      "id": "BH.oM.Geometry.Line",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/Geometry_oM/Line.cs",
+      "label": "TrackingLine (Line)",
+      "attributes": []
+    },
+    {
+      "id": "BH.oM.Base.IObject",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/BHoM/Interface/IObject.cs",
+      "label": "IObject",
+      "attributes": []
+    },
+    {
+      "id": "BH.oM.Geometry.Point",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/Geometry_oM/Point.cs",
+      "label": "TrackingPoint (Point)",
+      "attributes": []
+    },
+    {
+      "id": "BH.oM.Geometry.Line",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/Geometry_oM/Line.cs",
+      "label": "TrackingLine (Line)",
+      "attributes": []
+    },
+    {
+      "id": "BH.oM.Base.IObject",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/BHoM/Interface/IObject.cs",
+      "label": "IObject",
+      "attributes": []
+    },
+    {
+      "id": "BH.oM.Geometry.Line",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/Geometry_oM/Line.cs",
+      "label": "TrackingLine (Line)",
+      "attributes": []
+    },
+    {
+      "id": "BH.oM.Base.IObject",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/BHoM/Interface/IObject.cs",
+      "label": "IObject",
+      "attributes": []
+    },
+    {
+      "id": "BH.oM.Geometry.Line",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/Geometry_oM/Line.cs",
+      "label": "TrackingLine (Line)",
+      "attributes": []
+    },
+    {
+      "id": "BH.oM.Base.IObject",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/BHoM/Interface/IObject.cs",
+      "label": "IObject",
+      "attributes": []
+    },
+    {
+      "id": "BH.oM.Geometry.Line",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/Geometry_oM/Line.cs",
+      "label": "TrackingLine (Line)",
+      "attributes": []
+    },
+    {
+      "id": "BH.oM.Base.IObject",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/BHoM/Interface/IObject.cs",
+      "label": "IObject",
+      "attributes": []
+    }
+  ],
+  "property": [
+    {
+      "id": "171715c4-8fc4-42b0-91e6-c9d4f0913ac6",
+      "type": "owl:DatatypeProperty"
+    },
+    {
+      "id": "4a017784-9ada-422b-8055-1341d49389ee",
+      "type": "owl:DatatypeProperty"
+    },
+    {
+      "id": "2cab03b5-523d-44a7-8ad5-00ee2f4d2e2b",
+      "type": "owl:DatatypeProperty"
+    },
+    {
+      "id": "cc56b104-e32a-41f6-900f-61a027e89f73",
+      "type": "owl:DatatypeProperty"
+    },
+    {
+      "id": "be46879d-5b67-469f-b460-2f2b74026965",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "9cf3cbbf-308a-4b10-ba6d-873c10f0c4d9",
+      "type": "owl:DatatypeProperty"
+    },
+    {
+      "id": "8e792047-d98e-44e3-8da0-67a83ce437cd",
+      "type": "owl:DatatypeProperty"
+    },
+    {
+      "id": "ea9f0ec7-9ab1-4e00-8cd7-1ffc4d57980a",
+      "type": "owl:DatatypeProperty"
+    },
+    {
+      "id": "ed7fea62-d90e-4494-9f96-0ebd5c57579a",
+      "type": "owl:DatatypeProperty"
+    },
+    {
+      "id": "97922b5d-3ebc-4e4f-b6bc-095196cea59b",
+      "type": "owl:DatatypeProperty"
+    },
+    {
+      "id": "de61d2f3-5617-4b0f-97ae-6cce2bd24518",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "1880d35a-e7b2-496c-91f0-1720f7f933df",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "dbd66ed6-a82b-4293-9a5f-d106215c5b44",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "84837f96-6782-4ae6-acf3-800a5c64bb27",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "f9bc24e7-0bb2-4f6f-bb99-2f9668a32c68",
+      "type": "owl:DatatypeProperty"
+    },
+    {
+      "id": "bc09ac36-f725-46e2-8de7-5669ca5fc27f",
+      "type": "owl:DatatypeProperty"
+    },
+    {
+      "id": "4ec02039-c944-4139-8ed9-ec593000c3a9",
+      "type": "owl:DatatypeProperty"
+    },
+    {
+      "id": "662721b9-b1a1-488f-8b7d-19b6f9db2673",
+      "type": "owl:DatatypeProperty"
+    },
+    {
+      "id": "ec297ec8-fbd8-4b53-9bd2-15ac862d5906",
+      "type": "owl:DatatypeProperty"
+    },
+    {
+      "id": "40031d87-1eec-400c-8386-0263de0dc53d",
+      "type": "owl:DatatypeProperty"
+    },
+    {
+      "id": "e817d991-a9dd-4086-85ce-fbdfe0d4c5c1",
+      "type": "owl:DatatypeProperty"
+    },
+    {
+      "id": "c1bb5dcc-0d3d-4078-8233-0030e1d15434",
+      "type": "owl:DatatypeProperty"
+    },
+    {
+      "id": "6aa53472-e1c5-44fd-ba2a-7020a06cd506",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "37fbc5b6-3385-4481-851c-d5f17b6b9ec4",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "53cd56b6-e8f8-42b9-b4a9-c1c9942e4666",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "00554204-8410-4a1e-9ada-68b3c49b0f97",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "bf52b1ce-cc5b-4f86-87d6-72a25cff6255",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "b871ec63-73a8-4150-a9e9-fc61b5dc5339",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "4af7daef-33d5-4c39-84c6-c36edafacc1a",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "19ac2986-68a4-4f42-a0cb-4ad77efe26aa",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "16e341c3-6e2f-4182-8e34-665f13e6afbb",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "7d740bb7-5743-414e-8860-779dd757916d",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "bffcf52b-e98f-4ee0-88fd-6b8e8a8afa98",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "f407a662-e6aa-4421-9914-5d7aec6d0fb9",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "71243e99-6038-41ca-b14b-bf20a3442781",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "4cba3cb3-4a4c-4384-991a-1078c448c387",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "7729fd51-7a00-469c-8f76-3ba3b96ad022",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "78040d08-a6b1-456a-95a8-338c1bef4631",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "7a10a77c-c857-4f17-b2be-ab4527553a86",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "47e0c39d-5201-491f-b282-1dcadff98622",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "ad134900-24cd-4ea0-8acb-e409c25dc1aa",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "1079d3d0-095a-4856-b862-de392a41829c",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "53ad8113-0378-4420-8cc0-f7ce6a03abd9",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "a5492649-1c32-4e65-bd8f-07a6d0d997fa",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "df7cfb22-d04e-48dd-8046-c84a487f10b9",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "f92f3c85-d5b5-4b59-abd3-fc1175bae3c9",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "21c73844-73e2-4b1d-afaf-5490ca3c3266",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "90942117-6215-4246-b956-44da8a8eaf88",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "f49893b7-e982-44d3-a87c-057e44499679",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "cf6948fa-40f5-49db-adab-3948159f1833",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "8e821102-eeec-4fc5-acb4-0c9b44c0c585",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "3f59b90d-9932-405b-aeb2-587f920f9878",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "f7a3e06d-ea67-4d7f-9a8f-949ea5d23ca9",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "35e4ea17-fe76-40dc-8440-40e0f42af9ee",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "df385128-030d-40fd-bdc9-f39b71ee4d72",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "2f96894d-ff64-4b7d-97a8-58db10a28565",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "ecc0846b-c98a-442f-ac3f-105e8fff95c6",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "132d9d4f-c226-4b3b-b1e8-40ba2effa1c2",
+      "type": "owl:DatatypeProperty"
+    },
+    {
+      "id": "373e58d0-d18f-4775-bc98-0f13e03a5549",
+      "type": "owl:DatatypeProperty"
+    },
+    {
+      "id": "470579da-1b41-4895-9cd2-9c79fdbb53a0",
+      "type": "owl:DatatypeProperty"
+    },
+    {
+      "id": "2f29f84d-01b5-4e7e-a6af-75e3e4907aa2",
+      "type": "owl:DatatypeProperty"
+    },
+    {
+      "id": "ec68ba2a-d532-438b-9822-8d9f4ca9932e",
+      "type": "owl:DatatypeProperty"
+    },
+    {
+      "id": "cf10f8b2-4e0c-42f8-b3b9-2c14412be7eb",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "0046766d-1b1b-4f06-816c-9a402945d74b",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "2e7ef07b-7591-423c-addf-6a4b834d4048",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "8b931ae6-b8f4-478b-bb98-f4c3f47df2da",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "e0c7fa20-6cfa-4a03-8e9b-248cecb8ce0e",
+      "type": "owl:DatatypeProperty"
+    },
+    {
+      "id": "e896fb6a-0503-401c-b1af-bc01e0439a97",
+      "type": "owl:DatatypeProperty"
+    },
+    {
+      "id": "b73fd6ac-e65a-44ca-b118-4bbfcb1eaeb3",
+      "type": "owl:DatatypeProperty"
+    },
+    {
+      "id": "a2a873e8-f3d4-4c80-9a1c-32f399d4691d",
+      "type": "owl:DatatypeProperty"
+    },
+    {
+      "id": "a31fc2d7-7322-4aff-8dcb-517b18a96841",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "42e43111-6cd1-407e-9e44-68af19ef1f91",
+      "type": "owl:DatatypeProperty"
+    },
+    {
+      "id": "809690ae-e5a4-46d5-bd89-0c5c6ae96d9d",
+      "type": "owl:DatatypeProperty"
+    },
+    {
+      "id": "9def3fb6-fc62-4597-93ab-8992ef0527f2",
+      "type": "owl:DatatypeProperty"
+    },
+    {
+      "id": "509517c3-ea03-4c22-a4d8-f923be3b2a7b",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "5eff3cc9-00ac-45d2-ac4c-21331106c803",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "42e81d88-2fb7-4511-9858-7ffa6dc0dd4c",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "9a64d4da-c46c-4775-b7c7-8c69cc6e94b6",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "fe0d3f06-9c3c-4326-ad55-db32d994b8fc",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "c5539b14-8801-488c-b4bd-11243ece50e6",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "69553869-8683-48a2-b7ea-b99e50c05cfc",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "b80a10f4-ee7b-4e1b-b3d1-0e5de83907e6",
+      "type": "owl:DatatypeProperty"
+    },
+    {
+      "id": "4cd2e02f-fd2a-422f-b2df-a62a49615d21",
+      "type": "owl:DatatypeProperty"
+    },
+    {
+      "id": "ebd97e6d-5c3f-4c09-80ad-ee7304248bfc",
+      "type": "owl:DatatypeProperty"
+    },
+    {
+      "id": "3d4e1088-3600-41a9-9c4d-b0eed9b58709",
+      "type": "owl:DatatypeProperty"
+    },
+    {
+      "id": "c5b64ecc-af76-4814-a335-e6ddc98a5c46",
+      "type": "owl:DatatypeProperty"
+    },
+    {
+      "id": "a0728d17-4cac-47c1-a390-b3f503f90f19",
+      "type": "owl:DatatypeProperty"
+    },
+    {
+      "id": "a9b6ad23-95df-45ad-999f-71f4896c3807",
+      "type": "owl:DatatypeProperty"
+    },
+    {
+      "id": "8501d07e-fcab-4ff4-9319-eaa1f4f7ad49",
+      "type": "owl:DatatypeProperty"
+    },
+    {
+      "id": "12503f0c-ddc6-4e3a-a14a-9f415d2f00cc",
+      "type": "owl:DatatypeProperty"
+    },
+    {
+      "id": "0a1e26d0-ef30-4519-a7bb-10e81a585baf",
+      "type": "owl:DatatypeProperty"
+    },
+    {
+      "id": "3dc56842-47f7-434f-a4a3-de9ff3c4ce1e",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "e68337e4-977f-4ab3-8690-58998e1ae4f1",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "a83424c3-aa9c-458e-8222-193b61487db6",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "2e163177-5f9d-4e69-89f3-0f406fd8b459",
+      "type": "owl:DatatypeProperty"
+    },
+    {
+      "id": "288b39b6-10c4-4832-8129-9325255830cb",
+      "type": "owl:DatatypeProperty"
+    },
+    {
+      "id": "6c746d07-06a5-4e89-a678-81ce7dad0bff",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "7cd01827-455d-4196-8b9d-83a630cac94d",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "6db39738-d443-43e5-a20a-5ed269bc1c6c",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "98ac0346-874e-4f4b-b819-a4d12eb2a697",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "04e38d29-f65e-4019-85ed-949d10f61f17",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "0740a586-0262-467f-bf23-ece352fba18d",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "43eec419-fa3b-4482-8533-73a0384b2819",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "1c8d162c-f378-4f21-ae5e-b63f750d7171",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "03a001e5-6994-47bc-92a7-711493c45b4a",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "bb09ea9c-3f4c-4a3c-992e-4c362a94d708",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "a8ca7b3d-1e8a-4a52-8e25-77f14b37dedf",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "ccbf8699-9a2d-4f8b-9d51-34eb6a761b10",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "bd823887-1b13-405f-8f41-e8c75a898c0b",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "c2e9b7b2-3f7c-4822-b7ad-dcb90cd4a134",
+      "type": "owl:DatatypeProperty"
+    },
+    {
+      "id": "738d0bb0-1d52-448c-8987-284206387729",
+      "type": "owl:DatatypeProperty"
+    },
+    {
+      "id": "16ab692f-3843-4201-9b60-cb1c189ff3bc",
+      "type": "owl:DatatypeProperty"
+    },
+    {
+      "id": "502b2452-1762-42b2-9405-aeb0d7f1ef28",
+      "type": "owl:DatatypeProperty"
+    },
+    {
+      "id": "df5e2b8f-6a43-4c7b-8968-ad5b28e961c2",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "c4fe350e-0f9a-4189-84b6-8d288febcde6",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "11db2bfa-098f-46d3-adfc-bbbbdd0a5afd",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "2a22f6c1-a231-4a46-9659-e82de6e72888",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "a831de43-6409-4470-9530-5f6346e01219",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "e0bc7bfb-9548-4ae4-bbe7-62a2d3d51b0a",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "8d5f7889-9547-4478-af0f-963a4e028a78",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "fa2a73d3-2a96-4107-b227-448f19f05842",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "0b569d32-c0a3-4e54-adc0-6fc45dab689a",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "c214b765-944d-40fe-95e7-7e030417df0d",
+      "type": "owl:DatatypeProperty"
+    },
+    {
+      "id": "66796124-7f43-47e7-ab29-0bcd70f909fd",
+      "type": "owl:DatatypeProperty"
+    },
+    {
+      "id": "dc355d27-a512-449b-bcfc-055629b492c7",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "9d8bd477-adba-4092-beb7-fc092c345089",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "1760c872-6f01-44cb-bcc7-1c543861d759",
+      "type": "owl:DatatypeProperty"
+    },
+    {
+      "id": "4116f1ae-b479-4cdf-96af-971502e53d1e",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "6d2d6462-157b-404c-b024-5cc30bf35a6f",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "4b7b7fb0-55eb-4c85-832e-c82201c0923a",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "f3d5f841-8db7-40f1-9e4c-404c860eb2f7",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "fc905048-cb43-4995-923e-8d63ab95840a",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "a4a2b67b-891c-4548-aef7-87e595dee361",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "313d46e5-9577-43b4-b5fe-8e0b7af7da3c",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "e3794575-1967-4943-aee0-d0649c111b69",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "c090537d-c8aa-43b6-832f-274208d147da",
+      "type": "owl:DatatypeProperty"
+    },
+    {
+      "id": "82bdd10c-489d-4c85-9034-87254d124c51",
+      "type": "owl:DatatypeProperty"
+    },
+    {
+      "id": "46bf8f9a-bcc3-4318-aaf5-b1a97c4344c3",
+      "type": "owl:DatatypeProperty"
+    },
+    {
+      "id": "5236a062-3a2d-48ec-8f00-fea80b97e855",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "66cb5452-17f3-429e-b0f9-8ea231f2c0ef",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "6925fb9e-2ebb-4098-887d-59fcf0446f88",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "90eb23d6-58dd-40fd-8858-c043b24da596",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "d5366a7c-3871-47da-bfa6-75497c5d3886",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "fb365afd-d73e-4e63-8270-8105ca7535df",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "fb51ee75-bb18-4e42-9d18-2cea0b3613a5",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "68007fc3-470c-45c4-9aa5-773386cac46e",
+      "type": "owl:DatatypeProperty"
+    },
+    {
+      "id": "e46c4c9c-c740-4b8b-83f0-10abe827a670",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "0825480e-8b5e-498d-8f55-b409733bfc5c",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "eb47bd16-f16c-487a-bdc8-4fc9087840c1",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "e785d8f0-342c-4b9e-a120-7d0ad5adbddc",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "43f51035-7e86-4fa7-93e6-0b2e89f5d4f6",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "46a4848e-a33d-480b-9123-69ad61253c21",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "5eeb9615-95c7-4ace-8a8f-92589cde85a9",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "5fed9252-c2bd-404b-b380-a1a459c4bbdf",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "3bf6549d-e86e-4882-861f-d1ca500f830e",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "03a01ad1-9549-4538-bd19-9d44f0a21673",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "57095ff3-8ebb-45f7-8aca-a1e2b1be2500",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "38d64dd0-1bd9-4020-94a3-c89099ffebe5",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "c8dffebc-2a5e-41a3-ab26-0649f545e0bc",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "a80a5eb3-57da-4484-8dcb-7d1bfa9f4371",
+      "type": "owl:DatatypeProperty"
+    },
+    {
+      "id": "4865fe39-0274-4310-aa79-a81d679cc64c",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "88c02373-ce37-4916-b4fe-53058db085fa",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "847210c5-7e5b-4e46-a565-bc0b2ccf6ced",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "7f808a15-9c35-4d1c-add6-45f32bda22f3",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "1d723f5e-096c-411c-8192-16b30d0389d1",
+      "type": "owl:DatatypeProperty"
+    },
+    {
+      "id": "7bb0f8fd-ecf4-4727-842c-1247f3f4f32c",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "3a5d4a0e-2b45-4e31-b5ef-6bab22a22549",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "af0a327f-60df-4c7b-8b5d-84e25910276a",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "b146e1e8-b69e-46ca-bdc2-a8895be1d5cd",
+      "type": "owl:DatatypeProperty"
+    },
+    {
+      "id": "74f02ae8-124e-4517-86d1-af57d401b639",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "432f3dc0-07ba-4b0a-9a25-982cebfc1f58",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "c3ac971a-2f56-4cce-af67-dacfc68bd5c0",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "26809a23-3926-461d-8141-ebed818f615a",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "1e30380e-2265-4b21-b095-038b95c1aa27",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "bdf6cc1f-a870-4dad-b1b3-61f90ea60768",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "b13fce44-a0d6-4626-af53-18d5c26db666",
+      "type": "owl:DatatypeProperty"
+    },
+    {
+      "id": "f454ed7a-1f37-4860-b4f9-d192cd270038",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "01e5bf45-1c18-46f2-8178-bd8841bc80e2",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "1a4fd245-a5cd-4fff-ad84-c206030c26f9",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "81fd1c56-9057-40c8-8f8a-9cd9d7c35c36",
+      "type": "owl:DatatypeProperty"
+    },
+    {
+      "id": "ed9371a4-852b-4bd6-90ed-ba5afbc32f70",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "57fe726b-a37d-4f44-982d-aac5408db5a3",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "b7124a6e-cc46-4b02-951c-22a4efe9df45",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "82834dc7-dc48-4f34-a31e-433dc01dfe4f",
+      "type": "owl:DatatypeProperty"
+    },
+    {
+      "id": "a39054b9-4b80-4afe-a286-eb1128abd704",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "74f21956-2039-42fe-9597-17407d5bd079",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "10dd3d1a-bcea-49e5-914a-cf2d3a8f3618",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "18f98a6d-f67d-4aae-9187-1f98899b984a",
+      "type": "owl:DatatypeProperty"
+    },
+    {
+      "id": "f6bb9574-efc2-44e1-8eac-a7d1b773068c",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "2c221761-2625-4e8d-b851-0037763b5677",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "0bd1f19a-9991-442e-a496-31c15e0f291e",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "62c5198a-a2a7-43dd-ba8e-914936f6f697",
+      "type": "owl:DatatypeProperty"
+    },
+    {
+      "id": "c00b3b07-e01c-4743-a899-aa5efdc4d837",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "f5c963af-def5-41f7-b220-c946299dfcdf",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "32998f85-afcb-40ce-9ea5-ac69840a8129",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "c17d2450-b61b-4baa-888f-c74b2e9ed99b",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "83dc2753-ba02-4d3a-b792-e8ed65709835",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "0b788c18-c1a7-4c63-8918-10d2c29aa8ef",
+      "type": "owl:DatatypeProperty"
+    },
+    {
+      "id": "cf95c296-f704-41a5-8a49-5e1582763910",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "a2c8ff24-30ca-4bea-8dca-670f35006c6b",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "2b9e218e-536e-471f-8811-c3942ab71640",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "fd0867db-d1ea-4cfd-addd-e825777189bc",
+      "type": "owl:DatatypeProperty"
+    },
+    {
+      "id": "ace3f085-9e43-4d81-b014-f302a5ddb27a",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "4d5db078-5528-4ff9-875f-cb6ea48664af",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "c7b5dfeb-b763-4636-93c8-e90f53eae4b8",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "ee7c3a1c-8a56-4f7d-8f1b-00c4b8c2300b",
+      "type": "owl:DatatypeProperty"
+    },
+    {
+      "id": "592c5492-cf63-44d0-ab45-aa1610b8115a",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "919e5954-9dc4-4d67-b043-a977045dea4e",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "631a10bb-e722-4b76-b65a-cfa713145525",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "96d96dc3-1fb9-4546-901b-1dba75da39c7",
+      "type": "owl:DatatypeProperty"
+    },
+    {
+      "id": "fd4b7f6b-38f5-4477-a081-f5596f4df3db",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "7d8d2480-6233-4b6d-b7a7-76fbb3130a1e",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "bfaff669-230c-4404-af78-74a59a559455",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "39655d15-b91e-4e77-8b14-32980172dade",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "1673036f-4dd4-4762-908f-fb0077d99e16",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "b0e53e3a-d13e-4936-b263-3a071a414d36",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "338cd672-55f5-442a-ae3e-9af77ac61a48",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "fa7199eb-49e2-492a-bbbe-147c6b5974e2",
+      "type": "owl:DatatypeProperty"
+    },
+    {
+      "id": "5680297c-257f-4ba2-a76f-2185170aa2cd",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "396273d3-5029-490a-9c4c-008f63167094",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "dc08a664-9ce1-4541-836b-d3093d1e9b02",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "20984173-237c-4c16-aa74-8d8751581e28",
+      "type": "owl:DatatypeProperty"
+    },
+    {
+      "id": "1f6e881d-e796-45e0-8bab-f393e972ed1e",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "74aaa881-c474-41f5-bea1-bf352d142d64",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "4ef45d38-fc90-43ae-94eb-7bbebd7caea1",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "e8a68851-4c4d-4e4f-98b8-c62acb3fe882",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "fa76e65b-834a-4949-8478-c0cae333708d",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "49cac3c1-0eaa-4ce2-bf21-fbbd7871216c",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "7694a815-bf49-481d-9943-80ac470ea1d5",
+      "type": "owl:DatatypeProperty"
+    },
+    {
+      "id": "b60e5e85-9ac8-4b8d-88e9-1f407fba2346",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "0b58340d-8fb1-43e5-aeb7-b875f2c99e0a",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "7875a841-d66b-45be-9da8-78de113a3a41",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "f5da7c9a-482f-49bf-b181-ed9412c07b34",
+      "type": "owl:DatatypeProperty"
+    },
+    {
+      "id": "1c8502a1-fb1e-4129-a78a-5fc07a1a709c",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "9f39f9dd-6a7a-41ae-b6ef-125a890fee6a",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "6ca57c51-31be-4a05-9491-8caca0360929",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "ea692da7-5215-4f38-8e86-c5aedf722796",
+      "type": "owl:DatatypeProperty"
+    },
+    {
+      "id": "abc6384f-d34b-49d7-ab2c-722aaa013174",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "1a12b402-4591-488a-a02d-f32619fc7933",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "77dd5c7b-ae8f-40a8-beaa-c775d4d6a68c",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "7548078f-c587-4c7e-b540-ac050b67eea8",
+      "type": "owl:DatatypeProperty"
+    },
+    {
+      "id": "57283cb4-38ca-4085-8114-169398fc66bf",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "1e88a2f5-a28d-4248-92fb-df41263893c8",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "1b2080e6-1645-45bb-88fc-f2a89a30d4b4",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "a09bdd75-e599-45cb-adbc-a7dc1bfc7743",
+      "type": "owl:DatatypeProperty"
+    },
+    {
+      "id": "045bbfc3-b313-45c8-8d34-183ac078e9ae",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "3dcb47d6-9517-4057-8273-d7d87018c810",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "10d57055-86f5-4772-9aca-7685c6e3929c",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "117aa86f-8c4a-41f5-8a8b-7645d47e3ac9",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "c2dc0b11-bda2-4ec4-9b97-be32b28e5aea",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "101ce449-49a6-41f3-9e19-c961ae1e2fc0",
+      "type": "owl:DatatypeProperty"
+    },
+    {
+      "id": "51ea0c2b-ca7b-4322-bac4-127b2aa5a320",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "65b9ed34-8796-47d3-b1de-deb1ce94d224",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "ae477f5b-2e0b-45eb-a70f-ce2dbb0db6bd",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "c862e34f-2d3f-401d-a1da-879e3ec0db59",
+      "type": "owl:DatatypeProperty"
+    },
+    {
+      "id": "80255c93-e986-4227-b90c-4c00dc30b832",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "ed3e632a-98f7-40f5-9fa2-b8fd39212b29",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "eb1bd8f6-01d0-4373-8dd2-63d8bc49827d",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "1c5043b5-7323-49ea-8ad8-e06cf5fc95a5",
+      "type": "owl:DatatypeProperty"
+    },
+    {
+      "id": "fef602da-dbe1-4fe9-8338-dc6ab041bdbe",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "61e0f1e6-6ffa-45ac-afde-3c4383b05d56",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "a900cc97-11df-4a46-bddb-91663999de85",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "be8db8a1-df22-41f7-9112-ba6e399ccdce",
+      "type": "owl:DatatypeProperty"
+    }
+  ],
+  "propertyAttribute": [
+    {
+      "id": "171715c4-8fc4-42b0-91e6-c9d4f0913ac6",
+      "iri": "http://visualdataweb.org/newOntology/171715c4-8fc4-42b0-91e6-c9d4f0913ac6",
+      "label": "HasProperty",
+      "attributes": "datatype",
+      "domain": "BH.oM.Humans.Employee",
+      "range": "Company-e6da0090-7e7a-4cf4-bae1-f5048e5b13da-Employee-HasProperty"
+    },
+    {
+      "id": "4a017784-9ada-422b-8055-1341d49389ee",
+      "iri": "http://visualdataweb.org/newOntology/4a017784-9ada-422b-8055-1341d49389ee",
+      "label": "HasProperty",
+      "attributes": "datatype",
+      "domain": "BH.oM.Humans.Employee",
+      "range": "Office-2d5c0a79-57f4-4e57-85d4-09602aa810f7-Employee-HasProperty"
+    },
+    {
+      "id": "2cab03b5-523d-44a7-8ad5-00ee2f4d2e2b",
+      "iri": "http://visualdataweb.org/newOntology/2cab03b5-523d-44a7-8ad5-00ee2f4d2e2b",
+      "label": "HasProperty",
+      "attributes": "datatype",
+      "domain": "BH.oM.Humans.Employee",
+      "range": "Discipline-ca7332aa-396b-4c39-99d8-f9cfec4291fe-Employee-HasProperty"
+    },
+    {
+      "id": "cc56b104-e32a-41f6-900f-61a027e89f73",
+      "iri": "http://visualdataweb.org/newOntology/cc56b104-e32a-41f6-900f-61a027e89f73",
+      "label": "HasProperty",
+      "attributes": "datatype",
+      "domain": "BH.oM.Humans.Employee",
+      "range": "Team-f09c6535-bf7d-41a4-8c5f-8103747e63c7-Employee-HasProperty"
+    },
+    {
+      "id": "be46879d-5b67-469f-b460-2f2b74026965",
+      "iri": "http://visualdataweb.org/newOntology/be46879d-5b67-469f-b460-2f2b74026965",
+      "label": "HasProperty",
+      "attributes": "object",
+      "domain": "BH.oM.Humans.Employee",
+      "range": "BH.oM.Humans.Employee"
+    },
+    {
+      "id": "9cf3cbbf-308a-4b10-ba6d-873c10f0c4d9",
+      "iri": "http://visualdataweb.org/newOntology/9cf3cbbf-308a-4b10-ba6d-873c10f0c4d9",
+      "label": "HasProperty",
+      "attributes": "datatype",
+      "domain": "BH.oM.Humans.Employee",
+      "range": "Grade-c421a91d-2591-4196-9d08-8f6b58b9b517-Employee-HasProperty"
+    },
+    {
+      "id": "8e792047-d98e-44e3-8da0-67a83ce437cd",
+      "iri": "http://visualdataweb.org/newOntology/8e792047-d98e-44e3-8da0-67a83ce437cd",
+      "label": "HasProperty",
+      "attributes": "datatype",
+      "domain": "BH.oM.Humans.Employee",
+      "range": "Email-37407616-212b-4cc2-924e-6bd5868fe7c5-Employee-HasProperty"
+    },
+    {
+      "id": "ea9f0ec7-9ab1-4e00-8cd7-1ffc4d57980a",
+      "iri": "http://visualdataweb.org/newOntology/ea9f0ec7-9ab1-4e00-8cd7-1ffc4d57980a",
+      "label": "HasProperty",
+      "attributes": "datatype",
+      "domain": "BH.oM.Humans.Employee",
+      "range": "Phone-6e321895-7426-4bbe-bc27-3dd132e00feb-Employee-HasProperty"
+    },
+    {
+      "id": "ed7fea62-d90e-4494-9f96-0ebd5c57579a",
+      "iri": "http://visualdataweb.org/newOntology/ed7fea62-d90e-4494-9f96-0ebd5c57579a",
+      "label": "HasProperty",
+      "attributes": "datatype",
+      "domain": "BH.oM.Humans.Employee",
+      "range": "CodeDevelopmentRole-9d37f717-0344-4d16-8595-edf1663b42dc-Employee-HasProperty"
+    },
+    {
+      "id": "97922b5d-3ebc-4e4f-b6bc-095196cea59b",
+      "iri": "http://visualdataweb.org/newOntology/97922b5d-3ebc-4e4f-b6bc-095196cea59b",
+      "label": "HasProperty",
+      "attributes": "datatype",
+      "domain": "BH.oM.Humans.Employee",
+      "range": "BusinessUnit-bde5976b-35f7-4724-8835-ed954cf8e1e8-Employee-HasProperty"
+    },
+    {
+      "id": "de61d2f3-5617-4b0f-97ae-6cce2bd24518",
+      "iri": "http://visualdataweb.org/newOntology/de61d2f3-5617-4b0f-97ae-6cce2bd24518",
+      "label": "IsA",
+      "attributes": "object",
+      "domain": "BH.oM.Humans.Employee",
+      "range": "BH.oM.Base.IBHoMObject"
+    },
+    {
+      "id": "1880d35a-e7b2-496c-91f0-1720f7f933df",
+      "iri": "http://visualdataweb.org/newOntology/1880d35a-e7b2-496c-91f0-1720f7f933df",
+      "label": "IsA",
+      "attributes": "object",
+      "domain": "BH.oM.Humans.Employee",
+      "range": "BH.oM.Base.IObject"
+    },
+    {
+      "id": "dbd66ed6-a82b-4293-9a5f-d106215c5b44",
+      "iri": "http://visualdataweb.org/newOntology/dbd66ed6-a82b-4293-9a5f-d106215c5b44",
+      "label": "IsA",
+      "attributes": "object",
+      "domain": "BH.oM.Humans.Employee",
+      "range": "BH.oM.Humans.IHumanRole"
+    },
+    {
+      "id": "84837f96-6782-4ae6-acf3-800a5c64bb27",
+      "iri": "http://visualdataweb.org/newOntology/84837f96-6782-4ae6-acf3-800a5c64bb27",
+      "label": "IsSubclassOf",
+      "attributes": "object",
+      "domain": "BH.oM.Humans.Employee",
+      "range": "BH.oM.Base.BHoMObject"
+    },
+    {
+      "id": "f9bc24e7-0bb2-4f6f-bb99-2f9668a32c68",
+      "iri": "http://visualdataweb.org/newOntology/f9bc24e7-0bb2-4f6f-bb99-2f9668a32c68",
+      "label": "IsA",
+      "attributes": []
+    },
+    {
+      "id": "bc09ac36-f725-46e2-8de7-5669ca5fc27f",
+      "iri": "http://visualdataweb.org/newOntology/bc09ac36-f725-46e2-8de7-5669ca5fc27f",
+      "label": "IsA",
+      "attributes": []
+    },
+    {
+      "id": "4ec02039-c944-4139-8ed9-ec593000c3a9",
+      "iri": "http://visualdataweb.org/newOntology/4ec02039-c944-4139-8ed9-ec593000c3a9",
+      "label": "IsA",
+      "attributes": []
+    },
+    {
+      "id": "662721b9-b1a1-488f-8b7d-19b6f9db2673",
+      "iri": "http://visualdataweb.org/newOntology/662721b9-b1a1-488f-8b7d-19b6f9db2673",
+      "label": "IsSubclassOf",
+      "attributes": []
+    },
+    {
+      "id": "ec297ec8-fbd8-4b53-9bd2-15ac862d5906",
+      "iri": "http://visualdataweb.org/newOntology/ec297ec8-fbd8-4b53-9bd2-15ac862d5906",
+      "label": "IsA",
+      "attributes": []
+    },
+    {
+      "id": "40031d87-1eec-400c-8386-0263de0dc53d",
+      "iri": "http://visualdataweb.org/newOntology/40031d87-1eec-400c-8386-0263de0dc53d",
+      "label": "IsA",
+      "attributes": []
+    },
+    {
+      "id": "e817d991-a9dd-4086-85ce-fbdfe0d4c5c1",
+      "iri": "http://visualdataweb.org/newOntology/e817d991-a9dd-4086-85ce-fbdfe0d4c5c1",
+      "label": "IsA",
+      "attributes": []
+    },
+    {
+      "id": "c1bb5dcc-0d3d-4078-8233-0030e1d15434",
+      "iri": "http://visualdataweb.org/newOntology/c1bb5dcc-0d3d-4078-8233-0030e1d15434",
+      "label": "IsSubclassOf",
+      "attributes": []
+    },
+    {
+      "id": "6aa53472-e1c5-44fd-ba2a-7020a06cd506",
+      "iri": "http://visualdataweb.org/newOntology/6aa53472-e1c5-44fd-ba2a-7020a06cd506",
+      "label": "HasProperty",
+      "attributes": "datatype",
+      "domain": "BH.oM.Humans.Human",
+      "range": "Roles-23d5aab4-0d53-4bde-bfeb-8f3d1f88f591-Human-HasProperty"
+    },
+    {
+      "id": "37fbc5b6-3385-4481-851c-d5f17b6b9ec4",
+      "iri": "http://visualdataweb.org/newOntology/37fbc5b6-3385-4481-851c-d5f17b6b9ec4",
+      "label": "IsA",
+      "attributes": "object",
+      "domain": "BH.oM.Humans.Human",
+      "range": "BH.oM.Base.IBHoMObject"
+    },
+    {
+      "id": "53cd56b6-e8f8-42b9-b4a9-c1c9942e4666",
+      "iri": "http://visualdataweb.org/newOntology/53cd56b6-e8f8-42b9-b4a9-c1c9942e4666",
+      "label": "IsA",
+      "attributes": "object",
+      "domain": "BH.oM.Humans.Human",
+      "range": "BH.oM.Base.IObject"
+    },
+    {
+      "id": "00554204-8410-4a1e-9ada-68b3c49b0f97",
+      "iri": "http://visualdataweb.org/newOntology/00554204-8410-4a1e-9ada-68b3c49b0f97",
+      "label": "IsSubclassOf",
+      "attributes": "object",
+      "domain": "BH.oM.Humans.Human",
+      "range": "BH.oM.Base.BHoMObject"
+    },
+    {
+      "id": "bf52b1ce-cc5b-4f86-87d6-72a25cff6255",
+      "iri": "http://visualdataweb.org/newOntology/bf52b1ce-cc5b-4f86-87d6-72a25cff6255",
+      "label": "IsA",
+      "attributes": "object",
+      "domain": "BH.oM.Humans.IHumanRole",
+      "range": "BH.oM.Base.IObject"
+    },
+    {
+      "id": "b871ec63-73a8-4150-a9e9-fc61b5dc5339",
+      "iri": "http://visualdataweb.org/newOntology/b871ec63-73a8-4150-a9e9-fc61b5dc5339",
+      "label": "HasProperty",
+      "attributes": "object",
+      "domain": "BH.oM.Humans.Skeleton",
+      "range": "BH.oM.Humans.BodyParts.Head"
+    },
+    {
+      "id": "4af7daef-33d5-4c39-84c6-c36edafacc1a",
+      "iri": "http://visualdataweb.org/newOntology/4af7daef-33d5-4c39-84c6-c36edafacc1a",
+      "label": "HasProperty",
+      "attributes": "object",
+      "domain": "BH.oM.Humans.Skeleton",
+      "range": "BH.oM.Humans.BodyParts.RightHand"
+    },
+    {
+      "id": "19ac2986-68a4-4f42-a0cb-4ad77efe26aa",
+      "iri": "http://visualdataweb.org/newOntology/19ac2986-68a4-4f42-a0cb-4ad77efe26aa",
+      "label": "HasProperty",
+      "attributes": "object",
+      "domain": "BH.oM.Humans.Skeleton",
+      "range": "BH.oM.Humans.BodyParts.LeftHand"
+    },
+    {
+      "id": "16e341c3-6e2f-4182-8e34-665f13e6afbb",
+      "iri": "http://visualdataweb.org/newOntology/16e341c3-6e2f-4182-8e34-665f13e6afbb",
+      "label": "HasProperty",
+      "attributes": "object",
+      "domain": "BH.oM.Humans.Skeleton",
+      "range": "BH.oM.Humans.BodyParts.RightThumb"
+    },
+    {
+      "id": "7d740bb7-5743-414e-8860-779dd757916d",
+      "iri": "http://visualdataweb.org/newOntology/7d740bb7-5743-414e-8860-779dd757916d",
+      "label": "HasProperty",
+      "attributes": "object",
+      "domain": "BH.oM.Humans.Skeleton",
+      "range": "BH.oM.Humans.BodyParts.LeftThumb"
+    },
+    {
+      "id": "bffcf52b-e98f-4ee0-88fd-6b8e8a8afa98",
+      "iri": "http://visualdataweb.org/newOntology/bffcf52b-e98f-4ee0-88fd-6b8e8a8afa98",
+      "label": "HasProperty",
+      "attributes": "object",
+      "domain": "BH.oM.Humans.Skeleton",
+      "range": "BH.oM.Humans.BodyParts.Neck"
+    },
+    {
+      "id": "f407a662-e6aa-4421-9914-5d7aec6d0fb9",
+      "iri": "http://visualdataweb.org/newOntology/f407a662-e6aa-4421-9914-5d7aec6d0fb9",
+      "label": "HasProperty",
+      "attributes": "object",
+      "domain": "BH.oM.Humans.Skeleton",
+      "range": "BH.oM.Humans.BodyParts.RightShoulder"
+    },
+    {
+      "id": "71243e99-6038-41ca-b14b-bf20a3442781",
+      "iri": "http://visualdataweb.org/newOntology/71243e99-6038-41ca-b14b-bf20a3442781",
+      "label": "HasProperty",
+      "attributes": "object",
+      "domain": "BH.oM.Humans.Skeleton",
+      "range": "BH.oM.Humans.BodyParts.LeftShoulder"
+    },
+    {
+      "id": "4cba3cb3-4a4c-4384-991a-1078c448c387",
+      "iri": "http://visualdataweb.org/newOntology/4cba3cb3-4a4c-4384-991a-1078c448c387",
+      "label": "HasProperty",
+      "attributes": "object",
+      "domain": "BH.oM.Humans.Skeleton",
+      "range": "BH.oM.Humans.BodyParts.Spine"
+    },
+    {
+      "id": "7729fd51-7a00-469c-8f76-3ba3b96ad022",
+      "iri": "http://visualdataweb.org/newOntology/7729fd51-7a00-469c-8f76-3ba3b96ad022",
+      "label": "HasProperty",
+      "attributes": "object",
+      "domain": "BH.oM.Humans.Skeleton",
+      "range": "BH.oM.Humans.BodyParts.RightHip"
+    },
+    {
+      "id": "78040d08-a6b1-456a-95a8-338c1bef4631",
+      "iri": "http://visualdataweb.org/newOntology/78040d08-a6b1-456a-95a8-338c1bef4631",
+      "label": "HasProperty",
+      "attributes": "object",
+      "domain": "BH.oM.Humans.Skeleton",
+      "range": "BH.oM.Humans.BodyParts.LeftHip"
+    },
+    {
+      "id": "7a10a77c-c857-4f17-b2be-ab4527553a86",
+      "iri": "http://visualdataweb.org/newOntology/7a10a77c-c857-4f17-b2be-ab4527553a86",
+      "label": "HasProperty",
+      "attributes": "object",
+      "domain": "BH.oM.Humans.Skeleton",
+      "range": "BH.oM.Humans.BodyParts.RightUpperArm"
+    },
+    {
+      "id": "47e0c39d-5201-491f-b282-1dcadff98622",
+      "iri": "http://visualdataweb.org/newOntology/47e0c39d-5201-491f-b282-1dcadff98622",
+      "label": "HasProperty",
+      "attributes": "object",
+      "domain": "BH.oM.Humans.Skeleton",
+      "range": "BH.oM.Humans.BodyParts.LeftUpperArm"
+    },
+    {
+      "id": "ad134900-24cd-4ea0-8acb-e409c25dc1aa",
+      "iri": "http://visualdataweb.org/newOntology/ad134900-24cd-4ea0-8acb-e409c25dc1aa",
+      "label": "HasProperty",
+      "attributes": "object",
+      "domain": "BH.oM.Humans.Skeleton",
+      "range": "BH.oM.Humans.BodyParts.RightLowerArm"
+    },
+    {
+      "id": "1079d3d0-095a-4856-b862-de392a41829c",
+      "iri": "http://visualdataweb.org/newOntology/1079d3d0-095a-4856-b862-de392a41829c",
+      "label": "HasProperty",
+      "attributes": "object",
+      "domain": "BH.oM.Humans.Skeleton",
+      "range": "BH.oM.Humans.BodyParts.LeftLowerArm"
+    },
+    {
+      "id": "53ad8113-0378-4420-8cc0-f7ce6a03abd9",
+      "iri": "http://visualdataweb.org/newOntology/53ad8113-0378-4420-8cc0-f7ce6a03abd9",
+      "label": "HasProperty",
+      "attributes": "object",
+      "domain": "BH.oM.Humans.Skeleton",
+      "range": "BH.oM.Humans.BodyParts.RightUpperLeg"
+    },
+    {
+      "id": "a5492649-1c32-4e65-bd8f-07a6d0d997fa",
+      "iri": "http://visualdataweb.org/newOntology/a5492649-1c32-4e65-bd8f-07a6d0d997fa",
+      "label": "HasProperty",
+      "attributes": "object",
+      "domain": "BH.oM.Humans.Skeleton",
+      "range": "BH.oM.Humans.BodyParts.LeftUpperLeg"
+    },
+    {
+      "id": "df7cfb22-d04e-48dd-8046-c84a487f10b9",
+      "iri": "http://visualdataweb.org/newOntology/df7cfb22-d04e-48dd-8046-c84a487f10b9",
+      "label": "HasProperty",
+      "attributes": "object",
+      "domain": "BH.oM.Humans.Skeleton",
+      "range": "BH.oM.Humans.BodyParts.RightLowerLeg"
+    },
+    {
+      "id": "f92f3c85-d5b5-4b59-abd3-fc1175bae3c9",
+      "iri": "http://visualdataweb.org/newOntology/f92f3c85-d5b5-4b59-abd3-fc1175bae3c9",
+      "label": "HasProperty",
+      "attributes": "object",
+      "domain": "BH.oM.Humans.Skeleton",
+      "range": "BH.oM.Humans.BodyParts.LeftLowerLeg"
+    },
+    {
+      "id": "21c73844-73e2-4b1d-afaf-5490ca3c3266",
+      "iri": "http://visualdataweb.org/newOntology/21c73844-73e2-4b1d-afaf-5490ca3c3266",
+      "label": "HasProperty",
+      "attributes": "object",
+      "domain": "BH.oM.Humans.Skeleton",
+      "range": "BH.oM.Humans.BodyParts.RightFoot"
+    },
+    {
+      "id": "90942117-6215-4246-b956-44da8a8eaf88",
+      "iri": "http://visualdataweb.org/newOntology/90942117-6215-4246-b956-44da8a8eaf88",
+      "label": "HasProperty",
+      "attributes": "object",
+      "domain": "BH.oM.Humans.Skeleton",
+      "range": "BH.oM.Humans.BodyParts.LeftFoot"
+    },
+    {
+      "id": "f49893b7-e982-44d3-a87c-057e44499679",
+      "iri": "http://visualdataweb.org/newOntology/f49893b7-e982-44d3-a87c-057e44499679",
+      "label": "IsA",
+      "attributes": "object",
+      "domain": "BH.oM.Humans.Skeleton",
+      "range": "BH.oM.Base.IBHoMObject"
+    },
+    {
+      "id": "cf6948fa-40f5-49db-adab-3948159f1833",
+      "iri": "http://visualdataweb.org/newOntology/cf6948fa-40f5-49db-adab-3948159f1833",
+      "label": "IsA",
+      "attributes": "object",
+      "domain": "BH.oM.Humans.Skeleton",
+      "range": "BH.oM.Base.IObject"
+    },
+    {
+      "id": "8e821102-eeec-4fc5-acb4-0c9b44c0c585",
+      "iri": "http://visualdataweb.org/newOntology/8e821102-eeec-4fc5-acb4-0c9b44c0c585",
+      "label": "IsA",
+      "attributes": "object",
+      "domain": "BH.oM.Humans.Skeleton",
+      "range": "BH.oM.Humans.IHumanRole"
+    },
+    {
+      "id": "3f59b90d-9932-405b-aeb2-587f920f9878",
+      "iri": "http://visualdataweb.org/newOntology/3f59b90d-9932-405b-aeb2-587f920f9878",
+      "label": "IsSubclassOf",
+      "attributes": "object",
+      "domain": "BH.oM.Humans.Skeleton",
+      "range": "BH.oM.Base.BHoMObject"
+    },
+    {
+      "id": "f7a3e06d-ea67-4d7f-9a8f-949ea5d23ca9",
+      "iri": "http://visualdataweb.org/newOntology/f7a3e06d-ea67-4d7f-9a8f-949ea5d23ca9",
+      "label": "HasProperty",
+      "attributes": "datatype",
+      "domain": "BH.oM.Humans.ViewQuality.Audience",
+      "range": "Spectators-fcbbab24-2096-47dc-ae64-d1da354c7ebc-Audience-HasProperty"
+    },
+    {
+      "id": "35e4ea17-fe76-40dc-8440-40e0f42af9ee",
+      "iri": "http://visualdataweb.org/newOntology/35e4ea17-fe76-40dc-8440-40e0f42af9ee",
+      "label": "IsA",
+      "attributes": "object",
+      "domain": "BH.oM.Humans.ViewQuality.Audience",
+      "range": "BH.oM.Base.IBHoMObject"
+    },
+    {
+      "id": "df385128-030d-40fd-bdc9-f39b71ee4d72",
+      "iri": "http://visualdataweb.org/newOntology/df385128-030d-40fd-bdc9-f39b71ee4d72",
+      "label": "IsA",
+      "attributes": "object",
+      "domain": "BH.oM.Humans.ViewQuality.Audience",
+      "range": "BH.oM.Base.IObject"
+    },
+    {
+      "id": "2f96894d-ff64-4b7d-97a8-58db10a28565",
+      "iri": "http://visualdataweb.org/newOntology/2f96894d-ff64-4b7d-97a8-58db10a28565",
+      "label": "IsSubclassOf",
+      "attributes": "object",
+      "domain": "BH.oM.Humans.ViewQuality.Audience",
+      "range": "BH.oM.Base.BHoMObject"
+    },
+    {
+      "id": "ecc0846b-c98a-442f-ac3f-105e8fff95c6",
+      "iri": "http://visualdataweb.org/newOntology/ecc0846b-c98a-442f-ac3f-105e8fff95c6",
+      "label": "HasProperty",
+      "attributes": "object",
+      "domain": "BH.oM.Humans.ViewQuality.AvalueSettings",
+      "range": "BH.oM.Geometry.Polyline"
+    },
+    {
+      "id": "132d9d4f-c226-4b3b-b1e8-40ba2effa1c2",
+      "iri": "http://visualdataweb.org/newOntology/132d9d4f-c226-4b3b-b1e8-40ba2effa1c2",
+      "label": "HasProperty",
+      "attributes": "datatype",
+      "domain": "BH.oM.Humans.ViewQuality.AvalueSettings",
+      "range": "FarClippingPlaneDistance-12126a9c-02ee-436b-974c-4f454e9081c4-AvalueSettings-HasProperty"
+    },
+    {
+      "id": "373e58d0-d18f-4775-bc98-0f13e03a5549",
+      "iri": "http://visualdataweb.org/newOntology/373e58d0-d18f-4775-bc98-0f13e03a5549",
+      "label": "HasProperty",
+      "attributes": "datatype",
+      "domain": "BH.oM.Humans.ViewQuality.AvalueSettings",
+      "range": "CalculateOcclusion-beb81456-9155-42d9-a124-06924138616e-AvalueSettings-HasProperty"
+    },
+    {
+      "id": "470579da-1b41-4895-9cd2-9c79fdbb53a0",
+      "iri": "http://visualdataweb.org/newOntology/470579da-1b41-4895-9cd2-9c79fdbb53a0",
+      "label": "HasProperty",
+      "attributes": "datatype",
+      "domain": "BH.oM.Humans.ViewQuality.AvalueSettings",
+      "range": "EffectiveConeOfVisionWidth-66c0b590-a439-4276-8ee4-b357d0be50d1-AvalueSettings-HasProperty"
+    },
+    {
+      "id": "2f29f84d-01b5-4e7e-a6af-75e3e4907aa2",
+      "iri": "http://visualdataweb.org/newOntology/2f29f84d-01b5-4e7e-a6af-75e3e4907aa2",
+      "label": "HasProperty",
+      "attributes": "datatype",
+      "domain": "BH.oM.Humans.ViewQuality.AvalueSettings",
+      "range": "EffectiveConeOfVisionHeight-ce037fa7-2a63-4cd5-a188-b4d7e7045e53-AvalueSettings-HasProperty"
+    },
+    {
+      "id": "ec68ba2a-d532-438b-9822-8d9f4ca9932e",
+      "iri": "http://visualdataweb.org/newOntology/ec68ba2a-d532-438b-9822-8d9f4ca9932e",
+      "label": "HasProperty",
+      "attributes": "datatype",
+      "domain": "BH.oM.Humans.ViewQuality.AvalueSettings",
+      "range": "NearClippingPlaneDistance-6dbe16e7-8ef2-40ec-ada6-6ef182e99509-AvalueSettings-HasProperty"
+    },
+    {
+      "id": "cf10f8b2-4e0c-42f8-b3b9-2c14412be7eb",
+      "iri": "http://visualdataweb.org/newOntology/cf10f8b2-4e0c-42f8-b3b9-2c14412be7eb",
+      "label": "HasProperty",
+      "attributes": "object",
+      "domain": "BH.oM.Humans.ViewQuality.AvalueSettings",
+      "range": "BH.oM.Geometry.Point"
+    },
+    {
+      "id": "0046766d-1b1b-4f06-816c-9a402945d74b",
+      "iri": "http://visualdataweb.org/newOntology/0046766d-1b1b-4f06-816c-9a402945d74b",
+      "label": "IsA",
+      "attributes": "object",
+      "domain": "BH.oM.Humans.ViewQuality.AvalueSettings",
+      "range": "BH.oM.Base.IBHoMObject"
+    },
+    {
+      "id": "2e7ef07b-7591-423c-addf-6a4b834d4048",
+      "iri": "http://visualdataweb.org/newOntology/2e7ef07b-7591-423c-addf-6a4b834d4048",
+      "label": "IsA",
+      "attributes": "object",
+      "domain": "BH.oM.Humans.ViewQuality.AvalueSettings",
+      "range": "BH.oM.Base.IObject"
+    },
+    {
+      "id": "8b931ae6-b8f4-478b-bb98-f4c3f47df2da",
+      "iri": "http://visualdataweb.org/newOntology/8b931ae6-b8f4-478b-bb98-f4c3f47df2da",
+      "label": "IsSubclassOf",
+      "attributes": "object",
+      "domain": "BH.oM.Humans.ViewQuality.AvalueSettings",
+      "range": "BH.oM.Base.BHoMObject"
+    },
+    {
+      "id": "e0c7fa20-6cfa-4a03-8e9b-248cecb8ce0e",
+      "iri": "http://visualdataweb.org/newOntology/e0c7fa20-6cfa-4a03-8e9b-248cecb8ce0e",
+      "label": "IsA",
+      "attributes": []
+    },
+    {
+      "id": "e896fb6a-0503-401c-b1af-bc01e0439a97",
+      "iri": "http://visualdataweb.org/newOntology/e896fb6a-0503-401c-b1af-bc01e0439a97",
+      "label": "IsA",
+      "attributes": []
+    },
+    {
+      "id": "b73fd6ac-e65a-44ca-b118-4bbfcb1eaeb3",
+      "iri": "http://visualdataweb.org/newOntology/b73fd6ac-e65a-44ca-b118-4bbfcb1eaeb3",
+      "label": "IsA",
+      "attributes": []
+    },
+    {
+      "id": "a2a873e8-f3d4-4c80-9a1c-32f399d4691d",
+      "iri": "http://visualdataweb.org/newOntology/a2a873e8-f3d4-4c80-9a1c-32f399d4691d",
+      "label": "IsSubclassOf",
+      "attributes": []
+    },
+    {
+      "id": "a31fc2d7-7322-4aff-8dcb-517b18a96841",
+      "iri": "http://visualdataweb.org/newOntology/a31fc2d7-7322-4aff-8dcb-517b18a96841",
+      "label": "HasProperty",
+      "attributes": "object",
+      "domain": "BH.oM.Humans.ViewQuality.CvalueSettings",
+      "range": "BH.oM.Humans.ViewQuality.CvalueFocalMethodEnum"
+    },
+    {
+      "id": "42e43111-6cd1-407e-9e44-68af19ef1f91",
+      "iri": "http://visualdataweb.org/newOntology/42e43111-6cd1-407e-9e44-68af19ef1f91",
+      "label": "HasProperty",
+      "attributes": "datatype",
+      "domain": "BH.oM.Humans.ViewQuality.CvalueSettings",
+      "range": "DefaultCValue-398f3815-ee6c-4ea4-a49b-a52cbb9aa659-CvalueSettings-HasProperty"
+    },
+    {
+      "id": "809690ae-e5a4-46d5-bd89-0c5c6ae96d9d",
+      "iri": "http://visualdataweb.org/newOntology/809690ae-e5a4-46d5-bd89-0c5c6ae96d9d",
+      "label": "HasProperty",
+      "attributes": "datatype",
+      "domain": "BH.oM.Humans.ViewQuality.CvalueSettings",
+      "range": "FarClippingPlaneDistance-d0e5c4a7-a85d-4a83-9bd9-12b1887279db-CvalueSettings-HasProperty"
+    },
+    {
+      "id": "9def3fb6-fc62-4597-93ab-8992ef0527f2",
+      "iri": "http://visualdataweb.org/newOntology/9def3fb6-fc62-4597-93ab-8992ef0527f2",
+      "label": "HasProperty",
+      "attributes": "datatype",
+      "domain": "BH.oM.Humans.ViewQuality.CvalueSettings",
+      "range": "ViewConeAngle-7c67b23f-ef10-414e-9739-3119b9ee4883-CvalueSettings-HasProperty"
+    },
+    {
+      "id": "509517c3-ea03-4c22-a4d8-f923be3b2a7b",
+      "iri": "http://visualdataweb.org/newOntology/509517c3-ea03-4c22-a4d8-f923be3b2a7b",
+      "label": "IsA",
+      "attributes": "object",
+      "domain": "BH.oM.Humans.ViewQuality.CvalueSettings",
+      "range": "BH.oM.Base.IBHoMObject"
+    },
+    {
+      "id": "5eff3cc9-00ac-45d2-ac4c-21331106c803",
+      "iri": "http://visualdataweb.org/newOntology/5eff3cc9-00ac-45d2-ac4c-21331106c803",
+      "label": "IsA",
+      "attributes": "object",
+      "domain": "BH.oM.Humans.ViewQuality.CvalueSettings",
+      "range": "BH.oM.Base.IObject"
+    },
+    {
+      "id": "42e81d88-2fb7-4511-9858-7ffa6dc0dd4c",
+      "iri": "http://visualdataweb.org/newOntology/42e81d88-2fb7-4511-9858-7ffa6dc0dd4c",
+      "label": "IsSubclassOf",
+      "attributes": "object",
+      "domain": "BH.oM.Humans.ViewQuality.CvalueSettings",
+      "range": "BH.oM.Base.BHoMObject"
+    },
+    {
+      "id": "9a64d4da-c46c-4775-b7c7-8c69cc6e94b6",
+      "iri": "http://visualdataweb.org/newOntology/9a64d4da-c46c-4775-b7c7-8c69cc6e94b6",
+      "label": "HasProperty",
+      "attributes": "object",
+      "domain": "BH.oM.Humans.ViewQuality.EvalueSettings",
+      "range": "BH.oM.Humans.ViewQuality.EvalueViewEnum"
+    },
+    {
+      "id": "fe0d3f06-9c3c-4326-ad55-db32d994b8fc",
+      "iri": "http://visualdataweb.org/newOntology/fe0d3f06-9c3c-4326-ad55-db32d994b8fc",
+      "label": "IsA",
+      "attributes": "object",
+      "domain": "BH.oM.Humans.ViewQuality.EvalueSettings",
+      "range": "BH.oM.Base.IBHoMObject"
+    },
+    {
+      "id": "c5539b14-8801-488c-b4bd-11243ece50e6",
+      "iri": "http://visualdataweb.org/newOntology/c5539b14-8801-488c-b4bd-11243ece50e6",
+      "label": "IsA",
+      "attributes": "object",
+      "domain": "BH.oM.Humans.ViewQuality.EvalueSettings",
+      "range": "BH.oM.Base.IObject"
+    },
+    {
+      "id": "69553869-8683-48a2-b7ea-b99e50c05cfc",
+      "iri": "http://visualdataweb.org/newOntology/69553869-8683-48a2-b7ea-b99e50c05cfc",
+      "label": "IsSubclassOf",
+      "attributes": "object",
+      "domain": "BH.oM.Humans.ViewQuality.EvalueSettings",
+      "range": "BH.oM.Base.BHoMObject"
+    },
+    {
+      "id": "b80a10f4-ee7b-4e1b-b3d1-0e5de83907e6",
+      "iri": "http://visualdataweb.org/newOntology/b80a10f4-ee7b-4e1b-b3d1-0e5de83907e6",
+      "label": "IsA",
+      "attributes": []
+    },
+    {
+      "id": "4cd2e02f-fd2a-422f-b2df-a62a49615d21",
+      "iri": "http://visualdataweb.org/newOntology/4cd2e02f-fd2a-422f-b2df-a62a49615d21",
+      "label": "IsA",
+      "attributes": []
+    },
+    {
+      "id": "ebd97e6d-5c3f-4c09-80ad-ee7304248bfc",
+      "iri": "http://visualdataweb.org/newOntology/ebd97e6d-5c3f-4c09-80ad-ee7304248bfc",
+      "label": "IsA",
+      "attributes": []
+    },
+    {
+      "id": "3d4e1088-3600-41a9-9c4d-b0eed9b58709",
+      "iri": "http://visualdataweb.org/newOntology/3d4e1088-3600-41a9-9c4d-b0eed9b58709",
+      "label": "IsSubclassOf",
+      "attributes": []
+    },
+    {
+      "id": "c5b64ecc-af76-4814-a335-e6ddc98a5c46",
+      "iri": "http://visualdataweb.org/newOntology/c5b64ecc-af76-4814-a335-e6ddc98a5c46",
+      "label": "HasProperty",
+      "attributes": "datatype",
+      "domain": "BH.oM.Humans.ViewQuality.EyePositionParameters",
+      "range": "EyePositionZ-7878879e-843c-4c42-8a82-25ae35d03595-EyePositionParameters-HasProperty"
+    },
+    {
+      "id": "a0728d17-4cac-47c1-a390-b3f503f90f19",
+      "iri": "http://visualdataweb.org/newOntology/a0728d17-4cac-47c1-a390-b3f503f90f19",
+      "label": "HasProperty",
+      "attributes": "datatype",
+      "domain": "BH.oM.Humans.ViewQuality.EyePositionParameters",
+      "range": "EyePositionX-8b3d0eab-2b19-4a92-9696-496ef2e708c2-EyePositionParameters-HasProperty"
+    },
+    {
+      "id": "a9b6ad23-95df-45ad-999f-71f4896c3807",
+      "iri": "http://visualdataweb.org/newOntology/a9b6ad23-95df-45ad-999f-71f4896c3807",
+      "label": "HasProperty",
+      "attributes": "datatype",
+      "domain": "BH.oM.Humans.ViewQuality.EyePositionParameters",
+      "range": "WheelChairEyePositionZ-1fe82b7d-1c27-4ffd-bd4e-bfd71c92baa0-EyePositionParameters-HasProperty"
+    },
+    {
+      "id": "8501d07e-fcab-4ff4-9319-eaa1f4f7ad49",
+      "iri": "http://visualdataweb.org/newOntology/8501d07e-fcab-4ff4-9319-eaa1f4f7ad49",
+      "label": "HasProperty",
+      "attributes": "datatype",
+      "domain": "BH.oM.Humans.ViewQuality.EyePositionParameters",
+      "range": "WheelChairEyePositionX-d57f97bf-c3c4-4bab-a319-c0cfffbb85f3-EyePositionParameters-HasProperty"
+    },
+    {
+      "id": "12503f0c-ddc6-4e3a-a14a-9f415d2f00cc",
+      "iri": "http://visualdataweb.org/newOntology/12503f0c-ddc6-4e3a-a14a-9f415d2f00cc",
+      "label": "HasProperty",
+      "attributes": "datatype",
+      "domain": "BH.oM.Humans.ViewQuality.EyePositionParameters",
+      "range": "StandingEyePositionZ-c051633a-5abd-4588-850e-80e69d65934b-EyePositionParameters-HasProperty"
+    },
+    {
+      "id": "0a1e26d0-ef30-4519-a7bb-10e81a585baf",
+      "iri": "http://visualdataweb.org/newOntology/0a1e26d0-ef30-4519-a7bb-10e81a585baf",
+      "label": "HasProperty",
+      "attributes": "datatype",
+      "domain": "BH.oM.Humans.ViewQuality.EyePositionParameters",
+      "range": "StandingEyePositionX-153a7534-3c01-48c6-94eb-51c43e9e8545-EyePositionParameters-HasProperty"
+    },
+    {
+      "id": "3dc56842-47f7-434f-a4a3-de9ff3c4ce1e",
+      "iri": "http://visualdataweb.org/newOntology/3dc56842-47f7-434f-a4a3-de9ff3c4ce1e",
+      "label": "IsA",
+      "attributes": "object",
+      "domain": "BH.oM.Humans.ViewQuality.EyePositionParameters",
+      "range": "BH.oM.Base.IBHoMObject"
+    },
+    {
+      "id": "e68337e4-977f-4ab3-8690-58998e1ae4f1",
+      "iri": "http://visualdataweb.org/newOntology/e68337e4-977f-4ab3-8690-58998e1ae4f1",
+      "label": "IsA",
+      "attributes": "object",
+      "domain": "BH.oM.Humans.ViewQuality.EyePositionParameters",
+      "range": "BH.oM.Base.IObject"
+    },
+    {
+      "id": "a83424c3-aa9c-458e-8222-193b61487db6",
+      "iri": "http://visualdataweb.org/newOntology/a83424c3-aa9c-458e-8222-193b61487db6",
+      "label": "IsSubclassOf",
+      "attributes": "object",
+      "domain": "BH.oM.Humans.ViewQuality.EyePositionParameters",
+      "range": "BH.oM.Base.BHoMObject"
+    },
+    {
+      "id": "2e163177-5f9d-4e69-89f3-0f406fd8b459",
+      "iri": "http://visualdataweb.org/newOntology/2e163177-5f9d-4e69-89f3-0f406fd8b459",
+      "label": "HasProperty",
+      "attributes": "datatype",
+      "domain": "BH.oM.Humans.ViewQuality.Avalue",
+      "range": "AValue-d95506f5-f383-4d1f-87cf-4c5ada814458-Avalue-HasProperty"
+    },
+    {
+      "id": "288b39b6-10c4-4832-8129-9325255830cb",
+      "iri": "http://visualdataweb.org/newOntology/288b39b6-10c4-4832-8129-9325255830cb",
+      "label": "HasProperty",
+      "attributes": "datatype",
+      "domain": "BH.oM.Humans.ViewQuality.Avalue",
+      "range": "Occulsion-a26ad718-b907-4eab-9ed3-fb238bc94bf9-Avalue-HasProperty"
+    },
+    {
+      "id": "6c746d07-06a5-4e89-a678-81ce7dad0bff",
+      "iri": "http://visualdataweb.org/newOntology/6c746d07-06a5-4e89-a678-81ce7dad0bff",
+      "label": "HasProperty",
+      "attributes": "object",
+      "domain": "BH.oM.Humans.ViewQuality.Avalue",
+      "range": "BH.oM.Geometry.Polyline"
+    },
+    {
+      "id": "7cd01827-455d-4196-8b9d-83a630cac94d",
+      "iri": "http://visualdataweb.org/newOntology/7cd01827-455d-4196-8b9d-83a630cac94d",
+      "label": "HasProperty",
+      "attributes": "object",
+      "domain": "BH.oM.Humans.ViewQuality.Avalue",
+      "range": "BH.oM.Geometry.Polyline"
+    },
+    {
+      "id": "6db39738-d443-43e5-a20a-5ed269bc1c6c",
+      "iri": "http://visualdataweb.org/newOntology/6db39738-d443-43e5-a20a-5ed269bc1c6c",
+      "label": "HasProperty",
+      "attributes": "object",
+      "domain": "BH.oM.Humans.ViewQuality.Avalue",
+      "range": "BH.oM.Geometry.Polyline"
+    },
+    {
+      "id": "98ac0346-874e-4f4b-b819-a4d12eb2a697",
+      "iri": "http://visualdataweb.org/newOntology/98ac0346-874e-4f4b-b819-a4d12eb2a697",
+      "label": "HasProperty",
+      "attributes": "object",
+      "domain": "BH.oM.Humans.ViewQuality.Avalue",
+      "range": "BH.oM.Geometry.Point"
+    },
+    {
+      "id": "04e38d29-f65e-4019-85ed-949d10f61f17",
+      "iri": "http://visualdataweb.org/newOntology/04e38d29-f65e-4019-85ed-949d10f61f17",
+      "label": "HasProperty",
+      "attributes": "datatype",
+      "domain": "BH.oM.Humans.ViewQuality.Avalue",
+      "range": "OccludingHeads-4220e04b-e968-4387-a734-3d17ff7d661d-Avalue-HasProperty"
+    },
+    {
+      "id": "0740a586-0262-467f-bf23-ece352fba18d",
+      "iri": "http://visualdataweb.org/newOntology/0740a586-0262-467f-bf23-ece352fba18d",
+      "label": "IsA",
+      "attributes": "object",
+      "domain": "BH.oM.Humans.ViewQuality.Avalue",
+      "range": "BH.oM.Analytical.Results.IObjectIdResult"
+    },
+    {
+      "id": "43eec419-fa3b-4482-8533-73a0384b2819",
+      "iri": "http://visualdataweb.org/newOntology/43eec419-fa3b-4482-8533-73a0384b2819",
+      "label": "IsA",
+      "attributes": "object",
+      "domain": "BH.oM.Humans.ViewQuality.Avalue",
+      "range": "BH.oM.Analytical.Results.IResult"
+    },
+    {
+      "id": "1c8d162c-f378-4f21-ae5e-b63f750d7171",
+      "iri": "http://visualdataweb.org/newOntology/1c8d162c-f378-4f21-ae5e-b63f750d7171",
+      "label": "IsA",
+      "attributes": "object",
+      "domain": "BH.oM.Humans.ViewQuality.Avalue",
+      "range": "BH.oM.Base.IObject"
+    },
+    {
+      "id": "03a001e5-6994-47bc-92a7-711493c45b4a",
+      "iri": "http://visualdataweb.org/newOntology/03a001e5-6994-47bc-92a7-711493c45b4a",
+      "label": "IsA",
+      "attributes": []
+    },
+    {
+      "id": "bb09ea9c-3f4c-4a3c-992e-4c362a94d708",
+      "iri": "http://visualdataweb.org/newOntology/bb09ea9c-3f4c-4a3c-992e-4c362a94d708",
+      "label": "IsA",
+      "attributes": "object",
+      "domain": "BH.oM.Humans.ViewQuality.Avalue",
+      "range": "BH.oM.Base.IImmutable"
+    },
+    {
+      "id": "a8ca7b3d-1e8a-4a52-8e25-77f14b37dedf",
+      "iri": "http://visualdataweb.org/newOntology/a8ca7b3d-1e8a-4a52-8e25-77f14b37dedf",
+      "label": "IsA",
+      "attributes": "object",
+      "domain": "BH.oM.Humans.ViewQuality.Avalue",
+      "range": "BH.oM.Analytical.Results.ICasedResult"
+    },
+    {
+      "id": "ccbf8699-9a2d-4f8b-9d51-34eb6a761b10",
+      "iri": "http://visualdataweb.org/newOntology/ccbf8699-9a2d-4f8b-9d51-34eb6a761b10",
+      "label": "IsA",
+      "attributes": "object",
+      "domain": "BH.oM.Humans.ViewQuality.Avalue",
+      "range": "BH.oM.Analytical.Results.ITimeStepResult"
+    },
+    {
+      "id": "bd823887-1b13-405f-8f41-e8c75a898c0b",
+      "iri": "http://visualdataweb.org/newOntology/bd823887-1b13-405f-8f41-e8c75a898c0b",
+      "label": "IsSubclassOf",
+      "attributes": "object",
+      "domain": "BH.oM.Humans.ViewQuality.Avalue",
+      "range": "BH.oM.Humans.ViewQuality.ViewQualityResult"
+    },
+    {
+      "id": "c2e9b7b2-3f7c-4822-b7ad-dcb90cd4a134",
+      "iri": "http://visualdataweb.org/newOntology/c2e9b7b2-3f7c-4822-b7ad-dcb90cd4a134",
+      "label": "HasProperty",
+      "attributes": "datatype",
+      "domain": "BH.oM.Humans.ViewQuality.Cvalue",
+      "range": "CValue-3987c0c9-968b-499a-b370-98b3c097e382-Cvalue-HasProperty"
+    },
+    {
+      "id": "738d0bb0-1d52-448c-8987-284206387729",
+      "iri": "http://visualdataweb.org/newOntology/738d0bb0-1d52-448c-8987-284206387729",
+      "label": "HasProperty",
+      "attributes": "datatype",
+      "domain": "BH.oM.Humans.ViewQuality.Cvalue",
+      "range": "HorizDist-0b535716-6489-433d-8d98-da8eb5b4ab67-Cvalue-HasProperty"
+    },
+    {
+      "id": "16ab692f-3843-4201-9b60-cb1c189ff3bc",
+      "iri": "http://visualdataweb.org/newOntology/16ab692f-3843-4201-9b60-cb1c189ff3bc",
+      "label": "HasProperty",
+      "attributes": "datatype",
+      "domain": "BH.oM.Humans.ViewQuality.Cvalue",
+      "range": "HeightAbovePitch-39ad93c1-234b-4e3f-974d-944711832011-Cvalue-HasProperty"
+    },
+    {
+      "id": "502b2452-1762-42b2-9405-aeb0d7f1ef28",
+      "iri": "http://visualdataweb.org/newOntology/502b2452-1762-42b2-9405-aeb0d7f1ef28",
+      "label": "HasProperty",
+      "attributes": "datatype",
+      "domain": "BH.oM.Humans.ViewQuality.Cvalue",
+      "range": "AbsoluteDist-f42cf32d-4f08-4a44-b549-1a140c9b842d-Cvalue-HasProperty"
+    },
+    {
+      "id": "df5e2b8f-6a43-4c7b-8968-ad5b28e961c2",
+      "iri": "http://visualdataweb.org/newOntology/df5e2b8f-6a43-4c7b-8968-ad5b28e961c2",
+      "label": "HasProperty",
+      "attributes": "object",
+      "domain": "BH.oM.Humans.ViewQuality.Cvalue",
+      "range": "BH.oM.Geometry.Point"
+    },
+    {
+      "id": "c4fe350e-0f9a-4189-84b6-8d288febcde6",
+      "iri": "http://visualdataweb.org/newOntology/c4fe350e-0f9a-4189-84b6-8d288febcde6",
+      "label": "IsA",
+      "attributes": "object",
+      "domain": "BH.oM.Humans.ViewQuality.Cvalue",
+      "range": "BH.oM.Analytical.Results.IObjectIdResult"
+    },
+    {
+      "id": "11db2bfa-098f-46d3-adfc-bbbbdd0a5afd",
+      "iri": "http://visualdataweb.org/newOntology/11db2bfa-098f-46d3-adfc-bbbbdd0a5afd",
+      "label": "IsA",
+      "attributes": "object",
+      "domain": "BH.oM.Humans.ViewQuality.Cvalue",
+      "range": "BH.oM.Analytical.Results.IResult"
+    },
+    {
+      "id": "2a22f6c1-a231-4a46-9659-e82de6e72888",
+      "iri": "http://visualdataweb.org/newOntology/2a22f6c1-a231-4a46-9659-e82de6e72888",
+      "label": "IsA",
+      "attributes": "object",
+      "domain": "BH.oM.Humans.ViewQuality.Cvalue",
+      "range": "BH.oM.Base.IObject"
+    },
+    {
+      "id": "a831de43-6409-4470-9530-5f6346e01219",
+      "iri": "http://visualdataweb.org/newOntology/a831de43-6409-4470-9530-5f6346e01219",
+      "label": "IsA",
+      "attributes": []
+    },
+    {
+      "id": "e0bc7bfb-9548-4ae4-bbe7-62a2d3d51b0a",
+      "iri": "http://visualdataweb.org/newOntology/e0bc7bfb-9548-4ae4-bbe7-62a2d3d51b0a",
+      "label": "IsA",
+      "attributes": "object",
+      "domain": "BH.oM.Humans.ViewQuality.Cvalue",
+      "range": "BH.oM.Base.IImmutable"
+    },
+    {
+      "id": "8d5f7889-9547-4478-af0f-963a4e028a78",
+      "iri": "http://visualdataweb.org/newOntology/8d5f7889-9547-4478-af0f-963a4e028a78",
+      "label": "IsA",
+      "attributes": "object",
+      "domain": "BH.oM.Humans.ViewQuality.Cvalue",
+      "range": "BH.oM.Analytical.Results.ICasedResult"
+    },
+    {
+      "id": "fa2a73d3-2a96-4107-b227-448f19f05842",
+      "iri": "http://visualdataweb.org/newOntology/fa2a73d3-2a96-4107-b227-448f19f05842",
+      "label": "IsA",
+      "attributes": "object",
+      "domain": "BH.oM.Humans.ViewQuality.Cvalue",
+      "range": "BH.oM.Analytical.Results.ITimeStepResult"
+    },
+    {
+      "id": "0b569d32-c0a3-4e54-adc0-6fc45dab689a",
+      "iri": "http://visualdataweb.org/newOntology/0b569d32-c0a3-4e54-adc0-6fc45dab689a",
+      "label": "IsSubclassOf",
+      "attributes": "object",
+      "domain": "BH.oM.Humans.ViewQuality.Cvalue",
+      "range": "BH.oM.Humans.ViewQuality.ViewQualityResult"
+    },
+    {
+      "id": "c214b765-944d-40fe-95e7-7e030417df0d",
+      "iri": "http://visualdataweb.org/newOntology/c214b765-944d-40fe-95e7-7e030417df0d",
+      "label": "HasProperty",
+      "attributes": "datatype",
+      "domain": "BH.oM.Humans.ViewQuality.Evalue",
+      "range": "Torsion-e4807982-e7cf-4941-b3e6-8f9a7e08fcba-Evalue-HasProperty"
+    },
+    {
+      "id": "66796124-7f43-47e7-ab29-0bcd70f909fd",
+      "iri": "http://visualdataweb.org/newOntology/66796124-7f43-47e7-ab29-0bcd70f909fd",
+      "label": "HasProperty",
+      "attributes": "datatype",
+      "domain": "BH.oM.Humans.ViewQuality.Evalue",
+      "range": "HorizViewAng-f948d33a-8417-4c0d-8cd5-d45ba6dfbce5-Evalue-HasProperty"
+    },
+    {
+      "id": "dc355d27-a512-449b-bcfc-055629b492c7",
+      "iri": "http://visualdataweb.org/newOntology/dc355d27-a512-449b-bcfc-055629b492c7",
+      "label": "HasProperty",
+      "attributes": "object",
+      "domain": "BH.oM.Humans.ViewQuality.Evalue",
+      "range": "BH.oM.Geometry.Vector"
+    },
+    {
+      "id": "9d8bd477-adba-4092-beb7-fc092c345089",
+      "iri": "http://visualdataweb.org/newOntology/9d8bd477-adba-4092-beb7-fc092c345089",
+      "label": "HasProperty",
+      "attributes": "object",
+      "domain": "BH.oM.Humans.ViewQuality.Evalue",
+      "range": "BH.oM.Geometry.Vector"
+    },
+    {
+      "id": "1760c872-6f01-44cb-bcc7-1c543861d759",
+      "iri": "http://visualdataweb.org/newOntology/1760c872-6f01-44cb-bcc7-1c543861d759",
+      "label": "HasProperty",
+      "attributes": "datatype",
+      "domain": "BH.oM.Humans.ViewQuality.Evalue",
+      "range": "VertViewAng-4fde8521-ae99-4d06-b6b2-ceec1c823ce0-Evalue-HasProperty"
+    },
+    {
+      "id": "4116f1ae-b479-4cdf-96af-971502e53d1e",
+      "iri": "http://visualdataweb.org/newOntology/4116f1ae-b479-4cdf-96af-971502e53d1e",
+      "label": "IsA",
+      "attributes": "object",
+      "domain": "BH.oM.Humans.ViewQuality.Evalue",
+      "range": "BH.oM.Analytical.Results.IObjectIdResult"
+    },
+    {
+      "id": "6d2d6462-157b-404c-b024-5cc30bf35a6f",
+      "iri": "http://visualdataweb.org/newOntology/6d2d6462-157b-404c-b024-5cc30bf35a6f",
+      "label": "IsA",
+      "attributes": "object",
+      "domain": "BH.oM.Humans.ViewQuality.Evalue",
+      "range": "BH.oM.Analytical.Results.IResult"
+    },
+    {
+      "id": "4b7b7fb0-55eb-4c85-832e-c82201c0923a",
+      "iri": "http://visualdataweb.org/newOntology/4b7b7fb0-55eb-4c85-832e-c82201c0923a",
+      "label": "IsA",
+      "attributes": "object",
+      "domain": "BH.oM.Humans.ViewQuality.Evalue",
+      "range": "BH.oM.Base.IObject"
+    },
+    {
+      "id": "f3d5f841-8db7-40f1-9e4c-404c860eb2f7",
+      "iri": "http://visualdataweb.org/newOntology/f3d5f841-8db7-40f1-9e4c-404c860eb2f7",
+      "label": "IsA",
+      "attributes": []
+    },
+    {
+      "id": "fc905048-cb43-4995-923e-8d63ab95840a",
+      "iri": "http://visualdataweb.org/newOntology/fc905048-cb43-4995-923e-8d63ab95840a",
+      "label": "IsA",
+      "attributes": "object",
+      "domain": "BH.oM.Humans.ViewQuality.Evalue",
+      "range": "BH.oM.Base.IImmutable"
+    },
+    {
+      "id": "a4a2b67b-891c-4548-aef7-87e595dee361",
+      "iri": "http://visualdataweb.org/newOntology/a4a2b67b-891c-4548-aef7-87e595dee361",
+      "label": "IsA",
+      "attributes": "object",
+      "domain": "BH.oM.Humans.ViewQuality.Evalue",
+      "range": "BH.oM.Analytical.Results.ICasedResult"
+    },
+    {
+      "id": "313d46e5-9577-43b4-b5fe-8e0b7af7da3c",
+      "iri": "http://visualdataweb.org/newOntology/313d46e5-9577-43b4-b5fe-8e0b7af7da3c",
+      "label": "IsA",
+      "attributes": "object",
+      "domain": "BH.oM.Humans.ViewQuality.Evalue",
+      "range": "BH.oM.Analytical.Results.ITimeStepResult"
+    },
+    {
+      "id": "e3794575-1967-4943-aee0-d0649c111b69",
+      "iri": "http://visualdataweb.org/newOntology/e3794575-1967-4943-aee0-d0649c111b69",
+      "label": "IsSubclassOf",
+      "attributes": "object",
+      "domain": "BH.oM.Humans.ViewQuality.Evalue",
+      "range": "BH.oM.Humans.ViewQuality.ViewQualityResult"
+    },
+    {
+      "id": "c090537d-c8aa-43b6-832f-274208d147da",
+      "iri": "http://visualdataweb.org/newOntology/c090537d-c8aa-43b6-832f-274208d147da",
+      "label": "HasProperty",
+      "attributes": "datatype",
+      "domain": "BH.oM.Humans.ViewQuality.ViewQualityResult",
+      "range": "ObjectId-ac9f1765-4903-4119-b476-84a6b54b6dbe-ViewQualityResult-HasProperty"
+    },
+    {
+      "id": "82bdd10c-489d-4c85-9034-87254d124c51",
+      "iri": "http://visualdataweb.org/newOntology/82bdd10c-489d-4c85-9034-87254d124c51",
+      "label": "HasProperty",
+      "attributes": "datatype",
+      "domain": "BH.oM.Humans.ViewQuality.ViewQualityResult",
+      "range": "ResultCase-dd9dc471-8e85-4584-973d-88e6d79c93d6-ViewQualityResult-HasProperty"
+    },
+    {
+      "id": "46bf8f9a-bcc3-4318-aaf5-b1a97c4344c3",
+      "iri": "http://visualdataweb.org/newOntology/46bf8f9a-bcc3-4318-aaf5-b1a97c4344c3",
+      "label": "HasProperty",
+      "attributes": "datatype",
+      "domain": "BH.oM.Humans.ViewQuality.ViewQualityResult",
+      "range": "TimeStep-559417e4-f94b-4161-85e2-03913b09dcfc-ViewQualityResult-HasProperty"
+    },
+    {
+      "id": "5236a062-3a2d-48ec-8f00-fea80b97e855",
+      "iri": "http://visualdataweb.org/newOntology/5236a062-3a2d-48ec-8f00-fea80b97e855",
+      "label": "IsA",
+      "attributes": "object",
+      "domain": "BH.oM.Humans.ViewQuality.ViewQualityResult",
+      "range": "BH.oM.Analytical.Results.IObjectIdResult"
+    },
+    {
+      "id": "66cb5452-17f3-429e-b0f9-8ea231f2c0ef",
+      "iri": "http://visualdataweb.org/newOntology/66cb5452-17f3-429e-b0f9-8ea231f2c0ef",
+      "label": "IsA",
+      "attributes": "object",
+      "domain": "BH.oM.Humans.ViewQuality.ViewQualityResult",
+      "range": "BH.oM.Analytical.Results.IResult"
+    },
+    {
+      "id": "6925fb9e-2ebb-4098-887d-59fcf0446f88",
+      "iri": "http://visualdataweb.org/newOntology/6925fb9e-2ebb-4098-887d-59fcf0446f88",
+      "label": "IsA",
+      "attributes": "object",
+      "domain": "BH.oM.Humans.ViewQuality.ViewQualityResult",
+      "range": "BH.oM.Base.IObject"
+    },
+    {
+      "id": "90eb23d6-58dd-40fd-8858-c043b24da596",
+      "iri": "http://visualdataweb.org/newOntology/90eb23d6-58dd-40fd-8858-c043b24da596",
+      "label": "IsA",
+      "attributes": []
+    },
+    {
+      "id": "d5366a7c-3871-47da-bfa6-75497c5d3886",
+      "iri": "http://visualdataweb.org/newOntology/d5366a7c-3871-47da-bfa6-75497c5d3886",
+      "label": "IsA",
+      "attributes": "object",
+      "domain": "BH.oM.Humans.ViewQuality.ViewQualityResult",
+      "range": "BH.oM.Base.IImmutable"
+    },
+    {
+      "id": "fb365afd-d73e-4e63-8270-8105ca7535df",
+      "iri": "http://visualdataweb.org/newOntology/fb365afd-d73e-4e63-8270-8105ca7535df",
+      "label": "IsA",
+      "attributes": "object",
+      "domain": "BH.oM.Humans.ViewQuality.ViewQualityResult",
+      "range": "BH.oM.Analytical.Results.ICasedResult"
+    },
+    {
+      "id": "fb51ee75-bb18-4e42-9d18-2cea0b3613a5",
+      "iri": "http://visualdataweb.org/newOntology/fb51ee75-bb18-4e42-9d18-2cea0b3613a5",
+      "label": "IsA",
+      "attributes": "object",
+      "domain": "BH.oM.Humans.ViewQuality.ViewQualityResult",
+      "range": "BH.oM.Analytical.Results.ITimeStepResult"
+    },
+    {
+      "id": "68007fc3-470c-45c4-9aa5-773386cac46e",
+      "iri": "http://visualdataweb.org/newOntology/68007fc3-470c-45c4-9aa5-773386cac46e",
+      "label": "IsSubclassOf",
+      "attributes": []
+    },
+    {
+      "id": "e46c4c9c-c740-4b8b-83f0-10abe827a670",
+      "iri": "http://visualdataweb.org/newOntology/e46c4c9c-c740-4b8b-83f0-10abe827a670",
+      "label": "HasProperty",
+      "attributes": "object",
+      "domain": "BH.oM.Humans.ViewQuality.Spectator",
+      "range": "BH.oM.Humans.BodyParts.Head"
+    },
+    {
+      "id": "0825480e-8b5e-498d-8f55-b409733bfc5c",
+      "iri": "http://visualdataweb.org/newOntology/0825480e-8b5e-498d-8f55-b409733bfc5c",
+      "label": "HasProperty",
+      "attributes": "object",
+      "domain": "BH.oM.Humans.ViewQuality.Spectator",
+      "range": "BH.oM.Geometry.Polyline"
+    },
+    {
+      "id": "eb47bd16-f16c-487a-bdc8-4fc9087840c1",
+      "iri": "http://visualdataweb.org/newOntology/eb47bd16-f16c-487a-bdc8-4fc9087840c1",
+      "label": "IsA",
+      "attributes": "object",
+      "domain": "BH.oM.Humans.ViewQuality.Spectator",
+      "range": "BH.oM.Base.IBHoMObject"
+    },
+    {
+      "id": "e785d8f0-342c-4b9e-a120-7d0ad5adbddc",
+      "iri": "http://visualdataweb.org/newOntology/e785d8f0-342c-4b9e-a120-7d0ad5adbddc",
+      "label": "IsA",
+      "attributes": "object",
+      "domain": "BH.oM.Humans.ViewQuality.Spectator",
+      "range": "BH.oM.Base.IObject"
+    },
+    {
+      "id": "43f51035-7e86-4fa7-93e6-0b2e89f5d4f6",
+      "iri": "http://visualdataweb.org/newOntology/43f51035-7e86-4fa7-93e6-0b2e89f5d4f6",
+      "label": "IsA",
+      "attributes": "object",
+      "domain": "BH.oM.Humans.ViewQuality.Spectator",
+      "range": "BH.oM.Humans.IHumanRole"
+    },
+    {
+      "id": "46a4848e-a33d-480b-9123-69ad61253c21",
+      "iri": "http://visualdataweb.org/newOntology/46a4848e-a33d-480b-9123-69ad61253c21",
+      "label": "IsSubclassOf",
+      "attributes": "object",
+      "domain": "BH.oM.Humans.ViewQuality.Spectator",
+      "range": "BH.oM.Base.BHoMObject"
+    },
+    {
+      "id": "5eeb9615-95c7-4ace-8a8f-92589cde85a9",
+      "iri": "http://visualdataweb.org/newOntology/5eeb9615-95c7-4ace-8a8f-92589cde85a9",
+      "label": "RequiresProperty",
+      "attributes": "object",
+      "domain": "BH.oM.Humans.Interfaces.ILineBodyPart",
+      "range": "BH.oM.Geometry.Line"
+    },
+    {
+      "id": "5fed9252-c2bd-404b-b380-a1a459c4bbdf",
+      "iri": "http://visualdataweb.org/newOntology/5fed9252-c2bd-404b-b380-a1a459c4bbdf",
+      "label": "IsA",
+      "attributes": "object",
+      "domain": "BH.oM.Humans.Interfaces.ILineBodyPart",
+      "range": "BH.oM.Base.IObject"
+    },
+    {
+      "id": "3bf6549d-e86e-4882-861f-d1ca500f830e",
+      "iri": "http://visualdataweb.org/newOntology/3bf6549d-e86e-4882-861f-d1ca500f830e",
+      "label": "RequiresProperty",
+      "attributes": "object",
+      "domain": "BH.oM.Humans.Interfaces.IPointBodyPart",
+      "range": "BH.oM.Geometry.Point"
+    },
+    {
+      "id": "03a01ad1-9549-4538-bd19-9d44f0a21673",
+      "iri": "http://visualdataweb.org/newOntology/03a01ad1-9549-4538-bd19-9d44f0a21673",
+      "label": "IsA",
+      "attributes": "object",
+      "domain": "BH.oM.Humans.Interfaces.IPointBodyPart",
+      "range": "BH.oM.Base.IObject"
+    },
+    {
+      "id": "57095ff3-8ebb-45f7-8aca-a1e2b1be2500",
+      "iri": "http://visualdataweb.org/newOntology/57095ff3-8ebb-45f7-8aca-a1e2b1be2500",
+      "label": "HasProperty",
+      "attributes": "object",
+      "domain": "BH.oM.Humans.BodyParts.Eye",
+      "range": "BH.oM.Geometry.Point"
+    },
+    {
+      "id": "38d64dd0-1bd9-4020-94a3-c89099ffebe5",
+      "iri": "http://visualdataweb.org/newOntology/38d64dd0-1bd9-4020-94a3-c89099ffebe5",
+      "label": "IsA",
+      "attributes": "object",
+      "domain": "BH.oM.Humans.BodyParts.Eye",
+      "range": "BH.oM.Humans.Interfaces.IPointBodyPart"
+    },
+    {
+      "id": "c8dffebc-2a5e-41a3-ab26-0649f545e0bc",
+      "iri": "http://visualdataweb.org/newOntology/c8dffebc-2a5e-41a3-ab26-0649f545e0bc",
+      "label": "IsA",
+      "attributes": "object",
+      "domain": "BH.oM.Humans.BodyParts.Eye",
+      "range": "BH.oM.Base.IObject"
+    },
+    {
+      "id": "a80a5eb3-57da-4484-8dcb-7d1bfa9f4371",
+      "iri": "http://visualdataweb.org/newOntology/a80a5eb3-57da-4484-8dcb-7d1bfa9f4371",
+      "label": "IsSubclassOf",
+      "attributes": []
+    },
+    {
+      "id": "4865fe39-0274-4310-aa79-a81d679cc64c",
+      "iri": "http://visualdataweb.org/newOntology/4865fe39-0274-4310-aa79-a81d679cc64c",
+      "label": "HasProperty",
+      "attributes": "object",
+      "domain": "BH.oM.Humans.BodyParts.Head",
+      "range": "BH.oM.Geometry.Point"
+    },
+    {
+      "id": "88c02373-ce37-4916-b4fe-53058db085fa",
+      "iri": "http://visualdataweb.org/newOntology/88c02373-ce37-4916-b4fe-53058db085fa",
+      "label": "HasProperty",
+      "attributes": "object",
+      "domain": "BH.oM.Humans.BodyParts.Head",
+      "range": "BH.oM.Humans.BodyParts.PairOfEyes"
+    },
+    {
+      "id": "847210c5-7e5b-4e46-a565-bc0b2ccf6ced",
+      "iri": "http://visualdataweb.org/newOntology/847210c5-7e5b-4e46-a565-bc0b2ccf6ced",
+      "label": "IsA",
+      "attributes": "object",
+      "domain": "BH.oM.Humans.BodyParts.Head",
+      "range": "BH.oM.Humans.Interfaces.IPointBodyPart"
+    },
+    {
+      "id": "7f808a15-9c35-4d1c-add6-45f32bda22f3",
+      "iri": "http://visualdataweb.org/newOntology/7f808a15-9c35-4d1c-add6-45f32bda22f3",
+      "label": "IsA",
+      "attributes": "object",
+      "domain": "BH.oM.Humans.BodyParts.Head",
+      "range": "BH.oM.Base.IObject"
+    },
+    {
+      "id": "1d723f5e-096c-411c-8192-16b30d0389d1",
+      "iri": "http://visualdataweb.org/newOntology/1d723f5e-096c-411c-8192-16b30d0389d1",
+      "label": "IsSubclassOf",
+      "attributes": []
+    },
+    {
+      "id": "7bb0f8fd-ecf4-4727-842c-1247f3f4f32c",
+      "iri": "http://visualdataweb.org/newOntology/7bb0f8fd-ecf4-4727-842c-1247f3f4f32c",
+      "label": "HasProperty",
+      "attributes": "object",
+      "domain": "BH.oM.Humans.BodyParts.LeftFoot",
+      "range": "BH.oM.Geometry.Line"
+    },
+    {
+      "id": "3a5d4a0e-2b45-4e31-b5ef-6bab22a22549",
+      "iri": "http://visualdataweb.org/newOntology/3a5d4a0e-2b45-4e31-b5ef-6bab22a22549",
+      "label": "IsA",
+      "attributes": "object",
+      "domain": "BH.oM.Humans.BodyParts.LeftFoot",
+      "range": "BH.oM.Humans.Interfaces.ILineBodyPart"
+    },
+    {
+      "id": "af0a327f-60df-4c7b-8b5d-84e25910276a",
+      "iri": "http://visualdataweb.org/newOntology/af0a327f-60df-4c7b-8b5d-84e25910276a",
+      "label": "IsA",
+      "attributes": "object",
+      "domain": "BH.oM.Humans.BodyParts.LeftFoot",
+      "range": "BH.oM.Base.IObject"
+    },
+    {
+      "id": "b146e1e8-b69e-46ca-bdc2-a8895be1d5cd",
+      "iri": "http://visualdataweb.org/newOntology/b146e1e8-b69e-46ca-bdc2-a8895be1d5cd",
+      "label": "IsSubclassOf",
+      "attributes": []
+    },
+    {
+      "id": "74f02ae8-124e-4517-86d1-af57d401b639",
+      "iri": "http://visualdataweb.org/newOntology/74f02ae8-124e-4517-86d1-af57d401b639",
+      "label": "HasProperty",
+      "attributes": "object",
+      "domain": "BH.oM.Humans.BodyParts.LeftHand",
+      "range": "BH.oM.Geometry.Point"
+    },
+    {
+      "id": "432f3dc0-07ba-4b0a-9a25-982cebfc1f58",
+      "iri": "http://visualdataweb.org/newOntology/432f3dc0-07ba-4b0a-9a25-982cebfc1f58",
+      "label": "HasProperty",
+      "attributes": "object",
+      "domain": "BH.oM.Humans.BodyParts.LeftHand",
+      "range": "BH.oM.Geometry.Line"
+    },
+    {
+      "id": "c3ac971a-2f56-4cce-af67-dacfc68bd5c0",
+      "iri": "http://visualdataweb.org/newOntology/c3ac971a-2f56-4cce-af67-dacfc68bd5c0",
+      "label": "HasProperty",
+      "attributes": "object",
+      "domain": "BH.oM.Humans.BodyParts.LeftHand",
+      "range": "BH.oM.Humans.HandStateName"
+    },
+    {
+      "id": "26809a23-3926-461d-8141-ebed818f615a",
+      "iri": "http://visualdataweb.org/newOntology/26809a23-3926-461d-8141-ebed818f615a",
+      "label": "IsA",
+      "attributes": "object",
+      "domain": "BH.oM.Humans.BodyParts.LeftHand",
+      "range": "BH.oM.Humans.Interfaces.ILineBodyPart"
+    },
+    {
+      "id": "1e30380e-2265-4b21-b095-038b95c1aa27",
+      "iri": "http://visualdataweb.org/newOntology/1e30380e-2265-4b21-b095-038b95c1aa27",
+      "label": "IsA",
+      "attributes": "object",
+      "domain": "BH.oM.Humans.BodyParts.LeftHand",
+      "range": "BH.oM.Base.IObject"
+    },
+    {
+      "id": "bdf6cc1f-a870-4dad-b1b3-61f90ea60768",
+      "iri": "http://visualdataweb.org/newOntology/bdf6cc1f-a870-4dad-b1b3-61f90ea60768",
+      "label": "IsA",
+      "attributes": "object",
+      "domain": "BH.oM.Humans.BodyParts.LeftHand",
+      "range": "BH.oM.Humans.Interfaces.IPointBodyPart"
+    },
+    {
+      "id": "b13fce44-a0d6-4626-af53-18d5c26db666",
+      "iri": "http://visualdataweb.org/newOntology/b13fce44-a0d6-4626-af53-18d5c26db666",
+      "label": "IsSubclassOf",
+      "attributes": []
+    },
+    {
+      "id": "f454ed7a-1f37-4860-b4f9-d192cd270038",
+      "iri": "http://visualdataweb.org/newOntology/f454ed7a-1f37-4860-b4f9-d192cd270038",
+      "label": "HasProperty",
+      "attributes": "object",
+      "domain": "BH.oM.Humans.BodyParts.LeftHip",
+      "range": "BH.oM.Geometry.Line"
+    },
+    {
+      "id": "01e5bf45-1c18-46f2-8178-bd8841bc80e2",
+      "iri": "http://visualdataweb.org/newOntology/01e5bf45-1c18-46f2-8178-bd8841bc80e2",
+      "label": "IsA",
+      "attributes": "object",
+      "domain": "BH.oM.Humans.BodyParts.LeftHip",
+      "range": "BH.oM.Humans.Interfaces.ILineBodyPart"
+    },
+    {
+      "id": "1a4fd245-a5cd-4fff-ad84-c206030c26f9",
+      "iri": "http://visualdataweb.org/newOntology/1a4fd245-a5cd-4fff-ad84-c206030c26f9",
+      "label": "IsA",
+      "attributes": "object",
+      "domain": "BH.oM.Humans.BodyParts.LeftHip",
+      "range": "BH.oM.Base.IObject"
+    },
+    {
+      "id": "81fd1c56-9057-40c8-8f8a-9cd9d7c35c36",
+      "iri": "http://visualdataweb.org/newOntology/81fd1c56-9057-40c8-8f8a-9cd9d7c35c36",
+      "label": "IsSubclassOf",
+      "attributes": []
+    },
+    {
+      "id": "ed9371a4-852b-4bd6-90ed-ba5afbc32f70",
+      "iri": "http://visualdataweb.org/newOntology/ed9371a4-852b-4bd6-90ed-ba5afbc32f70",
+      "label": "HasProperty",
+      "attributes": "object",
+      "domain": "BH.oM.Humans.BodyParts.LeftLowerArm",
+      "range": "BH.oM.Geometry.Line"
+    },
+    {
+      "id": "57fe726b-a37d-4f44-982d-aac5408db5a3",
+      "iri": "http://visualdataweb.org/newOntology/57fe726b-a37d-4f44-982d-aac5408db5a3",
+      "label": "IsA",
+      "attributes": "object",
+      "domain": "BH.oM.Humans.BodyParts.LeftLowerArm",
+      "range": "BH.oM.Humans.Interfaces.ILineBodyPart"
+    },
+    {
+      "id": "b7124a6e-cc46-4b02-951c-22a4efe9df45",
+      "iri": "http://visualdataweb.org/newOntology/b7124a6e-cc46-4b02-951c-22a4efe9df45",
+      "label": "IsA",
+      "attributes": "object",
+      "domain": "BH.oM.Humans.BodyParts.LeftLowerArm",
+      "range": "BH.oM.Base.IObject"
+    },
+    {
+      "id": "82834dc7-dc48-4f34-a31e-433dc01dfe4f",
+      "iri": "http://visualdataweb.org/newOntology/82834dc7-dc48-4f34-a31e-433dc01dfe4f",
+      "label": "IsSubclassOf",
+      "attributes": []
+    },
+    {
+      "id": "a39054b9-4b80-4afe-a286-eb1128abd704",
+      "iri": "http://visualdataweb.org/newOntology/a39054b9-4b80-4afe-a286-eb1128abd704",
+      "label": "HasProperty",
+      "attributes": "object",
+      "domain": "BH.oM.Humans.BodyParts.LeftLowerLeg",
+      "range": "BH.oM.Geometry.Line"
+    },
+    {
+      "id": "74f21956-2039-42fe-9597-17407d5bd079",
+      "iri": "http://visualdataweb.org/newOntology/74f21956-2039-42fe-9597-17407d5bd079",
+      "label": "IsA",
+      "attributes": "object",
+      "domain": "BH.oM.Humans.BodyParts.LeftLowerLeg",
+      "range": "BH.oM.Humans.Interfaces.ILineBodyPart"
+    },
+    {
+      "id": "10dd3d1a-bcea-49e5-914a-cf2d3a8f3618",
+      "iri": "http://visualdataweb.org/newOntology/10dd3d1a-bcea-49e5-914a-cf2d3a8f3618",
+      "label": "IsA",
+      "attributes": "object",
+      "domain": "BH.oM.Humans.BodyParts.LeftLowerLeg",
+      "range": "BH.oM.Base.IObject"
+    },
+    {
+      "id": "18f98a6d-f67d-4aae-9187-1f98899b984a",
+      "iri": "http://visualdataweb.org/newOntology/18f98a6d-f67d-4aae-9187-1f98899b984a",
+      "label": "IsSubclassOf",
+      "attributes": []
+    },
+    {
+      "id": "f6bb9574-efc2-44e1-8eac-a7d1b773068c",
+      "iri": "http://visualdataweb.org/newOntology/f6bb9574-efc2-44e1-8eac-a7d1b773068c",
+      "label": "HasProperty",
+      "attributes": "object",
+      "domain": "BH.oM.Humans.BodyParts.LeftShoulder",
+      "range": "BH.oM.Geometry.Line"
+    },
+    {
+      "id": "2c221761-2625-4e8d-b851-0037763b5677",
+      "iri": "http://visualdataweb.org/newOntology/2c221761-2625-4e8d-b851-0037763b5677",
+      "label": "IsA",
+      "attributes": "object",
+      "domain": "BH.oM.Humans.BodyParts.LeftShoulder",
+      "range": "BH.oM.Humans.Interfaces.ILineBodyPart"
+    },
+    {
+      "id": "0bd1f19a-9991-442e-a496-31c15e0f291e",
+      "iri": "http://visualdataweb.org/newOntology/0bd1f19a-9991-442e-a496-31c15e0f291e",
+      "label": "IsA",
+      "attributes": "object",
+      "domain": "BH.oM.Humans.BodyParts.LeftShoulder",
+      "range": "BH.oM.Base.IObject"
+    },
+    {
+      "id": "62c5198a-a2a7-43dd-ba8e-914936f6f697",
+      "iri": "http://visualdataweb.org/newOntology/62c5198a-a2a7-43dd-ba8e-914936f6f697",
+      "label": "IsSubclassOf",
+      "attributes": []
+    },
+    {
+      "id": "c00b3b07-e01c-4743-a899-aa5efdc4d837",
+      "iri": "http://visualdataweb.org/newOntology/c00b3b07-e01c-4743-a899-aa5efdc4d837",
+      "label": "HasProperty",
+      "attributes": "object",
+      "domain": "BH.oM.Humans.BodyParts.LeftThumb",
+      "range": "BH.oM.Geometry.Point"
+    },
+    {
+      "id": "f5c963af-def5-41f7-b220-c946299dfcdf",
+      "iri": "http://visualdataweb.org/newOntology/f5c963af-def5-41f7-b220-c946299dfcdf",
+      "label": "HasProperty",
+      "attributes": "object",
+      "domain": "BH.oM.Humans.BodyParts.LeftThumb",
+      "range": "BH.oM.Geometry.Line"
+    },
+    {
+      "id": "32998f85-afcb-40ce-9ea5-ac69840a8129",
+      "iri": "http://visualdataweb.org/newOntology/32998f85-afcb-40ce-9ea5-ac69840a8129",
+      "label": "IsA",
+      "attributes": "object",
+      "domain": "BH.oM.Humans.BodyParts.LeftThumb",
+      "range": "BH.oM.Humans.Interfaces.ILineBodyPart"
+    },
+    {
+      "id": "c17d2450-b61b-4baa-888f-c74b2e9ed99b",
+      "iri": "http://visualdataweb.org/newOntology/c17d2450-b61b-4baa-888f-c74b2e9ed99b",
+      "label": "IsA",
+      "attributes": "object",
+      "domain": "BH.oM.Humans.BodyParts.LeftThumb",
+      "range": "BH.oM.Base.IObject"
+    },
+    {
+      "id": "83dc2753-ba02-4d3a-b792-e8ed65709835",
+      "iri": "http://visualdataweb.org/newOntology/83dc2753-ba02-4d3a-b792-e8ed65709835",
+      "label": "IsA",
+      "attributes": "object",
+      "domain": "BH.oM.Humans.BodyParts.LeftThumb",
+      "range": "BH.oM.Humans.Interfaces.IPointBodyPart"
+    },
+    {
+      "id": "0b788c18-c1a7-4c63-8918-10d2c29aa8ef",
+      "iri": "http://visualdataweb.org/newOntology/0b788c18-c1a7-4c63-8918-10d2c29aa8ef",
+      "label": "IsSubclassOf",
+      "attributes": []
+    },
+    {
+      "id": "cf95c296-f704-41a5-8a49-5e1582763910",
+      "iri": "http://visualdataweb.org/newOntology/cf95c296-f704-41a5-8a49-5e1582763910",
+      "label": "HasProperty",
+      "attributes": "object",
+      "domain": "BH.oM.Humans.BodyParts.LeftUpperArm",
+      "range": "BH.oM.Geometry.Line"
+    },
+    {
+      "id": "a2c8ff24-30ca-4bea-8dca-670f35006c6b",
+      "iri": "http://visualdataweb.org/newOntology/a2c8ff24-30ca-4bea-8dca-670f35006c6b",
+      "label": "IsA",
+      "attributes": "object",
+      "domain": "BH.oM.Humans.BodyParts.LeftUpperArm",
+      "range": "BH.oM.Humans.Interfaces.ILineBodyPart"
+    },
+    {
+      "id": "2b9e218e-536e-471f-8811-c3942ab71640",
+      "iri": "http://visualdataweb.org/newOntology/2b9e218e-536e-471f-8811-c3942ab71640",
+      "label": "IsA",
+      "attributes": "object",
+      "domain": "BH.oM.Humans.BodyParts.LeftUpperArm",
+      "range": "BH.oM.Base.IObject"
+    },
+    {
+      "id": "fd0867db-d1ea-4cfd-addd-e825777189bc",
+      "iri": "http://visualdataweb.org/newOntology/fd0867db-d1ea-4cfd-addd-e825777189bc",
+      "label": "IsSubclassOf",
+      "attributes": []
+    },
+    {
+      "id": "ace3f085-9e43-4d81-b014-f302a5ddb27a",
+      "iri": "http://visualdataweb.org/newOntology/ace3f085-9e43-4d81-b014-f302a5ddb27a",
+      "label": "HasProperty",
+      "attributes": "object",
+      "domain": "BH.oM.Humans.BodyParts.LeftUpperLeg",
+      "range": "BH.oM.Geometry.Line"
+    },
+    {
+      "id": "4d5db078-5528-4ff9-875f-cb6ea48664af",
+      "iri": "http://visualdataweb.org/newOntology/4d5db078-5528-4ff9-875f-cb6ea48664af",
+      "label": "IsA",
+      "attributes": "object",
+      "domain": "BH.oM.Humans.BodyParts.LeftUpperLeg",
+      "range": "BH.oM.Humans.Interfaces.ILineBodyPart"
+    },
+    {
+      "id": "c7b5dfeb-b763-4636-93c8-e90f53eae4b8",
+      "iri": "http://visualdataweb.org/newOntology/c7b5dfeb-b763-4636-93c8-e90f53eae4b8",
+      "label": "IsA",
+      "attributes": "object",
+      "domain": "BH.oM.Humans.BodyParts.LeftUpperLeg",
+      "range": "BH.oM.Base.IObject"
+    },
+    {
+      "id": "ee7c3a1c-8a56-4f7d-8f1b-00c4b8c2300b",
+      "iri": "http://visualdataweb.org/newOntology/ee7c3a1c-8a56-4f7d-8f1b-00c4b8c2300b",
+      "label": "IsSubclassOf",
+      "attributes": []
+    },
+    {
+      "id": "592c5492-cf63-44d0-ab45-aa1610b8115a",
+      "iri": "http://visualdataweb.org/newOntology/592c5492-cf63-44d0-ab45-aa1610b8115a",
+      "label": "HasProperty",
+      "attributes": "object",
+      "domain": "BH.oM.Humans.BodyParts.Neck",
+      "range": "BH.oM.Geometry.Line"
+    },
+    {
+      "id": "919e5954-9dc4-4d67-b043-a977045dea4e",
+      "iri": "http://visualdataweb.org/newOntology/919e5954-9dc4-4d67-b043-a977045dea4e",
+      "label": "IsA",
+      "attributes": "object",
+      "domain": "BH.oM.Humans.BodyParts.Neck",
+      "range": "BH.oM.Humans.Interfaces.ILineBodyPart"
+    },
+    {
+      "id": "631a10bb-e722-4b76-b65a-cfa713145525",
+      "iri": "http://visualdataweb.org/newOntology/631a10bb-e722-4b76-b65a-cfa713145525",
+      "label": "IsA",
+      "attributes": "object",
+      "domain": "BH.oM.Humans.BodyParts.Neck",
+      "range": "BH.oM.Base.IObject"
+    },
+    {
+      "id": "96d96dc3-1fb9-4546-901b-1dba75da39c7",
+      "iri": "http://visualdataweb.org/newOntology/96d96dc3-1fb9-4546-901b-1dba75da39c7",
+      "label": "IsSubclassOf",
+      "attributes": []
+    },
+    {
+      "id": "fd4b7f6b-38f5-4477-a081-f5596f4df3db",
+      "iri": "http://visualdataweb.org/newOntology/fd4b7f6b-38f5-4477-a081-f5596f4df3db",
+      "label": "HasProperty",
+      "attributes": "object",
+      "domain": "BH.oM.Humans.BodyParts.PairOfEyes",
+      "range": "BH.oM.Geometry.Point"
+    },
+    {
+      "id": "7d8d2480-6233-4b6d-b7a7-76fbb3130a1e",
+      "iri": "http://visualdataweb.org/newOntology/7d8d2480-6233-4b6d-b7a7-76fbb3130a1e",
+      "label": "HasProperty",
+      "attributes": "object",
+      "domain": "BH.oM.Humans.BodyParts.PairOfEyes",
+      "range": "BH.oM.Humans.BodyParts.Eye"
+    },
+    {
+      "id": "bfaff669-230c-4404-af78-74a59a559455",
+      "iri": "http://visualdataweb.org/newOntology/bfaff669-230c-4404-af78-74a59a559455",
+      "label": "HasProperty",
+      "attributes": "object",
+      "domain": "BH.oM.Humans.BodyParts.PairOfEyes",
+      "range": "BH.oM.Humans.BodyParts.Eye"
+    },
+    {
+      "id": "39655d15-b91e-4e77-8b14-32980172dade",
+      "iri": "http://visualdataweb.org/newOntology/39655d15-b91e-4e77-8b14-32980172dade",
+      "label": "HasProperty",
+      "attributes": "object",
+      "domain": "BH.oM.Humans.BodyParts.PairOfEyes",
+      "range": "BH.oM.Geometry.Point"
+    },
+    {
+      "id": "1673036f-4dd4-4762-908f-fb0077d99e16",
+      "iri": "http://visualdataweb.org/newOntology/1673036f-4dd4-4762-908f-fb0077d99e16",
+      "label": "HasProperty",
+      "attributes": "object",
+      "domain": "BH.oM.Humans.BodyParts.PairOfEyes",
+      "range": "BH.oM.Geometry.Vector"
+    },
+    {
+      "id": "b0e53e3a-d13e-4936-b263-3a071a414d36",
+      "iri": "http://visualdataweb.org/newOntology/b0e53e3a-d13e-4936-b263-3a071a414d36",
+      "label": "IsA",
+      "attributes": "object",
+      "domain": "BH.oM.Humans.BodyParts.PairOfEyes",
+      "range": "BH.oM.Humans.Interfaces.IPointBodyPart"
+    },
+    {
+      "id": "338cd672-55f5-442a-ae3e-9af77ac61a48",
+      "iri": "http://visualdataweb.org/newOntology/338cd672-55f5-442a-ae3e-9af77ac61a48",
+      "label": "IsA",
+      "attributes": "object",
+      "domain": "BH.oM.Humans.BodyParts.PairOfEyes",
+      "range": "BH.oM.Base.IObject"
+    },
+    {
+      "id": "fa7199eb-49e2-492a-bbbe-147c6b5974e2",
+      "iri": "http://visualdataweb.org/newOntology/fa7199eb-49e2-492a-bbbe-147c6b5974e2",
+      "label": "IsSubclassOf",
+      "attributes": []
+    },
+    {
+      "id": "5680297c-257f-4ba2-a76f-2185170aa2cd",
+      "iri": "http://visualdataweb.org/newOntology/5680297c-257f-4ba2-a76f-2185170aa2cd",
+      "label": "HasProperty",
+      "attributes": "object",
+      "domain": "BH.oM.Humans.BodyParts.RightFoot",
+      "range": "BH.oM.Geometry.Line"
+    },
+    {
+      "id": "396273d3-5029-490a-9c4c-008f63167094",
+      "iri": "http://visualdataweb.org/newOntology/396273d3-5029-490a-9c4c-008f63167094",
+      "label": "IsA",
+      "attributes": "object",
+      "domain": "BH.oM.Humans.BodyParts.RightFoot",
+      "range": "BH.oM.Humans.Interfaces.ILineBodyPart"
+    },
+    {
+      "id": "dc08a664-9ce1-4541-836b-d3093d1e9b02",
+      "iri": "http://visualdataweb.org/newOntology/dc08a664-9ce1-4541-836b-d3093d1e9b02",
+      "label": "IsA",
+      "attributes": "object",
+      "domain": "BH.oM.Humans.BodyParts.RightFoot",
+      "range": "BH.oM.Base.IObject"
+    },
+    {
+      "id": "20984173-237c-4c16-aa74-8d8751581e28",
+      "iri": "http://visualdataweb.org/newOntology/20984173-237c-4c16-aa74-8d8751581e28",
+      "label": "IsSubclassOf",
+      "attributes": []
+    },
+    {
+      "id": "1f6e881d-e796-45e0-8bab-f393e972ed1e",
+      "iri": "http://visualdataweb.org/newOntology/1f6e881d-e796-45e0-8bab-f393e972ed1e",
+      "label": "HasProperty",
+      "attributes": "object",
+      "domain": "BH.oM.Humans.BodyParts.RightHand",
+      "range": "BH.oM.Geometry.Point"
+    },
+    {
+      "id": "74aaa881-c474-41f5-bea1-bf352d142d64",
+      "iri": "http://visualdataweb.org/newOntology/74aaa881-c474-41f5-bea1-bf352d142d64",
+      "label": "HasProperty",
+      "attributes": "object",
+      "domain": "BH.oM.Humans.BodyParts.RightHand",
+      "range": "BH.oM.Geometry.Line"
+    },
+    {
+      "id": "4ef45d38-fc90-43ae-94eb-7bbebd7caea1",
+      "iri": "http://visualdataweb.org/newOntology/4ef45d38-fc90-43ae-94eb-7bbebd7caea1",
+      "label": "HasProperty",
+      "attributes": "object",
+      "domain": "BH.oM.Humans.BodyParts.RightHand",
+      "range": "BH.oM.Humans.HandStateName"
+    },
+    {
+      "id": "e8a68851-4c4d-4e4f-98b8-c62acb3fe882",
+      "iri": "http://visualdataweb.org/newOntology/e8a68851-4c4d-4e4f-98b8-c62acb3fe882",
+      "label": "IsA",
+      "attributes": "object",
+      "domain": "BH.oM.Humans.BodyParts.RightHand",
+      "range": "BH.oM.Humans.Interfaces.ILineBodyPart"
+    },
+    {
+      "id": "fa76e65b-834a-4949-8478-c0cae333708d",
+      "iri": "http://visualdataweb.org/newOntology/fa76e65b-834a-4949-8478-c0cae333708d",
+      "label": "IsA",
+      "attributes": "object",
+      "domain": "BH.oM.Humans.BodyParts.RightHand",
+      "range": "BH.oM.Base.IObject"
+    },
+    {
+      "id": "49cac3c1-0eaa-4ce2-bf21-fbbd7871216c",
+      "iri": "http://visualdataweb.org/newOntology/49cac3c1-0eaa-4ce2-bf21-fbbd7871216c",
+      "label": "IsA",
+      "attributes": "object",
+      "domain": "BH.oM.Humans.BodyParts.RightHand",
+      "range": "BH.oM.Humans.Interfaces.IPointBodyPart"
+    },
+    {
+      "id": "7694a815-bf49-481d-9943-80ac470ea1d5",
+      "iri": "http://visualdataweb.org/newOntology/7694a815-bf49-481d-9943-80ac470ea1d5",
+      "label": "IsSubclassOf",
+      "attributes": []
+    },
+    {
+      "id": "b60e5e85-9ac8-4b8d-88e9-1f407fba2346",
+      "iri": "http://visualdataweb.org/newOntology/b60e5e85-9ac8-4b8d-88e9-1f407fba2346",
+      "label": "HasProperty",
+      "attributes": "object",
+      "domain": "BH.oM.Humans.BodyParts.RightHip",
+      "range": "BH.oM.Geometry.Line"
+    },
+    {
+      "id": "0b58340d-8fb1-43e5-aeb7-b875f2c99e0a",
+      "iri": "http://visualdataweb.org/newOntology/0b58340d-8fb1-43e5-aeb7-b875f2c99e0a",
+      "label": "IsA",
+      "attributes": "object",
+      "domain": "BH.oM.Humans.BodyParts.RightHip",
+      "range": "BH.oM.Humans.Interfaces.ILineBodyPart"
+    },
+    {
+      "id": "7875a841-d66b-45be-9da8-78de113a3a41",
+      "iri": "http://visualdataweb.org/newOntology/7875a841-d66b-45be-9da8-78de113a3a41",
+      "label": "IsA",
+      "attributes": "object",
+      "domain": "BH.oM.Humans.BodyParts.RightHip",
+      "range": "BH.oM.Base.IObject"
+    },
+    {
+      "id": "f5da7c9a-482f-49bf-b181-ed9412c07b34",
+      "iri": "http://visualdataweb.org/newOntology/f5da7c9a-482f-49bf-b181-ed9412c07b34",
+      "label": "IsSubclassOf",
+      "attributes": []
+    },
+    {
+      "id": "1c8502a1-fb1e-4129-a78a-5fc07a1a709c",
+      "iri": "http://visualdataweb.org/newOntology/1c8502a1-fb1e-4129-a78a-5fc07a1a709c",
+      "label": "HasProperty",
+      "attributes": "object",
+      "domain": "BH.oM.Humans.BodyParts.RightLowerArm",
+      "range": "BH.oM.Geometry.Line"
+    },
+    {
+      "id": "9f39f9dd-6a7a-41ae-b6ef-125a890fee6a",
+      "iri": "http://visualdataweb.org/newOntology/9f39f9dd-6a7a-41ae-b6ef-125a890fee6a",
+      "label": "IsA",
+      "attributes": "object",
+      "domain": "BH.oM.Humans.BodyParts.RightLowerArm",
+      "range": "BH.oM.Humans.Interfaces.ILineBodyPart"
+    },
+    {
+      "id": "6ca57c51-31be-4a05-9491-8caca0360929",
+      "iri": "http://visualdataweb.org/newOntology/6ca57c51-31be-4a05-9491-8caca0360929",
+      "label": "IsA",
+      "attributes": "object",
+      "domain": "BH.oM.Humans.BodyParts.RightLowerArm",
+      "range": "BH.oM.Base.IObject"
+    },
+    {
+      "id": "ea692da7-5215-4f38-8e86-c5aedf722796",
+      "iri": "http://visualdataweb.org/newOntology/ea692da7-5215-4f38-8e86-c5aedf722796",
+      "label": "IsSubclassOf",
+      "attributes": []
+    },
+    {
+      "id": "abc6384f-d34b-49d7-ab2c-722aaa013174",
+      "iri": "http://visualdataweb.org/newOntology/abc6384f-d34b-49d7-ab2c-722aaa013174",
+      "label": "HasProperty",
+      "attributes": "object",
+      "domain": "BH.oM.Humans.BodyParts.RightLowerLeg",
+      "range": "BH.oM.Geometry.Line"
+    },
+    {
+      "id": "1a12b402-4591-488a-a02d-f32619fc7933",
+      "iri": "http://visualdataweb.org/newOntology/1a12b402-4591-488a-a02d-f32619fc7933",
+      "label": "IsA",
+      "attributes": "object",
+      "domain": "BH.oM.Humans.BodyParts.RightLowerLeg",
+      "range": "BH.oM.Humans.Interfaces.ILineBodyPart"
+    },
+    {
+      "id": "77dd5c7b-ae8f-40a8-beaa-c775d4d6a68c",
+      "iri": "http://visualdataweb.org/newOntology/77dd5c7b-ae8f-40a8-beaa-c775d4d6a68c",
+      "label": "IsA",
+      "attributes": "object",
+      "domain": "BH.oM.Humans.BodyParts.RightLowerLeg",
+      "range": "BH.oM.Base.IObject"
+    },
+    {
+      "id": "7548078f-c587-4c7e-b540-ac050b67eea8",
+      "iri": "http://visualdataweb.org/newOntology/7548078f-c587-4c7e-b540-ac050b67eea8",
+      "label": "IsSubclassOf",
+      "attributes": []
+    },
+    {
+      "id": "57283cb4-38ca-4085-8114-169398fc66bf",
+      "iri": "http://visualdataweb.org/newOntology/57283cb4-38ca-4085-8114-169398fc66bf",
+      "label": "HasProperty",
+      "attributes": "object",
+      "domain": "BH.oM.Humans.BodyParts.RightShoulder",
+      "range": "BH.oM.Geometry.Line"
+    },
+    {
+      "id": "1e88a2f5-a28d-4248-92fb-df41263893c8",
+      "iri": "http://visualdataweb.org/newOntology/1e88a2f5-a28d-4248-92fb-df41263893c8",
+      "label": "IsA",
+      "attributes": "object",
+      "domain": "BH.oM.Humans.BodyParts.RightShoulder",
+      "range": "BH.oM.Humans.Interfaces.ILineBodyPart"
+    },
+    {
+      "id": "1b2080e6-1645-45bb-88fc-f2a89a30d4b4",
+      "iri": "http://visualdataweb.org/newOntology/1b2080e6-1645-45bb-88fc-f2a89a30d4b4",
+      "label": "IsA",
+      "attributes": "object",
+      "domain": "BH.oM.Humans.BodyParts.RightShoulder",
+      "range": "BH.oM.Base.IObject"
+    },
+    {
+      "id": "a09bdd75-e599-45cb-adbc-a7dc1bfc7743",
+      "iri": "http://visualdataweb.org/newOntology/a09bdd75-e599-45cb-adbc-a7dc1bfc7743",
+      "label": "IsSubclassOf",
+      "attributes": []
+    },
+    {
+      "id": "045bbfc3-b313-45c8-8d34-183ac078e9ae",
+      "iri": "http://visualdataweb.org/newOntology/045bbfc3-b313-45c8-8d34-183ac078e9ae",
+      "label": "HasProperty",
+      "attributes": "object",
+      "domain": "BH.oM.Humans.BodyParts.RightThumb",
+      "range": "BH.oM.Geometry.Point"
+    },
+    {
+      "id": "3dcb47d6-9517-4057-8273-d7d87018c810",
+      "iri": "http://visualdataweb.org/newOntology/3dcb47d6-9517-4057-8273-d7d87018c810",
+      "label": "HasProperty",
+      "attributes": "object",
+      "domain": "BH.oM.Humans.BodyParts.RightThumb",
+      "range": "BH.oM.Geometry.Line"
+    },
+    {
+      "id": "10d57055-86f5-4772-9aca-7685c6e3929c",
+      "iri": "http://visualdataweb.org/newOntology/10d57055-86f5-4772-9aca-7685c6e3929c",
+      "label": "IsA",
+      "attributes": "object",
+      "domain": "BH.oM.Humans.BodyParts.RightThumb",
+      "range": "BH.oM.Humans.Interfaces.ILineBodyPart"
+    },
+    {
+      "id": "117aa86f-8c4a-41f5-8a8b-7645d47e3ac9",
+      "iri": "http://visualdataweb.org/newOntology/117aa86f-8c4a-41f5-8a8b-7645d47e3ac9",
+      "label": "IsA",
+      "attributes": "object",
+      "domain": "BH.oM.Humans.BodyParts.RightThumb",
+      "range": "BH.oM.Base.IObject"
+    },
+    {
+      "id": "c2dc0b11-bda2-4ec4-9b97-be32b28e5aea",
+      "iri": "http://visualdataweb.org/newOntology/c2dc0b11-bda2-4ec4-9b97-be32b28e5aea",
+      "label": "IsA",
+      "attributes": "object",
+      "domain": "BH.oM.Humans.BodyParts.RightThumb",
+      "range": "BH.oM.Humans.Interfaces.IPointBodyPart"
+    },
+    {
+      "id": "101ce449-49a6-41f3-9e19-c961ae1e2fc0",
+      "iri": "http://visualdataweb.org/newOntology/101ce449-49a6-41f3-9e19-c961ae1e2fc0",
+      "label": "IsSubclassOf",
+      "attributes": []
+    },
+    {
+      "id": "51ea0c2b-ca7b-4322-bac4-127b2aa5a320",
+      "iri": "http://visualdataweb.org/newOntology/51ea0c2b-ca7b-4322-bac4-127b2aa5a320",
+      "label": "HasProperty",
+      "attributes": "object",
+      "domain": "BH.oM.Humans.BodyParts.RightUpperArm",
+      "range": "BH.oM.Geometry.Line"
+    },
+    {
+      "id": "65b9ed34-8796-47d3-b1de-deb1ce94d224",
+      "iri": "http://visualdataweb.org/newOntology/65b9ed34-8796-47d3-b1de-deb1ce94d224",
+      "label": "IsA",
+      "attributes": "object",
+      "domain": "BH.oM.Humans.BodyParts.RightUpperArm",
+      "range": "BH.oM.Humans.Interfaces.ILineBodyPart"
+    },
+    {
+      "id": "ae477f5b-2e0b-45eb-a70f-ce2dbb0db6bd",
+      "iri": "http://visualdataweb.org/newOntology/ae477f5b-2e0b-45eb-a70f-ce2dbb0db6bd",
+      "label": "IsA",
+      "attributes": "object",
+      "domain": "BH.oM.Humans.BodyParts.RightUpperArm",
+      "range": "BH.oM.Base.IObject"
+    },
+    {
+      "id": "c862e34f-2d3f-401d-a1da-879e3ec0db59",
+      "iri": "http://visualdataweb.org/newOntology/c862e34f-2d3f-401d-a1da-879e3ec0db59",
+      "label": "IsSubclassOf",
+      "attributes": []
+    },
+    {
+      "id": "80255c93-e986-4227-b90c-4c00dc30b832",
+      "iri": "http://visualdataweb.org/newOntology/80255c93-e986-4227-b90c-4c00dc30b832",
+      "label": "HasProperty",
+      "attributes": "object",
+      "domain": "BH.oM.Humans.BodyParts.RightUpperLeg",
+      "range": "BH.oM.Geometry.Line"
+    },
+    {
+      "id": "ed3e632a-98f7-40f5-9fa2-b8fd39212b29",
+      "iri": "http://visualdataweb.org/newOntology/ed3e632a-98f7-40f5-9fa2-b8fd39212b29",
+      "label": "IsA",
+      "attributes": "object",
+      "domain": "BH.oM.Humans.BodyParts.RightUpperLeg",
+      "range": "BH.oM.Humans.Interfaces.ILineBodyPart"
+    },
+    {
+      "id": "eb1bd8f6-01d0-4373-8dd2-63d8bc49827d",
+      "iri": "http://visualdataweb.org/newOntology/eb1bd8f6-01d0-4373-8dd2-63d8bc49827d",
+      "label": "IsA",
+      "attributes": "object",
+      "domain": "BH.oM.Humans.BodyParts.RightUpperLeg",
+      "range": "BH.oM.Base.IObject"
+    },
+    {
+      "id": "1c5043b5-7323-49ea-8ad8-e06cf5fc95a5",
+      "iri": "http://visualdataweb.org/newOntology/1c5043b5-7323-49ea-8ad8-e06cf5fc95a5",
+      "label": "IsSubclassOf",
+      "attributes": []
+    },
+    {
+      "id": "fef602da-dbe1-4fe9-8338-dc6ab041bdbe",
+      "iri": "http://visualdataweb.org/newOntology/fef602da-dbe1-4fe9-8338-dc6ab041bdbe",
+      "label": "HasProperty",
+      "attributes": "object",
+      "domain": "BH.oM.Humans.BodyParts.Spine",
+      "range": "BH.oM.Geometry.Line"
+    },
+    {
+      "id": "61e0f1e6-6ffa-45ac-afde-3c4383b05d56",
+      "iri": "http://visualdataweb.org/newOntology/61e0f1e6-6ffa-45ac-afde-3c4383b05d56",
+      "label": "IsA",
+      "attributes": "object",
+      "domain": "BH.oM.Humans.BodyParts.Spine",
+      "range": "BH.oM.Humans.Interfaces.ILineBodyPart"
+    },
+    {
+      "id": "a900cc97-11df-4a46-bddb-91663999de85",
+      "iri": "http://visualdataweb.org/newOntology/a900cc97-11df-4a46-bddb-91663999de85",
+      "label": "IsA",
+      "attributes": "object",
+      "domain": "BH.oM.Humans.BodyParts.Spine",
+      "range": "BH.oM.Base.IObject"
+    },
+    {
+      "id": "be8db8a1-df22-41f7-9112-ba6e399ccdce",
+      "iri": "http://visualdataweb.org/newOntology/be8db8a1-df22-41f7-9112-ba6e399ccdce",
+      "label": "IsSubclassOf",
+      "attributes": []
+    }
+  ]
+}

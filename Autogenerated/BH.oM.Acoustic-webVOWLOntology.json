@@ -1,0 +1,1926 @@
+{
+  "comment": "Generated from BHoM RDF_Prototypes",
+  "namespace": [],
+  "class": [
+    {
+      "id": "BH.oM.Acoustic.Constants",
+      "type": "owl:Class"
+    },
+    {
+      "id": "BH.oM.Acoustic.Panel",
+      "type": "owl:Class"
+    },
+    {
+      "id": "BH.oM.Acoustic.Ray",
+      "type": "owl:Class"
+    },
+    {
+      "id": "BH.oM.Acoustic.Receiver",
+      "type": "owl:Class"
+    },
+    {
+      "id": "BH.oM.Acoustic.Room",
+      "type": "owl:Class"
+    },
+    {
+      "id": "BH.oM.Acoustic.Speaker",
+      "type": "owl:Class"
+    },
+    {
+      "id": "BH.oM.Acoustic.Frequency",
+      "type": "owl:Class"
+    },
+    {
+      "id": "BH.oM.Acoustic.IAcousticParameter",
+      "type": "owl:Class"
+    },
+    {
+      "id": "BH.oM.Acoustic.Rasti",
+      "type": "owl:Class"
+    },
+    {
+      "id": "BH.oM.Acoustic.RT",
+      "type": "owl:Class"
+    },
+    {
+      "id": "BH.oM.Acoustic.SnRatio",
+      "type": "owl:Class"
+    },
+    {
+      "id": "BH.oM.Acoustic.SoundLevel",
+      "type": "owl:Class"
+    },
+    {
+      "id": "BH.oM.Geometry.Mesh",
+      "type": "owl:Class"
+    },
+    {
+      "id": "PanelID-4b2b8b2d-e081-4098-999b-05eb72233153-Panel-HasProperty",
+      "type": "rdfs:Datatype"
+    },
+    {
+      "id": "R-e8a40e53-4358-46f7-b0ff-8b9c64549349-Panel-HasProperty",
+      "type": "rdfs:Datatype"
+    },
+    {
+      "id": "BH.oM.Base.IBHoMObject",
+      "type": "owl:Class"
+    },
+    {
+      "id": "BH.oM.Base.IObject",
+      "type": "owl:Class"
+    },
+    {
+      "id": "BH.oM.Base.BHoMObject",
+      "type": "owl:Class"
+    },
+    {
+      "id": "BH.oM.Geometry.Polyline",
+      "type": "owl:Class"
+    },
+    {
+      "id": "SpeakerID-f0d6ed94-a25c-4cc8-bacf-e528cb0fbfaa-Ray-HasProperty",
+      "type": "rdfs:Datatype"
+    },
+    {
+      "id": "ReceiverID-bc70ad59-9116-47d5-b59c-a992c6d497a0-Ray-HasProperty",
+      "type": "rdfs:Datatype"
+    },
+    {
+      "id": "PanelsID-1a63a6ee-e94c-411a-8b30-fff36b698fba-Ray-HasProperty",
+      "type": "rdfs:Datatype"
+    },
+    {
+      "id": "BH.oM.Base.IBHoMObject",
+      "type": "owl:Class"
+    },
+    {
+      "id": "BH.oM.Base.IObject",
+      "type": "owl:Class"
+    },
+    {
+      "id": "BH.oM.Base.BHoMObject",
+      "type": "owl:Class"
+    },
+    {
+      "id": "BH.oM.Geometry.Point",
+      "type": "owl:Class"
+    },
+    {
+      "id": "Category-4784d669-ae4e-4d23-bc33-ee52f19c00f3-Receiver-HasProperty",
+      "type": "rdfs:Datatype"
+    },
+    {
+      "id": "ReceiverID-9d17ae4a-264d-4f78-8f79-fe2e376f7496-Receiver-HasProperty",
+      "type": "rdfs:Datatype"
+    },
+    {
+      "id": "BH.oM.Base.IBHoMObject",
+      "type": "owl:Class"
+    },
+    {
+      "id": "BH.oM.Base.IObject",
+      "type": "owl:Class"
+    },
+    {
+      "id": "BH.oM.Base.BHoMObject",
+      "type": "owl:Class"
+    },
+    {
+      "id": "BH.oM.Geometry.PolySurface",
+      "type": "owl:Class"
+    },
+    {
+      "id": "Area-0adedfd2-69b5-47b0-b2d3-37be0e90d911-Room-HasProperty",
+      "type": "rdfs:Datatype"
+    },
+    {
+      "id": "Volume-dae3d68d-5bcb-4033-a286-9ddce1291acb-Room-HasProperty",
+      "type": "rdfs:Datatype"
+    },
+    {
+      "id": "Samples-bbef1878-7c44-4225-9a43-c7fe1d10222d-Room-HasProperty",
+      "type": "rdfs:Datatype"
+    },
+    {
+      "id": "AcousticZone-6dbfdea8-e740-46ef-9696-a60e16f4da5f-Room-HasProperty",
+      "type": "rdfs:Datatype"
+    },
+    {
+      "id": "PublicAddressVoiceAlarmZone-8fb22f75-7b4c-4f61-b43a-520695606263-Room-HasProperty",
+      "type": "rdfs:Datatype"
+    },
+    {
+      "id": "AverageInternalAmbientNoiseLevelRequirement-a7c69766-edb0-4431-a4aa-9268e9dbc930-Room-HasProperty",
+      "type": "rdfs:Datatype"
+    },
+    {
+      "id": "MaximumInternalAmbientNoiseLevelRequirement-2dc44ed6-4541-40a8-b0a5-50829719432c-Room-HasProperty",
+      "type": "rdfs:Datatype"
+    },
+    {
+      "id": "ReverberationTime-26929ea4-8ed6-4c47-ae6c-83b945362117-Room-HasProperty",
+      "type": "rdfs:Datatype"
+    },
+    {
+      "id": "NoiseRating-1d4d526f-961f-4a19-9d52-9e5ca03d68e0-Room-HasProperty",
+      "type": "rdfs:Datatype"
+    },
+    {
+      "id": "ImpactSoundInsulation-ea3d3d9a-59c0-456e-85cc-53a48157e66a-Room-HasProperty",
+      "type": "rdfs:Datatype"
+    },
+    {
+      "id": "SpeechTransmitionIndex-748c25cb-d812-4752-aba1-410ce75b41dc-Room-HasProperty",
+      "type": "rdfs:Datatype"
+    },
+    {
+      "id": "PrivacyRequirement-219e48c6-3aea-4390-a6fb-02886be20c0a-Room-HasProperty",
+      "type": "rdfs:Datatype"
+    },
+    {
+      "id": "MinimumSoundPressureLevel-8bac752b-362b-4f3c-b556-a5a859fee2d2-Room-HasProperty",
+      "type": "rdfs:Datatype"
+    },
+    {
+      "id": "SoundPressureLevelCoverage-f393e096-a0ae-4dec-8fe7-e1ce496d65b2-Room-HasProperty",
+      "type": "rdfs:Datatype"
+    },
+    {
+      "id": "AcousticUnderlayRequirement-8ac16295-f3a3-462f-a981-1c4477ad62da-Room-HasProperty",
+      "type": "rdfs:Datatype"
+    },
+    {
+      "id": "BH.oM.Base.IBHoMObject",
+      "type": "owl:Class"
+    },
+    {
+      "id": "BH.oM.Base.IObject",
+      "type": "owl:Class"
+    },
+    {
+      "id": "BH.oM.Base.BHoMObject",
+      "type": "owl:Class"
+    },
+    {
+      "id": "BH.oM.Geometry.Point",
+      "type": "owl:Class"
+    },
+    {
+      "id": "BH.oM.Geometry.Vector",
+      "type": "owl:Class"
+    },
+    {
+      "id": "EmissiveLevel-52378692-d080-44de-8426-c5e2d7e2af24-Speaker-HasProperty",
+      "type": "rdfs:Datatype"
+    },
+    {
+      "id": "Category-8ed7bbda-59f5-4754-8587-bd2e0915025e-Speaker-HasProperty",
+      "type": "rdfs:Datatype"
+    },
+    {
+      "id": "SpeakerID-38aa0ba6-6ef5-4d1a-8004-0f0e6f445755-Speaker-HasProperty",
+      "type": "rdfs:Datatype"
+    },
+    {
+      "id": "Gains-c875e1ef-dc81-406c-ac88-69bc6b4dc70c-Speaker-HasProperty",
+      "type": "rdfs:Datatype"
+    },
+    {
+      "id": "Directivity-0bd148d1-3cf4-4009-8f08-064439b9c02f-Speaker-HasProperty",
+      "type": "rdfs:Datatype"
+    },
+    {
+      "id": "BH.oM.Base.IBHoMObject",
+      "type": "owl:Class"
+    },
+    {
+      "id": "BH.oM.Base.IObject",
+      "type": "owl:Class"
+    },
+    {
+      "id": "BH.oM.Base.BHoMObject",
+      "type": "owl:Class"
+    },
+    {
+      "id": "BH.oM.Base.IObject",
+      "type": "owl:Class"
+    },
+    {
+      "id": "Value-1136dc94-2458-424d-a874-93605b343caa-Rasti-HasProperty",
+      "type": "rdfs:Datatype"
+    },
+    {
+      "id": "ReceiverID-703805a3-967d-4b26-90df-02491e1aa57e-Rasti-HasProperty",
+      "type": "rdfs:Datatype"
+    },
+    {
+      "id": "SpeakerID-407fe6dd-d75c-43e3-ab51-1e0c14639ee7-Rasti-HasProperty",
+      "type": "rdfs:Datatype"
+    },
+    {
+      "id": "BH.oM.Base.IBHoMObject",
+      "type": "owl:Class"
+    },
+    {
+      "id": "BH.oM.Base.IObject",
+      "type": "owl:Class"
+    },
+    {
+      "id": "BH.oM.Base.BHoMObject",
+      "type": "owl:Class"
+    },
+    {
+      "id": "Value-f31f2ee5-7896-411b-ab96-4b307fe4b573-RT60-HasProperty",
+      "type": "rdfs:Datatype"
+    },
+    {
+      "id": "ReceiverID-6b6f66f3-6258-485c-bfe4-c8afc2751244-RT60-HasProperty",
+      "type": "rdfs:Datatype"
+    },
+    {
+      "id": "SpeakerID-ff97656e-1072-4d5a-9d35-6d1e60f30313-RT60-HasProperty",
+      "type": "rdfs:Datatype"
+    },
+    {
+      "id": "BH.oM.Base.IBHoMObject",
+      "type": "owl:Class"
+    },
+    {
+      "id": "BH.oM.Base.IObject",
+      "type": "owl:Class"
+    },
+    {
+      "id": "BH.oM.Base.BHoMObject",
+      "type": "owl:Class"
+    },
+    {
+      "id": "Value-8743b48b-5df6-4f28-9895-ab6162611981-SnRatio-HasProperty",
+      "type": "rdfs:Datatype"
+    },
+    {
+      "id": "ReceiverID-746b4675-d918-4e10-b225-1f7d167ac415-SnRatio-HasProperty",
+      "type": "rdfs:Datatype"
+    },
+    {
+      "id": "SpeakerID-d22b8015-fb20-4045-9119-99357f9fbd22-SnRatio-HasProperty",
+      "type": "rdfs:Datatype"
+    },
+    {
+      "id": "BH.oM.Base.IBHoMObject",
+      "type": "owl:Class"
+    },
+    {
+      "id": "BH.oM.Base.IObject",
+      "type": "owl:Class"
+    },
+    {
+      "id": "BH.oM.Base.BHoMObject",
+      "type": "owl:Class"
+    },
+    {
+      "id": "Value-19bb5e84-89d1-43e7-b825-08068e09c383-SoundLevel-HasProperty",
+      "type": "rdfs:Datatype"
+    },
+    {
+      "id": "ReceiverID-bd28dc4c-64fa-4857-8fc9-1b31a18afbb0-SoundLevel-HasProperty",
+      "type": "rdfs:Datatype"
+    },
+    {
+      "id": "SpeakerID-8e385e53-51cf-4cf3-bb71-08a934189e63-SoundLevel-HasProperty",
+      "type": "rdfs:Datatype"
+    },
+    {
+      "id": "BH.oM.Base.IBHoMObject",
+      "type": "owl:Class"
+    },
+    {
+      "id": "BH.oM.Base.IObject",
+      "type": "owl:Class"
+    },
+    {
+      "id": "BH.oM.Base.BHoMObject",
+      "type": "owl:Class"
+    }
+  ],
+  "classAttribute": [
+    {
+      "id": "BH.oM.Acoustic.Constants",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/Acoustic_oM/Constants.cs",
+      "label": "Constants (BH.oM.Acoustic)",
+      "attributes": []
+    },
+    {
+      "id": "BH.oM.Acoustic.Panel",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/Acoustic_oM/Panel.cs",
+      "label": "Panel (BH.oM.Acoustic)",
+      "attributes": []
+    },
+    {
+      "id": "BH.oM.Acoustic.Ray",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/Acoustic_oM/Ray.cs",
+      "label": "Ray (BH.oM.Acoustic)",
+      "attributes": []
+    },
+    {
+      "id": "BH.oM.Acoustic.Receiver",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/Acoustic_oM/Receiver.cs",
+      "label": "Receiver (BH.oM.Acoustic)",
+      "attributes": []
+    },
+    {
+      "id": "BH.oM.Acoustic.Room",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/Acoustic_oM/Room.cs",
+      "label": "Room (BH.oM.Acoustic)",
+      "attributes": []
+    },
+    {
+      "id": "BH.oM.Acoustic.Speaker",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/Acoustic_oM/Speaker.cs",
+      "label": "Speaker (BH.oM.Acoustic)",
+      "attributes": []
+    },
+    {
+      "id": "BH.oM.Acoustic.Frequency",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/Acoustic_oM/Frequency.cs",
+      "label": "Frequency (BH.oM.Acoustic)",
+      "attributes": []
+    },
+    {
+      "id": "BH.oM.Acoustic.IAcousticParameter",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/Acoustic_oM/IAcousticParameter.cs",
+      "label": "IAcousticParameter (BH.oM.Acoustic)",
+      "attributes": []
+    },
+    {
+      "id": "BH.oM.Acoustic.Rasti",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/Acoustic_oM/Rasti.cs",
+      "label": "Rasti (BH.oM.Acoustic)",
+      "attributes": []
+    },
+    {
+      "id": "BH.oM.Acoustic.RT",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/Acoustic_oM/RT.cs",
+      "label": "RT (BH.oM.Acoustic)",
+      "attributes": []
+    },
+    {
+      "id": "BH.oM.Acoustic.SnRatio",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/Acoustic_oM/SnRatio.cs",
+      "label": "SnRatio (BH.oM.Acoustic)",
+      "attributes": []
+    },
+    {
+      "id": "BH.oM.Acoustic.SoundLevel",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/Acoustic_oM/SoundLevel.cs",
+      "label": "SoundLevel (BH.oM.Acoustic)",
+      "attributes": []
+    },
+    {
+      "id": "BH.oM.Geometry.Mesh",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/Geometry_oM/Mesh.cs",
+      "label": "Surface (Mesh)",
+      "attributes": []
+    },
+    {
+      "id": "PanelID-4b2b8b2d-e081-4098-999b-05eb72233153-Panel-HasProperty",
+      "iri": "http://www.w3.org/2001/XMLSchema#",
+      "label": "PanelID (Int)",
+      "attributes": "datatype"
+    },
+    {
+      "id": "R-e8a40e53-4358-46f7-b0ff-8b9c64549349-Panel-HasProperty",
+      "iri": "http://www.w3.org/2001/XMLSchema#",
+      "label": "R (Dictionary<Frequency,Double>)",
+      "attributes": "datatype"
+    },
+    {
+      "id": "BH.oM.Base.IBHoMObject",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/BHoM/Interface/IBHoMObject.cs",
+      "label": "IBHoMObject",
+      "attributes": []
+    },
+    {
+      "id": "BH.oM.Base.IObject",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/BHoM/Interface/IObject.cs",
+      "label": "IObject",
+      "attributes": []
+    },
+    {
+      "id": "BH.oM.Base.BHoMObject",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/BHoM/BHoMObject.cs",
+      "label": "BHoMObject",
+      "attributes": []
+    },
+    {
+      "id": "BH.oM.Geometry.Polyline",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/Geometry_oM/Polyline.cs",
+      "label": "Path (Polyline)",
+      "attributes": []
+    },
+    {
+      "id": "SpeakerID-f0d6ed94-a25c-4cc8-bacf-e528cb0fbfaa-Ray-HasProperty",
+      "iri": "http://www.w3.org/2001/XMLSchema#",
+      "label": "SpeakerID (Int)",
+      "attributes": "datatype"
+    },
+    {
+      "id": "ReceiverID-bc70ad59-9116-47d5-b59c-a992c6d497a0-Ray-HasProperty",
+      "iri": "http://www.w3.org/2001/XMLSchema#",
+      "label": "ReceiverID (Int)",
+      "attributes": "datatype"
+    },
+    {
+      "id": "PanelsID-1a63a6ee-e94c-411a-8b30-fff36b698fba-Ray-HasProperty",
+      "iri": "http://www.w3.org/2001/XMLSchema#",
+      "label": "PanelsID (List<Int>)",
+      "attributes": "datatype"
+    },
+    {
+      "id": "BH.oM.Base.IBHoMObject",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/BHoM/Interface/IBHoMObject.cs",
+      "label": "IBHoMObject",
+      "attributes": []
+    },
+    {
+      "id": "BH.oM.Base.IObject",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/BHoM/Interface/IObject.cs",
+      "label": "IObject",
+      "attributes": []
+    },
+    {
+      "id": "BH.oM.Base.BHoMObject",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/BHoM/BHoMObject.cs",
+      "label": "BHoMObject",
+      "attributes": []
+    },
+    {
+      "id": "BH.oM.Geometry.Point",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/Geometry_oM/Point.cs",
+      "label": "Location (Point)",
+      "attributes": []
+    },
+    {
+      "id": "Category-4784d669-ae4e-4d23-bc33-ee52f19c00f3-Receiver-HasProperty",
+      "iri": "http://www.w3.org/2001/XMLSchema#",
+      "label": "Category (String)",
+      "attributes": "datatype"
+    },
+    {
+      "id": "ReceiverID-9d17ae4a-264d-4f78-8f79-fe2e376f7496-Receiver-HasProperty",
+      "iri": "http://www.w3.org/2001/XMLSchema#",
+      "label": "ReceiverID (Int)",
+      "attributes": "datatype"
+    },
+    {
+      "id": "BH.oM.Base.IBHoMObject",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/BHoM/Interface/IBHoMObject.cs",
+      "label": "IBHoMObject",
+      "attributes": []
+    },
+    {
+      "id": "BH.oM.Base.IObject",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/BHoM/Interface/IObject.cs",
+      "label": "IObject",
+      "attributes": []
+    },
+    {
+      "id": "BH.oM.Base.BHoMObject",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/BHoM/BHoMObject.cs",
+      "label": "BHoMObject",
+      "attributes": []
+    },
+    {
+      "id": "BH.oM.Geometry.PolySurface",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/Geometry_oM/PolySurface.cs",
+      "label": "Boundaries (PolySurface)",
+      "attributes": []
+    },
+    {
+      "id": "Area-0adedfd2-69b5-47b0-b2d3-37be0e90d911-Room-HasProperty",
+      "iri": "http://www.w3.org/2001/XMLSchema#",
+      "label": "Area (Double)",
+      "attributes": "datatype"
+    },
+    {
+      "id": "Volume-dae3d68d-5bcb-4033-a286-9ddce1291acb-Room-HasProperty",
+      "iri": "http://www.w3.org/2001/XMLSchema#",
+      "label": "Volume (Double)",
+      "attributes": "datatype"
+    },
+    {
+      "id": "Samples-bbef1878-7c44-4225-9a43-c7fe1d10222d-Room-HasProperty",
+      "iri": "http://www.w3.org/2001/XMLSchema#",
+      "label": "Samples (List<Receiver>)",
+      "attributes": "datatype"
+    },
+    {
+      "id": "AcousticZone-6dbfdea8-e740-46ef-9696-a60e16f4da5f-Room-HasProperty",
+      "iri": "http://www.w3.org/2001/XMLSchema#",
+      "label": "AcousticZone (String)",
+      "attributes": "datatype"
+    },
+    {
+      "id": "PublicAddressVoiceAlarmZone-8fb22f75-7b4c-4f61-b43a-520695606263-Room-HasProperty",
+      "iri": "http://www.w3.org/2001/XMLSchema#",
+      "label": "PublicAddressVoiceAlarmZone (String)",
+      "attributes": "datatype"
+    },
+    {
+      "id": "AverageInternalAmbientNoiseLevelRequirement-a7c69766-edb0-4431-a4aa-9268e9dbc930-Room-HasProperty",
+      "iri": "http://www.w3.org/2001/XMLSchema#",
+      "label": "AverageInternalAmbientNoiseLevelRequirement (Int)",
+      "attributes": "datatype"
+    },
+    {
+      "id": "MaximumInternalAmbientNoiseLevelRequirement-2dc44ed6-4541-40a8-b0a5-50829719432c-Room-HasProperty",
+      "iri": "http://www.w3.org/2001/XMLSchema#",
+      "label": "MaximumInternalAmbientNoiseLevelRequirement (Int)",
+      "attributes": "datatype"
+    },
+    {
+      "id": "ReverberationTime-26929ea4-8ed6-4c47-ae6c-83b945362117-Room-HasProperty",
+      "iri": "http://www.w3.org/2001/XMLSchema#",
+      "label": "ReverberationTime (Double)",
+      "attributes": "datatype"
+    },
+    {
+      "id": "NoiseRating-1d4d526f-961f-4a19-9d52-9e5ca03d68e0-Room-HasProperty",
+      "iri": "http://www.w3.org/2001/XMLSchema#",
+      "label": "NoiseRating (Int)",
+      "attributes": "datatype"
+    },
+    {
+      "id": "ImpactSoundInsulation-ea3d3d9a-59c0-456e-85cc-53a48157e66a-Room-HasProperty",
+      "iri": "http://www.w3.org/2001/XMLSchema#",
+      "label": "ImpactSoundInsulation (Int)",
+      "attributes": "datatype"
+    },
+    {
+      "id": "SpeechTransmitionIndex-748c25cb-d812-4752-aba1-410ce75b41dc-Room-HasProperty",
+      "iri": "http://www.w3.org/2001/XMLSchema#",
+      "label": "SpeechTransmitionIndex (Double)",
+      "attributes": "datatype"
+    },
+    {
+      "id": "PrivacyRequirement-219e48c6-3aea-4390-a6fb-02886be20c0a-Room-HasProperty",
+      "iri": "http://www.w3.org/2001/XMLSchema#",
+      "label": "PrivacyRequirement (String)",
+      "attributes": "datatype"
+    },
+    {
+      "id": "MinimumSoundPressureLevel-8bac752b-362b-4f3c-b556-a5a859fee2d2-Room-HasProperty",
+      "iri": "http://www.w3.org/2001/XMLSchema#",
+      "label": "MinimumSoundPressureLevel (Int)",
+      "attributes": "datatype"
+    },
+    {
+      "id": "SoundPressureLevelCoverage-f393e096-a0ae-4dec-8fe7-e1ce496d65b2-Room-HasProperty",
+      "iri": "http://www.w3.org/2001/XMLSchema#",
+      "label": "SoundPressureLevelCoverage (Double)",
+      "attributes": "datatype"
+    },
+    {
+      "id": "AcousticUnderlayRequirement-8ac16295-f3a3-462f-a981-1c4477ad62da-Room-HasProperty",
+      "iri": "http://www.w3.org/2001/XMLSchema#",
+      "label": "AcousticUnderlayRequirement (Boolean)",
+      "attributes": "datatype"
+    },
+    {
+      "id": "BH.oM.Base.IBHoMObject",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/BHoM/Interface/IBHoMObject.cs",
+      "label": "IBHoMObject",
+      "attributes": []
+    },
+    {
+      "id": "BH.oM.Base.IObject",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/BHoM/Interface/IObject.cs",
+      "label": "IObject",
+      "attributes": []
+    },
+    {
+      "id": "BH.oM.Base.BHoMObject",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/BHoM/BHoMObject.cs",
+      "label": "BHoMObject",
+      "attributes": []
+    },
+    {
+      "id": "BH.oM.Geometry.Point",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/Geometry_oM/Point.cs",
+      "label": "Location (Point)",
+      "attributes": []
+    },
+    {
+      "id": "BH.oM.Geometry.Vector",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/Geometry_oM/Vector.cs",
+      "label": "Direction (Vector)",
+      "attributes": []
+    },
+    {
+      "id": "EmissiveLevel-52378692-d080-44de-8426-c5e2d7e2af24-Speaker-HasProperty",
+      "iri": "http://www.w3.org/2001/XMLSchema#",
+      "label": "EmissiveLevel (Double)",
+      "attributes": "datatype"
+    },
+    {
+      "id": "Category-8ed7bbda-59f5-4754-8587-bd2e0915025e-Speaker-HasProperty",
+      "iri": "http://www.w3.org/2001/XMLSchema#",
+      "label": "Category (String)",
+      "attributes": "datatype"
+    },
+    {
+      "id": "SpeakerID-38aa0ba6-6ef5-4d1a-8004-0f0e6f445755-Speaker-HasProperty",
+      "iri": "http://www.w3.org/2001/XMLSchema#",
+      "label": "SpeakerID (Int)",
+      "attributes": "datatype"
+    },
+    {
+      "id": "Gains-c875e1ef-dc81-406c-ac88-69bc6b4dc70c-Speaker-HasProperty",
+      "iri": "http://www.w3.org/2001/XMLSchema#",
+      "label": "Gains (Dictionary<Frequency,Double>)",
+      "attributes": "datatype"
+    },
+    {
+      "id": "Directivity-0bd148d1-3cf4-4009-8f08-064439b9c02f-Speaker-HasProperty",
+      "iri": "http://www.w3.org/2001/XMLSchema#",
+      "label": "Directivity (Dictionary<Frequency,Double>)",
+      "attributes": "datatype"
+    },
+    {
+      "id": "BH.oM.Base.IBHoMObject",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/BHoM/Interface/IBHoMObject.cs",
+      "label": "IBHoMObject",
+      "attributes": []
+    },
+    {
+      "id": "BH.oM.Base.IObject",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/BHoM/Interface/IObject.cs",
+      "label": "IObject",
+      "attributes": []
+    },
+    {
+      "id": "BH.oM.Base.BHoMObject",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/BHoM/BHoMObject.cs",
+      "label": "BHoMObject",
+      "attributes": []
+    },
+    {
+      "id": "BH.oM.Base.IObject",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/BHoM/Interface/IObject.cs",
+      "label": "IObject",
+      "attributes": []
+    },
+    {
+      "id": "Value-1136dc94-2458-424d-a874-93605b343caa-Rasti-HasProperty",
+      "iri": "http://www.w3.org/2001/XMLSchema#",
+      "label": "Value (Double)",
+      "attributes": "datatype"
+    },
+    {
+      "id": "ReceiverID-703805a3-967d-4b26-90df-02491e1aa57e-Rasti-HasProperty",
+      "iri": "http://www.w3.org/2001/XMLSchema#",
+      "label": "ReceiverID (Int)",
+      "attributes": "datatype"
+    },
+    {
+      "id": "SpeakerID-407fe6dd-d75c-43e3-ab51-1e0c14639ee7-Rasti-HasProperty",
+      "iri": "http://www.w3.org/2001/XMLSchema#",
+      "label": "SpeakerID (Int)",
+      "attributes": "datatype"
+    },
+    {
+      "id": "BH.oM.Base.IBHoMObject",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/BHoM/Interface/IBHoMObject.cs",
+      "label": "IBHoMObject",
+      "attributes": []
+    },
+    {
+      "id": "BH.oM.Base.IObject",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/BHoM/Interface/IObject.cs",
+      "label": "IObject",
+      "attributes": []
+    },
+    {
+      "id": "BH.oM.Base.BHoMObject",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/BHoM/BHoMObject.cs",
+      "label": "BHoMObject",
+      "attributes": []
+    },
+    {
+      "id": "Value-f31f2ee5-7896-411b-ab96-4b307fe4b573-RT60-HasProperty",
+      "iri": "http://www.w3.org/2001/XMLSchema#",
+      "label": "Value (Double)",
+      "attributes": "datatype"
+    },
+    {
+      "id": "ReceiverID-6b6f66f3-6258-485c-bfe4-c8afc2751244-RT60-HasProperty",
+      "iri": "http://www.w3.org/2001/XMLSchema#",
+      "label": "ReceiverID (Int)",
+      "attributes": "datatype"
+    },
+    {
+      "id": "SpeakerID-ff97656e-1072-4d5a-9d35-6d1e60f30313-RT60-HasProperty",
+      "iri": "http://www.w3.org/2001/XMLSchema#",
+      "label": "SpeakerID (Int)",
+      "attributes": "datatype"
+    },
+    {
+      "id": "BH.oM.Base.IBHoMObject",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/BHoM/Interface/IBHoMObject.cs",
+      "label": "IBHoMObject",
+      "attributes": []
+    },
+    {
+      "id": "BH.oM.Base.IObject",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/BHoM/Interface/IObject.cs",
+      "label": "IObject",
+      "attributes": []
+    },
+    {
+      "id": "BH.oM.Base.BHoMObject",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/BHoM/BHoMObject.cs",
+      "label": "BHoMObject",
+      "attributes": []
+    },
+    {
+      "id": "Value-8743b48b-5df6-4f28-9895-ab6162611981-SnRatio-HasProperty",
+      "iri": "http://www.w3.org/2001/XMLSchema#",
+      "label": "Value (Double)",
+      "attributes": "datatype"
+    },
+    {
+      "id": "ReceiverID-746b4675-d918-4e10-b225-1f7d167ac415-SnRatio-HasProperty",
+      "iri": "http://www.w3.org/2001/XMLSchema#",
+      "label": "ReceiverID (Int)",
+      "attributes": "datatype"
+    },
+    {
+      "id": "SpeakerID-d22b8015-fb20-4045-9119-99357f9fbd22-SnRatio-HasProperty",
+      "iri": "http://www.w3.org/2001/XMLSchema#",
+      "label": "SpeakerID (Int)",
+      "attributes": "datatype"
+    },
+    {
+      "id": "BH.oM.Base.IBHoMObject",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/BHoM/Interface/IBHoMObject.cs",
+      "label": "IBHoMObject",
+      "attributes": []
+    },
+    {
+      "id": "BH.oM.Base.IObject",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/BHoM/Interface/IObject.cs",
+      "label": "IObject",
+      "attributes": []
+    },
+    {
+      "id": "BH.oM.Base.BHoMObject",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/BHoM/BHoMObject.cs",
+      "label": "BHoMObject",
+      "attributes": []
+    },
+    {
+      "id": "Value-19bb5e84-89d1-43e7-b825-08068e09c383-SoundLevel-HasProperty",
+      "iri": "http://www.w3.org/2001/XMLSchema#",
+      "label": "Value (Double)",
+      "attributes": "datatype"
+    },
+    {
+      "id": "ReceiverID-bd28dc4c-64fa-4857-8fc9-1b31a18afbb0-SoundLevel-HasProperty",
+      "iri": "http://www.w3.org/2001/XMLSchema#",
+      "label": "ReceiverID (Int)",
+      "attributes": "datatype"
+    },
+    {
+      "id": "SpeakerID-8e385e53-51cf-4cf3-bb71-08a934189e63-SoundLevel-HasProperty",
+      "iri": "http://www.w3.org/2001/XMLSchema#",
+      "label": "SpeakerID (Int)",
+      "attributes": "datatype"
+    },
+    {
+      "id": "BH.oM.Base.IBHoMObject",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/BHoM/Interface/IBHoMObject.cs",
+      "label": "IBHoMObject",
+      "attributes": []
+    },
+    {
+      "id": "BH.oM.Base.IObject",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/BHoM/Interface/IObject.cs",
+      "label": "IObject",
+      "attributes": []
+    },
+    {
+      "id": "BH.oM.Base.BHoMObject",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/BHoM/BHoMObject.cs",
+      "label": "BHoMObject",
+      "attributes": []
+    }
+  ],
+  "property": [
+    {
+      "id": "e1fe1515-2d03-4876-9b96-63953295b0b8",
+      "type": "owl:DatatypeProperty"
+    },
+    {
+      "id": "2f80881c-6acc-4c2d-a294-a68ebfd5bb9f",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "72533f9b-6ba1-43f9-9201-67c40d9acbba",
+      "type": "owl:DatatypeProperty"
+    },
+    {
+      "id": "adf957ca-e48d-4c17-8a29-a60e905336eb",
+      "type": "owl:DatatypeProperty"
+    },
+    {
+      "id": "23e46df2-50fa-48d4-af26-091af2411cc4",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "865d4573-bb80-43cd-a6c0-481428ac08ae",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "cc71f66d-aeb9-42e9-80cf-76b7ab3679b1",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "645ab20b-d39d-4f18-a9fb-b90d9dad764a",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "1c4adcf6-a7a6-425f-ae89-3bb3288aeeb6",
+      "type": "owl:DatatypeProperty"
+    },
+    {
+      "id": "803477f7-066b-414e-a436-8d3ab65541c8",
+      "type": "owl:DatatypeProperty"
+    },
+    {
+      "id": "f93b6303-de9f-47ee-945f-1182514c4acd",
+      "type": "owl:DatatypeProperty"
+    },
+    {
+      "id": "334ce4f4-249e-4d7d-ab08-9d0d8f5e9083",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "47ce9003-8ade-44b5-a7be-594947fa8597",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "05e11102-82ce-4f41-b21c-d9c70be6155e",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "6be73017-f3ee-473e-b3cb-7613eed9a85d",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "1403e6a1-e5fc-484c-87c6-d23827f20dea",
+      "type": "owl:DatatypeProperty"
+    },
+    {
+      "id": "4d372a26-fdc3-4e3d-8af2-2b8bd8d7e734",
+      "type": "owl:DatatypeProperty"
+    },
+    {
+      "id": "af6e59e5-6e4f-44cb-b71a-a9ac14d8049d",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "db473717-d5ac-4513-92b0-c5b5f1b9a020",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "9a4cd411-8975-416a-91b9-50717c9cef7a",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "12647730-52d7-41ea-8e12-f0433a7c706b",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "4075b39a-942e-4b2e-885a-309acbb46758",
+      "type": "owl:DatatypeProperty"
+    },
+    {
+      "id": "9536c7af-78cc-4d76-9c24-80791fa0ebaf",
+      "type": "owl:DatatypeProperty"
+    },
+    {
+      "id": "b9df5e49-2743-419a-a3b8-32618decfc46",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "7a1fe880-aba8-4eb9-875e-b44e929b5fb6",
+      "type": "owl:DatatypeProperty"
+    },
+    {
+      "id": "828d211b-a775-4cb7-96cb-a2cc5e3d5337",
+      "type": "owl:DatatypeProperty"
+    },
+    {
+      "id": "136a5683-8a1f-4dc7-82fa-7478a5411998",
+      "type": "owl:DatatypeProperty"
+    },
+    {
+      "id": "1da376a4-bbe9-4a4b-ad03-53c2126a1886",
+      "type": "owl:DatatypeProperty"
+    },
+    {
+      "id": "3ee672dd-9670-490e-b3ce-8191294ed3ec",
+      "type": "owl:DatatypeProperty"
+    },
+    {
+      "id": "2159796a-25e5-4015-be2a-a3c568ef5075",
+      "type": "owl:DatatypeProperty"
+    },
+    {
+      "id": "908e36f7-a602-4dcc-87e5-98fd518314c1",
+      "type": "owl:DatatypeProperty"
+    },
+    {
+      "id": "11d01230-c3d0-4b2a-87c4-a73af8a5d7b0",
+      "type": "owl:DatatypeProperty"
+    },
+    {
+      "id": "582a417f-e86f-4cc0-b4be-ba5802870622",
+      "type": "owl:DatatypeProperty"
+    },
+    {
+      "id": "8be1307a-c925-48df-a825-7365a24b28e0",
+      "type": "owl:DatatypeProperty"
+    },
+    {
+      "id": "5ed560cf-8dd6-4242-a512-4fcd66e1744e",
+      "type": "owl:DatatypeProperty"
+    },
+    {
+      "id": "1743dc7c-27be-41ce-973e-e70c7f8658bc",
+      "type": "owl:DatatypeProperty"
+    },
+    {
+      "id": "07ee23ff-a846-4bbe-8072-96ff8313abb8",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "5b44e3b9-087f-4b43-84fb-bd964e69865c",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "f243de48-1338-4e20-bcff-bb5eb9f294e0",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "9cf2c6d5-3ff4-407f-b8d7-3a239795e5fa",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "3e246362-8692-4242-98db-4f34422a341c",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "0cfba5a1-4bee-45a1-8cb5-a406724a7d51",
+      "type": "owl:DatatypeProperty"
+    },
+    {
+      "id": "4b343791-214a-45c9-a1cb-b706ee6f5f09",
+      "type": "owl:DatatypeProperty"
+    },
+    {
+      "id": "0a5be278-9235-46d5-8114-933845e5ae14",
+      "type": "owl:DatatypeProperty"
+    },
+    {
+      "id": "308ac27a-3405-4e55-a14e-933467a7cd05",
+      "type": "owl:DatatypeProperty"
+    },
+    {
+      "id": "9edea8d6-d8dd-4e4a-8bd3-9cd8bc75a837",
+      "type": "owl:DatatypeProperty"
+    },
+    {
+      "id": "2c623e96-fdca-4adf-b88f-9c779a09edfa",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "30107f19-e00c-4e76-89ad-9eaf8b89c99e",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "e1eff219-e247-40b5-b779-1769e6de9201",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "a091dfb8-45af-4b44-b29e-0b5c88aa4948",
+      "type": "owl:DatatypeProperty"
+    },
+    {
+      "id": "cb1ec0c2-a9b1-4d43-a6fb-3faa4e134445",
+      "type": "owl:DatatypeProperty"
+    },
+    {
+      "id": "4ba635d6-09a9-4e2c-9131-2e0ab47b2ffa",
+      "type": "owl:DatatypeProperty"
+    },
+    {
+      "id": "81796ff3-7109-4b36-b28d-f7eb49e98cea",
+      "type": "owl:DatatypeProperty"
+    },
+    {
+      "id": "2df75d22-e80d-4c19-8ffa-75fdcf5c2cc3",
+      "type": "owl:DatatypeProperty"
+    },
+    {
+      "id": "9cbd48ee-dafc-42ba-aa30-0d3564d7a9ad",
+      "type": "owl:DatatypeProperty"
+    },
+    {
+      "id": "e2a92bb2-b1bb-4020-81d6-b78a416e67b4",
+      "type": "owl:DatatypeProperty"
+    },
+    {
+      "id": "0e1f3059-c6cb-45c8-a8ca-d102438825a5",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "56647ccc-137e-4793-b1ed-dfbcf11c20bf",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "4a93b4c0-5fa4-4256-8829-5661301ae54a",
+      "type": "owl:DatatypeProperty"
+    },
+    {
+      "id": "88d5b948-d5f4-4488-af21-36b37e0d2f65",
+      "type": "owl:DatatypeProperty"
+    },
+    {
+      "id": "d8d0ce90-46a3-484a-943a-00712b0a7e43",
+      "type": "owl:DatatypeProperty"
+    },
+    {
+      "id": "c0211ecd-3fc7-45e0-8ef4-d39ca2ce7594",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "096ae235-5052-4932-b7f2-13ec75cee06e",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "d7f776b4-b272-4072-ab18-8bd0e0e9337e",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "e6e987de-acc3-45cc-931a-a8768d6e8397",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "96d5a224-c5fd-4c97-8611-ce5e45489dc9",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "bd8cba6d-ed77-4806-916b-cbd121f205e8",
+      "type": "owl:DatatypeProperty"
+    },
+    {
+      "id": "a96c6081-9029-470e-a4c3-74d1c7f643bd",
+      "type": "owl:DatatypeProperty"
+    },
+    {
+      "id": "1839fbdf-6539-4d28-90f3-47dd547326f8",
+      "type": "owl:DatatypeProperty"
+    },
+    {
+      "id": "97b8b32c-d73f-4662-9ad2-cdece94559c0",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "348db318-99a8-4247-98dd-0959f05e35fc",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "4b8cf635-c61c-447d-b9bd-116cc23f4b5a",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "65d88b25-ff3c-44b6-b409-4145d03644c6",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "d2722b4f-ee41-450a-a3d5-3a430f8b1a16",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "80322b57-dd1a-49fe-952c-df498140111c",
+      "type": "owl:DatatypeProperty"
+    },
+    {
+      "id": "b6aede74-3578-40b8-858b-b93607536677",
+      "type": "owl:DatatypeProperty"
+    },
+    {
+      "id": "a87cf4f6-f73e-460f-ac53-469198dc1bbb",
+      "type": "owl:DatatypeProperty"
+    },
+    {
+      "id": "0fb61500-ec82-4ae3-bee3-3e6542744893",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "db87053d-1856-4523-90d5-7682fc938c6f",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "c7ff1443-6470-40ba-9775-ad125c53d5b1",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "46e7f233-1bb3-444d-9133-8616a1b64f47",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "f3eee829-2354-4219-b1cb-60d280829b7d",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "b000ff4a-787d-4b45-80d7-73fad6b03e29",
+      "type": "owl:DatatypeProperty"
+    },
+    {
+      "id": "862a5901-1fb4-4c25-b142-dbfc10ae7246",
+      "type": "owl:DatatypeProperty"
+    },
+    {
+      "id": "b8e4b4a8-05ea-47d7-a1b0-cf7dd8968ef7",
+      "type": "owl:DatatypeProperty"
+    },
+    {
+      "id": "247d97f4-b316-40cc-93f3-835468f50a9e",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "ca61d5c3-f319-4490-9537-de8edaddffa7",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "4b3daa35-0150-42f9-8779-b30e2941b1e0",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "f6946e0a-e007-4347-895f-82511fa399a7",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "4b79f89c-928c-4454-81b3-fc0830bcbf1c",
+      "type": "owl:ObjectProperty"
+    }
+  ],
+  "propertyAttribute": [
+    {
+      "id": "e1fe1515-2d03-4876-9b96-63953295b0b8",
+      "iri": "http://visualdataweb.org/newOntology/e1fe1515-2d03-4876-9b96-63953295b0b8",
+      "label": "IsSubclassOf",
+      "attributes": []
+    },
+    {
+      "id": "2f80881c-6acc-4c2d-a294-a68ebfd5bb9f",
+      "iri": "http://visualdataweb.org/newOntology/2f80881c-6acc-4c2d-a294-a68ebfd5bb9f",
+      "label": "HasProperty",
+      "attributes": "object",
+      "domain": "BH.oM.Acoustic.Panel",
+      "range": "BH.oM.Geometry.Mesh"
+    },
+    {
+      "id": "72533f9b-6ba1-43f9-9201-67c40d9acbba",
+      "iri": "http://visualdataweb.org/newOntology/72533f9b-6ba1-43f9-9201-67c40d9acbba",
+      "label": "HasProperty",
+      "attributes": "datatype",
+      "domain": "BH.oM.Acoustic.Panel",
+      "range": "PanelID-4b2b8b2d-e081-4098-999b-05eb72233153-Panel-HasProperty"
+    },
+    {
+      "id": "adf957ca-e48d-4c17-8a29-a60e905336eb",
+      "iri": "http://visualdataweb.org/newOntology/adf957ca-e48d-4c17-8a29-a60e905336eb",
+      "label": "HasProperty",
+      "attributes": "datatype",
+      "domain": "BH.oM.Acoustic.Panel",
+      "range": "R-e8a40e53-4358-46f7-b0ff-8b9c64549349-Panel-HasProperty"
+    },
+    {
+      "id": "23e46df2-50fa-48d4-af26-091af2411cc4",
+      "iri": "http://visualdataweb.org/newOntology/23e46df2-50fa-48d4-af26-091af2411cc4",
+      "label": "IsA",
+      "attributes": "object",
+      "domain": "BH.oM.Acoustic.Panel",
+      "range": "BH.oM.Base.IBHoMObject"
+    },
+    {
+      "id": "865d4573-bb80-43cd-a6c0-481428ac08ae",
+      "iri": "http://visualdataweb.org/newOntology/865d4573-bb80-43cd-a6c0-481428ac08ae",
+      "label": "IsA",
+      "attributes": "object",
+      "domain": "BH.oM.Acoustic.Panel",
+      "range": "BH.oM.Base.IObject"
+    },
+    {
+      "id": "cc71f66d-aeb9-42e9-80cf-76b7ab3679b1",
+      "iri": "http://visualdataweb.org/newOntology/cc71f66d-aeb9-42e9-80cf-76b7ab3679b1",
+      "label": "IsSubclassOf",
+      "attributes": "object",
+      "domain": "BH.oM.Acoustic.Panel",
+      "range": "BH.oM.Base.BHoMObject"
+    },
+    {
+      "id": "645ab20b-d39d-4f18-a9fb-b90d9dad764a",
+      "iri": "http://visualdataweb.org/newOntology/645ab20b-d39d-4f18-a9fb-b90d9dad764a",
+      "label": "HasProperty",
+      "attributes": "object",
+      "domain": "BH.oM.Acoustic.Ray",
+      "range": "BH.oM.Geometry.Polyline"
+    },
+    {
+      "id": "1c4adcf6-a7a6-425f-ae89-3bb3288aeeb6",
+      "iri": "http://visualdataweb.org/newOntology/1c4adcf6-a7a6-425f-ae89-3bb3288aeeb6",
+      "label": "HasProperty",
+      "attributes": "datatype",
+      "domain": "BH.oM.Acoustic.Ray",
+      "range": "SpeakerID-f0d6ed94-a25c-4cc8-bacf-e528cb0fbfaa-Ray-HasProperty"
+    },
+    {
+      "id": "803477f7-066b-414e-a436-8d3ab65541c8",
+      "iri": "http://visualdataweb.org/newOntology/803477f7-066b-414e-a436-8d3ab65541c8",
+      "label": "HasProperty",
+      "attributes": "datatype",
+      "domain": "BH.oM.Acoustic.Ray",
+      "range": "ReceiverID-bc70ad59-9116-47d5-b59c-a992c6d497a0-Ray-HasProperty"
+    },
+    {
+      "id": "f93b6303-de9f-47ee-945f-1182514c4acd",
+      "iri": "http://visualdataweb.org/newOntology/f93b6303-de9f-47ee-945f-1182514c4acd",
+      "label": "HasProperty",
+      "attributes": "datatype",
+      "domain": "BH.oM.Acoustic.Ray",
+      "range": "PanelsID-1a63a6ee-e94c-411a-8b30-fff36b698fba-Ray-HasProperty"
+    },
+    {
+      "id": "334ce4f4-249e-4d7d-ab08-9d0d8f5e9083",
+      "iri": "http://visualdataweb.org/newOntology/334ce4f4-249e-4d7d-ab08-9d0d8f5e9083",
+      "label": "IsA",
+      "attributes": "object",
+      "domain": "BH.oM.Acoustic.Ray",
+      "range": "BH.oM.Base.IBHoMObject"
+    },
+    {
+      "id": "47ce9003-8ade-44b5-a7be-594947fa8597",
+      "iri": "http://visualdataweb.org/newOntology/47ce9003-8ade-44b5-a7be-594947fa8597",
+      "label": "IsA",
+      "attributes": "object",
+      "domain": "BH.oM.Acoustic.Ray",
+      "range": "BH.oM.Base.IObject"
+    },
+    {
+      "id": "05e11102-82ce-4f41-b21c-d9c70be6155e",
+      "iri": "http://visualdataweb.org/newOntology/05e11102-82ce-4f41-b21c-d9c70be6155e",
+      "label": "IsSubclassOf",
+      "attributes": "object",
+      "domain": "BH.oM.Acoustic.Ray",
+      "range": "BH.oM.Base.BHoMObject"
+    },
+    {
+      "id": "6be73017-f3ee-473e-b3cb-7613eed9a85d",
+      "iri": "http://visualdataweb.org/newOntology/6be73017-f3ee-473e-b3cb-7613eed9a85d",
+      "label": "HasProperty",
+      "attributes": "object",
+      "domain": "BH.oM.Acoustic.Receiver",
+      "range": "BH.oM.Geometry.Point"
+    },
+    {
+      "id": "1403e6a1-e5fc-484c-87c6-d23827f20dea",
+      "iri": "http://visualdataweb.org/newOntology/1403e6a1-e5fc-484c-87c6-d23827f20dea",
+      "label": "HasProperty",
+      "attributes": "datatype",
+      "domain": "BH.oM.Acoustic.Receiver",
+      "range": "Category-4784d669-ae4e-4d23-bc33-ee52f19c00f3-Receiver-HasProperty"
+    },
+    {
+      "id": "4d372a26-fdc3-4e3d-8af2-2b8bd8d7e734",
+      "iri": "http://visualdataweb.org/newOntology/4d372a26-fdc3-4e3d-8af2-2b8bd8d7e734",
+      "label": "HasProperty",
+      "attributes": "datatype",
+      "domain": "BH.oM.Acoustic.Receiver",
+      "range": "ReceiverID-9d17ae4a-264d-4f78-8f79-fe2e376f7496-Receiver-HasProperty"
+    },
+    {
+      "id": "af6e59e5-6e4f-44cb-b71a-a9ac14d8049d",
+      "iri": "http://visualdataweb.org/newOntology/af6e59e5-6e4f-44cb-b71a-a9ac14d8049d",
+      "label": "IsA",
+      "attributes": "object",
+      "domain": "BH.oM.Acoustic.Receiver",
+      "range": "BH.oM.Base.IBHoMObject"
+    },
+    {
+      "id": "db473717-d5ac-4513-92b0-c5b5f1b9a020",
+      "iri": "http://visualdataweb.org/newOntology/db473717-d5ac-4513-92b0-c5b5f1b9a020",
+      "label": "IsA",
+      "attributes": "object",
+      "domain": "BH.oM.Acoustic.Receiver",
+      "range": "BH.oM.Base.IObject"
+    },
+    {
+      "id": "9a4cd411-8975-416a-91b9-50717c9cef7a",
+      "iri": "http://visualdataweb.org/newOntology/9a4cd411-8975-416a-91b9-50717c9cef7a",
+      "label": "IsSubclassOf",
+      "attributes": "object",
+      "domain": "BH.oM.Acoustic.Receiver",
+      "range": "BH.oM.Base.BHoMObject"
+    },
+    {
+      "id": "12647730-52d7-41ea-8e12-f0433a7c706b",
+      "iri": "http://visualdataweb.org/newOntology/12647730-52d7-41ea-8e12-f0433a7c706b",
+      "label": "HasProperty",
+      "attributes": "object",
+      "domain": "BH.oM.Acoustic.Room",
+      "range": "BH.oM.Geometry.PolySurface"
+    },
+    {
+      "id": "4075b39a-942e-4b2e-885a-309acbb46758",
+      "iri": "http://visualdataweb.org/newOntology/4075b39a-942e-4b2e-885a-309acbb46758",
+      "label": "HasProperty",
+      "attributes": "datatype",
+      "domain": "BH.oM.Acoustic.Room",
+      "range": "Area-0adedfd2-69b5-47b0-b2d3-37be0e90d911-Room-HasProperty"
+    },
+    {
+      "id": "9536c7af-78cc-4d76-9c24-80791fa0ebaf",
+      "iri": "http://visualdataweb.org/newOntology/9536c7af-78cc-4d76-9c24-80791fa0ebaf",
+      "label": "HasProperty",
+      "attributes": "datatype",
+      "domain": "BH.oM.Acoustic.Room",
+      "range": "Volume-dae3d68d-5bcb-4033-a286-9ddce1291acb-Room-HasProperty"
+    },
+    {
+      "id": "b9df5e49-2743-419a-a3b8-32618decfc46",
+      "iri": "http://visualdataweb.org/newOntology/b9df5e49-2743-419a-a3b8-32618decfc46",
+      "label": "HasProperty",
+      "attributes": "datatype",
+      "domain": "BH.oM.Acoustic.Room",
+      "range": "Samples-bbef1878-7c44-4225-9a43-c7fe1d10222d-Room-HasProperty"
+    },
+    {
+      "id": "7a1fe880-aba8-4eb9-875e-b44e929b5fb6",
+      "iri": "http://visualdataweb.org/newOntology/7a1fe880-aba8-4eb9-875e-b44e929b5fb6",
+      "label": "HasProperty",
+      "attributes": "datatype",
+      "domain": "BH.oM.Acoustic.Room",
+      "range": "AcousticZone-6dbfdea8-e740-46ef-9696-a60e16f4da5f-Room-HasProperty"
+    },
+    {
+      "id": "828d211b-a775-4cb7-96cb-a2cc5e3d5337",
+      "iri": "http://visualdataweb.org/newOntology/828d211b-a775-4cb7-96cb-a2cc5e3d5337",
+      "label": "HasProperty",
+      "attributes": "datatype",
+      "domain": "BH.oM.Acoustic.Room",
+      "range": "PublicAddressVoiceAlarmZone-8fb22f75-7b4c-4f61-b43a-520695606263-Room-HasProperty"
+    },
+    {
+      "id": "136a5683-8a1f-4dc7-82fa-7478a5411998",
+      "iri": "http://visualdataweb.org/newOntology/136a5683-8a1f-4dc7-82fa-7478a5411998",
+      "label": "HasProperty",
+      "attributes": "datatype",
+      "domain": "BH.oM.Acoustic.Room",
+      "range": "AverageInternalAmbientNoiseLevelRequirement-a7c69766-edb0-4431-a4aa-9268e9dbc930-Room-HasProperty"
+    },
+    {
+      "id": "1da376a4-bbe9-4a4b-ad03-53c2126a1886",
+      "iri": "http://visualdataweb.org/newOntology/1da376a4-bbe9-4a4b-ad03-53c2126a1886",
+      "label": "HasProperty",
+      "attributes": "datatype",
+      "domain": "BH.oM.Acoustic.Room",
+      "range": "MaximumInternalAmbientNoiseLevelRequirement-2dc44ed6-4541-40a8-b0a5-50829719432c-Room-HasProperty"
+    },
+    {
+      "id": "3ee672dd-9670-490e-b3ce-8191294ed3ec",
+      "iri": "http://visualdataweb.org/newOntology/3ee672dd-9670-490e-b3ce-8191294ed3ec",
+      "label": "HasProperty",
+      "attributes": "datatype",
+      "domain": "BH.oM.Acoustic.Room",
+      "range": "ReverberationTime-26929ea4-8ed6-4c47-ae6c-83b945362117-Room-HasProperty"
+    },
+    {
+      "id": "2159796a-25e5-4015-be2a-a3c568ef5075",
+      "iri": "http://visualdataweb.org/newOntology/2159796a-25e5-4015-be2a-a3c568ef5075",
+      "label": "HasProperty",
+      "attributes": "datatype",
+      "domain": "BH.oM.Acoustic.Room",
+      "range": "NoiseRating-1d4d526f-961f-4a19-9d52-9e5ca03d68e0-Room-HasProperty"
+    },
+    {
+      "id": "908e36f7-a602-4dcc-87e5-98fd518314c1",
+      "iri": "http://visualdataweb.org/newOntology/908e36f7-a602-4dcc-87e5-98fd518314c1",
+      "label": "HasProperty",
+      "attributes": "datatype",
+      "domain": "BH.oM.Acoustic.Room",
+      "range": "ImpactSoundInsulation-ea3d3d9a-59c0-456e-85cc-53a48157e66a-Room-HasProperty"
+    },
+    {
+      "id": "11d01230-c3d0-4b2a-87c4-a73af8a5d7b0",
+      "iri": "http://visualdataweb.org/newOntology/11d01230-c3d0-4b2a-87c4-a73af8a5d7b0",
+      "label": "HasProperty",
+      "attributes": "datatype",
+      "domain": "BH.oM.Acoustic.Room",
+      "range": "SpeechTransmitionIndex-748c25cb-d812-4752-aba1-410ce75b41dc-Room-HasProperty"
+    },
+    {
+      "id": "582a417f-e86f-4cc0-b4be-ba5802870622",
+      "iri": "http://visualdataweb.org/newOntology/582a417f-e86f-4cc0-b4be-ba5802870622",
+      "label": "HasProperty",
+      "attributes": "datatype",
+      "domain": "BH.oM.Acoustic.Room",
+      "range": "PrivacyRequirement-219e48c6-3aea-4390-a6fb-02886be20c0a-Room-HasProperty"
+    },
+    {
+      "id": "8be1307a-c925-48df-a825-7365a24b28e0",
+      "iri": "http://visualdataweb.org/newOntology/8be1307a-c925-48df-a825-7365a24b28e0",
+      "label": "HasProperty",
+      "attributes": "datatype",
+      "domain": "BH.oM.Acoustic.Room",
+      "range": "MinimumSoundPressureLevel-8bac752b-362b-4f3c-b556-a5a859fee2d2-Room-HasProperty"
+    },
+    {
+      "id": "5ed560cf-8dd6-4242-a512-4fcd66e1744e",
+      "iri": "http://visualdataweb.org/newOntology/5ed560cf-8dd6-4242-a512-4fcd66e1744e",
+      "label": "HasProperty",
+      "attributes": "datatype",
+      "domain": "BH.oM.Acoustic.Room",
+      "range": "SoundPressureLevelCoverage-f393e096-a0ae-4dec-8fe7-e1ce496d65b2-Room-HasProperty"
+    },
+    {
+      "id": "1743dc7c-27be-41ce-973e-e70c7f8658bc",
+      "iri": "http://visualdataweb.org/newOntology/1743dc7c-27be-41ce-973e-e70c7f8658bc",
+      "label": "HasProperty",
+      "attributes": "datatype",
+      "domain": "BH.oM.Acoustic.Room",
+      "range": "AcousticUnderlayRequirement-8ac16295-f3a3-462f-a981-1c4477ad62da-Room-HasProperty"
+    },
+    {
+      "id": "07ee23ff-a846-4bbe-8072-96ff8313abb8",
+      "iri": "http://visualdataweb.org/newOntology/07ee23ff-a846-4bbe-8072-96ff8313abb8",
+      "label": "IsA",
+      "attributes": "object",
+      "domain": "BH.oM.Acoustic.Room",
+      "range": "BH.oM.Base.IBHoMObject"
+    },
+    {
+      "id": "5b44e3b9-087f-4b43-84fb-bd964e69865c",
+      "iri": "http://visualdataweb.org/newOntology/5b44e3b9-087f-4b43-84fb-bd964e69865c",
+      "label": "IsA",
+      "attributes": "object",
+      "domain": "BH.oM.Acoustic.Room",
+      "range": "BH.oM.Base.IObject"
+    },
+    {
+      "id": "f243de48-1338-4e20-bcff-bb5eb9f294e0",
+      "iri": "http://visualdataweb.org/newOntology/f243de48-1338-4e20-bcff-bb5eb9f294e0",
+      "label": "IsSubclassOf",
+      "attributes": "object",
+      "domain": "BH.oM.Acoustic.Room",
+      "range": "BH.oM.Base.BHoMObject"
+    },
+    {
+      "id": "9cf2c6d5-3ff4-407f-b8d7-3a239795e5fa",
+      "iri": "http://visualdataweb.org/newOntology/9cf2c6d5-3ff4-407f-b8d7-3a239795e5fa",
+      "label": "HasProperty",
+      "attributes": "object",
+      "domain": "BH.oM.Acoustic.Speaker",
+      "range": "BH.oM.Geometry.Point"
+    },
+    {
+      "id": "3e246362-8692-4242-98db-4f34422a341c",
+      "iri": "http://visualdataweb.org/newOntology/3e246362-8692-4242-98db-4f34422a341c",
+      "label": "HasProperty",
+      "attributes": "object",
+      "domain": "BH.oM.Acoustic.Speaker",
+      "range": "BH.oM.Geometry.Vector"
+    },
+    {
+      "id": "0cfba5a1-4bee-45a1-8cb5-a406724a7d51",
+      "iri": "http://visualdataweb.org/newOntology/0cfba5a1-4bee-45a1-8cb5-a406724a7d51",
+      "label": "HasProperty",
+      "attributes": "datatype",
+      "domain": "BH.oM.Acoustic.Speaker",
+      "range": "EmissiveLevel-52378692-d080-44de-8426-c5e2d7e2af24-Speaker-HasProperty"
+    },
+    {
+      "id": "4b343791-214a-45c9-a1cb-b706ee6f5f09",
+      "iri": "http://visualdataweb.org/newOntology/4b343791-214a-45c9-a1cb-b706ee6f5f09",
+      "label": "HasProperty",
+      "attributes": "datatype",
+      "domain": "BH.oM.Acoustic.Speaker",
+      "range": "Category-8ed7bbda-59f5-4754-8587-bd2e0915025e-Speaker-HasProperty"
+    },
+    {
+      "id": "0a5be278-9235-46d5-8114-933845e5ae14",
+      "iri": "http://visualdataweb.org/newOntology/0a5be278-9235-46d5-8114-933845e5ae14",
+      "label": "HasProperty",
+      "attributes": "datatype",
+      "domain": "BH.oM.Acoustic.Speaker",
+      "range": "SpeakerID-38aa0ba6-6ef5-4d1a-8004-0f0e6f445755-Speaker-HasProperty"
+    },
+    {
+      "id": "308ac27a-3405-4e55-a14e-933467a7cd05",
+      "iri": "http://visualdataweb.org/newOntology/308ac27a-3405-4e55-a14e-933467a7cd05",
+      "label": "HasProperty",
+      "attributes": "datatype",
+      "domain": "BH.oM.Acoustic.Speaker",
+      "range": "Gains-c875e1ef-dc81-406c-ac88-69bc6b4dc70c-Speaker-HasProperty"
+    },
+    {
+      "id": "9edea8d6-d8dd-4e4a-8bd3-9cd8bc75a837",
+      "iri": "http://visualdataweb.org/newOntology/9edea8d6-d8dd-4e4a-8bd3-9cd8bc75a837",
+      "label": "HasProperty",
+      "attributes": "datatype",
+      "domain": "BH.oM.Acoustic.Speaker",
+      "range": "Directivity-0bd148d1-3cf4-4009-8f08-064439b9c02f-Speaker-HasProperty"
+    },
+    {
+      "id": "2c623e96-fdca-4adf-b88f-9c779a09edfa",
+      "iri": "http://visualdataweb.org/newOntology/2c623e96-fdca-4adf-b88f-9c779a09edfa",
+      "label": "IsA",
+      "attributes": "object",
+      "domain": "BH.oM.Acoustic.Speaker",
+      "range": "BH.oM.Base.IBHoMObject"
+    },
+    {
+      "id": "30107f19-e00c-4e76-89ad-9eaf8b89c99e",
+      "iri": "http://visualdataweb.org/newOntology/30107f19-e00c-4e76-89ad-9eaf8b89c99e",
+      "label": "IsA",
+      "attributes": "object",
+      "domain": "BH.oM.Acoustic.Speaker",
+      "range": "BH.oM.Base.IObject"
+    },
+    {
+      "id": "e1eff219-e247-40b5-b779-1769e6de9201",
+      "iri": "http://visualdataweb.org/newOntology/e1eff219-e247-40b5-b779-1769e6de9201",
+      "label": "IsSubclassOf",
+      "attributes": "object",
+      "domain": "BH.oM.Acoustic.Speaker",
+      "range": "BH.oM.Base.BHoMObject"
+    },
+    {
+      "id": "a091dfb8-45af-4b44-b29e-0b5c88aa4948",
+      "iri": "http://visualdataweb.org/newOntology/a091dfb8-45af-4b44-b29e-0b5c88aa4948",
+      "label": "IsA",
+      "attributes": []
+    },
+    {
+      "id": "cb1ec0c2-a9b1-4d43-a6fb-3faa4e134445",
+      "iri": "http://visualdataweb.org/newOntology/cb1ec0c2-a9b1-4d43-a6fb-3faa4e134445",
+      "label": "IsA",
+      "attributes": []
+    },
+    {
+      "id": "4ba635d6-09a9-4e2c-9131-2e0ab47b2ffa",
+      "iri": "http://visualdataweb.org/newOntology/4ba635d6-09a9-4e2c-9131-2e0ab47b2ffa",
+      "label": "IsA",
+      "attributes": []
+    },
+    {
+      "id": "81796ff3-7109-4b36-b28d-f7eb49e98cea",
+      "iri": "http://visualdataweb.org/newOntology/81796ff3-7109-4b36-b28d-f7eb49e98cea",
+      "label": "IsSubclassOf",
+      "attributes": []
+    },
+    {
+      "id": "2df75d22-e80d-4c19-8ffa-75fdcf5c2cc3",
+      "iri": "http://visualdataweb.org/newOntology/2df75d22-e80d-4c19-8ffa-75fdcf5c2cc3",
+      "label": "RequiresProperty",
+      "attributes": []
+    },
+    {
+      "id": "9cbd48ee-dafc-42ba-aa30-0d3564d7a9ad",
+      "iri": "http://visualdataweb.org/newOntology/9cbd48ee-dafc-42ba-aa30-0d3564d7a9ad",
+      "label": "RequiresProperty",
+      "attributes": []
+    },
+    {
+      "id": "e2a92bb2-b1bb-4020-81d6-b78a416e67b4",
+      "iri": "http://visualdataweb.org/newOntology/e2a92bb2-b1bb-4020-81d6-b78a416e67b4",
+      "label": "RequiresProperty",
+      "attributes": []
+    },
+    {
+      "id": "0e1f3059-c6cb-45c8-a8ca-d102438825a5",
+      "iri": "http://visualdataweb.org/newOntology/0e1f3059-c6cb-45c8-a8ca-d102438825a5",
+      "label": "RequiresProperty",
+      "attributes": "object",
+      "domain": "BH.oM.Acoustic.IAcousticParameter",
+      "range": "BH.oM.Acoustic.Frequency"
+    },
+    {
+      "id": "56647ccc-137e-4793-b1ed-dfbcf11c20bf",
+      "iri": "http://visualdataweb.org/newOntology/56647ccc-137e-4793-b1ed-dfbcf11c20bf",
+      "label": "IsA",
+      "attributes": "object",
+      "domain": "BH.oM.Acoustic.IAcousticParameter",
+      "range": "BH.oM.Base.IObject"
+    },
+    {
+      "id": "4a93b4c0-5fa4-4256-8829-5661301ae54a",
+      "iri": "http://visualdataweb.org/newOntology/4a93b4c0-5fa4-4256-8829-5661301ae54a",
+      "label": "HasProperty",
+      "attributes": "datatype",
+      "domain": "BH.oM.Acoustic.Rasti",
+      "range": "Value-1136dc94-2458-424d-a874-93605b343caa-Rasti-HasProperty"
+    },
+    {
+      "id": "88d5b948-d5f4-4488-af21-36b37e0d2f65",
+      "iri": "http://visualdataweb.org/newOntology/88d5b948-d5f4-4488-af21-36b37e0d2f65",
+      "label": "HasProperty",
+      "attributes": "datatype",
+      "domain": "BH.oM.Acoustic.Rasti",
+      "range": "ReceiverID-703805a3-967d-4b26-90df-02491e1aa57e-Rasti-HasProperty"
+    },
+    {
+      "id": "d8d0ce90-46a3-484a-943a-00712b0a7e43",
+      "iri": "http://visualdataweb.org/newOntology/d8d0ce90-46a3-484a-943a-00712b0a7e43",
+      "label": "HasProperty",
+      "attributes": "datatype",
+      "domain": "BH.oM.Acoustic.Rasti",
+      "range": "SpeakerID-407fe6dd-d75c-43e3-ab51-1e0c14639ee7-Rasti-HasProperty"
+    },
+    {
+      "id": "c0211ecd-3fc7-45e0-8ef4-d39ca2ce7594",
+      "iri": "http://visualdataweb.org/newOntology/c0211ecd-3fc7-45e0-8ef4-d39ca2ce7594",
+      "label": "HasProperty",
+      "attributes": "object",
+      "domain": "BH.oM.Acoustic.Rasti",
+      "range": "BH.oM.Acoustic.Frequency"
+    },
+    {
+      "id": "096ae235-5052-4932-b7f2-13ec75cee06e",
+      "iri": "http://visualdataweb.org/newOntology/096ae235-5052-4932-b7f2-13ec75cee06e",
+      "label": "IsA",
+      "attributes": "object",
+      "domain": "BH.oM.Acoustic.Rasti",
+      "range": "BH.oM.Base.IBHoMObject"
+    },
+    {
+      "id": "d7f776b4-b272-4072-ab18-8bd0e0e9337e",
+      "iri": "http://visualdataweb.org/newOntology/d7f776b4-b272-4072-ab18-8bd0e0e9337e",
+      "label": "IsA",
+      "attributes": "object",
+      "domain": "BH.oM.Acoustic.Rasti",
+      "range": "BH.oM.Base.IObject"
+    },
+    {
+      "id": "e6e987de-acc3-45cc-931a-a8768d6e8397",
+      "iri": "http://visualdataweb.org/newOntology/e6e987de-acc3-45cc-931a-a8768d6e8397",
+      "label": "IsA",
+      "attributes": "object",
+      "domain": "BH.oM.Acoustic.Rasti",
+      "range": "BH.oM.Acoustic.IAcousticParameter"
+    },
+    {
+      "id": "96d5a224-c5fd-4c97-8611-ce5e45489dc9",
+      "iri": "http://visualdataweb.org/newOntology/96d5a224-c5fd-4c97-8611-ce5e45489dc9",
+      "label": "IsSubclassOf",
+      "attributes": "object",
+      "domain": "BH.oM.Acoustic.Rasti",
+      "range": "BH.oM.Base.BHoMObject"
+    },
+    {
+      "id": "bd8cba6d-ed77-4806-916b-cbd121f205e8",
+      "iri": "http://visualdataweb.org/newOntology/bd8cba6d-ed77-4806-916b-cbd121f205e8",
+      "label": "HasProperty",
+      "attributes": "datatype",
+      "domain": "BH.oM.Acoustic.RT",
+      "range": "Value-f31f2ee5-7896-411b-ab96-4b307fe4b573-RT60-HasProperty"
+    },
+    {
+      "id": "a96c6081-9029-470e-a4c3-74d1c7f643bd",
+      "iri": "http://visualdataweb.org/newOntology/a96c6081-9029-470e-a4c3-74d1c7f643bd",
+      "label": "HasProperty",
+      "attributes": "datatype",
+      "domain": "BH.oM.Acoustic.RT",
+      "range": "ReceiverID-6b6f66f3-6258-485c-bfe4-c8afc2751244-RT60-HasProperty"
+    },
+    {
+      "id": "1839fbdf-6539-4d28-90f3-47dd547326f8",
+      "iri": "http://visualdataweb.org/newOntology/1839fbdf-6539-4d28-90f3-47dd547326f8",
+      "label": "HasProperty",
+      "attributes": "datatype",
+      "domain": "BH.oM.Acoustic.RT",
+      "range": "SpeakerID-ff97656e-1072-4d5a-9d35-6d1e60f30313-RT60-HasProperty"
+    },
+    {
+      "id": "97b8b32c-d73f-4662-9ad2-cdece94559c0",
+      "iri": "http://visualdataweb.org/newOntology/97b8b32c-d73f-4662-9ad2-cdece94559c0",
+      "label": "HasProperty",
+      "attributes": "object",
+      "domain": "BH.oM.Acoustic.RT",
+      "range": "BH.oM.Acoustic.Frequency"
+    },
+    {
+      "id": "348db318-99a8-4247-98dd-0959f05e35fc",
+      "iri": "http://visualdataweb.org/newOntology/348db318-99a8-4247-98dd-0959f05e35fc",
+      "label": "IsA",
+      "attributes": "object",
+      "domain": "BH.oM.Acoustic.RT",
+      "range": "BH.oM.Base.IBHoMObject"
+    },
+    {
+      "id": "4b8cf635-c61c-447d-b9bd-116cc23f4b5a",
+      "iri": "http://visualdataweb.org/newOntology/4b8cf635-c61c-447d-b9bd-116cc23f4b5a",
+      "label": "IsA",
+      "attributes": "object",
+      "domain": "BH.oM.Acoustic.RT",
+      "range": "BH.oM.Base.IObject"
+    },
+    {
+      "id": "65d88b25-ff3c-44b6-b409-4145d03644c6",
+      "iri": "http://visualdataweb.org/newOntology/65d88b25-ff3c-44b6-b409-4145d03644c6",
+      "label": "IsA",
+      "attributes": "object",
+      "domain": "BH.oM.Acoustic.RT",
+      "range": "BH.oM.Acoustic.IAcousticParameter"
+    },
+    {
+      "id": "d2722b4f-ee41-450a-a3d5-3a430f8b1a16",
+      "iri": "http://visualdataweb.org/newOntology/d2722b4f-ee41-450a-a3d5-3a430f8b1a16",
+      "label": "IsSubclassOf",
+      "attributes": "object",
+      "domain": "BH.oM.Acoustic.RT",
+      "range": "BH.oM.Base.BHoMObject"
+    },
+    {
+      "id": "80322b57-dd1a-49fe-952c-df498140111c",
+      "iri": "http://visualdataweb.org/newOntology/80322b57-dd1a-49fe-952c-df498140111c",
+      "label": "HasProperty",
+      "attributes": "datatype",
+      "domain": "BH.oM.Acoustic.SnRatio",
+      "range": "Value-8743b48b-5df6-4f28-9895-ab6162611981-SnRatio-HasProperty"
+    },
+    {
+      "id": "b6aede74-3578-40b8-858b-b93607536677",
+      "iri": "http://visualdataweb.org/newOntology/b6aede74-3578-40b8-858b-b93607536677",
+      "label": "HasProperty",
+      "attributes": "datatype",
+      "domain": "BH.oM.Acoustic.SnRatio",
+      "range": "ReceiverID-746b4675-d918-4e10-b225-1f7d167ac415-SnRatio-HasProperty"
+    },
+    {
+      "id": "a87cf4f6-f73e-460f-ac53-469198dc1bbb",
+      "iri": "http://visualdataweb.org/newOntology/a87cf4f6-f73e-460f-ac53-469198dc1bbb",
+      "label": "HasProperty",
+      "attributes": "datatype",
+      "domain": "BH.oM.Acoustic.SnRatio",
+      "range": "SpeakerID-d22b8015-fb20-4045-9119-99357f9fbd22-SnRatio-HasProperty"
+    },
+    {
+      "id": "0fb61500-ec82-4ae3-bee3-3e6542744893",
+      "iri": "http://visualdataweb.org/newOntology/0fb61500-ec82-4ae3-bee3-3e6542744893",
+      "label": "HasProperty",
+      "attributes": "object",
+      "domain": "BH.oM.Acoustic.SnRatio",
+      "range": "BH.oM.Acoustic.Frequency"
+    },
+    {
+      "id": "db87053d-1856-4523-90d5-7682fc938c6f",
+      "iri": "http://visualdataweb.org/newOntology/db87053d-1856-4523-90d5-7682fc938c6f",
+      "label": "IsA",
+      "attributes": "object",
+      "domain": "BH.oM.Acoustic.SnRatio",
+      "range": "BH.oM.Base.IBHoMObject"
+    },
+    {
+      "id": "c7ff1443-6470-40ba-9775-ad125c53d5b1",
+      "iri": "http://visualdataweb.org/newOntology/c7ff1443-6470-40ba-9775-ad125c53d5b1",
+      "label": "IsA",
+      "attributes": "object",
+      "domain": "BH.oM.Acoustic.SnRatio",
+      "range": "BH.oM.Base.IObject"
+    },
+    {
+      "id": "46e7f233-1bb3-444d-9133-8616a1b64f47",
+      "iri": "http://visualdataweb.org/newOntology/46e7f233-1bb3-444d-9133-8616a1b64f47",
+      "label": "IsA",
+      "attributes": "object",
+      "domain": "BH.oM.Acoustic.SnRatio",
+      "range": "BH.oM.Acoustic.IAcousticParameter"
+    },
+    {
+      "id": "f3eee829-2354-4219-b1cb-60d280829b7d",
+      "iri": "http://visualdataweb.org/newOntology/f3eee829-2354-4219-b1cb-60d280829b7d",
+      "label": "IsSubclassOf",
+      "attributes": "object",
+      "domain": "BH.oM.Acoustic.SnRatio",
+      "range": "BH.oM.Base.BHoMObject"
+    },
+    {
+      "id": "b000ff4a-787d-4b45-80d7-73fad6b03e29",
+      "iri": "http://visualdataweb.org/newOntology/b000ff4a-787d-4b45-80d7-73fad6b03e29",
+      "label": "HasProperty",
+      "attributes": "datatype",
+      "domain": "BH.oM.Acoustic.SoundLevel",
+      "range": "Value-19bb5e84-89d1-43e7-b825-08068e09c383-SoundLevel-HasProperty"
+    },
+    {
+      "id": "862a5901-1fb4-4c25-b142-dbfc10ae7246",
+      "iri": "http://visualdataweb.org/newOntology/862a5901-1fb4-4c25-b142-dbfc10ae7246",
+      "label": "HasProperty",
+      "attributes": "datatype",
+      "domain": "BH.oM.Acoustic.SoundLevel",
+      "range": "ReceiverID-bd28dc4c-64fa-4857-8fc9-1b31a18afbb0-SoundLevel-HasProperty"
+    },
+    {
+      "id": "b8e4b4a8-05ea-47d7-a1b0-cf7dd8968ef7",
+      "iri": "http://visualdataweb.org/newOntology/b8e4b4a8-05ea-47d7-a1b0-cf7dd8968ef7",
+      "label": "HasProperty",
+      "attributes": "datatype",
+      "domain": "BH.oM.Acoustic.SoundLevel",
+      "range": "SpeakerID-8e385e53-51cf-4cf3-bb71-08a934189e63-SoundLevel-HasProperty"
+    },
+    {
+      "id": "247d97f4-b316-40cc-93f3-835468f50a9e",
+      "iri": "http://visualdataweb.org/newOntology/247d97f4-b316-40cc-93f3-835468f50a9e",
+      "label": "HasProperty",
+      "attributes": "object",
+      "domain": "BH.oM.Acoustic.SoundLevel",
+      "range": "BH.oM.Acoustic.Frequency"
+    },
+    {
+      "id": "ca61d5c3-f319-4490-9537-de8edaddffa7",
+      "iri": "http://visualdataweb.org/newOntology/ca61d5c3-f319-4490-9537-de8edaddffa7",
+      "label": "IsA",
+      "attributes": "object",
+      "domain": "BH.oM.Acoustic.SoundLevel",
+      "range": "BH.oM.Base.IBHoMObject"
+    },
+    {
+      "id": "4b3daa35-0150-42f9-8779-b30e2941b1e0",
+      "iri": "http://visualdataweb.org/newOntology/4b3daa35-0150-42f9-8779-b30e2941b1e0",
+      "label": "IsA",
+      "attributes": "object",
+      "domain": "BH.oM.Acoustic.SoundLevel",
+      "range": "BH.oM.Base.IObject"
+    },
+    {
+      "id": "f6946e0a-e007-4347-895f-82511fa399a7",
+      "iri": "http://visualdataweb.org/newOntology/f6946e0a-e007-4347-895f-82511fa399a7",
+      "label": "IsA",
+      "attributes": "object",
+      "domain": "BH.oM.Acoustic.SoundLevel",
+      "range": "BH.oM.Acoustic.IAcousticParameter"
+    },
+    {
+      "id": "4b79f89c-928c-4454-81b3-fc0830bcbf1c",
+      "iri": "http://visualdataweb.org/newOntology/4b79f89c-928c-4454-81b3-fc0830bcbf1c",
+      "label": "IsSubclassOf",
+      "attributes": "object",
+      "domain": "BH.oM.Acoustic.SoundLevel",
+      "range": "BH.oM.Base.BHoMObject"
+    }
+  ]
+}
