@@ -34,6 +34,9 @@
     <Reference Include="BHoM">
       <HintPath>C:\ProgramData\BHoM\Assemblies\BHoM.dll</HintPath>
     </Reference>
+    <Reference Include="BHoM_Adapter">
+      <HintPath>C:\ProgramData\BHoM\Assemblies\BHoM_Adapter.dll</HintPath>
+    </Reference>
     <Reference Include="BHoM_Engine">
       <HintPath>C:\ProgramData\BHoM\Assemblies\BHoM_Engine.dll</HintPath>
     </Reference>
@@ -70,12 +73,18 @@
     <Compile Include="Compute\WriteToXMLFile.cs" />
     <Compile Include="Compute\LoadAssembliesInDirectory.cs" />
     <Compile Include="Modify\CreateOntologyClass.cs" />
-    <Compile Include="Query\IsBHoMSubtype.cs" />
+    <Compile Include="Query\IsBHoMType.cs" />
+    <Compile Include="Query\IsBHoMSubclass.cs" />
     <Compile Include="Query\ConcatenateDictionaryValues.cs" />
     <Compile Include="Query\HasBHoMCopyright.cs" />
     <Compile Include="Query\IsToolkitAssembly.cs" />
+    <Compile Include="Query\OnlyAlphabeticAndDots.cs" />
     <Compile Include="Query\ToolkitAssemblies.cs" />
     <Compile Include="Modify\CreateUriNode.cs" />
+    <Compile Include="Query\RelationsFromType.cs" />
+    <Compile Include="Query\DictionaryGraphFromTypeInfos.cs" />
+    <Compile Include="Query\OnlyAlphabetic.cs" />
+    <Compile Include="Convert\ToWebVOWLJson.cs" />
     <Compile Include="Query\UriFromType.cs" />
     <Compile Include="Query\TryGetAssemblyTypes.cs" />
     <Compile Include="Query\InnermostType.cs" />

@@ -78,8 +78,8 @@ namespace BH.oM.CodeAnalysis.ConsoleApp
 
             // Create three Uri Nodes for an iObject, a Room and a Column
             OntologyClass iObject = g.CreateOntologyClass(typeof(IObject));
-            OntologyClass room = g.CreateOntologyClass(typeof(IObject));
-            OntologyClass column = g.CreateOntologyClass(typeof(IObject));
+            OntologyClass room = g.CreateOntologyClass(typeof(Room));
+            OntologyClass column = g.CreateOntologyClass(typeof(Column));
 
             //// Set the is a class relationship
             //g.Assert(iObject, a, iObject_owlClass);

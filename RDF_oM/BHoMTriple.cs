@@ -9,7 +9,7 @@ namespace BH.oM.RDF
 {
     // Subject, Predicate, Object
 
-    public class BHoMTriple : IRelation
+    public class BHoMTriple
     {
         public object Subject { get; set; }
         public Predicates Predicate { get; set; } = Predicates.HasElement;

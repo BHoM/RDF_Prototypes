@@ -15,7 +15,7 @@ namespace BH.Engine.RDF
 {
     public static partial class Compute
     {
-        public static void WriteToJsonFile(this IGraph graph, string directory = @"C:\temp\RDF_Prototypes_test", string filename = "RDF_Prototypes_test.rdf")
+        public static void WriteToJsonFile(this IGraph graph, string filename = "RDF_Prototypes_test.rdf", string directory = @"C:\temp\RDF_Prototypes_test")
         {
             RdfJsonWriter rdfJsonWriter = new RdfJsonWriter();
             System.IO.StringWriter sw = new System.IO.StringWriter();
@@ -28,7 +28,14 @@ namespace BH.Engine.RDF
             Console.WriteLine(data);
 
             System.IO.Directory.CreateDirectory(directory);
-            File.WriteAllText(Path.Combine(directory, $"RDF_Prototypes_test.json"), data);
+            File.WriteAllText(Path.Combine(directory, filename), data);
+        }
+
+        public static void WriteToJsonFile(this string text, string filename = "RDF_Prototypes_test.rdf", string directory = @"C:\temp\RDF_Prototypes_test")
+        {
+            Directory.CreateDirectory(directory);
+
+            File.WriteAllText(Path.Combine(directory, filename), text);
         }
     }
 }
