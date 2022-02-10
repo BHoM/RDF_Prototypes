@@ -35,7 +35,16 @@ namespace BH.Engine.RDF
         {
             Directory.CreateDirectory(directory);
 
-            File.WriteAllText(Path.Combine(directory, filename), text);
+            string filepath = Path.Combine(directory, filename);
+
+            try
+            {
+                File.WriteAllText(filepath, text);
+            }
+            catch (Exception e)
+            {
+                log.RecordError($"Could not write file `{filepath}`. Exception:\n{e.ToString()}");
+            }
         }
     }
 }

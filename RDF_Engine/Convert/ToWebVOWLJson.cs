@@ -60,7 +60,7 @@ namespace BH.Engine.RDF
             List<IRelation> allRelations = dictionaryGraph.Values.SelectMany(v => v).ToList();
             foreach (IRelation relation in allRelations)
             {
-                string relationId = Guid.NewGuid().ToString();
+                string relationId = relation.Hash();
                 Type relationType = relation.GetType();
 
                 // // - Domain and range class and class attributes
@@ -167,7 +167,7 @@ namespace BH.Engine.RDF
 
         private static string WebVOWLNodeId(this IRelation relation)
         {
-            return $"{(relation.Object as dynamic)?.Name ?? ""}-{Guid.NewGuid().ToString()}-{((Type)relation.Subject).Name}-{relation.GetType().Name}";
+            return $"{(relation.Object as dynamic)?.Name ?? ""}-{relation.Hash()}-{((Type)relation.Subject).Name}-{relation.GetType().Name}";
         }
 
         /***************************************************/
