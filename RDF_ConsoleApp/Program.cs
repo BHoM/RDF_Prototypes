@@ -38,7 +38,7 @@ namespace BH.oM.CodeAnalysis.ConsoleApp
             //onlyBaseOmTypes = onlyBaseOmTypes.Where(t => t.Name.Contains("Output"));
             //onlyBaseOmTypes = onlyBaseOmTypes.Where(t => t.Name.Contains("ComparisonConfig"));
 
-            Dictionary<string, string> webVOWLJsonsPerNamespace = WebVOWLJsonPerNamespace(oMTypes);
+            SortedDictionary<string, string> webVOWLJsonsPerNamespace = WebVOWLJsonPerNamespace(oMTypes);
 
             foreach (var kv in webVOWLJsonsPerNamespace)
             {
@@ -64,9 +64,9 @@ namespace BH.oM.CodeAnalysis.ConsoleApp
             Console.ReadKey();
         }
 
-        public static Dictionary<string, string> WebVOWLJsonPerNamespace(List<TypeInfo> oMTypes, List<string> namespaceToConsider = null, List<string> typeNamesToConsider = null, int namespaceGroupDepth = 3)
+        public static SortedDictionary<string, string> WebVOWLJsonPerNamespace(List<TypeInfo> oMTypes, List<string> namespaceToConsider = null, List<string> typeNamesToConsider = null, int namespaceGroupDepth = 3)
         {
-            Dictionary<string, string> result = new Dictionary<string, string>();
+            SortedDictionary<string, string> result = new SortedDictionary<string, string>(new NaturalSortComparer<string>());
 
             // Null check
             oMTypes = oMTypes.Where(t => t != null && t.Namespace != null).ToList();
