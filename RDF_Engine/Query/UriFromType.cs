@@ -125,13 +125,20 @@ namespace BH.Engine.RDF
 
         [Input("typeToSearch", "The method will look for a file named using standard BHoM filename convention for Types. " +
             "For example, for the type `BH.oM.Structure.Elements.Bar`, the method will look for 'Bar.cs'.")]
-        public static string TypeFilePath(this Type typeToSearch, string githubRootDirectory, string cacheRootDirectory = null)
+        public static string TypeFilePath(this Type type, string githubRootDirectory, string cacheRootDirectory = null)
         {
-            string typeFileToSearch = typeToSearch.NameValidChars() + ".cs";
+            string typeFileToSearch = type.NameValidChars() + ".cs";
 
-            string filepath = Compute.FilesInRepo(githubRootDirectory, cacheRootDirectory).FirstOrDefault(path => path.EndsWith(typeFileToSearch));
+            List<string> allFilePaths = Compute.FilesInRepo(githubRootDirectory, cacheRootDirectory);
+
+            string nameSpaceGroup = type.Namespace.Split('.')[2]; // [2] selects anything exactly after `BH.oM.` or `BH.Engine.`
+
+            if (nameSpaceGroup == "Adapters" || nameSpaceGroup == "External")
+                nameSpaceGroup = type.Namespace.Split('.')[3];
+
+            string filepath = allFilePaths.FirstOrDefault(p => Path.GetDirectoryName(p).Contains(nameSpaceGroup) && p.EndsWith(typeFileToSearch));
             if (string.IsNullOrWhiteSpace(filepath))
-                log.RecordWarning($"Could not find filepath for Type `{typeToSearch.FullName}`", true);
+                log.RecordWarning($"Could not find filepath for Type `{type.FullName}`", true);
 
             return filepath; // If not found, this is null.
         }
