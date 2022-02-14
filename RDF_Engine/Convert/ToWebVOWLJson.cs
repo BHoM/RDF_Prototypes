@@ -112,10 +112,14 @@ namespace BH.Engine.RDF
             string propertyName = (subjectOrObject as PropertyInfo)?.Name ?? "";
             Type subjectOrObjectType = (subjectOrObject as PropertyInfo)?.PropertyType ?? subjectOrObject as Type;
 
+            if (subjectOrObjectType.Name.StartsWith("<>c__"))
+                return null;
+
             //Type subjectOrObjectType = (subjectOrObject as PropertyInfo)?.PropertyType ?? subjectOrObject as Type;
             //string label = (subjectOrObject as PropertyInfo)?.DescriptiveName() ?? $"{subjectOrObjectType.NameValidChars()} ({subjectOrObjectType.FullNameValidChars()})";
 
             string label = subjectOrObject.DescriptiveName();
+
 
             if (subjectOrObjectType.IsBHoMType())
             {
