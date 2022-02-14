@@ -20,6 +20,9 @@ namespace BH.Engine.RDF
 
         public static Uri GithubURI(this Type typeToSearch, string githubRootDirectory = null, Uri githubOrganisation = null, string cacheRootDirectory = null)
         {
+            if (typeToSearch.Name.StartsWith("<>c__"))
+                return null;
+
             if (githubOrganisation == null)
                 githubOrganisation = m_BHoMGithubOrganization;
 
@@ -35,6 +38,9 @@ namespace BH.Engine.RDF
 
         public static Uri ComposedGithubURI(this Type t)
         {
+            if (t.Name.StartsWith("<>c__"))
+                return null;
+
             string result = null;
 
             Assembly assembly = Assembly.GetAssembly(t);
@@ -81,7 +87,7 @@ namespace BH.Engine.RDF
             }
 
             Uri uri = null;
-            if (Uri.TryCreate(result, UriKind.Absolute, out uri))
+            if (!Uri.TryCreate(result, UriKind.Absolute, out uri))
                 log.RecordError($"Could not compose a valid URL for type {t.FullName}", true);
 
             return uri;
@@ -89,6 +95,9 @@ namespace BH.Engine.RDF
 
         public static Uri GithubURIFromFileSystem(this Type typeToSearch, string githubRootDirectory = null, Uri githubOrganisation = null, string cacheRootDirectory = null)
         {
+            if (typeToSearch.Name.StartsWith("<>c__"))
+                return null;
+
             if (githubOrganisation == null)
                 githubOrganisation = m_BHoMGithubOrganization;
 

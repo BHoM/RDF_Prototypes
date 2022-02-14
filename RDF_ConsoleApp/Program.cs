@@ -38,7 +38,7 @@ namespace BH.oM.CodeAnalysis.ConsoleApp
             //onlyBaseOmTypes = onlyBaseOmTypes.Where(t => t.Name.Contains("Output"));
             //onlyBaseOmTypes = onlyBaseOmTypes.Where(t => t.Name.Contains("ComparisonConfig"));
 
-            SortedDictionary<string, string> webVOWLJsonsPerNamespace = WebVOWLJsonPerNamespace(oMTypes);
+            SortedDictionary<string, string> webVOWLJsonsPerNamespace = WebVOWLJsonPerNamespace(oMTypes, new List<string>() { "BH.oM.Geometry" });
 
             foreach (var kv in webVOWLJsonsPerNamespace)
             {

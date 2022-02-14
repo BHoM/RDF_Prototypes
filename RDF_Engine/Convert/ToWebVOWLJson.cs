@@ -39,19 +39,23 @@ namespace BH.Engine.RDF
             JArray classAttributeArray = new JArray();
 
             // Iterate the Types in the dictionary. Each type will be a node in the graph.
+            HashSet<Type> addedTypes = new HashSet<Type>(); // There could be Types that were not gathered yet and that could emerge from the targets of the Relations.
             foreach (Type type in dictionaryGraph.Keys)
             {
                 string typeId = type.FullNameValidChars();
+                Uri typeUri = type.GithubURI();
+
+                if (typeUri == null)
+                    continue;
 
                 // 1) CLASS
                 classArray.AddToIdTypeArray(typeId, "owl:Class");
 
                 // 2) CLASS ATTRIBUTE
-                classAttributeArray.AddToAttributeArray(typeId, type.GithubURI(), type.DescriptiveName(true));
-            }
+                classAttributeArray.AddToAttributeArray(typeId, typeUri, type.DescriptiveName(true));
 
-            // There could be Types that were not gathered yet and that could emerge from the targets of the Relations.
-            HashSet<Type> addedTypes = new HashSet<Type>(dictionaryGraph.Keys);
+                addedTypes.Add(type);
+            }
 
             JArray propertyArray = new JArray();
             JArray propertyAttributeArray = new JArray();
@@ -123,6 +127,8 @@ namespace BH.Engine.RDF
                     classArray.AddToIdTypeArray(subjectOrObjectNodeId, "owl:Class");
 
                     classAttributeArray.AddToAttributeArray(subjectOrObjectNodeId, subjectOrObjectType.GithubURI(), label);
+
+                    addedTypes.Add(subjectOrObjectType);
                 }
 
                 propertyAttributes = new List<string>() { "object" };
