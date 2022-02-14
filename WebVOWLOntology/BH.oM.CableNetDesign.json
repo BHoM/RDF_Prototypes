@@ -1,0 +1,410 @@
+{
+  "comment": "Generated from BHoM RDF_Prototypes",
+  "namespace": [],
+  "class": [
+    {
+      "id": "BH.oM.CableNetDesign.EquilibrateMethod",
+      "type": "owl:Class"
+    },
+    {
+      "id": "BH.oM.CableNetDesign.BarAndForcePair",
+      "type": "owl:Class"
+    },
+    {
+      "id": "BH.oM.CableNetDesign.CableRelaxationResult",
+      "type": "owl:Class"
+    },
+    {
+      "id": "BH.oM.CableNetDesign.Fragments.SlackLengthFragment",
+      "type": "owl:Class"
+    },
+    {
+      "id": "Method-CB9E123B5939BDA94578AB796246945D59D0EA241382D05873DEDED98E0CFD39-EquilibrateMethod-HasProperty",
+      "type": "rdfs:Datatype"
+    },
+    {
+      "id": "inputParameters-72C15A1049AFDB50C36E21FA417BE38B3ABFC35A49F2670DC9DBFD3DEFEDD15C-EquilibrateMethod-HasProperty",
+      "type": "rdfs:Datatype"
+    },
+    {
+      "id": "BH.oM.Base.IBHoMObject",
+      "type": "owl:Class"
+    },
+    {
+      "id": "BH.oM.Base.IObject",
+      "type": "owl:Class"
+    },
+    {
+      "id": "BH.oM.Base.BHoMObject",
+      "type": "owl:Class"
+    },
+    {
+      "id": "BH.oM.Structure.Elements.Bar",
+      "type": "owl:Class"
+    },
+    {
+      "id": "BH.oM.Structure.Results.BarForce",
+      "type": "owl:Class"
+    },
+    {
+      "id": "ElementResults-9EC336893F8AFB1C7AFB62A702AE1912BE97D19BD5FD130FF004FFEB100999DF-CableRelaxationResult-HasProperty",
+      "type": "rdfs:Datatype"
+    },
+    {
+      "id": "BH.oM.FormFinding.RelaxSystem",
+      "type": "owl:Class"
+    },
+    {
+      "id": "SlackLength-E83191C2D4FF5C27DFB3E5D5F5D6EF4597FDEFB817BB5F751702BAF6E3B144E0-SlackLengthFragment-HasProperty",
+      "type": "rdfs:Datatype"
+    },
+    {
+      "id": "KeepExtactForce-8E6DADD7C1E6E772093D596CB2DF90129561ECB80DD48618B5BCFFE0D114652D-SlackLengthFragment-HasProperty",
+      "type": "rdfs:Datatype"
+    },
+    {
+      "id": "BH.oM.Base.IFragment",
+      "type": "owl:Class"
+    }
+  ],
+  "classAttribute": [
+    {
+      "id": "BH.oM.CableNetDesign.EquilibrateMethod",
+      "iri": "https://github.com/BHoM/StructuralEngineering_Toolkit/blob/main/CableNetDesign_Engine/Create/EquilibrateMethod.cs",
+      "label": "EquilibrateMethod (BH.oM.CableNetDesign)",
+      "attributes": []
+    },
+    {
+      "id": "BH.oM.CableNetDesign.BarAndForcePair",
+      "iri": "https://github.com/BHoM/StructuralEngineering_Toolkit/blob/main/CableNetDesign_oM/Structural/Results/BarAndForcePair.cs",
+      "label": "BarAndForcePair (BH.oM.CableNetDesign)",
+      "attributes": []
+    },
+    {
+      "id": "BH.oM.CableNetDesign.CableRelaxationResult",
+      "iri": "https://github.com/BHoM/StructuralEngineering_Toolkit/blob/main/CableNetDesign_oM/Structural/Results/CableRelaxationResult.cs",
+      "label": "CableRelaxationResult (BH.oM.CableNetDesign)",
+      "attributes": []
+    },
+    {
+      "id": "BH.oM.CableNetDesign.Fragments.SlackLengthFragment",
+      "iri": "https://github.com/BHoM/StructuralEngineering_Toolkit/blob/main/CableNetDesign_oM/Fragments/SlackLengthFragment.cs",
+      "label": "SlackLengthFragment (BH.oM.CableNetDesign.Fragments)",
+      "attributes": []
+    },
+    {
+      "id": "Method-CB9E123B5939BDA94578AB796246945D59D0EA241382D05873DEDED98E0CFD39-EquilibrateMethod-HasProperty",
+      "iri": "http://www.w3.org/2001/XMLSchema#",
+      "label": "Method (String)",
+      "attributes": "datatype"
+    },
+    {
+      "id": "inputParameters-72C15A1049AFDB50C36E21FA417BE38B3ABFC35A49F2670DC9DBFD3DEFEDD15C-EquilibrateMethod-HasProperty",
+      "iri": "http://www.w3.org/2001/XMLSchema#",
+      "label": "inputParameters (Dictionary<String,Object>)",
+      "attributes": "datatype"
+    },
+    {
+      "id": "BH.oM.Base.IBHoMObject",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/BHoM/Interface/IBHoMObject.cs",
+      "label": "IBHoMObject",
+      "attributes": []
+    },
+    {
+      "id": "BH.oM.Base.IObject",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/BHoM/Interface/IObject.cs",
+      "label": "IObject",
+      "attributes": []
+    },
+    {
+      "id": "BH.oM.Base.BHoMObject",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/BHoM/BHoMObject.cs",
+      "label": "BHoMObject",
+      "attributes": []
+    },
+    {
+      "id": "BH.oM.Structure.Elements.Bar",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/Structure_oM/Elements/Bar.cs",
+      "label": "Cable (Bar)",
+      "attributes": []
+    },
+    {
+      "id": "BH.oM.Structure.Results.BarForce",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/Structure_oM/Results/Bar Results/BarForce.cs",
+      "label": "Force (BarForce)",
+      "attributes": []
+    },
+    {
+      "id": "ElementResults-9EC336893F8AFB1C7AFB62A702AE1912BE97D19BD5FD130FF004FFEB100999DF-CableRelaxationResult-HasProperty",
+      "iri": "http://www.w3.org/2001/XMLSchema#",
+      "label": "ElementResults (List<BarAndForcePair>)",
+      "attributes": "datatype"
+    },
+    {
+      "id": "BH.oM.FormFinding.RelaxSystem",
+      "iri": "https://github.com/BHoM/FormFinding_Toolkit/blob/main/FormFinding_Engine/Create/RelaxSystem.cs",
+      "label": "RelaxSystem (RelaxSystem)",
+      "attributes": []
+    },
+    {
+      "id": "SlackLength-E83191C2D4FF5C27DFB3E5D5F5D6EF4597FDEFB817BB5F751702BAF6E3B144E0-SlackLengthFragment-HasProperty",
+      "iri": "http://www.w3.org/2001/XMLSchema#",
+      "label": "SlackLength (Double)",
+      "attributes": "datatype"
+    },
+    {
+      "id": "KeepExtactForce-8E6DADD7C1E6E772093D596CB2DF90129561ECB80DD48618B5BCFFE0D114652D-SlackLengthFragment-HasProperty",
+      "iri": "http://www.w3.org/2001/XMLSchema#",
+      "label": "KeepExtactForce (Boolean)",
+      "attributes": "datatype"
+    },
+    {
+      "id": "BH.oM.Base.IFragment",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/BHoM/Interface/IFragment.cs",
+      "label": "IFragment",
+      "attributes": []
+    }
+  ],
+  "property": [
+    {
+      "id": "CB9E123B5939BDA94578AB796246945D59D0EA241382D05873DEDED98E0CFD39",
+      "type": "owl:DatatypeProperty"
+    },
+    {
+      "id": "72C15A1049AFDB50C36E21FA417BE38B3ABFC35A49F2670DC9DBFD3DEFEDD15C",
+      "type": "owl:DatatypeProperty"
+    },
+    {
+      "id": "6234E3DB7843B52AD3320B361EB096B84863E96A9989278755025C181CEB9914",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "07C4A841FA9B816500157E0F91ECE33A8433DA122B44DBD89583400B2485E7EF",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "9876D2811027D9E80D4E6487EC64581A1003CC5CEB102F9804FDC6112D2252C1",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "248574A9D080FF08C82C717209E64F5374D3DE32F959BAB1957A43AD1FE3F1DC",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "B0256DBFE83973329BA4DF32744397A2DF88F3D8613B3F497FFA2751E34D86FA",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "F7B4D8D1E74CF8E742FC015A650FAEC513914B51389C2881A2891778B942BFAD",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "58BBD4BAC3E0A79C7B9F2F1EC02949B9ECC1EC947187DF960F696AAE401A7EBE",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "246D811C0A4609C228FAD31F50727223C11CF9C5CD4C90923923347A9B5DF940",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "9EC336893F8AFB1C7AFB62A702AE1912BE97D19BD5FD130FF004FFEB100999DF",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "7BC3F0021AEEE026A3701A447807C37F86010332E069EEF1CCC4584138D8DB79",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "ED02375F97B1B2277B6BFD0BD96D207901CD1510B84E018A03AC2A23E71C470E",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "F008687F48472B7862252F310F603231D2FB975E97784300F8857336FB2985DB",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "99EB99B329E5BE9467111C08FD8CE5F09FD1828E12F69929EC455FA9D1FFE6C2",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "E83191C2D4FF5C27DFB3E5D5F5D6EF4597FDEFB817BB5F751702BAF6E3B144E0",
+      "type": "owl:DatatypeProperty"
+    },
+    {
+      "id": "8E6DADD7C1E6E772093D596CB2DF90129561ECB80DD48618B5BCFFE0D114652D",
+      "type": "owl:DatatypeProperty"
+    },
+    {
+      "id": "DC62AC2A5668BA2713A14DC67DA3E00EDE961A64E6EB02D084C56A5EAE3196C4",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "2CC6FE322EEACF66B773D9B3E344CBD3C030BF30D2EC33FEA228F2E1C801AD7D",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "6265DFEF4E85AE35201B5B056C388E4ACB1F7346FFC8212D63805EEA240C2E10",
+      "type": "owl:DatatypeProperty"
+    }
+  ],
+  "propertyAttribute": [
+    {
+      "id": "CB9E123B5939BDA94578AB796246945D59D0EA241382D05873DEDED98E0CFD39",
+      "iri": "http://visualdataweb.org/newOntology/CB9E123B5939BDA94578AB796246945D59D0EA241382D05873DEDED98E0CFD39",
+      "label": "HasProperty",
+      "attributes": "datatype",
+      "domain": "BH.oM.CableNetDesign.EquilibrateMethod",
+      "range": "Method-CB9E123B5939BDA94578AB796246945D59D0EA241382D05873DEDED98E0CFD39-EquilibrateMethod-HasProperty"
+    },
+    {
+      "id": "72C15A1049AFDB50C36E21FA417BE38B3ABFC35A49F2670DC9DBFD3DEFEDD15C",
+      "iri": "http://visualdataweb.org/newOntology/72C15A1049AFDB50C36E21FA417BE38B3ABFC35A49F2670DC9DBFD3DEFEDD15C",
+      "label": "HasProperty",
+      "attributes": "datatype",
+      "domain": "BH.oM.CableNetDesign.EquilibrateMethod",
+      "range": "inputParameters-72C15A1049AFDB50C36E21FA417BE38B3ABFC35A49F2670DC9DBFD3DEFEDD15C-EquilibrateMethod-HasProperty"
+    },
+    {
+      "id": "6234E3DB7843B52AD3320B361EB096B84863E96A9989278755025C181CEB9914",
+      "iri": "http://visualdataweb.org/newOntology/6234E3DB7843B52AD3320B361EB096B84863E96A9989278755025C181CEB9914",
+      "label": "IsA",
+      "attributes": "object",
+      "domain": "BH.oM.CableNetDesign.EquilibrateMethod",
+      "range": "BH.oM.Base.IBHoMObject"
+    },
+    {
+      "id": "07C4A841FA9B816500157E0F91ECE33A8433DA122B44DBD89583400B2485E7EF",
+      "iri": "http://visualdataweb.org/newOntology/07C4A841FA9B816500157E0F91ECE33A8433DA122B44DBD89583400B2485E7EF",
+      "label": "IsA",
+      "attributes": "object",
+      "domain": "BH.oM.CableNetDesign.EquilibrateMethod",
+      "range": "BH.oM.Base.IObject"
+    },
+    {
+      "id": "9876D2811027D9E80D4E6487EC64581A1003CC5CEB102F9804FDC6112D2252C1",
+      "iri": "http://visualdataweb.org/newOntology/9876D2811027D9E80D4E6487EC64581A1003CC5CEB102F9804FDC6112D2252C1",
+      "label": "IsSubclassOf",
+      "attributes": "object",
+      "domain": "BH.oM.CableNetDesign.EquilibrateMethod",
+      "range": "BH.oM.Base.BHoMObject"
+    },
+    {
+      "id": "248574A9D080FF08C82C717209E64F5374D3DE32F959BAB1957A43AD1FE3F1DC",
+      "iri": "http://visualdataweb.org/newOntology/248574A9D080FF08C82C717209E64F5374D3DE32F959BAB1957A43AD1FE3F1DC",
+      "label": "HasProperty",
+      "attributes": "object",
+      "domain": "BH.oM.CableNetDesign.BarAndForcePair",
+      "range": "BH.oM.Structure.Elements.Bar"
+    },
+    {
+      "id": "B0256DBFE83973329BA4DF32744397A2DF88F3D8613B3F497FFA2751E34D86FA",
+      "iri": "http://visualdataweb.org/newOntology/B0256DBFE83973329BA4DF32744397A2DF88F3D8613B3F497FFA2751E34D86FA",
+      "label": "HasProperty",
+      "attributes": "object",
+      "domain": "BH.oM.CableNetDesign.BarAndForcePair",
+      "range": "BH.oM.Structure.Results.BarForce"
+    },
+    {
+      "id": "F7B4D8D1E74CF8E742FC015A650FAEC513914B51389C2881A2891778B942BFAD",
+      "iri": "http://visualdataweb.org/newOntology/F7B4D8D1E74CF8E742FC015A650FAEC513914B51389C2881A2891778B942BFAD",
+      "label": "IsA",
+      "attributes": "object",
+      "domain": "BH.oM.CableNetDesign.BarAndForcePair",
+      "range": "BH.oM.Base.IBHoMObject"
+    },
+    {
+      "id": "58BBD4BAC3E0A79C7B9F2F1EC02949B9ECC1EC947187DF960F696AAE401A7EBE",
+      "iri": "http://visualdataweb.org/newOntology/58BBD4BAC3E0A79C7B9F2F1EC02949B9ECC1EC947187DF960F696AAE401A7EBE",
+      "label": "IsA",
+      "attributes": "object",
+      "domain": "BH.oM.CableNetDesign.BarAndForcePair",
+      "range": "BH.oM.Base.IObject"
+    },
+    {
+      "id": "246D811C0A4609C228FAD31F50727223C11CF9C5CD4C90923923347A9B5DF940",
+      "iri": "http://visualdataweb.org/newOntology/246D811C0A4609C228FAD31F50727223C11CF9C5CD4C90923923347A9B5DF940",
+      "label": "IsSubclassOf",
+      "attributes": "object",
+      "domain": "BH.oM.CableNetDesign.BarAndForcePair",
+      "range": "BH.oM.Base.BHoMObject"
+    },
+    {
+      "id": "9EC336893F8AFB1C7AFB62A702AE1912BE97D19BD5FD130FF004FFEB100999DF",
+      "iri": "http://visualdataweb.org/newOntology/9EC336893F8AFB1C7AFB62A702AE1912BE97D19BD5FD130FF004FFEB100999DF",
+      "label": "HasProperty",
+      "attributes": "datatype",
+      "domain": "BH.oM.CableNetDesign.CableRelaxationResult",
+      "range": "ElementResults-9EC336893F8AFB1C7AFB62A702AE1912BE97D19BD5FD130FF004FFEB100999DF-CableRelaxationResult-HasProperty"
+    },
+    {
+      "id": "7BC3F0021AEEE026A3701A447807C37F86010332E069EEF1CCC4584138D8DB79",
+      "iri": "http://visualdataweb.org/newOntology/7BC3F0021AEEE026A3701A447807C37F86010332E069EEF1CCC4584138D8DB79",
+      "label": "HasProperty",
+      "attributes": "object",
+      "domain": "BH.oM.CableNetDesign.CableRelaxationResult",
+      "range": "BH.oM.FormFinding.RelaxSystem"
+    },
+    {
+      "id": "ED02375F97B1B2277B6BFD0BD96D207901CD1510B84E018A03AC2A23E71C470E",
+      "iri": "http://visualdataweb.org/newOntology/ED02375F97B1B2277B6BFD0BD96D207901CD1510B84E018A03AC2A23E71C470E",
+      "label": "IsA",
+      "attributes": "object",
+      "domain": "BH.oM.CableNetDesign.CableRelaxationResult",
+      "range": "BH.oM.Base.IBHoMObject"
+    },
+    {
+      "id": "F008687F48472B7862252F310F603231D2FB975E97784300F8857336FB2985DB",
+      "iri": "http://visualdataweb.org/newOntology/F008687F48472B7862252F310F603231D2FB975E97784300F8857336FB2985DB",
+      "label": "IsA",
+      "attributes": "object",
+      "domain": "BH.oM.CableNetDesign.CableRelaxationResult",
+      "range": "BH.oM.Base.IObject"
+    },
+    {
+      "id": "99EB99B329E5BE9467111C08FD8CE5F09FD1828E12F69929EC455FA9D1FFE6C2",
+      "iri": "http://visualdataweb.org/newOntology/99EB99B329E5BE9467111C08FD8CE5F09FD1828E12F69929EC455FA9D1FFE6C2",
+      "label": "IsSubclassOf",
+      "attributes": "object",
+      "domain": "BH.oM.CableNetDesign.CableRelaxationResult",
+      "range": "BH.oM.Base.BHoMObject"
+    },
+    {
+      "id": "E83191C2D4FF5C27DFB3E5D5F5D6EF4597FDEFB817BB5F751702BAF6E3B144E0",
+      "iri": "http://visualdataweb.org/newOntology/E83191C2D4FF5C27DFB3E5D5F5D6EF4597FDEFB817BB5F751702BAF6E3B144E0",
+      "label": "HasProperty",
+      "attributes": "datatype",
+      "domain": "BH.oM.CableNetDesign.Fragments.SlackLengthFragment",
+      "range": "SlackLength-E83191C2D4FF5C27DFB3E5D5F5D6EF4597FDEFB817BB5F751702BAF6E3B144E0-SlackLengthFragment-HasProperty"
+    },
+    {
+      "id": "8E6DADD7C1E6E772093D596CB2DF90129561ECB80DD48618B5BCFFE0D114652D",
+      "iri": "http://visualdataweb.org/newOntology/8E6DADD7C1E6E772093D596CB2DF90129561ECB80DD48618B5BCFFE0D114652D",
+      "label": "HasProperty",
+      "attributes": "datatype",
+      "domain": "BH.oM.CableNetDesign.Fragments.SlackLengthFragment",
+      "range": "KeepExtactForce-8E6DADD7C1E6E772093D596CB2DF90129561ECB80DD48618B5BCFFE0D114652D-SlackLengthFragment-HasProperty"
+    },
+    {
+      "id": "DC62AC2A5668BA2713A14DC67DA3E00EDE961A64E6EB02D084C56A5EAE3196C4",
+      "iri": "http://visualdataweb.org/newOntology/DC62AC2A5668BA2713A14DC67DA3E00EDE961A64E6EB02D084C56A5EAE3196C4",
+      "label": "IsA",
+      "attributes": "object",
+      "domain": "BH.oM.CableNetDesign.Fragments.SlackLengthFragment",
+      "range": "BH.oM.Base.IFragment"
+    },
+    {
+      "id": "2CC6FE322EEACF66B773D9B3E344CBD3C030BF30D2EC33FEA228F2E1C801AD7D",
+      "iri": "http://visualdataweb.org/newOntology/2CC6FE322EEACF66B773D9B3E344CBD3C030BF30D2EC33FEA228F2E1C801AD7D",
+      "label": "IsA",
+      "attributes": "object",
+      "domain": "BH.oM.CableNetDesign.Fragments.SlackLengthFragment",
+      "range": "BH.oM.Base.IObject"
+    },
+    {
+      "id": "6265DFEF4E85AE35201B5B056C388E4ACB1F7346FFC8212D63805EEA240C2E10",
+      "iri": "http://visualdataweb.org/newOntology/6265DFEF4E85AE35201B5B056C388E4ACB1F7346FFC8212D63805EEA240C2E10",
+      "label": "IsSubclassOf",
+      "attributes": []
+    }
+  ]
+}

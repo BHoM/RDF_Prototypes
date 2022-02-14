@@ -1,0 +1,1246 @@
+{
+  "comment": "Generated from BHoM RDF_Prototypes",
+  "namespace": [],
+  "class": [
+    {
+      "id": "BH.oM.Diffing.Delta",
+      "type": "owl:Class"
+    },
+    {
+      "id": "BH.oM.Diffing.Diff",
+      "type": "owl:Class"
+    },
+    {
+      "id": "BH.oM.Diffing.DiffingConfig",
+      "type": "owl:Class"
+    },
+    {
+      "id": "BH.oM.Diffing.ObjectDifferences",
+      "type": "owl:Class"
+    },
+    {
+      "id": "BH.oM.Diffing.PropertyDifference",
+      "type": "owl:Class"
+    },
+    {
+      "id": "BH.oM.Diffing.Revision",
+      "type": "owl:Class"
+    },
+    {
+      "id": "BH.oM.Diffing.RevisionFragment",
+      "type": "owl:Class"
+    },
+    {
+      "id": "BH.oM.Diffing.StreamPointer",
+      "type": "owl:Class"
+    },
+    {
+      "id": "StreamId-7596C609D930CD344AFD5C8834573439267A1A6AB1E9F2F6C900C5741FCB72D6-Delta-HasProperty",
+      "type": "rdfs:Datatype"
+    },
+    {
+      "id": "Revision_from-22E9A9549038B78A950390A0B9CCF93A1AC06618D0BD5FFB2B6DF3B6C6546DF6-Delta-HasProperty",
+      "type": "rdfs:Datatype"
+    },
+    {
+      "id": "Revision_to-0509EBDD82F959B59782A7D9AD15EF175D944C4ED0599D1088FEDB8BAD16EC45-Delta-HasProperty",
+      "type": "rdfs:Datatype"
+    },
+    {
+      "id": "Timestamp-1FF0BFF3ED73EBAEF6271998D01BAECBE4994B9281AE8EDBA655DFD6934EEDF7-Delta-HasProperty",
+      "type": "rdfs:Datatype"
+    },
+    {
+      "id": "Author-5759BC64C2F3765947358CDEEF3B606BBFCBDC4448211D07121403D231E14D57-Delta-HasProperty",
+      "type": "rdfs:Datatype"
+    },
+    {
+      "id": "Comment-E09180C6716215DCCAB0A3046B06913C29B3063163207061F95FBE2AE1E2929F-Delta-HasProperty",
+      "type": "rdfs:Datatype"
+    },
+    {
+      "id": "BH.oM.Base.IObject",
+      "type": "owl:Class"
+    },
+    {
+      "id": "BH.oM.Base.IImmutable",
+      "type": "owl:Class"
+    },
+    {
+      "id": "AddedObjects-4257D30C5EFA7D83E5906F2D1C007ABEC52C881C07C11DA23167C93441A0FF13-Diff-HasProperty",
+      "type": "rdfs:Datatype"
+    },
+    {
+      "id": "RemovedObjects-20AD41F91CCF45AE6F8E1CB00F6B004261D838388477A242B85E8E76D2D3181F-Diff-HasProperty",
+      "type": "rdfs:Datatype"
+    },
+    {
+      "id": "ModifiedObjects-2A419FF8B5D4772B95C41E8605B159CDD79FBACA6227AE0A7E403FB9C219CA76-Diff-HasProperty",
+      "type": "rdfs:Datatype"
+    },
+    {
+      "id": "UnchangedObjects-B32C8393CB5D765AD266F6EEE49F1079E1ECBB3524401682577CE6832DB745C8-Diff-HasProperty",
+      "type": "rdfs:Datatype"
+    },
+    {
+      "id": "ModifiedObjectsDifferences-C2A7CF6750681C1FED458788E6ACCB18F7A144D2648176A5F8CD84E75F7791B9-Diff-HasProperty",
+      "type": "rdfs:Datatype"
+    },
+    {
+      "id": "BH.oM.Base.BaseComparisonConfig",
+      "type": "owl:Class"
+    },
+    {
+      "id": "EnablePropertyDiffing-159646CAC03E9512521DF348B37DF37A9FD31C156E2F48E019AA25905A8A44CE-DiffingConfig-HasProperty",
+      "type": "rdfs:Datatype"
+    },
+    {
+      "id": "IncludeUnchangedObjects-B1957D4D9DC25719DD3AD3AE8A461AE65C10145CE888A1551300137E0C1479DF-DiffingConfig-HasProperty",
+      "type": "rdfs:Datatype"
+    },
+    {
+      "id": "AllowDuplicateIds-0088B6818F4663DF4D88DBF377AAEF99537E728C26AD8832EA7F63C7AAF82DCB-DiffingConfig-HasProperty",
+      "type": "rdfs:Datatype"
+    },
+    {
+      "id": "PastObject-89F0149145E6A9A03888C77DD0AA0701C7938CA0DFD18AF218F69AAF1DE7FC58-ObjectDifferences-HasProperty",
+      "type": "rdfs:Datatype"
+    },
+    {
+      "id": "FollowingObject-415B7EB96F60ACB69FA5935771ABD9FE55D173BE427EA52E6397DF9C8F9FFBA5-ObjectDifferences-HasProperty",
+      "type": "rdfs:Datatype"
+    },
+    {
+      "id": "Differences-CB79EAA714F553AA1179E87A89D1FC54FA51CA34F9A0C5DB3BAB4FFD02831BE8-ObjectDifferences-HasProperty",
+      "type": "rdfs:Datatype"
+    },
+    {
+      "id": "DisplayName-CC04CEB290804863C16C7B507EC58D2ED480E88F4BEEF7872C86B18027C670E3-PropertyDifference-HasProperty",
+      "type": "rdfs:Datatype"
+    },
+    {
+      "id": "PastValue-58E859FCB346DAF6C778851BD97915E0C113DE70C42EACE0D74B05051E0BEEF1-PropertyDifference-HasProperty",
+      "type": "rdfs:Datatype"
+    },
+    {
+      "id": "FollowingValue-4A592E79A6F42A583EAAB44BF8A4BFE430B0C245529EAC6CE54CE6F688BFDC3F-PropertyDifference-HasProperty",
+      "type": "rdfs:Datatype"
+    },
+    {
+      "id": "FullName-D824F5E183036D62E3B76071346BFB6E939263EFD5BBE87B294B92CBE6BB963E-PropertyDifference-HasProperty",
+      "type": "rdfs:Datatype"
+    },
+    {
+      "id": "StreamId-A8B715E003FC41D95A440A7DFAE421C55930981D01F5F0B130BC50D99CF642BC-Revision-HasProperty",
+      "type": "rdfs:Datatype"
+    },
+    {
+      "id": "RevisionId-AB63807E8106303DDAB3D11AA3E558518914D7BEC481E29585AE696D2C8A1D66-Revision-HasProperty",
+      "type": "rdfs:Datatype"
+    },
+    {
+      "id": "RevisionName-CB8C9377CB6F1C7410A4841A5367F65EBA0075F4FF37863FBF4A3E1288C9AAF2-Revision-HasProperty",
+      "type": "rdfs:Datatype"
+    },
+    {
+      "id": "Timestamp-3BD2B5BBDF67A1284E40389E82CEA5B85069168A364C5312D1298F8098649975-Revision-HasProperty",
+      "type": "rdfs:Datatype"
+    },
+    {
+      "id": "Author-29784137EC24A49B420D3B10D39181C909C1E10EAFE0CC6BCF404BFAC31762A5-Revision-HasProperty",
+      "type": "rdfs:Datatype"
+    },
+    {
+      "id": "Comment-29039111B89721FD9B3839C2FB268D0C8FCD55E36705706F05D979A9C7EFA9B8-Revision-HasProperty",
+      "type": "rdfs:Datatype"
+    },
+    {
+      "id": "Objects-D9D903AA179DD44D0E4F3D4E5DEE60EBDCBF4B2E4D87CF3D32155E291FDCE013-Revision-HasProperty",
+      "type": "rdfs:Datatype"
+    },
+    {
+      "id": "BH.oM.Base.IBHoMObject",
+      "type": "owl:Class"
+    },
+    {
+      "id": "BH.oM.Base.BHoMObject",
+      "type": "owl:Class"
+    },
+    {
+      "id": "Hash-D04A67BA366DEB9EA5CB514D955F9818C3C5BBF18F90D6385041FCF343264080-RevisionFragment-HasProperty",
+      "type": "rdfs:Datatype"
+    },
+    {
+      "id": "PreviousHash-12EC556B0EC6CD8DC412FAF51CBCF91AD21D83E6DDCB2793788E9F92BEEC10D1-RevisionFragment-HasProperty",
+      "type": "rdfs:Datatype"
+    },
+    {
+      "id": "BH.oM.Base.IHashFragment",
+      "type": "owl:Class"
+    },
+    {
+      "id": "BH.oM.Base.IFragment",
+      "type": "owl:Class"
+    },
+    {
+      "id": "StreamId-578CDC5EA37F703FA696E8644C3F1E5EE183CD1B4401A878A71F84593BA8E7C9-StreamPointer-HasProperty",
+      "type": "rdfs:Datatype"
+    },
+    {
+      "id": "StreamName-C9E59B9D8E2D7465B6107E192CC9AA93B521DBFC8A0C2A16D0F10DA3C6DF6C80-StreamPointer-HasProperty",
+      "type": "rdfs:Datatype"
+    },
+    {
+      "id": "Description-7E0DD48504CDE311D315BC2BA9CCA395F746C16ED599687BF8B6EFCBB8B42281-StreamPointer-HasProperty",
+      "type": "rdfs:Datatype"
+    },
+    {
+      "id": "Timestamp-3F34D8B62DB85257A075B33B34E4FBAFDCC04EC853374CDE7AD09AC195D924A5-StreamPointer-HasProperty",
+      "type": "rdfs:Datatype"
+    }
+  ],
+  "classAttribute": [
+    {
+      "id": "BH.oM.Diffing.Delta",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/Diffing_oM/Delta.cs",
+      "label": "Delta (BH.oM.Diffing)",
+      "attributes": []
+    },
+    {
+      "id": "BH.oM.Diffing.Diff",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/Diffing_oM/Diff.cs",
+      "label": "Diff (BH.oM.Diffing)",
+      "attributes": []
+    },
+    {
+      "id": "BH.oM.Diffing.DiffingConfig",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/Diffing_oM/DiffingConfig.cs",
+      "label": "DiffingConfig (BH.oM.Diffing)",
+      "attributes": []
+    },
+    {
+      "id": "BH.oM.Diffing.ObjectDifferences",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/Diffing_oM/ObjectDifferences.cs",
+      "label": "ObjectDifferences (BH.oM.Diffing)",
+      "attributes": []
+    },
+    {
+      "id": "BH.oM.Diffing.PropertyDifference",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/Diffing_oM/PropertyDifference.cs",
+      "label": "PropertyDifference (BH.oM.Diffing)",
+      "attributes": []
+    },
+    {
+      "id": "BH.oM.Diffing.Revision",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/Diffing_oM/Revision.cs",
+      "label": "Revision (BH.oM.Diffing)",
+      "attributes": []
+    },
+    {
+      "id": "BH.oM.Diffing.RevisionFragment",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/Diffing_oM/RevisionFragment.cs",
+      "label": "RevisionFragment (BH.oM.Diffing)",
+      "attributes": []
+    },
+    {
+      "id": "BH.oM.Diffing.StreamPointer",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/Diffing_oM/StreamPointer.cs",
+      "label": "StreamPointer (BH.oM.Diffing)",
+      "attributes": []
+    },
+    {
+      "id": "StreamId-7596C609D930CD344AFD5C8834573439267A1A6AB1E9F2F6C900C5741FCB72D6-Delta-HasProperty",
+      "iri": "http://www.w3.org/2001/XMLSchema#",
+      "label": "StreamId (Guid)",
+      "attributes": "datatype"
+    },
+    {
+      "id": "Revision_from-22E9A9549038B78A950390A0B9CCF93A1AC06618D0BD5FFB2B6DF3B6C6546DF6-Delta-HasProperty",
+      "iri": "http://www.w3.org/2001/XMLSchema#",
+      "label": "Revision_from (Guid)",
+      "attributes": "datatype"
+    },
+    {
+      "id": "Revision_to-0509EBDD82F959B59782A7D9AD15EF175D944C4ED0599D1088FEDB8BAD16EC45-Delta-HasProperty",
+      "iri": "http://www.w3.org/2001/XMLSchema#",
+      "label": "Revision_to (Guid)",
+      "attributes": "datatype"
+    },
+    {
+      "id": "Timestamp-1FF0BFF3ED73EBAEF6271998D01BAECBE4994B9281AE8EDBA655DFD6934EEDF7-Delta-HasProperty",
+      "iri": "http://www.w3.org/2001/XMLSchema#",
+      "label": "Timestamp (Int64)",
+      "attributes": "datatype"
+    },
+    {
+      "id": "Author-5759BC64C2F3765947358CDEEF3B606BBFCBDC4448211D07121403D231E14D57-Delta-HasProperty",
+      "iri": "http://www.w3.org/2001/XMLSchema#",
+      "label": "Author (String)",
+      "attributes": "datatype"
+    },
+    {
+      "id": "Comment-E09180C6716215DCCAB0A3046B06913C29B3063163207061F95FBE2AE1E2929F-Delta-HasProperty",
+      "iri": "http://www.w3.org/2001/XMLSchema#",
+      "label": "Comment (String)",
+      "attributes": "datatype"
+    },
+    {
+      "id": "BH.oM.Base.IObject",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/BHoM/Interface/IObject.cs",
+      "label": "IObject",
+      "attributes": []
+    },
+    {
+      "id": "BH.oM.Base.IImmutable",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/BHoM/Interface/IImmutable.cs",
+      "label": "IImmutable",
+      "attributes": []
+    },
+    {
+      "id": "AddedObjects-4257D30C5EFA7D83E5906F2D1C007ABEC52C881C07C11DA23167C93441A0FF13-Diff-HasProperty",
+      "iri": "http://www.w3.org/2001/XMLSchema#",
+      "label": "AddedObjects (IEnumerable<Object>)",
+      "attributes": "datatype"
+    },
+    {
+      "id": "RemovedObjects-20AD41F91CCF45AE6F8E1CB00F6B004261D838388477A242B85E8E76D2D3181F-Diff-HasProperty",
+      "iri": "http://www.w3.org/2001/XMLSchema#",
+      "label": "RemovedObjects (IEnumerable<Object>)",
+      "attributes": "datatype"
+    },
+    {
+      "id": "ModifiedObjects-2A419FF8B5D4772B95C41E8605B159CDD79FBACA6227AE0A7E403FB9C219CA76-Diff-HasProperty",
+      "iri": "http://www.w3.org/2001/XMLSchema#",
+      "label": "ModifiedObjects (IEnumerable<Object>)",
+      "attributes": "datatype"
+    },
+    {
+      "id": "UnchangedObjects-B32C8393CB5D765AD266F6EEE49F1079E1ECBB3524401682577CE6832DB745C8-Diff-HasProperty",
+      "iri": "http://www.w3.org/2001/XMLSchema#",
+      "label": "UnchangedObjects (IEnumerable<Object>)",
+      "attributes": "datatype"
+    },
+    {
+      "id": "ModifiedObjectsDifferences-C2A7CF6750681C1FED458788E6ACCB18F7A144D2648176A5F8CD84E75F7791B9-Diff-HasProperty",
+      "iri": "http://www.w3.org/2001/XMLSchema#",
+      "label": "ModifiedObjectsDifferences (IEnumerable<ObjectDifferences>)",
+      "attributes": "datatype"
+    },
+    {
+      "id": "BH.oM.Base.BaseComparisonConfig",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/BHoM/BaseComparisonConfig.cs",
+      "label": "ComparisonConfig (BaseComparisonConfig)",
+      "attributes": []
+    },
+    {
+      "id": "EnablePropertyDiffing-159646CAC03E9512521DF348B37DF37A9FD31C156E2F48E019AA25905A8A44CE-DiffingConfig-HasProperty",
+      "iri": "http://www.w3.org/2001/XMLSchema#",
+      "label": "EnablePropertyDiffing (Boolean)",
+      "attributes": "datatype"
+    },
+    {
+      "id": "IncludeUnchangedObjects-B1957D4D9DC25719DD3AD3AE8A461AE65C10145CE888A1551300137E0C1479DF-DiffingConfig-HasProperty",
+      "iri": "http://www.w3.org/2001/XMLSchema#",
+      "label": "IncludeUnchangedObjects (Boolean)",
+      "attributes": "datatype"
+    },
+    {
+      "id": "AllowDuplicateIds-0088B6818F4663DF4D88DBF377AAEF99537E728C26AD8832EA7F63C7AAF82DCB-DiffingConfig-HasProperty",
+      "iri": "http://www.w3.org/2001/XMLSchema#",
+      "label": "AllowDuplicateIds (Boolean)",
+      "attributes": "datatype"
+    },
+    {
+      "id": "PastObject-89F0149145E6A9A03888C77DD0AA0701C7938CA0DFD18AF218F69AAF1DE7FC58-ObjectDifferences-HasProperty",
+      "iri": "http://www.w3.org/2001/XMLSchema#",
+      "label": "PastObject (Object)",
+      "attributes": "datatype"
+    },
+    {
+      "id": "FollowingObject-415B7EB96F60ACB69FA5935771ABD9FE55D173BE427EA52E6397DF9C8F9FFBA5-ObjectDifferences-HasProperty",
+      "iri": "http://www.w3.org/2001/XMLSchema#",
+      "label": "FollowingObject (Object)",
+      "attributes": "datatype"
+    },
+    {
+      "id": "Differences-CB79EAA714F553AA1179E87A89D1FC54FA51CA34F9A0C5DB3BAB4FFD02831BE8-ObjectDifferences-HasProperty",
+      "iri": "http://www.w3.org/2001/XMLSchema#",
+      "label": "Differences (List<PropertyDifference>)",
+      "attributes": "datatype"
+    },
+    {
+      "id": "DisplayName-CC04CEB290804863C16C7B507EC58D2ED480E88F4BEEF7872C86B18027C670E3-PropertyDifference-HasProperty",
+      "iri": "http://www.w3.org/2001/XMLSchema#",
+      "label": "DisplayName (String)",
+      "attributes": "datatype"
+    },
+    {
+      "id": "PastValue-58E859FCB346DAF6C778851BD97915E0C113DE70C42EACE0D74B05051E0BEEF1-PropertyDifference-HasProperty",
+      "iri": "http://www.w3.org/2001/XMLSchema#",
+      "label": "PastValue (Object)",
+      "attributes": "datatype"
+    },
+    {
+      "id": "FollowingValue-4A592E79A6F42A583EAAB44BF8A4BFE430B0C245529EAC6CE54CE6F688BFDC3F-PropertyDifference-HasProperty",
+      "iri": "http://www.w3.org/2001/XMLSchema#",
+      "label": "FollowingValue (Object)",
+      "attributes": "datatype"
+    },
+    {
+      "id": "FullName-D824F5E183036D62E3B76071346BFB6E939263EFD5BBE87B294B92CBE6BB963E-PropertyDifference-HasProperty",
+      "iri": "http://www.w3.org/2001/XMLSchema#",
+      "label": "FullName (String)",
+      "attributes": "datatype"
+    },
+    {
+      "id": "StreamId-A8B715E003FC41D95A440A7DFAE421C55930981D01F5F0B130BC50D99CF642BC-Revision-HasProperty",
+      "iri": "http://www.w3.org/2001/XMLSchema#",
+      "label": "StreamId (Guid)",
+      "attributes": "datatype"
+    },
+    {
+      "id": "RevisionId-AB63807E8106303DDAB3D11AA3E558518914D7BEC481E29585AE696D2C8A1D66-Revision-HasProperty",
+      "iri": "http://www.w3.org/2001/XMLSchema#",
+      "label": "RevisionId (Guid)",
+      "attributes": "datatype"
+    },
+    {
+      "id": "RevisionName-CB8C9377CB6F1C7410A4841A5367F65EBA0075F4FF37863FBF4A3E1288C9AAF2-Revision-HasProperty",
+      "iri": "http://www.w3.org/2001/XMLSchema#",
+      "label": "RevisionName (String)",
+      "attributes": "datatype"
+    },
+    {
+      "id": "Timestamp-3BD2B5BBDF67A1284E40389E82CEA5B85069168A364C5312D1298F8098649975-Revision-HasProperty",
+      "iri": "http://www.w3.org/2001/XMLSchema#",
+      "label": "Timestamp (Int64)",
+      "attributes": "datatype"
+    },
+    {
+      "id": "Author-29784137EC24A49B420D3B10D39181C909C1E10EAFE0CC6BCF404BFAC31762A5-Revision-HasProperty",
+      "iri": "http://www.w3.org/2001/XMLSchema#",
+      "label": "Author (String)",
+      "attributes": "datatype"
+    },
+    {
+      "id": "Comment-29039111B89721FD9B3839C2FB268D0C8FCD55E36705706F05D979A9C7EFA9B8-Revision-HasProperty",
+      "iri": "http://www.w3.org/2001/XMLSchema#",
+      "label": "Comment (String)",
+      "attributes": "datatype"
+    },
+    {
+      "id": "Objects-D9D903AA179DD44D0E4F3D4E5DEE60EBDCBF4B2E4D87CF3D32155E291FDCE013-Revision-HasProperty",
+      "iri": "http://www.w3.org/2001/XMLSchema#",
+      "label": "Objects (IEnumerable<Object>)",
+      "attributes": "datatype"
+    },
+    {
+      "id": "BH.oM.Base.IBHoMObject",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/BHoM/Interface/IBHoMObject.cs",
+      "label": "IBHoMObject",
+      "attributes": []
+    },
+    {
+      "id": "BH.oM.Base.BHoMObject",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/BHoM/BHoMObject.cs",
+      "label": "BHoMObject",
+      "attributes": []
+    },
+    {
+      "id": "Hash-D04A67BA366DEB9EA5CB514D955F9818C3C5BBF18F90D6385041FCF343264080-RevisionFragment-HasProperty",
+      "iri": "http://www.w3.org/2001/XMLSchema#",
+      "label": "Hash (String)",
+      "attributes": "datatype"
+    },
+    {
+      "id": "PreviousHash-12EC556B0EC6CD8DC412FAF51CBCF91AD21D83E6DDCB2793788E9F92BEEC10D1-RevisionFragment-HasProperty",
+      "iri": "http://www.w3.org/2001/XMLSchema#",
+      "label": "PreviousHash (String)",
+      "attributes": "datatype"
+    },
+    {
+      "id": "BH.oM.Base.IHashFragment",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/BHoM/Interface/IHashFragment.cs",
+      "label": "IHashFragment",
+      "attributes": []
+    },
+    {
+      "id": "BH.oM.Base.IFragment",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/BHoM/Interface/IFragment.cs",
+      "label": "IFragment",
+      "attributes": []
+    },
+    {
+      "id": "StreamId-578CDC5EA37F703FA696E8644C3F1E5EE183CD1B4401A878A71F84593BA8E7C9-StreamPointer-HasProperty",
+      "iri": "http://www.w3.org/2001/XMLSchema#",
+      "label": "StreamId (Guid)",
+      "attributes": "datatype"
+    },
+    {
+      "id": "StreamName-C9E59B9D8E2D7465B6107E192CC9AA93B521DBFC8A0C2A16D0F10DA3C6DF6C80-StreamPointer-HasProperty",
+      "iri": "http://www.w3.org/2001/XMLSchema#",
+      "label": "StreamName (String)",
+      "attributes": "datatype"
+    },
+    {
+      "id": "Description-7E0DD48504CDE311D315BC2BA9CCA395F746C16ED599687BF8B6EFCBB8B42281-StreamPointer-HasProperty",
+      "iri": "http://www.w3.org/2001/XMLSchema#",
+      "label": "Description (String)",
+      "attributes": "datatype"
+    },
+    {
+      "id": "Timestamp-3F34D8B62DB85257A075B33B34E4FBAFDCC04EC853374CDE7AD09AC195D924A5-StreamPointer-HasProperty",
+      "iri": "http://www.w3.org/2001/XMLSchema#",
+      "label": "Timestamp (Int64)",
+      "attributes": "datatype"
+    }
+  ],
+  "property": [
+    {
+      "id": "7596C609D930CD344AFD5C8834573439267A1A6AB1E9F2F6C900C5741FCB72D6",
+      "type": "owl:DatatypeProperty"
+    },
+    {
+      "id": "BA839028E5647A27FBD3D989B6FA8D72492DD673048D72F26F53EB5ED12C6071",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "22E9A9549038B78A950390A0B9CCF93A1AC06618D0BD5FFB2B6DF3B6C6546DF6",
+      "type": "owl:DatatypeProperty"
+    },
+    {
+      "id": "0509EBDD82F959B59782A7D9AD15EF175D944C4ED0599D1088FEDB8BAD16EC45",
+      "type": "owl:DatatypeProperty"
+    },
+    {
+      "id": "1FF0BFF3ED73EBAEF6271998D01BAECBE4994B9281AE8EDBA655DFD6934EEDF7",
+      "type": "owl:DatatypeProperty"
+    },
+    {
+      "id": "5759BC64C2F3765947358CDEEF3B606BBFCBDC4448211D07121403D231E14D57",
+      "type": "owl:DatatypeProperty"
+    },
+    {
+      "id": "E09180C6716215DCCAB0A3046B06913C29B3063163207061F95FBE2AE1E2929F",
+      "type": "owl:DatatypeProperty"
+    },
+    {
+      "id": "055551AA228FE142BCCC672E8725E1A62E9D85C8BBAE0C108ABDCFF0306CD2DD",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "C96F678271D688335563F505D1D548A883012BC2CA7D4904FE1337F016AC0D1A",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "18745750FD4CFE7EF20B394A421EB127E7BFFE1AB65E18451F0CC333E2E6170B",
+      "type": "owl:DatatypeProperty"
+    },
+    {
+      "id": "4257D30C5EFA7D83E5906F2D1C007ABEC52C881C07C11DA23167C93441A0FF13",
+      "type": "owl:DatatypeProperty"
+    },
+    {
+      "id": "20AD41F91CCF45AE6F8E1CB00F6B004261D838388477A242B85E8E76D2D3181F",
+      "type": "owl:DatatypeProperty"
+    },
+    {
+      "id": "2A419FF8B5D4772B95C41E8605B159CDD79FBACA6227AE0A7E403FB9C219CA76",
+      "type": "owl:DatatypeProperty"
+    },
+    {
+      "id": "B32C8393CB5D765AD266F6EEE49F1079E1ECBB3524401682577CE6832DB745C8",
+      "type": "owl:DatatypeProperty"
+    },
+    {
+      "id": "C2A7CF6750681C1FED458788E6ACCB18F7A144D2648176A5F8CD84E75F7791B9",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "B2F575EECA11783078DE73357586A4FBBD5672B059BF7D7007288B2441BCABCE",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "B8BC2D05F1E84F0C49951944F47A0EC252B985EE9CBAD454BDFF7529872EBE71",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "3AAC05832A15A04A3EDCA17C62886D1EAF4A33C7660AC6FD21B1E7D92620BFB0",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "9DA46D14B58B58CF19D81038883D47467E17F330FB6C956239421C2AF1F99C7F",
+      "type": "owl:DatatypeProperty"
+    },
+    {
+      "id": "C45A598F3C182A3F2D4160FBEBC98503C80C5F4838B7B1D8594F351FC523A05E",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "159646CAC03E9512521DF348B37DF37A9FD31C156E2F48E019AA25905A8A44CE",
+      "type": "owl:DatatypeProperty"
+    },
+    {
+      "id": "B1957D4D9DC25719DD3AD3AE8A461AE65C10145CE888A1551300137E0C1479DF",
+      "type": "owl:DatatypeProperty"
+    },
+    {
+      "id": "0088B6818F4663DF4D88DBF377AAEF99537E728C26AD8832EA7F63C7AAF82DCB",
+      "type": "owl:DatatypeProperty"
+    },
+    {
+      "id": "1EE59775DF6A18A8660B74BE8D08D52F647D457BD0048B0A5F941E1F7742C313",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "7500F8AD855F2004E16EF6484C9AB78F7D2BD647A5478A1905BFB1F0DA251C0E",
+      "type": "owl:DatatypeProperty"
+    },
+    {
+      "id": "89F0149145E6A9A03888C77DD0AA0701C7938CA0DFD18AF218F69AAF1DE7FC58",
+      "type": "owl:DatatypeProperty"
+    },
+    {
+      "id": "415B7EB96F60ACB69FA5935771ABD9FE55D173BE427EA52E6397DF9C8F9FFBA5",
+      "type": "owl:DatatypeProperty"
+    },
+    {
+      "id": "CB79EAA714F553AA1179E87A89D1FC54FA51CA34F9A0C5DB3BAB4FFD02831BE8",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "B1D25F55528CF0AB1480ED4A087B845BEF0BE9B7D5C67D3C36A24797EC1BB797",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "E63E7526CBDAF2003F09D7595121BDE224FC18892BC80F529F3DE2F76BACB1C1",
+      "type": "owl:DatatypeProperty"
+    },
+    {
+      "id": "CC04CEB290804863C16C7B507EC58D2ED480E88F4BEEF7872C86B18027C670E3",
+      "type": "owl:DatatypeProperty"
+    },
+    {
+      "id": "58E859FCB346DAF6C778851BD97915E0C113DE70C42EACE0D74B05051E0BEEF1",
+      "type": "owl:DatatypeProperty"
+    },
+    {
+      "id": "4A592E79A6F42A583EAAB44BF8A4BFE430B0C245529EAC6CE54CE6F688BFDC3F",
+      "type": "owl:DatatypeProperty"
+    },
+    {
+      "id": "D824F5E183036D62E3B76071346BFB6E939263EFD5BBE87B294B92CBE6BB963E",
+      "type": "owl:DatatypeProperty"
+    },
+    {
+      "id": "C59F881EBE721CAB635CF0F24B0BBE61D0E29655E825F3C7D1DF489D12C6B83E",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "696D83BCB7FD31AAA09183AA529B29A66B48EB9BCCB392756FF649507ADCEC58",
+      "type": "owl:DatatypeProperty"
+    },
+    {
+      "id": "A8B715E003FC41D95A440A7DFAE421C55930981D01F5F0B130BC50D99CF642BC",
+      "type": "owl:DatatypeProperty"
+    },
+    {
+      "id": "AB63807E8106303DDAB3D11AA3E558518914D7BEC481E29585AE696D2C8A1D66",
+      "type": "owl:DatatypeProperty"
+    },
+    {
+      "id": "CB8C9377CB6F1C7410A4841A5367F65EBA0075F4FF37863FBF4A3E1288C9AAF2",
+      "type": "owl:DatatypeProperty"
+    },
+    {
+      "id": "3BD2B5BBDF67A1284E40389E82CEA5B85069168A364C5312D1298F8098649975",
+      "type": "owl:DatatypeProperty"
+    },
+    {
+      "id": "29784137EC24A49B420D3B10D39181C909C1E10EAFE0CC6BCF404BFAC31762A5",
+      "type": "owl:DatatypeProperty"
+    },
+    {
+      "id": "29039111B89721FD9B3839C2FB268D0C8FCD55E36705706F05D979A9C7EFA9B8",
+      "type": "owl:DatatypeProperty"
+    },
+    {
+      "id": "D9D903AA179DD44D0E4F3D4E5DEE60EBDCBF4B2E4D87CF3D32155E291FDCE013",
+      "type": "owl:DatatypeProperty"
+    },
+    {
+      "id": "BD8F1B837C016450459A06A936FB103D2B5E0B255FA1DB8DA371FBA9EEC95771",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "361949B9E8A5FCC258C494BA536B8ADBAEDB059CA1C1CD35CFF8B07FA5C462AA",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "25D6A243F3928038202D99AEB64E04C6B5147B9B4B6093AC454AB49E72CC3AA2",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "64815903334DD814E69E674B5207BF3319FE20B21A65CFBE93084093AE1DD684",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "8329522F83CA18FAC5EE17DC7E1AC3F5CAB837C43E1E9D5B73E2F612EE4B5479",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "D04A67BA366DEB9EA5CB514D955F9818C3C5BBF18F90D6385041FCF343264080",
+      "type": "owl:DatatypeProperty"
+    },
+    {
+      "id": "12EC556B0EC6CD8DC412FAF51CBCF91AD21D83E6DDCB2793788E9F92BEEC10D1",
+      "type": "owl:DatatypeProperty"
+    },
+    {
+      "id": "6F905E2AE7A1EA50B53317C44CE9B3AF015F2ECD4D99CCD0A5E811033E3774D6",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "F9FD49B4149CE4CFE1595787AE3FC07417AAB78A74ABA12B1F42D848F91E7F48",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "D5E997AACB1600A2E1D68F0EC5C4A5CFBC922D9FBDCB2135CE47797F8F2B05F8",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "5C046E756030348DE337859693689EF38A520742AFDCF3CE5C3A611031791DEE",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "26CDAD57FAE71E67E598D38F96C4B7A635FD74AADECBCF4B94211D616B31798F",
+      "type": "owl:DatatypeProperty"
+    },
+    {
+      "id": "578CDC5EA37F703FA696E8644C3F1E5EE183CD1B4401A878A71F84593BA8E7C9",
+      "type": "owl:DatatypeProperty"
+    },
+    {
+      "id": "C9E59B9D8E2D7465B6107E192CC9AA93B521DBFC8A0C2A16D0F10DA3C6DF6C80",
+      "type": "owl:DatatypeProperty"
+    },
+    {
+      "id": "7E0DD48504CDE311D315BC2BA9CCA395F746C16ED599687BF8B6EFCBB8B42281",
+      "type": "owl:DatatypeProperty"
+    },
+    {
+      "id": "3F34D8B62DB85257A075B33B34E4FBAFDCC04EC853374CDE7AD09AC195D924A5",
+      "type": "owl:DatatypeProperty"
+    },
+    {
+      "id": "8B0DA05DD6CCEF08128E61252FAC816D58D21BC81847D4AE7298FD1F733001D5",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "7A6A456D93D0FDA4B5335E7FE32626131484EF9C5F9494B5150063E1193A56F1",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "461CF7143DFC86F273F7AB745C40FF862CAA7BD7985717563244DA711FD2BFD6",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "CCAF8A3649ADB86D9BA914EA0AD48D0C423F3EFA76D6964207FE3B2061B0BE3A",
+      "type": "owl:ObjectProperty"
+    }
+  ],
+  "propertyAttribute": [
+    {
+      "id": "7596C609D930CD344AFD5C8834573439267A1A6AB1E9F2F6C900C5741FCB72D6",
+      "iri": "http://visualdataweb.org/newOntology/7596C609D930CD344AFD5C8834573439267A1A6AB1E9F2F6C900C5741FCB72D6",
+      "label": "HasProperty",
+      "attributes": "datatype",
+      "domain": "BH.oM.Diffing.Delta",
+      "range": "StreamId-7596C609D930CD344AFD5C8834573439267A1A6AB1E9F2F6C900C5741FCB72D6-Delta-HasProperty"
+    },
+    {
+      "id": "BA839028E5647A27FBD3D989B6FA8D72492DD673048D72F26F53EB5ED12C6071",
+      "iri": "http://visualdataweb.org/newOntology/BA839028E5647A27FBD3D989B6FA8D72492DD673048D72F26F53EB5ED12C6071",
+      "label": "HasProperty",
+      "attributes": "object",
+      "domain": "BH.oM.Diffing.Delta",
+      "range": "BH.oM.Diffing.Diff"
+    },
+    {
+      "id": "22E9A9549038B78A950390A0B9CCF93A1AC06618D0BD5FFB2B6DF3B6C6546DF6",
+      "iri": "http://visualdataweb.org/newOntology/22E9A9549038B78A950390A0B9CCF93A1AC06618D0BD5FFB2B6DF3B6C6546DF6",
+      "label": "HasProperty",
+      "attributes": "datatype",
+      "domain": "BH.oM.Diffing.Delta",
+      "range": "Revision_from-22E9A9549038B78A950390A0B9CCF93A1AC06618D0BD5FFB2B6DF3B6C6546DF6-Delta-HasProperty"
+    },
+    {
+      "id": "0509EBDD82F959B59782A7D9AD15EF175D944C4ED0599D1088FEDB8BAD16EC45",
+      "iri": "http://visualdataweb.org/newOntology/0509EBDD82F959B59782A7D9AD15EF175D944C4ED0599D1088FEDB8BAD16EC45",
+      "label": "HasProperty",
+      "attributes": "datatype",
+      "domain": "BH.oM.Diffing.Delta",
+      "range": "Revision_to-0509EBDD82F959B59782A7D9AD15EF175D944C4ED0599D1088FEDB8BAD16EC45-Delta-HasProperty"
+    },
+    {
+      "id": "1FF0BFF3ED73EBAEF6271998D01BAECBE4994B9281AE8EDBA655DFD6934EEDF7",
+      "iri": "http://visualdataweb.org/newOntology/1FF0BFF3ED73EBAEF6271998D01BAECBE4994B9281AE8EDBA655DFD6934EEDF7",
+      "label": "HasProperty",
+      "attributes": "datatype",
+      "domain": "BH.oM.Diffing.Delta",
+      "range": "Timestamp-1FF0BFF3ED73EBAEF6271998D01BAECBE4994B9281AE8EDBA655DFD6934EEDF7-Delta-HasProperty"
+    },
+    {
+      "id": "5759BC64C2F3765947358CDEEF3B606BBFCBDC4448211D07121403D231E14D57",
+      "iri": "http://visualdataweb.org/newOntology/5759BC64C2F3765947358CDEEF3B606BBFCBDC4448211D07121403D231E14D57",
+      "label": "HasProperty",
+      "attributes": "datatype",
+      "domain": "BH.oM.Diffing.Delta",
+      "range": "Author-5759BC64C2F3765947358CDEEF3B606BBFCBDC4448211D07121403D231E14D57-Delta-HasProperty"
+    },
+    {
+      "id": "E09180C6716215DCCAB0A3046B06913C29B3063163207061F95FBE2AE1E2929F",
+      "iri": "http://visualdataweb.org/newOntology/E09180C6716215DCCAB0A3046B06913C29B3063163207061F95FBE2AE1E2929F",
+      "label": "HasProperty",
+      "attributes": "datatype",
+      "domain": "BH.oM.Diffing.Delta",
+      "range": "Comment-E09180C6716215DCCAB0A3046B06913C29B3063163207061F95FBE2AE1E2929F-Delta-HasProperty"
+    },
+    {
+      "id": "055551AA228FE142BCCC672E8725E1A62E9D85C8BBAE0C108ABDCFF0306CD2DD",
+      "iri": "http://visualdataweb.org/newOntology/055551AA228FE142BCCC672E8725E1A62E9D85C8BBAE0C108ABDCFF0306CD2DD",
+      "label": "IsA",
+      "attributes": "object",
+      "domain": "BH.oM.Diffing.Delta",
+      "range": "BH.oM.Base.IObject"
+    },
+    {
+      "id": "C96F678271D688335563F505D1D548A883012BC2CA7D4904FE1337F016AC0D1A",
+      "iri": "http://visualdataweb.org/newOntology/C96F678271D688335563F505D1D548A883012BC2CA7D4904FE1337F016AC0D1A",
+      "label": "IsA",
+      "attributes": "object",
+      "domain": "BH.oM.Diffing.Delta",
+      "range": "BH.oM.Base.IImmutable"
+    },
+    {
+      "id": "18745750FD4CFE7EF20B394A421EB127E7BFFE1AB65E18451F0CC333E2E6170B",
+      "iri": "http://visualdataweb.org/newOntology/18745750FD4CFE7EF20B394A421EB127E7BFFE1AB65E18451F0CC333E2E6170B",
+      "label": "IsSubclassOf",
+      "attributes": []
+    },
+    {
+      "id": "4257D30C5EFA7D83E5906F2D1C007ABEC52C881C07C11DA23167C93441A0FF13",
+      "iri": "http://visualdataweb.org/newOntology/4257D30C5EFA7D83E5906F2D1C007ABEC52C881C07C11DA23167C93441A0FF13",
+      "label": "HasProperty",
+      "attributes": "datatype",
+      "domain": "BH.oM.Diffing.Diff",
+      "range": "AddedObjects-4257D30C5EFA7D83E5906F2D1C007ABEC52C881C07C11DA23167C93441A0FF13-Diff-HasProperty"
+    },
+    {
+      "id": "20AD41F91CCF45AE6F8E1CB00F6B004261D838388477A242B85E8E76D2D3181F",
+      "iri": "http://visualdataweb.org/newOntology/20AD41F91CCF45AE6F8E1CB00F6B004261D838388477A242B85E8E76D2D3181F",
+      "label": "HasProperty",
+      "attributes": "datatype",
+      "domain": "BH.oM.Diffing.Diff",
+      "range": "RemovedObjects-20AD41F91CCF45AE6F8E1CB00F6B004261D838388477A242B85E8E76D2D3181F-Diff-HasProperty"
+    },
+    {
+      "id": "2A419FF8B5D4772B95C41E8605B159CDD79FBACA6227AE0A7E403FB9C219CA76",
+      "iri": "http://visualdataweb.org/newOntology/2A419FF8B5D4772B95C41E8605B159CDD79FBACA6227AE0A7E403FB9C219CA76",
+      "label": "HasProperty",
+      "attributes": "datatype",
+      "domain": "BH.oM.Diffing.Diff",
+      "range": "ModifiedObjects-2A419FF8B5D4772B95C41E8605B159CDD79FBACA6227AE0A7E403FB9C219CA76-Diff-HasProperty"
+    },
+    {
+      "id": "B32C8393CB5D765AD266F6EEE49F1079E1ECBB3524401682577CE6832DB745C8",
+      "iri": "http://visualdataweb.org/newOntology/B32C8393CB5D765AD266F6EEE49F1079E1ECBB3524401682577CE6832DB745C8",
+      "label": "HasProperty",
+      "attributes": "datatype",
+      "domain": "BH.oM.Diffing.Diff",
+      "range": "UnchangedObjects-B32C8393CB5D765AD266F6EEE49F1079E1ECBB3524401682577CE6832DB745C8-Diff-HasProperty"
+    },
+    {
+      "id": "C2A7CF6750681C1FED458788E6ACCB18F7A144D2648176A5F8CD84E75F7791B9",
+      "iri": "http://visualdataweb.org/newOntology/C2A7CF6750681C1FED458788E6ACCB18F7A144D2648176A5F8CD84E75F7791B9",
+      "label": "HasProperty",
+      "attributes": "datatype",
+      "domain": "BH.oM.Diffing.Diff",
+      "range": "ModifiedObjectsDifferences-C2A7CF6750681C1FED458788E6ACCB18F7A144D2648176A5F8CD84E75F7791B9-Diff-HasProperty"
+    },
+    {
+      "id": "B2F575EECA11783078DE73357586A4FBBD5672B059BF7D7007288B2441BCABCE",
+      "iri": "http://visualdataweb.org/newOntology/B2F575EECA11783078DE73357586A4FBBD5672B059BF7D7007288B2441BCABCE",
+      "label": "HasProperty",
+      "attributes": "object",
+      "domain": "BH.oM.Diffing.Diff",
+      "range": "BH.oM.Diffing.DiffingConfig"
+    },
+    {
+      "id": "B8BC2D05F1E84F0C49951944F47A0EC252B985EE9CBAD454BDFF7529872EBE71",
+      "iri": "http://visualdataweb.org/newOntology/B8BC2D05F1E84F0C49951944F47A0EC252B985EE9CBAD454BDFF7529872EBE71",
+      "label": "IsA",
+      "attributes": "object",
+      "domain": "BH.oM.Diffing.Diff",
+      "range": "BH.oM.Base.IObject"
+    },
+    {
+      "id": "3AAC05832A15A04A3EDCA17C62886D1EAF4A33C7660AC6FD21B1E7D92620BFB0",
+      "iri": "http://visualdataweb.org/newOntology/3AAC05832A15A04A3EDCA17C62886D1EAF4A33C7660AC6FD21B1E7D92620BFB0",
+      "label": "IsA",
+      "attributes": "object",
+      "domain": "BH.oM.Diffing.Diff",
+      "range": "BH.oM.Base.IImmutable"
+    },
+    {
+      "id": "9DA46D14B58B58CF19D81038883D47467E17F330FB6C956239421C2AF1F99C7F",
+      "iri": "http://visualdataweb.org/newOntology/9DA46D14B58B58CF19D81038883D47467E17F330FB6C956239421C2AF1F99C7F",
+      "label": "IsSubclassOf",
+      "attributes": []
+    },
+    {
+      "id": "C45A598F3C182A3F2D4160FBEBC98503C80C5F4838B7B1D8594F351FC523A05E",
+      "iri": "http://visualdataweb.org/newOntology/C45A598F3C182A3F2D4160FBEBC98503C80C5F4838B7B1D8594F351FC523A05E",
+      "label": "HasProperty",
+      "attributes": "object",
+      "domain": "BH.oM.Diffing.DiffingConfig",
+      "range": "BH.oM.Base.BaseComparisonConfig"
+    },
+    {
+      "id": "159646CAC03E9512521DF348B37DF37A9FD31C156E2F48E019AA25905A8A44CE",
+      "iri": "http://visualdataweb.org/newOntology/159646CAC03E9512521DF348B37DF37A9FD31C156E2F48E019AA25905A8A44CE",
+      "label": "HasProperty",
+      "attributes": "datatype",
+      "domain": "BH.oM.Diffing.DiffingConfig",
+      "range": "EnablePropertyDiffing-159646CAC03E9512521DF348B37DF37A9FD31C156E2F48E019AA25905A8A44CE-DiffingConfig-HasProperty"
+    },
+    {
+      "id": "B1957D4D9DC25719DD3AD3AE8A461AE65C10145CE888A1551300137E0C1479DF",
+      "iri": "http://visualdataweb.org/newOntology/B1957D4D9DC25719DD3AD3AE8A461AE65C10145CE888A1551300137E0C1479DF",
+      "label": "HasProperty",
+      "attributes": "datatype",
+      "domain": "BH.oM.Diffing.DiffingConfig",
+      "range": "IncludeUnchangedObjects-B1957D4D9DC25719DD3AD3AE8A461AE65C10145CE888A1551300137E0C1479DF-DiffingConfig-HasProperty"
+    },
+    {
+      "id": "0088B6818F4663DF4D88DBF377AAEF99537E728C26AD8832EA7F63C7AAF82DCB",
+      "iri": "http://visualdataweb.org/newOntology/0088B6818F4663DF4D88DBF377AAEF99537E728C26AD8832EA7F63C7AAF82DCB",
+      "label": "HasProperty",
+      "attributes": "datatype",
+      "domain": "BH.oM.Diffing.DiffingConfig",
+      "range": "AllowDuplicateIds-0088B6818F4663DF4D88DBF377AAEF99537E728C26AD8832EA7F63C7AAF82DCB-DiffingConfig-HasProperty"
+    },
+    {
+      "id": "1EE59775DF6A18A8660B74BE8D08D52F647D457BD0048B0A5F941E1F7742C313",
+      "iri": "http://visualdataweb.org/newOntology/1EE59775DF6A18A8660B74BE8D08D52F647D457BD0048B0A5F941E1F7742C313",
+      "label": "IsA",
+      "attributes": "object",
+      "domain": "BH.oM.Diffing.DiffingConfig",
+      "range": "BH.oM.Base.IObject"
+    },
+    {
+      "id": "7500F8AD855F2004E16EF6484C9AB78F7D2BD647A5478A1905BFB1F0DA251C0E",
+      "iri": "http://visualdataweb.org/newOntology/7500F8AD855F2004E16EF6484C9AB78F7D2BD647A5478A1905BFB1F0DA251C0E",
+      "label": "IsSubclassOf",
+      "attributes": []
+    },
+    {
+      "id": "89F0149145E6A9A03888C77DD0AA0701C7938CA0DFD18AF218F69AAF1DE7FC58",
+      "iri": "http://visualdataweb.org/newOntology/89F0149145E6A9A03888C77DD0AA0701C7938CA0DFD18AF218F69AAF1DE7FC58",
+      "label": "HasProperty",
+      "attributes": "datatype",
+      "domain": "BH.oM.Diffing.ObjectDifferences",
+      "range": "PastObject-89F0149145E6A9A03888C77DD0AA0701C7938CA0DFD18AF218F69AAF1DE7FC58-ObjectDifferences-HasProperty"
+    },
+    {
+      "id": "415B7EB96F60ACB69FA5935771ABD9FE55D173BE427EA52E6397DF9C8F9FFBA5",
+      "iri": "http://visualdataweb.org/newOntology/415B7EB96F60ACB69FA5935771ABD9FE55D173BE427EA52E6397DF9C8F9FFBA5",
+      "label": "HasProperty",
+      "attributes": "datatype",
+      "domain": "BH.oM.Diffing.ObjectDifferences",
+      "range": "FollowingObject-415B7EB96F60ACB69FA5935771ABD9FE55D173BE427EA52E6397DF9C8F9FFBA5-ObjectDifferences-HasProperty"
+    },
+    {
+      "id": "CB79EAA714F553AA1179E87A89D1FC54FA51CA34F9A0C5DB3BAB4FFD02831BE8",
+      "iri": "http://visualdataweb.org/newOntology/CB79EAA714F553AA1179E87A89D1FC54FA51CA34F9A0C5DB3BAB4FFD02831BE8",
+      "label": "HasProperty",
+      "attributes": "datatype",
+      "domain": "BH.oM.Diffing.ObjectDifferences",
+      "range": "Differences-CB79EAA714F553AA1179E87A89D1FC54FA51CA34F9A0C5DB3BAB4FFD02831BE8-ObjectDifferences-HasProperty"
+    },
+    {
+      "id": "B1D25F55528CF0AB1480ED4A087B845BEF0BE9B7D5C67D3C36A24797EC1BB797",
+      "iri": "http://visualdataweb.org/newOntology/B1D25F55528CF0AB1480ED4A087B845BEF0BE9B7D5C67D3C36A24797EC1BB797",
+      "label": "IsA",
+      "attributes": "object",
+      "domain": "BH.oM.Diffing.ObjectDifferences",
+      "range": "BH.oM.Base.IObject"
+    },
+    {
+      "id": "E63E7526CBDAF2003F09D7595121BDE224FC18892BC80F529F3DE2F76BACB1C1",
+      "iri": "http://visualdataweb.org/newOntology/E63E7526CBDAF2003F09D7595121BDE224FC18892BC80F529F3DE2F76BACB1C1",
+      "label": "IsSubclassOf",
+      "attributes": []
+    },
+    {
+      "id": "CC04CEB290804863C16C7B507EC58D2ED480E88F4BEEF7872C86B18027C670E3",
+      "iri": "http://visualdataweb.org/newOntology/CC04CEB290804863C16C7B507EC58D2ED480E88F4BEEF7872C86B18027C670E3",
+      "label": "HasProperty",
+      "attributes": "datatype",
+      "domain": "BH.oM.Diffing.PropertyDifference",
+      "range": "DisplayName-CC04CEB290804863C16C7B507EC58D2ED480E88F4BEEF7872C86B18027C670E3-PropertyDifference-HasProperty"
+    },
+    {
+      "id": "58E859FCB346DAF6C778851BD97915E0C113DE70C42EACE0D74B05051E0BEEF1",
+      "iri": "http://visualdataweb.org/newOntology/58E859FCB346DAF6C778851BD97915E0C113DE70C42EACE0D74B05051E0BEEF1",
+      "label": "HasProperty",
+      "attributes": "datatype",
+      "domain": "BH.oM.Diffing.PropertyDifference",
+      "range": "PastValue-58E859FCB346DAF6C778851BD97915E0C113DE70C42EACE0D74B05051E0BEEF1-PropertyDifference-HasProperty"
+    },
+    {
+      "id": "4A592E79A6F42A583EAAB44BF8A4BFE430B0C245529EAC6CE54CE6F688BFDC3F",
+      "iri": "http://visualdataweb.org/newOntology/4A592E79A6F42A583EAAB44BF8A4BFE430B0C245529EAC6CE54CE6F688BFDC3F",
+      "label": "HasProperty",
+      "attributes": "datatype",
+      "domain": "BH.oM.Diffing.PropertyDifference",
+      "range": "FollowingValue-4A592E79A6F42A583EAAB44BF8A4BFE430B0C245529EAC6CE54CE6F688BFDC3F-PropertyDifference-HasProperty"
+    },
+    {
+      "id": "D824F5E183036D62E3B76071346BFB6E939263EFD5BBE87B294B92CBE6BB963E",
+      "iri": "http://visualdataweb.org/newOntology/D824F5E183036D62E3B76071346BFB6E939263EFD5BBE87B294B92CBE6BB963E",
+      "label": "HasProperty",
+      "attributes": "datatype",
+      "domain": "BH.oM.Diffing.PropertyDifference",
+      "range": "FullName-D824F5E183036D62E3B76071346BFB6E939263EFD5BBE87B294B92CBE6BB963E-PropertyDifference-HasProperty"
+    },
+    {
+      "id": "C59F881EBE721CAB635CF0F24B0BBE61D0E29655E825F3C7D1DF489D12C6B83E",
+      "iri": "http://visualdataweb.org/newOntology/C59F881EBE721CAB635CF0F24B0BBE61D0E29655E825F3C7D1DF489D12C6B83E",
+      "label": "IsA",
+      "attributes": "object",
+      "domain": "BH.oM.Diffing.PropertyDifference",
+      "range": "BH.oM.Base.IObject"
+    },
+    {
+      "id": "696D83BCB7FD31AAA09183AA529B29A66B48EB9BCCB392756FF649507ADCEC58",
+      "iri": "http://visualdataweb.org/newOntology/696D83BCB7FD31AAA09183AA529B29A66B48EB9BCCB392756FF649507ADCEC58",
+      "label": "IsSubclassOf",
+      "attributes": []
+    },
+    {
+      "id": "A8B715E003FC41D95A440A7DFAE421C55930981D01F5F0B130BC50D99CF642BC",
+      "iri": "http://visualdataweb.org/newOntology/A8B715E003FC41D95A440A7DFAE421C55930981D01F5F0B130BC50D99CF642BC",
+      "label": "HasProperty",
+      "attributes": "datatype",
+      "domain": "BH.oM.Diffing.Revision",
+      "range": "StreamId-A8B715E003FC41D95A440A7DFAE421C55930981D01F5F0B130BC50D99CF642BC-Revision-HasProperty"
+    },
+    {
+      "id": "AB63807E8106303DDAB3D11AA3E558518914D7BEC481E29585AE696D2C8A1D66",
+      "iri": "http://visualdataweb.org/newOntology/AB63807E8106303DDAB3D11AA3E558518914D7BEC481E29585AE696D2C8A1D66",
+      "label": "HasProperty",
+      "attributes": "datatype",
+      "domain": "BH.oM.Diffing.Revision",
+      "range": "RevisionId-AB63807E8106303DDAB3D11AA3E558518914D7BEC481E29585AE696D2C8A1D66-Revision-HasProperty"
+    },
+    {
+      "id": "CB8C9377CB6F1C7410A4841A5367F65EBA0075F4FF37863FBF4A3E1288C9AAF2",
+      "iri": "http://visualdataweb.org/newOntology/CB8C9377CB6F1C7410A4841A5367F65EBA0075F4FF37863FBF4A3E1288C9AAF2",
+      "label": "HasProperty",
+      "attributes": "datatype",
+      "domain": "BH.oM.Diffing.Revision",
+      "range": "RevisionName-CB8C9377CB6F1C7410A4841A5367F65EBA0075F4FF37863FBF4A3E1288C9AAF2-Revision-HasProperty"
+    },
+    {
+      "id": "3BD2B5BBDF67A1284E40389E82CEA5B85069168A364C5312D1298F8098649975",
+      "iri": "http://visualdataweb.org/newOntology/3BD2B5BBDF67A1284E40389E82CEA5B85069168A364C5312D1298F8098649975",
+      "label": "HasProperty",
+      "attributes": "datatype",
+      "domain": "BH.oM.Diffing.Revision",
+      "range": "Timestamp-3BD2B5BBDF67A1284E40389E82CEA5B85069168A364C5312D1298F8098649975-Revision-HasProperty"
+    },
+    {
+      "id": "29784137EC24A49B420D3B10D39181C909C1E10EAFE0CC6BCF404BFAC31762A5",
+      "iri": "http://visualdataweb.org/newOntology/29784137EC24A49B420D3B10D39181C909C1E10EAFE0CC6BCF404BFAC31762A5",
+      "label": "HasProperty",
+      "attributes": "datatype",
+      "domain": "BH.oM.Diffing.Revision",
+      "range": "Author-29784137EC24A49B420D3B10D39181C909C1E10EAFE0CC6BCF404BFAC31762A5-Revision-HasProperty"
+    },
+    {
+      "id": "29039111B89721FD9B3839C2FB268D0C8FCD55E36705706F05D979A9C7EFA9B8",
+      "iri": "http://visualdataweb.org/newOntology/29039111B89721FD9B3839C2FB268D0C8FCD55E36705706F05D979A9C7EFA9B8",
+      "label": "HasProperty",
+      "attributes": "datatype",
+      "domain": "BH.oM.Diffing.Revision",
+      "range": "Comment-29039111B89721FD9B3839C2FB268D0C8FCD55E36705706F05D979A9C7EFA9B8-Revision-HasProperty"
+    },
+    {
+      "id": "D9D903AA179DD44D0E4F3D4E5DEE60EBDCBF4B2E4D87CF3D32155E291FDCE013",
+      "iri": "http://visualdataweb.org/newOntology/D9D903AA179DD44D0E4F3D4E5DEE60EBDCBF4B2E4D87CF3D32155E291FDCE013",
+      "label": "HasProperty",
+      "attributes": "datatype",
+      "domain": "BH.oM.Diffing.Revision",
+      "range": "Objects-D9D903AA179DD44D0E4F3D4E5DEE60EBDCBF4B2E4D87CF3D32155E291FDCE013-Revision-HasProperty"
+    },
+    {
+      "id": "BD8F1B837C016450459A06A936FB103D2B5E0B255FA1DB8DA371FBA9EEC95771",
+      "iri": "http://visualdataweb.org/newOntology/BD8F1B837C016450459A06A936FB103D2B5E0B255FA1DB8DA371FBA9EEC95771",
+      "label": "HasProperty",
+      "attributes": "object",
+      "domain": "BH.oM.Diffing.Revision",
+      "range": "BH.oM.Diffing.DiffingConfig"
+    },
+    {
+      "id": "361949B9E8A5FCC258C494BA536B8ADBAEDB059CA1C1CD35CFF8B07FA5C462AA",
+      "iri": "http://visualdataweb.org/newOntology/361949B9E8A5FCC258C494BA536B8ADBAEDB059CA1C1CD35CFF8B07FA5C462AA",
+      "label": "IsA",
+      "attributes": "object",
+      "domain": "BH.oM.Diffing.Revision",
+      "range": "BH.oM.Base.IBHoMObject"
+    },
+    {
+      "id": "25D6A243F3928038202D99AEB64E04C6B5147B9B4B6093AC454AB49E72CC3AA2",
+      "iri": "http://visualdataweb.org/newOntology/25D6A243F3928038202D99AEB64E04C6B5147B9B4B6093AC454AB49E72CC3AA2",
+      "label": "IsA",
+      "attributes": "object",
+      "domain": "BH.oM.Diffing.Revision",
+      "range": "BH.oM.Base.IObject"
+    },
+    {
+      "id": "64815903334DD814E69E674B5207BF3319FE20B21A65CFBE93084093AE1DD684",
+      "iri": "http://visualdataweb.org/newOntology/64815903334DD814E69E674B5207BF3319FE20B21A65CFBE93084093AE1DD684",
+      "label": "IsA",
+      "attributes": "object",
+      "domain": "BH.oM.Diffing.Revision",
+      "range": "BH.oM.Base.IImmutable"
+    },
+    {
+      "id": "8329522F83CA18FAC5EE17DC7E1AC3F5CAB837C43E1E9D5B73E2F612EE4B5479",
+      "iri": "http://visualdataweb.org/newOntology/8329522F83CA18FAC5EE17DC7E1AC3F5CAB837C43E1E9D5B73E2F612EE4B5479",
+      "label": "IsSubclassOf",
+      "attributes": "object",
+      "domain": "BH.oM.Diffing.Revision",
+      "range": "BH.oM.Base.BHoMObject"
+    },
+    {
+      "id": "D04A67BA366DEB9EA5CB514D955F9818C3C5BBF18F90D6385041FCF343264080",
+      "iri": "http://visualdataweb.org/newOntology/D04A67BA366DEB9EA5CB514D955F9818C3C5BBF18F90D6385041FCF343264080",
+      "label": "HasProperty",
+      "attributes": "datatype",
+      "domain": "BH.oM.Diffing.RevisionFragment",
+      "range": "Hash-D04A67BA366DEB9EA5CB514D955F9818C3C5BBF18F90D6385041FCF343264080-RevisionFragment-HasProperty"
+    },
+    {
+      "id": "12EC556B0EC6CD8DC412FAF51CBCF91AD21D83E6DDCB2793788E9F92BEEC10D1",
+      "iri": "http://visualdataweb.org/newOntology/12EC556B0EC6CD8DC412FAF51CBCF91AD21D83E6DDCB2793788E9F92BEEC10D1",
+      "label": "HasProperty",
+      "attributes": "datatype",
+      "domain": "BH.oM.Diffing.RevisionFragment",
+      "range": "PreviousHash-12EC556B0EC6CD8DC412FAF51CBCF91AD21D83E6DDCB2793788E9F92BEEC10D1-RevisionFragment-HasProperty"
+    },
+    {
+      "id": "6F905E2AE7A1EA50B53317C44CE9B3AF015F2ECD4D99CCD0A5E811033E3774D6",
+      "iri": "http://visualdataweb.org/newOntology/6F905E2AE7A1EA50B53317C44CE9B3AF015F2ECD4D99CCD0A5E811033E3774D6",
+      "label": "IsA",
+      "attributes": "object",
+      "domain": "BH.oM.Diffing.RevisionFragment",
+      "range": "BH.oM.Base.IHashFragment"
+    },
+    {
+      "id": "F9FD49B4149CE4CFE1595787AE3FC07417AAB78A74ABA12B1F42D848F91E7F48",
+      "iri": "http://visualdataweb.org/newOntology/F9FD49B4149CE4CFE1595787AE3FC07417AAB78A74ABA12B1F42D848F91E7F48",
+      "label": "IsA",
+      "attributes": "object",
+      "domain": "BH.oM.Diffing.RevisionFragment",
+      "range": "BH.oM.Base.IFragment"
+    },
+    {
+      "id": "D5E997AACB1600A2E1D68F0EC5C4A5CFBC922D9FBDCB2135CE47797F8F2B05F8",
+      "iri": "http://visualdataweb.org/newOntology/D5E997AACB1600A2E1D68F0EC5C4A5CFBC922D9FBDCB2135CE47797F8F2B05F8",
+      "label": "IsA",
+      "attributes": "object",
+      "domain": "BH.oM.Diffing.RevisionFragment",
+      "range": "BH.oM.Base.IObject"
+    },
+    {
+      "id": "5C046E756030348DE337859693689EF38A520742AFDCF3CE5C3A611031791DEE",
+      "iri": "http://visualdataweb.org/newOntology/5C046E756030348DE337859693689EF38A520742AFDCF3CE5C3A611031791DEE",
+      "label": "IsA",
+      "attributes": "object",
+      "domain": "BH.oM.Diffing.RevisionFragment",
+      "range": "BH.oM.Base.IImmutable"
+    },
+    {
+      "id": "26CDAD57FAE71E67E598D38F96C4B7A635FD74AADECBCF4B94211D616B31798F",
+      "iri": "http://visualdataweb.org/newOntology/26CDAD57FAE71E67E598D38F96C4B7A635FD74AADECBCF4B94211D616B31798F",
+      "label": "IsSubclassOf",
+      "attributes": []
+    },
+    {
+      "id": "578CDC5EA37F703FA696E8644C3F1E5EE183CD1B4401A878A71F84593BA8E7C9",
+      "iri": "http://visualdataweb.org/newOntology/578CDC5EA37F703FA696E8644C3F1E5EE183CD1B4401A878A71F84593BA8E7C9",
+      "label": "HasProperty",
+      "attributes": "datatype",
+      "domain": "BH.oM.Diffing.StreamPointer",
+      "range": "StreamId-578CDC5EA37F703FA696E8644C3F1E5EE183CD1B4401A878A71F84593BA8E7C9-StreamPointer-HasProperty"
+    },
+    {
+      "id": "C9E59B9D8E2D7465B6107E192CC9AA93B521DBFC8A0C2A16D0F10DA3C6DF6C80",
+      "iri": "http://visualdataweb.org/newOntology/C9E59B9D8E2D7465B6107E192CC9AA93B521DBFC8A0C2A16D0F10DA3C6DF6C80",
+      "label": "HasProperty",
+      "attributes": "datatype",
+      "domain": "BH.oM.Diffing.StreamPointer",
+      "range": "StreamName-C9E59B9D8E2D7465B6107E192CC9AA93B521DBFC8A0C2A16D0F10DA3C6DF6C80-StreamPointer-HasProperty"
+    },
+    {
+      "id": "7E0DD48504CDE311D315BC2BA9CCA395F746C16ED599687BF8B6EFCBB8B42281",
+      "iri": "http://visualdataweb.org/newOntology/7E0DD48504CDE311D315BC2BA9CCA395F746C16ED599687BF8B6EFCBB8B42281",
+      "label": "HasProperty",
+      "attributes": "datatype",
+      "domain": "BH.oM.Diffing.StreamPointer",
+      "range": "Description-7E0DD48504CDE311D315BC2BA9CCA395F746C16ED599687BF8B6EFCBB8B42281-StreamPointer-HasProperty"
+    },
+    {
+      "id": "3F34D8B62DB85257A075B33B34E4FBAFDCC04EC853374CDE7AD09AC195D924A5",
+      "iri": "http://visualdataweb.org/newOntology/3F34D8B62DB85257A075B33B34E4FBAFDCC04EC853374CDE7AD09AC195D924A5",
+      "label": "HasProperty",
+      "attributes": "datatype",
+      "domain": "BH.oM.Diffing.StreamPointer",
+      "range": "Timestamp-3F34D8B62DB85257A075B33B34E4FBAFDCC04EC853374CDE7AD09AC195D924A5-StreamPointer-HasProperty"
+    },
+    {
+      "id": "8B0DA05DD6CCEF08128E61252FAC816D58D21BC81847D4AE7298FD1F733001D5",
+      "iri": "http://visualdataweb.org/newOntology/8B0DA05DD6CCEF08128E61252FAC816D58D21BC81847D4AE7298FD1F733001D5",
+      "label": "IsA",
+      "attributes": "object",
+      "domain": "BH.oM.Diffing.StreamPointer",
+      "range": "BH.oM.Base.IBHoMObject"
+    },
+    {
+      "id": "7A6A456D93D0FDA4B5335E7FE32626131484EF9C5F9494B5150063E1193A56F1",
+      "iri": "http://visualdataweb.org/newOntology/7A6A456D93D0FDA4B5335E7FE32626131484EF9C5F9494B5150063E1193A56F1",
+      "label": "IsA",
+      "attributes": "object",
+      "domain": "BH.oM.Diffing.StreamPointer",
+      "range": "BH.oM.Base.IObject"
+    },
+    {
+      "id": "461CF7143DFC86F273F7AB745C40FF862CAA7BD7985717563244DA711FD2BFD6",
+      "iri": "http://visualdataweb.org/newOntology/461CF7143DFC86F273F7AB745C40FF862CAA7BD7985717563244DA711FD2BFD6",
+      "label": "IsA",
+      "attributes": "object",
+      "domain": "BH.oM.Diffing.StreamPointer",
+      "range": "BH.oM.Base.IImmutable"
+    },
+    {
+      "id": "CCAF8A3649ADB86D9BA914EA0AD48D0C423F3EFA76D6964207FE3B2061B0BE3A",
+      "iri": "http://visualdataweb.org/newOntology/CCAF8A3649ADB86D9BA914EA0AD48D0C423F3EFA76D6964207FE3B2061B0BE3A",
+      "label": "IsSubclassOf",
+      "attributes": "object",
+      "domain": "BH.oM.Diffing.StreamPointer",
+      "range": "BH.oM.Base.BHoMObject"
+    }
+  ]
+}

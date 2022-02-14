@@ -30,17 +30,18 @@ namespace BH.Engine.RDF
 
         private static string RemoveInvalidChars(string text)
         {
-            Regex rgx = new Regex(@"[^a-zA-Z0-9.\p{IsGreek}]"); //only alphanumeric, dots and greek letters (useful for structural props).
-            text = rgx.Replace(text, "");
 
             if (text.Contains("`"))
             {
                 // remove those weird chars that sometimes happen e.g. IElementLoad`1
                 text = text.Substring(0, text.IndexOf("`"));
+
+                while (Char.IsDigit(text.Last()))
+                    text = text.Substring(0, text.Length - 1); // if last char is a number, remove it.
             }
 
-            while (Char.IsDigit(text.Last()))
-                text = text.Substring(0, text.Length - 1); // if last char is a number, remove it.
+            Regex rgx = new Regex(@"[^a-zA-Z0-9.\p{IsGreek}]"); //only alphanumeric, dots and greek letters (useful for structural props).
+            text = rgx.Replace(text, "");
 
             return text;
         }

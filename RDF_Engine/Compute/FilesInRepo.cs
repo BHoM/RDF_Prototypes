@@ -34,7 +34,11 @@ namespace BH.Engine.RDF
             {
                 // Read the filesystem and get the .cs files.
                 files = Directory.GetFiles(parentRepoDirectoryPath, "*.cs", SearchOption.AllDirectories);
-                files = files.Where(f => !f.Contains("TemporaryGeneratedFile_") && !f.EndsWith("AssemblyInfo.cs") && !f.EndsWith("Resources.Designer.cs")).ToArray();
+                files = files.Where(f => 
+                    !f.Contains("TemporaryGeneratedFile_") && 
+                    !f.EndsWith("AssemblyInfo.cs") && 
+                    !f.EndsWith("Resources.Designer.cs") && 
+                    !f.EndsWith("AssemblyAttributes.cs")).ToArray();
             }
 
             // Cache the results to disk.

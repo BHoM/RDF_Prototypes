@@ -138,12 +138,15 @@ namespace BH.Engine.RDF
         {
             string typeFileToSearch = type.NameValidChars() + ".cs";
 
-            List<string> allFilePaths = Compute.FilesInRepo(githubRootDirectory, cacheRootDirectory);
+            List<string> allFilePaths = Compute.FilesInRepo(githubRootDirectory);
 
             string nameSpaceGroup = type.Namespace.Split('.')[2]; // [2] selects anything exactly after `BH.oM.` or `BH.Engine.`
 
             if (nameSpaceGroup == "Adapters" || nameSpaceGroup == "External")
                 nameSpaceGroup = type.Namespace.Split('.')[3];
+
+            if (nameSpaceGroup == "Base")
+                nameSpaceGroup = "BHoM";
 
             string filepath = allFilePaths.FirstOrDefault(p => Path.GetDirectoryName(p).Contains(nameSpaceGroup) && p.EndsWith(typeFileToSearch));
             if (string.IsNullOrWhiteSpace(filepath))
