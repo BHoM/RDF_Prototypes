@@ -17,16 +17,16 @@ namespace BH.Engine.RDF
             string combinedUriString = baseUri.ToString();
 
             if (combinedUriString.EndsWith("/"))
-                combinedUriString.Remove(combinedUriString.Length - 2, 1);
+                combinedUriString = combinedUriString.Remove(combinedUriString.Length - 1, 1);
 
             foreach (string uri in uris)
             {
                 string correctedUri = uri.Replace(@"\", "/");
                 if (correctedUri.StartsWith("/"))
-                    correctedUri.Remove(0, 1);
+                    correctedUri = correctedUri.Remove(0, 1);
 
                 if (correctedUri.EndsWith("/"))
-                    correctedUri.Remove(correctedUri.Length - 2, 1);
+                    correctedUri = correctedUri.Remove(correctedUri.Length - 1, 1);
 
                 combinedUriString += "/" + correctedUri;
             }

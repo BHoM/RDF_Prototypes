@@ -113,8 +113,7 @@ namespace BH.Engine.RDF
 
                 try
                 {
-                    Uri URL = new Uri(githubOrganisation, Path.Combine(pathComponents[0], "/blob/main/", string.Join("/", pathComponents.Skip(1))));
-                    URL = CombineUris(githubOrganisation, Path.Combine(pathComponents[0], "/blob/main/", string.Join("/", pathComponents.Skip(1))));
+                    Uri URL = CombineUris(githubOrganisation, pathComponents[0], "/blob/main/", string.Join("/", pathComponents.Skip(1)));
                     return URL;
                 }
                 catch { }

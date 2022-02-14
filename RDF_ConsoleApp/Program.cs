@@ -38,7 +38,7 @@ namespace BH.oM.CodeAnalysis.ConsoleApp
             //onlyBaseOmTypes = onlyBaseOmTypes.Where(t => t.Name.Contains("Output"));
             //onlyBaseOmTypes = onlyBaseOmTypes.Where(t => t.Name.Contains("ComparisonConfig"));
 
-            SortedDictionary<string, string> webVOWLJsonsPerNamespace = WebVOWLJsonPerNamespace(oMTypes, new List<string>() { "oM.Structure" });
+            SortedDictionary<string, string> webVOWLJsonsPerNamespace = WebVOWLJsonPerNamespace(oMTypes);
 
             foreach (var kv in webVOWLJsonsPerNamespace)
             {
@@ -72,7 +72,8 @@ namespace BH.oM.CodeAnalysis.ConsoleApp
             oMTypes = oMTypes.Where(t => t != null && t.Namespace != null).ToList();
 
             // Filters
-            oMTypes = oMTypes.Where(t => namespaceToConsider.Any(nsf =>
+            if (namespaceToConsider != null && namespaceToConsider.All(f => !string.IsNullOrWhiteSpace(f)))
+                oMTypes = oMTypes.Where(t => namespaceToConsider.Any(nsf =>
                 {
                     if (nsf.StartsWith("BH."))
                         return t.Namespace.EndsWith(nsf);
@@ -81,8 +82,8 @@ namespace BH.oM.CodeAnalysis.ConsoleApp
                 })).ToList();
 
 
-            if (typeNamesToConsider != null)
-                oMTypes = oMTypes.Where(t => typeNamesToConsider.Any(tn => 
+            if (typeNamesToConsider != null && typeNamesToConsider.All(f => !string.IsNullOrWhiteSpace(f)))
+                oMTypes = oMTypes.Where(t => typeNamesToConsider.Any(tn =>
                 {
                     if (tn.StartsWith("BH."))
                         return t.Name == tn;
