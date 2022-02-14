@@ -33,12 +33,12 @@ namespace BH.oM.CodeAnalysis.ConsoleApp
                 .Select(g => g.First()));
 
             // Take a subset of the types avaialble to reduce the size of the output graph. This can become a Filter function.
-            IEnumerable<TypeInfo> onlyBaseOmTypes = oMTypes.Where(t => t != null && t.Namespace != null && t.Namespace.EndsWith("BH.oM.Base")).ToList();
+            //IEnumerable<TypeInfo> onlyBaseOmTypes = oMTypes.Where(t => t != null && t.Namespace != null && t.Namespace.EndsWith("BH.oM.Base")).ToList();
             //onlyBaseOmTypes = onlyBaseOmTypes.Where(t => t.Name == "NamedNumericTolerance" || t.Name == "IObject");
             //onlyBaseOmTypes = onlyBaseOmTypes.Where(t => t.Name.Contains("Output"));
             //onlyBaseOmTypes = onlyBaseOmTypes.Where(t => t.Name.Contains("ComparisonConfig"));
 
-            SortedDictionary<string, string> webVOWLJsonsPerNamespace = WebVOWLJsonPerNamespace(oMTypes);
+            SortedDictionary<string, string> webVOWLJsonsPerNamespace = WebVOWLJsonPerNamespace(oMTypes, new List<string>() { "oM.Structure" });
 
             foreach (var kv in webVOWLJsonsPerNamespace)
             {
@@ -72,11 +72,23 @@ namespace BH.oM.CodeAnalysis.ConsoleApp
             oMTypes = oMTypes.Where(t => t != null && t.Namespace != null).ToList();
 
             // Filters
-            if (namespaceToConsider != null)
-                oMTypes = oMTypes.Where(t => namespaceToConsider.Any(nsf => t.Namespace.EndsWith(nsf))).ToList();
+            oMTypes = oMTypes.Where(t => namespaceToConsider.Any(nsf =>
+                {
+                    if (nsf.StartsWith("BH."))
+                        return t.Namespace.EndsWith(nsf);
+                    else
+                        return t.Namespace.Contains(nsf);
+                })).ToList();
+
 
             if (typeNamesToConsider != null)
-                oMTypes = oMTypes.Where(t => typeNamesToConsider.Any(tn => t.Name == tn)).ToList();
+                oMTypes = oMTypes.Where(t => typeNamesToConsider.Any(tn => 
+                {
+                    if (tn.StartsWith("BH."))
+                        return t.Name == tn;
+                    else
+                        return t.Name.Contains(tn);
+                })).ToList();
 
             // Group by namespace
             if (namespaceGroupDepth < 3)

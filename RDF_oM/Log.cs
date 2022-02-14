@@ -9,16 +9,31 @@ namespace BH.oM.RDF
 {
     public static class Log
     {
-        public static void RecordError(string error)
+        private static HashSet<string> m_reportedErrors = new HashSet<string>();
+        private static HashSet<string> m_reportedWarnings = new HashSet<string>();
+
+        public static void RecordError(string error, bool doNotRepeat = false)
         {
-            Console.WriteLine($"ERROR:\n{error}");
+            if (doNotRepeat && m_reportedErrors.Contains(error))
+                return;
+
+            Console.WriteLine($"ERROR: {error}");
             BH.Engine.Base.Compute.RecordError(error);
+
+            if (doNotRepeat)
+                m_reportedErrors.Add(error);
         }
 
-        public static void RecordWarning(string warning)
+        public static void RecordWarning(string warning, bool doNotRepeat = false)
         {
-            Console.WriteLine($"Warning:\n{warning}");
+            if (doNotRepeat && m_reportedWarnings.Contains(warning))
+                return;
+
+            Console.WriteLine($"Warning: {warning}");
             BH.Engine.Base.Compute.RecordWarning(warning);
+
+            if (doNotRepeat)
+                m_reportedWarnings.Add(warning);
         }
 
         public static void RecordNote(string message)

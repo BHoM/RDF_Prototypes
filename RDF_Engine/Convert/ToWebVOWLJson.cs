@@ -47,7 +47,7 @@ namespace BH.Engine.RDF
                 classArray.AddToIdTypeArray(typeId, "owl:Class");
 
                 // 2) CLASS ATTRIBUTE
-                classAttributeArray.AddToAttributeArray(typeId, type.UriFromType(), type.DescriptiveName(true));
+                classAttributeArray.AddToAttributeArray(typeId, type.GithubURI(), type.DescriptiveName(true));
             }
 
             // There could be Types that were not gathered yet and that could emerge from the targets of the Relations.
@@ -81,7 +81,7 @@ namespace BH.Engine.RDF
                     propertyArray.AddToIdTypeArray(relationId, "owl:ObjectProperty");
 
                 // 4) PROPERTY ATTRIBUTE
-                propertyAttributeArray.AddToAttributeArray(relationId, $"http://visualdataweb.org/newOntology/{relationId}", relationType.Name, null, objectPropertyAttribute, new List<string>() { subjectNodeId }, new List<string>() { objectNodeId });
+                propertyAttributeArray.AddToAttributeArray(relationId, new Uri($"http://visualdataweb.org/newOntology/{relationId}", UriKind.Absolute), relationType.Name, null, objectPropertyAttribute, new List<string>() { subjectNodeId }, new List<string>() { objectNodeId });
             }
 
             rdfJsonObject.Add(new JProperty("class", classArray));
@@ -122,7 +122,7 @@ namespace BH.Engine.RDF
                 {
                     classArray.AddToIdTypeArray(subjectOrObjectNodeId, "owl:Class");
 
-                    classAttributeArray.AddToAttributeArray(subjectOrObjectNodeId, subjectOrObjectType.UriFromType(), label);
+                    classAttributeArray.AddToAttributeArray(subjectOrObjectNodeId, subjectOrObjectType.GithubURI(), label);
                 }
 
                 propertyAttributes = new List<string>() { "object" };
@@ -143,7 +143,7 @@ namespace BH.Engine.RDF
 
             classArray.AddToIdTypeArray(subjectOrObjectNodeId, "rdfs:Datatype");
 
-            classAttributeArray.AddToAttributeArray(subjectOrObjectNodeId, @"http://www.w3.org/2001/XMLSchema#", label, null, new List<string>() { "datatype" });
+            classAttributeArray.AddToAttributeArray(subjectOrObjectNodeId, new Uri(@"http://www.w3.org/2001/XMLSchema#", UriKind.Absolute), label, null, new List<string>() { "datatype" });
 
             propertyAttributes = new List<string>() { "datatype" };
             // Un-comment if we want to create `Literal` nodes for non-primitive, non-BHoM types.
@@ -184,13 +184,13 @@ namespace BH.Engine.RDF
 
         /***************************************************/
 
-        private static void AddToAttributeArray(this JArray attributeArray, string id, string iri, string label_en, string label_iriBased = null,
+        private static void AddToAttributeArray(this JArray attributeArray, string id, Uri uri, string label_en, string label_iriBased = null,
             List<string> attributes = null,
             List<string> domain = null, List<string> range = null)
         {
             JObject attributeArrayObj = new JObject();
             attributeArrayObj.Add(new JProperty("id", id));
-            attributeArrayObj.Add(new JProperty("iri", iri));
+            attributeArrayObj.Add(new JProperty("iri", uri));
 
             // // - Label
             if (label_iriBased != null)
