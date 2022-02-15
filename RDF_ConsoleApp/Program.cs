@@ -53,7 +53,7 @@ namespace BH.oM.CodeAnalysis.ConsoleApp
             File.WriteAllText(allWebOWLOntologyURL, ""); // empty the file
             foreach (var kv in webVOWLJsonsPerNamespace)
             {
-                string WebVOWLOntologyURL = $"https://service.tib.eu/webvowl/#url=https://raw.githubusercontent.com/BHoM/RDF_Prototypes/main/{generatedOntologiesDirectoryName}/{kv.Key}-webVOWLOntology.json";
+                string WebVOWLOntologyURL = $"https://service.tib.eu/webvowl/#url=https://raw.githubusercontent.com/BHoM/RDF_Prototypes/main/{generatedOntologiesDirectoryName}/{kv.Key}.json";
                 File.AppendAllText(allWebOWLOntologyURL, "\n" + WebVOWLOntologyURL);
             }
 
