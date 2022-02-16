@@ -7,7 +7,7 @@
       "type": "owl:Class"
     },
     {
-      "id": "Perimeter-BH.oM.Geometry.ICurve",
+      "id": "BH.oM.Architecture.Elements.Room.Perimeter",
       "type": "owl:Class"
     },
     {
@@ -15,7 +15,7 @@
       "type": "owl:Class"
     },
     {
-      "id": "Location-BH.oM.Geometry.Point",
+      "id": "BH.oM.Architecture.Elements.Room.Location",
       "type": "owl:Class"
     },
     {
@@ -59,9 +59,9 @@
       "attributes": []
     },
     {
-      "id": "Perimeter-BH.oM.Geometry.ICurve",
+      "id": "BH.oM.Architecture.Elements.Room.Perimeter",
       "iri": "https://github.com/BHoM/BHoM/blob/main/Geometry_oM/Curve/ICurve.cs",
-      "label": "Perimeter (ICurve)",
+      "label": "Perimeter",
       "attributes": []
     },
     {
@@ -71,9 +71,9 @@
       "attributes": []
     },
     {
-      "id": "Location-BH.oM.Geometry.Point",
+      "id": "BH.oM.Architecture.Elements.Room.Location",
       "iri": "https://github.com/BHoM/BHoM/blob/main/Geometry_oM/Vector/Point.cs",
-      "label": "Location (Point)",
+      "label": "Location",
       "attributes": []
     },
     {
@@ -127,7 +127,7 @@
   ],
   "property": [
     {
-      "id": "BH.oM.Architecture.Elements.Room-BH.oM.RDF.HasProperty-BH.oM.Geometry.ICurve Perimeter",
+      "id": "BH.oM.Architecture.Elements.Room.Perimeter-IsA-BH.oM.Geometry.ICurve",
       "type": "owl:ObjectProperty"
     },
     {
@@ -135,7 +135,7 @@
       "type": "owl:ObjectProperty"
     },
     {
-      "id": "BH.oM.Architecture.Elements.Room-BH.oM.RDF.HasProperty-BH.oM.Geometry.Point Location",
+      "id": "BH.oM.Architecture.Elements.Room.Location-IsA-BH.oM.Geometry.Point",
       "type": "owl:ObjectProperty"
     },
     {
@@ -173,11 +173,11 @@
   ],
   "propertyAttribute": [
     {
-      "id": "BH.oM.Architecture.Elements.Room-BH.oM.RDF.HasProperty-BH.oM.Geometry.ICurve Perimeter",
+      "id": "BH.oM.Architecture.Elements.Room.Perimeter-IsA-BH.oM.Geometry.ICurve",
       "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
       "label": "IsA",
       "attributes": "object",
-      "domain": "Perimeter-BH.oM.Geometry.ICurve",
+      "domain": "BH.oM.Architecture.Elements.Room.Perimeter",
       "range": "BH.oM.Geometry.ICurve"
     },
     {
@@ -186,14 +186,14 @@
       "label": "HasProperty",
       "attributes": "object",
       "domain": "BH.oM.Architecture.Elements.Room",
-      "range": "Perimeter-BH.oM.Geometry.ICurve"
+      "range": "BH.oM.Geometry.ICurve"
     },
     {
-      "id": "BH.oM.Architecture.Elements.Room-BH.oM.RDF.HasProperty-BH.oM.Geometry.Point Location",
+      "id": "BH.oM.Architecture.Elements.Room.Location-IsA-BH.oM.Geometry.Point",
       "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
       "label": "IsA",
       "attributes": "object",
-      "domain": "Location-BH.oM.Geometry.Point",
+      "domain": "BH.oM.Architecture.Elements.Room.Location",
       "range": "BH.oM.Geometry.Point"
     },
     {
@@ -202,7 +202,7 @@
       "label": "HasProperty",
       "attributes": "object",
       "domain": "BH.oM.Architecture.Elements.Room",
-      "range": "Location-BH.oM.Geometry.Point"
+      "range": "BH.oM.Geometry.Point"
     },
     {
       "id": "BH.oM.Architecture.Elements.Room-BH.oM.RDF.IsA-BH.oM.Base.IBHoMObject",
