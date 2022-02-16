@@ -24,11 +24,11 @@ namespace BH.Engine.RDF
 
             // Try to read from cached on disk.
             if (cacheRootDirectory == null)
-                cacheRootDirectory = new Uri(Path.GetDirectoryName(Assembly.GetExecutingAssembly().CodeBase)).LocalPath;
+                cacheRootDirectory = Directory.GetParent(Directory.GetParent(new Uri(Path.GetDirectoryName(Assembly.GetExecutingAssembly().CodeBase)).LocalPath).FullName).FullName;
 
             string cacheFilePath = null;
             if (!string.IsNullOrWhiteSpace(cacheRootDirectory))
-                cacheFilePath = cacheRootDirectory + "AllCsFilesInGithubRepos.txt";
+                cacheFilePath = cacheRootDirectory + "\\cached_GithubRootCsFilepaths.txt";
 
             if (!string.IsNullOrWhiteSpace(cacheFilePath) && File.Exists(cacheFilePath))
             {

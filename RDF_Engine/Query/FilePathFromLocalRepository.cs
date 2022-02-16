@@ -37,6 +37,7 @@ namespace BH.Engine.RDF
             if (m_cachedTypeFilePaths?.TryGetValue(type, out filepath) ?? false)
                 return relative ? filepath?.Replace(repositoryRoot, "") : filepath;
 
+            string typeNameValidChars = type.NameValidChars();
             HashSet<string> allFilePaths = Compute.FilesInRepo(repositoryRoot, cacheRootDirectory);
 
             string nameSpaceGroup = type.Namespace.Split('.')[2]; // [2] selects anything exactly after `BH.oM.` or `BH.Engine.`
@@ -51,20 +52,53 @@ namespace BH.Engine.RDF
 
             List<string> matchingFilePaths = allFilePaths?.Where(p =>
                 Path.GetDirectoryName(p).Contains($"{nameSpaceGroup}") &&
-                !Path.GetDirectoryName(p).Contains("Engine") &&
-                Path.GetFileNameWithoutExtension(p) == type.NameValidChars()).ToList();
+                !Path.GetDirectoryName(p).Contains("Engine") && // believe it or not, it's useful to remove certain exceptions.
+                Path.GetFileNameWithoutExtension(p) == typeNameValidChars).ToList();
 
             if (matchingFilePaths.Count() > 1)
-                log.RecordWarning($"Found more than one matching filepath for `{type.FullName}`: {string.Join(", ", matchingFilePaths)}", true);
-            else
             {
-                filepath = matchingFilePaths.FirstOrDefault();
+                log.RecordWarning($"Found more than one matching filepath for `{type.FullName}`: {string.Join(", ", matchingFilePaths)}", true);
 
-                if (string.IsNullOrWhiteSpace(filepath))
-                    log.RecordWarning($"Could not find filepath for Type `{type.FullName}`", true);
+                // Store null in cache, which is better than having to reperform the search.
+                m_cachedTypeFilePaths[type] = null;
+
+                return null;
             }
 
-            // Store in cache. If no filePath was found, stores null string, which is better than having to reperform the search.
+            // Try removing the namespaceGroup condition and see if we can find at least one match. Can help for types e.g. Structure_oM hosted in `Structural` folders (e.g. StructuralEngineering_Toolkit).
+            if (!matchingFilePaths.Any())
+            {
+                matchingFilePaths = allFilePaths?.Where(p =>
+                    //Path.GetDirectoryName(p).Contains($"_oM") &&
+                    !Path.GetDirectoryName(p).Contains("_Engine") &&  // believe it or not, it's useful to remove certain exceptions.
+                    Path.GetFileNameWithoutExtension(p) == typeNameValidChars).ToList();
+            }
+
+            // Try checking if filename *contains* the type name. Helps for files with non compliant prefixes/suffixes (e.g. _IExecuteCommand.cs in BHoM_Adapter).
+            if (!matchingFilePaths.Any())
+            {
+                matchingFilePaths = allFilePaths?.Where(p =>
+                    //Path.GetDirectoryName(p).Contains($"_oM") &&
+                    !Path.GetDirectoryName(p).Contains("_Engine") &&  // believe it or not, it's useful to remove certain exceptions.
+                    Path.GetFileNameWithoutExtension(p).Contains(typeNameValidChars)).ToList();
+            }
+
+            // Try lowercasing
+            if (!matchingFilePaths.Any())
+            {
+                // Try removing the namespaceGroup condition and see if we can find at least one match. Can help for types e.g. Structure_oM hosted in `Structural` folders (e.g. StructuralEngineering_Toolkit).
+                matchingFilePaths = allFilePaths?.Where(p =>
+                    //Path.GetDirectoryName(p).Contains($"_oM") &&
+                    !Path.GetDirectoryName(p).Contains("_Engine") &&  // believe it or not, it's useful to remove certain exceptions.
+                    Path.GetFileNameWithoutExtension(p).ToLower() == typeNameValidChars.ToLower()).ToList();
+            }
+
+            if (matchingFilePaths.Count != 1)
+                log.RecordWarning($"Could not find filepath for Type `{type.FullName}`", true);
+
+            filepath = matchingFilePaths.FirstOrDefault();
+
+            // Store in cache.
             m_cachedTypeFilePaths[type] = filepath;
 
             return relative ? filepath?.Replace(repositoryRoot, "") : filepath; // if not found, this returns null.

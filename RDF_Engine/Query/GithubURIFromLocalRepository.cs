@@ -51,7 +51,7 @@ namespace BH.Engine.RDF
             if (lineNumber < 0)
                 return declaringTypeUri;
 
-            Uri result = new Uri($"{ declaringTypeUri.ToString()}#L{lineNumber}");
+            Uri result = new Uri($"{ declaringTypeUri.ToString()}#L{lineNumber + 1}"); // need to add +1 because Github Line numbers start from 1.
 
             return result;
         }

@@ -17,7 +17,7 @@ namespace BH.Engine.RDF
     {
         private static Dictionary<string, List<string>> m_cachedFileLines = new Dictionary<string, List<string>>();
 
-        [Description("Looks for the line number of a property in its `.cs` file by reading the file. Returns -1 if not found.")]
+        [Description("Looks for the line number of a property in its `.cs` file by reading the file. Returns -1 if not found. 0 indicates the first line.")]
         public static int LineNumber(PropertyInfo pi, string repositoryRoot, string cacheRootDirectory = null)
         {
             string declaringTypeFilePath = pi.DeclaringType.FilePathFromLocalRepository(repositoryRoot);
