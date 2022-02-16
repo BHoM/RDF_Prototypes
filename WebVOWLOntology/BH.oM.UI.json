@@ -103,6 +103,10 @@
       "type": "rdfs:Datatype"
     },
     {
+      "id": "BH.oM.UI.ComponentRequest.Location",
+      "type": "owl:Class"
+    },
+    {
       "id": "BH.oM.Geometry.Point",
       "type": "owl:Class"
     },
@@ -135,12 +139,32 @@
       "type": "rdfs:Datatype"
     },
     {
+      "id": "BH.oM.UI.ParamUpdated.Param",
+      "type": "owl:Class"
+    },
+    {
+      "id": "BH.oM.UI.ParamUpdated.OldParam",
+      "type": "owl:Class"
+    },
+    {
       "id": "Index-786683244C64B64C05EC321E6ABC032930A333A97DC1C4718208CF0484ED0988-ParamMoved-HasProperty",
       "type": "rdfs:Datatype"
     },
     {
+      "id": "BH.oM.UI.ParamMoved.Param",
+      "type": "owl:Class"
+    },
+    {
+      "id": "BH.oM.UI.ParamRemoved.Param",
+      "type": "owl:Class"
+    },
+    {
       "id": "Index-F193F14B1045B1732D189E7C84070A47DEED2D0AE33A9D2A2914A6AD6BB7A777-ParamAdded-HasProperty",
       "type": "rdfs:Datatype"
+    },
+    {
+      "id": "BH.oM.UI.ParamAdded.Param",
+      "type": "owl:Class"
     },
     {
       "id": "Name-7E3426575490C4D0D9C9CEB9155876FCBD3F697E0D5073D00A1737225B08BC9B-ComponentUpdate-HasProperty",
@@ -149,6 +173,14 @@
     {
       "id": "Description-BFAAD018C9CF0E88A5ACE08F9FC38DAB5375823846770D30D6562489B33FCF78-ComponentUpdate-HasProperty",
       "type": "rdfs:Datatype"
+    },
+    {
+      "id": "BH.oM.UI.CallerUpdate.Cause",
+      "type": "owl:Class"
+    },
+    {
+      "id": "BH.oM.UI.CallerUpdate.ComponentUpdate",
+      "type": "owl:Class"
     },
     {
       "id": "InputUpdates-89D4B35FFF54602FDD9491779607205DED7102ECBF8FA469DEA5AB563F4F4476-CallerUpdate-HasProperty",
@@ -165,6 +197,10 @@
     {
       "id": "ProjectID-7DED3AF63196A140B5D01A62177ECDBDEF48B45F4A175B0F65EFA47C45A9AAC5-ProjectIDEvent-HasProperty",
       "type": "rdfs:Datatype"
+    },
+    {
+      "id": "BH.oM.UI.ProjectIDEvent.Type",
+      "type": "owl:Class"
     },
     {
       "id": "BH.oM.Base.Debugging.EventType",
@@ -269,6 +305,10 @@
     {
       "id": "Description-F60A3D16D3861AA2965A0AE857637B5FCB89C46FF7FC298AC4F728A9DFE376BB-ParamInfo-HasProperty",
       "type": "rdfs:Datatype"
+    },
+    {
+      "id": "BH.oM.UI.ParamInfo.Kind",
+      "type": "owl:Class"
     },
     {
       "id": "HasDefaultValue-AEEA0E504FBFE9AFE94CDFA9AB23DBF5EBAE880BA2EABE7F7AF98DBE80771BBA-ParamInfo-HasProperty",
@@ -443,9 +483,15 @@
       "attributes": "datatype"
     },
     {
+      "id": "BH.oM.UI.ComponentRequest.Location",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/Geometry_oM/Vector/Point.cs",
+      "label": "Location",
+      "attributes": []
+    },
+    {
       "id": "BH.oM.Geometry.Point",
       "iri": "https://github.com/BHoM/BHoM/blob/main/Geometry_oM/Vector/Point.cs",
-      "label": "Location (Point)",
+      "label": "Point",
       "attributes": []
     },
     {
@@ -491,16 +537,46 @@
       "attributes": "datatype"
     },
     {
+      "id": "BH.oM.UI.ParamUpdated.Param",
+      "iri": "https://github.com/BHoM/BHoM_UI/blob/main/UI_Engine/Create/ParamInfo.cs",
+      "label": "Param",
+      "attributes": []
+    },
+    {
+      "id": "BH.oM.UI.ParamUpdated.OldParam",
+      "iri": "https://github.com/BHoM/BHoM_UI/blob/main/UI_Engine/Create/ParamInfo.cs",
+      "label": "OldParam",
+      "attributes": []
+    },
+    {
       "id": "Index-786683244C64B64C05EC321E6ABC032930A333A97DC1C4718208CF0484ED0988-ParamMoved-HasProperty",
       "iri": "http://www.w3.org/2001/XMLSchema#",
       "label": "Index (Int32)",
       "attributes": "datatype"
     },
     {
+      "id": "BH.oM.UI.ParamMoved.Param",
+      "iri": "https://github.com/BHoM/BHoM_UI/blob/main/UI_Engine/Create/ParamInfo.cs",
+      "label": "Param",
+      "attributes": []
+    },
+    {
+      "id": "BH.oM.UI.ParamRemoved.Param",
+      "iri": "https://github.com/BHoM/BHoM_UI/blob/main/UI_Engine/Create/ParamInfo.cs",
+      "label": "Param",
+      "attributes": []
+    },
+    {
       "id": "Index-F193F14B1045B1732D189E7C84070A47DEED2D0AE33A9D2A2914A6AD6BB7A777-ParamAdded-HasProperty",
       "iri": "http://www.w3.org/2001/XMLSchema#",
       "label": "Index (Int32)",
       "attributes": "datatype"
+    },
+    {
+      "id": "BH.oM.UI.ParamAdded.Param",
+      "iri": "https://github.com/BHoM/BHoM_UI/blob/main/UI_Engine/Create/ParamInfo.cs",
+      "label": "Param",
+      "attributes": []
     },
     {
       "id": "Name-7E3426575490C4D0D9C9CEB9155876FCBD3F697E0D5073D00A1737225B08BC9B-ComponentUpdate-HasProperty",
@@ -513,6 +589,18 @@
       "iri": "http://www.w3.org/2001/XMLSchema#",
       "label": "Description (String)",
       "attributes": "datatype"
+    },
+    {
+      "id": "BH.oM.UI.CallerUpdate.Cause",
+      "iri": "https://github.com/BHoM/BHoM_UI/blob/main/UI_oM/Updates/CallerUpdateCause.cs",
+      "label": "Cause",
+      "attributes": []
+    },
+    {
+      "id": "BH.oM.UI.CallerUpdate.ComponentUpdate",
+      "iri": "https://github.com/BHoM/BHoM_UI/blob/main/UI_oM/Updates/ComponentUpdate.cs",
+      "label": "ComponentUpdate",
+      "attributes": []
     },
     {
       "id": "InputUpdates-89D4B35FFF54602FDD9491779607205DED7102ECBF8FA469DEA5AB563F4F4476-CallerUpdate-HasProperty",
@@ -539,9 +627,15 @@
       "attributes": "datatype"
     },
     {
+      "id": "BH.oM.UI.ProjectIDEvent.Type",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/BHoM/Debugging/EventType.cs",
+      "label": "Type",
+      "attributes": []
+    },
+    {
       "id": "BH.oM.Base.Debugging.EventType",
       "iri": "https://github.com/BHoM/BHoM/blob/main/BHoM/Debugging/EventType.cs",
-      "label": "Type (EventType)",
+      "label": "EventType",
       "attributes": []
     },
     {
@@ -695,6 +789,12 @@
       "attributes": "datatype"
     },
     {
+      "id": "BH.oM.UI.ParamInfo.Kind",
+      "iri": "https://github.com/BHoM/BHoM_UI/blob/main/UI_oM/ParamKind.cs",
+      "label": "Kind",
+      "attributes": []
+    },
+    {
       "id": "HasDefaultValue-AEEA0E504FBFE9AFE94CDFA9AB23DBF5EBAE880BA2EABE7F7AF98DBE80771BBA-ParamInfo-HasProperty",
       "iri": "http://www.w3.org/2001/XMLSchema#",
       "label": "HasDefaultValue (Boolean)",
@@ -727,1504 +827,1624 @@
   ],
   "property": [
     {
-      "id": "DDF893BE3ACA8EAC44D5230B39AB0C3AD2EBFFD984E30ACE9409E93EAA1A3E32",
+      "id": "BH.oM.UI.ComponentRequest-BH.oM.RDF.HasProperty-System.Type CallerType",
       "type": "owl:DatatypeProperty"
     },
     {
-      "id": "948303B2EAE69CE4F87C95C3174699B7725C39CD3F3ECF9940136F35BD48E212",
+      "id": "BH.oM.UI.ComponentRequest-BH.oM.RDF.HasProperty-System.Object SelectedItem",
       "type": "owl:DatatypeProperty"
     },
     {
-      "id": "CCA52DB8D5F7A82337F08785FE525CD315DFEACEC43EEF33DB891F0D6E487A48",
+      "id": "BH.oM.UI.ComponentRequest.Location-IsA-BH.oM.Geometry.Point",
       "type": "owl:ObjectProperty"
     },
     {
-      "id": "0F26E137B910BC048D92E433F96EB53ED8F80BA832B5F7B472A7F7580AA013B9",
+      "id": "BH.oM.UI.ComponentRequest-BH.oM.RDF.HasProperty-BH.oM.Geometry.Point Location",
       "type": "owl:ObjectProperty"
     },
     {
-      "id": "D5512B197BB2665A1361055A155BE92CBC911A37D9EB44FC2E7482AAFA6EF1BE",
+      "id": "BH.oM.UI.ComponentRequest-BH.oM.RDF.IsA-BH.oM.Base.IBHoMObject",
       "type": "owl:ObjectProperty"
     },
     {
-      "id": "442806641AB27C7154F9FAF7A7C7F8BBAF3FF92E43E979352889E36363E2B8C8",
+      "id": "BH.oM.UI.ComponentRequest-BH.oM.RDF.IsA-BH.oM.Base.IObject",
       "type": "owl:ObjectProperty"
     },
     {
-      "id": "04EC7B963541818B19FEE5E9423941E156AB3C8DBDEBF0CC26948ECC814970B0",
+      "id": "BH.oM.UI.ComponentRequest-BH.oM.RDF.IsSubclassOf-BH.oM.Base.BHoMObject",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "BH.oM.UI.PreviousNamesFragment-BH.oM.RDF.HasProperty-System.Collections.Generic.List`1[System.String] OldNames",
       "type": "owl:DatatypeProperty"
     },
     {
-      "id": "60384E3A94E054460A57563B92ADA5725BD1A0B0315C42696C7A59D9D9365E2E",
+      "id": "BH.oM.UI.PreviousNamesFragment-BH.oM.RDF.IsA-BH.oM.Base.IFragment",
       "type": "owl:ObjectProperty"
     },
     {
-      "id": "4FE8116B1827935CD6146B17C09923CC3A553D8E1ECE57EB213BCCE3E89F7257",
+      "id": "BH.oM.UI.PreviousNamesFragment-BH.oM.RDF.IsA-BH.oM.Base.IObject",
       "type": "owl:ObjectProperty"
     },
     {
-      "id": "FBF6884704EC573F8DF47311CEEA98EC593B9B0CD690D4CDE27FE2862C651416",
+      "id": "BH.oM.UI.PreviousNamesFragment-BH.oM.RDF.IsSubclassOf-System.Object",
       "type": "owl:DatatypeProperty"
     },
     {
-      "id": "0E70827A2F6095635BB95F4E856F46F98E88C0BA8B06BEEF2FC8D476D9F32654",
+      "id": "BH.oM.UI.OutputsUpdate-BH.oM.RDF.HasProperty-System.Collections.Generic.List`1[BH.oM.UI.IParamUpdate] ParamUpdates",
       "type": "owl:ObjectProperty"
     },
     {
-      "id": "74045CA8C86B8C760D44DAAB7E187F9D6E2F0DB5B5E45379445BBBA2A91720FC",
+      "id": "BH.oM.UI.OutputsUpdate-BH.oM.RDF.IsA-BH.oM.Base.IBHoMObject",
       "type": "owl:ObjectProperty"
     },
     {
-      "id": "9A8B922B8C51A50ED31DA18992FF8FC6C68D6F6291B0C44349E0CE54F895A421",
+      "id": "BH.oM.UI.OutputsUpdate-BH.oM.RDF.IsA-BH.oM.Base.IObject",
       "type": "owl:ObjectProperty"
     },
     {
-      "id": "5ED92996FE8AE963C6EC23BDC928A5F6FFDBCBCBDF2D8AA56EC48E35D0EE3CC8",
+      "id": "BH.oM.UI.OutputsUpdate-BH.oM.RDF.IsA-BH.oM.UI.IUpdate",
       "type": "owl:ObjectProperty"
     },
     {
-      "id": "7442A21F288C35B9EBF668C02E7D90E4A133AC5797A837D5ECE9DAD485589ECE",
+      "id": "BH.oM.UI.OutputsUpdate-BH.oM.RDF.IsSubclassOf-BH.oM.Base.BHoMObject",
       "type": "owl:ObjectProperty"
     },
     {
-      "id": "93C90CF625C7958085650C63767F6F30C2A4BED93C206726413DEBE1E3BDCC59",
+      "id": "BH.oM.UI.InputsUpdate-BH.oM.RDF.HasProperty-System.Collections.Generic.List`1[BH.oM.UI.IParamUpdate] ParamUpdates",
       "type": "owl:ObjectProperty"
     },
     {
-      "id": "C026E56F0DBB428799700B74C59F401F5DDEF0FD61D25C5AA97473A5711F65E9",
+      "id": "BH.oM.UI.InputsUpdate-BH.oM.RDF.IsA-BH.oM.Base.IBHoMObject",
       "type": "owl:ObjectProperty"
     },
     {
-      "id": "A92C1CD3EA2B5320B62286B90F3105FE3E2E97B43F9152E866392E109E46C3D4",
+      "id": "BH.oM.UI.InputsUpdate-BH.oM.RDF.IsA-BH.oM.Base.IObject",
       "type": "owl:ObjectProperty"
     },
     {
-      "id": "E731CD39487CD8FC6F8959F10B7C811D2C7CECCEB9FD172B7330AA52D9B54E24",
+      "id": "BH.oM.UI.InputsUpdate-BH.oM.RDF.IsA-BH.oM.UI.IUpdate",
       "type": "owl:ObjectProperty"
     },
     {
-      "id": "3F57A32A851FB1FD5E556186AB4C842EF4FA0CBB7B312309D37CF4167D8F2CB3",
+      "id": "BH.oM.UI.InputsUpdate-BH.oM.RDF.IsSubclassOf-BH.oM.Base.BHoMObject",
       "type": "owl:ObjectProperty"
     },
     {
-      "id": "2F881AC6F7F09D637240BAEBB0638912BACF23CF568194A23DCEC14A3A3869C4",
+      "id": "BH.oM.UI.ParamUpdated.Param-IsA-BH.oM.UI.ParamInfo",
       "type": "owl:ObjectProperty"
     },
     {
-      "id": "B059DCCEA204D26B11E7EA4432D6C072D8458FD874F1BEF23A1038323ED13B7F",
+      "id": "BH.oM.UI.ParamUpdated-BH.oM.RDF.HasProperty-BH.oM.UI.ParamInfo Param",
       "type": "owl:ObjectProperty"
     },
     {
-      "id": "BC3EFE6144EDB685BFBCB02ED1DB8EBEA409C83931432E1F830213BF81138AC9",
+      "id": "BH.oM.UI.ParamUpdated.OldParam-IsA-BH.oM.UI.ParamInfo",
       "type": "owl:ObjectProperty"
     },
     {
-      "id": "D5B6F2CA7F25D974FF2564377033A47EBED8959964542FC0D5D50E1CE9586A89",
+      "id": "BH.oM.UI.ParamUpdated-BH.oM.RDF.HasProperty-BH.oM.UI.ParamInfo OldParam",
       "type": "owl:ObjectProperty"
     },
     {
-      "id": "7D4BEFD6DAF93D9BC7F2143578661F6ECFBD696FEF3423A99D4C04FEF9979327",
+      "id": "BH.oM.UI.ParamUpdated-BH.oM.RDF.IsA-BH.oM.Base.IBHoMObject",
       "type": "owl:ObjectProperty"
     },
     {
-      "id": "608B60C97C92A1E3A6B7148729EEB6F28F8108B7EA841BAA148E13604F9363B7",
+      "id": "BH.oM.UI.ParamUpdated-BH.oM.RDF.IsA-BH.oM.Base.IObject",
       "type": "owl:ObjectProperty"
     },
     {
-      "id": "0181077BFF32DFF4E4230ACE786842091F37A70EE7585B3EF4304A48D9D9ABEB",
+      "id": "BH.oM.UI.ParamUpdated-BH.oM.RDF.IsA-BH.oM.UI.IParamUpdate",
       "type": "owl:ObjectProperty"
     },
     {
-      "id": "786683244C64B64C05EC321E6ABC032930A333A97DC1C4718208CF0484ED0988",
+      "id": "BH.oM.UI.ParamUpdated-BH.oM.RDF.IsA-BH.oM.UI.IUpdate",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "BH.oM.UI.ParamUpdated-BH.oM.RDF.IsSubclassOf-BH.oM.Base.BHoMObject",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "BH.oM.UI.ParamMoved-BH.oM.RDF.HasProperty-Int32 Index",
       "type": "owl:DatatypeProperty"
     },
     {
-      "id": "C5F87A4622004E8D4097C156BFA897A962A8ECA5F74AF098A3036EC8DE7D515C",
+      "id": "BH.oM.UI.ParamMoved.Param-IsA-BH.oM.UI.ParamInfo",
       "type": "owl:ObjectProperty"
     },
     {
-      "id": "BC74C16AA3A59310CE01D3424D7EFD891EE32FB434557E027138DFFEFDA61E25",
+      "id": "BH.oM.UI.ParamMoved-BH.oM.RDF.HasProperty-BH.oM.UI.ParamInfo Param",
       "type": "owl:ObjectProperty"
     },
     {
-      "id": "656537F2A9ACA99EFCB2240892E7437F48F20B04A069ECE5CDED508892E1224B",
+      "id": "BH.oM.UI.ParamMoved-BH.oM.RDF.IsA-BH.oM.Base.IBHoMObject",
       "type": "owl:ObjectProperty"
     },
     {
-      "id": "45C2481437B9EAED79C6B0C85E5BB72B3A2ECBB60EC853A2B1836894BFF82631",
+      "id": "BH.oM.UI.ParamMoved-BH.oM.RDF.IsA-BH.oM.Base.IObject",
       "type": "owl:ObjectProperty"
     },
     {
-      "id": "1EE9D483CBE89DBAE18203A88693BC5D7F75F6BF59FC0AF8713EB037B5342EFF",
+      "id": "BH.oM.UI.ParamMoved-BH.oM.RDF.IsA-BH.oM.UI.IParamUpdate",
       "type": "owl:ObjectProperty"
     },
     {
-      "id": "BA4230D3CE251DE2CF350BEFB580ECB925CE941E8412B755E64E5C70B32E4440",
+      "id": "BH.oM.UI.ParamMoved-BH.oM.RDF.IsA-BH.oM.UI.IUpdate",
       "type": "owl:ObjectProperty"
     },
     {
-      "id": "59F877E1092E66F167ED9BF3D34A7720E78C32664112274E00548F53E4505E71",
+      "id": "BH.oM.UI.ParamMoved-BH.oM.RDF.IsSubclassOf-BH.oM.Base.BHoMObject",
       "type": "owl:ObjectProperty"
     },
     {
-      "id": "C9A96D1266FD65928115186EEB1F51E0348188740E7E2B65ACD7DE7423AE17B5",
+      "id": "BH.oM.UI.ParamRemoved.Param-IsA-BH.oM.UI.ParamInfo",
       "type": "owl:ObjectProperty"
     },
     {
-      "id": "3E29A80237E846769714E5639B2206E4C125063FDC5E574E024BBC57D699FABD",
+      "id": "BH.oM.UI.ParamRemoved-BH.oM.RDF.HasProperty-BH.oM.UI.ParamInfo Param",
       "type": "owl:ObjectProperty"
     },
     {
-      "id": "4E94072642017F5975B6FC645FFB36BAD4DDA90003C602C9A33942D3B2769D8A",
+      "id": "BH.oM.UI.ParamRemoved-BH.oM.RDF.IsA-BH.oM.Base.IBHoMObject",
       "type": "owl:ObjectProperty"
     },
     {
-      "id": "470E3DF6AE31E24EAD91ED1E9C4AB10D1E367B944DC7976EE2C703F7B3826A96",
+      "id": "BH.oM.UI.ParamRemoved-BH.oM.RDF.IsA-BH.oM.Base.IObject",
       "type": "owl:ObjectProperty"
     },
     {
-      "id": "7A7A8CD1A5D7AE11458FBA5B116CD7EA4EB642742DB6D1AC3BCDE1EF0A004F42",
+      "id": "BH.oM.UI.ParamRemoved-BH.oM.RDF.IsA-BH.oM.UI.IParamUpdate",
       "type": "owl:ObjectProperty"
     },
     {
-      "id": "F193F14B1045B1732D189E7C84070A47DEED2D0AE33A9D2A2914A6AD6BB7A777",
+      "id": "BH.oM.UI.ParamRemoved-BH.oM.RDF.IsA-BH.oM.UI.IUpdate",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "BH.oM.UI.ParamRemoved-BH.oM.RDF.IsSubclassOf-BH.oM.Base.BHoMObject",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "BH.oM.UI.ParamAdded-BH.oM.RDF.HasProperty-Int32 Index",
       "type": "owl:DatatypeProperty"
     },
     {
-      "id": "CDCD1ED72F107BB1F7E94A1E40C081C1F2D478CCC66B42158B2B3CF1B4A9A22A",
+      "id": "BH.oM.UI.ParamAdded.Param-IsA-BH.oM.UI.ParamInfo",
       "type": "owl:ObjectProperty"
     },
     {
-      "id": "1F76D2ED65880A961B943A02D37FACD5F0741BEAF5C9F9648357EB4E20D8125A",
+      "id": "BH.oM.UI.ParamAdded-BH.oM.RDF.HasProperty-BH.oM.UI.ParamInfo Param",
       "type": "owl:ObjectProperty"
     },
     {
-      "id": "901549894E92BC59EBA489D3DDB8833CBD1C65E72F1D71D4C4352FEB7181638C",
+      "id": "BH.oM.UI.ParamAdded-BH.oM.RDF.IsA-BH.oM.Base.IBHoMObject",
       "type": "owl:ObjectProperty"
     },
     {
-      "id": "B86B3592007234E9D8C27AA4555A0052BB1F011FB0925FFCD55EAC02288445C5",
+      "id": "BH.oM.UI.ParamAdded-BH.oM.RDF.IsA-BH.oM.Base.IObject",
       "type": "owl:ObjectProperty"
     },
     {
-      "id": "51100CD941D2CD429F600F9B8F4C082C7EA7A973596F10B4AEEC09441C1F58ED",
+      "id": "BH.oM.UI.ParamAdded-BH.oM.RDF.IsA-BH.oM.UI.IParamUpdate",
       "type": "owl:ObjectProperty"
     },
     {
-      "id": "437CAF685D40ECA9FC8352A2BA7F3A884A2C575AC843FC3EEC41C39F78F6EB55",
+      "id": "BH.oM.UI.ParamAdded-BH.oM.RDF.IsA-BH.oM.UI.IUpdate",
       "type": "owl:ObjectProperty"
     },
     {
-      "id": "B600BF0FEA0E55E8F2A6A50FA3773EF0D05F66E1BEC9E0B580ED98831FFE4F86",
+      "id": "BH.oM.UI.ParamAdded-BH.oM.RDF.IsSubclassOf-BH.oM.Base.BHoMObject",
       "type": "owl:ObjectProperty"
     },
     {
-      "id": "B6F5B815E5510DD7DE4BA8DF5100FDEF3EC84CF448B4E1433EA847444CFFEDAF",
+      "id": "BH.oM.UI.IParamUpdate-BH.oM.RDF.RequiresProperty-BH.oM.UI.ParamInfo Param",
       "type": "owl:ObjectProperty"
     },
     {
-      "id": "7E3426575490C4D0D9C9CEB9155876FCBD3F697E0D5073D00A1737225B08BC9B",
+      "id": "BH.oM.UI.IParamUpdate-BH.oM.RDF.IsA-BH.oM.UI.IUpdate",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "BH.oM.UI.ComponentUpdate-BH.oM.RDF.HasProperty-System.String Name",
       "type": "owl:DatatypeProperty"
     },
     {
-      "id": "BFAAD018C9CF0E88A5ACE08F9FC38DAB5375823846770D30D6562489B33FCF78",
+      "id": "BH.oM.UI.ComponentUpdate-BH.oM.RDF.HasProperty-System.String Description",
       "type": "owl:DatatypeProperty"
     },
     {
-      "id": "B5D84F4FEDAD5A1B8D07FA2AB12430A6DC36F623877487E7A6DE7A060D22AE5E",
+      "id": "BH.oM.UI.ComponentUpdate-BH.oM.RDF.IsA-BH.oM.Base.IBHoMObject",
       "type": "owl:ObjectProperty"
     },
     {
-      "id": "51734E4D7C197A2E70E5B2B91B7F991CB6D0CD84298AD0900DB64B2DBBBB283D",
+      "id": "BH.oM.UI.ComponentUpdate-BH.oM.RDF.IsA-BH.oM.Base.IObject",
       "type": "owl:ObjectProperty"
     },
     {
-      "id": "F03E9268BE4904D47F1350704F5E1737E08270DC99766A2CC28364C740F942DF",
+      "id": "BH.oM.UI.ComponentUpdate-BH.oM.RDF.IsA-BH.oM.UI.IUpdate",
       "type": "owl:ObjectProperty"
     },
     {
-      "id": "41BEE3C0945A18D60DB581396F926153EFF2DBAC1449370699C053554BEDC29A",
+      "id": "BH.oM.UI.ComponentUpdate-BH.oM.RDF.IsSubclassOf-BH.oM.Base.BHoMObject",
       "type": "owl:ObjectProperty"
     },
     {
-      "id": "000C3724353973E85E0048FAFE094ADADD97100BA21C7299F789FF4B7C6C5873",
+      "id": "BH.oM.UI.CallerUpdate.Cause-IsA-BH.oM.UI.CallerUpdateCause",
       "type": "owl:ObjectProperty"
     },
     {
-      "id": "5D263FE3606C4ABE177A677F9630C513C2D120B48F6CCE8E2762540279024BD1",
+      "id": "BH.oM.UI.CallerUpdate-BH.oM.RDF.HasProperty-BH.oM.UI.CallerUpdateCause Cause",
       "type": "owl:ObjectProperty"
     },
     {
-      "id": "89D4B35FFF54602FDD9491779607205DED7102ECBF8FA469DEA5AB563F4F4476",
+      "id": "BH.oM.UI.CallerUpdate.ComponentUpdate-IsA-BH.oM.UI.ComponentUpdate",
       "type": "owl:ObjectProperty"
     },
     {
-      "id": "B8058939BD0E15D173E99F46F1FF361369DAE439693F8ABAD6FF5786B038954E",
+      "id": "BH.oM.UI.CallerUpdate-BH.oM.RDF.HasProperty-BH.oM.UI.ComponentUpdate ComponentUpdate",
       "type": "owl:ObjectProperty"
     },
     {
-      "id": "977632A1426133F23E7044E97500CCF1AD62D148C7CE8E17B76BD7F6745B077F",
+      "id": "BH.oM.UI.CallerUpdate-BH.oM.RDF.HasProperty-System.Collections.Generic.List`1[BH.oM.UI.IParamUpdate] InputUpdates",
       "type": "owl:ObjectProperty"
     },
     {
-      "id": "A715DAA46481738CAD912EE950AF9477BBA223B1735B33C4F541E3465D0D3EF4",
+      "id": "BH.oM.UI.CallerUpdate-BH.oM.RDF.HasProperty-System.Collections.Generic.List`1[BH.oM.UI.IParamUpdate] OutputUpdates",
       "type": "owl:ObjectProperty"
     },
     {
-      "id": "11CADF1FA0F8E9061D7852C494D97DE60EF41E6FE9704C893F8DDD9C2D761BDE",
+      "id": "BH.oM.UI.CallerUpdate-BH.oM.RDF.IsA-BH.oM.Base.IBHoMObject",
       "type": "owl:ObjectProperty"
     },
     {
-      "id": "F4B4169647AA089181B87A02B6D9DAAA451D829ADAF8632046BDFA72A3C5350E",
+      "id": "BH.oM.UI.CallerUpdate-BH.oM.RDF.IsA-BH.oM.Base.IObject",
       "type": "owl:ObjectProperty"
     },
     {
-      "id": "47EB04D6C83086474198FF42D0A00E310CEF18A41CE90625E8D3F20BE24F2FDE",
-      "type": "owl:DatatypeProperty"
-    },
-    {
-      "id": "1EEB6DF1F803E62BBE5AC8B45217DBEC15EB6E68AF09CF01768FEE32D472D80C",
-      "type": "owl:DatatypeProperty"
-    },
-    {
-      "id": "1DFF24F5F03BCEC64E8480442CFD862E8BE1DAEED650EC4F0ECA7E35F593DA01",
-      "type": "owl:DatatypeProperty"
-    },
-    {
-      "id": "6B2B38A28FF90E04E6768ADC29FE06F33BD124405C78539278DA55ADBDFD95A1",
-      "type": "owl:DatatypeProperty"
-    },
-    {
-      "id": "BC98F8676443EAD0F3208EA367899BA2A4120890648902E45778039EDE9629BF",
-      "type": "owl:DatatypeProperty"
-    },
-    {
-      "id": "04B45327B4EE14156D15130BDA3B15ADF55E3CAB7CB2CEB8B067D38F61FC2F60",
+      "id": "BH.oM.UI.CallerUpdate-BH.oM.RDF.IsA-BH.oM.UI.IUpdate",
       "type": "owl:ObjectProperty"
     },
     {
-      "id": "3C05C11E0C9AAAA8AF116EDB7F28D8B9DAD23C5945FFC44EBA8C365F265DBAE8",
+      "id": "BH.oM.UI.CallerUpdate-BH.oM.RDF.IsSubclassOf-BH.oM.Base.BHoMObject",
       "type": "owl:ObjectProperty"
     },
     {
-      "id": "7DED3AF63196A140B5D01A62177ECDBDEF48B45F4A175B0F65EFA47C45A9AAC5",
+      "id": "BH.oM.UI.CallerUpdateCause-BH.oM.RDF.IsA-System.IComparable",
       "type": "owl:DatatypeProperty"
     },
     {
-      "id": "78E7A93429353ED24DC92E0A0F3AB8563E9CE2129BC6ACC5056374459E1B472B",
+      "id": "BH.oM.UI.CallerUpdateCause-BH.oM.RDF.IsA-System.IFormattable",
+      "type": "owl:DatatypeProperty"
+    },
+    {
+      "id": "BH.oM.UI.CallerUpdateCause-BH.oM.RDF.IsA-System.IConvertible",
+      "type": "owl:DatatypeProperty"
+    },
+    {
+      "id": "BH.oM.UI.CallerUpdateCause-BH.oM.RDF.IsSubclassOf-System.Enum",
+      "type": "owl:DatatypeProperty"
+    },
+    {
+      "id": "BH.oM.UI.IInitialisationSettings-BH.oM.RDF.RequiresProperty-System.String InitialisationMethod",
+      "type": "owl:DatatypeProperty"
+    },
+    {
+      "id": "BH.oM.UI.IInitialisationSettings-BH.oM.RDF.IsA-BH.oM.Base.IImmutable",
       "type": "owl:ObjectProperty"
     },
     {
-      "id": "E88A8B0B6BAC46158AE7229C913D84212BD22C1BEDEEA4B834AA7803BAD260FB",
+      "id": "BH.oM.UI.IInitialisationSettings-BH.oM.RDF.IsA-BH.oM.Base.IObject",
       "type": "owl:ObjectProperty"
     },
     {
-      "id": "1290920D213CB0D982B5D838184182C4167848F30262232743335E128F717F6B",
+      "id": "BH.oM.UI.ProjectIDEvent-BH.oM.RDF.HasProperty-System.String ProjectID",
+      "type": "owl:DatatypeProperty"
+    },
+    {
+      "id": "BH.oM.UI.ProjectIDEvent.Type-IsA-BH.oM.Base.Debugging.EventType",
       "type": "owl:ObjectProperty"
     },
     {
-      "id": "9DC846BF9327D4EEB1D0E2CB9F084C5E54C905D80076C1590B60CDD04519FCC7",
+      "id": "BH.oM.UI.ProjectIDEvent-BH.oM.RDF.HasProperty-BH.oM.Base.Debugging.EventType Type",
       "type": "owl:ObjectProperty"
     },
     {
-      "id": "EA1DC9E2E0AAB45243F42BEAD444B5584E5DFC4649C9A237D8D81A8884CCACB2",
-      "type": "owl:DatatypeProperty"
-    },
-    {
-      "id": "F137C129714D34F280192E8ABAC847D63B615F2FDC17A6A6EBA2B743B2AB7A03",
-      "type": "owl:DatatypeProperty"
-    },
-    {
-      "id": "C162E287C8DBEB7843B3F45151F84FB69786311DFC1A7EE4E86B4171A9C1A468",
-      "type": "owl:DatatypeProperty"
-    },
-    {
-      "id": "193C2AA2BF9D2D8912B888073766F8AB1E1A65513E47D77B1BD17E576C978747",
-      "type": "owl:DatatypeProperty"
-    },
-    {
-      "id": "7324243C25C14C342384F07A52DF10EDC0993B9D5C0056B25396CFF48A0479BE",
-      "type": "owl:DatatypeProperty"
-    },
-    {
-      "id": "99B4C9574D216BCDFC11DA0388C2A1B530953C1C61F1D2FFA510814A2F604E7C",
-      "type": "owl:DatatypeProperty"
-    },
-    {
-      "id": "AF018A3E6DCC496E574EBF0738BB529C46F22B7EFEA65DDE89B9CE7F0A271B7F",
-      "type": "owl:DatatypeProperty"
-    },
-    {
-      "id": "FCDEE424B4FB589E50F082B00ECD8335899055937B8CBFD49AFD9A89751ABFC0",
-      "type": "owl:DatatypeProperty"
-    },
-    {
-      "id": "0644B239A2707990E98FB7831822C3FEF7A740ADBB2F09FCEF723F118DE0EDB0",
-      "type": "owl:DatatypeProperty"
-    },
-    {
-      "id": "E082917F4F0D0D7C03708DBF7A220F41732D31A5DD175A475D29099A7392798D",
-      "type": "owl:DatatypeProperty"
-    },
-    {
-      "id": "AF3B5ECDA994FB73B4CD93EB1C21AA2FAA2576E50388BCFA64AAE40189AB2F5C",
+      "id": "BH.oM.UI.ProjectIDEvent-BH.oM.RDF.IsA-BH.oM.Base.IBHoMObject",
       "type": "owl:ObjectProperty"
     },
     {
-      "id": "6E7B16E899690CA90E67CFD3BD2DA68EE91C6725FEF011C116963DFCC216B606",
+      "id": "BH.oM.UI.ProjectIDEvent-BH.oM.RDF.IsA-BH.oM.Base.IObject",
       "type": "owl:ObjectProperty"
     },
     {
-      "id": "A245469A7D64E0C2066131752B1ADB3C2C26677753EB1DDAC288E9FD7EB5FFD6",
+      "id": "BH.oM.UI.ProjectIDEvent-BH.oM.RDF.IsSubclassOf-BH.oM.Base.Debugging.Event",
       "type": "owl:ObjectProperty"
     },
     {
-      "id": "08A6B887DE07DFADA3A1B1645AB5E57609A4D00EBF3CEC541EFB5723A447202D",
+      "id": "BH.oM.UI.UsageLogEntry-BH.oM.RDF.HasProperty-System.DateTime Time",
+      "type": "owl:DatatypeProperty"
+    },
+    {
+      "id": "BH.oM.UI.UsageLogEntry-BH.oM.RDF.HasProperty-System.String UI",
+      "type": "owl:DatatypeProperty"
+    },
+    {
+      "id": "BH.oM.UI.UsageLogEntry-BH.oM.RDF.HasProperty-System.String UiVersion",
+      "type": "owl:DatatypeProperty"
+    },
+    {
+      "id": "BH.oM.UI.UsageLogEntry-BH.oM.RDF.HasProperty-System.String BHoMVersion",
+      "type": "owl:DatatypeProperty"
+    },
+    {
+      "id": "BH.oM.UI.UsageLogEntry-BH.oM.RDF.HasProperty-System.Guid ComponentId",
+      "type": "owl:DatatypeProperty"
+    },
+    {
+      "id": "BH.oM.UI.UsageLogEntry-BH.oM.RDF.HasProperty-System.String CallerName",
+      "type": "owl:DatatypeProperty"
+    },
+    {
+      "id": "BH.oM.UI.UsageLogEntry-BH.oM.RDF.HasProperty-System.Object SelectedItem",
+      "type": "owl:DatatypeProperty"
+    },
+    {
+      "id": "BH.oM.UI.UsageLogEntry-BH.oM.RDF.HasProperty-System.String FileId",
+      "type": "owl:DatatypeProperty"
+    },
+    {
+      "id": "BH.oM.UI.UsageLogEntry-BH.oM.RDF.HasProperty-System.String FileName",
+      "type": "owl:DatatypeProperty"
+    },
+    {
+      "id": "BH.oM.UI.UsageLogEntry-BH.oM.RDF.HasProperty-System.String ProjectID",
+      "type": "owl:DatatypeProperty"
+    },
+    {
+      "id": "BH.oM.UI.UsageLogEntry-BH.oM.RDF.HasProperty-System.Collections.Generic.List`1[BH.oM.Base.Debugging.Event] Errors",
       "type": "owl:ObjectProperty"
     },
     {
-      "id": "55CC1CB3760B55173B186D2DFF4833F3E1BFE17C3EB4D74D99EEC0BC8DBF664C",
-      "type": "owl:DatatypeProperty"
-    },
-    {
-      "id": "FB5690AA2997315826216C357DD56330BAA29CF8F22ADCDD138D65869503C455",
+      "id": "BH.oM.UI.UsageLogEntry-BH.oM.RDF.IsA-BH.oM.Base.IBHoMObject",
       "type": "owl:ObjectProperty"
     },
     {
-      "id": "97CE900111CE650413E942A50D9D9AFD2DEEC540D956CDC898207AA41CBDB3A0",
+      "id": "BH.oM.UI.UsageLogEntry-BH.oM.RDF.IsA-BH.oM.Base.IObject",
       "type": "owl:ObjectProperty"
     },
     {
-      "id": "095E036C5044FF0013AAC929C9C8D434C2EC41CD5B75F6ADE7C44C03981E762D",
-      "type": "owl:DatatypeProperty"
-    },
-    {
-      "id": "3F5FE391F2B6D075540380FDC9E92EE5C392346E6DC3C4C4C15EA75154C7C71A",
-      "type": "owl:DatatypeProperty"
-    },
-    {
-      "id": "E7CE7B10AD6147B9B1D1A421AD73E9701025F95C46B8BA3FD54B1AD1D5D41A25",
-      "type": "owl:DatatypeProperty"
-    },
-    {
-      "id": "C7B02E3CEF3DCC5ABD89816ABE569639DB0F387811C9FD1262CD9CC2A20A01E6",
-      "type": "owl:DatatypeProperty"
-    },
-    {
-      "id": "9B7DCEE568293188E10F350DD1A3ADAB736A2927164F2548FCE9D838ED810720",
+      "id": "BH.oM.UI.UsageLogEntry-BH.oM.RDF.IsSubclassOf-BH.oM.Base.BHoMObject",
       "type": "owl:ObjectProperty"
     },
     {
-      "id": "F09FC27CC60200CEAF39314A43CAE3AF7CDB28F5A41F983DF7333DA0829C92FE",
+      "id": "BH.oM.UI.ParamOldIndexFragment-BH.oM.RDF.HasProperty-Int32 OldIndex",
+      "type": "owl:DatatypeProperty"
+    },
+    {
+      "id": "BH.oM.UI.ParamOldIndexFragment-BH.oM.RDF.IsA-BH.oM.Base.IFragment",
       "type": "owl:ObjectProperty"
     },
     {
-      "id": "82A9EA9B7CCD18BF1885B6FE5E2F68726FE998F379F226CEA30EE86F4143CB2E",
+      "id": "BH.oM.UI.ParamOldIndexFragment-BH.oM.RDF.IsA-BH.oM.Base.IObject",
       "type": "owl:ObjectProperty"
     },
     {
-      "id": "76DEDFB3A1772CC14C961005E178BBE35B1AB252FF1ACADD679D657D11888AE5",
+      "id": "BH.oM.UI.ParamOldIndexFragment-BH.oM.RDF.IsSubclassOf-System.Object",
       "type": "owl:DatatypeProperty"
     },
     {
-      "id": "28594CCF5C7D2656633C721C35A20964D04C0F0B1F073394C8ED632CCAE84BE9",
+      "id": "BH.oM.UI.CustomItem-BH.oM.RDF.HasProperty-System.Collections.Generic.List`1[System.Type] InputTypes",
       "type": "owl:DatatypeProperty"
     },
     {
-      "id": "478A238914444D4AF52795633580149CE22CCE1351A156EE64C646E247060019",
+      "id": "BH.oM.UI.CustomItem-BH.oM.RDF.HasProperty-System.Collections.Generic.List`1[System.Type] OutputTypes",
+      "type": "owl:DatatypeProperty"
+    },
+    {
+      "id": "BH.oM.UI.CustomItem-BH.oM.RDF.HasProperty-System.Object Content",
+      "type": "owl:DatatypeProperty"
+    },
+    {
+      "id": "BH.oM.UI.CustomItem-BH.oM.RDF.IsA-BH.oM.Base.IBHoMObject",
       "type": "owl:ObjectProperty"
     },
     {
-      "id": "9EC566F6FD66A68940DF66D9ABDCD03C6ADBD1AA5CBAF3C477FD33F8E04C98E4",
+      "id": "BH.oM.UI.CustomItem-BH.oM.RDF.IsA-BH.oM.Base.IObject",
       "type": "owl:ObjectProperty"
     },
     {
-      "id": "03208E191FDBF4E2CF77A848BC50CBC4F6A8F43294587B5F19A1698C2BDCD9F4",
+      "id": "BH.oM.UI.CustomItem-BH.oM.RDF.IsSubclassOf-BH.oM.Base.BHoMObject",
       "type": "owl:ObjectProperty"
     },
     {
-      "id": "CF1AFD000C89F5A021FAEBE90C04465DA3AC90AE53375EAB7C6EFF270D32FB33",
+      "id": "BH.oM.UI.SearchConfig-BH.oM.RDF.HasProperty-System.Type TypeConstraint",
       "type": "owl:DatatypeProperty"
     },
     {
-      "id": "C2E2754DAC8084E809E6302CF7DC98BEC9B0CE29BD3F4965BFB7614A79DB7499",
+      "id": "BH.oM.UI.SearchConfig-BH.oM.RDF.HasProperty-Boolean IsReturnType",
       "type": "owl:DatatypeProperty"
     },
     {
-      "id": "E8437F99E7BE875260738F1F948C70E8C7BD611966776C721D96F9D4C479712F",
-      "type": "owl:DatatypeProperty"
-    },
-    {
-      "id": "85667036EBC797FD70A91B17F5E61DE97172441C11F58D264B0614F419D0B5F8",
-      "type": "owl:DatatypeProperty"
-    },
-    {
-      "id": "9C569A5D968275F8412911FC525E0362E49BB3604ED33F4785D4055B7617889E",
-      "type": "owl:DatatypeProperty"
-    },
-    {
-      "id": "FFC3F03EF2F86C12BE1E316C972A56E5AB1A557569CE84E93144023101FA4618",
+      "id": "BH.oM.UI.SearchConfig-BH.oM.RDF.IsA-BH.oM.Base.IBHoMObject",
       "type": "owl:ObjectProperty"
     },
     {
-      "id": "E5D224EAE77A674A8C89844A53F5962C9781406D56C0339D05CBCB10F924CC38",
+      "id": "BH.oM.UI.SearchConfig-BH.oM.RDF.IsA-BH.oM.Base.IObject",
       "type": "owl:ObjectProperty"
     },
     {
-      "id": "B521FC4135352076678CE1120C7F47C93E4E00FE918BEAED94CC198F909445D6",
+      "id": "BH.oM.UI.SearchConfig-BH.oM.RDF.IsSubclassOf-BH.oM.Base.BHoMObject",
       "type": "owl:ObjectProperty"
     },
     {
-      "id": "B4F0FF87906A11BDAC2F29D56F2A083D56357A8298F9355F648CD2387AC1E1C8",
+      "id": "BH.oM.UI.SearchItem-BH.oM.RDF.HasProperty-System.Type CallerType",
       "type": "owl:DatatypeProperty"
     },
     {
-      "id": "05C07315CFCC982DB8600D8D6B2BE500DDCDFB08FFDB2030B0BEA2E581842B0D",
+      "id": "BH.oM.UI.SearchItem-BH.oM.RDF.HasProperty-System.Object Item",
       "type": "owl:DatatypeProperty"
     },
     {
-      "id": "1814435F7866B367A1BC3EF2F08B54735ECC737F183FA97EF37C90FC4EFDEE31",
+      "id": "BH.oM.UI.SearchItem-BH.oM.RDF.HasProperty-System.Drawing.Bitmap Icon",
       "type": "owl:DatatypeProperty"
     },
     {
-      "id": "B6E0D7A9016B412DC6D386725C426F7A9B855B973AA8D0693754138D75DF327F",
+      "id": "BH.oM.UI.SearchItem-BH.oM.RDF.HasProperty-System.String Text",
       "type": "owl:DatatypeProperty"
     },
     {
-      "id": "9DF4C2C7B3576FABD21091409D9297FC81693F5FDC3B0FA63F1B4E6262B9D923",
+      "id": "BH.oM.UI.SearchItem-BH.oM.RDF.HasProperty-Double Weight",
       "type": "owl:DatatypeProperty"
     },
     {
-      "id": "F60A3D16D3861AA2965A0AE857637B5FCB89C46FF7FC298AC4F728A9DFE376BB",
-      "type": "owl:DatatypeProperty"
-    },
-    {
-      "id": "A19F93DD05DD9DC62B6115EA2A4BBA5DA391EA6DC262E09403C96BC81185B03D",
+      "id": "BH.oM.UI.SearchItem-BH.oM.RDF.IsA-BH.oM.Base.IBHoMObject",
       "type": "owl:ObjectProperty"
     },
     {
-      "id": "AEEA0E504FBFE9AFE94CDFA9AB23DBF5EBAE880BA2EABE7F7AF98DBE80771BBA",
-      "type": "owl:DatatypeProperty"
-    },
-    {
-      "id": "F70BF0BB3F8351CFA8DB9EF43D812123E6527853B71F8B20BB41E24FA1C6390E",
-      "type": "owl:DatatypeProperty"
-    },
-    {
-      "id": "3F677BBCB033750BDA41D03DD4D60C3E609C65DBCD6250E173FA0A513BF2E2A8",
-      "type": "owl:DatatypeProperty"
-    },
-    {
-      "id": "0640EB17375E1294B1F084B77DB2D3FE29AF3F52550F17CFBA810205D36DF7A6",
-      "type": "owl:DatatypeProperty"
-    },
-    {
-      "id": "E5EF04E094D5DC984109018AB49E5CDE18FB04175E08D7710E8A81A8E7A9FE08",
-      "type": "owl:DatatypeProperty"
-    },
-    {
-      "id": "9B35329E4BEF9636C31BA20CB125DF2FC8C7C01FFD9FFE19682E79C26F6DC172",
+      "id": "BH.oM.UI.SearchItem-BH.oM.RDF.IsA-BH.oM.Base.IObject",
       "type": "owl:ObjectProperty"
     },
     {
-      "id": "583E0CF8F4913B312FD5CE0A22329E058A8AB7AD3565C2CAC17CC3E1718A783E",
+      "id": "BH.oM.UI.SearchItem-BH.oM.RDF.IsSubclassOf-BH.oM.Base.BHoMObject",
       "type": "owl:ObjectProperty"
     },
     {
-      "id": "0DACC7721251F72CFC8338E0984C5F9B5F85664DDAF51132C2BA3DD7EC6A321F",
+      "id": "BH.oM.UI.ParamKind-BH.oM.RDF.IsA-System.IComparable",
+      "type": "owl:DatatypeProperty"
+    },
+    {
+      "id": "BH.oM.UI.ParamKind-BH.oM.RDF.IsA-System.IFormattable",
+      "type": "owl:DatatypeProperty"
+    },
+    {
+      "id": "BH.oM.UI.ParamKind-BH.oM.RDF.IsA-System.IConvertible",
+      "type": "owl:DatatypeProperty"
+    },
+    {
+      "id": "BH.oM.UI.ParamKind-BH.oM.RDF.IsSubclassOf-System.Enum",
+      "type": "owl:DatatypeProperty"
+    },
+    {
+      "id": "BH.oM.UI.ParamInfo-BH.oM.RDF.HasProperty-System.Type DataType",
+      "type": "owl:DatatypeProperty"
+    },
+    {
+      "id": "BH.oM.UI.ParamInfo-BH.oM.RDF.HasProperty-System.String Description",
+      "type": "owl:DatatypeProperty"
+    },
+    {
+      "id": "BH.oM.UI.ParamInfo.Kind-IsA-BH.oM.UI.ParamKind",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "BH.oM.UI.ParamInfo-BH.oM.RDF.HasProperty-BH.oM.UI.ParamKind Kind",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "BH.oM.UI.ParamInfo-BH.oM.RDF.HasProperty-Boolean HasDefaultValue",
+      "type": "owl:DatatypeProperty"
+    },
+    {
+      "id": "BH.oM.UI.ParamInfo-BH.oM.RDF.HasProperty-System.Object DefaultValue",
+      "type": "owl:DatatypeProperty"
+    },
+    {
+      "id": "BH.oM.UI.ParamInfo-BH.oM.RDF.HasProperty-Boolean IsRequired",
+      "type": "owl:DatatypeProperty"
+    },
+    {
+      "id": "BH.oM.UI.ParamInfo-BH.oM.RDF.HasProperty-Boolean IsSelected",
+      "type": "owl:DatatypeProperty"
+    },
+    {
+      "id": "BH.oM.UI.ParamInfo-BH.oM.RDF.HasProperty-System.String DefaultValueWarning",
+      "type": "owl:DatatypeProperty"
+    },
+    {
+      "id": "BH.oM.UI.ParamInfo-BH.oM.RDF.IsA-BH.oM.Base.IBHoMObject",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "BH.oM.UI.ParamInfo-BH.oM.RDF.IsA-BH.oM.Base.IObject",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "BH.oM.UI.ParamInfo-BH.oM.RDF.IsSubclassOf-BH.oM.Base.BHoMObject",
       "type": "owl:ObjectProperty"
     }
   ],
   "propertyAttribute": [
     {
-      "id": "DDF893BE3ACA8EAC44D5230B39AB0C3AD2EBFFD984E30ACE9409E93EAA1A3E32",
-      "iri": "http://visualdataweb.org/newOntology/DDF893BE3ACA8EAC44D5230B39AB0C3AD2EBFFD984E30ACE9409E93EAA1A3E32",
+      "id": "BH.oM.UI.ComponentRequest-BH.oM.RDF.HasProperty-System.Type CallerType",
+      "iri": "http://visualdataweb.org/newOntology/BH.oM.UI.ComponentRequest-BH.oM.RDF.HasProperty-System.Type CallerType",
       "label": "HasProperty",
       "attributes": "datatype",
       "domain": "BH.oM.UI.ComponentRequest",
       "range": "CallerType-DDF893BE3ACA8EAC44D5230B39AB0C3AD2EBFFD984E30ACE9409E93EAA1A3E32-ComponentRequest-HasProperty"
     },
     {
-      "id": "948303B2EAE69CE4F87C95C3174699B7725C39CD3F3ECF9940136F35BD48E212",
-      "iri": "http://visualdataweb.org/newOntology/948303B2EAE69CE4F87C95C3174699B7725C39CD3F3ECF9940136F35BD48E212",
+      "id": "BH.oM.UI.ComponentRequest-BH.oM.RDF.HasProperty-System.Object SelectedItem",
+      "iri": "http://visualdataweb.org/newOntology/BH.oM.UI.ComponentRequest-BH.oM.RDF.HasProperty-System.Object SelectedItem",
       "label": "HasProperty",
       "attributes": "datatype",
       "domain": "BH.oM.UI.ComponentRequest",
       "range": "SelectedItem-948303B2EAE69CE4F87C95C3174699B7725C39CD3F3ECF9940136F35BD48E212-ComponentRequest-HasProperty"
     },
     {
-      "id": "CCA52DB8D5F7A82337F08785FE525CD315DFEACEC43EEF33DB891F0D6E487A48",
-      "iri": "http://visualdataweb.org/newOntology/CCA52DB8D5F7A82337F08785FE525CD315DFEACEC43EEF33DB891F0D6E487A48",
-      "label": "HasProperty",
+      "id": "BH.oM.UI.ComponentRequest.Location-IsA-BH.oM.Geometry.Point",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "label": "IsA",
       "attributes": "object",
-      "domain": "BH.oM.UI.ComponentRequest",
+      "domain": "BH.oM.UI.ComponentRequest.Location",
       "range": "BH.oM.Geometry.Point"
     },
     {
-      "id": "0F26E137B910BC048D92E433F96EB53ED8F80BA832B5F7B472A7F7580AA013B9",
-      "iri": "http://visualdataweb.org/newOntology/0F26E137B910BC048D92E433F96EB53ED8F80BA832B5F7B472A7F7580AA013B9",
+      "id": "BH.oM.UI.ComponentRequest-BH.oM.RDF.HasProperty-BH.oM.Geometry.Point Location",
+      "iri": "http://visualdataweb.org/newOntology/BH.oM.UI.ComponentRequest-BH.oM.RDF.HasProperty-BH.oM.Geometry.Point Location",
+      "label": "HasProperty",
+      "attributes": [],
+      "domain": "BH.oM.UI.ComponentRequest",
+      "range": "BH.oM.UI.ComponentRequest.Location"
+    },
+    {
+      "id": "BH.oM.UI.ComponentRequest-BH.oM.RDF.IsA-BH.oM.Base.IBHoMObject",
+      "iri": "http://visualdataweb.org/newOntology/BH.oM.UI.ComponentRequest-BH.oM.RDF.IsA-BH.oM.Base.IBHoMObject",
       "label": "IsA",
       "attributes": "object",
       "domain": "BH.oM.UI.ComponentRequest",
       "range": "BH.oM.Base.IBHoMObject"
     },
     {
-      "id": "D5512B197BB2665A1361055A155BE92CBC911A37D9EB44FC2E7482AAFA6EF1BE",
-      "iri": "http://visualdataweb.org/newOntology/D5512B197BB2665A1361055A155BE92CBC911A37D9EB44FC2E7482AAFA6EF1BE",
+      "id": "BH.oM.UI.ComponentRequest-BH.oM.RDF.IsA-BH.oM.Base.IObject",
+      "iri": "http://visualdataweb.org/newOntology/BH.oM.UI.ComponentRequest-BH.oM.RDF.IsA-BH.oM.Base.IObject",
       "label": "IsA",
       "attributes": "object",
       "domain": "BH.oM.UI.ComponentRequest",
       "range": "BH.oM.Base.IObject"
     },
     {
-      "id": "442806641AB27C7154F9FAF7A7C7F8BBAF3FF92E43E979352889E36363E2B8C8",
-      "iri": "http://visualdataweb.org/newOntology/442806641AB27C7154F9FAF7A7C7F8BBAF3FF92E43E979352889E36363E2B8C8",
+      "id": "BH.oM.UI.ComponentRequest-BH.oM.RDF.IsSubclassOf-BH.oM.Base.BHoMObject",
+      "iri": "http://visualdataweb.org/newOntology/BH.oM.UI.ComponentRequest-BH.oM.RDF.IsSubclassOf-BH.oM.Base.BHoMObject",
       "label": "IsSubclassOf",
       "attributes": "object",
       "domain": "BH.oM.UI.ComponentRequest",
       "range": "BH.oM.Base.BHoMObject"
     },
     {
-      "id": "04EC7B963541818B19FEE5E9423941E156AB3C8DBDEBF0CC26948ECC814970B0",
-      "iri": "http://visualdataweb.org/newOntology/04EC7B963541818B19FEE5E9423941E156AB3C8DBDEBF0CC26948ECC814970B0",
+      "id": "BH.oM.UI.PreviousNamesFragment-BH.oM.RDF.HasProperty-System.Collections.Generic.List`1[System.String] OldNames",
+      "iri": "http://visualdataweb.org/newOntology/BH.oM.UI.PreviousNamesFragment-BH.oM.RDF.HasProperty-System.Collections.Generic.List`1[System.String] OldNames",
       "label": "HasProperty",
       "attributes": "datatype",
       "domain": "BH.oM.UI.PreviousNamesFragment",
       "range": "OldNames-04EC7B963541818B19FEE5E9423941E156AB3C8DBDEBF0CC26948ECC814970B0-PreviousNamesFragment-HasProperty"
     },
     {
-      "id": "60384E3A94E054460A57563B92ADA5725BD1A0B0315C42696C7A59D9D9365E2E",
-      "iri": "http://visualdataweb.org/newOntology/60384E3A94E054460A57563B92ADA5725BD1A0B0315C42696C7A59D9D9365E2E",
+      "id": "BH.oM.UI.PreviousNamesFragment-BH.oM.RDF.IsA-BH.oM.Base.IFragment",
+      "iri": "http://visualdataweb.org/newOntology/BH.oM.UI.PreviousNamesFragment-BH.oM.RDF.IsA-BH.oM.Base.IFragment",
       "label": "IsA",
       "attributes": "object",
       "domain": "BH.oM.UI.PreviousNamesFragment",
       "range": "BH.oM.Base.IFragment"
     },
     {
-      "id": "4FE8116B1827935CD6146B17C09923CC3A553D8E1ECE57EB213BCCE3E89F7257",
-      "iri": "http://visualdataweb.org/newOntology/4FE8116B1827935CD6146B17C09923CC3A553D8E1ECE57EB213BCCE3E89F7257",
+      "id": "BH.oM.UI.PreviousNamesFragment-BH.oM.RDF.IsA-BH.oM.Base.IObject",
+      "iri": "http://visualdataweb.org/newOntology/BH.oM.UI.PreviousNamesFragment-BH.oM.RDF.IsA-BH.oM.Base.IObject",
       "label": "IsA",
       "attributes": "object",
       "domain": "BH.oM.UI.PreviousNamesFragment",
       "range": "BH.oM.Base.IObject"
     },
     {
-      "id": "FBF6884704EC573F8DF47311CEEA98EC593B9B0CD690D4CDE27FE2862C651416",
-      "iri": "http://visualdataweb.org/newOntology/FBF6884704EC573F8DF47311CEEA98EC593B9B0CD690D4CDE27FE2862C651416",
+      "id": "BH.oM.UI.PreviousNamesFragment-BH.oM.RDF.IsSubclassOf-System.Object",
+      "iri": "http://visualdataweb.org/newOntology/BH.oM.UI.PreviousNamesFragment-BH.oM.RDF.IsSubclassOf-System.Object",
       "label": "IsSubclassOf",
       "attributes": []
     },
     {
-      "id": "0E70827A2F6095635BB95F4E856F46F98E88C0BA8B06BEEF2FC8D476D9F32654",
-      "iri": "http://visualdataweb.org/newOntology/0E70827A2F6095635BB95F4E856F46F98E88C0BA8B06BEEF2FC8D476D9F32654",
+      "id": "BH.oM.UI.OutputsUpdate-BH.oM.RDF.HasProperty-System.Collections.Generic.List`1[BH.oM.UI.IParamUpdate] ParamUpdates",
+      "iri": "http://visualdataweb.org/newOntology/BH.oM.UI.OutputsUpdate-BH.oM.RDF.HasProperty-System.Collections.Generic.List`1[BH.oM.UI.IParamUpdate] ParamUpdates",
       "label": "HasProperty",
       "attributes": "datatype",
       "domain": "BH.oM.UI.OutputsUpdate",
       "range": "ParamUpdates-0E70827A2F6095635BB95F4E856F46F98E88C0BA8B06BEEF2FC8D476D9F32654-OutputsUpdate-HasProperty"
     },
     {
-      "id": "74045CA8C86B8C760D44DAAB7E187F9D6E2F0DB5B5E45379445BBBA2A91720FC",
-      "iri": "http://visualdataweb.org/newOntology/74045CA8C86B8C760D44DAAB7E187F9D6E2F0DB5B5E45379445BBBA2A91720FC",
+      "id": "BH.oM.UI.OutputsUpdate-BH.oM.RDF.IsA-BH.oM.Base.IBHoMObject",
+      "iri": "http://visualdataweb.org/newOntology/BH.oM.UI.OutputsUpdate-BH.oM.RDF.IsA-BH.oM.Base.IBHoMObject",
       "label": "IsA",
       "attributes": "object",
       "domain": "BH.oM.UI.OutputsUpdate",
       "range": "BH.oM.Base.IBHoMObject"
     },
     {
-      "id": "9A8B922B8C51A50ED31DA18992FF8FC6C68D6F6291B0C44349E0CE54F895A421",
-      "iri": "http://visualdataweb.org/newOntology/9A8B922B8C51A50ED31DA18992FF8FC6C68D6F6291B0C44349E0CE54F895A421",
+      "id": "BH.oM.UI.OutputsUpdate-BH.oM.RDF.IsA-BH.oM.Base.IObject",
+      "iri": "http://visualdataweb.org/newOntology/BH.oM.UI.OutputsUpdate-BH.oM.RDF.IsA-BH.oM.Base.IObject",
       "label": "IsA",
       "attributes": "object",
       "domain": "BH.oM.UI.OutputsUpdate",
       "range": "BH.oM.Base.IObject"
     },
     {
-      "id": "5ED92996FE8AE963C6EC23BDC928A5F6FFDBCBCBDF2D8AA56EC48E35D0EE3CC8",
-      "iri": "http://visualdataweb.org/newOntology/5ED92996FE8AE963C6EC23BDC928A5F6FFDBCBCBDF2D8AA56EC48E35D0EE3CC8",
+      "id": "BH.oM.UI.OutputsUpdate-BH.oM.RDF.IsA-BH.oM.UI.IUpdate",
+      "iri": "http://visualdataweb.org/newOntology/BH.oM.UI.OutputsUpdate-BH.oM.RDF.IsA-BH.oM.UI.IUpdate",
       "label": "IsA",
       "attributes": "object",
       "domain": "BH.oM.UI.OutputsUpdate",
       "range": "BH.oM.UI.IUpdate"
     },
     {
-      "id": "7442A21F288C35B9EBF668C02E7D90E4A133AC5797A837D5ECE9DAD485589ECE",
-      "iri": "http://visualdataweb.org/newOntology/7442A21F288C35B9EBF668C02E7D90E4A133AC5797A837D5ECE9DAD485589ECE",
+      "id": "BH.oM.UI.OutputsUpdate-BH.oM.RDF.IsSubclassOf-BH.oM.Base.BHoMObject",
+      "iri": "http://visualdataweb.org/newOntology/BH.oM.UI.OutputsUpdate-BH.oM.RDF.IsSubclassOf-BH.oM.Base.BHoMObject",
       "label": "IsSubclassOf",
       "attributes": "object",
       "domain": "BH.oM.UI.OutputsUpdate",
       "range": "BH.oM.Base.BHoMObject"
     },
     {
-      "id": "93C90CF625C7958085650C63767F6F30C2A4BED93C206726413DEBE1E3BDCC59",
-      "iri": "http://visualdataweb.org/newOntology/93C90CF625C7958085650C63767F6F30C2A4BED93C206726413DEBE1E3BDCC59",
+      "id": "BH.oM.UI.InputsUpdate-BH.oM.RDF.HasProperty-System.Collections.Generic.List`1[BH.oM.UI.IParamUpdate] ParamUpdates",
+      "iri": "http://visualdataweb.org/newOntology/BH.oM.UI.InputsUpdate-BH.oM.RDF.HasProperty-System.Collections.Generic.List`1[BH.oM.UI.IParamUpdate] ParamUpdates",
       "label": "HasProperty",
       "attributes": "datatype",
       "domain": "BH.oM.UI.InputsUpdate",
       "range": "ParamUpdates-93C90CF625C7958085650C63767F6F30C2A4BED93C206726413DEBE1E3BDCC59-InputsUpdate-HasProperty"
     },
     {
-      "id": "C026E56F0DBB428799700B74C59F401F5DDEF0FD61D25C5AA97473A5711F65E9",
-      "iri": "http://visualdataweb.org/newOntology/C026E56F0DBB428799700B74C59F401F5DDEF0FD61D25C5AA97473A5711F65E9",
+      "id": "BH.oM.UI.InputsUpdate-BH.oM.RDF.IsA-BH.oM.Base.IBHoMObject",
+      "iri": "http://visualdataweb.org/newOntology/BH.oM.UI.InputsUpdate-BH.oM.RDF.IsA-BH.oM.Base.IBHoMObject",
       "label": "IsA",
       "attributes": "object",
       "domain": "BH.oM.UI.InputsUpdate",
       "range": "BH.oM.Base.IBHoMObject"
     },
     {
-      "id": "A92C1CD3EA2B5320B62286B90F3105FE3E2E97B43F9152E866392E109E46C3D4",
-      "iri": "http://visualdataweb.org/newOntology/A92C1CD3EA2B5320B62286B90F3105FE3E2E97B43F9152E866392E109E46C3D4",
+      "id": "BH.oM.UI.InputsUpdate-BH.oM.RDF.IsA-BH.oM.Base.IObject",
+      "iri": "http://visualdataweb.org/newOntology/BH.oM.UI.InputsUpdate-BH.oM.RDF.IsA-BH.oM.Base.IObject",
       "label": "IsA",
       "attributes": "object",
       "domain": "BH.oM.UI.InputsUpdate",
       "range": "BH.oM.Base.IObject"
     },
     {
-      "id": "E731CD39487CD8FC6F8959F10B7C811D2C7CECCEB9FD172B7330AA52D9B54E24",
-      "iri": "http://visualdataweb.org/newOntology/E731CD39487CD8FC6F8959F10B7C811D2C7CECCEB9FD172B7330AA52D9B54E24",
+      "id": "BH.oM.UI.InputsUpdate-BH.oM.RDF.IsA-BH.oM.UI.IUpdate",
+      "iri": "http://visualdataweb.org/newOntology/BH.oM.UI.InputsUpdate-BH.oM.RDF.IsA-BH.oM.UI.IUpdate",
       "label": "IsA",
       "attributes": "object",
       "domain": "BH.oM.UI.InputsUpdate",
       "range": "BH.oM.UI.IUpdate"
     },
     {
-      "id": "3F57A32A851FB1FD5E556186AB4C842EF4FA0CBB7B312309D37CF4167D8F2CB3",
-      "iri": "http://visualdataweb.org/newOntology/3F57A32A851FB1FD5E556186AB4C842EF4FA0CBB7B312309D37CF4167D8F2CB3",
+      "id": "BH.oM.UI.InputsUpdate-BH.oM.RDF.IsSubclassOf-BH.oM.Base.BHoMObject",
+      "iri": "http://visualdataweb.org/newOntology/BH.oM.UI.InputsUpdate-BH.oM.RDF.IsSubclassOf-BH.oM.Base.BHoMObject",
       "label": "IsSubclassOf",
       "attributes": "object",
       "domain": "BH.oM.UI.InputsUpdate",
       "range": "BH.oM.Base.BHoMObject"
     },
     {
-      "id": "2F881AC6F7F09D637240BAEBB0638912BACF23CF568194A23DCEC14A3A3869C4",
-      "iri": "http://visualdataweb.org/newOntology/2F881AC6F7F09D637240BAEBB0638912BACF23CF568194A23DCEC14A3A3869C4",
-      "label": "HasProperty",
+      "id": "BH.oM.UI.ParamUpdated.Param-IsA-BH.oM.UI.ParamInfo",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "label": "IsA",
       "attributes": "object",
-      "domain": "BH.oM.UI.ParamUpdated",
+      "domain": "BH.oM.UI.ParamUpdated.Param",
       "range": "BH.oM.UI.ParamInfo"
     },
     {
-      "id": "B059DCCEA204D26B11E7EA4432D6C072D8458FD874F1BEF23A1038323ED13B7F",
-      "iri": "http://visualdataweb.org/newOntology/B059DCCEA204D26B11E7EA4432D6C072D8458FD874F1BEF23A1038323ED13B7F",
+      "id": "BH.oM.UI.ParamUpdated-BH.oM.RDF.HasProperty-BH.oM.UI.ParamInfo Param",
+      "iri": "http://visualdataweb.org/newOntology/BH.oM.UI.ParamUpdated-BH.oM.RDF.HasProperty-BH.oM.UI.ParamInfo Param",
       "label": "HasProperty",
-      "attributes": "object",
+      "attributes": [],
       "domain": "BH.oM.UI.ParamUpdated",
+      "range": "BH.oM.UI.ParamUpdated.Param"
+    },
+    {
+      "id": "BH.oM.UI.ParamUpdated.OldParam-IsA-BH.oM.UI.ParamInfo",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "label": "IsA",
+      "attributes": "object",
+      "domain": "BH.oM.UI.ParamUpdated.OldParam",
       "range": "BH.oM.UI.ParamInfo"
     },
     {
-      "id": "BC3EFE6144EDB685BFBCB02ED1DB8EBEA409C83931432E1F830213BF81138AC9",
-      "iri": "http://visualdataweb.org/newOntology/BC3EFE6144EDB685BFBCB02ED1DB8EBEA409C83931432E1F830213BF81138AC9",
+      "id": "BH.oM.UI.ParamUpdated-BH.oM.RDF.HasProperty-BH.oM.UI.ParamInfo OldParam",
+      "iri": "http://visualdataweb.org/newOntology/BH.oM.UI.ParamUpdated-BH.oM.RDF.HasProperty-BH.oM.UI.ParamInfo OldParam",
+      "label": "HasProperty",
+      "attributes": [],
+      "domain": "BH.oM.UI.ParamUpdated",
+      "range": "BH.oM.UI.ParamUpdated.OldParam"
+    },
+    {
+      "id": "BH.oM.UI.ParamUpdated-BH.oM.RDF.IsA-BH.oM.Base.IBHoMObject",
+      "iri": "http://visualdataweb.org/newOntology/BH.oM.UI.ParamUpdated-BH.oM.RDF.IsA-BH.oM.Base.IBHoMObject",
       "label": "IsA",
       "attributes": "object",
       "domain": "BH.oM.UI.ParamUpdated",
       "range": "BH.oM.Base.IBHoMObject"
     },
     {
-      "id": "D5B6F2CA7F25D974FF2564377033A47EBED8959964542FC0D5D50E1CE9586A89",
-      "iri": "http://visualdataweb.org/newOntology/D5B6F2CA7F25D974FF2564377033A47EBED8959964542FC0D5D50E1CE9586A89",
+      "id": "BH.oM.UI.ParamUpdated-BH.oM.RDF.IsA-BH.oM.Base.IObject",
+      "iri": "http://visualdataweb.org/newOntology/BH.oM.UI.ParamUpdated-BH.oM.RDF.IsA-BH.oM.Base.IObject",
       "label": "IsA",
       "attributes": "object",
       "domain": "BH.oM.UI.ParamUpdated",
       "range": "BH.oM.Base.IObject"
     },
     {
-      "id": "7D4BEFD6DAF93D9BC7F2143578661F6ECFBD696FEF3423A99D4C04FEF9979327",
-      "iri": "http://visualdataweb.org/newOntology/7D4BEFD6DAF93D9BC7F2143578661F6ECFBD696FEF3423A99D4C04FEF9979327",
+      "id": "BH.oM.UI.ParamUpdated-BH.oM.RDF.IsA-BH.oM.UI.IParamUpdate",
+      "iri": "http://visualdataweb.org/newOntology/BH.oM.UI.ParamUpdated-BH.oM.RDF.IsA-BH.oM.UI.IParamUpdate",
       "label": "IsA",
       "attributes": "object",
       "domain": "BH.oM.UI.ParamUpdated",
       "range": "BH.oM.UI.IParamUpdate"
     },
     {
-      "id": "608B60C97C92A1E3A6B7148729EEB6F28F8108B7EA841BAA148E13604F9363B7",
-      "iri": "http://visualdataweb.org/newOntology/608B60C97C92A1E3A6B7148729EEB6F28F8108B7EA841BAA148E13604F9363B7",
+      "id": "BH.oM.UI.ParamUpdated-BH.oM.RDF.IsA-BH.oM.UI.IUpdate",
+      "iri": "http://visualdataweb.org/newOntology/BH.oM.UI.ParamUpdated-BH.oM.RDF.IsA-BH.oM.UI.IUpdate",
       "label": "IsA",
       "attributes": "object",
       "domain": "BH.oM.UI.ParamUpdated",
       "range": "BH.oM.UI.IUpdate"
     },
     {
-      "id": "0181077BFF32DFF4E4230ACE786842091F37A70EE7585B3EF4304A48D9D9ABEB",
-      "iri": "http://visualdataweb.org/newOntology/0181077BFF32DFF4E4230ACE786842091F37A70EE7585B3EF4304A48D9D9ABEB",
+      "id": "BH.oM.UI.ParamUpdated-BH.oM.RDF.IsSubclassOf-BH.oM.Base.BHoMObject",
+      "iri": "http://visualdataweb.org/newOntology/BH.oM.UI.ParamUpdated-BH.oM.RDF.IsSubclassOf-BH.oM.Base.BHoMObject",
       "label": "IsSubclassOf",
       "attributes": "object",
       "domain": "BH.oM.UI.ParamUpdated",
       "range": "BH.oM.Base.BHoMObject"
     },
     {
-      "id": "786683244C64B64C05EC321E6ABC032930A333A97DC1C4718208CF0484ED0988",
-      "iri": "http://visualdataweb.org/newOntology/786683244C64B64C05EC321E6ABC032930A333A97DC1C4718208CF0484ED0988",
+      "id": "BH.oM.UI.ParamMoved-BH.oM.RDF.HasProperty-Int32 Index",
+      "iri": "http://visualdataweb.org/newOntology/BH.oM.UI.ParamMoved-BH.oM.RDF.HasProperty-Int32 Index",
       "label": "HasProperty",
       "attributes": "datatype",
       "domain": "BH.oM.UI.ParamMoved",
       "range": "Index-786683244C64B64C05EC321E6ABC032930A333A97DC1C4718208CF0484ED0988-ParamMoved-HasProperty"
     },
     {
-      "id": "C5F87A4622004E8D4097C156BFA897A962A8ECA5F74AF098A3036EC8DE7D515C",
-      "iri": "http://visualdataweb.org/newOntology/C5F87A4622004E8D4097C156BFA897A962A8ECA5F74AF098A3036EC8DE7D515C",
-      "label": "HasProperty",
+      "id": "BH.oM.UI.ParamMoved.Param-IsA-BH.oM.UI.ParamInfo",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "label": "IsA",
       "attributes": "object",
-      "domain": "BH.oM.UI.ParamMoved",
+      "domain": "BH.oM.UI.ParamMoved.Param",
       "range": "BH.oM.UI.ParamInfo"
     },
     {
-      "id": "BC74C16AA3A59310CE01D3424D7EFD891EE32FB434557E027138DFFEFDA61E25",
-      "iri": "http://visualdataweb.org/newOntology/BC74C16AA3A59310CE01D3424D7EFD891EE32FB434557E027138DFFEFDA61E25",
+      "id": "BH.oM.UI.ParamMoved-BH.oM.RDF.HasProperty-BH.oM.UI.ParamInfo Param",
+      "iri": "http://visualdataweb.org/newOntology/BH.oM.UI.ParamMoved-BH.oM.RDF.HasProperty-BH.oM.UI.ParamInfo Param",
+      "label": "HasProperty",
+      "attributes": [],
+      "domain": "BH.oM.UI.ParamMoved",
+      "range": "BH.oM.UI.ParamMoved.Param"
+    },
+    {
+      "id": "BH.oM.UI.ParamMoved-BH.oM.RDF.IsA-BH.oM.Base.IBHoMObject",
+      "iri": "http://visualdataweb.org/newOntology/BH.oM.UI.ParamMoved-BH.oM.RDF.IsA-BH.oM.Base.IBHoMObject",
       "label": "IsA",
       "attributes": "object",
       "domain": "BH.oM.UI.ParamMoved",
       "range": "BH.oM.Base.IBHoMObject"
     },
     {
-      "id": "656537F2A9ACA99EFCB2240892E7437F48F20B04A069ECE5CDED508892E1224B",
-      "iri": "http://visualdataweb.org/newOntology/656537F2A9ACA99EFCB2240892E7437F48F20B04A069ECE5CDED508892E1224B",
+      "id": "BH.oM.UI.ParamMoved-BH.oM.RDF.IsA-BH.oM.Base.IObject",
+      "iri": "http://visualdataweb.org/newOntology/BH.oM.UI.ParamMoved-BH.oM.RDF.IsA-BH.oM.Base.IObject",
       "label": "IsA",
       "attributes": "object",
       "domain": "BH.oM.UI.ParamMoved",
       "range": "BH.oM.Base.IObject"
     },
     {
-      "id": "45C2481437B9EAED79C6B0C85E5BB72B3A2ECBB60EC853A2B1836894BFF82631",
-      "iri": "http://visualdataweb.org/newOntology/45C2481437B9EAED79C6B0C85E5BB72B3A2ECBB60EC853A2B1836894BFF82631",
+      "id": "BH.oM.UI.ParamMoved-BH.oM.RDF.IsA-BH.oM.UI.IParamUpdate",
+      "iri": "http://visualdataweb.org/newOntology/BH.oM.UI.ParamMoved-BH.oM.RDF.IsA-BH.oM.UI.IParamUpdate",
       "label": "IsA",
       "attributes": "object",
       "domain": "BH.oM.UI.ParamMoved",
       "range": "BH.oM.UI.IParamUpdate"
     },
     {
-      "id": "1EE9D483CBE89DBAE18203A88693BC5D7F75F6BF59FC0AF8713EB037B5342EFF",
-      "iri": "http://visualdataweb.org/newOntology/1EE9D483CBE89DBAE18203A88693BC5D7F75F6BF59FC0AF8713EB037B5342EFF",
+      "id": "BH.oM.UI.ParamMoved-BH.oM.RDF.IsA-BH.oM.UI.IUpdate",
+      "iri": "http://visualdataweb.org/newOntology/BH.oM.UI.ParamMoved-BH.oM.RDF.IsA-BH.oM.UI.IUpdate",
       "label": "IsA",
       "attributes": "object",
       "domain": "BH.oM.UI.ParamMoved",
       "range": "BH.oM.UI.IUpdate"
     },
     {
-      "id": "BA4230D3CE251DE2CF350BEFB580ECB925CE941E8412B755E64E5C70B32E4440",
-      "iri": "http://visualdataweb.org/newOntology/BA4230D3CE251DE2CF350BEFB580ECB925CE941E8412B755E64E5C70B32E4440",
+      "id": "BH.oM.UI.ParamMoved-BH.oM.RDF.IsSubclassOf-BH.oM.Base.BHoMObject",
+      "iri": "http://visualdataweb.org/newOntology/BH.oM.UI.ParamMoved-BH.oM.RDF.IsSubclassOf-BH.oM.Base.BHoMObject",
       "label": "IsSubclassOf",
       "attributes": "object",
       "domain": "BH.oM.UI.ParamMoved",
       "range": "BH.oM.Base.BHoMObject"
     },
     {
-      "id": "59F877E1092E66F167ED9BF3D34A7720E78C32664112274E00548F53E4505E71",
-      "iri": "http://visualdataweb.org/newOntology/59F877E1092E66F167ED9BF3D34A7720E78C32664112274E00548F53E4505E71",
-      "label": "HasProperty",
+      "id": "BH.oM.UI.ParamRemoved.Param-IsA-BH.oM.UI.ParamInfo",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "label": "IsA",
       "attributes": "object",
-      "domain": "BH.oM.UI.ParamRemoved",
+      "domain": "BH.oM.UI.ParamRemoved.Param",
       "range": "BH.oM.UI.ParamInfo"
     },
     {
-      "id": "C9A96D1266FD65928115186EEB1F51E0348188740E7E2B65ACD7DE7423AE17B5",
-      "iri": "http://visualdataweb.org/newOntology/C9A96D1266FD65928115186EEB1F51E0348188740E7E2B65ACD7DE7423AE17B5",
+      "id": "BH.oM.UI.ParamRemoved-BH.oM.RDF.HasProperty-BH.oM.UI.ParamInfo Param",
+      "iri": "http://visualdataweb.org/newOntology/BH.oM.UI.ParamRemoved-BH.oM.RDF.HasProperty-BH.oM.UI.ParamInfo Param",
+      "label": "HasProperty",
+      "attributes": [],
+      "domain": "BH.oM.UI.ParamRemoved",
+      "range": "BH.oM.UI.ParamRemoved.Param"
+    },
+    {
+      "id": "BH.oM.UI.ParamRemoved-BH.oM.RDF.IsA-BH.oM.Base.IBHoMObject",
+      "iri": "http://visualdataweb.org/newOntology/BH.oM.UI.ParamRemoved-BH.oM.RDF.IsA-BH.oM.Base.IBHoMObject",
       "label": "IsA",
       "attributes": "object",
       "domain": "BH.oM.UI.ParamRemoved",
       "range": "BH.oM.Base.IBHoMObject"
     },
     {
-      "id": "3E29A80237E846769714E5639B2206E4C125063FDC5E574E024BBC57D699FABD",
-      "iri": "http://visualdataweb.org/newOntology/3E29A80237E846769714E5639B2206E4C125063FDC5E574E024BBC57D699FABD",
+      "id": "BH.oM.UI.ParamRemoved-BH.oM.RDF.IsA-BH.oM.Base.IObject",
+      "iri": "http://visualdataweb.org/newOntology/BH.oM.UI.ParamRemoved-BH.oM.RDF.IsA-BH.oM.Base.IObject",
       "label": "IsA",
       "attributes": "object",
       "domain": "BH.oM.UI.ParamRemoved",
       "range": "BH.oM.Base.IObject"
     },
     {
-      "id": "4E94072642017F5975B6FC645FFB36BAD4DDA90003C602C9A33942D3B2769D8A",
-      "iri": "http://visualdataweb.org/newOntology/4E94072642017F5975B6FC645FFB36BAD4DDA90003C602C9A33942D3B2769D8A",
+      "id": "BH.oM.UI.ParamRemoved-BH.oM.RDF.IsA-BH.oM.UI.IParamUpdate",
+      "iri": "http://visualdataweb.org/newOntology/BH.oM.UI.ParamRemoved-BH.oM.RDF.IsA-BH.oM.UI.IParamUpdate",
       "label": "IsA",
       "attributes": "object",
       "domain": "BH.oM.UI.ParamRemoved",
       "range": "BH.oM.UI.IParamUpdate"
     },
     {
-      "id": "470E3DF6AE31E24EAD91ED1E9C4AB10D1E367B944DC7976EE2C703F7B3826A96",
-      "iri": "http://visualdataweb.org/newOntology/470E3DF6AE31E24EAD91ED1E9C4AB10D1E367B944DC7976EE2C703F7B3826A96",
+      "id": "BH.oM.UI.ParamRemoved-BH.oM.RDF.IsA-BH.oM.UI.IUpdate",
+      "iri": "http://visualdataweb.org/newOntology/BH.oM.UI.ParamRemoved-BH.oM.RDF.IsA-BH.oM.UI.IUpdate",
       "label": "IsA",
       "attributes": "object",
       "domain": "BH.oM.UI.ParamRemoved",
       "range": "BH.oM.UI.IUpdate"
     },
     {
-      "id": "7A7A8CD1A5D7AE11458FBA5B116CD7EA4EB642742DB6D1AC3BCDE1EF0A004F42",
-      "iri": "http://visualdataweb.org/newOntology/7A7A8CD1A5D7AE11458FBA5B116CD7EA4EB642742DB6D1AC3BCDE1EF0A004F42",
+      "id": "BH.oM.UI.ParamRemoved-BH.oM.RDF.IsSubclassOf-BH.oM.Base.BHoMObject",
+      "iri": "http://visualdataweb.org/newOntology/BH.oM.UI.ParamRemoved-BH.oM.RDF.IsSubclassOf-BH.oM.Base.BHoMObject",
       "label": "IsSubclassOf",
       "attributes": "object",
       "domain": "BH.oM.UI.ParamRemoved",
       "range": "BH.oM.Base.BHoMObject"
     },
     {
-      "id": "F193F14B1045B1732D189E7C84070A47DEED2D0AE33A9D2A2914A6AD6BB7A777",
-      "iri": "http://visualdataweb.org/newOntology/F193F14B1045B1732D189E7C84070A47DEED2D0AE33A9D2A2914A6AD6BB7A777",
+      "id": "BH.oM.UI.ParamAdded-BH.oM.RDF.HasProperty-Int32 Index",
+      "iri": "http://visualdataweb.org/newOntology/BH.oM.UI.ParamAdded-BH.oM.RDF.HasProperty-Int32 Index",
       "label": "HasProperty",
       "attributes": "datatype",
       "domain": "BH.oM.UI.ParamAdded",
       "range": "Index-F193F14B1045B1732D189E7C84070A47DEED2D0AE33A9D2A2914A6AD6BB7A777-ParamAdded-HasProperty"
     },
     {
-      "id": "CDCD1ED72F107BB1F7E94A1E40C081C1F2D478CCC66B42158B2B3CF1B4A9A22A",
-      "iri": "http://visualdataweb.org/newOntology/CDCD1ED72F107BB1F7E94A1E40C081C1F2D478CCC66B42158B2B3CF1B4A9A22A",
-      "label": "HasProperty",
+      "id": "BH.oM.UI.ParamAdded.Param-IsA-BH.oM.UI.ParamInfo",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "label": "IsA",
       "attributes": "object",
-      "domain": "BH.oM.UI.ParamAdded",
+      "domain": "BH.oM.UI.ParamAdded.Param",
       "range": "BH.oM.UI.ParamInfo"
     },
     {
-      "id": "1F76D2ED65880A961B943A02D37FACD5F0741BEAF5C9F9648357EB4E20D8125A",
-      "iri": "http://visualdataweb.org/newOntology/1F76D2ED65880A961B943A02D37FACD5F0741BEAF5C9F9648357EB4E20D8125A",
+      "id": "BH.oM.UI.ParamAdded-BH.oM.RDF.HasProperty-BH.oM.UI.ParamInfo Param",
+      "iri": "http://visualdataweb.org/newOntology/BH.oM.UI.ParamAdded-BH.oM.RDF.HasProperty-BH.oM.UI.ParamInfo Param",
+      "label": "HasProperty",
+      "attributes": [],
+      "domain": "BH.oM.UI.ParamAdded",
+      "range": "BH.oM.UI.ParamAdded.Param"
+    },
+    {
+      "id": "BH.oM.UI.ParamAdded-BH.oM.RDF.IsA-BH.oM.Base.IBHoMObject",
+      "iri": "http://visualdataweb.org/newOntology/BH.oM.UI.ParamAdded-BH.oM.RDF.IsA-BH.oM.Base.IBHoMObject",
       "label": "IsA",
       "attributes": "object",
       "domain": "BH.oM.UI.ParamAdded",
       "range": "BH.oM.Base.IBHoMObject"
     },
     {
-      "id": "901549894E92BC59EBA489D3DDB8833CBD1C65E72F1D71D4C4352FEB7181638C",
-      "iri": "http://visualdataweb.org/newOntology/901549894E92BC59EBA489D3DDB8833CBD1C65E72F1D71D4C4352FEB7181638C",
+      "id": "BH.oM.UI.ParamAdded-BH.oM.RDF.IsA-BH.oM.Base.IObject",
+      "iri": "http://visualdataweb.org/newOntology/BH.oM.UI.ParamAdded-BH.oM.RDF.IsA-BH.oM.Base.IObject",
       "label": "IsA",
       "attributes": "object",
       "domain": "BH.oM.UI.ParamAdded",
       "range": "BH.oM.Base.IObject"
     },
     {
-      "id": "B86B3592007234E9D8C27AA4555A0052BB1F011FB0925FFCD55EAC02288445C5",
-      "iri": "http://visualdataweb.org/newOntology/B86B3592007234E9D8C27AA4555A0052BB1F011FB0925FFCD55EAC02288445C5",
+      "id": "BH.oM.UI.ParamAdded-BH.oM.RDF.IsA-BH.oM.UI.IParamUpdate",
+      "iri": "http://visualdataweb.org/newOntology/BH.oM.UI.ParamAdded-BH.oM.RDF.IsA-BH.oM.UI.IParamUpdate",
       "label": "IsA",
       "attributes": "object",
       "domain": "BH.oM.UI.ParamAdded",
       "range": "BH.oM.UI.IParamUpdate"
     },
     {
-      "id": "51100CD941D2CD429F600F9B8F4C082C7EA7A973596F10B4AEEC09441C1F58ED",
-      "iri": "http://visualdataweb.org/newOntology/51100CD941D2CD429F600F9B8F4C082C7EA7A973596F10B4AEEC09441C1F58ED",
+      "id": "BH.oM.UI.ParamAdded-BH.oM.RDF.IsA-BH.oM.UI.IUpdate",
+      "iri": "http://visualdataweb.org/newOntology/BH.oM.UI.ParamAdded-BH.oM.RDF.IsA-BH.oM.UI.IUpdate",
       "label": "IsA",
       "attributes": "object",
       "domain": "BH.oM.UI.ParamAdded",
       "range": "BH.oM.UI.IUpdate"
     },
     {
-      "id": "437CAF685D40ECA9FC8352A2BA7F3A884A2C575AC843FC3EEC41C39F78F6EB55",
-      "iri": "http://visualdataweb.org/newOntology/437CAF685D40ECA9FC8352A2BA7F3A884A2C575AC843FC3EEC41C39F78F6EB55",
+      "id": "BH.oM.UI.ParamAdded-BH.oM.RDF.IsSubclassOf-BH.oM.Base.BHoMObject",
+      "iri": "http://visualdataweb.org/newOntology/BH.oM.UI.ParamAdded-BH.oM.RDF.IsSubclassOf-BH.oM.Base.BHoMObject",
       "label": "IsSubclassOf",
       "attributes": "object",
       "domain": "BH.oM.UI.ParamAdded",
       "range": "BH.oM.Base.BHoMObject"
     },
     {
-      "id": "B600BF0FEA0E55E8F2A6A50FA3773EF0D05F66E1BEC9E0B580ED98831FFE4F86",
-      "iri": "http://visualdataweb.org/newOntology/B600BF0FEA0E55E8F2A6A50FA3773EF0D05F66E1BEC9E0B580ED98831FFE4F86",
+      "id": "BH.oM.UI.IParamUpdate-BH.oM.RDF.RequiresProperty-BH.oM.UI.ParamInfo Param",
+      "iri": "http://visualdataweb.org/newOntology/BH.oM.UI.IParamUpdate-BH.oM.RDF.RequiresProperty-BH.oM.UI.ParamInfo Param",
       "label": "RequiresProperty",
       "attributes": "object",
       "domain": "BH.oM.UI.IParamUpdate",
       "range": "BH.oM.UI.ParamInfo"
     },
     {
-      "id": "B6F5B815E5510DD7DE4BA8DF5100FDEF3EC84CF448B4E1433EA847444CFFEDAF",
-      "iri": "http://visualdataweb.org/newOntology/B6F5B815E5510DD7DE4BA8DF5100FDEF3EC84CF448B4E1433EA847444CFFEDAF",
+      "id": "BH.oM.UI.IParamUpdate-BH.oM.RDF.IsA-BH.oM.UI.IUpdate",
+      "iri": "http://visualdataweb.org/newOntology/BH.oM.UI.IParamUpdate-BH.oM.RDF.IsA-BH.oM.UI.IUpdate",
       "label": "IsA",
       "attributes": "object",
       "domain": "BH.oM.UI.IParamUpdate",
       "range": "BH.oM.UI.IUpdate"
     },
     {
-      "id": "7E3426575490C4D0D9C9CEB9155876FCBD3F697E0D5073D00A1737225B08BC9B",
-      "iri": "http://visualdataweb.org/newOntology/7E3426575490C4D0D9C9CEB9155876FCBD3F697E0D5073D00A1737225B08BC9B",
+      "id": "BH.oM.UI.ComponentUpdate-BH.oM.RDF.HasProperty-System.String Name",
+      "iri": "http://visualdataweb.org/newOntology/BH.oM.UI.ComponentUpdate-BH.oM.RDF.HasProperty-System.String Name",
       "label": "HasProperty",
       "attributes": "datatype",
       "domain": "BH.oM.UI.ComponentUpdate",
       "range": "Name-7E3426575490C4D0D9C9CEB9155876FCBD3F697E0D5073D00A1737225B08BC9B-ComponentUpdate-HasProperty"
     },
     {
-      "id": "BFAAD018C9CF0E88A5ACE08F9FC38DAB5375823846770D30D6562489B33FCF78",
-      "iri": "http://visualdataweb.org/newOntology/BFAAD018C9CF0E88A5ACE08F9FC38DAB5375823846770D30D6562489B33FCF78",
+      "id": "BH.oM.UI.ComponentUpdate-BH.oM.RDF.HasProperty-System.String Description",
+      "iri": "http://visualdataweb.org/newOntology/BH.oM.UI.ComponentUpdate-BH.oM.RDF.HasProperty-System.String Description",
       "label": "HasProperty",
       "attributes": "datatype",
       "domain": "BH.oM.UI.ComponentUpdate",
       "range": "Description-BFAAD018C9CF0E88A5ACE08F9FC38DAB5375823846770D30D6562489B33FCF78-ComponentUpdate-HasProperty"
     },
     {
-      "id": "B5D84F4FEDAD5A1B8D07FA2AB12430A6DC36F623877487E7A6DE7A060D22AE5E",
-      "iri": "http://visualdataweb.org/newOntology/B5D84F4FEDAD5A1B8D07FA2AB12430A6DC36F623877487E7A6DE7A060D22AE5E",
+      "id": "BH.oM.UI.ComponentUpdate-BH.oM.RDF.IsA-BH.oM.Base.IBHoMObject",
+      "iri": "http://visualdataweb.org/newOntology/BH.oM.UI.ComponentUpdate-BH.oM.RDF.IsA-BH.oM.Base.IBHoMObject",
       "label": "IsA",
       "attributes": "object",
       "domain": "BH.oM.UI.ComponentUpdate",
       "range": "BH.oM.Base.IBHoMObject"
     },
     {
-      "id": "51734E4D7C197A2E70E5B2B91B7F991CB6D0CD84298AD0900DB64B2DBBBB283D",
-      "iri": "http://visualdataweb.org/newOntology/51734E4D7C197A2E70E5B2B91B7F991CB6D0CD84298AD0900DB64B2DBBBB283D",
+      "id": "BH.oM.UI.ComponentUpdate-BH.oM.RDF.IsA-BH.oM.Base.IObject",
+      "iri": "http://visualdataweb.org/newOntology/BH.oM.UI.ComponentUpdate-BH.oM.RDF.IsA-BH.oM.Base.IObject",
       "label": "IsA",
       "attributes": "object",
       "domain": "BH.oM.UI.ComponentUpdate",
       "range": "BH.oM.Base.IObject"
     },
     {
-      "id": "F03E9268BE4904D47F1350704F5E1737E08270DC99766A2CC28364C740F942DF",
-      "iri": "http://visualdataweb.org/newOntology/F03E9268BE4904D47F1350704F5E1737E08270DC99766A2CC28364C740F942DF",
+      "id": "BH.oM.UI.ComponentUpdate-BH.oM.RDF.IsA-BH.oM.UI.IUpdate",
+      "iri": "http://visualdataweb.org/newOntology/BH.oM.UI.ComponentUpdate-BH.oM.RDF.IsA-BH.oM.UI.IUpdate",
       "label": "IsA",
       "attributes": "object",
       "domain": "BH.oM.UI.ComponentUpdate",
       "range": "BH.oM.UI.IUpdate"
     },
     {
-      "id": "41BEE3C0945A18D60DB581396F926153EFF2DBAC1449370699C053554BEDC29A",
-      "iri": "http://visualdataweb.org/newOntology/41BEE3C0945A18D60DB581396F926153EFF2DBAC1449370699C053554BEDC29A",
+      "id": "BH.oM.UI.ComponentUpdate-BH.oM.RDF.IsSubclassOf-BH.oM.Base.BHoMObject",
+      "iri": "http://visualdataweb.org/newOntology/BH.oM.UI.ComponentUpdate-BH.oM.RDF.IsSubclassOf-BH.oM.Base.BHoMObject",
       "label": "IsSubclassOf",
       "attributes": "object",
       "domain": "BH.oM.UI.ComponentUpdate",
       "range": "BH.oM.Base.BHoMObject"
     },
     {
-      "id": "000C3724353973E85E0048FAFE094ADADD97100BA21C7299F789FF4B7C6C5873",
-      "iri": "http://visualdataweb.org/newOntology/000C3724353973E85E0048FAFE094ADADD97100BA21C7299F789FF4B7C6C5873",
-      "label": "HasProperty",
+      "id": "BH.oM.UI.CallerUpdate.Cause-IsA-BH.oM.UI.CallerUpdateCause",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "label": "IsA",
       "attributes": "object",
-      "domain": "BH.oM.UI.CallerUpdate",
+      "domain": "BH.oM.UI.CallerUpdate.Cause",
       "range": "BH.oM.UI.CallerUpdateCause"
     },
     {
-      "id": "5D263FE3606C4ABE177A677F9630C513C2D120B48F6CCE8E2762540279024BD1",
-      "iri": "http://visualdataweb.org/newOntology/5D263FE3606C4ABE177A677F9630C513C2D120B48F6CCE8E2762540279024BD1",
+      "id": "BH.oM.UI.CallerUpdate-BH.oM.RDF.HasProperty-BH.oM.UI.CallerUpdateCause Cause",
+      "iri": "http://visualdataweb.org/newOntology/BH.oM.UI.CallerUpdate-BH.oM.RDF.HasProperty-BH.oM.UI.CallerUpdateCause Cause",
       "label": "HasProperty",
-      "attributes": "object",
+      "attributes": [],
       "domain": "BH.oM.UI.CallerUpdate",
+      "range": "BH.oM.UI.CallerUpdate.Cause"
+    },
+    {
+      "id": "BH.oM.UI.CallerUpdate.ComponentUpdate-IsA-BH.oM.UI.ComponentUpdate",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "label": "IsA",
+      "attributes": "object",
+      "domain": "BH.oM.UI.CallerUpdate.ComponentUpdate",
       "range": "BH.oM.UI.ComponentUpdate"
     },
     {
-      "id": "89D4B35FFF54602FDD9491779607205DED7102ECBF8FA469DEA5AB563F4F4476",
-      "iri": "http://visualdataweb.org/newOntology/89D4B35FFF54602FDD9491779607205DED7102ECBF8FA469DEA5AB563F4F4476",
+      "id": "BH.oM.UI.CallerUpdate-BH.oM.RDF.HasProperty-BH.oM.UI.ComponentUpdate ComponentUpdate",
+      "iri": "http://visualdataweb.org/newOntology/BH.oM.UI.CallerUpdate-BH.oM.RDF.HasProperty-BH.oM.UI.ComponentUpdate ComponentUpdate",
+      "label": "HasProperty",
+      "attributes": [],
+      "domain": "BH.oM.UI.CallerUpdate",
+      "range": "BH.oM.UI.CallerUpdate.ComponentUpdate"
+    },
+    {
+      "id": "BH.oM.UI.CallerUpdate-BH.oM.RDF.HasProperty-System.Collections.Generic.List`1[BH.oM.UI.IParamUpdate] InputUpdates",
+      "iri": "http://visualdataweb.org/newOntology/BH.oM.UI.CallerUpdate-BH.oM.RDF.HasProperty-System.Collections.Generic.List`1[BH.oM.UI.IParamUpdate] InputUpdates",
       "label": "HasProperty",
       "attributes": "datatype",
       "domain": "BH.oM.UI.CallerUpdate",
       "range": "InputUpdates-89D4B35FFF54602FDD9491779607205DED7102ECBF8FA469DEA5AB563F4F4476-CallerUpdate-HasProperty"
     },
     {
-      "id": "B8058939BD0E15D173E99F46F1FF361369DAE439693F8ABAD6FF5786B038954E",
-      "iri": "http://visualdataweb.org/newOntology/B8058939BD0E15D173E99F46F1FF361369DAE439693F8ABAD6FF5786B038954E",
+      "id": "BH.oM.UI.CallerUpdate-BH.oM.RDF.HasProperty-System.Collections.Generic.List`1[BH.oM.UI.IParamUpdate] OutputUpdates",
+      "iri": "http://visualdataweb.org/newOntology/BH.oM.UI.CallerUpdate-BH.oM.RDF.HasProperty-System.Collections.Generic.List`1[BH.oM.UI.IParamUpdate] OutputUpdates",
       "label": "HasProperty",
       "attributes": "datatype",
       "domain": "BH.oM.UI.CallerUpdate",
       "range": "OutputUpdates-B8058939BD0E15D173E99F46F1FF361369DAE439693F8ABAD6FF5786B038954E-CallerUpdate-HasProperty"
     },
     {
-      "id": "977632A1426133F23E7044E97500CCF1AD62D148C7CE8E17B76BD7F6745B077F",
-      "iri": "http://visualdataweb.org/newOntology/977632A1426133F23E7044E97500CCF1AD62D148C7CE8E17B76BD7F6745B077F",
+      "id": "BH.oM.UI.CallerUpdate-BH.oM.RDF.IsA-BH.oM.Base.IBHoMObject",
+      "iri": "http://visualdataweb.org/newOntology/BH.oM.UI.CallerUpdate-BH.oM.RDF.IsA-BH.oM.Base.IBHoMObject",
       "label": "IsA",
       "attributes": "object",
       "domain": "BH.oM.UI.CallerUpdate",
       "range": "BH.oM.Base.IBHoMObject"
     },
     {
-      "id": "A715DAA46481738CAD912EE950AF9477BBA223B1735B33C4F541E3465D0D3EF4",
-      "iri": "http://visualdataweb.org/newOntology/A715DAA46481738CAD912EE950AF9477BBA223B1735B33C4F541E3465D0D3EF4",
+      "id": "BH.oM.UI.CallerUpdate-BH.oM.RDF.IsA-BH.oM.Base.IObject",
+      "iri": "http://visualdataweb.org/newOntology/BH.oM.UI.CallerUpdate-BH.oM.RDF.IsA-BH.oM.Base.IObject",
       "label": "IsA",
       "attributes": "object",
       "domain": "BH.oM.UI.CallerUpdate",
       "range": "BH.oM.Base.IObject"
     },
     {
-      "id": "11CADF1FA0F8E9061D7852C494D97DE60EF41E6FE9704C893F8DDD9C2D761BDE",
-      "iri": "http://visualdataweb.org/newOntology/11CADF1FA0F8E9061D7852C494D97DE60EF41E6FE9704C893F8DDD9C2D761BDE",
+      "id": "BH.oM.UI.CallerUpdate-BH.oM.RDF.IsA-BH.oM.UI.IUpdate",
+      "iri": "http://visualdataweb.org/newOntology/BH.oM.UI.CallerUpdate-BH.oM.RDF.IsA-BH.oM.UI.IUpdate",
       "label": "IsA",
       "attributes": "object",
       "domain": "BH.oM.UI.CallerUpdate",
       "range": "BH.oM.UI.IUpdate"
     },
     {
-      "id": "F4B4169647AA089181B87A02B6D9DAAA451D829ADAF8632046BDFA72A3C5350E",
-      "iri": "http://visualdataweb.org/newOntology/F4B4169647AA089181B87A02B6D9DAAA451D829ADAF8632046BDFA72A3C5350E",
+      "id": "BH.oM.UI.CallerUpdate-BH.oM.RDF.IsSubclassOf-BH.oM.Base.BHoMObject",
+      "iri": "http://visualdataweb.org/newOntology/BH.oM.UI.CallerUpdate-BH.oM.RDF.IsSubclassOf-BH.oM.Base.BHoMObject",
       "label": "IsSubclassOf",
       "attributes": "object",
       "domain": "BH.oM.UI.CallerUpdate",
       "range": "BH.oM.Base.BHoMObject"
     },
     {
-      "id": "47EB04D6C83086474198FF42D0A00E310CEF18A41CE90625E8D3F20BE24F2FDE",
-      "iri": "http://visualdataweb.org/newOntology/47EB04D6C83086474198FF42D0A00E310CEF18A41CE90625E8D3F20BE24F2FDE",
+      "id": "BH.oM.UI.CallerUpdateCause-BH.oM.RDF.IsA-System.IComparable",
+      "iri": "http://visualdataweb.org/newOntology/BH.oM.UI.CallerUpdateCause-BH.oM.RDF.IsA-System.IComparable",
       "label": "IsA",
       "attributes": []
     },
     {
-      "id": "1EEB6DF1F803E62BBE5AC8B45217DBEC15EB6E68AF09CF01768FEE32D472D80C",
-      "iri": "http://visualdataweb.org/newOntology/1EEB6DF1F803E62BBE5AC8B45217DBEC15EB6E68AF09CF01768FEE32D472D80C",
+      "id": "BH.oM.UI.CallerUpdateCause-BH.oM.RDF.IsA-System.IFormattable",
+      "iri": "http://visualdataweb.org/newOntology/BH.oM.UI.CallerUpdateCause-BH.oM.RDF.IsA-System.IFormattable",
       "label": "IsA",
       "attributes": []
     },
     {
-      "id": "1DFF24F5F03BCEC64E8480442CFD862E8BE1DAEED650EC4F0ECA7E35F593DA01",
-      "iri": "http://visualdataweb.org/newOntology/1DFF24F5F03BCEC64E8480442CFD862E8BE1DAEED650EC4F0ECA7E35F593DA01",
+      "id": "BH.oM.UI.CallerUpdateCause-BH.oM.RDF.IsA-System.IConvertible",
+      "iri": "http://visualdataweb.org/newOntology/BH.oM.UI.CallerUpdateCause-BH.oM.RDF.IsA-System.IConvertible",
       "label": "IsA",
       "attributes": []
     },
     {
-      "id": "6B2B38A28FF90E04E6768ADC29FE06F33BD124405C78539278DA55ADBDFD95A1",
-      "iri": "http://visualdataweb.org/newOntology/6B2B38A28FF90E04E6768ADC29FE06F33BD124405C78539278DA55ADBDFD95A1",
+      "id": "BH.oM.UI.CallerUpdateCause-BH.oM.RDF.IsSubclassOf-System.Enum",
+      "iri": "http://visualdataweb.org/newOntology/BH.oM.UI.CallerUpdateCause-BH.oM.RDF.IsSubclassOf-System.Enum",
       "label": "IsSubclassOf",
       "attributes": []
     },
     {
-      "id": "BC98F8676443EAD0F3208EA367899BA2A4120890648902E45778039EDE9629BF",
-      "iri": "http://visualdataweb.org/newOntology/BC98F8676443EAD0F3208EA367899BA2A4120890648902E45778039EDE9629BF",
+      "id": "BH.oM.UI.IInitialisationSettings-BH.oM.RDF.RequiresProperty-System.String InitialisationMethod",
+      "iri": "http://visualdataweb.org/newOntology/BH.oM.UI.IInitialisationSettings-BH.oM.RDF.RequiresProperty-System.String InitialisationMethod",
       "label": "RequiresProperty",
       "attributes": []
     },
     {
-      "id": "04B45327B4EE14156D15130BDA3B15ADF55E3CAB7CB2CEB8B067D38F61FC2F60",
-      "iri": "http://visualdataweb.org/newOntology/04B45327B4EE14156D15130BDA3B15ADF55E3CAB7CB2CEB8B067D38F61FC2F60",
+      "id": "BH.oM.UI.IInitialisationSettings-BH.oM.RDF.IsA-BH.oM.Base.IImmutable",
+      "iri": "http://visualdataweb.org/newOntology/BH.oM.UI.IInitialisationSettings-BH.oM.RDF.IsA-BH.oM.Base.IImmutable",
       "label": "IsA",
       "attributes": "object",
       "domain": "BH.oM.UI.IInitialisationSettings",
       "range": "BH.oM.Base.IImmutable"
     },
     {
-      "id": "3C05C11E0C9AAAA8AF116EDB7F28D8B9DAD23C5945FFC44EBA8C365F265DBAE8",
-      "iri": "http://visualdataweb.org/newOntology/3C05C11E0C9AAAA8AF116EDB7F28D8B9DAD23C5945FFC44EBA8C365F265DBAE8",
+      "id": "BH.oM.UI.IInitialisationSettings-BH.oM.RDF.IsA-BH.oM.Base.IObject",
+      "iri": "http://visualdataweb.org/newOntology/BH.oM.UI.IInitialisationSettings-BH.oM.RDF.IsA-BH.oM.Base.IObject",
       "label": "IsA",
       "attributes": "object",
       "domain": "BH.oM.UI.IInitialisationSettings",
       "range": "BH.oM.Base.IObject"
     },
     {
-      "id": "7DED3AF63196A140B5D01A62177ECDBDEF48B45F4A175B0F65EFA47C45A9AAC5",
-      "iri": "http://visualdataweb.org/newOntology/7DED3AF63196A140B5D01A62177ECDBDEF48B45F4A175B0F65EFA47C45A9AAC5",
+      "id": "BH.oM.UI.ProjectIDEvent-BH.oM.RDF.HasProperty-System.String ProjectID",
+      "iri": "http://visualdataweb.org/newOntology/BH.oM.UI.ProjectIDEvent-BH.oM.RDF.HasProperty-System.String ProjectID",
       "label": "HasProperty",
       "attributes": "datatype",
       "domain": "BH.oM.UI.ProjectIDEvent",
       "range": "ProjectID-7DED3AF63196A140B5D01A62177ECDBDEF48B45F4A175B0F65EFA47C45A9AAC5-ProjectIDEvent-HasProperty"
     },
     {
-      "id": "78E7A93429353ED24DC92E0A0F3AB8563E9CE2129BC6ACC5056374459E1B472B",
-      "iri": "http://visualdataweb.org/newOntology/78E7A93429353ED24DC92E0A0F3AB8563E9CE2129BC6ACC5056374459E1B472B",
-      "label": "HasProperty",
+      "id": "BH.oM.UI.ProjectIDEvent.Type-IsA-BH.oM.Base.Debugging.EventType",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "label": "IsA",
       "attributes": "object",
-      "domain": "BH.oM.UI.ProjectIDEvent",
+      "domain": "BH.oM.UI.ProjectIDEvent.Type",
       "range": "BH.oM.Base.Debugging.EventType"
     },
     {
-      "id": "E88A8B0B6BAC46158AE7229C913D84212BD22C1BEDEEA4B834AA7803BAD260FB",
-      "iri": "http://visualdataweb.org/newOntology/E88A8B0B6BAC46158AE7229C913D84212BD22C1BEDEEA4B834AA7803BAD260FB",
+      "id": "BH.oM.UI.ProjectIDEvent-BH.oM.RDF.HasProperty-BH.oM.Base.Debugging.EventType Type",
+      "iri": "http://visualdataweb.org/newOntology/BH.oM.UI.ProjectIDEvent-BH.oM.RDF.HasProperty-BH.oM.Base.Debugging.EventType Type",
+      "label": "HasProperty",
+      "attributes": [],
+      "domain": "BH.oM.UI.ProjectIDEvent",
+      "range": "BH.oM.UI.ProjectIDEvent.Type"
+    },
+    {
+      "id": "BH.oM.UI.ProjectIDEvent-BH.oM.RDF.IsA-BH.oM.Base.IBHoMObject",
+      "iri": "http://visualdataweb.org/newOntology/BH.oM.UI.ProjectIDEvent-BH.oM.RDF.IsA-BH.oM.Base.IBHoMObject",
       "label": "IsA",
       "attributes": "object",
       "domain": "BH.oM.UI.ProjectIDEvent",
       "range": "BH.oM.Base.IBHoMObject"
     },
     {
-      "id": "1290920D213CB0D982B5D838184182C4167848F30262232743335E128F717F6B",
-      "iri": "http://visualdataweb.org/newOntology/1290920D213CB0D982B5D838184182C4167848F30262232743335E128F717F6B",
+      "id": "BH.oM.UI.ProjectIDEvent-BH.oM.RDF.IsA-BH.oM.Base.IObject",
+      "iri": "http://visualdataweb.org/newOntology/BH.oM.UI.ProjectIDEvent-BH.oM.RDF.IsA-BH.oM.Base.IObject",
       "label": "IsA",
       "attributes": "object",
       "domain": "BH.oM.UI.ProjectIDEvent",
       "range": "BH.oM.Base.IObject"
     },
     {
-      "id": "9DC846BF9327D4EEB1D0E2CB9F084C5E54C905D80076C1590B60CDD04519FCC7",
-      "iri": "http://visualdataweb.org/newOntology/9DC846BF9327D4EEB1D0E2CB9F084C5E54C905D80076C1590B60CDD04519FCC7",
+      "id": "BH.oM.UI.ProjectIDEvent-BH.oM.RDF.IsSubclassOf-BH.oM.Base.Debugging.Event",
+      "iri": "http://visualdataweb.org/newOntology/BH.oM.UI.ProjectIDEvent-BH.oM.RDF.IsSubclassOf-BH.oM.Base.Debugging.Event",
       "label": "IsSubclassOf",
       "attributes": "object",
       "domain": "BH.oM.UI.ProjectIDEvent",
       "range": "BH.oM.Base.Debugging.Event"
     },
     {
-      "id": "EA1DC9E2E0AAB45243F42BEAD444B5584E5DFC4649C9A237D8D81A8884CCACB2",
-      "iri": "http://visualdataweb.org/newOntology/EA1DC9E2E0AAB45243F42BEAD444B5584E5DFC4649C9A237D8D81A8884CCACB2",
+      "id": "BH.oM.UI.UsageLogEntry-BH.oM.RDF.HasProperty-System.DateTime Time",
+      "iri": "http://visualdataweb.org/newOntology/BH.oM.UI.UsageLogEntry-BH.oM.RDF.HasProperty-System.DateTime Time",
       "label": "HasProperty",
       "attributes": "datatype",
       "domain": "BH.oM.UI.UsageLogEntry",
       "range": "Time-EA1DC9E2E0AAB45243F42BEAD444B5584E5DFC4649C9A237D8D81A8884CCACB2-UsageLogEntry-HasProperty"
     },
     {
-      "id": "F137C129714D34F280192E8ABAC847D63B615F2FDC17A6A6EBA2B743B2AB7A03",
-      "iri": "http://visualdataweb.org/newOntology/F137C129714D34F280192E8ABAC847D63B615F2FDC17A6A6EBA2B743B2AB7A03",
+      "id": "BH.oM.UI.UsageLogEntry-BH.oM.RDF.HasProperty-System.String UI",
+      "iri": "http://visualdataweb.org/newOntology/BH.oM.UI.UsageLogEntry-BH.oM.RDF.HasProperty-System.String UI",
       "label": "HasProperty",
       "attributes": "datatype",
       "domain": "BH.oM.UI.UsageLogEntry",
       "range": "UI-F137C129714D34F280192E8ABAC847D63B615F2FDC17A6A6EBA2B743B2AB7A03-UsageLogEntry-HasProperty"
     },
     {
-      "id": "C162E287C8DBEB7843B3F45151F84FB69786311DFC1A7EE4E86B4171A9C1A468",
-      "iri": "http://visualdataweb.org/newOntology/C162E287C8DBEB7843B3F45151F84FB69786311DFC1A7EE4E86B4171A9C1A468",
+      "id": "BH.oM.UI.UsageLogEntry-BH.oM.RDF.HasProperty-System.String UiVersion",
+      "iri": "http://visualdataweb.org/newOntology/BH.oM.UI.UsageLogEntry-BH.oM.RDF.HasProperty-System.String UiVersion",
       "label": "HasProperty",
       "attributes": "datatype",
       "domain": "BH.oM.UI.UsageLogEntry",
       "range": "UiVersion-C162E287C8DBEB7843B3F45151F84FB69786311DFC1A7EE4E86B4171A9C1A468-UsageLogEntry-HasProperty"
     },
     {
-      "id": "193C2AA2BF9D2D8912B888073766F8AB1E1A65513E47D77B1BD17E576C978747",
-      "iri": "http://visualdataweb.org/newOntology/193C2AA2BF9D2D8912B888073766F8AB1E1A65513E47D77B1BD17E576C978747",
+      "id": "BH.oM.UI.UsageLogEntry-BH.oM.RDF.HasProperty-System.String BHoMVersion",
+      "iri": "http://visualdataweb.org/newOntology/BH.oM.UI.UsageLogEntry-BH.oM.RDF.HasProperty-System.String BHoMVersion",
       "label": "HasProperty",
       "attributes": "datatype",
       "domain": "BH.oM.UI.UsageLogEntry",
       "range": "BHoMVersion-193C2AA2BF9D2D8912B888073766F8AB1E1A65513E47D77B1BD17E576C978747-UsageLogEntry-HasProperty"
     },
     {
-      "id": "7324243C25C14C342384F07A52DF10EDC0993B9D5C0056B25396CFF48A0479BE",
-      "iri": "http://visualdataweb.org/newOntology/7324243C25C14C342384F07A52DF10EDC0993B9D5C0056B25396CFF48A0479BE",
+      "id": "BH.oM.UI.UsageLogEntry-BH.oM.RDF.HasProperty-System.Guid ComponentId",
+      "iri": "http://visualdataweb.org/newOntology/BH.oM.UI.UsageLogEntry-BH.oM.RDF.HasProperty-System.Guid ComponentId",
       "label": "HasProperty",
       "attributes": "datatype",
       "domain": "BH.oM.UI.UsageLogEntry",
       "range": "ComponentId-7324243C25C14C342384F07A52DF10EDC0993B9D5C0056B25396CFF48A0479BE-UsageLogEntry-HasProperty"
     },
     {
-      "id": "99B4C9574D216BCDFC11DA0388C2A1B530953C1C61F1D2FFA510814A2F604E7C",
-      "iri": "http://visualdataweb.org/newOntology/99B4C9574D216BCDFC11DA0388C2A1B530953C1C61F1D2FFA510814A2F604E7C",
+      "id": "BH.oM.UI.UsageLogEntry-BH.oM.RDF.HasProperty-System.String CallerName",
+      "iri": "http://visualdataweb.org/newOntology/BH.oM.UI.UsageLogEntry-BH.oM.RDF.HasProperty-System.String CallerName",
       "label": "HasProperty",
       "attributes": "datatype",
       "domain": "BH.oM.UI.UsageLogEntry",
       "range": "CallerName-99B4C9574D216BCDFC11DA0388C2A1B530953C1C61F1D2FFA510814A2F604E7C-UsageLogEntry-HasProperty"
     },
     {
-      "id": "AF018A3E6DCC496E574EBF0738BB529C46F22B7EFEA65DDE89B9CE7F0A271B7F",
-      "iri": "http://visualdataweb.org/newOntology/AF018A3E6DCC496E574EBF0738BB529C46F22B7EFEA65DDE89B9CE7F0A271B7F",
+      "id": "BH.oM.UI.UsageLogEntry-BH.oM.RDF.HasProperty-System.Object SelectedItem",
+      "iri": "http://visualdataweb.org/newOntology/BH.oM.UI.UsageLogEntry-BH.oM.RDF.HasProperty-System.Object SelectedItem",
       "label": "HasProperty",
       "attributes": "datatype",
       "domain": "BH.oM.UI.UsageLogEntry",
       "range": "SelectedItem-AF018A3E6DCC496E574EBF0738BB529C46F22B7EFEA65DDE89B9CE7F0A271B7F-UsageLogEntry-HasProperty"
     },
     {
-      "id": "FCDEE424B4FB589E50F082B00ECD8335899055937B8CBFD49AFD9A89751ABFC0",
-      "iri": "http://visualdataweb.org/newOntology/FCDEE424B4FB589E50F082B00ECD8335899055937B8CBFD49AFD9A89751ABFC0",
+      "id": "BH.oM.UI.UsageLogEntry-BH.oM.RDF.HasProperty-System.String FileId",
+      "iri": "http://visualdataweb.org/newOntology/BH.oM.UI.UsageLogEntry-BH.oM.RDF.HasProperty-System.String FileId",
       "label": "HasProperty",
       "attributes": "datatype",
       "domain": "BH.oM.UI.UsageLogEntry",
       "range": "FileId-FCDEE424B4FB589E50F082B00ECD8335899055937B8CBFD49AFD9A89751ABFC0-UsageLogEntry-HasProperty"
     },
     {
-      "id": "0644B239A2707990E98FB7831822C3FEF7A740ADBB2F09FCEF723F118DE0EDB0",
-      "iri": "http://visualdataweb.org/newOntology/0644B239A2707990E98FB7831822C3FEF7A740ADBB2F09FCEF723F118DE0EDB0",
+      "id": "BH.oM.UI.UsageLogEntry-BH.oM.RDF.HasProperty-System.String FileName",
+      "iri": "http://visualdataweb.org/newOntology/BH.oM.UI.UsageLogEntry-BH.oM.RDF.HasProperty-System.String FileName",
       "label": "HasProperty",
       "attributes": "datatype",
       "domain": "BH.oM.UI.UsageLogEntry",
       "range": "FileName-0644B239A2707990E98FB7831822C3FEF7A740ADBB2F09FCEF723F118DE0EDB0-UsageLogEntry-HasProperty"
     },
     {
-      "id": "E082917F4F0D0D7C03708DBF7A220F41732D31A5DD175A475D29099A7392798D",
-      "iri": "http://visualdataweb.org/newOntology/E082917F4F0D0D7C03708DBF7A220F41732D31A5DD175A475D29099A7392798D",
+      "id": "BH.oM.UI.UsageLogEntry-BH.oM.RDF.HasProperty-System.String ProjectID",
+      "iri": "http://visualdataweb.org/newOntology/BH.oM.UI.UsageLogEntry-BH.oM.RDF.HasProperty-System.String ProjectID",
       "label": "HasProperty",
       "attributes": "datatype",
       "domain": "BH.oM.UI.UsageLogEntry",
       "range": "ProjectID-E082917F4F0D0D7C03708DBF7A220F41732D31A5DD175A475D29099A7392798D-UsageLogEntry-HasProperty"
     },
     {
-      "id": "AF3B5ECDA994FB73B4CD93EB1C21AA2FAA2576E50388BCFA64AAE40189AB2F5C",
-      "iri": "http://visualdataweb.org/newOntology/AF3B5ECDA994FB73B4CD93EB1C21AA2FAA2576E50388BCFA64AAE40189AB2F5C",
+      "id": "BH.oM.UI.UsageLogEntry-BH.oM.RDF.HasProperty-System.Collections.Generic.List`1[BH.oM.Base.Debugging.Event] Errors",
+      "iri": "http://visualdataweb.org/newOntology/BH.oM.UI.UsageLogEntry-BH.oM.RDF.HasProperty-System.Collections.Generic.List`1[BH.oM.Base.Debugging.Event] Errors",
       "label": "HasProperty",
       "attributes": "datatype",
       "domain": "BH.oM.UI.UsageLogEntry",
       "range": "Errors-AF3B5ECDA994FB73B4CD93EB1C21AA2FAA2576E50388BCFA64AAE40189AB2F5C-UsageLogEntry-HasProperty"
     },
     {
-      "id": "6E7B16E899690CA90E67CFD3BD2DA68EE91C6725FEF011C116963DFCC216B606",
-      "iri": "http://visualdataweb.org/newOntology/6E7B16E899690CA90E67CFD3BD2DA68EE91C6725FEF011C116963DFCC216B606",
+      "id": "BH.oM.UI.UsageLogEntry-BH.oM.RDF.IsA-BH.oM.Base.IBHoMObject",
+      "iri": "http://visualdataweb.org/newOntology/BH.oM.UI.UsageLogEntry-BH.oM.RDF.IsA-BH.oM.Base.IBHoMObject",
       "label": "IsA",
       "attributes": "object",
       "domain": "BH.oM.UI.UsageLogEntry",
       "range": "BH.oM.Base.IBHoMObject"
     },
     {
-      "id": "A245469A7D64E0C2066131752B1ADB3C2C26677753EB1DDAC288E9FD7EB5FFD6",
-      "iri": "http://visualdataweb.org/newOntology/A245469A7D64E0C2066131752B1ADB3C2C26677753EB1DDAC288E9FD7EB5FFD6",
+      "id": "BH.oM.UI.UsageLogEntry-BH.oM.RDF.IsA-BH.oM.Base.IObject",
+      "iri": "http://visualdataweb.org/newOntology/BH.oM.UI.UsageLogEntry-BH.oM.RDF.IsA-BH.oM.Base.IObject",
       "label": "IsA",
       "attributes": "object",
       "domain": "BH.oM.UI.UsageLogEntry",
       "range": "BH.oM.Base.IObject"
     },
     {
-      "id": "08A6B887DE07DFADA3A1B1645AB5E57609A4D00EBF3CEC541EFB5723A447202D",
-      "iri": "http://visualdataweb.org/newOntology/08A6B887DE07DFADA3A1B1645AB5E57609A4D00EBF3CEC541EFB5723A447202D",
+      "id": "BH.oM.UI.UsageLogEntry-BH.oM.RDF.IsSubclassOf-BH.oM.Base.BHoMObject",
+      "iri": "http://visualdataweb.org/newOntology/BH.oM.UI.UsageLogEntry-BH.oM.RDF.IsSubclassOf-BH.oM.Base.BHoMObject",
       "label": "IsSubclassOf",
       "attributes": "object",
       "domain": "BH.oM.UI.UsageLogEntry",
       "range": "BH.oM.Base.BHoMObject"
     },
     {
-      "id": "55CC1CB3760B55173B186D2DFF4833F3E1BFE17C3EB4D74D99EEC0BC8DBF664C",
-      "iri": "http://visualdataweb.org/newOntology/55CC1CB3760B55173B186D2DFF4833F3E1BFE17C3EB4D74D99EEC0BC8DBF664C",
+      "id": "BH.oM.UI.ParamOldIndexFragment-BH.oM.RDF.HasProperty-Int32 OldIndex",
+      "iri": "http://visualdataweb.org/newOntology/BH.oM.UI.ParamOldIndexFragment-BH.oM.RDF.HasProperty-Int32 OldIndex",
       "label": "HasProperty",
       "attributes": "datatype",
       "domain": "BH.oM.UI.ParamOldIndexFragment",
       "range": "OldIndex-55CC1CB3760B55173B186D2DFF4833F3E1BFE17C3EB4D74D99EEC0BC8DBF664C-ParamOldIndexFragment-HasProperty"
     },
     {
-      "id": "FB5690AA2997315826216C357DD56330BAA29CF8F22ADCDD138D65869503C455",
-      "iri": "http://visualdataweb.org/newOntology/FB5690AA2997315826216C357DD56330BAA29CF8F22ADCDD138D65869503C455",
+      "id": "BH.oM.UI.ParamOldIndexFragment-BH.oM.RDF.IsA-BH.oM.Base.IFragment",
+      "iri": "http://visualdataweb.org/newOntology/BH.oM.UI.ParamOldIndexFragment-BH.oM.RDF.IsA-BH.oM.Base.IFragment",
       "label": "IsA",
       "attributes": "object",
       "domain": "BH.oM.UI.ParamOldIndexFragment",
       "range": "BH.oM.Base.IFragment"
     },
     {
-      "id": "97CE900111CE650413E942A50D9D9AFD2DEEC540D956CDC898207AA41CBDB3A0",
-      "iri": "http://visualdataweb.org/newOntology/97CE900111CE650413E942A50D9D9AFD2DEEC540D956CDC898207AA41CBDB3A0",
+      "id": "BH.oM.UI.ParamOldIndexFragment-BH.oM.RDF.IsA-BH.oM.Base.IObject",
+      "iri": "http://visualdataweb.org/newOntology/BH.oM.UI.ParamOldIndexFragment-BH.oM.RDF.IsA-BH.oM.Base.IObject",
       "label": "IsA",
       "attributes": "object",
       "domain": "BH.oM.UI.ParamOldIndexFragment",
       "range": "BH.oM.Base.IObject"
     },
     {
-      "id": "095E036C5044FF0013AAC929C9C8D434C2EC41CD5B75F6ADE7C44C03981E762D",
-      "iri": "http://visualdataweb.org/newOntology/095E036C5044FF0013AAC929C9C8D434C2EC41CD5B75F6ADE7C44C03981E762D",
+      "id": "BH.oM.UI.ParamOldIndexFragment-BH.oM.RDF.IsSubclassOf-System.Object",
+      "iri": "http://visualdataweb.org/newOntology/BH.oM.UI.ParamOldIndexFragment-BH.oM.RDF.IsSubclassOf-System.Object",
       "label": "IsSubclassOf",
       "attributes": []
     },
     {
-      "id": "3F5FE391F2B6D075540380FDC9E92EE5C392346E6DC3C4C4C15EA75154C7C71A",
-      "iri": "http://visualdataweb.org/newOntology/3F5FE391F2B6D075540380FDC9E92EE5C392346E6DC3C4C4C15EA75154C7C71A",
+      "id": "BH.oM.UI.CustomItem-BH.oM.RDF.HasProperty-System.Collections.Generic.List`1[System.Type] InputTypes",
+      "iri": "http://visualdataweb.org/newOntology/BH.oM.UI.CustomItem-BH.oM.RDF.HasProperty-System.Collections.Generic.List`1[System.Type] InputTypes",
       "label": "HasProperty",
       "attributes": "datatype",
       "domain": "BH.oM.UI.CustomItem",
       "range": "InputTypes-3F5FE391F2B6D075540380FDC9E92EE5C392346E6DC3C4C4C15EA75154C7C71A-CustomItem-HasProperty"
     },
     {
-      "id": "E7CE7B10AD6147B9B1D1A421AD73E9701025F95C46B8BA3FD54B1AD1D5D41A25",
-      "iri": "http://visualdataweb.org/newOntology/E7CE7B10AD6147B9B1D1A421AD73E9701025F95C46B8BA3FD54B1AD1D5D41A25",
+      "id": "BH.oM.UI.CustomItem-BH.oM.RDF.HasProperty-System.Collections.Generic.List`1[System.Type] OutputTypes",
+      "iri": "http://visualdataweb.org/newOntology/BH.oM.UI.CustomItem-BH.oM.RDF.HasProperty-System.Collections.Generic.List`1[System.Type] OutputTypes",
       "label": "HasProperty",
       "attributes": "datatype",
       "domain": "BH.oM.UI.CustomItem",
       "range": "OutputTypes-E7CE7B10AD6147B9B1D1A421AD73E9701025F95C46B8BA3FD54B1AD1D5D41A25-CustomItem-HasProperty"
     },
     {
-      "id": "C7B02E3CEF3DCC5ABD89816ABE569639DB0F387811C9FD1262CD9CC2A20A01E6",
-      "iri": "http://visualdataweb.org/newOntology/C7B02E3CEF3DCC5ABD89816ABE569639DB0F387811C9FD1262CD9CC2A20A01E6",
+      "id": "BH.oM.UI.CustomItem-BH.oM.RDF.HasProperty-System.Object Content",
+      "iri": "http://visualdataweb.org/newOntology/BH.oM.UI.CustomItem-BH.oM.RDF.HasProperty-System.Object Content",
       "label": "HasProperty",
       "attributes": "datatype",
       "domain": "BH.oM.UI.CustomItem",
       "range": "Content-C7B02E3CEF3DCC5ABD89816ABE569639DB0F387811C9FD1262CD9CC2A20A01E6-CustomItem-HasProperty"
     },
     {
-      "id": "9B7DCEE568293188E10F350DD1A3ADAB736A2927164F2548FCE9D838ED810720",
-      "iri": "http://visualdataweb.org/newOntology/9B7DCEE568293188E10F350DD1A3ADAB736A2927164F2548FCE9D838ED810720",
+      "id": "BH.oM.UI.CustomItem-BH.oM.RDF.IsA-BH.oM.Base.IBHoMObject",
+      "iri": "http://visualdataweb.org/newOntology/BH.oM.UI.CustomItem-BH.oM.RDF.IsA-BH.oM.Base.IBHoMObject",
       "label": "IsA",
       "attributes": "object",
       "domain": "BH.oM.UI.CustomItem",
       "range": "BH.oM.Base.IBHoMObject"
     },
     {
-      "id": "F09FC27CC60200CEAF39314A43CAE3AF7CDB28F5A41F983DF7333DA0829C92FE",
-      "iri": "http://visualdataweb.org/newOntology/F09FC27CC60200CEAF39314A43CAE3AF7CDB28F5A41F983DF7333DA0829C92FE",
+      "id": "BH.oM.UI.CustomItem-BH.oM.RDF.IsA-BH.oM.Base.IObject",
+      "iri": "http://visualdataweb.org/newOntology/BH.oM.UI.CustomItem-BH.oM.RDF.IsA-BH.oM.Base.IObject",
       "label": "IsA",
       "attributes": "object",
       "domain": "BH.oM.UI.CustomItem",
       "range": "BH.oM.Base.IObject"
     },
     {
-      "id": "82A9EA9B7CCD18BF1885B6FE5E2F68726FE998F379F226CEA30EE86F4143CB2E",
-      "iri": "http://visualdataweb.org/newOntology/82A9EA9B7CCD18BF1885B6FE5E2F68726FE998F379F226CEA30EE86F4143CB2E",
+      "id": "BH.oM.UI.CustomItem-BH.oM.RDF.IsSubclassOf-BH.oM.Base.BHoMObject",
+      "iri": "http://visualdataweb.org/newOntology/BH.oM.UI.CustomItem-BH.oM.RDF.IsSubclassOf-BH.oM.Base.BHoMObject",
       "label": "IsSubclassOf",
       "attributes": "object",
       "domain": "BH.oM.UI.CustomItem",
       "range": "BH.oM.Base.BHoMObject"
     },
     {
-      "id": "76DEDFB3A1772CC14C961005E178BBE35B1AB252FF1ACADD679D657D11888AE5",
-      "iri": "http://visualdataweb.org/newOntology/76DEDFB3A1772CC14C961005E178BBE35B1AB252FF1ACADD679D657D11888AE5",
+      "id": "BH.oM.UI.SearchConfig-BH.oM.RDF.HasProperty-System.Type TypeConstraint",
+      "iri": "http://visualdataweb.org/newOntology/BH.oM.UI.SearchConfig-BH.oM.RDF.HasProperty-System.Type TypeConstraint",
       "label": "HasProperty",
       "attributes": "datatype",
       "domain": "BH.oM.UI.SearchConfig",
       "range": "TypeConstraint-76DEDFB3A1772CC14C961005E178BBE35B1AB252FF1ACADD679D657D11888AE5-SearchConfig-HasProperty"
     },
     {
-      "id": "28594CCF5C7D2656633C721C35A20964D04C0F0B1F073394C8ED632CCAE84BE9",
-      "iri": "http://visualdataweb.org/newOntology/28594CCF5C7D2656633C721C35A20964D04C0F0B1F073394C8ED632CCAE84BE9",
+      "id": "BH.oM.UI.SearchConfig-BH.oM.RDF.HasProperty-Boolean IsReturnType",
+      "iri": "http://visualdataweb.org/newOntology/BH.oM.UI.SearchConfig-BH.oM.RDF.HasProperty-Boolean IsReturnType",
       "label": "HasProperty",
       "attributes": "datatype",
       "domain": "BH.oM.UI.SearchConfig",
       "range": "IsReturnType-28594CCF5C7D2656633C721C35A20964D04C0F0B1F073394C8ED632CCAE84BE9-SearchConfig-HasProperty"
     },
     {
-      "id": "478A238914444D4AF52795633580149CE22CCE1351A156EE64C646E247060019",
-      "iri": "http://visualdataweb.org/newOntology/478A238914444D4AF52795633580149CE22CCE1351A156EE64C646E247060019",
+      "id": "BH.oM.UI.SearchConfig-BH.oM.RDF.IsA-BH.oM.Base.IBHoMObject",
+      "iri": "http://visualdataweb.org/newOntology/BH.oM.UI.SearchConfig-BH.oM.RDF.IsA-BH.oM.Base.IBHoMObject",
       "label": "IsA",
       "attributes": "object",
       "domain": "BH.oM.UI.SearchConfig",
       "range": "BH.oM.Base.IBHoMObject"
     },
     {
-      "id": "9EC566F6FD66A68940DF66D9ABDCD03C6ADBD1AA5CBAF3C477FD33F8E04C98E4",
-      "iri": "http://visualdataweb.org/newOntology/9EC566F6FD66A68940DF66D9ABDCD03C6ADBD1AA5CBAF3C477FD33F8E04C98E4",
+      "id": "BH.oM.UI.SearchConfig-BH.oM.RDF.IsA-BH.oM.Base.IObject",
+      "iri": "http://visualdataweb.org/newOntology/BH.oM.UI.SearchConfig-BH.oM.RDF.IsA-BH.oM.Base.IObject",
       "label": "IsA",
       "attributes": "object",
       "domain": "BH.oM.UI.SearchConfig",
       "range": "BH.oM.Base.IObject"
     },
     {
-      "id": "03208E191FDBF4E2CF77A848BC50CBC4F6A8F43294587B5F19A1698C2BDCD9F4",
-      "iri": "http://visualdataweb.org/newOntology/03208E191FDBF4E2CF77A848BC50CBC4F6A8F43294587B5F19A1698C2BDCD9F4",
+      "id": "BH.oM.UI.SearchConfig-BH.oM.RDF.IsSubclassOf-BH.oM.Base.BHoMObject",
+      "iri": "http://visualdataweb.org/newOntology/BH.oM.UI.SearchConfig-BH.oM.RDF.IsSubclassOf-BH.oM.Base.BHoMObject",
       "label": "IsSubclassOf",
       "attributes": "object",
       "domain": "BH.oM.UI.SearchConfig",
       "range": "BH.oM.Base.BHoMObject"
     },
     {
-      "id": "CF1AFD000C89F5A021FAEBE90C04465DA3AC90AE53375EAB7C6EFF270D32FB33",
-      "iri": "http://visualdataweb.org/newOntology/CF1AFD000C89F5A021FAEBE90C04465DA3AC90AE53375EAB7C6EFF270D32FB33",
+      "id": "BH.oM.UI.SearchItem-BH.oM.RDF.HasProperty-System.Type CallerType",
+      "iri": "http://visualdataweb.org/newOntology/BH.oM.UI.SearchItem-BH.oM.RDF.HasProperty-System.Type CallerType",
       "label": "HasProperty",
       "attributes": "datatype",
       "domain": "BH.oM.UI.SearchItem",
       "range": "CallerType-CF1AFD000C89F5A021FAEBE90C04465DA3AC90AE53375EAB7C6EFF270D32FB33-SearchItem-HasProperty"
     },
     {
-      "id": "C2E2754DAC8084E809E6302CF7DC98BEC9B0CE29BD3F4965BFB7614A79DB7499",
-      "iri": "http://visualdataweb.org/newOntology/C2E2754DAC8084E809E6302CF7DC98BEC9B0CE29BD3F4965BFB7614A79DB7499",
+      "id": "BH.oM.UI.SearchItem-BH.oM.RDF.HasProperty-System.Object Item",
+      "iri": "http://visualdataweb.org/newOntology/BH.oM.UI.SearchItem-BH.oM.RDF.HasProperty-System.Object Item",
       "label": "HasProperty",
       "attributes": "datatype",
       "domain": "BH.oM.UI.SearchItem",
       "range": "Item-C2E2754DAC8084E809E6302CF7DC98BEC9B0CE29BD3F4965BFB7614A79DB7499-SearchItem-HasProperty"
     },
     {
-      "id": "E8437F99E7BE875260738F1F948C70E8C7BD611966776C721D96F9D4C479712F",
-      "iri": "http://visualdataweb.org/newOntology/E8437F99E7BE875260738F1F948C70E8C7BD611966776C721D96F9D4C479712F",
+      "id": "BH.oM.UI.SearchItem-BH.oM.RDF.HasProperty-System.Drawing.Bitmap Icon",
+      "iri": "http://visualdataweb.org/newOntology/BH.oM.UI.SearchItem-BH.oM.RDF.HasProperty-System.Drawing.Bitmap Icon",
       "label": "HasProperty",
       "attributes": "datatype",
       "domain": "BH.oM.UI.SearchItem",
       "range": "Icon-E8437F99E7BE875260738F1F948C70E8C7BD611966776C721D96F9D4C479712F-SearchItem-HasProperty"
     },
     {
-      "id": "85667036EBC797FD70A91B17F5E61DE97172441C11F58D264B0614F419D0B5F8",
-      "iri": "http://visualdataweb.org/newOntology/85667036EBC797FD70A91B17F5E61DE97172441C11F58D264B0614F419D0B5F8",
+      "id": "BH.oM.UI.SearchItem-BH.oM.RDF.HasProperty-System.String Text",
+      "iri": "http://visualdataweb.org/newOntology/BH.oM.UI.SearchItem-BH.oM.RDF.HasProperty-System.String Text",
       "label": "HasProperty",
       "attributes": "datatype",
       "domain": "BH.oM.UI.SearchItem",
       "range": "Text-85667036EBC797FD70A91B17F5E61DE97172441C11F58D264B0614F419D0B5F8-SearchItem-HasProperty"
     },
     {
-      "id": "9C569A5D968275F8412911FC525E0362E49BB3604ED33F4785D4055B7617889E",
-      "iri": "http://visualdataweb.org/newOntology/9C569A5D968275F8412911FC525E0362E49BB3604ED33F4785D4055B7617889E",
+      "id": "BH.oM.UI.SearchItem-BH.oM.RDF.HasProperty-Double Weight",
+      "iri": "http://visualdataweb.org/newOntology/BH.oM.UI.SearchItem-BH.oM.RDF.HasProperty-Double Weight",
       "label": "HasProperty",
       "attributes": "datatype",
       "domain": "BH.oM.UI.SearchItem",
       "range": "Weight-9C569A5D968275F8412911FC525E0362E49BB3604ED33F4785D4055B7617889E-SearchItem-HasProperty"
     },
     {
-      "id": "FFC3F03EF2F86C12BE1E316C972A56E5AB1A557569CE84E93144023101FA4618",
-      "iri": "http://visualdataweb.org/newOntology/FFC3F03EF2F86C12BE1E316C972A56E5AB1A557569CE84E93144023101FA4618",
+      "id": "BH.oM.UI.SearchItem-BH.oM.RDF.IsA-BH.oM.Base.IBHoMObject",
+      "iri": "http://visualdataweb.org/newOntology/BH.oM.UI.SearchItem-BH.oM.RDF.IsA-BH.oM.Base.IBHoMObject",
       "label": "IsA",
       "attributes": "object",
       "domain": "BH.oM.UI.SearchItem",
       "range": "BH.oM.Base.IBHoMObject"
     },
     {
-      "id": "E5D224EAE77A674A8C89844A53F5962C9781406D56C0339D05CBCB10F924CC38",
-      "iri": "http://visualdataweb.org/newOntology/E5D224EAE77A674A8C89844A53F5962C9781406D56C0339D05CBCB10F924CC38",
+      "id": "BH.oM.UI.SearchItem-BH.oM.RDF.IsA-BH.oM.Base.IObject",
+      "iri": "http://visualdataweb.org/newOntology/BH.oM.UI.SearchItem-BH.oM.RDF.IsA-BH.oM.Base.IObject",
       "label": "IsA",
       "attributes": "object",
       "domain": "BH.oM.UI.SearchItem",
       "range": "BH.oM.Base.IObject"
     },
     {
-      "id": "B521FC4135352076678CE1120C7F47C93E4E00FE918BEAED94CC198F909445D6",
-      "iri": "http://visualdataweb.org/newOntology/B521FC4135352076678CE1120C7F47C93E4E00FE918BEAED94CC198F909445D6",
+      "id": "BH.oM.UI.SearchItem-BH.oM.RDF.IsSubclassOf-BH.oM.Base.BHoMObject",
+      "iri": "http://visualdataweb.org/newOntology/BH.oM.UI.SearchItem-BH.oM.RDF.IsSubclassOf-BH.oM.Base.BHoMObject",
       "label": "IsSubclassOf",
       "attributes": "object",
       "domain": "BH.oM.UI.SearchItem",
       "range": "BH.oM.Base.BHoMObject"
     },
     {
-      "id": "B4F0FF87906A11BDAC2F29D56F2A083D56357A8298F9355F648CD2387AC1E1C8",
-      "iri": "http://visualdataweb.org/newOntology/B4F0FF87906A11BDAC2F29D56F2A083D56357A8298F9355F648CD2387AC1E1C8",
+      "id": "BH.oM.UI.ParamKind-BH.oM.RDF.IsA-System.IComparable",
+      "iri": "http://visualdataweb.org/newOntology/BH.oM.UI.ParamKind-BH.oM.RDF.IsA-System.IComparable",
       "label": "IsA",
       "attributes": []
     },
     {
-      "id": "05C07315CFCC982DB8600D8D6B2BE500DDCDFB08FFDB2030B0BEA2E581842B0D",
-      "iri": "http://visualdataweb.org/newOntology/05C07315CFCC982DB8600D8D6B2BE500DDCDFB08FFDB2030B0BEA2E581842B0D",
+      "id": "BH.oM.UI.ParamKind-BH.oM.RDF.IsA-System.IFormattable",
+      "iri": "http://visualdataweb.org/newOntology/BH.oM.UI.ParamKind-BH.oM.RDF.IsA-System.IFormattable",
       "label": "IsA",
       "attributes": []
     },
     {
-      "id": "1814435F7866B367A1BC3EF2F08B54735ECC737F183FA97EF37C90FC4EFDEE31",
-      "iri": "http://visualdataweb.org/newOntology/1814435F7866B367A1BC3EF2F08B54735ECC737F183FA97EF37C90FC4EFDEE31",
+      "id": "BH.oM.UI.ParamKind-BH.oM.RDF.IsA-System.IConvertible",
+      "iri": "http://visualdataweb.org/newOntology/BH.oM.UI.ParamKind-BH.oM.RDF.IsA-System.IConvertible",
       "label": "IsA",
       "attributes": []
     },
     {
-      "id": "B6E0D7A9016B412DC6D386725C426F7A9B855B973AA8D0693754138D75DF327F",
-      "iri": "http://visualdataweb.org/newOntology/B6E0D7A9016B412DC6D386725C426F7A9B855B973AA8D0693754138D75DF327F",
+      "id": "BH.oM.UI.ParamKind-BH.oM.RDF.IsSubclassOf-System.Enum",
+      "iri": "http://visualdataweb.org/newOntology/BH.oM.UI.ParamKind-BH.oM.RDF.IsSubclassOf-System.Enum",
       "label": "IsSubclassOf",
       "attributes": []
     },
     {
-      "id": "9DF4C2C7B3576FABD21091409D9297FC81693F5FDC3B0FA63F1B4E6262B9D923",
-      "iri": "http://visualdataweb.org/newOntology/9DF4C2C7B3576FABD21091409D9297FC81693F5FDC3B0FA63F1B4E6262B9D923",
+      "id": "BH.oM.UI.ParamInfo-BH.oM.RDF.HasProperty-System.Type DataType",
+      "iri": "http://visualdataweb.org/newOntology/BH.oM.UI.ParamInfo-BH.oM.RDF.HasProperty-System.Type DataType",
       "label": "HasProperty",
       "attributes": "datatype",
       "domain": "BH.oM.UI.ParamInfo",
       "range": "DataType-9DF4C2C7B3576FABD21091409D9297FC81693F5FDC3B0FA63F1B4E6262B9D923-ParamInfo-HasProperty"
     },
     {
-      "id": "F60A3D16D3861AA2965A0AE857637B5FCB89C46FF7FC298AC4F728A9DFE376BB",
-      "iri": "http://visualdataweb.org/newOntology/F60A3D16D3861AA2965A0AE857637B5FCB89C46FF7FC298AC4F728A9DFE376BB",
+      "id": "BH.oM.UI.ParamInfo-BH.oM.RDF.HasProperty-System.String Description",
+      "iri": "http://visualdataweb.org/newOntology/BH.oM.UI.ParamInfo-BH.oM.RDF.HasProperty-System.String Description",
       "label": "HasProperty",
       "attributes": "datatype",
       "domain": "BH.oM.UI.ParamInfo",
       "range": "Description-F60A3D16D3861AA2965A0AE857637B5FCB89C46FF7FC298AC4F728A9DFE376BB-ParamInfo-HasProperty"
     },
     {
-      "id": "A19F93DD05DD9DC62B6115EA2A4BBA5DA391EA6DC262E09403C96BC81185B03D",
-      "iri": "http://visualdataweb.org/newOntology/A19F93DD05DD9DC62B6115EA2A4BBA5DA391EA6DC262E09403C96BC81185B03D",
-      "label": "HasProperty",
+      "id": "BH.oM.UI.ParamInfo.Kind-IsA-BH.oM.UI.ParamKind",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "label": "IsA",
       "attributes": "object",
-      "domain": "BH.oM.UI.ParamInfo",
+      "domain": "BH.oM.UI.ParamInfo.Kind",
       "range": "BH.oM.UI.ParamKind"
     },
     {
-      "id": "AEEA0E504FBFE9AFE94CDFA9AB23DBF5EBAE880BA2EABE7F7AF98DBE80771BBA",
-      "iri": "http://visualdataweb.org/newOntology/AEEA0E504FBFE9AFE94CDFA9AB23DBF5EBAE880BA2EABE7F7AF98DBE80771BBA",
+      "id": "BH.oM.UI.ParamInfo-BH.oM.RDF.HasProperty-BH.oM.UI.ParamKind Kind",
+      "iri": "http://visualdataweb.org/newOntology/BH.oM.UI.ParamInfo-BH.oM.RDF.HasProperty-BH.oM.UI.ParamKind Kind",
+      "label": "HasProperty",
+      "attributes": [],
+      "domain": "BH.oM.UI.ParamInfo",
+      "range": "BH.oM.UI.ParamInfo.Kind"
+    },
+    {
+      "id": "BH.oM.UI.ParamInfo-BH.oM.RDF.HasProperty-Boolean HasDefaultValue",
+      "iri": "http://visualdataweb.org/newOntology/BH.oM.UI.ParamInfo-BH.oM.RDF.HasProperty-Boolean HasDefaultValue",
       "label": "HasProperty",
       "attributes": "datatype",
       "domain": "BH.oM.UI.ParamInfo",
       "range": "HasDefaultValue-AEEA0E504FBFE9AFE94CDFA9AB23DBF5EBAE880BA2EABE7F7AF98DBE80771BBA-ParamInfo-HasProperty"
     },
     {
-      "id": "F70BF0BB3F8351CFA8DB9EF43D812123E6527853B71F8B20BB41E24FA1C6390E",
-      "iri": "http://visualdataweb.org/newOntology/F70BF0BB3F8351CFA8DB9EF43D812123E6527853B71F8B20BB41E24FA1C6390E",
+      "id": "BH.oM.UI.ParamInfo-BH.oM.RDF.HasProperty-System.Object DefaultValue",
+      "iri": "http://visualdataweb.org/newOntology/BH.oM.UI.ParamInfo-BH.oM.RDF.HasProperty-System.Object DefaultValue",
       "label": "HasProperty",
       "attributes": "datatype",
       "domain": "BH.oM.UI.ParamInfo",
       "range": "DefaultValue-F70BF0BB3F8351CFA8DB9EF43D812123E6527853B71F8B20BB41E24FA1C6390E-ParamInfo-HasProperty"
     },
     {
-      "id": "3F677BBCB033750BDA41D03DD4D60C3E609C65DBCD6250E173FA0A513BF2E2A8",
-      "iri": "http://visualdataweb.org/newOntology/3F677BBCB033750BDA41D03DD4D60C3E609C65DBCD6250E173FA0A513BF2E2A8",
+      "id": "BH.oM.UI.ParamInfo-BH.oM.RDF.HasProperty-Boolean IsRequired",
+      "iri": "http://visualdataweb.org/newOntology/BH.oM.UI.ParamInfo-BH.oM.RDF.HasProperty-Boolean IsRequired",
       "label": "HasProperty",
       "attributes": "datatype",
       "domain": "BH.oM.UI.ParamInfo",
       "range": "IsRequired-3F677BBCB033750BDA41D03DD4D60C3E609C65DBCD6250E173FA0A513BF2E2A8-ParamInfo-HasProperty"
     },
     {
-      "id": "0640EB17375E1294B1F084B77DB2D3FE29AF3F52550F17CFBA810205D36DF7A6",
-      "iri": "http://visualdataweb.org/newOntology/0640EB17375E1294B1F084B77DB2D3FE29AF3F52550F17CFBA810205D36DF7A6",
+      "id": "BH.oM.UI.ParamInfo-BH.oM.RDF.HasProperty-Boolean IsSelected",
+      "iri": "http://visualdataweb.org/newOntology/BH.oM.UI.ParamInfo-BH.oM.RDF.HasProperty-Boolean IsSelected",
       "label": "HasProperty",
       "attributes": "datatype",
       "domain": "BH.oM.UI.ParamInfo",
       "range": "IsSelected-0640EB17375E1294B1F084B77DB2D3FE29AF3F52550F17CFBA810205D36DF7A6-ParamInfo-HasProperty"
     },
     {
-      "id": "E5EF04E094D5DC984109018AB49E5CDE18FB04175E08D7710E8A81A8E7A9FE08",
-      "iri": "http://visualdataweb.org/newOntology/E5EF04E094D5DC984109018AB49E5CDE18FB04175E08D7710E8A81A8E7A9FE08",
+      "id": "BH.oM.UI.ParamInfo-BH.oM.RDF.HasProperty-System.String DefaultValueWarning",
+      "iri": "http://visualdataweb.org/newOntology/BH.oM.UI.ParamInfo-BH.oM.RDF.HasProperty-System.String DefaultValueWarning",
       "label": "HasProperty",
       "attributes": "datatype",
       "domain": "BH.oM.UI.ParamInfo",
       "range": "DefaultValueWarning-E5EF04E094D5DC984109018AB49E5CDE18FB04175E08D7710E8A81A8E7A9FE08-ParamInfo-HasProperty"
     },
     {
-      "id": "9B35329E4BEF9636C31BA20CB125DF2FC8C7C01FFD9FFE19682E79C26F6DC172",
-      "iri": "http://visualdataweb.org/newOntology/9B35329E4BEF9636C31BA20CB125DF2FC8C7C01FFD9FFE19682E79C26F6DC172",
+      "id": "BH.oM.UI.ParamInfo-BH.oM.RDF.IsA-BH.oM.Base.IBHoMObject",
+      "iri": "http://visualdataweb.org/newOntology/BH.oM.UI.ParamInfo-BH.oM.RDF.IsA-BH.oM.Base.IBHoMObject",
       "label": "IsA",
       "attributes": "object",
       "domain": "BH.oM.UI.ParamInfo",
       "range": "BH.oM.Base.IBHoMObject"
     },
     {
-      "id": "583E0CF8F4913B312FD5CE0A22329E058A8AB7AD3565C2CAC17CC3E1718A783E",
-      "iri": "http://visualdataweb.org/newOntology/583E0CF8F4913B312FD5CE0A22329E058A8AB7AD3565C2CAC17CC3E1718A783E",
+      "id": "BH.oM.UI.ParamInfo-BH.oM.RDF.IsA-BH.oM.Base.IObject",
+      "iri": "http://visualdataweb.org/newOntology/BH.oM.UI.ParamInfo-BH.oM.RDF.IsA-BH.oM.Base.IObject",
       "label": "IsA",
       "attributes": "object",
       "domain": "BH.oM.UI.ParamInfo",
       "range": "BH.oM.Base.IObject"
     },
     {
-      "id": "0DACC7721251F72CFC8338E0984C5F9B5F85664DDAF51132C2BA3DD7EC6A321F",
-      "iri": "http://visualdataweb.org/newOntology/0DACC7721251F72CFC8338E0984C5F9B5F85664DDAF51132C2BA3DD7EC6A321F",
+      "id": "BH.oM.UI.ParamInfo-BH.oM.RDF.IsSubclassOf-BH.oM.Base.BHoMObject",
+      "iri": "http://visualdataweb.org/newOntology/BH.oM.UI.ParamInfo-BH.oM.RDF.IsSubclassOf-BH.oM.Base.BHoMObject",
       "label": "IsSubclassOf",
       "attributes": "object",
       "domain": "BH.oM.UI.ParamInfo",

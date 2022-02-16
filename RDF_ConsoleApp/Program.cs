@@ -57,6 +57,8 @@ namespace BH.oM.CodeAnalysis.ConsoleApp
                 File.AppendAllText(allWebOWLOntologyURL, "\n" + WebVOWLOntologyURL);
             }
 
+            //List<Type> 
+            //Dictionary<Type, List<IRelation>> dictionaryGraph = group.DictionaryGraphFromTypes();
             // Invoke all static methods in `Tests_Alessio` class
             //typeof(Tests_Alessio).GetMethods().Where(mi => mi.IsStatic).ToList().ForEach(mi => mi.Invoke(null, null));
 

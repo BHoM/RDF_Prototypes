@@ -171,6 +171,10 @@
       "type": "rdfs:Datatype"
     },
     {
+      "id": "BH.oM.Inspection.Issue.Position",
+      "type": "owl:Class"
+    },
+    {
       "id": "BH.oM.Geometry.Point",
       "type": "owl:Class"
     },
@@ -437,9 +441,15 @@
       "attributes": "datatype"
     },
     {
+      "id": "BH.oM.Inspection.Issue.Position",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/Geometry_oM/Vector/Point.cs",
+      "label": "Position",
+      "attributes": []
+    },
+    {
       "id": "BH.oM.Geometry.Point",
       "iri": "https://github.com/BHoM/BHoM/blob/main/Geometry_oM/Vector/Point.cs",
-      "label": "Position (Point)",
+      "label": "Point",
       "attributes": []
     },
     {
@@ -457,602 +467,614 @@
   ],
   "property": [
     {
-      "id": "4B09D2CE952B6DE150F1A7FF1C8FD62AE4498C10B2EE938234D439B62EBF7F3F",
+      "id": "BH.oM.Inspection.Audit-BH.oM.RDF.HasProperty-System.String Title",
       "type": "owl:DatatypeProperty"
     },
     {
-      "id": "FCBB8A6352BF9DEB4DA166FCCE10F75B432E10E06A1080DDEEED9552A5B0EE64",
+      "id": "BH.oM.Inspection.Audit-BH.oM.RDF.HasProperty-System.String Filename",
       "type": "owl:DatatypeProperty"
     },
     {
-      "id": "459A92D4BFFF7264C417E52B01EE3FC022FFFA67DF75F41EBAA0CA7DE47711F8",
+      "id": "BH.oM.Inspection.Audit-BH.oM.RDF.HasProperty-System.String AuditID",
       "type": "owl:DatatypeProperty"
     },
     {
-      "id": "8E0E18563780B27F565BFA246738141537721C3527CF6E01A000F324E058C2DF",
+      "id": "BH.oM.Inspection.Audit-BH.oM.RDF.HasProperty-Int32 SiteVisitNumber",
       "type": "owl:DatatypeProperty"
     },
     {
-      "id": "0383B1FF5B1BEF433930E7ED122F3B30C58E0600855DFFE0AABF6B063B9541A1",
+      "id": "BH.oM.Inspection.Audit-BH.oM.RDF.HasProperty-System.String Client",
       "type": "owl:DatatypeProperty"
     },
     {
-      "id": "5776C591F232661D1A8BCA9976D9DB2C2BA632BB88AFAC283F726D64FF52E418",
+      "id": "BH.oM.Inspection.Audit-BH.oM.RDF.HasProperty-Int32 RevisionNumber",
       "type": "owl:DatatypeProperty"
     },
     {
-      "id": "088A0A65413DD626BF91FFE5B3FD1A999BDB52373CFBC81845D5B1E649E10C84",
+      "id": "BH.oM.Inspection.Audit-BH.oM.RDF.HasProperty-System.DateTime InspectionDate",
       "type": "owl:DatatypeProperty"
     },
     {
-      "id": "91A1B1AD5F740BCFAE484F7B5B27FF740CD1E4C69201A64049E554DCBE8BBF26",
+      "id": "BH.oM.Inspection.Audit-BH.oM.RDF.HasProperty-System.DateTime InspectionDateUtc",
       "type": "owl:DatatypeProperty"
     },
     {
-      "id": "72591178DFD6E77EBCB8BE15780EC107A4F383EF7552EB40D29F9A3E0307C9AF",
+      "id": "BH.oM.Inspection.Audit-BH.oM.RDF.HasProperty-System.DateTime IssueDate",
       "type": "owl:DatatypeProperty"
     },
     {
-      "id": "31BCE44738F69E98714862D57EC6A06FC48637144F184963119218C10A6AC65A",
+      "id": "BH.oM.Inspection.Audit-BH.oM.RDF.HasProperty-System.DateTime IssueDateUtc",
       "type": "owl:DatatypeProperty"
     },
     {
-      "id": "B2CF3B85D5F42F34BB9E38B0B5622C828C85B962558D23667403ACBAF2248FC9",
+      "id": "BH.oM.Inspection.Audit-BH.oM.RDF.HasProperty-System.String Author",
       "type": "owl:DatatypeProperty"
     },
     {
-      "id": "9723C37F09C4F154CAF9E835F9B827BE412AF299BDC9E5EDDBBC1DDAC3B42C08",
+      "id": "BH.oM.Inspection.Audit-BH.oM.RDF.HasProperty-System.String ProjectNumber",
       "type": "owl:DatatypeProperty"
     },
     {
-      "id": "E9EB4DD5E1B2AEE2CB0BFB268B12FD90D702C669C35C6941F043137ED8AC3B95",
+      "id": "BH.oM.Inspection.Audit-BH.oM.RDF.HasProperty-System.String JobLeader",
       "type": "owl:DatatypeProperty"
     },
     {
-      "id": "097B187DE628D2688091ECC26BAD0F75138208771349CCE1CC90D7B6E0D17B42",
+      "id": "BH.oM.Inspection.Audit-BH.oM.RDF.HasProperty-System.Collections.Generic.List`1[System.String] Distribution",
       "type": "owl:DatatypeProperty"
     },
     {
-      "id": "ECBBC0B17DCEF8846C9CD8C532C2A38D80EAC80E486D78AD8F36C5D5899459B4",
+      "id": "BH.oM.Inspection.Audit-BH.oM.RDF.HasProperty-System.Collections.Generic.List`1[System.String] Attendance",
       "type": "owl:DatatypeProperty"
     },
     {
-      "id": "5C126F671A68C6CFB2A1C73D18E1049BFC414BF303022C5B7FFF3417E8F48033",
+      "id": "BH.oM.Inspection.Audit-BH.oM.RDF.HasProperty-System.String VisitPurpose",
       "type": "owl:DatatypeProperty"
     },
     {
-      "id": "9A98BF9093888BED068BBCB4D1201CAC881AE37AC49FDC90EA1C82B5C155476C",
+      "id": "BH.oM.Inspection.Audit-BH.oM.RDF.HasProperty-System.Collections.Generic.List`1[System.String] AreasInspected",
       "type": "owl:DatatypeProperty"
     },
     {
-      "id": "5915F13B2CF190BDEA56703887DCFFF3C83130E1C1378B9C57436253D0080FF7",
+      "id": "BH.oM.Inspection.Audit-BH.oM.RDF.HasProperty-System.Collections.Generic.List`1[BH.oM.Inspection.InstallationProgress] InstallationProgressObjects",
       "type": "owl:ObjectProperty"
     },
     {
-      "id": "96DEA1B8873D452196D1A0DA7210C0C5ACE207E741E789507A4C7E663AAE0D11",
+      "id": "BH.oM.Inspection.Audit-BH.oM.RDF.HasProperty-System.Collections.Generic.List`1[System.String] IssueNumbers",
       "type": "owl:DatatypeProperty"
     },
     {
-      "id": "CDE281F062A9F6D3F40BC7C0B71B2347CED387A41FD968F42CDFFB09929A4CA1",
+      "id": "BH.oM.Inspection.Audit-BH.oM.RDF.HasProperty-System.String Score",
       "type": "owl:DatatypeProperty"
     },
     {
-      "id": "CD8DCDAB688F2D67778214195433F53386FFE2612911D194B57E680F9222D336",
+      "id": "BH.oM.Inspection.Audit-BH.oM.RDF.IsA-BH.oM.Base.IBHoMObject",
       "type": "owl:ObjectProperty"
     },
     {
-      "id": "0C6651BBF8B6D4C310AA6829BB1D6B4A764AEE5016BB65FBC8BFB7CB761B600B",
+      "id": "BH.oM.Inspection.Audit-BH.oM.RDF.IsA-BH.oM.Base.IObject",
       "type": "owl:ObjectProperty"
     },
     {
-      "id": "DBBC5C4C25AEDA7804F89186CF0BE6A8CDB5EC733AE486571F9ED9F13628B4F5",
+      "id": "BH.oM.Inspection.Audit-BH.oM.RDF.IsSubclassOf-BH.oM.Base.BHoMObject",
       "type": "owl:ObjectProperty"
     },
     {
-      "id": "5D13029A51D78100E7758142EE0A35E6BC5AAD0A1D0FFA4A97D745C04640128B",
+      "id": "BH.oM.Inspection.Comment-BH.oM.RDF.HasProperty-System.String Message",
       "type": "owl:DatatypeProperty"
     },
     {
-      "id": "F565D9BE3D105382B139606EB541AB0400279856717CA417528A9ED3A22077BB",
+      "id": "BH.oM.Inspection.Comment-BH.oM.RDF.HasProperty-System.String Owner",
       "type": "owl:DatatypeProperty"
     },
     {
-      "id": "4606077234A869207DA4C7EBB08D1A968C0846FC61349AE998315F1350A11A96",
+      "id": "BH.oM.Inspection.Comment-BH.oM.RDF.HasProperty-System.DateTime CommentDate",
       "type": "owl:DatatypeProperty"
     },
     {
-      "id": "3C0515ABCB3F6A2A84104AFFCB7A0E4D1D2FE8D5A583D7DA4358B5B0111E269B",
+      "id": "BH.oM.Inspection.Comment-BH.oM.RDF.IsA-BH.oM.Base.IBHoMObject",
       "type": "owl:ObjectProperty"
     },
     {
-      "id": "0A629A45B78466ACD2D17113C6D07E7BDD01B2CA5BF4CAD2634E3C8EABBA3957",
+      "id": "BH.oM.Inspection.Comment-BH.oM.RDF.IsA-BH.oM.Base.IObject",
       "type": "owl:ObjectProperty"
     },
     {
-      "id": "93D13129BF5826FBF032516073CB3147F86C696EB5E865826581F933AA66CE23",
+      "id": "BH.oM.Inspection.Comment-BH.oM.RDF.IsSubclassOf-BH.oM.Base.BHoMObject",
       "type": "owl:ObjectProperty"
     },
     {
-      "id": "94FBEB47EF6FD2C04F0E5F9BFA2B63F0AF23296C02EF33867DCF6A7DE77BFC52",
+      "id": "BH.oM.Inspection.InstallationProgress-BH.oM.RDF.HasProperty-System.String Status",
       "type": "owl:DatatypeProperty"
     },
     {
-      "id": "7213C4B1A5CC35630669E57B9930652DF0D90B9528D81739F3327235465FBCDF",
+      "id": "BH.oM.Inspection.InstallationProgress-BH.oM.RDF.HasProperty-System.String Area",
       "type": "owl:DatatypeProperty"
     },
     {
-      "id": "B5C23853AD38406CF49DC3D61A2BCB848936D252F4AE033232887C4D692DFC9C",
+      "id": "BH.oM.Inspection.InstallationProgress-BH.oM.RDF.HasProperty-System.Collections.Generic.List`1[System.String] Media",
       "type": "owl:DatatypeProperty"
     },
     {
-      "id": "9ED32467EBFBD417054E73EAF9FA9861831009182020A38D377130150D376945",
+      "id": "BH.oM.Inspection.InstallationProgress-BH.oM.RDF.IsA-BH.oM.Base.IBHoMObject",
       "type": "owl:ObjectProperty"
     },
     {
-      "id": "EBD1B1AE905D9B46DEB8B2DD90D8FE48DA0D1CE4A9CF1690EB341E934537A256",
+      "id": "BH.oM.Inspection.InstallationProgress-BH.oM.RDF.IsA-BH.oM.Base.IObject",
       "type": "owl:ObjectProperty"
     },
     {
-      "id": "256D6DD54D3D58051E2B091FD6AA54A769E813F53959685876362F2B0A41F53A",
+      "id": "BH.oM.Inspection.InstallationProgress-BH.oM.RDF.IsSubclassOf-BH.oM.Base.BHoMObject",
       "type": "owl:ObjectProperty"
     },
     {
-      "id": "2C348AEB4817FACC703BC37E4A1593CA3C73A60AB3759CF9DB00C2F833D77F28",
+      "id": "BH.oM.Inspection.Issue-BH.oM.RDF.HasProperty-System.String IssueNumber",
       "type": "owl:DatatypeProperty"
     },
     {
-      "id": "C933EF8CE1B2C18077F1605EC06185CBDA79E9EADDD2071FC76987D2844F1FED",
+      "id": "BH.oM.Inspection.Issue-BH.oM.RDF.HasProperty-System.DateTime DateCreated",
       "type": "owl:DatatypeProperty"
     },
     {
-      "id": "BC7C325188089A96489D11D316777A7984A70D59AFF3D8413DE31F60F58FAAD0",
+      "id": "BH.oM.Inspection.Issue-BH.oM.RDF.HasProperty-System.DateTime DateClosed",
       "type": "owl:DatatypeProperty"
     },
     {
-      "id": "8F2E42061F96E71F280E1A535B8EB39CE11AB2F42BAE87D23EFA126AB8C1610E",
+      "id": "BH.oM.Inspection.Issue-BH.oM.RDF.HasProperty-System.String Priority",
       "type": "owl:DatatypeProperty"
     },
     {
-      "id": "7D0F77404360C343597AE53B4A0DE7D068858D30D918B878EBA8BFE303BCB111",
+      "id": "BH.oM.Inspection.Issue-BH.oM.RDF.HasProperty-System.String Status",
       "type": "owl:DatatypeProperty"
     },
     {
-      "id": "9F74A0DE29AEFB6EBE32074F3027AD5601A3D151BB971FE91AEE6E21D342C9F1",
+      "id": "BH.oM.Inspection.Issue-BH.oM.RDF.HasProperty-System.Collections.Generic.List`1[System.String] Assign",
       "type": "owl:DatatypeProperty"
     },
     {
-      "id": "4D5F926FCF505DB963C924AB4AEE5406E02B334A2DD43F415A8179B92DBE49E8",
+      "id": "BH.oM.Inspection.Issue-BH.oM.RDF.HasProperty-System.String Type",
       "type": "owl:DatatypeProperty"
     },
     {
-      "id": "2788DEE8BAAE9A81CF2924DF4FA794903297F9BEC02DE7A7535784E6AEB702BE",
+      "id": "BH.oM.Inspection.Issue-BH.oM.RDF.HasProperty-System.String Description",
       "type": "owl:DatatypeProperty"
     },
     {
-      "id": "F71B73E7B5096D2A579EA9FEA347E84AC6FC0677EA656B9F12144C8F03B3449A",
+      "id": "BH.oM.Inspection.Issue-BH.oM.RDF.HasProperty-System.Collections.Generic.List`1[System.String] Media",
       "type": "owl:DatatypeProperty"
     },
     {
-      "id": "064C663220E7BB4076335FA46FAF384657A6AD7CF45C747029C6EDC9B509E9DD",
+      "id": "BH.oM.Inspection.Issue.Position-IsA-BH.oM.Geometry.Point",
       "type": "owl:ObjectProperty"
     },
     {
-      "id": "15383F90C881F5D57341117F50CF5360E27C386E47087ED4C243FF117CD29519",
+      "id": "BH.oM.Inspection.Issue-BH.oM.RDF.HasProperty-BH.oM.Geometry.Point Position",
       "type": "owl:ObjectProperty"
     },
     {
-      "id": "B7054242D17A0BDAF35EF9E62AE73DFB2BB3E26CE3102B72A9E9E1F37093C475",
+      "id": "BH.oM.Inspection.Issue-BH.oM.RDF.HasProperty-System.Collections.Generic.List`1[BH.oM.Inspection.Comment] Comments",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "BH.oM.Inspection.Issue-BH.oM.RDF.HasProperty-System.String AuditID",
       "type": "owl:DatatypeProperty"
     },
     {
-      "id": "05DA9EE083EA863E986596874C7959B3DC1FDB09EE74C09D547C6D0F20C3D674",
+      "id": "BH.oM.Inspection.Issue-BH.oM.RDF.IsA-BH.oM.Base.IBHoMObject",
       "type": "owl:ObjectProperty"
     },
     {
-      "id": "77095CE9E8157AA37580333F4818323822D989D7A85ABFD57B1840DA388D6939",
+      "id": "BH.oM.Inspection.Issue-BH.oM.RDF.IsA-BH.oM.Base.IObject",
       "type": "owl:ObjectProperty"
     },
     {
-      "id": "DEC4C8DE528B101C3A45EBA3A640D874C8693E240B84C9AF3B23DF5F859FBAF5",
+      "id": "BH.oM.Inspection.Issue-BH.oM.RDF.IsSubclassOf-BH.oM.Base.BHoMObject",
       "type": "owl:ObjectProperty"
     }
   ],
   "propertyAttribute": [
     {
-      "id": "4B09D2CE952B6DE150F1A7FF1C8FD62AE4498C10B2EE938234D439B62EBF7F3F",
-      "iri": "http://visualdataweb.org/newOntology/4B09D2CE952B6DE150F1A7FF1C8FD62AE4498C10B2EE938234D439B62EBF7F3F",
+      "id": "BH.oM.Inspection.Audit-BH.oM.RDF.HasProperty-System.String Title",
+      "iri": "http://visualdataweb.org/newOntology/BH.oM.Inspection.Audit-BH.oM.RDF.HasProperty-System.String Title",
       "label": "HasProperty",
       "attributes": "datatype",
       "domain": "BH.oM.Inspection.Audit",
       "range": "Title-4B09D2CE952B6DE150F1A7FF1C8FD62AE4498C10B2EE938234D439B62EBF7F3F-Audit-HasProperty"
     },
     {
-      "id": "FCBB8A6352BF9DEB4DA166FCCE10F75B432E10E06A1080DDEEED9552A5B0EE64",
-      "iri": "http://visualdataweb.org/newOntology/FCBB8A6352BF9DEB4DA166FCCE10F75B432E10E06A1080DDEEED9552A5B0EE64",
+      "id": "BH.oM.Inspection.Audit-BH.oM.RDF.HasProperty-System.String Filename",
+      "iri": "http://visualdataweb.org/newOntology/BH.oM.Inspection.Audit-BH.oM.RDF.HasProperty-System.String Filename",
       "label": "HasProperty",
       "attributes": "datatype",
       "domain": "BH.oM.Inspection.Audit",
       "range": "Filename-FCBB8A6352BF9DEB4DA166FCCE10F75B432E10E06A1080DDEEED9552A5B0EE64-Audit-HasProperty"
     },
     {
-      "id": "459A92D4BFFF7264C417E52B01EE3FC022FFFA67DF75F41EBAA0CA7DE47711F8",
-      "iri": "http://visualdataweb.org/newOntology/459A92D4BFFF7264C417E52B01EE3FC022FFFA67DF75F41EBAA0CA7DE47711F8",
+      "id": "BH.oM.Inspection.Audit-BH.oM.RDF.HasProperty-System.String AuditID",
+      "iri": "http://visualdataweb.org/newOntology/BH.oM.Inspection.Audit-BH.oM.RDF.HasProperty-System.String AuditID",
       "label": "HasProperty",
       "attributes": "datatype",
       "domain": "BH.oM.Inspection.Audit",
       "range": "AuditID-459A92D4BFFF7264C417E52B01EE3FC022FFFA67DF75F41EBAA0CA7DE47711F8-Audit-HasProperty"
     },
     {
-      "id": "8E0E18563780B27F565BFA246738141537721C3527CF6E01A000F324E058C2DF",
-      "iri": "http://visualdataweb.org/newOntology/8E0E18563780B27F565BFA246738141537721C3527CF6E01A000F324E058C2DF",
+      "id": "BH.oM.Inspection.Audit-BH.oM.RDF.HasProperty-Int32 SiteVisitNumber",
+      "iri": "http://visualdataweb.org/newOntology/BH.oM.Inspection.Audit-BH.oM.RDF.HasProperty-Int32 SiteVisitNumber",
       "label": "HasProperty",
       "attributes": "datatype",
       "domain": "BH.oM.Inspection.Audit",
       "range": "SiteVisitNumber-8E0E18563780B27F565BFA246738141537721C3527CF6E01A000F324E058C2DF-Audit-HasProperty"
     },
     {
-      "id": "0383B1FF5B1BEF433930E7ED122F3B30C58E0600855DFFE0AABF6B063B9541A1",
-      "iri": "http://visualdataweb.org/newOntology/0383B1FF5B1BEF433930E7ED122F3B30C58E0600855DFFE0AABF6B063B9541A1",
+      "id": "BH.oM.Inspection.Audit-BH.oM.RDF.HasProperty-System.String Client",
+      "iri": "http://visualdataweb.org/newOntology/BH.oM.Inspection.Audit-BH.oM.RDF.HasProperty-System.String Client",
       "label": "HasProperty",
       "attributes": "datatype",
       "domain": "BH.oM.Inspection.Audit",
       "range": "Client-0383B1FF5B1BEF433930E7ED122F3B30C58E0600855DFFE0AABF6B063B9541A1-Audit-HasProperty"
     },
     {
-      "id": "5776C591F232661D1A8BCA9976D9DB2C2BA632BB88AFAC283F726D64FF52E418",
-      "iri": "http://visualdataweb.org/newOntology/5776C591F232661D1A8BCA9976D9DB2C2BA632BB88AFAC283F726D64FF52E418",
+      "id": "BH.oM.Inspection.Audit-BH.oM.RDF.HasProperty-Int32 RevisionNumber",
+      "iri": "http://visualdataweb.org/newOntology/BH.oM.Inspection.Audit-BH.oM.RDF.HasProperty-Int32 RevisionNumber",
       "label": "HasProperty",
       "attributes": "datatype",
       "domain": "BH.oM.Inspection.Audit",
       "range": "RevisionNumber-5776C591F232661D1A8BCA9976D9DB2C2BA632BB88AFAC283F726D64FF52E418-Audit-HasProperty"
     },
     {
-      "id": "088A0A65413DD626BF91FFE5B3FD1A999BDB52373CFBC81845D5B1E649E10C84",
-      "iri": "http://visualdataweb.org/newOntology/088A0A65413DD626BF91FFE5B3FD1A999BDB52373CFBC81845D5B1E649E10C84",
+      "id": "BH.oM.Inspection.Audit-BH.oM.RDF.HasProperty-System.DateTime InspectionDate",
+      "iri": "http://visualdataweb.org/newOntology/BH.oM.Inspection.Audit-BH.oM.RDF.HasProperty-System.DateTime InspectionDate",
       "label": "HasProperty",
       "attributes": "datatype",
       "domain": "BH.oM.Inspection.Audit",
       "range": "InspectionDate-088A0A65413DD626BF91FFE5B3FD1A999BDB52373CFBC81845D5B1E649E10C84-Audit-HasProperty"
     },
     {
-      "id": "91A1B1AD5F740BCFAE484F7B5B27FF740CD1E4C69201A64049E554DCBE8BBF26",
-      "iri": "http://visualdataweb.org/newOntology/91A1B1AD5F740BCFAE484F7B5B27FF740CD1E4C69201A64049E554DCBE8BBF26",
+      "id": "BH.oM.Inspection.Audit-BH.oM.RDF.HasProperty-System.DateTime InspectionDateUtc",
+      "iri": "http://visualdataweb.org/newOntology/BH.oM.Inspection.Audit-BH.oM.RDF.HasProperty-System.DateTime InspectionDateUtc",
       "label": "HasProperty",
       "attributes": "datatype",
       "domain": "BH.oM.Inspection.Audit",
       "range": "InspectionDateUtc-91A1B1AD5F740BCFAE484F7B5B27FF740CD1E4C69201A64049E554DCBE8BBF26-Audit-HasProperty"
     },
     {
-      "id": "72591178DFD6E77EBCB8BE15780EC107A4F383EF7552EB40D29F9A3E0307C9AF",
-      "iri": "http://visualdataweb.org/newOntology/72591178DFD6E77EBCB8BE15780EC107A4F383EF7552EB40D29F9A3E0307C9AF",
+      "id": "BH.oM.Inspection.Audit-BH.oM.RDF.HasProperty-System.DateTime IssueDate",
+      "iri": "http://visualdataweb.org/newOntology/BH.oM.Inspection.Audit-BH.oM.RDF.HasProperty-System.DateTime IssueDate",
       "label": "HasProperty",
       "attributes": "datatype",
       "domain": "BH.oM.Inspection.Audit",
       "range": "IssueDate-72591178DFD6E77EBCB8BE15780EC107A4F383EF7552EB40D29F9A3E0307C9AF-Audit-HasProperty"
     },
     {
-      "id": "31BCE44738F69E98714862D57EC6A06FC48637144F184963119218C10A6AC65A",
-      "iri": "http://visualdataweb.org/newOntology/31BCE44738F69E98714862D57EC6A06FC48637144F184963119218C10A6AC65A",
+      "id": "BH.oM.Inspection.Audit-BH.oM.RDF.HasProperty-System.DateTime IssueDateUtc",
+      "iri": "http://visualdataweb.org/newOntology/BH.oM.Inspection.Audit-BH.oM.RDF.HasProperty-System.DateTime IssueDateUtc",
       "label": "HasProperty",
       "attributes": "datatype",
       "domain": "BH.oM.Inspection.Audit",
       "range": "IssueDateUtc-31BCE44738F69E98714862D57EC6A06FC48637144F184963119218C10A6AC65A-Audit-HasProperty"
     },
     {
-      "id": "B2CF3B85D5F42F34BB9E38B0B5622C828C85B962558D23667403ACBAF2248FC9",
-      "iri": "http://visualdataweb.org/newOntology/B2CF3B85D5F42F34BB9E38B0B5622C828C85B962558D23667403ACBAF2248FC9",
+      "id": "BH.oM.Inspection.Audit-BH.oM.RDF.HasProperty-System.String Author",
+      "iri": "http://visualdataweb.org/newOntology/BH.oM.Inspection.Audit-BH.oM.RDF.HasProperty-System.String Author",
       "label": "HasProperty",
       "attributes": "datatype",
       "domain": "BH.oM.Inspection.Audit",
       "range": "Author-B2CF3B85D5F42F34BB9E38B0B5622C828C85B962558D23667403ACBAF2248FC9-Audit-HasProperty"
     },
     {
-      "id": "9723C37F09C4F154CAF9E835F9B827BE412AF299BDC9E5EDDBBC1DDAC3B42C08",
-      "iri": "http://visualdataweb.org/newOntology/9723C37F09C4F154CAF9E835F9B827BE412AF299BDC9E5EDDBBC1DDAC3B42C08",
+      "id": "BH.oM.Inspection.Audit-BH.oM.RDF.HasProperty-System.String ProjectNumber",
+      "iri": "http://visualdataweb.org/newOntology/BH.oM.Inspection.Audit-BH.oM.RDF.HasProperty-System.String ProjectNumber",
       "label": "HasProperty",
       "attributes": "datatype",
       "domain": "BH.oM.Inspection.Audit",
       "range": "ProjectNumber-9723C37F09C4F154CAF9E835F9B827BE412AF299BDC9E5EDDBBC1DDAC3B42C08-Audit-HasProperty"
     },
     {
-      "id": "E9EB4DD5E1B2AEE2CB0BFB268B12FD90D702C669C35C6941F043137ED8AC3B95",
-      "iri": "http://visualdataweb.org/newOntology/E9EB4DD5E1B2AEE2CB0BFB268B12FD90D702C669C35C6941F043137ED8AC3B95",
+      "id": "BH.oM.Inspection.Audit-BH.oM.RDF.HasProperty-System.String JobLeader",
+      "iri": "http://visualdataweb.org/newOntology/BH.oM.Inspection.Audit-BH.oM.RDF.HasProperty-System.String JobLeader",
       "label": "HasProperty",
       "attributes": "datatype",
       "domain": "BH.oM.Inspection.Audit",
       "range": "JobLeader-E9EB4DD5E1B2AEE2CB0BFB268B12FD90D702C669C35C6941F043137ED8AC3B95-Audit-HasProperty"
     },
     {
-      "id": "097B187DE628D2688091ECC26BAD0F75138208771349CCE1CC90D7B6E0D17B42",
-      "iri": "http://visualdataweb.org/newOntology/097B187DE628D2688091ECC26BAD0F75138208771349CCE1CC90D7B6E0D17B42",
+      "id": "BH.oM.Inspection.Audit-BH.oM.RDF.HasProperty-System.Collections.Generic.List`1[System.String] Distribution",
+      "iri": "http://visualdataweb.org/newOntology/BH.oM.Inspection.Audit-BH.oM.RDF.HasProperty-System.Collections.Generic.List`1[System.String] Distribution",
       "label": "HasProperty",
       "attributes": "datatype",
       "domain": "BH.oM.Inspection.Audit",
       "range": "Distribution-097B187DE628D2688091ECC26BAD0F75138208771349CCE1CC90D7B6E0D17B42-Audit-HasProperty"
     },
     {
-      "id": "ECBBC0B17DCEF8846C9CD8C532C2A38D80EAC80E486D78AD8F36C5D5899459B4",
-      "iri": "http://visualdataweb.org/newOntology/ECBBC0B17DCEF8846C9CD8C532C2A38D80EAC80E486D78AD8F36C5D5899459B4",
+      "id": "BH.oM.Inspection.Audit-BH.oM.RDF.HasProperty-System.Collections.Generic.List`1[System.String] Attendance",
+      "iri": "http://visualdataweb.org/newOntology/BH.oM.Inspection.Audit-BH.oM.RDF.HasProperty-System.Collections.Generic.List`1[System.String] Attendance",
       "label": "HasProperty",
       "attributes": "datatype",
       "domain": "BH.oM.Inspection.Audit",
       "range": "Attendance-ECBBC0B17DCEF8846C9CD8C532C2A38D80EAC80E486D78AD8F36C5D5899459B4-Audit-HasProperty"
     },
     {
-      "id": "5C126F671A68C6CFB2A1C73D18E1049BFC414BF303022C5B7FFF3417E8F48033",
-      "iri": "http://visualdataweb.org/newOntology/5C126F671A68C6CFB2A1C73D18E1049BFC414BF303022C5B7FFF3417E8F48033",
+      "id": "BH.oM.Inspection.Audit-BH.oM.RDF.HasProperty-System.String VisitPurpose",
+      "iri": "http://visualdataweb.org/newOntology/BH.oM.Inspection.Audit-BH.oM.RDF.HasProperty-System.String VisitPurpose",
       "label": "HasProperty",
       "attributes": "datatype",
       "domain": "BH.oM.Inspection.Audit",
       "range": "VisitPurpose-5C126F671A68C6CFB2A1C73D18E1049BFC414BF303022C5B7FFF3417E8F48033-Audit-HasProperty"
     },
     {
-      "id": "9A98BF9093888BED068BBCB4D1201CAC881AE37AC49FDC90EA1C82B5C155476C",
-      "iri": "http://visualdataweb.org/newOntology/9A98BF9093888BED068BBCB4D1201CAC881AE37AC49FDC90EA1C82B5C155476C",
+      "id": "BH.oM.Inspection.Audit-BH.oM.RDF.HasProperty-System.Collections.Generic.List`1[System.String] AreasInspected",
+      "iri": "http://visualdataweb.org/newOntology/BH.oM.Inspection.Audit-BH.oM.RDF.HasProperty-System.Collections.Generic.List`1[System.String] AreasInspected",
       "label": "HasProperty",
       "attributes": "datatype",
       "domain": "BH.oM.Inspection.Audit",
       "range": "AreasInspected-9A98BF9093888BED068BBCB4D1201CAC881AE37AC49FDC90EA1C82B5C155476C-Audit-HasProperty"
     },
     {
-      "id": "5915F13B2CF190BDEA56703887DCFFF3C83130E1C1378B9C57436253D0080FF7",
-      "iri": "http://visualdataweb.org/newOntology/5915F13B2CF190BDEA56703887DCFFF3C83130E1C1378B9C57436253D0080FF7",
+      "id": "BH.oM.Inspection.Audit-BH.oM.RDF.HasProperty-System.Collections.Generic.List`1[BH.oM.Inspection.InstallationProgress] InstallationProgressObjects",
+      "iri": "http://visualdataweb.org/newOntology/BH.oM.Inspection.Audit-BH.oM.RDF.HasProperty-System.Collections.Generic.List`1[BH.oM.Inspection.InstallationProgress] InstallationProgressObjects",
       "label": "HasProperty",
       "attributes": "datatype",
       "domain": "BH.oM.Inspection.Audit",
       "range": "InstallationProgressObjects-5915F13B2CF190BDEA56703887DCFFF3C83130E1C1378B9C57436253D0080FF7-Audit-HasProperty"
     },
     {
-      "id": "96DEA1B8873D452196D1A0DA7210C0C5ACE207E741E789507A4C7E663AAE0D11",
-      "iri": "http://visualdataweb.org/newOntology/96DEA1B8873D452196D1A0DA7210C0C5ACE207E741E789507A4C7E663AAE0D11",
+      "id": "BH.oM.Inspection.Audit-BH.oM.RDF.HasProperty-System.Collections.Generic.List`1[System.String] IssueNumbers",
+      "iri": "http://visualdataweb.org/newOntology/BH.oM.Inspection.Audit-BH.oM.RDF.HasProperty-System.Collections.Generic.List`1[System.String] IssueNumbers",
       "label": "HasProperty",
       "attributes": "datatype",
       "domain": "BH.oM.Inspection.Audit",
       "range": "IssueNumbers-96DEA1B8873D452196D1A0DA7210C0C5ACE207E741E789507A4C7E663AAE0D11-Audit-HasProperty"
     },
     {
-      "id": "CDE281F062A9F6D3F40BC7C0B71B2347CED387A41FD968F42CDFFB09929A4CA1",
-      "iri": "http://visualdataweb.org/newOntology/CDE281F062A9F6D3F40BC7C0B71B2347CED387A41FD968F42CDFFB09929A4CA1",
+      "id": "BH.oM.Inspection.Audit-BH.oM.RDF.HasProperty-System.String Score",
+      "iri": "http://visualdataweb.org/newOntology/BH.oM.Inspection.Audit-BH.oM.RDF.HasProperty-System.String Score",
       "label": "HasProperty",
       "attributes": "datatype",
       "domain": "BH.oM.Inspection.Audit",
       "range": "Score-CDE281F062A9F6D3F40BC7C0B71B2347CED387A41FD968F42CDFFB09929A4CA1-Audit-HasProperty"
     },
     {
-      "id": "CD8DCDAB688F2D67778214195433F53386FFE2612911D194B57E680F9222D336",
-      "iri": "http://visualdataweb.org/newOntology/CD8DCDAB688F2D67778214195433F53386FFE2612911D194B57E680F9222D336",
+      "id": "BH.oM.Inspection.Audit-BH.oM.RDF.IsA-BH.oM.Base.IBHoMObject",
+      "iri": "http://visualdataweb.org/newOntology/BH.oM.Inspection.Audit-BH.oM.RDF.IsA-BH.oM.Base.IBHoMObject",
       "label": "IsA",
       "attributes": "object",
       "domain": "BH.oM.Inspection.Audit",
       "range": "BH.oM.Base.IBHoMObject"
     },
     {
-      "id": "0C6651BBF8B6D4C310AA6829BB1D6B4A764AEE5016BB65FBC8BFB7CB761B600B",
-      "iri": "http://visualdataweb.org/newOntology/0C6651BBF8B6D4C310AA6829BB1D6B4A764AEE5016BB65FBC8BFB7CB761B600B",
+      "id": "BH.oM.Inspection.Audit-BH.oM.RDF.IsA-BH.oM.Base.IObject",
+      "iri": "http://visualdataweb.org/newOntology/BH.oM.Inspection.Audit-BH.oM.RDF.IsA-BH.oM.Base.IObject",
       "label": "IsA",
       "attributes": "object",
       "domain": "BH.oM.Inspection.Audit",
       "range": "BH.oM.Base.IObject"
     },
     {
-      "id": "DBBC5C4C25AEDA7804F89186CF0BE6A8CDB5EC733AE486571F9ED9F13628B4F5",
-      "iri": "http://visualdataweb.org/newOntology/DBBC5C4C25AEDA7804F89186CF0BE6A8CDB5EC733AE486571F9ED9F13628B4F5",
+      "id": "BH.oM.Inspection.Audit-BH.oM.RDF.IsSubclassOf-BH.oM.Base.BHoMObject",
+      "iri": "http://visualdataweb.org/newOntology/BH.oM.Inspection.Audit-BH.oM.RDF.IsSubclassOf-BH.oM.Base.BHoMObject",
       "label": "IsSubclassOf",
       "attributes": "object",
       "domain": "BH.oM.Inspection.Audit",
       "range": "BH.oM.Base.BHoMObject"
     },
     {
-      "id": "5D13029A51D78100E7758142EE0A35E6BC5AAD0A1D0FFA4A97D745C04640128B",
-      "iri": "http://visualdataweb.org/newOntology/5D13029A51D78100E7758142EE0A35E6BC5AAD0A1D0FFA4A97D745C04640128B",
+      "id": "BH.oM.Inspection.Comment-BH.oM.RDF.HasProperty-System.String Message",
+      "iri": "http://visualdataweb.org/newOntology/BH.oM.Inspection.Comment-BH.oM.RDF.HasProperty-System.String Message",
       "label": "HasProperty",
       "attributes": "datatype",
       "domain": "BH.oM.Inspection.Comment",
       "range": "Message-5D13029A51D78100E7758142EE0A35E6BC5AAD0A1D0FFA4A97D745C04640128B-Comment-HasProperty"
     },
     {
-      "id": "F565D9BE3D105382B139606EB541AB0400279856717CA417528A9ED3A22077BB",
-      "iri": "http://visualdataweb.org/newOntology/F565D9BE3D105382B139606EB541AB0400279856717CA417528A9ED3A22077BB",
+      "id": "BH.oM.Inspection.Comment-BH.oM.RDF.HasProperty-System.String Owner",
+      "iri": "http://visualdataweb.org/newOntology/BH.oM.Inspection.Comment-BH.oM.RDF.HasProperty-System.String Owner",
       "label": "HasProperty",
       "attributes": "datatype",
       "domain": "BH.oM.Inspection.Comment",
       "range": "Owner-F565D9BE3D105382B139606EB541AB0400279856717CA417528A9ED3A22077BB-Comment-HasProperty"
     },
     {
-      "id": "4606077234A869207DA4C7EBB08D1A968C0846FC61349AE998315F1350A11A96",
-      "iri": "http://visualdataweb.org/newOntology/4606077234A869207DA4C7EBB08D1A968C0846FC61349AE998315F1350A11A96",
+      "id": "BH.oM.Inspection.Comment-BH.oM.RDF.HasProperty-System.DateTime CommentDate",
+      "iri": "http://visualdataweb.org/newOntology/BH.oM.Inspection.Comment-BH.oM.RDF.HasProperty-System.DateTime CommentDate",
       "label": "HasProperty",
       "attributes": "datatype",
       "domain": "BH.oM.Inspection.Comment",
       "range": "CommentDate-4606077234A869207DA4C7EBB08D1A968C0846FC61349AE998315F1350A11A96-Comment-HasProperty"
     },
     {
-      "id": "3C0515ABCB3F6A2A84104AFFCB7A0E4D1D2FE8D5A583D7DA4358B5B0111E269B",
-      "iri": "http://visualdataweb.org/newOntology/3C0515ABCB3F6A2A84104AFFCB7A0E4D1D2FE8D5A583D7DA4358B5B0111E269B",
+      "id": "BH.oM.Inspection.Comment-BH.oM.RDF.IsA-BH.oM.Base.IBHoMObject",
+      "iri": "http://visualdataweb.org/newOntology/BH.oM.Inspection.Comment-BH.oM.RDF.IsA-BH.oM.Base.IBHoMObject",
       "label": "IsA",
       "attributes": "object",
       "domain": "BH.oM.Inspection.Comment",
       "range": "BH.oM.Base.IBHoMObject"
     },
     {
-      "id": "0A629A45B78466ACD2D17113C6D07E7BDD01B2CA5BF4CAD2634E3C8EABBA3957",
-      "iri": "http://visualdataweb.org/newOntology/0A629A45B78466ACD2D17113C6D07E7BDD01B2CA5BF4CAD2634E3C8EABBA3957",
+      "id": "BH.oM.Inspection.Comment-BH.oM.RDF.IsA-BH.oM.Base.IObject",
+      "iri": "http://visualdataweb.org/newOntology/BH.oM.Inspection.Comment-BH.oM.RDF.IsA-BH.oM.Base.IObject",
       "label": "IsA",
       "attributes": "object",
       "domain": "BH.oM.Inspection.Comment",
       "range": "BH.oM.Base.IObject"
     },
     {
-      "id": "93D13129BF5826FBF032516073CB3147F86C696EB5E865826581F933AA66CE23",
-      "iri": "http://visualdataweb.org/newOntology/93D13129BF5826FBF032516073CB3147F86C696EB5E865826581F933AA66CE23",
+      "id": "BH.oM.Inspection.Comment-BH.oM.RDF.IsSubclassOf-BH.oM.Base.BHoMObject",
+      "iri": "http://visualdataweb.org/newOntology/BH.oM.Inspection.Comment-BH.oM.RDF.IsSubclassOf-BH.oM.Base.BHoMObject",
       "label": "IsSubclassOf",
       "attributes": "object",
       "domain": "BH.oM.Inspection.Comment",
       "range": "BH.oM.Base.BHoMObject"
     },
     {
-      "id": "94FBEB47EF6FD2C04F0E5F9BFA2B63F0AF23296C02EF33867DCF6A7DE77BFC52",
-      "iri": "http://visualdataweb.org/newOntology/94FBEB47EF6FD2C04F0E5F9BFA2B63F0AF23296C02EF33867DCF6A7DE77BFC52",
+      "id": "BH.oM.Inspection.InstallationProgress-BH.oM.RDF.HasProperty-System.String Status",
+      "iri": "http://visualdataweb.org/newOntology/BH.oM.Inspection.InstallationProgress-BH.oM.RDF.HasProperty-System.String Status",
       "label": "HasProperty",
       "attributes": "datatype",
       "domain": "BH.oM.Inspection.InstallationProgress",
       "range": "Status-94FBEB47EF6FD2C04F0E5F9BFA2B63F0AF23296C02EF33867DCF6A7DE77BFC52-InstallationProgress-HasProperty"
     },
     {
-      "id": "7213C4B1A5CC35630669E57B9930652DF0D90B9528D81739F3327235465FBCDF",
-      "iri": "http://visualdataweb.org/newOntology/7213C4B1A5CC35630669E57B9930652DF0D90B9528D81739F3327235465FBCDF",
+      "id": "BH.oM.Inspection.InstallationProgress-BH.oM.RDF.HasProperty-System.String Area",
+      "iri": "http://visualdataweb.org/newOntology/BH.oM.Inspection.InstallationProgress-BH.oM.RDF.HasProperty-System.String Area",
       "label": "HasProperty",
       "attributes": "datatype",
       "domain": "BH.oM.Inspection.InstallationProgress",
       "range": "Area-7213C4B1A5CC35630669E57B9930652DF0D90B9528D81739F3327235465FBCDF-InstallationProgress-HasProperty"
     },
     {
-      "id": "B5C23853AD38406CF49DC3D61A2BCB848936D252F4AE033232887C4D692DFC9C",
-      "iri": "http://visualdataweb.org/newOntology/B5C23853AD38406CF49DC3D61A2BCB848936D252F4AE033232887C4D692DFC9C",
+      "id": "BH.oM.Inspection.InstallationProgress-BH.oM.RDF.HasProperty-System.Collections.Generic.List`1[System.String] Media",
+      "iri": "http://visualdataweb.org/newOntology/BH.oM.Inspection.InstallationProgress-BH.oM.RDF.HasProperty-System.Collections.Generic.List`1[System.String] Media",
       "label": "HasProperty",
       "attributes": "datatype",
       "domain": "BH.oM.Inspection.InstallationProgress",
       "range": "Media-B5C23853AD38406CF49DC3D61A2BCB848936D252F4AE033232887C4D692DFC9C-InstallationProgress-HasProperty"
     },
     {
-      "id": "9ED32467EBFBD417054E73EAF9FA9861831009182020A38D377130150D376945",
-      "iri": "http://visualdataweb.org/newOntology/9ED32467EBFBD417054E73EAF9FA9861831009182020A38D377130150D376945",
+      "id": "BH.oM.Inspection.InstallationProgress-BH.oM.RDF.IsA-BH.oM.Base.IBHoMObject",
+      "iri": "http://visualdataweb.org/newOntology/BH.oM.Inspection.InstallationProgress-BH.oM.RDF.IsA-BH.oM.Base.IBHoMObject",
       "label": "IsA",
       "attributes": "object",
       "domain": "BH.oM.Inspection.InstallationProgress",
       "range": "BH.oM.Base.IBHoMObject"
     },
     {
-      "id": "EBD1B1AE905D9B46DEB8B2DD90D8FE48DA0D1CE4A9CF1690EB341E934537A256",
-      "iri": "http://visualdataweb.org/newOntology/EBD1B1AE905D9B46DEB8B2DD90D8FE48DA0D1CE4A9CF1690EB341E934537A256",
+      "id": "BH.oM.Inspection.InstallationProgress-BH.oM.RDF.IsA-BH.oM.Base.IObject",
+      "iri": "http://visualdataweb.org/newOntology/BH.oM.Inspection.InstallationProgress-BH.oM.RDF.IsA-BH.oM.Base.IObject",
       "label": "IsA",
       "attributes": "object",
       "domain": "BH.oM.Inspection.InstallationProgress",
       "range": "BH.oM.Base.IObject"
     },
     {
-      "id": "256D6DD54D3D58051E2B091FD6AA54A769E813F53959685876362F2B0A41F53A",
-      "iri": "http://visualdataweb.org/newOntology/256D6DD54D3D58051E2B091FD6AA54A769E813F53959685876362F2B0A41F53A",
+      "id": "BH.oM.Inspection.InstallationProgress-BH.oM.RDF.IsSubclassOf-BH.oM.Base.BHoMObject",
+      "iri": "http://visualdataweb.org/newOntology/BH.oM.Inspection.InstallationProgress-BH.oM.RDF.IsSubclassOf-BH.oM.Base.BHoMObject",
       "label": "IsSubclassOf",
       "attributes": "object",
       "domain": "BH.oM.Inspection.InstallationProgress",
       "range": "BH.oM.Base.BHoMObject"
     },
     {
-      "id": "2C348AEB4817FACC703BC37E4A1593CA3C73A60AB3759CF9DB00C2F833D77F28",
-      "iri": "http://visualdataweb.org/newOntology/2C348AEB4817FACC703BC37E4A1593CA3C73A60AB3759CF9DB00C2F833D77F28",
+      "id": "BH.oM.Inspection.Issue-BH.oM.RDF.HasProperty-System.String IssueNumber",
+      "iri": "http://visualdataweb.org/newOntology/BH.oM.Inspection.Issue-BH.oM.RDF.HasProperty-System.String IssueNumber",
       "label": "HasProperty",
       "attributes": "datatype",
       "domain": "BH.oM.Inspection.Issue",
       "range": "IssueNumber-2C348AEB4817FACC703BC37E4A1593CA3C73A60AB3759CF9DB00C2F833D77F28-Issue-HasProperty"
     },
     {
-      "id": "C933EF8CE1B2C18077F1605EC06185CBDA79E9EADDD2071FC76987D2844F1FED",
-      "iri": "http://visualdataweb.org/newOntology/C933EF8CE1B2C18077F1605EC06185CBDA79E9EADDD2071FC76987D2844F1FED",
+      "id": "BH.oM.Inspection.Issue-BH.oM.RDF.HasProperty-System.DateTime DateCreated",
+      "iri": "http://visualdataweb.org/newOntology/BH.oM.Inspection.Issue-BH.oM.RDF.HasProperty-System.DateTime DateCreated",
       "label": "HasProperty",
       "attributes": "datatype",
       "domain": "BH.oM.Inspection.Issue",
       "range": "DateCreated-C933EF8CE1B2C18077F1605EC06185CBDA79E9EADDD2071FC76987D2844F1FED-Issue-HasProperty"
     },
     {
-      "id": "BC7C325188089A96489D11D316777A7984A70D59AFF3D8413DE31F60F58FAAD0",
-      "iri": "http://visualdataweb.org/newOntology/BC7C325188089A96489D11D316777A7984A70D59AFF3D8413DE31F60F58FAAD0",
+      "id": "BH.oM.Inspection.Issue-BH.oM.RDF.HasProperty-System.DateTime DateClosed",
+      "iri": "http://visualdataweb.org/newOntology/BH.oM.Inspection.Issue-BH.oM.RDF.HasProperty-System.DateTime DateClosed",
       "label": "HasProperty",
       "attributes": "datatype",
       "domain": "BH.oM.Inspection.Issue",
       "range": "DateClosed-BC7C325188089A96489D11D316777A7984A70D59AFF3D8413DE31F60F58FAAD0-Issue-HasProperty"
     },
     {
-      "id": "8F2E42061F96E71F280E1A535B8EB39CE11AB2F42BAE87D23EFA126AB8C1610E",
-      "iri": "http://visualdataweb.org/newOntology/8F2E42061F96E71F280E1A535B8EB39CE11AB2F42BAE87D23EFA126AB8C1610E",
+      "id": "BH.oM.Inspection.Issue-BH.oM.RDF.HasProperty-System.String Priority",
+      "iri": "http://visualdataweb.org/newOntology/BH.oM.Inspection.Issue-BH.oM.RDF.HasProperty-System.String Priority",
       "label": "HasProperty",
       "attributes": "datatype",
       "domain": "BH.oM.Inspection.Issue",
       "range": "Priority-8F2E42061F96E71F280E1A535B8EB39CE11AB2F42BAE87D23EFA126AB8C1610E-Issue-HasProperty"
     },
     {
-      "id": "7D0F77404360C343597AE53B4A0DE7D068858D30D918B878EBA8BFE303BCB111",
-      "iri": "http://visualdataweb.org/newOntology/7D0F77404360C343597AE53B4A0DE7D068858D30D918B878EBA8BFE303BCB111",
+      "id": "BH.oM.Inspection.Issue-BH.oM.RDF.HasProperty-System.String Status",
+      "iri": "http://visualdataweb.org/newOntology/BH.oM.Inspection.Issue-BH.oM.RDF.HasProperty-System.String Status",
       "label": "HasProperty",
       "attributes": "datatype",
       "domain": "BH.oM.Inspection.Issue",
       "range": "Status-7D0F77404360C343597AE53B4A0DE7D068858D30D918B878EBA8BFE303BCB111-Issue-HasProperty"
     },
     {
-      "id": "9F74A0DE29AEFB6EBE32074F3027AD5601A3D151BB971FE91AEE6E21D342C9F1",
-      "iri": "http://visualdataweb.org/newOntology/9F74A0DE29AEFB6EBE32074F3027AD5601A3D151BB971FE91AEE6E21D342C9F1",
+      "id": "BH.oM.Inspection.Issue-BH.oM.RDF.HasProperty-System.Collections.Generic.List`1[System.String] Assign",
+      "iri": "http://visualdataweb.org/newOntology/BH.oM.Inspection.Issue-BH.oM.RDF.HasProperty-System.Collections.Generic.List`1[System.String] Assign",
       "label": "HasProperty",
       "attributes": "datatype",
       "domain": "BH.oM.Inspection.Issue",
       "range": "Assign-9F74A0DE29AEFB6EBE32074F3027AD5601A3D151BB971FE91AEE6E21D342C9F1-Issue-HasProperty"
     },
     {
-      "id": "4D5F926FCF505DB963C924AB4AEE5406E02B334A2DD43F415A8179B92DBE49E8",
-      "iri": "http://visualdataweb.org/newOntology/4D5F926FCF505DB963C924AB4AEE5406E02B334A2DD43F415A8179B92DBE49E8",
+      "id": "BH.oM.Inspection.Issue-BH.oM.RDF.HasProperty-System.String Type",
+      "iri": "http://visualdataweb.org/newOntology/BH.oM.Inspection.Issue-BH.oM.RDF.HasProperty-System.String Type",
       "label": "HasProperty",
       "attributes": "datatype",
       "domain": "BH.oM.Inspection.Issue",
       "range": "Type-4D5F926FCF505DB963C924AB4AEE5406E02B334A2DD43F415A8179B92DBE49E8-Issue-HasProperty"
     },
     {
-      "id": "2788DEE8BAAE9A81CF2924DF4FA794903297F9BEC02DE7A7535784E6AEB702BE",
-      "iri": "http://visualdataweb.org/newOntology/2788DEE8BAAE9A81CF2924DF4FA794903297F9BEC02DE7A7535784E6AEB702BE",
+      "id": "BH.oM.Inspection.Issue-BH.oM.RDF.HasProperty-System.String Description",
+      "iri": "http://visualdataweb.org/newOntology/BH.oM.Inspection.Issue-BH.oM.RDF.HasProperty-System.String Description",
       "label": "HasProperty",
       "attributes": "datatype",
       "domain": "BH.oM.Inspection.Issue",
       "range": "Description-2788DEE8BAAE9A81CF2924DF4FA794903297F9BEC02DE7A7535784E6AEB702BE-Issue-HasProperty"
     },
     {
-      "id": "F71B73E7B5096D2A579EA9FEA347E84AC6FC0677EA656B9F12144C8F03B3449A",
-      "iri": "http://visualdataweb.org/newOntology/F71B73E7B5096D2A579EA9FEA347E84AC6FC0677EA656B9F12144C8F03B3449A",
+      "id": "BH.oM.Inspection.Issue-BH.oM.RDF.HasProperty-System.Collections.Generic.List`1[System.String] Media",
+      "iri": "http://visualdataweb.org/newOntology/BH.oM.Inspection.Issue-BH.oM.RDF.HasProperty-System.Collections.Generic.List`1[System.String] Media",
       "label": "HasProperty",
       "attributes": "datatype",
       "domain": "BH.oM.Inspection.Issue",
       "range": "Media-F71B73E7B5096D2A579EA9FEA347E84AC6FC0677EA656B9F12144C8F03B3449A-Issue-HasProperty"
     },
     {
-      "id": "064C663220E7BB4076335FA46FAF384657A6AD7CF45C747029C6EDC9B509E9DD",
-      "iri": "http://visualdataweb.org/newOntology/064C663220E7BB4076335FA46FAF384657A6AD7CF45C747029C6EDC9B509E9DD",
-      "label": "HasProperty",
+      "id": "BH.oM.Inspection.Issue.Position-IsA-BH.oM.Geometry.Point",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "label": "IsA",
       "attributes": "object",
-      "domain": "BH.oM.Inspection.Issue",
+      "domain": "BH.oM.Inspection.Issue.Position",
       "range": "BH.oM.Geometry.Point"
     },
     {
-      "id": "15383F90C881F5D57341117F50CF5360E27C386E47087ED4C243FF117CD29519",
-      "iri": "http://visualdataweb.org/newOntology/15383F90C881F5D57341117F50CF5360E27C386E47087ED4C243FF117CD29519",
+      "id": "BH.oM.Inspection.Issue-BH.oM.RDF.HasProperty-BH.oM.Geometry.Point Position",
+      "iri": "http://visualdataweb.org/newOntology/BH.oM.Inspection.Issue-BH.oM.RDF.HasProperty-BH.oM.Geometry.Point Position",
+      "label": "HasProperty",
+      "attributes": [],
+      "domain": "BH.oM.Inspection.Issue",
+      "range": "BH.oM.Inspection.Issue.Position"
+    },
+    {
+      "id": "BH.oM.Inspection.Issue-BH.oM.RDF.HasProperty-System.Collections.Generic.List`1[BH.oM.Inspection.Comment] Comments",
+      "iri": "http://visualdataweb.org/newOntology/BH.oM.Inspection.Issue-BH.oM.RDF.HasProperty-System.Collections.Generic.List`1[BH.oM.Inspection.Comment] Comments",
       "label": "HasProperty",
       "attributes": "datatype",
       "domain": "BH.oM.Inspection.Issue",
       "range": "Comments-15383F90C881F5D57341117F50CF5360E27C386E47087ED4C243FF117CD29519-Issue-HasProperty"
     },
     {
-      "id": "B7054242D17A0BDAF35EF9E62AE73DFB2BB3E26CE3102B72A9E9E1F37093C475",
-      "iri": "http://visualdataweb.org/newOntology/B7054242D17A0BDAF35EF9E62AE73DFB2BB3E26CE3102B72A9E9E1F37093C475",
+      "id": "BH.oM.Inspection.Issue-BH.oM.RDF.HasProperty-System.String AuditID",
+      "iri": "http://visualdataweb.org/newOntology/BH.oM.Inspection.Issue-BH.oM.RDF.HasProperty-System.String AuditID",
       "label": "HasProperty",
       "attributes": "datatype",
       "domain": "BH.oM.Inspection.Issue",
       "range": "AuditID-B7054242D17A0BDAF35EF9E62AE73DFB2BB3E26CE3102B72A9E9E1F37093C475-Issue-HasProperty"
     },
     {
-      "id": "05DA9EE083EA863E986596874C7959B3DC1FDB09EE74C09D547C6D0F20C3D674",
-      "iri": "http://visualdataweb.org/newOntology/05DA9EE083EA863E986596874C7959B3DC1FDB09EE74C09D547C6D0F20C3D674",
+      "id": "BH.oM.Inspection.Issue-BH.oM.RDF.IsA-BH.oM.Base.IBHoMObject",
+      "iri": "http://visualdataweb.org/newOntology/BH.oM.Inspection.Issue-BH.oM.RDF.IsA-BH.oM.Base.IBHoMObject",
       "label": "IsA",
       "attributes": "object",
       "domain": "BH.oM.Inspection.Issue",
       "range": "BH.oM.Base.IBHoMObject"
     },
     {
-      "id": "77095CE9E8157AA37580333F4818323822D989D7A85ABFD57B1840DA388D6939",
-      "iri": "http://visualdataweb.org/newOntology/77095CE9E8157AA37580333F4818323822D989D7A85ABFD57B1840DA388D6939",
+      "id": "BH.oM.Inspection.Issue-BH.oM.RDF.IsA-BH.oM.Base.IObject",
+      "iri": "http://visualdataweb.org/newOntology/BH.oM.Inspection.Issue-BH.oM.RDF.IsA-BH.oM.Base.IObject",
       "label": "IsA",
       "attributes": "object",
       "domain": "BH.oM.Inspection.Issue",
       "range": "BH.oM.Base.IObject"
     },
     {
-      "id": "DEC4C8DE528B101C3A45EBA3A640D874C8693E240B84C9AF3B23DF5F859FBAF5",
-      "iri": "http://visualdataweb.org/newOntology/DEC4C8DE528B101C3A45EBA3A640D874C8693E240B84C9AF3B23DF5F859FBAF5",
+      "id": "BH.oM.Inspection.Issue-BH.oM.RDF.IsSubclassOf-BH.oM.Base.BHoMObject",
+      "iri": "http://visualdataweb.org/newOntology/BH.oM.Inspection.Issue-BH.oM.RDF.IsSubclassOf-BH.oM.Base.BHoMObject",
       "label": "IsSubclassOf",
       "attributes": "object",
       "domain": "BH.oM.Inspection.Issue",

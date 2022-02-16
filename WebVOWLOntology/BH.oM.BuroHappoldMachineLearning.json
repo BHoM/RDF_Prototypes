@@ -155,6 +155,10 @@
       "type": "rdfs:Datatype"
     },
     {
+      "id": "BH.oM.BuroHappoldMachineLearning.ModelZoo.Overheating",
+      "type": "owl:Class"
+    },
+    {
       "id": "BH.oM.Data.Library.Source",
       "type": "owl:Class"
     },
@@ -199,6 +203,10 @@
       "type": "rdfs:Datatype"
     },
     {
+      "id": "BH.oM.BuroHappoldMachineLearning.MotionLevelAnalyser.ResultReceived",
+      "type": "owl:Class"
+    },
+    {
       "id": "Model-8C451646A1C1E2E37B721F24082791E758E86F41F17E84FF4516D7F3B35F9D80-Overheating-HasProperty",
       "type": "rdfs:Datatype"
     },
@@ -207,7 +215,15 @@
       "type": "owl:Class"
     },
     {
+      "id": "BH.oM.BuroHappoldMachineLearning.RegionOfInterest.Start",
+      "type": "owl:Class"
+    },
+    {
       "id": "BH.oM.Geometry.Point",
+      "type": "owl:Class"
+    },
+    {
+      "id": "BH.oM.BuroHappoldMachineLearning.RegionOfInterest.End",
       "type": "owl:Class"
     },
     {
@@ -243,6 +259,10 @@
       "type": "rdfs:Datatype"
     },
     {
+      "id": "BH.oM.BuroHappoldMachineLearning.SoundLevelAnalyser.ResultReceived",
+      "type": "owl:Class"
+    },
+    {
       "id": "Results-DED523A027940E3042B34A959843D3A31BEB2739F2A6E439BFD9D7CF259B0FC6-SurrogateModelData-HasProperty",
       "type": "rdfs:Datatype"
     },
@@ -265,6 +285,10 @@
     {
       "id": "D-A6CA91420AD129EF0B027AB81556BB32C9EEEE2E30BA623821787B907B49E302-SurrogateModelData-HasProperty",
       "type": "rdfs:Datatype"
+    },
+    {
+      "id": "BH.oM.BuroHappoldMachineLearning.SurrogateModelData.InterpolationType",
+      "type": "owl:Class"
     },
     {
       "id": "ControlPoints-CDA433FD33F2FD200ED91C9609AE02AFBBD69E2E59B8C763103046A7C16E1523-SurrogateModelData-HasProperty",
@@ -309,6 +333,10 @@
     {
       "id": "FrameIndex-B892379009E85DA1E4849C07B8015AD8677F6A5A625D1AE6DB9E2818F9F5835A-VideoAnalyser-HasProperty",
       "type": "rdfs:Datatype"
+    },
+    {
+      "id": "BH.oM.BuroHappoldMachineLearning.VideoAnalyser.ResultReceived",
+      "type": "owl:Class"
     }
   ],
   "classAttribute": [
@@ -541,9 +569,15 @@
       "attributes": "datatype"
     },
     {
+      "id": "BH.oM.BuroHappoldMachineLearning.ModelZoo.Overheating",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/Data_oM/Library/Source.cs",
+      "label": "Overheating",
+      "attributes": []
+    },
+    {
       "id": "BH.oM.Data.Library.Source",
       "iri": "https://github.com/BHoM/BHoM/blob/main/Data_oM/Library/Source.cs",
-      "label": "Overheating (Source)",
+      "label": "Source",
       "attributes": []
     },
     {
@@ -607,6 +641,12 @@
       "attributes": "datatype"
     },
     {
+      "id": "BH.oM.BuroHappoldMachineLearning.MotionLevelAnalyser.ResultReceived",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/BuroHappoldMachineLearning_oM/VideoResultEvent.cs",
+      "label": "ResultReceived",
+      "attributes": []
+    },
+    {
       "id": "Model-8C451646A1C1E2E37B721F24082791E758E86F41F17E84FF4516D7F3B35F9D80-Overheating-HasProperty",
       "iri": "http://www.w3.org/2001/XMLSchema#",
       "label": "Model (PyObject)",
@@ -619,9 +659,21 @@
       "attributes": []
     },
     {
+      "id": "BH.oM.BuroHappoldMachineLearning.RegionOfInterest.Start",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/Geometry_oM/Vector/Point.cs",
+      "label": "Start",
+      "attributes": []
+    },
+    {
       "id": "BH.oM.Geometry.Point",
       "iri": "https://github.com/BHoM/BHoM/blob/main/Geometry_oM/Vector/Point.cs",
-      "label": "Start (Point)",
+      "label": "Point",
+      "attributes": []
+    },
+    {
+      "id": "BH.oM.BuroHappoldMachineLearning.RegionOfInterest.End",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/Geometry_oM/Vector/Point.cs",
+      "label": "End",
       "attributes": []
     },
     {
@@ -673,6 +725,12 @@
       "attributes": "datatype"
     },
     {
+      "id": "BH.oM.BuroHappoldMachineLearning.SoundLevelAnalyser.ResultReceived",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/BuroHappoldMachineLearning_oM/SoundResultEvent.cs",
+      "label": "ResultReceived",
+      "attributes": []
+    },
+    {
       "id": "Results-DED523A027940E3042B34A959843D3A31BEB2739F2A6E439BFD9D7CF259B0FC6-SurrogateModelData-HasProperty",
       "iri": "http://www.w3.org/2001/XMLSchema#",
       "label": "Results (List<Double>)",
@@ -707,6 +765,12 @@
       "iri": "http://www.w3.org/2001/XMLSchema#",
       "label": "D (Double)",
       "attributes": "datatype"
+    },
+    {
+      "id": "BH.oM.BuroHappoldMachineLearning.SurrogateModelData.InterpolationType",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/BuroHappoldMachineLearning_oM/SurrogateInterpolationType.cs",
+      "label": "InterpolationType",
+      "attributes": []
     },
     {
       "id": "ControlPoints-CDA433FD33F2FD200ED91C9609AE02AFBBD69E2E59B8C763103046A7C16E1523-SurrogateModelData-HasProperty",
@@ -773,1278 +837,1368 @@
       "iri": "http://www.w3.org/2001/XMLSchema#",
       "label": "FrameIndex (Int32)",
       "attributes": "datatype"
+    },
+    {
+      "id": "BH.oM.BuroHappoldMachineLearning.VideoAnalyser.ResultReceived",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/BuroHappoldMachineLearning_oM/VideoResultEvent.cs",
+      "label": "ResultReceived",
+      "attributes": []
     }
   ],
   "property": [
     {
-      "id": "BF288126E54F7BE85F385CCED61FE6BEA9C5EA8645D7DC94DFA1176D28D0732A",
+      "id": "BH.oM.BuroHappoldMachineLearning.GValues-BH.oM.RDF.HasProperty-Int32 Orientation",
       "type": "owl:DatatypeProperty"
     },
     {
-      "id": "2376CB712DA96096D0CBC3F381FE84306983566BBDF888ECA2AA977EEDD7818A",
+      "id": "BH.oM.BuroHappoldMachineLearning.GValues-BH.oM.RDF.HasProperty-Double GValue",
       "type": "owl:DatatypeProperty"
     },
     {
-      "id": "6EED2C3574173C2F1FF400D206A3FB7CA11C8501E8C11FF90456C14E4C309146",
+      "id": "BH.oM.BuroHappoldMachineLearning.GValues-BH.oM.RDF.IsA-BH.oM.Base.IBHoMObject",
       "type": "owl:ObjectProperty"
     },
     {
-      "id": "D7CA7FEFA585114C22BF72E850CBC42547C80A61DA07ACB2328B09E7580C287D",
+      "id": "BH.oM.BuroHappoldMachineLearning.GValues-BH.oM.RDF.IsA-BH.oM.Base.IObject",
       "type": "owl:ObjectProperty"
     },
     {
-      "id": "663FEA9A9802C1F9F4F75C5690EF7D9BA4335A564ECF6A9AABD86029C827142E",
+      "id": "BH.oM.BuroHappoldMachineLearning.GValues-BH.oM.RDF.IsSubclassOf-BH.oM.Base.BHoMObject",
       "type": "owl:ObjectProperty"
     },
     {
-      "id": "5E84A85E491EAC75BC32EADFE10FB71BF02E1E425E296F009ADA505D3BFBC50D",
+      "id": "BH.oM.BuroHappoldMachineLearning.MachineLearningExport-BH.oM.RDF.HasProperty-System.String ID",
       "type": "owl:DatatypeProperty"
     },
     {
-      "id": "636F6CDE13AF639CAB84541FD6FF7AB91B782323946AEFE53C42E2A33D49D925",
+      "id": "BH.oM.BuroHappoldMachineLearning.MachineLearningExport-BH.oM.RDF.HasProperty-System.String RoomType",
       "type": "owl:DatatypeProperty"
     },
     {
-      "id": "E877132088D257BA73F1F9593F2759AD448AF7BD4C7BB1EF5B8EF5A027A164A9",
+      "id": "BH.oM.BuroHappoldMachineLearning.MachineLearningExport-BH.oM.RDF.HasProperty-System.String SingleDualAspect",
       "type": "owl:DatatypeProperty"
     },
     {
-      "id": "EFC700AF6DDD8C9AC3606E0BD2DD10DC9AC8835D2AD650C34A052ECA8AB2D2A9",
+      "id": "BH.oM.BuroHappoldMachineLearning.MachineLearningExport-BH.oM.RDF.HasProperty-System.String BalconyType",
       "type": "owl:DatatypeProperty"
     },
     {
-      "id": "8EAFC62C1E46F023C59CCD3DE565C7B0692346EC90E0BE31A5AE49ABF0B2D3E5",
+      "id": "BH.oM.BuroHappoldMachineLearning.MachineLearningExport-BH.oM.RDF.HasProperty-Double GValue",
       "type": "owl:DatatypeProperty"
     },
     {
-      "id": "F1DE83E44264BFBB117054E2BFBB7FFA7069BC4AA20D772BAB01E5125CE7C920",
+      "id": "BH.oM.BuroHappoldMachineLearning.MachineLearningExport-BH.oM.RDF.HasProperty-Int32 DwellingBeds",
       "type": "owl:DatatypeProperty"
     },
     {
-      "id": "638399E75C068C9B29965ECDC72F5F36F4FAA8C988831113BB141C4E084A36FC",
+      "id": "BH.oM.BuroHappoldMachineLearning.MachineLearningExport-BH.oM.RDF.HasProperty-Double TotalRadiation",
       "type": "owl:DatatypeProperty"
     },
     {
-      "id": "C503EBEDAA5B40AD14C350E2C4567E87E5EA03261FE4FE696DAA9C7C30084943",
+      "id": "BH.oM.BuroHappoldMachineLearning.MachineLearningExport-BH.oM.RDF.HasProperty-Double ADF",
       "type": "owl:DatatypeProperty"
     },
     {
-      "id": "EA3FE4C26DEEB3527448A481F79DFE0C2B0D8C6E1373E981A8E2EAFBE29409E2",
+      "id": "BH.oM.BuroHappoldMachineLearning.MachineLearningExport-BH.oM.RDF.HasProperty-Double GlazingRatioWindowFloor",
       "type": "owl:DatatypeProperty"
     },
     {
-      "id": "65FF05C1AF34D388DE1ABAC18412E80F220A3FD171D80AF9D981B8C69BFB0373",
+      "id": "BH.oM.BuroHappoldMachineLearning.MachineLearningExport-BH.oM.RDF.HasProperty-Double GlazedArea",
       "type": "owl:DatatypeProperty"
     },
     {
-      "id": "8BFFD8362A4B45B991F8D0747871A08B6D0B8A62218DB4568093F4CF3FC7C81C",
+      "id": "BH.oM.BuroHappoldMachineLearning.MachineLearningExport-BH.oM.RDF.HasProperty-Double GlazingRatio",
       "type": "owl:DatatypeProperty"
     },
     {
-      "id": "2D3577977F46914A4D75353E6F2E013B30B0D2F67EDDC20D9B63DF88730B5E8B",
+      "id": "BH.oM.BuroHappoldMachineLearning.MachineLearningExport-BH.oM.RDF.HasProperty-Double FloorArea",
       "type": "owl:DatatypeProperty"
     },
     {
-      "id": "C3AA950FCC7F63BA1E8FE29260BB4709F7AE778F0E5CB4998A9DA5C4A6CEDFDE",
+      "id": "BH.oM.BuroHappoldMachineLearning.MachineLearningExport-BH.oM.RDF.HasProperty-Double ExternalWallArea",
       "type": "owl:DatatypeProperty"
     },
     {
-      "id": "3DB1C85762F43D58AFF40E51CB4465E3961C6153E4BEBA882B7E0771BE649BDA",
+      "id": "BH.oM.BuroHappoldMachineLearning.MachineLearningExport-BH.oM.RDF.HasProperty-System.String GlazingAreaA",
       "type": "owl:DatatypeProperty"
     },
     {
-      "id": "0D0768D37E635F5AF78A77E604DE0009BE49999FC0B24C81314508B2B1494962",
+      "id": "BH.oM.BuroHappoldMachineLearning.MachineLearningExport-BH.oM.RDF.HasProperty-System.String GlazingAreaB",
       "type": "owl:DatatypeProperty"
     },
     {
-      "id": "82D97DC59F0762E8CD9A48429F6F8802D104E9778DE65C433582F81D00B0A095",
+      "id": "BH.oM.BuroHappoldMachineLearning.MachineLearningExport-BH.oM.RDF.HasProperty-System.String GlazingAreaC",
       "type": "owl:DatatypeProperty"
     },
     {
-      "id": "5E459EFCE55CCE9C5BE5FA578E0B3852269206DE5BF658377A63EB190A0275B6",
+      "id": "BH.oM.BuroHappoldMachineLearning.MachineLearningExport-BH.oM.RDF.HasProperty-System.String OrientationA",
       "type": "owl:DatatypeProperty"
     },
     {
-      "id": "BD3C389E7ACB168520062B84526E02EAACEF5E39EE8DB3C6AA81D6106334E3DB",
+      "id": "BH.oM.BuroHappoldMachineLearning.MachineLearningExport-BH.oM.RDF.HasProperty-System.String OrientationB",
       "type": "owl:DatatypeProperty"
     },
     {
-      "id": "ECBC9E26C5CB06015355471CD9C8C36FBE2FAF2BCA6C3210244FB0D531231937",
+      "id": "BH.oM.BuroHappoldMachineLearning.MachineLearningExport-BH.oM.RDF.HasProperty-System.String OrientationC",
       "type": "owl:DatatypeProperty"
     },
     {
-      "id": "47669288A7D17E62F4848E4250AB04D2A64E54BF1EA375AC4E5CB5EA1BFDBFB2",
+      "id": "BH.oM.BuroHappoldMachineLearning.MachineLearningExport-BH.oM.RDF.IsA-BH.oM.Base.IBHoMObject",
       "type": "owl:ObjectProperty"
     },
     {
-      "id": "438CE04777EA49161D0ED4A234E17F317F109EED5ACB9535C482DF7836339109",
+      "id": "BH.oM.BuroHappoldMachineLearning.MachineLearningExport-BH.oM.RDF.IsA-BH.oM.Base.IObject",
       "type": "owl:ObjectProperty"
     },
     {
-      "id": "98DAF0F5E066149541C62961576C00D2BF179A0CCD0A3DC0122C3189B4A35D40",
+      "id": "BH.oM.BuroHappoldMachineLearning.MachineLearningExport-BH.oM.RDF.IsSubclassOf-BH.oM.Base.BHoMObject",
       "type": "owl:ObjectProperty"
     },
     {
-      "id": "57A8589F50CE2F31404D3EB0A804EEF3110A31A88F100E0E80598CBA40D05F05",
+      "id": "BH.oM.BuroHappoldMachineLearning.ModelZoo.Overheating-IsA-BH.oM.Data.Library.Source",
       "type": "owl:ObjectProperty"
     },
     {
-      "id": "A3EB375210A5324EFBD86C88FEECEEF92D3C2B5CAFDBAD9C94402A97DFC7DA6A",
+      "id": "BH.oM.BuroHappoldMachineLearning.ModelZoo-BH.oM.RDF.HasProperty-BH.oM.Data.Library.Source Overheating",
       "type": "owl:ObjectProperty"
     },
     {
-      "id": "938CA2C7EA0075794C87E7A58564CCFB46B709A61490ED7FB497D93FB9AA7C6A",
+      "id": "BH.oM.BuroHappoldMachineLearning.ModelZoo-BH.oM.RDF.IsA-BH.oM.Base.IBHoMObject",
       "type": "owl:ObjectProperty"
     },
     {
-      "id": "83DC6A2ED7389A3D9611B9BAEE312AA99BD063954399E5EC5A1B7968444EE1D0",
+      "id": "BH.oM.BuroHappoldMachineLearning.ModelZoo-BH.oM.RDF.IsA-BH.oM.Base.IObject",
       "type": "owl:ObjectProperty"
     },
     {
-      "id": "0F2CAE015AC4B62AFC202B918C453E2C4467BE45D799A328ED4921DC413A1C8A",
-      "type": "owl:DatatypeProperty"
-    },
-    {
-      "id": "9D8416478727F07D5412A609DC6495CB048543914951A474745B7FCF841F6653",
-      "type": "owl:DatatypeProperty"
-    },
-    {
-      "id": "B35E045920E11B0E0146C736B4792700451B68D773C7083A3C6313110AF87487",
-      "type": "owl:DatatypeProperty"
-    },
-    {
-      "id": "29ED01FE100242C5FBD4C44D4F7F1A086D1E8E10406D9993636F57027C3FDC43",
-      "type": "owl:DatatypeProperty"
-    },
-    {
-      "id": "2FD178557AAA3240F97A3EC9FC54F3C0E28538EA8DB3A5E5D4731A2F3E877927",
-      "type": "owl:DatatypeProperty"
-    },
-    {
-      "id": "B61DC0B62BF717E2E4B0233BCB68DA82C9CE392A99860670EA2F5B7594BDCFC8",
-      "type": "owl:DatatypeProperty"
-    },
-    {
-      "id": "3D162BBCA8304C6D142DB49F15038A2FEA47101F9AC2D68B8DE9CF35B488D790",
-      "type": "owl:DatatypeProperty"
-    },
-    {
-      "id": "92F51EBCBA681922405AF8575B1C6663B4630F8C872530B6A9AD63663FFF5CED",
-      "type": "owl:DatatypeProperty"
-    },
-    {
-      "id": "F5559562729ED4BEC846F2BFA5958299F6D699BFF261BE7C211A97251129F629",
-      "type": "owl:DatatypeProperty"
-    },
-    {
-      "id": "3C7777152342826928422F8810B3BDF0B3608EC6904CFB5E0545A00134E3B10F",
-      "type": "owl:DatatypeProperty"
-    },
-    {
-      "id": "16A5648DA53EBCDA830A887C6B8233ADF9B961D5E3EEFFA165A4E52B0EC7E8CC",
+      "id": "BH.oM.BuroHappoldMachineLearning.ModelZoo-BH.oM.RDF.IsSubclassOf-BH.oM.Base.BHoMObject",
       "type": "owl:ObjectProperty"
     },
     {
-      "id": "D1296BEE20E4A9383A0410F38A7F7721421A436F65B4BC32ED03904B6446FF36",
+      "id": "BH.oM.BuroHappoldMachineLearning.MotionLevelAnalyser-BH.oM.RDF.HasProperty-Int32 StartFrame",
+      "type": "owl:DatatypeProperty"
+    },
+    {
+      "id": "BH.oM.BuroHappoldMachineLearning.MotionLevelAnalyser-BH.oM.RDF.HasProperty-Int32 EndFrame",
+      "type": "owl:DatatypeProperty"
+    },
+    {
+      "id": "BH.oM.BuroHappoldMachineLearning.MotionLevelAnalyser-BH.oM.RDF.HasProperty-Int32 FrameStep",
+      "type": "owl:DatatypeProperty"
+    },
+    {
+      "id": "BH.oM.BuroHappoldMachineLearning.MotionLevelAnalyser-BH.oM.RDF.HasProperty-System.String OutFolder",
+      "type": "owl:DatatypeProperty"
+    },
+    {
+      "id": "BH.oM.BuroHappoldMachineLearning.MotionLevelAnalyser-BH.oM.RDF.HasProperty-Int32 NbRows",
+      "type": "owl:DatatypeProperty"
+    },
+    {
+      "id": "BH.oM.BuroHappoldMachineLearning.MotionLevelAnalyser-BH.oM.RDF.HasProperty-Int32 NbColumns",
+      "type": "owl:DatatypeProperty"
+    },
+    {
+      "id": "BH.oM.BuroHappoldMachineLearning.MotionLevelAnalyser-BH.oM.RDF.HasProperty-Accord.Video.DirectShow.FileVideoSource VideoSource",
+      "type": "owl:DatatypeProperty"
+    },
+    {
+      "id": "BH.oM.BuroHappoldMachineLearning.MotionLevelAnalyser-BH.oM.RDF.HasProperty-Accord.Vision.Motion.TwoFramesDifferenceDetector Detector",
+      "type": "owl:DatatypeProperty"
+    },
+    {
+      "id": "BH.oM.BuroHappoldMachineLearning.MotionLevelAnalyser-BH.oM.RDF.HasProperty-System.Collections.Generic.Dictionary`2[System.Int32,System.Collections.Generic.List`1[System.Double]] MotionLevel",
+      "type": "owl:DatatypeProperty"
+    },
+    {
+      "id": "BH.oM.BuroHappoldMachineLearning.MotionLevelAnalyser-BH.oM.RDF.HasProperty-Int32 FrameIndex",
+      "type": "owl:DatatypeProperty"
+    },
+    {
+      "id": "BH.oM.BuroHappoldMachineLearning.MotionLevelAnalyser.ResultReceived-IsA-BH.oM.BuroHappoldMachineLearning.MotionLevelAnalyserVideoResultEvent",
       "type": "owl:ObjectProperty"
     },
     {
-      "id": "C01BC2698547355219FBD9FB48E065DF62CDE9CF66CC9A00A05654766B8DBB87",
+      "id": "BH.oM.BuroHappoldMachineLearning.MotionLevelAnalyser-BH.oM.RDF.HasProperty-VideoResultEvent ResultReceived",
       "type": "owl:ObjectProperty"
     },
     {
-      "id": "BB5C04747AD52E86BB31FEC1ED39731B9BFA9320093A29AC46B735548678F3E4",
+      "id": "BH.oM.BuroHappoldMachineLearning.MotionLevelAnalyser-BH.oM.RDF.IsA-BH.oM.Base.IBHoMObject",
       "type": "owl:ObjectProperty"
     },
     {
-      "id": "BBEB8F5229943D6EF2D3B5F45D4261215F2369340D45AFD3A84BE06CA40708E0",
+      "id": "BH.oM.BuroHappoldMachineLearning.MotionLevelAnalyser-BH.oM.RDF.IsA-BH.oM.Base.IObject",
       "type": "owl:ObjectProperty"
     },
     {
-      "id": "8C451646A1C1E2E37B721F24082791E758E86F41F17E84FF4516D7F3B35F9D80",
-      "type": "owl:DatatypeProperty"
-    },
-    {
-      "id": "1FBFD32C3FD69D9C8EDDD1059EA54F5111D82DC38D9166D74A706156DF10056E",
+      "id": "BH.oM.BuroHappoldMachineLearning.MotionLevelAnalyser-BH.oM.RDF.IsA-BH.oM.BuroHappoldMachineLearning.IAnalyser",
       "type": "owl:ObjectProperty"
     },
     {
-      "id": "27DC607D3D683428CC557D84041831F7FEBA0015F2CAFBDF2346ED64750929F8",
+      "id": "BH.oM.BuroHappoldMachineLearning.MotionLevelAnalyser-BH.oM.RDF.IsSubclassOf-BH.oM.Base.BHoMObject",
       "type": "owl:ObjectProperty"
     },
     {
-      "id": "60638CD68277B4B6D9E926124EB97333AE885B84AA52CDE620BE0E091B3D1E65",
+      "id": "BH.oM.BuroHappoldMachineLearning.Overheating-BH.oM.RDF.HasProperty-Python.Runtime.PyObject Model",
+      "type": "owl:DatatypeProperty"
+    },
+    {
+      "id": "BH.oM.BuroHappoldMachineLearning.Overheating-BH.oM.RDF.IsA-BH.oM.Base.IBHoMObject",
       "type": "owl:ObjectProperty"
     },
     {
-      "id": "D0C48CD030D2370E9BD2691F0919D5BA3DCB13EB407C978F7EEF2D708C714478",
+      "id": "BH.oM.BuroHappoldMachineLearning.Overheating-BH.oM.RDF.IsA-BH.oM.Base.IObject",
       "type": "owl:ObjectProperty"
     },
     {
-      "id": "5574E297C735E1B5C5768E69F23C1283AC87F71D385FEECB26E8001823C63230",
+      "id": "BH.oM.BuroHappoldMachineLearning.Overheating-BH.oM.RDF.IsA-BH.oM.Base.IImmutable",
       "type": "owl:ObjectProperty"
     },
     {
-      "id": "82E5F2015E341927BD0CA794553F3265EE21DD22819BB4C4053F52EC11B79250",
+      "id": "BH.oM.BuroHappoldMachineLearning.Overheating-BH.oM.RDF.IsSubclassOf-BH.oM.Base.BHoMObject",
       "type": "owl:ObjectProperty"
     },
     {
-      "id": "47956CCD19A420B59DC7518CBEE762FE89D78FFB185A70B0D86A61CB6237091B",
-      "type": "owl:DatatypeProperty"
-    },
-    {
-      "id": "D8EDF160F6E5449A6E749EBBEFA8A8CBCA475E1E53C16342EB11CC4866FEE5E8",
+      "id": "BH.oM.BuroHappoldMachineLearning.RegionOfInterest.Start-IsA-BH.oM.Geometry.Point",
       "type": "owl:ObjectProperty"
     },
     {
-      "id": "08678ACDDB14BD92C4291C85FE6456400F620ABD6DEAF4585123EAFAC820CD72",
+      "id": "BH.oM.BuroHappoldMachineLearning.RegionOfInterest-BH.oM.RDF.HasProperty-BH.oM.Geometry.Point Start",
       "type": "owl:ObjectProperty"
     },
     {
-      "id": "FC53739A6B10E04197CBA6C157655435930EAE79457B028B5CAA6522FFBA5091",
+      "id": "BH.oM.BuroHappoldMachineLearning.RegionOfInterest.End-IsA-BH.oM.Geometry.Point",
       "type": "owl:ObjectProperty"
     },
     {
-      "id": "D6BF4B5DDF1B650EEF54E8D4BA82EE665D47201D276A1C3BD6B410DCE77BF845",
-      "type": "owl:DatatypeProperty"
-    },
-    {
-      "id": "0C493D9D53363D63425BAB6F894281CABA43259518FF43BF98148C4CD80D8710",
-      "type": "owl:DatatypeProperty"
-    },
-    {
-      "id": "0C7A32AA3E3E5ACF5ABEF447466F4CEE6EB3B7F11CFB8568509A9E9EDC44473E",
-      "type": "owl:DatatypeProperty"
-    },
-    {
-      "id": "6359C1DA695ECE2A2D80A6669917269795B3509499C218EB4A40933F72117DCD",
-      "type": "owl:DatatypeProperty"
-    },
-    {
-      "id": "71D6359DF4C4FC964ECCF71710E69E41FF9E0F12D8472A2317CDD2031BD7111B",
-      "type": "owl:DatatypeProperty"
-    },
-    {
-      "id": "CEDEAA828B2403918A67AEE636E62DCB32C9E9427DF36B383E39C2ADF18F3893",
-      "type": "owl:DatatypeProperty"
-    },
-    {
-      "id": "EB24AFF14F715CFAA99CFC72DC7FE7E09F6464A0CA3020EAE024B37CFB816B9C",
-      "type": "owl:DatatypeProperty"
-    },
-    {
-      "id": "506581D739B3A522DD4B7945E02D1F9732E74ABF5F75DD40923D69C241C6319C",
+      "id": "BH.oM.BuroHappoldMachineLearning.RegionOfInterest-BH.oM.RDF.HasProperty-BH.oM.Geometry.Point End",
       "type": "owl:ObjectProperty"
     },
     {
-      "id": "D3331F189D8D1353E16293C3C2959402533F532D3C45B8B33D4A5B04BE79D785",
+      "id": "BH.oM.BuroHappoldMachineLearning.RegionOfInterest-BH.oM.RDF.HasProperty-System.Collections.Generic.Dictionary`2[System.Int32,System.Double] MotionLevel",
+      "type": "owl:DatatypeProperty"
+    },
+    {
+      "id": "BH.oM.BuroHappoldMachineLearning.RegionOfInterest-BH.oM.RDF.IsA-BH.oM.Base.IBHoMObject",
       "type": "owl:ObjectProperty"
     },
     {
-      "id": "B4AFF5074B00281DB6189481D7CEDD496E35CC39DFC28BB5C9866834B0C7300C",
+      "id": "BH.oM.BuroHappoldMachineLearning.RegionOfInterest-BH.oM.RDF.IsA-BH.oM.Base.IObject",
       "type": "owl:ObjectProperty"
     },
     {
-      "id": "AE818B4D17617E1EBB250D6714FA15C2CCAC40803ADEF9E91DDB0F6810F76058",
+      "id": "BH.oM.BuroHappoldMachineLearning.RegionOfInterest-BH.oM.RDF.IsSubclassOf-BH.oM.Base.BHoMObject",
       "type": "owl:ObjectProperty"
     },
     {
-      "id": "EA23F41B65EA45FE9CFA39BD967F6B02CC62E241E11E29C64728AA81D0E787B6",
+      "id": "BH.oM.BuroHappoldMachineLearning.SoundLevelAnalyser-BH.oM.RDF.HasProperty-Int32 StartFrame",
+      "type": "owl:DatatypeProperty"
+    },
+    {
+      "id": "BH.oM.BuroHappoldMachineLearning.SoundLevelAnalyser-BH.oM.RDF.HasProperty-Int32 EndFrame",
+      "type": "owl:DatatypeProperty"
+    },
+    {
+      "id": "BH.oM.BuroHappoldMachineLearning.SoundLevelAnalyser-BH.oM.RDF.HasProperty-Int32 FrameStep",
+      "type": "owl:DatatypeProperty"
+    },
+    {
+      "id": "BH.oM.BuroHappoldMachineLearning.SoundLevelAnalyser-BH.oM.RDF.HasProperty-System.String OutFolder",
+      "type": "owl:DatatypeProperty"
+    },
+    {
+      "id": "BH.oM.BuroHappoldMachineLearning.SoundLevelAnalyser-BH.oM.RDF.HasProperty-Accord.DirectSound.WaveFileAudioSource AudioSource",
+      "type": "owl:DatatypeProperty"
+    },
+    {
+      "id": "BH.oM.BuroHappoldMachineLearning.SoundLevelAnalyser-BH.oM.RDF.HasProperty-System.Collections.Generic.Dictionary`2[System.Int32,System.Double] SoundLevel",
+      "type": "owl:DatatypeProperty"
+    },
+    {
+      "id": "BH.oM.BuroHappoldMachineLearning.SoundLevelAnalyser-BH.oM.RDF.HasProperty-Int32 FrameIndex",
+      "type": "owl:DatatypeProperty"
+    },
+    {
+      "id": "BH.oM.BuroHappoldMachineLearning.SoundLevelAnalyser.ResultReceived-IsA-BH.oM.BuroHappoldMachineLearning.SoundLevelAnalyserSoundResultEvent",
       "type": "owl:ObjectProperty"
     },
     {
-      "id": "84DAA47CC56D7DBF6EAA9F98FCF359C6B98718453E92046BE397FA7C0CDFAADB",
-      "type": "owl:DatatypeProperty"
-    },
-    {
-      "id": "B9BDE21BCCE6AE6B97AF065AD8CCC93C0B84B02E17C0A5409FA46C053ABF5EF4",
-      "type": "owl:DatatypeProperty"
-    },
-    {
-      "id": "C252548B8C1DDCBC77D7ECC5839422E61726BBBACDD4D9063CE5A193FC945331",
-      "type": "owl:DatatypeProperty"
-    },
-    {
-      "id": "4F5ED604BA7F000D4B538995751646F4622A5197A903A822A296219C0FCDA75D",
-      "type": "owl:DatatypeProperty"
-    },
-    {
-      "id": "DED523A027940E3042B34A959843D3A31BEB2739F2A6E439BFD9D7CF259B0FC6",
-      "type": "owl:DatatypeProperty"
-    },
-    {
-      "id": "C4102F3A084075C0DAB0E21837C9000406B55CF1929FA9005622E836BB315C41",
-      "type": "owl:DatatypeProperty"
-    },
-    {
-      "id": "A34EAB7B53441B36F0AAE765C2238049235EA24C2FC0A7B3B570E3D825D17D29",
-      "type": "owl:DatatypeProperty"
-    },
-    {
-      "id": "66D78B136DB4C4EEE398233F52D87B668FF3C102985B41143ECA8E6AFBC6AC90",
-      "type": "owl:DatatypeProperty"
-    },
-    {
-      "id": "D755CE5F7C64611DE47B1F54563FB0F5B70CC8BD179A9FE9FEF9BC81E64AB264",
-      "type": "owl:DatatypeProperty"
-    },
-    {
-      "id": "A6CA91420AD129EF0B027AB81556BB32C9EEEE2E30BA623821787B907B49E302",
-      "type": "owl:DatatypeProperty"
-    },
-    {
-      "id": "4E37D1BB366B382694140E183929F8F522EB97C2831273670BC904BD4856D8C3",
+      "id": "BH.oM.BuroHappoldMachineLearning.SoundLevelAnalyser-BH.oM.RDF.HasProperty-SoundResultEvent ResultReceived",
       "type": "owl:ObjectProperty"
     },
     {
-      "id": "CDA433FD33F2FD200ED91C9609AE02AFBBD69E2E59B8C763103046A7C16E1523",
-      "type": "owl:DatatypeProperty"
-    },
-    {
-      "id": "8BEB83CB93F57A23F430DB4766340C018F455CE1EE615B54B24E5CFBA6521EC5",
-      "type": "owl:DatatypeProperty"
-    },
-    {
-      "id": "76C7A81D682C8460D37EF3F57479A9CE4D27FA94503B31D871AF9B4D34EA611A",
-      "type": "owl:DatatypeProperty"
-    },
-    {
-      "id": "3DD6ADAE4F16BA94883406735715947FC9A3B74794BD820B99544777830C41F0",
+      "id": "BH.oM.BuroHappoldMachineLearning.SoundLevelAnalyser-BH.oM.RDF.IsA-BH.oM.Base.IBHoMObject",
       "type": "owl:ObjectProperty"
     },
     {
-      "id": "B290D780AD67759D8B8F25A68222550BC11EF240F62EAFEF33EE5FA32DA483B3",
+      "id": "BH.oM.BuroHappoldMachineLearning.SoundLevelAnalyser-BH.oM.RDF.IsA-BH.oM.Base.IObject",
       "type": "owl:ObjectProperty"
     },
     {
-      "id": "9DE701130317250B4E9049E73C595C9EDE737DF16218C6310199AFB0854E61EF",
+      "id": "BH.oM.BuroHappoldMachineLearning.SoundLevelAnalyser-BH.oM.RDF.IsA-BH.oM.BuroHappoldMachineLearning.IAnalyser",
       "type": "owl:ObjectProperty"
     },
     {
-      "id": "BC165A22846B046A4E5824BFD0AFD35338ED983CFB2104DE15F04009E435E4A3",
-      "type": "owl:DatatypeProperty"
-    },
-    {
-      "id": "BD585DAE5ACC4B1211E247534077E332292B01BDC31DE6A878DFBA1281FEC990",
-      "type": "owl:DatatypeProperty"
-    },
-    {
-      "id": "BF9176F710C4ABBEEA9258C415DD5842A578FB366368BFED536632998AA34664",
-      "type": "owl:DatatypeProperty"
-    },
-    {
-      "id": "B99FD5EE0A53D01967F6F65EC3FFBC3BA827E5C97DCEEF9D7C3E5DA67A90702B",
-      "type": "owl:DatatypeProperty"
-    },
-    {
-      "id": "034D961B4AB5F1494F1569E09672BB4B7016E15041BB6D17ABDB9C6030011674",
+      "id": "BH.oM.BuroHappoldMachineLearning.SoundLevelAnalyser-BH.oM.RDF.IsSubclassOf-BH.oM.Base.BHoMObject",
       "type": "owl:ObjectProperty"
     },
     {
-      "id": "B67DE17AABEEAC9FDF3EBC1F53AC98189BE84F110619C3143DC117B5CD5AC9B3",
+      "id": "BH.oM.BuroHappoldMachineLearning.SurrogateInterpolationType-BH.oM.RDF.IsA-System.IComparable",
       "type": "owl:DatatypeProperty"
     },
     {
-      "id": "F54FF8DFE0E3B4B993545315CBACF01E611ACFF38D5D70C8A626FC10A73548FD",
+      "id": "BH.oM.BuroHappoldMachineLearning.SurrogateInterpolationType-BH.oM.RDF.IsA-System.IFormattable",
       "type": "owl:DatatypeProperty"
     },
     {
-      "id": "B892379009E85DA1E4849C07B8015AD8677F6A5A625D1AE6DB9E2818F9F5835A",
+      "id": "BH.oM.BuroHappoldMachineLearning.SurrogateInterpolationType-BH.oM.RDF.IsA-System.IConvertible",
       "type": "owl:DatatypeProperty"
     },
     {
-      "id": "C2C53A80222A263A6123E2CE0FA8B06104550796B45D97CEFE80FA329FC5CD81",
+      "id": "BH.oM.BuroHappoldMachineLearning.SurrogateInterpolationType-BH.oM.RDF.IsSubclassOf-System.Enum",
+      "type": "owl:DatatypeProperty"
+    },
+    {
+      "id": "BH.oM.BuroHappoldMachineLearning.SurrogateModelData-BH.oM.RDF.HasProperty-System.Collections.Generic.List`1[System.Double] Results",
+      "type": "owl:DatatypeProperty"
+    },
+    {
+      "id": "BH.oM.BuroHappoldMachineLearning.SurrogateModelData-BH.oM.RDF.HasProperty-System.Collections.Generic.List`1[System.Collections.Generic.List`1[System.Double]] NodeParams",
+      "type": "owl:DatatypeProperty"
+    },
+    {
+      "id": "BH.oM.BuroHappoldMachineLearning.SurrogateModelData-BH.oM.RDF.HasProperty-System.Collections.Generic.List`1[System.Collections.Generic.List`1[System.Double]] NormalisedNodeParams",
+      "type": "owl:DatatypeProperty"
+    },
+    {
+      "id": "BH.oM.BuroHappoldMachineLearning.SurrogateModelData-BH.oM.RDF.HasProperty-Double Epsilon_norm",
+      "type": "owl:DatatypeProperty"
+    },
+    {
+      "id": "BH.oM.BuroHappoldMachineLearning.SurrogateModelData-BH.oM.RDF.HasProperty-Double Exp",
+      "type": "owl:DatatypeProperty"
+    },
+    {
+      "id": "BH.oM.BuroHappoldMachineLearning.SurrogateModelData-BH.oM.RDF.HasProperty-Double D",
+      "type": "owl:DatatypeProperty"
+    },
+    {
+      "id": "BH.oM.BuroHappoldMachineLearning.SurrogateModelData.InterpolationType-IsA-BH.oM.BuroHappoldMachineLearning.SurrogateInterpolationType",
       "type": "owl:ObjectProperty"
     },
     {
-      "id": "88A1205236E8C2D8D7B894F3A33053A0E8E2C9FB66A019B328AD4CDC215E51DA",
+      "id": "BH.oM.BuroHappoldMachineLearning.SurrogateModelData-BH.oM.RDF.HasProperty-BH.oM.BuroHappoldMachineLearning.SurrogateInterpolationType InterpolationType",
       "type": "owl:ObjectProperty"
     },
     {
-      "id": "E5D535CF41970BF674C9FA12909A4180728F2211E150D98C6D1D82144BE565A9",
+      "id": "BH.oM.BuroHappoldMachineLearning.SurrogateModelData-BH.oM.RDF.HasProperty-System.Collections.Generic.List`1[System.Double] ControlPoints",
+      "type": "owl:DatatypeProperty"
+    },
+    {
+      "id": "BH.oM.BuroHappoldMachineLearning.SurrogateModelData-BH.oM.RDF.HasProperty-System.Collections.Generic.List`1[System.Double] MaxOfEachParameter",
+      "type": "owl:DatatypeProperty"
+    },
+    {
+      "id": "BH.oM.BuroHappoldMachineLearning.SurrogateModelData-BH.oM.RDF.HasProperty-System.Collections.Generic.List`1[System.Double] MinOfEachParameter",
+      "type": "owl:DatatypeProperty"
+    },
+    {
+      "id": "BH.oM.BuroHappoldMachineLearning.SurrogateModelData-BH.oM.RDF.IsA-BH.oM.Base.IBHoMObject",
       "type": "owl:ObjectProperty"
     },
     {
-      "id": "37990F296112D3470BAAE805721BA5C159E21908C44E4CB84226D5FF237C4911",
+      "id": "BH.oM.BuroHappoldMachineLearning.SurrogateModelData-BH.oM.RDF.IsA-BH.oM.Base.IObject",
       "type": "owl:ObjectProperty"
     },
     {
-      "id": "67B2F7FDF098740B99875B03562C268C9C188BBC787A269CA843562C1AED8072",
+      "id": "BH.oM.BuroHappoldMachineLearning.SurrogateModelData-BH.oM.RDF.IsSubclassOf-BH.oM.Base.BHoMObject",
       "type": "owl:ObjectProperty"
     },
     {
-      "id": "4316F1B8863D607433DCD4DBB4FBC2876F5208217212A5C2D1C743C0E173C282",
+      "id": "BH.oM.BuroHappoldMachineLearning.VideoAnalyser-BH.oM.RDF.HasProperty-Int32 StartFrame",
       "type": "owl:DatatypeProperty"
     },
     {
-      "id": "D4F4BFC8C4B36B4ED8E3B29AFC7A04CED5AACE84911C7267EF44B4845FBCB23D",
+      "id": "BH.oM.BuroHappoldMachineLearning.VideoAnalyser-BH.oM.RDF.HasProperty-Int32 EndFrame",
       "type": "owl:DatatypeProperty"
     },
     {
-      "id": "B20E8D1D4F30CE12E7544781F16D9920D5EB552ADAFFB6366BA51AF3527F0429",
+      "id": "BH.oM.BuroHappoldMachineLearning.VideoAnalyser-BH.oM.RDF.HasProperty-Int32 FrameStep",
       "type": "owl:DatatypeProperty"
     },
     {
-      "id": "1A754AE2B1BCF8F9AE1F26D28BB7E9836CEDBDA652905EA646DB997D3E101F77",
+      "id": "BH.oM.BuroHappoldMachineLearning.VideoAnalyser-BH.oM.RDF.HasProperty-System.String OutFolder",
       "type": "owl:DatatypeProperty"
     },
     {
-      "id": "3882AE688F87EB761A1FC58BDC3A0BA59399A0985FEAFFD8E58A98D403975136",
+      "id": "BH.oM.BuroHappoldMachineLearning.VideoAnalyser-BH.oM.RDF.HasProperty-System.Collections.Generic.List`1[BH.oM.BuroHappoldMachineLearning.RegionOfInterest] Rois",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "BH.oM.BuroHappoldMachineLearning.VideoAnalyser-BH.oM.RDF.HasProperty-Accord.Video.DirectShow.FileVideoSource VideoSource",
       "type": "owl:DatatypeProperty"
     },
     {
-      "id": "B25A29FA78FB009A68DEDE705C0255D32EDC025FB518182E51ED6D5D7E0798D7",
+      "id": "BH.oM.BuroHappoldMachineLearning.VideoAnalyser-BH.oM.RDF.HasProperty-Accord.Vision.Motion.TwoFramesDifferenceDetector Detector",
       "type": "owl:DatatypeProperty"
     },
     {
-      "id": "22721FE8535E38FB200DD9097C5107CDC8115B1B98A6FBC0AC7D9ACCC0E1D3FE",
+      "id": "BH.oM.BuroHappoldMachineLearning.VideoAnalyser-BH.oM.RDF.HasProperty-Int32 FrameIndex",
       "type": "owl:DatatypeProperty"
     },
     {
-      "id": "518F901C9661F52EA0D67669D042BC4DD8983210C79A7304CE2C3D902E85AFBB",
+      "id": "BH.oM.BuroHappoldMachineLearning.VideoAnalyser.ResultReceived-IsA-BH.oM.BuroHappoldMachineLearning.VideoAnalyserVideoResultEvent",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "BH.oM.BuroHappoldMachineLearning.VideoAnalyser-BH.oM.RDF.HasProperty-VideoResultEvent ResultReceived",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "BH.oM.BuroHappoldMachineLearning.VideoAnalyser-BH.oM.RDF.IsA-BH.oM.Base.IBHoMObject",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "BH.oM.BuroHappoldMachineLearning.VideoAnalyser-BH.oM.RDF.IsA-BH.oM.Base.IObject",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "BH.oM.BuroHappoldMachineLearning.VideoAnalyser-BH.oM.RDF.IsA-BH.oM.BuroHappoldMachineLearning.IAnalyser",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "BH.oM.BuroHappoldMachineLearning.VideoAnalyser-BH.oM.RDF.IsSubclassOf-BH.oM.Base.BHoMObject",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "BH.oM.BuroHappoldMachineLearning.MotionLevelAnalyser+VideoResultEvent-BH.oM.RDF.IsA-System.ICloneable",
       "type": "owl:DatatypeProperty"
     },
     {
-      "id": "B6971AE0998AA23972E0400E03A3E77C51733DDEBB5499463BE0FAFFCAFC8B05",
+      "id": "BH.oM.BuroHappoldMachineLearning.MotionLevelAnalyser+VideoResultEvent-BH.oM.RDF.IsA-System.Runtime.Serialization.ISerializable",
+      "type": "owl:DatatypeProperty"
+    },
+    {
+      "id": "BH.oM.BuroHappoldMachineLearning.MotionLevelAnalyser+VideoResultEvent-BH.oM.RDF.IsSubclassOf-System.MulticastDelegate",
+      "type": "owl:DatatypeProperty"
+    },
+    {
+      "id": "BH.oM.BuroHappoldMachineLearning.SoundLevelAnalyser+SoundResultEvent-BH.oM.RDF.IsA-System.ICloneable",
+      "type": "owl:DatatypeProperty"
+    },
+    {
+      "id": "BH.oM.BuroHappoldMachineLearning.SoundLevelAnalyser+SoundResultEvent-BH.oM.RDF.IsA-System.Runtime.Serialization.ISerializable",
+      "type": "owl:DatatypeProperty"
+    },
+    {
+      "id": "BH.oM.BuroHappoldMachineLearning.SoundLevelAnalyser+SoundResultEvent-BH.oM.RDF.IsSubclassOf-System.MulticastDelegate",
+      "type": "owl:DatatypeProperty"
+    },
+    {
+      "id": "BH.oM.BuroHappoldMachineLearning.VideoAnalyser+VideoResultEvent-BH.oM.RDF.IsA-System.ICloneable",
+      "type": "owl:DatatypeProperty"
+    },
+    {
+      "id": "BH.oM.BuroHappoldMachineLearning.VideoAnalyser+VideoResultEvent-BH.oM.RDF.IsA-System.Runtime.Serialization.ISerializable",
+      "type": "owl:DatatypeProperty"
+    },
+    {
+      "id": "BH.oM.BuroHappoldMachineLearning.VideoAnalyser+VideoResultEvent-BH.oM.RDF.IsSubclassOf-System.MulticastDelegate",
       "type": "owl:DatatypeProperty"
     }
   ],
   "propertyAttribute": [
     {
-      "id": "BF288126E54F7BE85F385CCED61FE6BEA9C5EA8645D7DC94DFA1176D28D0732A",
-      "iri": "http://visualdataweb.org/newOntology/BF288126E54F7BE85F385CCED61FE6BEA9C5EA8645D7DC94DFA1176D28D0732A",
+      "id": "BH.oM.BuroHappoldMachineLearning.GValues-BH.oM.RDF.HasProperty-Int32 Orientation",
+      "iri": "http://visualdataweb.org/newOntology/BH.oM.BuroHappoldMachineLearning.GValues-BH.oM.RDF.HasProperty-Int32 Orientation",
       "label": "HasProperty",
       "attributes": "datatype",
       "domain": "BH.oM.BuroHappoldMachineLearning.GValues",
       "range": "Orientation-BF288126E54F7BE85F385CCED61FE6BEA9C5EA8645D7DC94DFA1176D28D0732A-GValues-HasProperty"
     },
     {
-      "id": "2376CB712DA96096D0CBC3F381FE84306983566BBDF888ECA2AA977EEDD7818A",
-      "iri": "http://visualdataweb.org/newOntology/2376CB712DA96096D0CBC3F381FE84306983566BBDF888ECA2AA977EEDD7818A",
+      "id": "BH.oM.BuroHappoldMachineLearning.GValues-BH.oM.RDF.HasProperty-Double GValue",
+      "iri": "http://visualdataweb.org/newOntology/BH.oM.BuroHappoldMachineLearning.GValues-BH.oM.RDF.HasProperty-Double GValue",
       "label": "HasProperty",
       "attributes": "datatype",
       "domain": "BH.oM.BuroHappoldMachineLearning.GValues",
       "range": "GValue-2376CB712DA96096D0CBC3F381FE84306983566BBDF888ECA2AA977EEDD7818A-GValues-HasProperty"
     },
     {
-      "id": "6EED2C3574173C2F1FF400D206A3FB7CA11C8501E8C11FF90456C14E4C309146",
-      "iri": "http://visualdataweb.org/newOntology/6EED2C3574173C2F1FF400D206A3FB7CA11C8501E8C11FF90456C14E4C309146",
+      "id": "BH.oM.BuroHappoldMachineLearning.GValues-BH.oM.RDF.IsA-BH.oM.Base.IBHoMObject",
+      "iri": "http://visualdataweb.org/newOntology/BH.oM.BuroHappoldMachineLearning.GValues-BH.oM.RDF.IsA-BH.oM.Base.IBHoMObject",
       "label": "IsA",
       "attributes": "object",
       "domain": "BH.oM.BuroHappoldMachineLearning.GValues",
       "range": "BH.oM.Base.IBHoMObject"
     },
     {
-      "id": "D7CA7FEFA585114C22BF72E850CBC42547C80A61DA07ACB2328B09E7580C287D",
-      "iri": "http://visualdataweb.org/newOntology/D7CA7FEFA585114C22BF72E850CBC42547C80A61DA07ACB2328B09E7580C287D",
+      "id": "BH.oM.BuroHappoldMachineLearning.GValues-BH.oM.RDF.IsA-BH.oM.Base.IObject",
+      "iri": "http://visualdataweb.org/newOntology/BH.oM.BuroHappoldMachineLearning.GValues-BH.oM.RDF.IsA-BH.oM.Base.IObject",
       "label": "IsA",
       "attributes": "object",
       "domain": "BH.oM.BuroHappoldMachineLearning.GValues",
       "range": "BH.oM.Base.IObject"
     },
     {
-      "id": "663FEA9A9802C1F9F4F75C5690EF7D9BA4335A564ECF6A9AABD86029C827142E",
-      "iri": "http://visualdataweb.org/newOntology/663FEA9A9802C1F9F4F75C5690EF7D9BA4335A564ECF6A9AABD86029C827142E",
+      "id": "BH.oM.BuroHappoldMachineLearning.GValues-BH.oM.RDF.IsSubclassOf-BH.oM.Base.BHoMObject",
+      "iri": "http://visualdataweb.org/newOntology/BH.oM.BuroHappoldMachineLearning.GValues-BH.oM.RDF.IsSubclassOf-BH.oM.Base.BHoMObject",
       "label": "IsSubclassOf",
       "attributes": "object",
       "domain": "BH.oM.BuroHappoldMachineLearning.GValues",
       "range": "BH.oM.Base.BHoMObject"
     },
     {
-      "id": "5E84A85E491EAC75BC32EADFE10FB71BF02E1E425E296F009ADA505D3BFBC50D",
-      "iri": "http://visualdataweb.org/newOntology/5E84A85E491EAC75BC32EADFE10FB71BF02E1E425E296F009ADA505D3BFBC50D",
+      "id": "BH.oM.BuroHappoldMachineLearning.MachineLearningExport-BH.oM.RDF.HasProperty-System.String ID",
+      "iri": "http://visualdataweb.org/newOntology/BH.oM.BuroHappoldMachineLearning.MachineLearningExport-BH.oM.RDF.HasProperty-System.String ID",
       "label": "HasProperty",
       "attributes": "datatype",
       "domain": "BH.oM.BuroHappoldMachineLearning.MachineLearningExport",
       "range": "ID-5E84A85E491EAC75BC32EADFE10FB71BF02E1E425E296F009ADA505D3BFBC50D-MachineLearningExport-HasProperty"
     },
     {
-      "id": "636F6CDE13AF639CAB84541FD6FF7AB91B782323946AEFE53C42E2A33D49D925",
-      "iri": "http://visualdataweb.org/newOntology/636F6CDE13AF639CAB84541FD6FF7AB91B782323946AEFE53C42E2A33D49D925",
+      "id": "BH.oM.BuroHappoldMachineLearning.MachineLearningExport-BH.oM.RDF.HasProperty-System.String RoomType",
+      "iri": "http://visualdataweb.org/newOntology/BH.oM.BuroHappoldMachineLearning.MachineLearningExport-BH.oM.RDF.HasProperty-System.String RoomType",
       "label": "HasProperty",
       "attributes": "datatype",
       "domain": "BH.oM.BuroHappoldMachineLearning.MachineLearningExport",
       "range": "RoomType-636F6CDE13AF639CAB84541FD6FF7AB91B782323946AEFE53C42E2A33D49D925-MachineLearningExport-HasProperty"
     },
     {
-      "id": "E877132088D257BA73F1F9593F2759AD448AF7BD4C7BB1EF5B8EF5A027A164A9",
-      "iri": "http://visualdataweb.org/newOntology/E877132088D257BA73F1F9593F2759AD448AF7BD4C7BB1EF5B8EF5A027A164A9",
+      "id": "BH.oM.BuroHappoldMachineLearning.MachineLearningExport-BH.oM.RDF.HasProperty-System.String SingleDualAspect",
+      "iri": "http://visualdataweb.org/newOntology/BH.oM.BuroHappoldMachineLearning.MachineLearningExport-BH.oM.RDF.HasProperty-System.String SingleDualAspect",
       "label": "HasProperty",
       "attributes": "datatype",
       "domain": "BH.oM.BuroHappoldMachineLearning.MachineLearningExport",
       "range": "SingleDualAspect-E877132088D257BA73F1F9593F2759AD448AF7BD4C7BB1EF5B8EF5A027A164A9-MachineLearningExport-HasProperty"
     },
     {
-      "id": "EFC700AF6DDD8C9AC3606E0BD2DD10DC9AC8835D2AD650C34A052ECA8AB2D2A9",
-      "iri": "http://visualdataweb.org/newOntology/EFC700AF6DDD8C9AC3606E0BD2DD10DC9AC8835D2AD650C34A052ECA8AB2D2A9",
+      "id": "BH.oM.BuroHappoldMachineLearning.MachineLearningExport-BH.oM.RDF.HasProperty-System.String BalconyType",
+      "iri": "http://visualdataweb.org/newOntology/BH.oM.BuroHappoldMachineLearning.MachineLearningExport-BH.oM.RDF.HasProperty-System.String BalconyType",
       "label": "HasProperty",
       "attributes": "datatype",
       "domain": "BH.oM.BuroHappoldMachineLearning.MachineLearningExport",
       "range": "BalconyType-EFC700AF6DDD8C9AC3606E0BD2DD10DC9AC8835D2AD650C34A052ECA8AB2D2A9-MachineLearningExport-HasProperty"
     },
     {
-      "id": "8EAFC62C1E46F023C59CCD3DE565C7B0692346EC90E0BE31A5AE49ABF0B2D3E5",
-      "iri": "http://visualdataweb.org/newOntology/8EAFC62C1E46F023C59CCD3DE565C7B0692346EC90E0BE31A5AE49ABF0B2D3E5",
+      "id": "BH.oM.BuroHappoldMachineLearning.MachineLearningExport-BH.oM.RDF.HasProperty-Double GValue",
+      "iri": "http://visualdataweb.org/newOntology/BH.oM.BuroHappoldMachineLearning.MachineLearningExport-BH.oM.RDF.HasProperty-Double GValue",
       "label": "HasProperty",
       "attributes": "datatype",
       "domain": "BH.oM.BuroHappoldMachineLearning.MachineLearningExport",
       "range": "GValue-8EAFC62C1E46F023C59CCD3DE565C7B0692346EC90E0BE31A5AE49ABF0B2D3E5-MachineLearningExport-HasProperty"
     },
     {
-      "id": "F1DE83E44264BFBB117054E2BFBB7FFA7069BC4AA20D772BAB01E5125CE7C920",
-      "iri": "http://visualdataweb.org/newOntology/F1DE83E44264BFBB117054E2BFBB7FFA7069BC4AA20D772BAB01E5125CE7C920",
+      "id": "BH.oM.BuroHappoldMachineLearning.MachineLearningExport-BH.oM.RDF.HasProperty-Int32 DwellingBeds",
+      "iri": "http://visualdataweb.org/newOntology/BH.oM.BuroHappoldMachineLearning.MachineLearningExport-BH.oM.RDF.HasProperty-Int32 DwellingBeds",
       "label": "HasProperty",
       "attributes": "datatype",
       "domain": "BH.oM.BuroHappoldMachineLearning.MachineLearningExport",
       "range": "DwellingBeds-F1DE83E44264BFBB117054E2BFBB7FFA7069BC4AA20D772BAB01E5125CE7C920-MachineLearningExport-HasProperty"
     },
     {
-      "id": "638399E75C068C9B29965ECDC72F5F36F4FAA8C988831113BB141C4E084A36FC",
-      "iri": "http://visualdataweb.org/newOntology/638399E75C068C9B29965ECDC72F5F36F4FAA8C988831113BB141C4E084A36FC",
+      "id": "BH.oM.BuroHappoldMachineLearning.MachineLearningExport-BH.oM.RDF.HasProperty-Double TotalRadiation",
+      "iri": "http://visualdataweb.org/newOntology/BH.oM.BuroHappoldMachineLearning.MachineLearningExport-BH.oM.RDF.HasProperty-Double TotalRadiation",
       "label": "HasProperty",
       "attributes": "datatype",
       "domain": "BH.oM.BuroHappoldMachineLearning.MachineLearningExport",
       "range": "TotalRadiation-638399E75C068C9B29965ECDC72F5F36F4FAA8C988831113BB141C4E084A36FC-MachineLearningExport-HasProperty"
     },
     {
-      "id": "C503EBEDAA5B40AD14C350E2C4567E87E5EA03261FE4FE696DAA9C7C30084943",
-      "iri": "http://visualdataweb.org/newOntology/C503EBEDAA5B40AD14C350E2C4567E87E5EA03261FE4FE696DAA9C7C30084943",
+      "id": "BH.oM.BuroHappoldMachineLearning.MachineLearningExport-BH.oM.RDF.HasProperty-Double ADF",
+      "iri": "http://visualdataweb.org/newOntology/BH.oM.BuroHappoldMachineLearning.MachineLearningExport-BH.oM.RDF.HasProperty-Double ADF",
       "label": "HasProperty",
       "attributes": "datatype",
       "domain": "BH.oM.BuroHappoldMachineLearning.MachineLearningExport",
       "range": "ADF-C503EBEDAA5B40AD14C350E2C4567E87E5EA03261FE4FE696DAA9C7C30084943-MachineLearningExport-HasProperty"
     },
     {
-      "id": "EA3FE4C26DEEB3527448A481F79DFE0C2B0D8C6E1373E981A8E2EAFBE29409E2",
-      "iri": "http://visualdataweb.org/newOntology/EA3FE4C26DEEB3527448A481F79DFE0C2B0D8C6E1373E981A8E2EAFBE29409E2",
+      "id": "BH.oM.BuroHappoldMachineLearning.MachineLearningExport-BH.oM.RDF.HasProperty-Double GlazingRatioWindowFloor",
+      "iri": "http://visualdataweb.org/newOntology/BH.oM.BuroHappoldMachineLearning.MachineLearningExport-BH.oM.RDF.HasProperty-Double GlazingRatioWindowFloor",
       "label": "HasProperty",
       "attributes": "datatype",
       "domain": "BH.oM.BuroHappoldMachineLearning.MachineLearningExport",
       "range": "GlazingRatioWindowFloor-EA3FE4C26DEEB3527448A481F79DFE0C2B0D8C6E1373E981A8E2EAFBE29409E2-MachineLearningExport-HasProperty"
     },
     {
-      "id": "65FF05C1AF34D388DE1ABAC18412E80F220A3FD171D80AF9D981B8C69BFB0373",
-      "iri": "http://visualdataweb.org/newOntology/65FF05C1AF34D388DE1ABAC18412E80F220A3FD171D80AF9D981B8C69BFB0373",
+      "id": "BH.oM.BuroHappoldMachineLearning.MachineLearningExport-BH.oM.RDF.HasProperty-Double GlazedArea",
+      "iri": "http://visualdataweb.org/newOntology/BH.oM.BuroHappoldMachineLearning.MachineLearningExport-BH.oM.RDF.HasProperty-Double GlazedArea",
       "label": "HasProperty",
       "attributes": "datatype",
       "domain": "BH.oM.BuroHappoldMachineLearning.MachineLearningExport",
       "range": "GlazedArea-65FF05C1AF34D388DE1ABAC18412E80F220A3FD171D80AF9D981B8C69BFB0373-MachineLearningExport-HasProperty"
     },
     {
-      "id": "8BFFD8362A4B45B991F8D0747871A08B6D0B8A62218DB4568093F4CF3FC7C81C",
-      "iri": "http://visualdataweb.org/newOntology/8BFFD8362A4B45B991F8D0747871A08B6D0B8A62218DB4568093F4CF3FC7C81C",
+      "id": "BH.oM.BuroHappoldMachineLearning.MachineLearningExport-BH.oM.RDF.HasProperty-Double GlazingRatio",
+      "iri": "http://visualdataweb.org/newOntology/BH.oM.BuroHappoldMachineLearning.MachineLearningExport-BH.oM.RDF.HasProperty-Double GlazingRatio",
       "label": "HasProperty",
       "attributes": "datatype",
       "domain": "BH.oM.BuroHappoldMachineLearning.MachineLearningExport",
       "range": "GlazingRatio-8BFFD8362A4B45B991F8D0747871A08B6D0B8A62218DB4568093F4CF3FC7C81C-MachineLearningExport-HasProperty"
     },
     {
-      "id": "2D3577977F46914A4D75353E6F2E013B30B0D2F67EDDC20D9B63DF88730B5E8B",
-      "iri": "http://visualdataweb.org/newOntology/2D3577977F46914A4D75353E6F2E013B30B0D2F67EDDC20D9B63DF88730B5E8B",
+      "id": "BH.oM.BuroHappoldMachineLearning.MachineLearningExport-BH.oM.RDF.HasProperty-Double FloorArea",
+      "iri": "http://visualdataweb.org/newOntology/BH.oM.BuroHappoldMachineLearning.MachineLearningExport-BH.oM.RDF.HasProperty-Double FloorArea",
       "label": "HasProperty",
       "attributes": "datatype",
       "domain": "BH.oM.BuroHappoldMachineLearning.MachineLearningExport",
       "range": "FloorArea-2D3577977F46914A4D75353E6F2E013B30B0D2F67EDDC20D9B63DF88730B5E8B-MachineLearningExport-HasProperty"
     },
     {
-      "id": "C3AA950FCC7F63BA1E8FE29260BB4709F7AE778F0E5CB4998A9DA5C4A6CEDFDE",
-      "iri": "http://visualdataweb.org/newOntology/C3AA950FCC7F63BA1E8FE29260BB4709F7AE778F0E5CB4998A9DA5C4A6CEDFDE",
+      "id": "BH.oM.BuroHappoldMachineLearning.MachineLearningExport-BH.oM.RDF.HasProperty-Double ExternalWallArea",
+      "iri": "http://visualdataweb.org/newOntology/BH.oM.BuroHappoldMachineLearning.MachineLearningExport-BH.oM.RDF.HasProperty-Double ExternalWallArea",
       "label": "HasProperty",
       "attributes": "datatype",
       "domain": "BH.oM.BuroHappoldMachineLearning.MachineLearningExport",
       "range": "ExternalWallArea-C3AA950FCC7F63BA1E8FE29260BB4709F7AE778F0E5CB4998A9DA5C4A6CEDFDE-MachineLearningExport-HasProperty"
     },
     {
-      "id": "3DB1C85762F43D58AFF40E51CB4465E3961C6153E4BEBA882B7E0771BE649BDA",
-      "iri": "http://visualdataweb.org/newOntology/3DB1C85762F43D58AFF40E51CB4465E3961C6153E4BEBA882B7E0771BE649BDA",
+      "id": "BH.oM.BuroHappoldMachineLearning.MachineLearningExport-BH.oM.RDF.HasProperty-System.String GlazingAreaA",
+      "iri": "http://visualdataweb.org/newOntology/BH.oM.BuroHappoldMachineLearning.MachineLearningExport-BH.oM.RDF.HasProperty-System.String GlazingAreaA",
       "label": "HasProperty",
       "attributes": "datatype",
       "domain": "BH.oM.BuroHappoldMachineLearning.MachineLearningExport",
       "range": "GlazingAreaA-3DB1C85762F43D58AFF40E51CB4465E3961C6153E4BEBA882B7E0771BE649BDA-MachineLearningExport-HasProperty"
     },
     {
-      "id": "0D0768D37E635F5AF78A77E604DE0009BE49999FC0B24C81314508B2B1494962",
-      "iri": "http://visualdataweb.org/newOntology/0D0768D37E635F5AF78A77E604DE0009BE49999FC0B24C81314508B2B1494962",
+      "id": "BH.oM.BuroHappoldMachineLearning.MachineLearningExport-BH.oM.RDF.HasProperty-System.String GlazingAreaB",
+      "iri": "http://visualdataweb.org/newOntology/BH.oM.BuroHappoldMachineLearning.MachineLearningExport-BH.oM.RDF.HasProperty-System.String GlazingAreaB",
       "label": "HasProperty",
       "attributes": "datatype",
       "domain": "BH.oM.BuroHappoldMachineLearning.MachineLearningExport",
       "range": "GlazingAreaB-0D0768D37E635F5AF78A77E604DE0009BE49999FC0B24C81314508B2B1494962-MachineLearningExport-HasProperty"
     },
     {
-      "id": "82D97DC59F0762E8CD9A48429F6F8802D104E9778DE65C433582F81D00B0A095",
-      "iri": "http://visualdataweb.org/newOntology/82D97DC59F0762E8CD9A48429F6F8802D104E9778DE65C433582F81D00B0A095",
+      "id": "BH.oM.BuroHappoldMachineLearning.MachineLearningExport-BH.oM.RDF.HasProperty-System.String GlazingAreaC",
+      "iri": "http://visualdataweb.org/newOntology/BH.oM.BuroHappoldMachineLearning.MachineLearningExport-BH.oM.RDF.HasProperty-System.String GlazingAreaC",
       "label": "HasProperty",
       "attributes": "datatype",
       "domain": "BH.oM.BuroHappoldMachineLearning.MachineLearningExport",
       "range": "GlazingAreaC-82D97DC59F0762E8CD9A48429F6F8802D104E9778DE65C433582F81D00B0A095-MachineLearningExport-HasProperty"
     },
     {
-      "id": "5E459EFCE55CCE9C5BE5FA578E0B3852269206DE5BF658377A63EB190A0275B6",
-      "iri": "http://visualdataweb.org/newOntology/5E459EFCE55CCE9C5BE5FA578E0B3852269206DE5BF658377A63EB190A0275B6",
+      "id": "BH.oM.BuroHappoldMachineLearning.MachineLearningExport-BH.oM.RDF.HasProperty-System.String OrientationA",
+      "iri": "http://visualdataweb.org/newOntology/BH.oM.BuroHappoldMachineLearning.MachineLearningExport-BH.oM.RDF.HasProperty-System.String OrientationA",
       "label": "HasProperty",
       "attributes": "datatype",
       "domain": "BH.oM.BuroHappoldMachineLearning.MachineLearningExport",
       "range": "OrientationA-5E459EFCE55CCE9C5BE5FA578E0B3852269206DE5BF658377A63EB190A0275B6-MachineLearningExport-HasProperty"
     },
     {
-      "id": "BD3C389E7ACB168520062B84526E02EAACEF5E39EE8DB3C6AA81D6106334E3DB",
-      "iri": "http://visualdataweb.org/newOntology/BD3C389E7ACB168520062B84526E02EAACEF5E39EE8DB3C6AA81D6106334E3DB",
+      "id": "BH.oM.BuroHappoldMachineLearning.MachineLearningExport-BH.oM.RDF.HasProperty-System.String OrientationB",
+      "iri": "http://visualdataweb.org/newOntology/BH.oM.BuroHappoldMachineLearning.MachineLearningExport-BH.oM.RDF.HasProperty-System.String OrientationB",
       "label": "HasProperty",
       "attributes": "datatype",
       "domain": "BH.oM.BuroHappoldMachineLearning.MachineLearningExport",
       "range": "OrientationB-BD3C389E7ACB168520062B84526E02EAACEF5E39EE8DB3C6AA81D6106334E3DB-MachineLearningExport-HasProperty"
     },
     {
-      "id": "ECBC9E26C5CB06015355471CD9C8C36FBE2FAF2BCA6C3210244FB0D531231937",
-      "iri": "http://visualdataweb.org/newOntology/ECBC9E26C5CB06015355471CD9C8C36FBE2FAF2BCA6C3210244FB0D531231937",
+      "id": "BH.oM.BuroHappoldMachineLearning.MachineLearningExport-BH.oM.RDF.HasProperty-System.String OrientationC",
+      "iri": "http://visualdataweb.org/newOntology/BH.oM.BuroHappoldMachineLearning.MachineLearningExport-BH.oM.RDF.HasProperty-System.String OrientationC",
       "label": "HasProperty",
       "attributes": "datatype",
       "domain": "BH.oM.BuroHappoldMachineLearning.MachineLearningExport",
       "range": "OrientationC-ECBC9E26C5CB06015355471CD9C8C36FBE2FAF2BCA6C3210244FB0D531231937-MachineLearningExport-HasProperty"
     },
     {
-      "id": "47669288A7D17E62F4848E4250AB04D2A64E54BF1EA375AC4E5CB5EA1BFDBFB2",
-      "iri": "http://visualdataweb.org/newOntology/47669288A7D17E62F4848E4250AB04D2A64E54BF1EA375AC4E5CB5EA1BFDBFB2",
+      "id": "BH.oM.BuroHappoldMachineLearning.MachineLearningExport-BH.oM.RDF.IsA-BH.oM.Base.IBHoMObject",
+      "iri": "http://visualdataweb.org/newOntology/BH.oM.BuroHappoldMachineLearning.MachineLearningExport-BH.oM.RDF.IsA-BH.oM.Base.IBHoMObject",
       "label": "IsA",
       "attributes": "object",
       "domain": "BH.oM.BuroHappoldMachineLearning.MachineLearningExport",
       "range": "BH.oM.Base.IBHoMObject"
     },
     {
-      "id": "438CE04777EA49161D0ED4A234E17F317F109EED5ACB9535C482DF7836339109",
-      "iri": "http://visualdataweb.org/newOntology/438CE04777EA49161D0ED4A234E17F317F109EED5ACB9535C482DF7836339109",
+      "id": "BH.oM.BuroHappoldMachineLearning.MachineLearningExport-BH.oM.RDF.IsA-BH.oM.Base.IObject",
+      "iri": "http://visualdataweb.org/newOntology/BH.oM.BuroHappoldMachineLearning.MachineLearningExport-BH.oM.RDF.IsA-BH.oM.Base.IObject",
       "label": "IsA",
       "attributes": "object",
       "domain": "BH.oM.BuroHappoldMachineLearning.MachineLearningExport",
       "range": "BH.oM.Base.IObject"
     },
     {
-      "id": "98DAF0F5E066149541C62961576C00D2BF179A0CCD0A3DC0122C3189B4A35D40",
-      "iri": "http://visualdataweb.org/newOntology/98DAF0F5E066149541C62961576C00D2BF179A0CCD0A3DC0122C3189B4A35D40",
+      "id": "BH.oM.BuroHappoldMachineLearning.MachineLearningExport-BH.oM.RDF.IsSubclassOf-BH.oM.Base.BHoMObject",
+      "iri": "http://visualdataweb.org/newOntology/BH.oM.BuroHappoldMachineLearning.MachineLearningExport-BH.oM.RDF.IsSubclassOf-BH.oM.Base.BHoMObject",
       "label": "IsSubclassOf",
       "attributes": "object",
       "domain": "BH.oM.BuroHappoldMachineLearning.MachineLearningExport",
       "range": "BH.oM.Base.BHoMObject"
     },
     {
-      "id": "57A8589F50CE2F31404D3EB0A804EEF3110A31A88F100E0E80598CBA40D05F05",
-      "iri": "http://visualdataweb.org/newOntology/57A8589F50CE2F31404D3EB0A804EEF3110A31A88F100E0E80598CBA40D05F05",
-      "label": "HasProperty",
+      "id": "BH.oM.BuroHappoldMachineLearning.ModelZoo.Overheating-IsA-BH.oM.Data.Library.Source",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "label": "IsA",
       "attributes": "object",
-      "domain": "BH.oM.BuroHappoldMachineLearning.ModelZoo",
+      "domain": "BH.oM.BuroHappoldMachineLearning.ModelZoo.Overheating",
       "range": "BH.oM.Data.Library.Source"
     },
     {
-      "id": "A3EB375210A5324EFBD86C88FEECEEF92D3C2B5CAFDBAD9C94402A97DFC7DA6A",
-      "iri": "http://visualdataweb.org/newOntology/A3EB375210A5324EFBD86C88FEECEEF92D3C2B5CAFDBAD9C94402A97DFC7DA6A",
+      "id": "BH.oM.BuroHappoldMachineLearning.ModelZoo-BH.oM.RDF.HasProperty-BH.oM.Data.Library.Source Overheating",
+      "iri": "http://visualdataweb.org/newOntology/BH.oM.BuroHappoldMachineLearning.ModelZoo-BH.oM.RDF.HasProperty-BH.oM.Data.Library.Source Overheating",
+      "label": "HasProperty",
+      "attributes": [],
+      "domain": "BH.oM.BuroHappoldMachineLearning.ModelZoo",
+      "range": "BH.oM.BuroHappoldMachineLearning.ModelZoo.Overheating"
+    },
+    {
+      "id": "BH.oM.BuroHappoldMachineLearning.ModelZoo-BH.oM.RDF.IsA-BH.oM.Base.IBHoMObject",
+      "iri": "http://visualdataweb.org/newOntology/BH.oM.BuroHappoldMachineLearning.ModelZoo-BH.oM.RDF.IsA-BH.oM.Base.IBHoMObject",
       "label": "IsA",
       "attributes": "object",
       "domain": "BH.oM.BuroHappoldMachineLearning.ModelZoo",
       "range": "BH.oM.Base.IBHoMObject"
     },
     {
-      "id": "938CA2C7EA0075794C87E7A58564CCFB46B709A61490ED7FB497D93FB9AA7C6A",
-      "iri": "http://visualdataweb.org/newOntology/938CA2C7EA0075794C87E7A58564CCFB46B709A61490ED7FB497D93FB9AA7C6A",
+      "id": "BH.oM.BuroHappoldMachineLearning.ModelZoo-BH.oM.RDF.IsA-BH.oM.Base.IObject",
+      "iri": "http://visualdataweb.org/newOntology/BH.oM.BuroHappoldMachineLearning.ModelZoo-BH.oM.RDF.IsA-BH.oM.Base.IObject",
       "label": "IsA",
       "attributes": "object",
       "domain": "BH.oM.BuroHappoldMachineLearning.ModelZoo",
       "range": "BH.oM.Base.IObject"
     },
     {
-      "id": "83DC6A2ED7389A3D9611B9BAEE312AA99BD063954399E5EC5A1B7968444EE1D0",
-      "iri": "http://visualdataweb.org/newOntology/83DC6A2ED7389A3D9611B9BAEE312AA99BD063954399E5EC5A1B7968444EE1D0",
+      "id": "BH.oM.BuroHappoldMachineLearning.ModelZoo-BH.oM.RDF.IsSubclassOf-BH.oM.Base.BHoMObject",
+      "iri": "http://visualdataweb.org/newOntology/BH.oM.BuroHappoldMachineLearning.ModelZoo-BH.oM.RDF.IsSubclassOf-BH.oM.Base.BHoMObject",
       "label": "IsSubclassOf",
       "attributes": "object",
       "domain": "BH.oM.BuroHappoldMachineLearning.ModelZoo",
       "range": "BH.oM.Base.BHoMObject"
     },
     {
-      "id": "0F2CAE015AC4B62AFC202B918C453E2C4467BE45D799A328ED4921DC413A1C8A",
-      "iri": "http://visualdataweb.org/newOntology/0F2CAE015AC4B62AFC202B918C453E2C4467BE45D799A328ED4921DC413A1C8A",
+      "id": "BH.oM.BuroHappoldMachineLearning.MotionLevelAnalyser-BH.oM.RDF.HasProperty-Int32 StartFrame",
+      "iri": "http://visualdataweb.org/newOntology/BH.oM.BuroHappoldMachineLearning.MotionLevelAnalyser-BH.oM.RDF.HasProperty-Int32 StartFrame",
       "label": "HasProperty",
       "attributes": "datatype",
       "domain": "BH.oM.BuroHappoldMachineLearning.MotionLevelAnalyser",
       "range": "StartFrame-0F2CAE015AC4B62AFC202B918C453E2C4467BE45D799A328ED4921DC413A1C8A-MotionLevelAnalyser-HasProperty"
     },
     {
-      "id": "9D8416478727F07D5412A609DC6495CB048543914951A474745B7FCF841F6653",
-      "iri": "http://visualdataweb.org/newOntology/9D8416478727F07D5412A609DC6495CB048543914951A474745B7FCF841F6653",
+      "id": "BH.oM.BuroHappoldMachineLearning.MotionLevelAnalyser-BH.oM.RDF.HasProperty-Int32 EndFrame",
+      "iri": "http://visualdataweb.org/newOntology/BH.oM.BuroHappoldMachineLearning.MotionLevelAnalyser-BH.oM.RDF.HasProperty-Int32 EndFrame",
       "label": "HasProperty",
       "attributes": "datatype",
       "domain": "BH.oM.BuroHappoldMachineLearning.MotionLevelAnalyser",
       "range": "EndFrame-9D8416478727F07D5412A609DC6495CB048543914951A474745B7FCF841F6653-MotionLevelAnalyser-HasProperty"
     },
     {
-      "id": "B35E045920E11B0E0146C736B4792700451B68D773C7083A3C6313110AF87487",
-      "iri": "http://visualdataweb.org/newOntology/B35E045920E11B0E0146C736B4792700451B68D773C7083A3C6313110AF87487",
+      "id": "BH.oM.BuroHappoldMachineLearning.MotionLevelAnalyser-BH.oM.RDF.HasProperty-Int32 FrameStep",
+      "iri": "http://visualdataweb.org/newOntology/BH.oM.BuroHappoldMachineLearning.MotionLevelAnalyser-BH.oM.RDF.HasProperty-Int32 FrameStep",
       "label": "HasProperty",
       "attributes": "datatype",
       "domain": "BH.oM.BuroHappoldMachineLearning.MotionLevelAnalyser",
       "range": "FrameStep-B35E045920E11B0E0146C736B4792700451B68D773C7083A3C6313110AF87487-MotionLevelAnalyser-HasProperty"
     },
     {
-      "id": "29ED01FE100242C5FBD4C44D4F7F1A086D1E8E10406D9993636F57027C3FDC43",
-      "iri": "http://visualdataweb.org/newOntology/29ED01FE100242C5FBD4C44D4F7F1A086D1E8E10406D9993636F57027C3FDC43",
+      "id": "BH.oM.BuroHappoldMachineLearning.MotionLevelAnalyser-BH.oM.RDF.HasProperty-System.String OutFolder",
+      "iri": "http://visualdataweb.org/newOntology/BH.oM.BuroHappoldMachineLearning.MotionLevelAnalyser-BH.oM.RDF.HasProperty-System.String OutFolder",
       "label": "HasProperty",
       "attributes": "datatype",
       "domain": "BH.oM.BuroHappoldMachineLearning.MotionLevelAnalyser",
       "range": "OutFolder-29ED01FE100242C5FBD4C44D4F7F1A086D1E8E10406D9993636F57027C3FDC43-MotionLevelAnalyser-HasProperty"
     },
     {
-      "id": "2FD178557AAA3240F97A3EC9FC54F3C0E28538EA8DB3A5E5D4731A2F3E877927",
-      "iri": "http://visualdataweb.org/newOntology/2FD178557AAA3240F97A3EC9FC54F3C0E28538EA8DB3A5E5D4731A2F3E877927",
+      "id": "BH.oM.BuroHappoldMachineLearning.MotionLevelAnalyser-BH.oM.RDF.HasProperty-Int32 NbRows",
+      "iri": "http://visualdataweb.org/newOntology/BH.oM.BuroHappoldMachineLearning.MotionLevelAnalyser-BH.oM.RDF.HasProperty-Int32 NbRows",
       "label": "HasProperty",
       "attributes": "datatype",
       "domain": "BH.oM.BuroHappoldMachineLearning.MotionLevelAnalyser",
       "range": "NbRows-2FD178557AAA3240F97A3EC9FC54F3C0E28538EA8DB3A5E5D4731A2F3E877927-MotionLevelAnalyser-HasProperty"
     },
     {
-      "id": "B61DC0B62BF717E2E4B0233BCB68DA82C9CE392A99860670EA2F5B7594BDCFC8",
-      "iri": "http://visualdataweb.org/newOntology/B61DC0B62BF717E2E4B0233BCB68DA82C9CE392A99860670EA2F5B7594BDCFC8",
+      "id": "BH.oM.BuroHappoldMachineLearning.MotionLevelAnalyser-BH.oM.RDF.HasProperty-Int32 NbColumns",
+      "iri": "http://visualdataweb.org/newOntology/BH.oM.BuroHappoldMachineLearning.MotionLevelAnalyser-BH.oM.RDF.HasProperty-Int32 NbColumns",
       "label": "HasProperty",
       "attributes": "datatype",
       "domain": "BH.oM.BuroHappoldMachineLearning.MotionLevelAnalyser",
       "range": "NbColumns-B61DC0B62BF717E2E4B0233BCB68DA82C9CE392A99860670EA2F5B7594BDCFC8-MotionLevelAnalyser-HasProperty"
     },
     {
-      "id": "3D162BBCA8304C6D142DB49F15038A2FEA47101F9AC2D68B8DE9CF35B488D790",
-      "iri": "http://visualdataweb.org/newOntology/3D162BBCA8304C6D142DB49F15038A2FEA47101F9AC2D68B8DE9CF35B488D790",
+      "id": "BH.oM.BuroHappoldMachineLearning.MotionLevelAnalyser-BH.oM.RDF.HasProperty-Accord.Video.DirectShow.FileVideoSource VideoSource",
+      "iri": "http://visualdataweb.org/newOntology/BH.oM.BuroHappoldMachineLearning.MotionLevelAnalyser-BH.oM.RDF.HasProperty-Accord.Video.DirectShow.FileVideoSource VideoSource",
       "label": "HasProperty",
       "attributes": "datatype",
       "domain": "BH.oM.BuroHappoldMachineLearning.MotionLevelAnalyser",
       "range": "VideoSource-3D162BBCA8304C6D142DB49F15038A2FEA47101F9AC2D68B8DE9CF35B488D790-MotionLevelAnalyser-HasProperty"
     },
     {
-      "id": "92F51EBCBA681922405AF8575B1C6663B4630F8C872530B6A9AD63663FFF5CED",
-      "iri": "http://visualdataweb.org/newOntology/92F51EBCBA681922405AF8575B1C6663B4630F8C872530B6A9AD63663FFF5CED",
+      "id": "BH.oM.BuroHappoldMachineLearning.MotionLevelAnalyser-BH.oM.RDF.HasProperty-Accord.Vision.Motion.TwoFramesDifferenceDetector Detector",
+      "iri": "http://visualdataweb.org/newOntology/BH.oM.BuroHappoldMachineLearning.MotionLevelAnalyser-BH.oM.RDF.HasProperty-Accord.Vision.Motion.TwoFramesDifferenceDetector Detector",
       "label": "HasProperty",
       "attributes": "datatype",
       "domain": "BH.oM.BuroHappoldMachineLearning.MotionLevelAnalyser",
       "range": "Detector-92F51EBCBA681922405AF8575B1C6663B4630F8C872530B6A9AD63663FFF5CED-MotionLevelAnalyser-HasProperty"
     },
     {
-      "id": "F5559562729ED4BEC846F2BFA5958299F6D699BFF261BE7C211A97251129F629",
-      "iri": "http://visualdataweb.org/newOntology/F5559562729ED4BEC846F2BFA5958299F6D699BFF261BE7C211A97251129F629",
+      "id": "BH.oM.BuroHappoldMachineLearning.MotionLevelAnalyser-BH.oM.RDF.HasProperty-System.Collections.Generic.Dictionary`2[System.Int32,System.Collections.Generic.List`1[System.Double]] MotionLevel",
+      "iri": "http://visualdataweb.org/newOntology/BH.oM.BuroHappoldMachineLearning.MotionLevelAnalyser-BH.oM.RDF.HasProperty-System.Collections.Generic.Dictionary`2[System.Int32,System.Collections.Generic.List`1[System.Double]] MotionLevel",
       "label": "HasProperty",
       "attributes": "datatype",
       "domain": "BH.oM.BuroHappoldMachineLearning.MotionLevelAnalyser",
       "range": "MotionLevel-F5559562729ED4BEC846F2BFA5958299F6D699BFF261BE7C211A97251129F629-MotionLevelAnalyser-HasProperty"
     },
     {
-      "id": "3C7777152342826928422F8810B3BDF0B3608EC6904CFB5E0545A00134E3B10F",
-      "iri": "http://visualdataweb.org/newOntology/3C7777152342826928422F8810B3BDF0B3608EC6904CFB5E0545A00134E3B10F",
+      "id": "BH.oM.BuroHappoldMachineLearning.MotionLevelAnalyser-BH.oM.RDF.HasProperty-Int32 FrameIndex",
+      "iri": "http://visualdataweb.org/newOntology/BH.oM.BuroHappoldMachineLearning.MotionLevelAnalyser-BH.oM.RDF.HasProperty-Int32 FrameIndex",
       "label": "HasProperty",
       "attributes": "datatype",
       "domain": "BH.oM.BuroHappoldMachineLearning.MotionLevelAnalyser",
       "range": "FrameIndex-3C7777152342826928422F8810B3BDF0B3608EC6904CFB5E0545A00134E3B10F-MotionLevelAnalyser-HasProperty"
     },
     {
-      "id": "16A5648DA53EBCDA830A887C6B8233ADF9B961D5E3EEFFA165A4E52B0EC7E8CC",
-      "iri": "http://visualdataweb.org/newOntology/16A5648DA53EBCDA830A887C6B8233ADF9B961D5E3EEFFA165A4E52B0EC7E8CC",
-      "label": "HasProperty",
+      "id": "BH.oM.BuroHappoldMachineLearning.MotionLevelAnalyser.ResultReceived-IsA-BH.oM.BuroHappoldMachineLearning.MotionLevelAnalyserVideoResultEvent",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "label": "IsA",
       "attributes": "object",
-      "domain": "BH.oM.BuroHappoldMachineLearning.MotionLevelAnalyser",
+      "domain": "BH.oM.BuroHappoldMachineLearning.MotionLevelAnalyser.ResultReceived",
       "range": "BH.oM.BuroHappoldMachineLearning.MotionLevelAnalyserVideoResultEvent"
     },
     {
-      "id": "D1296BEE20E4A9383A0410F38A7F7721421A436F65B4BC32ED03904B6446FF36",
-      "iri": "http://visualdataweb.org/newOntology/D1296BEE20E4A9383A0410F38A7F7721421A436F65B4BC32ED03904B6446FF36",
+      "id": "BH.oM.BuroHappoldMachineLearning.MotionLevelAnalyser-BH.oM.RDF.HasProperty-VideoResultEvent ResultReceived",
+      "iri": "http://visualdataweb.org/newOntology/BH.oM.BuroHappoldMachineLearning.MotionLevelAnalyser-BH.oM.RDF.HasProperty-VideoResultEvent ResultReceived",
+      "label": "HasProperty",
+      "attributes": [],
+      "domain": "BH.oM.BuroHappoldMachineLearning.MotionLevelAnalyser",
+      "range": "BH.oM.BuroHappoldMachineLearning.MotionLevelAnalyser.ResultReceived"
+    },
+    {
+      "id": "BH.oM.BuroHappoldMachineLearning.MotionLevelAnalyser-BH.oM.RDF.IsA-BH.oM.Base.IBHoMObject",
+      "iri": "http://visualdataweb.org/newOntology/BH.oM.BuroHappoldMachineLearning.MotionLevelAnalyser-BH.oM.RDF.IsA-BH.oM.Base.IBHoMObject",
       "label": "IsA",
       "attributes": "object",
       "domain": "BH.oM.BuroHappoldMachineLearning.MotionLevelAnalyser",
       "range": "BH.oM.Base.IBHoMObject"
     },
     {
-      "id": "C01BC2698547355219FBD9FB48E065DF62CDE9CF66CC9A00A05654766B8DBB87",
-      "iri": "http://visualdataweb.org/newOntology/C01BC2698547355219FBD9FB48E065DF62CDE9CF66CC9A00A05654766B8DBB87",
+      "id": "BH.oM.BuroHappoldMachineLearning.MotionLevelAnalyser-BH.oM.RDF.IsA-BH.oM.Base.IObject",
+      "iri": "http://visualdataweb.org/newOntology/BH.oM.BuroHappoldMachineLearning.MotionLevelAnalyser-BH.oM.RDF.IsA-BH.oM.Base.IObject",
       "label": "IsA",
       "attributes": "object",
       "domain": "BH.oM.BuroHappoldMachineLearning.MotionLevelAnalyser",
       "range": "BH.oM.Base.IObject"
     },
     {
-      "id": "BB5C04747AD52E86BB31FEC1ED39731B9BFA9320093A29AC46B735548678F3E4",
-      "iri": "http://visualdataweb.org/newOntology/BB5C04747AD52E86BB31FEC1ED39731B9BFA9320093A29AC46B735548678F3E4",
+      "id": "BH.oM.BuroHappoldMachineLearning.MotionLevelAnalyser-BH.oM.RDF.IsA-BH.oM.BuroHappoldMachineLearning.IAnalyser",
+      "iri": "http://visualdataweb.org/newOntology/BH.oM.BuroHappoldMachineLearning.MotionLevelAnalyser-BH.oM.RDF.IsA-BH.oM.BuroHappoldMachineLearning.IAnalyser",
       "label": "IsA",
       "attributes": "object",
       "domain": "BH.oM.BuroHappoldMachineLearning.MotionLevelAnalyser",
       "range": "BH.oM.BuroHappoldMachineLearning.IAnalyser"
     },
     {
-      "id": "BBEB8F5229943D6EF2D3B5F45D4261215F2369340D45AFD3A84BE06CA40708E0",
-      "iri": "http://visualdataweb.org/newOntology/BBEB8F5229943D6EF2D3B5F45D4261215F2369340D45AFD3A84BE06CA40708E0",
+      "id": "BH.oM.BuroHappoldMachineLearning.MotionLevelAnalyser-BH.oM.RDF.IsSubclassOf-BH.oM.Base.BHoMObject",
+      "iri": "http://visualdataweb.org/newOntology/BH.oM.BuroHappoldMachineLearning.MotionLevelAnalyser-BH.oM.RDF.IsSubclassOf-BH.oM.Base.BHoMObject",
       "label": "IsSubclassOf",
       "attributes": "object",
       "domain": "BH.oM.BuroHappoldMachineLearning.MotionLevelAnalyser",
       "range": "BH.oM.Base.BHoMObject"
     },
     {
-      "id": "8C451646A1C1E2E37B721F24082791E758E86F41F17E84FF4516D7F3B35F9D80",
-      "iri": "http://visualdataweb.org/newOntology/8C451646A1C1E2E37B721F24082791E758E86F41F17E84FF4516D7F3B35F9D80",
+      "id": "BH.oM.BuroHappoldMachineLearning.Overheating-BH.oM.RDF.HasProperty-Python.Runtime.PyObject Model",
+      "iri": "http://visualdataweb.org/newOntology/BH.oM.BuroHappoldMachineLearning.Overheating-BH.oM.RDF.HasProperty-Python.Runtime.PyObject Model",
       "label": "HasProperty",
       "attributes": "datatype",
       "domain": "BH.oM.BuroHappoldMachineLearning.Overheating",
       "range": "Model-8C451646A1C1E2E37B721F24082791E758E86F41F17E84FF4516D7F3B35F9D80-Overheating-HasProperty"
     },
     {
-      "id": "1FBFD32C3FD69D9C8EDDD1059EA54F5111D82DC38D9166D74A706156DF10056E",
-      "iri": "http://visualdataweb.org/newOntology/1FBFD32C3FD69D9C8EDDD1059EA54F5111D82DC38D9166D74A706156DF10056E",
+      "id": "BH.oM.BuroHappoldMachineLearning.Overheating-BH.oM.RDF.IsA-BH.oM.Base.IBHoMObject",
+      "iri": "http://visualdataweb.org/newOntology/BH.oM.BuroHappoldMachineLearning.Overheating-BH.oM.RDF.IsA-BH.oM.Base.IBHoMObject",
       "label": "IsA",
       "attributes": "object",
       "domain": "BH.oM.BuroHappoldMachineLearning.Overheating",
       "range": "BH.oM.Base.IBHoMObject"
     },
     {
-      "id": "27DC607D3D683428CC557D84041831F7FEBA0015F2CAFBDF2346ED64750929F8",
-      "iri": "http://visualdataweb.org/newOntology/27DC607D3D683428CC557D84041831F7FEBA0015F2CAFBDF2346ED64750929F8",
+      "id": "BH.oM.BuroHappoldMachineLearning.Overheating-BH.oM.RDF.IsA-BH.oM.Base.IObject",
+      "iri": "http://visualdataweb.org/newOntology/BH.oM.BuroHappoldMachineLearning.Overheating-BH.oM.RDF.IsA-BH.oM.Base.IObject",
       "label": "IsA",
       "attributes": "object",
       "domain": "BH.oM.BuroHappoldMachineLearning.Overheating",
       "range": "BH.oM.Base.IObject"
     },
     {
-      "id": "60638CD68277B4B6D9E926124EB97333AE885B84AA52CDE620BE0E091B3D1E65",
-      "iri": "http://visualdataweb.org/newOntology/60638CD68277B4B6D9E926124EB97333AE885B84AA52CDE620BE0E091B3D1E65",
+      "id": "BH.oM.BuroHappoldMachineLearning.Overheating-BH.oM.RDF.IsA-BH.oM.Base.IImmutable",
+      "iri": "http://visualdataweb.org/newOntology/BH.oM.BuroHappoldMachineLearning.Overheating-BH.oM.RDF.IsA-BH.oM.Base.IImmutable",
       "label": "IsA",
       "attributes": "object",
       "domain": "BH.oM.BuroHappoldMachineLearning.Overheating",
       "range": "BH.oM.Base.IImmutable"
     },
     {
-      "id": "D0C48CD030D2370E9BD2691F0919D5BA3DCB13EB407C978F7EEF2D708C714478",
-      "iri": "http://visualdataweb.org/newOntology/D0C48CD030D2370E9BD2691F0919D5BA3DCB13EB407C978F7EEF2D708C714478",
+      "id": "BH.oM.BuroHappoldMachineLearning.Overheating-BH.oM.RDF.IsSubclassOf-BH.oM.Base.BHoMObject",
+      "iri": "http://visualdataweb.org/newOntology/BH.oM.BuroHappoldMachineLearning.Overheating-BH.oM.RDF.IsSubclassOf-BH.oM.Base.BHoMObject",
       "label": "IsSubclassOf",
       "attributes": "object",
       "domain": "BH.oM.BuroHappoldMachineLearning.Overheating",
       "range": "BH.oM.Base.BHoMObject"
     },
     {
-      "id": "5574E297C735E1B5C5768E69F23C1283AC87F71D385FEECB26E8001823C63230",
-      "iri": "http://visualdataweb.org/newOntology/5574E297C735E1B5C5768E69F23C1283AC87F71D385FEECB26E8001823C63230",
-      "label": "HasProperty",
+      "id": "BH.oM.BuroHappoldMachineLearning.RegionOfInterest.Start-IsA-BH.oM.Geometry.Point",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "label": "IsA",
       "attributes": "object",
-      "domain": "BH.oM.BuroHappoldMachineLearning.RegionOfInterest",
+      "domain": "BH.oM.BuroHappoldMachineLearning.RegionOfInterest.Start",
       "range": "BH.oM.Geometry.Point"
     },
     {
-      "id": "82E5F2015E341927BD0CA794553F3265EE21DD22819BB4C4053F52EC11B79250",
-      "iri": "http://visualdataweb.org/newOntology/82E5F2015E341927BD0CA794553F3265EE21DD22819BB4C4053F52EC11B79250",
+      "id": "BH.oM.BuroHappoldMachineLearning.RegionOfInterest-BH.oM.RDF.HasProperty-BH.oM.Geometry.Point Start",
+      "iri": "http://visualdataweb.org/newOntology/BH.oM.BuroHappoldMachineLearning.RegionOfInterest-BH.oM.RDF.HasProperty-BH.oM.Geometry.Point Start",
       "label": "HasProperty",
-      "attributes": "object",
+      "attributes": [],
       "domain": "BH.oM.BuroHappoldMachineLearning.RegionOfInterest",
+      "range": "BH.oM.BuroHappoldMachineLearning.RegionOfInterest.Start"
+    },
+    {
+      "id": "BH.oM.BuroHappoldMachineLearning.RegionOfInterest.End-IsA-BH.oM.Geometry.Point",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "label": "IsA",
+      "attributes": "object",
+      "domain": "BH.oM.BuroHappoldMachineLearning.RegionOfInterest.End",
       "range": "BH.oM.Geometry.Point"
     },
     {
-      "id": "47956CCD19A420B59DC7518CBEE762FE89D78FFB185A70B0D86A61CB6237091B",
-      "iri": "http://visualdataweb.org/newOntology/47956CCD19A420B59DC7518CBEE762FE89D78FFB185A70B0D86A61CB6237091B",
+      "id": "BH.oM.BuroHappoldMachineLearning.RegionOfInterest-BH.oM.RDF.HasProperty-BH.oM.Geometry.Point End",
+      "iri": "http://visualdataweb.org/newOntology/BH.oM.BuroHappoldMachineLearning.RegionOfInterest-BH.oM.RDF.HasProperty-BH.oM.Geometry.Point End",
+      "label": "HasProperty",
+      "attributes": [],
+      "domain": "BH.oM.BuroHappoldMachineLearning.RegionOfInterest",
+      "range": "BH.oM.BuroHappoldMachineLearning.RegionOfInterest.End"
+    },
+    {
+      "id": "BH.oM.BuroHappoldMachineLearning.RegionOfInterest-BH.oM.RDF.HasProperty-System.Collections.Generic.Dictionary`2[System.Int32,System.Double] MotionLevel",
+      "iri": "http://visualdataweb.org/newOntology/BH.oM.BuroHappoldMachineLearning.RegionOfInterest-BH.oM.RDF.HasProperty-System.Collections.Generic.Dictionary`2[System.Int32,System.Double] MotionLevel",
       "label": "HasProperty",
       "attributes": "datatype",
       "domain": "BH.oM.BuroHappoldMachineLearning.RegionOfInterest",
       "range": "MotionLevel-47956CCD19A420B59DC7518CBEE762FE89D78FFB185A70B0D86A61CB6237091B-RegionOfInterest-HasProperty"
     },
     {
-      "id": "D8EDF160F6E5449A6E749EBBEFA8A8CBCA475E1E53C16342EB11CC4866FEE5E8",
-      "iri": "http://visualdataweb.org/newOntology/D8EDF160F6E5449A6E749EBBEFA8A8CBCA475E1E53C16342EB11CC4866FEE5E8",
+      "id": "BH.oM.BuroHappoldMachineLearning.RegionOfInterest-BH.oM.RDF.IsA-BH.oM.Base.IBHoMObject",
+      "iri": "http://visualdataweb.org/newOntology/BH.oM.BuroHappoldMachineLearning.RegionOfInterest-BH.oM.RDF.IsA-BH.oM.Base.IBHoMObject",
       "label": "IsA",
       "attributes": "object",
       "domain": "BH.oM.BuroHappoldMachineLearning.RegionOfInterest",
       "range": "BH.oM.Base.IBHoMObject"
     },
     {
-      "id": "08678ACDDB14BD92C4291C85FE6456400F620ABD6DEAF4585123EAFAC820CD72",
-      "iri": "http://visualdataweb.org/newOntology/08678ACDDB14BD92C4291C85FE6456400F620ABD6DEAF4585123EAFAC820CD72",
+      "id": "BH.oM.BuroHappoldMachineLearning.RegionOfInterest-BH.oM.RDF.IsA-BH.oM.Base.IObject",
+      "iri": "http://visualdataweb.org/newOntology/BH.oM.BuroHappoldMachineLearning.RegionOfInterest-BH.oM.RDF.IsA-BH.oM.Base.IObject",
       "label": "IsA",
       "attributes": "object",
       "domain": "BH.oM.BuroHappoldMachineLearning.RegionOfInterest",
       "range": "BH.oM.Base.IObject"
     },
     {
-      "id": "FC53739A6B10E04197CBA6C157655435930EAE79457B028B5CAA6522FFBA5091",
-      "iri": "http://visualdataweb.org/newOntology/FC53739A6B10E04197CBA6C157655435930EAE79457B028B5CAA6522FFBA5091",
+      "id": "BH.oM.BuroHappoldMachineLearning.RegionOfInterest-BH.oM.RDF.IsSubclassOf-BH.oM.Base.BHoMObject",
+      "iri": "http://visualdataweb.org/newOntology/BH.oM.BuroHappoldMachineLearning.RegionOfInterest-BH.oM.RDF.IsSubclassOf-BH.oM.Base.BHoMObject",
       "label": "IsSubclassOf",
       "attributes": "object",
       "domain": "BH.oM.BuroHappoldMachineLearning.RegionOfInterest",
       "range": "BH.oM.Base.BHoMObject"
     },
     {
-      "id": "D6BF4B5DDF1B650EEF54E8D4BA82EE665D47201D276A1C3BD6B410DCE77BF845",
-      "iri": "http://visualdataweb.org/newOntology/D6BF4B5DDF1B650EEF54E8D4BA82EE665D47201D276A1C3BD6B410DCE77BF845",
+      "id": "BH.oM.BuroHappoldMachineLearning.SoundLevelAnalyser-BH.oM.RDF.HasProperty-Int32 StartFrame",
+      "iri": "http://visualdataweb.org/newOntology/BH.oM.BuroHappoldMachineLearning.SoundLevelAnalyser-BH.oM.RDF.HasProperty-Int32 StartFrame",
       "label": "HasProperty",
       "attributes": "datatype",
       "domain": "BH.oM.BuroHappoldMachineLearning.SoundLevelAnalyser",
       "range": "StartFrame-D6BF4B5DDF1B650EEF54E8D4BA82EE665D47201D276A1C3BD6B410DCE77BF845-SoundLevelAnalyser-HasProperty"
     },
     {
-      "id": "0C493D9D53363D63425BAB6F894281CABA43259518FF43BF98148C4CD80D8710",
-      "iri": "http://visualdataweb.org/newOntology/0C493D9D53363D63425BAB6F894281CABA43259518FF43BF98148C4CD80D8710",
+      "id": "BH.oM.BuroHappoldMachineLearning.SoundLevelAnalyser-BH.oM.RDF.HasProperty-Int32 EndFrame",
+      "iri": "http://visualdataweb.org/newOntology/BH.oM.BuroHappoldMachineLearning.SoundLevelAnalyser-BH.oM.RDF.HasProperty-Int32 EndFrame",
       "label": "HasProperty",
       "attributes": "datatype",
       "domain": "BH.oM.BuroHappoldMachineLearning.SoundLevelAnalyser",
       "range": "EndFrame-0C493D9D53363D63425BAB6F894281CABA43259518FF43BF98148C4CD80D8710-SoundLevelAnalyser-HasProperty"
     },
     {
-      "id": "0C7A32AA3E3E5ACF5ABEF447466F4CEE6EB3B7F11CFB8568509A9E9EDC44473E",
-      "iri": "http://visualdataweb.org/newOntology/0C7A32AA3E3E5ACF5ABEF447466F4CEE6EB3B7F11CFB8568509A9E9EDC44473E",
+      "id": "BH.oM.BuroHappoldMachineLearning.SoundLevelAnalyser-BH.oM.RDF.HasProperty-Int32 FrameStep",
+      "iri": "http://visualdataweb.org/newOntology/BH.oM.BuroHappoldMachineLearning.SoundLevelAnalyser-BH.oM.RDF.HasProperty-Int32 FrameStep",
       "label": "HasProperty",
       "attributes": "datatype",
       "domain": "BH.oM.BuroHappoldMachineLearning.SoundLevelAnalyser",
       "range": "FrameStep-0C7A32AA3E3E5ACF5ABEF447466F4CEE6EB3B7F11CFB8568509A9E9EDC44473E-SoundLevelAnalyser-HasProperty"
     },
     {
-      "id": "6359C1DA695ECE2A2D80A6669917269795B3509499C218EB4A40933F72117DCD",
-      "iri": "http://visualdataweb.org/newOntology/6359C1DA695ECE2A2D80A6669917269795B3509499C218EB4A40933F72117DCD",
+      "id": "BH.oM.BuroHappoldMachineLearning.SoundLevelAnalyser-BH.oM.RDF.HasProperty-System.String OutFolder",
+      "iri": "http://visualdataweb.org/newOntology/BH.oM.BuroHappoldMachineLearning.SoundLevelAnalyser-BH.oM.RDF.HasProperty-System.String OutFolder",
       "label": "HasProperty",
       "attributes": "datatype",
       "domain": "BH.oM.BuroHappoldMachineLearning.SoundLevelAnalyser",
       "range": "OutFolder-6359C1DA695ECE2A2D80A6669917269795B3509499C218EB4A40933F72117DCD-SoundLevelAnalyser-HasProperty"
     },
     {
-      "id": "71D6359DF4C4FC964ECCF71710E69E41FF9E0F12D8472A2317CDD2031BD7111B",
-      "iri": "http://visualdataweb.org/newOntology/71D6359DF4C4FC964ECCF71710E69E41FF9E0F12D8472A2317CDD2031BD7111B",
+      "id": "BH.oM.BuroHappoldMachineLearning.SoundLevelAnalyser-BH.oM.RDF.HasProperty-Accord.DirectSound.WaveFileAudioSource AudioSource",
+      "iri": "http://visualdataweb.org/newOntology/BH.oM.BuroHappoldMachineLearning.SoundLevelAnalyser-BH.oM.RDF.HasProperty-Accord.DirectSound.WaveFileAudioSource AudioSource",
       "label": "HasProperty",
       "attributes": "datatype",
       "domain": "BH.oM.BuroHappoldMachineLearning.SoundLevelAnalyser",
       "range": "AudioSource-71D6359DF4C4FC964ECCF71710E69E41FF9E0F12D8472A2317CDD2031BD7111B-SoundLevelAnalyser-HasProperty"
     },
     {
-      "id": "CEDEAA828B2403918A67AEE636E62DCB32C9E9427DF36B383E39C2ADF18F3893",
-      "iri": "http://visualdataweb.org/newOntology/CEDEAA828B2403918A67AEE636E62DCB32C9E9427DF36B383E39C2ADF18F3893",
+      "id": "BH.oM.BuroHappoldMachineLearning.SoundLevelAnalyser-BH.oM.RDF.HasProperty-System.Collections.Generic.Dictionary`2[System.Int32,System.Double] SoundLevel",
+      "iri": "http://visualdataweb.org/newOntology/BH.oM.BuroHappoldMachineLearning.SoundLevelAnalyser-BH.oM.RDF.HasProperty-System.Collections.Generic.Dictionary`2[System.Int32,System.Double] SoundLevel",
       "label": "HasProperty",
       "attributes": "datatype",
       "domain": "BH.oM.BuroHappoldMachineLearning.SoundLevelAnalyser",
       "range": "SoundLevel-CEDEAA828B2403918A67AEE636E62DCB32C9E9427DF36B383E39C2ADF18F3893-SoundLevelAnalyser-HasProperty"
     },
     {
-      "id": "EB24AFF14F715CFAA99CFC72DC7FE7E09F6464A0CA3020EAE024B37CFB816B9C",
-      "iri": "http://visualdataweb.org/newOntology/EB24AFF14F715CFAA99CFC72DC7FE7E09F6464A0CA3020EAE024B37CFB816B9C",
+      "id": "BH.oM.BuroHappoldMachineLearning.SoundLevelAnalyser-BH.oM.RDF.HasProperty-Int32 FrameIndex",
+      "iri": "http://visualdataweb.org/newOntology/BH.oM.BuroHappoldMachineLearning.SoundLevelAnalyser-BH.oM.RDF.HasProperty-Int32 FrameIndex",
       "label": "HasProperty",
       "attributes": "datatype",
       "domain": "BH.oM.BuroHappoldMachineLearning.SoundLevelAnalyser",
       "range": "FrameIndex-EB24AFF14F715CFAA99CFC72DC7FE7E09F6464A0CA3020EAE024B37CFB816B9C-SoundLevelAnalyser-HasProperty"
     },
     {
-      "id": "506581D739B3A522DD4B7945E02D1F9732E74ABF5F75DD40923D69C241C6319C",
-      "iri": "http://visualdataweb.org/newOntology/506581D739B3A522DD4B7945E02D1F9732E74ABF5F75DD40923D69C241C6319C",
-      "label": "HasProperty",
+      "id": "BH.oM.BuroHappoldMachineLearning.SoundLevelAnalyser.ResultReceived-IsA-BH.oM.BuroHappoldMachineLearning.SoundLevelAnalyserSoundResultEvent",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "label": "IsA",
       "attributes": "object",
-      "domain": "BH.oM.BuroHappoldMachineLearning.SoundLevelAnalyser",
+      "domain": "BH.oM.BuroHappoldMachineLearning.SoundLevelAnalyser.ResultReceived",
       "range": "BH.oM.BuroHappoldMachineLearning.SoundLevelAnalyserSoundResultEvent"
     },
     {
-      "id": "D3331F189D8D1353E16293C3C2959402533F532D3C45B8B33D4A5B04BE79D785",
-      "iri": "http://visualdataweb.org/newOntology/D3331F189D8D1353E16293C3C2959402533F532D3C45B8B33D4A5B04BE79D785",
+      "id": "BH.oM.BuroHappoldMachineLearning.SoundLevelAnalyser-BH.oM.RDF.HasProperty-SoundResultEvent ResultReceived",
+      "iri": "http://visualdataweb.org/newOntology/BH.oM.BuroHappoldMachineLearning.SoundLevelAnalyser-BH.oM.RDF.HasProperty-SoundResultEvent ResultReceived",
+      "label": "HasProperty",
+      "attributes": [],
+      "domain": "BH.oM.BuroHappoldMachineLearning.SoundLevelAnalyser",
+      "range": "BH.oM.BuroHappoldMachineLearning.SoundLevelAnalyser.ResultReceived"
+    },
+    {
+      "id": "BH.oM.BuroHappoldMachineLearning.SoundLevelAnalyser-BH.oM.RDF.IsA-BH.oM.Base.IBHoMObject",
+      "iri": "http://visualdataweb.org/newOntology/BH.oM.BuroHappoldMachineLearning.SoundLevelAnalyser-BH.oM.RDF.IsA-BH.oM.Base.IBHoMObject",
       "label": "IsA",
       "attributes": "object",
       "domain": "BH.oM.BuroHappoldMachineLearning.SoundLevelAnalyser",
       "range": "BH.oM.Base.IBHoMObject"
     },
     {
-      "id": "B4AFF5074B00281DB6189481D7CEDD496E35CC39DFC28BB5C9866834B0C7300C",
-      "iri": "http://visualdataweb.org/newOntology/B4AFF5074B00281DB6189481D7CEDD496E35CC39DFC28BB5C9866834B0C7300C",
+      "id": "BH.oM.BuroHappoldMachineLearning.SoundLevelAnalyser-BH.oM.RDF.IsA-BH.oM.Base.IObject",
+      "iri": "http://visualdataweb.org/newOntology/BH.oM.BuroHappoldMachineLearning.SoundLevelAnalyser-BH.oM.RDF.IsA-BH.oM.Base.IObject",
       "label": "IsA",
       "attributes": "object",
       "domain": "BH.oM.BuroHappoldMachineLearning.SoundLevelAnalyser",
       "range": "BH.oM.Base.IObject"
     },
     {
-      "id": "AE818B4D17617E1EBB250D6714FA15C2CCAC40803ADEF9E91DDB0F6810F76058",
-      "iri": "http://visualdataweb.org/newOntology/AE818B4D17617E1EBB250D6714FA15C2CCAC40803ADEF9E91DDB0F6810F76058",
+      "id": "BH.oM.BuroHappoldMachineLearning.SoundLevelAnalyser-BH.oM.RDF.IsA-BH.oM.BuroHappoldMachineLearning.IAnalyser",
+      "iri": "http://visualdataweb.org/newOntology/BH.oM.BuroHappoldMachineLearning.SoundLevelAnalyser-BH.oM.RDF.IsA-BH.oM.BuroHappoldMachineLearning.IAnalyser",
       "label": "IsA",
       "attributes": "object",
       "domain": "BH.oM.BuroHappoldMachineLearning.SoundLevelAnalyser",
       "range": "BH.oM.BuroHappoldMachineLearning.IAnalyser"
     },
     {
-      "id": "EA23F41B65EA45FE9CFA39BD967F6B02CC62E241E11E29C64728AA81D0E787B6",
-      "iri": "http://visualdataweb.org/newOntology/EA23F41B65EA45FE9CFA39BD967F6B02CC62E241E11E29C64728AA81D0E787B6",
+      "id": "BH.oM.BuroHappoldMachineLearning.SoundLevelAnalyser-BH.oM.RDF.IsSubclassOf-BH.oM.Base.BHoMObject",
+      "iri": "http://visualdataweb.org/newOntology/BH.oM.BuroHappoldMachineLearning.SoundLevelAnalyser-BH.oM.RDF.IsSubclassOf-BH.oM.Base.BHoMObject",
       "label": "IsSubclassOf",
       "attributes": "object",
       "domain": "BH.oM.BuroHappoldMachineLearning.SoundLevelAnalyser",
       "range": "BH.oM.Base.BHoMObject"
     },
     {
-      "id": "84DAA47CC56D7DBF6EAA9F98FCF359C6B98718453E92046BE397FA7C0CDFAADB",
-      "iri": "http://visualdataweb.org/newOntology/84DAA47CC56D7DBF6EAA9F98FCF359C6B98718453E92046BE397FA7C0CDFAADB",
+      "id": "BH.oM.BuroHappoldMachineLearning.SurrogateInterpolationType-BH.oM.RDF.IsA-System.IComparable",
+      "iri": "http://visualdataweb.org/newOntology/BH.oM.BuroHappoldMachineLearning.SurrogateInterpolationType-BH.oM.RDF.IsA-System.IComparable",
       "label": "IsA",
       "attributes": []
     },
     {
-      "id": "B9BDE21BCCE6AE6B97AF065AD8CCC93C0B84B02E17C0A5409FA46C053ABF5EF4",
-      "iri": "http://visualdataweb.org/newOntology/B9BDE21BCCE6AE6B97AF065AD8CCC93C0B84B02E17C0A5409FA46C053ABF5EF4",
+      "id": "BH.oM.BuroHappoldMachineLearning.SurrogateInterpolationType-BH.oM.RDF.IsA-System.IFormattable",
+      "iri": "http://visualdataweb.org/newOntology/BH.oM.BuroHappoldMachineLearning.SurrogateInterpolationType-BH.oM.RDF.IsA-System.IFormattable",
       "label": "IsA",
       "attributes": []
     },
     {
-      "id": "C252548B8C1DDCBC77D7ECC5839422E61726BBBACDD4D9063CE5A193FC945331",
-      "iri": "http://visualdataweb.org/newOntology/C252548B8C1DDCBC77D7ECC5839422E61726BBBACDD4D9063CE5A193FC945331",
+      "id": "BH.oM.BuroHappoldMachineLearning.SurrogateInterpolationType-BH.oM.RDF.IsA-System.IConvertible",
+      "iri": "http://visualdataweb.org/newOntology/BH.oM.BuroHappoldMachineLearning.SurrogateInterpolationType-BH.oM.RDF.IsA-System.IConvertible",
       "label": "IsA",
       "attributes": []
     },
     {
-      "id": "4F5ED604BA7F000D4B538995751646F4622A5197A903A822A296219C0FCDA75D",
-      "iri": "http://visualdataweb.org/newOntology/4F5ED604BA7F000D4B538995751646F4622A5197A903A822A296219C0FCDA75D",
+      "id": "BH.oM.BuroHappoldMachineLearning.SurrogateInterpolationType-BH.oM.RDF.IsSubclassOf-System.Enum",
+      "iri": "http://visualdataweb.org/newOntology/BH.oM.BuroHappoldMachineLearning.SurrogateInterpolationType-BH.oM.RDF.IsSubclassOf-System.Enum",
       "label": "IsSubclassOf",
       "attributes": []
     },
     {
-      "id": "DED523A027940E3042B34A959843D3A31BEB2739F2A6E439BFD9D7CF259B0FC6",
-      "iri": "http://visualdataweb.org/newOntology/DED523A027940E3042B34A959843D3A31BEB2739F2A6E439BFD9D7CF259B0FC6",
+      "id": "BH.oM.BuroHappoldMachineLearning.SurrogateModelData-BH.oM.RDF.HasProperty-System.Collections.Generic.List`1[System.Double] Results",
+      "iri": "http://visualdataweb.org/newOntology/BH.oM.BuroHappoldMachineLearning.SurrogateModelData-BH.oM.RDF.HasProperty-System.Collections.Generic.List`1[System.Double] Results",
       "label": "HasProperty",
       "attributes": "datatype",
       "domain": "BH.oM.BuroHappoldMachineLearning.SurrogateModelData",
       "range": "Results-DED523A027940E3042B34A959843D3A31BEB2739F2A6E439BFD9D7CF259B0FC6-SurrogateModelData-HasProperty"
     },
     {
-      "id": "C4102F3A084075C0DAB0E21837C9000406B55CF1929FA9005622E836BB315C41",
-      "iri": "http://visualdataweb.org/newOntology/C4102F3A084075C0DAB0E21837C9000406B55CF1929FA9005622E836BB315C41",
+      "id": "BH.oM.BuroHappoldMachineLearning.SurrogateModelData-BH.oM.RDF.HasProperty-System.Collections.Generic.List`1[System.Collections.Generic.List`1[System.Double]] NodeParams",
+      "iri": "http://visualdataweb.org/newOntology/BH.oM.BuroHappoldMachineLearning.SurrogateModelData-BH.oM.RDF.HasProperty-System.Collections.Generic.List`1[System.Collections.Generic.List`1[System.Double]] NodeParams",
       "label": "HasProperty",
       "attributes": "datatype",
       "domain": "BH.oM.BuroHappoldMachineLearning.SurrogateModelData",
       "range": "NodeParams-C4102F3A084075C0DAB0E21837C9000406B55CF1929FA9005622E836BB315C41-SurrogateModelData-HasProperty"
     },
     {
-      "id": "A34EAB7B53441B36F0AAE765C2238049235EA24C2FC0A7B3B570E3D825D17D29",
-      "iri": "http://visualdataweb.org/newOntology/A34EAB7B53441B36F0AAE765C2238049235EA24C2FC0A7B3B570E3D825D17D29",
+      "id": "BH.oM.BuroHappoldMachineLearning.SurrogateModelData-BH.oM.RDF.HasProperty-System.Collections.Generic.List`1[System.Collections.Generic.List`1[System.Double]] NormalisedNodeParams",
+      "iri": "http://visualdataweb.org/newOntology/BH.oM.BuroHappoldMachineLearning.SurrogateModelData-BH.oM.RDF.HasProperty-System.Collections.Generic.List`1[System.Collections.Generic.List`1[System.Double]] NormalisedNodeParams",
       "label": "HasProperty",
       "attributes": "datatype",
       "domain": "BH.oM.BuroHappoldMachineLearning.SurrogateModelData",
       "range": "NormalisedNodeParams-A34EAB7B53441B36F0AAE765C2238049235EA24C2FC0A7B3B570E3D825D17D29-SurrogateModelData-HasProperty"
     },
     {
-      "id": "66D78B136DB4C4EEE398233F52D87B668FF3C102985B41143ECA8E6AFBC6AC90",
-      "iri": "http://visualdataweb.org/newOntology/66D78B136DB4C4EEE398233F52D87B668FF3C102985B41143ECA8E6AFBC6AC90",
+      "id": "BH.oM.BuroHappoldMachineLearning.SurrogateModelData-BH.oM.RDF.HasProperty-Double Epsilon_norm",
+      "iri": "http://visualdataweb.org/newOntology/BH.oM.BuroHappoldMachineLearning.SurrogateModelData-BH.oM.RDF.HasProperty-Double Epsilon_norm",
       "label": "HasProperty",
       "attributes": "datatype",
       "domain": "BH.oM.BuroHappoldMachineLearning.SurrogateModelData",
       "range": "Epsilon_norm-66D78B136DB4C4EEE398233F52D87B668FF3C102985B41143ECA8E6AFBC6AC90-SurrogateModelData-HasProperty"
     },
     {
-      "id": "D755CE5F7C64611DE47B1F54563FB0F5B70CC8BD179A9FE9FEF9BC81E64AB264",
-      "iri": "http://visualdataweb.org/newOntology/D755CE5F7C64611DE47B1F54563FB0F5B70CC8BD179A9FE9FEF9BC81E64AB264",
+      "id": "BH.oM.BuroHappoldMachineLearning.SurrogateModelData-BH.oM.RDF.HasProperty-Double Exp",
+      "iri": "http://visualdataweb.org/newOntology/BH.oM.BuroHappoldMachineLearning.SurrogateModelData-BH.oM.RDF.HasProperty-Double Exp",
       "label": "HasProperty",
       "attributes": "datatype",
       "domain": "BH.oM.BuroHappoldMachineLearning.SurrogateModelData",
       "range": "Exp-D755CE5F7C64611DE47B1F54563FB0F5B70CC8BD179A9FE9FEF9BC81E64AB264-SurrogateModelData-HasProperty"
     },
     {
-      "id": "A6CA91420AD129EF0B027AB81556BB32C9EEEE2E30BA623821787B907B49E302",
-      "iri": "http://visualdataweb.org/newOntology/A6CA91420AD129EF0B027AB81556BB32C9EEEE2E30BA623821787B907B49E302",
+      "id": "BH.oM.BuroHappoldMachineLearning.SurrogateModelData-BH.oM.RDF.HasProperty-Double D",
+      "iri": "http://visualdataweb.org/newOntology/BH.oM.BuroHappoldMachineLearning.SurrogateModelData-BH.oM.RDF.HasProperty-Double D",
       "label": "HasProperty",
       "attributes": "datatype",
       "domain": "BH.oM.BuroHappoldMachineLearning.SurrogateModelData",
       "range": "D-A6CA91420AD129EF0B027AB81556BB32C9EEEE2E30BA623821787B907B49E302-SurrogateModelData-HasProperty"
     },
     {
-      "id": "4E37D1BB366B382694140E183929F8F522EB97C2831273670BC904BD4856D8C3",
-      "iri": "http://visualdataweb.org/newOntology/4E37D1BB366B382694140E183929F8F522EB97C2831273670BC904BD4856D8C3",
-      "label": "HasProperty",
+      "id": "BH.oM.BuroHappoldMachineLearning.SurrogateModelData.InterpolationType-IsA-BH.oM.BuroHappoldMachineLearning.SurrogateInterpolationType",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "label": "IsA",
       "attributes": "object",
-      "domain": "BH.oM.BuroHappoldMachineLearning.SurrogateModelData",
+      "domain": "BH.oM.BuroHappoldMachineLearning.SurrogateModelData.InterpolationType",
       "range": "BH.oM.BuroHappoldMachineLearning.SurrogateInterpolationType"
     },
     {
-      "id": "CDA433FD33F2FD200ED91C9609AE02AFBBD69E2E59B8C763103046A7C16E1523",
-      "iri": "http://visualdataweb.org/newOntology/CDA433FD33F2FD200ED91C9609AE02AFBBD69E2E59B8C763103046A7C16E1523",
+      "id": "BH.oM.BuroHappoldMachineLearning.SurrogateModelData-BH.oM.RDF.HasProperty-BH.oM.BuroHappoldMachineLearning.SurrogateInterpolationType InterpolationType",
+      "iri": "http://visualdataweb.org/newOntology/BH.oM.BuroHappoldMachineLearning.SurrogateModelData-BH.oM.RDF.HasProperty-BH.oM.BuroHappoldMachineLearning.SurrogateInterpolationType InterpolationType",
+      "label": "HasProperty",
+      "attributes": [],
+      "domain": "BH.oM.BuroHappoldMachineLearning.SurrogateModelData",
+      "range": "BH.oM.BuroHappoldMachineLearning.SurrogateModelData.InterpolationType"
+    },
+    {
+      "id": "BH.oM.BuroHappoldMachineLearning.SurrogateModelData-BH.oM.RDF.HasProperty-System.Collections.Generic.List`1[System.Double] ControlPoints",
+      "iri": "http://visualdataweb.org/newOntology/BH.oM.BuroHappoldMachineLearning.SurrogateModelData-BH.oM.RDF.HasProperty-System.Collections.Generic.List`1[System.Double] ControlPoints",
       "label": "HasProperty",
       "attributes": "datatype",
       "domain": "BH.oM.BuroHappoldMachineLearning.SurrogateModelData",
       "range": "ControlPoints-CDA433FD33F2FD200ED91C9609AE02AFBBD69E2E59B8C763103046A7C16E1523-SurrogateModelData-HasProperty"
     },
     {
-      "id": "8BEB83CB93F57A23F430DB4766340C018F455CE1EE615B54B24E5CFBA6521EC5",
-      "iri": "http://visualdataweb.org/newOntology/8BEB83CB93F57A23F430DB4766340C018F455CE1EE615B54B24E5CFBA6521EC5",
+      "id": "BH.oM.BuroHappoldMachineLearning.SurrogateModelData-BH.oM.RDF.HasProperty-System.Collections.Generic.List`1[System.Double] MaxOfEachParameter",
+      "iri": "http://visualdataweb.org/newOntology/BH.oM.BuroHappoldMachineLearning.SurrogateModelData-BH.oM.RDF.HasProperty-System.Collections.Generic.List`1[System.Double] MaxOfEachParameter",
       "label": "HasProperty",
       "attributes": "datatype",
       "domain": "BH.oM.BuroHappoldMachineLearning.SurrogateModelData",
       "range": "MaxOfEachParameter-8BEB83CB93F57A23F430DB4766340C018F455CE1EE615B54B24E5CFBA6521EC5-SurrogateModelData-HasProperty"
     },
     {
-      "id": "76C7A81D682C8460D37EF3F57479A9CE4D27FA94503B31D871AF9B4D34EA611A",
-      "iri": "http://visualdataweb.org/newOntology/76C7A81D682C8460D37EF3F57479A9CE4D27FA94503B31D871AF9B4D34EA611A",
+      "id": "BH.oM.BuroHappoldMachineLearning.SurrogateModelData-BH.oM.RDF.HasProperty-System.Collections.Generic.List`1[System.Double] MinOfEachParameter",
+      "iri": "http://visualdataweb.org/newOntology/BH.oM.BuroHappoldMachineLearning.SurrogateModelData-BH.oM.RDF.HasProperty-System.Collections.Generic.List`1[System.Double] MinOfEachParameter",
       "label": "HasProperty",
       "attributes": "datatype",
       "domain": "BH.oM.BuroHappoldMachineLearning.SurrogateModelData",
       "range": "MinOfEachParameter-76C7A81D682C8460D37EF3F57479A9CE4D27FA94503B31D871AF9B4D34EA611A-SurrogateModelData-HasProperty"
     },
     {
-      "id": "3DD6ADAE4F16BA94883406735715947FC9A3B74794BD820B99544777830C41F0",
-      "iri": "http://visualdataweb.org/newOntology/3DD6ADAE4F16BA94883406735715947FC9A3B74794BD820B99544777830C41F0",
+      "id": "BH.oM.BuroHappoldMachineLearning.SurrogateModelData-BH.oM.RDF.IsA-BH.oM.Base.IBHoMObject",
+      "iri": "http://visualdataweb.org/newOntology/BH.oM.BuroHappoldMachineLearning.SurrogateModelData-BH.oM.RDF.IsA-BH.oM.Base.IBHoMObject",
       "label": "IsA",
       "attributes": "object",
       "domain": "BH.oM.BuroHappoldMachineLearning.SurrogateModelData",
       "range": "BH.oM.Base.IBHoMObject"
     },
     {
-      "id": "B290D780AD67759D8B8F25A68222550BC11EF240F62EAFEF33EE5FA32DA483B3",
-      "iri": "http://visualdataweb.org/newOntology/B290D780AD67759D8B8F25A68222550BC11EF240F62EAFEF33EE5FA32DA483B3",
+      "id": "BH.oM.BuroHappoldMachineLearning.SurrogateModelData-BH.oM.RDF.IsA-BH.oM.Base.IObject",
+      "iri": "http://visualdataweb.org/newOntology/BH.oM.BuroHappoldMachineLearning.SurrogateModelData-BH.oM.RDF.IsA-BH.oM.Base.IObject",
       "label": "IsA",
       "attributes": "object",
       "domain": "BH.oM.BuroHappoldMachineLearning.SurrogateModelData",
       "range": "BH.oM.Base.IObject"
     },
     {
-      "id": "9DE701130317250B4E9049E73C595C9EDE737DF16218C6310199AFB0854E61EF",
-      "iri": "http://visualdataweb.org/newOntology/9DE701130317250B4E9049E73C595C9EDE737DF16218C6310199AFB0854E61EF",
+      "id": "BH.oM.BuroHappoldMachineLearning.SurrogateModelData-BH.oM.RDF.IsSubclassOf-BH.oM.Base.BHoMObject",
+      "iri": "http://visualdataweb.org/newOntology/BH.oM.BuroHappoldMachineLearning.SurrogateModelData-BH.oM.RDF.IsSubclassOf-BH.oM.Base.BHoMObject",
       "label": "IsSubclassOf",
       "attributes": "object",
       "domain": "BH.oM.BuroHappoldMachineLearning.SurrogateModelData",
       "range": "BH.oM.Base.BHoMObject"
     },
     {
-      "id": "BC165A22846B046A4E5824BFD0AFD35338ED983CFB2104DE15F04009E435E4A3",
-      "iri": "http://visualdataweb.org/newOntology/BC165A22846B046A4E5824BFD0AFD35338ED983CFB2104DE15F04009E435E4A3",
+      "id": "BH.oM.BuroHappoldMachineLearning.VideoAnalyser-BH.oM.RDF.HasProperty-Int32 StartFrame",
+      "iri": "http://visualdataweb.org/newOntology/BH.oM.BuroHappoldMachineLearning.VideoAnalyser-BH.oM.RDF.HasProperty-Int32 StartFrame",
       "label": "HasProperty",
       "attributes": "datatype",
       "domain": "BH.oM.BuroHappoldMachineLearning.VideoAnalyser",
       "range": "StartFrame-BC165A22846B046A4E5824BFD0AFD35338ED983CFB2104DE15F04009E435E4A3-VideoAnalyser-HasProperty"
     },
     {
-      "id": "BD585DAE5ACC4B1211E247534077E332292B01BDC31DE6A878DFBA1281FEC990",
-      "iri": "http://visualdataweb.org/newOntology/BD585DAE5ACC4B1211E247534077E332292B01BDC31DE6A878DFBA1281FEC990",
+      "id": "BH.oM.BuroHappoldMachineLearning.VideoAnalyser-BH.oM.RDF.HasProperty-Int32 EndFrame",
+      "iri": "http://visualdataweb.org/newOntology/BH.oM.BuroHappoldMachineLearning.VideoAnalyser-BH.oM.RDF.HasProperty-Int32 EndFrame",
       "label": "HasProperty",
       "attributes": "datatype",
       "domain": "BH.oM.BuroHappoldMachineLearning.VideoAnalyser",
       "range": "EndFrame-BD585DAE5ACC4B1211E247534077E332292B01BDC31DE6A878DFBA1281FEC990-VideoAnalyser-HasProperty"
     },
     {
-      "id": "BF9176F710C4ABBEEA9258C415DD5842A578FB366368BFED536632998AA34664",
-      "iri": "http://visualdataweb.org/newOntology/BF9176F710C4ABBEEA9258C415DD5842A578FB366368BFED536632998AA34664",
+      "id": "BH.oM.BuroHappoldMachineLearning.VideoAnalyser-BH.oM.RDF.HasProperty-Int32 FrameStep",
+      "iri": "http://visualdataweb.org/newOntology/BH.oM.BuroHappoldMachineLearning.VideoAnalyser-BH.oM.RDF.HasProperty-Int32 FrameStep",
       "label": "HasProperty",
       "attributes": "datatype",
       "domain": "BH.oM.BuroHappoldMachineLearning.VideoAnalyser",
       "range": "FrameStep-BF9176F710C4ABBEEA9258C415DD5842A578FB366368BFED536632998AA34664-VideoAnalyser-HasProperty"
     },
     {
-      "id": "B99FD5EE0A53D01967F6F65EC3FFBC3BA827E5C97DCEEF9D7C3E5DA67A90702B",
-      "iri": "http://visualdataweb.org/newOntology/B99FD5EE0A53D01967F6F65EC3FFBC3BA827E5C97DCEEF9D7C3E5DA67A90702B",
+      "id": "BH.oM.BuroHappoldMachineLearning.VideoAnalyser-BH.oM.RDF.HasProperty-System.String OutFolder",
+      "iri": "http://visualdataweb.org/newOntology/BH.oM.BuroHappoldMachineLearning.VideoAnalyser-BH.oM.RDF.HasProperty-System.String OutFolder",
       "label": "HasProperty",
       "attributes": "datatype",
       "domain": "BH.oM.BuroHappoldMachineLearning.VideoAnalyser",
       "range": "OutFolder-B99FD5EE0A53D01967F6F65EC3FFBC3BA827E5C97DCEEF9D7C3E5DA67A90702B-VideoAnalyser-HasProperty"
     },
     {
-      "id": "034D961B4AB5F1494F1569E09672BB4B7016E15041BB6D17ABDB9C6030011674",
-      "iri": "http://visualdataweb.org/newOntology/034D961B4AB5F1494F1569E09672BB4B7016E15041BB6D17ABDB9C6030011674",
+      "id": "BH.oM.BuroHappoldMachineLearning.VideoAnalyser-BH.oM.RDF.HasProperty-System.Collections.Generic.List`1[BH.oM.BuroHappoldMachineLearning.RegionOfInterest] Rois",
+      "iri": "http://visualdataweb.org/newOntology/BH.oM.BuroHappoldMachineLearning.VideoAnalyser-BH.oM.RDF.HasProperty-System.Collections.Generic.List`1[BH.oM.BuroHappoldMachineLearning.RegionOfInterest] Rois",
       "label": "HasProperty",
       "attributes": "datatype",
       "domain": "BH.oM.BuroHappoldMachineLearning.VideoAnalyser",
       "range": "Rois-034D961B4AB5F1494F1569E09672BB4B7016E15041BB6D17ABDB9C6030011674-VideoAnalyser-HasProperty"
     },
     {
-      "id": "B67DE17AABEEAC9FDF3EBC1F53AC98189BE84F110619C3143DC117B5CD5AC9B3",
-      "iri": "http://visualdataweb.org/newOntology/B67DE17AABEEAC9FDF3EBC1F53AC98189BE84F110619C3143DC117B5CD5AC9B3",
+      "id": "BH.oM.BuroHappoldMachineLearning.VideoAnalyser-BH.oM.RDF.HasProperty-Accord.Video.DirectShow.FileVideoSource VideoSource",
+      "iri": "http://visualdataweb.org/newOntology/BH.oM.BuroHappoldMachineLearning.VideoAnalyser-BH.oM.RDF.HasProperty-Accord.Video.DirectShow.FileVideoSource VideoSource",
       "label": "HasProperty",
       "attributes": "datatype",
       "domain": "BH.oM.BuroHappoldMachineLearning.VideoAnalyser",
       "range": "VideoSource-B67DE17AABEEAC9FDF3EBC1F53AC98189BE84F110619C3143DC117B5CD5AC9B3-VideoAnalyser-HasProperty"
     },
     {
-      "id": "F54FF8DFE0E3B4B993545315CBACF01E611ACFF38D5D70C8A626FC10A73548FD",
-      "iri": "http://visualdataweb.org/newOntology/F54FF8DFE0E3B4B993545315CBACF01E611ACFF38D5D70C8A626FC10A73548FD",
+      "id": "BH.oM.BuroHappoldMachineLearning.VideoAnalyser-BH.oM.RDF.HasProperty-Accord.Vision.Motion.TwoFramesDifferenceDetector Detector",
+      "iri": "http://visualdataweb.org/newOntology/BH.oM.BuroHappoldMachineLearning.VideoAnalyser-BH.oM.RDF.HasProperty-Accord.Vision.Motion.TwoFramesDifferenceDetector Detector",
       "label": "HasProperty",
       "attributes": "datatype",
       "domain": "BH.oM.BuroHappoldMachineLearning.VideoAnalyser",
       "range": "Detector-F54FF8DFE0E3B4B993545315CBACF01E611ACFF38D5D70C8A626FC10A73548FD-VideoAnalyser-HasProperty"
     },
     {
-      "id": "B892379009E85DA1E4849C07B8015AD8677F6A5A625D1AE6DB9E2818F9F5835A",
-      "iri": "http://visualdataweb.org/newOntology/B892379009E85DA1E4849C07B8015AD8677F6A5A625D1AE6DB9E2818F9F5835A",
+      "id": "BH.oM.BuroHappoldMachineLearning.VideoAnalyser-BH.oM.RDF.HasProperty-Int32 FrameIndex",
+      "iri": "http://visualdataweb.org/newOntology/BH.oM.BuroHappoldMachineLearning.VideoAnalyser-BH.oM.RDF.HasProperty-Int32 FrameIndex",
       "label": "HasProperty",
       "attributes": "datatype",
       "domain": "BH.oM.BuroHappoldMachineLearning.VideoAnalyser",
       "range": "FrameIndex-B892379009E85DA1E4849C07B8015AD8677F6A5A625D1AE6DB9E2818F9F5835A-VideoAnalyser-HasProperty"
     },
     {
-      "id": "C2C53A80222A263A6123E2CE0FA8B06104550796B45D97CEFE80FA329FC5CD81",
-      "iri": "http://visualdataweb.org/newOntology/C2C53A80222A263A6123E2CE0FA8B06104550796B45D97CEFE80FA329FC5CD81",
-      "label": "HasProperty",
+      "id": "BH.oM.BuroHappoldMachineLearning.VideoAnalyser.ResultReceived-IsA-BH.oM.BuroHappoldMachineLearning.VideoAnalyserVideoResultEvent",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "label": "IsA",
       "attributes": "object",
-      "domain": "BH.oM.BuroHappoldMachineLearning.VideoAnalyser",
+      "domain": "BH.oM.BuroHappoldMachineLearning.VideoAnalyser.ResultReceived",
       "range": "BH.oM.BuroHappoldMachineLearning.VideoAnalyserVideoResultEvent"
     },
     {
-      "id": "88A1205236E8C2D8D7B894F3A33053A0E8E2C9FB66A019B328AD4CDC215E51DA",
-      "iri": "http://visualdataweb.org/newOntology/88A1205236E8C2D8D7B894F3A33053A0E8E2C9FB66A019B328AD4CDC215E51DA",
+      "id": "BH.oM.BuroHappoldMachineLearning.VideoAnalyser-BH.oM.RDF.HasProperty-VideoResultEvent ResultReceived",
+      "iri": "http://visualdataweb.org/newOntology/BH.oM.BuroHappoldMachineLearning.VideoAnalyser-BH.oM.RDF.HasProperty-VideoResultEvent ResultReceived",
+      "label": "HasProperty",
+      "attributes": [],
+      "domain": "BH.oM.BuroHappoldMachineLearning.VideoAnalyser",
+      "range": "BH.oM.BuroHappoldMachineLearning.VideoAnalyser.ResultReceived"
+    },
+    {
+      "id": "BH.oM.BuroHappoldMachineLearning.VideoAnalyser-BH.oM.RDF.IsA-BH.oM.Base.IBHoMObject",
+      "iri": "http://visualdataweb.org/newOntology/BH.oM.BuroHappoldMachineLearning.VideoAnalyser-BH.oM.RDF.IsA-BH.oM.Base.IBHoMObject",
       "label": "IsA",
       "attributes": "object",
       "domain": "BH.oM.BuroHappoldMachineLearning.VideoAnalyser",
       "range": "BH.oM.Base.IBHoMObject"
     },
     {
-      "id": "E5D535CF41970BF674C9FA12909A4180728F2211E150D98C6D1D82144BE565A9",
-      "iri": "http://visualdataweb.org/newOntology/E5D535CF41970BF674C9FA12909A4180728F2211E150D98C6D1D82144BE565A9",
+      "id": "BH.oM.BuroHappoldMachineLearning.VideoAnalyser-BH.oM.RDF.IsA-BH.oM.Base.IObject",
+      "iri": "http://visualdataweb.org/newOntology/BH.oM.BuroHappoldMachineLearning.VideoAnalyser-BH.oM.RDF.IsA-BH.oM.Base.IObject",
       "label": "IsA",
       "attributes": "object",
       "domain": "BH.oM.BuroHappoldMachineLearning.VideoAnalyser",
       "range": "BH.oM.Base.IObject"
     },
     {
-      "id": "37990F296112D3470BAAE805721BA5C159E21908C44E4CB84226D5FF237C4911",
-      "iri": "http://visualdataweb.org/newOntology/37990F296112D3470BAAE805721BA5C159E21908C44E4CB84226D5FF237C4911",
+      "id": "BH.oM.BuroHappoldMachineLearning.VideoAnalyser-BH.oM.RDF.IsA-BH.oM.BuroHappoldMachineLearning.IAnalyser",
+      "iri": "http://visualdataweb.org/newOntology/BH.oM.BuroHappoldMachineLearning.VideoAnalyser-BH.oM.RDF.IsA-BH.oM.BuroHappoldMachineLearning.IAnalyser",
       "label": "IsA",
       "attributes": "object",
       "domain": "BH.oM.BuroHappoldMachineLearning.VideoAnalyser",
       "range": "BH.oM.BuroHappoldMachineLearning.IAnalyser"
     },
     {
-      "id": "67B2F7FDF098740B99875B03562C268C9C188BBC787A269CA843562C1AED8072",
-      "iri": "http://visualdataweb.org/newOntology/67B2F7FDF098740B99875B03562C268C9C188BBC787A269CA843562C1AED8072",
+      "id": "BH.oM.BuroHappoldMachineLearning.VideoAnalyser-BH.oM.RDF.IsSubclassOf-BH.oM.Base.BHoMObject",
+      "iri": "http://visualdataweb.org/newOntology/BH.oM.BuroHappoldMachineLearning.VideoAnalyser-BH.oM.RDF.IsSubclassOf-BH.oM.Base.BHoMObject",
       "label": "IsSubclassOf",
       "attributes": "object",
       "domain": "BH.oM.BuroHappoldMachineLearning.VideoAnalyser",
       "range": "BH.oM.Base.BHoMObject"
     },
     {
-      "id": "4316F1B8863D607433DCD4DBB4FBC2876F5208217212A5C2D1C743C0E173C282",
-      "iri": "http://visualdataweb.org/newOntology/4316F1B8863D607433DCD4DBB4FBC2876F5208217212A5C2D1C743C0E173C282",
+      "id": "BH.oM.BuroHappoldMachineLearning.MotionLevelAnalyser+VideoResultEvent-BH.oM.RDF.IsA-System.ICloneable",
+      "iri": "http://visualdataweb.org/newOntology/BH.oM.BuroHappoldMachineLearning.MotionLevelAnalyser+VideoResultEvent-BH.oM.RDF.IsA-System.ICloneable",
       "label": "IsA",
       "attributes": []
     },
     {
-      "id": "D4F4BFC8C4B36B4ED8E3B29AFC7A04CED5AACE84911C7267EF44B4845FBCB23D",
-      "iri": "http://visualdataweb.org/newOntology/D4F4BFC8C4B36B4ED8E3B29AFC7A04CED5AACE84911C7267EF44B4845FBCB23D",
+      "id": "BH.oM.BuroHappoldMachineLearning.MotionLevelAnalyser+VideoResultEvent-BH.oM.RDF.IsA-System.Runtime.Serialization.ISerializable",
+      "iri": "http://visualdataweb.org/newOntology/BH.oM.BuroHappoldMachineLearning.MotionLevelAnalyser+VideoResultEvent-BH.oM.RDF.IsA-System.Runtime.Serialization.ISerializable",
       "label": "IsA",
       "attributes": []
     },
     {
-      "id": "B20E8D1D4F30CE12E7544781F16D9920D5EB552ADAFFB6366BA51AF3527F0429",
-      "iri": "http://visualdataweb.org/newOntology/B20E8D1D4F30CE12E7544781F16D9920D5EB552ADAFFB6366BA51AF3527F0429",
+      "id": "BH.oM.BuroHappoldMachineLearning.MotionLevelAnalyser+VideoResultEvent-BH.oM.RDF.IsSubclassOf-System.MulticastDelegate",
+      "iri": "http://visualdataweb.org/newOntology/BH.oM.BuroHappoldMachineLearning.MotionLevelAnalyser+VideoResultEvent-BH.oM.RDF.IsSubclassOf-System.MulticastDelegate",
       "label": "IsSubclassOf",
       "attributes": []
     },
     {
-      "id": "1A754AE2B1BCF8F9AE1F26D28BB7E9836CEDBDA652905EA646DB997D3E101F77",
-      "iri": "http://visualdataweb.org/newOntology/1A754AE2B1BCF8F9AE1F26D28BB7E9836CEDBDA652905EA646DB997D3E101F77",
+      "id": "BH.oM.BuroHappoldMachineLearning.SoundLevelAnalyser+SoundResultEvent-BH.oM.RDF.IsA-System.ICloneable",
+      "iri": "http://visualdataweb.org/newOntology/BH.oM.BuroHappoldMachineLearning.SoundLevelAnalyser+SoundResultEvent-BH.oM.RDF.IsA-System.ICloneable",
       "label": "IsA",
       "attributes": []
     },
     {
-      "id": "3882AE688F87EB761A1FC58BDC3A0BA59399A0985FEAFFD8E58A98D403975136",
-      "iri": "http://visualdataweb.org/newOntology/3882AE688F87EB761A1FC58BDC3A0BA59399A0985FEAFFD8E58A98D403975136",
+      "id": "BH.oM.BuroHappoldMachineLearning.SoundLevelAnalyser+SoundResultEvent-BH.oM.RDF.IsA-System.Runtime.Serialization.ISerializable",
+      "iri": "http://visualdataweb.org/newOntology/BH.oM.BuroHappoldMachineLearning.SoundLevelAnalyser+SoundResultEvent-BH.oM.RDF.IsA-System.Runtime.Serialization.ISerializable",
       "label": "IsA",
       "attributes": []
     },
     {
-      "id": "B25A29FA78FB009A68DEDE705C0255D32EDC025FB518182E51ED6D5D7E0798D7",
-      "iri": "http://visualdataweb.org/newOntology/B25A29FA78FB009A68DEDE705C0255D32EDC025FB518182E51ED6D5D7E0798D7",
+      "id": "BH.oM.BuroHappoldMachineLearning.SoundLevelAnalyser+SoundResultEvent-BH.oM.RDF.IsSubclassOf-System.MulticastDelegate",
+      "iri": "http://visualdataweb.org/newOntology/BH.oM.BuroHappoldMachineLearning.SoundLevelAnalyser+SoundResultEvent-BH.oM.RDF.IsSubclassOf-System.MulticastDelegate",
       "label": "IsSubclassOf",
       "attributes": []
     },
     {
-      "id": "22721FE8535E38FB200DD9097C5107CDC8115B1B98A6FBC0AC7D9ACCC0E1D3FE",
-      "iri": "http://visualdataweb.org/newOntology/22721FE8535E38FB200DD9097C5107CDC8115B1B98A6FBC0AC7D9ACCC0E1D3FE",
+      "id": "BH.oM.BuroHappoldMachineLearning.VideoAnalyser+VideoResultEvent-BH.oM.RDF.IsA-System.ICloneable",
+      "iri": "http://visualdataweb.org/newOntology/BH.oM.BuroHappoldMachineLearning.VideoAnalyser+VideoResultEvent-BH.oM.RDF.IsA-System.ICloneable",
       "label": "IsA",
       "attributes": []
     },
     {
-      "id": "518F901C9661F52EA0D67669D042BC4DD8983210C79A7304CE2C3D902E85AFBB",
-      "iri": "http://visualdataweb.org/newOntology/518F901C9661F52EA0D67669D042BC4DD8983210C79A7304CE2C3D902E85AFBB",
+      "id": "BH.oM.BuroHappoldMachineLearning.VideoAnalyser+VideoResultEvent-BH.oM.RDF.IsA-System.Runtime.Serialization.ISerializable",
+      "iri": "http://visualdataweb.org/newOntology/BH.oM.BuroHappoldMachineLearning.VideoAnalyser+VideoResultEvent-BH.oM.RDF.IsA-System.Runtime.Serialization.ISerializable",
       "label": "IsA",
       "attributes": []
     },
     {
-      "id": "B6971AE0998AA23972E0400E03A3E77C51733DDEBB5499463BE0FAFFCAFC8B05",
-      "iri": "http://visualdataweb.org/newOntology/B6971AE0998AA23972E0400E03A3E77C51733DDEBB5499463BE0FAFFCAFC8B05",
+      "id": "BH.oM.BuroHappoldMachineLearning.VideoAnalyser+VideoResultEvent-BH.oM.RDF.IsSubclassOf-System.MulticastDelegate",
+      "iri": "http://visualdataweb.org/newOntology/BH.oM.BuroHappoldMachineLearning.VideoAnalyser+VideoResultEvent-BH.oM.RDF.IsSubclassOf-System.MulticastDelegate",
       "label": "IsSubclassOf",
       "attributes": []
     }

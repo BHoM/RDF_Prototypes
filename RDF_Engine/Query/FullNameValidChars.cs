@@ -15,7 +15,7 @@ namespace BH.Engine.RDF
         [Description("Returns the Full Name of the input Type, only including characters that are alphanumeric, dots and/or greek letters (which are useful for BH.oM.Structure objects properties).")]
         public static string FullNameValidChars(this Type type)
         {
-            return RemoveInvalidChars(type.FullName);
+            return RemoveInvalidChars(type.FullName ?? $"{type.Namespace}.{type.Name}");
         }
 
         /***************************************************/
@@ -30,7 +30,6 @@ namespace BH.Engine.RDF
 
         private static string RemoveInvalidChars(string text)
         {
-
             if (text.Contains("`"))
             {
                 // remove those weird chars that sometimes happen e.g. IElementLoad`1

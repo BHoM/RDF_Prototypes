@@ -39,7 +39,15 @@
       "type": "owl:Class"
     },
     {
+      "id": "BH.oM.CableNetDesign.BarAndForcePair.Cable",
+      "type": "owl:Class"
+    },
+    {
       "id": "BH.oM.Structure.Elements.Bar",
+      "type": "owl:Class"
+    },
+    {
+      "id": "BH.oM.CableNetDesign.BarAndForcePair.Force",
       "type": "owl:Class"
     },
     {
@@ -49,6 +57,10 @@
     {
       "id": "ElementResults-9EC336893F8AFB1C7AFB62A702AE1912BE97D19BD5FD130FF004FFEB100999DF-CableRelaxationResult-HasProperty",
       "type": "rdfs:Datatype"
+    },
+    {
+      "id": "BH.oM.CableNetDesign.CableRelaxationResult.RelaxSystem",
+      "type": "owl:Class"
     },
     {
       "id": "BH.oM.FormFinding.RelaxSystem",
@@ -123,15 +135,27 @@
       "attributes": []
     },
     {
+      "id": "BH.oM.CableNetDesign.BarAndForcePair.Cable",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/Structure_oM/Elements/Bar.cs",
+      "label": "Cable",
+      "attributes": []
+    },
+    {
       "id": "BH.oM.Structure.Elements.Bar",
       "iri": "https://github.com/BHoM/BHoM/blob/main/Structure_oM/Elements/Bar.cs",
-      "label": "Cable (Bar)",
+      "label": "Bar",
+      "attributes": []
+    },
+    {
+      "id": "BH.oM.CableNetDesign.BarAndForcePair.Force",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/Structure_oM/Results/Bar Results/BarForce.cs",
+      "label": "Force",
       "attributes": []
     },
     {
       "id": "BH.oM.Structure.Results.BarForce",
       "iri": "https://github.com/BHoM/BHoM/blob/main/Structure_oM/Results/Bar Results/BarForce.cs",
-      "label": "Force (BarForce)",
+      "label": "BarForce",
       "attributes": []
     },
     {
@@ -141,9 +165,15 @@
       "attributes": "datatype"
     },
     {
+      "id": "BH.oM.CableNetDesign.CableRelaxationResult.RelaxSystem",
+      "iri": "https://github.com/BHoM/FormFinding_Toolkit/blob/main/FormFinding_Engine/Create/RelaxSystem.cs",
+      "label": "RelaxSystem",
+      "attributes": []
+    },
+    {
       "id": "BH.oM.FormFinding.RelaxSystem",
       "iri": "https://github.com/BHoM/FormFinding_Toolkit/blob/main/FormFinding_Engine/Create/RelaxSystem.cs",
-      "label": "RelaxSystem (RelaxSystem)",
+      "label": "RelaxSystem",
       "attributes": []
     },
     {
@@ -167,242 +197,278 @@
   ],
   "property": [
     {
-      "id": "CB9E123B5939BDA94578AB796246945D59D0EA241382D05873DEDED98E0CFD39",
+      "id": "BH.oM.CableNetDesign.EquilibrateMethod-BH.oM.RDF.HasProperty-System.String Method",
       "type": "owl:DatatypeProperty"
     },
     {
-      "id": "72C15A1049AFDB50C36E21FA417BE38B3ABFC35A49F2670DC9DBFD3DEFEDD15C",
+      "id": "BH.oM.CableNetDesign.EquilibrateMethod-BH.oM.RDF.HasProperty-System.Collections.Generic.Dictionary`2[System.String,System.Object] inputParameters",
       "type": "owl:DatatypeProperty"
     },
     {
-      "id": "6234E3DB7843B52AD3320B361EB096B84863E96A9989278755025C181CEB9914",
+      "id": "BH.oM.CableNetDesign.EquilibrateMethod-BH.oM.RDF.IsA-BH.oM.Base.IBHoMObject",
       "type": "owl:ObjectProperty"
     },
     {
-      "id": "07C4A841FA9B816500157E0F91ECE33A8433DA122B44DBD89583400B2485E7EF",
+      "id": "BH.oM.CableNetDesign.EquilibrateMethod-BH.oM.RDF.IsA-BH.oM.Base.IObject",
       "type": "owl:ObjectProperty"
     },
     {
-      "id": "9876D2811027D9E80D4E6487EC64581A1003CC5CEB102F9804FDC6112D2252C1",
+      "id": "BH.oM.CableNetDesign.EquilibrateMethod-BH.oM.RDF.IsSubclassOf-BH.oM.Base.BHoMObject",
       "type": "owl:ObjectProperty"
     },
     {
-      "id": "248574A9D080FF08C82C717209E64F5374D3DE32F959BAB1957A43AD1FE3F1DC",
+      "id": "BH.oM.CableNetDesign.BarAndForcePair.Cable-IsA-BH.oM.Structure.Elements.Bar",
       "type": "owl:ObjectProperty"
     },
     {
-      "id": "B0256DBFE83973329BA4DF32744397A2DF88F3D8613B3F497FFA2751E34D86FA",
+      "id": "BH.oM.CableNetDesign.BarAndForcePair-BH.oM.RDF.HasProperty-BH.oM.Structure.Elements.Bar Cable",
       "type": "owl:ObjectProperty"
     },
     {
-      "id": "F7B4D8D1E74CF8E742FC015A650FAEC513914B51389C2881A2891778B942BFAD",
+      "id": "BH.oM.CableNetDesign.BarAndForcePair.Force-IsA-BH.oM.Structure.Results.BarForce",
       "type": "owl:ObjectProperty"
     },
     {
-      "id": "58BBD4BAC3E0A79C7B9F2F1EC02949B9ECC1EC947187DF960F696AAE401A7EBE",
+      "id": "BH.oM.CableNetDesign.BarAndForcePair-BH.oM.RDF.HasProperty-BH.oM.Structure.Results.BarForce Force",
       "type": "owl:ObjectProperty"
     },
     {
-      "id": "246D811C0A4609C228FAD31F50727223C11CF9C5CD4C90923923347A9B5DF940",
+      "id": "BH.oM.CableNetDesign.BarAndForcePair-BH.oM.RDF.IsA-BH.oM.Base.IBHoMObject",
       "type": "owl:ObjectProperty"
     },
     {
-      "id": "9EC336893F8AFB1C7AFB62A702AE1912BE97D19BD5FD130FF004FFEB100999DF",
+      "id": "BH.oM.CableNetDesign.BarAndForcePair-BH.oM.RDF.IsA-BH.oM.Base.IObject",
       "type": "owl:ObjectProperty"
     },
     {
-      "id": "7BC3F0021AEEE026A3701A447807C37F86010332E069EEF1CCC4584138D8DB79",
+      "id": "BH.oM.CableNetDesign.BarAndForcePair-BH.oM.RDF.IsSubclassOf-BH.oM.Base.BHoMObject",
       "type": "owl:ObjectProperty"
     },
     {
-      "id": "ED02375F97B1B2277B6BFD0BD96D207901CD1510B84E018A03AC2A23E71C470E",
+      "id": "BH.oM.CableNetDesign.CableRelaxationResult-BH.oM.RDF.HasProperty-System.Collections.Generic.List`1[BH.oM.CableNetDesign.BarAndForcePair] ElementResults",
       "type": "owl:ObjectProperty"
     },
     {
-      "id": "F008687F48472B7862252F310F603231D2FB975E97784300F8857336FB2985DB",
+      "id": "BH.oM.CableNetDesign.CableRelaxationResult.RelaxSystem-IsA-BH.oM.FormFinding.RelaxSystem",
       "type": "owl:ObjectProperty"
     },
     {
-      "id": "99EB99B329E5BE9467111C08FD8CE5F09FD1828E12F69929EC455FA9D1FFE6C2",
+      "id": "BH.oM.CableNetDesign.CableRelaxationResult-BH.oM.RDF.HasProperty-BH.oM.FormFinding.RelaxSystem RelaxSystem",
       "type": "owl:ObjectProperty"
     },
     {
-      "id": "E83191C2D4FF5C27DFB3E5D5F5D6EF4597FDEFB817BB5F751702BAF6E3B144E0",
+      "id": "BH.oM.CableNetDesign.CableRelaxationResult-BH.oM.RDF.IsA-BH.oM.Base.IBHoMObject",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "BH.oM.CableNetDesign.CableRelaxationResult-BH.oM.RDF.IsA-BH.oM.Base.IObject",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "BH.oM.CableNetDesign.CableRelaxationResult-BH.oM.RDF.IsSubclassOf-BH.oM.Base.BHoMObject",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "BH.oM.CableNetDesign.Fragments.SlackLengthFragment-BH.oM.RDF.HasProperty-Double SlackLength",
       "type": "owl:DatatypeProperty"
     },
     {
-      "id": "8E6DADD7C1E6E772093D596CB2DF90129561ECB80DD48618B5BCFFE0D114652D",
+      "id": "BH.oM.CableNetDesign.Fragments.SlackLengthFragment-BH.oM.RDF.HasProperty-Boolean KeepExtactForce",
       "type": "owl:DatatypeProperty"
     },
     {
-      "id": "DC62AC2A5668BA2713A14DC67DA3E00EDE961A64E6EB02D084C56A5EAE3196C4",
+      "id": "BH.oM.CableNetDesign.Fragments.SlackLengthFragment-BH.oM.RDF.IsA-BH.oM.Base.IFragment",
       "type": "owl:ObjectProperty"
     },
     {
-      "id": "2CC6FE322EEACF66B773D9B3E344CBD3C030BF30D2EC33FEA228F2E1C801AD7D",
+      "id": "BH.oM.CableNetDesign.Fragments.SlackLengthFragment-BH.oM.RDF.IsA-BH.oM.Base.IObject",
       "type": "owl:ObjectProperty"
     },
     {
-      "id": "6265DFEF4E85AE35201B5B056C388E4ACB1F7346FFC8212D63805EEA240C2E10",
+      "id": "BH.oM.CableNetDesign.Fragments.SlackLengthFragment-BH.oM.RDF.IsSubclassOf-System.Object",
       "type": "owl:DatatypeProperty"
     }
   ],
   "propertyAttribute": [
     {
-      "id": "CB9E123B5939BDA94578AB796246945D59D0EA241382D05873DEDED98E0CFD39",
-      "iri": "http://visualdataweb.org/newOntology/CB9E123B5939BDA94578AB796246945D59D0EA241382D05873DEDED98E0CFD39",
+      "id": "BH.oM.CableNetDesign.EquilibrateMethod-BH.oM.RDF.HasProperty-System.String Method",
+      "iri": "http://visualdataweb.org/newOntology/BH.oM.CableNetDesign.EquilibrateMethod-BH.oM.RDF.HasProperty-System.String Method",
       "label": "HasProperty",
       "attributes": "datatype",
       "domain": "BH.oM.CableNetDesign.EquilibrateMethod",
       "range": "Method-CB9E123B5939BDA94578AB796246945D59D0EA241382D05873DEDED98E0CFD39-EquilibrateMethod-HasProperty"
     },
     {
-      "id": "72C15A1049AFDB50C36E21FA417BE38B3ABFC35A49F2670DC9DBFD3DEFEDD15C",
-      "iri": "http://visualdataweb.org/newOntology/72C15A1049AFDB50C36E21FA417BE38B3ABFC35A49F2670DC9DBFD3DEFEDD15C",
+      "id": "BH.oM.CableNetDesign.EquilibrateMethod-BH.oM.RDF.HasProperty-System.Collections.Generic.Dictionary`2[System.String,System.Object] inputParameters",
+      "iri": "http://visualdataweb.org/newOntology/BH.oM.CableNetDesign.EquilibrateMethod-BH.oM.RDF.HasProperty-System.Collections.Generic.Dictionary`2[System.String,System.Object] inputParameters",
       "label": "HasProperty",
       "attributes": "datatype",
       "domain": "BH.oM.CableNetDesign.EquilibrateMethod",
       "range": "inputParameters-72C15A1049AFDB50C36E21FA417BE38B3ABFC35A49F2670DC9DBFD3DEFEDD15C-EquilibrateMethod-HasProperty"
     },
     {
-      "id": "6234E3DB7843B52AD3320B361EB096B84863E96A9989278755025C181CEB9914",
-      "iri": "http://visualdataweb.org/newOntology/6234E3DB7843B52AD3320B361EB096B84863E96A9989278755025C181CEB9914",
+      "id": "BH.oM.CableNetDesign.EquilibrateMethod-BH.oM.RDF.IsA-BH.oM.Base.IBHoMObject",
+      "iri": "http://visualdataweb.org/newOntology/BH.oM.CableNetDesign.EquilibrateMethod-BH.oM.RDF.IsA-BH.oM.Base.IBHoMObject",
       "label": "IsA",
       "attributes": "object",
       "domain": "BH.oM.CableNetDesign.EquilibrateMethod",
       "range": "BH.oM.Base.IBHoMObject"
     },
     {
-      "id": "07C4A841FA9B816500157E0F91ECE33A8433DA122B44DBD89583400B2485E7EF",
-      "iri": "http://visualdataweb.org/newOntology/07C4A841FA9B816500157E0F91ECE33A8433DA122B44DBD89583400B2485E7EF",
+      "id": "BH.oM.CableNetDesign.EquilibrateMethod-BH.oM.RDF.IsA-BH.oM.Base.IObject",
+      "iri": "http://visualdataweb.org/newOntology/BH.oM.CableNetDesign.EquilibrateMethod-BH.oM.RDF.IsA-BH.oM.Base.IObject",
       "label": "IsA",
       "attributes": "object",
       "domain": "BH.oM.CableNetDesign.EquilibrateMethod",
       "range": "BH.oM.Base.IObject"
     },
     {
-      "id": "9876D2811027D9E80D4E6487EC64581A1003CC5CEB102F9804FDC6112D2252C1",
-      "iri": "http://visualdataweb.org/newOntology/9876D2811027D9E80D4E6487EC64581A1003CC5CEB102F9804FDC6112D2252C1",
+      "id": "BH.oM.CableNetDesign.EquilibrateMethod-BH.oM.RDF.IsSubclassOf-BH.oM.Base.BHoMObject",
+      "iri": "http://visualdataweb.org/newOntology/BH.oM.CableNetDesign.EquilibrateMethod-BH.oM.RDF.IsSubclassOf-BH.oM.Base.BHoMObject",
       "label": "IsSubclassOf",
       "attributes": "object",
       "domain": "BH.oM.CableNetDesign.EquilibrateMethod",
       "range": "BH.oM.Base.BHoMObject"
     },
     {
-      "id": "248574A9D080FF08C82C717209E64F5374D3DE32F959BAB1957A43AD1FE3F1DC",
-      "iri": "http://visualdataweb.org/newOntology/248574A9D080FF08C82C717209E64F5374D3DE32F959BAB1957A43AD1FE3F1DC",
-      "label": "HasProperty",
+      "id": "BH.oM.CableNetDesign.BarAndForcePair.Cable-IsA-BH.oM.Structure.Elements.Bar",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "label": "IsA",
       "attributes": "object",
-      "domain": "BH.oM.CableNetDesign.BarAndForcePair",
+      "domain": "BH.oM.CableNetDesign.BarAndForcePair.Cable",
       "range": "BH.oM.Structure.Elements.Bar"
     },
     {
-      "id": "B0256DBFE83973329BA4DF32744397A2DF88F3D8613B3F497FFA2751E34D86FA",
-      "iri": "http://visualdataweb.org/newOntology/B0256DBFE83973329BA4DF32744397A2DF88F3D8613B3F497FFA2751E34D86FA",
+      "id": "BH.oM.CableNetDesign.BarAndForcePair-BH.oM.RDF.HasProperty-BH.oM.Structure.Elements.Bar Cable",
+      "iri": "http://visualdataweb.org/newOntology/BH.oM.CableNetDesign.BarAndForcePair-BH.oM.RDF.HasProperty-BH.oM.Structure.Elements.Bar Cable",
       "label": "HasProperty",
-      "attributes": "object",
+      "attributes": [],
       "domain": "BH.oM.CableNetDesign.BarAndForcePair",
+      "range": "BH.oM.CableNetDesign.BarAndForcePair.Cable"
+    },
+    {
+      "id": "BH.oM.CableNetDesign.BarAndForcePair.Force-IsA-BH.oM.Structure.Results.BarForce",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "label": "IsA",
+      "attributes": "object",
+      "domain": "BH.oM.CableNetDesign.BarAndForcePair.Force",
       "range": "BH.oM.Structure.Results.BarForce"
     },
     {
-      "id": "F7B4D8D1E74CF8E742FC015A650FAEC513914B51389C2881A2891778B942BFAD",
-      "iri": "http://visualdataweb.org/newOntology/F7B4D8D1E74CF8E742FC015A650FAEC513914B51389C2881A2891778B942BFAD",
+      "id": "BH.oM.CableNetDesign.BarAndForcePair-BH.oM.RDF.HasProperty-BH.oM.Structure.Results.BarForce Force",
+      "iri": "http://visualdataweb.org/newOntology/BH.oM.CableNetDesign.BarAndForcePair-BH.oM.RDF.HasProperty-BH.oM.Structure.Results.BarForce Force",
+      "label": "HasProperty",
+      "attributes": [],
+      "domain": "BH.oM.CableNetDesign.BarAndForcePair",
+      "range": "BH.oM.CableNetDesign.BarAndForcePair.Force"
+    },
+    {
+      "id": "BH.oM.CableNetDesign.BarAndForcePair-BH.oM.RDF.IsA-BH.oM.Base.IBHoMObject",
+      "iri": "http://visualdataweb.org/newOntology/BH.oM.CableNetDesign.BarAndForcePair-BH.oM.RDF.IsA-BH.oM.Base.IBHoMObject",
       "label": "IsA",
       "attributes": "object",
       "domain": "BH.oM.CableNetDesign.BarAndForcePair",
       "range": "BH.oM.Base.IBHoMObject"
     },
     {
-      "id": "58BBD4BAC3E0A79C7B9F2F1EC02949B9ECC1EC947187DF960F696AAE401A7EBE",
-      "iri": "http://visualdataweb.org/newOntology/58BBD4BAC3E0A79C7B9F2F1EC02949B9ECC1EC947187DF960F696AAE401A7EBE",
+      "id": "BH.oM.CableNetDesign.BarAndForcePair-BH.oM.RDF.IsA-BH.oM.Base.IObject",
+      "iri": "http://visualdataweb.org/newOntology/BH.oM.CableNetDesign.BarAndForcePair-BH.oM.RDF.IsA-BH.oM.Base.IObject",
       "label": "IsA",
       "attributes": "object",
       "domain": "BH.oM.CableNetDesign.BarAndForcePair",
       "range": "BH.oM.Base.IObject"
     },
     {
-      "id": "246D811C0A4609C228FAD31F50727223C11CF9C5CD4C90923923347A9B5DF940",
-      "iri": "http://visualdataweb.org/newOntology/246D811C0A4609C228FAD31F50727223C11CF9C5CD4C90923923347A9B5DF940",
+      "id": "BH.oM.CableNetDesign.BarAndForcePair-BH.oM.RDF.IsSubclassOf-BH.oM.Base.BHoMObject",
+      "iri": "http://visualdataweb.org/newOntology/BH.oM.CableNetDesign.BarAndForcePair-BH.oM.RDF.IsSubclassOf-BH.oM.Base.BHoMObject",
       "label": "IsSubclassOf",
       "attributes": "object",
       "domain": "BH.oM.CableNetDesign.BarAndForcePair",
       "range": "BH.oM.Base.BHoMObject"
     },
     {
-      "id": "9EC336893F8AFB1C7AFB62A702AE1912BE97D19BD5FD130FF004FFEB100999DF",
-      "iri": "http://visualdataweb.org/newOntology/9EC336893F8AFB1C7AFB62A702AE1912BE97D19BD5FD130FF004FFEB100999DF",
+      "id": "BH.oM.CableNetDesign.CableRelaxationResult-BH.oM.RDF.HasProperty-System.Collections.Generic.List`1[BH.oM.CableNetDesign.BarAndForcePair] ElementResults",
+      "iri": "http://visualdataweb.org/newOntology/BH.oM.CableNetDesign.CableRelaxationResult-BH.oM.RDF.HasProperty-System.Collections.Generic.List`1[BH.oM.CableNetDesign.BarAndForcePair] ElementResults",
       "label": "HasProperty",
       "attributes": "datatype",
       "domain": "BH.oM.CableNetDesign.CableRelaxationResult",
       "range": "ElementResults-9EC336893F8AFB1C7AFB62A702AE1912BE97D19BD5FD130FF004FFEB100999DF-CableRelaxationResult-HasProperty"
     },
     {
-      "id": "7BC3F0021AEEE026A3701A447807C37F86010332E069EEF1CCC4584138D8DB79",
-      "iri": "http://visualdataweb.org/newOntology/7BC3F0021AEEE026A3701A447807C37F86010332E069EEF1CCC4584138D8DB79",
-      "label": "HasProperty",
+      "id": "BH.oM.CableNetDesign.CableRelaxationResult.RelaxSystem-IsA-BH.oM.FormFinding.RelaxSystem",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "label": "IsA",
       "attributes": "object",
-      "domain": "BH.oM.CableNetDesign.CableRelaxationResult",
+      "domain": "BH.oM.CableNetDesign.CableRelaxationResult.RelaxSystem",
       "range": "BH.oM.FormFinding.RelaxSystem"
     },
     {
-      "id": "ED02375F97B1B2277B6BFD0BD96D207901CD1510B84E018A03AC2A23E71C470E",
-      "iri": "http://visualdataweb.org/newOntology/ED02375F97B1B2277B6BFD0BD96D207901CD1510B84E018A03AC2A23E71C470E",
+      "id": "BH.oM.CableNetDesign.CableRelaxationResult-BH.oM.RDF.HasProperty-BH.oM.FormFinding.RelaxSystem RelaxSystem",
+      "iri": "http://visualdataweb.org/newOntology/BH.oM.CableNetDesign.CableRelaxationResult-BH.oM.RDF.HasProperty-BH.oM.FormFinding.RelaxSystem RelaxSystem",
+      "label": "HasProperty",
+      "attributes": [],
+      "domain": "BH.oM.CableNetDesign.CableRelaxationResult",
+      "range": "BH.oM.CableNetDesign.CableRelaxationResult.RelaxSystem"
+    },
+    {
+      "id": "BH.oM.CableNetDesign.CableRelaxationResult-BH.oM.RDF.IsA-BH.oM.Base.IBHoMObject",
+      "iri": "http://visualdataweb.org/newOntology/BH.oM.CableNetDesign.CableRelaxationResult-BH.oM.RDF.IsA-BH.oM.Base.IBHoMObject",
       "label": "IsA",
       "attributes": "object",
       "domain": "BH.oM.CableNetDesign.CableRelaxationResult",
       "range": "BH.oM.Base.IBHoMObject"
     },
     {
-      "id": "F008687F48472B7862252F310F603231D2FB975E97784300F8857336FB2985DB",
-      "iri": "http://visualdataweb.org/newOntology/F008687F48472B7862252F310F603231D2FB975E97784300F8857336FB2985DB",
+      "id": "BH.oM.CableNetDesign.CableRelaxationResult-BH.oM.RDF.IsA-BH.oM.Base.IObject",
+      "iri": "http://visualdataweb.org/newOntology/BH.oM.CableNetDesign.CableRelaxationResult-BH.oM.RDF.IsA-BH.oM.Base.IObject",
       "label": "IsA",
       "attributes": "object",
       "domain": "BH.oM.CableNetDesign.CableRelaxationResult",
       "range": "BH.oM.Base.IObject"
     },
     {
-      "id": "99EB99B329E5BE9467111C08FD8CE5F09FD1828E12F69929EC455FA9D1FFE6C2",
-      "iri": "http://visualdataweb.org/newOntology/99EB99B329E5BE9467111C08FD8CE5F09FD1828E12F69929EC455FA9D1FFE6C2",
+      "id": "BH.oM.CableNetDesign.CableRelaxationResult-BH.oM.RDF.IsSubclassOf-BH.oM.Base.BHoMObject",
+      "iri": "http://visualdataweb.org/newOntology/BH.oM.CableNetDesign.CableRelaxationResult-BH.oM.RDF.IsSubclassOf-BH.oM.Base.BHoMObject",
       "label": "IsSubclassOf",
       "attributes": "object",
       "domain": "BH.oM.CableNetDesign.CableRelaxationResult",
       "range": "BH.oM.Base.BHoMObject"
     },
     {
-      "id": "E83191C2D4FF5C27DFB3E5D5F5D6EF4597FDEFB817BB5F751702BAF6E3B144E0",
-      "iri": "http://visualdataweb.org/newOntology/E83191C2D4FF5C27DFB3E5D5F5D6EF4597FDEFB817BB5F751702BAF6E3B144E0",
+      "id": "BH.oM.CableNetDesign.Fragments.SlackLengthFragment-BH.oM.RDF.HasProperty-Double SlackLength",
+      "iri": "http://visualdataweb.org/newOntology/BH.oM.CableNetDesign.Fragments.SlackLengthFragment-BH.oM.RDF.HasProperty-Double SlackLength",
       "label": "HasProperty",
       "attributes": "datatype",
       "domain": "BH.oM.CableNetDesign.Fragments.SlackLengthFragment",
       "range": "SlackLength-E83191C2D4FF5C27DFB3E5D5F5D6EF4597FDEFB817BB5F751702BAF6E3B144E0-SlackLengthFragment-HasProperty"
     },
     {
-      "id": "8E6DADD7C1E6E772093D596CB2DF90129561ECB80DD48618B5BCFFE0D114652D",
-      "iri": "http://visualdataweb.org/newOntology/8E6DADD7C1E6E772093D596CB2DF90129561ECB80DD48618B5BCFFE0D114652D",
+      "id": "BH.oM.CableNetDesign.Fragments.SlackLengthFragment-BH.oM.RDF.HasProperty-Boolean KeepExtactForce",
+      "iri": "http://visualdataweb.org/newOntology/BH.oM.CableNetDesign.Fragments.SlackLengthFragment-BH.oM.RDF.HasProperty-Boolean KeepExtactForce",
       "label": "HasProperty",
       "attributes": "datatype",
       "domain": "BH.oM.CableNetDesign.Fragments.SlackLengthFragment",
       "range": "KeepExtactForce-8E6DADD7C1E6E772093D596CB2DF90129561ECB80DD48618B5BCFFE0D114652D-SlackLengthFragment-HasProperty"
     },
     {
-      "id": "DC62AC2A5668BA2713A14DC67DA3E00EDE961A64E6EB02D084C56A5EAE3196C4",
-      "iri": "http://visualdataweb.org/newOntology/DC62AC2A5668BA2713A14DC67DA3E00EDE961A64E6EB02D084C56A5EAE3196C4",
+      "id": "BH.oM.CableNetDesign.Fragments.SlackLengthFragment-BH.oM.RDF.IsA-BH.oM.Base.IFragment",
+      "iri": "http://visualdataweb.org/newOntology/BH.oM.CableNetDesign.Fragments.SlackLengthFragment-BH.oM.RDF.IsA-BH.oM.Base.IFragment",
       "label": "IsA",
       "attributes": "object",
       "domain": "BH.oM.CableNetDesign.Fragments.SlackLengthFragment",
       "range": "BH.oM.Base.IFragment"
     },
     {
-      "id": "2CC6FE322EEACF66B773D9B3E344CBD3C030BF30D2EC33FEA228F2E1C801AD7D",
-      "iri": "http://visualdataweb.org/newOntology/2CC6FE322EEACF66B773D9B3E344CBD3C030BF30D2EC33FEA228F2E1C801AD7D",
+      "id": "BH.oM.CableNetDesign.Fragments.SlackLengthFragment-BH.oM.RDF.IsA-BH.oM.Base.IObject",
+      "iri": "http://visualdataweb.org/newOntology/BH.oM.CableNetDesign.Fragments.SlackLengthFragment-BH.oM.RDF.IsA-BH.oM.Base.IObject",
       "label": "IsA",
       "attributes": "object",
       "domain": "BH.oM.CableNetDesign.Fragments.SlackLengthFragment",
       "range": "BH.oM.Base.IObject"
     },
     {
-      "id": "6265DFEF4E85AE35201B5B056C388E4ACB1F7346FFC8212D63805EEA240C2E10",
-      "iri": "http://visualdataweb.org/newOntology/6265DFEF4E85AE35201B5B056C388E4ACB1F7346FFC8212D63805EEA240C2E10",
+      "id": "BH.oM.CableNetDesign.Fragments.SlackLengthFragment-BH.oM.RDF.IsSubclassOf-System.Object",
+      "iri": "http://visualdataweb.org/newOntology/BH.oM.CableNetDesign.Fragments.SlackLengthFragment-BH.oM.RDF.IsSubclassOf-System.Object",
       "label": "IsSubclassOf",
       "attributes": []
     }

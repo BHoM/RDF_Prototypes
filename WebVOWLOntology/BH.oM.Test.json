@@ -87,6 +87,10 @@
       "type": "rdfs:Datatype"
     },
     {
+      "id": "BH.oM.Test.Results.EventMessage.Status",
+      "type": "owl:Class"
+    },
+    {
       "id": "UTCTime-1126F313B5E1CE43B63603ECC41DE8AB40F57E173D68DC5986F20F067444078B-EventMessage-HasProperty",
       "type": "rdfs:Datatype"
     },
@@ -105,6 +109,10 @@
     {
       "id": "ObjectType-4151C4DD2D4EB29C7E592F22AE6BD30FBE0AEE1FEAD94FC338E97E53BBFCCD85-InputOutputComparison-HasProperty",
       "type": "rdfs:Datatype"
+    },
+    {
+      "id": "BH.oM.Test.Results.InputOutputComparison.ResultType",
+      "type": "owl:Class"
     },
     {
       "id": "Results-14E77D93099AE4797D41A412F8A72D48F2010DB6FA8179FE066B40F0332892B8-InputOutputComparison-HasProperty",
@@ -147,6 +155,10 @@
       "type": "rdfs:Datatype"
     },
     {
+      "id": "BH.oM.Test.Results.InputOutputComparisonDiffing.Type",
+      "type": "owl:Class"
+    },
+    {
       "id": "InputValue-0DFE72D8B3C57C3334DE72A23247BDF442772694DF90D6B9740CB75EDAACE42F-InputOutputComparisonDiffing-HasProperty",
       "type": "rdfs:Datatype"
     },
@@ -185,6 +197,10 @@
     {
       "id": "TimeStep-6EFC682B01888AA00E0E2E3ED51BD57D4D1F7C066860BFC2D2167015A49677AE-InputOutputComparisonSummary-HasProperty",
       "type": "rdfs:Datatype"
+    },
+    {
+      "id": "BH.oM.Test.Results.InputOutputComparisonSummary.ResultType",
+      "type": "owl:Class"
     },
     {
       "id": "Occurrences-D9EBA7B6FA246F621C08B21A6B31F843BC7A9F3A3EC7696F5682A7F525B7D38A-InputOutputComparisonSummary-HasProperty",
@@ -241,6 +257,10 @@
     {
       "id": "Description-4910BE0218EDA6282E90438D2FBF3A7011C6F240F4AE6B0A838D2A732D68D237-TestResult-HasProperty",
       "type": "rdfs:Datatype"
+    },
+    {
+      "id": "BH.oM.Test.Results.TestResult.Status",
+      "type": "owl:Class"
     },
     {
       "id": "Information-1084A277BB92D1529BB468B3445A1C06AB96E185B998B235607BE9654155AF65-TestResult-HasProperty",
@@ -387,6 +407,12 @@
       "attributes": "datatype"
     },
     {
+      "id": "BH.oM.Test.Results.EventMessage.Status",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/Test_oM/TestStatus.cs",
+      "label": "Status",
+      "attributes": []
+    },
+    {
       "id": "UTCTime-1126F313B5E1CE43B63603ECC41DE8AB40F57E173D68DC5986F20F067444078B-EventMessage-HasProperty",
       "iri": "http://www.w3.org/2001/XMLSchema#",
       "label": "UTCTime (DateTime)",
@@ -415,6 +441,12 @@
       "iri": "http://www.w3.org/2001/XMLSchema#",
       "label": "ObjectType (Type)",
       "attributes": "datatype"
+    },
+    {
+      "id": "BH.oM.Test.Results.InputOutputComparison.ResultType",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/Test_oM/Results/Enums/InputOutputComparisonType.cs",
+      "label": "ResultType",
+      "attributes": []
     },
     {
       "id": "Results-14E77D93099AE4797D41A412F8A72D48F2010DB6FA8179FE066B40F0332892B8-InputOutputComparison-HasProperty",
@@ -477,6 +509,12 @@
       "attributes": "datatype"
     },
     {
+      "id": "BH.oM.Test.Results.InputOutputComparisonDiffing.Type",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/Test_oM/Results/Enums/InputOutputComparisonDiffingType.cs",
+      "label": "Type",
+      "attributes": []
+    },
+    {
       "id": "InputValue-0DFE72D8B3C57C3334DE72A23247BDF442772694DF90D6B9740CB75EDAACE42F-InputOutputComparisonDiffing-HasProperty",
       "iri": "http://www.w3.org/2001/XMLSchema#",
       "label": "InputValue (Object)",
@@ -535,6 +573,12 @@
       "iri": "http://www.w3.org/2001/XMLSchema#",
       "label": "TimeStep (Double)",
       "attributes": "datatype"
+    },
+    {
+      "id": "BH.oM.Test.Results.InputOutputComparisonSummary.ResultType",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/Test_oM/Results/Enums/InputOutputComparisonType.cs",
+      "label": "ResultType",
+      "attributes": []
     },
     {
       "id": "Occurrences-D9EBA7B6FA246F621C08B21A6B31F843BC7A9F3A3EC7696F5682A7F525B7D38A-InputOutputComparisonSummary-HasProperty",
@@ -621,6 +665,12 @@
       "attributes": "datatype"
     },
     {
+      "id": "BH.oM.Test.Results.TestResult.Status",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/Test_oM/TestStatus.cs",
+      "label": "Status",
+      "attributes": []
+    },
+    {
       "id": "Information-1084A277BB92D1529BB468B3445A1C06AB96E185B998B235607BE9654155AF65-TestResult-HasProperty",
       "iri": "http://www.w3.org/2001/XMLSchema#",
       "label": "Information (List<ITestInformation>)",
@@ -647,1240 +697,1300 @@
   ],
   "property": [
     {
-      "id": "8F69048D04584E7BB8B014B9A29FB27356DED1E7999F0133846D96F6C8267B5D",
+      "id": "BH.oM.Test.ITestInformation-BH.oM.RDF.RequiresProperty-System.String Message",
       "type": "owl:DatatypeProperty"
     },
     {
-      "id": "BA560D7CC5272354C2685413ED97090298C2DA3D5B91511C33377B11C9E812D0",
+      "id": "BH.oM.Test.ITestInformation-BH.oM.RDF.RequiresProperty-BH.oM.Test.TestStatus Status",
       "type": "owl:ObjectProperty"
     },
     {
-      "id": "52E323A2BDBAB917DF66481C3A36C6256A3CC37D24AF0DA2994DA3B725DDC929",
+      "id": "BH.oM.Test.ITestInformation-BH.oM.RDF.RequiresProperty-System.DateTime UTCTime",
       "type": "owl:DatatypeProperty"
     },
     {
-      "id": "E3F12A43ABB9422B9E0CB953314272CC1423DBD28803B1F0C111BEE336010253",
+      "id": "BH.oM.Test.ITestInformation-BH.oM.RDF.IsA-BH.oM.Base.IObject",
       "type": "owl:ObjectProperty"
     },
     {
-      "id": "84E7FC71E9EE8B1AD3FDE4AB2AE65581A14444AB18D69E788C16BAA8C8DB61E2",
+      "id": "BH.oM.Test.TestStatus-BH.oM.RDF.IsA-System.IComparable",
       "type": "owl:DatatypeProperty"
     },
     {
-      "id": "438B3100F855CBA9D364DBF9566A2FCAAE78A50440D25DC97C0141B7A4FCFAC1",
+      "id": "BH.oM.Test.TestStatus-BH.oM.RDF.IsA-System.IFormattable",
       "type": "owl:DatatypeProperty"
     },
     {
-      "id": "05D9A692277EF7551E2F489E5BB744D07EBF6247CA5DBF02ED913C051FA412D3",
+      "id": "BH.oM.Test.TestStatus-BH.oM.RDF.IsA-System.IConvertible",
       "type": "owl:DatatypeProperty"
     },
     {
-      "id": "490CD533E291CB1D3D738F67C6B795037B9F6A2271EDFBACBF19CE5702B3682B",
+      "id": "BH.oM.Test.TestStatus-BH.oM.RDF.IsSubclassOf-System.Enum",
       "type": "owl:DatatypeProperty"
     },
     {
-      "id": "986529380FE964A01264E33BCD8828CF47C242BA32B03A19800BEDCC3625EC59",
+      "id": "BH.oM.Test.UnitTests.TestData-BH.oM.RDF.HasProperty-System.Collections.ObjectModel.ReadOnlyCollection`1[System.Object] Inputs",
       "type": "owl:DatatypeProperty"
     },
     {
-      "id": "10EEFC65BC5A5C809E169CC48D8F24350BC93CC716C591F514AE700844B42608",
+      "id": "BH.oM.Test.UnitTests.TestData-BH.oM.RDF.HasProperty-System.Collections.ObjectModel.ReadOnlyCollection`1[System.Object] Outputs",
       "type": "owl:DatatypeProperty"
     },
     {
-      "id": "48AA9F37BAD8BDC89C95C1D69CA92CA8F8B08CD9F4C015AD96CA1E8BF97FB00D",
+      "id": "BH.oM.Test.UnitTests.TestData-BH.oM.RDF.IsA-BH.oM.Base.IBHoMObject",
       "type": "owl:ObjectProperty"
     },
     {
-      "id": "6883A92C81265262F90F9E48C0696BB3516486EF0B44DB17E77034DA428F5849",
+      "id": "BH.oM.Test.UnitTests.TestData-BH.oM.RDF.IsA-BH.oM.Base.IObject",
       "type": "owl:ObjectProperty"
     },
     {
-      "id": "684E1D6D284FC29A237F8A170340420087AA56F9B16FB0D0CFE752C108890195",
+      "id": "BH.oM.Test.UnitTests.TestData-BH.oM.RDF.IsA-BH.oM.Base.IImmutable",
       "type": "owl:ObjectProperty"
     },
     {
-      "id": "1B0968EC359C993E167F1AACE2725A324598C3E2AA8BFA4680B0208C982CC127",
+      "id": "BH.oM.Test.UnitTests.TestData-BH.oM.RDF.IsSubclassOf-BH.oM.Base.BHoMObject",
       "type": "owl:ObjectProperty"
     },
     {
-      "id": "EDA348DA110E1FBA6BCFBEF2D2ADE90A645F7ACA4CB77A150EA3C8F1BCB3D7D8",
+      "id": "BH.oM.Test.UnitTests.UnitTest-BH.oM.RDF.HasProperty-System.Reflection.MethodBase Method",
       "type": "owl:DatatypeProperty"
     },
     {
-      "id": "ACEF6976208DC91716C013074AAD5FC1BD63292E10F7B1CE96F3AAA6F2C3C6A6",
+      "id": "BH.oM.Test.UnitTests.UnitTest-BH.oM.RDF.HasProperty-System.Collections.Generic.List`1[BH.oM.Test.UnitTests.TestData] Data",
       "type": "owl:ObjectProperty"
     },
     {
-      "id": "9DF5DCADD2C6C31323A7DF39D2979C14B7EA576BF30C05E81C9ABCEA65B8F585",
+      "id": "BH.oM.Test.UnitTests.UnitTest-BH.oM.RDF.IsA-BH.oM.Base.IBHoMObject",
       "type": "owl:ObjectProperty"
     },
     {
-      "id": "015476F9AE6EBA8CA7EC2204BF7F00152750C99CD7D700A87701008371848212",
+      "id": "BH.oM.Test.UnitTests.UnitTest-BH.oM.RDF.IsA-BH.oM.Base.IObject",
       "type": "owl:ObjectProperty"
     },
     {
-      "id": "1BD099B8C1450B8099BC44EF72EF408E60F447FE2333EC7DFF7FB4FAE56B16E5",
+      "id": "BH.oM.Test.UnitTests.UnitTest-BH.oM.RDF.IsSubclassOf-BH.oM.Base.BHoMObject",
       "type": "owl:ObjectProperty"
     },
     {
-      "id": "528B6D9AC1177EE48074DFF009E57271CEE9EA757D08EC408EC98EA856092060",
+      "id": "BH.oM.Test.Results.InputOutputComparisonDiffingType-BH.oM.RDF.IsA-System.IComparable",
       "type": "owl:DatatypeProperty"
     },
     {
-      "id": "578A72F5D234F9D5280DBEA3A2360EDA34EA3372CBB885ACF882891D9139A888",
+      "id": "BH.oM.Test.Results.InputOutputComparisonDiffingType-BH.oM.RDF.IsA-System.IFormattable",
       "type": "owl:DatatypeProperty"
     },
     {
-      "id": "EC97420E2F8C691465FD373BC8AEB1A51873076533A7906662C5C207EEE86AC6",
+      "id": "BH.oM.Test.Results.InputOutputComparisonDiffingType-BH.oM.RDF.IsA-System.IConvertible",
       "type": "owl:DatatypeProperty"
     },
     {
-      "id": "C63942F73F7465BB8F2927FCA7C39E5D63B344DBD32781F427115F7C8DA9AA18",
+      "id": "BH.oM.Test.Results.InputOutputComparisonDiffingType-BH.oM.RDF.IsSubclassOf-System.Enum",
       "type": "owl:DatatypeProperty"
     },
     {
-      "id": "FEE1A5EC286C10BEF87DF37DFF64D7FA48602104DFB310FC71379372F7C41291",
+      "id": "BH.oM.Test.Results.InputOutputComparisonType-BH.oM.RDF.IsA-System.IComparable",
       "type": "owl:DatatypeProperty"
     },
     {
-      "id": "B29316FD6896E66E73D166893E279C3BCC5DA10DA6623E9AC2380B50D19E3F34",
+      "id": "BH.oM.Test.Results.InputOutputComparisonType-BH.oM.RDF.IsA-System.IFormattable",
       "type": "owl:DatatypeProperty"
     },
     {
-      "id": "19FF9C374AF08AF8DF12AAA10ACFF4A07E7111099E27E85A817F2B8BB3FD3540",
+      "id": "BH.oM.Test.Results.InputOutputComparisonType-BH.oM.RDF.IsA-System.IConvertible",
       "type": "owl:DatatypeProperty"
     },
     {
-      "id": "3951D936736E97E97C2976FF410F13CA983F7FFA38095311D6DF1004D4FD4EFE",
+      "id": "BH.oM.Test.Results.InputOutputComparisonType-BH.oM.RDF.IsSubclassOf-System.Enum",
       "type": "owl:DatatypeProperty"
     },
     {
-      "id": "CF3EAA03E7A80228C95DB1C21A3DD0225DFAB19AF3D9BCD354AD5E866598DEC8",
+      "id": "BH.oM.Test.Results.EventMessage-BH.oM.RDF.HasProperty-System.String Message",
       "type": "owl:DatatypeProperty"
     },
     {
-      "id": "1792D7D6671C31246373FB444D9BDC9DE3393BCB1AFB9D33ADA07BDE994092E0",
+      "id": "BH.oM.Test.Results.EventMessage.Status-IsA-BH.oM.Test.TestStatus",
       "type": "owl:ObjectProperty"
     },
     {
-      "id": "1126F313B5E1CE43B63603ECC41DE8AB40F57E173D68DC5986F20F067444078B",
-      "type": "owl:DatatypeProperty"
-    },
-    {
-      "id": "6806B04DA398BA7FB1C1454CABB5CF35E15E783EC8B38E6A65240F249BC5674D",
-      "type": "owl:DatatypeProperty"
-    },
-    {
-      "id": "0FD7AC076FC142D33538CEFAEB653912BB884B150A976526459A3F641D29AC08",
+      "id": "BH.oM.Test.Results.EventMessage-BH.oM.RDF.HasProperty-BH.oM.Test.TestStatus Status",
       "type": "owl:ObjectProperty"
     },
     {
-      "id": "603D7DD58E46A3550F0FC158BAEC7D3A989B6F28427EDB375F197EC183290344",
+      "id": "BH.oM.Test.Results.EventMessage-BH.oM.RDF.HasProperty-System.DateTime UTCTime",
+      "type": "owl:DatatypeProperty"
+    },
+    {
+      "id": "BH.oM.Test.Results.EventMessage-BH.oM.RDF.HasProperty-System.String StackTrace",
+      "type": "owl:DatatypeProperty"
+    },
+    {
+      "id": "BH.oM.Test.Results.EventMessage-BH.oM.RDF.IsA-BH.oM.Test.ITestInformation",
       "type": "owl:ObjectProperty"
     },
     {
-      "id": "AC600A4A24929A6CC4AE024A4AE00BF1CC651A5792F485F221342E469148992D",
-      "type": "owl:DatatypeProperty"
-    },
-    {
-      "id": "AC91AB383EEDD639FDD4E9D08409F9ACB13E1E6B6AC22AC03AC9BCA145E65521",
-      "type": "owl:DatatypeProperty"
-    },
-    {
-      "id": "E0967284EAAFA40543139FC2FF5276C85E768B9C816E3340F20CF932E3310D3B",
-      "type": "owl:DatatypeProperty"
-    },
-    {
-      "id": "4151C4DD2D4EB29C7E592F22AE6BD30FBE0AEE1FEAD94FC338E97E53BBFCCD85",
-      "type": "owl:DatatypeProperty"
-    },
-    {
-      "id": "3D264DAFBDF11A850B246AE3EF21276AEDC5BEC9D7A67D72B7B43180593F9F8A",
+      "id": "BH.oM.Test.Results.EventMessage-BH.oM.RDF.IsA-BH.oM.Base.IObject",
       "type": "owl:ObjectProperty"
     },
     {
-      "id": "14E77D93099AE4797D41A412F8A72D48F2010DB6FA8179FE066B40F0332892B8",
-      "type": "owl:ObjectProperty"
-    },
-    {
-      "id": "6C42764415C03C024725F130278205D8CDA04A0BB6579AD2D146A3EA500A7A8A",
+      "id": "BH.oM.Test.Results.EventMessage-BH.oM.RDF.IsSubclassOf-System.Object",
       "type": "owl:DatatypeProperty"
     },
     {
-      "id": "27C18D3322F72F5CDF0D37A8D95E37C88A81BFE0597BE481781EF95808380B38",
-      "type": "owl:ObjectProperty"
-    },
-    {
-      "id": "BF27C1026C7012F763D9C32EF0CD832EC9DD89857F5807A9BCFA4DA5A292C1D6",
-      "type": "owl:ObjectProperty"
-    },
-    {
-      "id": "F9A7EF8A68BB98E3A907DC731A7F7FB3FCC76F9C14A695F1AF63505C82BA77C4",
-      "type": "owl:ObjectProperty"
-    },
-    {
-      "id": "275894A4EFE58214A2B3B6F25727DD92FFB38275F9CDC876B3A5C59E928FBFF0",
-      "type": "owl:ObjectProperty"
-    },
-    {
-      "id": "FC289D43CE42245877C1DB1A802F31878B704D2BF5CDCFF7B6563D15E85F7D24",
-      "type": "owl:ObjectProperty"
-    },
-    {
-      "id": "FB0A45E86C32A6DD2F268A75F2D671715BB48A65B1A2CBB22D17A4B7B21BAA30",
-      "type": "owl:ObjectProperty"
-    },
-    {
-      "id": "045353F8960CF1A60A346CAE19102CD8494A74DD07017D5AD1CCD8F3F77798FD",
+      "id": "BH.oM.Test.Results.InputOutputComparison-BH.oM.RDF.HasProperty-System.IComparable ObjectId",
       "type": "owl:DatatypeProperty"
     },
     {
-      "id": "4617FA4373788F3D794170E56DE8C4285C696FD5C52EA48F02610B03E953E496",
+      "id": "BH.oM.Test.Results.InputOutputComparison-BH.oM.RDF.HasProperty-System.IComparable ResultCase",
       "type": "owl:DatatypeProperty"
     },
     {
-      "id": "D65768D332534684C3C463FFD0C6C7234C88E0685EE3AB82E2127EEF563264AF",
+      "id": "BH.oM.Test.Results.InputOutputComparison-BH.oM.RDF.HasProperty-System.Type ObjectType",
       "type": "owl:DatatypeProperty"
     },
     {
-      "id": "3B212148D2D9B736012B484938FA54D325E94C98EE52160E4453C75E50258CFD",
-      "type": "owl:DatatypeProperty"
-    },
-    {
-      "id": "B81FFA3FBA913350E93E9FF76752B340FD5C3EADE9BCC0324EBFC25E3C5148B6",
-      "type": "owl:DatatypeProperty"
-    },
-    {
-      "id": "B8155555C87D001CF3074A6098C2C7109BDD54907D625D18F64D05A88909346D",
-      "type": "owl:DatatypeProperty"
-    },
-    {
-      "id": "01BA328CBD9482E3CA6BEBB1154CE118ED59D248499B29635ED378EF4C6857C1",
+      "id": "BH.oM.Test.Results.InputOutputComparison.ResultType-IsA-BH.oM.Test.Results.InputOutputComparisonType",
       "type": "owl:ObjectProperty"
     },
     {
-      "id": "0DFE72D8B3C57C3334DE72A23247BDF442772694DF90D6B9740CB75EDAACE42F",
-      "type": "owl:DatatypeProperty"
-    },
-    {
-      "id": "2EBD1067BFFFF3C9E0C72C30FB3649B8BDE33DAD694D9A7D04CE43B52B82289D",
-      "type": "owl:DatatypeProperty"
-    },
-    {
-      "id": "4B656E3937475BF0DC53A431E1F0DFCDB8258DAB0113C9D8B32DFF85B9214EA1",
-      "type": "owl:DatatypeProperty"
-    },
-    {
-      "id": "68E4C506F1BE99A480B95B376FB1B48083FDD40CB282D0DF783EF2A87E4640C6",
+      "id": "BH.oM.Test.Results.InputOutputComparison-BH.oM.RDF.HasProperty-BH.oM.Test.Results.InputOutputComparisonType ResultType",
       "type": "owl:ObjectProperty"
     },
     {
-      "id": "263B1C3AE1346A389847AC1D8680B0426FEF74ECCACA0633504A3C035CB8FC44",
+      "id": "BH.oM.Test.Results.InputOutputComparison-BH.oM.RDF.HasProperty-System.Collections.ObjectModel.ReadOnlyCollection`1[BH.oM.Test.Results.InputOutputDifference] Results",
       "type": "owl:ObjectProperty"
     },
     {
-      "id": "EC1ACE5E59259F0E2C47941C21EB96BBE155D0F8CD013CBF9232E93156537F3E",
-      "type": "owl:ObjectProperty"
-    },
-    {
-      "id": "13DC0E0CE946DF677E1CC09DB4CC1CA66D4CD8B8C47A876EA9DA992C1DE7A9EF",
-      "type": "owl:ObjectProperty"
-    },
-    {
-      "id": "E7587AC4411F22F7F6F1B261B3B42A80BBB5B142CACD051DFC4E97634176FB3E",
-      "type": "owl:ObjectProperty"
-    },
-    {
-      "id": "F22B3B8C544582E81ABEF8B5FB60159569FBF4656650492E3AB07A8A8DA4A56B",
-      "type": "owl:ObjectProperty"
-    },
-    {
-      "id": "AD6AC07A8C3E72F48B8D3F25866EE23449FF5FF2567B75BC8673332C79D7750D",
-      "type": "owl:ObjectProperty"
-    },
-    {
-      "id": "218244EA22D07687F8D98CCD0B56844FABA36A765F1AF674BE6B1623724B5B42",
+      "id": "BH.oM.Test.Results.InputOutputComparison-BH.oM.RDF.HasProperty-Double TimeStep",
       "type": "owl:DatatypeProperty"
     },
     {
-      "id": "C32FF7262ADF5F83E2F6335817C567F2C0C62CB63CC33AEDB7678FF23B2D401F",
-      "type": "owl:DatatypeProperty"
-    },
-    {
-      "id": "0781984908FDA5E8F2DAF1A4C3F58BE920474A4680D8869A93D01692017F5ACD",
-      "type": "owl:DatatypeProperty"
-    },
-    {
-      "id": "77ACDB60041D27677EB679ED13A9397C8195BB53783B49D67C84A8A5D7902A3C",
-      "type": "owl:DatatypeProperty"
-    },
-    {
-      "id": "6EFC682B01888AA00E0E2E3ED51BD57D4D1F7C066860BFC2D2167015A49677AE",
-      "type": "owl:DatatypeProperty"
-    },
-    {
-      "id": "7D178D3B54A15B4BADF58BCDEA602494C39FE5C32172EE7C9A8193CC886A3237",
+      "id": "BH.oM.Test.Results.InputOutputComparison-BH.oM.RDF.IsA-BH.oM.Analytical.Results.IResultCollection`1[BH.oM.Test.Results.InputOutputDifference]",
       "type": "owl:ObjectProperty"
     },
     {
-      "id": "D9EBA7B6FA246F621C08B21A6B31F843BC7A9F3A3EC7696F5682A7F525B7D38A",
-      "type": "owl:DatatypeProperty"
-    },
-    {
-      "id": "2DC7DA3B0FCE79A22E963F6623A95E520919B0022284835C39AD6725F5474ADF",
-      "type": "owl:DatatypeProperty"
-    },
-    {
-      "id": "81F4121873008BDBD414A47940D660F4F945B165B49B20E4437378E96BB54A2E",
-      "type": "owl:DatatypeProperty"
-    },
-    {
-      "id": "A404FD0A6FE565023867530BF97997FD8F9B80B2512D7D124251CD269E7068F0",
-      "type": "owl:DatatypeProperty"
-    },
-    {
-      "id": "60E7A44F9192451ECDD7A05831A1A5CB083A748EBA4098841201D0DC0D04D133",
-      "type": "owl:DatatypeProperty"
-    },
-    {
-      "id": "BB5C77645A6FA1C12D9F3DB3D0CA67F05F97DE8C4F03D62F320A6D17BCF92B4A",
-      "type": "owl:DatatypeProperty"
-    },
-    {
-      "id": "63FB1F8468E50A37932815131141854B7880938190D2B0BF0FF70C90D2329952",
+      "id": "BH.oM.Test.Results.InputOutputComparison-BH.oM.RDF.IsA-BH.oM.Analytical.Results.IResultCollection",
       "type": "owl:ObjectProperty"
     },
     {
-      "id": "802B7E12F55DD610C6A70A82F92F16DD74BD4A83E48C5312FEF17E168DFA100A",
+      "id": "BH.oM.Test.Results.InputOutputComparison-BH.oM.RDF.IsA-BH.oM.Base.IObject",
       "type": "owl:ObjectProperty"
     },
     {
-      "id": "168E32E48DB440307690AB1BBD9F327DDE56E2FBC510F005BDDB31FD66A750ED",
+      "id": "BH.oM.Test.Results.InputOutputComparison-BH.oM.RDF.IsA-BH.oM.Base.IImmutable",
       "type": "owl:ObjectProperty"
     },
     {
-      "id": "1FDB7CB926D1FFF1A2952690D10A5E1DB5FFC520237752DCBC52EDB0EFE1C0B1",
+      "id": "BH.oM.Test.Results.InputOutputComparison-BH.oM.RDF.IsA-BH.oM.Analytical.Results.IResult",
       "type": "owl:ObjectProperty"
     },
     {
-      "id": "04FCB2C76E258C4BE8DC753777738CB40B7E6650695EAABFB9F7C38466859643",
+      "id": "BH.oM.Test.Results.InputOutputComparison-BH.oM.RDF.IsA-System.IComparable`1[BH.oM.Analytical.Results.IResult]",
       "type": "owl:ObjectProperty"
     },
     {
-      "id": "E4A41D875AC470D6AD69E815B4ACC9C446D0484CC11CDDE1457BE4930FA4D875",
-      "type": "owl:ObjectProperty"
-    },
-    {
-      "id": "AA6DFADD624F5DD918B72824AE76D37B77FFA777ABC9C6A346FC8F48C9450828",
-      "type": "owl:ObjectProperty"
-    },
-    {
-      "id": "2AECF67D7D41FB167E94908A3FE7FD9A98E4C01D39BE71C1A07F710710F28CCC",
+      "id": "BH.oM.Test.Results.InputOutputComparison-BH.oM.RDF.IsSubclassOf-System.Object",
       "type": "owl:DatatypeProperty"
     },
     {
-      "id": "4A00F068615A04C2CEF2BB2883DA1A01FB9DA0CB9821DF785CE1D1B0ADC84A21",
+      "id": "BH.oM.Test.Results.InputOutputComparisonDiffing-BH.oM.RDF.HasProperty-System.IComparable ObjectId",
       "type": "owl:DatatypeProperty"
     },
     {
-      "id": "3B9F4BF521E9C2941A6C3DC1954444E2C498FFD720C5719BFE1ACEFCFB87E4BC",
+      "id": "BH.oM.Test.Results.InputOutputComparisonDiffing-BH.oM.RDF.HasProperty-System.IComparable ResultCase",
       "type": "owl:DatatypeProperty"
     },
     {
-      "id": "F3F61C1CC398B27F30EE0B58C08F3EEF882800DC3A0071579DF7DD092CB45494",
+      "id": "BH.oM.Test.Results.InputOutputComparisonDiffing-BH.oM.RDF.HasProperty-System.String PropertyId",
       "type": "owl:DatatypeProperty"
     },
     {
-      "id": "58126B7A4C8C5E0ED29DBCFB45FD6DEC98955DE7F43DD275B0807EE3D69DBCA2",
+      "id": "BH.oM.Test.Results.InputOutputComparisonDiffing-BH.oM.RDF.HasProperty-System.Type ObjectType",
       "type": "owl:DatatypeProperty"
     },
     {
-      "id": "3AD8980331ACB1CECFF531291F78804A535EBAABAC7C0C1B236590D938818E25",
+      "id": "BH.oM.Test.Results.InputOutputComparisonDiffing-BH.oM.RDF.HasProperty-Double TimeStep",
       "type": "owl:DatatypeProperty"
     },
     {
-      "id": "8F1CE83B4E6E9B329E7CF4E75F652F9CFFCBEFEE337CD1B2B5350C2F382B4C9F",
-      "type": "owl:DatatypeProperty"
-    },
-    {
-      "id": "B0C716D7C2955320D26535B2153F89A27F6894E1DFDE0682F3823E210CDA8E6B",
-      "type": "owl:DatatypeProperty"
-    },
-    {
-      "id": "D3CE0D33986E95E09F116535FC4D5180ED935F0CA8DA20A3C6080DCB1CF2F234",
+      "id": "BH.oM.Test.Results.InputOutputComparisonDiffing.Type-IsA-BH.oM.Test.Results.InputOutputComparisonDiffingType",
       "type": "owl:ObjectProperty"
     },
     {
-      "id": "EE8844C6B3D6F3581EAAEF850007EF905A7675F2494AB92BB837DB2277528C9E",
+      "id": "BH.oM.Test.Results.InputOutputComparisonDiffing-BH.oM.RDF.HasProperty-BH.oM.Test.Results.InputOutputComparisonDiffingType Type",
       "type": "owl:ObjectProperty"
     },
     {
-      "id": "A305C102E06D7223C8689068F8C9B4F618B0F871570649B13B930CA079A4129C",
-      "type": "owl:ObjectProperty"
-    },
-    {
-      "id": "A9BADBF33EFC51A795A81043C7C08E3000203B09F6786E44CB48E3790280379D",
-      "type": "owl:ObjectProperty"
-    },
-    {
-      "id": "D8E77BD7EEC03F3C6BDCFF184BB6DAED4476803DD598ED43838A3A1B376ABB61",
-      "type": "owl:ObjectProperty"
-    },
-    {
-      "id": "CD152608C542048E8CA45DB80202696EB0AB5BEEBADE08DB5DED2AD42C8DC58E",
-      "type": "owl:ObjectProperty"
-    },
-    {
-      "id": "E9144252E9D78994FBD8AB5F4A9EC3982FC166985CF4BEC08F78931250414CD2",
-      "type": "owl:ObjectProperty"
-    },
-    {
-      "id": "F75D01E27B31A68776B06320981490FD98AAD71E37E9B68793C16060550F20C3",
+      "id": "BH.oM.Test.Results.InputOutputComparisonDiffing-BH.oM.RDF.HasProperty-System.Object InputValue",
       "type": "owl:DatatypeProperty"
     },
     {
-      "id": "4910BE0218EDA6282E90438D2FBF3A7011C6F240F4AE6B0A838D2A732D68D237",
+      "id": "BH.oM.Test.Results.InputOutputComparisonDiffing-BH.oM.RDF.HasProperty-System.Object NewValue",
       "type": "owl:DatatypeProperty"
     },
     {
-      "id": "B2565FD389AEDF7CB01C981261CCA1A73E0446448D53806E0B7C1E6A25B39815",
-      "type": "owl:ObjectProperty"
-    },
-    {
-      "id": "1084A277BB92D1529BB468B3445A1C06AB96E185B998B235607BE9654155AF65",
-      "type": "owl:ObjectProperty"
-    },
-    {
-      "id": "8432B9E8F6D350E942407D230A5B264FA7CD9CEF585429A25D0027D19F6E5FF7",
+      "id": "BH.oM.Test.Results.InputOutputComparisonDiffing-BH.oM.RDF.HasProperty-System.Object ReferenceValue",
       "type": "owl:DatatypeProperty"
     },
     {
-      "id": "1237E17FB9E892AAE5BADEFA9BDABA0D8740E07B63E77E5A601E31702DFE42E1",
-      "type": "owl:DatatypeProperty"
-    },
-    {
-      "id": "78DF96C591A9D925BFB4D4D55ED110243BC2885A8EE721B34E9CF820A86CD987",
-      "type": "owl:DatatypeProperty"
-    },
-    {
-      "id": "0FE2D325BA3447C0996D98C06E4839A67BFEFBC45A6AB53EBD6E8884692BBB1D",
+      "id": "BH.oM.Test.Results.InputOutputComparisonDiffing-BH.oM.RDF.IsA-BH.oM.Analytical.Results.IObjectIdResult",
       "type": "owl:ObjectProperty"
     },
     {
-      "id": "67BAAFEA990A1A0B3657E00D00F0299F17C1B7CFB4822A12CB6273C838B727D8",
+      "id": "BH.oM.Test.Results.InputOutputComparisonDiffing-BH.oM.RDF.IsA-BH.oM.Analytical.Results.IResult",
       "type": "owl:ObjectProperty"
     },
     {
-      "id": "72CA59412F771FB823BABBA2B339A08984FA6F7866D6283A064EFF7C9FF49C5F",
+      "id": "BH.oM.Test.Results.InputOutputComparisonDiffing-BH.oM.RDF.IsA-BH.oM.Base.IObject",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "BH.oM.Test.Results.InputOutputComparisonDiffing-BH.oM.RDF.IsA-System.IComparable`1[BH.oM.Analytical.Results.IResult]",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "BH.oM.Test.Results.InputOutputComparisonDiffing-BH.oM.RDF.IsA-BH.oM.Base.IImmutable",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "BH.oM.Test.Results.InputOutputComparisonDiffing-BH.oM.RDF.IsA-BH.oM.Analytical.Results.ICasedResult",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "BH.oM.Test.Results.InputOutputComparisonDiffing-BH.oM.RDF.IsA-BH.oM.Analytical.Results.ITimeStepResult",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "BH.oM.Test.Results.InputOutputComparisonDiffing-BH.oM.RDF.IsSubclassOf-System.Object",
+      "type": "owl:DatatypeProperty"
+    },
+    {
+      "id": "BH.oM.Test.Results.InputOutputComparisonSummary-BH.oM.RDF.HasProperty-System.IComparable ObjectId",
+      "type": "owl:DatatypeProperty"
+    },
+    {
+      "id": "BH.oM.Test.Results.InputOutputComparisonSummary-BH.oM.RDF.HasProperty-System.IComparable ResultCase",
+      "type": "owl:DatatypeProperty"
+    },
+    {
+      "id": "BH.oM.Test.Results.InputOutputComparisonSummary-BH.oM.RDF.HasProperty-System.Type ObjectType",
+      "type": "owl:DatatypeProperty"
+    },
+    {
+      "id": "BH.oM.Test.Results.InputOutputComparisonSummary-BH.oM.RDF.HasProperty-Double TimeStep",
+      "type": "owl:DatatypeProperty"
+    },
+    {
+      "id": "BH.oM.Test.Results.InputOutputComparisonSummary.ResultType-IsA-BH.oM.Test.Results.InputOutputComparisonType",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "BH.oM.Test.Results.InputOutputComparisonSummary-BH.oM.RDF.HasProperty-BH.oM.Test.Results.InputOutputComparisonType ResultType",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "BH.oM.Test.Results.InputOutputComparisonSummary-BH.oM.RDF.HasProperty-Int32 Occurrences",
+      "type": "owl:DatatypeProperty"
+    },
+    {
+      "id": "BH.oM.Test.Results.InputOutputComparisonSummary-BH.oM.RDF.HasProperty-System.String PropertyId",
+      "type": "owl:DatatypeProperty"
+    },
+    {
+      "id": "BH.oM.Test.Results.InputOutputComparisonSummary-BH.oM.RDF.HasProperty-Double AverageDifference",
+      "type": "owl:DatatypeProperty"
+    },
+    {
+      "id": "BH.oM.Test.Results.InputOutputComparisonSummary-BH.oM.RDF.HasProperty-Double MaximumDifference",
+      "type": "owl:DatatypeProperty"
+    },
+    {
+      "id": "BH.oM.Test.Results.InputOutputComparisonSummary-BH.oM.RDF.HasProperty-Double MaximumDifferenceInputItem",
+      "type": "owl:DatatypeProperty"
+    },
+    {
+      "id": "BH.oM.Test.Results.InputOutputComparisonSummary-BH.oM.RDF.HasProperty-Double MaximumDifferenceReturnedItem",
+      "type": "owl:DatatypeProperty"
+    },
+    {
+      "id": "BH.oM.Test.Results.InputOutputComparisonSummary-BH.oM.RDF.IsA-BH.oM.Analytical.Results.IObjectIdResult",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "BH.oM.Test.Results.InputOutputComparisonSummary-BH.oM.RDF.IsA-BH.oM.Analytical.Results.IResult",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "BH.oM.Test.Results.InputOutputComparisonSummary-BH.oM.RDF.IsA-BH.oM.Base.IObject",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "BH.oM.Test.Results.InputOutputComparisonSummary-BH.oM.RDF.IsA-System.IComparable`1[BH.oM.Analytical.Results.IResult]",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "BH.oM.Test.Results.InputOutputComparisonSummary-BH.oM.RDF.IsA-BH.oM.Base.IImmutable",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "BH.oM.Test.Results.InputOutputComparisonSummary-BH.oM.RDF.IsA-BH.oM.Analytical.Results.ICasedResult",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "BH.oM.Test.Results.InputOutputComparisonSummary-BH.oM.RDF.IsA-BH.oM.Analytical.Results.ITimeStepResult",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "BH.oM.Test.Results.InputOutputComparisonSummary-BH.oM.RDF.IsSubclassOf-System.Object",
+      "type": "owl:DatatypeProperty"
+    },
+    {
+      "id": "BH.oM.Test.Results.InputOutputDifference-BH.oM.RDF.HasProperty-System.IComparable ObjectId",
+      "type": "owl:DatatypeProperty"
+    },
+    {
+      "id": "BH.oM.Test.Results.InputOutputDifference-BH.oM.RDF.HasProperty-System.IComparable ResultCase",
+      "type": "owl:DatatypeProperty"
+    },
+    {
+      "id": "BH.oM.Test.Results.InputOutputDifference-BH.oM.RDF.HasProperty-System.Type ObjectType",
+      "type": "owl:DatatypeProperty"
+    },
+    {
+      "id": "BH.oM.Test.Results.InputOutputDifference-BH.oM.RDF.HasProperty-System.String PropertyId",
+      "type": "owl:DatatypeProperty"
+    },
+    {
+      "id": "BH.oM.Test.Results.InputOutputDifference-BH.oM.RDF.HasProperty-System.String InputItem",
+      "type": "owl:DatatypeProperty"
+    },
+    {
+      "id": "BH.oM.Test.Results.InputOutputDifference-BH.oM.RDF.HasProperty-System.String ReturnedItem",
+      "type": "owl:DatatypeProperty"
+    },
+    {
+      "id": "BH.oM.Test.Results.InputOutputDifference-BH.oM.RDF.HasProperty-Double TimeStep",
+      "type": "owl:DatatypeProperty"
+    },
+    {
+      "id": "BH.oM.Test.Results.InputOutputDifference-BH.oM.RDF.IsA-BH.oM.Analytical.Results.IObjectIdResult",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "BH.oM.Test.Results.InputOutputDifference-BH.oM.RDF.IsA-BH.oM.Analytical.Results.IResult",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "BH.oM.Test.Results.InputOutputDifference-BH.oM.RDF.IsA-BH.oM.Base.IObject",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "BH.oM.Test.Results.InputOutputDifference-BH.oM.RDF.IsA-System.IComparable`1[BH.oM.Analytical.Results.IResult]",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "BH.oM.Test.Results.InputOutputDifference-BH.oM.RDF.IsA-BH.oM.Base.IImmutable",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "BH.oM.Test.Results.InputOutputDifference-BH.oM.RDF.IsA-BH.oM.Analytical.Results.ICasedResult",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "BH.oM.Test.Results.InputOutputDifference-BH.oM.RDF.IsA-BH.oM.Analytical.Results.ITimeStepResult",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "BH.oM.Test.Results.InputOutputDifference-BH.oM.RDF.IsSubclassOf-System.Object",
+      "type": "owl:DatatypeProperty"
+    },
+    {
+      "id": "BH.oM.Test.Results.TestResult-BH.oM.RDF.HasProperty-System.String Description",
+      "type": "owl:DatatypeProperty"
+    },
+    {
+      "id": "BH.oM.Test.Results.TestResult.Status-IsA-BH.oM.Test.TestStatus",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "BH.oM.Test.Results.TestResult-BH.oM.RDF.HasProperty-BH.oM.Test.TestStatus Status",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "BH.oM.Test.Results.TestResult-BH.oM.RDF.HasProperty-System.Collections.Generic.List`1[BH.oM.Test.ITestInformation] Information",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "BH.oM.Test.Results.TestResult-BH.oM.RDF.HasProperty-System.String Message",
+      "type": "owl:DatatypeProperty"
+    },
+    {
+      "id": "BH.oM.Test.Results.TestResult-BH.oM.RDF.HasProperty-System.DateTime UTCTime",
+      "type": "owl:DatatypeProperty"
+    },
+    {
+      "id": "BH.oM.Test.Results.TestResult-BH.oM.RDF.HasProperty-System.String ID",
+      "type": "owl:DatatypeProperty"
+    },
+    {
+      "id": "BH.oM.Test.Results.TestResult-BH.oM.RDF.IsA-BH.oM.Test.ITestInformation",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "BH.oM.Test.Results.TestResult-BH.oM.RDF.IsA-BH.oM.Base.IObject",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "BH.oM.Test.Results.TestResult-BH.oM.RDF.IsSubclassOf-System.Object",
       "type": "owl:DatatypeProperty"
     }
   ],
   "propertyAttribute": [
     {
-      "id": "8F69048D04584E7BB8B014B9A29FB27356DED1E7999F0133846D96F6C8267B5D",
-      "iri": "http://visualdataweb.org/newOntology/8F69048D04584E7BB8B014B9A29FB27356DED1E7999F0133846D96F6C8267B5D",
+      "id": "BH.oM.Test.ITestInformation-BH.oM.RDF.RequiresProperty-System.String Message",
+      "iri": "http://visualdataweb.org/newOntology/BH.oM.Test.ITestInformation-BH.oM.RDF.RequiresProperty-System.String Message",
       "label": "RequiresProperty",
       "attributes": []
     },
     {
-      "id": "BA560D7CC5272354C2685413ED97090298C2DA3D5B91511C33377B11C9E812D0",
-      "iri": "http://visualdataweb.org/newOntology/BA560D7CC5272354C2685413ED97090298C2DA3D5B91511C33377B11C9E812D0",
+      "id": "BH.oM.Test.ITestInformation-BH.oM.RDF.RequiresProperty-BH.oM.Test.TestStatus Status",
+      "iri": "http://visualdataweb.org/newOntology/BH.oM.Test.ITestInformation-BH.oM.RDF.RequiresProperty-BH.oM.Test.TestStatus Status",
       "label": "RequiresProperty",
       "attributes": "object",
       "domain": "BH.oM.Test.ITestInformation",
       "range": "BH.oM.Test.TestStatus"
     },
     {
-      "id": "52E323A2BDBAB917DF66481C3A36C6256A3CC37D24AF0DA2994DA3B725DDC929",
-      "iri": "http://visualdataweb.org/newOntology/52E323A2BDBAB917DF66481C3A36C6256A3CC37D24AF0DA2994DA3B725DDC929",
+      "id": "BH.oM.Test.ITestInformation-BH.oM.RDF.RequiresProperty-System.DateTime UTCTime",
+      "iri": "http://visualdataweb.org/newOntology/BH.oM.Test.ITestInformation-BH.oM.RDF.RequiresProperty-System.DateTime UTCTime",
       "label": "RequiresProperty",
       "attributes": []
     },
     {
-      "id": "E3F12A43ABB9422B9E0CB953314272CC1423DBD28803B1F0C111BEE336010253",
-      "iri": "http://visualdataweb.org/newOntology/E3F12A43ABB9422B9E0CB953314272CC1423DBD28803B1F0C111BEE336010253",
+      "id": "BH.oM.Test.ITestInformation-BH.oM.RDF.IsA-BH.oM.Base.IObject",
+      "iri": "http://visualdataweb.org/newOntology/BH.oM.Test.ITestInformation-BH.oM.RDF.IsA-BH.oM.Base.IObject",
       "label": "IsA",
       "attributes": "object",
       "domain": "BH.oM.Test.ITestInformation",
       "range": "BH.oM.Base.IObject"
     },
     {
-      "id": "84E7FC71E9EE8B1AD3FDE4AB2AE65581A14444AB18D69E788C16BAA8C8DB61E2",
-      "iri": "http://visualdataweb.org/newOntology/84E7FC71E9EE8B1AD3FDE4AB2AE65581A14444AB18D69E788C16BAA8C8DB61E2",
+      "id": "BH.oM.Test.TestStatus-BH.oM.RDF.IsA-System.IComparable",
+      "iri": "http://visualdataweb.org/newOntology/BH.oM.Test.TestStatus-BH.oM.RDF.IsA-System.IComparable",
       "label": "IsA",
       "attributes": []
     },
     {
-      "id": "438B3100F855CBA9D364DBF9566A2FCAAE78A50440D25DC97C0141B7A4FCFAC1",
-      "iri": "http://visualdataweb.org/newOntology/438B3100F855CBA9D364DBF9566A2FCAAE78A50440D25DC97C0141B7A4FCFAC1",
+      "id": "BH.oM.Test.TestStatus-BH.oM.RDF.IsA-System.IFormattable",
+      "iri": "http://visualdataweb.org/newOntology/BH.oM.Test.TestStatus-BH.oM.RDF.IsA-System.IFormattable",
       "label": "IsA",
       "attributes": []
     },
     {
-      "id": "05D9A692277EF7551E2F489E5BB744D07EBF6247CA5DBF02ED913C051FA412D3",
-      "iri": "http://visualdataweb.org/newOntology/05D9A692277EF7551E2F489E5BB744D07EBF6247CA5DBF02ED913C051FA412D3",
+      "id": "BH.oM.Test.TestStatus-BH.oM.RDF.IsA-System.IConvertible",
+      "iri": "http://visualdataweb.org/newOntology/BH.oM.Test.TestStatus-BH.oM.RDF.IsA-System.IConvertible",
       "label": "IsA",
       "attributes": []
     },
     {
-      "id": "490CD533E291CB1D3D738F67C6B795037B9F6A2271EDFBACBF19CE5702B3682B",
-      "iri": "http://visualdataweb.org/newOntology/490CD533E291CB1D3D738F67C6B795037B9F6A2271EDFBACBF19CE5702B3682B",
+      "id": "BH.oM.Test.TestStatus-BH.oM.RDF.IsSubclassOf-System.Enum",
+      "iri": "http://visualdataweb.org/newOntology/BH.oM.Test.TestStatus-BH.oM.RDF.IsSubclassOf-System.Enum",
       "label": "IsSubclassOf",
       "attributes": []
     },
     {
-      "id": "986529380FE964A01264E33BCD8828CF47C242BA32B03A19800BEDCC3625EC59",
-      "iri": "http://visualdataweb.org/newOntology/986529380FE964A01264E33BCD8828CF47C242BA32B03A19800BEDCC3625EC59",
+      "id": "BH.oM.Test.UnitTests.TestData-BH.oM.RDF.HasProperty-System.Collections.ObjectModel.ReadOnlyCollection`1[System.Object] Inputs",
+      "iri": "http://visualdataweb.org/newOntology/BH.oM.Test.UnitTests.TestData-BH.oM.RDF.HasProperty-System.Collections.ObjectModel.ReadOnlyCollection`1[System.Object] Inputs",
       "label": "HasProperty",
       "attributes": "datatype",
       "domain": "BH.oM.Test.UnitTests.TestData",
       "range": "Inputs-986529380FE964A01264E33BCD8828CF47C242BA32B03A19800BEDCC3625EC59-TestData-HasProperty"
     },
     {
-      "id": "10EEFC65BC5A5C809E169CC48D8F24350BC93CC716C591F514AE700844B42608",
-      "iri": "http://visualdataweb.org/newOntology/10EEFC65BC5A5C809E169CC48D8F24350BC93CC716C591F514AE700844B42608",
+      "id": "BH.oM.Test.UnitTests.TestData-BH.oM.RDF.HasProperty-System.Collections.ObjectModel.ReadOnlyCollection`1[System.Object] Outputs",
+      "iri": "http://visualdataweb.org/newOntology/BH.oM.Test.UnitTests.TestData-BH.oM.RDF.HasProperty-System.Collections.ObjectModel.ReadOnlyCollection`1[System.Object] Outputs",
       "label": "HasProperty",
       "attributes": "datatype",
       "domain": "BH.oM.Test.UnitTests.TestData",
       "range": "Outputs-10EEFC65BC5A5C809E169CC48D8F24350BC93CC716C591F514AE700844B42608-TestData-HasProperty"
     },
     {
-      "id": "48AA9F37BAD8BDC89C95C1D69CA92CA8F8B08CD9F4C015AD96CA1E8BF97FB00D",
-      "iri": "http://visualdataweb.org/newOntology/48AA9F37BAD8BDC89C95C1D69CA92CA8F8B08CD9F4C015AD96CA1E8BF97FB00D",
+      "id": "BH.oM.Test.UnitTests.TestData-BH.oM.RDF.IsA-BH.oM.Base.IBHoMObject",
+      "iri": "http://visualdataweb.org/newOntology/BH.oM.Test.UnitTests.TestData-BH.oM.RDF.IsA-BH.oM.Base.IBHoMObject",
       "label": "IsA",
       "attributes": "object",
       "domain": "BH.oM.Test.UnitTests.TestData",
       "range": "BH.oM.Base.IBHoMObject"
     },
     {
-      "id": "6883A92C81265262F90F9E48C0696BB3516486EF0B44DB17E77034DA428F5849",
-      "iri": "http://visualdataweb.org/newOntology/6883A92C81265262F90F9E48C0696BB3516486EF0B44DB17E77034DA428F5849",
+      "id": "BH.oM.Test.UnitTests.TestData-BH.oM.RDF.IsA-BH.oM.Base.IObject",
+      "iri": "http://visualdataweb.org/newOntology/BH.oM.Test.UnitTests.TestData-BH.oM.RDF.IsA-BH.oM.Base.IObject",
       "label": "IsA",
       "attributes": "object",
       "domain": "BH.oM.Test.UnitTests.TestData",
       "range": "BH.oM.Base.IObject"
     },
     {
-      "id": "684E1D6D284FC29A237F8A170340420087AA56F9B16FB0D0CFE752C108890195",
-      "iri": "http://visualdataweb.org/newOntology/684E1D6D284FC29A237F8A170340420087AA56F9B16FB0D0CFE752C108890195",
+      "id": "BH.oM.Test.UnitTests.TestData-BH.oM.RDF.IsA-BH.oM.Base.IImmutable",
+      "iri": "http://visualdataweb.org/newOntology/BH.oM.Test.UnitTests.TestData-BH.oM.RDF.IsA-BH.oM.Base.IImmutable",
       "label": "IsA",
       "attributes": "object",
       "domain": "BH.oM.Test.UnitTests.TestData",
       "range": "BH.oM.Base.IImmutable"
     },
     {
-      "id": "1B0968EC359C993E167F1AACE2725A324598C3E2AA8BFA4680B0208C982CC127",
-      "iri": "http://visualdataweb.org/newOntology/1B0968EC359C993E167F1AACE2725A324598C3E2AA8BFA4680B0208C982CC127",
+      "id": "BH.oM.Test.UnitTests.TestData-BH.oM.RDF.IsSubclassOf-BH.oM.Base.BHoMObject",
+      "iri": "http://visualdataweb.org/newOntology/BH.oM.Test.UnitTests.TestData-BH.oM.RDF.IsSubclassOf-BH.oM.Base.BHoMObject",
       "label": "IsSubclassOf",
       "attributes": "object",
       "domain": "BH.oM.Test.UnitTests.TestData",
       "range": "BH.oM.Base.BHoMObject"
     },
     {
-      "id": "EDA348DA110E1FBA6BCFBEF2D2ADE90A645F7ACA4CB77A150EA3C8F1BCB3D7D8",
-      "iri": "http://visualdataweb.org/newOntology/EDA348DA110E1FBA6BCFBEF2D2ADE90A645F7ACA4CB77A150EA3C8F1BCB3D7D8",
+      "id": "BH.oM.Test.UnitTests.UnitTest-BH.oM.RDF.HasProperty-System.Reflection.MethodBase Method",
+      "iri": "http://visualdataweb.org/newOntology/BH.oM.Test.UnitTests.UnitTest-BH.oM.RDF.HasProperty-System.Reflection.MethodBase Method",
       "label": "HasProperty",
       "attributes": "datatype",
       "domain": "BH.oM.Test.UnitTests.UnitTest",
       "range": "Method-EDA348DA110E1FBA6BCFBEF2D2ADE90A645F7ACA4CB77A150EA3C8F1BCB3D7D8-UnitTest-HasProperty"
     },
     {
-      "id": "ACEF6976208DC91716C013074AAD5FC1BD63292E10F7B1CE96F3AAA6F2C3C6A6",
-      "iri": "http://visualdataweb.org/newOntology/ACEF6976208DC91716C013074AAD5FC1BD63292E10F7B1CE96F3AAA6F2C3C6A6",
+      "id": "BH.oM.Test.UnitTests.UnitTest-BH.oM.RDF.HasProperty-System.Collections.Generic.List`1[BH.oM.Test.UnitTests.TestData] Data",
+      "iri": "http://visualdataweb.org/newOntology/BH.oM.Test.UnitTests.UnitTest-BH.oM.RDF.HasProperty-System.Collections.Generic.List`1[BH.oM.Test.UnitTests.TestData] Data",
       "label": "HasProperty",
       "attributes": "datatype",
       "domain": "BH.oM.Test.UnitTests.UnitTest",
       "range": "Data-ACEF6976208DC91716C013074AAD5FC1BD63292E10F7B1CE96F3AAA6F2C3C6A6-UnitTest-HasProperty"
     },
     {
-      "id": "9DF5DCADD2C6C31323A7DF39D2979C14B7EA576BF30C05E81C9ABCEA65B8F585",
-      "iri": "http://visualdataweb.org/newOntology/9DF5DCADD2C6C31323A7DF39D2979C14B7EA576BF30C05E81C9ABCEA65B8F585",
+      "id": "BH.oM.Test.UnitTests.UnitTest-BH.oM.RDF.IsA-BH.oM.Base.IBHoMObject",
+      "iri": "http://visualdataweb.org/newOntology/BH.oM.Test.UnitTests.UnitTest-BH.oM.RDF.IsA-BH.oM.Base.IBHoMObject",
       "label": "IsA",
       "attributes": "object",
       "domain": "BH.oM.Test.UnitTests.UnitTest",
       "range": "BH.oM.Base.IBHoMObject"
     },
     {
-      "id": "015476F9AE6EBA8CA7EC2204BF7F00152750C99CD7D700A87701008371848212",
-      "iri": "http://visualdataweb.org/newOntology/015476F9AE6EBA8CA7EC2204BF7F00152750C99CD7D700A87701008371848212",
+      "id": "BH.oM.Test.UnitTests.UnitTest-BH.oM.RDF.IsA-BH.oM.Base.IObject",
+      "iri": "http://visualdataweb.org/newOntology/BH.oM.Test.UnitTests.UnitTest-BH.oM.RDF.IsA-BH.oM.Base.IObject",
       "label": "IsA",
       "attributes": "object",
       "domain": "BH.oM.Test.UnitTests.UnitTest",
       "range": "BH.oM.Base.IObject"
     },
     {
-      "id": "1BD099B8C1450B8099BC44EF72EF408E60F447FE2333EC7DFF7FB4FAE56B16E5",
-      "iri": "http://visualdataweb.org/newOntology/1BD099B8C1450B8099BC44EF72EF408E60F447FE2333EC7DFF7FB4FAE56B16E5",
+      "id": "BH.oM.Test.UnitTests.UnitTest-BH.oM.RDF.IsSubclassOf-BH.oM.Base.BHoMObject",
+      "iri": "http://visualdataweb.org/newOntology/BH.oM.Test.UnitTests.UnitTest-BH.oM.RDF.IsSubclassOf-BH.oM.Base.BHoMObject",
       "label": "IsSubclassOf",
       "attributes": "object",
       "domain": "BH.oM.Test.UnitTests.UnitTest",
       "range": "BH.oM.Base.BHoMObject"
     },
     {
-      "id": "528B6D9AC1177EE48074DFF009E57271CEE9EA757D08EC408EC98EA856092060",
-      "iri": "http://visualdataweb.org/newOntology/528B6D9AC1177EE48074DFF009E57271CEE9EA757D08EC408EC98EA856092060",
+      "id": "BH.oM.Test.Results.InputOutputComparisonDiffingType-BH.oM.RDF.IsA-System.IComparable",
+      "iri": "http://visualdataweb.org/newOntology/BH.oM.Test.Results.InputOutputComparisonDiffingType-BH.oM.RDF.IsA-System.IComparable",
       "label": "IsA",
       "attributes": []
     },
     {
-      "id": "578A72F5D234F9D5280DBEA3A2360EDA34EA3372CBB885ACF882891D9139A888",
-      "iri": "http://visualdataweb.org/newOntology/578A72F5D234F9D5280DBEA3A2360EDA34EA3372CBB885ACF882891D9139A888",
+      "id": "BH.oM.Test.Results.InputOutputComparisonDiffingType-BH.oM.RDF.IsA-System.IFormattable",
+      "iri": "http://visualdataweb.org/newOntology/BH.oM.Test.Results.InputOutputComparisonDiffingType-BH.oM.RDF.IsA-System.IFormattable",
       "label": "IsA",
       "attributes": []
     },
     {
-      "id": "EC97420E2F8C691465FD373BC8AEB1A51873076533A7906662C5C207EEE86AC6",
-      "iri": "http://visualdataweb.org/newOntology/EC97420E2F8C691465FD373BC8AEB1A51873076533A7906662C5C207EEE86AC6",
+      "id": "BH.oM.Test.Results.InputOutputComparisonDiffingType-BH.oM.RDF.IsA-System.IConvertible",
+      "iri": "http://visualdataweb.org/newOntology/BH.oM.Test.Results.InputOutputComparisonDiffingType-BH.oM.RDF.IsA-System.IConvertible",
       "label": "IsA",
       "attributes": []
     },
     {
-      "id": "C63942F73F7465BB8F2927FCA7C39E5D63B344DBD32781F427115F7C8DA9AA18",
-      "iri": "http://visualdataweb.org/newOntology/C63942F73F7465BB8F2927FCA7C39E5D63B344DBD32781F427115F7C8DA9AA18",
+      "id": "BH.oM.Test.Results.InputOutputComparisonDiffingType-BH.oM.RDF.IsSubclassOf-System.Enum",
+      "iri": "http://visualdataweb.org/newOntology/BH.oM.Test.Results.InputOutputComparisonDiffingType-BH.oM.RDF.IsSubclassOf-System.Enum",
       "label": "IsSubclassOf",
       "attributes": []
     },
     {
-      "id": "FEE1A5EC286C10BEF87DF37DFF64D7FA48602104DFB310FC71379372F7C41291",
-      "iri": "http://visualdataweb.org/newOntology/FEE1A5EC286C10BEF87DF37DFF64D7FA48602104DFB310FC71379372F7C41291",
+      "id": "BH.oM.Test.Results.InputOutputComparisonType-BH.oM.RDF.IsA-System.IComparable",
+      "iri": "http://visualdataweb.org/newOntology/BH.oM.Test.Results.InputOutputComparisonType-BH.oM.RDF.IsA-System.IComparable",
       "label": "IsA",
       "attributes": []
     },
     {
-      "id": "B29316FD6896E66E73D166893E279C3BCC5DA10DA6623E9AC2380B50D19E3F34",
-      "iri": "http://visualdataweb.org/newOntology/B29316FD6896E66E73D166893E279C3BCC5DA10DA6623E9AC2380B50D19E3F34",
+      "id": "BH.oM.Test.Results.InputOutputComparisonType-BH.oM.RDF.IsA-System.IFormattable",
+      "iri": "http://visualdataweb.org/newOntology/BH.oM.Test.Results.InputOutputComparisonType-BH.oM.RDF.IsA-System.IFormattable",
       "label": "IsA",
       "attributes": []
     },
     {
-      "id": "19FF9C374AF08AF8DF12AAA10ACFF4A07E7111099E27E85A817F2B8BB3FD3540",
-      "iri": "http://visualdataweb.org/newOntology/19FF9C374AF08AF8DF12AAA10ACFF4A07E7111099E27E85A817F2B8BB3FD3540",
+      "id": "BH.oM.Test.Results.InputOutputComparisonType-BH.oM.RDF.IsA-System.IConvertible",
+      "iri": "http://visualdataweb.org/newOntology/BH.oM.Test.Results.InputOutputComparisonType-BH.oM.RDF.IsA-System.IConvertible",
       "label": "IsA",
       "attributes": []
     },
     {
-      "id": "3951D936736E97E97C2976FF410F13CA983F7FFA38095311D6DF1004D4FD4EFE",
-      "iri": "http://visualdataweb.org/newOntology/3951D936736E97E97C2976FF410F13CA983F7FFA38095311D6DF1004D4FD4EFE",
+      "id": "BH.oM.Test.Results.InputOutputComparisonType-BH.oM.RDF.IsSubclassOf-System.Enum",
+      "iri": "http://visualdataweb.org/newOntology/BH.oM.Test.Results.InputOutputComparisonType-BH.oM.RDF.IsSubclassOf-System.Enum",
       "label": "IsSubclassOf",
       "attributes": []
     },
     {
-      "id": "CF3EAA03E7A80228C95DB1C21A3DD0225DFAB19AF3D9BCD354AD5E866598DEC8",
-      "iri": "http://visualdataweb.org/newOntology/CF3EAA03E7A80228C95DB1C21A3DD0225DFAB19AF3D9BCD354AD5E866598DEC8",
+      "id": "BH.oM.Test.Results.EventMessage-BH.oM.RDF.HasProperty-System.String Message",
+      "iri": "http://visualdataweb.org/newOntology/BH.oM.Test.Results.EventMessage-BH.oM.RDF.HasProperty-System.String Message",
       "label": "HasProperty",
       "attributes": "datatype",
       "domain": "BH.oM.Test.Results.EventMessage",
       "range": "Message-CF3EAA03E7A80228C95DB1C21A3DD0225DFAB19AF3D9BCD354AD5E866598DEC8-EventMessage-HasProperty"
     },
     {
-      "id": "1792D7D6671C31246373FB444D9BDC9DE3393BCB1AFB9D33ADA07BDE994092E0",
-      "iri": "http://visualdataweb.org/newOntology/1792D7D6671C31246373FB444D9BDC9DE3393BCB1AFB9D33ADA07BDE994092E0",
-      "label": "HasProperty",
+      "id": "BH.oM.Test.Results.EventMessage.Status-IsA-BH.oM.Test.TestStatus",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "label": "IsA",
       "attributes": "object",
-      "domain": "BH.oM.Test.Results.EventMessage",
+      "domain": "BH.oM.Test.Results.EventMessage.Status",
       "range": "BH.oM.Test.TestStatus"
     },
     {
-      "id": "1126F313B5E1CE43B63603ECC41DE8AB40F57E173D68DC5986F20F067444078B",
-      "iri": "http://visualdataweb.org/newOntology/1126F313B5E1CE43B63603ECC41DE8AB40F57E173D68DC5986F20F067444078B",
+      "id": "BH.oM.Test.Results.EventMessage-BH.oM.RDF.HasProperty-BH.oM.Test.TestStatus Status",
+      "iri": "http://visualdataweb.org/newOntology/BH.oM.Test.Results.EventMessage-BH.oM.RDF.HasProperty-BH.oM.Test.TestStatus Status",
+      "label": "HasProperty",
+      "attributes": [],
+      "domain": "BH.oM.Test.Results.EventMessage",
+      "range": "BH.oM.Test.Results.EventMessage.Status"
+    },
+    {
+      "id": "BH.oM.Test.Results.EventMessage-BH.oM.RDF.HasProperty-System.DateTime UTCTime",
+      "iri": "http://visualdataweb.org/newOntology/BH.oM.Test.Results.EventMessage-BH.oM.RDF.HasProperty-System.DateTime UTCTime",
       "label": "HasProperty",
       "attributes": "datatype",
       "domain": "BH.oM.Test.Results.EventMessage",
       "range": "UTCTime-1126F313B5E1CE43B63603ECC41DE8AB40F57E173D68DC5986F20F067444078B-EventMessage-HasProperty"
     },
     {
-      "id": "6806B04DA398BA7FB1C1454CABB5CF35E15E783EC8B38E6A65240F249BC5674D",
-      "iri": "http://visualdataweb.org/newOntology/6806B04DA398BA7FB1C1454CABB5CF35E15E783EC8B38E6A65240F249BC5674D",
+      "id": "BH.oM.Test.Results.EventMessage-BH.oM.RDF.HasProperty-System.String StackTrace",
+      "iri": "http://visualdataweb.org/newOntology/BH.oM.Test.Results.EventMessage-BH.oM.RDF.HasProperty-System.String StackTrace",
       "label": "HasProperty",
       "attributes": "datatype",
       "domain": "BH.oM.Test.Results.EventMessage",
       "range": "StackTrace-6806B04DA398BA7FB1C1454CABB5CF35E15E783EC8B38E6A65240F249BC5674D-EventMessage-HasProperty"
     },
     {
-      "id": "0FD7AC076FC142D33538CEFAEB653912BB884B150A976526459A3F641D29AC08",
-      "iri": "http://visualdataweb.org/newOntology/0FD7AC076FC142D33538CEFAEB653912BB884B150A976526459A3F641D29AC08",
+      "id": "BH.oM.Test.Results.EventMessage-BH.oM.RDF.IsA-BH.oM.Test.ITestInformation",
+      "iri": "http://visualdataweb.org/newOntology/BH.oM.Test.Results.EventMessage-BH.oM.RDF.IsA-BH.oM.Test.ITestInformation",
       "label": "IsA",
       "attributes": "object",
       "domain": "BH.oM.Test.Results.EventMessage",
       "range": "BH.oM.Test.ITestInformation"
     },
     {
-      "id": "603D7DD58E46A3550F0FC158BAEC7D3A989B6F28427EDB375F197EC183290344",
-      "iri": "http://visualdataweb.org/newOntology/603D7DD58E46A3550F0FC158BAEC7D3A989B6F28427EDB375F197EC183290344",
+      "id": "BH.oM.Test.Results.EventMessage-BH.oM.RDF.IsA-BH.oM.Base.IObject",
+      "iri": "http://visualdataweb.org/newOntology/BH.oM.Test.Results.EventMessage-BH.oM.RDF.IsA-BH.oM.Base.IObject",
       "label": "IsA",
       "attributes": "object",
       "domain": "BH.oM.Test.Results.EventMessage",
       "range": "BH.oM.Base.IObject"
     },
     {
-      "id": "AC600A4A24929A6CC4AE024A4AE00BF1CC651A5792F485F221342E469148992D",
-      "iri": "http://visualdataweb.org/newOntology/AC600A4A24929A6CC4AE024A4AE00BF1CC651A5792F485F221342E469148992D",
+      "id": "BH.oM.Test.Results.EventMessage-BH.oM.RDF.IsSubclassOf-System.Object",
+      "iri": "http://visualdataweb.org/newOntology/BH.oM.Test.Results.EventMessage-BH.oM.RDF.IsSubclassOf-System.Object",
       "label": "IsSubclassOf",
       "attributes": []
     },
     {
-      "id": "AC91AB383EEDD639FDD4E9D08409F9ACB13E1E6B6AC22AC03AC9BCA145E65521",
-      "iri": "http://visualdataweb.org/newOntology/AC91AB383EEDD639FDD4E9D08409F9ACB13E1E6B6AC22AC03AC9BCA145E65521",
+      "id": "BH.oM.Test.Results.InputOutputComparison-BH.oM.RDF.HasProperty-System.IComparable ObjectId",
+      "iri": "http://visualdataweb.org/newOntology/BH.oM.Test.Results.InputOutputComparison-BH.oM.RDF.HasProperty-System.IComparable ObjectId",
       "label": "HasProperty",
       "attributes": "datatype",
       "domain": "BH.oM.Test.Results.InputOutputComparison",
       "range": "ObjectId-AC91AB383EEDD639FDD4E9D08409F9ACB13E1E6B6AC22AC03AC9BCA145E65521-InputOutputComparison-HasProperty"
     },
     {
-      "id": "E0967284EAAFA40543139FC2FF5276C85E768B9C816E3340F20CF932E3310D3B",
-      "iri": "http://visualdataweb.org/newOntology/E0967284EAAFA40543139FC2FF5276C85E768B9C816E3340F20CF932E3310D3B",
+      "id": "BH.oM.Test.Results.InputOutputComparison-BH.oM.RDF.HasProperty-System.IComparable ResultCase",
+      "iri": "http://visualdataweb.org/newOntology/BH.oM.Test.Results.InputOutputComparison-BH.oM.RDF.HasProperty-System.IComparable ResultCase",
       "label": "HasProperty",
       "attributes": "datatype",
       "domain": "BH.oM.Test.Results.InputOutputComparison",
       "range": "ResultCase-E0967284EAAFA40543139FC2FF5276C85E768B9C816E3340F20CF932E3310D3B-InputOutputComparison-HasProperty"
     },
     {
-      "id": "4151C4DD2D4EB29C7E592F22AE6BD30FBE0AEE1FEAD94FC338E97E53BBFCCD85",
-      "iri": "http://visualdataweb.org/newOntology/4151C4DD2D4EB29C7E592F22AE6BD30FBE0AEE1FEAD94FC338E97E53BBFCCD85",
+      "id": "BH.oM.Test.Results.InputOutputComparison-BH.oM.RDF.HasProperty-System.Type ObjectType",
+      "iri": "http://visualdataweb.org/newOntology/BH.oM.Test.Results.InputOutputComparison-BH.oM.RDF.HasProperty-System.Type ObjectType",
       "label": "HasProperty",
       "attributes": "datatype",
       "domain": "BH.oM.Test.Results.InputOutputComparison",
       "range": "ObjectType-4151C4DD2D4EB29C7E592F22AE6BD30FBE0AEE1FEAD94FC338E97E53BBFCCD85-InputOutputComparison-HasProperty"
     },
     {
-      "id": "3D264DAFBDF11A850B246AE3EF21276AEDC5BEC9D7A67D72B7B43180593F9F8A",
-      "iri": "http://visualdataweb.org/newOntology/3D264DAFBDF11A850B246AE3EF21276AEDC5BEC9D7A67D72B7B43180593F9F8A",
-      "label": "HasProperty",
+      "id": "BH.oM.Test.Results.InputOutputComparison.ResultType-IsA-BH.oM.Test.Results.InputOutputComparisonType",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "label": "IsA",
       "attributes": "object",
-      "domain": "BH.oM.Test.Results.InputOutputComparison",
+      "domain": "BH.oM.Test.Results.InputOutputComparison.ResultType",
       "range": "BH.oM.Test.Results.InputOutputComparisonType"
     },
     {
-      "id": "14E77D93099AE4797D41A412F8A72D48F2010DB6FA8179FE066B40F0332892B8",
-      "iri": "http://visualdataweb.org/newOntology/14E77D93099AE4797D41A412F8A72D48F2010DB6FA8179FE066B40F0332892B8",
+      "id": "BH.oM.Test.Results.InputOutputComparison-BH.oM.RDF.HasProperty-BH.oM.Test.Results.InputOutputComparisonType ResultType",
+      "iri": "http://visualdataweb.org/newOntology/BH.oM.Test.Results.InputOutputComparison-BH.oM.RDF.HasProperty-BH.oM.Test.Results.InputOutputComparisonType ResultType",
+      "label": "HasProperty",
+      "attributes": [],
+      "domain": "BH.oM.Test.Results.InputOutputComparison",
+      "range": "BH.oM.Test.Results.InputOutputComparison.ResultType"
+    },
+    {
+      "id": "BH.oM.Test.Results.InputOutputComparison-BH.oM.RDF.HasProperty-System.Collections.ObjectModel.ReadOnlyCollection`1[BH.oM.Test.Results.InputOutputDifference] Results",
+      "iri": "http://visualdataweb.org/newOntology/BH.oM.Test.Results.InputOutputComparison-BH.oM.RDF.HasProperty-System.Collections.ObjectModel.ReadOnlyCollection`1[BH.oM.Test.Results.InputOutputDifference] Results",
       "label": "HasProperty",
       "attributes": "datatype",
       "domain": "BH.oM.Test.Results.InputOutputComparison",
       "range": "Results-14E77D93099AE4797D41A412F8A72D48F2010DB6FA8179FE066B40F0332892B8-InputOutputComparison-HasProperty"
     },
     {
-      "id": "6C42764415C03C024725F130278205D8CDA04A0BB6579AD2D146A3EA500A7A8A",
-      "iri": "http://visualdataweb.org/newOntology/6C42764415C03C024725F130278205D8CDA04A0BB6579AD2D146A3EA500A7A8A",
+      "id": "BH.oM.Test.Results.InputOutputComparison-BH.oM.RDF.HasProperty-Double TimeStep",
+      "iri": "http://visualdataweb.org/newOntology/BH.oM.Test.Results.InputOutputComparison-BH.oM.RDF.HasProperty-Double TimeStep",
       "label": "HasProperty",
       "attributes": "datatype",
       "domain": "BH.oM.Test.Results.InputOutputComparison",
       "range": "TimeStep-6C42764415C03C024725F130278205D8CDA04A0BB6579AD2D146A3EA500A7A8A-InputOutputComparison-HasProperty"
     },
     {
-      "id": "27C18D3322F72F5CDF0D37A8D95E37C88A81BFE0597BE481781EF95808380B38",
-      "iri": "http://visualdataweb.org/newOntology/27C18D3322F72F5CDF0D37A8D95E37C88A81BFE0597BE481781EF95808380B38",
+      "id": "BH.oM.Test.Results.InputOutputComparison-BH.oM.RDF.IsA-BH.oM.Analytical.Results.IResultCollection`1[BH.oM.Test.Results.InputOutputDifference]",
+      "iri": "http://visualdataweb.org/newOntology/BH.oM.Test.Results.InputOutputComparison-BH.oM.RDF.IsA-BH.oM.Analytical.Results.IResultCollection`1[BH.oM.Test.Results.InputOutputDifference]",
       "label": "IsA",
       "attributes": "object",
       "domain": "BH.oM.Test.Results.InputOutputComparison",
       "range": "BH.oM.Analytical.Results.IResultCollection"
     },
     {
-      "id": "BF27C1026C7012F763D9C32EF0CD832EC9DD89857F5807A9BCFA4DA5A292C1D6",
-      "iri": "http://visualdataweb.org/newOntology/BF27C1026C7012F763D9C32EF0CD832EC9DD89857F5807A9BCFA4DA5A292C1D6",
+      "id": "BH.oM.Test.Results.InputOutputComparison-BH.oM.RDF.IsA-BH.oM.Analytical.Results.IResultCollection",
+      "iri": "http://visualdataweb.org/newOntology/BH.oM.Test.Results.InputOutputComparison-BH.oM.RDF.IsA-BH.oM.Analytical.Results.IResultCollection",
       "label": "IsA",
       "attributes": "object",
       "domain": "BH.oM.Test.Results.InputOutputComparison",
       "range": "BH.oM.Analytical.Results.IResultCollection"
     },
     {
-      "id": "F9A7EF8A68BB98E3A907DC731A7F7FB3FCC76F9C14A695F1AF63505C82BA77C4",
-      "iri": "http://visualdataweb.org/newOntology/F9A7EF8A68BB98E3A907DC731A7F7FB3FCC76F9C14A695F1AF63505C82BA77C4",
+      "id": "BH.oM.Test.Results.InputOutputComparison-BH.oM.RDF.IsA-BH.oM.Base.IObject",
+      "iri": "http://visualdataweb.org/newOntology/BH.oM.Test.Results.InputOutputComparison-BH.oM.RDF.IsA-BH.oM.Base.IObject",
       "label": "IsA",
       "attributes": "object",
       "domain": "BH.oM.Test.Results.InputOutputComparison",
       "range": "BH.oM.Base.IObject"
     },
     {
-      "id": "275894A4EFE58214A2B3B6F25727DD92FFB38275F9CDC876B3A5C59E928FBFF0",
-      "iri": "http://visualdataweb.org/newOntology/275894A4EFE58214A2B3B6F25727DD92FFB38275F9CDC876B3A5C59E928FBFF0",
+      "id": "BH.oM.Test.Results.InputOutputComparison-BH.oM.RDF.IsA-BH.oM.Base.IImmutable",
+      "iri": "http://visualdataweb.org/newOntology/BH.oM.Test.Results.InputOutputComparison-BH.oM.RDF.IsA-BH.oM.Base.IImmutable",
       "label": "IsA",
       "attributes": "object",
       "domain": "BH.oM.Test.Results.InputOutputComparison",
       "range": "BH.oM.Base.IImmutable"
     },
     {
-      "id": "FC289D43CE42245877C1DB1A802F31878B704D2BF5CDCFF7B6563D15E85F7D24",
-      "iri": "http://visualdataweb.org/newOntology/FC289D43CE42245877C1DB1A802F31878B704D2BF5CDCFF7B6563D15E85F7D24",
+      "id": "BH.oM.Test.Results.InputOutputComparison-BH.oM.RDF.IsA-BH.oM.Analytical.Results.IResult",
+      "iri": "http://visualdataweb.org/newOntology/BH.oM.Test.Results.InputOutputComparison-BH.oM.RDF.IsA-BH.oM.Analytical.Results.IResult",
       "label": "IsA",
       "attributes": "object",
       "domain": "BH.oM.Test.Results.InputOutputComparison",
       "range": "BH.oM.Analytical.Results.IResult"
     },
     {
-      "id": "FB0A45E86C32A6DD2F268A75F2D671715BB48A65B1A2CBB22D17A4B7B21BAA30",
-      "iri": "http://visualdataweb.org/newOntology/FB0A45E86C32A6DD2F268A75F2D671715BB48A65B1A2CBB22D17A4B7B21BAA30",
+      "id": "BH.oM.Test.Results.InputOutputComparison-BH.oM.RDF.IsA-System.IComparable`1[BH.oM.Analytical.Results.IResult]",
+      "iri": "http://visualdataweb.org/newOntology/BH.oM.Test.Results.InputOutputComparison-BH.oM.RDF.IsA-System.IComparable`1[BH.oM.Analytical.Results.IResult]",
       "label": "IsA",
       "attributes": []
     },
     {
-      "id": "045353F8960CF1A60A346CAE19102CD8494A74DD07017D5AD1CCD8F3F77798FD",
-      "iri": "http://visualdataweb.org/newOntology/045353F8960CF1A60A346CAE19102CD8494A74DD07017D5AD1CCD8F3F77798FD",
+      "id": "BH.oM.Test.Results.InputOutputComparison-BH.oM.RDF.IsSubclassOf-System.Object",
+      "iri": "http://visualdataweb.org/newOntology/BH.oM.Test.Results.InputOutputComparison-BH.oM.RDF.IsSubclassOf-System.Object",
       "label": "IsSubclassOf",
       "attributes": []
     },
     {
-      "id": "4617FA4373788F3D794170E56DE8C4285C696FD5C52EA48F02610B03E953E496",
-      "iri": "http://visualdataweb.org/newOntology/4617FA4373788F3D794170E56DE8C4285C696FD5C52EA48F02610B03E953E496",
+      "id": "BH.oM.Test.Results.InputOutputComparisonDiffing-BH.oM.RDF.HasProperty-System.IComparable ObjectId",
+      "iri": "http://visualdataweb.org/newOntology/BH.oM.Test.Results.InputOutputComparisonDiffing-BH.oM.RDF.HasProperty-System.IComparable ObjectId",
       "label": "HasProperty",
       "attributes": "datatype",
       "domain": "BH.oM.Test.Results.InputOutputComparisonDiffing",
       "range": "ObjectId-4617FA4373788F3D794170E56DE8C4285C696FD5C52EA48F02610B03E953E496-InputOutputComparisonDiffing-HasProperty"
     },
     {
-      "id": "D65768D332534684C3C463FFD0C6C7234C88E0685EE3AB82E2127EEF563264AF",
-      "iri": "http://visualdataweb.org/newOntology/D65768D332534684C3C463FFD0C6C7234C88E0685EE3AB82E2127EEF563264AF",
+      "id": "BH.oM.Test.Results.InputOutputComparisonDiffing-BH.oM.RDF.HasProperty-System.IComparable ResultCase",
+      "iri": "http://visualdataweb.org/newOntology/BH.oM.Test.Results.InputOutputComparisonDiffing-BH.oM.RDF.HasProperty-System.IComparable ResultCase",
       "label": "HasProperty",
       "attributes": "datatype",
       "domain": "BH.oM.Test.Results.InputOutputComparisonDiffing",
       "range": "ResultCase-D65768D332534684C3C463FFD0C6C7234C88E0685EE3AB82E2127EEF563264AF-InputOutputComparisonDiffing-HasProperty"
     },
     {
-      "id": "3B212148D2D9B736012B484938FA54D325E94C98EE52160E4453C75E50258CFD",
-      "iri": "http://visualdataweb.org/newOntology/3B212148D2D9B736012B484938FA54D325E94C98EE52160E4453C75E50258CFD",
+      "id": "BH.oM.Test.Results.InputOutputComparisonDiffing-BH.oM.RDF.HasProperty-System.String PropertyId",
+      "iri": "http://visualdataweb.org/newOntology/BH.oM.Test.Results.InputOutputComparisonDiffing-BH.oM.RDF.HasProperty-System.String PropertyId",
       "label": "HasProperty",
       "attributes": "datatype",
       "domain": "BH.oM.Test.Results.InputOutputComparisonDiffing",
       "range": "PropertyId-3B212148D2D9B736012B484938FA54D325E94C98EE52160E4453C75E50258CFD-InputOutputComparisonDiffing-HasProperty"
     },
     {
-      "id": "B81FFA3FBA913350E93E9FF76752B340FD5C3EADE9BCC0324EBFC25E3C5148B6",
-      "iri": "http://visualdataweb.org/newOntology/B81FFA3FBA913350E93E9FF76752B340FD5C3EADE9BCC0324EBFC25E3C5148B6",
+      "id": "BH.oM.Test.Results.InputOutputComparisonDiffing-BH.oM.RDF.HasProperty-System.Type ObjectType",
+      "iri": "http://visualdataweb.org/newOntology/BH.oM.Test.Results.InputOutputComparisonDiffing-BH.oM.RDF.HasProperty-System.Type ObjectType",
       "label": "HasProperty",
       "attributes": "datatype",
       "domain": "BH.oM.Test.Results.InputOutputComparisonDiffing",
       "range": "ObjectType-B81FFA3FBA913350E93E9FF76752B340FD5C3EADE9BCC0324EBFC25E3C5148B6-InputOutputComparisonDiffing-HasProperty"
     },
     {
-      "id": "B8155555C87D001CF3074A6098C2C7109BDD54907D625D18F64D05A88909346D",
-      "iri": "http://visualdataweb.org/newOntology/B8155555C87D001CF3074A6098C2C7109BDD54907D625D18F64D05A88909346D",
+      "id": "BH.oM.Test.Results.InputOutputComparisonDiffing-BH.oM.RDF.HasProperty-Double TimeStep",
+      "iri": "http://visualdataweb.org/newOntology/BH.oM.Test.Results.InputOutputComparisonDiffing-BH.oM.RDF.HasProperty-Double TimeStep",
       "label": "HasProperty",
       "attributes": "datatype",
       "domain": "BH.oM.Test.Results.InputOutputComparisonDiffing",
       "range": "TimeStep-B8155555C87D001CF3074A6098C2C7109BDD54907D625D18F64D05A88909346D-InputOutputComparisonDiffing-HasProperty"
     },
     {
-      "id": "01BA328CBD9482E3CA6BEBB1154CE118ED59D248499B29635ED378EF4C6857C1",
-      "iri": "http://visualdataweb.org/newOntology/01BA328CBD9482E3CA6BEBB1154CE118ED59D248499B29635ED378EF4C6857C1",
-      "label": "HasProperty",
+      "id": "BH.oM.Test.Results.InputOutputComparisonDiffing.Type-IsA-BH.oM.Test.Results.InputOutputComparisonDiffingType",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "label": "IsA",
       "attributes": "object",
-      "domain": "BH.oM.Test.Results.InputOutputComparisonDiffing",
+      "domain": "BH.oM.Test.Results.InputOutputComparisonDiffing.Type",
       "range": "BH.oM.Test.Results.InputOutputComparisonDiffingType"
     },
     {
-      "id": "0DFE72D8B3C57C3334DE72A23247BDF442772694DF90D6B9740CB75EDAACE42F",
-      "iri": "http://visualdataweb.org/newOntology/0DFE72D8B3C57C3334DE72A23247BDF442772694DF90D6B9740CB75EDAACE42F",
+      "id": "BH.oM.Test.Results.InputOutputComparisonDiffing-BH.oM.RDF.HasProperty-BH.oM.Test.Results.InputOutputComparisonDiffingType Type",
+      "iri": "http://visualdataweb.org/newOntology/BH.oM.Test.Results.InputOutputComparisonDiffing-BH.oM.RDF.HasProperty-BH.oM.Test.Results.InputOutputComparisonDiffingType Type",
+      "label": "HasProperty",
+      "attributes": [],
+      "domain": "BH.oM.Test.Results.InputOutputComparisonDiffing",
+      "range": "BH.oM.Test.Results.InputOutputComparisonDiffing.Type"
+    },
+    {
+      "id": "BH.oM.Test.Results.InputOutputComparisonDiffing-BH.oM.RDF.HasProperty-System.Object InputValue",
+      "iri": "http://visualdataweb.org/newOntology/BH.oM.Test.Results.InputOutputComparisonDiffing-BH.oM.RDF.HasProperty-System.Object InputValue",
       "label": "HasProperty",
       "attributes": "datatype",
       "domain": "BH.oM.Test.Results.InputOutputComparisonDiffing",
       "range": "InputValue-0DFE72D8B3C57C3334DE72A23247BDF442772694DF90D6B9740CB75EDAACE42F-InputOutputComparisonDiffing-HasProperty"
     },
     {
-      "id": "2EBD1067BFFFF3C9E0C72C30FB3649B8BDE33DAD694D9A7D04CE43B52B82289D",
-      "iri": "http://visualdataweb.org/newOntology/2EBD1067BFFFF3C9E0C72C30FB3649B8BDE33DAD694D9A7D04CE43B52B82289D",
+      "id": "BH.oM.Test.Results.InputOutputComparisonDiffing-BH.oM.RDF.HasProperty-System.Object NewValue",
+      "iri": "http://visualdataweb.org/newOntology/BH.oM.Test.Results.InputOutputComparisonDiffing-BH.oM.RDF.HasProperty-System.Object NewValue",
       "label": "HasProperty",
       "attributes": "datatype",
       "domain": "BH.oM.Test.Results.InputOutputComparisonDiffing",
       "range": "NewValue-2EBD1067BFFFF3C9E0C72C30FB3649B8BDE33DAD694D9A7D04CE43B52B82289D-InputOutputComparisonDiffing-HasProperty"
     },
     {
-      "id": "4B656E3937475BF0DC53A431E1F0DFCDB8258DAB0113C9D8B32DFF85B9214EA1",
-      "iri": "http://visualdataweb.org/newOntology/4B656E3937475BF0DC53A431E1F0DFCDB8258DAB0113C9D8B32DFF85B9214EA1",
+      "id": "BH.oM.Test.Results.InputOutputComparisonDiffing-BH.oM.RDF.HasProperty-System.Object ReferenceValue",
+      "iri": "http://visualdataweb.org/newOntology/BH.oM.Test.Results.InputOutputComparisonDiffing-BH.oM.RDF.HasProperty-System.Object ReferenceValue",
       "label": "HasProperty",
       "attributes": "datatype",
       "domain": "BH.oM.Test.Results.InputOutputComparisonDiffing",
       "range": "ReferenceValue-4B656E3937475BF0DC53A431E1F0DFCDB8258DAB0113C9D8B32DFF85B9214EA1-InputOutputComparisonDiffing-HasProperty"
     },
     {
-      "id": "68E4C506F1BE99A480B95B376FB1B48083FDD40CB282D0DF783EF2A87E4640C6",
-      "iri": "http://visualdataweb.org/newOntology/68E4C506F1BE99A480B95B376FB1B48083FDD40CB282D0DF783EF2A87E4640C6",
+      "id": "BH.oM.Test.Results.InputOutputComparisonDiffing-BH.oM.RDF.IsA-BH.oM.Analytical.Results.IObjectIdResult",
+      "iri": "http://visualdataweb.org/newOntology/BH.oM.Test.Results.InputOutputComparisonDiffing-BH.oM.RDF.IsA-BH.oM.Analytical.Results.IObjectIdResult",
       "label": "IsA",
       "attributes": "object",
       "domain": "BH.oM.Test.Results.InputOutputComparisonDiffing",
       "range": "BH.oM.Analytical.Results.IObjectIdResult"
     },
     {
-      "id": "263B1C3AE1346A389847AC1D8680B0426FEF74ECCACA0633504A3C035CB8FC44",
-      "iri": "http://visualdataweb.org/newOntology/263B1C3AE1346A389847AC1D8680B0426FEF74ECCACA0633504A3C035CB8FC44",
+      "id": "BH.oM.Test.Results.InputOutputComparisonDiffing-BH.oM.RDF.IsA-BH.oM.Analytical.Results.IResult",
+      "iri": "http://visualdataweb.org/newOntology/BH.oM.Test.Results.InputOutputComparisonDiffing-BH.oM.RDF.IsA-BH.oM.Analytical.Results.IResult",
       "label": "IsA",
       "attributes": "object",
       "domain": "BH.oM.Test.Results.InputOutputComparisonDiffing",
       "range": "BH.oM.Analytical.Results.IResult"
     },
     {
-      "id": "EC1ACE5E59259F0E2C47941C21EB96BBE155D0F8CD013CBF9232E93156537F3E",
-      "iri": "http://visualdataweb.org/newOntology/EC1ACE5E59259F0E2C47941C21EB96BBE155D0F8CD013CBF9232E93156537F3E",
+      "id": "BH.oM.Test.Results.InputOutputComparisonDiffing-BH.oM.RDF.IsA-BH.oM.Base.IObject",
+      "iri": "http://visualdataweb.org/newOntology/BH.oM.Test.Results.InputOutputComparisonDiffing-BH.oM.RDF.IsA-BH.oM.Base.IObject",
       "label": "IsA",
       "attributes": "object",
       "domain": "BH.oM.Test.Results.InputOutputComparisonDiffing",
       "range": "BH.oM.Base.IObject"
     },
     {
-      "id": "13DC0E0CE946DF677E1CC09DB4CC1CA66D4CD8B8C47A876EA9DA992C1DE7A9EF",
-      "iri": "http://visualdataweb.org/newOntology/13DC0E0CE946DF677E1CC09DB4CC1CA66D4CD8B8C47A876EA9DA992C1DE7A9EF",
+      "id": "BH.oM.Test.Results.InputOutputComparisonDiffing-BH.oM.RDF.IsA-System.IComparable`1[BH.oM.Analytical.Results.IResult]",
+      "iri": "http://visualdataweb.org/newOntology/BH.oM.Test.Results.InputOutputComparisonDiffing-BH.oM.RDF.IsA-System.IComparable`1[BH.oM.Analytical.Results.IResult]",
       "label": "IsA",
       "attributes": []
     },
     {
-      "id": "E7587AC4411F22F7F6F1B261B3B42A80BBB5B142CACD051DFC4E97634176FB3E",
-      "iri": "http://visualdataweb.org/newOntology/E7587AC4411F22F7F6F1B261B3B42A80BBB5B142CACD051DFC4E97634176FB3E",
+      "id": "BH.oM.Test.Results.InputOutputComparisonDiffing-BH.oM.RDF.IsA-BH.oM.Base.IImmutable",
+      "iri": "http://visualdataweb.org/newOntology/BH.oM.Test.Results.InputOutputComparisonDiffing-BH.oM.RDF.IsA-BH.oM.Base.IImmutable",
       "label": "IsA",
       "attributes": "object",
       "domain": "BH.oM.Test.Results.InputOutputComparisonDiffing",
       "range": "BH.oM.Base.IImmutable"
     },
     {
-      "id": "F22B3B8C544582E81ABEF8B5FB60159569FBF4656650492E3AB07A8A8DA4A56B",
-      "iri": "http://visualdataweb.org/newOntology/F22B3B8C544582E81ABEF8B5FB60159569FBF4656650492E3AB07A8A8DA4A56B",
+      "id": "BH.oM.Test.Results.InputOutputComparisonDiffing-BH.oM.RDF.IsA-BH.oM.Analytical.Results.ICasedResult",
+      "iri": "http://visualdataweb.org/newOntology/BH.oM.Test.Results.InputOutputComparisonDiffing-BH.oM.RDF.IsA-BH.oM.Analytical.Results.ICasedResult",
       "label": "IsA",
       "attributes": "object",
       "domain": "BH.oM.Test.Results.InputOutputComparisonDiffing",
       "range": "BH.oM.Analytical.Results.ICasedResult"
     },
     {
-      "id": "AD6AC07A8C3E72F48B8D3F25866EE23449FF5FF2567B75BC8673332C79D7750D",
-      "iri": "http://visualdataweb.org/newOntology/AD6AC07A8C3E72F48B8D3F25866EE23449FF5FF2567B75BC8673332C79D7750D",
+      "id": "BH.oM.Test.Results.InputOutputComparisonDiffing-BH.oM.RDF.IsA-BH.oM.Analytical.Results.ITimeStepResult",
+      "iri": "http://visualdataweb.org/newOntology/BH.oM.Test.Results.InputOutputComparisonDiffing-BH.oM.RDF.IsA-BH.oM.Analytical.Results.ITimeStepResult",
       "label": "IsA",
       "attributes": "object",
       "domain": "BH.oM.Test.Results.InputOutputComparisonDiffing",
       "range": "BH.oM.Analytical.Results.ITimeStepResult"
     },
     {
-      "id": "218244EA22D07687F8D98CCD0B56844FABA36A765F1AF674BE6B1623724B5B42",
-      "iri": "http://visualdataweb.org/newOntology/218244EA22D07687F8D98CCD0B56844FABA36A765F1AF674BE6B1623724B5B42",
+      "id": "BH.oM.Test.Results.InputOutputComparisonDiffing-BH.oM.RDF.IsSubclassOf-System.Object",
+      "iri": "http://visualdataweb.org/newOntology/BH.oM.Test.Results.InputOutputComparisonDiffing-BH.oM.RDF.IsSubclassOf-System.Object",
       "label": "IsSubclassOf",
       "attributes": []
     },
     {
-      "id": "C32FF7262ADF5F83E2F6335817C567F2C0C62CB63CC33AEDB7678FF23B2D401F",
-      "iri": "http://visualdataweb.org/newOntology/C32FF7262ADF5F83E2F6335817C567F2C0C62CB63CC33AEDB7678FF23B2D401F",
+      "id": "BH.oM.Test.Results.InputOutputComparisonSummary-BH.oM.RDF.HasProperty-System.IComparable ObjectId",
+      "iri": "http://visualdataweb.org/newOntology/BH.oM.Test.Results.InputOutputComparisonSummary-BH.oM.RDF.HasProperty-System.IComparable ObjectId",
       "label": "HasProperty",
       "attributes": "datatype",
       "domain": "BH.oM.Test.Results.InputOutputComparisonSummary",
       "range": "ObjectId-C32FF7262ADF5F83E2F6335817C567F2C0C62CB63CC33AEDB7678FF23B2D401F-InputOutputComparisonSummary-HasProperty"
     },
     {
-      "id": "0781984908FDA5E8F2DAF1A4C3F58BE920474A4680D8869A93D01692017F5ACD",
-      "iri": "http://visualdataweb.org/newOntology/0781984908FDA5E8F2DAF1A4C3F58BE920474A4680D8869A93D01692017F5ACD",
+      "id": "BH.oM.Test.Results.InputOutputComparisonSummary-BH.oM.RDF.HasProperty-System.IComparable ResultCase",
+      "iri": "http://visualdataweb.org/newOntology/BH.oM.Test.Results.InputOutputComparisonSummary-BH.oM.RDF.HasProperty-System.IComparable ResultCase",
       "label": "HasProperty",
       "attributes": "datatype",
       "domain": "BH.oM.Test.Results.InputOutputComparisonSummary",
       "range": "ResultCase-0781984908FDA5E8F2DAF1A4C3F58BE920474A4680D8869A93D01692017F5ACD-InputOutputComparisonSummary-HasProperty"
     },
     {
-      "id": "77ACDB60041D27677EB679ED13A9397C8195BB53783B49D67C84A8A5D7902A3C",
-      "iri": "http://visualdataweb.org/newOntology/77ACDB60041D27677EB679ED13A9397C8195BB53783B49D67C84A8A5D7902A3C",
+      "id": "BH.oM.Test.Results.InputOutputComparisonSummary-BH.oM.RDF.HasProperty-System.Type ObjectType",
+      "iri": "http://visualdataweb.org/newOntology/BH.oM.Test.Results.InputOutputComparisonSummary-BH.oM.RDF.HasProperty-System.Type ObjectType",
       "label": "HasProperty",
       "attributes": "datatype",
       "domain": "BH.oM.Test.Results.InputOutputComparisonSummary",
       "range": "ObjectType-77ACDB60041D27677EB679ED13A9397C8195BB53783B49D67C84A8A5D7902A3C-InputOutputComparisonSummary-HasProperty"
     },
     {
-      "id": "6EFC682B01888AA00E0E2E3ED51BD57D4D1F7C066860BFC2D2167015A49677AE",
-      "iri": "http://visualdataweb.org/newOntology/6EFC682B01888AA00E0E2E3ED51BD57D4D1F7C066860BFC2D2167015A49677AE",
+      "id": "BH.oM.Test.Results.InputOutputComparisonSummary-BH.oM.RDF.HasProperty-Double TimeStep",
+      "iri": "http://visualdataweb.org/newOntology/BH.oM.Test.Results.InputOutputComparisonSummary-BH.oM.RDF.HasProperty-Double TimeStep",
       "label": "HasProperty",
       "attributes": "datatype",
       "domain": "BH.oM.Test.Results.InputOutputComparisonSummary",
       "range": "TimeStep-6EFC682B01888AA00E0E2E3ED51BD57D4D1F7C066860BFC2D2167015A49677AE-InputOutputComparisonSummary-HasProperty"
     },
     {
-      "id": "7D178D3B54A15B4BADF58BCDEA602494C39FE5C32172EE7C9A8193CC886A3237",
-      "iri": "http://visualdataweb.org/newOntology/7D178D3B54A15B4BADF58BCDEA602494C39FE5C32172EE7C9A8193CC886A3237",
-      "label": "HasProperty",
+      "id": "BH.oM.Test.Results.InputOutputComparisonSummary.ResultType-IsA-BH.oM.Test.Results.InputOutputComparisonType",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "label": "IsA",
       "attributes": "object",
-      "domain": "BH.oM.Test.Results.InputOutputComparisonSummary",
+      "domain": "BH.oM.Test.Results.InputOutputComparisonSummary.ResultType",
       "range": "BH.oM.Test.Results.InputOutputComparisonType"
     },
     {
-      "id": "D9EBA7B6FA246F621C08B21A6B31F843BC7A9F3A3EC7696F5682A7F525B7D38A",
-      "iri": "http://visualdataweb.org/newOntology/D9EBA7B6FA246F621C08B21A6B31F843BC7A9F3A3EC7696F5682A7F525B7D38A",
+      "id": "BH.oM.Test.Results.InputOutputComparisonSummary-BH.oM.RDF.HasProperty-BH.oM.Test.Results.InputOutputComparisonType ResultType",
+      "iri": "http://visualdataweb.org/newOntology/BH.oM.Test.Results.InputOutputComparisonSummary-BH.oM.RDF.HasProperty-BH.oM.Test.Results.InputOutputComparisonType ResultType",
+      "label": "HasProperty",
+      "attributes": [],
+      "domain": "BH.oM.Test.Results.InputOutputComparisonSummary",
+      "range": "BH.oM.Test.Results.InputOutputComparisonSummary.ResultType"
+    },
+    {
+      "id": "BH.oM.Test.Results.InputOutputComparisonSummary-BH.oM.RDF.HasProperty-Int32 Occurrences",
+      "iri": "http://visualdataweb.org/newOntology/BH.oM.Test.Results.InputOutputComparisonSummary-BH.oM.RDF.HasProperty-Int32 Occurrences",
       "label": "HasProperty",
       "attributes": "datatype",
       "domain": "BH.oM.Test.Results.InputOutputComparisonSummary",
       "range": "Occurrences-D9EBA7B6FA246F621C08B21A6B31F843BC7A9F3A3EC7696F5682A7F525B7D38A-InputOutputComparisonSummary-HasProperty"
     },
     {
-      "id": "2DC7DA3B0FCE79A22E963F6623A95E520919B0022284835C39AD6725F5474ADF",
-      "iri": "http://visualdataweb.org/newOntology/2DC7DA3B0FCE79A22E963F6623A95E520919B0022284835C39AD6725F5474ADF",
+      "id": "BH.oM.Test.Results.InputOutputComparisonSummary-BH.oM.RDF.HasProperty-System.String PropertyId",
+      "iri": "http://visualdataweb.org/newOntology/BH.oM.Test.Results.InputOutputComparisonSummary-BH.oM.RDF.HasProperty-System.String PropertyId",
       "label": "HasProperty",
       "attributes": "datatype",
       "domain": "BH.oM.Test.Results.InputOutputComparisonSummary",
       "range": "PropertyId-2DC7DA3B0FCE79A22E963F6623A95E520919B0022284835C39AD6725F5474ADF-InputOutputComparisonSummary-HasProperty"
     },
     {
-      "id": "81F4121873008BDBD414A47940D660F4F945B165B49B20E4437378E96BB54A2E",
-      "iri": "http://visualdataweb.org/newOntology/81F4121873008BDBD414A47940D660F4F945B165B49B20E4437378E96BB54A2E",
+      "id": "BH.oM.Test.Results.InputOutputComparisonSummary-BH.oM.RDF.HasProperty-Double AverageDifference",
+      "iri": "http://visualdataweb.org/newOntology/BH.oM.Test.Results.InputOutputComparisonSummary-BH.oM.RDF.HasProperty-Double AverageDifference",
       "label": "HasProperty",
       "attributes": "datatype",
       "domain": "BH.oM.Test.Results.InputOutputComparisonSummary",
       "range": "AverageDifference-81F4121873008BDBD414A47940D660F4F945B165B49B20E4437378E96BB54A2E-InputOutputComparisonSummary-HasProperty"
     },
     {
-      "id": "A404FD0A6FE565023867530BF97997FD8F9B80B2512D7D124251CD269E7068F0",
-      "iri": "http://visualdataweb.org/newOntology/A404FD0A6FE565023867530BF97997FD8F9B80B2512D7D124251CD269E7068F0",
+      "id": "BH.oM.Test.Results.InputOutputComparisonSummary-BH.oM.RDF.HasProperty-Double MaximumDifference",
+      "iri": "http://visualdataweb.org/newOntology/BH.oM.Test.Results.InputOutputComparisonSummary-BH.oM.RDF.HasProperty-Double MaximumDifference",
       "label": "HasProperty",
       "attributes": "datatype",
       "domain": "BH.oM.Test.Results.InputOutputComparisonSummary",
       "range": "MaximumDifference-A404FD0A6FE565023867530BF97997FD8F9B80B2512D7D124251CD269E7068F0-InputOutputComparisonSummary-HasProperty"
     },
     {
-      "id": "60E7A44F9192451ECDD7A05831A1A5CB083A748EBA4098841201D0DC0D04D133",
-      "iri": "http://visualdataweb.org/newOntology/60E7A44F9192451ECDD7A05831A1A5CB083A748EBA4098841201D0DC0D04D133",
+      "id": "BH.oM.Test.Results.InputOutputComparisonSummary-BH.oM.RDF.HasProperty-Double MaximumDifferenceInputItem",
+      "iri": "http://visualdataweb.org/newOntology/BH.oM.Test.Results.InputOutputComparisonSummary-BH.oM.RDF.HasProperty-Double MaximumDifferenceInputItem",
       "label": "HasProperty",
       "attributes": "datatype",
       "domain": "BH.oM.Test.Results.InputOutputComparisonSummary",
       "range": "MaximumDifferenceInputItem-60E7A44F9192451ECDD7A05831A1A5CB083A748EBA4098841201D0DC0D04D133-InputOutputComparisonSummary-HasProperty"
     },
     {
-      "id": "BB5C77645A6FA1C12D9F3DB3D0CA67F05F97DE8C4F03D62F320A6D17BCF92B4A",
-      "iri": "http://visualdataweb.org/newOntology/BB5C77645A6FA1C12D9F3DB3D0CA67F05F97DE8C4F03D62F320A6D17BCF92B4A",
+      "id": "BH.oM.Test.Results.InputOutputComparisonSummary-BH.oM.RDF.HasProperty-Double MaximumDifferenceReturnedItem",
+      "iri": "http://visualdataweb.org/newOntology/BH.oM.Test.Results.InputOutputComparisonSummary-BH.oM.RDF.HasProperty-Double MaximumDifferenceReturnedItem",
       "label": "HasProperty",
       "attributes": "datatype",
       "domain": "BH.oM.Test.Results.InputOutputComparisonSummary",
       "range": "MaximumDifferenceReturnedItem-BB5C77645A6FA1C12D9F3DB3D0CA67F05F97DE8C4F03D62F320A6D17BCF92B4A-InputOutputComparisonSummary-HasProperty"
     },
     {
-      "id": "63FB1F8468E50A37932815131141854B7880938190D2B0BF0FF70C90D2329952",
-      "iri": "http://visualdataweb.org/newOntology/63FB1F8468E50A37932815131141854B7880938190D2B0BF0FF70C90D2329952",
+      "id": "BH.oM.Test.Results.InputOutputComparisonSummary-BH.oM.RDF.IsA-BH.oM.Analytical.Results.IObjectIdResult",
+      "iri": "http://visualdataweb.org/newOntology/BH.oM.Test.Results.InputOutputComparisonSummary-BH.oM.RDF.IsA-BH.oM.Analytical.Results.IObjectIdResult",
       "label": "IsA",
       "attributes": "object",
       "domain": "BH.oM.Test.Results.InputOutputComparisonSummary",
       "range": "BH.oM.Analytical.Results.IObjectIdResult"
     },
     {
-      "id": "802B7E12F55DD610C6A70A82F92F16DD74BD4A83E48C5312FEF17E168DFA100A",
-      "iri": "http://visualdataweb.org/newOntology/802B7E12F55DD610C6A70A82F92F16DD74BD4A83E48C5312FEF17E168DFA100A",
+      "id": "BH.oM.Test.Results.InputOutputComparisonSummary-BH.oM.RDF.IsA-BH.oM.Analytical.Results.IResult",
+      "iri": "http://visualdataweb.org/newOntology/BH.oM.Test.Results.InputOutputComparisonSummary-BH.oM.RDF.IsA-BH.oM.Analytical.Results.IResult",
       "label": "IsA",
       "attributes": "object",
       "domain": "BH.oM.Test.Results.InputOutputComparisonSummary",
       "range": "BH.oM.Analytical.Results.IResult"
     },
     {
-      "id": "168E32E48DB440307690AB1BBD9F327DDE56E2FBC510F005BDDB31FD66A750ED",
-      "iri": "http://visualdataweb.org/newOntology/168E32E48DB440307690AB1BBD9F327DDE56E2FBC510F005BDDB31FD66A750ED",
+      "id": "BH.oM.Test.Results.InputOutputComparisonSummary-BH.oM.RDF.IsA-BH.oM.Base.IObject",
+      "iri": "http://visualdataweb.org/newOntology/BH.oM.Test.Results.InputOutputComparisonSummary-BH.oM.RDF.IsA-BH.oM.Base.IObject",
       "label": "IsA",
       "attributes": "object",
       "domain": "BH.oM.Test.Results.InputOutputComparisonSummary",
       "range": "BH.oM.Base.IObject"
     },
     {
-      "id": "1FDB7CB926D1FFF1A2952690D10A5E1DB5FFC520237752DCBC52EDB0EFE1C0B1",
-      "iri": "http://visualdataweb.org/newOntology/1FDB7CB926D1FFF1A2952690D10A5E1DB5FFC520237752DCBC52EDB0EFE1C0B1",
+      "id": "BH.oM.Test.Results.InputOutputComparisonSummary-BH.oM.RDF.IsA-System.IComparable`1[BH.oM.Analytical.Results.IResult]",
+      "iri": "http://visualdataweb.org/newOntology/BH.oM.Test.Results.InputOutputComparisonSummary-BH.oM.RDF.IsA-System.IComparable`1[BH.oM.Analytical.Results.IResult]",
       "label": "IsA",
       "attributes": []
     },
     {
-      "id": "04FCB2C76E258C4BE8DC753777738CB40B7E6650695EAABFB9F7C38466859643",
-      "iri": "http://visualdataweb.org/newOntology/04FCB2C76E258C4BE8DC753777738CB40B7E6650695EAABFB9F7C38466859643",
+      "id": "BH.oM.Test.Results.InputOutputComparisonSummary-BH.oM.RDF.IsA-BH.oM.Base.IImmutable",
+      "iri": "http://visualdataweb.org/newOntology/BH.oM.Test.Results.InputOutputComparisonSummary-BH.oM.RDF.IsA-BH.oM.Base.IImmutable",
       "label": "IsA",
       "attributes": "object",
       "domain": "BH.oM.Test.Results.InputOutputComparisonSummary",
       "range": "BH.oM.Base.IImmutable"
     },
     {
-      "id": "E4A41D875AC470D6AD69E815B4ACC9C446D0484CC11CDDE1457BE4930FA4D875",
-      "iri": "http://visualdataweb.org/newOntology/E4A41D875AC470D6AD69E815B4ACC9C446D0484CC11CDDE1457BE4930FA4D875",
+      "id": "BH.oM.Test.Results.InputOutputComparisonSummary-BH.oM.RDF.IsA-BH.oM.Analytical.Results.ICasedResult",
+      "iri": "http://visualdataweb.org/newOntology/BH.oM.Test.Results.InputOutputComparisonSummary-BH.oM.RDF.IsA-BH.oM.Analytical.Results.ICasedResult",
       "label": "IsA",
       "attributes": "object",
       "domain": "BH.oM.Test.Results.InputOutputComparisonSummary",
       "range": "BH.oM.Analytical.Results.ICasedResult"
     },
     {
-      "id": "AA6DFADD624F5DD918B72824AE76D37B77FFA777ABC9C6A346FC8F48C9450828",
-      "iri": "http://visualdataweb.org/newOntology/AA6DFADD624F5DD918B72824AE76D37B77FFA777ABC9C6A346FC8F48C9450828",
+      "id": "BH.oM.Test.Results.InputOutputComparisonSummary-BH.oM.RDF.IsA-BH.oM.Analytical.Results.ITimeStepResult",
+      "iri": "http://visualdataweb.org/newOntology/BH.oM.Test.Results.InputOutputComparisonSummary-BH.oM.RDF.IsA-BH.oM.Analytical.Results.ITimeStepResult",
       "label": "IsA",
       "attributes": "object",
       "domain": "BH.oM.Test.Results.InputOutputComparisonSummary",
       "range": "BH.oM.Analytical.Results.ITimeStepResult"
     },
     {
-      "id": "2AECF67D7D41FB167E94908A3FE7FD9A98E4C01D39BE71C1A07F710710F28CCC",
-      "iri": "http://visualdataweb.org/newOntology/2AECF67D7D41FB167E94908A3FE7FD9A98E4C01D39BE71C1A07F710710F28CCC",
+      "id": "BH.oM.Test.Results.InputOutputComparisonSummary-BH.oM.RDF.IsSubclassOf-System.Object",
+      "iri": "http://visualdataweb.org/newOntology/BH.oM.Test.Results.InputOutputComparisonSummary-BH.oM.RDF.IsSubclassOf-System.Object",
       "label": "IsSubclassOf",
       "attributes": []
     },
     {
-      "id": "4A00F068615A04C2CEF2BB2883DA1A01FB9DA0CB9821DF785CE1D1B0ADC84A21",
-      "iri": "http://visualdataweb.org/newOntology/4A00F068615A04C2CEF2BB2883DA1A01FB9DA0CB9821DF785CE1D1B0ADC84A21",
+      "id": "BH.oM.Test.Results.InputOutputDifference-BH.oM.RDF.HasProperty-System.IComparable ObjectId",
+      "iri": "http://visualdataweb.org/newOntology/BH.oM.Test.Results.InputOutputDifference-BH.oM.RDF.HasProperty-System.IComparable ObjectId",
       "label": "HasProperty",
       "attributes": "datatype",
       "domain": "BH.oM.Test.Results.InputOutputDifference",
       "range": "ObjectId-4A00F068615A04C2CEF2BB2883DA1A01FB9DA0CB9821DF785CE1D1B0ADC84A21-InputOutputDifference-HasProperty"
     },
     {
-      "id": "3B9F4BF521E9C2941A6C3DC1954444E2C498FFD720C5719BFE1ACEFCFB87E4BC",
-      "iri": "http://visualdataweb.org/newOntology/3B9F4BF521E9C2941A6C3DC1954444E2C498FFD720C5719BFE1ACEFCFB87E4BC",
+      "id": "BH.oM.Test.Results.InputOutputDifference-BH.oM.RDF.HasProperty-System.IComparable ResultCase",
+      "iri": "http://visualdataweb.org/newOntology/BH.oM.Test.Results.InputOutputDifference-BH.oM.RDF.HasProperty-System.IComparable ResultCase",
       "label": "HasProperty",
       "attributes": "datatype",
       "domain": "BH.oM.Test.Results.InputOutputDifference",
       "range": "ResultCase-3B9F4BF521E9C2941A6C3DC1954444E2C498FFD720C5719BFE1ACEFCFB87E4BC-InputOutputDifference-HasProperty"
     },
     {
-      "id": "F3F61C1CC398B27F30EE0B58C08F3EEF882800DC3A0071579DF7DD092CB45494",
-      "iri": "http://visualdataweb.org/newOntology/F3F61C1CC398B27F30EE0B58C08F3EEF882800DC3A0071579DF7DD092CB45494",
+      "id": "BH.oM.Test.Results.InputOutputDifference-BH.oM.RDF.HasProperty-System.Type ObjectType",
+      "iri": "http://visualdataweb.org/newOntology/BH.oM.Test.Results.InputOutputDifference-BH.oM.RDF.HasProperty-System.Type ObjectType",
       "label": "HasProperty",
       "attributes": "datatype",
       "domain": "BH.oM.Test.Results.InputOutputDifference",
       "range": "ObjectType-F3F61C1CC398B27F30EE0B58C08F3EEF882800DC3A0071579DF7DD092CB45494-InputOutputDifference-HasProperty"
     },
     {
-      "id": "58126B7A4C8C5E0ED29DBCFB45FD6DEC98955DE7F43DD275B0807EE3D69DBCA2",
-      "iri": "http://visualdataweb.org/newOntology/58126B7A4C8C5E0ED29DBCFB45FD6DEC98955DE7F43DD275B0807EE3D69DBCA2",
+      "id": "BH.oM.Test.Results.InputOutputDifference-BH.oM.RDF.HasProperty-System.String PropertyId",
+      "iri": "http://visualdataweb.org/newOntology/BH.oM.Test.Results.InputOutputDifference-BH.oM.RDF.HasProperty-System.String PropertyId",
       "label": "HasProperty",
       "attributes": "datatype",
       "domain": "BH.oM.Test.Results.InputOutputDifference",
       "range": "PropertyId-58126B7A4C8C5E0ED29DBCFB45FD6DEC98955DE7F43DD275B0807EE3D69DBCA2-InputOutputDifference-HasProperty"
     },
     {
-      "id": "3AD8980331ACB1CECFF531291F78804A535EBAABAC7C0C1B236590D938818E25",
-      "iri": "http://visualdataweb.org/newOntology/3AD8980331ACB1CECFF531291F78804A535EBAABAC7C0C1B236590D938818E25",
+      "id": "BH.oM.Test.Results.InputOutputDifference-BH.oM.RDF.HasProperty-System.String InputItem",
+      "iri": "http://visualdataweb.org/newOntology/BH.oM.Test.Results.InputOutputDifference-BH.oM.RDF.HasProperty-System.String InputItem",
       "label": "HasProperty",
       "attributes": "datatype",
       "domain": "BH.oM.Test.Results.InputOutputDifference",
       "range": "InputItem-3AD8980331ACB1CECFF531291F78804A535EBAABAC7C0C1B236590D938818E25-InputOutputDifference-HasProperty"
     },
     {
-      "id": "8F1CE83B4E6E9B329E7CF4E75F652F9CFFCBEFEE337CD1B2B5350C2F382B4C9F",
-      "iri": "http://visualdataweb.org/newOntology/8F1CE83B4E6E9B329E7CF4E75F652F9CFFCBEFEE337CD1B2B5350C2F382B4C9F",
+      "id": "BH.oM.Test.Results.InputOutputDifference-BH.oM.RDF.HasProperty-System.String ReturnedItem",
+      "iri": "http://visualdataweb.org/newOntology/BH.oM.Test.Results.InputOutputDifference-BH.oM.RDF.HasProperty-System.String ReturnedItem",
       "label": "HasProperty",
       "attributes": "datatype",
       "domain": "BH.oM.Test.Results.InputOutputDifference",
       "range": "ReturnedItem-8F1CE83B4E6E9B329E7CF4E75F652F9CFFCBEFEE337CD1B2B5350C2F382B4C9F-InputOutputDifference-HasProperty"
     },
     {
-      "id": "B0C716D7C2955320D26535B2153F89A27F6894E1DFDE0682F3823E210CDA8E6B",
-      "iri": "http://visualdataweb.org/newOntology/B0C716D7C2955320D26535B2153F89A27F6894E1DFDE0682F3823E210CDA8E6B",
+      "id": "BH.oM.Test.Results.InputOutputDifference-BH.oM.RDF.HasProperty-Double TimeStep",
+      "iri": "http://visualdataweb.org/newOntology/BH.oM.Test.Results.InputOutputDifference-BH.oM.RDF.HasProperty-Double TimeStep",
       "label": "HasProperty",
       "attributes": "datatype",
       "domain": "BH.oM.Test.Results.InputOutputDifference",
       "range": "TimeStep-B0C716D7C2955320D26535B2153F89A27F6894E1DFDE0682F3823E210CDA8E6B-InputOutputDifference-HasProperty"
     },
     {
-      "id": "D3CE0D33986E95E09F116535FC4D5180ED935F0CA8DA20A3C6080DCB1CF2F234",
-      "iri": "http://visualdataweb.org/newOntology/D3CE0D33986E95E09F116535FC4D5180ED935F0CA8DA20A3C6080DCB1CF2F234",
+      "id": "BH.oM.Test.Results.InputOutputDifference-BH.oM.RDF.IsA-BH.oM.Analytical.Results.IObjectIdResult",
+      "iri": "http://visualdataweb.org/newOntology/BH.oM.Test.Results.InputOutputDifference-BH.oM.RDF.IsA-BH.oM.Analytical.Results.IObjectIdResult",
       "label": "IsA",
       "attributes": "object",
       "domain": "BH.oM.Test.Results.InputOutputDifference",
       "range": "BH.oM.Analytical.Results.IObjectIdResult"
     },
     {
-      "id": "EE8844C6B3D6F3581EAAEF850007EF905A7675F2494AB92BB837DB2277528C9E",
-      "iri": "http://visualdataweb.org/newOntology/EE8844C6B3D6F3581EAAEF850007EF905A7675F2494AB92BB837DB2277528C9E",
+      "id": "BH.oM.Test.Results.InputOutputDifference-BH.oM.RDF.IsA-BH.oM.Analytical.Results.IResult",
+      "iri": "http://visualdataweb.org/newOntology/BH.oM.Test.Results.InputOutputDifference-BH.oM.RDF.IsA-BH.oM.Analytical.Results.IResult",
       "label": "IsA",
       "attributes": "object",
       "domain": "BH.oM.Test.Results.InputOutputDifference",
       "range": "BH.oM.Analytical.Results.IResult"
     },
     {
-      "id": "A305C102E06D7223C8689068F8C9B4F618B0F871570649B13B930CA079A4129C",
-      "iri": "http://visualdataweb.org/newOntology/A305C102E06D7223C8689068F8C9B4F618B0F871570649B13B930CA079A4129C",
+      "id": "BH.oM.Test.Results.InputOutputDifference-BH.oM.RDF.IsA-BH.oM.Base.IObject",
+      "iri": "http://visualdataweb.org/newOntology/BH.oM.Test.Results.InputOutputDifference-BH.oM.RDF.IsA-BH.oM.Base.IObject",
       "label": "IsA",
       "attributes": "object",
       "domain": "BH.oM.Test.Results.InputOutputDifference",
       "range": "BH.oM.Base.IObject"
     },
     {
-      "id": "A9BADBF33EFC51A795A81043C7C08E3000203B09F6786E44CB48E3790280379D",
-      "iri": "http://visualdataweb.org/newOntology/A9BADBF33EFC51A795A81043C7C08E3000203B09F6786E44CB48E3790280379D",
+      "id": "BH.oM.Test.Results.InputOutputDifference-BH.oM.RDF.IsA-System.IComparable`1[BH.oM.Analytical.Results.IResult]",
+      "iri": "http://visualdataweb.org/newOntology/BH.oM.Test.Results.InputOutputDifference-BH.oM.RDF.IsA-System.IComparable`1[BH.oM.Analytical.Results.IResult]",
       "label": "IsA",
       "attributes": []
     },
     {
-      "id": "D8E77BD7EEC03F3C6BDCFF184BB6DAED4476803DD598ED43838A3A1B376ABB61",
-      "iri": "http://visualdataweb.org/newOntology/D8E77BD7EEC03F3C6BDCFF184BB6DAED4476803DD598ED43838A3A1B376ABB61",
+      "id": "BH.oM.Test.Results.InputOutputDifference-BH.oM.RDF.IsA-BH.oM.Base.IImmutable",
+      "iri": "http://visualdataweb.org/newOntology/BH.oM.Test.Results.InputOutputDifference-BH.oM.RDF.IsA-BH.oM.Base.IImmutable",
       "label": "IsA",
       "attributes": "object",
       "domain": "BH.oM.Test.Results.InputOutputDifference",
       "range": "BH.oM.Base.IImmutable"
     },
     {
-      "id": "CD152608C542048E8CA45DB80202696EB0AB5BEEBADE08DB5DED2AD42C8DC58E",
-      "iri": "http://visualdataweb.org/newOntology/CD152608C542048E8CA45DB80202696EB0AB5BEEBADE08DB5DED2AD42C8DC58E",
+      "id": "BH.oM.Test.Results.InputOutputDifference-BH.oM.RDF.IsA-BH.oM.Analytical.Results.ICasedResult",
+      "iri": "http://visualdataweb.org/newOntology/BH.oM.Test.Results.InputOutputDifference-BH.oM.RDF.IsA-BH.oM.Analytical.Results.ICasedResult",
       "label": "IsA",
       "attributes": "object",
       "domain": "BH.oM.Test.Results.InputOutputDifference",
       "range": "BH.oM.Analytical.Results.ICasedResult"
     },
     {
-      "id": "E9144252E9D78994FBD8AB5F4A9EC3982FC166985CF4BEC08F78931250414CD2",
-      "iri": "http://visualdataweb.org/newOntology/E9144252E9D78994FBD8AB5F4A9EC3982FC166985CF4BEC08F78931250414CD2",
+      "id": "BH.oM.Test.Results.InputOutputDifference-BH.oM.RDF.IsA-BH.oM.Analytical.Results.ITimeStepResult",
+      "iri": "http://visualdataweb.org/newOntology/BH.oM.Test.Results.InputOutputDifference-BH.oM.RDF.IsA-BH.oM.Analytical.Results.ITimeStepResult",
       "label": "IsA",
       "attributes": "object",
       "domain": "BH.oM.Test.Results.InputOutputDifference",
       "range": "BH.oM.Analytical.Results.ITimeStepResult"
     },
     {
-      "id": "F75D01E27B31A68776B06320981490FD98AAD71E37E9B68793C16060550F20C3",
-      "iri": "http://visualdataweb.org/newOntology/F75D01E27B31A68776B06320981490FD98AAD71E37E9B68793C16060550F20C3",
+      "id": "BH.oM.Test.Results.InputOutputDifference-BH.oM.RDF.IsSubclassOf-System.Object",
+      "iri": "http://visualdataweb.org/newOntology/BH.oM.Test.Results.InputOutputDifference-BH.oM.RDF.IsSubclassOf-System.Object",
       "label": "IsSubclassOf",
       "attributes": []
     },
     {
-      "id": "4910BE0218EDA6282E90438D2FBF3A7011C6F240F4AE6B0A838D2A732D68D237",
-      "iri": "http://visualdataweb.org/newOntology/4910BE0218EDA6282E90438D2FBF3A7011C6F240F4AE6B0A838D2A732D68D237",
+      "id": "BH.oM.Test.Results.TestResult-BH.oM.RDF.HasProperty-System.String Description",
+      "iri": "http://visualdataweb.org/newOntology/BH.oM.Test.Results.TestResult-BH.oM.RDF.HasProperty-System.String Description",
       "label": "HasProperty",
       "attributes": "datatype",
       "domain": "BH.oM.Test.Results.TestResult",
       "range": "Description-4910BE0218EDA6282E90438D2FBF3A7011C6F240F4AE6B0A838D2A732D68D237-TestResult-HasProperty"
     },
     {
-      "id": "B2565FD389AEDF7CB01C981261CCA1A73E0446448D53806E0B7C1E6A25B39815",
-      "iri": "http://visualdataweb.org/newOntology/B2565FD389AEDF7CB01C981261CCA1A73E0446448D53806E0B7C1E6A25B39815",
-      "label": "HasProperty",
+      "id": "BH.oM.Test.Results.TestResult.Status-IsA-BH.oM.Test.TestStatus",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "label": "IsA",
       "attributes": "object",
-      "domain": "BH.oM.Test.Results.TestResult",
+      "domain": "BH.oM.Test.Results.TestResult.Status",
       "range": "BH.oM.Test.TestStatus"
     },
     {
-      "id": "1084A277BB92D1529BB468B3445A1C06AB96E185B998B235607BE9654155AF65",
-      "iri": "http://visualdataweb.org/newOntology/1084A277BB92D1529BB468B3445A1C06AB96E185B998B235607BE9654155AF65",
+      "id": "BH.oM.Test.Results.TestResult-BH.oM.RDF.HasProperty-BH.oM.Test.TestStatus Status",
+      "iri": "http://visualdataweb.org/newOntology/BH.oM.Test.Results.TestResult-BH.oM.RDF.HasProperty-BH.oM.Test.TestStatus Status",
+      "label": "HasProperty",
+      "attributes": [],
+      "domain": "BH.oM.Test.Results.TestResult",
+      "range": "BH.oM.Test.Results.TestResult.Status"
+    },
+    {
+      "id": "BH.oM.Test.Results.TestResult-BH.oM.RDF.HasProperty-System.Collections.Generic.List`1[BH.oM.Test.ITestInformation] Information",
+      "iri": "http://visualdataweb.org/newOntology/BH.oM.Test.Results.TestResult-BH.oM.RDF.HasProperty-System.Collections.Generic.List`1[BH.oM.Test.ITestInformation] Information",
       "label": "HasProperty",
       "attributes": "datatype",
       "domain": "BH.oM.Test.Results.TestResult",
       "range": "Information-1084A277BB92D1529BB468B3445A1C06AB96E185B998B235607BE9654155AF65-TestResult-HasProperty"
     },
     {
-      "id": "8432B9E8F6D350E942407D230A5B264FA7CD9CEF585429A25D0027D19F6E5FF7",
-      "iri": "http://visualdataweb.org/newOntology/8432B9E8F6D350E942407D230A5B264FA7CD9CEF585429A25D0027D19F6E5FF7",
+      "id": "BH.oM.Test.Results.TestResult-BH.oM.RDF.HasProperty-System.String Message",
+      "iri": "http://visualdataweb.org/newOntology/BH.oM.Test.Results.TestResult-BH.oM.RDF.HasProperty-System.String Message",
       "label": "HasProperty",
       "attributes": "datatype",
       "domain": "BH.oM.Test.Results.TestResult",
       "range": "Message-8432B9E8F6D350E942407D230A5B264FA7CD9CEF585429A25D0027D19F6E5FF7-TestResult-HasProperty"
     },
     {
-      "id": "1237E17FB9E892AAE5BADEFA9BDABA0D8740E07B63E77E5A601E31702DFE42E1",
-      "iri": "http://visualdataweb.org/newOntology/1237E17FB9E892AAE5BADEFA9BDABA0D8740E07B63E77E5A601E31702DFE42E1",
+      "id": "BH.oM.Test.Results.TestResult-BH.oM.RDF.HasProperty-System.DateTime UTCTime",
+      "iri": "http://visualdataweb.org/newOntology/BH.oM.Test.Results.TestResult-BH.oM.RDF.HasProperty-System.DateTime UTCTime",
       "label": "HasProperty",
       "attributes": "datatype",
       "domain": "BH.oM.Test.Results.TestResult",
       "range": "UTCTime-1237E17FB9E892AAE5BADEFA9BDABA0D8740E07B63E77E5A601E31702DFE42E1-TestResult-HasProperty"
     },
     {
-      "id": "78DF96C591A9D925BFB4D4D55ED110243BC2885A8EE721B34E9CF820A86CD987",
-      "iri": "http://visualdataweb.org/newOntology/78DF96C591A9D925BFB4D4D55ED110243BC2885A8EE721B34E9CF820A86CD987",
+      "id": "BH.oM.Test.Results.TestResult-BH.oM.RDF.HasProperty-System.String ID",
+      "iri": "http://visualdataweb.org/newOntology/BH.oM.Test.Results.TestResult-BH.oM.RDF.HasProperty-System.String ID",
       "label": "HasProperty",
       "attributes": "datatype",
       "domain": "BH.oM.Test.Results.TestResult",
       "range": "ID-78DF96C591A9D925BFB4D4D55ED110243BC2885A8EE721B34E9CF820A86CD987-TestResult-HasProperty"
     },
     {
-      "id": "0FE2D325BA3447C0996D98C06E4839A67BFEFBC45A6AB53EBD6E8884692BBB1D",
-      "iri": "http://visualdataweb.org/newOntology/0FE2D325BA3447C0996D98C06E4839A67BFEFBC45A6AB53EBD6E8884692BBB1D",
+      "id": "BH.oM.Test.Results.TestResult-BH.oM.RDF.IsA-BH.oM.Test.ITestInformation",
+      "iri": "http://visualdataweb.org/newOntology/BH.oM.Test.Results.TestResult-BH.oM.RDF.IsA-BH.oM.Test.ITestInformation",
       "label": "IsA",
       "attributes": "object",
       "domain": "BH.oM.Test.Results.TestResult",
       "range": "BH.oM.Test.ITestInformation"
     },
     {
-      "id": "67BAAFEA990A1A0B3657E00D00F0299F17C1B7CFB4822A12CB6273C838B727D8",
-      "iri": "http://visualdataweb.org/newOntology/67BAAFEA990A1A0B3657E00D00F0299F17C1B7CFB4822A12CB6273C838B727D8",
+      "id": "BH.oM.Test.Results.TestResult-BH.oM.RDF.IsA-BH.oM.Base.IObject",
+      "iri": "http://visualdataweb.org/newOntology/BH.oM.Test.Results.TestResult-BH.oM.RDF.IsA-BH.oM.Base.IObject",
       "label": "IsA",
       "attributes": "object",
       "domain": "BH.oM.Test.Results.TestResult",
       "range": "BH.oM.Base.IObject"
     },
     {
-      "id": "72CA59412F771FB823BABBA2B339A08984FA6F7866D6283A064EFF7C9FF49C5F",
-      "iri": "http://visualdataweb.org/newOntology/72CA59412F771FB823BABBA2B339A08984FA6F7866D6283A064EFF7C9FF49C5F",
+      "id": "BH.oM.Test.Results.TestResult-BH.oM.RDF.IsSubclassOf-System.Object",
+      "iri": "http://visualdataweb.org/newOntology/BH.oM.Test.Results.TestResult-BH.oM.RDF.IsSubclassOf-System.Object",
       "label": "IsSubclassOf",
       "attributes": []
     }

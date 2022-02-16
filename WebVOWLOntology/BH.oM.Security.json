@@ -15,12 +15,28 @@
       "type": "owl:Class"
     },
     {
+      "id": "BH.oM.Security.Elements.CameraDevice.EyePosition",
+      "type": "owl:Class"
+    },
+    {
       "id": "BH.oM.Geometry.Point",
+      "type": "owl:Class"
+    },
+    {
+      "id": "BH.oM.Security.Elements.CameraDevice.TargetPosition",
       "type": "owl:Class"
     },
     {
       "id": "HorizontalFieldOfView-0FF7F2A2225DE48B79F6073FCF5B1DFD35A7557D102F485910F36BDFA63396DD-CameraDevice-HasProperty",
       "type": "rdfs:Datatype"
+    },
+    {
+      "id": "BH.oM.Security.Elements.CameraDevice.Mounting",
+      "type": "owl:Class"
+    },
+    {
+      "id": "BH.oM.Security.Elements.CameraDevice.Type",
+      "type": "owl:Class"
     },
     {
       "id": "Megapixels-40D46DCF81C4CEC3CFE285E0CF48FD49504AFA2B57EDD01D4836A64FCD2B82BA-CameraDevice-HasProperty",
@@ -71,9 +87,21 @@
       "attributes": []
     },
     {
+      "id": "BH.oM.Security.Elements.CameraDevice.EyePosition",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/Geometry_oM/Vector/Point.cs",
+      "label": "EyePosition",
+      "attributes": []
+    },
+    {
       "id": "BH.oM.Geometry.Point",
       "iri": "https://github.com/BHoM/BHoM/blob/main/Geometry_oM/Vector/Point.cs",
-      "label": "EyePosition (Point)",
+      "label": "Point",
+      "attributes": []
+    },
+    {
+      "id": "BH.oM.Security.Elements.CameraDevice.TargetPosition",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/Geometry_oM/Vector/Point.cs",
+      "label": "TargetPosition",
       "attributes": []
     },
     {
@@ -81,6 +109,18 @@
       "iri": "http://www.w3.org/2001/XMLSchema#",
       "label": "HorizontalFieldOfView (Double)",
       "attributes": "datatype"
+    },
+    {
+      "id": "BH.oM.Security.Elements.CameraDevice.Mounting",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/Security_oM/Enums/MountingType.cs",
+      "label": "Mounting",
+      "attributes": []
+    },
+    {
+      "id": "BH.oM.Security.Elements.CameraDevice.Type",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/Security_oM/Enums/CameraType.cs",
+      "label": "Type",
+      "attributes": []
     },
     {
       "id": "Megapixels-40D46DCF81C4CEC3CFE285E0CF48FD49504AFA2B57EDD01D4836A64FCD2B82BA-CameraDevice-HasProperty",
@@ -127,226 +167,274 @@
   ],
   "property": [
     {
-      "id": "F5BD637741512CE8A7D6B22BADFF46A022C4D0EE015FACBCD2255811480E932F",
+      "id": "BH.oM.Security.Enums.CameraType-BH.oM.RDF.IsA-System.IComparable",
       "type": "owl:DatatypeProperty"
     },
     {
-      "id": "413B0C308ACBC060ADD4BD171B89213966D19A564DFAD9009969D8705DDCD279",
+      "id": "BH.oM.Security.Enums.CameraType-BH.oM.RDF.IsA-System.IFormattable",
       "type": "owl:DatatypeProperty"
     },
     {
-      "id": "CEF298B5A094C29E95E4DF81CFBD525F5450AAAF42BBA4A1FC1B11CC464B332B",
+      "id": "BH.oM.Security.Enums.CameraType-BH.oM.RDF.IsA-System.IConvertible",
       "type": "owl:DatatypeProperty"
     },
     {
-      "id": "5EF873BEBA69DBB06E1AF58A69B06A6D19DB3D99811F9B21609A2DF9CCF698D9",
+      "id": "BH.oM.Security.Enums.CameraType-BH.oM.RDF.IsSubclassOf-System.Enum",
       "type": "owl:DatatypeProperty"
     },
     {
-      "id": "A56ED752C5B9176E6DD10856B517A176227483A4D348724156D92D89A2C9DE3C",
+      "id": "BH.oM.Security.Enums.MountingType-BH.oM.RDF.IsA-System.IComparable",
       "type": "owl:DatatypeProperty"
     },
     {
-      "id": "4F5FE33CF3DF1FAAEDF1D835D62BD45AC1C419DE0395DF456621C494BBFCB78C",
+      "id": "BH.oM.Security.Enums.MountingType-BH.oM.RDF.IsA-System.IFormattable",
       "type": "owl:DatatypeProperty"
     },
     {
-      "id": "CDE81A0B0E9780FF2AFBC51360BB18F1BED061BEB658F80231EE41E3B2992CDA",
+      "id": "BH.oM.Security.Enums.MountingType-BH.oM.RDF.IsA-System.IConvertible",
       "type": "owl:DatatypeProperty"
     },
     {
-      "id": "636A0502FC786921D7CCED4B3605CFFA207092EB59C68E82426AB3BD8C79CE0D",
+      "id": "BH.oM.Security.Enums.MountingType-BH.oM.RDF.IsSubclassOf-System.Enum",
       "type": "owl:DatatypeProperty"
     },
     {
-      "id": "573EF4AF8EB25B27341DB41A6BE02A09D5602D27979CC3B36B439C9EF6952316",
+      "id": "BH.oM.Security.Elements.CameraDevice.EyePosition-IsA-BH.oM.Geometry.Point",
       "type": "owl:ObjectProperty"
     },
     {
-      "id": "191E32D044495CA50311370C4CBCEF1A7B2458CF7A8FE922CDA10FF51D4DCC84",
+      "id": "BH.oM.Security.Elements.CameraDevice-BH.oM.RDF.HasProperty-BH.oM.Geometry.Point EyePosition",
       "type": "owl:ObjectProperty"
     },
     {
-      "id": "0FF7F2A2225DE48B79F6073FCF5B1DFD35A7557D102F485910F36BDFA63396DD",
+      "id": "BH.oM.Security.Elements.CameraDevice.TargetPosition-IsA-BH.oM.Geometry.Point",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "BH.oM.Security.Elements.CameraDevice-BH.oM.RDF.HasProperty-BH.oM.Geometry.Point TargetPosition",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "BH.oM.Security.Elements.CameraDevice-BH.oM.RDF.HasProperty-Double HorizontalFieldOfView",
       "type": "owl:DatatypeProperty"
     },
     {
-      "id": "617E3FA3E4F5DB9E7476198D7904FC53A58FEF56F01366823955A6D6610982ED",
+      "id": "BH.oM.Security.Elements.CameraDevice.Mounting-IsA-BH.oM.Security.Enums.MountingType",
       "type": "owl:ObjectProperty"
     },
     {
-      "id": "DD87204C084CA3B966B8D7AE0FB8BCF105554774FA8DCF4C3E94DD03175E307B",
+      "id": "BH.oM.Security.Elements.CameraDevice-BH.oM.RDF.HasProperty-BH.oM.Security.Enums.MountingType Mounting",
       "type": "owl:ObjectProperty"
     },
     {
-      "id": "40D46DCF81C4CEC3CFE285E0CF48FD49504AFA2B57EDD01D4836A64FCD2B82BA",
+      "id": "BH.oM.Security.Elements.CameraDevice.Type-IsA-BH.oM.Security.Enums.CameraType",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "BH.oM.Security.Elements.CameraDevice-BH.oM.RDF.HasProperty-BH.oM.Security.Enums.CameraType Type",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "BH.oM.Security.Elements.CameraDevice-BH.oM.RDF.HasProperty-Double Megapixels",
       "type": "owl:DatatypeProperty"
     },
     {
-      "id": "E7FE400CE50E1C5C60929439AF790CA241D42A4095901D87061CA11F40DD516E",
+      "id": "BH.oM.Security.Elements.CameraDevice-BH.oM.RDF.IsA-BH.oM.Base.IBHoMObject",
       "type": "owl:ObjectProperty"
     },
     {
-      "id": "2936ED46DA2E398DB44799CA217BFA8311918E2DDA007D2648745B500AEEFF5F",
+      "id": "BH.oM.Security.Elements.CameraDevice-BH.oM.RDF.IsA-BH.oM.Base.IObject",
       "type": "owl:ObjectProperty"
     },
     {
-      "id": "A80A271F4AE7FC82A6AAB344FDFA74C12C0781EB5FA5BF09AE3D0F91F3EA629C",
+      "id": "BH.oM.Security.Elements.CameraDevice-BH.oM.RDF.IsA-BH.oM.Dimensional.IElement0D",
       "type": "owl:ObjectProperty"
     },
     {
-      "id": "22D987FD07C909FDFCDF90583630A23435ABA4EDB7FCAF6D2768CAB7198B399E",
+      "id": "BH.oM.Security.Elements.CameraDevice-BH.oM.RDF.IsA-BH.oM.Dimensional.IElement",
       "type": "owl:ObjectProperty"
     },
     {
-      "id": "02ED7EC409C544C7EF9E5D31294DB95AECE35651E794805DB68913AB0ACE023D",
+      "id": "BH.oM.Security.Elements.CameraDevice-BH.oM.RDF.IsA-BH.oM.Dimensional.IElementM",
       "type": "owl:ObjectProperty"
     },
     {
-      "id": "5B297C5FA0C73B8D66BE53465FFE7DA7AA02666DD33CB594C8F18CA3783A74D7",
+      "id": "BH.oM.Security.Elements.CameraDevice-BH.oM.RDF.IsSubclassOf-BH.oM.Base.BHoMObject",
       "type": "owl:ObjectProperty"
     }
   ],
   "propertyAttribute": [
     {
-      "id": "F5BD637741512CE8A7D6B22BADFF46A022C4D0EE015FACBCD2255811480E932F",
-      "iri": "http://visualdataweb.org/newOntology/F5BD637741512CE8A7D6B22BADFF46A022C4D0EE015FACBCD2255811480E932F",
+      "id": "BH.oM.Security.Enums.CameraType-BH.oM.RDF.IsA-System.IComparable",
+      "iri": "http://visualdataweb.org/newOntology/BH.oM.Security.Enums.CameraType-BH.oM.RDF.IsA-System.IComparable",
       "label": "IsA",
       "attributes": []
     },
     {
-      "id": "413B0C308ACBC060ADD4BD171B89213966D19A564DFAD9009969D8705DDCD279",
-      "iri": "http://visualdataweb.org/newOntology/413B0C308ACBC060ADD4BD171B89213966D19A564DFAD9009969D8705DDCD279",
+      "id": "BH.oM.Security.Enums.CameraType-BH.oM.RDF.IsA-System.IFormattable",
+      "iri": "http://visualdataweb.org/newOntology/BH.oM.Security.Enums.CameraType-BH.oM.RDF.IsA-System.IFormattable",
       "label": "IsA",
       "attributes": []
     },
     {
-      "id": "CEF298B5A094C29E95E4DF81CFBD525F5450AAAF42BBA4A1FC1B11CC464B332B",
-      "iri": "http://visualdataweb.org/newOntology/CEF298B5A094C29E95E4DF81CFBD525F5450AAAF42BBA4A1FC1B11CC464B332B",
+      "id": "BH.oM.Security.Enums.CameraType-BH.oM.RDF.IsA-System.IConvertible",
+      "iri": "http://visualdataweb.org/newOntology/BH.oM.Security.Enums.CameraType-BH.oM.RDF.IsA-System.IConvertible",
       "label": "IsA",
       "attributes": []
     },
     {
-      "id": "5EF873BEBA69DBB06E1AF58A69B06A6D19DB3D99811F9B21609A2DF9CCF698D9",
-      "iri": "http://visualdataweb.org/newOntology/5EF873BEBA69DBB06E1AF58A69B06A6D19DB3D99811F9B21609A2DF9CCF698D9",
+      "id": "BH.oM.Security.Enums.CameraType-BH.oM.RDF.IsSubclassOf-System.Enum",
+      "iri": "http://visualdataweb.org/newOntology/BH.oM.Security.Enums.CameraType-BH.oM.RDF.IsSubclassOf-System.Enum",
       "label": "IsSubclassOf",
       "attributes": []
     },
     {
-      "id": "A56ED752C5B9176E6DD10856B517A176227483A4D348724156D92D89A2C9DE3C",
-      "iri": "http://visualdataweb.org/newOntology/A56ED752C5B9176E6DD10856B517A176227483A4D348724156D92D89A2C9DE3C",
+      "id": "BH.oM.Security.Enums.MountingType-BH.oM.RDF.IsA-System.IComparable",
+      "iri": "http://visualdataweb.org/newOntology/BH.oM.Security.Enums.MountingType-BH.oM.RDF.IsA-System.IComparable",
       "label": "IsA",
       "attributes": []
     },
     {
-      "id": "4F5FE33CF3DF1FAAEDF1D835D62BD45AC1C419DE0395DF456621C494BBFCB78C",
-      "iri": "http://visualdataweb.org/newOntology/4F5FE33CF3DF1FAAEDF1D835D62BD45AC1C419DE0395DF456621C494BBFCB78C",
+      "id": "BH.oM.Security.Enums.MountingType-BH.oM.RDF.IsA-System.IFormattable",
+      "iri": "http://visualdataweb.org/newOntology/BH.oM.Security.Enums.MountingType-BH.oM.RDF.IsA-System.IFormattable",
       "label": "IsA",
       "attributes": []
     },
     {
-      "id": "CDE81A0B0E9780FF2AFBC51360BB18F1BED061BEB658F80231EE41E3B2992CDA",
-      "iri": "http://visualdataweb.org/newOntology/CDE81A0B0E9780FF2AFBC51360BB18F1BED061BEB658F80231EE41E3B2992CDA",
+      "id": "BH.oM.Security.Enums.MountingType-BH.oM.RDF.IsA-System.IConvertible",
+      "iri": "http://visualdataweb.org/newOntology/BH.oM.Security.Enums.MountingType-BH.oM.RDF.IsA-System.IConvertible",
       "label": "IsA",
       "attributes": []
     },
     {
-      "id": "636A0502FC786921D7CCED4B3605CFFA207092EB59C68E82426AB3BD8C79CE0D",
-      "iri": "http://visualdataweb.org/newOntology/636A0502FC786921D7CCED4B3605CFFA207092EB59C68E82426AB3BD8C79CE0D",
+      "id": "BH.oM.Security.Enums.MountingType-BH.oM.RDF.IsSubclassOf-System.Enum",
+      "iri": "http://visualdataweb.org/newOntology/BH.oM.Security.Enums.MountingType-BH.oM.RDF.IsSubclassOf-System.Enum",
       "label": "IsSubclassOf",
       "attributes": []
     },
     {
-      "id": "573EF4AF8EB25B27341DB41A6BE02A09D5602D27979CC3B36B439C9EF6952316",
-      "iri": "http://visualdataweb.org/newOntology/573EF4AF8EB25B27341DB41A6BE02A09D5602D27979CC3B36B439C9EF6952316",
-      "label": "HasProperty",
+      "id": "BH.oM.Security.Elements.CameraDevice.EyePosition-IsA-BH.oM.Geometry.Point",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "label": "IsA",
       "attributes": "object",
-      "domain": "BH.oM.Security.Elements.CameraDevice",
+      "domain": "BH.oM.Security.Elements.CameraDevice.EyePosition",
       "range": "BH.oM.Geometry.Point"
     },
     {
-      "id": "191E32D044495CA50311370C4CBCEF1A7B2458CF7A8FE922CDA10FF51D4DCC84",
-      "iri": "http://visualdataweb.org/newOntology/191E32D044495CA50311370C4CBCEF1A7B2458CF7A8FE922CDA10FF51D4DCC84",
+      "id": "BH.oM.Security.Elements.CameraDevice-BH.oM.RDF.HasProperty-BH.oM.Geometry.Point EyePosition",
+      "iri": "http://visualdataweb.org/newOntology/BH.oM.Security.Elements.CameraDevice-BH.oM.RDF.HasProperty-BH.oM.Geometry.Point EyePosition",
       "label": "HasProperty",
-      "attributes": "object",
+      "attributes": [],
       "domain": "BH.oM.Security.Elements.CameraDevice",
+      "range": "BH.oM.Security.Elements.CameraDevice.EyePosition"
+    },
+    {
+      "id": "BH.oM.Security.Elements.CameraDevice.TargetPosition-IsA-BH.oM.Geometry.Point",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "label": "IsA",
+      "attributes": "object",
+      "domain": "BH.oM.Security.Elements.CameraDevice.TargetPosition",
       "range": "BH.oM.Geometry.Point"
     },
     {
-      "id": "0FF7F2A2225DE48B79F6073FCF5B1DFD35A7557D102F485910F36BDFA63396DD",
-      "iri": "http://visualdataweb.org/newOntology/0FF7F2A2225DE48B79F6073FCF5B1DFD35A7557D102F485910F36BDFA63396DD",
+      "id": "BH.oM.Security.Elements.CameraDevice-BH.oM.RDF.HasProperty-BH.oM.Geometry.Point TargetPosition",
+      "iri": "http://visualdataweb.org/newOntology/BH.oM.Security.Elements.CameraDevice-BH.oM.RDF.HasProperty-BH.oM.Geometry.Point TargetPosition",
+      "label": "HasProperty",
+      "attributes": [],
+      "domain": "BH.oM.Security.Elements.CameraDevice",
+      "range": "BH.oM.Security.Elements.CameraDevice.TargetPosition"
+    },
+    {
+      "id": "BH.oM.Security.Elements.CameraDevice-BH.oM.RDF.HasProperty-Double HorizontalFieldOfView",
+      "iri": "http://visualdataweb.org/newOntology/BH.oM.Security.Elements.CameraDevice-BH.oM.RDF.HasProperty-Double HorizontalFieldOfView",
       "label": "HasProperty",
       "attributes": "datatype",
       "domain": "BH.oM.Security.Elements.CameraDevice",
       "range": "HorizontalFieldOfView-0FF7F2A2225DE48B79F6073FCF5B1DFD35A7557D102F485910F36BDFA63396DD-CameraDevice-HasProperty"
     },
     {
-      "id": "617E3FA3E4F5DB9E7476198D7904FC53A58FEF56F01366823955A6D6610982ED",
-      "iri": "http://visualdataweb.org/newOntology/617E3FA3E4F5DB9E7476198D7904FC53A58FEF56F01366823955A6D6610982ED",
-      "label": "HasProperty",
+      "id": "BH.oM.Security.Elements.CameraDevice.Mounting-IsA-BH.oM.Security.Enums.MountingType",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "label": "IsA",
       "attributes": "object",
-      "domain": "BH.oM.Security.Elements.CameraDevice",
+      "domain": "BH.oM.Security.Elements.CameraDevice.Mounting",
       "range": "BH.oM.Security.Enums.MountingType"
     },
     {
-      "id": "DD87204C084CA3B966B8D7AE0FB8BCF105554774FA8DCF4C3E94DD03175E307B",
-      "iri": "http://visualdataweb.org/newOntology/DD87204C084CA3B966B8D7AE0FB8BCF105554774FA8DCF4C3E94DD03175E307B",
+      "id": "BH.oM.Security.Elements.CameraDevice-BH.oM.RDF.HasProperty-BH.oM.Security.Enums.MountingType Mounting",
+      "iri": "http://visualdataweb.org/newOntology/BH.oM.Security.Elements.CameraDevice-BH.oM.RDF.HasProperty-BH.oM.Security.Enums.MountingType Mounting",
       "label": "HasProperty",
-      "attributes": "object",
+      "attributes": [],
       "domain": "BH.oM.Security.Elements.CameraDevice",
+      "range": "BH.oM.Security.Elements.CameraDevice.Mounting"
+    },
+    {
+      "id": "BH.oM.Security.Elements.CameraDevice.Type-IsA-BH.oM.Security.Enums.CameraType",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "label": "IsA",
+      "attributes": "object",
+      "domain": "BH.oM.Security.Elements.CameraDevice.Type",
       "range": "BH.oM.Security.Enums.CameraType"
     },
     {
-      "id": "40D46DCF81C4CEC3CFE285E0CF48FD49504AFA2B57EDD01D4836A64FCD2B82BA",
-      "iri": "http://visualdataweb.org/newOntology/40D46DCF81C4CEC3CFE285E0CF48FD49504AFA2B57EDD01D4836A64FCD2B82BA",
+      "id": "BH.oM.Security.Elements.CameraDevice-BH.oM.RDF.HasProperty-BH.oM.Security.Enums.CameraType Type",
+      "iri": "http://visualdataweb.org/newOntology/BH.oM.Security.Elements.CameraDevice-BH.oM.RDF.HasProperty-BH.oM.Security.Enums.CameraType Type",
+      "label": "HasProperty",
+      "attributes": [],
+      "domain": "BH.oM.Security.Elements.CameraDevice",
+      "range": "BH.oM.Security.Elements.CameraDevice.Type"
+    },
+    {
+      "id": "BH.oM.Security.Elements.CameraDevice-BH.oM.RDF.HasProperty-Double Megapixels",
+      "iri": "http://visualdataweb.org/newOntology/BH.oM.Security.Elements.CameraDevice-BH.oM.RDF.HasProperty-Double Megapixels",
       "label": "HasProperty",
       "attributes": "datatype",
       "domain": "BH.oM.Security.Elements.CameraDevice",
       "range": "Megapixels-40D46DCF81C4CEC3CFE285E0CF48FD49504AFA2B57EDD01D4836A64FCD2B82BA-CameraDevice-HasProperty"
     },
     {
-      "id": "E7FE400CE50E1C5C60929439AF790CA241D42A4095901D87061CA11F40DD516E",
-      "iri": "http://visualdataweb.org/newOntology/E7FE400CE50E1C5C60929439AF790CA241D42A4095901D87061CA11F40DD516E",
+      "id": "BH.oM.Security.Elements.CameraDevice-BH.oM.RDF.IsA-BH.oM.Base.IBHoMObject",
+      "iri": "http://visualdataweb.org/newOntology/BH.oM.Security.Elements.CameraDevice-BH.oM.RDF.IsA-BH.oM.Base.IBHoMObject",
       "label": "IsA",
       "attributes": "object",
       "domain": "BH.oM.Security.Elements.CameraDevice",
       "range": "BH.oM.Base.IBHoMObject"
     },
     {
-      "id": "2936ED46DA2E398DB44799CA217BFA8311918E2DDA007D2648745B500AEEFF5F",
-      "iri": "http://visualdataweb.org/newOntology/2936ED46DA2E398DB44799CA217BFA8311918E2DDA007D2648745B500AEEFF5F",
+      "id": "BH.oM.Security.Elements.CameraDevice-BH.oM.RDF.IsA-BH.oM.Base.IObject",
+      "iri": "http://visualdataweb.org/newOntology/BH.oM.Security.Elements.CameraDevice-BH.oM.RDF.IsA-BH.oM.Base.IObject",
       "label": "IsA",
       "attributes": "object",
       "domain": "BH.oM.Security.Elements.CameraDevice",
       "range": "BH.oM.Base.IObject"
     },
     {
-      "id": "A80A271F4AE7FC82A6AAB344FDFA74C12C0781EB5FA5BF09AE3D0F91F3EA629C",
-      "iri": "http://visualdataweb.org/newOntology/A80A271F4AE7FC82A6AAB344FDFA74C12C0781EB5FA5BF09AE3D0F91F3EA629C",
+      "id": "BH.oM.Security.Elements.CameraDevice-BH.oM.RDF.IsA-BH.oM.Dimensional.IElement0D",
+      "iri": "http://visualdataweb.org/newOntology/BH.oM.Security.Elements.CameraDevice-BH.oM.RDF.IsA-BH.oM.Dimensional.IElement0D",
       "label": "IsA",
       "attributes": "object",
       "domain": "BH.oM.Security.Elements.CameraDevice",
       "range": "BH.oM.Dimensional.IElement0D"
     },
     {
-      "id": "22D987FD07C909FDFCDF90583630A23435ABA4EDB7FCAF6D2768CAB7198B399E",
-      "iri": "http://visualdataweb.org/newOntology/22D987FD07C909FDFCDF90583630A23435ABA4EDB7FCAF6D2768CAB7198B399E",
+      "id": "BH.oM.Security.Elements.CameraDevice-BH.oM.RDF.IsA-BH.oM.Dimensional.IElement",
+      "iri": "http://visualdataweb.org/newOntology/BH.oM.Security.Elements.CameraDevice-BH.oM.RDF.IsA-BH.oM.Dimensional.IElement",
       "label": "IsA",
       "attributes": "object",
       "domain": "BH.oM.Security.Elements.CameraDevice",
       "range": "BH.oM.Dimensional.IElement"
     },
     {
-      "id": "02ED7EC409C544C7EF9E5D31294DB95AECE35651E794805DB68913AB0ACE023D",
-      "iri": "http://visualdataweb.org/newOntology/02ED7EC409C544C7EF9E5D31294DB95AECE35651E794805DB68913AB0ACE023D",
+      "id": "BH.oM.Security.Elements.CameraDevice-BH.oM.RDF.IsA-BH.oM.Dimensional.IElementM",
+      "iri": "http://visualdataweb.org/newOntology/BH.oM.Security.Elements.CameraDevice-BH.oM.RDF.IsA-BH.oM.Dimensional.IElementM",
       "label": "IsA",
       "attributes": "object",
       "domain": "BH.oM.Security.Elements.CameraDevice",
       "range": "BH.oM.Dimensional.IElementM"
     },
     {
-      "id": "5B297C5FA0C73B8D66BE53465FFE7DA7AA02666DD33CB594C8F18CA3783A74D7",
-      "iri": "http://visualdataweb.org/newOntology/5B297C5FA0C73B8D66BE53465FFE7DA7AA02666DD33CB594C8F18CA3783A74D7",
+      "id": "BH.oM.Security.Elements.CameraDevice-BH.oM.RDF.IsSubclassOf-BH.oM.Base.BHoMObject",
+      "iri": "http://visualdataweb.org/newOntology/BH.oM.Security.Elements.CameraDevice-BH.oM.RDF.IsSubclassOf-BH.oM.Base.BHoMObject",
       "label": "IsSubclassOf",
       "attributes": "object",
       "domain": "BH.oM.Security.Elements.CameraDevice",

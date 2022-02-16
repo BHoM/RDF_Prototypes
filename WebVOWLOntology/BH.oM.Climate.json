@@ -183,12 +183,48 @@
       "type": "rdfs:Datatype"
     },
     {
+      "id": "BH.oM.Climate.PointCondition.Gender",
+      "type": "owl:Class"
+    },
+    {
       "id": "BodyHeightNeutral-D64B16C80AF56E7C30842ACA1DD720173AD612DFFEAB7E5AE9781C35FE3FDA4B-PointCondition-HasProperty",
       "type": "rdfs:Datatype"
     },
     {
+      "id": "BH.oM.Climate.PointCondition.BodyPosition",
+      "type": "owl:Class"
+    },
+    {
       "id": "BodyOrientation-4EC13321025B00270B2A855A1F2DA1CEBCFA5F6087AE9491579535237AF8D13A-PointCondition-HasProperty",
       "type": "rdfs:Datatype"
+    },
+    {
+      "id": "BH.oM.Climate.PointCondition.ClothingAlbedo",
+      "type": "owl:Class"
+    },
+    {
+      "id": "BH.oM.Climate.PointCondition.CloValue",
+      "type": "owl:Class"
+    },
+    {
+      "id": "BH.oM.Climate.PointCondition.GroundReflectivity",
+      "type": "owl:Class"
+    },
+    {
+      "id": "BH.oM.Climate.PointCondition.MetabolicRate",
+      "type": "owl:Class"
+    },
+    {
+      "id": "BH.oM.Climate.PointCondition.SoilDiffusivity",
+      "type": "owl:Class"
+    },
+    {
+      "id": "BH.oM.Climate.PointCondition.AdaptiveComfortClass",
+      "type": "owl:Class"
+    },
+    {
+      "id": "BH.oM.Climate.PointCondition.TerrainRoughnessLength",
+      "type": "owl:Class"
     },
     {
       "id": "ShadingTransmissivity-BC0BD867B3530C72B21137863CD8FB94A0FD5542AFA22912AD73A7D840F63D04-PointCondition-HasProperty",
@@ -515,16 +551,70 @@
       "attributes": "datatype"
     },
     {
+      "id": "BH.oM.Climate.PointCondition.Gender",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/Climate_oM/Gender.cs",
+      "label": "Gender",
+      "attributes": []
+    },
+    {
       "id": "BodyHeightNeutral-D64B16C80AF56E7C30842ACA1DD720173AD612DFFEAB7E5AE9781C35FE3FDA4B-PointCondition-HasProperty",
       "iri": "http://www.w3.org/2001/XMLSchema#",
       "label": "BodyHeightNeutral (Double)",
       "attributes": "datatype"
     },
     {
+      "id": "BH.oM.Climate.PointCondition.BodyPosition",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/Climate_oM/BodyPosition.cs",
+      "label": "BodyPosition",
+      "attributes": []
+    },
+    {
       "id": "BodyOrientation-4EC13321025B00270B2A855A1F2DA1CEBCFA5F6087AE9491579535237AF8D13A-PointCondition-HasProperty",
       "iri": "http://www.w3.org/2001/XMLSchema#",
       "label": "BodyOrientation (Double)",
       "attributes": "datatype"
+    },
+    {
+      "id": "BH.oM.Climate.PointCondition.ClothingAlbedo",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/Climate_oM/ClothingAlbedo.cs",
+      "label": "ClothingAlbedo",
+      "attributes": []
+    },
+    {
+      "id": "BH.oM.Climate.PointCondition.CloValue",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/Climate_oM/CloValue.cs",
+      "label": "CloValue",
+      "attributes": []
+    },
+    {
+      "id": "BH.oM.Climate.PointCondition.GroundReflectivity",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/Climate_oM/GroundReflectivity.cs",
+      "label": "GroundReflectivity",
+      "attributes": []
+    },
+    {
+      "id": "BH.oM.Climate.PointCondition.MetabolicRate",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/Climate_oM/MetabolicRate.cs",
+      "label": "MetabolicRate",
+      "attributes": []
+    },
+    {
+      "id": "BH.oM.Climate.PointCondition.SoilDiffusivity",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/Climate_oM/SoilDiffusivity.cs",
+      "label": "SoilDiffusivity",
+      "attributes": []
+    },
+    {
+      "id": "BH.oM.Climate.PointCondition.AdaptiveComfortClass",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/Climate_oM/AdaptiveComfortClass.cs",
+      "label": "AdaptiveComfortClass",
+      "attributes": []
+    },
+    {
+      "id": "BH.oM.Climate.PointCondition.TerrainRoughnessLength",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/Climate_oM/TerrainRoughnessLength.cs",
+      "label": "TerrainRoughnessLength",
+      "attributes": []
     },
     {
       "id": "ShadingTransmissivity-BC0BD867B3530C72B21137863CD8FB94A0FD5542AFA22912AD73A7D840F63D04-PointCondition-HasProperty",
@@ -607,1094 +697,1202 @@
   ],
   "property": [
     {
-      "id": "A180D0598FA572913D12B73C6FC9C15C599BE42BEE40B0FE2C43769918748E1B",
+      "id": "BH.oM.Climate.Series-BH.oM.RDF.HasProperty-System.Collections.Generic.List`1[System.DateTime] Index",
       "type": "owl:DatatypeProperty"
     },
     {
-      "id": "D50948DD4A3A20E8870C9EBF88DE315CBFD087640EB870E694FEE84E2BA71A06",
+      "id": "BH.oM.Climate.Series-BH.oM.RDF.HasProperty-System.Collections.Generic.List`1[System.Object] Values",
       "type": "owl:DatatypeProperty"
     },
     {
-      "id": "69D34917A5B64926868FB3C5C33CD2CE958462B0EBF9E330FE053A90EEDB1857",
+      "id": "BH.oM.Climate.Series-BH.oM.RDF.IsA-BH.oM.Base.IBHoMObject",
       "type": "owl:ObjectProperty"
     },
     {
-      "id": "25BD07382137E7C0CA7AD2C6D1984467348CE5DA9545C46B2935F4AD4E9A609F",
+      "id": "BH.oM.Climate.Series-BH.oM.RDF.IsA-BH.oM.Base.IObject",
       "type": "owl:ObjectProperty"
     },
     {
-      "id": "1DE6A43B011E715A991D10AA6C074CA1371063FC7E004A4D3F36C9FF74448A45",
+      "id": "BH.oM.Climate.Series-BH.oM.RDF.IsSubclassOf-BH.oM.Base.BHoMObject",
       "type": "owl:ObjectProperty"
     },
     {
-      "id": "89CCB6F7C89ABD233ACF1D6C5D7742AF0C59490569DBB5CE45DDC123A2006E42",
+      "id": "BH.oM.Climate.AdaptiveComfortClass-BH.oM.RDF.IsA-System.IComparable",
       "type": "owl:DatatypeProperty"
     },
     {
-      "id": "7FD270496A92B437058866229CD967F05E3D022FDF4EE1026897F4806B8A3BB6",
+      "id": "BH.oM.Climate.AdaptiveComfortClass-BH.oM.RDF.IsA-System.IFormattable",
       "type": "owl:DatatypeProperty"
     },
     {
-      "id": "1E96816A13E8CE9B120A5FD9D93E4B9A88DAB8B3E54FDAFB3B7E25194F7B16E8",
+      "id": "BH.oM.Climate.AdaptiveComfortClass-BH.oM.RDF.IsA-System.IConvertible",
       "type": "owl:DatatypeProperty"
     },
     {
-      "id": "C7421298E9426BA6C0441399A386AC89F525DDC8AE26504B9465B029E9788B93",
+      "id": "BH.oM.Climate.AdaptiveComfortClass-BH.oM.RDF.IsSubclassOf-System.Enum",
       "type": "owl:DatatypeProperty"
     },
     {
-      "id": "1A9AD85A2755D29083EE2B8CCF09269EF7C8243F511AFBBEDDAE58CF65D3A6C1",
+      "id": "BH.oM.Climate.BodyPosition-BH.oM.RDF.IsA-System.IComparable",
       "type": "owl:DatatypeProperty"
     },
     {
-      "id": "71F9295C13AAADF2F9809ED4E87A3550C394EE9BBFD8DFDC845FB2FF00CEBDE7",
+      "id": "BH.oM.Climate.BodyPosition-BH.oM.RDF.IsA-System.IFormattable",
       "type": "owl:DatatypeProperty"
     },
     {
-      "id": "E4D3794BC7647C550535447499D164DFAED22A6858B77EF73DFD428C1D49FEBF",
+      "id": "BH.oM.Climate.BodyPosition-BH.oM.RDF.IsA-System.IConvertible",
       "type": "owl:DatatypeProperty"
     },
     {
-      "id": "CB9F68C9F3D1AEDC22A617A53F5003E209112C159CD13056EFCB399F63C87A18",
+      "id": "BH.oM.Climate.BodyPosition-BH.oM.RDF.IsSubclassOf-System.Enum",
       "type": "owl:DatatypeProperty"
     },
     {
-      "id": "3AD180B044B23E97D396DC04EB12FF34D04011E417820A7D11138BF251FD3FB8",
+      "id": "BH.oM.Climate.CloValue-BH.oM.RDF.IsA-System.IComparable",
       "type": "owl:DatatypeProperty"
     },
     {
-      "id": "A3B4A6B68E94A39188AFD0BF21C6CB7276F7A7A31A45354E447725552D7420C5",
+      "id": "BH.oM.Climate.CloValue-BH.oM.RDF.IsA-System.IFormattable",
       "type": "owl:DatatypeProperty"
     },
     {
-      "id": "77CC9B82A5705F688076FA6FC81D43CB6E5E5EE9476631524C2AF44BABBEBB01",
+      "id": "BH.oM.Climate.CloValue-BH.oM.RDF.IsA-System.IConvertible",
       "type": "owl:DatatypeProperty"
     },
     {
-      "id": "14807B0DA6FCFCF3C136AD563F3E3C663182B873EFBF0CCCA9108A1936A8AC18",
+      "id": "BH.oM.Climate.CloValue-BH.oM.RDF.IsSubclassOf-System.Enum",
       "type": "owl:DatatypeProperty"
     },
     {
-      "id": "2B20AD46F7323AC95E859CFF58BE8BB40A71AF3ADDE7B912FF829C50F07229D9",
+      "id": "BH.oM.Climate.ClothingAlbedo-BH.oM.RDF.IsA-System.IComparable",
       "type": "owl:DatatypeProperty"
     },
     {
-      "id": "C97D1893273BE15F86E809DEFBCB638D9424E6C2D78FFD274C9C2233FCC447C8",
+      "id": "BH.oM.Climate.ClothingAlbedo-BH.oM.RDF.IsA-System.IFormattable",
       "type": "owl:DatatypeProperty"
     },
     {
-      "id": "16AD395D5CE33D2A59F7A3D01CE7833D17DFD1A680CDEDB873FFA10BC6EDE3CA",
+      "id": "BH.oM.Climate.ClothingAlbedo-BH.oM.RDF.IsA-System.IConvertible",
       "type": "owl:DatatypeProperty"
     },
     {
-      "id": "C99D95045C8DB84F0818379FD8F3323A79EFFE8730CEA00E7F7C6BEA9D35D224",
+      "id": "BH.oM.Climate.ClothingAlbedo-BH.oM.RDF.IsSubclassOf-System.Enum",
       "type": "owl:DatatypeProperty"
     },
     {
-      "id": "44DC10E2ED4C5AFF358E12D72C96C2AAF307740AD7FA9F8D22BBD010A671429F",
+      "id": "BH.oM.Climate.GroundReflectivity-BH.oM.RDF.IsA-System.IComparable",
       "type": "owl:DatatypeProperty"
     },
     {
-      "id": "898064CCA8D00EBACF2ACEEC3C84F1A3A964CED87B8E512DCCC8BB645450F4BD",
+      "id": "BH.oM.Climate.GroundReflectivity-BH.oM.RDF.IsA-System.IFormattable",
       "type": "owl:DatatypeProperty"
     },
     {
-      "id": "CB4119CFDCAF61045954AE289BEC86840CB993207096480EA514EDC34FF6070A",
+      "id": "BH.oM.Climate.GroundReflectivity-BH.oM.RDF.IsA-System.IConvertible",
       "type": "owl:DatatypeProperty"
     },
     {
-      "id": "FEEC5CA0498772828D09C0CCA7D7EAB77D435A81F3A2194F2445FD241DDD4EFD",
+      "id": "BH.oM.Climate.GroundReflectivity-BH.oM.RDF.IsSubclassOf-System.Enum",
       "type": "owl:DatatypeProperty"
     },
     {
-      "id": "ED87D376425D502FDA0E662E67BAB870D97A1AABA2558930B82DA1955542ACF8",
+      "id": "BH.oM.Climate.TerrainRoughnessLength-BH.oM.RDF.IsA-System.IComparable",
       "type": "owl:DatatypeProperty"
     },
     {
-      "id": "C9CAD3A768D843CB19605F06C836C794180F39001D0D52EE48D1B8432053522B",
+      "id": "BH.oM.Climate.TerrainRoughnessLength-BH.oM.RDF.IsA-System.IFormattable",
       "type": "owl:DatatypeProperty"
     },
     {
-      "id": "DF4FCA1E97C43CE7E79119D60278E154A4A4F355B460911EE9B8F3A56B7E1960",
+      "id": "BH.oM.Climate.TerrainRoughnessLength-BH.oM.RDF.IsA-System.IConvertible",
       "type": "owl:DatatypeProperty"
     },
     {
-      "id": "0FAC9BEC55959DA36A49E346ADEDC3CC1C8809C221CCC5F0B188C2717C674C80",
+      "id": "BH.oM.Climate.TerrainRoughnessLength-BH.oM.RDF.IsSubclassOf-System.Enum",
       "type": "owl:DatatypeProperty"
     },
     {
-      "id": "88934DAEBC98E24FFBA9931D7CA0139D1AEAD9D5CB7399B818B1D299DA5B1384",
+      "id": "BH.oM.Climate.SoilDiffusivity-BH.oM.RDF.IsA-System.IComparable",
       "type": "owl:DatatypeProperty"
     },
     {
-      "id": "20DF415DD5FC78F468B8CC39A455E2058324EFFBF344501B16689CA30FF3A8D4",
+      "id": "BH.oM.Climate.SoilDiffusivity-BH.oM.RDF.IsA-System.IFormattable",
       "type": "owl:DatatypeProperty"
     },
     {
-      "id": "D15F7A72CF749DB07E695C77FE7801F71732AF50838CFBB0AB93C0059FCAE0BB",
+      "id": "BH.oM.Climate.SoilDiffusivity-BH.oM.RDF.IsA-System.IConvertible",
       "type": "owl:DatatypeProperty"
     },
     {
-      "id": "E36B87E3676073806656466D7FEA64EF0AB424784036BD0C24F1D30D81CA05A7",
+      "id": "BH.oM.Climate.SoilDiffusivity-BH.oM.RDF.IsSubclassOf-System.Enum",
       "type": "owl:DatatypeProperty"
     },
     {
-      "id": "19BE4ED7656826364BB1803DE95D8BBC9A965C5BB37187104060F0DD6F9BE235",
+      "id": "BH.oM.Climate.MetabolicRate-BH.oM.RDF.IsA-System.IComparable",
       "type": "owl:DatatypeProperty"
     },
     {
-      "id": "EA03D1D25F89408F764D75CADDDAF9327FE730CE1F141167659B44944CB48F43",
+      "id": "BH.oM.Climate.MetabolicRate-BH.oM.RDF.IsA-System.IFormattable",
       "type": "owl:DatatypeProperty"
     },
     {
-      "id": "7551962F9E8556A67BD2A1D1AB4D32110A8565AFA270935193864B9FE82EB230",
+      "id": "BH.oM.Climate.MetabolicRate-BH.oM.RDF.IsA-System.IConvertible",
       "type": "owl:DatatypeProperty"
     },
     {
-      "id": "303DFEA909BB650CA9144D5FA424971F90229D0233EBD44C45954D33EBFCB63F",
+      "id": "BH.oM.Climate.MetabolicRate-BH.oM.RDF.IsSubclassOf-System.Enum",
       "type": "owl:DatatypeProperty"
     },
     {
-      "id": "EB252A5DD4F6E4C363F36D1B7E068717328054D79BB74AF5F8969A70F4C33909",
+      "id": "BH.oM.Climate.Gender-BH.oM.RDF.IsA-System.IComparable",
       "type": "owl:DatatypeProperty"
     },
     {
-      "id": "593E9F7F5E033D3A4084676F2DE04ECE2C4C2E554F29066A4C05AAF72DF992B5",
+      "id": "BH.oM.Climate.Gender-BH.oM.RDF.IsA-System.IFormattable",
       "type": "owl:DatatypeProperty"
     },
     {
-      "id": "CE58149EBCCE4810BFE5EDFEAB397C67EA3702B6EF8A89FAB524B3C543325507",
+      "id": "BH.oM.Climate.Gender-BH.oM.RDF.IsA-System.IConvertible",
       "type": "owl:DatatypeProperty"
     },
     {
-      "id": "0D167B83BAC20CA548DE9B698975FBE95363B7757B38AA1E8CDDFBB651B68C17",
+      "id": "BH.oM.Climate.Gender-BH.oM.RDF.IsSubclassOf-System.Enum",
       "type": "owl:DatatypeProperty"
     },
     {
-      "id": "3C251D905C38FC23C8242C028401E5C2882EF1272ADBF49E02EF03B3150369B9",
+      "id": "BH.oM.Climate.EnvironmentCondition-BH.oM.RDF.HasProperty-Double DryBulbTemperature",
       "type": "owl:DatatypeProperty"
     },
     {
-      "id": "302E9839F2F2FED3706FFD5717716B35144B9BE75B7B74E2358E332E362EF304",
+      "id": "BH.oM.Climate.EnvironmentCondition-BH.oM.RDF.HasProperty-Double DewPointTemperature",
       "type": "owl:DatatypeProperty"
     },
     {
-      "id": "1488B03A2390A6029752A52CB9A01E013741D2C2711584EDB356CFEFF0E37EC6",
+      "id": "BH.oM.Climate.EnvironmentCondition-BH.oM.RDF.HasProperty-Double RelativeHumidity",
       "type": "owl:DatatypeProperty"
     },
     {
-      "id": "82242755C97B6698C80E00CCB2C0BA74E3A072A0E9FE02FB4D3479D3AD6D34C3",
+      "id": "BH.oM.Climate.EnvironmentCondition-BH.oM.RDF.HasProperty-Double AtmosphericStationPressure",
       "type": "owl:DatatypeProperty"
     },
     {
-      "id": "FBFCD70B2902A3D9E7CE86397C62CF1F6959518A4FDEA9928A653CBBAFE01CCB",
+      "id": "BH.oM.Climate.EnvironmentCondition-BH.oM.RDF.HasProperty-Double ExtraterrestrialHorizontalRadiation",
       "type": "owl:DatatypeProperty"
     },
     {
-      "id": "5B8B1096C84035F20A5BE026204BC70B1FB98D3B0C4C04A69F646B905D570B9A",
+      "id": "BH.oM.Climate.EnvironmentCondition-BH.oM.RDF.HasProperty-Double ExtraterrestrialDirectNormalRadiation",
       "type": "owl:DatatypeProperty"
     },
     {
-      "id": "601922CD683AE421B30CFE352C92D037333354DC6E339D2C212F7E9D0D07706A",
+      "id": "BH.oM.Climate.EnvironmentCondition-BH.oM.RDF.HasProperty-Double HorizontalInfraredRadiationIntensity",
       "type": "owl:DatatypeProperty"
     },
     {
-      "id": "1667B683AD3E257E9E367302729DF366BC5EA3F4F3820090A6D435A80A053668",
+      "id": "BH.oM.Climate.EnvironmentCondition-BH.oM.RDF.HasProperty-Double GlobalHorizontalRadiation",
       "type": "owl:DatatypeProperty"
     },
     {
-      "id": "2F42ECEADE31CF5F3216E9F743628C0292807DC2ECC83D04D60D8B6413DA5103",
+      "id": "BH.oM.Climate.EnvironmentCondition-BH.oM.RDF.HasProperty-Double DirectNormalRadiation",
       "type": "owl:DatatypeProperty"
     },
     {
-      "id": "8E1EDE635E29F75E7BC80A23A8EDAD56F5ED071D9676A5AC5D58921634CD55C9",
+      "id": "BH.oM.Climate.EnvironmentCondition-BH.oM.RDF.HasProperty-Double DiffuseHorizontalRadiation",
       "type": "owl:DatatypeProperty"
     },
     {
-      "id": "EA17072B39331338FB1C095DA6A83B8E9259918F0F709DC37BD8E16CB44C389C",
+      "id": "BH.oM.Climate.EnvironmentCondition-BH.oM.RDF.HasProperty-Double GlobalHorizontalIlluminance",
       "type": "owl:DatatypeProperty"
     },
     {
-      "id": "B397E1415499AE5F44CFC9C1CA2FD76FE0E8A9403778CD2029B299086C438025",
+      "id": "BH.oM.Climate.EnvironmentCondition-BH.oM.RDF.HasProperty-Double DirectNormalIlluminance",
       "type": "owl:DatatypeProperty"
     },
     {
-      "id": "5AD76A7BB57ADBCC23F0549410844CDC8BD2DE33893B85B56F132F3CA96ABC03",
+      "id": "BH.oM.Climate.EnvironmentCondition-BH.oM.RDF.HasProperty-Double DiffuseHorizontalIlluminance",
       "type": "owl:DatatypeProperty"
     },
     {
-      "id": "DBF5C50FEC022A202D46F2498FF49EBB589B1449928C2DDF136943627B1096B4",
+      "id": "BH.oM.Climate.EnvironmentCondition-BH.oM.RDF.HasProperty-Double ZenithLuminance",
       "type": "owl:DatatypeProperty"
     },
     {
-      "id": "EBD1AE7F5B2C97A7E4E94EB92ADA591D3C50CD96278DC82ED9A0820AEEE8C827",
+      "id": "BH.oM.Climate.EnvironmentCondition-BH.oM.RDF.HasProperty-Double WindDirection",
       "type": "owl:DatatypeProperty"
     },
     {
-      "id": "EC575BC1EF0BA62EAA14EAFE2F1848E4A518EC2878BA1D875CEA7A801E76520C",
+      "id": "BH.oM.Climate.EnvironmentCondition-BH.oM.RDF.HasProperty-Double WindSpeed",
       "type": "owl:DatatypeProperty"
     },
     {
-      "id": "8580DE1F9083D946878DBAEC6A0E97AB867F5D60E3BE1F463DEA1C139044114B",
+      "id": "BH.oM.Climate.EnvironmentCondition-BH.oM.RDF.HasProperty-Double TotalSkyCover",
       "type": "owl:DatatypeProperty"
     },
     {
-      "id": "8072C42761121F65F1CA8C82A223C72017628511D267483FE67C87AEA99B857D",
+      "id": "BH.oM.Climate.EnvironmentCondition-BH.oM.RDF.HasProperty-Double OpaqueSkyCover",
       "type": "owl:DatatypeProperty"
     },
     {
-      "id": "73ACD7ED7B7968ED09958DA1FCE914E1948BFB8556036A97EF49CEFC271E2A52",
+      "id": "BH.oM.Climate.EnvironmentCondition-BH.oM.RDF.HasProperty-Double Visibility",
       "type": "owl:DatatypeProperty"
     },
     {
-      "id": "12539FED6CA73CCEBEF5A98DB6867136F55524ECE5785910E1BBA83737BF60A0",
+      "id": "BH.oM.Climate.EnvironmentCondition-BH.oM.RDF.HasProperty-Double CeilingHeight",
       "type": "owl:DatatypeProperty"
     },
     {
-      "id": "675BD1C516621A77C60134D6DBBA3192C73EFFD176BE62473EAA51C8F307B746",
+      "id": "BH.oM.Climate.EnvironmentCondition-BH.oM.RDF.HasProperty-Double PrecipitableWater",
       "type": "owl:DatatypeProperty"
     },
     {
-      "id": "58E4A82F5701963AA3E3B1B7B0593EB6F5C9E36B4BDF14E83230660332555A61",
+      "id": "BH.oM.Climate.EnvironmentCondition-BH.oM.RDF.HasProperty-Double AerosolOpticalDepth",
       "type": "owl:DatatypeProperty"
     },
     {
-      "id": "DA4280D8765DB95024087503FC258EFD7667CA9C663752CC8890B50E83CF49FB",
+      "id": "BH.oM.Climate.EnvironmentCondition-BH.oM.RDF.HasProperty-Double SnowDepth",
       "type": "owl:DatatypeProperty"
     },
     {
-      "id": "F20CC418E9D1393833A08D083537951D268E7D9AAB29069CF39FCA00DDC2B52F",
+      "id": "BH.oM.Climate.EnvironmentCondition-BH.oM.RDF.HasProperty-Double DaysSinceLastSnowfall",
       "type": "owl:DatatypeProperty"
     },
     {
-      "id": "346EC27E22B4CBF4BCD15B69F578FD2C02F9DED117C6C0198363B048DBA307EC",
+      "id": "BH.oM.Climate.EnvironmentCondition-BH.oM.RDF.HasProperty-Double Albedo",
       "type": "owl:DatatypeProperty"
     },
     {
-      "id": "6866A832E8EAA8C1E40023F24ADBB93F0FA6F36BB41DE753DD98A337FD015525",
+      "id": "BH.oM.Climate.EnvironmentCondition-BH.oM.RDF.HasProperty-Double LiquidPrecipitationDepth",
       "type": "owl:DatatypeProperty"
     },
     {
-      "id": "DEA6D98863633F8DFBEF85E41C133C4BB2C8AB0D4A8A704D24B90CA0A2BB0A17",
+      "id": "BH.oM.Climate.EnvironmentCondition-BH.oM.RDF.HasProperty-Double LiquidPrecipitationQuantity",
       "type": "owl:DatatypeProperty"
     },
     {
-      "id": "9E0EC25F9A3B664F7502CF908B5199A171100E0B4EFBF92A39F9A0699F96E4F0",
+      "id": "BH.oM.Climate.EnvironmentCondition-BH.oM.RDF.IsA-BH.oM.Base.IBHoMObject",
       "type": "owl:ObjectProperty"
     },
     {
-      "id": "C5BA6C59990FB9493E5287E430D537C6E5F814A384DE05F4F13527DAFD1B9A89",
+      "id": "BH.oM.Climate.EnvironmentCondition-BH.oM.RDF.IsA-BH.oM.Base.IObject",
       "type": "owl:ObjectProperty"
     },
     {
-      "id": "B27A157D7A6765CBB7C65E1C253E192C4922016795FD49C0BFE276832CDAE421",
+      "id": "BH.oM.Climate.EnvironmentCondition-BH.oM.RDF.IsSubclassOf-BH.oM.Base.BHoMObject",
       "type": "owl:ObjectProperty"
     },
     {
-      "id": "227765704C89F8AC20EB77642E5FB639460B7752A0DDEFF3F59F62CD7676633F",
+      "id": "BH.oM.Climate.PointCondition-BH.oM.RDF.HasProperty-Int32 Age",
       "type": "owl:DatatypeProperty"
     },
     {
-      "id": "BAE1A26E773E574F1DBD5E25B4C957CFB081285F943CC632999CE25ADF4ADF50",
+      "id": "BH.oM.Climate.PointCondition.Gender-IsA-BH.oM.Climate.Gender",
       "type": "owl:ObjectProperty"
     },
     {
-      "id": "D64B16C80AF56E7C30842ACA1DD720173AD612DFFEAB7E5AE9781C35FE3FDA4B",
-      "type": "owl:DatatypeProperty"
-    },
-    {
-      "id": "AF34AD2B82E498D5B6BF82810ECF3A88F00C184FD0D2C3BA300C281F74246B5A",
+      "id": "BH.oM.Climate.PointCondition-BH.oM.RDF.HasProperty-BH.oM.Climate.Gender Gender",
       "type": "owl:ObjectProperty"
     },
     {
-      "id": "4EC13321025B00270B2A855A1F2DA1CEBCFA5F6087AE9491579535237AF8D13A",
+      "id": "BH.oM.Climate.PointCondition-BH.oM.RDF.HasProperty-Double BodyHeightNeutral",
       "type": "owl:DatatypeProperty"
     },
     {
-      "id": "E297E4FC63B797354A462B0F1C6CF8BC65A4683CF33C5A2CC533356456BC4B16",
+      "id": "BH.oM.Climate.PointCondition.BodyPosition-IsA-BH.oM.Climate.BodyPosition",
       "type": "owl:ObjectProperty"
     },
     {
-      "id": "239569F44DB6B93BDB6549A3194C1BEDB00982AE96CCE95C0F373F2BE6021C05",
+      "id": "BH.oM.Climate.PointCondition-BH.oM.RDF.HasProperty-BH.oM.Climate.BodyPosition BodyPosition",
       "type": "owl:ObjectProperty"
     },
     {
-      "id": "C5529D4DD2BA42132250E0E0C8C075C8E64E3C4F6BC6239CBCB144FCA3A7E579",
+      "id": "BH.oM.Climate.PointCondition-BH.oM.RDF.HasProperty-Double BodyOrientation",
+      "type": "owl:DatatypeProperty"
+    },
+    {
+      "id": "BH.oM.Climate.PointCondition.ClothingAlbedo-IsA-BH.oM.Climate.ClothingAlbedo",
       "type": "owl:ObjectProperty"
     },
     {
-      "id": "B9182828147305AD5C479B1EC55A5EC6B4EF55EC9CE8C523FF25BEA67FC19436",
+      "id": "BH.oM.Climate.PointCondition-BH.oM.RDF.HasProperty-BH.oM.Climate.ClothingAlbedo ClothingAlbedo",
       "type": "owl:ObjectProperty"
     },
     {
-      "id": "7FEAC6150D9158AB1FA4551B06DE0E4F71C2E209F64356F805528CAB626A6632",
+      "id": "BH.oM.Climate.PointCondition.CloValue-IsA-BH.oM.Climate.CloValue",
       "type": "owl:ObjectProperty"
     },
     {
-      "id": "2CD8ED3AE2CFAB0A25ABE14A3C1F2E6060545CC4C82918EE2017AC099ACE79DE",
+      "id": "BH.oM.Climate.PointCondition-BH.oM.RDF.HasProperty-BH.oM.Climate.CloValue CloValue",
       "type": "owl:ObjectProperty"
     },
     {
-      "id": "001A11210990090F678C5A13EE1E2DBCFC5C7D8FE4D25C4E22AAA85D9A3C376A",
+      "id": "BH.oM.Climate.PointCondition.GroundReflectivity-IsA-BH.oM.Climate.GroundReflectivity",
       "type": "owl:ObjectProperty"
     },
     {
-      "id": "BC0BD867B3530C72B21137863CD8FB94A0FD5542AFA22912AD73A7D840F63D04",
+      "id": "BH.oM.Climate.PointCondition-BH.oM.RDF.HasProperty-BH.oM.Climate.GroundReflectivity GroundReflectivity",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "BH.oM.Climate.PointCondition.MetabolicRate-IsA-BH.oM.Climate.MetabolicRate",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "BH.oM.Climate.PointCondition-BH.oM.RDF.HasProperty-BH.oM.Climate.MetabolicRate MetabolicRate",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "BH.oM.Climate.PointCondition.SoilDiffusivity-IsA-BH.oM.Climate.SoilDiffusivity",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "BH.oM.Climate.PointCondition-BH.oM.RDF.HasProperty-BH.oM.Climate.SoilDiffusivity SoilDiffusivity",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "BH.oM.Climate.PointCondition.AdaptiveComfortClass-IsA-BH.oM.Climate.AdaptiveComfortClass",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "BH.oM.Climate.PointCondition-BH.oM.RDF.HasProperty-BH.oM.Climate.AdaptiveComfortClass AdaptiveComfortClass",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "BH.oM.Climate.PointCondition.TerrainRoughnessLength-IsA-BH.oM.Climate.TerrainRoughnessLength",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "BH.oM.Climate.PointCondition-BH.oM.RDF.HasProperty-BH.oM.Climate.TerrainRoughnessLength TerrainRoughnessLength",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "BH.oM.Climate.PointCondition-BH.oM.RDF.HasProperty-Double ShadingTransmissivity",
       "type": "owl:DatatypeProperty"
     },
     {
-      "id": "91576211633594811D2A6C4894617E79EC39F6A4B30B1CAC38B0B4F6AFB774EE",
+      "id": "BH.oM.Climate.PointCondition-BH.oM.RDF.HasProperty-Double SkinTemperatureNeutral",
       "type": "owl:DatatypeProperty"
     },
     {
-      "id": "F76C81FA6ACBDE4D72244233197D742A6EFA2CDAEAC8AD45317B6993E4AAFDFC",
+      "id": "BH.oM.Climate.PointCondition-BH.oM.RDF.HasProperty-Double CoreTemperatureNeutral",
       "type": "owl:DatatypeProperty"
     },
     {
-      "id": "A0998CBF6019507DCE39BDACFA4EA9BF02AD50D079D2B8966D729FDE05A6FA0B",
+      "id": "BH.oM.Climate.PointCondition-BH.oM.RDF.HasProperty-Double BodyTemperatureNeutral",
       "type": "owl:DatatypeProperty"
     },
     {
-      "id": "F158152F0C1473D28C2319B8D7886C388DEB69A5190DCEB6034CB9CFACC48DD6",
+      "id": "BH.oM.Climate.PointCondition-BH.oM.RDF.HasProperty-Double SkinBloodFlowNeutral",
       "type": "owl:DatatypeProperty"
     },
     {
-      "id": "D54EE0E889E50291FF3996C152A416967873CE66684F8FA0A058CB45D27A2AD4",
+      "id": "BH.oM.Climate.PointCondition-BH.oM.RDF.HasProperty-Double BodyWeightNeutral",
       "type": "owl:DatatypeProperty"
     },
     {
-      "id": "5DA4D26744E602A2DF76D96451BA31A090472F0729A92E92BB84FBCA96180EA4",
+      "id": "BH.oM.Climate.PointCondition-BH.oM.RDF.HasProperty-Double BodySurfaceAreaNeutral",
       "type": "owl:DatatypeProperty"
     },
     {
-      "id": "C55075BB73F1FAFA28D9E535524F54B98D02C99B41B1BA4E8B7270B6C68CA6CE",
+      "id": "BH.oM.Climate.PointCondition-BH.oM.RDF.HasProperty-Double MetabolicFactorNeutral",
       "type": "owl:DatatypeProperty"
     },
     {
-      "id": "E13E3A65FDBD45DB6B65C10E43449E90F07A5AF767AF1794994283A5A7DDB763",
+      "id": "BH.oM.Climate.PointCondition-BH.oM.RDF.HasProperty-Double SweatingConstant",
       "type": "owl:DatatypeProperty"
     },
     {
-      "id": "15F21871CA98EDC3A5B79201B09B739EFC6B1465A75B4C7C779C5DC0B187C164",
+      "id": "BH.oM.Climate.PointCondition-BH.oM.RDF.HasProperty-Double VasodilationConstant",
       "type": "owl:DatatypeProperty"
     },
     {
-      "id": "721478D55DA458CB6ECD61C0E9BB5BB1F55DAFB53F31DF4E177931459EAF8AD0",
+      "id": "BH.oM.Climate.PointCondition-BH.oM.RDF.HasProperty-Double VasoconstrictionConstant",
       "type": "owl:DatatypeProperty"
     },
     {
-      "id": "AC956E683D55B7E572D0A4FFDF12983A0AD83438F37745AFCC81067C090BFDA8",
+      "id": "BH.oM.Climate.PointCondition-BH.oM.RDF.HasProperty-Double ClothingBodySurfaceAreaIncrease",
       "type": "owl:DatatypeProperty"
     },
     {
-      "id": "EEC88711ADB387CF513FBDE4B8A6E6836ECF3A5C37EE61635C2B64F429E3CFF6",
+      "id": "BH.oM.Climate.PointCondition-BH.oM.RDF.HasProperty-Double StefanBoltzmannConstant",
       "type": "owl:DatatypeProperty"
     },
     {
-      "id": "136D63F1B081F10293A56A9A8A97E67C8C44B3EF5294448A45C390E77AEE35C2",
+      "id": "BH.oM.Climate.PointCondition-BH.oM.RDF.IsSubclassOf-System.Object",
       "type": "owl:DatatypeProperty"
     }
   ],
   "propertyAttribute": [
     {
-      "id": "A180D0598FA572913D12B73C6FC9C15C599BE42BEE40B0FE2C43769918748E1B",
-      "iri": "http://visualdataweb.org/newOntology/A180D0598FA572913D12B73C6FC9C15C599BE42BEE40B0FE2C43769918748E1B",
+      "id": "BH.oM.Climate.Series-BH.oM.RDF.HasProperty-System.Collections.Generic.List`1[System.DateTime] Index",
+      "iri": "http://visualdataweb.org/newOntology/BH.oM.Climate.Series-BH.oM.RDF.HasProperty-System.Collections.Generic.List`1[System.DateTime] Index",
       "label": "HasProperty",
       "attributes": "datatype",
       "domain": "BH.oM.Climate.Series",
       "range": "Index-A180D0598FA572913D12B73C6FC9C15C599BE42BEE40B0FE2C43769918748E1B-Series-HasProperty"
     },
     {
-      "id": "D50948DD4A3A20E8870C9EBF88DE315CBFD087640EB870E694FEE84E2BA71A06",
-      "iri": "http://visualdataweb.org/newOntology/D50948DD4A3A20E8870C9EBF88DE315CBFD087640EB870E694FEE84E2BA71A06",
+      "id": "BH.oM.Climate.Series-BH.oM.RDF.HasProperty-System.Collections.Generic.List`1[System.Object] Values",
+      "iri": "http://visualdataweb.org/newOntology/BH.oM.Climate.Series-BH.oM.RDF.HasProperty-System.Collections.Generic.List`1[System.Object] Values",
       "label": "HasProperty",
       "attributes": "datatype",
       "domain": "BH.oM.Climate.Series",
       "range": "Values-D50948DD4A3A20E8870C9EBF88DE315CBFD087640EB870E694FEE84E2BA71A06-Series-HasProperty"
     },
     {
-      "id": "69D34917A5B64926868FB3C5C33CD2CE958462B0EBF9E330FE053A90EEDB1857",
-      "iri": "http://visualdataweb.org/newOntology/69D34917A5B64926868FB3C5C33CD2CE958462B0EBF9E330FE053A90EEDB1857",
+      "id": "BH.oM.Climate.Series-BH.oM.RDF.IsA-BH.oM.Base.IBHoMObject",
+      "iri": "http://visualdataweb.org/newOntology/BH.oM.Climate.Series-BH.oM.RDF.IsA-BH.oM.Base.IBHoMObject",
       "label": "IsA",
       "attributes": "object",
       "domain": "BH.oM.Climate.Series",
       "range": "BH.oM.Base.IBHoMObject"
     },
     {
-      "id": "25BD07382137E7C0CA7AD2C6D1984467348CE5DA9545C46B2935F4AD4E9A609F",
-      "iri": "http://visualdataweb.org/newOntology/25BD07382137E7C0CA7AD2C6D1984467348CE5DA9545C46B2935F4AD4E9A609F",
+      "id": "BH.oM.Climate.Series-BH.oM.RDF.IsA-BH.oM.Base.IObject",
+      "iri": "http://visualdataweb.org/newOntology/BH.oM.Climate.Series-BH.oM.RDF.IsA-BH.oM.Base.IObject",
       "label": "IsA",
       "attributes": "object",
       "domain": "BH.oM.Climate.Series",
       "range": "BH.oM.Base.IObject"
     },
     {
-      "id": "1DE6A43B011E715A991D10AA6C074CA1371063FC7E004A4D3F36C9FF74448A45",
-      "iri": "http://visualdataweb.org/newOntology/1DE6A43B011E715A991D10AA6C074CA1371063FC7E004A4D3F36C9FF74448A45",
+      "id": "BH.oM.Climate.Series-BH.oM.RDF.IsSubclassOf-BH.oM.Base.BHoMObject",
+      "iri": "http://visualdataweb.org/newOntology/BH.oM.Climate.Series-BH.oM.RDF.IsSubclassOf-BH.oM.Base.BHoMObject",
       "label": "IsSubclassOf",
       "attributes": "object",
       "domain": "BH.oM.Climate.Series",
       "range": "BH.oM.Base.BHoMObject"
     },
     {
-      "id": "89CCB6F7C89ABD233ACF1D6C5D7742AF0C59490569DBB5CE45DDC123A2006E42",
-      "iri": "http://visualdataweb.org/newOntology/89CCB6F7C89ABD233ACF1D6C5D7742AF0C59490569DBB5CE45DDC123A2006E42",
+      "id": "BH.oM.Climate.AdaptiveComfortClass-BH.oM.RDF.IsA-System.IComparable",
+      "iri": "http://visualdataweb.org/newOntology/BH.oM.Climate.AdaptiveComfortClass-BH.oM.RDF.IsA-System.IComparable",
       "label": "IsA",
       "attributes": []
     },
     {
-      "id": "7FD270496A92B437058866229CD967F05E3D022FDF4EE1026897F4806B8A3BB6",
-      "iri": "http://visualdataweb.org/newOntology/7FD270496A92B437058866229CD967F05E3D022FDF4EE1026897F4806B8A3BB6",
+      "id": "BH.oM.Climate.AdaptiveComfortClass-BH.oM.RDF.IsA-System.IFormattable",
+      "iri": "http://visualdataweb.org/newOntology/BH.oM.Climate.AdaptiveComfortClass-BH.oM.RDF.IsA-System.IFormattable",
       "label": "IsA",
       "attributes": []
     },
     {
-      "id": "1E96816A13E8CE9B120A5FD9D93E4B9A88DAB8B3E54FDAFB3B7E25194F7B16E8",
-      "iri": "http://visualdataweb.org/newOntology/1E96816A13E8CE9B120A5FD9D93E4B9A88DAB8B3E54FDAFB3B7E25194F7B16E8",
+      "id": "BH.oM.Climate.AdaptiveComfortClass-BH.oM.RDF.IsA-System.IConvertible",
+      "iri": "http://visualdataweb.org/newOntology/BH.oM.Climate.AdaptiveComfortClass-BH.oM.RDF.IsA-System.IConvertible",
       "label": "IsA",
       "attributes": []
     },
     {
-      "id": "C7421298E9426BA6C0441399A386AC89F525DDC8AE26504B9465B029E9788B93",
-      "iri": "http://visualdataweb.org/newOntology/C7421298E9426BA6C0441399A386AC89F525DDC8AE26504B9465B029E9788B93",
+      "id": "BH.oM.Climate.AdaptiveComfortClass-BH.oM.RDF.IsSubclassOf-System.Enum",
+      "iri": "http://visualdataweb.org/newOntology/BH.oM.Climate.AdaptiveComfortClass-BH.oM.RDF.IsSubclassOf-System.Enum",
       "label": "IsSubclassOf",
       "attributes": []
     },
     {
-      "id": "1A9AD85A2755D29083EE2B8CCF09269EF7C8243F511AFBBEDDAE58CF65D3A6C1",
-      "iri": "http://visualdataweb.org/newOntology/1A9AD85A2755D29083EE2B8CCF09269EF7C8243F511AFBBEDDAE58CF65D3A6C1",
+      "id": "BH.oM.Climate.BodyPosition-BH.oM.RDF.IsA-System.IComparable",
+      "iri": "http://visualdataweb.org/newOntology/BH.oM.Climate.BodyPosition-BH.oM.RDF.IsA-System.IComparable",
       "label": "IsA",
       "attributes": []
     },
     {
-      "id": "71F9295C13AAADF2F9809ED4E87A3550C394EE9BBFD8DFDC845FB2FF00CEBDE7",
-      "iri": "http://visualdataweb.org/newOntology/71F9295C13AAADF2F9809ED4E87A3550C394EE9BBFD8DFDC845FB2FF00CEBDE7",
+      "id": "BH.oM.Climate.BodyPosition-BH.oM.RDF.IsA-System.IFormattable",
+      "iri": "http://visualdataweb.org/newOntology/BH.oM.Climate.BodyPosition-BH.oM.RDF.IsA-System.IFormattable",
       "label": "IsA",
       "attributes": []
     },
     {
-      "id": "E4D3794BC7647C550535447499D164DFAED22A6858B77EF73DFD428C1D49FEBF",
-      "iri": "http://visualdataweb.org/newOntology/E4D3794BC7647C550535447499D164DFAED22A6858B77EF73DFD428C1D49FEBF",
+      "id": "BH.oM.Climate.BodyPosition-BH.oM.RDF.IsA-System.IConvertible",
+      "iri": "http://visualdataweb.org/newOntology/BH.oM.Climate.BodyPosition-BH.oM.RDF.IsA-System.IConvertible",
       "label": "IsA",
       "attributes": []
     },
     {
-      "id": "CB9F68C9F3D1AEDC22A617A53F5003E209112C159CD13056EFCB399F63C87A18",
-      "iri": "http://visualdataweb.org/newOntology/CB9F68C9F3D1AEDC22A617A53F5003E209112C159CD13056EFCB399F63C87A18",
+      "id": "BH.oM.Climate.BodyPosition-BH.oM.RDF.IsSubclassOf-System.Enum",
+      "iri": "http://visualdataweb.org/newOntology/BH.oM.Climate.BodyPosition-BH.oM.RDF.IsSubclassOf-System.Enum",
       "label": "IsSubclassOf",
       "attributes": []
     },
     {
-      "id": "3AD180B044B23E97D396DC04EB12FF34D04011E417820A7D11138BF251FD3FB8",
-      "iri": "http://visualdataweb.org/newOntology/3AD180B044B23E97D396DC04EB12FF34D04011E417820A7D11138BF251FD3FB8",
+      "id": "BH.oM.Climate.CloValue-BH.oM.RDF.IsA-System.IComparable",
+      "iri": "http://visualdataweb.org/newOntology/BH.oM.Climate.CloValue-BH.oM.RDF.IsA-System.IComparable",
       "label": "IsA",
       "attributes": []
     },
     {
-      "id": "A3B4A6B68E94A39188AFD0BF21C6CB7276F7A7A31A45354E447725552D7420C5",
-      "iri": "http://visualdataweb.org/newOntology/A3B4A6B68E94A39188AFD0BF21C6CB7276F7A7A31A45354E447725552D7420C5",
+      "id": "BH.oM.Climate.CloValue-BH.oM.RDF.IsA-System.IFormattable",
+      "iri": "http://visualdataweb.org/newOntology/BH.oM.Climate.CloValue-BH.oM.RDF.IsA-System.IFormattable",
       "label": "IsA",
       "attributes": []
     },
     {
-      "id": "77CC9B82A5705F688076FA6FC81D43CB6E5E5EE9476631524C2AF44BABBEBB01",
-      "iri": "http://visualdataweb.org/newOntology/77CC9B82A5705F688076FA6FC81D43CB6E5E5EE9476631524C2AF44BABBEBB01",
+      "id": "BH.oM.Climate.CloValue-BH.oM.RDF.IsA-System.IConvertible",
+      "iri": "http://visualdataweb.org/newOntology/BH.oM.Climate.CloValue-BH.oM.RDF.IsA-System.IConvertible",
       "label": "IsA",
       "attributes": []
     },
     {
-      "id": "14807B0DA6FCFCF3C136AD563F3E3C663182B873EFBF0CCCA9108A1936A8AC18",
-      "iri": "http://visualdataweb.org/newOntology/14807B0DA6FCFCF3C136AD563F3E3C663182B873EFBF0CCCA9108A1936A8AC18",
+      "id": "BH.oM.Climate.CloValue-BH.oM.RDF.IsSubclassOf-System.Enum",
+      "iri": "http://visualdataweb.org/newOntology/BH.oM.Climate.CloValue-BH.oM.RDF.IsSubclassOf-System.Enum",
       "label": "IsSubclassOf",
       "attributes": []
     },
     {
-      "id": "2B20AD46F7323AC95E859CFF58BE8BB40A71AF3ADDE7B912FF829C50F07229D9",
-      "iri": "http://visualdataweb.org/newOntology/2B20AD46F7323AC95E859CFF58BE8BB40A71AF3ADDE7B912FF829C50F07229D9",
+      "id": "BH.oM.Climate.ClothingAlbedo-BH.oM.RDF.IsA-System.IComparable",
+      "iri": "http://visualdataweb.org/newOntology/BH.oM.Climate.ClothingAlbedo-BH.oM.RDF.IsA-System.IComparable",
       "label": "IsA",
       "attributes": []
     },
     {
-      "id": "C97D1893273BE15F86E809DEFBCB638D9424E6C2D78FFD274C9C2233FCC447C8",
-      "iri": "http://visualdataweb.org/newOntology/C97D1893273BE15F86E809DEFBCB638D9424E6C2D78FFD274C9C2233FCC447C8",
+      "id": "BH.oM.Climate.ClothingAlbedo-BH.oM.RDF.IsA-System.IFormattable",
+      "iri": "http://visualdataweb.org/newOntology/BH.oM.Climate.ClothingAlbedo-BH.oM.RDF.IsA-System.IFormattable",
       "label": "IsA",
       "attributes": []
     },
     {
-      "id": "16AD395D5CE33D2A59F7A3D01CE7833D17DFD1A680CDEDB873FFA10BC6EDE3CA",
-      "iri": "http://visualdataweb.org/newOntology/16AD395D5CE33D2A59F7A3D01CE7833D17DFD1A680CDEDB873FFA10BC6EDE3CA",
+      "id": "BH.oM.Climate.ClothingAlbedo-BH.oM.RDF.IsA-System.IConvertible",
+      "iri": "http://visualdataweb.org/newOntology/BH.oM.Climate.ClothingAlbedo-BH.oM.RDF.IsA-System.IConvertible",
       "label": "IsA",
       "attributes": []
     },
     {
-      "id": "C99D95045C8DB84F0818379FD8F3323A79EFFE8730CEA00E7F7C6BEA9D35D224",
-      "iri": "http://visualdataweb.org/newOntology/C99D95045C8DB84F0818379FD8F3323A79EFFE8730CEA00E7F7C6BEA9D35D224",
+      "id": "BH.oM.Climate.ClothingAlbedo-BH.oM.RDF.IsSubclassOf-System.Enum",
+      "iri": "http://visualdataweb.org/newOntology/BH.oM.Climate.ClothingAlbedo-BH.oM.RDF.IsSubclassOf-System.Enum",
       "label": "IsSubclassOf",
       "attributes": []
     },
     {
-      "id": "44DC10E2ED4C5AFF358E12D72C96C2AAF307740AD7FA9F8D22BBD010A671429F",
-      "iri": "http://visualdataweb.org/newOntology/44DC10E2ED4C5AFF358E12D72C96C2AAF307740AD7FA9F8D22BBD010A671429F",
+      "id": "BH.oM.Climate.GroundReflectivity-BH.oM.RDF.IsA-System.IComparable",
+      "iri": "http://visualdataweb.org/newOntology/BH.oM.Climate.GroundReflectivity-BH.oM.RDF.IsA-System.IComparable",
       "label": "IsA",
       "attributes": []
     },
     {
-      "id": "898064CCA8D00EBACF2ACEEC3C84F1A3A964CED87B8E512DCCC8BB645450F4BD",
-      "iri": "http://visualdataweb.org/newOntology/898064CCA8D00EBACF2ACEEC3C84F1A3A964CED87B8E512DCCC8BB645450F4BD",
+      "id": "BH.oM.Climate.GroundReflectivity-BH.oM.RDF.IsA-System.IFormattable",
+      "iri": "http://visualdataweb.org/newOntology/BH.oM.Climate.GroundReflectivity-BH.oM.RDF.IsA-System.IFormattable",
       "label": "IsA",
       "attributes": []
     },
     {
-      "id": "CB4119CFDCAF61045954AE289BEC86840CB993207096480EA514EDC34FF6070A",
-      "iri": "http://visualdataweb.org/newOntology/CB4119CFDCAF61045954AE289BEC86840CB993207096480EA514EDC34FF6070A",
+      "id": "BH.oM.Climate.GroundReflectivity-BH.oM.RDF.IsA-System.IConvertible",
+      "iri": "http://visualdataweb.org/newOntology/BH.oM.Climate.GroundReflectivity-BH.oM.RDF.IsA-System.IConvertible",
       "label": "IsA",
       "attributes": []
     },
     {
-      "id": "FEEC5CA0498772828D09C0CCA7D7EAB77D435A81F3A2194F2445FD241DDD4EFD",
-      "iri": "http://visualdataweb.org/newOntology/FEEC5CA0498772828D09C0CCA7D7EAB77D435A81F3A2194F2445FD241DDD4EFD",
+      "id": "BH.oM.Climate.GroundReflectivity-BH.oM.RDF.IsSubclassOf-System.Enum",
+      "iri": "http://visualdataweb.org/newOntology/BH.oM.Climate.GroundReflectivity-BH.oM.RDF.IsSubclassOf-System.Enum",
       "label": "IsSubclassOf",
       "attributes": []
     },
     {
-      "id": "ED87D376425D502FDA0E662E67BAB870D97A1AABA2558930B82DA1955542ACF8",
-      "iri": "http://visualdataweb.org/newOntology/ED87D376425D502FDA0E662E67BAB870D97A1AABA2558930B82DA1955542ACF8",
+      "id": "BH.oM.Climate.TerrainRoughnessLength-BH.oM.RDF.IsA-System.IComparable",
+      "iri": "http://visualdataweb.org/newOntology/BH.oM.Climate.TerrainRoughnessLength-BH.oM.RDF.IsA-System.IComparable",
       "label": "IsA",
       "attributes": []
     },
     {
-      "id": "C9CAD3A768D843CB19605F06C836C794180F39001D0D52EE48D1B8432053522B",
-      "iri": "http://visualdataweb.org/newOntology/C9CAD3A768D843CB19605F06C836C794180F39001D0D52EE48D1B8432053522B",
+      "id": "BH.oM.Climate.TerrainRoughnessLength-BH.oM.RDF.IsA-System.IFormattable",
+      "iri": "http://visualdataweb.org/newOntology/BH.oM.Climate.TerrainRoughnessLength-BH.oM.RDF.IsA-System.IFormattable",
       "label": "IsA",
       "attributes": []
     },
     {
-      "id": "DF4FCA1E97C43CE7E79119D60278E154A4A4F355B460911EE9B8F3A56B7E1960",
-      "iri": "http://visualdataweb.org/newOntology/DF4FCA1E97C43CE7E79119D60278E154A4A4F355B460911EE9B8F3A56B7E1960",
+      "id": "BH.oM.Climate.TerrainRoughnessLength-BH.oM.RDF.IsA-System.IConvertible",
+      "iri": "http://visualdataweb.org/newOntology/BH.oM.Climate.TerrainRoughnessLength-BH.oM.RDF.IsA-System.IConvertible",
       "label": "IsA",
       "attributes": []
     },
     {
-      "id": "0FAC9BEC55959DA36A49E346ADEDC3CC1C8809C221CCC5F0B188C2717C674C80",
-      "iri": "http://visualdataweb.org/newOntology/0FAC9BEC55959DA36A49E346ADEDC3CC1C8809C221CCC5F0B188C2717C674C80",
+      "id": "BH.oM.Climate.TerrainRoughnessLength-BH.oM.RDF.IsSubclassOf-System.Enum",
+      "iri": "http://visualdataweb.org/newOntology/BH.oM.Climate.TerrainRoughnessLength-BH.oM.RDF.IsSubclassOf-System.Enum",
       "label": "IsSubclassOf",
       "attributes": []
     },
     {
-      "id": "88934DAEBC98E24FFBA9931D7CA0139D1AEAD9D5CB7399B818B1D299DA5B1384",
-      "iri": "http://visualdataweb.org/newOntology/88934DAEBC98E24FFBA9931D7CA0139D1AEAD9D5CB7399B818B1D299DA5B1384",
+      "id": "BH.oM.Climate.SoilDiffusivity-BH.oM.RDF.IsA-System.IComparable",
+      "iri": "http://visualdataweb.org/newOntology/BH.oM.Climate.SoilDiffusivity-BH.oM.RDF.IsA-System.IComparable",
       "label": "IsA",
       "attributes": []
     },
     {
-      "id": "20DF415DD5FC78F468B8CC39A455E2058324EFFBF344501B16689CA30FF3A8D4",
-      "iri": "http://visualdataweb.org/newOntology/20DF415DD5FC78F468B8CC39A455E2058324EFFBF344501B16689CA30FF3A8D4",
+      "id": "BH.oM.Climate.SoilDiffusivity-BH.oM.RDF.IsA-System.IFormattable",
+      "iri": "http://visualdataweb.org/newOntology/BH.oM.Climate.SoilDiffusivity-BH.oM.RDF.IsA-System.IFormattable",
       "label": "IsA",
       "attributes": []
     },
     {
-      "id": "D15F7A72CF749DB07E695C77FE7801F71732AF50838CFBB0AB93C0059FCAE0BB",
-      "iri": "http://visualdataweb.org/newOntology/D15F7A72CF749DB07E695C77FE7801F71732AF50838CFBB0AB93C0059FCAE0BB",
+      "id": "BH.oM.Climate.SoilDiffusivity-BH.oM.RDF.IsA-System.IConvertible",
+      "iri": "http://visualdataweb.org/newOntology/BH.oM.Climate.SoilDiffusivity-BH.oM.RDF.IsA-System.IConvertible",
       "label": "IsA",
       "attributes": []
     },
     {
-      "id": "E36B87E3676073806656466D7FEA64EF0AB424784036BD0C24F1D30D81CA05A7",
-      "iri": "http://visualdataweb.org/newOntology/E36B87E3676073806656466D7FEA64EF0AB424784036BD0C24F1D30D81CA05A7",
+      "id": "BH.oM.Climate.SoilDiffusivity-BH.oM.RDF.IsSubclassOf-System.Enum",
+      "iri": "http://visualdataweb.org/newOntology/BH.oM.Climate.SoilDiffusivity-BH.oM.RDF.IsSubclassOf-System.Enum",
       "label": "IsSubclassOf",
       "attributes": []
     },
     {
-      "id": "19BE4ED7656826364BB1803DE95D8BBC9A965C5BB37187104060F0DD6F9BE235",
-      "iri": "http://visualdataweb.org/newOntology/19BE4ED7656826364BB1803DE95D8BBC9A965C5BB37187104060F0DD6F9BE235",
+      "id": "BH.oM.Climate.MetabolicRate-BH.oM.RDF.IsA-System.IComparable",
+      "iri": "http://visualdataweb.org/newOntology/BH.oM.Climate.MetabolicRate-BH.oM.RDF.IsA-System.IComparable",
       "label": "IsA",
       "attributes": []
     },
     {
-      "id": "EA03D1D25F89408F764D75CADDDAF9327FE730CE1F141167659B44944CB48F43",
-      "iri": "http://visualdataweb.org/newOntology/EA03D1D25F89408F764D75CADDDAF9327FE730CE1F141167659B44944CB48F43",
+      "id": "BH.oM.Climate.MetabolicRate-BH.oM.RDF.IsA-System.IFormattable",
+      "iri": "http://visualdataweb.org/newOntology/BH.oM.Climate.MetabolicRate-BH.oM.RDF.IsA-System.IFormattable",
       "label": "IsA",
       "attributes": []
     },
     {
-      "id": "7551962F9E8556A67BD2A1D1AB4D32110A8565AFA270935193864B9FE82EB230",
-      "iri": "http://visualdataweb.org/newOntology/7551962F9E8556A67BD2A1D1AB4D32110A8565AFA270935193864B9FE82EB230",
+      "id": "BH.oM.Climate.MetabolicRate-BH.oM.RDF.IsA-System.IConvertible",
+      "iri": "http://visualdataweb.org/newOntology/BH.oM.Climate.MetabolicRate-BH.oM.RDF.IsA-System.IConvertible",
       "label": "IsA",
       "attributes": []
     },
     {
-      "id": "303DFEA909BB650CA9144D5FA424971F90229D0233EBD44C45954D33EBFCB63F",
-      "iri": "http://visualdataweb.org/newOntology/303DFEA909BB650CA9144D5FA424971F90229D0233EBD44C45954D33EBFCB63F",
+      "id": "BH.oM.Climate.MetabolicRate-BH.oM.RDF.IsSubclassOf-System.Enum",
+      "iri": "http://visualdataweb.org/newOntology/BH.oM.Climate.MetabolicRate-BH.oM.RDF.IsSubclassOf-System.Enum",
       "label": "IsSubclassOf",
       "attributes": []
     },
     {
-      "id": "EB252A5DD4F6E4C363F36D1B7E068717328054D79BB74AF5F8969A70F4C33909",
-      "iri": "http://visualdataweb.org/newOntology/EB252A5DD4F6E4C363F36D1B7E068717328054D79BB74AF5F8969A70F4C33909",
+      "id": "BH.oM.Climate.Gender-BH.oM.RDF.IsA-System.IComparable",
+      "iri": "http://visualdataweb.org/newOntology/BH.oM.Climate.Gender-BH.oM.RDF.IsA-System.IComparable",
       "label": "IsA",
       "attributes": []
     },
     {
-      "id": "593E9F7F5E033D3A4084676F2DE04ECE2C4C2E554F29066A4C05AAF72DF992B5",
-      "iri": "http://visualdataweb.org/newOntology/593E9F7F5E033D3A4084676F2DE04ECE2C4C2E554F29066A4C05AAF72DF992B5",
+      "id": "BH.oM.Climate.Gender-BH.oM.RDF.IsA-System.IFormattable",
+      "iri": "http://visualdataweb.org/newOntology/BH.oM.Climate.Gender-BH.oM.RDF.IsA-System.IFormattable",
       "label": "IsA",
       "attributes": []
     },
     {
-      "id": "CE58149EBCCE4810BFE5EDFEAB397C67EA3702B6EF8A89FAB524B3C543325507",
-      "iri": "http://visualdataweb.org/newOntology/CE58149EBCCE4810BFE5EDFEAB397C67EA3702B6EF8A89FAB524B3C543325507",
+      "id": "BH.oM.Climate.Gender-BH.oM.RDF.IsA-System.IConvertible",
+      "iri": "http://visualdataweb.org/newOntology/BH.oM.Climate.Gender-BH.oM.RDF.IsA-System.IConvertible",
       "label": "IsA",
       "attributes": []
     },
     {
-      "id": "0D167B83BAC20CA548DE9B698975FBE95363B7757B38AA1E8CDDFBB651B68C17",
-      "iri": "http://visualdataweb.org/newOntology/0D167B83BAC20CA548DE9B698975FBE95363B7757B38AA1E8CDDFBB651B68C17",
+      "id": "BH.oM.Climate.Gender-BH.oM.RDF.IsSubclassOf-System.Enum",
+      "iri": "http://visualdataweb.org/newOntology/BH.oM.Climate.Gender-BH.oM.RDF.IsSubclassOf-System.Enum",
       "label": "IsSubclassOf",
       "attributes": []
     },
     {
-      "id": "3C251D905C38FC23C8242C028401E5C2882EF1272ADBF49E02EF03B3150369B9",
-      "iri": "http://visualdataweb.org/newOntology/3C251D905C38FC23C8242C028401E5C2882EF1272ADBF49E02EF03B3150369B9",
+      "id": "BH.oM.Climate.EnvironmentCondition-BH.oM.RDF.HasProperty-Double DryBulbTemperature",
+      "iri": "http://visualdataweb.org/newOntology/BH.oM.Climate.EnvironmentCondition-BH.oM.RDF.HasProperty-Double DryBulbTemperature",
       "label": "HasProperty",
       "attributes": "datatype",
       "domain": "BH.oM.Climate.EnvironmentCondition",
       "range": "DryBulbTemperature-3C251D905C38FC23C8242C028401E5C2882EF1272ADBF49E02EF03B3150369B9-EnvironmentCondition-HasProperty"
     },
     {
-      "id": "302E9839F2F2FED3706FFD5717716B35144B9BE75B7B74E2358E332E362EF304",
-      "iri": "http://visualdataweb.org/newOntology/302E9839F2F2FED3706FFD5717716B35144B9BE75B7B74E2358E332E362EF304",
+      "id": "BH.oM.Climate.EnvironmentCondition-BH.oM.RDF.HasProperty-Double DewPointTemperature",
+      "iri": "http://visualdataweb.org/newOntology/BH.oM.Climate.EnvironmentCondition-BH.oM.RDF.HasProperty-Double DewPointTemperature",
       "label": "HasProperty",
       "attributes": "datatype",
       "domain": "BH.oM.Climate.EnvironmentCondition",
       "range": "DewPointTemperature-302E9839F2F2FED3706FFD5717716B35144B9BE75B7B74E2358E332E362EF304-EnvironmentCondition-HasProperty"
     },
     {
-      "id": "1488B03A2390A6029752A52CB9A01E013741D2C2711584EDB356CFEFF0E37EC6",
-      "iri": "http://visualdataweb.org/newOntology/1488B03A2390A6029752A52CB9A01E013741D2C2711584EDB356CFEFF0E37EC6",
+      "id": "BH.oM.Climate.EnvironmentCondition-BH.oM.RDF.HasProperty-Double RelativeHumidity",
+      "iri": "http://visualdataweb.org/newOntology/BH.oM.Climate.EnvironmentCondition-BH.oM.RDF.HasProperty-Double RelativeHumidity",
       "label": "HasProperty",
       "attributes": "datatype",
       "domain": "BH.oM.Climate.EnvironmentCondition",
       "range": "RelativeHumidity-1488B03A2390A6029752A52CB9A01E013741D2C2711584EDB356CFEFF0E37EC6-EnvironmentCondition-HasProperty"
     },
     {
-      "id": "82242755C97B6698C80E00CCB2C0BA74E3A072A0E9FE02FB4D3479D3AD6D34C3",
-      "iri": "http://visualdataweb.org/newOntology/82242755C97B6698C80E00CCB2C0BA74E3A072A0E9FE02FB4D3479D3AD6D34C3",
+      "id": "BH.oM.Climate.EnvironmentCondition-BH.oM.RDF.HasProperty-Double AtmosphericStationPressure",
+      "iri": "http://visualdataweb.org/newOntology/BH.oM.Climate.EnvironmentCondition-BH.oM.RDF.HasProperty-Double AtmosphericStationPressure",
       "label": "HasProperty",
       "attributes": "datatype",
       "domain": "BH.oM.Climate.EnvironmentCondition",
       "range": "AtmosphericStationPressure-82242755C97B6698C80E00CCB2C0BA74E3A072A0E9FE02FB4D3479D3AD6D34C3-EnvironmentCondition-HasProperty"
     },
     {
-      "id": "FBFCD70B2902A3D9E7CE86397C62CF1F6959518A4FDEA9928A653CBBAFE01CCB",
-      "iri": "http://visualdataweb.org/newOntology/FBFCD70B2902A3D9E7CE86397C62CF1F6959518A4FDEA9928A653CBBAFE01CCB",
+      "id": "BH.oM.Climate.EnvironmentCondition-BH.oM.RDF.HasProperty-Double ExtraterrestrialHorizontalRadiation",
+      "iri": "http://visualdataweb.org/newOntology/BH.oM.Climate.EnvironmentCondition-BH.oM.RDF.HasProperty-Double ExtraterrestrialHorizontalRadiation",
       "label": "HasProperty",
       "attributes": "datatype",
       "domain": "BH.oM.Climate.EnvironmentCondition",
       "range": "ExtraterrestrialHorizontalRadiation-FBFCD70B2902A3D9E7CE86397C62CF1F6959518A4FDEA9928A653CBBAFE01CCB-EnvironmentCondition-HasProperty"
     },
     {
-      "id": "5B8B1096C84035F20A5BE026204BC70B1FB98D3B0C4C04A69F646B905D570B9A",
-      "iri": "http://visualdataweb.org/newOntology/5B8B1096C84035F20A5BE026204BC70B1FB98D3B0C4C04A69F646B905D570B9A",
+      "id": "BH.oM.Climate.EnvironmentCondition-BH.oM.RDF.HasProperty-Double ExtraterrestrialDirectNormalRadiation",
+      "iri": "http://visualdataweb.org/newOntology/BH.oM.Climate.EnvironmentCondition-BH.oM.RDF.HasProperty-Double ExtraterrestrialDirectNormalRadiation",
       "label": "HasProperty",
       "attributes": "datatype",
       "domain": "BH.oM.Climate.EnvironmentCondition",
       "range": "ExtraterrestrialDirectNormalRadiation-5B8B1096C84035F20A5BE026204BC70B1FB98D3B0C4C04A69F646B905D570B9A-EnvironmentCondition-HasProperty"
     },
     {
-      "id": "601922CD683AE421B30CFE352C92D037333354DC6E339D2C212F7E9D0D07706A",
-      "iri": "http://visualdataweb.org/newOntology/601922CD683AE421B30CFE352C92D037333354DC6E339D2C212F7E9D0D07706A",
+      "id": "BH.oM.Climate.EnvironmentCondition-BH.oM.RDF.HasProperty-Double HorizontalInfraredRadiationIntensity",
+      "iri": "http://visualdataweb.org/newOntology/BH.oM.Climate.EnvironmentCondition-BH.oM.RDF.HasProperty-Double HorizontalInfraredRadiationIntensity",
       "label": "HasProperty",
       "attributes": "datatype",
       "domain": "BH.oM.Climate.EnvironmentCondition",
       "range": "HorizontalInfraredRadiationIntensity-601922CD683AE421B30CFE352C92D037333354DC6E339D2C212F7E9D0D07706A-EnvironmentCondition-HasProperty"
     },
     {
-      "id": "1667B683AD3E257E9E367302729DF366BC5EA3F4F3820090A6D435A80A053668",
-      "iri": "http://visualdataweb.org/newOntology/1667B683AD3E257E9E367302729DF366BC5EA3F4F3820090A6D435A80A053668",
+      "id": "BH.oM.Climate.EnvironmentCondition-BH.oM.RDF.HasProperty-Double GlobalHorizontalRadiation",
+      "iri": "http://visualdataweb.org/newOntology/BH.oM.Climate.EnvironmentCondition-BH.oM.RDF.HasProperty-Double GlobalHorizontalRadiation",
       "label": "HasProperty",
       "attributes": "datatype",
       "domain": "BH.oM.Climate.EnvironmentCondition",
       "range": "GlobalHorizontalRadiation-1667B683AD3E257E9E367302729DF366BC5EA3F4F3820090A6D435A80A053668-EnvironmentCondition-HasProperty"
     },
     {
-      "id": "2F42ECEADE31CF5F3216E9F743628C0292807DC2ECC83D04D60D8B6413DA5103",
-      "iri": "http://visualdataweb.org/newOntology/2F42ECEADE31CF5F3216E9F743628C0292807DC2ECC83D04D60D8B6413DA5103",
+      "id": "BH.oM.Climate.EnvironmentCondition-BH.oM.RDF.HasProperty-Double DirectNormalRadiation",
+      "iri": "http://visualdataweb.org/newOntology/BH.oM.Climate.EnvironmentCondition-BH.oM.RDF.HasProperty-Double DirectNormalRadiation",
       "label": "HasProperty",
       "attributes": "datatype",
       "domain": "BH.oM.Climate.EnvironmentCondition",
       "range": "DirectNormalRadiation-2F42ECEADE31CF5F3216E9F743628C0292807DC2ECC83D04D60D8B6413DA5103-EnvironmentCondition-HasProperty"
     },
     {
-      "id": "8E1EDE635E29F75E7BC80A23A8EDAD56F5ED071D9676A5AC5D58921634CD55C9",
-      "iri": "http://visualdataweb.org/newOntology/8E1EDE635E29F75E7BC80A23A8EDAD56F5ED071D9676A5AC5D58921634CD55C9",
+      "id": "BH.oM.Climate.EnvironmentCondition-BH.oM.RDF.HasProperty-Double DiffuseHorizontalRadiation",
+      "iri": "http://visualdataweb.org/newOntology/BH.oM.Climate.EnvironmentCondition-BH.oM.RDF.HasProperty-Double DiffuseHorizontalRadiation",
       "label": "HasProperty",
       "attributes": "datatype",
       "domain": "BH.oM.Climate.EnvironmentCondition",
       "range": "DiffuseHorizontalRadiation-8E1EDE635E29F75E7BC80A23A8EDAD56F5ED071D9676A5AC5D58921634CD55C9-EnvironmentCondition-HasProperty"
     },
     {
-      "id": "EA17072B39331338FB1C095DA6A83B8E9259918F0F709DC37BD8E16CB44C389C",
-      "iri": "http://visualdataweb.org/newOntology/EA17072B39331338FB1C095DA6A83B8E9259918F0F709DC37BD8E16CB44C389C",
+      "id": "BH.oM.Climate.EnvironmentCondition-BH.oM.RDF.HasProperty-Double GlobalHorizontalIlluminance",
+      "iri": "http://visualdataweb.org/newOntology/BH.oM.Climate.EnvironmentCondition-BH.oM.RDF.HasProperty-Double GlobalHorizontalIlluminance",
       "label": "HasProperty",
       "attributes": "datatype",
       "domain": "BH.oM.Climate.EnvironmentCondition",
       "range": "GlobalHorizontalIlluminance-EA17072B39331338FB1C095DA6A83B8E9259918F0F709DC37BD8E16CB44C389C-EnvironmentCondition-HasProperty"
     },
     {
-      "id": "B397E1415499AE5F44CFC9C1CA2FD76FE0E8A9403778CD2029B299086C438025",
-      "iri": "http://visualdataweb.org/newOntology/B397E1415499AE5F44CFC9C1CA2FD76FE0E8A9403778CD2029B299086C438025",
+      "id": "BH.oM.Climate.EnvironmentCondition-BH.oM.RDF.HasProperty-Double DirectNormalIlluminance",
+      "iri": "http://visualdataweb.org/newOntology/BH.oM.Climate.EnvironmentCondition-BH.oM.RDF.HasProperty-Double DirectNormalIlluminance",
       "label": "HasProperty",
       "attributes": "datatype",
       "domain": "BH.oM.Climate.EnvironmentCondition",
       "range": "DirectNormalIlluminance-B397E1415499AE5F44CFC9C1CA2FD76FE0E8A9403778CD2029B299086C438025-EnvironmentCondition-HasProperty"
     },
     {
-      "id": "5AD76A7BB57ADBCC23F0549410844CDC8BD2DE33893B85B56F132F3CA96ABC03",
-      "iri": "http://visualdataweb.org/newOntology/5AD76A7BB57ADBCC23F0549410844CDC8BD2DE33893B85B56F132F3CA96ABC03",
+      "id": "BH.oM.Climate.EnvironmentCondition-BH.oM.RDF.HasProperty-Double DiffuseHorizontalIlluminance",
+      "iri": "http://visualdataweb.org/newOntology/BH.oM.Climate.EnvironmentCondition-BH.oM.RDF.HasProperty-Double DiffuseHorizontalIlluminance",
       "label": "HasProperty",
       "attributes": "datatype",
       "domain": "BH.oM.Climate.EnvironmentCondition",
       "range": "DiffuseHorizontalIlluminance-5AD76A7BB57ADBCC23F0549410844CDC8BD2DE33893B85B56F132F3CA96ABC03-EnvironmentCondition-HasProperty"
     },
     {
-      "id": "DBF5C50FEC022A202D46F2498FF49EBB589B1449928C2DDF136943627B1096B4",
-      "iri": "http://visualdataweb.org/newOntology/DBF5C50FEC022A202D46F2498FF49EBB589B1449928C2DDF136943627B1096B4",
+      "id": "BH.oM.Climate.EnvironmentCondition-BH.oM.RDF.HasProperty-Double ZenithLuminance",
+      "iri": "http://visualdataweb.org/newOntology/BH.oM.Climate.EnvironmentCondition-BH.oM.RDF.HasProperty-Double ZenithLuminance",
       "label": "HasProperty",
       "attributes": "datatype",
       "domain": "BH.oM.Climate.EnvironmentCondition",
       "range": "ZenithLuminance-DBF5C50FEC022A202D46F2498FF49EBB589B1449928C2DDF136943627B1096B4-EnvironmentCondition-HasProperty"
     },
     {
-      "id": "EBD1AE7F5B2C97A7E4E94EB92ADA591D3C50CD96278DC82ED9A0820AEEE8C827",
-      "iri": "http://visualdataweb.org/newOntology/EBD1AE7F5B2C97A7E4E94EB92ADA591D3C50CD96278DC82ED9A0820AEEE8C827",
+      "id": "BH.oM.Climate.EnvironmentCondition-BH.oM.RDF.HasProperty-Double WindDirection",
+      "iri": "http://visualdataweb.org/newOntology/BH.oM.Climate.EnvironmentCondition-BH.oM.RDF.HasProperty-Double WindDirection",
       "label": "HasProperty",
       "attributes": "datatype",
       "domain": "BH.oM.Climate.EnvironmentCondition",
       "range": "WindDirection-EBD1AE7F5B2C97A7E4E94EB92ADA591D3C50CD96278DC82ED9A0820AEEE8C827-EnvironmentCondition-HasProperty"
     },
     {
-      "id": "EC575BC1EF0BA62EAA14EAFE2F1848E4A518EC2878BA1D875CEA7A801E76520C",
-      "iri": "http://visualdataweb.org/newOntology/EC575BC1EF0BA62EAA14EAFE2F1848E4A518EC2878BA1D875CEA7A801E76520C",
+      "id": "BH.oM.Climate.EnvironmentCondition-BH.oM.RDF.HasProperty-Double WindSpeed",
+      "iri": "http://visualdataweb.org/newOntology/BH.oM.Climate.EnvironmentCondition-BH.oM.RDF.HasProperty-Double WindSpeed",
       "label": "HasProperty",
       "attributes": "datatype",
       "domain": "BH.oM.Climate.EnvironmentCondition",
       "range": "WindSpeed-EC575BC1EF0BA62EAA14EAFE2F1848E4A518EC2878BA1D875CEA7A801E76520C-EnvironmentCondition-HasProperty"
     },
     {
-      "id": "8580DE1F9083D946878DBAEC6A0E97AB867F5D60E3BE1F463DEA1C139044114B",
-      "iri": "http://visualdataweb.org/newOntology/8580DE1F9083D946878DBAEC6A0E97AB867F5D60E3BE1F463DEA1C139044114B",
+      "id": "BH.oM.Climate.EnvironmentCondition-BH.oM.RDF.HasProperty-Double TotalSkyCover",
+      "iri": "http://visualdataweb.org/newOntology/BH.oM.Climate.EnvironmentCondition-BH.oM.RDF.HasProperty-Double TotalSkyCover",
       "label": "HasProperty",
       "attributes": "datatype",
       "domain": "BH.oM.Climate.EnvironmentCondition",
       "range": "TotalSkyCover-8580DE1F9083D946878DBAEC6A0E97AB867F5D60E3BE1F463DEA1C139044114B-EnvironmentCondition-HasProperty"
     },
     {
-      "id": "8072C42761121F65F1CA8C82A223C72017628511D267483FE67C87AEA99B857D",
-      "iri": "http://visualdataweb.org/newOntology/8072C42761121F65F1CA8C82A223C72017628511D267483FE67C87AEA99B857D",
+      "id": "BH.oM.Climate.EnvironmentCondition-BH.oM.RDF.HasProperty-Double OpaqueSkyCover",
+      "iri": "http://visualdataweb.org/newOntology/BH.oM.Climate.EnvironmentCondition-BH.oM.RDF.HasProperty-Double OpaqueSkyCover",
       "label": "HasProperty",
       "attributes": "datatype",
       "domain": "BH.oM.Climate.EnvironmentCondition",
       "range": "OpaqueSkyCover-8072C42761121F65F1CA8C82A223C72017628511D267483FE67C87AEA99B857D-EnvironmentCondition-HasProperty"
     },
     {
-      "id": "73ACD7ED7B7968ED09958DA1FCE914E1948BFB8556036A97EF49CEFC271E2A52",
-      "iri": "http://visualdataweb.org/newOntology/73ACD7ED7B7968ED09958DA1FCE914E1948BFB8556036A97EF49CEFC271E2A52",
+      "id": "BH.oM.Climate.EnvironmentCondition-BH.oM.RDF.HasProperty-Double Visibility",
+      "iri": "http://visualdataweb.org/newOntology/BH.oM.Climate.EnvironmentCondition-BH.oM.RDF.HasProperty-Double Visibility",
       "label": "HasProperty",
       "attributes": "datatype",
       "domain": "BH.oM.Climate.EnvironmentCondition",
       "range": "Visibility-73ACD7ED7B7968ED09958DA1FCE914E1948BFB8556036A97EF49CEFC271E2A52-EnvironmentCondition-HasProperty"
     },
     {
-      "id": "12539FED6CA73CCEBEF5A98DB6867136F55524ECE5785910E1BBA83737BF60A0",
-      "iri": "http://visualdataweb.org/newOntology/12539FED6CA73CCEBEF5A98DB6867136F55524ECE5785910E1BBA83737BF60A0",
+      "id": "BH.oM.Climate.EnvironmentCondition-BH.oM.RDF.HasProperty-Double CeilingHeight",
+      "iri": "http://visualdataweb.org/newOntology/BH.oM.Climate.EnvironmentCondition-BH.oM.RDF.HasProperty-Double CeilingHeight",
       "label": "HasProperty",
       "attributes": "datatype",
       "domain": "BH.oM.Climate.EnvironmentCondition",
       "range": "CeilingHeight-12539FED6CA73CCEBEF5A98DB6867136F55524ECE5785910E1BBA83737BF60A0-EnvironmentCondition-HasProperty"
     },
     {
-      "id": "675BD1C516621A77C60134D6DBBA3192C73EFFD176BE62473EAA51C8F307B746",
-      "iri": "http://visualdataweb.org/newOntology/675BD1C516621A77C60134D6DBBA3192C73EFFD176BE62473EAA51C8F307B746",
+      "id": "BH.oM.Climate.EnvironmentCondition-BH.oM.RDF.HasProperty-Double PrecipitableWater",
+      "iri": "http://visualdataweb.org/newOntology/BH.oM.Climate.EnvironmentCondition-BH.oM.RDF.HasProperty-Double PrecipitableWater",
       "label": "HasProperty",
       "attributes": "datatype",
       "domain": "BH.oM.Climate.EnvironmentCondition",
       "range": "PrecipitableWater-675BD1C516621A77C60134D6DBBA3192C73EFFD176BE62473EAA51C8F307B746-EnvironmentCondition-HasProperty"
     },
     {
-      "id": "58E4A82F5701963AA3E3B1B7B0593EB6F5C9E36B4BDF14E83230660332555A61",
-      "iri": "http://visualdataweb.org/newOntology/58E4A82F5701963AA3E3B1B7B0593EB6F5C9E36B4BDF14E83230660332555A61",
+      "id": "BH.oM.Climate.EnvironmentCondition-BH.oM.RDF.HasProperty-Double AerosolOpticalDepth",
+      "iri": "http://visualdataweb.org/newOntology/BH.oM.Climate.EnvironmentCondition-BH.oM.RDF.HasProperty-Double AerosolOpticalDepth",
       "label": "HasProperty",
       "attributes": "datatype",
       "domain": "BH.oM.Climate.EnvironmentCondition",
       "range": "AerosolOpticalDepth-58E4A82F5701963AA3E3B1B7B0593EB6F5C9E36B4BDF14E83230660332555A61-EnvironmentCondition-HasProperty"
     },
     {
-      "id": "DA4280D8765DB95024087503FC258EFD7667CA9C663752CC8890B50E83CF49FB",
-      "iri": "http://visualdataweb.org/newOntology/DA4280D8765DB95024087503FC258EFD7667CA9C663752CC8890B50E83CF49FB",
+      "id": "BH.oM.Climate.EnvironmentCondition-BH.oM.RDF.HasProperty-Double SnowDepth",
+      "iri": "http://visualdataweb.org/newOntology/BH.oM.Climate.EnvironmentCondition-BH.oM.RDF.HasProperty-Double SnowDepth",
       "label": "HasProperty",
       "attributes": "datatype",
       "domain": "BH.oM.Climate.EnvironmentCondition",
       "range": "SnowDepth-DA4280D8765DB95024087503FC258EFD7667CA9C663752CC8890B50E83CF49FB-EnvironmentCondition-HasProperty"
     },
     {
-      "id": "F20CC418E9D1393833A08D083537951D268E7D9AAB29069CF39FCA00DDC2B52F",
-      "iri": "http://visualdataweb.org/newOntology/F20CC418E9D1393833A08D083537951D268E7D9AAB29069CF39FCA00DDC2B52F",
+      "id": "BH.oM.Climate.EnvironmentCondition-BH.oM.RDF.HasProperty-Double DaysSinceLastSnowfall",
+      "iri": "http://visualdataweb.org/newOntology/BH.oM.Climate.EnvironmentCondition-BH.oM.RDF.HasProperty-Double DaysSinceLastSnowfall",
       "label": "HasProperty",
       "attributes": "datatype",
       "domain": "BH.oM.Climate.EnvironmentCondition",
       "range": "DaysSinceLastSnowfall-F20CC418E9D1393833A08D083537951D268E7D9AAB29069CF39FCA00DDC2B52F-EnvironmentCondition-HasProperty"
     },
     {
-      "id": "346EC27E22B4CBF4BCD15B69F578FD2C02F9DED117C6C0198363B048DBA307EC",
-      "iri": "http://visualdataweb.org/newOntology/346EC27E22B4CBF4BCD15B69F578FD2C02F9DED117C6C0198363B048DBA307EC",
+      "id": "BH.oM.Climate.EnvironmentCondition-BH.oM.RDF.HasProperty-Double Albedo",
+      "iri": "http://visualdataweb.org/newOntology/BH.oM.Climate.EnvironmentCondition-BH.oM.RDF.HasProperty-Double Albedo",
       "label": "HasProperty",
       "attributes": "datatype",
       "domain": "BH.oM.Climate.EnvironmentCondition",
       "range": "Albedo-346EC27E22B4CBF4BCD15B69F578FD2C02F9DED117C6C0198363B048DBA307EC-EnvironmentCondition-HasProperty"
     },
     {
-      "id": "6866A832E8EAA8C1E40023F24ADBB93F0FA6F36BB41DE753DD98A337FD015525",
-      "iri": "http://visualdataweb.org/newOntology/6866A832E8EAA8C1E40023F24ADBB93F0FA6F36BB41DE753DD98A337FD015525",
+      "id": "BH.oM.Climate.EnvironmentCondition-BH.oM.RDF.HasProperty-Double LiquidPrecipitationDepth",
+      "iri": "http://visualdataweb.org/newOntology/BH.oM.Climate.EnvironmentCondition-BH.oM.RDF.HasProperty-Double LiquidPrecipitationDepth",
       "label": "HasProperty",
       "attributes": "datatype",
       "domain": "BH.oM.Climate.EnvironmentCondition",
       "range": "LiquidPrecipitationDepth-6866A832E8EAA8C1E40023F24ADBB93F0FA6F36BB41DE753DD98A337FD015525-EnvironmentCondition-HasProperty"
     },
     {
-      "id": "DEA6D98863633F8DFBEF85E41C133C4BB2C8AB0D4A8A704D24B90CA0A2BB0A17",
-      "iri": "http://visualdataweb.org/newOntology/DEA6D98863633F8DFBEF85E41C133C4BB2C8AB0D4A8A704D24B90CA0A2BB0A17",
+      "id": "BH.oM.Climate.EnvironmentCondition-BH.oM.RDF.HasProperty-Double LiquidPrecipitationQuantity",
+      "iri": "http://visualdataweb.org/newOntology/BH.oM.Climate.EnvironmentCondition-BH.oM.RDF.HasProperty-Double LiquidPrecipitationQuantity",
       "label": "HasProperty",
       "attributes": "datatype",
       "domain": "BH.oM.Climate.EnvironmentCondition",
       "range": "LiquidPrecipitationQuantity-DEA6D98863633F8DFBEF85E41C133C4BB2C8AB0D4A8A704D24B90CA0A2BB0A17-EnvironmentCondition-HasProperty"
     },
     {
-      "id": "9E0EC25F9A3B664F7502CF908B5199A171100E0B4EFBF92A39F9A0699F96E4F0",
-      "iri": "http://visualdataweb.org/newOntology/9E0EC25F9A3B664F7502CF908B5199A171100E0B4EFBF92A39F9A0699F96E4F0",
+      "id": "BH.oM.Climate.EnvironmentCondition-BH.oM.RDF.IsA-BH.oM.Base.IBHoMObject",
+      "iri": "http://visualdataweb.org/newOntology/BH.oM.Climate.EnvironmentCondition-BH.oM.RDF.IsA-BH.oM.Base.IBHoMObject",
       "label": "IsA",
       "attributes": "object",
       "domain": "BH.oM.Climate.EnvironmentCondition",
       "range": "BH.oM.Base.IBHoMObject"
     },
     {
-      "id": "C5BA6C59990FB9493E5287E430D537C6E5F814A384DE05F4F13527DAFD1B9A89",
-      "iri": "http://visualdataweb.org/newOntology/C5BA6C59990FB9493E5287E430D537C6E5F814A384DE05F4F13527DAFD1B9A89",
+      "id": "BH.oM.Climate.EnvironmentCondition-BH.oM.RDF.IsA-BH.oM.Base.IObject",
+      "iri": "http://visualdataweb.org/newOntology/BH.oM.Climate.EnvironmentCondition-BH.oM.RDF.IsA-BH.oM.Base.IObject",
       "label": "IsA",
       "attributes": "object",
       "domain": "BH.oM.Climate.EnvironmentCondition",
       "range": "BH.oM.Base.IObject"
     },
     {
-      "id": "B27A157D7A6765CBB7C65E1C253E192C4922016795FD49C0BFE276832CDAE421",
-      "iri": "http://visualdataweb.org/newOntology/B27A157D7A6765CBB7C65E1C253E192C4922016795FD49C0BFE276832CDAE421",
+      "id": "BH.oM.Climate.EnvironmentCondition-BH.oM.RDF.IsSubclassOf-BH.oM.Base.BHoMObject",
+      "iri": "http://visualdataweb.org/newOntology/BH.oM.Climate.EnvironmentCondition-BH.oM.RDF.IsSubclassOf-BH.oM.Base.BHoMObject",
       "label": "IsSubclassOf",
       "attributes": "object",
       "domain": "BH.oM.Climate.EnvironmentCondition",
       "range": "BH.oM.Base.BHoMObject"
     },
     {
-      "id": "227765704C89F8AC20EB77642E5FB639460B7752A0DDEFF3F59F62CD7676633F",
-      "iri": "http://visualdataweb.org/newOntology/227765704C89F8AC20EB77642E5FB639460B7752A0DDEFF3F59F62CD7676633F",
+      "id": "BH.oM.Climate.PointCondition-BH.oM.RDF.HasProperty-Int32 Age",
+      "iri": "http://visualdataweb.org/newOntology/BH.oM.Climate.PointCondition-BH.oM.RDF.HasProperty-Int32 Age",
       "label": "HasProperty",
       "attributes": "datatype",
       "domain": "BH.oM.Climate.PointCondition",
       "range": "Age-227765704C89F8AC20EB77642E5FB639460B7752A0DDEFF3F59F62CD7676633F-PointCondition-HasProperty"
     },
     {
-      "id": "BAE1A26E773E574F1DBD5E25B4C957CFB081285F943CC632999CE25ADF4ADF50",
-      "iri": "http://visualdataweb.org/newOntology/BAE1A26E773E574F1DBD5E25B4C957CFB081285F943CC632999CE25ADF4ADF50",
-      "label": "HasProperty",
+      "id": "BH.oM.Climate.PointCondition.Gender-IsA-BH.oM.Climate.Gender",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "label": "IsA",
       "attributes": "object",
-      "domain": "BH.oM.Climate.PointCondition",
+      "domain": "BH.oM.Climate.PointCondition.Gender",
       "range": "BH.oM.Climate.Gender"
     },
     {
-      "id": "D64B16C80AF56E7C30842ACA1DD720173AD612DFFEAB7E5AE9781C35FE3FDA4B",
-      "iri": "http://visualdataweb.org/newOntology/D64B16C80AF56E7C30842ACA1DD720173AD612DFFEAB7E5AE9781C35FE3FDA4B",
+      "id": "BH.oM.Climate.PointCondition-BH.oM.RDF.HasProperty-BH.oM.Climate.Gender Gender",
+      "iri": "http://visualdataweb.org/newOntology/BH.oM.Climate.PointCondition-BH.oM.RDF.HasProperty-BH.oM.Climate.Gender Gender",
+      "label": "HasProperty",
+      "attributes": [],
+      "domain": "BH.oM.Climate.PointCondition",
+      "range": "BH.oM.Climate.PointCondition.Gender"
+    },
+    {
+      "id": "BH.oM.Climate.PointCondition-BH.oM.RDF.HasProperty-Double BodyHeightNeutral",
+      "iri": "http://visualdataweb.org/newOntology/BH.oM.Climate.PointCondition-BH.oM.RDF.HasProperty-Double BodyHeightNeutral",
       "label": "HasProperty",
       "attributes": "datatype",
       "domain": "BH.oM.Climate.PointCondition",
       "range": "BodyHeightNeutral-D64B16C80AF56E7C30842ACA1DD720173AD612DFFEAB7E5AE9781C35FE3FDA4B-PointCondition-HasProperty"
     },
     {
-      "id": "AF34AD2B82E498D5B6BF82810ECF3A88F00C184FD0D2C3BA300C281F74246B5A",
-      "iri": "http://visualdataweb.org/newOntology/AF34AD2B82E498D5B6BF82810ECF3A88F00C184FD0D2C3BA300C281F74246B5A",
-      "label": "HasProperty",
+      "id": "BH.oM.Climate.PointCondition.BodyPosition-IsA-BH.oM.Climate.BodyPosition",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "label": "IsA",
       "attributes": "object",
-      "domain": "BH.oM.Climate.PointCondition",
+      "domain": "BH.oM.Climate.PointCondition.BodyPosition",
       "range": "BH.oM.Climate.BodyPosition"
     },
     {
-      "id": "4EC13321025B00270B2A855A1F2DA1CEBCFA5F6087AE9491579535237AF8D13A",
-      "iri": "http://visualdataweb.org/newOntology/4EC13321025B00270B2A855A1F2DA1CEBCFA5F6087AE9491579535237AF8D13A",
+      "id": "BH.oM.Climate.PointCondition-BH.oM.RDF.HasProperty-BH.oM.Climate.BodyPosition BodyPosition",
+      "iri": "http://visualdataweb.org/newOntology/BH.oM.Climate.PointCondition-BH.oM.RDF.HasProperty-BH.oM.Climate.BodyPosition BodyPosition",
+      "label": "HasProperty",
+      "attributes": [],
+      "domain": "BH.oM.Climate.PointCondition",
+      "range": "BH.oM.Climate.PointCondition.BodyPosition"
+    },
+    {
+      "id": "BH.oM.Climate.PointCondition-BH.oM.RDF.HasProperty-Double BodyOrientation",
+      "iri": "http://visualdataweb.org/newOntology/BH.oM.Climate.PointCondition-BH.oM.RDF.HasProperty-Double BodyOrientation",
       "label": "HasProperty",
       "attributes": "datatype",
       "domain": "BH.oM.Climate.PointCondition",
       "range": "BodyOrientation-4EC13321025B00270B2A855A1F2DA1CEBCFA5F6087AE9491579535237AF8D13A-PointCondition-HasProperty"
     },
     {
-      "id": "E297E4FC63B797354A462B0F1C6CF8BC65A4683CF33C5A2CC533356456BC4B16",
-      "iri": "http://visualdataweb.org/newOntology/E297E4FC63B797354A462B0F1C6CF8BC65A4683CF33C5A2CC533356456BC4B16",
-      "label": "HasProperty",
+      "id": "BH.oM.Climate.PointCondition.ClothingAlbedo-IsA-BH.oM.Climate.ClothingAlbedo",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "label": "IsA",
       "attributes": "object",
-      "domain": "BH.oM.Climate.PointCondition",
+      "domain": "BH.oM.Climate.PointCondition.ClothingAlbedo",
       "range": "BH.oM.Climate.ClothingAlbedo"
     },
     {
-      "id": "239569F44DB6B93BDB6549A3194C1BEDB00982AE96CCE95C0F373F2BE6021C05",
-      "iri": "http://visualdataweb.org/newOntology/239569F44DB6B93BDB6549A3194C1BEDB00982AE96CCE95C0F373F2BE6021C05",
+      "id": "BH.oM.Climate.PointCondition-BH.oM.RDF.HasProperty-BH.oM.Climate.ClothingAlbedo ClothingAlbedo",
+      "iri": "http://visualdataweb.org/newOntology/BH.oM.Climate.PointCondition-BH.oM.RDF.HasProperty-BH.oM.Climate.ClothingAlbedo ClothingAlbedo",
       "label": "HasProperty",
-      "attributes": "object",
+      "attributes": [],
       "domain": "BH.oM.Climate.PointCondition",
+      "range": "BH.oM.Climate.PointCondition.ClothingAlbedo"
+    },
+    {
+      "id": "BH.oM.Climate.PointCondition.CloValue-IsA-BH.oM.Climate.CloValue",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "label": "IsA",
+      "attributes": "object",
+      "domain": "BH.oM.Climate.PointCondition.CloValue",
       "range": "BH.oM.Climate.CloValue"
     },
     {
-      "id": "C5529D4DD2BA42132250E0E0C8C075C8E64E3C4F6BC6239CBCB144FCA3A7E579",
-      "iri": "http://visualdataweb.org/newOntology/C5529D4DD2BA42132250E0E0C8C075C8E64E3C4F6BC6239CBCB144FCA3A7E579",
+      "id": "BH.oM.Climate.PointCondition-BH.oM.RDF.HasProperty-BH.oM.Climate.CloValue CloValue",
+      "iri": "http://visualdataweb.org/newOntology/BH.oM.Climate.PointCondition-BH.oM.RDF.HasProperty-BH.oM.Climate.CloValue CloValue",
       "label": "HasProperty",
-      "attributes": "object",
+      "attributes": [],
       "domain": "BH.oM.Climate.PointCondition",
+      "range": "BH.oM.Climate.PointCondition.CloValue"
+    },
+    {
+      "id": "BH.oM.Climate.PointCondition.GroundReflectivity-IsA-BH.oM.Climate.GroundReflectivity",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "label": "IsA",
+      "attributes": "object",
+      "domain": "BH.oM.Climate.PointCondition.GroundReflectivity",
       "range": "BH.oM.Climate.GroundReflectivity"
     },
     {
-      "id": "B9182828147305AD5C479B1EC55A5EC6B4EF55EC9CE8C523FF25BEA67FC19436",
-      "iri": "http://visualdataweb.org/newOntology/B9182828147305AD5C479B1EC55A5EC6B4EF55EC9CE8C523FF25BEA67FC19436",
+      "id": "BH.oM.Climate.PointCondition-BH.oM.RDF.HasProperty-BH.oM.Climate.GroundReflectivity GroundReflectivity",
+      "iri": "http://visualdataweb.org/newOntology/BH.oM.Climate.PointCondition-BH.oM.RDF.HasProperty-BH.oM.Climate.GroundReflectivity GroundReflectivity",
       "label": "HasProperty",
-      "attributes": "object",
+      "attributes": [],
       "domain": "BH.oM.Climate.PointCondition",
+      "range": "BH.oM.Climate.PointCondition.GroundReflectivity"
+    },
+    {
+      "id": "BH.oM.Climate.PointCondition.MetabolicRate-IsA-BH.oM.Climate.MetabolicRate",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "label": "IsA",
+      "attributes": "object",
+      "domain": "BH.oM.Climate.PointCondition.MetabolicRate",
       "range": "BH.oM.Climate.MetabolicRate"
     },
     {
-      "id": "7FEAC6150D9158AB1FA4551B06DE0E4F71C2E209F64356F805528CAB626A6632",
-      "iri": "http://visualdataweb.org/newOntology/7FEAC6150D9158AB1FA4551B06DE0E4F71C2E209F64356F805528CAB626A6632",
+      "id": "BH.oM.Climate.PointCondition-BH.oM.RDF.HasProperty-BH.oM.Climate.MetabolicRate MetabolicRate",
+      "iri": "http://visualdataweb.org/newOntology/BH.oM.Climate.PointCondition-BH.oM.RDF.HasProperty-BH.oM.Climate.MetabolicRate MetabolicRate",
       "label": "HasProperty",
-      "attributes": "object",
+      "attributes": [],
       "domain": "BH.oM.Climate.PointCondition",
+      "range": "BH.oM.Climate.PointCondition.MetabolicRate"
+    },
+    {
+      "id": "BH.oM.Climate.PointCondition.SoilDiffusivity-IsA-BH.oM.Climate.SoilDiffusivity",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "label": "IsA",
+      "attributes": "object",
+      "domain": "BH.oM.Climate.PointCondition.SoilDiffusivity",
       "range": "BH.oM.Climate.SoilDiffusivity"
     },
     {
-      "id": "2CD8ED3AE2CFAB0A25ABE14A3C1F2E6060545CC4C82918EE2017AC099ACE79DE",
-      "iri": "http://visualdataweb.org/newOntology/2CD8ED3AE2CFAB0A25ABE14A3C1F2E6060545CC4C82918EE2017AC099ACE79DE",
+      "id": "BH.oM.Climate.PointCondition-BH.oM.RDF.HasProperty-BH.oM.Climate.SoilDiffusivity SoilDiffusivity",
+      "iri": "http://visualdataweb.org/newOntology/BH.oM.Climate.PointCondition-BH.oM.RDF.HasProperty-BH.oM.Climate.SoilDiffusivity SoilDiffusivity",
       "label": "HasProperty",
-      "attributes": "object",
+      "attributes": [],
       "domain": "BH.oM.Climate.PointCondition",
+      "range": "BH.oM.Climate.PointCondition.SoilDiffusivity"
+    },
+    {
+      "id": "BH.oM.Climate.PointCondition.AdaptiveComfortClass-IsA-BH.oM.Climate.AdaptiveComfortClass",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "label": "IsA",
+      "attributes": "object",
+      "domain": "BH.oM.Climate.PointCondition.AdaptiveComfortClass",
       "range": "BH.oM.Climate.AdaptiveComfortClass"
     },
     {
-      "id": "001A11210990090F678C5A13EE1E2DBCFC5C7D8FE4D25C4E22AAA85D9A3C376A",
-      "iri": "http://visualdataweb.org/newOntology/001A11210990090F678C5A13EE1E2DBCFC5C7D8FE4D25C4E22AAA85D9A3C376A",
+      "id": "BH.oM.Climate.PointCondition-BH.oM.RDF.HasProperty-BH.oM.Climate.AdaptiveComfortClass AdaptiveComfortClass",
+      "iri": "http://visualdataweb.org/newOntology/BH.oM.Climate.PointCondition-BH.oM.RDF.HasProperty-BH.oM.Climate.AdaptiveComfortClass AdaptiveComfortClass",
       "label": "HasProperty",
-      "attributes": "object",
+      "attributes": [],
       "domain": "BH.oM.Climate.PointCondition",
+      "range": "BH.oM.Climate.PointCondition.AdaptiveComfortClass"
+    },
+    {
+      "id": "BH.oM.Climate.PointCondition.TerrainRoughnessLength-IsA-BH.oM.Climate.TerrainRoughnessLength",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "label": "IsA",
+      "attributes": "object",
+      "domain": "BH.oM.Climate.PointCondition.TerrainRoughnessLength",
       "range": "BH.oM.Climate.TerrainRoughnessLength"
     },
     {
-      "id": "BC0BD867B3530C72B21137863CD8FB94A0FD5542AFA22912AD73A7D840F63D04",
-      "iri": "http://visualdataweb.org/newOntology/BC0BD867B3530C72B21137863CD8FB94A0FD5542AFA22912AD73A7D840F63D04",
+      "id": "BH.oM.Climate.PointCondition-BH.oM.RDF.HasProperty-BH.oM.Climate.TerrainRoughnessLength TerrainRoughnessLength",
+      "iri": "http://visualdataweb.org/newOntology/BH.oM.Climate.PointCondition-BH.oM.RDF.HasProperty-BH.oM.Climate.TerrainRoughnessLength TerrainRoughnessLength",
+      "label": "HasProperty",
+      "attributes": [],
+      "domain": "BH.oM.Climate.PointCondition",
+      "range": "BH.oM.Climate.PointCondition.TerrainRoughnessLength"
+    },
+    {
+      "id": "BH.oM.Climate.PointCondition-BH.oM.RDF.HasProperty-Double ShadingTransmissivity",
+      "iri": "http://visualdataweb.org/newOntology/BH.oM.Climate.PointCondition-BH.oM.RDF.HasProperty-Double ShadingTransmissivity",
       "label": "HasProperty",
       "attributes": "datatype",
       "domain": "BH.oM.Climate.PointCondition",
       "range": "ShadingTransmissivity-BC0BD867B3530C72B21137863CD8FB94A0FD5542AFA22912AD73A7D840F63D04-PointCondition-HasProperty"
     },
     {
-      "id": "91576211633594811D2A6C4894617E79EC39F6A4B30B1CAC38B0B4F6AFB774EE",
-      "iri": "http://visualdataweb.org/newOntology/91576211633594811D2A6C4894617E79EC39F6A4B30B1CAC38B0B4F6AFB774EE",
+      "id": "BH.oM.Climate.PointCondition-BH.oM.RDF.HasProperty-Double SkinTemperatureNeutral",
+      "iri": "http://visualdataweb.org/newOntology/BH.oM.Climate.PointCondition-BH.oM.RDF.HasProperty-Double SkinTemperatureNeutral",
       "label": "HasProperty",
       "attributes": "datatype",
       "domain": "BH.oM.Climate.PointCondition",
       "range": "SkinTemperatureNeutral-91576211633594811D2A6C4894617E79EC39F6A4B30B1CAC38B0B4F6AFB774EE-PointCondition-HasProperty"
     },
     {
-      "id": "F76C81FA6ACBDE4D72244233197D742A6EFA2CDAEAC8AD45317B6993E4AAFDFC",
-      "iri": "http://visualdataweb.org/newOntology/F76C81FA6ACBDE4D72244233197D742A6EFA2CDAEAC8AD45317B6993E4AAFDFC",
+      "id": "BH.oM.Climate.PointCondition-BH.oM.RDF.HasProperty-Double CoreTemperatureNeutral",
+      "iri": "http://visualdataweb.org/newOntology/BH.oM.Climate.PointCondition-BH.oM.RDF.HasProperty-Double CoreTemperatureNeutral",
       "label": "HasProperty",
       "attributes": "datatype",
       "domain": "BH.oM.Climate.PointCondition",
       "range": "CoreTemperatureNeutral-F76C81FA6ACBDE4D72244233197D742A6EFA2CDAEAC8AD45317B6993E4AAFDFC-PointCondition-HasProperty"
     },
     {
-      "id": "A0998CBF6019507DCE39BDACFA4EA9BF02AD50D079D2B8966D729FDE05A6FA0B",
-      "iri": "http://visualdataweb.org/newOntology/A0998CBF6019507DCE39BDACFA4EA9BF02AD50D079D2B8966D729FDE05A6FA0B",
+      "id": "BH.oM.Climate.PointCondition-BH.oM.RDF.HasProperty-Double BodyTemperatureNeutral",
+      "iri": "http://visualdataweb.org/newOntology/BH.oM.Climate.PointCondition-BH.oM.RDF.HasProperty-Double BodyTemperatureNeutral",
       "label": "HasProperty",
       "attributes": "datatype",
       "domain": "BH.oM.Climate.PointCondition",
       "range": "BodyTemperatureNeutral-A0998CBF6019507DCE39BDACFA4EA9BF02AD50D079D2B8966D729FDE05A6FA0B-PointCondition-HasProperty"
     },
     {
-      "id": "F158152F0C1473D28C2319B8D7886C388DEB69A5190DCEB6034CB9CFACC48DD6",
-      "iri": "http://visualdataweb.org/newOntology/F158152F0C1473D28C2319B8D7886C388DEB69A5190DCEB6034CB9CFACC48DD6",
+      "id": "BH.oM.Climate.PointCondition-BH.oM.RDF.HasProperty-Double SkinBloodFlowNeutral",
+      "iri": "http://visualdataweb.org/newOntology/BH.oM.Climate.PointCondition-BH.oM.RDF.HasProperty-Double SkinBloodFlowNeutral",
       "label": "HasProperty",
       "attributes": "datatype",
       "domain": "BH.oM.Climate.PointCondition",
       "range": "SkinBloodFlowNeutral-F158152F0C1473D28C2319B8D7886C388DEB69A5190DCEB6034CB9CFACC48DD6-PointCondition-HasProperty"
     },
     {
-      "id": "D54EE0E889E50291FF3996C152A416967873CE66684F8FA0A058CB45D27A2AD4",
-      "iri": "http://visualdataweb.org/newOntology/D54EE0E889E50291FF3996C152A416967873CE66684F8FA0A058CB45D27A2AD4",
+      "id": "BH.oM.Climate.PointCondition-BH.oM.RDF.HasProperty-Double BodyWeightNeutral",
+      "iri": "http://visualdataweb.org/newOntology/BH.oM.Climate.PointCondition-BH.oM.RDF.HasProperty-Double BodyWeightNeutral",
       "label": "HasProperty",
       "attributes": "datatype",
       "domain": "BH.oM.Climate.PointCondition",
       "range": "BodyWeightNeutral-D54EE0E889E50291FF3996C152A416967873CE66684F8FA0A058CB45D27A2AD4-PointCondition-HasProperty"
     },
     {
-      "id": "5DA4D26744E602A2DF76D96451BA31A090472F0729A92E92BB84FBCA96180EA4",
-      "iri": "http://visualdataweb.org/newOntology/5DA4D26744E602A2DF76D96451BA31A090472F0729A92E92BB84FBCA96180EA4",
+      "id": "BH.oM.Climate.PointCondition-BH.oM.RDF.HasProperty-Double BodySurfaceAreaNeutral",
+      "iri": "http://visualdataweb.org/newOntology/BH.oM.Climate.PointCondition-BH.oM.RDF.HasProperty-Double BodySurfaceAreaNeutral",
       "label": "HasProperty",
       "attributes": "datatype",
       "domain": "BH.oM.Climate.PointCondition",
       "range": "BodySurfaceAreaNeutral-5DA4D26744E602A2DF76D96451BA31A090472F0729A92E92BB84FBCA96180EA4-PointCondition-HasProperty"
     },
     {
-      "id": "C55075BB73F1FAFA28D9E535524F54B98D02C99B41B1BA4E8B7270B6C68CA6CE",
-      "iri": "http://visualdataweb.org/newOntology/C55075BB73F1FAFA28D9E535524F54B98D02C99B41B1BA4E8B7270B6C68CA6CE",
+      "id": "BH.oM.Climate.PointCondition-BH.oM.RDF.HasProperty-Double MetabolicFactorNeutral",
+      "iri": "http://visualdataweb.org/newOntology/BH.oM.Climate.PointCondition-BH.oM.RDF.HasProperty-Double MetabolicFactorNeutral",
       "label": "HasProperty",
       "attributes": "datatype",
       "domain": "BH.oM.Climate.PointCondition",
       "range": "MetabolicFactorNeutral-C55075BB73F1FAFA28D9E535524F54B98D02C99B41B1BA4E8B7270B6C68CA6CE-PointCondition-HasProperty"
     },
     {
-      "id": "E13E3A65FDBD45DB6B65C10E43449E90F07A5AF767AF1794994283A5A7DDB763",
-      "iri": "http://visualdataweb.org/newOntology/E13E3A65FDBD45DB6B65C10E43449E90F07A5AF767AF1794994283A5A7DDB763",
+      "id": "BH.oM.Climate.PointCondition-BH.oM.RDF.HasProperty-Double SweatingConstant",
+      "iri": "http://visualdataweb.org/newOntology/BH.oM.Climate.PointCondition-BH.oM.RDF.HasProperty-Double SweatingConstant",
       "label": "HasProperty",
       "attributes": "datatype",
       "domain": "BH.oM.Climate.PointCondition",
       "range": "SweatingConstant-E13E3A65FDBD45DB6B65C10E43449E90F07A5AF767AF1794994283A5A7DDB763-PointCondition-HasProperty"
     },
     {
-      "id": "15F21871CA98EDC3A5B79201B09B739EFC6B1465A75B4C7C779C5DC0B187C164",
-      "iri": "http://visualdataweb.org/newOntology/15F21871CA98EDC3A5B79201B09B739EFC6B1465A75B4C7C779C5DC0B187C164",
+      "id": "BH.oM.Climate.PointCondition-BH.oM.RDF.HasProperty-Double VasodilationConstant",
+      "iri": "http://visualdataweb.org/newOntology/BH.oM.Climate.PointCondition-BH.oM.RDF.HasProperty-Double VasodilationConstant",
       "label": "HasProperty",
       "attributes": "datatype",
       "domain": "BH.oM.Climate.PointCondition",
       "range": "VasodilationConstant-15F21871CA98EDC3A5B79201B09B739EFC6B1465A75B4C7C779C5DC0B187C164-PointCondition-HasProperty"
     },
     {
-      "id": "721478D55DA458CB6ECD61C0E9BB5BB1F55DAFB53F31DF4E177931459EAF8AD0",
-      "iri": "http://visualdataweb.org/newOntology/721478D55DA458CB6ECD61C0E9BB5BB1F55DAFB53F31DF4E177931459EAF8AD0",
+      "id": "BH.oM.Climate.PointCondition-BH.oM.RDF.HasProperty-Double VasoconstrictionConstant",
+      "iri": "http://visualdataweb.org/newOntology/BH.oM.Climate.PointCondition-BH.oM.RDF.HasProperty-Double VasoconstrictionConstant",
       "label": "HasProperty",
       "attributes": "datatype",
       "domain": "BH.oM.Climate.PointCondition",
       "range": "VasoconstrictionConstant-721478D55DA458CB6ECD61C0E9BB5BB1F55DAFB53F31DF4E177931459EAF8AD0-PointCondition-HasProperty"
     },
     {
-      "id": "AC956E683D55B7E572D0A4FFDF12983A0AD83438F37745AFCC81067C090BFDA8",
-      "iri": "http://visualdataweb.org/newOntology/AC956E683D55B7E572D0A4FFDF12983A0AD83438F37745AFCC81067C090BFDA8",
+      "id": "BH.oM.Climate.PointCondition-BH.oM.RDF.HasProperty-Double ClothingBodySurfaceAreaIncrease",
+      "iri": "http://visualdataweb.org/newOntology/BH.oM.Climate.PointCondition-BH.oM.RDF.HasProperty-Double ClothingBodySurfaceAreaIncrease",
       "label": "HasProperty",
       "attributes": "datatype",
       "domain": "BH.oM.Climate.PointCondition",
       "range": "ClothingBodySurfaceAreaIncrease-AC956E683D55B7E572D0A4FFDF12983A0AD83438F37745AFCC81067C090BFDA8-PointCondition-HasProperty"
     },
     {
-      "id": "EEC88711ADB387CF513FBDE4B8A6E6836ECF3A5C37EE61635C2B64F429E3CFF6",
-      "iri": "http://visualdataweb.org/newOntology/EEC88711ADB387CF513FBDE4B8A6E6836ECF3A5C37EE61635C2B64F429E3CFF6",
+      "id": "BH.oM.Climate.PointCondition-BH.oM.RDF.HasProperty-Double StefanBoltzmannConstant",
+      "iri": "http://visualdataweb.org/newOntology/BH.oM.Climate.PointCondition-BH.oM.RDF.HasProperty-Double StefanBoltzmannConstant",
       "label": "HasProperty",
       "attributes": "datatype",
       "domain": "BH.oM.Climate.PointCondition",
       "range": "StefanBoltzmannConstant-EEC88711ADB387CF513FBDE4B8A6E6836ECF3A5C37EE61635C2B64F429E3CFF6-PointCondition-HasProperty"
     },
     {
-      "id": "136D63F1B081F10293A56A9A8A97E67C8C44B3EF5294448A45C390E77AEE35C2",
-      "iri": "http://visualdataweb.org/newOntology/136D63F1B081F10293A56A9A8A97E67C8C44B3EF5294448A45C390E77AEE35C2",
+      "id": "BH.oM.Climate.PointCondition-BH.oM.RDF.IsSubclassOf-System.Object",
+      "iri": "http://visualdataweb.org/newOntology/BH.oM.Climate.PointCondition-BH.oM.RDF.IsSubclassOf-System.Object",
       "label": "IsSubclassOf",
       "attributes": []
     }

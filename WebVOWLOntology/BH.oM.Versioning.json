@@ -23,6 +23,10 @@
       "type": "rdfs:Datatype"
     },
     {
+      "id": "BH.oM.Versioning.VersioningEvent.Type",
+      "type": "owl:Class"
+    },
+    {
       "id": "BH.oM.Base.Debugging.EventType",
       "type": "owl:Class"
     },
@@ -71,9 +75,15 @@
       "attributes": "datatype"
     },
     {
+      "id": "BH.oM.Versioning.VersioningEvent.Type",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/BHoM/Debugging/EventType.cs",
+      "label": "Type",
+      "attributes": []
+    },
+    {
       "id": "BH.oM.Base.Debugging.EventType",
       "iri": "https://github.com/BHoM/BHoM/blob/main/BHoM/Debugging/EventType.cs",
-      "label": "Type (EventType)",
+      "label": "EventType",
       "attributes": []
     },
     {
@@ -97,98 +107,110 @@
   ],
   "property": [
     {
-      "id": "4C64C95955DF4549D6080EDBF8D78FFB89D5AEC541FE63D1C76137ACBF6200F5",
+      "id": "BH.oM.Versioning.VersioningEvent-BH.oM.RDF.HasProperty-System.String OldDocument",
       "type": "owl:DatatypeProperty"
     },
     {
-      "id": "95F48905579F7CA0A3AC7540FAA1F5DDAC4F6D39DD3EBF45CA5438FBE630502E",
+      "id": "BH.oM.Versioning.VersioningEvent-BH.oM.RDF.HasProperty-System.String NewDocument",
       "type": "owl:DatatypeProperty"
     },
     {
-      "id": "C0FFFD5B14CC9E67B03D4CCA75A256F6DBCCAE7E4EF151507371F8FC2AB27A7A",
+      "id": "BH.oM.Versioning.VersioningEvent-BH.oM.RDF.HasProperty-System.String OldVersion",
       "type": "owl:DatatypeProperty"
     },
     {
-      "id": "8AA6553A185D94A7B93CEFAFDBD486E88A47B7E443A2F22FEE6E886E21145CDE",
+      "id": "BH.oM.Versioning.VersioningEvent-BH.oM.RDF.HasProperty-System.String NewVersion",
       "type": "owl:DatatypeProperty"
     },
     {
-      "id": "3A03C786FAF802E067D854C9C591248FFA4D1A56ADC962DB412ABC5DD63AEA5C",
+      "id": "BH.oM.Versioning.VersioningEvent.Type-IsA-BH.oM.Base.Debugging.EventType",
       "type": "owl:ObjectProperty"
     },
     {
-      "id": "4AE6D9D87A46839F3C33745CA7B80DBF6C88FCF93E4EC67268AACF7E61936840",
+      "id": "BH.oM.Versioning.VersioningEvent-BH.oM.RDF.HasProperty-BH.oM.Base.Debugging.EventType Type",
       "type": "owl:ObjectProperty"
     },
     {
-      "id": "E8352939DA364C8EACB862DF3F564248E8A5392DDAE35E23272D6DE446D51479",
+      "id": "BH.oM.Versioning.VersioningEvent-BH.oM.RDF.IsA-BH.oM.Base.IBHoMObject",
       "type": "owl:ObjectProperty"
     },
     {
-      "id": "038BA251645596E39FBB8263193601CE1BC0874094B818F37376B4D562780552",
+      "id": "BH.oM.Versioning.VersioningEvent-BH.oM.RDF.IsA-BH.oM.Base.IObject",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "BH.oM.Versioning.VersioningEvent-BH.oM.RDF.IsSubclassOf-BH.oM.Base.Debugging.Event",
       "type": "owl:ObjectProperty"
     }
   ],
   "propertyAttribute": [
     {
-      "id": "4C64C95955DF4549D6080EDBF8D78FFB89D5AEC541FE63D1C76137ACBF6200F5",
-      "iri": "http://visualdataweb.org/newOntology/4C64C95955DF4549D6080EDBF8D78FFB89D5AEC541FE63D1C76137ACBF6200F5",
+      "id": "BH.oM.Versioning.VersioningEvent-BH.oM.RDF.HasProperty-System.String OldDocument",
+      "iri": "http://visualdataweb.org/newOntology/BH.oM.Versioning.VersioningEvent-BH.oM.RDF.HasProperty-System.String OldDocument",
       "label": "HasProperty",
       "attributes": "datatype",
       "domain": "BH.oM.Versioning.VersioningEvent",
       "range": "OldDocument-4C64C95955DF4549D6080EDBF8D78FFB89D5AEC541FE63D1C76137ACBF6200F5-VersioningEvent-HasProperty"
     },
     {
-      "id": "95F48905579F7CA0A3AC7540FAA1F5DDAC4F6D39DD3EBF45CA5438FBE630502E",
-      "iri": "http://visualdataweb.org/newOntology/95F48905579F7CA0A3AC7540FAA1F5DDAC4F6D39DD3EBF45CA5438FBE630502E",
+      "id": "BH.oM.Versioning.VersioningEvent-BH.oM.RDF.HasProperty-System.String NewDocument",
+      "iri": "http://visualdataweb.org/newOntology/BH.oM.Versioning.VersioningEvent-BH.oM.RDF.HasProperty-System.String NewDocument",
       "label": "HasProperty",
       "attributes": "datatype",
       "domain": "BH.oM.Versioning.VersioningEvent",
       "range": "NewDocument-95F48905579F7CA0A3AC7540FAA1F5DDAC4F6D39DD3EBF45CA5438FBE630502E-VersioningEvent-HasProperty"
     },
     {
-      "id": "C0FFFD5B14CC9E67B03D4CCA75A256F6DBCCAE7E4EF151507371F8FC2AB27A7A",
-      "iri": "http://visualdataweb.org/newOntology/C0FFFD5B14CC9E67B03D4CCA75A256F6DBCCAE7E4EF151507371F8FC2AB27A7A",
+      "id": "BH.oM.Versioning.VersioningEvent-BH.oM.RDF.HasProperty-System.String OldVersion",
+      "iri": "http://visualdataweb.org/newOntology/BH.oM.Versioning.VersioningEvent-BH.oM.RDF.HasProperty-System.String OldVersion",
       "label": "HasProperty",
       "attributes": "datatype",
       "domain": "BH.oM.Versioning.VersioningEvent",
       "range": "OldVersion-C0FFFD5B14CC9E67B03D4CCA75A256F6DBCCAE7E4EF151507371F8FC2AB27A7A-VersioningEvent-HasProperty"
     },
     {
-      "id": "8AA6553A185D94A7B93CEFAFDBD486E88A47B7E443A2F22FEE6E886E21145CDE",
-      "iri": "http://visualdataweb.org/newOntology/8AA6553A185D94A7B93CEFAFDBD486E88A47B7E443A2F22FEE6E886E21145CDE",
+      "id": "BH.oM.Versioning.VersioningEvent-BH.oM.RDF.HasProperty-System.String NewVersion",
+      "iri": "http://visualdataweb.org/newOntology/BH.oM.Versioning.VersioningEvent-BH.oM.RDF.HasProperty-System.String NewVersion",
       "label": "HasProperty",
       "attributes": "datatype",
       "domain": "BH.oM.Versioning.VersioningEvent",
       "range": "NewVersion-8AA6553A185D94A7B93CEFAFDBD486E88A47B7E443A2F22FEE6E886E21145CDE-VersioningEvent-HasProperty"
     },
     {
-      "id": "3A03C786FAF802E067D854C9C591248FFA4D1A56ADC962DB412ABC5DD63AEA5C",
-      "iri": "http://visualdataweb.org/newOntology/3A03C786FAF802E067D854C9C591248FFA4D1A56ADC962DB412ABC5DD63AEA5C",
-      "label": "HasProperty",
+      "id": "BH.oM.Versioning.VersioningEvent.Type-IsA-BH.oM.Base.Debugging.EventType",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "label": "IsA",
       "attributes": "object",
-      "domain": "BH.oM.Versioning.VersioningEvent",
+      "domain": "BH.oM.Versioning.VersioningEvent.Type",
       "range": "BH.oM.Base.Debugging.EventType"
     },
     {
-      "id": "4AE6D9D87A46839F3C33745CA7B80DBF6C88FCF93E4EC67268AACF7E61936840",
-      "iri": "http://visualdataweb.org/newOntology/4AE6D9D87A46839F3C33745CA7B80DBF6C88FCF93E4EC67268AACF7E61936840",
+      "id": "BH.oM.Versioning.VersioningEvent-BH.oM.RDF.HasProperty-BH.oM.Base.Debugging.EventType Type",
+      "iri": "http://visualdataweb.org/newOntology/BH.oM.Versioning.VersioningEvent-BH.oM.RDF.HasProperty-BH.oM.Base.Debugging.EventType Type",
+      "label": "HasProperty",
+      "attributes": [],
+      "domain": "BH.oM.Versioning.VersioningEvent",
+      "range": "BH.oM.Versioning.VersioningEvent.Type"
+    },
+    {
+      "id": "BH.oM.Versioning.VersioningEvent-BH.oM.RDF.IsA-BH.oM.Base.IBHoMObject",
+      "iri": "http://visualdataweb.org/newOntology/BH.oM.Versioning.VersioningEvent-BH.oM.RDF.IsA-BH.oM.Base.IBHoMObject",
       "label": "IsA",
       "attributes": "object",
       "domain": "BH.oM.Versioning.VersioningEvent",
       "range": "BH.oM.Base.IBHoMObject"
     },
     {
-      "id": "E8352939DA364C8EACB862DF3F564248E8A5392DDAE35E23272D6DE446D51479",
-      "iri": "http://visualdataweb.org/newOntology/E8352939DA364C8EACB862DF3F564248E8A5392DDAE35E23272D6DE446D51479",
+      "id": "BH.oM.Versioning.VersioningEvent-BH.oM.RDF.IsA-BH.oM.Base.IObject",
+      "iri": "http://visualdataweb.org/newOntology/BH.oM.Versioning.VersioningEvent-BH.oM.RDF.IsA-BH.oM.Base.IObject",
       "label": "IsA",
       "attributes": "object",
       "domain": "BH.oM.Versioning.VersioningEvent",
       "range": "BH.oM.Base.IObject"
     },
     {
-      "id": "038BA251645596E39FBB8263193601CE1BC0874094B818F37376B4D562780552",
-      "iri": "http://visualdataweb.org/newOntology/038BA251645596E39FBB8263193601CE1BC0874094B818F37376B4D562780552",
+      "id": "BH.oM.Versioning.VersioningEvent-BH.oM.RDF.IsSubclassOf-BH.oM.Base.Debugging.Event",
+      "iri": "http://visualdataweb.org/newOntology/BH.oM.Versioning.VersioningEvent-BH.oM.RDF.IsSubclassOf-BH.oM.Base.Debugging.Event",
       "label": "IsSubclassOf",
       "attributes": "object",
       "domain": "BH.oM.Versioning.VersioningEvent",
