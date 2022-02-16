@@ -85,7 +85,7 @@ namespace BH.Engine.RDF
                 // 3) PROPERTY
                 // To determine what kind of relation we want to set, we check the type of the RDF "Object" (or "range").
                 // If the "Object" is a BHoM type, we can consider it an "owl:ObjectProperty", otherwise we consider it a "owl:DatatypeProperty".
-                bool isDatatypeProperty = !((relation.Object as PropertyInfo)?.PropertyType ?? relation.Object as Type)?.InnermostType().IsValidBHoMType() ?? true;
+                bool isDatatypeProperty = !((relation.Object as PropertyInfo)?.PropertyType ?? relation.Object as Type)?.InnermostType().IsBHoMType() ?? true;
                 if (isDatatypeProperty)
                     propertyArray.AddToIdTypeArray(relationId, "owl:DatatypeProperty");
                 else
@@ -126,7 +126,7 @@ namespace BH.Engine.RDF
             //string label = (subjectOrObject as PropertyInfo)?.DescriptiveName() ?? $"{subjectOrObjectType.NameValidChars()} ({subjectOrObjectType.FullNameValidChars()})";
 
 
-            if (subjectOrObjectType.IsValidBHoMType())
+            if (subjectOrObjectType.IsBHoMType())
             {
                 // If the Type is a BHoMType, the node id is the type full name.
 
@@ -142,7 +142,7 @@ namespace BH.Engine.RDF
                     classAttributeArray.AddToAttributeArray(propertyNodeId, subjectOrObjectType.GithubURI(), pInfo.Name);
 
                     // If the property is a BHoM type, We need to add a "IsA" relation to a node that represents its property type.
-                    if (pInfo.PropertyType.IsValidBHoMType() && propertyArray != null && propertyAttributeArray != null)
+                    if (pInfo.PropertyType.IsBHoMType() && propertyArray != null && propertyAttributeArray != null)
                     {
                         string propertyTypeNodeId = pInfo.PropertyType.FullNameValidChars();
                         // See if we have yet to add a Node for the type of this property.
