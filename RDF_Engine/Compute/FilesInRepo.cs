@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
+using System.Reflection;
 using System.Text;
 using System.Threading.Tasks;
 using log = BH.oM.RDF.Log;
@@ -22,6 +23,9 @@ namespace BH.Engine.RDF
             string[] files = null;
 
             // Try to read from cached on disk.
+            if (cacheRootDirectory == null)
+                cacheRootDirectory = new Uri(Path.GetDirectoryName(Assembly.GetExecutingAssembly().CodeBase)).LocalPath;
+
             string cacheFilePath = null;
             if (!string.IsNullOrWhiteSpace(cacheRootDirectory))
                 cacheFilePath = cacheRootDirectory + "AllCsFilesInGithubRepos.txt";

@@ -59,6 +59,11 @@ namespace BH.oM.CodeAnalysis.ConsoleApp
 
             //List<Type> 
             //Dictionary<Type, List<IRelation>> dictionaryGraph = group.DictionaryGraphFromTypes();
+            //string webVOWLJson = Engine.RDF.Convert.ToWebVOWLJson(dictionaryGraph);
+
+            //result[group.Key] = webVOWLJson;
+
+
             // Invoke all static methods in `Tests_Alessio` class
             //typeof(Tests_Alessio).GetMethods().Where(mi => mi.IsStatic).ToList().ForEach(mi => mi.Invoke(null, null));
 
@@ -82,7 +87,7 @@ namespace BH.oM.CodeAnalysis.ConsoleApp
                 oMTypes = oMTypes.Where(t => namespaceToConsider.Any(nsf =>
                 {
                     if (nsf.StartsWith("BH."))
-                        return t.Namespace.EndsWith(nsf);
+                        return t.Namespace.StartsWith(nsf);
                     else
                         return t.Namespace.Contains(nsf);
                 })).ToList();
@@ -106,7 +111,7 @@ namespace BH.oM.CodeAnalysis.ConsoleApp
             foreach (var group in oMTypesGroupsPerNamespace)
             {
                 // Extract a dictionary representation of the BHoM Ontology Graph
-                Dictionary<Type, List<IRelation>> dictionaryGraph = group.DictionaryGraphFromTypes();
+                Dictionary<TypeInfo, List<IRelation>> dictionaryGraph = group.DictionaryGraphFromTypes();
                 string webVOWLJson = Engine.RDF.Convert.ToWebVOWLJson(dictionaryGraph);
 
                 result[group.Key] = webVOWLJson;
