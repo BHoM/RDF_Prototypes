@@ -30,7 +30,13 @@ namespace BH.Engine.RDF
                 m_cachedFileLines[declaringTypeFilePath] = lines;
             }
 
-            int index = lines?.FindIndex(l => l.Contains(pi.Name) && l.Contains(pi.PropertyType.Name)) ?? -1;
+            int index = lines?.FindIndex(l =>
+            l.Contains(pi.Name) &&
+            l.Contains(pi.PropertyType.Name) &&
+            l.Contains(pi.PropertyType.Name) &&
+            l.Contains("public") &&
+            l.Contains("{"))
+                ?? -1;
 
             return index;
         }
