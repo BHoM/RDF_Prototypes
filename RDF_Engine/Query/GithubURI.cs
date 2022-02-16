@@ -21,7 +21,6 @@ namespace BH.Engine.RDF
             if (typeToSearch.Name.StartsWith("<>c__"))
                 return null;
 
-
             if (cacheRootDirectory == null)
                 cacheRootDirectory = new Uri(Path.GetDirectoryName(Assembly.GetExecutingAssembly().CodeBase)).LocalPath;
 

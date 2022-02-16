@@ -15,6 +15,8 @@ namespace BH.Engine.RDF
 {
     public static partial class Query
     {
+        private static Dictionary<Type, string> m_cachedTypeFilePaths = new Dictionary<Type, string>();
+
         [Description("The method will look for a file named using standard BHoM filename convention for Types. " +
             "For example, for the type `BH.oM.Structure.Elements.Bar`, the method will look for 'Bar.cs', and the filepath will have to contain the 'namespaceGroup' called `Structure`.")]
         public static string FilePathFromLocalRepository(this Type type, string repositoryRoot, string cacheRootDirectory = null, bool relative = false)
@@ -29,7 +31,13 @@ namespace BH.Engine.RDF
                 }
             }
 
-            List<string> allFilePaths = Compute.FilesInRepo(repositoryRoot, cacheRootDirectory);
+            string filepath = null;
+
+            // Check the cached types first.
+            if (m_cachedTypeFilePaths?.TryGetValue(type, out filepath) ?? false)
+                return relative ? filepath?.Replace(repositoryRoot, "") : filepath;
+
+            HashSet<string> allFilePaths = Compute.FilesInRepo(repositoryRoot, cacheRootDirectory);
 
             string nameSpaceGroup = type.Namespace.Split('.')[2]; // [2] selects anything exactly after `BH.oM.` or `BH.Engine.`
 
@@ -40,8 +48,6 @@ namespace BH.Engine.RDF
                 nameSpaceGroup = "BHoM";
             else
                 nameSpaceGroup += "_oM";
-
-            string filepath = null;
 
             List<string> matchingFilePaths = allFilePaths?.Where(p =>
                 Path.GetDirectoryName(p).Contains($"{nameSpaceGroup}") &&
@@ -58,10 +64,10 @@ namespace BH.Engine.RDF
                     log.RecordWarning($"Could not find filepath for Type `{type.FullName}`", true);
             }
 
-            if (relative)
-                return filepath?.Replace(repositoryRoot, "");
+            // Store in cache. If no filePath was found, stores null string, which is better than having to reperform the search.
+            m_cachedTypeFilePaths[type] = filepath;
 
-            return filepath; // If not found, this is null.
+            return relative ? filepath?.Replace(repositoryRoot, "") : filepath; // if not found, this returns null.
         }
     }
 }

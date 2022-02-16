@@ -11,7 +11,7 @@ namespace BH.Engine.RDF
 {
     public static partial class Compute
     {
-        public static List<string> FilesInRepo(string parentRepoDirectoryPath, string cacheRootDirectory = null)
+        public static HashSet<string> FilesInRepo(string parentRepoDirectoryPath, string cacheRootDirectory = null)
         {
             if (string.IsNullOrWhiteSpace(parentRepoDirectoryPath) || !Directory.Exists(parentRepoDirectoryPath))
                 return null;
@@ -42,7 +42,9 @@ namespace BH.Engine.RDF
                     !f.Contains("TemporaryGeneratedFile_") && 
                     !f.EndsWith("AssemblyInfo.cs") && 
                     !f.EndsWith("Resources.Designer.cs") && 
-                    !f.EndsWith("AssemblyAttributes.cs")).ToArray();
+                    !f.EndsWith("AssemblyAttributes.cs") &&
+                    !(f.Contains("packages") && !f.Contains("src")) // removes nuget package source files
+                    ).ToArray();
             }
 
             // Cache the results to disk.
@@ -53,12 +55,12 @@ namespace BH.Engine.RDF
             }
 
             // Cache in memory.
-            m_allCsFilePaths = files.ToList();
+            m_allCsFilePaths = new HashSet<string>(files);
 
             return m_allCsFilePaths;
         }
 
         // All ".cs" file paths found in the specified Root repository (e.g. C:/Users/alombardi/GitHub).
-        private static List<string> m_allCsFilePaths;
+        private static HashSet<string> m_allCsFilePaths;
     }
 }

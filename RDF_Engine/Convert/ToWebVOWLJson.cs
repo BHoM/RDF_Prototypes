@@ -92,7 +92,7 @@ namespace BH.Engine.RDF
                     propertyArray.AddToIdTypeArray(relationId, "owl:ObjectProperty");
 
                 // 4) PROPERTY ATTRIBUTE
-                propertyAttributeArray.AddToAttributeArray(relationId, new Uri($"http://visualdataweb.org/newOntology/{relationId}", UriKind.Absolute), relationType.Name, null, objectPropertyAttribute, new List<string>() { subjectNodeId }, new List<string>() { objectNodeId });
+                propertyAttributeArray.AddToAttributeArray(relationId, relation.GetType().GithubURI(), relationType.Name, null, objectPropertyAttribute, new List<string>() { subjectNodeId }, new List<string>() { objectNodeId });
             }
 
             rdfJsonObject.Add(new JProperty("class", classArray));
@@ -139,7 +139,7 @@ namespace BH.Engine.RDF
 
                     classArray.AddToIdTypeArray(propertyNodeId, "owl:Class");
 
-                    classAttributeArray.AddToAttributeArray(propertyNodeId, subjectOrObjectType.GithubURI(), pInfo.Name);
+                    classAttributeArray.AddToAttributeArray(propertyNodeId, pInfo.GithubURI(), pInfo.DescriptiveName());
 
                     // If the property is a BHoM type, We need to add a "IsA" relation to a node that represents its property type.
                     if (pInfo.PropertyType.IsBHoMType() && propertyArray != null && propertyAttributeArray != null)
@@ -193,7 +193,7 @@ namespace BH.Engine.RDF
 
             classArray.AddToIdTypeArray(subjectOrObjectNodeId, "rdfs:Datatype");
 
-            classAttributeArray.AddToAttributeArray(subjectOrObjectNodeId, new Uri(@"http://www.w3.org/2001/XMLSchema#", UriKind.Absolute), subjectOrObject.DescriptiveName(), null, new List<string>() { "datatype" });
+            classAttributeArray.AddToAttributeArray(subjectOrObjectNodeId, relation.GetType().GithubURI(), subjectOrObject.DescriptiveName(), null, new List<string>() { "datatype" });
 
             propertyAttributes = new List<string>() { "datatype" };
             // Un-comment if we want to create `Literal` nodes for non-primitive, non-BHoM types.
