@@ -270,7 +270,7 @@ namespace BH.Engine.RDF
             if (isExternal)
                 attributes = attributes == null ? new List<string> { "external" } : attributes.Concat(new List<string> { "external" }).ToList();
 
-            attributeArrayObj.Add(attributes.ToJProperty("attributes"));
+            attributeArrayObj.Add(new JProperty("attributes", attributes.ToJArray()));
 
 
             // // - Domain and range
