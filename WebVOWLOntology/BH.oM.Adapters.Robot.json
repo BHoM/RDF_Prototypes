@@ -1,0 +1,1816 @@
+{
+  "comment": "Generated from BHoM RDF_Prototypes",
+  "namespace": [],
+  "class": [
+    {
+      "id": "BH.oM.Adapters.Robot.DesignCodeSteel",
+      "type": "owl:Class"
+    },
+    {
+      "id": "BH.oM.Adapters.Robot.MaterialDB",
+      "type": "owl:Class"
+    },
+    {
+      "id": "BH.oM.Adapters.Robot.SectionDB",
+      "type": "owl:Class"
+    },
+    {
+      "id": "BH.oM.Adapters.Robot.LoadCaseLabel",
+      "type": "owl:Class"
+    },
+    {
+      "id": "BH.oM.Adapters.Robot.PanelFiniteElementIds",
+      "type": "owl:Class"
+    },
+    {
+      "id": "BH.oM.Adapters.Robot.RobotId",
+      "type": "owl:Class"
+    },
+    {
+      "id": "BH.oM.Adapters.Robot.DesignGroup",
+      "type": "owl:Class"
+    },
+    {
+      "id": "BH.oM.Adapters.Robot.InteractiveSettings",
+      "type": "owl:Class"
+    },
+    {
+      "id": "BH.oM.Adapters.Robot.RobotConfig",
+      "type": "owl:Class"
+    },
+    {
+      "id": "BH.oM.Adapters.Robot.AdvancedSettings",
+      "type": "owl:Class"
+    },
+    {
+      "id": "BH.oM.Adapters.Robot.DatabaseSettings",
+      "type": "owl:Class"
+    },
+    {
+      "id": "BH.oM.Adapters.Robot.ContourLoad",
+      "type": "owl:Class"
+    },
+    {
+      "id": "BH.oM.Adapters.Robot.GeometricalLineLoad",
+      "type": "owl:Class"
+    },
+    {
+      "id": "BH.oM.Adapters.Robot.FramingElementDesignProperties",
+      "type": "owl:Class"
+    },
+    {
+      "id": "Label-FE0E289E1FA4AB454FF9EF323F2C5C01246E14C5D11CA8B80EBE29AEC89D5CB6-LoadCaseLabel-HasProperty",
+      "type": "rdfs:Datatype"
+    },
+    {
+      "id": "BH.oM.Base.IFragment",
+      "type": "owl:Class"
+    },
+    {
+      "id": "BH.oM.Base.IObject",
+      "type": "owl:Class"
+    },
+    {
+      "id": "FiniteElementIds-BA55EB2E71D75E23DA2ADFE062056B1B0B9601B3893F444467A82F7E38C10AF3-PanelFiniteElementIds-HasProperty",
+      "type": "rdfs:Datatype"
+    },
+    {
+      "id": "NodeIds-8583AEC3E53607652906A8AF71330CC7F81892C35CC3BCECF5DDF8CEA770F13B-PanelFiniteElementIds-HasProperty",
+      "type": "rdfs:Datatype"
+    },
+    {
+      "id": "Id-E727CB20888DB4358E3DED3A67DA6CB84833D35F38FDC70C9749E418C6E70B73-RobotId-HasProperty",
+      "type": "rdfs:Datatype"
+    },
+    {
+      "id": "BH.oM.Base.IAdapterId",
+      "type": "owl:Class"
+    },
+    {
+      "id": "Number-4CEE9A8E8E8044B0C66AA8BAF51FB4F16DEF9553ECE457D6020988E6AFB0D7BF-DesignGroup-HasProperty",
+      "type": "rdfs:Datatype"
+    },
+    {
+      "id": "MaterialName-B5D0E1E557D1FE6C96C5E9C5D046A9E701DE3C1695E98AE2251EF9AD385ED557-DesignGroup-HasProperty",
+      "type": "rdfs:Datatype"
+    },
+    {
+      "id": "MemberIds-A55431E5DDEC79ED9A6D6929CD674F1F9F3694F14C3ACDB3AF1A766035564ACF-DesignGroup-HasProperty",
+      "type": "rdfs:Datatype"
+    },
+    {
+      "id": "BH.oM.Base.IBHoMObject",
+      "type": "owl:Class"
+    },
+    {
+      "id": "BH.oM.Base.BHoMObject",
+      "type": "owl:Class"
+    },
+    {
+      "id": "IsInteractive-99492314B4CA7BA893FB82E74B6B59BFFFB020D13FB0053EC58AD01B5E35928A-InteractiveSettings-HasProperty",
+      "type": "rdfs:Datatype"
+    },
+    {
+      "id": "IsVisible-E3CAB4654DD4761F1BAF22ABB434E6DE871B3E50BF5B0BBE6792D6E5C413333D-InteractiveSettings-HasProperty",
+      "type": "rdfs:Datatype"
+    },
+    {
+      "id": "BH.oM.Adapters.Robot.RobotConfig.AdvancedSettings",
+      "type": "owl:Class"
+    },
+    {
+      "id": "BH.oM.Adapters.Robot.RobotConfig.DatabaseSettings",
+      "type": "owl:Class"
+    },
+    {
+      "id": "BH.oM.Adapters.Robot.RobotConfig.InteractiveSettings",
+      "type": "owl:Class"
+    },
+    {
+      "id": "readBarsByQuery-DF811D5CED471B826478370DD5AF96D7C424841FA635C5EF54DAA6F233BE19E6-AdvancedSettings-HasProperty",
+      "type": "rdfs:Datatype"
+    },
+    {
+      "id": "readNodesByQuery-BE0EB89410115460849EAE274C40D869D9DDF5191F253AA834141A391CC8E105-AdvancedSettings-HasProperty",
+      "type": "rdfs:Datatype"
+    },
+    {
+      "id": "BH.oM.Adapters.Robot.DatabaseSettings.MaterialDatabase",
+      "type": "owl:Class"
+    },
+    {
+      "id": "BH.oM.Adapters.Robot.DatabaseSettings.SectionDatabase",
+      "type": "owl:Class"
+    },
+    {
+      "id": "BH.oM.Adapters.Robot.DatabaseSettings.SteelDesignCode",
+      "type": "owl:Class"
+    },
+    {
+      "id": "BH.oM.Adapters.Robot.ContourLoad.Axis",
+      "type": "owl:Class"
+    },
+    {
+      "id": "BH.oM.Structure.Loads.LoadAxis",
+      "type": "owl:Class"
+    },
+    {
+      "id": "BH.oM.Adapters.Robot.ContourLoad.Loadcase",
+      "type": "owl:Class"
+    },
+    {
+      "id": "BH.oM.Structure.Loads.Loadcase",
+      "type": "owl:Class"
+    },
+    {
+      "id": "Projected-8396F316FD990427A557D7C078FA147B156C752C074E6216918E8F9C72BC4599-ContourLoad-HasProperty",
+      "type": "rdfs:Datatype"
+    },
+    {
+      "id": "BH.oM.Adapters.Robot.ContourLoad.Force",
+      "type": "owl:Class"
+    },
+    {
+      "id": "BH.oM.Geometry.Vector",
+      "type": "owl:Class"
+    },
+    {
+      "id": "BH.oM.Adapters.Robot.ContourLoad.Contour",
+      "type": "owl:Class"
+    },
+    {
+      "id": "BH.oM.Geometry.Polyline",
+      "type": "owl:Class"
+    },
+    {
+      "id": "BH.oM.Structure.Loads.ILoad",
+      "type": "owl:Class"
+    },
+    {
+      "id": "BH.oM.Adapters.Robot.GeometricalLineLoad.Axis",
+      "type": "owl:Class"
+    },
+    {
+      "id": "BH.oM.Adapters.Robot.GeometricalLineLoad.Loadcase",
+      "type": "owl:Class"
+    },
+    {
+      "id": "Projected-EA406D04F87C0496FA4EA59589BC769EAFCD85BF47B798F7AD750045F29D360C-GeometricalLineLoad-HasProperty",
+      "type": "rdfs:Datatype"
+    },
+    {
+      "id": "BH.oM.Adapters.Robot.GeometricalLineLoad.ForceA",
+      "type": "owl:Class"
+    },
+    {
+      "id": "BH.oM.Adapters.Robot.GeometricalLineLoad.ForceB",
+      "type": "owl:Class"
+    },
+    {
+      "id": "BH.oM.Adapters.Robot.GeometricalLineLoad.MomentA",
+      "type": "owl:Class"
+    },
+    {
+      "id": "BH.oM.Adapters.Robot.GeometricalLineLoad.MomentB",
+      "type": "owl:Class"
+    },
+    {
+      "id": "BH.oM.Adapters.Robot.GeometricalLineLoad.Location",
+      "type": "owl:Class"
+    },
+    {
+      "id": "BH.oM.Geometry.Line",
+      "type": "owl:Class"
+    },
+    {
+      "id": "EulerBucklingLengthCoefficientY-7B3BCFCBB78FBFCEEF46E282095BD7D734A66AAA8A698DB6AAB2F1B803D27723-FramingElementDesignProperties-HasProperty",
+      "type": "rdfs:Datatype"
+    },
+    {
+      "id": "EulerBucklingLengthCoefficientZ-EC8543E3B7F6AF4AFA62749D51F7AD3DE66C9A4271C28EC0361129974C02F2F9-FramingElementDesignProperties-HasProperty",
+      "type": "rdfs:Datatype"
+    },
+    {
+      "id": "MemberLengthY-1120D0BDCFD1C7E2BC1C3D7D7F2BAC2921DBAAB213FABB532A943E60958A2AEB-FramingElementDesignProperties-HasProperty",
+      "type": "rdfs:Datatype"
+    },
+    {
+      "id": "MemberLengthZ-2D0451EC338A3A8756DE3681D65EE1B6A9E32952F2F04A5675F1AAF65064072B-FramingElementDesignProperties-HasProperty",
+      "type": "rdfs:Datatype"
+    },
+    {
+      "id": "MemberLengthYIsRelative-2EB991EF81D9A5C21F9ED2E45E65E25417136A15CEBE1D14858ADA7A00DE7725-FramingElementDesignProperties-HasProperty",
+      "type": "rdfs:Datatype"
+    },
+    {
+      "id": "MemberLengthZIsRelative-48F2A19DD7B73E0AC524F23450E2E7E1941B0CCAB39E0A64BB69D5D29C7CDAEC-FramingElementDesignProperties-HasProperty",
+      "type": "rdfs:Datatype"
+    }
+  ],
+  "classAttribute": [
+    {
+      "id": "BH.oM.Adapters.Robot.DesignCodeSteel",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/Robot_oM/DesignCodeSteel.cs",
+      "label": "DesignCodeSteel (BH.oM.Adapters.Robot)",
+      "attributes": []
+    },
+    {
+      "id": "BH.oM.Adapters.Robot.MaterialDB",
+      "iri": "https://github.com/BHoM/Robot_Toolkit/blob/main/Robot_oM/Enums/MaterialDB.cs",
+      "label": "MaterialDB (BH.oM.Adapters.Robot)",
+      "attributes": []
+    },
+    {
+      "id": "BH.oM.Adapters.Robot.SectionDB",
+      "iri": "https://github.com/BHoM/Robot_Toolkit/blob/main/Robot_oM/Enums/SectionDB.cs",
+      "label": "SectionDB (BH.oM.Adapters.Robot)",
+      "attributes": []
+    },
+    {
+      "id": "BH.oM.Adapters.Robot.LoadCaseLabel",
+      "iri": "https://github.com/BHoM/Robot_Toolkit/blob/main/Robot_oM/Fragments/LoadCaseLabel.cs",
+      "label": "LoadCaseLabel (BH.oM.Adapters.Robot)",
+      "attributes": []
+    },
+    {
+      "id": "BH.oM.Adapters.Robot.PanelFiniteElementIds",
+      "iri": "https://github.com/BHoM/Robot_Toolkit/blob/main/Robot_oM/Fragments/PanelFiniteElementIds.cs",
+      "label": "PanelFiniteElementIds (BH.oM.Adapters.Robot)",
+      "attributes": []
+    },
+    {
+      "id": "BH.oM.Adapters.Robot.RobotId",
+      "iri": "https://github.com/BHoM/Robot_Toolkit/blob/main/Robot_oM/Fragments/RobotId.cs",
+      "label": "RobotId (BH.oM.Adapters.Robot)",
+      "attributes": []
+    },
+    {
+      "id": "BH.oM.Adapters.Robot.DesignGroup",
+      "iri": "https://github.com/BHoM/Robot_Toolkit/blob/main/Robot_oM/Settings/DesignGroup.cs",
+      "label": "DesignGroup (BH.oM.Adapters.Robot)",
+      "attributes": []
+    },
+    {
+      "id": "BH.oM.Adapters.Robot.InteractiveSettings",
+      "iri": "https://github.com/BHoM/Robot_Toolkit/blob/main/Robot_oM/Settings/InteractiveSettings.cs",
+      "label": "InteractiveSettings (BH.oM.Adapters.Robot)",
+      "attributes": []
+    },
+    {
+      "id": "BH.oM.Adapters.Robot.RobotConfig",
+      "iri": "https://github.com/BHoM/Robot_Toolkit/blob/main/Robot_oM/Settings/RobotConfig.cs",
+      "label": "RobotConfig (BH.oM.Adapters.Robot)",
+      "attributes": []
+    },
+    {
+      "id": "BH.oM.Adapters.Robot.AdvancedSettings",
+      "iri": "https://github.com/BHoM/Robot_Toolkit/blob/main/Robot_oM/Settings/AdvancedSettings.cs",
+      "label": "AdvancedSettings (BH.oM.Adapters.Robot)",
+      "attributes": []
+    },
+    {
+      "id": "BH.oM.Adapters.Robot.DatabaseSettings",
+      "iri": "https://github.com/BHoM/Robot_Toolkit/blob/main/Robot_oM/Settings/DatabaseSettings.cs",
+      "label": "DatabaseSettings (BH.oM.Adapters.Robot)",
+      "attributes": []
+    },
+    {
+      "id": "BH.oM.Adapters.Robot.ContourLoad",
+      "iri": "https://github.com/BHoM/Robot_Toolkit/blob/main/Robot_oM/Structural/Loads/ContourLoad.cs",
+      "label": "ContourLoad (BH.oM.Adapters.Robot)",
+      "attributes": []
+    },
+    {
+      "id": "BH.oM.Adapters.Robot.GeometricalLineLoad",
+      "iri": "https://github.com/BHoM/Robot_Toolkit/blob/main/Robot_oM/Structural/Loads/GeometricalLineLoad.cs",
+      "label": "GeometricalLineLoad (BH.oM.Adapters.Robot)",
+      "attributes": []
+    },
+    {
+      "id": "BH.oM.Adapters.Robot.FramingElementDesignProperties",
+      "iri": "https://github.com/BHoM/Robot_Toolkit/blob/main/Robot_oM/Structural/Properties/FramingElementDesignProperties.cs",
+      "label": "FramingElementDesignProperties (BH.oM.Adapters.Robot)",
+      "attributes": []
+    },
+    {
+      "id": "Label-FE0E289E1FA4AB454FF9EF323F2C5C01246E14C5D11CA8B80EBE29AEC89D5CB6-LoadCaseLabel-HasProperty",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/HasProperty.cs",
+      "label": "Label (BH.oM.Adapters.Robot.LoadCaseLabel.Label)",
+      "attributes": "datatype"
+    },
+    {
+      "id": "BH.oM.Base.IFragment",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/BHoM/Interface/IFragment.cs",
+      "label": "IFragment",
+      "attributes": []
+    },
+    {
+      "id": "BH.oM.Base.IObject",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/BHoM/Interface/IObject.cs",
+      "label": "IObject",
+      "attributes": []
+    },
+    {
+      "id": "FiniteElementIds-BA55EB2E71D75E23DA2ADFE062056B1B0B9601B3893F444467A82F7E38C10AF3-PanelFiniteElementIds-HasProperty",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/HasProperty.cs",
+      "label": "FiniteElementIds (BH.oM.Adapters.Robot.PanelFiniteElementIds.FiniteElementIds)",
+      "attributes": "datatype"
+    },
+    {
+      "id": "NodeIds-8583AEC3E53607652906A8AF71330CC7F81892C35CC3BCECF5DDF8CEA770F13B-PanelFiniteElementIds-HasProperty",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/HasProperty.cs",
+      "label": "NodeIds (BH.oM.Adapters.Robot.PanelFiniteElementIds.NodeIds)",
+      "attributes": "datatype"
+    },
+    {
+      "id": "Id-E727CB20888DB4358E3DED3A67DA6CB84833D35F38FDC70C9749E418C6E70B73-RobotId-HasProperty",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/HasProperty.cs",
+      "label": "Id (BH.oM.Adapters.Robot.RobotId.Id)",
+      "attributes": "datatype"
+    },
+    {
+      "id": "BH.oM.Base.IAdapterId",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/BHoM/Interface/IAdapterId.cs",
+      "label": "IAdapterId",
+      "attributes": []
+    },
+    {
+      "id": "Number-4CEE9A8E8E8044B0C66AA8BAF51FB4F16DEF9553ECE457D6020988E6AFB0D7BF-DesignGroup-HasProperty",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/HasProperty.cs",
+      "label": "Number (BH.oM.Adapters.Robot.DesignGroup.Number)",
+      "attributes": "datatype"
+    },
+    {
+      "id": "MaterialName-B5D0E1E557D1FE6C96C5E9C5D046A9E701DE3C1695E98AE2251EF9AD385ED557-DesignGroup-HasProperty",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/HasProperty.cs",
+      "label": "MaterialName (BH.oM.Adapters.Robot.DesignGroup.MaterialName)",
+      "attributes": "datatype"
+    },
+    {
+      "id": "MemberIds-A55431E5DDEC79ED9A6D6929CD674F1F9F3694F14C3ACDB3AF1A766035564ACF-DesignGroup-HasProperty",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/HasProperty.cs",
+      "label": "MemberIds (BH.oM.Adapters.Robot.DesignGroup.MemberIds)",
+      "attributes": "datatype"
+    },
+    {
+      "id": "BH.oM.Base.IBHoMObject",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/BHoM/Interface/IBHoMObject.cs",
+      "label": "IBHoMObject",
+      "attributes": []
+    },
+    {
+      "id": "BH.oM.Base.BHoMObject",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/BHoM/BHoMObject.cs",
+      "label": "BHoMObject",
+      "attributes": []
+    },
+    {
+      "id": "IsInteractive-99492314B4CA7BA893FB82E74B6B59BFFFB020D13FB0053EC58AD01B5E35928A-InteractiveSettings-HasProperty",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/HasProperty.cs",
+      "label": "IsInteractive (BH.oM.Adapters.Robot.InteractiveSettings.IsInteractive)",
+      "attributes": "datatype"
+    },
+    {
+      "id": "IsVisible-E3CAB4654DD4761F1BAF22ABB434E6DE871B3E50BF5B0BBE6792D6E5C413333D-InteractiveSettings-HasProperty",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/HasProperty.cs",
+      "label": "IsVisible (BH.oM.Adapters.Robot.InteractiveSettings.IsVisible)",
+      "attributes": "datatype"
+    },
+    {
+      "id": "BH.oM.Adapters.Robot.RobotConfig.AdvancedSettings",
+      "iri": "https://github.com/BHoM/Robot_Toolkit/blob/main/Robot_oM/Settings/RobotConfig.cs#L33",
+      "label": "AdvancedSettings (BH.oM.Adapters.Robot.RobotConfig.AdvancedSettings)",
+      "attributes": []
+    },
+    {
+      "id": "BH.oM.Adapters.Robot.RobotConfig.DatabaseSettings",
+      "iri": "https://github.com/BHoM/Robot_Toolkit/blob/main/Robot_oM/Settings/RobotConfig.cs#L34",
+      "label": "DatabaseSettings (BH.oM.Adapters.Robot.RobotConfig.DatabaseSettings)",
+      "attributes": []
+    },
+    {
+      "id": "BH.oM.Adapters.Robot.RobotConfig.InteractiveSettings",
+      "iri": "https://github.com/BHoM/Robot_Toolkit/blob/main/Robot_oM/Settings/RobotConfig.cs#L35",
+      "label": "InteractiveSettings (BH.oM.Adapters.Robot.RobotConfig.InteractiveSettings)",
+      "attributes": []
+    },
+    {
+      "id": "readBarsByQuery-DF811D5CED471B826478370DD5AF96D7C424841FA635C5EF54DAA6F233BE19E6-AdvancedSettings-HasProperty",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/HasProperty.cs",
+      "label": "readBarsByQuery (BH.oM.Adapters.Robot.AdvancedSettings.readBarsByQuery)",
+      "attributes": "datatype"
+    },
+    {
+      "id": "readNodesByQuery-BE0EB89410115460849EAE274C40D869D9DDF5191F253AA834141A391CC8E105-AdvancedSettings-HasProperty",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/HasProperty.cs",
+      "label": "readNodesByQuery (BH.oM.Adapters.Robot.AdvancedSettings.readNodesByQuery)",
+      "attributes": "datatype"
+    },
+    {
+      "id": "BH.oM.Adapters.Robot.DatabaseSettings.MaterialDatabase",
+      "iri": "https://github.com/BHoM/Robot_Toolkit/blob/main/Robot_oM/Settings/DatabaseSettings.cs#L33",
+      "label": "MaterialDatabase (BH.oM.Adapters.Robot.DatabaseSettings.MaterialDatabase)",
+      "attributes": []
+    },
+    {
+      "id": "BH.oM.Adapters.Robot.DatabaseSettings.SectionDatabase",
+      "iri": "https://github.com/BHoM/Robot_Toolkit/blob/main/Robot_oM/Settings/DatabaseSettings.cs#L34",
+      "label": "SectionDatabase (BH.oM.Adapters.Robot.DatabaseSettings.SectionDatabase)",
+      "attributes": []
+    },
+    {
+      "id": "BH.oM.Adapters.Robot.DatabaseSettings.SteelDesignCode",
+      "iri": "https://github.com/BHoM/Robot_Toolkit/blob/main/Robot_oM/Settings/DatabaseSettings.cs#L35",
+      "label": "SteelDesignCode (BH.oM.Adapters.Robot.DatabaseSettings.SteelDesignCode)",
+      "attributes": []
+    },
+    {
+      "id": "BH.oM.Adapters.Robot.ContourLoad.Axis",
+      "iri": "https://github.com/BHoM/Robot_Toolkit/blob/main/Robot_oM/Structural/Loads/ContourLoad.cs#L39",
+      "label": "Axis (BH.oM.Adapters.Robot.ContourLoad.Axis)",
+      "attributes": []
+    },
+    {
+      "id": "BH.oM.Structure.Loads.LoadAxis",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/Structure_oM/Loads/Enums/LoadAxis.cs",
+      "label": "LoadAxis (BH.oM.Structure.Loads)",
+      "attributes": "external"
+    },
+    {
+      "id": "BH.oM.Adapters.Robot.ContourLoad.Loadcase",
+      "iri": "https://github.com/BHoM/Robot_Toolkit/blob/main/Robot_oM/Structural/Loads/ContourLoad.cs#L41",
+      "label": "Loadcase (BH.oM.Adapters.Robot.ContourLoad.Loadcase)",
+      "attributes": []
+    },
+    {
+      "id": "BH.oM.Structure.Loads.Loadcase",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/Structure_oM/Loads/Loadcase.cs",
+      "label": "Loadcase (BH.oM.Structure.Loads)",
+      "attributes": "external"
+    },
+    {
+      "id": "Projected-8396F316FD990427A557D7C078FA147B156C752C074E6216918E8F9C72BC4599-ContourLoad-HasProperty",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/HasProperty.cs",
+      "label": "Projected (BH.oM.Adapters.Robot.ContourLoad.Projected)",
+      "attributes": "datatype"
+    },
+    {
+      "id": "BH.oM.Adapters.Robot.ContourLoad.Force",
+      "iri": "https://github.com/BHoM/Robot_Toolkit/blob/main/Robot_oM/Structural/Loads/ContourLoad.cs#L45",
+      "label": "Force (BH.oM.Adapters.Robot.ContourLoad.Force)",
+      "attributes": []
+    },
+    {
+      "id": "BH.oM.Geometry.Vector",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/Geometry_oM/Vector/Vector.cs",
+      "label": "Vector (BH.oM.Geometry)",
+      "attributes": "external"
+    },
+    {
+      "id": "BH.oM.Adapters.Robot.ContourLoad.Contour",
+      "iri": "https://github.com/BHoM/Robot_Toolkit/blob/main/Robot_oM/Structural/Loads/ContourLoad.cs#L47",
+      "label": "Contour (BH.oM.Adapters.Robot.ContourLoad.Contour)",
+      "attributes": []
+    },
+    {
+      "id": "BH.oM.Geometry.Polyline",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/Geometry_oM/Curve/Polyline.cs",
+      "label": "Polyline (BH.oM.Geometry)",
+      "attributes": "external"
+    },
+    {
+      "id": "BH.oM.Structure.Loads.ILoad",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/Structure_oM/Loads/ILoad.cs",
+      "label": "ILoad",
+      "attributes": []
+    },
+    {
+      "id": "BH.oM.Adapters.Robot.GeometricalLineLoad.Axis",
+      "iri": "https://github.com/BHoM/Robot_Toolkit/blob/main/Robot_oM/Structural/Loads/GeometricalLineLoad.cs#L39",
+      "label": "Axis (BH.oM.Adapters.Robot.GeometricalLineLoad.Axis)",
+      "attributes": []
+    },
+    {
+      "id": "BH.oM.Adapters.Robot.GeometricalLineLoad.Loadcase",
+      "iri": "https://github.com/BHoM/Robot_Toolkit/blob/main/Robot_oM/Structural/Loads/GeometricalLineLoad.cs#L41",
+      "label": "Loadcase (BH.oM.Adapters.Robot.GeometricalLineLoad.Loadcase)",
+      "attributes": []
+    },
+    {
+      "id": "Projected-EA406D04F87C0496FA4EA59589BC769EAFCD85BF47B798F7AD750045F29D360C-GeometricalLineLoad-HasProperty",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/HasProperty.cs",
+      "label": "Projected (BH.oM.Adapters.Robot.GeometricalLineLoad.Projected)",
+      "attributes": "datatype"
+    },
+    {
+      "id": "BH.oM.Adapters.Robot.GeometricalLineLoad.ForceA",
+      "iri": "https://github.com/BHoM/Robot_Toolkit/blob/main/Robot_oM/Structural/Loads/GeometricalLineLoad.cs#L45",
+      "label": "ForceA (BH.oM.Adapters.Robot.GeometricalLineLoad.ForceA)",
+      "attributes": []
+    },
+    {
+      "id": "BH.oM.Adapters.Robot.GeometricalLineLoad.ForceB",
+      "iri": "https://github.com/BHoM/Robot_Toolkit/blob/main/Robot_oM/Structural/Loads/GeometricalLineLoad.cs#L47",
+      "label": "ForceB (BH.oM.Adapters.Robot.GeometricalLineLoad.ForceB)",
+      "attributes": []
+    },
+    {
+      "id": "BH.oM.Adapters.Robot.GeometricalLineLoad.MomentA",
+      "iri": "https://github.com/BHoM/Robot_Toolkit/blob/main/Robot_oM/Structural/Loads/GeometricalLineLoad.cs#L49",
+      "label": "MomentA (BH.oM.Adapters.Robot.GeometricalLineLoad.MomentA)",
+      "attributes": []
+    },
+    {
+      "id": "BH.oM.Adapters.Robot.GeometricalLineLoad.MomentB",
+      "iri": "https://github.com/BHoM/Robot_Toolkit/blob/main/Robot_oM/Structural/Loads/GeometricalLineLoad.cs#L51",
+      "label": "MomentB (BH.oM.Adapters.Robot.GeometricalLineLoad.MomentB)",
+      "attributes": []
+    },
+    {
+      "id": "BH.oM.Adapters.Robot.GeometricalLineLoad.Location",
+      "iri": "https://github.com/BHoM/Robot_Toolkit/blob/main/Robot_oM/Structural/Loads/GeometricalLineLoad.cs#L53",
+      "label": "Location (BH.oM.Adapters.Robot.GeometricalLineLoad.Location)",
+      "attributes": []
+    },
+    {
+      "id": "BH.oM.Geometry.Line",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/Geometry_oM/Curve/Line.cs",
+      "label": "Line (BH.oM.Geometry)",
+      "attributes": "external"
+    },
+    {
+      "id": "EulerBucklingLengthCoefficientY-7B3BCFCBB78FBFCEEF46E282095BD7D734A66AAA8A698DB6AAB2F1B803D27723-FramingElementDesignProperties-HasProperty",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/HasProperty.cs",
+      "label": "EulerBucklingLengthCoefficientY (BH.oM.Adapters.Robot.FramingElementDesignProperties.EulerBucklingLengthCoefficientY)",
+      "attributes": "datatype"
+    },
+    {
+      "id": "EulerBucklingLengthCoefficientZ-EC8543E3B7F6AF4AFA62749D51F7AD3DE66C9A4271C28EC0361129974C02F2F9-FramingElementDesignProperties-HasProperty",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/HasProperty.cs",
+      "label": "EulerBucklingLengthCoefficientZ (BH.oM.Adapters.Robot.FramingElementDesignProperties.EulerBucklingLengthCoefficientZ)",
+      "attributes": "datatype"
+    },
+    {
+      "id": "MemberLengthY-1120D0BDCFD1C7E2BC1C3D7D7F2BAC2921DBAAB213FABB532A943E60958A2AEB-FramingElementDesignProperties-HasProperty",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/HasProperty.cs",
+      "label": "MemberLengthY (BH.oM.Adapters.Robot.FramingElementDesignProperties.MemberLengthY)",
+      "attributes": "datatype"
+    },
+    {
+      "id": "MemberLengthZ-2D0451EC338A3A8756DE3681D65EE1B6A9E32952F2F04A5675F1AAF65064072B-FramingElementDesignProperties-HasProperty",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/HasProperty.cs",
+      "label": "MemberLengthZ (BH.oM.Adapters.Robot.FramingElementDesignProperties.MemberLengthZ)",
+      "attributes": "datatype"
+    },
+    {
+      "id": "MemberLengthYIsRelative-2EB991EF81D9A5C21F9ED2E45E65E25417136A15CEBE1D14858ADA7A00DE7725-FramingElementDesignProperties-HasProperty",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/HasProperty.cs",
+      "label": "MemberLengthYIsRelative (BH.oM.Adapters.Robot.FramingElementDesignProperties.MemberLengthYIsRelative)",
+      "attributes": "datatype"
+    },
+    {
+      "id": "MemberLengthZIsRelative-48F2A19DD7B73E0AC524F23450E2E7E1941B0CCAB39E0A64BB69D5D29C7CDAEC-FramingElementDesignProperties-HasProperty",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/HasProperty.cs",
+      "label": "MemberLengthZIsRelative (BH.oM.Adapters.Robot.FramingElementDesignProperties.MemberLengthZIsRelative)",
+      "attributes": "datatype"
+    }
+  ],
+  "property": [
+    {
+      "id": "BH.oM.Adapters.Robot.DesignCode_Steel-BH.oM.RDF.IsA-System.IComparable",
+      "type": "owl:DatatypeProperty"
+    },
+    {
+      "id": "BH.oM.Adapters.Robot.DesignCode_Steel-BH.oM.RDF.IsA-System.IFormattable",
+      "type": "owl:DatatypeProperty"
+    },
+    {
+      "id": "BH.oM.Adapters.Robot.DesignCode_Steel-BH.oM.RDF.IsA-System.IConvertible",
+      "type": "owl:DatatypeProperty"
+    },
+    {
+      "id": "BH.oM.Adapters.Robot.DesignCode_Steel-BH.oM.RDF.IsSubclassOf-System.Enum",
+      "type": "owl:DatatypeProperty"
+    },
+    {
+      "id": "BH.oM.Adapters.Robot.MaterialDB-BH.oM.RDF.IsA-System.IComparable",
+      "type": "owl:DatatypeProperty"
+    },
+    {
+      "id": "BH.oM.Adapters.Robot.MaterialDB-BH.oM.RDF.IsA-System.IFormattable",
+      "type": "owl:DatatypeProperty"
+    },
+    {
+      "id": "BH.oM.Adapters.Robot.MaterialDB-BH.oM.RDF.IsA-System.IConvertible",
+      "type": "owl:DatatypeProperty"
+    },
+    {
+      "id": "BH.oM.Adapters.Robot.MaterialDB-BH.oM.RDF.IsSubclassOf-System.Enum",
+      "type": "owl:DatatypeProperty"
+    },
+    {
+      "id": "BH.oM.Adapters.Robot.SectionDB-BH.oM.RDF.IsA-System.IComparable",
+      "type": "owl:DatatypeProperty"
+    },
+    {
+      "id": "BH.oM.Adapters.Robot.SectionDB-BH.oM.RDF.IsA-System.IFormattable",
+      "type": "owl:DatatypeProperty"
+    },
+    {
+      "id": "BH.oM.Adapters.Robot.SectionDB-BH.oM.RDF.IsA-System.IConvertible",
+      "type": "owl:DatatypeProperty"
+    },
+    {
+      "id": "BH.oM.Adapters.Robot.SectionDB-BH.oM.RDF.IsSubclassOf-System.Enum",
+      "type": "owl:DatatypeProperty"
+    },
+    {
+      "id": "BH.oM.Adapters.Robot.LoadCaseLabel-BH.oM.RDF.HasProperty-System.String Label",
+      "type": "owl:DatatypeProperty"
+    },
+    {
+      "id": "BH.oM.Adapters.Robot.LoadCaseLabel-BH.oM.RDF.IsA-BH.oM.Base.IFragment",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "BH.oM.Adapters.Robot.LoadCaseLabel-BH.oM.RDF.IsA-BH.oM.Base.IObject",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "BH.oM.Adapters.Robot.LoadCaseLabel-BH.oM.RDF.IsSubclassOf-System.Object",
+      "type": "owl:DatatypeProperty"
+    },
+    {
+      "id": "BH.oM.Adapters.Robot.PanelFiniteElementIds-BH.oM.RDF.HasProperty-System.String FiniteElementIds",
+      "type": "owl:DatatypeProperty"
+    },
+    {
+      "id": "BH.oM.Adapters.Robot.PanelFiniteElementIds-BH.oM.RDF.HasProperty-System.String NodeIds",
+      "type": "owl:DatatypeProperty"
+    },
+    {
+      "id": "BH.oM.Adapters.Robot.PanelFiniteElementIds-BH.oM.RDF.IsA-BH.oM.Base.IFragment",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "BH.oM.Adapters.Robot.PanelFiniteElementIds-BH.oM.RDF.IsA-BH.oM.Base.IObject",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "BH.oM.Adapters.Robot.PanelFiniteElementIds-BH.oM.RDF.IsSubclassOf-System.Object",
+      "type": "owl:DatatypeProperty"
+    },
+    {
+      "id": "BH.oM.Adapters.Robot.RobotId-BH.oM.RDF.HasProperty-System.Object Id",
+      "type": "owl:DatatypeProperty"
+    },
+    {
+      "id": "BH.oM.Adapters.Robot.RobotId-BH.oM.RDF.IsA-BH.oM.Base.IAdapterId",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "BH.oM.Adapters.Robot.RobotId-BH.oM.RDF.IsA-BH.oM.Base.IFragment",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "BH.oM.Adapters.Robot.RobotId-BH.oM.RDF.IsA-BH.oM.Base.IObject",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "BH.oM.Adapters.Robot.RobotId-BH.oM.RDF.IsSubclassOf-System.Object",
+      "type": "owl:DatatypeProperty"
+    },
+    {
+      "id": "BH.oM.Adapters.Robot.DesignGroup-BH.oM.RDF.HasProperty-Int32 Number",
+      "type": "owl:DatatypeProperty"
+    },
+    {
+      "id": "BH.oM.Adapters.Robot.DesignGroup-BH.oM.RDF.HasProperty-System.String MaterialName",
+      "type": "owl:DatatypeProperty"
+    },
+    {
+      "id": "BH.oM.Adapters.Robot.DesignGroup-BH.oM.RDF.HasProperty-System.Collections.Generic.List`1[System.Int32] MemberIds",
+      "type": "owl:DatatypeProperty"
+    },
+    {
+      "id": "BH.oM.Adapters.Robot.DesignGroup-BH.oM.RDF.IsA-BH.oM.Base.IBHoMObject",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "BH.oM.Adapters.Robot.DesignGroup-BH.oM.RDF.IsA-BH.oM.Base.IObject",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "BH.oM.Adapters.Robot.DesignGroup-BH.oM.RDF.IsSubclassOf-BH.oM.Base.BHoMObject",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "BH.oM.Adapters.Robot.InteractiveSettings-BH.oM.RDF.HasProperty-Boolean IsInteractive",
+      "type": "owl:DatatypeProperty"
+    },
+    {
+      "id": "BH.oM.Adapters.Robot.InteractiveSettings-BH.oM.RDF.HasProperty-Boolean IsVisible",
+      "type": "owl:DatatypeProperty"
+    },
+    {
+      "id": "BH.oM.Adapters.Robot.InteractiveSettings-BH.oM.RDF.IsA-BH.oM.Base.IBHoMObject",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "BH.oM.Adapters.Robot.InteractiveSettings-BH.oM.RDF.IsA-BH.oM.Base.IObject",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "BH.oM.Adapters.Robot.InteractiveSettings-BH.oM.RDF.IsSubclassOf-BH.oM.Base.BHoMObject",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "BH.oM.Adapters.Robot.RobotConfig.AdvancedSettings-IsA-BH.oM.Adapters.Robot.AdvancedSettings",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "BH.oM.Adapters.Robot.RobotConfig-BH.oM.RDF.HasProperty-BH.oM.Adapters.Robot.AdvancedSettings AdvancedSettings",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "BH.oM.Adapters.Robot.RobotConfig.DatabaseSettings-IsA-BH.oM.Adapters.Robot.DatabaseSettings",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "BH.oM.Adapters.Robot.RobotConfig-BH.oM.RDF.HasProperty-BH.oM.Adapters.Robot.DatabaseSettings DatabaseSettings",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "BH.oM.Adapters.Robot.RobotConfig.InteractiveSettings-IsA-BH.oM.Adapters.Robot.InteractiveSettings",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "BH.oM.Adapters.Robot.RobotConfig-BH.oM.RDF.HasProperty-BH.oM.Adapters.Robot.InteractiveSettings InteractiveSettings",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "BH.oM.Adapters.Robot.RobotConfig-BH.oM.RDF.IsA-BH.oM.Base.IBHoMObject",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "BH.oM.Adapters.Robot.RobotConfig-BH.oM.RDF.IsA-BH.oM.Base.IObject",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "BH.oM.Adapters.Robot.RobotConfig-BH.oM.RDF.IsSubclassOf-BH.oM.Base.BHoMObject",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "BH.oM.Adapters.Robot.AdvancedSettings-BH.oM.RDF.HasProperty-Boolean readBarsByQuery",
+      "type": "owl:DatatypeProperty"
+    },
+    {
+      "id": "BH.oM.Adapters.Robot.AdvancedSettings-BH.oM.RDF.HasProperty-Boolean readNodesByQuery",
+      "type": "owl:DatatypeProperty"
+    },
+    {
+      "id": "BH.oM.Adapters.Robot.AdvancedSettings-BH.oM.RDF.IsA-BH.oM.Base.IBHoMObject",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "BH.oM.Adapters.Robot.AdvancedSettings-BH.oM.RDF.IsA-BH.oM.Base.IObject",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "BH.oM.Adapters.Robot.AdvancedSettings-BH.oM.RDF.IsSubclassOf-BH.oM.Base.BHoMObject",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "BH.oM.Adapters.Robot.DatabaseSettings.MaterialDatabase-IsA-BH.oM.Adapters.Robot.MaterialDB",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "BH.oM.Adapters.Robot.DatabaseSettings-BH.oM.RDF.HasProperty-BH.oM.Adapters.Robot.MaterialDB MaterialDatabase",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "BH.oM.Adapters.Robot.DatabaseSettings.SectionDatabase-IsA-BH.oM.Adapters.Robot.SectionDB",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "BH.oM.Adapters.Robot.DatabaseSettings-BH.oM.RDF.HasProperty-BH.oM.Adapters.Robot.SectionDB SectionDatabase",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "BH.oM.Adapters.Robot.DatabaseSettings.SteelDesignCode-IsA-BH.oM.Adapters.Robot.DesignCodeSteel",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "BH.oM.Adapters.Robot.DatabaseSettings-BH.oM.RDF.HasProperty-BH.oM.Adapters.Robot.DesignCode_Steel SteelDesignCode",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "BH.oM.Adapters.Robot.DatabaseSettings-BH.oM.RDF.IsA-BH.oM.Base.IBHoMObject",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "BH.oM.Adapters.Robot.DatabaseSettings-BH.oM.RDF.IsA-BH.oM.Base.IObject",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "BH.oM.Adapters.Robot.DatabaseSettings-BH.oM.RDF.IsSubclassOf-BH.oM.Base.BHoMObject",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "BH.oM.Adapters.Robot.ContourLoad.Axis-IsA-BH.oM.Structure.Loads.LoadAxis",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "BH.oM.Adapters.Robot.ContourLoad-BH.oM.RDF.HasProperty-BH.oM.Structure.Loads.LoadAxis Axis",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "BH.oM.Adapters.Robot.ContourLoad.Loadcase-IsA-BH.oM.Structure.Loads.Loadcase",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "BH.oM.Adapters.Robot.ContourLoad-BH.oM.RDF.HasProperty-BH.oM.Structure.Loads.Loadcase Loadcase",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "BH.oM.Adapters.Robot.ContourLoad-BH.oM.RDF.HasProperty-Boolean Projected",
+      "type": "owl:DatatypeProperty"
+    },
+    {
+      "id": "BH.oM.Adapters.Robot.ContourLoad.Force-IsA-BH.oM.Geometry.Vector",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "BH.oM.Adapters.Robot.ContourLoad-BH.oM.RDF.HasProperty-BH.oM.Geometry.Vector Force",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "BH.oM.Adapters.Robot.ContourLoad.Contour-IsA-BH.oM.Geometry.Polyline",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "BH.oM.Adapters.Robot.ContourLoad-BH.oM.RDF.HasProperty-BH.oM.Geometry.Polyline Contour",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "BH.oM.Adapters.Robot.ContourLoad-BH.oM.RDF.IsA-BH.oM.Base.IBHoMObject",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "BH.oM.Adapters.Robot.ContourLoad-BH.oM.RDF.IsA-BH.oM.Base.IObject",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "BH.oM.Adapters.Robot.ContourLoad-BH.oM.RDF.IsA-BH.oM.Structure.Loads.ILoad",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "BH.oM.Adapters.Robot.ContourLoad-BH.oM.RDF.IsSubclassOf-BH.oM.Base.BHoMObject",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "BH.oM.Adapters.Robot.GeometricalLineLoad.Axis-IsA-BH.oM.Structure.Loads.LoadAxis",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "BH.oM.Adapters.Robot.GeometricalLineLoad-BH.oM.RDF.HasProperty-BH.oM.Structure.Loads.LoadAxis Axis",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "BH.oM.Adapters.Robot.GeometricalLineLoad.Loadcase-IsA-BH.oM.Structure.Loads.Loadcase",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "BH.oM.Adapters.Robot.GeometricalLineLoad-BH.oM.RDF.HasProperty-BH.oM.Structure.Loads.Loadcase Loadcase",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "BH.oM.Adapters.Robot.GeometricalLineLoad-BH.oM.RDF.HasProperty-Boolean Projected",
+      "type": "owl:DatatypeProperty"
+    },
+    {
+      "id": "BH.oM.Adapters.Robot.GeometricalLineLoad.ForceA-IsA-BH.oM.Geometry.Vector",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "BH.oM.Adapters.Robot.GeometricalLineLoad-BH.oM.RDF.HasProperty-BH.oM.Geometry.Vector ForceA",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "BH.oM.Adapters.Robot.GeometricalLineLoad.ForceB-IsA-BH.oM.Geometry.Vector",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "BH.oM.Adapters.Robot.GeometricalLineLoad-BH.oM.RDF.HasProperty-BH.oM.Geometry.Vector ForceB",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "BH.oM.Adapters.Robot.GeometricalLineLoad.MomentA-IsA-BH.oM.Geometry.Vector",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "BH.oM.Adapters.Robot.GeometricalLineLoad-BH.oM.RDF.HasProperty-BH.oM.Geometry.Vector MomentA",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "BH.oM.Adapters.Robot.GeometricalLineLoad.MomentB-IsA-BH.oM.Geometry.Vector",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "BH.oM.Adapters.Robot.GeometricalLineLoad-BH.oM.RDF.HasProperty-BH.oM.Geometry.Vector MomentB",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "BH.oM.Adapters.Robot.GeometricalLineLoad.Location-IsA-BH.oM.Geometry.Line",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "BH.oM.Adapters.Robot.GeometricalLineLoad-BH.oM.RDF.HasProperty-BH.oM.Geometry.Line Location",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "BH.oM.Adapters.Robot.GeometricalLineLoad-BH.oM.RDF.IsA-BH.oM.Base.IBHoMObject",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "BH.oM.Adapters.Robot.GeometricalLineLoad-BH.oM.RDF.IsA-BH.oM.Base.IObject",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "BH.oM.Adapters.Robot.GeometricalLineLoad-BH.oM.RDF.IsA-BH.oM.Structure.Loads.ILoad",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "BH.oM.Adapters.Robot.GeometricalLineLoad-BH.oM.RDF.IsSubclassOf-BH.oM.Base.BHoMObject",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "BH.oM.Adapters.Robot.FramingElementDesignProperties-BH.oM.RDF.HasProperty-Double EulerBucklingLengthCoefficientY",
+      "type": "owl:DatatypeProperty"
+    },
+    {
+      "id": "BH.oM.Adapters.Robot.FramingElementDesignProperties-BH.oM.RDF.HasProperty-Double EulerBucklingLengthCoefficientZ",
+      "type": "owl:DatatypeProperty"
+    },
+    {
+      "id": "BH.oM.Adapters.Robot.FramingElementDesignProperties-BH.oM.RDF.HasProperty-Double MemberLengthY",
+      "type": "owl:DatatypeProperty"
+    },
+    {
+      "id": "BH.oM.Adapters.Robot.FramingElementDesignProperties-BH.oM.RDF.HasProperty-Double MemberLengthZ",
+      "type": "owl:DatatypeProperty"
+    },
+    {
+      "id": "BH.oM.Adapters.Robot.FramingElementDesignProperties-BH.oM.RDF.HasProperty-Boolean MemberLengthYIsRelative",
+      "type": "owl:DatatypeProperty"
+    },
+    {
+      "id": "BH.oM.Adapters.Robot.FramingElementDesignProperties-BH.oM.RDF.HasProperty-Boolean MemberLengthZIsRelative",
+      "type": "owl:DatatypeProperty"
+    },
+    {
+      "id": "BH.oM.Adapters.Robot.FramingElementDesignProperties-BH.oM.RDF.IsA-BH.oM.Base.IBHoMObject",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "BH.oM.Adapters.Robot.FramingElementDesignProperties-BH.oM.RDF.IsA-BH.oM.Base.IObject",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "BH.oM.Adapters.Robot.FramingElementDesignProperties-BH.oM.RDF.IsA-BH.oM.Base.IFragment",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "BH.oM.Adapters.Robot.FramingElementDesignProperties-BH.oM.RDF.IsSubclassOf-BH.oM.Base.BHoMObject",
+      "type": "owl:ObjectProperty"
+    }
+  ],
+  "propertyAttribute": [
+    {
+      "id": "BH.oM.Adapters.Robot.DesignCode_Steel-BH.oM.RDF.IsA-System.IComparable",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "label": "IsA",
+      "attributes": []
+    },
+    {
+      "id": "BH.oM.Adapters.Robot.DesignCode_Steel-BH.oM.RDF.IsA-System.IFormattable",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "label": "IsA",
+      "attributes": []
+    },
+    {
+      "id": "BH.oM.Adapters.Robot.DesignCode_Steel-BH.oM.RDF.IsA-System.IConvertible",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "label": "IsA",
+      "attributes": []
+    },
+    {
+      "id": "BH.oM.Adapters.Robot.DesignCode_Steel-BH.oM.RDF.IsSubclassOf-System.Enum",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsSubclassOf.cs",
+      "label": "IsSubclassOf",
+      "attributes": []
+    },
+    {
+      "id": "BH.oM.Adapters.Robot.MaterialDB-BH.oM.RDF.IsA-System.IComparable",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "label": "IsA",
+      "attributes": []
+    },
+    {
+      "id": "BH.oM.Adapters.Robot.MaterialDB-BH.oM.RDF.IsA-System.IFormattable",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "label": "IsA",
+      "attributes": []
+    },
+    {
+      "id": "BH.oM.Adapters.Robot.MaterialDB-BH.oM.RDF.IsA-System.IConvertible",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "label": "IsA",
+      "attributes": []
+    },
+    {
+      "id": "BH.oM.Adapters.Robot.MaterialDB-BH.oM.RDF.IsSubclassOf-System.Enum",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsSubclassOf.cs",
+      "label": "IsSubclassOf",
+      "attributes": []
+    },
+    {
+      "id": "BH.oM.Adapters.Robot.SectionDB-BH.oM.RDF.IsA-System.IComparable",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "label": "IsA",
+      "attributes": []
+    },
+    {
+      "id": "BH.oM.Adapters.Robot.SectionDB-BH.oM.RDF.IsA-System.IFormattable",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "label": "IsA",
+      "attributes": []
+    },
+    {
+      "id": "BH.oM.Adapters.Robot.SectionDB-BH.oM.RDF.IsA-System.IConvertible",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "label": "IsA",
+      "attributes": []
+    },
+    {
+      "id": "BH.oM.Adapters.Robot.SectionDB-BH.oM.RDF.IsSubclassOf-System.Enum",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsSubclassOf.cs",
+      "label": "IsSubclassOf",
+      "attributes": []
+    },
+    {
+      "id": "BH.oM.Adapters.Robot.LoadCaseLabel-BH.oM.RDF.HasProperty-System.String Label",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/HasProperty.cs",
+      "label": "HasProperty",
+      "attributes": "datatype",
+      "domain": "BH.oM.Adapters.Robot.LoadCaseLabel",
+      "range": "Label-FE0E289E1FA4AB454FF9EF323F2C5C01246E14C5D11CA8B80EBE29AEC89D5CB6-LoadCaseLabel-HasProperty"
+    },
+    {
+      "id": "BH.oM.Adapters.Robot.LoadCaseLabel-BH.oM.RDF.IsA-BH.oM.Base.IFragment",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "label": "IsA",
+      "attributes": "object",
+      "domain": "BH.oM.Adapters.Robot.LoadCaseLabel",
+      "range": "BH.oM.Base.IFragment"
+    },
+    {
+      "id": "BH.oM.Adapters.Robot.LoadCaseLabel-BH.oM.RDF.IsA-BH.oM.Base.IObject",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "label": "IsA",
+      "attributes": "object",
+      "domain": "BH.oM.Adapters.Robot.LoadCaseLabel",
+      "range": "BH.oM.Base.IObject"
+    },
+    {
+      "id": "BH.oM.Adapters.Robot.LoadCaseLabel-BH.oM.RDF.IsSubclassOf-System.Object",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsSubclassOf.cs",
+      "label": "IsSubclassOf",
+      "attributes": []
+    },
+    {
+      "id": "BH.oM.Adapters.Robot.PanelFiniteElementIds-BH.oM.RDF.HasProperty-System.String FiniteElementIds",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/HasProperty.cs",
+      "label": "HasProperty",
+      "attributes": "datatype",
+      "domain": "BH.oM.Adapters.Robot.PanelFiniteElementIds",
+      "range": "FiniteElementIds-BA55EB2E71D75E23DA2ADFE062056B1B0B9601B3893F444467A82F7E38C10AF3-PanelFiniteElementIds-HasProperty"
+    },
+    {
+      "id": "BH.oM.Adapters.Robot.PanelFiniteElementIds-BH.oM.RDF.HasProperty-System.String NodeIds",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/HasProperty.cs",
+      "label": "HasProperty",
+      "attributes": "datatype",
+      "domain": "BH.oM.Adapters.Robot.PanelFiniteElementIds",
+      "range": "NodeIds-8583AEC3E53607652906A8AF71330CC7F81892C35CC3BCECF5DDF8CEA770F13B-PanelFiniteElementIds-HasProperty"
+    },
+    {
+      "id": "BH.oM.Adapters.Robot.PanelFiniteElementIds-BH.oM.RDF.IsA-BH.oM.Base.IFragment",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "label": "IsA",
+      "attributes": "object",
+      "domain": "BH.oM.Adapters.Robot.PanelFiniteElementIds",
+      "range": "BH.oM.Base.IFragment"
+    },
+    {
+      "id": "BH.oM.Adapters.Robot.PanelFiniteElementIds-BH.oM.RDF.IsA-BH.oM.Base.IObject",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "label": "IsA",
+      "attributes": "object",
+      "domain": "BH.oM.Adapters.Robot.PanelFiniteElementIds",
+      "range": "BH.oM.Base.IObject"
+    },
+    {
+      "id": "BH.oM.Adapters.Robot.PanelFiniteElementIds-BH.oM.RDF.IsSubclassOf-System.Object",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsSubclassOf.cs",
+      "label": "IsSubclassOf",
+      "attributes": []
+    },
+    {
+      "id": "BH.oM.Adapters.Robot.RobotId-BH.oM.RDF.HasProperty-System.Object Id",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/HasProperty.cs",
+      "label": "HasProperty",
+      "attributes": "datatype",
+      "domain": "BH.oM.Adapters.Robot.RobotId",
+      "range": "Id-E727CB20888DB4358E3DED3A67DA6CB84833D35F38FDC70C9749E418C6E70B73-RobotId-HasProperty"
+    },
+    {
+      "id": "BH.oM.Adapters.Robot.RobotId-BH.oM.RDF.IsA-BH.oM.Base.IAdapterId",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "label": "IsA",
+      "attributes": "object",
+      "domain": "BH.oM.Adapters.Robot.RobotId",
+      "range": "BH.oM.Base.IAdapterId"
+    },
+    {
+      "id": "BH.oM.Adapters.Robot.RobotId-BH.oM.RDF.IsA-BH.oM.Base.IFragment",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "label": "IsA",
+      "attributes": "object",
+      "domain": "BH.oM.Adapters.Robot.RobotId",
+      "range": "BH.oM.Base.IFragment"
+    },
+    {
+      "id": "BH.oM.Adapters.Robot.RobotId-BH.oM.RDF.IsA-BH.oM.Base.IObject",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "label": "IsA",
+      "attributes": "object",
+      "domain": "BH.oM.Adapters.Robot.RobotId",
+      "range": "BH.oM.Base.IObject"
+    },
+    {
+      "id": "BH.oM.Adapters.Robot.RobotId-BH.oM.RDF.IsSubclassOf-System.Object",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsSubclassOf.cs",
+      "label": "IsSubclassOf",
+      "attributes": []
+    },
+    {
+      "id": "BH.oM.Adapters.Robot.DesignGroup-BH.oM.RDF.HasProperty-Int32 Number",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/HasProperty.cs",
+      "label": "HasProperty",
+      "attributes": "datatype",
+      "domain": "BH.oM.Adapters.Robot.DesignGroup",
+      "range": "Number-4CEE9A8E8E8044B0C66AA8BAF51FB4F16DEF9553ECE457D6020988E6AFB0D7BF-DesignGroup-HasProperty"
+    },
+    {
+      "id": "BH.oM.Adapters.Robot.DesignGroup-BH.oM.RDF.HasProperty-System.String MaterialName",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/HasProperty.cs",
+      "label": "HasProperty",
+      "attributes": "datatype",
+      "domain": "BH.oM.Adapters.Robot.DesignGroup",
+      "range": "MaterialName-B5D0E1E557D1FE6C96C5E9C5D046A9E701DE3C1695E98AE2251EF9AD385ED557-DesignGroup-HasProperty"
+    },
+    {
+      "id": "BH.oM.Adapters.Robot.DesignGroup-BH.oM.RDF.HasProperty-System.Collections.Generic.List`1[System.Int32] MemberIds",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/HasProperty.cs",
+      "label": "HasProperty",
+      "attributes": "datatype",
+      "domain": "BH.oM.Adapters.Robot.DesignGroup",
+      "range": "MemberIds-A55431E5DDEC79ED9A6D6929CD674F1F9F3694F14C3ACDB3AF1A766035564ACF-DesignGroup-HasProperty"
+    },
+    {
+      "id": "BH.oM.Adapters.Robot.DesignGroup-BH.oM.RDF.IsA-BH.oM.Base.IBHoMObject",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "label": "IsA",
+      "attributes": "object",
+      "domain": "BH.oM.Adapters.Robot.DesignGroup",
+      "range": "BH.oM.Base.IBHoMObject"
+    },
+    {
+      "id": "BH.oM.Adapters.Robot.DesignGroup-BH.oM.RDF.IsA-BH.oM.Base.IObject",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "label": "IsA",
+      "attributes": "object",
+      "domain": "BH.oM.Adapters.Robot.DesignGroup",
+      "range": "BH.oM.Base.IObject"
+    },
+    {
+      "id": "BH.oM.Adapters.Robot.DesignGroup-BH.oM.RDF.IsSubclassOf-BH.oM.Base.BHoMObject",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsSubclassOf.cs",
+      "label": "IsSubclassOf",
+      "attributes": "object",
+      "domain": "BH.oM.Adapters.Robot.DesignGroup",
+      "range": "BH.oM.Base.BHoMObject"
+    },
+    {
+      "id": "BH.oM.Adapters.Robot.InteractiveSettings-BH.oM.RDF.HasProperty-Boolean IsInteractive",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/HasProperty.cs",
+      "label": "HasProperty",
+      "attributes": "datatype",
+      "domain": "BH.oM.Adapters.Robot.InteractiveSettings",
+      "range": "IsInteractive-99492314B4CA7BA893FB82E74B6B59BFFFB020D13FB0053EC58AD01B5E35928A-InteractiveSettings-HasProperty"
+    },
+    {
+      "id": "BH.oM.Adapters.Robot.InteractiveSettings-BH.oM.RDF.HasProperty-Boolean IsVisible",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/HasProperty.cs",
+      "label": "HasProperty",
+      "attributes": "datatype",
+      "domain": "BH.oM.Adapters.Robot.InteractiveSettings",
+      "range": "IsVisible-E3CAB4654DD4761F1BAF22ABB434E6DE871B3E50BF5B0BBE6792D6E5C413333D-InteractiveSettings-HasProperty"
+    },
+    {
+      "id": "BH.oM.Adapters.Robot.InteractiveSettings-BH.oM.RDF.IsA-BH.oM.Base.IBHoMObject",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "label": "IsA",
+      "attributes": "object",
+      "domain": "BH.oM.Adapters.Robot.InteractiveSettings",
+      "range": "BH.oM.Base.IBHoMObject"
+    },
+    {
+      "id": "BH.oM.Adapters.Robot.InteractiveSettings-BH.oM.RDF.IsA-BH.oM.Base.IObject",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "label": "IsA",
+      "attributes": "object",
+      "domain": "BH.oM.Adapters.Robot.InteractiveSettings",
+      "range": "BH.oM.Base.IObject"
+    },
+    {
+      "id": "BH.oM.Adapters.Robot.InteractiveSettings-BH.oM.RDF.IsSubclassOf-BH.oM.Base.BHoMObject",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsSubclassOf.cs",
+      "label": "IsSubclassOf",
+      "attributes": "object",
+      "domain": "BH.oM.Adapters.Robot.InteractiveSettings",
+      "range": "BH.oM.Base.BHoMObject"
+    },
+    {
+      "id": "BH.oM.Adapters.Robot.RobotConfig.AdvancedSettings-IsA-BH.oM.Adapters.Robot.AdvancedSettings",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "label": "IsA",
+      "attributes": "object",
+      "domain": "BH.oM.Adapters.Robot.RobotConfig.AdvancedSettings",
+      "range": "BH.oM.Adapters.Robot.AdvancedSettings"
+    },
+    {
+      "id": "BH.oM.Adapters.Robot.RobotConfig-BH.oM.RDF.HasProperty-BH.oM.Adapters.Robot.AdvancedSettings AdvancedSettings",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/HasProperty.cs",
+      "label": "HasProperty",
+      "attributes": [],
+      "domain": "BH.oM.Adapters.Robot.RobotConfig",
+      "range": "BH.oM.Adapters.Robot.RobotConfig.AdvancedSettings"
+    },
+    {
+      "id": "BH.oM.Adapters.Robot.RobotConfig.DatabaseSettings-IsA-BH.oM.Adapters.Robot.DatabaseSettings",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "label": "IsA",
+      "attributes": "object",
+      "domain": "BH.oM.Adapters.Robot.RobotConfig.DatabaseSettings",
+      "range": "BH.oM.Adapters.Robot.DatabaseSettings"
+    },
+    {
+      "id": "BH.oM.Adapters.Robot.RobotConfig-BH.oM.RDF.HasProperty-BH.oM.Adapters.Robot.DatabaseSettings DatabaseSettings",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/HasProperty.cs",
+      "label": "HasProperty",
+      "attributes": [],
+      "domain": "BH.oM.Adapters.Robot.RobotConfig",
+      "range": "BH.oM.Adapters.Robot.RobotConfig.DatabaseSettings"
+    },
+    {
+      "id": "BH.oM.Adapters.Robot.RobotConfig.InteractiveSettings-IsA-BH.oM.Adapters.Robot.InteractiveSettings",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "label": "IsA",
+      "attributes": "object",
+      "domain": "BH.oM.Adapters.Robot.RobotConfig.InteractiveSettings",
+      "range": "BH.oM.Adapters.Robot.InteractiveSettings"
+    },
+    {
+      "id": "BH.oM.Adapters.Robot.RobotConfig-BH.oM.RDF.HasProperty-BH.oM.Adapters.Robot.InteractiveSettings InteractiveSettings",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/HasProperty.cs",
+      "label": "HasProperty",
+      "attributes": [],
+      "domain": "BH.oM.Adapters.Robot.RobotConfig",
+      "range": "BH.oM.Adapters.Robot.RobotConfig.InteractiveSettings"
+    },
+    {
+      "id": "BH.oM.Adapters.Robot.RobotConfig-BH.oM.RDF.IsA-BH.oM.Base.IBHoMObject",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "label": "IsA",
+      "attributes": "object",
+      "domain": "BH.oM.Adapters.Robot.RobotConfig",
+      "range": "BH.oM.Base.IBHoMObject"
+    },
+    {
+      "id": "BH.oM.Adapters.Robot.RobotConfig-BH.oM.RDF.IsA-BH.oM.Base.IObject",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "label": "IsA",
+      "attributes": "object",
+      "domain": "BH.oM.Adapters.Robot.RobotConfig",
+      "range": "BH.oM.Base.IObject"
+    },
+    {
+      "id": "BH.oM.Adapters.Robot.RobotConfig-BH.oM.RDF.IsSubclassOf-BH.oM.Base.BHoMObject",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsSubclassOf.cs",
+      "label": "IsSubclassOf",
+      "attributes": "object",
+      "domain": "BH.oM.Adapters.Robot.RobotConfig",
+      "range": "BH.oM.Base.BHoMObject"
+    },
+    {
+      "id": "BH.oM.Adapters.Robot.AdvancedSettings-BH.oM.RDF.HasProperty-Boolean readBarsByQuery",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/HasProperty.cs",
+      "label": "HasProperty",
+      "attributes": "datatype",
+      "domain": "BH.oM.Adapters.Robot.AdvancedSettings",
+      "range": "readBarsByQuery-DF811D5CED471B826478370DD5AF96D7C424841FA635C5EF54DAA6F233BE19E6-AdvancedSettings-HasProperty"
+    },
+    {
+      "id": "BH.oM.Adapters.Robot.AdvancedSettings-BH.oM.RDF.HasProperty-Boolean readNodesByQuery",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/HasProperty.cs",
+      "label": "HasProperty",
+      "attributes": "datatype",
+      "domain": "BH.oM.Adapters.Robot.AdvancedSettings",
+      "range": "readNodesByQuery-BE0EB89410115460849EAE274C40D869D9DDF5191F253AA834141A391CC8E105-AdvancedSettings-HasProperty"
+    },
+    {
+      "id": "BH.oM.Adapters.Robot.AdvancedSettings-BH.oM.RDF.IsA-BH.oM.Base.IBHoMObject",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "label": "IsA",
+      "attributes": "object",
+      "domain": "BH.oM.Adapters.Robot.AdvancedSettings",
+      "range": "BH.oM.Base.IBHoMObject"
+    },
+    {
+      "id": "BH.oM.Adapters.Robot.AdvancedSettings-BH.oM.RDF.IsA-BH.oM.Base.IObject",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "label": "IsA",
+      "attributes": "object",
+      "domain": "BH.oM.Adapters.Robot.AdvancedSettings",
+      "range": "BH.oM.Base.IObject"
+    },
+    {
+      "id": "BH.oM.Adapters.Robot.AdvancedSettings-BH.oM.RDF.IsSubclassOf-BH.oM.Base.BHoMObject",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsSubclassOf.cs",
+      "label": "IsSubclassOf",
+      "attributes": "object",
+      "domain": "BH.oM.Adapters.Robot.AdvancedSettings",
+      "range": "BH.oM.Base.BHoMObject"
+    },
+    {
+      "id": "BH.oM.Adapters.Robot.DatabaseSettings.MaterialDatabase-IsA-BH.oM.Adapters.Robot.MaterialDB",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "label": "IsA",
+      "attributes": "object",
+      "domain": "BH.oM.Adapters.Robot.DatabaseSettings.MaterialDatabase",
+      "range": "BH.oM.Adapters.Robot.MaterialDB"
+    },
+    {
+      "id": "BH.oM.Adapters.Robot.DatabaseSettings-BH.oM.RDF.HasProperty-BH.oM.Adapters.Robot.MaterialDB MaterialDatabase",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/HasProperty.cs",
+      "label": "HasProperty",
+      "attributes": [],
+      "domain": "BH.oM.Adapters.Robot.DatabaseSettings",
+      "range": "BH.oM.Adapters.Robot.DatabaseSettings.MaterialDatabase"
+    },
+    {
+      "id": "BH.oM.Adapters.Robot.DatabaseSettings.SectionDatabase-IsA-BH.oM.Adapters.Robot.SectionDB",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "label": "IsA",
+      "attributes": "object",
+      "domain": "BH.oM.Adapters.Robot.DatabaseSettings.SectionDatabase",
+      "range": "BH.oM.Adapters.Robot.SectionDB"
+    },
+    {
+      "id": "BH.oM.Adapters.Robot.DatabaseSettings-BH.oM.RDF.HasProperty-BH.oM.Adapters.Robot.SectionDB SectionDatabase",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/HasProperty.cs",
+      "label": "HasProperty",
+      "attributes": [],
+      "domain": "BH.oM.Adapters.Robot.DatabaseSettings",
+      "range": "BH.oM.Adapters.Robot.DatabaseSettings.SectionDatabase"
+    },
+    {
+      "id": "BH.oM.Adapters.Robot.DatabaseSettings.SteelDesignCode-IsA-BH.oM.Adapters.Robot.DesignCodeSteel",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "label": "IsA",
+      "attributes": "object",
+      "domain": "BH.oM.Adapters.Robot.DatabaseSettings.SteelDesignCode",
+      "range": "BH.oM.Adapters.Robot.DesignCodeSteel"
+    },
+    {
+      "id": "BH.oM.Adapters.Robot.DatabaseSettings-BH.oM.RDF.HasProperty-BH.oM.Adapters.Robot.DesignCode_Steel SteelDesignCode",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/HasProperty.cs",
+      "label": "HasProperty",
+      "attributes": [],
+      "domain": "BH.oM.Adapters.Robot.DatabaseSettings",
+      "range": "BH.oM.Adapters.Robot.DatabaseSettings.SteelDesignCode"
+    },
+    {
+      "id": "BH.oM.Adapters.Robot.DatabaseSettings-BH.oM.RDF.IsA-BH.oM.Base.IBHoMObject",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "label": "IsA",
+      "attributes": "object",
+      "domain": "BH.oM.Adapters.Robot.DatabaseSettings",
+      "range": "BH.oM.Base.IBHoMObject"
+    },
+    {
+      "id": "BH.oM.Adapters.Robot.DatabaseSettings-BH.oM.RDF.IsA-BH.oM.Base.IObject",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "label": "IsA",
+      "attributes": "object",
+      "domain": "BH.oM.Adapters.Robot.DatabaseSettings",
+      "range": "BH.oM.Base.IObject"
+    },
+    {
+      "id": "BH.oM.Adapters.Robot.DatabaseSettings-BH.oM.RDF.IsSubclassOf-BH.oM.Base.BHoMObject",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsSubclassOf.cs",
+      "label": "IsSubclassOf",
+      "attributes": "object",
+      "domain": "BH.oM.Adapters.Robot.DatabaseSettings",
+      "range": "BH.oM.Base.BHoMObject"
+    },
+    {
+      "id": "BH.oM.Adapters.Robot.ContourLoad.Axis-IsA-BH.oM.Structure.Loads.LoadAxis",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "label": "IsA",
+      "attributes": "object",
+      "domain": "BH.oM.Adapters.Robot.ContourLoad.Axis",
+      "range": "BH.oM.Structure.Loads.LoadAxis"
+    },
+    {
+      "id": "BH.oM.Adapters.Robot.ContourLoad-BH.oM.RDF.HasProperty-BH.oM.Structure.Loads.LoadAxis Axis",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/HasProperty.cs",
+      "label": "HasProperty",
+      "attributes": [],
+      "domain": "BH.oM.Adapters.Robot.ContourLoad",
+      "range": "BH.oM.Adapters.Robot.ContourLoad.Axis"
+    },
+    {
+      "id": "BH.oM.Adapters.Robot.ContourLoad.Loadcase-IsA-BH.oM.Structure.Loads.Loadcase",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "label": "IsA",
+      "attributes": "object",
+      "domain": "BH.oM.Adapters.Robot.ContourLoad.Loadcase",
+      "range": "BH.oM.Structure.Loads.Loadcase"
+    },
+    {
+      "id": "BH.oM.Adapters.Robot.ContourLoad-BH.oM.RDF.HasProperty-BH.oM.Structure.Loads.Loadcase Loadcase",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/HasProperty.cs",
+      "label": "HasProperty",
+      "attributes": [],
+      "domain": "BH.oM.Adapters.Robot.ContourLoad",
+      "range": "BH.oM.Adapters.Robot.ContourLoad.Loadcase"
+    },
+    {
+      "id": "BH.oM.Adapters.Robot.ContourLoad-BH.oM.RDF.HasProperty-Boolean Projected",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/HasProperty.cs",
+      "label": "HasProperty",
+      "attributes": "datatype",
+      "domain": "BH.oM.Adapters.Robot.ContourLoad",
+      "range": "Projected-8396F316FD990427A557D7C078FA147B156C752C074E6216918E8F9C72BC4599-ContourLoad-HasProperty"
+    },
+    {
+      "id": "BH.oM.Adapters.Robot.ContourLoad.Force-IsA-BH.oM.Geometry.Vector",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "label": "IsA",
+      "attributes": "object",
+      "domain": "BH.oM.Adapters.Robot.ContourLoad.Force",
+      "range": "BH.oM.Geometry.Vector"
+    },
+    {
+      "id": "BH.oM.Adapters.Robot.ContourLoad-BH.oM.RDF.HasProperty-BH.oM.Geometry.Vector Force",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/HasProperty.cs",
+      "label": "HasProperty",
+      "attributes": [],
+      "domain": "BH.oM.Adapters.Robot.ContourLoad",
+      "range": "BH.oM.Adapters.Robot.ContourLoad.Force"
+    },
+    {
+      "id": "BH.oM.Adapters.Robot.ContourLoad.Contour-IsA-BH.oM.Geometry.Polyline",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "label": "IsA",
+      "attributes": "object",
+      "domain": "BH.oM.Adapters.Robot.ContourLoad.Contour",
+      "range": "BH.oM.Geometry.Polyline"
+    },
+    {
+      "id": "BH.oM.Adapters.Robot.ContourLoad-BH.oM.RDF.HasProperty-BH.oM.Geometry.Polyline Contour",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/HasProperty.cs",
+      "label": "HasProperty",
+      "attributes": [],
+      "domain": "BH.oM.Adapters.Robot.ContourLoad",
+      "range": "BH.oM.Adapters.Robot.ContourLoad.Contour"
+    },
+    {
+      "id": "BH.oM.Adapters.Robot.ContourLoad-BH.oM.RDF.IsA-BH.oM.Base.IBHoMObject",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "label": "IsA",
+      "attributes": "object",
+      "domain": "BH.oM.Adapters.Robot.ContourLoad",
+      "range": "BH.oM.Base.IBHoMObject"
+    },
+    {
+      "id": "BH.oM.Adapters.Robot.ContourLoad-BH.oM.RDF.IsA-BH.oM.Base.IObject",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "label": "IsA",
+      "attributes": "object",
+      "domain": "BH.oM.Adapters.Robot.ContourLoad",
+      "range": "BH.oM.Base.IObject"
+    },
+    {
+      "id": "BH.oM.Adapters.Robot.ContourLoad-BH.oM.RDF.IsA-BH.oM.Structure.Loads.ILoad",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "label": "IsA",
+      "attributes": "object",
+      "domain": "BH.oM.Adapters.Robot.ContourLoad",
+      "range": "BH.oM.Structure.Loads.ILoad"
+    },
+    {
+      "id": "BH.oM.Adapters.Robot.ContourLoad-BH.oM.RDF.IsSubclassOf-BH.oM.Base.BHoMObject",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsSubclassOf.cs",
+      "label": "IsSubclassOf",
+      "attributes": "object",
+      "domain": "BH.oM.Adapters.Robot.ContourLoad",
+      "range": "BH.oM.Base.BHoMObject"
+    },
+    {
+      "id": "BH.oM.Adapters.Robot.GeometricalLineLoad.Axis-IsA-BH.oM.Structure.Loads.LoadAxis",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "label": "IsA",
+      "attributes": "object",
+      "domain": "BH.oM.Adapters.Robot.GeometricalLineLoad.Axis",
+      "range": "BH.oM.Structure.Loads.LoadAxis"
+    },
+    {
+      "id": "BH.oM.Adapters.Robot.GeometricalLineLoad-BH.oM.RDF.HasProperty-BH.oM.Structure.Loads.LoadAxis Axis",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/HasProperty.cs",
+      "label": "HasProperty",
+      "attributes": [],
+      "domain": "BH.oM.Adapters.Robot.GeometricalLineLoad",
+      "range": "BH.oM.Adapters.Robot.GeometricalLineLoad.Axis"
+    },
+    {
+      "id": "BH.oM.Adapters.Robot.GeometricalLineLoad.Loadcase-IsA-BH.oM.Structure.Loads.Loadcase",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "label": "IsA",
+      "attributes": "object",
+      "domain": "BH.oM.Adapters.Robot.GeometricalLineLoad.Loadcase",
+      "range": "BH.oM.Structure.Loads.Loadcase"
+    },
+    {
+      "id": "BH.oM.Adapters.Robot.GeometricalLineLoad-BH.oM.RDF.HasProperty-BH.oM.Structure.Loads.Loadcase Loadcase",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/HasProperty.cs",
+      "label": "HasProperty",
+      "attributes": [],
+      "domain": "BH.oM.Adapters.Robot.GeometricalLineLoad",
+      "range": "BH.oM.Adapters.Robot.GeometricalLineLoad.Loadcase"
+    },
+    {
+      "id": "BH.oM.Adapters.Robot.GeometricalLineLoad-BH.oM.RDF.HasProperty-Boolean Projected",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/HasProperty.cs",
+      "label": "HasProperty",
+      "attributes": "datatype",
+      "domain": "BH.oM.Adapters.Robot.GeometricalLineLoad",
+      "range": "Projected-EA406D04F87C0496FA4EA59589BC769EAFCD85BF47B798F7AD750045F29D360C-GeometricalLineLoad-HasProperty"
+    },
+    {
+      "id": "BH.oM.Adapters.Robot.GeometricalLineLoad.ForceA-IsA-BH.oM.Geometry.Vector",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "label": "IsA",
+      "attributes": "object",
+      "domain": "BH.oM.Adapters.Robot.GeometricalLineLoad.ForceA",
+      "range": "BH.oM.Geometry.Vector"
+    },
+    {
+      "id": "BH.oM.Adapters.Robot.GeometricalLineLoad-BH.oM.RDF.HasProperty-BH.oM.Geometry.Vector ForceA",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/HasProperty.cs",
+      "label": "HasProperty",
+      "attributes": [],
+      "domain": "BH.oM.Adapters.Robot.GeometricalLineLoad",
+      "range": "BH.oM.Adapters.Robot.GeometricalLineLoad.ForceA"
+    },
+    {
+      "id": "BH.oM.Adapters.Robot.GeometricalLineLoad.ForceB-IsA-BH.oM.Geometry.Vector",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "label": "IsA",
+      "attributes": "object",
+      "domain": "BH.oM.Adapters.Robot.GeometricalLineLoad.ForceB",
+      "range": "BH.oM.Geometry.Vector"
+    },
+    {
+      "id": "BH.oM.Adapters.Robot.GeometricalLineLoad-BH.oM.RDF.HasProperty-BH.oM.Geometry.Vector ForceB",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/HasProperty.cs",
+      "label": "HasProperty",
+      "attributes": [],
+      "domain": "BH.oM.Adapters.Robot.GeometricalLineLoad",
+      "range": "BH.oM.Adapters.Robot.GeometricalLineLoad.ForceB"
+    },
+    {
+      "id": "BH.oM.Adapters.Robot.GeometricalLineLoad.MomentA-IsA-BH.oM.Geometry.Vector",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "label": "IsA",
+      "attributes": "object",
+      "domain": "BH.oM.Adapters.Robot.GeometricalLineLoad.MomentA",
+      "range": "BH.oM.Geometry.Vector"
+    },
+    {
+      "id": "BH.oM.Adapters.Robot.GeometricalLineLoad-BH.oM.RDF.HasProperty-BH.oM.Geometry.Vector MomentA",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/HasProperty.cs",
+      "label": "HasProperty",
+      "attributes": [],
+      "domain": "BH.oM.Adapters.Robot.GeometricalLineLoad",
+      "range": "BH.oM.Adapters.Robot.GeometricalLineLoad.MomentA"
+    },
+    {
+      "id": "BH.oM.Adapters.Robot.GeometricalLineLoad.MomentB-IsA-BH.oM.Geometry.Vector",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "label": "IsA",
+      "attributes": "object",
+      "domain": "BH.oM.Adapters.Robot.GeometricalLineLoad.MomentB",
+      "range": "BH.oM.Geometry.Vector"
+    },
+    {
+      "id": "BH.oM.Adapters.Robot.GeometricalLineLoad-BH.oM.RDF.HasProperty-BH.oM.Geometry.Vector MomentB",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/HasProperty.cs",
+      "label": "HasProperty",
+      "attributes": [],
+      "domain": "BH.oM.Adapters.Robot.GeometricalLineLoad",
+      "range": "BH.oM.Adapters.Robot.GeometricalLineLoad.MomentB"
+    },
+    {
+      "id": "BH.oM.Adapters.Robot.GeometricalLineLoad.Location-IsA-BH.oM.Geometry.Line",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "label": "IsA",
+      "attributes": "object",
+      "domain": "BH.oM.Adapters.Robot.GeometricalLineLoad.Location",
+      "range": "BH.oM.Geometry.Line"
+    },
+    {
+      "id": "BH.oM.Adapters.Robot.GeometricalLineLoad-BH.oM.RDF.HasProperty-BH.oM.Geometry.Line Location",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/HasProperty.cs",
+      "label": "HasProperty",
+      "attributes": [],
+      "domain": "BH.oM.Adapters.Robot.GeometricalLineLoad",
+      "range": "BH.oM.Adapters.Robot.GeometricalLineLoad.Location"
+    },
+    {
+      "id": "BH.oM.Adapters.Robot.GeometricalLineLoad-BH.oM.RDF.IsA-BH.oM.Base.IBHoMObject",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "label": "IsA",
+      "attributes": "object",
+      "domain": "BH.oM.Adapters.Robot.GeometricalLineLoad",
+      "range": "BH.oM.Base.IBHoMObject"
+    },
+    {
+      "id": "BH.oM.Adapters.Robot.GeometricalLineLoad-BH.oM.RDF.IsA-BH.oM.Base.IObject",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "label": "IsA",
+      "attributes": "object",
+      "domain": "BH.oM.Adapters.Robot.GeometricalLineLoad",
+      "range": "BH.oM.Base.IObject"
+    },
+    {
+      "id": "BH.oM.Adapters.Robot.GeometricalLineLoad-BH.oM.RDF.IsA-BH.oM.Structure.Loads.ILoad",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "label": "IsA",
+      "attributes": "object",
+      "domain": "BH.oM.Adapters.Robot.GeometricalLineLoad",
+      "range": "BH.oM.Structure.Loads.ILoad"
+    },
+    {
+      "id": "BH.oM.Adapters.Robot.GeometricalLineLoad-BH.oM.RDF.IsSubclassOf-BH.oM.Base.BHoMObject",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsSubclassOf.cs",
+      "label": "IsSubclassOf",
+      "attributes": "object",
+      "domain": "BH.oM.Adapters.Robot.GeometricalLineLoad",
+      "range": "BH.oM.Base.BHoMObject"
+    },
+    {
+      "id": "BH.oM.Adapters.Robot.FramingElementDesignProperties-BH.oM.RDF.HasProperty-Double EulerBucklingLengthCoefficientY",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/HasProperty.cs",
+      "label": "HasProperty",
+      "attributes": "datatype",
+      "domain": "BH.oM.Adapters.Robot.FramingElementDesignProperties",
+      "range": "EulerBucklingLengthCoefficientY-7B3BCFCBB78FBFCEEF46E282095BD7D734A66AAA8A698DB6AAB2F1B803D27723-FramingElementDesignProperties-HasProperty"
+    },
+    {
+      "id": "BH.oM.Adapters.Robot.FramingElementDesignProperties-BH.oM.RDF.HasProperty-Double EulerBucklingLengthCoefficientZ",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/HasProperty.cs",
+      "label": "HasProperty",
+      "attributes": "datatype",
+      "domain": "BH.oM.Adapters.Robot.FramingElementDesignProperties",
+      "range": "EulerBucklingLengthCoefficientZ-EC8543E3B7F6AF4AFA62749D51F7AD3DE66C9A4271C28EC0361129974C02F2F9-FramingElementDesignProperties-HasProperty"
+    },
+    {
+      "id": "BH.oM.Adapters.Robot.FramingElementDesignProperties-BH.oM.RDF.HasProperty-Double MemberLengthY",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/HasProperty.cs",
+      "label": "HasProperty",
+      "attributes": "datatype",
+      "domain": "BH.oM.Adapters.Robot.FramingElementDesignProperties",
+      "range": "MemberLengthY-1120D0BDCFD1C7E2BC1C3D7D7F2BAC2921DBAAB213FABB532A943E60958A2AEB-FramingElementDesignProperties-HasProperty"
+    },
+    {
+      "id": "BH.oM.Adapters.Robot.FramingElementDesignProperties-BH.oM.RDF.HasProperty-Double MemberLengthZ",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/HasProperty.cs",
+      "label": "HasProperty",
+      "attributes": "datatype",
+      "domain": "BH.oM.Adapters.Robot.FramingElementDesignProperties",
+      "range": "MemberLengthZ-2D0451EC338A3A8756DE3681D65EE1B6A9E32952F2F04A5675F1AAF65064072B-FramingElementDesignProperties-HasProperty"
+    },
+    {
+      "id": "BH.oM.Adapters.Robot.FramingElementDesignProperties-BH.oM.RDF.HasProperty-Boolean MemberLengthYIsRelative",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/HasProperty.cs",
+      "label": "HasProperty",
+      "attributes": "datatype",
+      "domain": "BH.oM.Adapters.Robot.FramingElementDesignProperties",
+      "range": "MemberLengthYIsRelative-2EB991EF81D9A5C21F9ED2E45E65E25417136A15CEBE1D14858ADA7A00DE7725-FramingElementDesignProperties-HasProperty"
+    },
+    {
+      "id": "BH.oM.Adapters.Robot.FramingElementDesignProperties-BH.oM.RDF.HasProperty-Boolean MemberLengthZIsRelative",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/HasProperty.cs",
+      "label": "HasProperty",
+      "attributes": "datatype",
+      "domain": "BH.oM.Adapters.Robot.FramingElementDesignProperties",
+      "range": "MemberLengthZIsRelative-48F2A19DD7B73E0AC524F23450E2E7E1941B0CCAB39E0A64BB69D5D29C7CDAEC-FramingElementDesignProperties-HasProperty"
+    },
+    {
+      "id": "BH.oM.Adapters.Robot.FramingElementDesignProperties-BH.oM.RDF.IsA-BH.oM.Base.IBHoMObject",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "label": "IsA",
+      "attributes": "object",
+      "domain": "BH.oM.Adapters.Robot.FramingElementDesignProperties",
+      "range": "BH.oM.Base.IBHoMObject"
+    },
+    {
+      "id": "BH.oM.Adapters.Robot.FramingElementDesignProperties-BH.oM.RDF.IsA-BH.oM.Base.IObject",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "label": "IsA",
+      "attributes": "object",
+      "domain": "BH.oM.Adapters.Robot.FramingElementDesignProperties",
+      "range": "BH.oM.Base.IObject"
+    },
+    {
+      "id": "BH.oM.Adapters.Robot.FramingElementDesignProperties-BH.oM.RDF.IsA-BH.oM.Base.IFragment",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "label": "IsA",
+      "attributes": "object",
+      "domain": "BH.oM.Adapters.Robot.FramingElementDesignProperties",
+      "range": "BH.oM.Base.IFragment"
+    },
+    {
+      "id": "BH.oM.Adapters.Robot.FramingElementDesignProperties-BH.oM.RDF.IsSubclassOf-BH.oM.Base.BHoMObject",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsSubclassOf.cs",
+      "label": "IsSubclassOf",
+      "attributes": "object",
+      "domain": "BH.oM.Adapters.Robot.FramingElementDesignProperties",
+      "range": "BH.oM.Base.BHoMObject"
+    }
+  ]
+}

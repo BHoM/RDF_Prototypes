@@ -1,0 +1,3962 @@
+{
+  "comment": "Generated from BHoM RDF_Prototypes",
+  "namespace": [],
+  "class": [
+    {
+      "id": "BH.oM.Adapters.File.CopyCommand",
+      "type": "owl:Class"
+    },
+    {
+      "id": "BH.oM.Adapters.File.MoveCommand",
+      "type": "owl:Class"
+    },
+    {
+      "id": "BH.oM.Adapters.File.IMRCCommand",
+      "type": "owl:Class"
+    },
+    {
+      "id": "BH.oM.Adapters.File.RenameCommand",
+      "type": "owl:Class"
+    },
+    {
+      "id": "BH.oM.Adapters.File.ExecuteConfig",
+      "type": "owl:Class"
+    },
+    {
+      "id": "BH.oM.Adapters.File.PullConfig",
+      "type": "owl:Class"
+    },
+    {
+      "id": "BH.oM.Adapters.File.RemoveConfig",
+      "type": "owl:Class"
+    },
+    {
+      "id": "BH.oM.Adapters.File.PushConfig",
+      "type": "owl:Class"
+    },
+    {
+      "id": "BH.oM.Adapters.File.Directory",
+      "type": "owl:Class"
+    },
+    {
+      "id": "BH.oM.Adapters.File.SortOrder",
+      "type": "owl:Class"
+    },
+    {
+      "id": "BH.oM.Adapters.File.FSDirectory",
+      "type": "owl:Class"
+    },
+    {
+      "id": "BH.oM.Adapters.File.Encodings",
+      "type": "owl:Class"
+    },
+    {
+      "id": "BH.oM.Adapters.File.File",
+      "type": "owl:Class"
+    },
+    {
+      "id": "BH.oM.Adapters.File.IFSResource",
+      "type": "owl:Class"
+    },
+    {
+      "id": "BH.oM.Adapters.File.ISizeableResource",
+      "type": "owl:Class"
+    },
+    {
+      "id": "BH.oM.Adapters.File.IContainableResource",
+      "type": "owl:Class"
+    },
+    {
+      "id": "BH.oM.Adapters.File.IContainer",
+      "type": "owl:Class"
+    },
+    {
+      "id": "BH.oM.Adapters.File.IDirectory",
+      "type": "owl:Class"
+    },
+    {
+      "id": "BH.oM.Adapters.File.IFSContainer",
+      "type": "owl:Class"
+    },
+    {
+      "id": "BH.oM.Adapters.File.IFSInfo",
+      "type": "owl:Class"
+    },
+    {
+      "id": "BH.oM.Adapters.File.ILocatableResource",
+      "type": "owl:Class"
+    },
+    {
+      "id": "BH.oM.Adapters.File.IResource",
+      "type": "owl:Class"
+    },
+    {
+      "id": "BH.oM.Adapters.File.IFile",
+      "type": "owl:Class"
+    },
+    {
+      "id": "BH.oM.Adapters.File.IFilingRequest",
+      "type": "owl:Class"
+    },
+    {
+      "id": "BH.oM.Adapters.File.ISortableRequest",
+      "type": "owl:Class"
+    },
+    {
+      "id": "BH.oM.Adapters.File.RemoveRequest",
+      "type": "owl:Class"
+    },
+    {
+      "id": "BH.oM.Adapters.File.IFileRequest",
+      "type": "owl:Class"
+    },
+    {
+      "id": "BH.oM.Adapters.File.IResourceRequest",
+      "type": "owl:Class"
+    },
+    {
+      "id": "BH.oM.Adapters.File.IDirectoryRequest",
+      "type": "owl:Class"
+    },
+    {
+      "id": "BH.oM.Adapters.File.FileContentRequest",
+      "type": "owl:Class"
+    },
+    {
+      "id": "BH.oM.Adapters.File.DirectoryRequest",
+      "type": "owl:Class"
+    },
+    {
+      "id": "BH.oM.Adapters.File.FileRequest",
+      "type": "owl:Class"
+    },
+    {
+      "id": "BH.oM.Adapters.File.FileDirRequest",
+      "type": "owl:Class"
+    },
+    {
+      "id": "BH.oM.Adapters.File.FileFormat",
+      "type": "owl:Class"
+    },
+    {
+      "id": "BH.oM.Adapters.File.FSFile",
+      "type": "owl:Class"
+    },
+    {
+      "id": "FullPath-B1AB7C7D74D19FF56F319D05C6F76C064C8497F9BB42EF3F295D0C8CDA0DD6A0-CopyCommand-HasProperty",
+      "type": "rdfs:Datatype"
+    },
+    {
+      "id": "TargetFullPath-2A8339E3BD79169EDD821E2902161256F302E8039CD6EB1B8C066FBC6153D364-CopyCommand-HasProperty",
+      "type": "rdfs:Datatype"
+    },
+    {
+      "id": "CreateDirectoryIfNotExist-A808CD4B45698BF420FFF149D6A9E7782E24F62524EE1FA77E1ADA56C8850A4D-CopyCommand-HasProperty",
+      "type": "rdfs:Datatype"
+    },
+    {
+      "id": "OverwriteTarget-76B37AC3E6691F6419820EB61D50B21DB6CD770B23936DF616A836BA6F86400E-CopyCommand-HasProperty",
+      "type": "rdfs:Datatype"
+    },
+    {
+      "id": "BH.oM.Adapter.IExecuteCommand",
+      "type": "owl:Class"
+    },
+    {
+      "id": "BH.oM.Base.IObject",
+      "type": "owl:Class"
+    },
+    {
+      "id": "FullPath-74BB1E8F2C65A9BBDF164CEA336628427EE170D37FBEA79595C3CB50E064B821-MoveCommand-HasProperty",
+      "type": "rdfs:Datatype"
+    },
+    {
+      "id": "TargetFullPath-2B1333DA782DEE2627EFDCDF69676D351465E8D3A3273CFB3D1289743DF74180-MoveCommand-HasProperty",
+      "type": "rdfs:Datatype"
+    },
+    {
+      "id": "CreateDirectoryIfNotExist-7AEE7C8BB4D80D414C844DF29BE797B4935C7F59666FE31AD58CEAD8FC8854A5-MoveCommand-HasProperty",
+      "type": "rdfs:Datatype"
+    },
+    {
+      "id": "OverwriteTarget-9AFCB47755E6471202CBF9C8CF840935C07501D3EC62906168AF142A2BAD6060-MoveCommand-HasProperty",
+      "type": "rdfs:Datatype"
+    },
+    {
+      "id": "FullPath-0CAD4D4E819F83091DA6BEB68A0B15F8BFE238E58998AB020816378FB46F3A25-RenameCommand-HasProperty",
+      "type": "rdfs:Datatype"
+    },
+    {
+      "id": "TargetFullPath-7E259BAF41F4164EDEAD94EA7B4AC9EB7F94F8321B39DA9880D098B7AEF21E95-RenameCommand-HasProperty",
+      "type": "rdfs:Datatype"
+    },
+    {
+      "id": "OverwriteTarget-8E22547D9E12CE7EA73EFF38B4507FFCD283911C3262228EF6C8562F00C9019A-RenameCommand-HasProperty",
+      "type": "rdfs:Datatype"
+    },
+    {
+      "id": "DisableWarnings-E0B6412C25224277796A682E9165D29AC64BA3B7B7F731E18D82D195D274B8EE-ExecuteConfig-HasProperty",
+      "type": "rdfs:Datatype"
+    },
+    {
+      "id": "BH.oM.Adapter.ActionConfig",
+      "type": "owl:Class"
+    },
+    {
+      "id": "IncludeHiddenFiles-7AD9AD742610604C658A365C354F19E49175064AC2E6DB08DA3BF354D7D5B8DC-PullConfig-HasProperty",
+      "type": "rdfs:Datatype"
+    },
+    {
+      "id": "IncludeSystemFiles-DEDDC0D268B2253D48CF5BDEF14FF2712E81FD4EEC540783B3E6E473168047DE-PullConfig-HasProperty",
+      "type": "rdfs:Datatype"
+    },
+    {
+      "id": "DisableWarnings-34EE528FACCCBFD36C5CBF8BB5E42AFFAF9AC7318EE6AB20356CB334A0B43022-RemoveConfig-HasProperty",
+      "type": "rdfs:Datatype"
+    },
+    {
+      "id": "IncludeHiddenFiles-FC50F86F951EA6691B2C59CB7F9D9CB4751BDE29BA4F5FFFCACB90264DD84E7A-RemoveConfig-HasProperty",
+      "type": "rdfs:Datatype"
+    },
+    {
+      "id": "UseDatasetSerialization-AA2732412A228E2A19FC097E51CFAE9EDECEA8E5451D08695221684094034E35-PushConfig-HasProperty",
+      "type": "rdfs:Datatype"
+    },
+    {
+      "id": "BeautifyJson-761D50106A13D97CBA52CCEB96A691C39192FBF17101B83D7BF20EB4569B70AA-PushConfig-HasProperty",
+      "type": "rdfs:Datatype"
+    },
+    {
+      "id": "DisableWarnings-168A83144AFB402E80024E9F8F8447DCFE39D42005C0612A81DD0B210F1F7C78-PushConfig-HasProperty",
+      "type": "rdfs:Datatype"
+    },
+    {
+      "id": "Location-BFA659DCB71CCF3DFBB1A1DF1B2C474E3D755C63DEE2BCCA5AEDBD51E20075C5-Directory-HasProperty",
+      "type": "rdfs:Datatype"
+    },
+    {
+      "id": "Name-206484299DC28C89F07B8D000D193E839D7787057DBA91EA90C7615436117659-Directory-HasProperty",
+      "type": "rdfs:Datatype"
+    },
+    {
+      "id": "Content-17E3811C3258A1BFBFDE44920D860B7B412D1D2D3FBB7DB6AA006B659803CED1-Directory-HasProperty",
+      "type": "rdfs:Datatype"
+    },
+    {
+      "id": "BH.oM.Base.IBHoMObject",
+      "type": "owl:Class"
+    },
+    {
+      "id": "BH.oM.Base.BHoMObject",
+      "type": "owl:Class"
+    },
+    {
+      "id": "BH.oM.Adapters.File.FSDirectory.ParentDirectory",
+      "type": "owl:Class"
+    },
+    {
+      "id": "Name-2C0A25802620CD64EB80907DA2E5B5215911D9DCE1D5E07DDFD05FD048E24D92-FSDirectory-HasProperty",
+      "type": "rdfs:Datatype"
+    },
+    {
+      "id": "Exists-0605332357663E679E3B97F9459812798E39367405475F85AFE97B450A11B09A-FSDirectory-HasProperty",
+      "type": "rdfs:Datatype"
+    },
+    {
+      "id": "IsReadOnly-BCB19C50E70F9737B68F78AA223F8606BF8387624269087C5E6248B41EB2E411-FSDirectory-HasProperty",
+      "type": "rdfs:Datatype"
+    },
+    {
+      "id": "Size-E2EAE87F2DDC4405A57B91458F2AF6F3CD391443B382F060E9B5A5B28259DECC-FSDirectory-HasProperty",
+      "type": "rdfs:Datatype"
+    },
+    {
+      "id": "Attributes-1CA4EEE107AF84D21B7661E359BDEC23BAFA858B2F3338ED185EE2BC7A80B318-FSDirectory-HasProperty",
+      "type": "rdfs:Datatype"
+    },
+    {
+      "id": "CreationTime-BB97758C9E08D7461FEBA9FF6198504D1431BF10CFB59FAF6E51067A208A7F76-FSDirectory-HasProperty",
+      "type": "rdfs:Datatype"
+    },
+    {
+      "id": "CreationTimeUtc-E0D62A21FEA0D9F10CB2FF76294F81D0B823C0A687CA24202DD5566952984CB8-FSDirectory-HasProperty",
+      "type": "rdfs:Datatype"
+    },
+    {
+      "id": "LastWriteTime-CC73C8BDC8B10946A76D2CE5A8CDF534D31264DF2EE3379BB6FE192CEFFC3075-FSDirectory-HasProperty",
+      "type": "rdfs:Datatype"
+    },
+    {
+      "id": "ModifiedTimeUtc-3BFE88C1B4767EAD927FA786C01BFE31E51CF2B5405A7B00FFADEDA72392E68B-FSDirectory-HasProperty",
+      "type": "rdfs:Datatype"
+    },
+    {
+      "id": "Owner-1704AE93E48B27EA1E0D0630CD4813EB8273C83A06100C3B790DA72527123BC8-FSDirectory-HasProperty",
+      "type": "rdfs:Datatype"
+    },
+    {
+      "id": "Content-E8A6FA45F2C2B78BD9A0DD3A904A1DFEA0704E2CBA7F589F2CB688C3D603B774-FSDirectory-HasProperty",
+      "type": "rdfs:Datatype"
+    },
+    {
+      "id": "Location-DB5944BB244CA5BB58FACF188FF12877F00D8F6A67416C870CDB1C9DFC6F9283-File-HasProperty",
+      "type": "rdfs:Datatype"
+    },
+    {
+      "id": "Name-6EC7BF4E660A77B1B5D4DBE8A89BD230E9D14115EB416E3B3113E21DE5A87B93-File-HasProperty",
+      "type": "rdfs:Datatype"
+    },
+    {
+      "id": "Content-53E86238387250EB3CA1E3BDEA089450E95A575D7E9E55961BE720160C5EADEC-File-HasProperty",
+      "type": "rdfs:Datatype"
+    },
+    {
+      "id": "BH.oM.Data.Requests.IRequest",
+      "type": "owl:Class"
+    },
+    {
+      "id": "ToRemove-AEDA6F17E2C08B3775A5585B66AEE9BDDCC56B58BD817037AEC82A8C53F1CA07-RemoveRequest-HasProperty",
+      "type": "rdfs:Datatype"
+    },
+    {
+      "id": "BH.oM.Adapters.File.FileContentRequest.File",
+      "type": "owl:Class"
+    },
+    {
+      "id": "Types-1ABDB1AABDC6012CC89081D87478DB00A05A2B4E0CD54C85014709633A4CC045-FileContentRequest-HasProperty",
+      "type": "rdfs:Datatype"
+    },
+    {
+      "id": "CustomDataKeys-634D577824981E80D49B57F6E3D9C915351DA78C4265C11AF5189E03957F682F-FileContentRequest-HasProperty",
+      "type": "rdfs:Datatype"
+    },
+    {
+      "id": "FragmentTypes-5CA9F6339F39A6C77D54E44B843A59566169E5B848A4C277DFFD6E9E73CCBCBA-FileContentRequest-HasProperty",
+      "type": "rdfs:Datatype"
+    },
+    {
+      "id": "Location-F53E8242FB53B4C7F3F8EAB5D2E2B41CBF8066105C9682FEB3C0507065B2E3A7-DirectoryRequest-HasProperty",
+      "type": "rdfs:Datatype"
+    },
+    {
+      "id": "SearchSubdirectories-D824642967106575BAC020A23D6D03BD018AF85B946E7E02C087DE3D73667657-DirectoryRequest-HasProperty",
+      "type": "rdfs:Datatype"
+    },
+    {
+      "id": "MaxNesting-B0C4168B90B5D1A20B71431C58610AC5DA7086C7D4F221FAB822A1D253E1857A-DirectoryRequest-HasProperty",
+      "type": "rdfs:Datatype"
+    },
+    {
+      "id": "BH.oM.Adapters.File.DirectoryRequest.SortOrder",
+      "type": "owl:Class"
+    },
+    {
+      "id": "MaxDirectories-0275A68FBB13C6008A4393B3ABE1A591B65043C6FB4D3BF943E90193687FFA99-DirectoryRequest-HasProperty",
+      "type": "rdfs:Datatype"
+    },
+    {
+      "id": "Exclusions-66D54539ED8B567092757439E63E4A5D85CB15C1ECDE139FA97290C5DF534807-DirectoryRequest-HasProperty",
+      "type": "rdfs:Datatype"
+    },
+    {
+      "id": "Location-78638A6CF0D1003812B131B3CBD12028E3F67AA801BEC19D4CDB2238BCB264E2-FileRequest-HasProperty",
+      "type": "rdfs:Datatype"
+    },
+    {
+      "id": "SearchSubdirectories-1881D0634865B38CBCDF780695A6439999627F65E1645328648D391145725B45-FileRequest-HasProperty",
+      "type": "rdfs:Datatype"
+    },
+    {
+      "id": "MaxNesting-C34BC62FC51B1D1E18C9CD4583FEA9AF0F86F190BBDB8B5BA4BA903415BBFF0E-FileRequest-HasProperty",
+      "type": "rdfs:Datatype"
+    },
+    {
+      "id": "BH.oM.Adapters.File.FileRequest.SortOrder",
+      "type": "owl:Class"
+    },
+    {
+      "id": "MaxFiles-1FFACF4FF56CD3425BB410C586D1438539DEDC83C67724A8C7AB0C467E0D6CD5-FileRequest-HasProperty",
+      "type": "rdfs:Datatype"
+    },
+    {
+      "id": "IncludeFileContents-B897C7AE89473ED118DB3274234F31BE2ABE015DC00D83C9BA6E5A6DD36D9EEA-FileRequest-HasProperty",
+      "type": "rdfs:Datatype"
+    },
+    {
+      "id": "Exclusions-58A5DFFAF5627591B188A7BD6142D525682AB6378B83CE691846DCCFB2BB7702-FileRequest-HasProperty",
+      "type": "rdfs:Datatype"
+    },
+    {
+      "id": "Location-D975D7E12FD204BB52BEF3FA0EA92E0B886E9075D755DE5CF7AF85C1AE10EDA5-FileDirRequest-HasProperty",
+      "type": "rdfs:Datatype"
+    },
+    {
+      "id": "IncludeFiles-ABEE481EABBDA553C08B7E475D8439AD9C30F2D63ED55F1F67D9B8515AD38A43-FileDirRequest-HasProperty",
+      "type": "rdfs:Datatype"
+    },
+    {
+      "id": "IncludeDirectories-3C04A0C0691FD3E4E9ADAF495CFB4C3B4FD32BDDD40E8FF87B945F9561CE3250-FileDirRequest-HasProperty",
+      "type": "rdfs:Datatype"
+    },
+    {
+      "id": "SearchSubdirectories-79E8786CC5CD81304D0DAF63F36AE5B3BC655A478B9402703A0CB67A06200F63-FileDirRequest-HasProperty",
+      "type": "rdfs:Datatype"
+    },
+    {
+      "id": "IncludeFileContents-8B91B23C1E7C80A1A09072FB5ECE120FE0EA06BCCFF73337CE5C5659C49BC95B-FileDirRequest-HasProperty",
+      "type": "rdfs:Datatype"
+    },
+    {
+      "id": "MaxNesting-BB70E3CD049E5F8376DDA218EC758EC5483E26538D6301C1B9D441A79F776507-FileDirRequest-HasProperty",
+      "type": "rdfs:Datatype"
+    },
+    {
+      "id": "BH.oM.Adapters.File.FileDirRequest.SortOrder",
+      "type": "owl:Class"
+    },
+    {
+      "id": "MaxFiles-7B255C42E246E40910E93448C438502E9E8602D58CE24033279929E15E46E851-FileDirRequest-HasProperty",
+      "type": "rdfs:Datatype"
+    },
+    {
+      "id": "MaxDirectories-B17460C68F711900C634324B256613C74F491B03EAD60EA57B1BFDEC398A1B6B-FileDirRequest-HasProperty",
+      "type": "rdfs:Datatype"
+    },
+    {
+      "id": "Exclusions-11E7B24F34CC917172E2EBAB247CBF696ED77804F620D68624335FEBE76C43EA-FileDirRequest-HasProperty",
+      "type": "rdfs:Datatype"
+    },
+    {
+      "id": "BH.oM.Adapters.File.FSFile.ParentDirectory",
+      "type": "owl:Class"
+    },
+    {
+      "id": "Name-599346303C12E22F01E9C2A615F14B213A4A663E8666A137F8049AA51E7622D5-FSFile-HasProperty",
+      "type": "rdfs:Datatype"
+    },
+    {
+      "id": "Exists-EAB130C676E095E08017F65508340BD64850A9837E1BEB7044A63841FF118C91-FSFile-HasProperty",
+      "type": "rdfs:Datatype"
+    },
+    {
+      "id": "IsReadOnly-EF979C3158869BEBD1DC2A97208C65DFE4B6B5ED72304E1651AEF90E6BF4BBC9-FSFile-HasProperty",
+      "type": "rdfs:Datatype"
+    },
+    {
+      "id": "Size-9EFAE880FE7BDEE1BCBED657F5174F06644E5E8D70E48E3D4AAF08A2B782CD5E-FSFile-HasProperty",
+      "type": "rdfs:Datatype"
+    },
+    {
+      "id": "Attributes-2C088112A3065C424E1C8EAC6F4362AE3B780076FB31262F288653C9366EADE8-FSFile-HasProperty",
+      "type": "rdfs:Datatype"
+    },
+    {
+      "id": "CreationTimeUtc-26EC85F91F497FC1C1B0B10D85D527F525F584E8D59EA66AE461B05AC5026E52-FSFile-HasProperty",
+      "type": "rdfs:Datatype"
+    },
+    {
+      "id": "ModifiedTimeUtc-8C03341E278D842BBE603A1309A8D2AA5D12D83265A7281981B85A04633FB089-FSFile-HasProperty",
+      "type": "rdfs:Datatype"
+    },
+    {
+      "id": "Owner-9D16BCC9B5B775F23CAA8E3D4E3FB9EB853A5A12511BB209692064B53A09FE26-FSFile-HasProperty",
+      "type": "rdfs:Datatype"
+    },
+    {
+      "id": "Content-5AA7ABE80D2350ED14EDFC4CA2777178BD04B63C1DCBCEFFC233E5BACB7EA792-FSFile-HasProperty",
+      "type": "rdfs:Datatype"
+    }
+  ],
+  "classAttribute": [
+    {
+      "id": "BH.oM.Adapters.File.CopyCommand",
+      "iri": "https://github.com/BHoM/Filing_Toolkit/blob/main/File_oM/Commands/CopyCommand.cs",
+      "label": "CopyCommand (BH.oM.Adapters.File)",
+      "attributes": []
+    },
+    {
+      "id": "BH.oM.Adapters.File.MoveCommand",
+      "iri": "https://github.com/BHoM/Filing_Toolkit/blob/main/File_oM/Commands/MoveCommand.cs",
+      "label": "MoveCommand (BH.oM.Adapters.File)",
+      "attributes": []
+    },
+    {
+      "id": "BH.oM.Adapters.File.IMRCCommand",
+      "iri": "https://github.com/BHoM/Filing_Toolkit/blob/main/File_oM/Commands/IMRCCommand.cs",
+      "label": "IMRCCommand (BH.oM.Adapters.File)",
+      "attributes": []
+    },
+    {
+      "id": "BH.oM.Adapters.File.RenameCommand",
+      "iri": "https://github.com/BHoM/Filing_Toolkit/blob/main/File_oM/Commands/RenameCommand.cs",
+      "label": "RenameCommand (BH.oM.Adapters.File)",
+      "attributes": []
+    },
+    {
+      "id": "BH.oM.Adapters.File.ExecuteConfig",
+      "iri": "https://github.com/BHoM/Filing_Toolkit/blob/main/File_oM/Config/ExecuteConfig.cs",
+      "label": "ExecuteConfig (BH.oM.Adapters.File)",
+      "attributes": []
+    },
+    {
+      "id": "BH.oM.Adapters.File.PullConfig",
+      "iri": "https://github.com/BHoM/Filing_Toolkit/blob/main/File_oM/Config/PullConfig.cs",
+      "label": "PullConfig (BH.oM.Adapters.File)",
+      "attributes": []
+    },
+    {
+      "id": "BH.oM.Adapters.File.RemoveConfig",
+      "iri": "https://github.com/BHoM/Filing_Toolkit/blob/main/File_oM/Config/RemoveConfig.cs",
+      "label": "RemoveConfig (BH.oM.Adapters.File)",
+      "attributes": []
+    },
+    {
+      "id": "BH.oM.Adapters.File.PushConfig",
+      "iri": "https://github.com/BHoM/Filing_Toolkit/blob/main/File_oM/Config/PushConfig.cs",
+      "label": "PushConfig (BH.oM.Adapters.File)",
+      "attributes": []
+    },
+    {
+      "id": "BH.oM.Adapters.File.Directory",
+      "iri": "https://github.com/BHoM/Filing_Toolkit/blob/main/File_oM/Directory.cs",
+      "label": "Directory (BH.oM.Adapters.File)",
+      "attributes": []
+    },
+    {
+      "id": "BH.oM.Adapters.File.SortOrder",
+      "iri": "https://github.com/BHoM/Filing_Toolkit/blob/main/File_oM/enums/SortOrder.cs",
+      "label": "SortOrder (BH.oM.Adapters.File)",
+      "attributes": []
+    },
+    {
+      "id": "BH.oM.Adapters.File.FSDirectory",
+      "iri": "https://github.com/BHoM/Filing_Toolkit/blob/main/File_oM/FSDirectory.cs",
+      "label": "FSDirectory (BH.oM.Adapters.File)",
+      "attributes": []
+    },
+    {
+      "id": "BH.oM.Adapters.File.Encodings",
+      "iri": "https://github.com/BHoM/Filing_Toolkit/blob/main/File_oM/enums/Encodings.cs",
+      "label": "Encodings (BH.oM.Adapters.File)",
+      "attributes": []
+    },
+    {
+      "id": "BH.oM.Adapters.File.File",
+      "iri": "https://github.com/BHoM/Filing_Toolkit/blob/main/File_oM/File.cs",
+      "label": "File (BH.oM.Adapters.File)",
+      "attributes": []
+    },
+    {
+      "id": "BH.oM.Adapters.File.IFSResource",
+      "iri": "https://github.com/BHoM/Filing_Toolkit/blob/main/File_oM/Interfaces/IFSResource.cs",
+      "label": "IFSResource (BH.oM.Adapters.File)",
+      "attributes": []
+    },
+    {
+      "id": "BH.oM.Adapters.File.ISizeableResource",
+      "iri": "https://github.com/BHoM/Filing_Toolkit/blob/main/File_oM/Interfaces/ISizeableResource.cs",
+      "label": "ISizeableResource (BH.oM.Adapters.File)",
+      "attributes": []
+    },
+    {
+      "id": "BH.oM.Adapters.File.IContainableResource",
+      "iri": "https://github.com/BHoM/Filing_Toolkit/blob/main/File_oM/Interfaces/IContainableResource.cs",
+      "label": "IContainableResource (BH.oM.Adapters.File)",
+      "attributes": []
+    },
+    {
+      "id": "BH.oM.Adapters.File.IContainer",
+      "iri": "https://github.com/BHoM/Filing_Toolkit/blob/main/File_oM/Interfaces/IContainer.cs",
+      "label": "IContainer (BH.oM.Adapters.File)",
+      "attributes": []
+    },
+    {
+      "id": "BH.oM.Adapters.File.IDirectory",
+      "iri": "https://github.com/BHoM/Filing_Toolkit/blob/main/File_oM/Interfaces/IDirectory.cs",
+      "label": "IDirectory (BH.oM.Adapters.File)",
+      "attributes": []
+    },
+    {
+      "id": "BH.oM.Adapters.File.IFSContainer",
+      "iri": "https://github.com/BHoM/Filing_Toolkit/blob/main/File_oM/Interfaces/IFSContainer.cs",
+      "label": "IFSContainer (BH.oM.Adapters.File)",
+      "attributes": []
+    },
+    {
+      "id": "BH.oM.Adapters.File.IFSInfo",
+      "iri": "https://github.com/BHoM/Filing_Toolkit/blob/main/File_oM/Interfaces/IFSInfo.cs",
+      "label": "IFSInfo (BH.oM.Adapters.File)",
+      "attributes": []
+    },
+    {
+      "id": "BH.oM.Adapters.File.ILocatableResource",
+      "iri": "https://github.com/BHoM/Filing_Toolkit/blob/main/File_oM/Interfaces/ILocatableResource.cs",
+      "label": "ILocatableResource (BH.oM.Adapters.File)",
+      "attributes": []
+    },
+    {
+      "id": "BH.oM.Adapters.File.IResource",
+      "iri": "https://github.com/BHoM/Filing_Toolkit/blob/main/File_oM/Interfaces/IResource.cs",
+      "label": "IResource (BH.oM.Adapters.File)",
+      "attributes": []
+    },
+    {
+      "id": "BH.oM.Adapters.File.IFile",
+      "iri": "https://github.com/BHoM/Filing_Toolkit/blob/main/File_oM/Interfaces/IFile.cs",
+      "label": "IFile (BH.oM.Adapters.File)",
+      "attributes": []
+    },
+    {
+      "id": "BH.oM.Adapters.File.IFilingRequest",
+      "iri": "https://github.com/BHoM/Filing_Toolkit/blob/main/File_oM/Requests/Interfaces/IFilingRequest.cs",
+      "label": "IFilingRequest (BH.oM.Adapters.File)",
+      "attributes": []
+    },
+    {
+      "id": "BH.oM.Adapters.File.ISortableRequest",
+      "iri": "https://github.com/BHoM/Filing_Toolkit/blob/main/File_oM/Requests/Interfaces/ISortableRequest.cs",
+      "label": "ISortableRequest (BH.oM.Adapters.File)",
+      "attributes": []
+    },
+    {
+      "id": "BH.oM.Adapters.File.RemoveRequest",
+      "iri": "https://github.com/BHoM/Filing_Toolkit/blob/main/File_oM/Requests/IRemoveRequest.cs",
+      "label": "RemoveRequest (BH.oM.Adapters.File)",
+      "attributes": []
+    },
+    {
+      "id": "BH.oM.Adapters.File.IFileRequest",
+      "iri": "https://github.com/BHoM/Filing_Toolkit/blob/main/File_oM/Requests/Interfaces/IFileRequest.cs",
+      "label": "IFileRequest (BH.oM.Adapters.File)",
+      "attributes": []
+    },
+    {
+      "id": "BH.oM.Adapters.File.IResourceRequest",
+      "iri": "https://github.com/BHoM/Filing_Toolkit/blob/main/File_oM/Requests/Interfaces/IResourceRequest.cs",
+      "label": "IResourceRequest (BH.oM.Adapters.File)",
+      "attributes": []
+    },
+    {
+      "id": "BH.oM.Adapters.File.IDirectoryRequest",
+      "iri": "https://github.com/BHoM/Filing_Toolkit/blob/main/File_oM/Requests/Interfaces/IDirectoryRequest.cs",
+      "label": "IDirectoryRequest (BH.oM.Adapters.File)",
+      "attributes": []
+    },
+    {
+      "id": "BH.oM.Adapters.File.FileContentRequest",
+      "iri": "https://github.com/BHoM/Filing_Toolkit/blob/main/File_oM/Requests/FileContentRequest.cs",
+      "label": "FileContentRequest (BH.oM.Adapters.File)",
+      "attributes": []
+    },
+    {
+      "id": "BH.oM.Adapters.File.DirectoryRequest",
+      "iri": "https://github.com/BHoM/Filing_Toolkit/blob/main/File_oM/Requests/DirectoryRequest.cs",
+      "label": "DirectoryRequest (BH.oM.Adapters.File)",
+      "attributes": []
+    },
+    {
+      "id": "BH.oM.Adapters.File.FileRequest",
+      "iri": "https://github.com/BHoM/Filing_Toolkit/blob/main/File_oM/Requests/FileRequest.cs",
+      "label": "FileRequest (BH.oM.Adapters.File)",
+      "attributes": []
+    },
+    {
+      "id": "BH.oM.Adapters.File.FileDirRequest",
+      "iri": "https://github.com/BHoM/Filing_Toolkit/blob/main/File_oM/Requests/FileDirRequest.cs",
+      "label": "FileDirRequest (BH.oM.Adapters.File)",
+      "attributes": []
+    },
+    {
+      "id": "BH.oM.Adapters.File.FileFormat",
+      "iri": "https://github.com/BHoM/Filing_Toolkit/blob/main/File_oM/enums/FileFormat.cs",
+      "label": "FileFormat (BH.oM.Adapters.File)",
+      "attributes": []
+    },
+    {
+      "id": "BH.oM.Adapters.File.FSFile",
+      "iri": "https://github.com/BHoM/Filing_Toolkit/blob/main/File_oM/FSFile.cs",
+      "label": "FSFile (BH.oM.Adapters.File)",
+      "attributes": []
+    },
+    {
+      "id": "FullPath-B1AB7C7D74D19FF56F319D05C6F76C064C8497F9BB42EF3F295D0C8CDA0DD6A0-CopyCommand-HasProperty",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/HasProperty.cs",
+      "label": "FullPath (BH.oM.Adapters.File.CopyCommand.FullPath)",
+      "attributes": "datatype"
+    },
+    {
+      "id": "TargetFullPath-2A8339E3BD79169EDD821E2902161256F302E8039CD6EB1B8C066FBC6153D364-CopyCommand-HasProperty",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/HasProperty.cs",
+      "label": "TargetFullPath (BH.oM.Adapters.File.CopyCommand.TargetFullPath)",
+      "attributes": "datatype"
+    },
+    {
+      "id": "CreateDirectoryIfNotExist-A808CD4B45698BF420FFF149D6A9E7782E24F62524EE1FA77E1ADA56C8850A4D-CopyCommand-HasProperty",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/HasProperty.cs",
+      "label": "CreateDirectoryIfNotExist (BH.oM.Adapters.File.CopyCommand.CreateDirectoryIfNotExist)",
+      "attributes": "datatype"
+    },
+    {
+      "id": "OverwriteTarget-76B37AC3E6691F6419820EB61D50B21DB6CD770B23936DF616A836BA6F86400E-CopyCommand-HasProperty",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/HasProperty.cs",
+      "label": "OverwriteTarget (BH.oM.Adapters.File.CopyCommand.OverwriteTarget)",
+      "attributes": "datatype"
+    },
+    {
+      "id": "BH.oM.Adapter.IExecuteCommand",
+      "iri": "https://github.com/BHoM/BHoM_Adapter/blob/main/Adapter_oM/ExecuteCommands/_IExecuteCommand.cs",
+      "label": "IExecuteCommand",
+      "attributes": []
+    },
+    {
+      "id": "BH.oM.Base.IObject",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/BHoM/Interface/IObject.cs",
+      "label": "IObject",
+      "attributes": []
+    },
+    {
+      "id": "FullPath-74BB1E8F2C65A9BBDF164CEA336628427EE170D37FBEA79595C3CB50E064B821-MoveCommand-HasProperty",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/HasProperty.cs",
+      "label": "FullPath (BH.oM.Adapters.File.MoveCommand.FullPath)",
+      "attributes": "datatype"
+    },
+    {
+      "id": "TargetFullPath-2B1333DA782DEE2627EFDCDF69676D351465E8D3A3273CFB3D1289743DF74180-MoveCommand-HasProperty",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/HasProperty.cs",
+      "label": "TargetFullPath (BH.oM.Adapters.File.MoveCommand.TargetFullPath)",
+      "attributes": "datatype"
+    },
+    {
+      "id": "CreateDirectoryIfNotExist-7AEE7C8BB4D80D414C844DF29BE797B4935C7F59666FE31AD58CEAD8FC8854A5-MoveCommand-HasProperty",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/HasProperty.cs",
+      "label": "CreateDirectoryIfNotExist (BH.oM.Adapters.File.MoveCommand.CreateDirectoryIfNotExist)",
+      "attributes": "datatype"
+    },
+    {
+      "id": "OverwriteTarget-9AFCB47755E6471202CBF9C8CF840935C07501D3EC62906168AF142A2BAD6060-MoveCommand-HasProperty",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/HasProperty.cs",
+      "label": "OverwriteTarget (BH.oM.Adapters.File.MoveCommand.OverwriteTarget)",
+      "attributes": "datatype"
+    },
+    {
+      "id": "FullPath-0CAD4D4E819F83091DA6BEB68A0B15F8BFE238E58998AB020816378FB46F3A25-RenameCommand-HasProperty",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/HasProperty.cs",
+      "label": "FullPath (BH.oM.Adapters.File.RenameCommand.FullPath)",
+      "attributes": "datatype"
+    },
+    {
+      "id": "TargetFullPath-7E259BAF41F4164EDEAD94EA7B4AC9EB7F94F8321B39DA9880D098B7AEF21E95-RenameCommand-HasProperty",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/HasProperty.cs",
+      "label": "TargetFullPath (BH.oM.Adapters.File.RenameCommand.TargetFullPath)",
+      "attributes": "datatype"
+    },
+    {
+      "id": "OverwriteTarget-8E22547D9E12CE7EA73EFF38B4507FFCD283911C3262228EF6C8562F00C9019A-RenameCommand-HasProperty",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/HasProperty.cs",
+      "label": "OverwriteTarget (BH.oM.Adapters.File.RenameCommand.OverwriteTarget)",
+      "attributes": "datatype"
+    },
+    {
+      "id": "DisableWarnings-E0B6412C25224277796A682E9165D29AC64BA3B7B7F731E18D82D195D274B8EE-ExecuteConfig-HasProperty",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/HasProperty.cs",
+      "label": "DisableWarnings (BH.oM.Adapters.File.ExecuteConfig.DisableWarnings)",
+      "attributes": "datatype"
+    },
+    {
+      "id": "BH.oM.Adapter.ActionConfig",
+      "iri": "https://github.com/BHoM/BHoM_Adapter/blob/main/Adapter_oM/Settings-Config/ActionConfig.cs",
+      "label": "ActionConfig",
+      "attributes": []
+    },
+    {
+      "id": "IncludeHiddenFiles-7AD9AD742610604C658A365C354F19E49175064AC2E6DB08DA3BF354D7D5B8DC-PullConfig-HasProperty",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/HasProperty.cs",
+      "label": "IncludeHiddenFiles (BH.oM.Adapters.File.PullConfig.IncludeHiddenFiles)",
+      "attributes": "datatype"
+    },
+    {
+      "id": "IncludeSystemFiles-DEDDC0D268B2253D48CF5BDEF14FF2712E81FD4EEC540783B3E6E473168047DE-PullConfig-HasProperty",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/HasProperty.cs",
+      "label": "IncludeSystemFiles (BH.oM.Adapters.File.PullConfig.IncludeSystemFiles)",
+      "attributes": "datatype"
+    },
+    {
+      "id": "DisableWarnings-34EE528FACCCBFD36C5CBF8BB5E42AFFAF9AC7318EE6AB20356CB334A0B43022-RemoveConfig-HasProperty",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/HasProperty.cs",
+      "label": "DisableWarnings (BH.oM.Adapters.File.RemoveConfig.DisableWarnings)",
+      "attributes": "datatype"
+    },
+    {
+      "id": "IncludeHiddenFiles-FC50F86F951EA6691B2C59CB7F9D9CB4751BDE29BA4F5FFFCACB90264DD84E7A-RemoveConfig-HasProperty",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/HasProperty.cs",
+      "label": "IncludeHiddenFiles (BH.oM.Adapters.File.RemoveConfig.IncludeHiddenFiles)",
+      "attributes": "datatype"
+    },
+    {
+      "id": "UseDatasetSerialization-AA2732412A228E2A19FC097E51CFAE9EDECEA8E5451D08695221684094034E35-PushConfig-HasProperty",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/HasProperty.cs",
+      "label": "UseDatasetSerialization (BH.oM.Adapters.File.PushConfig.UseDatasetSerialization)",
+      "attributes": "datatype"
+    },
+    {
+      "id": "BeautifyJson-761D50106A13D97CBA52CCEB96A691C39192FBF17101B83D7BF20EB4569B70AA-PushConfig-HasProperty",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/HasProperty.cs",
+      "label": "BeautifyJson (BH.oM.Adapters.File.PushConfig.BeautifyJson)",
+      "attributes": "datatype"
+    },
+    {
+      "id": "DisableWarnings-168A83144AFB402E80024E9F8F8447DCFE39D42005C0612A81DD0B210F1F7C78-PushConfig-HasProperty",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/HasProperty.cs",
+      "label": "DisableWarnings (BH.oM.Adapters.File.PushConfig.DisableWarnings)",
+      "attributes": "datatype"
+    },
+    {
+      "id": "Location-BFA659DCB71CCF3DFBB1A1DF1B2C474E3D755C63DEE2BCCA5AEDBD51E20075C5-Directory-HasProperty",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/HasProperty.cs",
+      "label": "Location (BH.oM.Adapters.File.Directory.Location)",
+      "attributes": "datatype"
+    },
+    {
+      "id": "Name-206484299DC28C89F07B8D000D193E839D7787057DBA91EA90C7615436117659-Directory-HasProperty",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/HasProperty.cs",
+      "label": "Name (BH.oM.Adapters.File.Directory.Name)",
+      "attributes": "datatype"
+    },
+    {
+      "id": "Content-17E3811C3258A1BFBFDE44920D860B7B412D1D2D3FBB7DB6AA006B659803CED1-Directory-HasProperty",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/HasProperty.cs",
+      "label": "Content (BH.oM.Adapters.File.Directory.Content)",
+      "attributes": "datatype"
+    },
+    {
+      "id": "BH.oM.Base.IBHoMObject",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/BHoM/Interface/IBHoMObject.cs",
+      "label": "IBHoMObject",
+      "attributes": []
+    },
+    {
+      "id": "BH.oM.Base.BHoMObject",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/BHoM/BHoMObject.cs",
+      "label": "BHoMObject",
+      "attributes": []
+    },
+    {
+      "id": "BH.oM.Adapters.File.FSDirectory.ParentDirectory",
+      "iri": "https://github.com/BHoM/Filing_Toolkit/blob/main/File_oM/FSDirectory.cs#L43",
+      "label": "ParentDirectory (BH.oM.Adapters.File.FSDirectory.ParentDirectory)",
+      "attributes": []
+    },
+    {
+      "id": "Name-2C0A25802620CD64EB80907DA2E5B5215911D9DCE1D5E07DDFD05FD048E24D92-FSDirectory-HasProperty",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/HasProperty.cs",
+      "label": "Name (BH.oM.Adapters.File.FSDirectory.Name)",
+      "attributes": "datatype"
+    },
+    {
+      "id": "Exists-0605332357663E679E3B97F9459812798E39367405475F85AFE97B450A11B09A-FSDirectory-HasProperty",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/HasProperty.cs",
+      "label": "Exists (BH.oM.Adapters.File.FSDirectory.Exists)",
+      "attributes": "datatype"
+    },
+    {
+      "id": "IsReadOnly-BCB19C50E70F9737B68F78AA223F8606BF8387624269087C5E6248B41EB2E411-FSDirectory-HasProperty",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/HasProperty.cs",
+      "label": "IsReadOnly (BH.oM.Adapters.File.FSDirectory.IsReadOnly)",
+      "attributes": "datatype"
+    },
+    {
+      "id": "Size-E2EAE87F2DDC4405A57B91458F2AF6F3CD391443B382F060E9B5A5B28259DECC-FSDirectory-HasProperty",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/HasProperty.cs",
+      "label": "Size (BH.oM.Adapters.File.FSDirectory.Size)",
+      "attributes": "datatype"
+    },
+    {
+      "id": "Attributes-1CA4EEE107AF84D21B7661E359BDEC23BAFA858B2F3338ED185EE2BC7A80B318-FSDirectory-HasProperty",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/HasProperty.cs",
+      "label": "Attributes (BH.oM.Adapters.File.FSDirectory.Attributes)",
+      "attributes": "datatype"
+    },
+    {
+      "id": "CreationTime-BB97758C9E08D7461FEBA9FF6198504D1431BF10CFB59FAF6E51067A208A7F76-FSDirectory-HasProperty",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/HasProperty.cs",
+      "label": "CreationTime (BH.oM.Adapters.File.FSDirectory.CreationTime)",
+      "attributes": "datatype"
+    },
+    {
+      "id": "CreationTimeUtc-E0D62A21FEA0D9F10CB2FF76294F81D0B823C0A687CA24202DD5566952984CB8-FSDirectory-HasProperty",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/HasProperty.cs",
+      "label": "CreationTimeUtc (BH.oM.Adapters.File.FSDirectory.CreationTimeUtc)",
+      "attributes": "datatype"
+    },
+    {
+      "id": "LastWriteTime-CC73C8BDC8B10946A76D2CE5A8CDF534D31264DF2EE3379BB6FE192CEFFC3075-FSDirectory-HasProperty",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/HasProperty.cs",
+      "label": "LastWriteTime (BH.oM.Adapters.File.FSDirectory.LastWriteTime)",
+      "attributes": "datatype"
+    },
+    {
+      "id": "ModifiedTimeUtc-3BFE88C1B4767EAD927FA786C01BFE31E51CF2B5405A7B00FFADEDA72392E68B-FSDirectory-HasProperty",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/HasProperty.cs",
+      "label": "ModifiedTimeUtc (BH.oM.Adapters.File.FSDirectory.ModifiedTimeUtc)",
+      "attributes": "datatype"
+    },
+    {
+      "id": "Owner-1704AE93E48B27EA1E0D0630CD4813EB8273C83A06100C3B790DA72527123BC8-FSDirectory-HasProperty",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/HasProperty.cs",
+      "label": "Owner (BH.oM.Adapters.File.FSDirectory.Owner)",
+      "attributes": "datatype"
+    },
+    {
+      "id": "Content-E8A6FA45F2C2B78BD9A0DD3A904A1DFEA0704E2CBA7F589F2CB688C3D603B774-FSDirectory-HasProperty",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/HasProperty.cs",
+      "label": "Content (BH.oM.Adapters.File.FSDirectory.Content)",
+      "attributes": "datatype"
+    },
+    {
+      "id": "Location-DB5944BB244CA5BB58FACF188FF12877F00D8F6A67416C870CDB1C9DFC6F9283-File-HasProperty",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/HasProperty.cs",
+      "label": "Location (BH.oM.Adapters.File.File.Location)",
+      "attributes": "datatype"
+    },
+    {
+      "id": "Name-6EC7BF4E660A77B1B5D4DBE8A89BD230E9D14115EB416E3B3113E21DE5A87B93-File-HasProperty",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/HasProperty.cs",
+      "label": "Name (BH.oM.Adapters.File.File.Name)",
+      "attributes": "datatype"
+    },
+    {
+      "id": "Content-53E86238387250EB3CA1E3BDEA089450E95A575D7E9E55961BE720160C5EADEC-File-HasProperty",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/HasProperty.cs",
+      "label": "Content (BH.oM.Adapters.File.File.Content)",
+      "attributes": "datatype"
+    },
+    {
+      "id": "BH.oM.Data.Requests.IRequest",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/Data_oM/Requests/IRequest.cs",
+      "label": "IRequest",
+      "attributes": []
+    },
+    {
+      "id": "ToRemove-AEDA6F17E2C08B3775A5585B66AEE9BDDCC56B58BD817037AEC82A8C53F1CA07-RemoveRequest-HasProperty",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/HasProperty.cs",
+      "label": "ToRemove (BH.oM.Adapters.File.RemoveRequest.ToRemove)",
+      "attributes": "datatype"
+    },
+    {
+      "id": "BH.oM.Adapters.File.FileContentRequest.File",
+      "iri": "https://github.com/BHoM/Filing_Toolkit/blob/main/File_oM/Requests/FileContentRequest.cs#L45",
+      "label": "File (BH.oM.Adapters.File.FileContentRequest.File)",
+      "attributes": []
+    },
+    {
+      "id": "Types-1ABDB1AABDC6012CC89081D87478DB00A05A2B4E0CD54C85014709633A4CC045-FileContentRequest-HasProperty",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/HasProperty.cs",
+      "label": "Types (BH.oM.Adapters.File.FileContentRequest.Types)",
+      "attributes": "datatype"
+    },
+    {
+      "id": "CustomDataKeys-634D577824981E80D49B57F6E3D9C915351DA78C4265C11AF5189E03957F682F-FileContentRequest-HasProperty",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/HasProperty.cs",
+      "label": "CustomDataKeys (BH.oM.Adapters.File.FileContentRequest.CustomDataKeys)",
+      "attributes": "datatype"
+    },
+    {
+      "id": "FragmentTypes-5CA9F6339F39A6C77D54E44B843A59566169E5B848A4C277DFFD6E9E73CCBCBA-FileContentRequest-HasProperty",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/HasProperty.cs",
+      "label": "FragmentTypes (BH.oM.Adapters.File.FileContentRequest.FragmentTypes)",
+      "attributes": "datatype"
+    },
+    {
+      "id": "Location-F53E8242FB53B4C7F3F8EAB5D2E2B41CBF8066105C9682FEB3C0507065B2E3A7-DirectoryRequest-HasProperty",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/HasProperty.cs",
+      "label": "Location (BH.oM.Adapters.File.DirectoryRequest.Location)",
+      "attributes": "datatype"
+    },
+    {
+      "id": "SearchSubdirectories-D824642967106575BAC020A23D6D03BD018AF85B946E7E02C087DE3D73667657-DirectoryRequest-HasProperty",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/HasProperty.cs",
+      "label": "SearchSubdirectories (BH.oM.Adapters.File.DirectoryRequest.SearchSubdirectories)",
+      "attributes": "datatype"
+    },
+    {
+      "id": "MaxNesting-B0C4168B90B5D1A20B71431C58610AC5DA7086C7D4F221FAB822A1D253E1857A-DirectoryRequest-HasProperty",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/HasProperty.cs",
+      "label": "MaxNesting (BH.oM.Adapters.File.DirectoryRequest.MaxNesting)",
+      "attributes": "datatype"
+    },
+    {
+      "id": "BH.oM.Adapters.File.DirectoryRequest.SortOrder",
+      "iri": "https://github.com/BHoM/Filing_Toolkit/blob/main/File_oM/Requests/DirectoryRequest.cs#L54",
+      "label": "SortOrder (BH.oM.Adapters.File.DirectoryRequest.SortOrder)",
+      "attributes": []
+    },
+    {
+      "id": "MaxDirectories-0275A68FBB13C6008A4393B3ABE1A591B65043C6FB4D3BF943E90193687FFA99-DirectoryRequest-HasProperty",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/HasProperty.cs",
+      "label": "MaxDirectories (BH.oM.Adapters.File.DirectoryRequest.MaxDirectories)",
+      "attributes": "datatype"
+    },
+    {
+      "id": "Exclusions-66D54539ED8B567092757439E63E4A5D85CB15C1ECDE139FA97290C5DF534807-DirectoryRequest-HasProperty",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/HasProperty.cs",
+      "label": "Exclusions (BH.oM.Adapters.File.DirectoryRequest.Exclusions)",
+      "attributes": "datatype"
+    },
+    {
+      "id": "Location-78638A6CF0D1003812B131B3CBD12028E3F67AA801BEC19D4CDB2238BCB264E2-FileRequest-HasProperty",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/HasProperty.cs",
+      "label": "Location (BH.oM.Adapters.File.FileRequest.Location)",
+      "attributes": "datatype"
+    },
+    {
+      "id": "SearchSubdirectories-1881D0634865B38CBCDF780695A6439999627F65E1645328648D391145725B45-FileRequest-HasProperty",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/HasProperty.cs",
+      "label": "SearchSubdirectories (BH.oM.Adapters.File.FileRequest.SearchSubdirectories)",
+      "attributes": "datatype"
+    },
+    {
+      "id": "MaxNesting-C34BC62FC51B1D1E18C9CD4583FEA9AF0F86F190BBDB8B5BA4BA903415BBFF0E-FileRequest-HasProperty",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/HasProperty.cs",
+      "label": "MaxNesting (BH.oM.Adapters.File.FileRequest.MaxNesting)",
+      "attributes": "datatype"
+    },
+    {
+      "id": "BH.oM.Adapters.File.FileRequest.SortOrder",
+      "iri": "https://github.com/BHoM/Filing_Toolkit/blob/main/File_oM/Requests/FileRequest.cs#L54",
+      "label": "SortOrder (BH.oM.Adapters.File.FileRequest.SortOrder)",
+      "attributes": []
+    },
+    {
+      "id": "MaxFiles-1FFACF4FF56CD3425BB410C586D1438539DEDC83C67724A8C7AB0C467E0D6CD5-FileRequest-HasProperty",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/HasProperty.cs",
+      "label": "MaxFiles (BH.oM.Adapters.File.FileRequest.MaxFiles)",
+      "attributes": "datatype"
+    },
+    {
+      "id": "IncludeFileContents-B897C7AE89473ED118DB3274234F31BE2ABE015DC00D83C9BA6E5A6DD36D9EEA-FileRequest-HasProperty",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/HasProperty.cs",
+      "label": "IncludeFileContents (BH.oM.Adapters.File.FileRequest.IncludeFileContents)",
+      "attributes": "datatype"
+    },
+    {
+      "id": "Exclusions-58A5DFFAF5627591B188A7BD6142D525682AB6378B83CE691846DCCFB2BB7702-FileRequest-HasProperty",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/HasProperty.cs",
+      "label": "Exclusions (BH.oM.Adapters.File.FileRequest.Exclusions)",
+      "attributes": "datatype"
+    },
+    {
+      "id": "Location-D975D7E12FD204BB52BEF3FA0EA92E0B886E9075D755DE5CF7AF85C1AE10EDA5-FileDirRequest-HasProperty",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/HasProperty.cs",
+      "label": "Location (BH.oM.Adapters.File.FileDirRequest.Location)",
+      "attributes": "datatype"
+    },
+    {
+      "id": "IncludeFiles-ABEE481EABBDA553C08B7E475D8439AD9C30F2D63ED55F1F67D9B8515AD38A43-FileDirRequest-HasProperty",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/HasProperty.cs",
+      "label": "IncludeFiles (BH.oM.Adapters.File.FileDirRequest.IncludeFiles)",
+      "attributes": "datatype"
+    },
+    {
+      "id": "IncludeDirectories-3C04A0C0691FD3E4E9ADAF495CFB4C3B4FD32BDDD40E8FF87B945F9561CE3250-FileDirRequest-HasProperty",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/HasProperty.cs",
+      "label": "IncludeDirectories (BH.oM.Adapters.File.FileDirRequest.IncludeDirectories)",
+      "attributes": "datatype"
+    },
+    {
+      "id": "SearchSubdirectories-79E8786CC5CD81304D0DAF63F36AE5B3BC655A478B9402703A0CB67A06200F63-FileDirRequest-HasProperty",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/HasProperty.cs",
+      "label": "SearchSubdirectories (BH.oM.Adapters.File.FileDirRequest.SearchSubdirectories)",
+      "attributes": "datatype"
+    },
+    {
+      "id": "IncludeFileContents-8B91B23C1E7C80A1A09072FB5ECE120FE0EA06BCCFF73337CE5C5659C49BC95B-FileDirRequest-HasProperty",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/HasProperty.cs",
+      "label": "IncludeFileContents (BH.oM.Adapters.File.FileDirRequest.IncludeFileContents)",
+      "attributes": "datatype"
+    },
+    {
+      "id": "MaxNesting-BB70E3CD049E5F8376DDA218EC758EC5483E26538D6301C1B9D441A79F776507-FileDirRequest-HasProperty",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/HasProperty.cs",
+      "label": "MaxNesting (BH.oM.Adapters.File.FileDirRequest.MaxNesting)",
+      "attributes": "datatype"
+    },
+    {
+      "id": "BH.oM.Adapters.File.FileDirRequest.SortOrder",
+      "iri": "https://github.com/BHoM/Filing_Toolkit/blob/main/File_oM/Requests/FileDirRequest.cs#L63",
+      "label": "SortOrder (BH.oM.Adapters.File.FileDirRequest.SortOrder)",
+      "attributes": []
+    },
+    {
+      "id": "MaxFiles-7B255C42E246E40910E93448C438502E9E8602D58CE24033279929E15E46E851-FileDirRequest-HasProperty",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/HasProperty.cs",
+      "label": "MaxFiles (BH.oM.Adapters.File.FileDirRequest.MaxFiles)",
+      "attributes": "datatype"
+    },
+    {
+      "id": "MaxDirectories-B17460C68F711900C634324B256613C74F491B03EAD60EA57B1BFDEC398A1B6B-FileDirRequest-HasProperty",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/HasProperty.cs",
+      "label": "MaxDirectories (BH.oM.Adapters.File.FileDirRequest.MaxDirectories)",
+      "attributes": "datatype"
+    },
+    {
+      "id": "Exclusions-11E7B24F34CC917172E2EBAB247CBF696ED77804F620D68624335FEBE76C43EA-FileDirRequest-HasProperty",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/HasProperty.cs",
+      "label": "Exclusions (BH.oM.Adapters.File.FileDirRequest.Exclusions)",
+      "attributes": "datatype"
+    },
+    {
+      "id": "BH.oM.Adapters.File.FSFile.ParentDirectory",
+      "iri": "https://github.com/BHoM/Filing_Toolkit/blob/main/File_oM/FSFile.cs#L43",
+      "label": "ParentDirectory (BH.oM.Adapters.File.FSFile.ParentDirectory)",
+      "attributes": []
+    },
+    {
+      "id": "Name-599346303C12E22F01E9C2A615F14B213A4A663E8666A137F8049AA51E7622D5-FSFile-HasProperty",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/HasProperty.cs",
+      "label": "Name (BH.oM.Adapters.File.FSFile.Name)",
+      "attributes": "datatype"
+    },
+    {
+      "id": "Exists-EAB130C676E095E08017F65508340BD64850A9837E1BEB7044A63841FF118C91-FSFile-HasProperty",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/HasProperty.cs",
+      "label": "Exists (BH.oM.Adapters.File.FSFile.Exists)",
+      "attributes": "datatype"
+    },
+    {
+      "id": "IsReadOnly-EF979C3158869BEBD1DC2A97208C65DFE4B6B5ED72304E1651AEF90E6BF4BBC9-FSFile-HasProperty",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/HasProperty.cs",
+      "label": "IsReadOnly (BH.oM.Adapters.File.FSFile.IsReadOnly)",
+      "attributes": "datatype"
+    },
+    {
+      "id": "Size-9EFAE880FE7BDEE1BCBED657F5174F06644E5E8D70E48E3D4AAF08A2B782CD5E-FSFile-HasProperty",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/HasProperty.cs",
+      "label": "Size (BH.oM.Adapters.File.FSFile.Size)",
+      "attributes": "datatype"
+    },
+    {
+      "id": "Attributes-2C088112A3065C424E1C8EAC6F4362AE3B780076FB31262F288653C9366EADE8-FSFile-HasProperty",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/HasProperty.cs",
+      "label": "Attributes (BH.oM.Adapters.File.FSFile.Attributes)",
+      "attributes": "datatype"
+    },
+    {
+      "id": "CreationTimeUtc-26EC85F91F497FC1C1B0B10D85D527F525F584E8D59EA66AE461B05AC5026E52-FSFile-HasProperty",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/HasProperty.cs",
+      "label": "CreationTimeUtc (BH.oM.Adapters.File.FSFile.CreationTimeUtc)",
+      "attributes": "datatype"
+    },
+    {
+      "id": "ModifiedTimeUtc-8C03341E278D842BBE603A1309A8D2AA5D12D83265A7281981B85A04633FB089-FSFile-HasProperty",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/HasProperty.cs",
+      "label": "ModifiedTimeUtc (BH.oM.Adapters.File.FSFile.ModifiedTimeUtc)",
+      "attributes": "datatype"
+    },
+    {
+      "id": "Owner-9D16BCC9B5B775F23CAA8E3D4E3FB9EB853A5A12511BB209692064B53A09FE26-FSFile-HasProperty",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/HasProperty.cs",
+      "label": "Owner (BH.oM.Adapters.File.FSFile.Owner)",
+      "attributes": "datatype"
+    },
+    {
+      "id": "Content-5AA7ABE80D2350ED14EDFC4CA2777178BD04B63C1DCBCEFFC233E5BACB7EA792-FSFile-HasProperty",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/HasProperty.cs",
+      "label": "Content (BH.oM.Adapters.File.FSFile.Content)",
+      "attributes": "datatype"
+    }
+  ],
+  "property": [
+    {
+      "id": "BH.oM.Adapters.File.CopyCommand-BH.oM.RDF.HasProperty-System.String FullPath",
+      "type": "owl:DatatypeProperty"
+    },
+    {
+      "id": "BH.oM.Adapters.File.CopyCommand-BH.oM.RDF.HasProperty-System.String TargetFullPath",
+      "type": "owl:DatatypeProperty"
+    },
+    {
+      "id": "BH.oM.Adapters.File.CopyCommand-BH.oM.RDF.HasProperty-Boolean CreateDirectoryIfNotExist",
+      "type": "owl:DatatypeProperty"
+    },
+    {
+      "id": "BH.oM.Adapters.File.CopyCommand-BH.oM.RDF.HasProperty-Boolean OverwriteTarget",
+      "type": "owl:DatatypeProperty"
+    },
+    {
+      "id": "BH.oM.Adapters.File.CopyCommand-BH.oM.RDF.IsA-BH.oM.Adapters.File.IMRCCommand",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "BH.oM.Adapters.File.CopyCommand-BH.oM.RDF.IsA-BH.oM.Adapter.IExecuteCommand",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "BH.oM.Adapters.File.CopyCommand-BH.oM.RDF.IsA-BH.oM.Base.IObject",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "BH.oM.Adapters.File.CopyCommand-BH.oM.RDF.IsSubclassOf-System.Object",
+      "type": "owl:DatatypeProperty"
+    },
+    {
+      "id": "BH.oM.Adapters.File.MoveCommand-BH.oM.RDF.HasProperty-System.String FullPath",
+      "type": "owl:DatatypeProperty"
+    },
+    {
+      "id": "BH.oM.Adapters.File.MoveCommand-BH.oM.RDF.HasProperty-System.String TargetFullPath",
+      "type": "owl:DatatypeProperty"
+    },
+    {
+      "id": "BH.oM.Adapters.File.MoveCommand-BH.oM.RDF.HasProperty-Boolean CreateDirectoryIfNotExist",
+      "type": "owl:DatatypeProperty"
+    },
+    {
+      "id": "BH.oM.Adapters.File.MoveCommand-BH.oM.RDF.HasProperty-Boolean OverwriteTarget",
+      "type": "owl:DatatypeProperty"
+    },
+    {
+      "id": "BH.oM.Adapters.File.MoveCommand-BH.oM.RDF.IsA-BH.oM.Adapters.File.IMRCCommand",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "BH.oM.Adapters.File.MoveCommand-BH.oM.RDF.IsA-BH.oM.Adapter.IExecuteCommand",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "BH.oM.Adapters.File.MoveCommand-BH.oM.RDF.IsA-BH.oM.Base.IObject",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "BH.oM.Adapters.File.MoveCommand-BH.oM.RDF.IsSubclassOf-System.Object",
+      "type": "owl:DatatypeProperty"
+    },
+    {
+      "id": "BH.oM.Adapters.File.IMRCCommand-BH.oM.RDF.RequiresProperty-System.String FullPath",
+      "type": "owl:DatatypeProperty"
+    },
+    {
+      "id": "BH.oM.Adapters.File.IMRCCommand-BH.oM.RDF.RequiresProperty-System.String TargetFullPath",
+      "type": "owl:DatatypeProperty"
+    },
+    {
+      "id": "BH.oM.Adapters.File.IMRCCommand-BH.oM.RDF.RequiresProperty-Boolean OverwriteTarget",
+      "type": "owl:DatatypeProperty"
+    },
+    {
+      "id": "BH.oM.Adapters.File.IMRCCommand-BH.oM.RDF.IsA-BH.oM.Adapter.IExecuteCommand",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "BH.oM.Adapters.File.IMRCCommand-BH.oM.RDF.IsA-BH.oM.Base.IObject",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "BH.oM.Adapters.File.RenameCommand-BH.oM.RDF.HasProperty-System.String FullPath",
+      "type": "owl:DatatypeProperty"
+    },
+    {
+      "id": "BH.oM.Adapters.File.RenameCommand-BH.oM.RDF.HasProperty-System.String TargetFullPath",
+      "type": "owl:DatatypeProperty"
+    },
+    {
+      "id": "BH.oM.Adapters.File.RenameCommand-BH.oM.RDF.HasProperty-Boolean OverwriteTarget",
+      "type": "owl:DatatypeProperty"
+    },
+    {
+      "id": "BH.oM.Adapters.File.RenameCommand-BH.oM.RDF.IsA-BH.oM.Adapters.File.IMRCCommand",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "BH.oM.Adapters.File.RenameCommand-BH.oM.RDF.IsA-BH.oM.Adapter.IExecuteCommand",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "BH.oM.Adapters.File.RenameCommand-BH.oM.RDF.IsA-BH.oM.Base.IObject",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "BH.oM.Adapters.File.RenameCommand-BH.oM.RDF.IsSubclassOf-System.Object",
+      "type": "owl:DatatypeProperty"
+    },
+    {
+      "id": "BH.oM.Adapters.File.ExecuteConfig-BH.oM.RDF.HasProperty-Boolean DisableWarnings",
+      "type": "owl:DatatypeProperty"
+    },
+    {
+      "id": "BH.oM.Adapters.File.ExecuteConfig-BH.oM.RDF.IsA-BH.oM.Base.IObject",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "BH.oM.Adapters.File.ExecuteConfig-BH.oM.RDF.IsSubclassOf-BH.oM.Adapter.ActionConfig",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "BH.oM.Adapters.File.PullConfig-BH.oM.RDF.HasProperty-Boolean IncludeHiddenFiles",
+      "type": "owl:DatatypeProperty"
+    },
+    {
+      "id": "BH.oM.Adapters.File.PullConfig-BH.oM.RDF.HasProperty-Boolean IncludeSystemFiles",
+      "type": "owl:DatatypeProperty"
+    },
+    {
+      "id": "BH.oM.Adapters.File.PullConfig-BH.oM.RDF.IsA-BH.oM.Base.IObject",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "BH.oM.Adapters.File.PullConfig-BH.oM.RDF.IsSubclassOf-BH.oM.Adapter.ActionConfig",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "BH.oM.Adapters.File.RemoveConfig-BH.oM.RDF.HasProperty-Boolean DisableWarnings",
+      "type": "owl:DatatypeProperty"
+    },
+    {
+      "id": "BH.oM.Adapters.File.RemoveConfig-BH.oM.RDF.HasProperty-Boolean IncludeHiddenFiles",
+      "type": "owl:DatatypeProperty"
+    },
+    {
+      "id": "BH.oM.Adapters.File.RemoveConfig-BH.oM.RDF.IsA-BH.oM.Base.IObject",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "BH.oM.Adapters.File.RemoveConfig-BH.oM.RDF.IsSubclassOf-BH.oM.Adapter.ActionConfig",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "BH.oM.Adapters.File.PushConfig-BH.oM.RDF.HasProperty-Boolean UseDatasetSerialization",
+      "type": "owl:DatatypeProperty"
+    },
+    {
+      "id": "BH.oM.Adapters.File.PushConfig-BH.oM.RDF.HasProperty-Boolean BeautifyJson",
+      "type": "owl:DatatypeProperty"
+    },
+    {
+      "id": "BH.oM.Adapters.File.PushConfig-BH.oM.RDF.HasProperty-Boolean DisableWarnings",
+      "type": "owl:DatatypeProperty"
+    },
+    {
+      "id": "BH.oM.Adapters.File.PushConfig-BH.oM.RDF.IsA-BH.oM.Base.IObject",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "BH.oM.Adapters.File.PushConfig-BH.oM.RDF.IsSubclassOf-BH.oM.Adapter.ActionConfig",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "BH.oM.Adapters.File.Directory-BH.oM.RDF.HasProperty-System.String Location",
+      "type": "owl:DatatypeProperty"
+    },
+    {
+      "id": "BH.oM.Adapters.File.Directory-BH.oM.RDF.HasProperty-System.String Name",
+      "type": "owl:DatatypeProperty"
+    },
+    {
+      "id": "BH.oM.Adapters.File.Directory-BH.oM.RDF.HasProperty-System.Collections.Generic.List`1[System.Object] Content",
+      "type": "owl:DatatypeProperty"
+    },
+    {
+      "id": "BH.oM.Adapters.File.Directory-BH.oM.RDF.IsA-BH.oM.Base.IBHoMObject",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "BH.oM.Adapters.File.Directory-BH.oM.RDF.IsA-BH.oM.Base.IObject",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "BH.oM.Adapters.File.Directory-BH.oM.RDF.IsA-BH.oM.Adapters.File.IDirectory",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "BH.oM.Adapters.File.Directory-BH.oM.RDF.IsA-BH.oM.Adapters.File.IResource",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "BH.oM.Adapters.File.Directory-BH.oM.RDF.IsA-BH.oM.Adapters.File.ILocatableResource",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "BH.oM.Adapters.File.Directory-BH.oM.RDF.IsA-BH.oM.Adapters.File.IContainableResource",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "BH.oM.Adapters.File.Directory-BH.oM.RDF.IsSubclassOf-BH.oM.Base.BHoMObject",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "BH.oM.Adapters.File.SortOrder-BH.oM.RDF.IsA-System.IComparable",
+      "type": "owl:DatatypeProperty"
+    },
+    {
+      "id": "BH.oM.Adapters.File.SortOrder-BH.oM.RDF.IsA-System.IFormattable",
+      "type": "owl:DatatypeProperty"
+    },
+    {
+      "id": "BH.oM.Adapters.File.SortOrder-BH.oM.RDF.IsA-System.IConvertible",
+      "type": "owl:DatatypeProperty"
+    },
+    {
+      "id": "BH.oM.Adapters.File.SortOrder-BH.oM.RDF.IsSubclassOf-System.Enum",
+      "type": "owl:DatatypeProperty"
+    },
+    {
+      "id": "BH.oM.Adapters.File.FSDirectory.ParentDirectory-IsA-BH.oM.Adapters.File.FSDirectory",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "BH.oM.Adapters.File.FSDirectory-BH.oM.RDF.HasProperty-BH.oM.Adapters.File.FSDirectory ParentDirectory",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "BH.oM.Adapters.File.FSDirectory-BH.oM.RDF.HasProperty-System.String Name",
+      "type": "owl:DatatypeProperty"
+    },
+    {
+      "id": "BH.oM.Adapters.File.FSDirectory-BH.oM.RDF.HasProperty-System.Nullable`1[System.Boolean] Exists",
+      "type": "owl:DatatypeProperty"
+    },
+    {
+      "id": "BH.oM.Adapters.File.FSDirectory-BH.oM.RDF.HasProperty-System.Nullable`1[System.Boolean] IsReadOnly",
+      "type": "owl:DatatypeProperty"
+    },
+    {
+      "id": "BH.oM.Adapters.File.FSDirectory-BH.oM.RDF.HasProperty-Int32 Size",
+      "type": "owl:DatatypeProperty"
+    },
+    {
+      "id": "BH.oM.Adapters.File.FSDirectory-BH.oM.RDF.HasProperty-System.IO.FileAttributes Attributes",
+      "type": "owl:DatatypeProperty"
+    },
+    {
+      "id": "BH.oM.Adapters.File.FSDirectory-BH.oM.RDF.HasProperty-System.DateTime CreationTime",
+      "type": "owl:DatatypeProperty"
+    },
+    {
+      "id": "BH.oM.Adapters.File.FSDirectory-BH.oM.RDF.HasProperty-System.DateTime CreationTimeUtc",
+      "type": "owl:DatatypeProperty"
+    },
+    {
+      "id": "BH.oM.Adapters.File.FSDirectory-BH.oM.RDF.HasProperty-System.DateTime LastWriteTime",
+      "type": "owl:DatatypeProperty"
+    },
+    {
+      "id": "BH.oM.Adapters.File.FSDirectory-BH.oM.RDF.HasProperty-System.DateTime ModifiedTimeUtc",
+      "type": "owl:DatatypeProperty"
+    },
+    {
+      "id": "BH.oM.Adapters.File.FSDirectory-BH.oM.RDF.HasProperty-System.String Owner",
+      "type": "owl:DatatypeProperty"
+    },
+    {
+      "id": "BH.oM.Adapters.File.FSDirectory-BH.oM.RDF.HasProperty-System.Collections.Generic.List`1[System.Object] Content",
+      "type": "owl:DatatypeProperty"
+    },
+    {
+      "id": "BH.oM.Adapters.File.FSDirectory-BH.oM.RDF.IsA-BH.oM.Base.IBHoMObject",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "BH.oM.Adapters.File.FSDirectory-BH.oM.RDF.IsA-BH.oM.Base.IObject",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "BH.oM.Adapters.File.FSDirectory-BH.oM.RDF.IsA-BH.oM.Adapters.File.IFSContainer",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "BH.oM.Adapters.File.FSDirectory-BH.oM.RDF.IsA-BH.oM.Adapters.File.IFSInfo",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "BH.oM.Adapters.File.FSDirectory-BH.oM.RDF.IsA-BH.oM.Adapters.File.IContainableResource",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "BH.oM.Adapters.File.FSDirectory-BH.oM.RDF.IsA-BH.oM.Adapters.File.IResource",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "BH.oM.Adapters.File.FSDirectory-BH.oM.RDF.IsA-BH.oM.Adapters.File.IDirectory",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "BH.oM.Adapters.File.FSDirectory-BH.oM.RDF.IsA-BH.oM.Adapters.File.ISizeableResource",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "BH.oM.Adapters.File.FSDirectory-BH.oM.RDF.IsSubclassOf-BH.oM.Base.BHoMObject",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "BH.oM.Adapters.File.Encodings-BH.oM.RDF.IsA-System.IComparable",
+      "type": "owl:DatatypeProperty"
+    },
+    {
+      "id": "BH.oM.Adapters.File.Encodings-BH.oM.RDF.IsA-System.IFormattable",
+      "type": "owl:DatatypeProperty"
+    },
+    {
+      "id": "BH.oM.Adapters.File.Encodings-BH.oM.RDF.IsA-System.IConvertible",
+      "type": "owl:DatatypeProperty"
+    },
+    {
+      "id": "BH.oM.Adapters.File.Encodings-BH.oM.RDF.IsSubclassOf-System.Enum",
+      "type": "owl:DatatypeProperty"
+    },
+    {
+      "id": "BH.oM.Adapters.File.File-BH.oM.RDF.HasProperty-System.String Location",
+      "type": "owl:DatatypeProperty"
+    },
+    {
+      "id": "BH.oM.Adapters.File.File-BH.oM.RDF.HasProperty-System.String Name",
+      "type": "owl:DatatypeProperty"
+    },
+    {
+      "id": "BH.oM.Adapters.File.File-BH.oM.RDF.HasProperty-System.Collections.Generic.List`1[System.Object] Content",
+      "type": "owl:DatatypeProperty"
+    },
+    {
+      "id": "BH.oM.Adapters.File.File-BH.oM.RDF.IsA-BH.oM.Base.IBHoMObject",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "BH.oM.Adapters.File.File-BH.oM.RDF.IsA-BH.oM.Base.IObject",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "BH.oM.Adapters.File.File-BH.oM.RDF.IsA-BH.oM.Adapters.File.IFile",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "BH.oM.Adapters.File.File-BH.oM.RDF.IsA-BH.oM.Adapters.File.IResource",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "BH.oM.Adapters.File.File-BH.oM.RDF.IsA-BH.oM.Adapters.File.ILocatableResource",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "BH.oM.Adapters.File.File-BH.oM.RDF.IsA-BH.oM.Adapters.File.IContainableResource",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "BH.oM.Adapters.File.File-BH.oM.RDF.IsSubclassOf-BH.oM.Base.BHoMObject",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "BH.oM.Adapters.File.IFSResource-BH.oM.RDF.IsA-BH.oM.Adapters.File.IResource",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "BH.oM.Adapters.File.IFSResource-BH.oM.RDF.IsA-BH.oM.Base.IBHoMObject",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "BH.oM.Adapters.File.IFSResource-BH.oM.RDF.IsA-BH.oM.Base.IObject",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "BH.oM.Adapters.File.ISizeableResource-BH.oM.RDF.RequiresProperty-Int32 Size",
+      "type": "owl:DatatypeProperty"
+    },
+    {
+      "id": "BH.oM.Adapters.File.ISizeableResource-BH.oM.RDF.IsA-BH.oM.Adapters.File.IResource",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "BH.oM.Adapters.File.ISizeableResource-BH.oM.RDF.IsA-BH.oM.Base.IBHoMObject",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "BH.oM.Adapters.File.ISizeableResource-BH.oM.RDF.IsA-BH.oM.Base.IObject",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "BH.oM.Adapters.File.IContainableResource-BH.oM.RDF.RequiresProperty-System.Collections.Generic.List`1[System.Object] Content",
+      "type": "owl:DatatypeProperty"
+    },
+    {
+      "id": "BH.oM.Adapters.File.IContainableResource-BH.oM.RDF.IsA-BH.oM.Adapters.File.IResource",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "BH.oM.Adapters.File.IContainableResource-BH.oM.RDF.IsA-BH.oM.Base.IBHoMObject",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "BH.oM.Adapters.File.IContainableResource-BH.oM.RDF.IsA-BH.oM.Base.IObject",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "BH.oM.Adapters.File.IContainer-BH.oM.RDF.IsA-BH.oM.Adapters.File.ILocatableResource",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "BH.oM.Adapters.File.IContainer-BH.oM.RDF.IsA-BH.oM.Adapters.File.IResource",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "BH.oM.Adapters.File.IContainer-BH.oM.RDF.IsA-BH.oM.Base.IBHoMObject",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "BH.oM.Adapters.File.IContainer-BH.oM.RDF.IsA-BH.oM.Base.IObject",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "BH.oM.Adapters.File.IContainer-BH.oM.RDF.IsA-BH.oM.Adapters.File.IContainableResource",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "BH.oM.Adapters.File.IDirectory-BH.oM.RDF.IsA-BH.oM.Adapters.File.IResource",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "BH.oM.Adapters.File.IDirectory-BH.oM.RDF.IsA-BH.oM.Base.IBHoMObject",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "BH.oM.Adapters.File.IDirectory-BH.oM.RDF.IsA-BH.oM.Base.IObject",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "BH.oM.Adapters.File.IFSContainer-BH.oM.RDF.IsA-BH.oM.Adapters.File.IFSInfo",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "BH.oM.Adapters.File.IFSContainer-BH.oM.RDF.IsA-BH.oM.Base.IObject",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "BH.oM.Adapters.File.IFSContainer-BH.oM.RDF.IsA-BH.oM.Adapters.File.IContainableResource",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "BH.oM.Adapters.File.IFSContainer-BH.oM.RDF.IsA-BH.oM.Adapters.File.IResource",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "BH.oM.Adapters.File.IFSContainer-BH.oM.RDF.IsA-BH.oM.Base.IBHoMObject",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "BH.oM.Adapters.File.IFSInfo-BH.oM.RDF.RequiresProperty-BH.oM.Adapters.File.FSDirectory ParentDirectory",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "BH.oM.Adapters.File.IFSInfo-BH.oM.RDF.RequiresProperty-System.String Name",
+      "type": "owl:DatatypeProperty"
+    },
+    {
+      "id": "BH.oM.Adapters.File.IFSInfo-BH.oM.RDF.RequiresProperty-System.Nullable`1[System.Boolean] Exists",
+      "type": "owl:DatatypeProperty"
+    },
+    {
+      "id": "BH.oM.Adapters.File.IFSInfo-BH.oM.RDF.RequiresProperty-System.IO.FileAttributes Attributes",
+      "type": "owl:DatatypeProperty"
+    },
+    {
+      "id": "BH.oM.Adapters.File.IFSInfo-BH.oM.RDF.RequiresProperty-System.DateTime CreationTimeUtc",
+      "type": "owl:DatatypeProperty"
+    },
+    {
+      "id": "BH.oM.Adapters.File.IFSInfo-BH.oM.RDF.RequiresProperty-System.DateTime ModifiedTimeUtc",
+      "type": "owl:DatatypeProperty"
+    },
+    {
+      "id": "BH.oM.Adapters.File.IFSInfo-BH.oM.RDF.RequiresProperty-Int32 Size",
+      "type": "owl:DatatypeProperty"
+    },
+    {
+      "id": "BH.oM.Adapters.File.IFSInfo-BH.oM.RDF.RequiresProperty-System.String Owner",
+      "type": "owl:DatatypeProperty"
+    },
+    {
+      "id": "BH.oM.Adapters.File.IFSInfo-BH.oM.RDF.IsA-BH.oM.Base.IObject",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "BH.oM.Adapters.File.ILocatableResource-BH.oM.RDF.RequiresProperty-System.String Location",
+      "type": "owl:DatatypeProperty"
+    },
+    {
+      "id": "BH.oM.Adapters.File.ILocatableResource-BH.oM.RDF.IsA-BH.oM.Adapters.File.IResource",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "BH.oM.Adapters.File.ILocatableResource-BH.oM.RDF.IsA-BH.oM.Base.IBHoMObject",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "BH.oM.Adapters.File.ILocatableResource-BH.oM.RDF.IsA-BH.oM.Base.IObject",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "BH.oM.Adapters.File.IResource-BH.oM.RDF.IsA-BH.oM.Base.IBHoMObject",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "BH.oM.Adapters.File.IResource-BH.oM.RDF.IsA-BH.oM.Base.IObject",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "BH.oM.Adapters.File.IFile-BH.oM.RDF.IsA-BH.oM.Adapters.File.IResource",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "BH.oM.Adapters.File.IFile-BH.oM.RDF.IsA-BH.oM.Base.IBHoMObject",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "BH.oM.Adapters.File.IFile-BH.oM.RDF.IsA-BH.oM.Base.IObject",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "BH.oM.Adapters.File.IFilingRequest-BH.oM.RDF.IsA-BH.oM.Data.Requests.IRequest",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "BH.oM.Adapters.File.IFilingRequest-BH.oM.RDF.IsA-BH.oM.Base.IObject",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "BH.oM.Adapters.File.ISortableRequest-BH.oM.RDF.RequiresProperty-BH.oM.Adapters.File.SortOrder SortOrder",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "BH.oM.Adapters.File.ISortableRequest-BH.oM.RDF.IsA-BH.oM.Data.Requests.IRequest",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "BH.oM.Adapters.File.ISortableRequest-BH.oM.RDF.IsA-BH.oM.Base.IObject",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "BH.oM.Adapters.File.RemoveRequest-BH.oM.RDF.HasProperty-System.Collections.Generic.List`1[System.String] ToRemove",
+      "type": "owl:DatatypeProperty"
+    },
+    {
+      "id": "BH.oM.Adapters.File.RemoveRequest-BH.oM.RDF.IsA-BH.oM.Data.Requests.IRequest",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "BH.oM.Adapters.File.RemoveRequest-BH.oM.RDF.IsA-BH.oM.Base.IObject",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "BH.oM.Adapters.File.RemoveRequest-BH.oM.RDF.IsSubclassOf-System.Object",
+      "type": "owl:DatatypeProperty"
+    },
+    {
+      "id": "BH.oM.Adapters.File.IFileRequest-BH.oM.RDF.RequiresProperty-Int32 MaxFiles",
+      "type": "owl:DatatypeProperty"
+    },
+    {
+      "id": "BH.oM.Adapters.File.IFileRequest-BH.oM.RDF.RequiresProperty-Boolean IncludeFileContents",
+      "type": "owl:DatatypeProperty"
+    },
+    {
+      "id": "BH.oM.Adapters.File.IFileRequest-BH.oM.RDF.IsA-BH.oM.Adapters.File.ISortableRequest",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "BH.oM.Adapters.File.IFileRequest-BH.oM.RDF.IsA-BH.oM.Data.Requests.IRequest",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "BH.oM.Adapters.File.IFileRequest-BH.oM.RDF.IsA-BH.oM.Base.IObject",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "BH.oM.Adapters.File.IFileRequest-BH.oM.RDF.IsA-BH.oM.Adapters.File.IResourceRequest",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "BH.oM.Adapters.File.IResourceRequest-BH.oM.RDF.RequiresProperty-System.String Location",
+      "type": "owl:DatatypeProperty"
+    },
+    {
+      "id": "BH.oM.Adapters.File.IResourceRequest-BH.oM.RDF.RequiresProperty-Boolean SearchSubdirectories",
+      "type": "owl:DatatypeProperty"
+    },
+    {
+      "id": "BH.oM.Adapters.File.IResourceRequest-BH.oM.RDF.RequiresProperty-System.Collections.Generic.List`1[System.Object] Exclusions",
+      "type": "owl:DatatypeProperty"
+    },
+    {
+      "id": "BH.oM.Adapters.File.IResourceRequest-BH.oM.RDF.IsA-BH.oM.Data.Requests.IRequest",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "BH.oM.Adapters.File.IResourceRequest-BH.oM.RDF.IsA-BH.oM.Base.IObject",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "BH.oM.Adapters.File.IDirectoryRequest-BH.oM.RDF.RequiresProperty-Int32 MaxDirectories",
+      "type": "owl:DatatypeProperty"
+    },
+    {
+      "id": "BH.oM.Adapters.File.IDirectoryRequest-BH.oM.RDF.IsA-BH.oM.Adapters.File.ISortableRequest",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "BH.oM.Adapters.File.IDirectoryRequest-BH.oM.RDF.IsA-BH.oM.Data.Requests.IRequest",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "BH.oM.Adapters.File.IDirectoryRequest-BH.oM.RDF.IsA-BH.oM.Base.IObject",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "BH.oM.Adapters.File.IDirectoryRequest-BH.oM.RDF.IsA-BH.oM.Adapters.File.IResourceRequest",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "BH.oM.Adapters.File.FileContentRequest.File-IsA-BH.oM.Adapters.File.FSFile",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "BH.oM.Adapters.File.FileContentRequest-BH.oM.RDF.HasProperty-BH.oM.Adapters.File.FSFile File",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "BH.oM.Adapters.File.FileContentRequest-BH.oM.RDF.HasProperty-System.Collections.Generic.List`1[System.Type] Types",
+      "type": "owl:DatatypeProperty"
+    },
+    {
+      "id": "BH.oM.Adapters.File.FileContentRequest-BH.oM.RDF.HasProperty-System.Collections.Generic.List`1[System.String] CustomDataKeys",
+      "type": "owl:DatatypeProperty"
+    },
+    {
+      "id": "BH.oM.Adapters.File.FileContentRequest-BH.oM.RDF.HasProperty-System.Collections.Generic.List`1[System.Type] FragmentTypes",
+      "type": "owl:DatatypeProperty"
+    },
+    {
+      "id": "BH.oM.Adapters.File.FileContentRequest-BH.oM.RDF.IsA-BH.oM.Adapters.File.IFilingRequest",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "BH.oM.Adapters.File.FileContentRequest-BH.oM.RDF.IsA-BH.oM.Data.Requests.IRequest",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "BH.oM.Adapters.File.FileContentRequest-BH.oM.RDF.IsA-BH.oM.Base.IObject",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "BH.oM.Adapters.File.FileContentRequest-BH.oM.RDF.IsSubclassOf-System.Object",
+      "type": "owl:DatatypeProperty"
+    },
+    {
+      "id": "BH.oM.Adapters.File.DirectoryRequest-BH.oM.RDF.HasProperty-System.String Location",
+      "type": "owl:DatatypeProperty"
+    },
+    {
+      "id": "BH.oM.Adapters.File.DirectoryRequest-BH.oM.RDF.HasProperty-Boolean SearchSubdirectories",
+      "type": "owl:DatatypeProperty"
+    },
+    {
+      "id": "BH.oM.Adapters.File.DirectoryRequest-BH.oM.RDF.HasProperty-Int32 MaxNesting",
+      "type": "owl:DatatypeProperty"
+    },
+    {
+      "id": "BH.oM.Adapters.File.DirectoryRequest.SortOrder-IsA-BH.oM.Adapters.File.SortOrder",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "BH.oM.Adapters.File.DirectoryRequest-BH.oM.RDF.HasProperty-BH.oM.Adapters.File.SortOrder SortOrder",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "BH.oM.Adapters.File.DirectoryRequest-BH.oM.RDF.HasProperty-Int32 MaxDirectories",
+      "type": "owl:DatatypeProperty"
+    },
+    {
+      "id": "BH.oM.Adapters.File.DirectoryRequest-BH.oM.RDF.HasProperty-System.Collections.Generic.List`1[System.Object] Exclusions",
+      "type": "owl:DatatypeProperty"
+    },
+    {
+      "id": "BH.oM.Adapters.File.DirectoryRequest-BH.oM.RDF.IsA-BH.oM.Adapters.File.IDirectoryRequest",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "BH.oM.Adapters.File.DirectoryRequest-BH.oM.RDF.IsA-BH.oM.Adapters.File.ISortableRequest",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "BH.oM.Adapters.File.DirectoryRequest-BH.oM.RDF.IsA-BH.oM.Data.Requests.IRequest",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "BH.oM.Adapters.File.DirectoryRequest-BH.oM.RDF.IsA-BH.oM.Base.IObject",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "BH.oM.Adapters.File.DirectoryRequest-BH.oM.RDF.IsA-BH.oM.Adapters.File.IResourceRequest",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "BH.oM.Adapters.File.DirectoryRequest-BH.oM.RDF.IsSubclassOf-System.Object",
+      "type": "owl:DatatypeProperty"
+    },
+    {
+      "id": "BH.oM.Adapters.File.FileRequest-BH.oM.RDF.HasProperty-System.String Location",
+      "type": "owl:DatatypeProperty"
+    },
+    {
+      "id": "BH.oM.Adapters.File.FileRequest-BH.oM.RDF.HasProperty-Boolean SearchSubdirectories",
+      "type": "owl:DatatypeProperty"
+    },
+    {
+      "id": "BH.oM.Adapters.File.FileRequest-BH.oM.RDF.HasProperty-Int32 MaxNesting",
+      "type": "owl:DatatypeProperty"
+    },
+    {
+      "id": "BH.oM.Adapters.File.FileRequest.SortOrder-IsA-BH.oM.Adapters.File.SortOrder",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "BH.oM.Adapters.File.FileRequest-BH.oM.RDF.HasProperty-BH.oM.Adapters.File.SortOrder SortOrder",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "BH.oM.Adapters.File.FileRequest-BH.oM.RDF.HasProperty-Int32 MaxFiles",
+      "type": "owl:DatatypeProperty"
+    },
+    {
+      "id": "BH.oM.Adapters.File.FileRequest-BH.oM.RDF.HasProperty-Boolean IncludeFileContents",
+      "type": "owl:DatatypeProperty"
+    },
+    {
+      "id": "BH.oM.Adapters.File.FileRequest-BH.oM.RDF.HasProperty-System.Collections.Generic.List`1[System.Object] Exclusions",
+      "type": "owl:DatatypeProperty"
+    },
+    {
+      "id": "BH.oM.Adapters.File.FileRequest-BH.oM.RDF.IsA-BH.oM.Adapters.File.IFileRequest",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "BH.oM.Adapters.File.FileRequest-BH.oM.RDF.IsA-BH.oM.Adapters.File.ISortableRequest",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "BH.oM.Adapters.File.FileRequest-BH.oM.RDF.IsA-BH.oM.Data.Requests.IRequest",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "BH.oM.Adapters.File.FileRequest-BH.oM.RDF.IsA-BH.oM.Base.IObject",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "BH.oM.Adapters.File.FileRequest-BH.oM.RDF.IsA-BH.oM.Adapters.File.IResourceRequest",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "BH.oM.Adapters.File.FileRequest-BH.oM.RDF.IsSubclassOf-System.Object",
+      "type": "owl:DatatypeProperty"
+    },
+    {
+      "id": "BH.oM.Adapters.File.FileDirRequest-BH.oM.RDF.HasProperty-System.String Location",
+      "type": "owl:DatatypeProperty"
+    },
+    {
+      "id": "BH.oM.Adapters.File.FileDirRequest-BH.oM.RDF.HasProperty-Boolean IncludeFiles",
+      "type": "owl:DatatypeProperty"
+    },
+    {
+      "id": "BH.oM.Adapters.File.FileDirRequest-BH.oM.RDF.HasProperty-Boolean IncludeDirectories",
+      "type": "owl:DatatypeProperty"
+    },
+    {
+      "id": "BH.oM.Adapters.File.FileDirRequest-BH.oM.RDF.HasProperty-Boolean SearchSubdirectories",
+      "type": "owl:DatatypeProperty"
+    },
+    {
+      "id": "BH.oM.Adapters.File.FileDirRequest-BH.oM.RDF.HasProperty-Boolean IncludeFileContents",
+      "type": "owl:DatatypeProperty"
+    },
+    {
+      "id": "BH.oM.Adapters.File.FileDirRequest-BH.oM.RDF.HasProperty-Int32 MaxNesting",
+      "type": "owl:DatatypeProperty"
+    },
+    {
+      "id": "BH.oM.Adapters.File.FileDirRequest.SortOrder-IsA-BH.oM.Adapters.File.SortOrder",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "BH.oM.Adapters.File.FileDirRequest-BH.oM.RDF.HasProperty-BH.oM.Adapters.File.SortOrder SortOrder",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "BH.oM.Adapters.File.FileDirRequest-BH.oM.RDF.HasProperty-Int32 MaxFiles",
+      "type": "owl:DatatypeProperty"
+    },
+    {
+      "id": "BH.oM.Adapters.File.FileDirRequest-BH.oM.RDF.HasProperty-Int32 MaxDirectories",
+      "type": "owl:DatatypeProperty"
+    },
+    {
+      "id": "BH.oM.Adapters.File.FileDirRequest-BH.oM.RDF.HasProperty-System.Collections.Generic.List`1[System.Object] Exclusions",
+      "type": "owl:DatatypeProperty"
+    },
+    {
+      "id": "BH.oM.Adapters.File.FileDirRequest-BH.oM.RDF.IsA-BH.oM.Adapters.File.IFileRequest",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "BH.oM.Adapters.File.FileDirRequest-BH.oM.RDF.IsA-BH.oM.Adapters.File.ISortableRequest",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "BH.oM.Adapters.File.FileDirRequest-BH.oM.RDF.IsA-BH.oM.Data.Requests.IRequest",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "BH.oM.Adapters.File.FileDirRequest-BH.oM.RDF.IsA-BH.oM.Base.IObject",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "BH.oM.Adapters.File.FileDirRequest-BH.oM.RDF.IsA-BH.oM.Adapters.File.IResourceRequest",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "BH.oM.Adapters.File.FileDirRequest-BH.oM.RDF.IsA-BH.oM.Adapters.File.IDirectoryRequest",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "BH.oM.Adapters.File.FileDirRequest-BH.oM.RDF.IsSubclassOf-System.Object",
+      "type": "owl:DatatypeProperty"
+    },
+    {
+      "id": "BH.oM.Adapters.File.FileFormat-BH.oM.RDF.IsA-System.IComparable",
+      "type": "owl:DatatypeProperty"
+    },
+    {
+      "id": "BH.oM.Adapters.File.FileFormat-BH.oM.RDF.IsA-System.IFormattable",
+      "type": "owl:DatatypeProperty"
+    },
+    {
+      "id": "BH.oM.Adapters.File.FileFormat-BH.oM.RDF.IsA-System.IConvertible",
+      "type": "owl:DatatypeProperty"
+    },
+    {
+      "id": "BH.oM.Adapters.File.FileFormat-BH.oM.RDF.IsSubclassOf-System.Enum",
+      "type": "owl:DatatypeProperty"
+    },
+    {
+      "id": "BH.oM.Adapters.File.FSFile.ParentDirectory-IsA-BH.oM.Adapters.File.FSDirectory",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "BH.oM.Adapters.File.FSFile-BH.oM.RDF.HasProperty-BH.oM.Adapters.File.FSDirectory ParentDirectory",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "BH.oM.Adapters.File.FSFile-BH.oM.RDF.HasProperty-System.String Name",
+      "type": "owl:DatatypeProperty"
+    },
+    {
+      "id": "BH.oM.Adapters.File.FSFile-BH.oM.RDF.HasProperty-System.Nullable`1[System.Boolean] Exists",
+      "type": "owl:DatatypeProperty"
+    },
+    {
+      "id": "BH.oM.Adapters.File.FSFile-BH.oM.RDF.HasProperty-System.Nullable`1[System.Boolean] IsReadOnly",
+      "type": "owl:DatatypeProperty"
+    },
+    {
+      "id": "BH.oM.Adapters.File.FSFile-BH.oM.RDF.HasProperty-Int32 Size",
+      "type": "owl:DatatypeProperty"
+    },
+    {
+      "id": "BH.oM.Adapters.File.FSFile-BH.oM.RDF.HasProperty-System.IO.FileAttributes Attributes",
+      "type": "owl:DatatypeProperty"
+    },
+    {
+      "id": "BH.oM.Adapters.File.FSFile-BH.oM.RDF.HasProperty-System.DateTime CreationTimeUtc",
+      "type": "owl:DatatypeProperty"
+    },
+    {
+      "id": "BH.oM.Adapters.File.FSFile-BH.oM.RDF.HasProperty-System.DateTime ModifiedTimeUtc",
+      "type": "owl:DatatypeProperty"
+    },
+    {
+      "id": "BH.oM.Adapters.File.FSFile-BH.oM.RDF.HasProperty-System.String Owner",
+      "type": "owl:DatatypeProperty"
+    },
+    {
+      "id": "BH.oM.Adapters.File.FSFile-BH.oM.RDF.HasProperty-System.Collections.Generic.List`1[System.Object] Content",
+      "type": "owl:DatatypeProperty"
+    },
+    {
+      "id": "BH.oM.Adapters.File.FSFile-BH.oM.RDF.IsA-BH.oM.Base.IBHoMObject",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "BH.oM.Adapters.File.FSFile-BH.oM.RDF.IsA-BH.oM.Base.IObject",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "BH.oM.Adapters.File.FSFile-BH.oM.RDF.IsA-BH.oM.Adapters.File.IFSContainer",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "BH.oM.Adapters.File.FSFile-BH.oM.RDF.IsA-BH.oM.Adapters.File.IFSInfo",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "BH.oM.Adapters.File.FSFile-BH.oM.RDF.IsA-BH.oM.Adapters.File.IContainableResource",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "BH.oM.Adapters.File.FSFile-BH.oM.RDF.IsA-BH.oM.Adapters.File.IResource",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "BH.oM.Adapters.File.FSFile-BH.oM.RDF.IsA-BH.oM.Adapters.File.IFile",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "BH.oM.Adapters.File.FSFile-BH.oM.RDF.IsA-BH.oM.Adapters.File.ISizeableResource",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "BH.oM.Adapters.File.FSFile-BH.oM.RDF.IsSubclassOf-BH.oM.Base.BHoMObject",
+      "type": "owl:ObjectProperty"
+    }
+  ],
+  "propertyAttribute": [
+    {
+      "id": "BH.oM.Adapters.File.CopyCommand-BH.oM.RDF.HasProperty-System.String FullPath",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/HasProperty.cs",
+      "label": "HasProperty",
+      "attributes": "datatype",
+      "domain": "BH.oM.Adapters.File.CopyCommand",
+      "range": "FullPath-B1AB7C7D74D19FF56F319D05C6F76C064C8497F9BB42EF3F295D0C8CDA0DD6A0-CopyCommand-HasProperty"
+    },
+    {
+      "id": "BH.oM.Adapters.File.CopyCommand-BH.oM.RDF.HasProperty-System.String TargetFullPath",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/HasProperty.cs",
+      "label": "HasProperty",
+      "attributes": "datatype",
+      "domain": "BH.oM.Adapters.File.CopyCommand",
+      "range": "TargetFullPath-2A8339E3BD79169EDD821E2902161256F302E8039CD6EB1B8C066FBC6153D364-CopyCommand-HasProperty"
+    },
+    {
+      "id": "BH.oM.Adapters.File.CopyCommand-BH.oM.RDF.HasProperty-Boolean CreateDirectoryIfNotExist",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/HasProperty.cs",
+      "label": "HasProperty",
+      "attributes": "datatype",
+      "domain": "BH.oM.Adapters.File.CopyCommand",
+      "range": "CreateDirectoryIfNotExist-A808CD4B45698BF420FFF149D6A9E7782E24F62524EE1FA77E1ADA56C8850A4D-CopyCommand-HasProperty"
+    },
+    {
+      "id": "BH.oM.Adapters.File.CopyCommand-BH.oM.RDF.HasProperty-Boolean OverwriteTarget",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/HasProperty.cs",
+      "label": "HasProperty",
+      "attributes": "datatype",
+      "domain": "BH.oM.Adapters.File.CopyCommand",
+      "range": "OverwriteTarget-76B37AC3E6691F6419820EB61D50B21DB6CD770B23936DF616A836BA6F86400E-CopyCommand-HasProperty"
+    },
+    {
+      "id": "BH.oM.Adapters.File.CopyCommand-BH.oM.RDF.IsA-BH.oM.Adapters.File.IMRCCommand",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "label": "IsA",
+      "attributes": "object",
+      "domain": "BH.oM.Adapters.File.CopyCommand",
+      "range": "BH.oM.Adapters.File.IMRCCommand"
+    },
+    {
+      "id": "BH.oM.Adapters.File.CopyCommand-BH.oM.RDF.IsA-BH.oM.Adapter.IExecuteCommand",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "label": "IsA",
+      "attributes": "object",
+      "domain": "BH.oM.Adapters.File.CopyCommand",
+      "range": "BH.oM.Adapter.IExecuteCommand"
+    },
+    {
+      "id": "BH.oM.Adapters.File.CopyCommand-BH.oM.RDF.IsA-BH.oM.Base.IObject",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "label": "IsA",
+      "attributes": "object",
+      "domain": "BH.oM.Adapters.File.CopyCommand",
+      "range": "BH.oM.Base.IObject"
+    },
+    {
+      "id": "BH.oM.Adapters.File.CopyCommand-BH.oM.RDF.IsSubclassOf-System.Object",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsSubclassOf.cs",
+      "label": "IsSubclassOf",
+      "attributes": []
+    },
+    {
+      "id": "BH.oM.Adapters.File.MoveCommand-BH.oM.RDF.HasProperty-System.String FullPath",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/HasProperty.cs",
+      "label": "HasProperty",
+      "attributes": "datatype",
+      "domain": "BH.oM.Adapters.File.MoveCommand",
+      "range": "FullPath-74BB1E8F2C65A9BBDF164CEA336628427EE170D37FBEA79595C3CB50E064B821-MoveCommand-HasProperty"
+    },
+    {
+      "id": "BH.oM.Adapters.File.MoveCommand-BH.oM.RDF.HasProperty-System.String TargetFullPath",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/HasProperty.cs",
+      "label": "HasProperty",
+      "attributes": "datatype",
+      "domain": "BH.oM.Adapters.File.MoveCommand",
+      "range": "TargetFullPath-2B1333DA782DEE2627EFDCDF69676D351465E8D3A3273CFB3D1289743DF74180-MoveCommand-HasProperty"
+    },
+    {
+      "id": "BH.oM.Adapters.File.MoveCommand-BH.oM.RDF.HasProperty-Boolean CreateDirectoryIfNotExist",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/HasProperty.cs",
+      "label": "HasProperty",
+      "attributes": "datatype",
+      "domain": "BH.oM.Adapters.File.MoveCommand",
+      "range": "CreateDirectoryIfNotExist-7AEE7C8BB4D80D414C844DF29BE797B4935C7F59666FE31AD58CEAD8FC8854A5-MoveCommand-HasProperty"
+    },
+    {
+      "id": "BH.oM.Adapters.File.MoveCommand-BH.oM.RDF.HasProperty-Boolean OverwriteTarget",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/HasProperty.cs",
+      "label": "HasProperty",
+      "attributes": "datatype",
+      "domain": "BH.oM.Adapters.File.MoveCommand",
+      "range": "OverwriteTarget-9AFCB47755E6471202CBF9C8CF840935C07501D3EC62906168AF142A2BAD6060-MoveCommand-HasProperty"
+    },
+    {
+      "id": "BH.oM.Adapters.File.MoveCommand-BH.oM.RDF.IsA-BH.oM.Adapters.File.IMRCCommand",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "label": "IsA",
+      "attributes": "object",
+      "domain": "BH.oM.Adapters.File.MoveCommand",
+      "range": "BH.oM.Adapters.File.IMRCCommand"
+    },
+    {
+      "id": "BH.oM.Adapters.File.MoveCommand-BH.oM.RDF.IsA-BH.oM.Adapter.IExecuteCommand",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "label": "IsA",
+      "attributes": "object",
+      "domain": "BH.oM.Adapters.File.MoveCommand",
+      "range": "BH.oM.Adapter.IExecuteCommand"
+    },
+    {
+      "id": "BH.oM.Adapters.File.MoveCommand-BH.oM.RDF.IsA-BH.oM.Base.IObject",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "label": "IsA",
+      "attributes": "object",
+      "domain": "BH.oM.Adapters.File.MoveCommand",
+      "range": "BH.oM.Base.IObject"
+    },
+    {
+      "id": "BH.oM.Adapters.File.MoveCommand-BH.oM.RDF.IsSubclassOf-System.Object",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsSubclassOf.cs",
+      "label": "IsSubclassOf",
+      "attributes": []
+    },
+    {
+      "id": "BH.oM.Adapters.File.IMRCCommand-BH.oM.RDF.RequiresProperty-System.String FullPath",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/RequiresProperty.cs",
+      "label": "RequiresProperty",
+      "attributes": []
+    },
+    {
+      "id": "BH.oM.Adapters.File.IMRCCommand-BH.oM.RDF.RequiresProperty-System.String TargetFullPath",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/RequiresProperty.cs",
+      "label": "RequiresProperty",
+      "attributes": []
+    },
+    {
+      "id": "BH.oM.Adapters.File.IMRCCommand-BH.oM.RDF.RequiresProperty-Boolean OverwriteTarget",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/RequiresProperty.cs",
+      "label": "RequiresProperty",
+      "attributes": []
+    },
+    {
+      "id": "BH.oM.Adapters.File.IMRCCommand-BH.oM.RDF.IsA-BH.oM.Adapter.IExecuteCommand",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "label": "IsA",
+      "attributes": "object",
+      "domain": "BH.oM.Adapters.File.IMRCCommand",
+      "range": "BH.oM.Adapter.IExecuteCommand"
+    },
+    {
+      "id": "BH.oM.Adapters.File.IMRCCommand-BH.oM.RDF.IsA-BH.oM.Base.IObject",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "label": "IsA",
+      "attributes": "object",
+      "domain": "BH.oM.Adapters.File.IMRCCommand",
+      "range": "BH.oM.Base.IObject"
+    },
+    {
+      "id": "BH.oM.Adapters.File.RenameCommand-BH.oM.RDF.HasProperty-System.String FullPath",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/HasProperty.cs",
+      "label": "HasProperty",
+      "attributes": "datatype",
+      "domain": "BH.oM.Adapters.File.RenameCommand",
+      "range": "FullPath-0CAD4D4E819F83091DA6BEB68A0B15F8BFE238E58998AB020816378FB46F3A25-RenameCommand-HasProperty"
+    },
+    {
+      "id": "BH.oM.Adapters.File.RenameCommand-BH.oM.RDF.HasProperty-System.String TargetFullPath",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/HasProperty.cs",
+      "label": "HasProperty",
+      "attributes": "datatype",
+      "domain": "BH.oM.Adapters.File.RenameCommand",
+      "range": "TargetFullPath-7E259BAF41F4164EDEAD94EA7B4AC9EB7F94F8321B39DA9880D098B7AEF21E95-RenameCommand-HasProperty"
+    },
+    {
+      "id": "BH.oM.Adapters.File.RenameCommand-BH.oM.RDF.HasProperty-Boolean OverwriteTarget",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/HasProperty.cs",
+      "label": "HasProperty",
+      "attributes": "datatype",
+      "domain": "BH.oM.Adapters.File.RenameCommand",
+      "range": "OverwriteTarget-8E22547D9E12CE7EA73EFF38B4507FFCD283911C3262228EF6C8562F00C9019A-RenameCommand-HasProperty"
+    },
+    {
+      "id": "BH.oM.Adapters.File.RenameCommand-BH.oM.RDF.IsA-BH.oM.Adapters.File.IMRCCommand",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "label": "IsA",
+      "attributes": "object",
+      "domain": "BH.oM.Adapters.File.RenameCommand",
+      "range": "BH.oM.Adapters.File.IMRCCommand"
+    },
+    {
+      "id": "BH.oM.Adapters.File.RenameCommand-BH.oM.RDF.IsA-BH.oM.Adapter.IExecuteCommand",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "label": "IsA",
+      "attributes": "object",
+      "domain": "BH.oM.Adapters.File.RenameCommand",
+      "range": "BH.oM.Adapter.IExecuteCommand"
+    },
+    {
+      "id": "BH.oM.Adapters.File.RenameCommand-BH.oM.RDF.IsA-BH.oM.Base.IObject",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "label": "IsA",
+      "attributes": "object",
+      "domain": "BH.oM.Adapters.File.RenameCommand",
+      "range": "BH.oM.Base.IObject"
+    },
+    {
+      "id": "BH.oM.Adapters.File.RenameCommand-BH.oM.RDF.IsSubclassOf-System.Object",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsSubclassOf.cs",
+      "label": "IsSubclassOf",
+      "attributes": []
+    },
+    {
+      "id": "BH.oM.Adapters.File.ExecuteConfig-BH.oM.RDF.HasProperty-Boolean DisableWarnings",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/HasProperty.cs",
+      "label": "HasProperty",
+      "attributes": "datatype",
+      "domain": "BH.oM.Adapters.File.ExecuteConfig",
+      "range": "DisableWarnings-E0B6412C25224277796A682E9165D29AC64BA3B7B7F731E18D82D195D274B8EE-ExecuteConfig-HasProperty"
+    },
+    {
+      "id": "BH.oM.Adapters.File.ExecuteConfig-BH.oM.RDF.IsA-BH.oM.Base.IObject",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "label": "IsA",
+      "attributes": "object",
+      "domain": "BH.oM.Adapters.File.ExecuteConfig",
+      "range": "BH.oM.Base.IObject"
+    },
+    {
+      "id": "BH.oM.Adapters.File.ExecuteConfig-BH.oM.RDF.IsSubclassOf-BH.oM.Adapter.ActionConfig",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsSubclassOf.cs",
+      "label": "IsSubclassOf",
+      "attributes": "object",
+      "domain": "BH.oM.Adapters.File.ExecuteConfig",
+      "range": "BH.oM.Adapter.ActionConfig"
+    },
+    {
+      "id": "BH.oM.Adapters.File.PullConfig-BH.oM.RDF.HasProperty-Boolean IncludeHiddenFiles",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/HasProperty.cs",
+      "label": "HasProperty",
+      "attributes": "datatype",
+      "domain": "BH.oM.Adapters.File.PullConfig",
+      "range": "IncludeHiddenFiles-7AD9AD742610604C658A365C354F19E49175064AC2E6DB08DA3BF354D7D5B8DC-PullConfig-HasProperty"
+    },
+    {
+      "id": "BH.oM.Adapters.File.PullConfig-BH.oM.RDF.HasProperty-Boolean IncludeSystemFiles",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/HasProperty.cs",
+      "label": "HasProperty",
+      "attributes": "datatype",
+      "domain": "BH.oM.Adapters.File.PullConfig",
+      "range": "IncludeSystemFiles-DEDDC0D268B2253D48CF5BDEF14FF2712E81FD4EEC540783B3E6E473168047DE-PullConfig-HasProperty"
+    },
+    {
+      "id": "BH.oM.Adapters.File.PullConfig-BH.oM.RDF.IsA-BH.oM.Base.IObject",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "label": "IsA",
+      "attributes": "object",
+      "domain": "BH.oM.Adapters.File.PullConfig",
+      "range": "BH.oM.Base.IObject"
+    },
+    {
+      "id": "BH.oM.Adapters.File.PullConfig-BH.oM.RDF.IsSubclassOf-BH.oM.Adapter.ActionConfig",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsSubclassOf.cs",
+      "label": "IsSubclassOf",
+      "attributes": "object",
+      "domain": "BH.oM.Adapters.File.PullConfig",
+      "range": "BH.oM.Adapter.ActionConfig"
+    },
+    {
+      "id": "BH.oM.Adapters.File.RemoveConfig-BH.oM.RDF.HasProperty-Boolean DisableWarnings",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/HasProperty.cs",
+      "label": "HasProperty",
+      "attributes": "datatype",
+      "domain": "BH.oM.Adapters.File.RemoveConfig",
+      "range": "DisableWarnings-34EE528FACCCBFD36C5CBF8BB5E42AFFAF9AC7318EE6AB20356CB334A0B43022-RemoveConfig-HasProperty"
+    },
+    {
+      "id": "BH.oM.Adapters.File.RemoveConfig-BH.oM.RDF.HasProperty-Boolean IncludeHiddenFiles",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/HasProperty.cs",
+      "label": "HasProperty",
+      "attributes": "datatype",
+      "domain": "BH.oM.Adapters.File.RemoveConfig",
+      "range": "IncludeHiddenFiles-FC50F86F951EA6691B2C59CB7F9D9CB4751BDE29BA4F5FFFCACB90264DD84E7A-RemoveConfig-HasProperty"
+    },
+    {
+      "id": "BH.oM.Adapters.File.RemoveConfig-BH.oM.RDF.IsA-BH.oM.Base.IObject",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "label": "IsA",
+      "attributes": "object",
+      "domain": "BH.oM.Adapters.File.RemoveConfig",
+      "range": "BH.oM.Base.IObject"
+    },
+    {
+      "id": "BH.oM.Adapters.File.RemoveConfig-BH.oM.RDF.IsSubclassOf-BH.oM.Adapter.ActionConfig",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsSubclassOf.cs",
+      "label": "IsSubclassOf",
+      "attributes": "object",
+      "domain": "BH.oM.Adapters.File.RemoveConfig",
+      "range": "BH.oM.Adapter.ActionConfig"
+    },
+    {
+      "id": "BH.oM.Adapters.File.PushConfig-BH.oM.RDF.HasProperty-Boolean UseDatasetSerialization",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/HasProperty.cs",
+      "label": "HasProperty",
+      "attributes": "datatype",
+      "domain": "BH.oM.Adapters.File.PushConfig",
+      "range": "UseDatasetSerialization-AA2732412A228E2A19FC097E51CFAE9EDECEA8E5451D08695221684094034E35-PushConfig-HasProperty"
+    },
+    {
+      "id": "BH.oM.Adapters.File.PushConfig-BH.oM.RDF.HasProperty-Boolean BeautifyJson",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/HasProperty.cs",
+      "label": "HasProperty",
+      "attributes": "datatype",
+      "domain": "BH.oM.Adapters.File.PushConfig",
+      "range": "BeautifyJson-761D50106A13D97CBA52CCEB96A691C39192FBF17101B83D7BF20EB4569B70AA-PushConfig-HasProperty"
+    },
+    {
+      "id": "BH.oM.Adapters.File.PushConfig-BH.oM.RDF.HasProperty-Boolean DisableWarnings",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/HasProperty.cs",
+      "label": "HasProperty",
+      "attributes": "datatype",
+      "domain": "BH.oM.Adapters.File.PushConfig",
+      "range": "DisableWarnings-168A83144AFB402E80024E9F8F8447DCFE39D42005C0612A81DD0B210F1F7C78-PushConfig-HasProperty"
+    },
+    {
+      "id": "BH.oM.Adapters.File.PushConfig-BH.oM.RDF.IsA-BH.oM.Base.IObject",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "label": "IsA",
+      "attributes": "object",
+      "domain": "BH.oM.Adapters.File.PushConfig",
+      "range": "BH.oM.Base.IObject"
+    },
+    {
+      "id": "BH.oM.Adapters.File.PushConfig-BH.oM.RDF.IsSubclassOf-BH.oM.Adapter.ActionConfig",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsSubclassOf.cs",
+      "label": "IsSubclassOf",
+      "attributes": "object",
+      "domain": "BH.oM.Adapters.File.PushConfig",
+      "range": "BH.oM.Adapter.ActionConfig"
+    },
+    {
+      "id": "BH.oM.Adapters.File.Directory-BH.oM.RDF.HasProperty-System.String Location",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/HasProperty.cs",
+      "label": "HasProperty",
+      "attributes": "datatype",
+      "domain": "BH.oM.Adapters.File.Directory",
+      "range": "Location-BFA659DCB71CCF3DFBB1A1DF1B2C474E3D755C63DEE2BCCA5AEDBD51E20075C5-Directory-HasProperty"
+    },
+    {
+      "id": "BH.oM.Adapters.File.Directory-BH.oM.RDF.HasProperty-System.String Name",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/HasProperty.cs",
+      "label": "HasProperty",
+      "attributes": "datatype",
+      "domain": "BH.oM.Adapters.File.Directory",
+      "range": "Name-206484299DC28C89F07B8D000D193E839D7787057DBA91EA90C7615436117659-Directory-HasProperty"
+    },
+    {
+      "id": "BH.oM.Adapters.File.Directory-BH.oM.RDF.HasProperty-System.Collections.Generic.List`1[System.Object] Content",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/HasProperty.cs",
+      "label": "HasProperty",
+      "attributes": "datatype",
+      "domain": "BH.oM.Adapters.File.Directory",
+      "range": "Content-17E3811C3258A1BFBFDE44920D860B7B412D1D2D3FBB7DB6AA006B659803CED1-Directory-HasProperty"
+    },
+    {
+      "id": "BH.oM.Adapters.File.Directory-BH.oM.RDF.IsA-BH.oM.Base.IBHoMObject",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "label": "IsA",
+      "attributes": "object",
+      "domain": "BH.oM.Adapters.File.Directory",
+      "range": "BH.oM.Base.IBHoMObject"
+    },
+    {
+      "id": "BH.oM.Adapters.File.Directory-BH.oM.RDF.IsA-BH.oM.Base.IObject",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "label": "IsA",
+      "attributes": "object",
+      "domain": "BH.oM.Adapters.File.Directory",
+      "range": "BH.oM.Base.IObject"
+    },
+    {
+      "id": "BH.oM.Adapters.File.Directory-BH.oM.RDF.IsA-BH.oM.Adapters.File.IDirectory",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "label": "IsA",
+      "attributes": "object",
+      "domain": "BH.oM.Adapters.File.Directory",
+      "range": "BH.oM.Adapters.File.IDirectory"
+    },
+    {
+      "id": "BH.oM.Adapters.File.Directory-BH.oM.RDF.IsA-BH.oM.Adapters.File.IResource",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "label": "IsA",
+      "attributes": "object",
+      "domain": "BH.oM.Adapters.File.Directory",
+      "range": "BH.oM.Adapters.File.IResource"
+    },
+    {
+      "id": "BH.oM.Adapters.File.Directory-BH.oM.RDF.IsA-BH.oM.Adapters.File.ILocatableResource",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "label": "IsA",
+      "attributes": "object",
+      "domain": "BH.oM.Adapters.File.Directory",
+      "range": "BH.oM.Adapters.File.ILocatableResource"
+    },
+    {
+      "id": "BH.oM.Adapters.File.Directory-BH.oM.RDF.IsA-BH.oM.Adapters.File.IContainableResource",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "label": "IsA",
+      "attributes": "object",
+      "domain": "BH.oM.Adapters.File.Directory",
+      "range": "BH.oM.Adapters.File.IContainableResource"
+    },
+    {
+      "id": "BH.oM.Adapters.File.Directory-BH.oM.RDF.IsSubclassOf-BH.oM.Base.BHoMObject",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsSubclassOf.cs",
+      "label": "IsSubclassOf",
+      "attributes": "object",
+      "domain": "BH.oM.Adapters.File.Directory",
+      "range": "BH.oM.Base.BHoMObject"
+    },
+    {
+      "id": "BH.oM.Adapters.File.SortOrder-BH.oM.RDF.IsA-System.IComparable",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "label": "IsA",
+      "attributes": []
+    },
+    {
+      "id": "BH.oM.Adapters.File.SortOrder-BH.oM.RDF.IsA-System.IFormattable",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "label": "IsA",
+      "attributes": []
+    },
+    {
+      "id": "BH.oM.Adapters.File.SortOrder-BH.oM.RDF.IsA-System.IConvertible",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "label": "IsA",
+      "attributes": []
+    },
+    {
+      "id": "BH.oM.Adapters.File.SortOrder-BH.oM.RDF.IsSubclassOf-System.Enum",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsSubclassOf.cs",
+      "label": "IsSubclassOf",
+      "attributes": []
+    },
+    {
+      "id": "BH.oM.Adapters.File.FSDirectory.ParentDirectory-IsA-BH.oM.Adapters.File.FSDirectory",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "label": "IsA",
+      "attributes": "object",
+      "domain": "BH.oM.Adapters.File.FSDirectory.ParentDirectory",
+      "range": "BH.oM.Adapters.File.FSDirectory"
+    },
+    {
+      "id": "BH.oM.Adapters.File.FSDirectory-BH.oM.RDF.HasProperty-BH.oM.Adapters.File.FSDirectory ParentDirectory",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/HasProperty.cs",
+      "label": "HasProperty",
+      "attributes": [],
+      "domain": "BH.oM.Adapters.File.FSDirectory",
+      "range": "BH.oM.Adapters.File.FSDirectory.ParentDirectory"
+    },
+    {
+      "id": "BH.oM.Adapters.File.FSDirectory-BH.oM.RDF.HasProperty-System.String Name",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/HasProperty.cs",
+      "label": "HasProperty",
+      "attributes": "datatype",
+      "domain": "BH.oM.Adapters.File.FSDirectory",
+      "range": "Name-2C0A25802620CD64EB80907DA2E5B5215911D9DCE1D5E07DDFD05FD048E24D92-FSDirectory-HasProperty"
+    },
+    {
+      "id": "BH.oM.Adapters.File.FSDirectory-BH.oM.RDF.HasProperty-System.Nullable`1[System.Boolean] Exists",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/HasProperty.cs",
+      "label": "HasProperty",
+      "attributes": "datatype",
+      "domain": "BH.oM.Adapters.File.FSDirectory",
+      "range": "Exists-0605332357663E679E3B97F9459812798E39367405475F85AFE97B450A11B09A-FSDirectory-HasProperty"
+    },
+    {
+      "id": "BH.oM.Adapters.File.FSDirectory-BH.oM.RDF.HasProperty-System.Nullable`1[System.Boolean] IsReadOnly",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/HasProperty.cs",
+      "label": "HasProperty",
+      "attributes": "datatype",
+      "domain": "BH.oM.Adapters.File.FSDirectory",
+      "range": "IsReadOnly-BCB19C50E70F9737B68F78AA223F8606BF8387624269087C5E6248B41EB2E411-FSDirectory-HasProperty"
+    },
+    {
+      "id": "BH.oM.Adapters.File.FSDirectory-BH.oM.RDF.HasProperty-Int32 Size",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/HasProperty.cs",
+      "label": "HasProperty",
+      "attributes": "datatype",
+      "domain": "BH.oM.Adapters.File.FSDirectory",
+      "range": "Size-E2EAE87F2DDC4405A57B91458F2AF6F3CD391443B382F060E9B5A5B28259DECC-FSDirectory-HasProperty"
+    },
+    {
+      "id": "BH.oM.Adapters.File.FSDirectory-BH.oM.RDF.HasProperty-System.IO.FileAttributes Attributes",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/HasProperty.cs",
+      "label": "HasProperty",
+      "attributes": "datatype",
+      "domain": "BH.oM.Adapters.File.FSDirectory",
+      "range": "Attributes-1CA4EEE107AF84D21B7661E359BDEC23BAFA858B2F3338ED185EE2BC7A80B318-FSDirectory-HasProperty"
+    },
+    {
+      "id": "BH.oM.Adapters.File.FSDirectory-BH.oM.RDF.HasProperty-System.DateTime CreationTime",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/HasProperty.cs",
+      "label": "HasProperty",
+      "attributes": "datatype",
+      "domain": "BH.oM.Adapters.File.FSDirectory",
+      "range": "CreationTime-BB97758C9E08D7461FEBA9FF6198504D1431BF10CFB59FAF6E51067A208A7F76-FSDirectory-HasProperty"
+    },
+    {
+      "id": "BH.oM.Adapters.File.FSDirectory-BH.oM.RDF.HasProperty-System.DateTime CreationTimeUtc",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/HasProperty.cs",
+      "label": "HasProperty",
+      "attributes": "datatype",
+      "domain": "BH.oM.Adapters.File.FSDirectory",
+      "range": "CreationTimeUtc-E0D62A21FEA0D9F10CB2FF76294F81D0B823C0A687CA24202DD5566952984CB8-FSDirectory-HasProperty"
+    },
+    {
+      "id": "BH.oM.Adapters.File.FSDirectory-BH.oM.RDF.HasProperty-System.DateTime LastWriteTime",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/HasProperty.cs",
+      "label": "HasProperty",
+      "attributes": "datatype",
+      "domain": "BH.oM.Adapters.File.FSDirectory",
+      "range": "LastWriteTime-CC73C8BDC8B10946A76D2CE5A8CDF534D31264DF2EE3379BB6FE192CEFFC3075-FSDirectory-HasProperty"
+    },
+    {
+      "id": "BH.oM.Adapters.File.FSDirectory-BH.oM.RDF.HasProperty-System.DateTime ModifiedTimeUtc",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/HasProperty.cs",
+      "label": "HasProperty",
+      "attributes": "datatype",
+      "domain": "BH.oM.Adapters.File.FSDirectory",
+      "range": "ModifiedTimeUtc-3BFE88C1B4767EAD927FA786C01BFE31E51CF2B5405A7B00FFADEDA72392E68B-FSDirectory-HasProperty"
+    },
+    {
+      "id": "BH.oM.Adapters.File.FSDirectory-BH.oM.RDF.HasProperty-System.String Owner",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/HasProperty.cs",
+      "label": "HasProperty",
+      "attributes": "datatype",
+      "domain": "BH.oM.Adapters.File.FSDirectory",
+      "range": "Owner-1704AE93E48B27EA1E0D0630CD4813EB8273C83A06100C3B790DA72527123BC8-FSDirectory-HasProperty"
+    },
+    {
+      "id": "BH.oM.Adapters.File.FSDirectory-BH.oM.RDF.HasProperty-System.Collections.Generic.List`1[System.Object] Content",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/HasProperty.cs",
+      "label": "HasProperty",
+      "attributes": "datatype",
+      "domain": "BH.oM.Adapters.File.FSDirectory",
+      "range": "Content-E8A6FA45F2C2B78BD9A0DD3A904A1DFEA0704E2CBA7F589F2CB688C3D603B774-FSDirectory-HasProperty"
+    },
+    {
+      "id": "BH.oM.Adapters.File.FSDirectory-BH.oM.RDF.IsA-BH.oM.Base.IBHoMObject",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "label": "IsA",
+      "attributes": "object",
+      "domain": "BH.oM.Adapters.File.FSDirectory",
+      "range": "BH.oM.Base.IBHoMObject"
+    },
+    {
+      "id": "BH.oM.Adapters.File.FSDirectory-BH.oM.RDF.IsA-BH.oM.Base.IObject",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "label": "IsA",
+      "attributes": "object",
+      "domain": "BH.oM.Adapters.File.FSDirectory",
+      "range": "BH.oM.Base.IObject"
+    },
+    {
+      "id": "BH.oM.Adapters.File.FSDirectory-BH.oM.RDF.IsA-BH.oM.Adapters.File.IFSContainer",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "label": "IsA",
+      "attributes": "object",
+      "domain": "BH.oM.Adapters.File.FSDirectory",
+      "range": "BH.oM.Adapters.File.IFSContainer"
+    },
+    {
+      "id": "BH.oM.Adapters.File.FSDirectory-BH.oM.RDF.IsA-BH.oM.Adapters.File.IFSInfo",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "label": "IsA",
+      "attributes": "object",
+      "domain": "BH.oM.Adapters.File.FSDirectory",
+      "range": "BH.oM.Adapters.File.IFSInfo"
+    },
+    {
+      "id": "BH.oM.Adapters.File.FSDirectory-BH.oM.RDF.IsA-BH.oM.Adapters.File.IContainableResource",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "label": "IsA",
+      "attributes": "object",
+      "domain": "BH.oM.Adapters.File.FSDirectory",
+      "range": "BH.oM.Adapters.File.IContainableResource"
+    },
+    {
+      "id": "BH.oM.Adapters.File.FSDirectory-BH.oM.RDF.IsA-BH.oM.Adapters.File.IResource",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "label": "IsA",
+      "attributes": "object",
+      "domain": "BH.oM.Adapters.File.FSDirectory",
+      "range": "BH.oM.Adapters.File.IResource"
+    },
+    {
+      "id": "BH.oM.Adapters.File.FSDirectory-BH.oM.RDF.IsA-BH.oM.Adapters.File.IDirectory",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "label": "IsA",
+      "attributes": "object",
+      "domain": "BH.oM.Adapters.File.FSDirectory",
+      "range": "BH.oM.Adapters.File.IDirectory"
+    },
+    {
+      "id": "BH.oM.Adapters.File.FSDirectory-BH.oM.RDF.IsA-BH.oM.Adapters.File.ISizeableResource",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "label": "IsA",
+      "attributes": "object",
+      "domain": "BH.oM.Adapters.File.FSDirectory",
+      "range": "BH.oM.Adapters.File.ISizeableResource"
+    },
+    {
+      "id": "BH.oM.Adapters.File.FSDirectory-BH.oM.RDF.IsSubclassOf-BH.oM.Base.BHoMObject",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsSubclassOf.cs",
+      "label": "IsSubclassOf",
+      "attributes": "object",
+      "domain": "BH.oM.Adapters.File.FSDirectory",
+      "range": "BH.oM.Base.BHoMObject"
+    },
+    {
+      "id": "BH.oM.Adapters.File.Encodings-BH.oM.RDF.IsA-System.IComparable",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "label": "IsA",
+      "attributes": []
+    },
+    {
+      "id": "BH.oM.Adapters.File.Encodings-BH.oM.RDF.IsA-System.IFormattable",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "label": "IsA",
+      "attributes": []
+    },
+    {
+      "id": "BH.oM.Adapters.File.Encodings-BH.oM.RDF.IsA-System.IConvertible",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "label": "IsA",
+      "attributes": []
+    },
+    {
+      "id": "BH.oM.Adapters.File.Encodings-BH.oM.RDF.IsSubclassOf-System.Enum",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsSubclassOf.cs",
+      "label": "IsSubclassOf",
+      "attributes": []
+    },
+    {
+      "id": "BH.oM.Adapters.File.File-BH.oM.RDF.HasProperty-System.String Location",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/HasProperty.cs",
+      "label": "HasProperty",
+      "attributes": "datatype",
+      "domain": "BH.oM.Adapters.File.File",
+      "range": "Location-DB5944BB244CA5BB58FACF188FF12877F00D8F6A67416C870CDB1C9DFC6F9283-File-HasProperty"
+    },
+    {
+      "id": "BH.oM.Adapters.File.File-BH.oM.RDF.HasProperty-System.String Name",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/HasProperty.cs",
+      "label": "HasProperty",
+      "attributes": "datatype",
+      "domain": "BH.oM.Adapters.File.File",
+      "range": "Name-6EC7BF4E660A77B1B5D4DBE8A89BD230E9D14115EB416E3B3113E21DE5A87B93-File-HasProperty"
+    },
+    {
+      "id": "BH.oM.Adapters.File.File-BH.oM.RDF.HasProperty-System.Collections.Generic.List`1[System.Object] Content",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/HasProperty.cs",
+      "label": "HasProperty",
+      "attributes": "datatype",
+      "domain": "BH.oM.Adapters.File.File",
+      "range": "Content-53E86238387250EB3CA1E3BDEA089450E95A575D7E9E55961BE720160C5EADEC-File-HasProperty"
+    },
+    {
+      "id": "BH.oM.Adapters.File.File-BH.oM.RDF.IsA-BH.oM.Base.IBHoMObject",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "label": "IsA",
+      "attributes": "object",
+      "domain": "BH.oM.Adapters.File.File",
+      "range": "BH.oM.Base.IBHoMObject"
+    },
+    {
+      "id": "BH.oM.Adapters.File.File-BH.oM.RDF.IsA-BH.oM.Base.IObject",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "label": "IsA",
+      "attributes": "object",
+      "domain": "BH.oM.Adapters.File.File",
+      "range": "BH.oM.Base.IObject"
+    },
+    {
+      "id": "BH.oM.Adapters.File.File-BH.oM.RDF.IsA-BH.oM.Adapters.File.IFile",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "label": "IsA",
+      "attributes": "object",
+      "domain": "BH.oM.Adapters.File.File",
+      "range": "BH.oM.Adapters.File.IFile"
+    },
+    {
+      "id": "BH.oM.Adapters.File.File-BH.oM.RDF.IsA-BH.oM.Adapters.File.IResource",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "label": "IsA",
+      "attributes": "object",
+      "domain": "BH.oM.Adapters.File.File",
+      "range": "BH.oM.Adapters.File.IResource"
+    },
+    {
+      "id": "BH.oM.Adapters.File.File-BH.oM.RDF.IsA-BH.oM.Adapters.File.ILocatableResource",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "label": "IsA",
+      "attributes": "object",
+      "domain": "BH.oM.Adapters.File.File",
+      "range": "BH.oM.Adapters.File.ILocatableResource"
+    },
+    {
+      "id": "BH.oM.Adapters.File.File-BH.oM.RDF.IsA-BH.oM.Adapters.File.IContainableResource",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "label": "IsA",
+      "attributes": "object",
+      "domain": "BH.oM.Adapters.File.File",
+      "range": "BH.oM.Adapters.File.IContainableResource"
+    },
+    {
+      "id": "BH.oM.Adapters.File.File-BH.oM.RDF.IsSubclassOf-BH.oM.Base.BHoMObject",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsSubclassOf.cs",
+      "label": "IsSubclassOf",
+      "attributes": "object",
+      "domain": "BH.oM.Adapters.File.File",
+      "range": "BH.oM.Base.BHoMObject"
+    },
+    {
+      "id": "BH.oM.Adapters.File.IFSResource-BH.oM.RDF.IsA-BH.oM.Adapters.File.IResource",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "label": "IsA",
+      "attributes": "object",
+      "domain": "BH.oM.Adapters.File.IFSResource",
+      "range": "BH.oM.Adapters.File.IResource"
+    },
+    {
+      "id": "BH.oM.Adapters.File.IFSResource-BH.oM.RDF.IsA-BH.oM.Base.IBHoMObject",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "label": "IsA",
+      "attributes": "object",
+      "domain": "BH.oM.Adapters.File.IFSResource",
+      "range": "BH.oM.Base.IBHoMObject"
+    },
+    {
+      "id": "BH.oM.Adapters.File.IFSResource-BH.oM.RDF.IsA-BH.oM.Base.IObject",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "label": "IsA",
+      "attributes": "object",
+      "domain": "BH.oM.Adapters.File.IFSResource",
+      "range": "BH.oM.Base.IObject"
+    },
+    {
+      "id": "BH.oM.Adapters.File.ISizeableResource-BH.oM.RDF.RequiresProperty-Int32 Size",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/RequiresProperty.cs",
+      "label": "RequiresProperty",
+      "attributes": []
+    },
+    {
+      "id": "BH.oM.Adapters.File.ISizeableResource-BH.oM.RDF.IsA-BH.oM.Adapters.File.IResource",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "label": "IsA",
+      "attributes": "object",
+      "domain": "BH.oM.Adapters.File.ISizeableResource",
+      "range": "BH.oM.Adapters.File.IResource"
+    },
+    {
+      "id": "BH.oM.Adapters.File.ISizeableResource-BH.oM.RDF.IsA-BH.oM.Base.IBHoMObject",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "label": "IsA",
+      "attributes": "object",
+      "domain": "BH.oM.Adapters.File.ISizeableResource",
+      "range": "BH.oM.Base.IBHoMObject"
+    },
+    {
+      "id": "BH.oM.Adapters.File.ISizeableResource-BH.oM.RDF.IsA-BH.oM.Base.IObject",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "label": "IsA",
+      "attributes": "object",
+      "domain": "BH.oM.Adapters.File.ISizeableResource",
+      "range": "BH.oM.Base.IObject"
+    },
+    {
+      "id": "BH.oM.Adapters.File.IContainableResource-BH.oM.RDF.RequiresProperty-System.Collections.Generic.List`1[System.Object] Content",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/RequiresProperty.cs",
+      "label": "RequiresProperty",
+      "attributes": []
+    },
+    {
+      "id": "BH.oM.Adapters.File.IContainableResource-BH.oM.RDF.IsA-BH.oM.Adapters.File.IResource",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "label": "IsA",
+      "attributes": "object",
+      "domain": "BH.oM.Adapters.File.IContainableResource",
+      "range": "BH.oM.Adapters.File.IResource"
+    },
+    {
+      "id": "BH.oM.Adapters.File.IContainableResource-BH.oM.RDF.IsA-BH.oM.Base.IBHoMObject",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "label": "IsA",
+      "attributes": "object",
+      "domain": "BH.oM.Adapters.File.IContainableResource",
+      "range": "BH.oM.Base.IBHoMObject"
+    },
+    {
+      "id": "BH.oM.Adapters.File.IContainableResource-BH.oM.RDF.IsA-BH.oM.Base.IObject",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "label": "IsA",
+      "attributes": "object",
+      "domain": "BH.oM.Adapters.File.IContainableResource",
+      "range": "BH.oM.Base.IObject"
+    },
+    {
+      "id": "BH.oM.Adapters.File.IContainer-BH.oM.RDF.IsA-BH.oM.Adapters.File.ILocatableResource",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "label": "IsA",
+      "attributes": "object",
+      "domain": "BH.oM.Adapters.File.IContainer",
+      "range": "BH.oM.Adapters.File.ILocatableResource"
+    },
+    {
+      "id": "BH.oM.Adapters.File.IContainer-BH.oM.RDF.IsA-BH.oM.Adapters.File.IResource",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "label": "IsA",
+      "attributes": "object",
+      "domain": "BH.oM.Adapters.File.IContainer",
+      "range": "BH.oM.Adapters.File.IResource"
+    },
+    {
+      "id": "BH.oM.Adapters.File.IContainer-BH.oM.RDF.IsA-BH.oM.Base.IBHoMObject",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "label": "IsA",
+      "attributes": "object",
+      "domain": "BH.oM.Adapters.File.IContainer",
+      "range": "BH.oM.Base.IBHoMObject"
+    },
+    {
+      "id": "BH.oM.Adapters.File.IContainer-BH.oM.RDF.IsA-BH.oM.Base.IObject",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "label": "IsA",
+      "attributes": "object",
+      "domain": "BH.oM.Adapters.File.IContainer",
+      "range": "BH.oM.Base.IObject"
+    },
+    {
+      "id": "BH.oM.Adapters.File.IContainer-BH.oM.RDF.IsA-BH.oM.Adapters.File.IContainableResource",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "label": "IsA",
+      "attributes": "object",
+      "domain": "BH.oM.Adapters.File.IContainer",
+      "range": "BH.oM.Adapters.File.IContainableResource"
+    },
+    {
+      "id": "BH.oM.Adapters.File.IDirectory-BH.oM.RDF.IsA-BH.oM.Adapters.File.IResource",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "label": "IsA",
+      "attributes": "object",
+      "domain": "BH.oM.Adapters.File.IDirectory",
+      "range": "BH.oM.Adapters.File.IResource"
+    },
+    {
+      "id": "BH.oM.Adapters.File.IDirectory-BH.oM.RDF.IsA-BH.oM.Base.IBHoMObject",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "label": "IsA",
+      "attributes": "object",
+      "domain": "BH.oM.Adapters.File.IDirectory",
+      "range": "BH.oM.Base.IBHoMObject"
+    },
+    {
+      "id": "BH.oM.Adapters.File.IDirectory-BH.oM.RDF.IsA-BH.oM.Base.IObject",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "label": "IsA",
+      "attributes": "object",
+      "domain": "BH.oM.Adapters.File.IDirectory",
+      "range": "BH.oM.Base.IObject"
+    },
+    {
+      "id": "BH.oM.Adapters.File.IFSContainer-BH.oM.RDF.IsA-BH.oM.Adapters.File.IFSInfo",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "label": "IsA",
+      "attributes": "object",
+      "domain": "BH.oM.Adapters.File.IFSContainer",
+      "range": "BH.oM.Adapters.File.IFSInfo"
+    },
+    {
+      "id": "BH.oM.Adapters.File.IFSContainer-BH.oM.RDF.IsA-BH.oM.Base.IObject",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "label": "IsA",
+      "attributes": "object",
+      "domain": "BH.oM.Adapters.File.IFSContainer",
+      "range": "BH.oM.Base.IObject"
+    },
+    {
+      "id": "BH.oM.Adapters.File.IFSContainer-BH.oM.RDF.IsA-BH.oM.Adapters.File.IContainableResource",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "label": "IsA",
+      "attributes": "object",
+      "domain": "BH.oM.Adapters.File.IFSContainer",
+      "range": "BH.oM.Adapters.File.IContainableResource"
+    },
+    {
+      "id": "BH.oM.Adapters.File.IFSContainer-BH.oM.RDF.IsA-BH.oM.Adapters.File.IResource",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "label": "IsA",
+      "attributes": "object",
+      "domain": "BH.oM.Adapters.File.IFSContainer",
+      "range": "BH.oM.Adapters.File.IResource"
+    },
+    {
+      "id": "BH.oM.Adapters.File.IFSContainer-BH.oM.RDF.IsA-BH.oM.Base.IBHoMObject",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "label": "IsA",
+      "attributes": "object",
+      "domain": "BH.oM.Adapters.File.IFSContainer",
+      "range": "BH.oM.Base.IBHoMObject"
+    },
+    {
+      "id": "BH.oM.Adapters.File.IFSInfo-BH.oM.RDF.RequiresProperty-BH.oM.Adapters.File.FSDirectory ParentDirectory",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/RequiresProperty.cs",
+      "label": "RequiresProperty",
+      "attributes": "object",
+      "domain": "BH.oM.Adapters.File.IFSInfo",
+      "range": "BH.oM.Adapters.File.FSDirectory"
+    },
+    {
+      "id": "BH.oM.Adapters.File.IFSInfo-BH.oM.RDF.RequiresProperty-System.String Name",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/RequiresProperty.cs",
+      "label": "RequiresProperty",
+      "attributes": []
+    },
+    {
+      "id": "BH.oM.Adapters.File.IFSInfo-BH.oM.RDF.RequiresProperty-System.Nullable`1[System.Boolean] Exists",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/RequiresProperty.cs",
+      "label": "RequiresProperty",
+      "attributes": []
+    },
+    {
+      "id": "BH.oM.Adapters.File.IFSInfo-BH.oM.RDF.RequiresProperty-System.IO.FileAttributes Attributes",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/RequiresProperty.cs",
+      "label": "RequiresProperty",
+      "attributes": []
+    },
+    {
+      "id": "BH.oM.Adapters.File.IFSInfo-BH.oM.RDF.RequiresProperty-System.DateTime CreationTimeUtc",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/RequiresProperty.cs",
+      "label": "RequiresProperty",
+      "attributes": []
+    },
+    {
+      "id": "BH.oM.Adapters.File.IFSInfo-BH.oM.RDF.RequiresProperty-System.DateTime ModifiedTimeUtc",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/RequiresProperty.cs",
+      "label": "RequiresProperty",
+      "attributes": []
+    },
+    {
+      "id": "BH.oM.Adapters.File.IFSInfo-BH.oM.RDF.RequiresProperty-Int32 Size",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/RequiresProperty.cs",
+      "label": "RequiresProperty",
+      "attributes": []
+    },
+    {
+      "id": "BH.oM.Adapters.File.IFSInfo-BH.oM.RDF.RequiresProperty-System.String Owner",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/RequiresProperty.cs",
+      "label": "RequiresProperty",
+      "attributes": []
+    },
+    {
+      "id": "BH.oM.Adapters.File.IFSInfo-BH.oM.RDF.IsA-BH.oM.Base.IObject",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "label": "IsA",
+      "attributes": "object",
+      "domain": "BH.oM.Adapters.File.IFSInfo",
+      "range": "BH.oM.Base.IObject"
+    },
+    {
+      "id": "BH.oM.Adapters.File.ILocatableResource-BH.oM.RDF.RequiresProperty-System.String Location",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/RequiresProperty.cs",
+      "label": "RequiresProperty",
+      "attributes": []
+    },
+    {
+      "id": "BH.oM.Adapters.File.ILocatableResource-BH.oM.RDF.IsA-BH.oM.Adapters.File.IResource",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "label": "IsA",
+      "attributes": "object",
+      "domain": "BH.oM.Adapters.File.ILocatableResource",
+      "range": "BH.oM.Adapters.File.IResource"
+    },
+    {
+      "id": "BH.oM.Adapters.File.ILocatableResource-BH.oM.RDF.IsA-BH.oM.Base.IBHoMObject",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "label": "IsA",
+      "attributes": "object",
+      "domain": "BH.oM.Adapters.File.ILocatableResource",
+      "range": "BH.oM.Base.IBHoMObject"
+    },
+    {
+      "id": "BH.oM.Adapters.File.ILocatableResource-BH.oM.RDF.IsA-BH.oM.Base.IObject",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "label": "IsA",
+      "attributes": "object",
+      "domain": "BH.oM.Adapters.File.ILocatableResource",
+      "range": "BH.oM.Base.IObject"
+    },
+    {
+      "id": "BH.oM.Adapters.File.IResource-BH.oM.RDF.IsA-BH.oM.Base.IBHoMObject",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "label": "IsA",
+      "attributes": "object",
+      "domain": "BH.oM.Adapters.File.IResource",
+      "range": "BH.oM.Base.IBHoMObject"
+    },
+    {
+      "id": "BH.oM.Adapters.File.IResource-BH.oM.RDF.IsA-BH.oM.Base.IObject",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "label": "IsA",
+      "attributes": "object",
+      "domain": "BH.oM.Adapters.File.IResource",
+      "range": "BH.oM.Base.IObject"
+    },
+    {
+      "id": "BH.oM.Adapters.File.IFile-BH.oM.RDF.IsA-BH.oM.Adapters.File.IResource",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "label": "IsA",
+      "attributes": "object",
+      "domain": "BH.oM.Adapters.File.IFile",
+      "range": "BH.oM.Adapters.File.IResource"
+    },
+    {
+      "id": "BH.oM.Adapters.File.IFile-BH.oM.RDF.IsA-BH.oM.Base.IBHoMObject",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "label": "IsA",
+      "attributes": "object",
+      "domain": "BH.oM.Adapters.File.IFile",
+      "range": "BH.oM.Base.IBHoMObject"
+    },
+    {
+      "id": "BH.oM.Adapters.File.IFile-BH.oM.RDF.IsA-BH.oM.Base.IObject",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "label": "IsA",
+      "attributes": "object",
+      "domain": "BH.oM.Adapters.File.IFile",
+      "range": "BH.oM.Base.IObject"
+    },
+    {
+      "id": "BH.oM.Adapters.File.IFilingRequest-BH.oM.RDF.IsA-BH.oM.Data.Requests.IRequest",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "label": "IsA",
+      "attributes": "object",
+      "domain": "BH.oM.Adapters.File.IFilingRequest",
+      "range": "BH.oM.Data.Requests.IRequest"
+    },
+    {
+      "id": "BH.oM.Adapters.File.IFilingRequest-BH.oM.RDF.IsA-BH.oM.Base.IObject",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "label": "IsA",
+      "attributes": "object",
+      "domain": "BH.oM.Adapters.File.IFilingRequest",
+      "range": "BH.oM.Base.IObject"
+    },
+    {
+      "id": "BH.oM.Adapters.File.ISortableRequest-BH.oM.RDF.RequiresProperty-BH.oM.Adapters.File.SortOrder SortOrder",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/RequiresProperty.cs",
+      "label": "RequiresProperty",
+      "attributes": "object",
+      "domain": "BH.oM.Adapters.File.ISortableRequest",
+      "range": "BH.oM.Adapters.File.SortOrder"
+    },
+    {
+      "id": "BH.oM.Adapters.File.ISortableRequest-BH.oM.RDF.IsA-BH.oM.Data.Requests.IRequest",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "label": "IsA",
+      "attributes": "object",
+      "domain": "BH.oM.Adapters.File.ISortableRequest",
+      "range": "BH.oM.Data.Requests.IRequest"
+    },
+    {
+      "id": "BH.oM.Adapters.File.ISortableRequest-BH.oM.RDF.IsA-BH.oM.Base.IObject",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "label": "IsA",
+      "attributes": "object",
+      "domain": "BH.oM.Adapters.File.ISortableRequest",
+      "range": "BH.oM.Base.IObject"
+    },
+    {
+      "id": "BH.oM.Adapters.File.RemoveRequest-BH.oM.RDF.HasProperty-System.Collections.Generic.List`1[System.String] ToRemove",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/HasProperty.cs",
+      "label": "HasProperty",
+      "attributes": "datatype",
+      "domain": "BH.oM.Adapters.File.RemoveRequest",
+      "range": "ToRemove-AEDA6F17E2C08B3775A5585B66AEE9BDDCC56B58BD817037AEC82A8C53F1CA07-RemoveRequest-HasProperty"
+    },
+    {
+      "id": "BH.oM.Adapters.File.RemoveRequest-BH.oM.RDF.IsA-BH.oM.Data.Requests.IRequest",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "label": "IsA",
+      "attributes": "object",
+      "domain": "BH.oM.Adapters.File.RemoveRequest",
+      "range": "BH.oM.Data.Requests.IRequest"
+    },
+    {
+      "id": "BH.oM.Adapters.File.RemoveRequest-BH.oM.RDF.IsA-BH.oM.Base.IObject",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "label": "IsA",
+      "attributes": "object",
+      "domain": "BH.oM.Adapters.File.RemoveRequest",
+      "range": "BH.oM.Base.IObject"
+    },
+    {
+      "id": "BH.oM.Adapters.File.RemoveRequest-BH.oM.RDF.IsSubclassOf-System.Object",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsSubclassOf.cs",
+      "label": "IsSubclassOf",
+      "attributes": []
+    },
+    {
+      "id": "BH.oM.Adapters.File.IFileRequest-BH.oM.RDF.RequiresProperty-Int32 MaxFiles",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/RequiresProperty.cs",
+      "label": "RequiresProperty",
+      "attributes": []
+    },
+    {
+      "id": "BH.oM.Adapters.File.IFileRequest-BH.oM.RDF.RequiresProperty-Boolean IncludeFileContents",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/RequiresProperty.cs",
+      "label": "RequiresProperty",
+      "attributes": []
+    },
+    {
+      "id": "BH.oM.Adapters.File.IFileRequest-BH.oM.RDF.IsA-BH.oM.Adapters.File.ISortableRequest",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "label": "IsA",
+      "attributes": "object",
+      "domain": "BH.oM.Adapters.File.IFileRequest",
+      "range": "BH.oM.Adapters.File.ISortableRequest"
+    },
+    {
+      "id": "BH.oM.Adapters.File.IFileRequest-BH.oM.RDF.IsA-BH.oM.Data.Requests.IRequest",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "label": "IsA",
+      "attributes": "object",
+      "domain": "BH.oM.Adapters.File.IFileRequest",
+      "range": "BH.oM.Data.Requests.IRequest"
+    },
+    {
+      "id": "BH.oM.Adapters.File.IFileRequest-BH.oM.RDF.IsA-BH.oM.Base.IObject",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "label": "IsA",
+      "attributes": "object",
+      "domain": "BH.oM.Adapters.File.IFileRequest",
+      "range": "BH.oM.Base.IObject"
+    },
+    {
+      "id": "BH.oM.Adapters.File.IFileRequest-BH.oM.RDF.IsA-BH.oM.Adapters.File.IResourceRequest",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "label": "IsA",
+      "attributes": "object",
+      "domain": "BH.oM.Adapters.File.IFileRequest",
+      "range": "BH.oM.Adapters.File.IResourceRequest"
+    },
+    {
+      "id": "BH.oM.Adapters.File.IResourceRequest-BH.oM.RDF.RequiresProperty-System.String Location",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/RequiresProperty.cs",
+      "label": "RequiresProperty",
+      "attributes": []
+    },
+    {
+      "id": "BH.oM.Adapters.File.IResourceRequest-BH.oM.RDF.RequiresProperty-Boolean SearchSubdirectories",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/RequiresProperty.cs",
+      "label": "RequiresProperty",
+      "attributes": []
+    },
+    {
+      "id": "BH.oM.Adapters.File.IResourceRequest-BH.oM.RDF.RequiresProperty-System.Collections.Generic.List`1[System.Object] Exclusions",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/RequiresProperty.cs",
+      "label": "RequiresProperty",
+      "attributes": []
+    },
+    {
+      "id": "BH.oM.Adapters.File.IResourceRequest-BH.oM.RDF.IsA-BH.oM.Data.Requests.IRequest",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "label": "IsA",
+      "attributes": "object",
+      "domain": "BH.oM.Adapters.File.IResourceRequest",
+      "range": "BH.oM.Data.Requests.IRequest"
+    },
+    {
+      "id": "BH.oM.Adapters.File.IResourceRequest-BH.oM.RDF.IsA-BH.oM.Base.IObject",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "label": "IsA",
+      "attributes": "object",
+      "domain": "BH.oM.Adapters.File.IResourceRequest",
+      "range": "BH.oM.Base.IObject"
+    },
+    {
+      "id": "BH.oM.Adapters.File.IDirectoryRequest-BH.oM.RDF.RequiresProperty-Int32 MaxDirectories",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/RequiresProperty.cs",
+      "label": "RequiresProperty",
+      "attributes": []
+    },
+    {
+      "id": "BH.oM.Adapters.File.IDirectoryRequest-BH.oM.RDF.IsA-BH.oM.Adapters.File.ISortableRequest",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "label": "IsA",
+      "attributes": "object",
+      "domain": "BH.oM.Adapters.File.IDirectoryRequest",
+      "range": "BH.oM.Adapters.File.ISortableRequest"
+    },
+    {
+      "id": "BH.oM.Adapters.File.IDirectoryRequest-BH.oM.RDF.IsA-BH.oM.Data.Requests.IRequest",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "label": "IsA",
+      "attributes": "object",
+      "domain": "BH.oM.Adapters.File.IDirectoryRequest",
+      "range": "BH.oM.Data.Requests.IRequest"
+    },
+    {
+      "id": "BH.oM.Adapters.File.IDirectoryRequest-BH.oM.RDF.IsA-BH.oM.Base.IObject",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "label": "IsA",
+      "attributes": "object",
+      "domain": "BH.oM.Adapters.File.IDirectoryRequest",
+      "range": "BH.oM.Base.IObject"
+    },
+    {
+      "id": "BH.oM.Adapters.File.IDirectoryRequest-BH.oM.RDF.IsA-BH.oM.Adapters.File.IResourceRequest",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "label": "IsA",
+      "attributes": "object",
+      "domain": "BH.oM.Adapters.File.IDirectoryRequest",
+      "range": "BH.oM.Adapters.File.IResourceRequest"
+    },
+    {
+      "id": "BH.oM.Adapters.File.FileContentRequest.File-IsA-BH.oM.Adapters.File.FSFile",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "label": "IsA",
+      "attributes": "object",
+      "domain": "BH.oM.Adapters.File.FileContentRequest.File",
+      "range": "BH.oM.Adapters.File.FSFile"
+    },
+    {
+      "id": "BH.oM.Adapters.File.FileContentRequest-BH.oM.RDF.HasProperty-BH.oM.Adapters.File.FSFile File",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/HasProperty.cs",
+      "label": "HasProperty",
+      "attributes": [],
+      "domain": "BH.oM.Adapters.File.FileContentRequest",
+      "range": "BH.oM.Adapters.File.FileContentRequest.File"
+    },
+    {
+      "id": "BH.oM.Adapters.File.FileContentRequest-BH.oM.RDF.HasProperty-System.Collections.Generic.List`1[System.Type] Types",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/HasProperty.cs",
+      "label": "HasProperty",
+      "attributes": "datatype",
+      "domain": "BH.oM.Adapters.File.FileContentRequest",
+      "range": "Types-1ABDB1AABDC6012CC89081D87478DB00A05A2B4E0CD54C85014709633A4CC045-FileContentRequest-HasProperty"
+    },
+    {
+      "id": "BH.oM.Adapters.File.FileContentRequest-BH.oM.RDF.HasProperty-System.Collections.Generic.List`1[System.String] CustomDataKeys",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/HasProperty.cs",
+      "label": "HasProperty",
+      "attributes": "datatype",
+      "domain": "BH.oM.Adapters.File.FileContentRequest",
+      "range": "CustomDataKeys-634D577824981E80D49B57F6E3D9C915351DA78C4265C11AF5189E03957F682F-FileContentRequest-HasProperty"
+    },
+    {
+      "id": "BH.oM.Adapters.File.FileContentRequest-BH.oM.RDF.HasProperty-System.Collections.Generic.List`1[System.Type] FragmentTypes",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/HasProperty.cs",
+      "label": "HasProperty",
+      "attributes": "datatype",
+      "domain": "BH.oM.Adapters.File.FileContentRequest",
+      "range": "FragmentTypes-5CA9F6339F39A6C77D54E44B843A59566169E5B848A4C277DFFD6E9E73CCBCBA-FileContentRequest-HasProperty"
+    },
+    {
+      "id": "BH.oM.Adapters.File.FileContentRequest-BH.oM.RDF.IsA-BH.oM.Adapters.File.IFilingRequest",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "label": "IsA",
+      "attributes": "object",
+      "domain": "BH.oM.Adapters.File.FileContentRequest",
+      "range": "BH.oM.Adapters.File.IFilingRequest"
+    },
+    {
+      "id": "BH.oM.Adapters.File.FileContentRequest-BH.oM.RDF.IsA-BH.oM.Data.Requests.IRequest",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "label": "IsA",
+      "attributes": "object",
+      "domain": "BH.oM.Adapters.File.FileContentRequest",
+      "range": "BH.oM.Data.Requests.IRequest"
+    },
+    {
+      "id": "BH.oM.Adapters.File.FileContentRequest-BH.oM.RDF.IsA-BH.oM.Base.IObject",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "label": "IsA",
+      "attributes": "object",
+      "domain": "BH.oM.Adapters.File.FileContentRequest",
+      "range": "BH.oM.Base.IObject"
+    },
+    {
+      "id": "BH.oM.Adapters.File.FileContentRequest-BH.oM.RDF.IsSubclassOf-System.Object",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsSubclassOf.cs",
+      "label": "IsSubclassOf",
+      "attributes": []
+    },
+    {
+      "id": "BH.oM.Adapters.File.DirectoryRequest-BH.oM.RDF.HasProperty-System.String Location",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/HasProperty.cs",
+      "label": "HasProperty",
+      "attributes": "datatype",
+      "domain": "BH.oM.Adapters.File.DirectoryRequest",
+      "range": "Location-F53E8242FB53B4C7F3F8EAB5D2E2B41CBF8066105C9682FEB3C0507065B2E3A7-DirectoryRequest-HasProperty"
+    },
+    {
+      "id": "BH.oM.Adapters.File.DirectoryRequest-BH.oM.RDF.HasProperty-Boolean SearchSubdirectories",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/HasProperty.cs",
+      "label": "HasProperty",
+      "attributes": "datatype",
+      "domain": "BH.oM.Adapters.File.DirectoryRequest",
+      "range": "SearchSubdirectories-D824642967106575BAC020A23D6D03BD018AF85B946E7E02C087DE3D73667657-DirectoryRequest-HasProperty"
+    },
+    {
+      "id": "BH.oM.Adapters.File.DirectoryRequest-BH.oM.RDF.HasProperty-Int32 MaxNesting",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/HasProperty.cs",
+      "label": "HasProperty",
+      "attributes": "datatype",
+      "domain": "BH.oM.Adapters.File.DirectoryRequest",
+      "range": "MaxNesting-B0C4168B90B5D1A20B71431C58610AC5DA7086C7D4F221FAB822A1D253E1857A-DirectoryRequest-HasProperty"
+    },
+    {
+      "id": "BH.oM.Adapters.File.DirectoryRequest.SortOrder-IsA-BH.oM.Adapters.File.SortOrder",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "label": "IsA",
+      "attributes": "object",
+      "domain": "BH.oM.Adapters.File.DirectoryRequest.SortOrder",
+      "range": "BH.oM.Adapters.File.SortOrder"
+    },
+    {
+      "id": "BH.oM.Adapters.File.DirectoryRequest-BH.oM.RDF.HasProperty-BH.oM.Adapters.File.SortOrder SortOrder",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/HasProperty.cs",
+      "label": "HasProperty",
+      "attributes": [],
+      "domain": "BH.oM.Adapters.File.DirectoryRequest",
+      "range": "BH.oM.Adapters.File.DirectoryRequest.SortOrder"
+    },
+    {
+      "id": "BH.oM.Adapters.File.DirectoryRequest-BH.oM.RDF.HasProperty-Int32 MaxDirectories",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/HasProperty.cs",
+      "label": "HasProperty",
+      "attributes": "datatype",
+      "domain": "BH.oM.Adapters.File.DirectoryRequest",
+      "range": "MaxDirectories-0275A68FBB13C6008A4393B3ABE1A591B65043C6FB4D3BF943E90193687FFA99-DirectoryRequest-HasProperty"
+    },
+    {
+      "id": "BH.oM.Adapters.File.DirectoryRequest-BH.oM.RDF.HasProperty-System.Collections.Generic.List`1[System.Object] Exclusions",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/HasProperty.cs",
+      "label": "HasProperty",
+      "attributes": "datatype",
+      "domain": "BH.oM.Adapters.File.DirectoryRequest",
+      "range": "Exclusions-66D54539ED8B567092757439E63E4A5D85CB15C1ECDE139FA97290C5DF534807-DirectoryRequest-HasProperty"
+    },
+    {
+      "id": "BH.oM.Adapters.File.DirectoryRequest-BH.oM.RDF.IsA-BH.oM.Adapters.File.IDirectoryRequest",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "label": "IsA",
+      "attributes": "object",
+      "domain": "BH.oM.Adapters.File.DirectoryRequest",
+      "range": "BH.oM.Adapters.File.IDirectoryRequest"
+    },
+    {
+      "id": "BH.oM.Adapters.File.DirectoryRequest-BH.oM.RDF.IsA-BH.oM.Adapters.File.ISortableRequest",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "label": "IsA",
+      "attributes": "object",
+      "domain": "BH.oM.Adapters.File.DirectoryRequest",
+      "range": "BH.oM.Adapters.File.ISortableRequest"
+    },
+    {
+      "id": "BH.oM.Adapters.File.DirectoryRequest-BH.oM.RDF.IsA-BH.oM.Data.Requests.IRequest",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "label": "IsA",
+      "attributes": "object",
+      "domain": "BH.oM.Adapters.File.DirectoryRequest",
+      "range": "BH.oM.Data.Requests.IRequest"
+    },
+    {
+      "id": "BH.oM.Adapters.File.DirectoryRequest-BH.oM.RDF.IsA-BH.oM.Base.IObject",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "label": "IsA",
+      "attributes": "object",
+      "domain": "BH.oM.Adapters.File.DirectoryRequest",
+      "range": "BH.oM.Base.IObject"
+    },
+    {
+      "id": "BH.oM.Adapters.File.DirectoryRequest-BH.oM.RDF.IsA-BH.oM.Adapters.File.IResourceRequest",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "label": "IsA",
+      "attributes": "object",
+      "domain": "BH.oM.Adapters.File.DirectoryRequest",
+      "range": "BH.oM.Adapters.File.IResourceRequest"
+    },
+    {
+      "id": "BH.oM.Adapters.File.DirectoryRequest-BH.oM.RDF.IsSubclassOf-System.Object",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsSubclassOf.cs",
+      "label": "IsSubclassOf",
+      "attributes": []
+    },
+    {
+      "id": "BH.oM.Adapters.File.FileRequest-BH.oM.RDF.HasProperty-System.String Location",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/HasProperty.cs",
+      "label": "HasProperty",
+      "attributes": "datatype",
+      "domain": "BH.oM.Adapters.File.FileRequest",
+      "range": "Location-78638A6CF0D1003812B131B3CBD12028E3F67AA801BEC19D4CDB2238BCB264E2-FileRequest-HasProperty"
+    },
+    {
+      "id": "BH.oM.Adapters.File.FileRequest-BH.oM.RDF.HasProperty-Boolean SearchSubdirectories",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/HasProperty.cs",
+      "label": "HasProperty",
+      "attributes": "datatype",
+      "domain": "BH.oM.Adapters.File.FileRequest",
+      "range": "SearchSubdirectories-1881D0634865B38CBCDF780695A6439999627F65E1645328648D391145725B45-FileRequest-HasProperty"
+    },
+    {
+      "id": "BH.oM.Adapters.File.FileRequest-BH.oM.RDF.HasProperty-Int32 MaxNesting",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/HasProperty.cs",
+      "label": "HasProperty",
+      "attributes": "datatype",
+      "domain": "BH.oM.Adapters.File.FileRequest",
+      "range": "MaxNesting-C34BC62FC51B1D1E18C9CD4583FEA9AF0F86F190BBDB8B5BA4BA903415BBFF0E-FileRequest-HasProperty"
+    },
+    {
+      "id": "BH.oM.Adapters.File.FileRequest.SortOrder-IsA-BH.oM.Adapters.File.SortOrder",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "label": "IsA",
+      "attributes": "object",
+      "domain": "BH.oM.Adapters.File.FileRequest.SortOrder",
+      "range": "BH.oM.Adapters.File.SortOrder"
+    },
+    {
+      "id": "BH.oM.Adapters.File.FileRequest-BH.oM.RDF.HasProperty-BH.oM.Adapters.File.SortOrder SortOrder",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/HasProperty.cs",
+      "label": "HasProperty",
+      "attributes": [],
+      "domain": "BH.oM.Adapters.File.FileRequest",
+      "range": "BH.oM.Adapters.File.FileRequest.SortOrder"
+    },
+    {
+      "id": "BH.oM.Adapters.File.FileRequest-BH.oM.RDF.HasProperty-Int32 MaxFiles",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/HasProperty.cs",
+      "label": "HasProperty",
+      "attributes": "datatype",
+      "domain": "BH.oM.Adapters.File.FileRequest",
+      "range": "MaxFiles-1FFACF4FF56CD3425BB410C586D1438539DEDC83C67724A8C7AB0C467E0D6CD5-FileRequest-HasProperty"
+    },
+    {
+      "id": "BH.oM.Adapters.File.FileRequest-BH.oM.RDF.HasProperty-Boolean IncludeFileContents",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/HasProperty.cs",
+      "label": "HasProperty",
+      "attributes": "datatype",
+      "domain": "BH.oM.Adapters.File.FileRequest",
+      "range": "IncludeFileContents-B897C7AE89473ED118DB3274234F31BE2ABE015DC00D83C9BA6E5A6DD36D9EEA-FileRequest-HasProperty"
+    },
+    {
+      "id": "BH.oM.Adapters.File.FileRequest-BH.oM.RDF.HasProperty-System.Collections.Generic.List`1[System.Object] Exclusions",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/HasProperty.cs",
+      "label": "HasProperty",
+      "attributes": "datatype",
+      "domain": "BH.oM.Adapters.File.FileRequest",
+      "range": "Exclusions-58A5DFFAF5627591B188A7BD6142D525682AB6378B83CE691846DCCFB2BB7702-FileRequest-HasProperty"
+    },
+    {
+      "id": "BH.oM.Adapters.File.FileRequest-BH.oM.RDF.IsA-BH.oM.Adapters.File.IFileRequest",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "label": "IsA",
+      "attributes": "object",
+      "domain": "BH.oM.Adapters.File.FileRequest",
+      "range": "BH.oM.Adapters.File.IFileRequest"
+    },
+    {
+      "id": "BH.oM.Adapters.File.FileRequest-BH.oM.RDF.IsA-BH.oM.Adapters.File.ISortableRequest",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "label": "IsA",
+      "attributes": "object",
+      "domain": "BH.oM.Adapters.File.FileRequest",
+      "range": "BH.oM.Adapters.File.ISortableRequest"
+    },
+    {
+      "id": "BH.oM.Adapters.File.FileRequest-BH.oM.RDF.IsA-BH.oM.Data.Requests.IRequest",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "label": "IsA",
+      "attributes": "object",
+      "domain": "BH.oM.Adapters.File.FileRequest",
+      "range": "BH.oM.Data.Requests.IRequest"
+    },
+    {
+      "id": "BH.oM.Adapters.File.FileRequest-BH.oM.RDF.IsA-BH.oM.Base.IObject",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "label": "IsA",
+      "attributes": "object",
+      "domain": "BH.oM.Adapters.File.FileRequest",
+      "range": "BH.oM.Base.IObject"
+    },
+    {
+      "id": "BH.oM.Adapters.File.FileRequest-BH.oM.RDF.IsA-BH.oM.Adapters.File.IResourceRequest",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "label": "IsA",
+      "attributes": "object",
+      "domain": "BH.oM.Adapters.File.FileRequest",
+      "range": "BH.oM.Adapters.File.IResourceRequest"
+    },
+    {
+      "id": "BH.oM.Adapters.File.FileRequest-BH.oM.RDF.IsSubclassOf-System.Object",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsSubclassOf.cs",
+      "label": "IsSubclassOf",
+      "attributes": []
+    },
+    {
+      "id": "BH.oM.Adapters.File.FileDirRequest-BH.oM.RDF.HasProperty-System.String Location",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/HasProperty.cs",
+      "label": "HasProperty",
+      "attributes": "datatype",
+      "domain": "BH.oM.Adapters.File.FileDirRequest",
+      "range": "Location-D975D7E12FD204BB52BEF3FA0EA92E0B886E9075D755DE5CF7AF85C1AE10EDA5-FileDirRequest-HasProperty"
+    },
+    {
+      "id": "BH.oM.Adapters.File.FileDirRequest-BH.oM.RDF.HasProperty-Boolean IncludeFiles",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/HasProperty.cs",
+      "label": "HasProperty",
+      "attributes": "datatype",
+      "domain": "BH.oM.Adapters.File.FileDirRequest",
+      "range": "IncludeFiles-ABEE481EABBDA553C08B7E475D8439AD9C30F2D63ED55F1F67D9B8515AD38A43-FileDirRequest-HasProperty"
+    },
+    {
+      "id": "BH.oM.Adapters.File.FileDirRequest-BH.oM.RDF.HasProperty-Boolean IncludeDirectories",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/HasProperty.cs",
+      "label": "HasProperty",
+      "attributes": "datatype",
+      "domain": "BH.oM.Adapters.File.FileDirRequest",
+      "range": "IncludeDirectories-3C04A0C0691FD3E4E9ADAF495CFB4C3B4FD32BDDD40E8FF87B945F9561CE3250-FileDirRequest-HasProperty"
+    },
+    {
+      "id": "BH.oM.Adapters.File.FileDirRequest-BH.oM.RDF.HasProperty-Boolean SearchSubdirectories",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/HasProperty.cs",
+      "label": "HasProperty",
+      "attributes": "datatype",
+      "domain": "BH.oM.Adapters.File.FileDirRequest",
+      "range": "SearchSubdirectories-79E8786CC5CD81304D0DAF63F36AE5B3BC655A478B9402703A0CB67A06200F63-FileDirRequest-HasProperty"
+    },
+    {
+      "id": "BH.oM.Adapters.File.FileDirRequest-BH.oM.RDF.HasProperty-Boolean IncludeFileContents",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/HasProperty.cs",
+      "label": "HasProperty",
+      "attributes": "datatype",
+      "domain": "BH.oM.Adapters.File.FileDirRequest",
+      "range": "IncludeFileContents-8B91B23C1E7C80A1A09072FB5ECE120FE0EA06BCCFF73337CE5C5659C49BC95B-FileDirRequest-HasProperty"
+    },
+    {
+      "id": "BH.oM.Adapters.File.FileDirRequest-BH.oM.RDF.HasProperty-Int32 MaxNesting",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/HasProperty.cs",
+      "label": "HasProperty",
+      "attributes": "datatype",
+      "domain": "BH.oM.Adapters.File.FileDirRequest",
+      "range": "MaxNesting-BB70E3CD049E5F8376DDA218EC758EC5483E26538D6301C1B9D441A79F776507-FileDirRequest-HasProperty"
+    },
+    {
+      "id": "BH.oM.Adapters.File.FileDirRequest.SortOrder-IsA-BH.oM.Adapters.File.SortOrder",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "label": "IsA",
+      "attributes": "object",
+      "domain": "BH.oM.Adapters.File.FileDirRequest.SortOrder",
+      "range": "BH.oM.Adapters.File.SortOrder"
+    },
+    {
+      "id": "BH.oM.Adapters.File.FileDirRequest-BH.oM.RDF.HasProperty-BH.oM.Adapters.File.SortOrder SortOrder",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/HasProperty.cs",
+      "label": "HasProperty",
+      "attributes": [],
+      "domain": "BH.oM.Adapters.File.FileDirRequest",
+      "range": "BH.oM.Adapters.File.FileDirRequest.SortOrder"
+    },
+    {
+      "id": "BH.oM.Adapters.File.FileDirRequest-BH.oM.RDF.HasProperty-Int32 MaxFiles",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/HasProperty.cs",
+      "label": "HasProperty",
+      "attributes": "datatype",
+      "domain": "BH.oM.Adapters.File.FileDirRequest",
+      "range": "MaxFiles-7B255C42E246E40910E93448C438502E9E8602D58CE24033279929E15E46E851-FileDirRequest-HasProperty"
+    },
+    {
+      "id": "BH.oM.Adapters.File.FileDirRequest-BH.oM.RDF.HasProperty-Int32 MaxDirectories",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/HasProperty.cs",
+      "label": "HasProperty",
+      "attributes": "datatype",
+      "domain": "BH.oM.Adapters.File.FileDirRequest",
+      "range": "MaxDirectories-B17460C68F711900C634324B256613C74F491B03EAD60EA57B1BFDEC398A1B6B-FileDirRequest-HasProperty"
+    },
+    {
+      "id": "BH.oM.Adapters.File.FileDirRequest-BH.oM.RDF.HasProperty-System.Collections.Generic.List`1[System.Object] Exclusions",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/HasProperty.cs",
+      "label": "HasProperty",
+      "attributes": "datatype",
+      "domain": "BH.oM.Adapters.File.FileDirRequest",
+      "range": "Exclusions-11E7B24F34CC917172E2EBAB247CBF696ED77804F620D68624335FEBE76C43EA-FileDirRequest-HasProperty"
+    },
+    {
+      "id": "BH.oM.Adapters.File.FileDirRequest-BH.oM.RDF.IsA-BH.oM.Adapters.File.IFileRequest",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "label": "IsA",
+      "attributes": "object",
+      "domain": "BH.oM.Adapters.File.FileDirRequest",
+      "range": "BH.oM.Adapters.File.IFileRequest"
+    },
+    {
+      "id": "BH.oM.Adapters.File.FileDirRequest-BH.oM.RDF.IsA-BH.oM.Adapters.File.ISortableRequest",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "label": "IsA",
+      "attributes": "object",
+      "domain": "BH.oM.Adapters.File.FileDirRequest",
+      "range": "BH.oM.Adapters.File.ISortableRequest"
+    },
+    {
+      "id": "BH.oM.Adapters.File.FileDirRequest-BH.oM.RDF.IsA-BH.oM.Data.Requests.IRequest",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "label": "IsA",
+      "attributes": "object",
+      "domain": "BH.oM.Adapters.File.FileDirRequest",
+      "range": "BH.oM.Data.Requests.IRequest"
+    },
+    {
+      "id": "BH.oM.Adapters.File.FileDirRequest-BH.oM.RDF.IsA-BH.oM.Base.IObject",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "label": "IsA",
+      "attributes": "object",
+      "domain": "BH.oM.Adapters.File.FileDirRequest",
+      "range": "BH.oM.Base.IObject"
+    },
+    {
+      "id": "BH.oM.Adapters.File.FileDirRequest-BH.oM.RDF.IsA-BH.oM.Adapters.File.IResourceRequest",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "label": "IsA",
+      "attributes": "object",
+      "domain": "BH.oM.Adapters.File.FileDirRequest",
+      "range": "BH.oM.Adapters.File.IResourceRequest"
+    },
+    {
+      "id": "BH.oM.Adapters.File.FileDirRequest-BH.oM.RDF.IsA-BH.oM.Adapters.File.IDirectoryRequest",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "label": "IsA",
+      "attributes": "object",
+      "domain": "BH.oM.Adapters.File.FileDirRequest",
+      "range": "BH.oM.Adapters.File.IDirectoryRequest"
+    },
+    {
+      "id": "BH.oM.Adapters.File.FileDirRequest-BH.oM.RDF.IsSubclassOf-System.Object",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsSubclassOf.cs",
+      "label": "IsSubclassOf",
+      "attributes": []
+    },
+    {
+      "id": "BH.oM.Adapters.File.FileFormat-BH.oM.RDF.IsA-System.IComparable",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "label": "IsA",
+      "attributes": []
+    },
+    {
+      "id": "BH.oM.Adapters.File.FileFormat-BH.oM.RDF.IsA-System.IFormattable",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "label": "IsA",
+      "attributes": []
+    },
+    {
+      "id": "BH.oM.Adapters.File.FileFormat-BH.oM.RDF.IsA-System.IConvertible",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "label": "IsA",
+      "attributes": []
+    },
+    {
+      "id": "BH.oM.Adapters.File.FileFormat-BH.oM.RDF.IsSubclassOf-System.Enum",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsSubclassOf.cs",
+      "label": "IsSubclassOf",
+      "attributes": []
+    },
+    {
+      "id": "BH.oM.Adapters.File.FSFile.ParentDirectory-IsA-BH.oM.Adapters.File.FSDirectory",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "label": "IsA",
+      "attributes": "object",
+      "domain": "BH.oM.Adapters.File.FSFile.ParentDirectory",
+      "range": "BH.oM.Adapters.File.FSDirectory"
+    },
+    {
+      "id": "BH.oM.Adapters.File.FSFile-BH.oM.RDF.HasProperty-BH.oM.Adapters.File.FSDirectory ParentDirectory",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/HasProperty.cs",
+      "label": "HasProperty",
+      "attributes": [],
+      "domain": "BH.oM.Adapters.File.FSFile",
+      "range": "BH.oM.Adapters.File.FSFile.ParentDirectory"
+    },
+    {
+      "id": "BH.oM.Adapters.File.FSFile-BH.oM.RDF.HasProperty-System.String Name",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/HasProperty.cs",
+      "label": "HasProperty",
+      "attributes": "datatype",
+      "domain": "BH.oM.Adapters.File.FSFile",
+      "range": "Name-599346303C12E22F01E9C2A615F14B213A4A663E8666A137F8049AA51E7622D5-FSFile-HasProperty"
+    },
+    {
+      "id": "BH.oM.Adapters.File.FSFile-BH.oM.RDF.HasProperty-System.Nullable`1[System.Boolean] Exists",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/HasProperty.cs",
+      "label": "HasProperty",
+      "attributes": "datatype",
+      "domain": "BH.oM.Adapters.File.FSFile",
+      "range": "Exists-EAB130C676E095E08017F65508340BD64850A9837E1BEB7044A63841FF118C91-FSFile-HasProperty"
+    },
+    {
+      "id": "BH.oM.Adapters.File.FSFile-BH.oM.RDF.HasProperty-System.Nullable`1[System.Boolean] IsReadOnly",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/HasProperty.cs",
+      "label": "HasProperty",
+      "attributes": "datatype",
+      "domain": "BH.oM.Adapters.File.FSFile",
+      "range": "IsReadOnly-EF979C3158869BEBD1DC2A97208C65DFE4B6B5ED72304E1651AEF90E6BF4BBC9-FSFile-HasProperty"
+    },
+    {
+      "id": "BH.oM.Adapters.File.FSFile-BH.oM.RDF.HasProperty-Int32 Size",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/HasProperty.cs",
+      "label": "HasProperty",
+      "attributes": "datatype",
+      "domain": "BH.oM.Adapters.File.FSFile",
+      "range": "Size-9EFAE880FE7BDEE1BCBED657F5174F06644E5E8D70E48E3D4AAF08A2B782CD5E-FSFile-HasProperty"
+    },
+    {
+      "id": "BH.oM.Adapters.File.FSFile-BH.oM.RDF.HasProperty-System.IO.FileAttributes Attributes",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/HasProperty.cs",
+      "label": "HasProperty",
+      "attributes": "datatype",
+      "domain": "BH.oM.Adapters.File.FSFile",
+      "range": "Attributes-2C088112A3065C424E1C8EAC6F4362AE3B780076FB31262F288653C9366EADE8-FSFile-HasProperty"
+    },
+    {
+      "id": "BH.oM.Adapters.File.FSFile-BH.oM.RDF.HasProperty-System.DateTime CreationTimeUtc",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/HasProperty.cs",
+      "label": "HasProperty",
+      "attributes": "datatype",
+      "domain": "BH.oM.Adapters.File.FSFile",
+      "range": "CreationTimeUtc-26EC85F91F497FC1C1B0B10D85D527F525F584E8D59EA66AE461B05AC5026E52-FSFile-HasProperty"
+    },
+    {
+      "id": "BH.oM.Adapters.File.FSFile-BH.oM.RDF.HasProperty-System.DateTime ModifiedTimeUtc",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/HasProperty.cs",
+      "label": "HasProperty",
+      "attributes": "datatype",
+      "domain": "BH.oM.Adapters.File.FSFile",
+      "range": "ModifiedTimeUtc-8C03341E278D842BBE603A1309A8D2AA5D12D83265A7281981B85A04633FB089-FSFile-HasProperty"
+    },
+    {
+      "id": "BH.oM.Adapters.File.FSFile-BH.oM.RDF.HasProperty-System.String Owner",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/HasProperty.cs",
+      "label": "HasProperty",
+      "attributes": "datatype",
+      "domain": "BH.oM.Adapters.File.FSFile",
+      "range": "Owner-9D16BCC9B5B775F23CAA8E3D4E3FB9EB853A5A12511BB209692064B53A09FE26-FSFile-HasProperty"
+    },
+    {
+      "id": "BH.oM.Adapters.File.FSFile-BH.oM.RDF.HasProperty-System.Collections.Generic.List`1[System.Object] Content",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/HasProperty.cs",
+      "label": "HasProperty",
+      "attributes": "datatype",
+      "domain": "BH.oM.Adapters.File.FSFile",
+      "range": "Content-5AA7ABE80D2350ED14EDFC4CA2777178BD04B63C1DCBCEFFC233E5BACB7EA792-FSFile-HasProperty"
+    },
+    {
+      "id": "BH.oM.Adapters.File.FSFile-BH.oM.RDF.IsA-BH.oM.Base.IBHoMObject",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "label": "IsA",
+      "attributes": "object",
+      "domain": "BH.oM.Adapters.File.FSFile",
+      "range": "BH.oM.Base.IBHoMObject"
+    },
+    {
+      "id": "BH.oM.Adapters.File.FSFile-BH.oM.RDF.IsA-BH.oM.Base.IObject",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "label": "IsA",
+      "attributes": "object",
+      "domain": "BH.oM.Adapters.File.FSFile",
+      "range": "BH.oM.Base.IObject"
+    },
+    {
+      "id": "BH.oM.Adapters.File.FSFile-BH.oM.RDF.IsA-BH.oM.Adapters.File.IFSContainer",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "label": "IsA",
+      "attributes": "object",
+      "domain": "BH.oM.Adapters.File.FSFile",
+      "range": "BH.oM.Adapters.File.IFSContainer"
+    },
+    {
+      "id": "BH.oM.Adapters.File.FSFile-BH.oM.RDF.IsA-BH.oM.Adapters.File.IFSInfo",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "label": "IsA",
+      "attributes": "object",
+      "domain": "BH.oM.Adapters.File.FSFile",
+      "range": "BH.oM.Adapters.File.IFSInfo"
+    },
+    {
+      "id": "BH.oM.Adapters.File.FSFile-BH.oM.RDF.IsA-BH.oM.Adapters.File.IContainableResource",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "label": "IsA",
+      "attributes": "object",
+      "domain": "BH.oM.Adapters.File.FSFile",
+      "range": "BH.oM.Adapters.File.IContainableResource"
+    },
+    {
+      "id": "BH.oM.Adapters.File.FSFile-BH.oM.RDF.IsA-BH.oM.Adapters.File.IResource",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "label": "IsA",
+      "attributes": "object",
+      "domain": "BH.oM.Adapters.File.FSFile",
+      "range": "BH.oM.Adapters.File.IResource"
+    },
+    {
+      "id": "BH.oM.Adapters.File.FSFile-BH.oM.RDF.IsA-BH.oM.Adapters.File.IFile",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "label": "IsA",
+      "attributes": "object",
+      "domain": "BH.oM.Adapters.File.FSFile",
+      "range": "BH.oM.Adapters.File.IFile"
+    },
+    {
+      "id": "BH.oM.Adapters.File.FSFile-BH.oM.RDF.IsA-BH.oM.Adapters.File.ISizeableResource",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "label": "IsA",
+      "attributes": "object",
+      "domain": "BH.oM.Adapters.File.FSFile",
+      "range": "BH.oM.Adapters.File.ISizeableResource"
+    },
+    {
+      "id": "BH.oM.Adapters.File.FSFile-BH.oM.RDF.IsSubclassOf-BH.oM.Base.BHoMObject",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsSubclassOf.cs",
+      "label": "IsSubclassOf",
+      "attributes": "object",
+      "domain": "BH.oM.Adapters.File.FSFile",
+      "range": "BH.oM.Base.BHoMObject"
+    }
+  ]
+}

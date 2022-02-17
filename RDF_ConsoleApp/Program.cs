@@ -25,13 +25,7 @@ namespace BH.oM.CodeAnalysis.ConsoleApp
         public static void Main(string[] args = null)
         {
             List<Assembly> oMassemblies = BH.Engine.RDF.Compute.LoadAssembliesInDirectory(true);
-
-            // Remove duplicate classes in the same file, e.g. `BH.oM.Base.Output` which has many generics replicas.
-            List<TypeInfo> oMTypes = new List<TypeInfo>(oMassemblies
-                .SelectMany(a => a.DefinedTypes)
-                .Where(t => t.NameValidChars().Count() > 1) // removes those 'c<>' generics types that appear as duplicates
-                .GroupBy(t => t.FullName.OnlyAlphabeticAndDots())
-                .Select(g => g.First()));
+            List<TypeInfo> oMTypes = oMassemblies.BHoMTypes();
 
             // Take a subset of the types avaialble to reduce the size of the output graph. This can become a Filter function.
             //IEnumerable<TypeInfo> onlyBaseOmTypes = oMTypes.Where(t => t != null && t.Namespace != null && t.Namespace.EndsWith("BH.oM.Base")).ToList();
@@ -39,8 +33,7 @@ namespace BH.oM.CodeAnalysis.ConsoleApp
             //onlyBaseOmTypes = onlyBaseOmTypes.Where(t => t.Name.Contains("Output"));
             //onlyBaseOmTypes = onlyBaseOmTypes.Where(t => t.Name.Contains("ComparisonConfig"));
 
-            SortedDictionary<string, string> webVOWLJsonsPerNamespace = WebVOWLJsonPerNamespace(oMTypes);
-
+            SortedDictionary<string, string> webVOWLJsonsPerNamespace = Engine.RDF.Compute.WebVOWLJsonPerNamespace(oMTypes);
             string generatedOntologiesDirectoryName = "WebVOWLOntology";
 
             // Save all generated ontologies to file
@@ -73,51 +66,6 @@ namespace BH.oM.CodeAnalysis.ConsoleApp
             Console.WriteLine("\nPress any key to exit.");
             Console.ReadKey();
             log.SaveLogToDisk("..\\..\\..\\log.txt");
-        }
-
-        public static SortedDictionary<string, string> WebVOWLJsonPerNamespace(List<TypeInfo> oMTypes, List<string> namespaceToConsider = null, List<string> typeNamesToConsider = null, int namespaceGroupDepth = 3)
-        {
-            SortedDictionary<string, string> result = new SortedDictionary<string, string>(new NaturalSortComparer<string>());
-
-            // Null check
-            oMTypes = oMTypes.Where(t => t != null && t.Namespace != null).ToList();
-
-            // Filters
-            if (namespaceToConsider != null && namespaceToConsider.All(f => !string.IsNullOrWhiteSpace(f)))
-                oMTypes = oMTypes.Where(t => namespaceToConsider.Any(nsf =>
-                {
-                    if (nsf.StartsWith("BH."))
-                        return t.Namespace.StartsWith(nsf);
-                    else
-                        return t.Namespace.Contains(nsf);
-                })).ToList();
-
-
-            if (typeNamesToConsider != null && typeNamesToConsider.All(f => !string.IsNullOrWhiteSpace(f)))
-                oMTypes = oMTypes.Where(t => typeNamesToConsider.Any(tn =>
-                {
-                    if (tn.StartsWith("BH."))
-                        return t.Name == tn;
-                    else
-                        return t.Name.Contains(tn);
-                })).ToList();
-
-            // Group by namespace
-            if (namespaceGroupDepth < 3)
-                namespaceGroupDepth = 3; // at least group per BH.oM.Something
-
-            var oMTypesGroupsPerNamespace = oMTypes.GroupBy(t => string.Join(".", t.Namespace.Split('.').Take(namespaceGroupDepth)));
-
-            foreach (var group in oMTypesGroupsPerNamespace)
-            {
-                // Extract a dictionary representation of the BHoM Ontology Graph
-                Dictionary<TypeInfo, List<IRelation>> dictionaryGraph = group.DictionaryGraphFromTypes();
-                string webVOWLJson = Engine.RDF.Convert.ToWebVOWLJson(dictionaryGraph);
-
-                result[group.Key] = webVOWLJson;
-            }
-
-            return result;
         }
     }
 }

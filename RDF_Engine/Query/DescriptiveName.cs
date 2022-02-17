@@ -35,7 +35,7 @@ namespace BH.Engine.RDF
 
         public static string DescriptiveName(this PropertyInfo pi)
         {
-            return pi.Name + $" ({pi.PropertyType.DescriptiveName()})";
+            return pi.Name + $" ({pi.DeclaringType.FullNameValidChars()}.{pi.Name})";
         }
 
         /***************************************************/
