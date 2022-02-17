@@ -23,7 +23,7 @@ namespace BH.Engine.RDF
                 return null;
             }    
 
-            return graph.CreateUriNode(UriFactory.Create(t.UriFromType()));
+            return graph.CreateUriNode(t.GithubURI()); // UriFactory.Create(t.UriFromType()
         }
     }
 }

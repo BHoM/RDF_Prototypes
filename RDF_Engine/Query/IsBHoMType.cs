@@ -14,8 +14,11 @@ namespace BH.Engine.RDF
     public static partial class Query
     {
         [Description("Checks whether a type is a bhom type.")]
-        public static bool IsBHoMType(this Type t)
+        public static bool IsBHoMType(this Type t, bool noGenericsDuplicates = true)
         {
+            if (noGenericsDuplicates && t.Name.StartsWith("<>c__"))
+                return false;
+
             if (t == null)
                 return false;
 

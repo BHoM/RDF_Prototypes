@@ -1,0 +1,1886 @@
+{
+  "comment": "Generated from BHoM RDF_Prototypes",
+  "namespace": [],
+  "class": [
+    {
+      "id": "BH.oM.Acoustic.Constants",
+      "type": "owl:Class"
+    },
+    {
+      "id": "BH.oM.Acoustic.Panel",
+      "type": "owl:Class"
+    },
+    {
+      "id": "BH.oM.Acoustic.Ray",
+      "type": "owl:Class"
+    },
+    {
+      "id": "BH.oM.Acoustic.Receiver",
+      "type": "owl:Class"
+    },
+    {
+      "id": "BH.oM.Acoustic.Room",
+      "type": "owl:Class"
+    },
+    {
+      "id": "BH.oM.Acoustic.Speaker",
+      "type": "owl:Class"
+    },
+    {
+      "id": "BH.oM.Acoustic.Frequency",
+      "type": "owl:Class"
+    },
+    {
+      "id": "BH.oM.Acoustic.IAcousticParameter",
+      "type": "owl:Class"
+    },
+    {
+      "id": "BH.oM.Acoustic.Rasti",
+      "type": "owl:Class"
+    },
+    {
+      "id": "BH.oM.Acoustic.RT60",
+      "type": "owl:Class"
+    },
+    {
+      "id": "BH.oM.Acoustic.SnRatio",
+      "type": "owl:Class"
+    },
+    {
+      "id": "BH.oM.Acoustic.SoundLevel",
+      "type": "owl:Class"
+    },
+    {
+      "id": "BH.oM.Acoustic.Panel.Surface",
+      "type": "owl:Class"
+    },
+    {
+      "id": "BH.oM.Geometry.Mesh",
+      "type": "owl:Class"
+    },
+    {
+      "id": "PanelID-21AEB20AD43E34008AFB730DB3F47BB378A1F910BFDB2AFDB78D6B92CCA108F7-Panel-HasProperty",
+      "type": "rdfs:Datatype"
+    },
+    {
+      "id": "R-3EF0EC336D7DFFA8CD5C72E8A477E57ECC9D261C89C9AB7489B18EC51CE8A1BE-Panel-HasProperty",
+      "type": "rdfs:Datatype"
+    },
+    {
+      "id": "BH.oM.Base.IBHoMObject",
+      "type": "owl:Class"
+    },
+    {
+      "id": "BH.oM.Base.IObject",
+      "type": "owl:Class"
+    },
+    {
+      "id": "BH.oM.Base.BHoMObject",
+      "type": "owl:Class"
+    },
+    {
+      "id": "BH.oM.Acoustic.Ray.Path",
+      "type": "owl:Class"
+    },
+    {
+      "id": "BH.oM.Geometry.Polyline",
+      "type": "owl:Class"
+    },
+    {
+      "id": "SpeakerID-8B318C670203C66BEAF5A3DBADE803A69B3C2BEEB0098024B43FF100F142D539-Ray-HasProperty",
+      "type": "rdfs:Datatype"
+    },
+    {
+      "id": "ReceiverID-81C73A7D822E94F61E84EB31D1877101184EBCB73174225DBBC9DF39E9F1133E-Ray-HasProperty",
+      "type": "rdfs:Datatype"
+    },
+    {
+      "id": "PanelsID-1773ED2A45BD722C0DE91F677D74C4B172ABF3FD20EBB2FA56B3BBEA95C1CF83-Ray-HasProperty",
+      "type": "rdfs:Datatype"
+    },
+    {
+      "id": "BH.oM.Acoustic.Receiver.Location",
+      "type": "owl:Class"
+    },
+    {
+      "id": "BH.oM.Geometry.Point",
+      "type": "owl:Class"
+    },
+    {
+      "id": "Category-9DDE3B86A8E48E822D4672EA3BCE4D4724E5D21F56FB6548206D768CF2D285BA-Receiver-HasProperty",
+      "type": "rdfs:Datatype"
+    },
+    {
+      "id": "ReceiverID-BEF42D2BC0D30F613F1CAECF96DD933D153960CB36C3E1F4218720CDD2A42547-Receiver-HasProperty",
+      "type": "rdfs:Datatype"
+    },
+    {
+      "id": "BH.oM.Acoustic.Room.Boundaries",
+      "type": "owl:Class"
+    },
+    {
+      "id": "BH.oM.Geometry.PolySurface",
+      "type": "owl:Class"
+    },
+    {
+      "id": "Area-894AF8C18C67929F928A476B7358E967A1E85141FE9F7142571F6B80079B2362-Room-HasProperty",
+      "type": "rdfs:Datatype"
+    },
+    {
+      "id": "Volume-EF986BD2DD61C4AECAF997E553FF2CF012470B905B89E4A5A50C46719072E3D8-Room-HasProperty",
+      "type": "rdfs:Datatype"
+    },
+    {
+      "id": "Samples-4B7945FE1456FAC2032B85B0275EC54117D7DCCCCCAC84F8C9BA048DA36B50DB-Room-HasProperty",
+      "type": "rdfs:Datatype"
+    },
+    {
+      "id": "AcousticZone-8F5BF0DE138E4E07C5A03353A69B80C63E995FBC607D72B30B02812229207960-Room-HasProperty",
+      "type": "rdfs:Datatype"
+    },
+    {
+      "id": "PublicAddressVoiceAlarmZone-23627A6A32136D330A126C9CEDA92FB59915A24C60A9C9F6AF3C9E3191911136-Room-HasProperty",
+      "type": "rdfs:Datatype"
+    },
+    {
+      "id": "AverageInternalAmbientNoiseLevelRequirement-23C190D93D434CDF30154DD31354222083AD5E2E8E24FBC5029E333EE8449D03-Room-HasProperty",
+      "type": "rdfs:Datatype"
+    },
+    {
+      "id": "MaximumInternalAmbientNoiseLevelRequirement-1DD8C183ED1F7EE18272725EBBCCA48A0558B2A5468922065CBF46D21095794C-Room-HasProperty",
+      "type": "rdfs:Datatype"
+    },
+    {
+      "id": "ReverberationTime-7BAE58DA0350E3C85C7A96FFBE568AE816AEE16DEB535FF791980207DE9DF8E6-Room-HasProperty",
+      "type": "rdfs:Datatype"
+    },
+    {
+      "id": "NoiseRating-CAA35E7A4E089F73EB0DB01EB3DC7B71409E6918D9C25329CCC29B3EE7CDE7A4-Room-HasProperty",
+      "type": "rdfs:Datatype"
+    },
+    {
+      "id": "ImpactSoundInsulation-2EE693D742D863C26589D8268249BFC8D4A524A685A344240560EE6A822C88BB-Room-HasProperty",
+      "type": "rdfs:Datatype"
+    },
+    {
+      "id": "SpeechTransmitionIndex-359B6187073ACF1F7BAC699C8185B570C080235E285F43384F6FD6EF17293FD7-Room-HasProperty",
+      "type": "rdfs:Datatype"
+    },
+    {
+      "id": "PrivacyRequirement-BA9616B0E90FF4BC157D778489613B44F97B0CCC8514C5D1C04800F79645F6B5-Room-HasProperty",
+      "type": "rdfs:Datatype"
+    },
+    {
+      "id": "MinimumSoundPressureLevel-850EABE7D02CBE906DE89C1A291F260F78174F5D06E56750C8599BB0C42CFB2D-Room-HasProperty",
+      "type": "rdfs:Datatype"
+    },
+    {
+      "id": "SoundPressureLevelCoverage-81751076B43310A907DA21E88B36368FDC103BCEA87BDE897E2D515D989EDA0C-Room-HasProperty",
+      "type": "rdfs:Datatype"
+    },
+    {
+      "id": "AcousticUnderlayRequirement-455CFAE22CE2A2CADE89DAB3CD970FD13D6C6B06E4008E917CF41CF384FA469E-Room-HasProperty",
+      "type": "rdfs:Datatype"
+    },
+    {
+      "id": "BH.oM.Acoustic.Speaker.Location",
+      "type": "owl:Class"
+    },
+    {
+      "id": "BH.oM.Acoustic.Speaker.Direction",
+      "type": "owl:Class"
+    },
+    {
+      "id": "BH.oM.Geometry.Vector",
+      "type": "owl:Class"
+    },
+    {
+      "id": "EmissiveLevel-7139039C3F5EB1E71425111F0DBF0F336BE8286D67EADC97B5019045C20BD260-Speaker-HasProperty",
+      "type": "rdfs:Datatype"
+    },
+    {
+      "id": "Category-EA5BBAC94DADB9DE665378482322176DB5B6ECEED8E0F66D42895D3ABDB58225-Speaker-HasProperty",
+      "type": "rdfs:Datatype"
+    },
+    {
+      "id": "SpeakerID-05A479C929FDF3CADDF610E4BBC9FBA29F7A38501CD99189108229E56D169A4D-Speaker-HasProperty",
+      "type": "rdfs:Datatype"
+    },
+    {
+      "id": "Gains-0BEC9F0EF65905BE8DE8CE235F4B532EE244F9568497240A05D18539A2F0C5E9-Speaker-HasProperty",
+      "type": "rdfs:Datatype"
+    },
+    {
+      "id": "Directivity-8D4E0A6C20FC2DA82DC56B071C4F7FCE882DCE89406858BF4CD23D1B484A71AA-Speaker-HasProperty",
+      "type": "rdfs:Datatype"
+    },
+    {
+      "id": "Value-13C987008018E688F1C9D0B2FE27E96E6CC3650049A6AD88E6D00BB146299D2E-Rasti-HasProperty",
+      "type": "rdfs:Datatype"
+    },
+    {
+      "id": "ReceiverID-4542EC72F953E106E53B68ADE6A5CC019178EA50A3CC55637BC5C3A08B62BC3F-Rasti-HasProperty",
+      "type": "rdfs:Datatype"
+    },
+    {
+      "id": "SpeakerID-6D4DD7022A75516EC65AC742431DE5D6A89394F735C9FA450732787BC05D9C48-Rasti-HasProperty",
+      "type": "rdfs:Datatype"
+    },
+    {
+      "id": "BH.oM.Acoustic.Rasti.Frequency",
+      "type": "owl:Class"
+    },
+    {
+      "id": "Value-1C1339CF28ECF91BAEECC84D5C89551AEEDB7260453F734BE6FE5395F11E79A1-RT60-HasProperty",
+      "type": "rdfs:Datatype"
+    },
+    {
+      "id": "ReceiverID-8A1C932510B118768F773335D6A836F0198B9E373882C457C7452C23B82F54B4-RT60-HasProperty",
+      "type": "rdfs:Datatype"
+    },
+    {
+      "id": "SpeakerID-83EF3D1FB9E3EB70F28A8C53EC99A01B9DE8E1DF07F34394BB9FAB7723BA2BC6-RT60-HasProperty",
+      "type": "rdfs:Datatype"
+    },
+    {
+      "id": "BH.oM.Acoustic.RT60.Frequency",
+      "type": "owl:Class"
+    },
+    {
+      "id": "Value-349479460D6E9279DFF751AA98E6D257D0CEE222BAC209E66E14CFC1A79CDB46-SnRatio-HasProperty",
+      "type": "rdfs:Datatype"
+    },
+    {
+      "id": "ReceiverID-23F6D1AD7DDBDB1A262AED4296425B75324DF315B6582697302651C1757A8C24-SnRatio-HasProperty",
+      "type": "rdfs:Datatype"
+    },
+    {
+      "id": "SpeakerID-EC26512A222C6465FEF6607412A9A038B93B6C45B31F9C6C3390F776D493497F-SnRatio-HasProperty",
+      "type": "rdfs:Datatype"
+    },
+    {
+      "id": "BH.oM.Acoustic.SnRatio.Frequency",
+      "type": "owl:Class"
+    },
+    {
+      "id": "Value-03A27BFD371ACA841E005F398FB25475D8B5C47832EEE431D0545BC209EBB691-SoundLevel-HasProperty",
+      "type": "rdfs:Datatype"
+    },
+    {
+      "id": "ReceiverID-2679F65C70CFACB0E49BC43393BE5483FA61676E39A0E94CAC14D61F9F255BC2-SoundLevel-HasProperty",
+      "type": "rdfs:Datatype"
+    },
+    {
+      "id": "SpeakerID-62797CFA5205BADCCDFFC822725E886098F1B1EE18E3710A14FD8AEA6601E5F4-SoundLevel-HasProperty",
+      "type": "rdfs:Datatype"
+    },
+    {
+      "id": "BH.oM.Acoustic.SoundLevel.Frequency",
+      "type": "owl:Class"
+    }
+  ],
+  "classAttribute": [
+    {
+      "id": "BH.oM.Acoustic.Constants",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/Acoustic_oM/Constants.cs",
+      "label": "Constants (BH.oM.Acoustic)",
+      "attributes": []
+    },
+    {
+      "id": "BH.oM.Acoustic.Panel",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/Acoustic_oM/Elements/Panel.cs",
+      "label": "Panel (BH.oM.Acoustic)",
+      "attributes": []
+    },
+    {
+      "id": "BH.oM.Acoustic.Ray",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/Acoustic_oM/Elements/Ray.cs",
+      "label": "Ray (BH.oM.Acoustic)",
+      "attributes": []
+    },
+    {
+      "id": "BH.oM.Acoustic.Receiver",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/Acoustic_oM/Elements/Receiver.cs",
+      "label": "Receiver (BH.oM.Acoustic)",
+      "attributes": []
+    },
+    {
+      "id": "BH.oM.Acoustic.Room",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/Acoustic_oM/Elements/Room.cs",
+      "label": "Room (BH.oM.Acoustic)",
+      "attributes": []
+    },
+    {
+      "id": "BH.oM.Acoustic.Speaker",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/Acoustic_oM/Elements/Speaker.cs",
+      "label": "Speaker (BH.oM.Acoustic)",
+      "attributes": []
+    },
+    {
+      "id": "BH.oM.Acoustic.Frequency",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/Acoustic_oM/Frequency.cs",
+      "label": "Frequency (BH.oM.Acoustic)",
+      "attributes": []
+    },
+    {
+      "id": "BH.oM.Acoustic.IAcousticParameter",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/Acoustic_oM/Parameters/IAcousticParameter.cs",
+      "label": "IAcousticParameter (BH.oM.Acoustic)",
+      "attributes": []
+    },
+    {
+      "id": "BH.oM.Acoustic.Rasti",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/Acoustic_oM/Parameters/Rasti.cs",
+      "label": "Rasti (BH.oM.Acoustic)",
+      "attributes": []
+    },
+    {
+      "id": "BH.oM.Acoustic.RT60",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/Acoustic_oM/Parameters/RT60.cs",
+      "label": "RT60 (BH.oM.Acoustic)",
+      "attributes": []
+    },
+    {
+      "id": "BH.oM.Acoustic.SnRatio",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/Acoustic_oM/Parameters/SnRatio.cs",
+      "label": "SnRatio (BH.oM.Acoustic)",
+      "attributes": []
+    },
+    {
+      "id": "BH.oM.Acoustic.SoundLevel",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/Acoustic_oM/Parameters/SoundLevel.cs",
+      "label": "SoundLevel (BH.oM.Acoustic)",
+      "attributes": []
+    },
+    {
+      "id": "BH.oM.Acoustic.Panel.Surface",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/Acoustic_oM/Elements/Panel.cs#L35",
+      "label": "Surface (Mesh)",
+      "attributes": []
+    },
+    {
+      "id": "BH.oM.Geometry.Mesh",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/Geometry_oM/Mesh/Mesh.cs",
+      "label": "Mesh (BH.oM.Geometry)",
+      "attributes": []
+    },
+    {
+      "id": "PanelID-21AEB20AD43E34008AFB730DB3F47BB378A1F910BFDB2AFDB78D6B92CCA108F7-Panel-HasProperty",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/HasProperty.cs",
+      "label": "PanelID (Int32)",
+      "attributes": "datatype"
+    },
+    {
+      "id": "R-3EF0EC336D7DFFA8CD5C72E8A477E57ECC9D261C89C9AB7489B18EC51CE8A1BE-Panel-HasProperty",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/HasProperty.cs",
+      "label": "R (Dictionary<Frequency,Double>)",
+      "attributes": "datatype"
+    },
+    {
+      "id": "BH.oM.Base.IBHoMObject",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/BHoM/Interface/IBHoMObject.cs",
+      "label": "IBHoMObject",
+      "attributes": []
+    },
+    {
+      "id": "BH.oM.Base.IObject",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/BHoM/Interface/IObject.cs",
+      "label": "IObject",
+      "attributes": []
+    },
+    {
+      "id": "BH.oM.Base.BHoMObject",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/BHoM/BHoMObject.cs",
+      "label": "BHoMObject",
+      "attributes": []
+    },
+    {
+      "id": "BH.oM.Acoustic.Ray.Path",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/Acoustic_oM/Elements/Ray.cs#L35",
+      "label": "Path (Polyline)",
+      "attributes": []
+    },
+    {
+      "id": "BH.oM.Geometry.Polyline",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/Geometry_oM/Curve/Polyline.cs",
+      "label": "Polyline (BH.oM.Geometry)",
+      "attributes": []
+    },
+    {
+      "id": "SpeakerID-8B318C670203C66BEAF5A3DBADE803A69B3C2BEEB0098024B43FF100F142D539-Ray-HasProperty",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/HasProperty.cs",
+      "label": "SpeakerID (Int32)",
+      "attributes": "datatype"
+    },
+    {
+      "id": "ReceiverID-81C73A7D822E94F61E84EB31D1877101184EBCB73174225DBBC9DF39E9F1133E-Ray-HasProperty",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/HasProperty.cs",
+      "label": "ReceiverID (Int32)",
+      "attributes": "datatype"
+    },
+    {
+      "id": "PanelsID-1773ED2A45BD722C0DE91F677D74C4B172ABF3FD20EBB2FA56B3BBEA95C1CF83-Ray-HasProperty",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/HasProperty.cs",
+      "label": "PanelsID (List<Int32>)",
+      "attributes": "datatype"
+    },
+    {
+      "id": "BH.oM.Acoustic.Receiver.Location",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/Acoustic_oM/Elements/Receiver.cs#L34",
+      "label": "Location (Point)",
+      "attributes": []
+    },
+    {
+      "id": "BH.oM.Geometry.Point",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/Geometry_oM/Vector/Point.cs",
+      "label": "Point (BH.oM.Geometry)",
+      "attributes": []
+    },
+    {
+      "id": "Category-9DDE3B86A8E48E822D4672EA3BCE4D4724E5D21F56FB6548206D768CF2D285BA-Receiver-HasProperty",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/HasProperty.cs",
+      "label": "Category (String)",
+      "attributes": "datatype"
+    },
+    {
+      "id": "ReceiverID-BEF42D2BC0D30F613F1CAECF96DD933D153960CB36C3E1F4218720CDD2A42547-Receiver-HasProperty",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/HasProperty.cs",
+      "label": "ReceiverID (Int32)",
+      "attributes": "datatype"
+    },
+    {
+      "id": "BH.oM.Acoustic.Room.Boundaries",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/Acoustic_oM/Elements/Room.cs#L37",
+      "label": "Boundaries (PolySurface)",
+      "attributes": []
+    },
+    {
+      "id": "BH.oM.Geometry.PolySurface",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/Geometry_oM/Surface/PolySurface.cs",
+      "label": "PolySurface (BH.oM.Geometry)",
+      "attributes": []
+    },
+    {
+      "id": "Area-894AF8C18C67929F928A476B7358E967A1E85141FE9F7142571F6B80079B2362-Room-HasProperty",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/HasProperty.cs",
+      "label": "Area (Double)",
+      "attributes": "datatype"
+    },
+    {
+      "id": "Volume-EF986BD2DD61C4AECAF997E553FF2CF012470B905B89E4A5A50C46719072E3D8-Room-HasProperty",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/HasProperty.cs",
+      "label": "Volume (Double)",
+      "attributes": "datatype"
+    },
+    {
+      "id": "Samples-4B7945FE1456FAC2032B85B0275EC54117D7DCCCCCAC84F8C9BA048DA36B50DB-Room-HasProperty",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/HasProperty.cs",
+      "label": "Samples (List<Receiver>)",
+      "attributes": "datatype"
+    },
+    {
+      "id": "AcousticZone-8F5BF0DE138E4E07C5A03353A69B80C63E995FBC607D72B30B02812229207960-Room-HasProperty",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/HasProperty.cs",
+      "label": "AcousticZone (String)",
+      "attributes": "datatype"
+    },
+    {
+      "id": "PublicAddressVoiceAlarmZone-23627A6A32136D330A126C9CEDA92FB59915A24C60A9C9F6AF3C9E3191911136-Room-HasProperty",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/HasProperty.cs",
+      "label": "PublicAddressVoiceAlarmZone (String)",
+      "attributes": "datatype"
+    },
+    {
+      "id": "AverageInternalAmbientNoiseLevelRequirement-23C190D93D434CDF30154DD31354222083AD5E2E8E24FBC5029E333EE8449D03-Room-HasProperty",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/HasProperty.cs",
+      "label": "AverageInternalAmbientNoiseLevelRequirement (Int32)",
+      "attributes": "datatype"
+    },
+    {
+      "id": "MaximumInternalAmbientNoiseLevelRequirement-1DD8C183ED1F7EE18272725EBBCCA48A0558B2A5468922065CBF46D21095794C-Room-HasProperty",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/HasProperty.cs",
+      "label": "MaximumInternalAmbientNoiseLevelRequirement (Int32)",
+      "attributes": "datatype"
+    },
+    {
+      "id": "ReverberationTime-7BAE58DA0350E3C85C7A96FFBE568AE816AEE16DEB535FF791980207DE9DF8E6-Room-HasProperty",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/HasProperty.cs",
+      "label": "ReverberationTime (Double)",
+      "attributes": "datatype"
+    },
+    {
+      "id": "NoiseRating-CAA35E7A4E089F73EB0DB01EB3DC7B71409E6918D9C25329CCC29B3EE7CDE7A4-Room-HasProperty",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/HasProperty.cs",
+      "label": "NoiseRating (Int32)",
+      "attributes": "datatype"
+    },
+    {
+      "id": "ImpactSoundInsulation-2EE693D742D863C26589D8268249BFC8D4A524A685A344240560EE6A822C88BB-Room-HasProperty",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/HasProperty.cs",
+      "label": "ImpactSoundInsulation (Int32)",
+      "attributes": "datatype"
+    },
+    {
+      "id": "SpeechTransmitionIndex-359B6187073ACF1F7BAC699C8185B570C080235E285F43384F6FD6EF17293FD7-Room-HasProperty",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/HasProperty.cs",
+      "label": "SpeechTransmitionIndex (Double)",
+      "attributes": "datatype"
+    },
+    {
+      "id": "PrivacyRequirement-BA9616B0E90FF4BC157D778489613B44F97B0CCC8514C5D1C04800F79645F6B5-Room-HasProperty",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/HasProperty.cs",
+      "label": "PrivacyRequirement (String)",
+      "attributes": "datatype"
+    },
+    {
+      "id": "MinimumSoundPressureLevel-850EABE7D02CBE906DE89C1A291F260F78174F5D06E56750C8599BB0C42CFB2D-Room-HasProperty",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/HasProperty.cs",
+      "label": "MinimumSoundPressureLevel (Int32)",
+      "attributes": "datatype"
+    },
+    {
+      "id": "SoundPressureLevelCoverage-81751076B43310A907DA21E88B36368FDC103BCEA87BDE897E2D515D989EDA0C-Room-HasProperty",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/HasProperty.cs",
+      "label": "SoundPressureLevelCoverage (Double)",
+      "attributes": "datatype"
+    },
+    {
+      "id": "AcousticUnderlayRequirement-455CFAE22CE2A2CADE89DAB3CD970FD13D6C6B06E4008E917CF41CF384FA469E-Room-HasProperty",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/HasProperty.cs",
+      "label": "AcousticUnderlayRequirement (Boolean)",
+      "attributes": "datatype"
+    },
+    {
+      "id": "BH.oM.Acoustic.Speaker.Location",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/Acoustic_oM/Elements/Speaker.cs#L35",
+      "label": "Location (Point)",
+      "attributes": []
+    },
+    {
+      "id": "BH.oM.Acoustic.Speaker.Direction",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/Acoustic_oM/Elements/Speaker.cs#L37",
+      "label": "Direction (Vector)",
+      "attributes": []
+    },
+    {
+      "id": "BH.oM.Geometry.Vector",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/Geometry_oM/Vector/Vector.cs",
+      "label": "Vector (BH.oM.Geometry)",
+      "attributes": []
+    },
+    {
+      "id": "EmissiveLevel-7139039C3F5EB1E71425111F0DBF0F336BE8286D67EADC97B5019045C20BD260-Speaker-HasProperty",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/HasProperty.cs",
+      "label": "EmissiveLevel (Double)",
+      "attributes": "datatype"
+    },
+    {
+      "id": "Category-EA5BBAC94DADB9DE665378482322176DB5B6ECEED8E0F66D42895D3ABDB58225-Speaker-HasProperty",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/HasProperty.cs",
+      "label": "Category (String)",
+      "attributes": "datatype"
+    },
+    {
+      "id": "SpeakerID-05A479C929FDF3CADDF610E4BBC9FBA29F7A38501CD99189108229E56D169A4D-Speaker-HasProperty",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/HasProperty.cs",
+      "label": "SpeakerID (Int32)",
+      "attributes": "datatype"
+    },
+    {
+      "id": "Gains-0BEC9F0EF65905BE8DE8CE235F4B532EE244F9568497240A05D18539A2F0C5E9-Speaker-HasProperty",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/HasProperty.cs",
+      "label": "Gains (Dictionary<Frequency,Double>)",
+      "attributes": "datatype"
+    },
+    {
+      "id": "Directivity-8D4E0A6C20FC2DA82DC56B071C4F7FCE882DCE89406858BF4CD23D1B484A71AA-Speaker-HasProperty",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/HasProperty.cs",
+      "label": "Directivity (Dictionary<Frequency,Double>)",
+      "attributes": "datatype"
+    },
+    {
+      "id": "Value-13C987008018E688F1C9D0B2FE27E96E6CC3650049A6AD88E6D00BB146299D2E-Rasti-HasProperty",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/HasProperty.cs",
+      "label": "Value (Double)",
+      "attributes": "datatype"
+    },
+    {
+      "id": "ReceiverID-4542EC72F953E106E53B68ADE6A5CC019178EA50A3CC55637BC5C3A08B62BC3F-Rasti-HasProperty",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/HasProperty.cs",
+      "label": "ReceiverID (Int32)",
+      "attributes": "datatype"
+    },
+    {
+      "id": "SpeakerID-6D4DD7022A75516EC65AC742431DE5D6A89394F735C9FA450732787BC05D9C48-Rasti-HasProperty",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/HasProperty.cs",
+      "label": "SpeakerID (Int32)",
+      "attributes": "datatype"
+    },
+    {
+      "id": "BH.oM.Acoustic.Rasti.Frequency",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/Acoustic_oM/Parameters/Rasti.cs#L39",
+      "label": "Frequency (Frequency)",
+      "attributes": []
+    },
+    {
+      "id": "Value-1C1339CF28ECF91BAEECC84D5C89551AEEDB7260453F734BE6FE5395F11E79A1-RT60-HasProperty",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/HasProperty.cs",
+      "label": "Value (Double)",
+      "attributes": "datatype"
+    },
+    {
+      "id": "ReceiverID-8A1C932510B118768F773335D6A836F0198B9E373882C457C7452C23B82F54B4-RT60-HasProperty",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/HasProperty.cs",
+      "label": "ReceiverID (Int32)",
+      "attributes": "datatype"
+    },
+    {
+      "id": "SpeakerID-83EF3D1FB9E3EB70F28A8C53EC99A01B9DE8E1DF07F34394BB9FAB7723BA2BC6-RT60-HasProperty",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/HasProperty.cs",
+      "label": "SpeakerID (Int32)",
+      "attributes": "datatype"
+    },
+    {
+      "id": "BH.oM.Acoustic.RT60.Frequency",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/Acoustic_oM/Parameters/RT60.cs#L39",
+      "label": "Frequency (Frequency)",
+      "attributes": []
+    },
+    {
+      "id": "Value-349479460D6E9279DFF751AA98E6D257D0CEE222BAC209E66E14CFC1A79CDB46-SnRatio-HasProperty",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/HasProperty.cs",
+      "label": "Value (Double)",
+      "attributes": "datatype"
+    },
+    {
+      "id": "ReceiverID-23F6D1AD7DDBDB1A262AED4296425B75324DF315B6582697302651C1757A8C24-SnRatio-HasProperty",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/HasProperty.cs",
+      "label": "ReceiverID (Int32)",
+      "attributes": "datatype"
+    },
+    {
+      "id": "SpeakerID-EC26512A222C6465FEF6607412A9A038B93B6C45B31F9C6C3390F776D493497F-SnRatio-HasProperty",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/HasProperty.cs",
+      "label": "SpeakerID (Int32)",
+      "attributes": "datatype"
+    },
+    {
+      "id": "BH.oM.Acoustic.SnRatio.Frequency",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/Acoustic_oM/Parameters/SnRatio.cs#L39",
+      "label": "Frequency (Frequency)",
+      "attributes": []
+    },
+    {
+      "id": "Value-03A27BFD371ACA841E005F398FB25475D8B5C47832EEE431D0545BC209EBB691-SoundLevel-HasProperty",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/HasProperty.cs",
+      "label": "Value (Double)",
+      "attributes": "datatype"
+    },
+    {
+      "id": "ReceiverID-2679F65C70CFACB0E49BC43393BE5483FA61676E39A0E94CAC14D61F9F255BC2-SoundLevel-HasProperty",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/HasProperty.cs",
+      "label": "ReceiverID (Int32)",
+      "attributes": "datatype"
+    },
+    {
+      "id": "SpeakerID-62797CFA5205BADCCDFFC822725E886098F1B1EE18E3710A14FD8AEA6601E5F4-SoundLevel-HasProperty",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/HasProperty.cs",
+      "label": "SpeakerID (Int32)",
+      "attributes": "datatype"
+    },
+    {
+      "id": "BH.oM.Acoustic.SoundLevel.Frequency",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/Acoustic_oM/Parameters/SoundLevel.cs#L40",
+      "label": "Frequency (Frequency)",
+      "attributes": []
+    }
+  ],
+  "property": [
+    {
+      "id": "BH.oM.Acoustic.Constants-BH.oM.RDF.IsSubclassOf-System.Object",
+      "type": "owl:DatatypeProperty"
+    },
+    {
+      "id": "BH.oM.Acoustic.Panel.Surface-IsA-BH.oM.Geometry.Mesh",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "BH.oM.Acoustic.Panel-BH.oM.RDF.HasProperty-BH.oM.Geometry.Mesh Surface",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "BH.oM.Acoustic.Panel-BH.oM.RDF.HasProperty-Int32 PanelID",
+      "type": "owl:DatatypeProperty"
+    },
+    {
+      "id": "BH.oM.Acoustic.Panel-BH.oM.RDF.HasProperty-System.Collections.Generic.Dictionary`2[BH.oM.Acoustic.Frequency,System.Double] R",
+      "type": "owl:DatatypeProperty"
+    },
+    {
+      "id": "BH.oM.Acoustic.Panel-BH.oM.RDF.IsA-BH.oM.Base.IBHoMObject",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "BH.oM.Acoustic.Panel-BH.oM.RDF.IsA-BH.oM.Base.IObject",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "BH.oM.Acoustic.Panel-BH.oM.RDF.IsSubclassOf-BH.oM.Base.BHoMObject",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "BH.oM.Acoustic.Ray.Path-IsA-BH.oM.Geometry.Polyline",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "BH.oM.Acoustic.Ray-BH.oM.RDF.HasProperty-BH.oM.Geometry.Polyline Path",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "BH.oM.Acoustic.Ray-BH.oM.RDF.HasProperty-Int32 SpeakerID",
+      "type": "owl:DatatypeProperty"
+    },
+    {
+      "id": "BH.oM.Acoustic.Ray-BH.oM.RDF.HasProperty-Int32 ReceiverID",
+      "type": "owl:DatatypeProperty"
+    },
+    {
+      "id": "BH.oM.Acoustic.Ray-BH.oM.RDF.HasProperty-System.Collections.Generic.List`1[System.Int32] PanelsID",
+      "type": "owl:DatatypeProperty"
+    },
+    {
+      "id": "BH.oM.Acoustic.Ray-BH.oM.RDF.IsA-BH.oM.Base.IBHoMObject",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "BH.oM.Acoustic.Ray-BH.oM.RDF.IsA-BH.oM.Base.IObject",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "BH.oM.Acoustic.Ray-BH.oM.RDF.IsSubclassOf-BH.oM.Base.BHoMObject",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "BH.oM.Acoustic.Receiver.Location-IsA-BH.oM.Geometry.Point",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "BH.oM.Acoustic.Receiver-BH.oM.RDF.HasProperty-BH.oM.Geometry.Point Location",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "BH.oM.Acoustic.Receiver-BH.oM.RDF.HasProperty-System.String Category",
+      "type": "owl:DatatypeProperty"
+    },
+    {
+      "id": "BH.oM.Acoustic.Receiver-BH.oM.RDF.HasProperty-Int32 ReceiverID",
+      "type": "owl:DatatypeProperty"
+    },
+    {
+      "id": "BH.oM.Acoustic.Receiver-BH.oM.RDF.IsA-BH.oM.Base.IBHoMObject",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "BH.oM.Acoustic.Receiver-BH.oM.RDF.IsA-BH.oM.Base.IObject",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "BH.oM.Acoustic.Receiver-BH.oM.RDF.IsSubclassOf-BH.oM.Base.BHoMObject",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "BH.oM.Acoustic.Room.Boundaries-IsA-BH.oM.Geometry.PolySurface",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "BH.oM.Acoustic.Room-BH.oM.RDF.HasProperty-BH.oM.Geometry.PolySurface Boundaries",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "BH.oM.Acoustic.Room-BH.oM.RDF.HasProperty-Double Area",
+      "type": "owl:DatatypeProperty"
+    },
+    {
+      "id": "BH.oM.Acoustic.Room-BH.oM.RDF.HasProperty-Double Volume",
+      "type": "owl:DatatypeProperty"
+    },
+    {
+      "id": "BH.oM.Acoustic.Room-BH.oM.RDF.HasProperty-System.Collections.Generic.List`1[BH.oM.Acoustic.Receiver] Samples",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "BH.oM.Acoustic.Room-BH.oM.RDF.HasProperty-System.String AcousticZone",
+      "type": "owl:DatatypeProperty"
+    },
+    {
+      "id": "BH.oM.Acoustic.Room-BH.oM.RDF.HasProperty-System.String PublicAddressVoiceAlarmZone",
+      "type": "owl:DatatypeProperty"
+    },
+    {
+      "id": "BH.oM.Acoustic.Room-BH.oM.RDF.HasProperty-Int32 AverageInternalAmbientNoiseLevelRequirement",
+      "type": "owl:DatatypeProperty"
+    },
+    {
+      "id": "BH.oM.Acoustic.Room-BH.oM.RDF.HasProperty-Int32 MaximumInternalAmbientNoiseLevelRequirement",
+      "type": "owl:DatatypeProperty"
+    },
+    {
+      "id": "BH.oM.Acoustic.Room-BH.oM.RDF.HasProperty-Double ReverberationTime",
+      "type": "owl:DatatypeProperty"
+    },
+    {
+      "id": "BH.oM.Acoustic.Room-BH.oM.RDF.HasProperty-Int32 NoiseRating",
+      "type": "owl:DatatypeProperty"
+    },
+    {
+      "id": "BH.oM.Acoustic.Room-BH.oM.RDF.HasProperty-Int32 ImpactSoundInsulation",
+      "type": "owl:DatatypeProperty"
+    },
+    {
+      "id": "BH.oM.Acoustic.Room-BH.oM.RDF.HasProperty-Double SpeechTransmitionIndex",
+      "type": "owl:DatatypeProperty"
+    },
+    {
+      "id": "BH.oM.Acoustic.Room-BH.oM.RDF.HasProperty-System.String PrivacyRequirement",
+      "type": "owl:DatatypeProperty"
+    },
+    {
+      "id": "BH.oM.Acoustic.Room-BH.oM.RDF.HasProperty-Int32 MinimumSoundPressureLevel",
+      "type": "owl:DatatypeProperty"
+    },
+    {
+      "id": "BH.oM.Acoustic.Room-BH.oM.RDF.HasProperty-Double SoundPressureLevelCoverage",
+      "type": "owl:DatatypeProperty"
+    },
+    {
+      "id": "BH.oM.Acoustic.Room-BH.oM.RDF.HasProperty-Boolean AcousticUnderlayRequirement",
+      "type": "owl:DatatypeProperty"
+    },
+    {
+      "id": "BH.oM.Acoustic.Room-BH.oM.RDF.IsA-BH.oM.Base.IBHoMObject",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "BH.oM.Acoustic.Room-BH.oM.RDF.IsA-BH.oM.Base.IObject",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "BH.oM.Acoustic.Room-BH.oM.RDF.IsSubclassOf-BH.oM.Base.BHoMObject",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "BH.oM.Acoustic.Speaker.Location-IsA-BH.oM.Geometry.Point",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "BH.oM.Acoustic.Speaker-BH.oM.RDF.HasProperty-BH.oM.Geometry.Point Location",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "BH.oM.Acoustic.Speaker.Direction-IsA-BH.oM.Geometry.Vector",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "BH.oM.Acoustic.Speaker-BH.oM.RDF.HasProperty-BH.oM.Geometry.Vector Direction",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "BH.oM.Acoustic.Speaker-BH.oM.RDF.HasProperty-Double EmissiveLevel",
+      "type": "owl:DatatypeProperty"
+    },
+    {
+      "id": "BH.oM.Acoustic.Speaker-BH.oM.RDF.HasProperty-System.String Category",
+      "type": "owl:DatatypeProperty"
+    },
+    {
+      "id": "BH.oM.Acoustic.Speaker-BH.oM.RDF.HasProperty-Int32 SpeakerID",
+      "type": "owl:DatatypeProperty"
+    },
+    {
+      "id": "BH.oM.Acoustic.Speaker-BH.oM.RDF.HasProperty-System.Collections.Generic.Dictionary`2[BH.oM.Acoustic.Frequency,System.Double] Gains",
+      "type": "owl:DatatypeProperty"
+    },
+    {
+      "id": "BH.oM.Acoustic.Speaker-BH.oM.RDF.HasProperty-System.Collections.Generic.Dictionary`2[BH.oM.Acoustic.Frequency,System.Double[,]] Directivity",
+      "type": "owl:DatatypeProperty"
+    },
+    {
+      "id": "BH.oM.Acoustic.Speaker-BH.oM.RDF.IsA-BH.oM.Base.IBHoMObject",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "BH.oM.Acoustic.Speaker-BH.oM.RDF.IsA-BH.oM.Base.IObject",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "BH.oM.Acoustic.Speaker-BH.oM.RDF.IsSubclassOf-BH.oM.Base.BHoMObject",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "BH.oM.Acoustic.Frequency-BH.oM.RDF.IsA-System.IComparable",
+      "type": "owl:DatatypeProperty"
+    },
+    {
+      "id": "BH.oM.Acoustic.Frequency-BH.oM.RDF.IsA-System.IFormattable",
+      "type": "owl:DatatypeProperty"
+    },
+    {
+      "id": "BH.oM.Acoustic.Frequency-BH.oM.RDF.IsA-System.IConvertible",
+      "type": "owl:DatatypeProperty"
+    },
+    {
+      "id": "BH.oM.Acoustic.Frequency-BH.oM.RDF.IsSubclassOf-System.Enum",
+      "type": "owl:DatatypeProperty"
+    },
+    {
+      "id": "BH.oM.Acoustic.IAcousticParameter-BH.oM.RDF.RequiresProperty-Double Value",
+      "type": "owl:DatatypeProperty"
+    },
+    {
+      "id": "BH.oM.Acoustic.IAcousticParameter-BH.oM.RDF.RequiresProperty-Int32 ReceiverID",
+      "type": "owl:DatatypeProperty"
+    },
+    {
+      "id": "BH.oM.Acoustic.IAcousticParameter-BH.oM.RDF.RequiresProperty-Int32 SpeakerID",
+      "type": "owl:DatatypeProperty"
+    },
+    {
+      "id": "BH.oM.Acoustic.IAcousticParameter-BH.oM.RDF.RequiresProperty-BH.oM.Acoustic.Frequency Frequency",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "BH.oM.Acoustic.IAcousticParameter-BH.oM.RDF.IsA-BH.oM.Base.IObject",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "BH.oM.Acoustic.Rasti-BH.oM.RDF.HasProperty-Double Value",
+      "type": "owl:DatatypeProperty"
+    },
+    {
+      "id": "BH.oM.Acoustic.Rasti-BH.oM.RDF.HasProperty-Int32 ReceiverID",
+      "type": "owl:DatatypeProperty"
+    },
+    {
+      "id": "BH.oM.Acoustic.Rasti-BH.oM.RDF.HasProperty-Int32 SpeakerID",
+      "type": "owl:DatatypeProperty"
+    },
+    {
+      "id": "BH.oM.Acoustic.Rasti.Frequency-IsA-BH.oM.Acoustic.Frequency",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "BH.oM.Acoustic.Rasti-BH.oM.RDF.HasProperty-BH.oM.Acoustic.Frequency Frequency",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "BH.oM.Acoustic.Rasti-BH.oM.RDF.IsA-BH.oM.Base.IBHoMObject",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "BH.oM.Acoustic.Rasti-BH.oM.RDF.IsA-BH.oM.Base.IObject",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "BH.oM.Acoustic.Rasti-BH.oM.RDF.IsA-BH.oM.Acoustic.IAcousticParameter",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "BH.oM.Acoustic.Rasti-BH.oM.RDF.IsSubclassOf-BH.oM.Base.BHoMObject",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "BH.oM.Acoustic.RT60-BH.oM.RDF.HasProperty-Double Value",
+      "type": "owl:DatatypeProperty"
+    },
+    {
+      "id": "BH.oM.Acoustic.RT60-BH.oM.RDF.HasProperty-Int32 ReceiverID",
+      "type": "owl:DatatypeProperty"
+    },
+    {
+      "id": "BH.oM.Acoustic.RT60-BH.oM.RDF.HasProperty-Int32 SpeakerID",
+      "type": "owl:DatatypeProperty"
+    },
+    {
+      "id": "BH.oM.Acoustic.RT60.Frequency-IsA-BH.oM.Acoustic.Frequency",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "BH.oM.Acoustic.RT60-BH.oM.RDF.HasProperty-BH.oM.Acoustic.Frequency Frequency",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "BH.oM.Acoustic.RT60-BH.oM.RDF.IsA-BH.oM.Base.IBHoMObject",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "BH.oM.Acoustic.RT60-BH.oM.RDF.IsA-BH.oM.Base.IObject",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "BH.oM.Acoustic.RT60-BH.oM.RDF.IsA-BH.oM.Acoustic.IAcousticParameter",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "BH.oM.Acoustic.RT60-BH.oM.RDF.IsSubclassOf-BH.oM.Base.BHoMObject",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "BH.oM.Acoustic.SnRatio-BH.oM.RDF.HasProperty-Double Value",
+      "type": "owl:DatatypeProperty"
+    },
+    {
+      "id": "BH.oM.Acoustic.SnRatio-BH.oM.RDF.HasProperty-Int32 ReceiverID",
+      "type": "owl:DatatypeProperty"
+    },
+    {
+      "id": "BH.oM.Acoustic.SnRatio-BH.oM.RDF.HasProperty-Int32 SpeakerID",
+      "type": "owl:DatatypeProperty"
+    },
+    {
+      "id": "BH.oM.Acoustic.SnRatio.Frequency-IsA-BH.oM.Acoustic.Frequency",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "BH.oM.Acoustic.SnRatio-BH.oM.RDF.HasProperty-BH.oM.Acoustic.Frequency Frequency",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "BH.oM.Acoustic.SnRatio-BH.oM.RDF.IsA-BH.oM.Base.IBHoMObject",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "BH.oM.Acoustic.SnRatio-BH.oM.RDF.IsA-BH.oM.Base.IObject",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "BH.oM.Acoustic.SnRatio-BH.oM.RDF.IsA-BH.oM.Acoustic.IAcousticParameter",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "BH.oM.Acoustic.SnRatio-BH.oM.RDF.IsSubclassOf-BH.oM.Base.BHoMObject",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "BH.oM.Acoustic.SoundLevel-BH.oM.RDF.HasProperty-Double Value",
+      "type": "owl:DatatypeProperty"
+    },
+    {
+      "id": "BH.oM.Acoustic.SoundLevel-BH.oM.RDF.HasProperty-Int32 ReceiverID",
+      "type": "owl:DatatypeProperty"
+    },
+    {
+      "id": "BH.oM.Acoustic.SoundLevel-BH.oM.RDF.HasProperty-Int32 SpeakerID",
+      "type": "owl:DatatypeProperty"
+    },
+    {
+      "id": "BH.oM.Acoustic.SoundLevel.Frequency-IsA-BH.oM.Acoustic.Frequency",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "BH.oM.Acoustic.SoundLevel-BH.oM.RDF.HasProperty-BH.oM.Acoustic.Frequency Frequency",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "BH.oM.Acoustic.SoundLevel-BH.oM.RDF.IsA-BH.oM.Base.IBHoMObject",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "BH.oM.Acoustic.SoundLevel-BH.oM.RDF.IsA-BH.oM.Base.IObject",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "BH.oM.Acoustic.SoundLevel-BH.oM.RDF.IsA-BH.oM.Acoustic.IAcousticParameter",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "BH.oM.Acoustic.SoundLevel-BH.oM.RDF.IsSubclassOf-BH.oM.Base.BHoMObject",
+      "type": "owl:ObjectProperty"
+    }
+  ],
+  "propertyAttribute": [
+    {
+      "id": "BH.oM.Acoustic.Constants-BH.oM.RDF.IsSubclassOf-System.Object",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsSubclassOf.cs",
+      "label": "IsSubclassOf",
+      "attributes": []
+    },
+    {
+      "id": "BH.oM.Acoustic.Panel.Surface-IsA-BH.oM.Geometry.Mesh",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "label": "IsA",
+      "attributes": "object",
+      "domain": "BH.oM.Acoustic.Panel.Surface",
+      "range": "BH.oM.Geometry.Mesh"
+    },
+    {
+      "id": "BH.oM.Acoustic.Panel-BH.oM.RDF.HasProperty-BH.oM.Geometry.Mesh Surface",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/HasProperty.cs",
+      "label": "HasProperty",
+      "attributes": [],
+      "domain": "BH.oM.Acoustic.Panel",
+      "range": "BH.oM.Acoustic.Panel.Surface"
+    },
+    {
+      "id": "BH.oM.Acoustic.Panel-BH.oM.RDF.HasProperty-Int32 PanelID",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/HasProperty.cs",
+      "label": "HasProperty",
+      "attributes": "datatype",
+      "domain": "BH.oM.Acoustic.Panel",
+      "range": "PanelID-21AEB20AD43E34008AFB730DB3F47BB378A1F910BFDB2AFDB78D6B92CCA108F7-Panel-HasProperty"
+    },
+    {
+      "id": "BH.oM.Acoustic.Panel-BH.oM.RDF.HasProperty-System.Collections.Generic.Dictionary`2[BH.oM.Acoustic.Frequency,System.Double] R",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/HasProperty.cs",
+      "label": "HasProperty",
+      "attributes": "datatype",
+      "domain": "BH.oM.Acoustic.Panel",
+      "range": "R-3EF0EC336D7DFFA8CD5C72E8A477E57ECC9D261C89C9AB7489B18EC51CE8A1BE-Panel-HasProperty"
+    },
+    {
+      "id": "BH.oM.Acoustic.Panel-BH.oM.RDF.IsA-BH.oM.Base.IBHoMObject",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "label": "IsA",
+      "attributes": "object",
+      "domain": "BH.oM.Acoustic.Panel",
+      "range": "BH.oM.Base.IBHoMObject"
+    },
+    {
+      "id": "BH.oM.Acoustic.Panel-BH.oM.RDF.IsA-BH.oM.Base.IObject",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "label": "IsA",
+      "attributes": "object",
+      "domain": "BH.oM.Acoustic.Panel",
+      "range": "BH.oM.Base.IObject"
+    },
+    {
+      "id": "BH.oM.Acoustic.Panel-BH.oM.RDF.IsSubclassOf-BH.oM.Base.BHoMObject",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsSubclassOf.cs",
+      "label": "IsSubclassOf",
+      "attributes": "object",
+      "domain": "BH.oM.Acoustic.Panel",
+      "range": "BH.oM.Base.BHoMObject"
+    },
+    {
+      "id": "BH.oM.Acoustic.Ray.Path-IsA-BH.oM.Geometry.Polyline",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "label": "IsA",
+      "attributes": "object",
+      "domain": "BH.oM.Acoustic.Ray.Path",
+      "range": "BH.oM.Geometry.Polyline"
+    },
+    {
+      "id": "BH.oM.Acoustic.Ray-BH.oM.RDF.HasProperty-BH.oM.Geometry.Polyline Path",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/HasProperty.cs",
+      "label": "HasProperty",
+      "attributes": [],
+      "domain": "BH.oM.Acoustic.Ray",
+      "range": "BH.oM.Acoustic.Ray.Path"
+    },
+    {
+      "id": "BH.oM.Acoustic.Ray-BH.oM.RDF.HasProperty-Int32 SpeakerID",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/HasProperty.cs",
+      "label": "HasProperty",
+      "attributes": "datatype",
+      "domain": "BH.oM.Acoustic.Ray",
+      "range": "SpeakerID-8B318C670203C66BEAF5A3DBADE803A69B3C2BEEB0098024B43FF100F142D539-Ray-HasProperty"
+    },
+    {
+      "id": "BH.oM.Acoustic.Ray-BH.oM.RDF.HasProperty-Int32 ReceiverID",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/HasProperty.cs",
+      "label": "HasProperty",
+      "attributes": "datatype",
+      "domain": "BH.oM.Acoustic.Ray",
+      "range": "ReceiverID-81C73A7D822E94F61E84EB31D1877101184EBCB73174225DBBC9DF39E9F1133E-Ray-HasProperty"
+    },
+    {
+      "id": "BH.oM.Acoustic.Ray-BH.oM.RDF.HasProperty-System.Collections.Generic.List`1[System.Int32] PanelsID",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/HasProperty.cs",
+      "label": "HasProperty",
+      "attributes": "datatype",
+      "domain": "BH.oM.Acoustic.Ray",
+      "range": "PanelsID-1773ED2A45BD722C0DE91F677D74C4B172ABF3FD20EBB2FA56B3BBEA95C1CF83-Ray-HasProperty"
+    },
+    {
+      "id": "BH.oM.Acoustic.Ray-BH.oM.RDF.IsA-BH.oM.Base.IBHoMObject",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "label": "IsA",
+      "attributes": "object",
+      "domain": "BH.oM.Acoustic.Ray",
+      "range": "BH.oM.Base.IBHoMObject"
+    },
+    {
+      "id": "BH.oM.Acoustic.Ray-BH.oM.RDF.IsA-BH.oM.Base.IObject",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "label": "IsA",
+      "attributes": "object",
+      "domain": "BH.oM.Acoustic.Ray",
+      "range": "BH.oM.Base.IObject"
+    },
+    {
+      "id": "BH.oM.Acoustic.Ray-BH.oM.RDF.IsSubclassOf-BH.oM.Base.BHoMObject",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsSubclassOf.cs",
+      "label": "IsSubclassOf",
+      "attributes": "object",
+      "domain": "BH.oM.Acoustic.Ray",
+      "range": "BH.oM.Base.BHoMObject"
+    },
+    {
+      "id": "BH.oM.Acoustic.Receiver.Location-IsA-BH.oM.Geometry.Point",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "label": "IsA",
+      "attributes": "object",
+      "domain": "BH.oM.Acoustic.Receiver.Location",
+      "range": "BH.oM.Geometry.Point"
+    },
+    {
+      "id": "BH.oM.Acoustic.Receiver-BH.oM.RDF.HasProperty-BH.oM.Geometry.Point Location",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/HasProperty.cs",
+      "label": "HasProperty",
+      "attributes": [],
+      "domain": "BH.oM.Acoustic.Receiver",
+      "range": "BH.oM.Acoustic.Receiver.Location"
+    },
+    {
+      "id": "BH.oM.Acoustic.Receiver-BH.oM.RDF.HasProperty-System.String Category",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/HasProperty.cs",
+      "label": "HasProperty",
+      "attributes": "datatype",
+      "domain": "BH.oM.Acoustic.Receiver",
+      "range": "Category-9DDE3B86A8E48E822D4672EA3BCE4D4724E5D21F56FB6548206D768CF2D285BA-Receiver-HasProperty"
+    },
+    {
+      "id": "BH.oM.Acoustic.Receiver-BH.oM.RDF.HasProperty-Int32 ReceiverID",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/HasProperty.cs",
+      "label": "HasProperty",
+      "attributes": "datatype",
+      "domain": "BH.oM.Acoustic.Receiver",
+      "range": "ReceiverID-BEF42D2BC0D30F613F1CAECF96DD933D153960CB36C3E1F4218720CDD2A42547-Receiver-HasProperty"
+    },
+    {
+      "id": "BH.oM.Acoustic.Receiver-BH.oM.RDF.IsA-BH.oM.Base.IBHoMObject",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "label": "IsA",
+      "attributes": "object",
+      "domain": "BH.oM.Acoustic.Receiver",
+      "range": "BH.oM.Base.IBHoMObject"
+    },
+    {
+      "id": "BH.oM.Acoustic.Receiver-BH.oM.RDF.IsA-BH.oM.Base.IObject",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "label": "IsA",
+      "attributes": "object",
+      "domain": "BH.oM.Acoustic.Receiver",
+      "range": "BH.oM.Base.IObject"
+    },
+    {
+      "id": "BH.oM.Acoustic.Receiver-BH.oM.RDF.IsSubclassOf-BH.oM.Base.BHoMObject",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsSubclassOf.cs",
+      "label": "IsSubclassOf",
+      "attributes": "object",
+      "domain": "BH.oM.Acoustic.Receiver",
+      "range": "BH.oM.Base.BHoMObject"
+    },
+    {
+      "id": "BH.oM.Acoustic.Room.Boundaries-IsA-BH.oM.Geometry.PolySurface",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "label": "IsA",
+      "attributes": "object",
+      "domain": "BH.oM.Acoustic.Room.Boundaries",
+      "range": "BH.oM.Geometry.PolySurface"
+    },
+    {
+      "id": "BH.oM.Acoustic.Room-BH.oM.RDF.HasProperty-BH.oM.Geometry.PolySurface Boundaries",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/HasProperty.cs",
+      "label": "HasProperty",
+      "attributes": [],
+      "domain": "BH.oM.Acoustic.Room",
+      "range": "BH.oM.Acoustic.Room.Boundaries"
+    },
+    {
+      "id": "BH.oM.Acoustic.Room-BH.oM.RDF.HasProperty-Double Area",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/HasProperty.cs",
+      "label": "HasProperty",
+      "attributes": "datatype",
+      "domain": "BH.oM.Acoustic.Room",
+      "range": "Area-894AF8C18C67929F928A476B7358E967A1E85141FE9F7142571F6B80079B2362-Room-HasProperty"
+    },
+    {
+      "id": "BH.oM.Acoustic.Room-BH.oM.RDF.HasProperty-Double Volume",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/HasProperty.cs",
+      "label": "HasProperty",
+      "attributes": "datatype",
+      "domain": "BH.oM.Acoustic.Room",
+      "range": "Volume-EF986BD2DD61C4AECAF997E553FF2CF012470B905B89E4A5A50C46719072E3D8-Room-HasProperty"
+    },
+    {
+      "id": "BH.oM.Acoustic.Room-BH.oM.RDF.HasProperty-System.Collections.Generic.List`1[BH.oM.Acoustic.Receiver] Samples",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/HasProperty.cs",
+      "label": "HasProperty",
+      "attributes": "datatype",
+      "domain": "BH.oM.Acoustic.Room",
+      "range": "Samples-4B7945FE1456FAC2032B85B0275EC54117D7DCCCCCAC84F8C9BA048DA36B50DB-Room-HasProperty"
+    },
+    {
+      "id": "BH.oM.Acoustic.Room-BH.oM.RDF.HasProperty-System.String AcousticZone",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/HasProperty.cs",
+      "label": "HasProperty",
+      "attributes": "datatype",
+      "domain": "BH.oM.Acoustic.Room",
+      "range": "AcousticZone-8F5BF0DE138E4E07C5A03353A69B80C63E995FBC607D72B30B02812229207960-Room-HasProperty"
+    },
+    {
+      "id": "BH.oM.Acoustic.Room-BH.oM.RDF.HasProperty-System.String PublicAddressVoiceAlarmZone",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/HasProperty.cs",
+      "label": "HasProperty",
+      "attributes": "datatype",
+      "domain": "BH.oM.Acoustic.Room",
+      "range": "PublicAddressVoiceAlarmZone-23627A6A32136D330A126C9CEDA92FB59915A24C60A9C9F6AF3C9E3191911136-Room-HasProperty"
+    },
+    {
+      "id": "BH.oM.Acoustic.Room-BH.oM.RDF.HasProperty-Int32 AverageInternalAmbientNoiseLevelRequirement",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/HasProperty.cs",
+      "label": "HasProperty",
+      "attributes": "datatype",
+      "domain": "BH.oM.Acoustic.Room",
+      "range": "AverageInternalAmbientNoiseLevelRequirement-23C190D93D434CDF30154DD31354222083AD5E2E8E24FBC5029E333EE8449D03-Room-HasProperty"
+    },
+    {
+      "id": "BH.oM.Acoustic.Room-BH.oM.RDF.HasProperty-Int32 MaximumInternalAmbientNoiseLevelRequirement",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/HasProperty.cs",
+      "label": "HasProperty",
+      "attributes": "datatype",
+      "domain": "BH.oM.Acoustic.Room",
+      "range": "MaximumInternalAmbientNoiseLevelRequirement-1DD8C183ED1F7EE18272725EBBCCA48A0558B2A5468922065CBF46D21095794C-Room-HasProperty"
+    },
+    {
+      "id": "BH.oM.Acoustic.Room-BH.oM.RDF.HasProperty-Double ReverberationTime",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/HasProperty.cs",
+      "label": "HasProperty",
+      "attributes": "datatype",
+      "domain": "BH.oM.Acoustic.Room",
+      "range": "ReverberationTime-7BAE58DA0350E3C85C7A96FFBE568AE816AEE16DEB535FF791980207DE9DF8E6-Room-HasProperty"
+    },
+    {
+      "id": "BH.oM.Acoustic.Room-BH.oM.RDF.HasProperty-Int32 NoiseRating",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/HasProperty.cs",
+      "label": "HasProperty",
+      "attributes": "datatype",
+      "domain": "BH.oM.Acoustic.Room",
+      "range": "NoiseRating-CAA35E7A4E089F73EB0DB01EB3DC7B71409E6918D9C25329CCC29B3EE7CDE7A4-Room-HasProperty"
+    },
+    {
+      "id": "BH.oM.Acoustic.Room-BH.oM.RDF.HasProperty-Int32 ImpactSoundInsulation",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/HasProperty.cs",
+      "label": "HasProperty",
+      "attributes": "datatype",
+      "domain": "BH.oM.Acoustic.Room",
+      "range": "ImpactSoundInsulation-2EE693D742D863C26589D8268249BFC8D4A524A685A344240560EE6A822C88BB-Room-HasProperty"
+    },
+    {
+      "id": "BH.oM.Acoustic.Room-BH.oM.RDF.HasProperty-Double SpeechTransmitionIndex",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/HasProperty.cs",
+      "label": "HasProperty",
+      "attributes": "datatype",
+      "domain": "BH.oM.Acoustic.Room",
+      "range": "SpeechTransmitionIndex-359B6187073ACF1F7BAC699C8185B570C080235E285F43384F6FD6EF17293FD7-Room-HasProperty"
+    },
+    {
+      "id": "BH.oM.Acoustic.Room-BH.oM.RDF.HasProperty-System.String PrivacyRequirement",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/HasProperty.cs",
+      "label": "HasProperty",
+      "attributes": "datatype",
+      "domain": "BH.oM.Acoustic.Room",
+      "range": "PrivacyRequirement-BA9616B0E90FF4BC157D778489613B44F97B0CCC8514C5D1C04800F79645F6B5-Room-HasProperty"
+    },
+    {
+      "id": "BH.oM.Acoustic.Room-BH.oM.RDF.HasProperty-Int32 MinimumSoundPressureLevel",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/HasProperty.cs",
+      "label": "HasProperty",
+      "attributes": "datatype",
+      "domain": "BH.oM.Acoustic.Room",
+      "range": "MinimumSoundPressureLevel-850EABE7D02CBE906DE89C1A291F260F78174F5D06E56750C8599BB0C42CFB2D-Room-HasProperty"
+    },
+    {
+      "id": "BH.oM.Acoustic.Room-BH.oM.RDF.HasProperty-Double SoundPressureLevelCoverage",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/HasProperty.cs",
+      "label": "HasProperty",
+      "attributes": "datatype",
+      "domain": "BH.oM.Acoustic.Room",
+      "range": "SoundPressureLevelCoverage-81751076B43310A907DA21E88B36368FDC103BCEA87BDE897E2D515D989EDA0C-Room-HasProperty"
+    },
+    {
+      "id": "BH.oM.Acoustic.Room-BH.oM.RDF.HasProperty-Boolean AcousticUnderlayRequirement",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/HasProperty.cs",
+      "label": "HasProperty",
+      "attributes": "datatype",
+      "domain": "BH.oM.Acoustic.Room",
+      "range": "AcousticUnderlayRequirement-455CFAE22CE2A2CADE89DAB3CD970FD13D6C6B06E4008E917CF41CF384FA469E-Room-HasProperty"
+    },
+    {
+      "id": "BH.oM.Acoustic.Room-BH.oM.RDF.IsA-BH.oM.Base.IBHoMObject",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "label": "IsA",
+      "attributes": "object",
+      "domain": "BH.oM.Acoustic.Room",
+      "range": "BH.oM.Base.IBHoMObject"
+    },
+    {
+      "id": "BH.oM.Acoustic.Room-BH.oM.RDF.IsA-BH.oM.Base.IObject",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "label": "IsA",
+      "attributes": "object",
+      "domain": "BH.oM.Acoustic.Room",
+      "range": "BH.oM.Base.IObject"
+    },
+    {
+      "id": "BH.oM.Acoustic.Room-BH.oM.RDF.IsSubclassOf-BH.oM.Base.BHoMObject",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsSubclassOf.cs",
+      "label": "IsSubclassOf",
+      "attributes": "object",
+      "domain": "BH.oM.Acoustic.Room",
+      "range": "BH.oM.Base.BHoMObject"
+    },
+    {
+      "id": "BH.oM.Acoustic.Speaker.Location-IsA-BH.oM.Geometry.Point",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "label": "IsA",
+      "attributes": "object",
+      "domain": "BH.oM.Acoustic.Speaker.Location",
+      "range": "BH.oM.Geometry.Point"
+    },
+    {
+      "id": "BH.oM.Acoustic.Speaker-BH.oM.RDF.HasProperty-BH.oM.Geometry.Point Location",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/HasProperty.cs",
+      "label": "HasProperty",
+      "attributes": [],
+      "domain": "BH.oM.Acoustic.Speaker",
+      "range": "BH.oM.Acoustic.Speaker.Location"
+    },
+    {
+      "id": "BH.oM.Acoustic.Speaker.Direction-IsA-BH.oM.Geometry.Vector",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "label": "IsA",
+      "attributes": "object",
+      "domain": "BH.oM.Acoustic.Speaker.Direction",
+      "range": "BH.oM.Geometry.Vector"
+    },
+    {
+      "id": "BH.oM.Acoustic.Speaker-BH.oM.RDF.HasProperty-BH.oM.Geometry.Vector Direction",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/HasProperty.cs",
+      "label": "HasProperty",
+      "attributes": [],
+      "domain": "BH.oM.Acoustic.Speaker",
+      "range": "BH.oM.Acoustic.Speaker.Direction"
+    },
+    {
+      "id": "BH.oM.Acoustic.Speaker-BH.oM.RDF.HasProperty-Double EmissiveLevel",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/HasProperty.cs",
+      "label": "HasProperty",
+      "attributes": "datatype",
+      "domain": "BH.oM.Acoustic.Speaker",
+      "range": "EmissiveLevel-7139039C3F5EB1E71425111F0DBF0F336BE8286D67EADC97B5019045C20BD260-Speaker-HasProperty"
+    },
+    {
+      "id": "BH.oM.Acoustic.Speaker-BH.oM.RDF.HasProperty-System.String Category",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/HasProperty.cs",
+      "label": "HasProperty",
+      "attributes": "datatype",
+      "domain": "BH.oM.Acoustic.Speaker",
+      "range": "Category-EA5BBAC94DADB9DE665378482322176DB5B6ECEED8E0F66D42895D3ABDB58225-Speaker-HasProperty"
+    },
+    {
+      "id": "BH.oM.Acoustic.Speaker-BH.oM.RDF.HasProperty-Int32 SpeakerID",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/HasProperty.cs",
+      "label": "HasProperty",
+      "attributes": "datatype",
+      "domain": "BH.oM.Acoustic.Speaker",
+      "range": "SpeakerID-05A479C929FDF3CADDF610E4BBC9FBA29F7A38501CD99189108229E56D169A4D-Speaker-HasProperty"
+    },
+    {
+      "id": "BH.oM.Acoustic.Speaker-BH.oM.RDF.HasProperty-System.Collections.Generic.Dictionary`2[BH.oM.Acoustic.Frequency,System.Double] Gains",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/HasProperty.cs",
+      "label": "HasProperty",
+      "attributes": "datatype",
+      "domain": "BH.oM.Acoustic.Speaker",
+      "range": "Gains-0BEC9F0EF65905BE8DE8CE235F4B532EE244F9568497240A05D18539A2F0C5E9-Speaker-HasProperty"
+    },
+    {
+      "id": "BH.oM.Acoustic.Speaker-BH.oM.RDF.HasProperty-System.Collections.Generic.Dictionary`2[BH.oM.Acoustic.Frequency,System.Double[,]] Directivity",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/HasProperty.cs",
+      "label": "HasProperty",
+      "attributes": "datatype",
+      "domain": "BH.oM.Acoustic.Speaker",
+      "range": "Directivity-8D4E0A6C20FC2DA82DC56B071C4F7FCE882DCE89406858BF4CD23D1B484A71AA-Speaker-HasProperty"
+    },
+    {
+      "id": "BH.oM.Acoustic.Speaker-BH.oM.RDF.IsA-BH.oM.Base.IBHoMObject",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "label": "IsA",
+      "attributes": "object",
+      "domain": "BH.oM.Acoustic.Speaker",
+      "range": "BH.oM.Base.IBHoMObject"
+    },
+    {
+      "id": "BH.oM.Acoustic.Speaker-BH.oM.RDF.IsA-BH.oM.Base.IObject",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "label": "IsA",
+      "attributes": "object",
+      "domain": "BH.oM.Acoustic.Speaker",
+      "range": "BH.oM.Base.IObject"
+    },
+    {
+      "id": "BH.oM.Acoustic.Speaker-BH.oM.RDF.IsSubclassOf-BH.oM.Base.BHoMObject",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsSubclassOf.cs",
+      "label": "IsSubclassOf",
+      "attributes": "object",
+      "domain": "BH.oM.Acoustic.Speaker",
+      "range": "BH.oM.Base.BHoMObject"
+    },
+    {
+      "id": "BH.oM.Acoustic.Frequency-BH.oM.RDF.IsA-System.IComparable",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "label": "IsA",
+      "attributes": []
+    },
+    {
+      "id": "BH.oM.Acoustic.Frequency-BH.oM.RDF.IsA-System.IFormattable",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "label": "IsA",
+      "attributes": []
+    },
+    {
+      "id": "BH.oM.Acoustic.Frequency-BH.oM.RDF.IsA-System.IConvertible",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "label": "IsA",
+      "attributes": []
+    },
+    {
+      "id": "BH.oM.Acoustic.Frequency-BH.oM.RDF.IsSubclassOf-System.Enum",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsSubclassOf.cs",
+      "label": "IsSubclassOf",
+      "attributes": []
+    },
+    {
+      "id": "BH.oM.Acoustic.IAcousticParameter-BH.oM.RDF.RequiresProperty-Double Value",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/RequiresProperty.cs",
+      "label": "RequiresProperty",
+      "attributes": []
+    },
+    {
+      "id": "BH.oM.Acoustic.IAcousticParameter-BH.oM.RDF.RequiresProperty-Int32 ReceiverID",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/RequiresProperty.cs",
+      "label": "RequiresProperty",
+      "attributes": []
+    },
+    {
+      "id": "BH.oM.Acoustic.IAcousticParameter-BH.oM.RDF.RequiresProperty-Int32 SpeakerID",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/RequiresProperty.cs",
+      "label": "RequiresProperty",
+      "attributes": []
+    },
+    {
+      "id": "BH.oM.Acoustic.IAcousticParameter-BH.oM.RDF.RequiresProperty-BH.oM.Acoustic.Frequency Frequency",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/RequiresProperty.cs",
+      "label": "RequiresProperty",
+      "attributes": "object",
+      "domain": "BH.oM.Acoustic.IAcousticParameter",
+      "range": "BH.oM.Acoustic.Frequency"
+    },
+    {
+      "id": "BH.oM.Acoustic.IAcousticParameter-BH.oM.RDF.IsA-BH.oM.Base.IObject",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "label": "IsA",
+      "attributes": "object",
+      "domain": "BH.oM.Acoustic.IAcousticParameter",
+      "range": "BH.oM.Base.IObject"
+    },
+    {
+      "id": "BH.oM.Acoustic.Rasti-BH.oM.RDF.HasProperty-Double Value",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/HasProperty.cs",
+      "label": "HasProperty",
+      "attributes": "datatype",
+      "domain": "BH.oM.Acoustic.Rasti",
+      "range": "Value-13C987008018E688F1C9D0B2FE27E96E6CC3650049A6AD88E6D00BB146299D2E-Rasti-HasProperty"
+    },
+    {
+      "id": "BH.oM.Acoustic.Rasti-BH.oM.RDF.HasProperty-Int32 ReceiverID",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/HasProperty.cs",
+      "label": "HasProperty",
+      "attributes": "datatype",
+      "domain": "BH.oM.Acoustic.Rasti",
+      "range": "ReceiverID-4542EC72F953E106E53B68ADE6A5CC019178EA50A3CC55637BC5C3A08B62BC3F-Rasti-HasProperty"
+    },
+    {
+      "id": "BH.oM.Acoustic.Rasti-BH.oM.RDF.HasProperty-Int32 SpeakerID",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/HasProperty.cs",
+      "label": "HasProperty",
+      "attributes": "datatype",
+      "domain": "BH.oM.Acoustic.Rasti",
+      "range": "SpeakerID-6D4DD7022A75516EC65AC742431DE5D6A89394F735C9FA450732787BC05D9C48-Rasti-HasProperty"
+    },
+    {
+      "id": "BH.oM.Acoustic.Rasti.Frequency-IsA-BH.oM.Acoustic.Frequency",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "label": "IsA",
+      "attributes": "object",
+      "domain": "BH.oM.Acoustic.Rasti.Frequency",
+      "range": "BH.oM.Acoustic.Frequency"
+    },
+    {
+      "id": "BH.oM.Acoustic.Rasti-BH.oM.RDF.HasProperty-BH.oM.Acoustic.Frequency Frequency",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/HasProperty.cs",
+      "label": "HasProperty",
+      "attributes": [],
+      "domain": "BH.oM.Acoustic.Rasti",
+      "range": "BH.oM.Acoustic.Rasti.Frequency"
+    },
+    {
+      "id": "BH.oM.Acoustic.Rasti-BH.oM.RDF.IsA-BH.oM.Base.IBHoMObject",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "label": "IsA",
+      "attributes": "object",
+      "domain": "BH.oM.Acoustic.Rasti",
+      "range": "BH.oM.Base.IBHoMObject"
+    },
+    {
+      "id": "BH.oM.Acoustic.Rasti-BH.oM.RDF.IsA-BH.oM.Base.IObject",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "label": "IsA",
+      "attributes": "object",
+      "domain": "BH.oM.Acoustic.Rasti",
+      "range": "BH.oM.Base.IObject"
+    },
+    {
+      "id": "BH.oM.Acoustic.Rasti-BH.oM.RDF.IsA-BH.oM.Acoustic.IAcousticParameter",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "label": "IsA",
+      "attributes": "object",
+      "domain": "BH.oM.Acoustic.Rasti",
+      "range": "BH.oM.Acoustic.IAcousticParameter"
+    },
+    {
+      "id": "BH.oM.Acoustic.Rasti-BH.oM.RDF.IsSubclassOf-BH.oM.Base.BHoMObject",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsSubclassOf.cs",
+      "label": "IsSubclassOf",
+      "attributes": "object",
+      "domain": "BH.oM.Acoustic.Rasti",
+      "range": "BH.oM.Base.BHoMObject"
+    },
+    {
+      "id": "BH.oM.Acoustic.RT60-BH.oM.RDF.HasProperty-Double Value",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/HasProperty.cs",
+      "label": "HasProperty",
+      "attributes": "datatype",
+      "domain": "BH.oM.Acoustic.RT60",
+      "range": "Value-1C1339CF28ECF91BAEECC84D5C89551AEEDB7260453F734BE6FE5395F11E79A1-RT60-HasProperty"
+    },
+    {
+      "id": "BH.oM.Acoustic.RT60-BH.oM.RDF.HasProperty-Int32 ReceiverID",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/HasProperty.cs",
+      "label": "HasProperty",
+      "attributes": "datatype",
+      "domain": "BH.oM.Acoustic.RT60",
+      "range": "ReceiverID-8A1C932510B118768F773335D6A836F0198B9E373882C457C7452C23B82F54B4-RT60-HasProperty"
+    },
+    {
+      "id": "BH.oM.Acoustic.RT60-BH.oM.RDF.HasProperty-Int32 SpeakerID",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/HasProperty.cs",
+      "label": "HasProperty",
+      "attributes": "datatype",
+      "domain": "BH.oM.Acoustic.RT60",
+      "range": "SpeakerID-83EF3D1FB9E3EB70F28A8C53EC99A01B9DE8E1DF07F34394BB9FAB7723BA2BC6-RT60-HasProperty"
+    },
+    {
+      "id": "BH.oM.Acoustic.RT60.Frequency-IsA-BH.oM.Acoustic.Frequency",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "label": "IsA",
+      "attributes": "object",
+      "domain": "BH.oM.Acoustic.RT60.Frequency",
+      "range": "BH.oM.Acoustic.Frequency"
+    },
+    {
+      "id": "BH.oM.Acoustic.RT60-BH.oM.RDF.HasProperty-BH.oM.Acoustic.Frequency Frequency",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/HasProperty.cs",
+      "label": "HasProperty",
+      "attributes": [],
+      "domain": "BH.oM.Acoustic.RT60",
+      "range": "BH.oM.Acoustic.RT60.Frequency"
+    },
+    {
+      "id": "BH.oM.Acoustic.RT60-BH.oM.RDF.IsA-BH.oM.Base.IBHoMObject",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "label": "IsA",
+      "attributes": "object",
+      "domain": "BH.oM.Acoustic.RT60",
+      "range": "BH.oM.Base.IBHoMObject"
+    },
+    {
+      "id": "BH.oM.Acoustic.RT60-BH.oM.RDF.IsA-BH.oM.Base.IObject",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "label": "IsA",
+      "attributes": "object",
+      "domain": "BH.oM.Acoustic.RT60",
+      "range": "BH.oM.Base.IObject"
+    },
+    {
+      "id": "BH.oM.Acoustic.RT60-BH.oM.RDF.IsA-BH.oM.Acoustic.IAcousticParameter",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "label": "IsA",
+      "attributes": "object",
+      "domain": "BH.oM.Acoustic.RT60",
+      "range": "BH.oM.Acoustic.IAcousticParameter"
+    },
+    {
+      "id": "BH.oM.Acoustic.RT60-BH.oM.RDF.IsSubclassOf-BH.oM.Base.BHoMObject",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsSubclassOf.cs",
+      "label": "IsSubclassOf",
+      "attributes": "object",
+      "domain": "BH.oM.Acoustic.RT60",
+      "range": "BH.oM.Base.BHoMObject"
+    },
+    {
+      "id": "BH.oM.Acoustic.SnRatio-BH.oM.RDF.HasProperty-Double Value",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/HasProperty.cs",
+      "label": "HasProperty",
+      "attributes": "datatype",
+      "domain": "BH.oM.Acoustic.SnRatio",
+      "range": "Value-349479460D6E9279DFF751AA98E6D257D0CEE222BAC209E66E14CFC1A79CDB46-SnRatio-HasProperty"
+    },
+    {
+      "id": "BH.oM.Acoustic.SnRatio-BH.oM.RDF.HasProperty-Int32 ReceiverID",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/HasProperty.cs",
+      "label": "HasProperty",
+      "attributes": "datatype",
+      "domain": "BH.oM.Acoustic.SnRatio",
+      "range": "ReceiverID-23F6D1AD7DDBDB1A262AED4296425B75324DF315B6582697302651C1757A8C24-SnRatio-HasProperty"
+    },
+    {
+      "id": "BH.oM.Acoustic.SnRatio-BH.oM.RDF.HasProperty-Int32 SpeakerID",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/HasProperty.cs",
+      "label": "HasProperty",
+      "attributes": "datatype",
+      "domain": "BH.oM.Acoustic.SnRatio",
+      "range": "SpeakerID-EC26512A222C6465FEF6607412A9A038B93B6C45B31F9C6C3390F776D493497F-SnRatio-HasProperty"
+    },
+    {
+      "id": "BH.oM.Acoustic.SnRatio.Frequency-IsA-BH.oM.Acoustic.Frequency",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "label": "IsA",
+      "attributes": "object",
+      "domain": "BH.oM.Acoustic.SnRatio.Frequency",
+      "range": "BH.oM.Acoustic.Frequency"
+    },
+    {
+      "id": "BH.oM.Acoustic.SnRatio-BH.oM.RDF.HasProperty-BH.oM.Acoustic.Frequency Frequency",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/HasProperty.cs",
+      "label": "HasProperty",
+      "attributes": [],
+      "domain": "BH.oM.Acoustic.SnRatio",
+      "range": "BH.oM.Acoustic.SnRatio.Frequency"
+    },
+    {
+      "id": "BH.oM.Acoustic.SnRatio-BH.oM.RDF.IsA-BH.oM.Base.IBHoMObject",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "label": "IsA",
+      "attributes": "object",
+      "domain": "BH.oM.Acoustic.SnRatio",
+      "range": "BH.oM.Base.IBHoMObject"
+    },
+    {
+      "id": "BH.oM.Acoustic.SnRatio-BH.oM.RDF.IsA-BH.oM.Base.IObject",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "label": "IsA",
+      "attributes": "object",
+      "domain": "BH.oM.Acoustic.SnRatio",
+      "range": "BH.oM.Base.IObject"
+    },
+    {
+      "id": "BH.oM.Acoustic.SnRatio-BH.oM.RDF.IsA-BH.oM.Acoustic.IAcousticParameter",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "label": "IsA",
+      "attributes": "object",
+      "domain": "BH.oM.Acoustic.SnRatio",
+      "range": "BH.oM.Acoustic.IAcousticParameter"
+    },
+    {
+      "id": "BH.oM.Acoustic.SnRatio-BH.oM.RDF.IsSubclassOf-BH.oM.Base.BHoMObject",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsSubclassOf.cs",
+      "label": "IsSubclassOf",
+      "attributes": "object",
+      "domain": "BH.oM.Acoustic.SnRatio",
+      "range": "BH.oM.Base.BHoMObject"
+    },
+    {
+      "id": "BH.oM.Acoustic.SoundLevel-BH.oM.RDF.HasProperty-Double Value",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/HasProperty.cs",
+      "label": "HasProperty",
+      "attributes": "datatype",
+      "domain": "BH.oM.Acoustic.SoundLevel",
+      "range": "Value-03A27BFD371ACA841E005F398FB25475D8B5C47832EEE431D0545BC209EBB691-SoundLevel-HasProperty"
+    },
+    {
+      "id": "BH.oM.Acoustic.SoundLevel-BH.oM.RDF.HasProperty-Int32 ReceiverID",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/HasProperty.cs",
+      "label": "HasProperty",
+      "attributes": "datatype",
+      "domain": "BH.oM.Acoustic.SoundLevel",
+      "range": "ReceiverID-2679F65C70CFACB0E49BC43393BE5483FA61676E39A0E94CAC14D61F9F255BC2-SoundLevel-HasProperty"
+    },
+    {
+      "id": "BH.oM.Acoustic.SoundLevel-BH.oM.RDF.HasProperty-Int32 SpeakerID",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/HasProperty.cs",
+      "label": "HasProperty",
+      "attributes": "datatype",
+      "domain": "BH.oM.Acoustic.SoundLevel",
+      "range": "SpeakerID-62797CFA5205BADCCDFFC822725E886098F1B1EE18E3710A14FD8AEA6601E5F4-SoundLevel-HasProperty"
+    },
+    {
+      "id": "BH.oM.Acoustic.SoundLevel.Frequency-IsA-BH.oM.Acoustic.Frequency",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "label": "IsA",
+      "attributes": "object",
+      "domain": "BH.oM.Acoustic.SoundLevel.Frequency",
+      "range": "BH.oM.Acoustic.Frequency"
+    },
+    {
+      "id": "BH.oM.Acoustic.SoundLevel-BH.oM.RDF.HasProperty-BH.oM.Acoustic.Frequency Frequency",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/HasProperty.cs",
+      "label": "HasProperty",
+      "attributes": [],
+      "domain": "BH.oM.Acoustic.SoundLevel",
+      "range": "BH.oM.Acoustic.SoundLevel.Frequency"
+    },
+    {
+      "id": "BH.oM.Acoustic.SoundLevel-BH.oM.RDF.IsA-BH.oM.Base.IBHoMObject",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "label": "IsA",
+      "attributes": "object",
+      "domain": "BH.oM.Acoustic.SoundLevel",
+      "range": "BH.oM.Base.IBHoMObject"
+    },
+    {
+      "id": "BH.oM.Acoustic.SoundLevel-BH.oM.RDF.IsA-BH.oM.Base.IObject",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "label": "IsA",
+      "attributes": "object",
+      "domain": "BH.oM.Acoustic.SoundLevel",
+      "range": "BH.oM.Base.IObject"
+    },
+    {
+      "id": "BH.oM.Acoustic.SoundLevel-BH.oM.RDF.IsA-BH.oM.Acoustic.IAcousticParameter",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "label": "IsA",
+      "attributes": "object",
+      "domain": "BH.oM.Acoustic.SoundLevel",
+      "range": "BH.oM.Acoustic.IAcousticParameter"
+    },
+    {
+      "id": "BH.oM.Acoustic.SoundLevel-BH.oM.RDF.IsSubclassOf-BH.oM.Base.BHoMObject",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsSubclassOf.cs",
+      "label": "IsSubclassOf",
+      "attributes": "object",
+      "domain": "BH.oM.Acoustic.SoundLevel",
+      "range": "BH.oM.Base.BHoMObject"
+    }
+  ]
+}

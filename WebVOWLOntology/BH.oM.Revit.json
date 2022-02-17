@@ -1,0 +1,1564 @@
+{
+  "comment": "Generated from BHoM RDF_Prototypes",
+  "namespace": [],
+  "class": [
+    {
+      "id": "BH.oM.Revit.PinnedItemInfo",
+      "type": "owl:Class"
+    },
+    {
+      "id": "BH.oM.Revit.IRevitSettings",
+      "type": "owl:Class"
+    },
+    {
+      "id": "BH.oM.Revit.MainSettings",
+      "type": "owl:Class"
+    },
+    {
+      "id": "BH.oM.Revit.Scenarios.ElementFilter",
+      "type": "owl:Class"
+    },
+    {
+      "id": "BH.oM.Revit.Scenarios.IScenario",
+      "type": "owl:Class"
+    },
+    {
+      "id": "BH.oM.Revit.Scenarios.IScenario1Element",
+      "type": "owl:Class"
+    },
+    {
+      "id": "BH.oM.Revit.Scenarios.IScenario2Elements",
+      "type": "owl:Class"
+    },
+    {
+      "id": "BH.oM.Revit.Logging.IRevitLog",
+      "type": "owl:Class"
+    },
+    {
+      "id": "BH.oM.Revit.Logging.IRevitLogItem",
+      "type": "owl:Class"
+    },
+    {
+      "id": "BH.oM.Revit.Logging.StandardRevitLog",
+      "type": "owl:Class"
+    },
+    {
+      "id": "BH.oM.Revit.Attributes.ComboBoxAttribute",
+      "type": "owl:Class"
+    },
+    {
+      "id": "BH.oM.Revit.Attributes.ManualTransactionAttribute",
+      "type": "owl:Class"
+    },
+    {
+      "id": "BH.oM.Revit.Attributes.TagsAttribute",
+      "type": "owl:Class"
+    },
+    {
+      "id": "BH.oM.Revit.Attributes.SplitButtonAttribute",
+      "type": "owl:Class"
+    },
+    {
+      "id": "BH.oM.Revit.Attributes.UIEnabledAttribute",
+      "type": "owl:Class"
+    },
+    {
+      "id": "BH.oM.Revit.Attributes.IconFileNameAttribute",
+      "type": "owl:Class"
+    },
+    {
+      "id": "BH.oM.Revit.Attributes.NameAttribute",
+      "type": "owl:Class"
+    },
+    {
+      "id": "BH.oM.Revit.Attributes.PanelNameAttribute",
+      "type": "owl:Class"
+    },
+    {
+      "id": "BH.oM.Revit.Attributes.TabNameAttribute",
+      "type": "owl:Class"
+    },
+    {
+      "id": "BH.oM.Revit.Attributes.ToolTipAttribute",
+      "type": "owl:Class"
+    },
+    {
+      "id": "BH.oM.Revit.Attributes.ToolTipImageFileNameAttribute",
+      "type": "owl:Class"
+    },
+    {
+      "id": "BH.oM.Revit.RevitHostFragment",
+      "type": "owl:Class"
+    },
+    {
+      "id": "Method-C2D5D87F9EEA5C53E63CBF9A1E57AC21928FB88EB16DDFD8CF3662B911D343FC-PinnedItemInfo-HasProperty",
+      "type": "rdfs:Datatype"
+    },
+    {
+      "id": "TabName-29D2209A7D8DE4341ADF15C15749C8331AC334F689C98BA84F50298E6DE4BF14-PinnedItemInfo-HasProperty",
+      "type": "rdfs:Datatype"
+    },
+    {
+      "id": "PanelName-98A68279484683CD41EECB4999D2DB98D692443060FE3251CB8487FCC55A54D2-PinnedItemInfo-HasProperty",
+      "type": "rdfs:Datatype"
+    },
+    {
+      "id": "BH.oM.Base.IBHoMObject",
+      "type": "owl:Class"
+    },
+    {
+      "id": "BH.oM.Base.IObject",
+      "type": "owl:Class"
+    },
+    {
+      "id": "BH.oM.Base.BHoMObject",
+      "type": "owl:Class"
+    },
+    {
+      "id": "AddinFolders-EBCCDFE844F8E5B4EB0AFA2D872B9A33152C9E3468BB6E332C869213016B0031-MainSettings-HasProperty",
+      "type": "rdfs:Datatype"
+    },
+    {
+      "id": "ShowPaneOnStartup-A1F4BF97D8C13F4F4DF94395EC8D4334DCB6DB7528AA66D516A655D5CDFB6C6A-MainSettings-HasProperty",
+      "type": "rdfs:Datatype"
+    },
+    {
+      "id": "BH.oM.Revit.Scenarios.ElementFilter.Request",
+      "type": "owl:Class"
+    },
+    {
+      "id": "BH.oM.Data.Requests.IRequest",
+      "type": "owl:Class"
+    },
+    {
+      "id": "ElementIndex-3D7125881E18DBA001D3CAD09C8CBF4A6B85B3CFE60DD42FF3BAC642B98DAD08-ElementFilter-HasProperty",
+      "type": "rdfs:Datatype"
+    },
+    {
+      "id": "Items-9836434195FD167138A1EA03572D351332C7E632AF03EF83BE221E3F4C761741-StandardRevitLog-HasProperty",
+      "type": "rdfs:Datatype"
+    },
+    {
+      "id": "ParentSettings-34F9EE7C454D062D6A51C897FA93C915E9A901BB62E94D7DC5870CF2311E32E7-ComboBoxAttribute-HasProperty",
+      "type": "rdfs:Datatype"
+    },
+    {
+      "id": "UpdateOnDocumentChange-B1F770A0E028A13BA94D30339F410C495415780DFBC483447570F9FB7BDEE4E1-ComboBoxAttribute-HasProperty",
+      "type": "rdfs:Datatype"
+    },
+    {
+      "id": "BH.oM.Base.IImmutable",
+      "type": "owl:Class"
+    },
+    {
+      "id": "Tags-830C16D58B6577DFF263D80304F7A807A136F3FE6D9C5DDB481F802C4F8E2327-TagsAttribute-HasProperty",
+      "type": "rdfs:Datatype"
+    },
+    {
+      "id": "SplitButtonName-9192CCE9561C99E988E840034F44EDF697E8FC3F04DDB623ACCE288F620D1FD9-SplitButtonAttribute-HasProperty",
+      "type": "rdfs:Datatype"
+    },
+    {
+      "id": "Enabled-F922D9857D70F91D09DD234593F86183AD344BEAC97B6E6907CF137B0871B156-UIEnabledAttribute-HasProperty",
+      "type": "rdfs:Datatype"
+    },
+    {
+      "id": "FileName-008A1EFAA43E1AC28B558E2BB71DA7904BAE8996BE2BD64826460CE27591156A-IconFileNameAttribute-HasProperty",
+      "type": "rdfs:Datatype"
+    },
+    {
+      "id": "Name-0592F73B4D148A42B1A07EC7885760EAD8DDB66588565113C42586B3B19C69DB-NameAttribute-HasProperty",
+      "type": "rdfs:Datatype"
+    },
+    {
+      "id": "PanelName-3C73935F505C7A8A99DFA97AFFD71BEA7D4CC94EDF6A2A93F31922136FBE0148-PanelNameAttribute-HasProperty",
+      "type": "rdfs:Datatype"
+    },
+    {
+      "id": "TabName-E73C6C1D4589E1EB4F4C108223778DFF7995A2F5846B7B2AFCD3E7F2FB2C74FD-TabNameAttribute-HasProperty",
+      "type": "rdfs:Datatype"
+    },
+    {
+      "id": "Text-AAA6E4FD92F5C9D7E958BDEA1FB1839F7EA0277BBCDE23F5EBE113EABDAECDFC-ToolTipAttribute-HasProperty",
+      "type": "rdfs:Datatype"
+    },
+    {
+      "id": "FileName-35BA94527130D9E49433119C248DAF413EDBC3B56D5D421BC6511C0E7512AE61-ToolTipImageFileNameAttribute-HasProperty",
+      "type": "rdfs:Datatype"
+    },
+    {
+      "id": "HostId-573837931A2F340FAF9ADFD5FFBB465817AB470A16589C6C2033E7B49D78B185-RevitHostFragment-HasProperty",
+      "type": "rdfs:Datatype"
+    },
+    {
+      "id": "LinkDocument-5A606ED51FD9FB55E66CCC7DE5026129C8ADA88CE218002BD346CCDB4578486D-RevitHostFragment-HasProperty",
+      "type": "rdfs:Datatype"
+    },
+    {
+      "id": "BH.oM.Base.IFragment",
+      "type": "owl:Class"
+    }
+  ],
+  "classAttribute": [
+    {
+      "id": "BH.oM.Revit.PinnedItemInfo",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/Revit_oM/PinnedItemInfo.cs",
+      "label": "PinnedItemInfo (BH.oM.Revit)",
+      "attributes": []
+    },
+    {
+      "id": "BH.oM.Revit.IRevitSettings",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/Revit_oM/IRevitSettings.cs",
+      "label": "IRevitSettings (BH.oM.Revit)",
+      "attributes": []
+    },
+    {
+      "id": "BH.oM.Revit.MainSettings",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/Revit_oM/MainSettings.cs",
+      "label": "MainSettings (BH.oM.Revit)",
+      "attributes": []
+    },
+    {
+      "id": "BH.oM.Revit.Scenarios.ElementFilter",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/Revit_oM/Scenarios/ElementFilter.cs",
+      "label": "ElementFilter (BH.oM.Revit.Scenarios)",
+      "attributes": []
+    },
+    {
+      "id": "BH.oM.Revit.Scenarios.IScenario",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/Revit_oM/Scenarios/IScenario.cs",
+      "label": "IScenario (BH.oM.Revit.Scenarios)",
+      "attributes": []
+    },
+    {
+      "id": "BH.oM.Revit.Scenarios.IScenario1Element",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/Revit_oM/Scenarios/IScenario1Element.cs",
+      "label": "IScenario1Element (BH.oM.Revit.Scenarios)",
+      "attributes": []
+    },
+    {
+      "id": "BH.oM.Revit.Scenarios.IScenario2Elements",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/Revit_oM/Scenarios/IScenario2Elements.cs",
+      "label": "IScenario2Elements (BH.oM.Revit.Scenarios)",
+      "attributes": []
+    },
+    {
+      "id": "BH.oM.Revit.Logging.IRevitLog",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/Revit_oM/Logging/IRevitLog.cs",
+      "label": "IRevitLog (BH.oM.Revit.Logging)",
+      "attributes": []
+    },
+    {
+      "id": "BH.oM.Revit.Logging.IRevitLogItem",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/Revit_oM/Logging/IRevitLogItem.cs",
+      "label": "IRevitLogItem (BH.oM.Revit.Logging)",
+      "attributes": []
+    },
+    {
+      "id": "BH.oM.Revit.Logging.StandardRevitLog",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/Revit_oM/Logging/StandardRevitLog.cs",
+      "label": "StandardRevitLog (BH.oM.Revit.Logging)",
+      "attributes": []
+    },
+    {
+      "id": "BH.oM.Revit.Attributes.ComboBoxAttribute",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/Revit_oM/Attributes/ComboBoxAttribute.cs",
+      "label": "ComboBoxAttribute (BH.oM.Revit.Attributes)",
+      "attributes": []
+    },
+    {
+      "id": "BH.oM.Revit.Attributes.ManualTransactionAttribute",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/Revit_oM/Attributes/ManualTransactionAttribute.cs",
+      "label": "ManualTransactionAttribute (BH.oM.Revit.Attributes)",
+      "attributes": []
+    },
+    {
+      "id": "BH.oM.Revit.Attributes.TagsAttribute",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/Revit_oM/Attributes/TagsAttribute.cs",
+      "label": "TagsAttribute (BH.oM.Revit.Attributes)",
+      "attributes": []
+    },
+    {
+      "id": "BH.oM.Revit.Attributes.SplitButtonAttribute",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/Revit_oM/Attributes/SplitButtonAttribute.cs",
+      "label": "SplitButtonAttribute (BH.oM.Revit.Attributes)",
+      "attributes": []
+    },
+    {
+      "id": "BH.oM.Revit.Attributes.UIEnabledAttribute",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/Revit_oM/Attributes/UIEnabledAttribute.cs",
+      "label": "UIEnabledAttribute (BH.oM.Revit.Attributes)",
+      "attributes": []
+    },
+    {
+      "id": "BH.oM.Revit.Attributes.IconFileNameAttribute",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/Revit_oM/Attributes/IconFileNameAttribute.cs",
+      "label": "IconFileNameAttribute (BH.oM.Revit.Attributes)",
+      "attributes": []
+    },
+    {
+      "id": "BH.oM.Revit.Attributes.NameAttribute",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/Revit_oM/Attributes/NameAttribute.cs",
+      "label": "NameAttribute (BH.oM.Revit.Attributes)",
+      "attributes": []
+    },
+    {
+      "id": "BH.oM.Revit.Attributes.PanelNameAttribute",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/Revit_oM/Attributes/PanelNameAttribute.cs",
+      "label": "PanelNameAttribute (BH.oM.Revit.Attributes)",
+      "attributes": []
+    },
+    {
+      "id": "BH.oM.Revit.Attributes.TabNameAttribute",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/Revit_oM/Attributes/TabNameAttribute.cs",
+      "label": "TabNameAttribute (BH.oM.Revit.Attributes)",
+      "attributes": []
+    },
+    {
+      "id": "BH.oM.Revit.Attributes.ToolTipAttribute",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/Revit_oM/Attributes/ToolTipAttribute.cs",
+      "label": "ToolTipAttribute (BH.oM.Revit.Attributes)",
+      "attributes": []
+    },
+    {
+      "id": "BH.oM.Revit.Attributes.ToolTipImageFileNameAttribute",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/Revit_oM/Attributes/ToolTipImageFileNameAttribute.cs",
+      "label": "ToolTipImageFileNameAttribute (BH.oM.Revit.Attributes)",
+      "attributes": []
+    },
+    {
+      "id": "BH.oM.Revit.RevitHostFragment",
+      "iri": "https://github.com/BHoM/Revit_Toolkit/blob/main/Revit_oM/Misc/RevitHostFragment.cs",
+      "label": "RevitHostFragment (BH.oM.Revit)",
+      "attributes": []
+    },
+    {
+      "id": "Method-C2D5D87F9EEA5C53E63CBF9A1E57AC21928FB88EB16DDFD8CF3662B911D343FC-PinnedItemInfo-HasProperty",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/HasProperty.cs",
+      "label": "Method (MethodInfo)",
+      "attributes": "datatype"
+    },
+    {
+      "id": "TabName-29D2209A7D8DE4341ADF15C15749C8331AC334F689C98BA84F50298E6DE4BF14-PinnedItemInfo-HasProperty",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/HasProperty.cs",
+      "label": "TabName (String)",
+      "attributes": "datatype"
+    },
+    {
+      "id": "PanelName-98A68279484683CD41EECB4999D2DB98D692443060FE3251CB8487FCC55A54D2-PinnedItemInfo-HasProperty",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/HasProperty.cs",
+      "label": "PanelName (String)",
+      "attributes": "datatype"
+    },
+    {
+      "id": "BH.oM.Base.IBHoMObject",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/BHoM/Interface/IBHoMObject.cs",
+      "label": "IBHoMObject",
+      "attributes": []
+    },
+    {
+      "id": "BH.oM.Base.IObject",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/BHoM/Interface/IObject.cs",
+      "label": "IObject",
+      "attributes": []
+    },
+    {
+      "id": "BH.oM.Base.BHoMObject",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/BHoM/BHoMObject.cs",
+      "label": "BHoMObject",
+      "attributes": []
+    },
+    {
+      "id": "AddinFolders-EBCCDFE844F8E5B4EB0AFA2D872B9A33152C9E3468BB6E332C869213016B0031-MainSettings-HasProperty",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/HasProperty.cs",
+      "label": "AddinFolders (List<String>)",
+      "attributes": "datatype"
+    },
+    {
+      "id": "ShowPaneOnStartup-A1F4BF97D8C13F4F4DF94395EC8D4334DCB6DB7528AA66D516A655D5CDFB6C6A-MainSettings-HasProperty",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/HasProperty.cs",
+      "label": "ShowPaneOnStartup (Boolean)",
+      "attributes": "datatype"
+    },
+    {
+      "id": "BH.oM.Revit.Scenarios.ElementFilter.Request",
+      "iri": null,
+      "label": "Request (IRequest)",
+      "attributes": []
+    },
+    {
+      "id": "BH.oM.Data.Requests.IRequest",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/Data_oM/Requests/IRequest.cs",
+      "label": "IRequest (BH.oM.Data.Requests)",
+      "attributes": []
+    },
+    {
+      "id": "ElementIndex-3D7125881E18DBA001D3CAD09C8CBF4A6B85B3CFE60DD42FF3BAC642B98DAD08-ElementFilter-HasProperty",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/HasProperty.cs",
+      "label": "ElementIndex (Int32)",
+      "attributes": "datatype"
+    },
+    {
+      "id": "Items-9836434195FD167138A1EA03572D351332C7E632AF03EF83BE221E3F4C761741-StandardRevitLog-HasProperty",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/HasProperty.cs",
+      "label": "Items (IEnumerable<IRevitLogItem>)",
+      "attributes": "datatype"
+    },
+    {
+      "id": "ParentSettings-34F9EE7C454D062D6A51C897FA93C915E9A901BB62E94D7DC5870CF2311E32E7-ComboBoxAttribute-HasProperty",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/HasProperty.cs",
+      "label": "ParentSettings (Type)",
+      "attributes": "datatype"
+    },
+    {
+      "id": "UpdateOnDocumentChange-B1F770A0E028A13BA94D30339F410C495415780DFBC483447570F9FB7BDEE4E1-ComboBoxAttribute-HasProperty",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/HasProperty.cs",
+      "label": "UpdateOnDocumentChange (Boolean)",
+      "attributes": "datatype"
+    },
+    {
+      "id": "BH.oM.Base.IImmutable",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/BHoM/Interface/IImmutable.cs",
+      "label": "IImmutable",
+      "attributes": []
+    },
+    {
+      "id": "Tags-830C16D58B6577DFF263D80304F7A807A136F3FE6D9C5DDB481F802C4F8E2327-TagsAttribute-HasProperty",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/HasProperty.cs",
+      "label": "Tags (String)",
+      "attributes": "datatype"
+    },
+    {
+      "id": "SplitButtonName-9192CCE9561C99E988E840034F44EDF697E8FC3F04DDB623ACCE288F620D1FD9-SplitButtonAttribute-HasProperty",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/HasProperty.cs",
+      "label": "SplitButtonName (String)",
+      "attributes": "datatype"
+    },
+    {
+      "id": "Enabled-F922D9857D70F91D09DD234593F86183AD344BEAC97B6E6907CF137B0871B156-UIEnabledAttribute-HasProperty",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/HasProperty.cs",
+      "label": "Enabled (Boolean)",
+      "attributes": "datatype"
+    },
+    {
+      "id": "FileName-008A1EFAA43E1AC28B558E2BB71DA7904BAE8996BE2BD64826460CE27591156A-IconFileNameAttribute-HasProperty",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/HasProperty.cs",
+      "label": "FileName (String)",
+      "attributes": "datatype"
+    },
+    {
+      "id": "Name-0592F73B4D148A42B1A07EC7885760EAD8DDB66588565113C42586B3B19C69DB-NameAttribute-HasProperty",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/HasProperty.cs",
+      "label": "Name (String)",
+      "attributes": "datatype"
+    },
+    {
+      "id": "PanelName-3C73935F505C7A8A99DFA97AFFD71BEA7D4CC94EDF6A2A93F31922136FBE0148-PanelNameAttribute-HasProperty",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/HasProperty.cs",
+      "label": "PanelName (String)",
+      "attributes": "datatype"
+    },
+    {
+      "id": "TabName-E73C6C1D4589E1EB4F4C108223778DFF7995A2F5846B7B2AFCD3E7F2FB2C74FD-TabNameAttribute-HasProperty",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/HasProperty.cs",
+      "label": "TabName (String)",
+      "attributes": "datatype"
+    },
+    {
+      "id": "Text-AAA6E4FD92F5C9D7E958BDEA1FB1839F7EA0277BBCDE23F5EBE113EABDAECDFC-ToolTipAttribute-HasProperty",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/HasProperty.cs",
+      "label": "Text (String)",
+      "attributes": "datatype"
+    },
+    {
+      "id": "FileName-35BA94527130D9E49433119C248DAF413EDBC3B56D5D421BC6511C0E7512AE61-ToolTipImageFileNameAttribute-HasProperty",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/HasProperty.cs",
+      "label": "FileName (String)",
+      "attributes": "datatype"
+    },
+    {
+      "id": "HostId-573837931A2F340FAF9ADFD5FFBB465817AB470A16589C6C2033E7B49D78B185-RevitHostFragment-HasProperty",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/HasProperty.cs",
+      "label": "HostId (Int32)",
+      "attributes": "datatype"
+    },
+    {
+      "id": "LinkDocument-5A606ED51FD9FB55E66CCC7DE5026129C8ADA88CE218002BD346CCDB4578486D-RevitHostFragment-HasProperty",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/HasProperty.cs",
+      "label": "LinkDocument (String)",
+      "attributes": "datatype"
+    },
+    {
+      "id": "BH.oM.Base.IFragment",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/BHoM/Interface/IFragment.cs",
+      "label": "IFragment",
+      "attributes": []
+    }
+  ],
+  "property": [
+    {
+      "id": "BH.oM.Revit.PinnedItemInfo-BH.oM.RDF.HasProperty-System.Reflection.MethodInfo Method",
+      "type": "owl:DatatypeProperty"
+    },
+    {
+      "id": "BH.oM.Revit.PinnedItemInfo-BH.oM.RDF.HasProperty-System.String TabName",
+      "type": "owl:DatatypeProperty"
+    },
+    {
+      "id": "BH.oM.Revit.PinnedItemInfo-BH.oM.RDF.HasProperty-System.String PanelName",
+      "type": "owl:DatatypeProperty"
+    },
+    {
+      "id": "BH.oM.Revit.PinnedItemInfo-BH.oM.RDF.IsA-BH.oM.Base.IBHoMObject",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "BH.oM.Revit.PinnedItemInfo-BH.oM.RDF.IsA-BH.oM.Base.IObject",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "BH.oM.Revit.PinnedItemInfo-BH.oM.RDF.IsSubclassOf-BH.oM.Base.BHoMObject",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "BH.oM.Revit.IRevitSettings-BH.oM.RDF.IsA-BH.oM.Base.IBHoMObject",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "BH.oM.Revit.IRevitSettings-BH.oM.RDF.IsA-BH.oM.Base.IObject",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "BH.oM.Revit.MainSettings-BH.oM.RDF.HasProperty-System.Collections.Generic.List`1[System.String] AddinFolders",
+      "type": "owl:DatatypeProperty"
+    },
+    {
+      "id": "BH.oM.Revit.MainSettings-BH.oM.RDF.HasProperty-Boolean ShowPaneOnStartup",
+      "type": "owl:DatatypeProperty"
+    },
+    {
+      "id": "BH.oM.Revit.MainSettings-BH.oM.RDF.IsA-BH.oM.Base.IBHoMObject",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "BH.oM.Revit.MainSettings-BH.oM.RDF.IsA-BH.oM.Base.IObject",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "BH.oM.Revit.MainSettings-BH.oM.RDF.IsA-BH.oM.Revit.IRevitSettings",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "BH.oM.Revit.MainSettings-BH.oM.RDF.IsSubclassOf-BH.oM.Base.BHoMObject",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "BH.oM.Revit.Scenarios.ElementFilter.Request-IsA-BH.oM.Data.Requests.IRequest",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "BH.oM.Revit.Scenarios.ElementFilter-BH.oM.RDF.HasProperty-BH.oM.Data.Requests.IRequest Request",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "BH.oM.Revit.Scenarios.ElementFilter-BH.oM.RDF.HasProperty-Int32 ElementIndex",
+      "type": "owl:DatatypeProperty"
+    },
+    {
+      "id": "BH.oM.Revit.Scenarios.ElementFilter-BH.oM.RDF.IsA-BH.oM.Base.IBHoMObject",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "BH.oM.Revit.Scenarios.ElementFilter-BH.oM.RDF.IsA-BH.oM.Base.IObject",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "BH.oM.Revit.Scenarios.ElementFilter-BH.oM.RDF.IsSubclassOf-BH.oM.Base.BHoMObject",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "BH.oM.Revit.Scenarios.IScenario-BH.oM.RDF.RequiresProperty-System.Collections.Generic.List`1[BH.oM.Revit.Scenarios.ElementFilter] Filters",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "BH.oM.Revit.Scenarios.IScenario-BH.oM.RDF.RequiresProperty-System.String ExpressionString",
+      "type": "owl:DatatypeProperty"
+    },
+    {
+      "id": "BH.oM.Revit.Scenarios.IScenario1Element-BH.oM.RDF.IsA-BH.oM.Revit.Scenarios.IScenario",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "BH.oM.Revit.Scenarios.IScenario2Elements-BH.oM.RDF.IsA-BH.oM.Revit.Scenarios.IScenario",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "BH.oM.Revit.Logging.IRevitLog-BH.oM.RDF.RequiresProperty-System.Collections.Generic.IEnumerable`1[BH.oM.Revit.Logging.IRevitLogItem] Items",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "BH.oM.Revit.Logging.IRevitLog-BH.oM.RDF.RequiresProperty-System.String Name",
+      "type": "owl:DatatypeProperty"
+    },
+    {
+      "id": "BH.oM.Revit.Logging.IRevitLogItem-BH.oM.RDF.IsA-BH.oM.Base.IObject",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "BH.oM.Revit.Logging.StandardRevitLog-BH.oM.RDF.HasProperty-System.Collections.Generic.IEnumerable`1[BH.oM.Revit.Logging.IRevitLogItem] Items",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "BH.oM.Revit.Logging.StandardRevitLog-BH.oM.RDF.IsA-BH.oM.Base.IBHoMObject",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "BH.oM.Revit.Logging.StandardRevitLog-BH.oM.RDF.IsA-BH.oM.Base.IObject",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "BH.oM.Revit.Logging.StandardRevitLog-BH.oM.RDF.IsA-BH.oM.Revit.Logging.IRevitLog",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "BH.oM.Revit.Logging.StandardRevitLog-BH.oM.RDF.IsSubclassOf-BH.oM.Base.BHoMObject",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "BH.oM.Revit.Attributes.ComboBoxAttribute-BH.oM.RDF.HasProperty-System.Type ParentSettings",
+      "type": "owl:DatatypeProperty"
+    },
+    {
+      "id": "BH.oM.Revit.Attributes.ComboBoxAttribute-BH.oM.RDF.HasProperty-Boolean UpdateOnDocumentChange",
+      "type": "owl:DatatypeProperty"
+    },
+    {
+      "id": "BH.oM.Revit.Attributes.ComboBoxAttribute-BH.oM.RDF.IsA-System.Runtime.InteropServices._Attribute",
+      "type": "owl:DatatypeProperty"
+    },
+    {
+      "id": "BH.oM.Revit.Attributes.ComboBoxAttribute-BH.oM.RDF.IsA-BH.oM.Base.IImmutable",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "BH.oM.Revit.Attributes.ComboBoxAttribute-BH.oM.RDF.IsA-BH.oM.Base.IObject",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "BH.oM.Revit.Attributes.ComboBoxAttribute-BH.oM.RDF.IsSubclassOf-System.Attribute",
+      "type": "owl:DatatypeProperty"
+    },
+    {
+      "id": "BH.oM.Revit.Attributes.ManualTransactionAttribute-BH.oM.RDF.IsA-System.Runtime.InteropServices._Attribute",
+      "type": "owl:DatatypeProperty"
+    },
+    {
+      "id": "BH.oM.Revit.Attributes.ManualTransactionAttribute-BH.oM.RDF.IsA-BH.oM.Base.IImmutable",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "BH.oM.Revit.Attributes.ManualTransactionAttribute-BH.oM.RDF.IsA-BH.oM.Base.IObject",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "BH.oM.Revit.Attributes.ManualTransactionAttribute-BH.oM.RDF.IsSubclassOf-System.Attribute",
+      "type": "owl:DatatypeProperty"
+    },
+    {
+      "id": "BH.oM.Revit.Attributes.TagsAttribute-BH.oM.RDF.HasProperty-System.String[] Tags",
+      "type": "owl:DatatypeProperty"
+    },
+    {
+      "id": "BH.oM.Revit.Attributes.TagsAttribute-BH.oM.RDF.IsA-System.Runtime.InteropServices._Attribute",
+      "type": "owl:DatatypeProperty"
+    },
+    {
+      "id": "BH.oM.Revit.Attributes.TagsAttribute-BH.oM.RDF.IsA-BH.oM.Base.IImmutable",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "BH.oM.Revit.Attributes.TagsAttribute-BH.oM.RDF.IsA-BH.oM.Base.IObject",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "BH.oM.Revit.Attributes.TagsAttribute-BH.oM.RDF.IsSubclassOf-System.Attribute",
+      "type": "owl:DatatypeProperty"
+    },
+    {
+      "id": "BH.oM.Revit.Attributes.SplitButtonAttribute-BH.oM.RDF.HasProperty-System.String SplitButtonName",
+      "type": "owl:DatatypeProperty"
+    },
+    {
+      "id": "BH.oM.Revit.Attributes.SplitButtonAttribute-BH.oM.RDF.IsA-System.Runtime.InteropServices._Attribute",
+      "type": "owl:DatatypeProperty"
+    },
+    {
+      "id": "BH.oM.Revit.Attributes.SplitButtonAttribute-BH.oM.RDF.IsA-BH.oM.Base.IImmutable",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "BH.oM.Revit.Attributes.SplitButtonAttribute-BH.oM.RDF.IsA-BH.oM.Base.IObject",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "BH.oM.Revit.Attributes.SplitButtonAttribute-BH.oM.RDF.IsSubclassOf-System.Attribute",
+      "type": "owl:DatatypeProperty"
+    },
+    {
+      "id": "BH.oM.Revit.Attributes.UIEnabledAttribute-BH.oM.RDF.HasProperty-Boolean Enabled",
+      "type": "owl:DatatypeProperty"
+    },
+    {
+      "id": "BH.oM.Revit.Attributes.UIEnabledAttribute-BH.oM.RDF.IsA-System.Runtime.InteropServices._Attribute",
+      "type": "owl:DatatypeProperty"
+    },
+    {
+      "id": "BH.oM.Revit.Attributes.UIEnabledAttribute-BH.oM.RDF.IsA-BH.oM.Base.IImmutable",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "BH.oM.Revit.Attributes.UIEnabledAttribute-BH.oM.RDF.IsA-BH.oM.Base.IObject",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "BH.oM.Revit.Attributes.UIEnabledAttribute-BH.oM.RDF.IsSubclassOf-System.Attribute",
+      "type": "owl:DatatypeProperty"
+    },
+    {
+      "id": "BH.oM.Revit.Attributes.IconFileNameAttribute-BH.oM.RDF.HasProperty-System.String FileName",
+      "type": "owl:DatatypeProperty"
+    },
+    {
+      "id": "BH.oM.Revit.Attributes.IconFileNameAttribute-BH.oM.RDF.IsA-System.Runtime.InteropServices._Attribute",
+      "type": "owl:DatatypeProperty"
+    },
+    {
+      "id": "BH.oM.Revit.Attributes.IconFileNameAttribute-BH.oM.RDF.IsA-BH.oM.Base.IImmutable",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "BH.oM.Revit.Attributes.IconFileNameAttribute-BH.oM.RDF.IsA-BH.oM.Base.IObject",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "BH.oM.Revit.Attributes.IconFileNameAttribute-BH.oM.RDF.IsSubclassOf-System.Attribute",
+      "type": "owl:DatatypeProperty"
+    },
+    {
+      "id": "BH.oM.Revit.Attributes.NameAttribute-BH.oM.RDF.HasProperty-System.String Name",
+      "type": "owl:DatatypeProperty"
+    },
+    {
+      "id": "BH.oM.Revit.Attributes.NameAttribute-BH.oM.RDF.IsA-System.Runtime.InteropServices._Attribute",
+      "type": "owl:DatatypeProperty"
+    },
+    {
+      "id": "BH.oM.Revit.Attributes.NameAttribute-BH.oM.RDF.IsA-BH.oM.Base.IImmutable",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "BH.oM.Revit.Attributes.NameAttribute-BH.oM.RDF.IsA-BH.oM.Base.IObject",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "BH.oM.Revit.Attributes.NameAttribute-BH.oM.RDF.IsSubclassOf-System.Attribute",
+      "type": "owl:DatatypeProperty"
+    },
+    {
+      "id": "BH.oM.Revit.Attributes.PanelNameAttribute-BH.oM.RDF.HasProperty-System.String PanelName",
+      "type": "owl:DatatypeProperty"
+    },
+    {
+      "id": "BH.oM.Revit.Attributes.PanelNameAttribute-BH.oM.RDF.IsA-System.Runtime.InteropServices._Attribute",
+      "type": "owl:DatatypeProperty"
+    },
+    {
+      "id": "BH.oM.Revit.Attributes.PanelNameAttribute-BH.oM.RDF.IsA-BH.oM.Base.IImmutable",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "BH.oM.Revit.Attributes.PanelNameAttribute-BH.oM.RDF.IsA-BH.oM.Base.IObject",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "BH.oM.Revit.Attributes.PanelNameAttribute-BH.oM.RDF.IsSubclassOf-System.Attribute",
+      "type": "owl:DatatypeProperty"
+    },
+    {
+      "id": "BH.oM.Revit.Attributes.TabNameAttribute-BH.oM.RDF.HasProperty-System.String TabName",
+      "type": "owl:DatatypeProperty"
+    },
+    {
+      "id": "BH.oM.Revit.Attributes.TabNameAttribute-BH.oM.RDF.IsA-System.Runtime.InteropServices._Attribute",
+      "type": "owl:DatatypeProperty"
+    },
+    {
+      "id": "BH.oM.Revit.Attributes.TabNameAttribute-BH.oM.RDF.IsA-BH.oM.Base.IImmutable",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "BH.oM.Revit.Attributes.TabNameAttribute-BH.oM.RDF.IsA-BH.oM.Base.IObject",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "BH.oM.Revit.Attributes.TabNameAttribute-BH.oM.RDF.IsSubclassOf-System.Attribute",
+      "type": "owl:DatatypeProperty"
+    },
+    {
+      "id": "BH.oM.Revit.Attributes.ToolTipAttribute-BH.oM.RDF.HasProperty-System.String Text",
+      "type": "owl:DatatypeProperty"
+    },
+    {
+      "id": "BH.oM.Revit.Attributes.ToolTipAttribute-BH.oM.RDF.IsA-System.Runtime.InteropServices._Attribute",
+      "type": "owl:DatatypeProperty"
+    },
+    {
+      "id": "BH.oM.Revit.Attributes.ToolTipAttribute-BH.oM.RDF.IsA-BH.oM.Base.IImmutable",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "BH.oM.Revit.Attributes.ToolTipAttribute-BH.oM.RDF.IsA-BH.oM.Base.IObject",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "BH.oM.Revit.Attributes.ToolTipAttribute-BH.oM.RDF.IsSubclassOf-System.Attribute",
+      "type": "owl:DatatypeProperty"
+    },
+    {
+      "id": "BH.oM.Revit.Attributes.ToolTipImageFileNameAttribute-BH.oM.RDF.HasProperty-System.String FileName",
+      "type": "owl:DatatypeProperty"
+    },
+    {
+      "id": "BH.oM.Revit.Attributes.ToolTipImageFileNameAttribute-BH.oM.RDF.IsA-System.Runtime.InteropServices._Attribute",
+      "type": "owl:DatatypeProperty"
+    },
+    {
+      "id": "BH.oM.Revit.Attributes.ToolTipImageFileNameAttribute-BH.oM.RDF.IsA-BH.oM.Base.IImmutable",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "BH.oM.Revit.Attributes.ToolTipImageFileNameAttribute-BH.oM.RDF.IsA-BH.oM.Base.IObject",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "BH.oM.Revit.Attributes.ToolTipImageFileNameAttribute-BH.oM.RDF.IsSubclassOf-System.Attribute",
+      "type": "owl:DatatypeProperty"
+    },
+    {
+      "id": "BH.oM.Revit.RevitHostFragment-BH.oM.RDF.HasProperty-Int32 HostId",
+      "type": "owl:DatatypeProperty"
+    },
+    {
+      "id": "BH.oM.Revit.RevitHostFragment-BH.oM.RDF.HasProperty-System.String LinkDocument",
+      "type": "owl:DatatypeProperty"
+    },
+    {
+      "id": "BH.oM.Revit.RevitHostFragment-BH.oM.RDF.IsA-BH.oM.Base.IFragment",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "BH.oM.Revit.RevitHostFragment-BH.oM.RDF.IsA-BH.oM.Base.IObject",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "BH.oM.Revit.RevitHostFragment-BH.oM.RDF.IsA-BH.oM.Base.IImmutable",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "BH.oM.Revit.RevitHostFragment-BH.oM.RDF.IsSubclassOf-System.Object",
+      "type": "owl:DatatypeProperty"
+    }
+  ],
+  "propertyAttribute": [
+    {
+      "id": "BH.oM.Revit.PinnedItemInfo-BH.oM.RDF.HasProperty-System.Reflection.MethodInfo Method",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/HasProperty.cs",
+      "label": "HasProperty",
+      "attributes": "datatype",
+      "domain": "BH.oM.Revit.PinnedItemInfo",
+      "range": "Method-C2D5D87F9EEA5C53E63CBF9A1E57AC21928FB88EB16DDFD8CF3662B911D343FC-PinnedItemInfo-HasProperty"
+    },
+    {
+      "id": "BH.oM.Revit.PinnedItemInfo-BH.oM.RDF.HasProperty-System.String TabName",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/HasProperty.cs",
+      "label": "HasProperty",
+      "attributes": "datatype",
+      "domain": "BH.oM.Revit.PinnedItemInfo",
+      "range": "TabName-29D2209A7D8DE4341ADF15C15749C8331AC334F689C98BA84F50298E6DE4BF14-PinnedItemInfo-HasProperty"
+    },
+    {
+      "id": "BH.oM.Revit.PinnedItemInfo-BH.oM.RDF.HasProperty-System.String PanelName",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/HasProperty.cs",
+      "label": "HasProperty",
+      "attributes": "datatype",
+      "domain": "BH.oM.Revit.PinnedItemInfo",
+      "range": "PanelName-98A68279484683CD41EECB4999D2DB98D692443060FE3251CB8487FCC55A54D2-PinnedItemInfo-HasProperty"
+    },
+    {
+      "id": "BH.oM.Revit.PinnedItemInfo-BH.oM.RDF.IsA-BH.oM.Base.IBHoMObject",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "label": "IsA",
+      "attributes": "object",
+      "domain": "BH.oM.Revit.PinnedItemInfo",
+      "range": "BH.oM.Base.IBHoMObject"
+    },
+    {
+      "id": "BH.oM.Revit.PinnedItemInfo-BH.oM.RDF.IsA-BH.oM.Base.IObject",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "label": "IsA",
+      "attributes": "object",
+      "domain": "BH.oM.Revit.PinnedItemInfo",
+      "range": "BH.oM.Base.IObject"
+    },
+    {
+      "id": "BH.oM.Revit.PinnedItemInfo-BH.oM.RDF.IsSubclassOf-BH.oM.Base.BHoMObject",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsSubclassOf.cs",
+      "label": "IsSubclassOf",
+      "attributes": "object",
+      "domain": "BH.oM.Revit.PinnedItemInfo",
+      "range": "BH.oM.Base.BHoMObject"
+    },
+    {
+      "id": "BH.oM.Revit.IRevitSettings-BH.oM.RDF.IsA-BH.oM.Base.IBHoMObject",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "label": "IsA",
+      "attributes": "object",
+      "domain": "BH.oM.Revit.IRevitSettings",
+      "range": "BH.oM.Base.IBHoMObject"
+    },
+    {
+      "id": "BH.oM.Revit.IRevitSettings-BH.oM.RDF.IsA-BH.oM.Base.IObject",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "label": "IsA",
+      "attributes": "object",
+      "domain": "BH.oM.Revit.IRevitSettings",
+      "range": "BH.oM.Base.IObject"
+    },
+    {
+      "id": "BH.oM.Revit.MainSettings-BH.oM.RDF.HasProperty-System.Collections.Generic.List`1[System.String] AddinFolders",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/HasProperty.cs",
+      "label": "HasProperty",
+      "attributes": "datatype",
+      "domain": "BH.oM.Revit.MainSettings",
+      "range": "AddinFolders-EBCCDFE844F8E5B4EB0AFA2D872B9A33152C9E3468BB6E332C869213016B0031-MainSettings-HasProperty"
+    },
+    {
+      "id": "BH.oM.Revit.MainSettings-BH.oM.RDF.HasProperty-Boolean ShowPaneOnStartup",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/HasProperty.cs",
+      "label": "HasProperty",
+      "attributes": "datatype",
+      "domain": "BH.oM.Revit.MainSettings",
+      "range": "ShowPaneOnStartup-A1F4BF97D8C13F4F4DF94395EC8D4334DCB6DB7528AA66D516A655D5CDFB6C6A-MainSettings-HasProperty"
+    },
+    {
+      "id": "BH.oM.Revit.MainSettings-BH.oM.RDF.IsA-BH.oM.Base.IBHoMObject",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "label": "IsA",
+      "attributes": "object",
+      "domain": "BH.oM.Revit.MainSettings",
+      "range": "BH.oM.Base.IBHoMObject"
+    },
+    {
+      "id": "BH.oM.Revit.MainSettings-BH.oM.RDF.IsA-BH.oM.Base.IObject",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "label": "IsA",
+      "attributes": "object",
+      "domain": "BH.oM.Revit.MainSettings",
+      "range": "BH.oM.Base.IObject"
+    },
+    {
+      "id": "BH.oM.Revit.MainSettings-BH.oM.RDF.IsA-BH.oM.Revit.IRevitSettings",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "label": "IsA",
+      "attributes": "object",
+      "domain": "BH.oM.Revit.MainSettings",
+      "range": "BH.oM.Revit.IRevitSettings"
+    },
+    {
+      "id": "BH.oM.Revit.MainSettings-BH.oM.RDF.IsSubclassOf-BH.oM.Base.BHoMObject",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsSubclassOf.cs",
+      "label": "IsSubclassOf",
+      "attributes": "object",
+      "domain": "BH.oM.Revit.MainSettings",
+      "range": "BH.oM.Base.BHoMObject"
+    },
+    {
+      "id": "BH.oM.Revit.Scenarios.ElementFilter.Request-IsA-BH.oM.Data.Requests.IRequest",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "label": "IsA",
+      "attributes": "object",
+      "domain": "BH.oM.Revit.Scenarios.ElementFilter.Request",
+      "range": "BH.oM.Data.Requests.IRequest"
+    },
+    {
+      "id": "BH.oM.Revit.Scenarios.ElementFilter-BH.oM.RDF.HasProperty-BH.oM.Data.Requests.IRequest Request",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/HasProperty.cs",
+      "label": "HasProperty",
+      "attributes": [],
+      "domain": "BH.oM.Revit.Scenarios.ElementFilter",
+      "range": "BH.oM.Revit.Scenarios.ElementFilter.Request"
+    },
+    {
+      "id": "BH.oM.Revit.Scenarios.ElementFilter-BH.oM.RDF.HasProperty-Int32 ElementIndex",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/HasProperty.cs",
+      "label": "HasProperty",
+      "attributes": "datatype",
+      "domain": "BH.oM.Revit.Scenarios.ElementFilter",
+      "range": "ElementIndex-3D7125881E18DBA001D3CAD09C8CBF4A6B85B3CFE60DD42FF3BAC642B98DAD08-ElementFilter-HasProperty"
+    },
+    {
+      "id": "BH.oM.Revit.Scenarios.ElementFilter-BH.oM.RDF.IsA-BH.oM.Base.IBHoMObject",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "label": "IsA",
+      "attributes": "object",
+      "domain": "BH.oM.Revit.Scenarios.ElementFilter",
+      "range": "BH.oM.Base.IBHoMObject"
+    },
+    {
+      "id": "BH.oM.Revit.Scenarios.ElementFilter-BH.oM.RDF.IsA-BH.oM.Base.IObject",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "label": "IsA",
+      "attributes": "object",
+      "domain": "BH.oM.Revit.Scenarios.ElementFilter",
+      "range": "BH.oM.Base.IObject"
+    },
+    {
+      "id": "BH.oM.Revit.Scenarios.ElementFilter-BH.oM.RDF.IsSubclassOf-BH.oM.Base.BHoMObject",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsSubclassOf.cs",
+      "label": "IsSubclassOf",
+      "attributes": "object",
+      "domain": "BH.oM.Revit.Scenarios.ElementFilter",
+      "range": "BH.oM.Base.BHoMObject"
+    },
+    {
+      "id": "BH.oM.Revit.Scenarios.IScenario-BH.oM.RDF.RequiresProperty-System.Collections.Generic.List`1[BH.oM.Revit.Scenarios.ElementFilter] Filters",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/RequiresProperty.cs",
+      "label": "RequiresProperty",
+      "attributes": []
+    },
+    {
+      "id": "BH.oM.Revit.Scenarios.IScenario-BH.oM.RDF.RequiresProperty-System.String ExpressionString",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/RequiresProperty.cs",
+      "label": "RequiresProperty",
+      "attributes": []
+    },
+    {
+      "id": "BH.oM.Revit.Scenarios.IScenario1Element-BH.oM.RDF.IsA-BH.oM.Revit.Scenarios.IScenario",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "label": "IsA",
+      "attributes": "object",
+      "domain": "BH.oM.Revit.Scenarios.IScenario1Element",
+      "range": "BH.oM.Revit.Scenarios.IScenario"
+    },
+    {
+      "id": "BH.oM.Revit.Scenarios.IScenario2Elements-BH.oM.RDF.IsA-BH.oM.Revit.Scenarios.IScenario",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "label": "IsA",
+      "attributes": "object",
+      "domain": "BH.oM.Revit.Scenarios.IScenario2Elements",
+      "range": "BH.oM.Revit.Scenarios.IScenario"
+    },
+    {
+      "id": "BH.oM.Revit.Logging.IRevitLog-BH.oM.RDF.RequiresProperty-System.Collections.Generic.IEnumerable`1[BH.oM.Revit.Logging.IRevitLogItem] Items",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/RequiresProperty.cs",
+      "label": "RequiresProperty",
+      "attributes": []
+    },
+    {
+      "id": "BH.oM.Revit.Logging.IRevitLog-BH.oM.RDF.RequiresProperty-System.String Name",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/RequiresProperty.cs",
+      "label": "RequiresProperty",
+      "attributes": []
+    },
+    {
+      "id": "BH.oM.Revit.Logging.IRevitLogItem-BH.oM.RDF.IsA-BH.oM.Base.IObject",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "label": "IsA",
+      "attributes": "object",
+      "domain": "BH.oM.Revit.Logging.IRevitLogItem",
+      "range": "BH.oM.Base.IObject"
+    },
+    {
+      "id": "BH.oM.Revit.Logging.StandardRevitLog-BH.oM.RDF.HasProperty-System.Collections.Generic.IEnumerable`1[BH.oM.Revit.Logging.IRevitLogItem] Items",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/HasProperty.cs",
+      "label": "HasProperty",
+      "attributes": "datatype",
+      "domain": "BH.oM.Revit.Logging.StandardRevitLog",
+      "range": "Items-9836434195FD167138A1EA03572D351332C7E632AF03EF83BE221E3F4C761741-StandardRevitLog-HasProperty"
+    },
+    {
+      "id": "BH.oM.Revit.Logging.StandardRevitLog-BH.oM.RDF.IsA-BH.oM.Base.IBHoMObject",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "label": "IsA",
+      "attributes": "object",
+      "domain": "BH.oM.Revit.Logging.StandardRevitLog",
+      "range": "BH.oM.Base.IBHoMObject"
+    },
+    {
+      "id": "BH.oM.Revit.Logging.StandardRevitLog-BH.oM.RDF.IsA-BH.oM.Base.IObject",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "label": "IsA",
+      "attributes": "object",
+      "domain": "BH.oM.Revit.Logging.StandardRevitLog",
+      "range": "BH.oM.Base.IObject"
+    },
+    {
+      "id": "BH.oM.Revit.Logging.StandardRevitLog-BH.oM.RDF.IsA-BH.oM.Revit.Logging.IRevitLog",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "label": "IsA",
+      "attributes": "object",
+      "domain": "BH.oM.Revit.Logging.StandardRevitLog",
+      "range": "BH.oM.Revit.Logging.IRevitLog"
+    },
+    {
+      "id": "BH.oM.Revit.Logging.StandardRevitLog-BH.oM.RDF.IsSubclassOf-BH.oM.Base.BHoMObject",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsSubclassOf.cs",
+      "label": "IsSubclassOf",
+      "attributes": "object",
+      "domain": "BH.oM.Revit.Logging.StandardRevitLog",
+      "range": "BH.oM.Base.BHoMObject"
+    },
+    {
+      "id": "BH.oM.Revit.Attributes.ComboBoxAttribute-BH.oM.RDF.HasProperty-System.Type ParentSettings",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/HasProperty.cs",
+      "label": "HasProperty",
+      "attributes": "datatype",
+      "domain": "BH.oM.Revit.Attributes.ComboBoxAttribute",
+      "range": "ParentSettings-34F9EE7C454D062D6A51C897FA93C915E9A901BB62E94D7DC5870CF2311E32E7-ComboBoxAttribute-HasProperty"
+    },
+    {
+      "id": "BH.oM.Revit.Attributes.ComboBoxAttribute-BH.oM.RDF.HasProperty-Boolean UpdateOnDocumentChange",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/HasProperty.cs",
+      "label": "HasProperty",
+      "attributes": "datatype",
+      "domain": "BH.oM.Revit.Attributes.ComboBoxAttribute",
+      "range": "UpdateOnDocumentChange-B1F770A0E028A13BA94D30339F410C495415780DFBC483447570F9FB7BDEE4E1-ComboBoxAttribute-HasProperty"
+    },
+    {
+      "id": "BH.oM.Revit.Attributes.ComboBoxAttribute-BH.oM.RDF.IsA-System.Runtime.InteropServices._Attribute",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "label": "IsA",
+      "attributes": []
+    },
+    {
+      "id": "BH.oM.Revit.Attributes.ComboBoxAttribute-BH.oM.RDF.IsA-BH.oM.Base.IImmutable",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "label": "IsA",
+      "attributes": "object",
+      "domain": "BH.oM.Revit.Attributes.ComboBoxAttribute",
+      "range": "BH.oM.Base.IImmutable"
+    },
+    {
+      "id": "BH.oM.Revit.Attributes.ComboBoxAttribute-BH.oM.RDF.IsA-BH.oM.Base.IObject",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "label": "IsA",
+      "attributes": "object",
+      "domain": "BH.oM.Revit.Attributes.ComboBoxAttribute",
+      "range": "BH.oM.Base.IObject"
+    },
+    {
+      "id": "BH.oM.Revit.Attributes.ComboBoxAttribute-BH.oM.RDF.IsSubclassOf-System.Attribute",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsSubclassOf.cs",
+      "label": "IsSubclassOf",
+      "attributes": []
+    },
+    {
+      "id": "BH.oM.Revit.Attributes.ManualTransactionAttribute-BH.oM.RDF.IsA-System.Runtime.InteropServices._Attribute",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "label": "IsA",
+      "attributes": []
+    },
+    {
+      "id": "BH.oM.Revit.Attributes.ManualTransactionAttribute-BH.oM.RDF.IsA-BH.oM.Base.IImmutable",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "label": "IsA",
+      "attributes": "object",
+      "domain": "BH.oM.Revit.Attributes.ManualTransactionAttribute",
+      "range": "BH.oM.Base.IImmutable"
+    },
+    {
+      "id": "BH.oM.Revit.Attributes.ManualTransactionAttribute-BH.oM.RDF.IsA-BH.oM.Base.IObject",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "label": "IsA",
+      "attributes": "object",
+      "domain": "BH.oM.Revit.Attributes.ManualTransactionAttribute",
+      "range": "BH.oM.Base.IObject"
+    },
+    {
+      "id": "BH.oM.Revit.Attributes.ManualTransactionAttribute-BH.oM.RDF.IsSubclassOf-System.Attribute",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsSubclassOf.cs",
+      "label": "IsSubclassOf",
+      "attributes": []
+    },
+    {
+      "id": "BH.oM.Revit.Attributes.TagsAttribute-BH.oM.RDF.HasProperty-System.String[] Tags",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/HasProperty.cs",
+      "label": "HasProperty",
+      "attributes": "datatype",
+      "domain": "BH.oM.Revit.Attributes.TagsAttribute",
+      "range": "Tags-830C16D58B6577DFF263D80304F7A807A136F3FE6D9C5DDB481F802C4F8E2327-TagsAttribute-HasProperty"
+    },
+    {
+      "id": "BH.oM.Revit.Attributes.TagsAttribute-BH.oM.RDF.IsA-System.Runtime.InteropServices._Attribute",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "label": "IsA",
+      "attributes": []
+    },
+    {
+      "id": "BH.oM.Revit.Attributes.TagsAttribute-BH.oM.RDF.IsA-BH.oM.Base.IImmutable",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "label": "IsA",
+      "attributes": "object",
+      "domain": "BH.oM.Revit.Attributes.TagsAttribute",
+      "range": "BH.oM.Base.IImmutable"
+    },
+    {
+      "id": "BH.oM.Revit.Attributes.TagsAttribute-BH.oM.RDF.IsA-BH.oM.Base.IObject",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "label": "IsA",
+      "attributes": "object",
+      "domain": "BH.oM.Revit.Attributes.TagsAttribute",
+      "range": "BH.oM.Base.IObject"
+    },
+    {
+      "id": "BH.oM.Revit.Attributes.TagsAttribute-BH.oM.RDF.IsSubclassOf-System.Attribute",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsSubclassOf.cs",
+      "label": "IsSubclassOf",
+      "attributes": []
+    },
+    {
+      "id": "BH.oM.Revit.Attributes.SplitButtonAttribute-BH.oM.RDF.HasProperty-System.String SplitButtonName",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/HasProperty.cs",
+      "label": "HasProperty",
+      "attributes": "datatype",
+      "domain": "BH.oM.Revit.Attributes.SplitButtonAttribute",
+      "range": "SplitButtonName-9192CCE9561C99E988E840034F44EDF697E8FC3F04DDB623ACCE288F620D1FD9-SplitButtonAttribute-HasProperty"
+    },
+    {
+      "id": "BH.oM.Revit.Attributes.SplitButtonAttribute-BH.oM.RDF.IsA-System.Runtime.InteropServices._Attribute",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "label": "IsA",
+      "attributes": []
+    },
+    {
+      "id": "BH.oM.Revit.Attributes.SplitButtonAttribute-BH.oM.RDF.IsA-BH.oM.Base.IImmutable",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "label": "IsA",
+      "attributes": "object",
+      "domain": "BH.oM.Revit.Attributes.SplitButtonAttribute",
+      "range": "BH.oM.Base.IImmutable"
+    },
+    {
+      "id": "BH.oM.Revit.Attributes.SplitButtonAttribute-BH.oM.RDF.IsA-BH.oM.Base.IObject",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "label": "IsA",
+      "attributes": "object",
+      "domain": "BH.oM.Revit.Attributes.SplitButtonAttribute",
+      "range": "BH.oM.Base.IObject"
+    },
+    {
+      "id": "BH.oM.Revit.Attributes.SplitButtonAttribute-BH.oM.RDF.IsSubclassOf-System.Attribute",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsSubclassOf.cs",
+      "label": "IsSubclassOf",
+      "attributes": []
+    },
+    {
+      "id": "BH.oM.Revit.Attributes.UIEnabledAttribute-BH.oM.RDF.HasProperty-Boolean Enabled",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/HasProperty.cs",
+      "label": "HasProperty",
+      "attributes": "datatype",
+      "domain": "BH.oM.Revit.Attributes.UIEnabledAttribute",
+      "range": "Enabled-F922D9857D70F91D09DD234593F86183AD344BEAC97B6E6907CF137B0871B156-UIEnabledAttribute-HasProperty"
+    },
+    {
+      "id": "BH.oM.Revit.Attributes.UIEnabledAttribute-BH.oM.RDF.IsA-System.Runtime.InteropServices._Attribute",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "label": "IsA",
+      "attributes": []
+    },
+    {
+      "id": "BH.oM.Revit.Attributes.UIEnabledAttribute-BH.oM.RDF.IsA-BH.oM.Base.IImmutable",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "label": "IsA",
+      "attributes": "object",
+      "domain": "BH.oM.Revit.Attributes.UIEnabledAttribute",
+      "range": "BH.oM.Base.IImmutable"
+    },
+    {
+      "id": "BH.oM.Revit.Attributes.UIEnabledAttribute-BH.oM.RDF.IsA-BH.oM.Base.IObject",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "label": "IsA",
+      "attributes": "object",
+      "domain": "BH.oM.Revit.Attributes.UIEnabledAttribute",
+      "range": "BH.oM.Base.IObject"
+    },
+    {
+      "id": "BH.oM.Revit.Attributes.UIEnabledAttribute-BH.oM.RDF.IsSubclassOf-System.Attribute",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsSubclassOf.cs",
+      "label": "IsSubclassOf",
+      "attributes": []
+    },
+    {
+      "id": "BH.oM.Revit.Attributes.IconFileNameAttribute-BH.oM.RDF.HasProperty-System.String FileName",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/HasProperty.cs",
+      "label": "HasProperty",
+      "attributes": "datatype",
+      "domain": "BH.oM.Revit.Attributes.IconFileNameAttribute",
+      "range": "FileName-008A1EFAA43E1AC28B558E2BB71DA7904BAE8996BE2BD64826460CE27591156A-IconFileNameAttribute-HasProperty"
+    },
+    {
+      "id": "BH.oM.Revit.Attributes.IconFileNameAttribute-BH.oM.RDF.IsA-System.Runtime.InteropServices._Attribute",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "label": "IsA",
+      "attributes": []
+    },
+    {
+      "id": "BH.oM.Revit.Attributes.IconFileNameAttribute-BH.oM.RDF.IsA-BH.oM.Base.IImmutable",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "label": "IsA",
+      "attributes": "object",
+      "domain": "BH.oM.Revit.Attributes.IconFileNameAttribute",
+      "range": "BH.oM.Base.IImmutable"
+    },
+    {
+      "id": "BH.oM.Revit.Attributes.IconFileNameAttribute-BH.oM.RDF.IsA-BH.oM.Base.IObject",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "label": "IsA",
+      "attributes": "object",
+      "domain": "BH.oM.Revit.Attributes.IconFileNameAttribute",
+      "range": "BH.oM.Base.IObject"
+    },
+    {
+      "id": "BH.oM.Revit.Attributes.IconFileNameAttribute-BH.oM.RDF.IsSubclassOf-System.Attribute",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsSubclassOf.cs",
+      "label": "IsSubclassOf",
+      "attributes": []
+    },
+    {
+      "id": "BH.oM.Revit.Attributes.NameAttribute-BH.oM.RDF.HasProperty-System.String Name",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/HasProperty.cs",
+      "label": "HasProperty",
+      "attributes": "datatype",
+      "domain": "BH.oM.Revit.Attributes.NameAttribute",
+      "range": "Name-0592F73B4D148A42B1A07EC7885760EAD8DDB66588565113C42586B3B19C69DB-NameAttribute-HasProperty"
+    },
+    {
+      "id": "BH.oM.Revit.Attributes.NameAttribute-BH.oM.RDF.IsA-System.Runtime.InteropServices._Attribute",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "label": "IsA",
+      "attributes": []
+    },
+    {
+      "id": "BH.oM.Revit.Attributes.NameAttribute-BH.oM.RDF.IsA-BH.oM.Base.IImmutable",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "label": "IsA",
+      "attributes": "object",
+      "domain": "BH.oM.Revit.Attributes.NameAttribute",
+      "range": "BH.oM.Base.IImmutable"
+    },
+    {
+      "id": "BH.oM.Revit.Attributes.NameAttribute-BH.oM.RDF.IsA-BH.oM.Base.IObject",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "label": "IsA",
+      "attributes": "object",
+      "domain": "BH.oM.Revit.Attributes.NameAttribute",
+      "range": "BH.oM.Base.IObject"
+    },
+    {
+      "id": "BH.oM.Revit.Attributes.NameAttribute-BH.oM.RDF.IsSubclassOf-System.Attribute",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsSubclassOf.cs",
+      "label": "IsSubclassOf",
+      "attributes": []
+    },
+    {
+      "id": "BH.oM.Revit.Attributes.PanelNameAttribute-BH.oM.RDF.HasProperty-System.String PanelName",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/HasProperty.cs",
+      "label": "HasProperty",
+      "attributes": "datatype",
+      "domain": "BH.oM.Revit.Attributes.PanelNameAttribute",
+      "range": "PanelName-3C73935F505C7A8A99DFA97AFFD71BEA7D4CC94EDF6A2A93F31922136FBE0148-PanelNameAttribute-HasProperty"
+    },
+    {
+      "id": "BH.oM.Revit.Attributes.PanelNameAttribute-BH.oM.RDF.IsA-System.Runtime.InteropServices._Attribute",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "label": "IsA",
+      "attributes": []
+    },
+    {
+      "id": "BH.oM.Revit.Attributes.PanelNameAttribute-BH.oM.RDF.IsA-BH.oM.Base.IImmutable",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "label": "IsA",
+      "attributes": "object",
+      "domain": "BH.oM.Revit.Attributes.PanelNameAttribute",
+      "range": "BH.oM.Base.IImmutable"
+    },
+    {
+      "id": "BH.oM.Revit.Attributes.PanelNameAttribute-BH.oM.RDF.IsA-BH.oM.Base.IObject",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "label": "IsA",
+      "attributes": "object",
+      "domain": "BH.oM.Revit.Attributes.PanelNameAttribute",
+      "range": "BH.oM.Base.IObject"
+    },
+    {
+      "id": "BH.oM.Revit.Attributes.PanelNameAttribute-BH.oM.RDF.IsSubclassOf-System.Attribute",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsSubclassOf.cs",
+      "label": "IsSubclassOf",
+      "attributes": []
+    },
+    {
+      "id": "BH.oM.Revit.Attributes.TabNameAttribute-BH.oM.RDF.HasProperty-System.String TabName",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/HasProperty.cs",
+      "label": "HasProperty",
+      "attributes": "datatype",
+      "domain": "BH.oM.Revit.Attributes.TabNameAttribute",
+      "range": "TabName-E73C6C1D4589E1EB4F4C108223778DFF7995A2F5846B7B2AFCD3E7F2FB2C74FD-TabNameAttribute-HasProperty"
+    },
+    {
+      "id": "BH.oM.Revit.Attributes.TabNameAttribute-BH.oM.RDF.IsA-System.Runtime.InteropServices._Attribute",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "label": "IsA",
+      "attributes": []
+    },
+    {
+      "id": "BH.oM.Revit.Attributes.TabNameAttribute-BH.oM.RDF.IsA-BH.oM.Base.IImmutable",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "label": "IsA",
+      "attributes": "object",
+      "domain": "BH.oM.Revit.Attributes.TabNameAttribute",
+      "range": "BH.oM.Base.IImmutable"
+    },
+    {
+      "id": "BH.oM.Revit.Attributes.TabNameAttribute-BH.oM.RDF.IsA-BH.oM.Base.IObject",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "label": "IsA",
+      "attributes": "object",
+      "domain": "BH.oM.Revit.Attributes.TabNameAttribute",
+      "range": "BH.oM.Base.IObject"
+    },
+    {
+      "id": "BH.oM.Revit.Attributes.TabNameAttribute-BH.oM.RDF.IsSubclassOf-System.Attribute",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsSubclassOf.cs",
+      "label": "IsSubclassOf",
+      "attributes": []
+    },
+    {
+      "id": "BH.oM.Revit.Attributes.ToolTipAttribute-BH.oM.RDF.HasProperty-System.String Text",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/HasProperty.cs",
+      "label": "HasProperty",
+      "attributes": "datatype",
+      "domain": "BH.oM.Revit.Attributes.ToolTipAttribute",
+      "range": "Text-AAA6E4FD92F5C9D7E958BDEA1FB1839F7EA0277BBCDE23F5EBE113EABDAECDFC-ToolTipAttribute-HasProperty"
+    },
+    {
+      "id": "BH.oM.Revit.Attributes.ToolTipAttribute-BH.oM.RDF.IsA-System.Runtime.InteropServices._Attribute",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "label": "IsA",
+      "attributes": []
+    },
+    {
+      "id": "BH.oM.Revit.Attributes.ToolTipAttribute-BH.oM.RDF.IsA-BH.oM.Base.IImmutable",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "label": "IsA",
+      "attributes": "object",
+      "domain": "BH.oM.Revit.Attributes.ToolTipAttribute",
+      "range": "BH.oM.Base.IImmutable"
+    },
+    {
+      "id": "BH.oM.Revit.Attributes.ToolTipAttribute-BH.oM.RDF.IsA-BH.oM.Base.IObject",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "label": "IsA",
+      "attributes": "object",
+      "domain": "BH.oM.Revit.Attributes.ToolTipAttribute",
+      "range": "BH.oM.Base.IObject"
+    },
+    {
+      "id": "BH.oM.Revit.Attributes.ToolTipAttribute-BH.oM.RDF.IsSubclassOf-System.Attribute",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsSubclassOf.cs",
+      "label": "IsSubclassOf",
+      "attributes": []
+    },
+    {
+      "id": "BH.oM.Revit.Attributes.ToolTipImageFileNameAttribute-BH.oM.RDF.HasProperty-System.String FileName",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/HasProperty.cs",
+      "label": "HasProperty",
+      "attributes": "datatype",
+      "domain": "BH.oM.Revit.Attributes.ToolTipImageFileNameAttribute",
+      "range": "FileName-35BA94527130D9E49433119C248DAF413EDBC3B56D5D421BC6511C0E7512AE61-ToolTipImageFileNameAttribute-HasProperty"
+    },
+    {
+      "id": "BH.oM.Revit.Attributes.ToolTipImageFileNameAttribute-BH.oM.RDF.IsA-System.Runtime.InteropServices._Attribute",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "label": "IsA",
+      "attributes": []
+    },
+    {
+      "id": "BH.oM.Revit.Attributes.ToolTipImageFileNameAttribute-BH.oM.RDF.IsA-BH.oM.Base.IImmutable",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "label": "IsA",
+      "attributes": "object",
+      "domain": "BH.oM.Revit.Attributes.ToolTipImageFileNameAttribute",
+      "range": "BH.oM.Base.IImmutable"
+    },
+    {
+      "id": "BH.oM.Revit.Attributes.ToolTipImageFileNameAttribute-BH.oM.RDF.IsA-BH.oM.Base.IObject",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "label": "IsA",
+      "attributes": "object",
+      "domain": "BH.oM.Revit.Attributes.ToolTipImageFileNameAttribute",
+      "range": "BH.oM.Base.IObject"
+    },
+    {
+      "id": "BH.oM.Revit.Attributes.ToolTipImageFileNameAttribute-BH.oM.RDF.IsSubclassOf-System.Attribute",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsSubclassOf.cs",
+      "label": "IsSubclassOf",
+      "attributes": []
+    },
+    {
+      "id": "BH.oM.Revit.RevitHostFragment-BH.oM.RDF.HasProperty-Int32 HostId",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/HasProperty.cs",
+      "label": "HasProperty",
+      "attributes": "datatype",
+      "domain": "BH.oM.Revit.RevitHostFragment",
+      "range": "HostId-573837931A2F340FAF9ADFD5FFBB465817AB470A16589C6C2033E7B49D78B185-RevitHostFragment-HasProperty"
+    },
+    {
+      "id": "BH.oM.Revit.RevitHostFragment-BH.oM.RDF.HasProperty-System.String LinkDocument",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/HasProperty.cs",
+      "label": "HasProperty",
+      "attributes": "datatype",
+      "domain": "BH.oM.Revit.RevitHostFragment",
+      "range": "LinkDocument-5A606ED51FD9FB55E66CCC7DE5026129C8ADA88CE218002BD346CCDB4578486D-RevitHostFragment-HasProperty"
+    },
+    {
+      "id": "BH.oM.Revit.RevitHostFragment-BH.oM.RDF.IsA-BH.oM.Base.IFragment",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "label": "IsA",
+      "attributes": "object",
+      "domain": "BH.oM.Revit.RevitHostFragment",
+      "range": "BH.oM.Base.IFragment"
+    },
+    {
+      "id": "BH.oM.Revit.RevitHostFragment-BH.oM.RDF.IsA-BH.oM.Base.IObject",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "label": "IsA",
+      "attributes": "object",
+      "domain": "BH.oM.Revit.RevitHostFragment",
+      "range": "BH.oM.Base.IObject"
+    },
+    {
+      "id": "BH.oM.Revit.RevitHostFragment-BH.oM.RDF.IsA-BH.oM.Base.IImmutable",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "label": "IsA",
+      "attributes": "object",
+      "domain": "BH.oM.Revit.RevitHostFragment",
+      "range": "BH.oM.Base.IImmutable"
+    },
+    {
+      "id": "BH.oM.Revit.RevitHostFragment-BH.oM.RDF.IsSubclassOf-System.Object",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsSubclassOf.cs",
+      "label": "IsSubclassOf",
+      "attributes": []
+    }
+  ]
+}

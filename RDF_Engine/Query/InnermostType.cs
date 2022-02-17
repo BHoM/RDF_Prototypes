@@ -14,7 +14,7 @@ namespace BH.Engine.RDF
         [Description("Get the most nested type within a generic type. For example, passing a type of `List<List<Bar>>` will return the type of `Bar`." +
             "Supports only generic types and IEnumerables." +
             "If the generic type owns more than one generic argument, returns only the first (e.g. for a key-value collection it will only return the type of the key).")]
-        public static Type InnermostType<T>(T obj)
+        public static Type InnermostType<T>(this T obj)
         {
             Type type = typeof(T);
 

@@ -24,7 +24,7 @@ namespace BH.Engine.RDF
                 return null;
             }
 
-            return graph.CreateOntologyClass(UriFactory.Create(t.UriFromType()));
+            return graph.CreateOntologyClass(t.GithubURI()); // UriFactory.Create(t.UriFromType()
         }
     }
 }

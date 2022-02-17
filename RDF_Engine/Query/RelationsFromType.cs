@@ -14,13 +14,18 @@ namespace BH.Engine.RDF
 {
     public static partial class Query
     {
-        public static List<IRelation> RelationsFromType(this Type oMType, List<IRelation> existingRelations = null)
+        public static List<IRelation> RelationsFromType(this Type oMType, List<IRelation> existingRelations = null, bool onlyDeclaredProperties = true)
         {
             List<IRelation> resultRelations = new List<IRelation>();
             if (existingRelations != null)
                 resultRelations.AddRange(existingRelations);
-            
-            PropertyInfo[] properties = oMType.GetProperties();
+
+            PropertyInfo[] properties = null;
+
+            if (onlyDeclaredProperties)
+                properties = oMType.GetProperties(System.Reflection.BindingFlags.Public | System.Reflection.BindingFlags.Instance | System.Reflection.BindingFlags.DeclaredOnly);
+            else
+                properties = oMType.GetProperties();
 
             IRelation propertyRelation = null;
             foreach (PropertyInfo property in properties)

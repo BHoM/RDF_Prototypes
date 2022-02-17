@@ -1,0 +1,154 @@
+{
+  "comment": "Generated from BHoM RDF_Prototypes",
+  "namespace": [],
+  "class": [
+    {
+      "id": "BH.oM.CSharp.Variable",
+      "type": "owl:Class"
+    },
+    {
+      "id": "Type-EAB17D1CB1F64DC0467A57883569B7047410A5BD997FF09FCEB882CD245896E1-Variable-HasProperty",
+      "type": "rdfs:Datatype"
+    },
+    {
+      "id": "Expression-DBD2981997C34F496F416AE711408E3658F106971BD6227BC64C155FF1C389CA-Variable-HasProperty",
+      "type": "rdfs:Datatype"
+    },
+    {
+      "id": "SourceId-01F83D887C07F8E94D4DE98BC7CA96A345F9D8E6DB23B915FB394D78737AE59A-Variable-HasProperty",
+      "type": "rdfs:Datatype"
+    },
+    {
+      "id": "BH.oM.Base.IBHoMObject",
+      "type": "owl:Class"
+    },
+    {
+      "id": "BH.oM.Base.IObject",
+      "type": "owl:Class"
+    },
+    {
+      "id": "BH.oM.Base.BHoMObject",
+      "type": "owl:Class"
+    }
+  ],
+  "classAttribute": [
+    {
+      "id": "BH.oM.CSharp.Variable",
+      "iri": "https://github.com/BHoM/CSharp_Toolkit/blob/main/CSharp_oM/Others/Variable.cs",
+      "label": "Variable (BH.oM.CSharp)",
+      "attributes": []
+    },
+    {
+      "id": "Type-EAB17D1CB1F64DC0467A57883569B7047410A5BD997FF09FCEB882CD245896E1-Variable-HasProperty",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/HasProperty.cs",
+      "label": "Type (Type)",
+      "attributes": "datatype"
+    },
+    {
+      "id": "Expression-DBD2981997C34F496F416AE711408E3658F106971BD6227BC64C155FF1C389CA-Variable-HasProperty",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/HasProperty.cs",
+      "label": "Expression (ExpressionSyntax)",
+      "attributes": "datatype"
+    },
+    {
+      "id": "SourceId-01F83D887C07F8E94D4DE98BC7CA96A345F9D8E6DB23B915FB394D78737AE59A-Variable-HasProperty",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/HasProperty.cs",
+      "label": "SourceId (Guid)",
+      "attributes": "datatype"
+    },
+    {
+      "id": "BH.oM.Base.IBHoMObject",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/BHoM/Interface/IBHoMObject.cs",
+      "label": "IBHoMObject",
+      "attributes": []
+    },
+    {
+      "id": "BH.oM.Base.IObject",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/BHoM/Interface/IObject.cs",
+      "label": "IObject",
+      "attributes": []
+    },
+    {
+      "id": "BH.oM.Base.BHoMObject",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/BHoM/BHoMObject.cs",
+      "label": "BHoMObject",
+      "attributes": []
+    }
+  ],
+  "property": [
+    {
+      "id": "BH.oM.CSharp.Variable-BH.oM.RDF.HasProperty-System.Type Type",
+      "type": "owl:DatatypeProperty"
+    },
+    {
+      "id": "BH.oM.CSharp.Variable-BH.oM.RDF.HasProperty-Microsoft.CodeAnalysis.CSharp.Syntax.ExpressionSyntax Expression",
+      "type": "owl:DatatypeProperty"
+    },
+    {
+      "id": "BH.oM.CSharp.Variable-BH.oM.RDF.HasProperty-System.Guid SourceId",
+      "type": "owl:DatatypeProperty"
+    },
+    {
+      "id": "BH.oM.CSharp.Variable-BH.oM.RDF.IsA-BH.oM.Base.IBHoMObject",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "BH.oM.CSharp.Variable-BH.oM.RDF.IsA-BH.oM.Base.IObject",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "BH.oM.CSharp.Variable-BH.oM.RDF.IsSubclassOf-BH.oM.Base.BHoMObject",
+      "type": "owl:ObjectProperty"
+    }
+  ],
+  "propertyAttribute": [
+    {
+      "id": "BH.oM.CSharp.Variable-BH.oM.RDF.HasProperty-System.Type Type",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/HasProperty.cs",
+      "label": "HasProperty",
+      "attributes": "datatype",
+      "domain": "BH.oM.CSharp.Variable",
+      "range": "Type-EAB17D1CB1F64DC0467A57883569B7047410A5BD997FF09FCEB882CD245896E1-Variable-HasProperty"
+    },
+    {
+      "id": "BH.oM.CSharp.Variable-BH.oM.RDF.HasProperty-Microsoft.CodeAnalysis.CSharp.Syntax.ExpressionSyntax Expression",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/HasProperty.cs",
+      "label": "HasProperty",
+      "attributes": "datatype",
+      "domain": "BH.oM.CSharp.Variable",
+      "range": "Expression-DBD2981997C34F496F416AE711408E3658F106971BD6227BC64C155FF1C389CA-Variable-HasProperty"
+    },
+    {
+      "id": "BH.oM.CSharp.Variable-BH.oM.RDF.HasProperty-System.Guid SourceId",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/HasProperty.cs",
+      "label": "HasProperty",
+      "attributes": "datatype",
+      "domain": "BH.oM.CSharp.Variable",
+      "range": "SourceId-01F83D887C07F8E94D4DE98BC7CA96A345F9D8E6DB23B915FB394D78737AE59A-Variable-HasProperty"
+    },
+    {
+      "id": "BH.oM.CSharp.Variable-BH.oM.RDF.IsA-BH.oM.Base.IBHoMObject",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "label": "IsA",
+      "attributes": "object",
+      "domain": "BH.oM.CSharp.Variable",
+      "range": "BH.oM.Base.IBHoMObject"
+    },
+    {
+      "id": "BH.oM.CSharp.Variable-BH.oM.RDF.IsA-BH.oM.Base.IObject",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "label": "IsA",
+      "attributes": "object",
+      "domain": "BH.oM.CSharp.Variable",
+      "range": "BH.oM.Base.IObject"
+    },
+    {
+      "id": "BH.oM.CSharp.Variable-BH.oM.RDF.IsSubclassOf-BH.oM.Base.BHoMObject",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsSubclassOf.cs",
+      "label": "IsSubclassOf",
+      "attributes": "object",
+      "domain": "BH.oM.CSharp.Variable",
+      "range": "BH.oM.Base.BHoMObject"
+    }
+  ]
+}
