@@ -79,39 +79,39 @@ namespace BH.oM.CodeAnalysis.ConsoleApp
             var Structure_oM_Elements_Bar = g.CreateUriNode(UriFactory.Create("https://github.com/BHoM/BHoM/blob/main/Structure_oM/Elements/Bar.cs"));
             g.Assert(Structure_oM_Elements_Bar, rdfsLabel, g.CreateLiteralNode("Structure_oM_Elements_Bar", "en"));
 
+           // var Structure_oM_Elements_Type = g.CreateLiteralNode("Type");
+           // g.Assert(Structure_oM_Elements_Type, rdfsLabel, g.CreateLiteralNode("Structure_oM_Elements_Type", "en"));
+
+            // var hasName = g.CreateLiteralNode("hasName");
+            //  g.Assert(hasName, rdfsLabel, g.CreateLiteralNode("hasName", "en"));
 
 
-
-           // var hasName = g.CreateLiteralNode("hasName");
-           //  g.Assert(hasName, rdfsLabel, g.CreateLiteralNode("hasName", "en"));
-
-           
             //g.Assert(Architecture_oM_Elements_LivingRoom, rdfsLiteral, Perimeter);
             //g.Assert(Perimeter,a, rdfsLiteral);
 
-            
+
             //Makes Architecture_oM_Elements_LivingRoom subclass of Architecture_oM_Elements_Room
 
-          //  g.Assert(Architecture_oM_Elements_LivingRoom, a, Architecture_oM_Elements_Room);
-           // g.Assert(Architecture_oM_Elements_LivingRoom, rdfsLiteral, 
+            //  g.Assert(Architecture_oM_Elements_LivingRoom, a, Architecture_oM_Elements_Room);
+            // g.Assert(Architecture_oM_Elements_LivingRoom, rdfsLiteral, 
 
 
-             // var GUID = g.CreateLiteralNode("GUID");
-           //   g.Assert(GUID, a, rdfsLiteral);
+            // var GUID = g.CreateLiteralNode("GUID");
+            //   g.Assert(GUID, a, rdfsLiteral);
 
 
             //Tries to create an OWL same as property, and make the Geometry_oM_Vector_Point and Point equal BUT IT FAILED
-          //  var Geometry_oM_Vector_Point = g.CreateUriNode(UriFactory.Create("https://github.com/BHoM/BHoM/blob/main/Geometry_oM/Vector/Point.cs"));
-          //  g.Assert(Geometry_oM_Vector_Point, rdfsLabel, g.CreateLiteralNode("Geometry_oM_Vector_Point", "en"));
+            //  var Geometry_oM_Vector_Point = g.CreateUriNode(UriFactory.Create("https://github.com/BHoM/BHoM/blob/main/Geometry_oM/Vector/Point.cs"));
+            //  g.Assert(Geometry_oM_Vector_Point, rdfsLabel, g.CreateLiteralNode("Geometry_oM_Vector_Point", "en"));
 
-           //var Point = g.CreateUriNode(UriFactory.Create("https://github.com/BHoM/BHoM/blob/main/Geometry_oM/Point.cs"));
-         //  g.Assert(Point, rdfsLabel, g.CreateLiteralNode("Point", "en"));
+            //var Point = g.CreateUriNode(UriFactory.Create("https://github.com/BHoM/BHoM/blob/main/Geometry_oM/Point.cs"));
+            //  g.Assert(Point, rdfsLabel, g.CreateLiteralNode("Point", "en"));
 
-          // g.Assert(Point, owlSameAs, Geometry_oM_Vector_Point);
+            // g.Assert(Point, owlSameAs, Geometry_oM_Vector_Point);
 
 
             // Creates isPartOf Relation (Physical_oM_Elements_Beam, isPartOf, Structure_oM_Elements_Bar)
-           var isPartOf = g.CreateUriNode(UriFactory.Create("https://github.com/BHoM/Predicate/isPartOf"));
+            var isPartOf = g.CreateUriNode(UriFactory.Create("https://github.com/BHoM/Predicate/isPartOf"));
             g.Assert(owlObjectProperty, a, isPartOf); // there is a problem here. It makes isPartof OWL. But if we remove the row, everything else stops working ...
             g.Assert(isPartOf, rdfsLabel, g.CreateLiteralNode("isPartOf", "en"));
 
@@ -145,15 +145,19 @@ namespace BH.oM.CodeAnalysis.ConsoleApp
 ;
 
 
-           //g.Assert(hasElement, rdfsLabel, g.CreateLiteralNode("hasElement", "en"));
-           //Relation :( Architecture_oM_Elements_Room, hasElement, Structure_oM_Elements_Bar)
-           //var hasElement = g.CreateUriNode(UriFactory.Create("https://github.com/BHoM/Predicate/hasElement"));
-           //g.Assert(hasElement, rdfsLabel, g.CreateLiteralNode("hasElement", "en"));
-           //g.Assert(hasElement, rdfsDomain, Architecture_oM_Elements_Room);
-           //g.Assert(hasElement, rdfsRange, Structure_oM_Elements_Bar);
+            //g.Assert(hasElement, rdfsLabel, g.CreateLiteralNode("hasElement", "en"));
+            //Relation :( Architecture_oM_Elements_Room, hasElement, Structure_oM_Elements_Bar)
+            //var hasElement = g.CreateUriNode(UriFactory.Create("https://github.com/BHoM/Predicate/hasElement"));
+            //g.Assert(hasElement, rdfsLabel, g.CreateLiteralNode("hasElement", "en"));
+            //g.Assert(hasElement, rdfsDomain, Architecture_oM_Elements_Room);
+            //g.Assert(hasElement, rdfsRange, Structure_oM_Elements_Bar);
 
 
             g.WriteToXMLFile(_fileDirectory, "RoomWithBar.rdf");
+
+        
+
+
         }
     }
 }
