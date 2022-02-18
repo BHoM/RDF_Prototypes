@@ -11,6 +11,22 @@
       "type": "owl:Class"
     },
     {
+      "id": "System.Guidb5009b8b-f328-4544-a109-070db29d9d83",
+      "type": "rdfs:Datatype"
+    },
+    {
+      "id": "System.String08fbd5b7-255a-44ef-8db1-7fc780d657ae",
+      "type": "rdfs:Datatype"
+    },
+    {
+      "id": "System.Collections.Generic.HashSet`1[[System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]e3d3aa6d-d5e5-4edb-8cd8-202a297ab33e",
+      "type": "rdfs:Datatype"
+    },
+    {
+      "id": "System.Collections.Generic.Dictionary`2[[System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089],[System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]bf5305a0-01c7-40b6-b7c5-179b08d9461e",
+      "type": "rdfs:Datatype"
+    },
+    {
       "id": "BH.oM.Base.IBHoMObject",
       "type": "owl:Class"
     },
@@ -71,6 +87,38 @@
       "iri": "https://github.com/BHoM/BHoM/blob/main/BHoM/FragmentSet.cs",
       "label": "FragmentSet (BH.oM.Base)",
       "attributes": []
+    },
+    {
+      "id": "System.Guidb5009b8b-f328-4544-a109-070db29d9d83",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/HasProperty.cs",
+      "label": "Guid",
+      "attributes": [
+        "datatype"
+      ]
+    },
+    {
+      "id": "System.String08fbd5b7-255a-44ef-8db1-7fc780d657ae",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/HasProperty.cs",
+      "label": "String",
+      "attributes": [
+        "datatype"
+      ]
+    },
+    {
+      "id": "System.Collections.Generic.HashSet`1[[System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]e3d3aa6d-d5e5-4edb-8cd8-202a297ab33e",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/HasProperty.cs",
+      "label": "HashSet<String>",
+      "attributes": [
+        "datatype"
+      ]
+    },
+    {
+      "id": "System.Collections.Generic.Dictionary`2[[System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089],[System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]bf5305a0-01c7-40b6-b7c5-179b08d9461e",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/HasProperty.cs",
+      "label": "Dictionary<String,Object>",
+      "attributes": [
+        "datatype"
+      ]
     },
     {
       "id": "BH.oM.Base.IBHoMObject",
@@ -167,8 +215,24 @@
   ],
   "property": [
     {
+      "id": "BHoMObject-HasProperty-BHoM_Guid_8DD4FC3BF42DE45BD6F7CA027731FAF4B6C4EC3EF0408D0AC6D569D7D0BA135C",
+      "type": "owl:DatatypeProperty"
+    },
+    {
+      "id": "BHoMObject-HasProperty-Name_C89BD1918E32C81C301FA4AEAC4F504CCBFA81C34AE9E8B4279BB52E739A9323",
+      "type": "owl:DatatypeProperty"
+    },
+    {
       "id": "Fragments-IsA-FragmentSet_B95D150398815F064B2DD6D9FE24B53A6761BA949A6CCED24BC991B78B538B0D",
       "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "BHoMObject-HasProperty-Tags_19A34329DC9C6BEB81293950676267062031BE42D49425C47FE2F8176894C4A2",
+      "type": "owl:DatatypeProperty"
+    },
+    {
+      "id": "BHoMObject-HasProperty-CustomData_269F7E4A961EBDA28B63F45CDE1CE26775BE6B188367DC5213B8C6D41DCC7DB0",
+      "type": "owl:DatatypeProperty"
     },
     {
       "id": "BHoMObject-IsA-IBHoMObject_477BD74340BED9FA358EF34710894A1B7B85A097E2332104889663EDF9280D91",
@@ -225,6 +289,26 @@
   ],
   "propertyAttribute": [
     {
+      "id": "BHoMObject-HasProperty-BHoM_Guid_8DD4FC3BF42DE45BD6F7CA027731FAF4B6C4EC3EF0408D0AC6D569D7D0BA135C",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/RDF_oM/IsAListOf.cs",
+      "label": "IsAListOf",
+      "attributes": [
+        "datatype"
+      ],
+      "domain": "BH.oM.Base.BHoMObject",
+      "range": "BH.oM.Base.BHoMObject.BHoM_Guid"
+    },
+    {
+      "id": "BHoMObject-HasProperty-Name_C89BD1918E32C81C301FA4AEAC4F504CCBFA81C34AE9E8B4279BB52E739A9323",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/RDF_oM/IsAListOf.cs",
+      "label": "IsAListOf",
+      "attributes": [
+        "datatype"
+      ],
+      "domain": "BH.oM.Base.BHoMObject",
+      "range": "BH.oM.Base.BHoMObject.Name"
+    },
+    {
       "id": "Fragments-IsA-FragmentSet_B95D150398815F064B2DD6D9FE24B53A6761BA949A6CCED24BC991B78B538B0D",
       "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
       "label": "IsA",
@@ -233,6 +317,26 @@
       ],
       "domain": "BH.oM.Base.FragmentSet",
       "range": "BH.oM.Base.FragmentSet"
+    },
+    {
+      "id": "BHoMObject-HasProperty-Tags_19A34329DC9C6BEB81293950676267062031BE42D49425C47FE2F8176894C4A2",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/RDF_oM/IsAListOf.cs",
+      "label": "IsAListOf",
+      "attributes": [
+        "datatype"
+      ],
+      "domain": "BH.oM.Base.BHoMObject",
+      "range": "BH.oM.Base.BHoMObject.Tags"
+    },
+    {
+      "id": "BHoMObject-HasProperty-CustomData_269F7E4A961EBDA28B63F45CDE1CE26775BE6B188367DC5213B8C6D41DCC7DB0",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/RDF_oM/IsAListOf.cs",
+      "label": "IsAListOf",
+      "attributes": [
+        "datatype"
+      ],
+      "domain": "BH.oM.Base.BHoMObject",
+      "range": "BH.oM.Base.BHoMObject.CustomData"
     },
     {
       "id": "BHoMObject-IsA-IBHoMObject_477BD74340BED9FA358EF34710894A1B7B85A097E2332104889663EDF9280D91",
