@@ -32,8 +32,7 @@ namespace BH.Engine.RDF
 
             int index = lines?.FindIndex(l =>
             l.Contains(pi.Name) &&
-            l.Contains(pi.PropertyType.Name) &&
-            l.Contains(pi.PropertyType.Name) &&
+            l.ToLower().Contains(pi.PropertyType.Name.ToLower()) &&
             l.Contains("public") &&
             l.Contains("{"))
                 ?? -1;
