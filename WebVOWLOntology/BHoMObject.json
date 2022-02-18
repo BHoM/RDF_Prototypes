@@ -19,6 +19,10 @@
       "type": "rdfs:Datatype"
     },
     {
+      "id": "BH.oM.Base.BHoMObject.Fragments",
+      "type": "rdfs:Datatype"
+    },
+    {
       "id": "BH.oM.Base.BHoMObject.Tags",
       "type": "rdfs:Datatype"
     },
@@ -100,6 +104,14 @@
       "id": "BH.oM.Base.BHoMObject.Name",
       "iri": "http://www.w3.org/2001/XMLSchema#String",
       "label": "Name(BH.oM.Base.BHoMObject.Name)",
+      "attributes": [
+        "datatype"
+      ]
+    },
+    {
+      "id": "BH.oM.Base.BHoMObject.Fragments",
+      "iri": "http://www.w3.org/2001/XMLSchema#FragmentSet",
+      "label": "Fragments(BH.oM.Base.BHoMObject.Fragments)",
       "attributes": [
         "datatype"
       ]
@@ -224,11 +236,15 @@
     },
     {
       "id": "BH.oM.Base.FragmentSet",
-      "type": "owl:DatatypeProperty"
+      "type": "owl:ObjectProperty"
     },
     {
-      "id": "Fragments-IsA-FragmentSet_B95D150398815F064B2DD6D9FE24B53A6761BA949A6CCED24BC991B78B538B0D",
+      "id": "BH.oM.Base.FragmentSet-IsA-BH.oM.Base.FragmentSet",
       "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "BHoMObject-HasProperty-Fragments_D91934470EE8AAEA4217DAADC9C26307FCC9B0A5B38963762F214F3A0C350F31",
+      "type": "owl:DatatypeProperty"
     },
     {
       "id": "BHoMObject-HasProperty-Tags_19A34329DC9C6BEB81293950676267062031BE42D49425C47FE2F8176894C4A2",
@@ -323,7 +339,7 @@
       "range": "BH.oM.Base.FragmentSet"
     },
     {
-      "id": "Fragments-IsA-FragmentSet_B95D150398815F064B2DD6D9FE24B53A6761BA949A6CCED24BC991B78B538B0D",
+      "id": "BH.oM.Base.FragmentSet-IsA-BH.oM.Base.FragmentSet",
       "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
       "label": "IsA",
       "attributes": [
@@ -331,6 +347,16 @@
       ],
       "domain": "BH.oM.Base.FragmentSet",
       "range": "BH.oM.Base.FragmentSet"
+    },
+    {
+      "id": "BHoMObject-HasProperty-Fragments_D91934470EE8AAEA4217DAADC9C26307FCC9B0A5B38963762F214F3A0C350F31",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/HasProperty.cs",
+      "label": "HasProperty",
+      "attributes": [
+        "datatype"
+      ],
+      "domain": "BH.oM.Base.BHoMObject",
+      "range": "BH.oM.Base.BHoMObject.Fragments"
     },
     {
       "id": "BHoMObject-HasProperty-Tags_19A34329DC9C6BEB81293950676267062031BE42D49425C47FE2F8176894C4A2",
