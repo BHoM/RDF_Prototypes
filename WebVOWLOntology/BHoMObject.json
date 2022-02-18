@@ -20,6 +20,10 @@
     },
     {
       "id": "BH.oM.Base.BHoMObject.Fragments",
+      "type": "owl:Class"
+    },
+    {
+      "id": "BH.oM.Base.BHoMObject.Fragments",
       "type": "rdfs:Datatype"
     },
     {
@@ -107,6 +111,12 @@
       "attributes": [
         "datatype"
       ]
+    },
+    {
+      "id": "BH.oM.Base.BHoMObject.Fragments",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/BHoM/BHoMObject.cs#L38",
+      "label": "Fragments(BH.oM.Base.BHoMObject.Fragments)",
+      "attributes": []
     },
     {
       "id": "BH.oM.Base.BHoMObject.Fragments",
@@ -235,11 +245,11 @@
       "type": "owl:DatatypeProperty"
     },
     {
-      "id": "BH.oM.Base.FragmentSet",
+      "id": "BH.oM.Base.BHoMObject-HasProperty-BH.oM.Base.BHoMObject.Fragments",
       "type": "owl:ObjectProperty"
     },
     {
-      "id": "BH.oM.Base.FragmentSet-IsA-BH.oM.Base.FragmentSet",
+      "id": "BH.oM.Base.BHoMObject.Fragments-IsA-BH.oM.Base.FragmentSet",
       "type": "owl:ObjectProperty"
     },
     {
@@ -329,23 +339,23 @@
       "range": "BH.oM.Base.BHoMObject.Name"
     },
     {
-      "id": "BH.oM.Base.FragmentSet",
+      "id": "BH.oM.Base.BHoMObject-HasProperty-BH.oM.Base.BHoMObject.Fragments",
       "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/HasProperty.cs",
       "label": "HasProperty",
       "attributes": [
         "object"
       ],
       "domain": "BH.oM.Base.BHoMObject",
-      "range": "BH.oM.Base.FragmentSet"
+      "range": "BH.oM.Base.BHoMObject.Fragments"
     },
     {
-      "id": "BH.oM.Base.FragmentSet-IsA-BH.oM.Base.FragmentSet",
+      "id": "BH.oM.Base.BHoMObject.Fragments-IsA-BH.oM.Base.FragmentSet",
       "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
       "label": "IsA",
       "attributes": [
         "object"
       ],
-      "domain": "BH.oM.Base.FragmentSet",
+      "domain": "BH.oM.Base.BHoMObject.Fragments",
       "range": "BH.oM.Base.FragmentSet"
     },
     {
