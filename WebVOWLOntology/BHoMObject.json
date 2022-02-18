@@ -223,6 +223,10 @@
       "type": "owl:DatatypeProperty"
     },
     {
+      "id": "BH.oM.Base.FragmentSet",
+      "type": "owl:DatatypeProperty"
+    },
+    {
       "id": "Fragments-IsA-FragmentSet_B95D150398815F064B2DD6D9FE24B53A6761BA949A6CCED24BC991B78B538B0D",
       "type": "owl:ObjectProperty"
     },
@@ -291,7 +295,7 @@
     {
       "id": "BHoMObject-HasProperty-BHoM_Guid_8DD4FC3BF42DE45BD6F7CA027731FAF4B6C4EC3EF0408D0AC6D569D7D0BA135C",
       "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/HasProperty.cs",
-      "label": "IsAListOf",
+      "label": "HasProperty",
       "attributes": [
         "datatype"
       ],
@@ -301,12 +305,22 @@
     {
       "id": "BHoMObject-HasProperty-Name_C89BD1918E32C81C301FA4AEAC4F504CCBFA81C34AE9E8B4279BB52E739A9323",
       "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/HasProperty.cs",
-      "label": "IsAListOf",
+      "label": "HasProperty",
       "attributes": [
         "datatype"
       ],
       "domain": "BH.oM.Base.BHoMObject",
       "range": "BH.oM.Base.BHoMObject.Name"
+    },
+    {
+      "id": "BH.oM.Base.FragmentSet",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/HasProperty.cs",
+      "label": "HasProperty",
+      "attributes": [
+        "object"
+      ],
+      "domain": "BH.oM.Base.BHoMObject",
+      "range": "BH.oM.Base.FragmentSet"
     },
     {
       "id": "Fragments-IsA-FragmentSet_B95D150398815F064B2DD6D9FE24B53A6761BA949A6CCED24BC991B78B538B0D",
@@ -321,7 +335,7 @@
     {
       "id": "BHoMObject-HasProperty-Tags_19A34329DC9C6BEB81293950676267062031BE42D49425C47FE2F8176894C4A2",
       "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/HasProperty.cs",
-      "label": "IsAListOf",
+      "label": "HasProperty",
       "attributes": [
         "datatype"
       ],
@@ -331,7 +345,7 @@
     {
       "id": "BHoMObject-HasProperty-CustomData_269F7E4A961EBDA28B63F45CDE1CE26775BE6B188367DC5213B8C6D41DCC7DB0",
       "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/HasProperty.cs",
-      "label": "IsAListOf",
+      "label": "HasProperty",
       "attributes": [
         "datatype"
       ],
