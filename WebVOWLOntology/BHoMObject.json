@@ -12,11 +12,11 @@
     },
     {
       "id": "BH.oM.Base.BHoMObject.BHoM_Guid",
-      "type": "owl:Class"
+      "type": "rdfs:Datatype"
     },
     {
       "id": "BH.oM.Base.BHoMObject.Name",
-      "type": "owl:Class"
+      "type": "rdfs:Datatype"
     },
     {
       "id": "BH.oM.Base.BHoMObject.Fragments",
@@ -24,11 +24,11 @@
     },
     {
       "id": "BH.oM.Base.BHoMObject.Tags",
-      "type": "owl:Class"
+      "type": "rdfs:Datatype"
     },
     {
       "id": "BH.oM.Base.BHoMObject.CustomData",
-      "type": "owl:Class"
+      "type": "rdfs:Datatype"
     },
     {
       "id": "BH.oM.Base.IBHoMObject",
@@ -237,6 +237,10 @@
       "type": "owl:ObjectProperty"
     },
     {
+      "id": "BH.oM.Base.BHoMObject.Fragments-IsA-BH.oM.Base.FragmentSet",
+      "type": "owl:ObjectProperty"
+    },
+    {
       "id": "BHoMObject-HasProperty-Tags_19A34329DC9C6BEB81293950676267062031BE42D49425C47FE2F8176894C4A2",
       "type": "owl:ObjectProperty"
     },
@@ -327,6 +331,16 @@
       ],
       "domain": "BH.oM.Base.BHoMObject",
       "range": "BH.oM.Base.BHoMObject.Fragments"
+    },
+    {
+      "id": "BH.oM.Base.BHoMObject.Fragments-IsA-BH.oM.Base.FragmentSet",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "label": "IsA",
+      "attributes": [
+        "object"
+      ],
+      "domain": "BH.oM.Base.BHoMObject.Fragments",
+      "range": "BH.oM.Base.FragmentSet"
     },
     {
       "id": "BHoMObject-HasProperty-Tags_19A34329DC9C6BEB81293950676267062031BE42D49425C47FE2F8176894C4A2",
