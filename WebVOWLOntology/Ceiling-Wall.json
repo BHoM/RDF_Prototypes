@@ -63,6 +63,10 @@
       "type": "owl:Class"
     },
     {
+      "id": "BH.oM.Architecture.Elements.Ceiling.Tiles",
+      "type": "owl:Class"
+    },
+    {
       "id": "BH.oM.Base.IBHoMObject",
       "type": "owl:Class"
     },
@@ -119,6 +123,10 @@
       "type": "owl:Class"
     },
     {
+      "id": "BH.oM.Physical.Elements.Wall.Openings",
+      "type": "owl:Class"
+    },
+    {
       "id": "BH.oM.Physical.Elements.Wall.Offset",
       "type": "owl:Class"
     },
@@ -132,6 +140,10 @@
     },
     {
       "id": "System.Enum",
+      "type": "owl:Class"
+    },
+    {
+      "id": "BH.oM.Physical.Constructions.Construction.Layers",
       "type": "owl:Class"
     },
     {
@@ -239,6 +251,12 @@
       "attributes": []
     },
     {
+      "id": "BH.oM.Architecture.Elements.Ceiling.Tiles",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/Architecture_oM/Elements/Ceiling.cs#L40",
+      "label": "Tiles(BH.oM.Architecture.Elements.Ceiling.Tiles)",
+      "attributes": []
+    },
+    {
       "id": "BH.oM.Base.IBHoMObject",
       "iri": "https://github.com/BHoM/BHoM/blob/main/BHoM/Interface/IBHoMObject.cs",
       "label": "IBHoMObject (BH.oM.Base)",
@@ -337,6 +355,12 @@
       "attributes": []
     },
     {
+      "id": "BH.oM.Physical.Elements.Wall.Openings",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/Physical_oM/Elements/Wall.cs#L42",
+      "label": "Openings(BH.oM.Physical.Elements.Wall.Openings)",
+      "attributes": []
+    },
+    {
       "id": "BH.oM.Physical.Elements.Wall.Offset",
       "iri": "https://github.com/BHoM/BHoM/blob/main/Physical_oM/Elements/Wall.cs#L43",
       "label": "Offset(BH.oM.Physical.Elements.Wall.Offset)",
@@ -363,6 +387,12 @@
       "attributes": [
         "external"
       ]
+    },
+    {
+      "id": "BH.oM.Physical.Constructions.Construction.Layers",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/Physical_oM/Constructions/Construction.cs#L39",
+      "label": "Layers(BH.oM.Physical.Constructions.Construction.Layers)",
+      "attributes": []
     },
     {
       "id": "BH.oM.Physical.Constructions.Layer.Material",
@@ -403,7 +433,11 @@
       "type": "owl:ObjectProperty"
     },
     {
-      "id": "Tiles-IsAListOf-CeilingTile_C4CECAE8A77B9705CA56DD50B519062E58B6A65E6BA874EB0CB01CC90C640C11",
+      "id": "BH.oM.Architecture.Elements.Ceiling-HasProperty-BH.oM.Architecture.Elements.Ceiling.Tiles",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "BH.oM.Architecture.Elements.Ceiling.Tiles-IsAListOf-BH.oM.Architecture.Elements.CeilingTile",
       "type": "owl:ObjectProperty"
     },
     {
@@ -547,7 +581,11 @@
       "type": "owl:ObjectProperty"
     },
     {
-      "id": "Openings-IsAListOf-IOpening_21F5A0A20194D3B748CFD000940160C503F1366EB096B338A2DF6235947651CE",
+      "id": "BH.oM.Physical.Elements.Wall-HasProperty-BH.oM.Physical.Elements.Wall.Openings",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "BH.oM.Physical.Elements.Wall.Openings-IsAListOf-BH.oM.Physical.Elements.IOpening",
       "type": "owl:ObjectProperty"
     },
     {
@@ -595,7 +633,11 @@
       "type": "rdfs:subClassOf"
     },
     {
-      "id": "Layers-IsAListOf-Layer_924410E441DBB4780112770A8019989BF78E0AF8F4392A2BABA42050E400B7F6",
+      "id": "BH.oM.Physical.Constructions.Construction-HasProperty-BH.oM.Physical.Constructions.Construction.Layers",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "BH.oM.Physical.Constructions.Construction.Layers-IsAListOf-BH.oM.Physical.Constructions.Layer",
       "type": "owl:ObjectProperty"
     },
     {
@@ -697,13 +739,23 @@
       "range": "BH.oM.Physical.Constructions.Construction"
     },
     {
-      "id": "Tiles-IsAListOf-CeilingTile_C4CECAE8A77B9705CA56DD50B519062E58B6A65E6BA874EB0CB01CC90C640C11",
+      "id": "BH.oM.Architecture.Elements.Ceiling-HasProperty-BH.oM.Architecture.Elements.Ceiling.Tiles",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/HasProperty.cs",
+      "label": "HasProperty",
+      "attributes": [
+        "object"
+      ],
+      "domain": "BH.oM.Architecture.Elements.Ceiling",
+      "range": "BH.oM.Architecture.Elements.Ceiling.Tiles"
+    },
+    {
+      "id": "BH.oM.Architecture.Elements.Ceiling.Tiles-IsAListOf-BH.oM.Architecture.Elements.CeilingTile",
       "iri": "https://github.com/BHoM/BHoM/blob/main/RDF_oM/IsAListOf.cs",
       "label": "IsAListOf",
       "attributes": [
         "object"
       ],
-      "domain": "BH.oM.Architecture.Elements.CeilingTile",
+      "domain": "BH.oM.Architecture.Elements.Ceiling.Tiles",
       "range": "BH.oM.Architecture.Elements.CeilingTile"
     },
     {
@@ -1057,13 +1109,23 @@
       "range": "BH.oM.Physical.Constructions.IConstruction"
     },
     {
-      "id": "Openings-IsAListOf-IOpening_21F5A0A20194D3B748CFD000940160C503F1366EB096B338A2DF6235947651CE",
+      "id": "BH.oM.Physical.Elements.Wall-HasProperty-BH.oM.Physical.Elements.Wall.Openings",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/HasProperty.cs",
+      "label": "HasProperty",
+      "attributes": [
+        "object"
+      ],
+      "domain": "BH.oM.Physical.Elements.Wall",
+      "range": "BH.oM.Physical.Elements.Wall.Openings"
+    },
+    {
+      "id": "BH.oM.Physical.Elements.Wall.Openings-IsAListOf-BH.oM.Physical.Elements.IOpening",
       "iri": "https://github.com/BHoM/BHoM/blob/main/RDF_oM/IsAListOf.cs",
       "label": "IsAListOf",
       "attributes": [
         "object"
       ],
-      "domain": "BH.oM.Physical.Elements.IOpening",
+      "domain": "BH.oM.Physical.Elements.Wall.Openings",
       "range": "BH.oM.Physical.Elements.IOpening"
     },
     {
@@ -1177,13 +1239,23 @@
       "range": "System.Enum"
     },
     {
-      "id": "Layers-IsAListOf-Layer_924410E441DBB4780112770A8019989BF78E0AF8F4392A2BABA42050E400B7F6",
+      "id": "BH.oM.Physical.Constructions.Construction-HasProperty-BH.oM.Physical.Constructions.Construction.Layers",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/HasProperty.cs",
+      "label": "HasProperty",
+      "attributes": [
+        "object"
+      ],
+      "domain": "BH.oM.Physical.Constructions.Construction",
+      "range": "BH.oM.Physical.Constructions.Construction.Layers"
+    },
+    {
+      "id": "BH.oM.Physical.Constructions.Construction.Layers-IsAListOf-BH.oM.Physical.Constructions.Layer",
       "iri": "https://github.com/BHoM/BHoM/blob/main/RDF_oM/IsAListOf.cs",
       "label": "IsAListOf",
       "attributes": [
         "object"
       ],
-      "domain": "BH.oM.Physical.Constructions.Layer",
+      "domain": "BH.oM.Physical.Constructions.Construction.Layers",
       "range": "BH.oM.Physical.Constructions.Layer"
     },
     {
