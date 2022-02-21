@@ -24,13 +24,20 @@ namespace BH.oM.CodeAnalysis.ConsoleApp
     {
         public static void Main(string[] args = null)
         {
-            Tests_Alessio.WriteWebVOWLOntologiesPerNamespace();
+            HashSet<string> exceptions = new HashSet<string>()
+            {
+                "BH.oM.Base.IObject",
+                "BH.oM.Base.IBHoMObject",
+                "BH.oM.Base.BHoMObject",
+            };
 
-            Tests_Alessio.WriteWebVOWLOntology(new List<string> {
-                "BH.oM.Architecture.Elements.Room",
-                "BH.oM.Architecture.Elements.Ceiling",
-                "BH.oM.Physical.Elements.Wall",
-            });
+            //Tests_Alessio.WriteWebVOWLOntology(new List<string> {
+            //    "BH.oM.Architecture.Elements.Ceiling",
+            //    "BH.oM.Physical.Elements.Wall",
+            //    "BH.oM.Architecture.Elements.Room"
+            //}, exceptions: exceptions);
+
+            Tests_Alessio.WriteWebVOWLOntologiesPerNamespace();
 
             // Invoke all static methods in `Tests_Alessio` class
             //typeof(Tests_Alessio).GetMethods().Where(mi => mi.IsStatic).ToList().ForEach(mi => mi.Invoke(null, null));

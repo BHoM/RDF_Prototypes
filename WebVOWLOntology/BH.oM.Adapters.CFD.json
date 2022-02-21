@@ -15,10 +15,6 @@
       "type": "owl:Class"
     },
     {
-      "id": "BH.oM.Base.IObject",
-      "type": "owl:Class"
-    },
-    {
       "id": "BH.oM.Adapter.ActionConfig",
       "type": "owl:Class"
     }
@@ -33,7 +29,7 @@
     {
       "id": "BH.oM.Adapters.CFD.CFX.CFXConfig.CFXRunMode",
       "iri": "https://github.com/BHoM/CFD_Toolkit/blob/main/CFD_oM/Config/CFXConfig.cs#L18",
-      "label": "CFXRunMode (BH.oM.Adapters.CFD.CFX.CFXConfig.CFXRunMode)",
+      "label": "CFXRunMode(BH.oM.Adapters.CFD.CFX.CFXConfig.CFXRunMode)",
       "attributes": []
     },
     {
@@ -45,37 +41,39 @@
       ]
     },
     {
-      "id": "BH.oM.Base.IObject",
-      "iri": "https://github.com/BHoM/BHoM/blob/main/BHoM/Interface/IObject.cs",
-      "label": "IObject",
-      "attributes": []
-    },
-    {
       "id": "BH.oM.Adapter.ActionConfig",
       "iri": "https://github.com/BHoM/BHoM_Adapter/blob/main/Adapter_oM/Settings-Config/ActionConfig.cs",
-      "label": "ActionConfig",
-      "attributes": []
+      "label": "ActionConfig (BH.oM.Adapter)",
+      "attributes": [
+        "external"
+      ]
     }
   ],
   "property": [
+    {
+      "id": "BH.oM.Adapters.CFD.CFX.CFXConfig-HasProperty-BH.oM.Adapters.CFD.CFX.CFXConfig.CFXRunMode",
+      "type": "owl:ObjectProperty"
+    },
     {
       "id": "BH.oM.Adapters.CFD.CFX.CFXConfig.CFXRunMode-IsA-BH.oM.CFD.CFX.CFXRunMode",
       "type": "owl:ObjectProperty"
     },
     {
-      "id": "BH.oM.Adapters.CFD.CFX.CFXConfig-BH.oM.RDF.HasProperty-BH.oM.CFD.CFX.CFXRunMode CFXRunMode",
-      "type": "owl:ObjectProperty"
-    },
-    {
-      "id": "BH.oM.Adapters.CFD.CFX.CFXConfig-BH.oM.RDF.IsA-BH.oM.Base.IObject",
-      "type": "owl:ObjectProperty"
-    },
-    {
-      "id": "BH.oM.Adapters.CFD.CFX.CFXConfig-BH.oM.RDF.IsSubclassOf-BH.oM.Adapter.ActionConfig",
-      "type": "owl:ObjectProperty"
+      "id": "CFXConfig-IsSubclassOf-ActionConfig_6535F04DCCC0A9B5176E6DB1E82F0C6FE613341C1DDE55752E04EB64C521DFB8",
+      "type": "rdfs:subClassOf"
     }
   ],
   "propertyAttribute": [
+    {
+      "id": "BH.oM.Adapters.CFD.CFX.CFXConfig-HasProperty-BH.oM.Adapters.CFD.CFX.CFXConfig.CFXRunMode",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/HasProperty.cs",
+      "label": "HasProperty",
+      "attributes": [
+        "object"
+      ],
+      "domain": "BH.oM.Adapters.CFD.CFX.CFXConfig",
+      "range": "BH.oM.Adapters.CFD.CFX.CFXConfig.CFXRunMode"
+    },
     {
       "id": "BH.oM.Adapters.CFD.CFX.CFXConfig.CFXRunMode-IsA-BH.oM.CFD.CFX.CFXRunMode",
       "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
@@ -87,27 +85,9 @@
       "range": "BH.oM.CFD.CFX.CFXRunMode"
     },
     {
-      "id": "BH.oM.Adapters.CFD.CFX.CFXConfig-BH.oM.RDF.HasProperty-BH.oM.CFD.CFX.CFXRunMode CFXRunMode",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/HasProperty.cs",
-      "label": "HasProperty",
-      "attributes": [],
-      "domain": "BH.oM.Adapters.CFD.CFX.CFXConfig",
-      "range": "BH.oM.Adapters.CFD.CFX.CFXConfig.CFXRunMode"
-    },
-    {
-      "id": "BH.oM.Adapters.CFD.CFX.CFXConfig-BH.oM.RDF.IsA-BH.oM.Base.IObject",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
-      "label": "IsA",
-      "attributes": [
-        "object"
-      ],
-      "domain": "BH.oM.Adapters.CFD.CFX.CFXConfig",
-      "range": "BH.oM.Base.IObject"
-    },
-    {
-      "id": "BH.oM.Adapters.CFD.CFX.CFXConfig-BH.oM.RDF.IsSubclassOf-BH.oM.Adapter.ActionConfig",
+      "id": "CFXConfig-IsSubclassOf-ActionConfig_6535F04DCCC0A9B5176E6DB1E82F0C6FE613341C1DDE55752E04EB64C521DFB8",
       "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsSubclassOf.cs",
-      "label": "IsSubclassOf",
+      "label": "IsA",
       "attributes": [
         "object"
       ],

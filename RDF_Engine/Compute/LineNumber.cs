@@ -32,10 +32,13 @@ namespace BH.Engine.RDF
 
             int index = lines?.FindIndex(l =>
             l.Contains(pi.Name) &&
-            l.ToLower().Contains(pi.PropertyType.NameValidChars().ToLower()) &&
-            l.Contains("public") &&
+            l.ToLower().Contains(pi.PropertyType.GetCodeName().ToLower()) &&
+            //l.Contains("public") &&
             l.Contains("{"))
                 ?? -1;
+
+            if (index == -1)
+                log.RecordWarning($"Could not find Line Number of property {pi.FullNameValidChars()}");
 
             return index;
         }

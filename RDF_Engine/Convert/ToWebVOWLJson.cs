@@ -11,6 +11,7 @@ using System.Linq;
 using System.Reflection;
 using System.Text;
 using System.Threading.Tasks;
+using log = BH.oM.RDF.Log;
 
 namespace BH.Engine.RDF
 {
@@ -21,7 +22,7 @@ namespace BH.Engine.RDF
         /***************************************************/
 
         [Description("Convert a Graph ontological representation of (BHoM) types and their relations into a Json format readable by WebVOWL (http://vowl.visualdataweb.org/webvowl.html).")]
-        public static string ToWebVOWLJson(Dictionary<TypeInfo, List<IRelation>> dictionaryGraph, HashSet<string> internalNamespaces = null)
+        public static string ToWebVOWLJson(Dictionary<TypeInfo, List<IRelation>> dictionaryGraph, HashSet<string> internalNamespaces = null, HashSet<string> exceptions = null)
         {
             if (dictionaryGraph == null)
                 return null;
@@ -42,23 +43,10 @@ namespace BH.Engine.RDF
             JArray classAttributeArray = new JArray();
 
             // Iterate the Types in the dictionary. Each type will be a node in the graph.
-            HashSet<TypeInfo> addedTypes = new HashSet<TypeInfo>(); // There could be Types that were not gathered yet and that could emerge from the targets of the Relations.
+            HashSet<Type> addedTypes = new HashSet<Type>(); // There could be Types that were not gathered yet and that could emerge from the targets of the Relations.
+
             foreach (TypeInfo type in dictionaryGraph.Keys)
-            {
-                string typeId = type.FullNameValidChars();
-                Uri typeUri = type.GithubURI();
-
-                if (typeUri == null)
-                    continue;
-
-                // 1) CLASS
-                classArray.AddToIdTypeArray(typeId, "owl:Class");
-
-                // 2) CLASS ATTRIBUTE
-                classAttributeArray.AddToAttributeArray(typeId, typeUri, type.DescriptiveName(true));
-
-                addedTypes.Add(type);
-            }
+                AddWebOwlClassNodes(type, classArray, classAttributeArray, addedTypes);
 
             JArray propertyArray = new JArray();
             JArray propertyAttributeArray = new JArray();
@@ -67,30 +55,7 @@ namespace BH.Engine.RDF
             List<IRelation> allRelations = dictionaryGraph.Values.SelectMany(v => v).ToList();
             foreach (IRelation relation in allRelations)
             {
-                string relationId = $"{relation.Subject}-{relation.GetType().FullName}-{relation.Object}";
-                Type relationType = relation.GetType();
-
-                // // - Domain and range class and class attributes
-                // We check these first because it is useful to set the 3) PROPERTY section, see later.
-                List<string> subjectPropertyAttribute = new List<string>(); // unused
-                List<string> objectPropertyAttribute = new List<string>(); // this is the determinant in the relationship's attributes
-
-                Type subjectType = (relation.Subject as PropertyInfo)?.PropertyType ?? relation.Subject as Type;
-
-                string subjectNodeId = PopulateClassNodesFromRelation(relation.Subject, relation, classArray, classAttributeArray, addedTypes, out subjectPropertyAttribute, null, null, internalNamespaces);
-                string objectNodeId = PopulateClassNodesFromRelation(relation.Object, relation, classArray, classAttributeArray, addedTypes, out objectPropertyAttribute, propertyArray, propertyAttributeArray, internalNamespaces);
-
-                // 3) PROPERTY
-                // To determine what kind of relation we want to set, we check the type of the RDF "Object" (or "range").
-                // If the "Object" is a BHoM type, we can consider it an "owl:ObjectProperty", otherwise we consider it a "owl:DatatypeProperty".
-                bool isDatatypeProperty = !((relation.Object as PropertyInfo)?.PropertyType ?? relation.Object as Type)?.InnermostType().IsBHoMType() ?? true;
-                if (isDatatypeProperty)
-                    propertyArray.AddToIdTypeArray(relationId, "owl:DatatypeProperty");
-                else
-                    propertyArray.AddToIdTypeArray(relationId, "owl:ObjectProperty");
-
-                // 4) PROPERTY ATTRIBUTE
-                propertyAttributeArray.AddToAttributeArray(relationId, relation.GetType().GithubURI(), relationType.Name, false, objectPropertyAttribute, new List<string>() { subjectNodeId }, new List<string>() { objectNodeId });
+                AddWebOwlRelationNodes(relation as dynamic, classArray, classAttributeArray, addedTypes, propertyArray, propertyAttributeArray, internalNamespaces, exceptions);
             }
 
             rdfJsonObject.Add(new JProperty("class", classArray));
@@ -101,190 +66,104 @@ namespace BH.Engine.RDF
             return rdfJsonObject.ToString();
         }
 
+
         /***************************************************/
         /**** Private Methods                           ****/
         /***************************************************/
 
-        private static string PopulateClassNodesFromRelation(object subjectOrObject, IRelation relation,
-                                                             JArray classArray,
-                                                             JArray classAttributeArray, HashSet<TypeInfo> addedTypes,
-                                                             out List<string> propertyAttributes,
-                                                             JArray propertyArray = null,
-                                                             JArray propertyAttributeArray = null,
-                                                             HashSet<string> internalNamespaces = null)
-        {
-            propertyAttributes = null;
+        //private static void AddRelationObjectNodes(PropertyInfo relationObject, IRelation relation,
+        //                                             JArray classArray,
+        //                                             JArray classAttributeArray, HashSet<TypeInfo> addedTypes,
+        //                                             JArray propertyArray = null,
+        //                                             JArray propertyAttributeArray = null,
+        //                                             HashSet<string> internalNamespaces = null)
+        //{
+        //    TypeInfo relationObjectType = (relation.Object as PropertyInfo)?.PropertyType.GetTypeInfo() ?? relation.Object as TypeInfo;
 
-            if (subjectOrObject == null)
-                throw new ArgumentException("Subject type cannot be null.");
+        //    if (relationObjectType.Name.StartsWith("<>c__"))
+        //        return null;
 
-            string propertyName = (subjectOrObject as PropertyInfo)?.Name ?? "";
-            TypeInfo subjectOrObjectType = (subjectOrObject as PropertyInfo)?.PropertyType.GetTypeInfo() ?? subjectOrObject as TypeInfo;
+        //    string subjectOrObjectNodeId = relationObjectType.FullNameValidChars();
 
-            if (subjectOrObjectType.Name.StartsWith("<>c__"))
-                return null;
+        //    //Type subjectOrObjectType = (subjectOrObject as PropertyInfo)?.PropertyType ?? subjectOrObject as Type;
+        //    //string label = (subjectOrObject as PropertyInfo)?.DescriptiveName() ?? $"{subjectOrObjectType.NameValidChars()} ({subjectOrObjectType.FullNameValidChars()})";
 
-            string subjectOrObjectNodeId = subjectOrObjectType.FullNameValidChars();
+        //    if (relationObjectType.Name == "Ceiling")
+        //        subjectOrObjectNodeId = subjectOrObjectNodeId;
 
-            //Type subjectOrObjectType = (subjectOrObject as PropertyInfo)?.PropertyType ?? subjectOrObject as Type;
-            //string label = (subjectOrObject as PropertyInfo)?.DescriptiveName() ?? $"{subjectOrObjectType.NameValidChars()} ({subjectOrObjectType.FullNameValidChars()})";
+        //    if (relationObjectType.IsBHoMType() || relationObjectType.IsGenericTypeWithBHoMArgs())
+        //    {
+        //        // If the Type is a BHoMType, the node id is the type full name.
 
-            if (subjectOrObjectType.IsBHoMType())
-            {
-                // If the Type is a BHoMType, the node id is the type full name.
+        //        if (relation is HasProperty && subjectOrObject is PropertyInfo)
+        //        {
+        //            PropertyInfo pInfo = (PropertyInfo)subjectOrObject;
 
-                if (relation is HasProperty && subjectOrObject is PropertyInfo)
-                {
-                    PropertyInfo pInfo = (PropertyInfo)subjectOrObject;
+        //            if (pInfo.Name == "Tiles")
+        //                subjectOrObjectNodeId = subjectOrObjectNodeId;
 
-                    // We need to add a node for the property.
-                    string propertyNodeId = $"{pInfo.DeclaringType.FullName}.{pInfo.Name}";
+        //            return AddPropertyNodes(pInfo, classArray, classAttributeArray, addedTypes, propertyArray, propertyAttributeArray, internalNamespaces);
+        //        }
+        //        else if (!addedTypes.Contains(relationObjectType))
+        //        {
+        //            string label = subjectOrObject.DescriptiveName();
 
-                    classArray.AddToIdTypeArray(propertyNodeId, "owl:Class");
+        //            classArray.AddToIdTypeArray(subjectOrObjectNodeId, "owl:Class");
 
-                    classAttributeArray.AddToAttributeArray(propertyNodeId, pInfo.GithubURI(), pInfo.DescriptiveName());
+        //            classAttributeArray.AddToAttributeArray(subjectOrObjectNodeId, relationObjectType.GithubURI(), label);
 
-                    AddPropertyNodes(classArray, classAttributeArray, addedTypes, propertyArray, propertyAttributeArray, pInfo, propertyNodeId, internalNamespaces);
+        //            addedTypes.Add(relationObjectType);
+        //        }
 
-                    return propertyNodeId;
-                }
-                else if (!addedTypes.Contains(subjectOrObjectType))
-                {
-                    string label = subjectOrObject.DescriptiveName();
+        //        propertyAttributes = new List<string>() { "object" };
 
-                    classArray.AddToIdTypeArray(subjectOrObjectNodeId, "owl:Class");
+        //        return subjectOrObjectNodeId;
+        //    }
+        //    else if (!(relation is HasProperty))
+        //    {
+        //        // If the subject or Object type is not a BHoM type, and the Relation is not a HasProperty relation,
+        //        // we do not want to be adding another class node.
+        //        // This is because we do not want to make ontological class nodes for C# classes, like Dictionary, IEnumerable etc.
+        //        return "";
+        //    }
 
-                    classAttributeArray.AddToAttributeArray(subjectOrObjectNodeId, subjectOrObjectType.GithubURI(), label);
+        //    // if (subjectOrObject is string || subjectOrObjectType.IsNumeric()) { // Un-comment if we want to create `Literal` nodes for non-primitive, non-BHoM types.
 
-                    addedTypes.Add(subjectOrObjectType);
-                }
+        //    subjectOrObjectNodeId = relation.WebVOWLNodeId();
 
-                propertyAttributes = new List<string>() { "object" };
+        //    classArray.AddToIdTypeArray(subjectOrObjectNodeId, "rdfs:Datatype");
 
-                return subjectOrObjectNodeId;
-            }
-            else if (!(relation is HasProperty))
-            {
-                // If the subject or Object type is not a BHoM type, and the Relation is not a HasProperty relation,
-                // we do not want to be adding another class node.
-                // This is because we do not want to make ontological class nodes for C# classes, like Dictionary, IEnumerable etc.
-                return "";
-            }
+        //    classAttributeArray.AddToAttributeArray(subjectOrObjectNodeId, relation.GetType().GithubURI(), subjectOrObject.DescriptiveName(), false, new List<string>() { "datatype" });
 
-            // if (subjectOrObject is string || subjectOrObjectType.IsNumeric()) { // Un-comment if we want to create `Literal` nodes for non-primitive, non-BHoM types.
+        //    propertyAttributes = new List<string>() { "datatype" };
+        //    // Un-comment if we want to create `Literal` nodes for non-primitive, non-BHoM types.
 
-            subjectOrObjectNodeId = relation.WebVOWLNodeId();
+        //    // }
+        //    //else
+        //    //{
+        //    //    subjectOrObjectNodeId = relation.WebVOWLNodeId();
 
-            classArray.AddToIdTypeArray(subjectOrObjectNodeId, "rdfs:Datatype");
+        //    //    classArray.AddToIdTypeArray(subjectOrObjectNodeId, "rdfs:Literal");
 
-            classAttributeArray.AddToAttributeArray(subjectOrObjectNodeId, relation.GetType().GithubURI(), subjectOrObject.DescriptiveName(), attributes: new List<string>() { "datatype" }, label_iriBased: null);
+        //    //    classAttributeArray.AddToAttributeArray(subjectOrObjectNodeId, @"http://www.w3.org/2001/XMLSchema#", label);
 
-            propertyAttributes = new List<string>() { "datatype" };
-            // Un-comment if we want to create `Literal` nodes for non-primitive, non-BHoM types.
+        //    //    // literal node has no property attribute
+        //    //}
 
-            // }
-            //else
-            //{
-            //    subjectOrObjectNodeId = relation.WebVOWLNodeId();
+        //    // 3) PROPERTY
+        //    // To determine what kind of relation we want to set, we check the type of the RDF "Object" (or "range").
+        //    // If the "Object" is a BHoM type, we can consider it an "owl:ObjectProperty", otherwise we consider it a "owl:DatatypeProperty".
+        //    bool isDatatypeProperty = !((relation.Object as PropertyInfo)?.PropertyType ?? relation.Object as Type)?.InnermostType().IsBHoMType() ?? true;
+        //    if (isDatatypeProperty)
+        //        propertyArray.AddToIdTypeArray(relationId, "owl:DatatypeProperty");
+        //    else
+        //        propertyArray.AddToIdTypeArray(relationId, "owl:ObjectProperty");
 
-            //    classArray.AddToIdTypeArray(subjectOrObjectNodeId, "rdfs:Literal");
+        //    // 4) PROPERTY ATTRIBUTE
+        //    propertyAttributeArray.AddToAttributeArray(relationId, relation.GetType().GithubURI(), relation.GetType().Name, false, objectPropertyAttribute, new List<string>() { relation.Subject }, new List<string>() { objectNodeId });
+        //}
 
-            //    classAttributeArray.AddToAttributeArray(subjectOrObjectNodeId, @"http://www.w3.org/2001/XMLSchema#", label);
-
-            //    // literal node has no property attribute
-            //}
-
-            return subjectOrObjectNodeId;
-        }
-
-        /***************************************************/
-
-        private static void AddPropertyNodes(JArray classArray, JArray classAttributeArray, HashSet<TypeInfo> addedTypes, JArray propertyArray, JArray propertyAttributeArray, PropertyInfo pInfo, string propertyNodeId, HashSet<string> internalNamespaces = null)
-        {
-            // If the property is a BHoM type, We need to add a "IsA" relation to a node that represents its property type.
-            if (pInfo.PropertyType.IsBHoMType() && propertyArray != null && propertyAttributeArray != null)
-            {
-                string propertyTypeNodeId = pInfo.PropertyType.FullNameValidChars();
-                // See if we have yet to add a Node for the type of this property.
-                if (!addedTypes.Contains(pInfo.PropertyType))
-                {
-                    // We need to add the type of this property as a node.
-                    classArray.AddToIdTypeArray(propertyTypeNodeId, "owl:Class");
-
-                    classAttributeArray.AddToAttributeArray(propertyTypeNodeId, pInfo.PropertyType.GithubURI(), pInfo.PropertyType.DescriptiveName(true), !pInfo.PropertyType.IsInNamespace(internalNamespaces) ?? false);
-
-                    addedTypes.Add(pInfo.PropertyType.GetTypeInfo());
-                }
-
-                // Add the "IsA" relation to link this property to the corresponding type node.
-                string propertyTypeRelationId = $"{propertyNodeId}-IsA-{propertyTypeNodeId}";
-                propertyArray.AddToIdTypeArray(propertyTypeRelationId, "owl:ObjectProperty");
-                propertyAttributeArray.AddToAttributeArray(propertyTypeRelationId, new Uri(typeof(IsA).GithubURI().ToString(), UriKind.Absolute), typeof(IsA).Name, attributes: new List<string>() { "object" }, domain: new List<string>() { propertyNodeId }, range: new List<string>() { propertyTypeNodeId }, label_iriBased: null);
-            }
-        }
-
-        /***************************************************/
-
-        private static string WebVOWLNodeId(this IRelation relation)
-        {
-            return $"{(relation.Object as dynamic)?.Name ?? ""}-{relation.Hash()}-{((Type)relation.Subject).Name}-{relation.GetType().Name}";
-        }
-
-        /***************************************************/
-
-        public static void AddToIdTypeArray(this JArray idTypeArray, string id, string type)
-        {
-            // CLASS
-            JObject classObj = new JObject();
-            classObj.Add(new JProperty("id", id));
-            classObj.Add(new JProperty("type", type));
-
-            idTypeArray.Add(classObj);
-        }
-
-        /***************************************************/
-
-        private static void AddToAttributeArray(this JArray attributeArray, string id, Uri uri, string label_en, bool isExternal = false,
-            List<string> attributes = null,
-            List<string> domain = null, List<string> range = null,
-            string label_iriBased = null)
-        {
-            JObject attributeArrayObj = new JObject();
-            attributeArrayObj.Add(new JProperty("id", id));
-            attributeArrayObj.Add(new JProperty("iri", uri));
-
-            // // - Label
-            if (label_iriBased != null)
-            {
-                JObject labelObj = new JObject();
-
-                labelObj.Add(new JProperty("IRI-based", label_iriBased)); // not sure what this is for
-                labelObj.Add(new JProperty("en", label_en)); //  type.Name + $" ({type.Namespace})"
-
-                attributeArrayObj.Add(new JProperty("label", labelObj));
-            }
-            else
-                attributeArrayObj.Add(new JProperty("label", label_en));
-
-            // // - Attributes
-            if (isExternal)
-                attributes = attributes == null ? new List<string> { "external" } : attributes.Concat(new List<string> { "external" }).ToList();
-
-            attributeArrayObj.Add(new JProperty("attributes", attributes.ToJArray()));
-
-
-            // // - Domain and range
-            domain = domain?.Where(s => !string.IsNullOrWhiteSpace(s)).ToList();
-            range = range?.Where(s => !string.IsNullOrWhiteSpace(s)).ToList();
-
-            if ((domain?.Any() ?? false) && (range?.Any() ?? false))
-            {
-                attributeArrayObj.Add(domain.ToJProperty("domain"));
-                attributeArrayObj.Add(range.ToJProperty("range"));
-            }
-
-            attributeArray.Add(attributeArrayObj);
-        }
+       
 
         /***************************************************/
 

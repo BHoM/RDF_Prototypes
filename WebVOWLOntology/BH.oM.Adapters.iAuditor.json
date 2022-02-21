@@ -7,19 +7,15 @@
       "type": "owl:Class"
     },
     {
-      "id": "Id-EDA6FCE7B5B071E1BFD7E5AE9B42EFCB8E5FF9E209B1EC9EAFB149086DF9572B-iAuditorConfig-HasProperty",
-      "type": "rdfs:Datatype"
+      "id": "BH.oM.Adapters.iAuditor.iAuditorConfig.Id",
+      "type": "owl:Class"
     },
     {
-      "id": "AssetFilePath-BF60100C0C17CA38795150301CBF962B5BC08F4A94C7A2D60EA7D75E7587E6FE-iAuditorConfig-HasProperty",
-      "type": "rdfs:Datatype"
+      "id": "BH.oM.Adapters.iAuditor.iAuditorConfig.AssetFilePath",
+      "type": "owl:Class"
     },
     {
-      "id": "IncludeAssetFiles-C5DD79D7F2E19DFE1D4EFE4C7625A2928CB43CCE03C64B65D092A99C3E330738-iAuditorConfig-HasProperty",
-      "type": "rdfs:Datatype"
-    },
-    {
-      "id": "BH.oM.Base.IObject",
+      "id": "BH.oM.Adapters.iAuditor.iAuditorConfig.IncludeAssetFiles",
       "type": "owl:Class"
     },
     {
@@ -35,109 +31,91 @@
       "attributes": []
     },
     {
-      "id": "Id-EDA6FCE7B5B071E1BFD7E5AE9B42EFCB8E5FF9E209B1EC9EAFB149086DF9572B-iAuditorConfig-HasProperty",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/HasProperty.cs",
-      "label": "Id (BH.oM.Adapters.iAuditor.iAuditorConfig.Id)",
+      "id": "BH.oM.Adapters.iAuditor.iAuditorConfig.Id",
+      "iri": "https://github.com/BHoM/iAuditor_Toolkit/blob/main/iAuditor_oM/Adapter/iAuditorConfig.cs#L39",
+      "label": "Id(BH.oM.Adapters.iAuditor.iAuditorConfig.Id)",
       "attributes": [
         "datatype"
       ]
     },
     {
-      "id": "AssetFilePath-BF60100C0C17CA38795150301CBF962B5BC08F4A94C7A2D60EA7D75E7587E6FE-iAuditorConfig-HasProperty",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/HasProperty.cs",
-      "label": "AssetFilePath (BH.oM.Adapters.iAuditor.iAuditorConfig.AssetFilePath)",
+      "id": "BH.oM.Adapters.iAuditor.iAuditorConfig.AssetFilePath",
+      "iri": "https://github.com/BHoM/iAuditor_Toolkit/blob/main/iAuditor_oM/Adapter/iAuditorConfig.cs#L42",
+      "label": "AssetFilePath(BH.oM.Adapters.iAuditor.iAuditorConfig.AssetFilePath)",
       "attributes": [
         "datatype"
       ]
     },
     {
-      "id": "IncludeAssetFiles-C5DD79D7F2E19DFE1D4EFE4C7625A2928CB43CCE03C64B65D092A99C3E330738-iAuditorConfig-HasProperty",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/HasProperty.cs",
-      "label": "IncludeAssetFiles (BH.oM.Adapters.iAuditor.iAuditorConfig.IncludeAssetFiles)",
+      "id": "BH.oM.Adapters.iAuditor.iAuditorConfig.IncludeAssetFiles",
+      "iri": "https://github.com/BHoM/iAuditor_Toolkit/blob/main/iAuditor_oM/Adapter/iAuditorConfig.cs#L45",
+      "label": "IncludeAssetFiles(BH.oM.Adapters.iAuditor.iAuditorConfig.IncludeAssetFiles)",
       "attributes": [
         "datatype"
       ]
-    },
-    {
-      "id": "BH.oM.Base.IObject",
-      "iri": "https://github.com/BHoM/BHoM/blob/main/BHoM/Interface/IObject.cs",
-      "label": "IObject",
-      "attributes": []
     },
     {
       "id": "BH.oM.Adapter.ActionConfig",
       "iri": "https://github.com/BHoM/BHoM_Adapter/blob/main/Adapter_oM/Settings-Config/ActionConfig.cs",
-      "label": "ActionConfig",
-      "attributes": []
+      "label": "ActionConfig (BH.oM.Adapter)",
+      "attributes": [
+        "external"
+      ]
     }
   ],
   "property": [
     {
-      "id": "BH.oM.Adapters.iAuditor.iAuditorConfig-BH.oM.RDF.HasProperty-System.String Id",
+      "id": "iAuditorConfig-HasProperty-Id_EDA6FCE7B5B071E1BFD7E5AE9B42EFCB8E5FF9E209B1EC9EAFB149086DF9572B",
       "type": "owl:DatatypeProperty"
     },
     {
-      "id": "BH.oM.Adapters.iAuditor.iAuditorConfig-BH.oM.RDF.HasProperty-System.String AssetFilePath",
+      "id": "iAuditorConfig-HasProperty-AssetFilePath_BF60100C0C17CA38795150301CBF962B5BC08F4A94C7A2D60EA7D75E7587E6FE",
       "type": "owl:DatatypeProperty"
     },
     {
-      "id": "BH.oM.Adapters.iAuditor.iAuditorConfig-BH.oM.RDF.HasProperty-Boolean IncludeAssetFiles",
+      "id": "iAuditorConfig-HasProperty-IncludeAssetFiles_C5DD79D7F2E19DFE1D4EFE4C7625A2928CB43CCE03C64B65D092A99C3E330738",
       "type": "owl:DatatypeProperty"
     },
     {
-      "id": "BH.oM.Adapters.iAuditor.iAuditorConfig-BH.oM.RDF.IsA-BH.oM.Base.IObject",
-      "type": "owl:ObjectProperty"
-    },
-    {
-      "id": "BH.oM.Adapters.iAuditor.iAuditorConfig-BH.oM.RDF.IsSubclassOf-BH.oM.Adapter.ActionConfig",
-      "type": "owl:ObjectProperty"
+      "id": "iAuditorConfig-IsSubclassOf-ActionConfig_D5364A5ABB02015B765E5946A2D7606E38AA9F345AA973C638892F56E8915EA8",
+      "type": "rdfs:subClassOf"
     }
   ],
   "propertyAttribute": [
     {
-      "id": "BH.oM.Adapters.iAuditor.iAuditorConfig-BH.oM.RDF.HasProperty-System.String Id",
+      "id": "iAuditorConfig-HasProperty-Id_EDA6FCE7B5B071E1BFD7E5AE9B42EFCB8E5FF9E209B1EC9EAFB149086DF9572B",
       "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/HasProperty.cs",
       "label": "HasProperty",
       "attributes": [
         "datatype"
       ],
       "domain": "BH.oM.Adapters.iAuditor.iAuditorConfig",
-      "range": "Id-EDA6FCE7B5B071E1BFD7E5AE9B42EFCB8E5FF9E209B1EC9EAFB149086DF9572B-iAuditorConfig-HasProperty"
+      "range": "BH.oM.Adapters.iAuditor.iAuditorConfig.Id"
     },
     {
-      "id": "BH.oM.Adapters.iAuditor.iAuditorConfig-BH.oM.RDF.HasProperty-System.String AssetFilePath",
+      "id": "iAuditorConfig-HasProperty-AssetFilePath_BF60100C0C17CA38795150301CBF962B5BC08F4A94C7A2D60EA7D75E7587E6FE",
       "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/HasProperty.cs",
       "label": "HasProperty",
       "attributes": [
         "datatype"
       ],
       "domain": "BH.oM.Adapters.iAuditor.iAuditorConfig",
-      "range": "AssetFilePath-BF60100C0C17CA38795150301CBF962B5BC08F4A94C7A2D60EA7D75E7587E6FE-iAuditorConfig-HasProperty"
+      "range": "BH.oM.Adapters.iAuditor.iAuditorConfig.AssetFilePath"
     },
     {
-      "id": "BH.oM.Adapters.iAuditor.iAuditorConfig-BH.oM.RDF.HasProperty-Boolean IncludeAssetFiles",
+      "id": "iAuditorConfig-HasProperty-IncludeAssetFiles_C5DD79D7F2E19DFE1D4EFE4C7625A2928CB43CCE03C64B65D092A99C3E330738",
       "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/HasProperty.cs",
       "label": "HasProperty",
       "attributes": [
         "datatype"
       ],
       "domain": "BH.oM.Adapters.iAuditor.iAuditorConfig",
-      "range": "IncludeAssetFiles-C5DD79D7F2E19DFE1D4EFE4C7625A2928CB43CCE03C64B65D092A99C3E330738-iAuditorConfig-HasProperty"
+      "range": "BH.oM.Adapters.iAuditor.iAuditorConfig.IncludeAssetFiles"
     },
     {
-      "id": "BH.oM.Adapters.iAuditor.iAuditorConfig-BH.oM.RDF.IsA-BH.oM.Base.IObject",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
-      "label": "IsA",
-      "attributes": [
-        "object"
-      ],
-      "domain": "BH.oM.Adapters.iAuditor.iAuditorConfig",
-      "range": "BH.oM.Base.IObject"
-    },
-    {
-      "id": "BH.oM.Adapters.iAuditor.iAuditorConfig-BH.oM.RDF.IsSubclassOf-BH.oM.Adapter.ActionConfig",
+      "id": "iAuditorConfig-IsSubclassOf-ActionConfig_D5364A5ABB02015B765E5946A2D7606E38AA9F345AA973C638892F56E8915EA8",
       "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsSubclassOf.cs",
-      "label": "IsSubclassOf",
+      "label": "IsA",
       "attributes": [
         "object"
       ],

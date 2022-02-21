@@ -121,36 +121,36 @@ namespace BH.oM.CodeAnalysis.ConsoleApp
             }
         }
 
-        public static void WriteWebVOWLOntology(List<string> typeFullNames, string fileName = null, string saveDirRelativeToRepoRoot = "WebVOWLOntology")
+        public static void WriteWebVOWLOntology(List<string> typeFullNames, string fileName = null, string saveDirRelativeToRepoRoot = "WebVOWLOntology", HashSet<string> exceptions = null)
         {
             List<Assembly> oMassemblies = BH.Engine.RDF.Compute.LoadAssembliesInDirectory(true);
             
             // Get the System.Types corresponding to the input typeFullNames
             List<Type> correspondingOmTypes = oMassemblies.BHoMTypes().Where(t => typeFullNames.Contains(t.AsType().FullName)).Select(ti => ti.AsType()).ToList();
 
-            WriteWebVOWLOntology(correspondingOmTypes, fileName, saveDirRelativeToRepoRoot);
+            WriteWebVOWLOntology(correspondingOmTypes, fileName, saveDirRelativeToRepoRoot, exceptions);
         }
 
-        public static void WriteWebVOWLOntology(List<Type> types, string fileName = null, string saveDirRelativeToRepoRoot = "WebVOWLOntology")
+        public static void WriteWebVOWLOntology(List<Type> types, string fileName = null, string saveDirRelativeToRepoRoot = "WebVOWLOntology", HashSet<string> exceptions = null)
         {
             if (string.IsNullOrWhiteSpace(fileName))
                 fileName = string.Join("-", types.Select(t => t.Name));
 
             // Of all the input System.Types, get also all the BHoM System.Types of all their Properties.
-            HashSet<Type> allConnectedBHoMTypes = types.AllNestedTypes();
-            types = types.Concat(allConnectedBHoMTypes).Distinct().ToList();
+            //HashSet<Type> allConnectedBHoMTypes = types.AllNestedTypes();
+            //types = types.Concat(allConnectedBHoMTypes).Distinct().ToList();
 
             List<Assembly> oMassemblies = BH.Engine.RDF.Compute.LoadAssembliesInDirectory(true);
             List<TypeInfo> oMTypeInfos = oMassemblies.BHoMTypes().Where(t => types.Contains(t.AsType())).ToList();
 
-            WriteWebVOWLOntology(oMTypeInfos, fileName, saveDirRelativeToRepoRoot);
+            WriteWebVOWLOntology(oMTypeInfos, fileName, saveDirRelativeToRepoRoot, exceptions);
         }
 
 
-        private static void WriteWebVOWLOntology(List<TypeInfo> oMTypes, string fileName, string saveDirRelativeToRepoRoot)
+        private static void WriteWebVOWLOntology(List<TypeInfo> oMTypes, string fileName, string saveDirRelativeToRepoRoot, HashSet<string> exceptions = null)
         {
             Dictionary<TypeInfo, List<IRelation>> dictionaryGraph = oMTypes.DictionaryGraphFromTypeInfos();
-            string webVOWLJson = Engine.RDF.Convert.ToWebVOWLJson(dictionaryGraph, new HashSet<string>(oMTypes.Select(t => t.Namespace)));
+            string webVOWLJson = Engine.RDF.Convert.ToWebVOWLJson(dictionaryGraph, new HashSet<string>(oMTypes.Select(t => t.Namespace)), exceptions);
 
             if (string.IsNullOrWhiteSpace(fileName))
                 fileName = string.Join("-", oMTypes.Select(t => t.Name));
@@ -158,8 +158,7 @@ namespace BH.oM.CodeAnalysis.ConsoleApp
             if (!fileName.EndsWith(".json"))
                 fileName += ".json";
 
-
-            webVOWLJson.WriteToJsonFile($"{fileName}.json", $"..\\..\\..\\{saveDirRelativeToRepoRoot}");
+            webVOWLJson.WriteToJsonFile(fileName, $"..\\..\\..\\{saveDirRelativeToRepoRoot}");
         }
     }
 }

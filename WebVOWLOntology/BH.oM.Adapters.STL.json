@@ -11,32 +11,24 @@
       "type": "owl:Class"
     },
     {
-      "id": "Geometry-7E18ED652512555F0B1CC1F02CD604BE512D28400B55F8538C7393A87CACDB58-GeometryGroup-HasProperty",
-      "type": "rdfs:Datatype"
-    },
-    {
-      "id": "FileName-57054E0D34BB2E4AAF5E4C9780E794E381B54B8F3EEC60A1D3BDA06B18C960D6-GeometryGroup-HasProperty",
-      "type": "rdfs:Datatype"
-    },
-    {
-      "id": "BH.oM.Base.IBHoMObject",
+      "id": "BH.oM.Adapters.STL.GeometryGroup.Geometry",
       "type": "owl:Class"
     },
     {
-      "id": "BH.oM.Base.IObject",
+      "id": "BH.oM.Geometry.IGeometry",
       "type": "owl:Class"
     },
     {
-      "id": "BH.oM.Base.BHoMObject",
+      "id": "BH.oM.Adapters.STL.GeometryGroup.FileName",
       "type": "owl:Class"
     },
     {
-      "id": "Directory-27D881B759D625FC38E2B84A7561D70267FD2C9723E6D2F715E3A07CF36BCCD7-STLSettings-HasProperty",
-      "type": "rdfs:Datatype"
+      "id": "BH.oM.Adapters.STL.Settings.STLSettings.Directory",
+      "type": "owl:Class"
     },
     {
-      "id": "DecimalPlaces-E3B3CA441D3C802E4E3F97CCD7D1D5DE8D7483B45B4C21E9326418D9B5E5F391-STLSettings-HasProperty",
-      "type": "rdfs:Datatype"
+      "id": "BH.oM.Adapters.STL.Settings.STLSettings.DecimalPlaces",
+      "type": "owl:Class"
     }
   ],
   "classAttribute": [
@@ -53,51 +45,39 @@
       "attributes": []
     },
     {
-      "id": "Geometry-7E18ED652512555F0B1CC1F02CD604BE512D28400B55F8538C7393A87CACDB58-GeometryGroup-HasProperty",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/HasProperty.cs",
-      "label": "Geometry (BH.oM.Adapters.STL.GeometryGroup.Geometry)",
+      "id": "BH.oM.Adapters.STL.GeometryGroup.Geometry",
+      "iri": "https://github.com/BHoM/STL_Toolkit/blob/main/STL_oM/GeometryGroup.cs#L38",
+      "label": "Geometry(BH.oM.Adapters.STL.GeometryGroup.Geometry)",
+      "attributes": []
+    },
+    {
+      "id": "BH.oM.Geometry.IGeometry",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/Geometry_oM/Interface/IGeometry.cs",
+      "label": "IGeometry (BH.oM.Geometry)",
+      "attributes": [
+        "external"
+      ]
+    },
+    {
+      "id": "BH.oM.Adapters.STL.GeometryGroup.FileName",
+      "iri": "https://github.com/BHoM/STL_Toolkit/blob/main/STL_oM/GeometryGroup.cs#L41",
+      "label": "FileName(BH.oM.Adapters.STL.GeometryGroup.FileName)",
       "attributes": [
         "datatype"
       ]
     },
     {
-      "id": "FileName-57054E0D34BB2E4AAF5E4C9780E794E381B54B8F3EEC60A1D3BDA06B18C960D6-GeometryGroup-HasProperty",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/HasProperty.cs",
-      "label": "FileName (BH.oM.Adapters.STL.GeometryGroup.FileName)",
+      "id": "BH.oM.Adapters.STL.Settings.STLSettings.Directory",
+      "iri": "https://github.com/BHoM/STL_Toolkit/blob/main/STL_oM/STLSettings.cs#L36",
+      "label": "Directory(BH.oM.Adapters.STL.Settings.STLSettings.Directory)",
       "attributes": [
         "datatype"
       ]
     },
     {
-      "id": "BH.oM.Base.IBHoMObject",
-      "iri": "https://github.com/BHoM/BHoM/blob/main/BHoM/Interface/IBHoMObject.cs",
-      "label": "IBHoMObject",
-      "attributes": []
-    },
-    {
-      "id": "BH.oM.Base.IObject",
-      "iri": "https://github.com/BHoM/BHoM/blob/main/BHoM/Interface/IObject.cs",
-      "label": "IObject",
-      "attributes": []
-    },
-    {
-      "id": "BH.oM.Base.BHoMObject",
-      "iri": "https://github.com/BHoM/BHoM/blob/main/BHoM/BHoMObject.cs",
-      "label": "BHoMObject",
-      "attributes": []
-    },
-    {
-      "id": "Directory-27D881B759D625FC38E2B84A7561D70267FD2C9723E6D2F715E3A07CF36BCCD7-STLSettings-HasProperty",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/HasProperty.cs",
-      "label": "Directory (BH.oM.Adapters.STL.Settings.STLSettings.Directory)",
-      "attributes": [
-        "datatype"
-      ]
-    },
-    {
-      "id": "DecimalPlaces-E3B3CA441D3C802E4E3F97CCD7D1D5DE8D7483B45B4C21E9326418D9B5E5F391-STLSettings-HasProperty",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/HasProperty.cs",
-      "label": "DecimalPlaces (BH.oM.Adapters.STL.Settings.STLSettings.DecimalPlaces)",
+      "id": "BH.oM.Adapters.STL.Settings.STLSettings.DecimalPlaces",
+      "iri": "https://github.com/BHoM/STL_Toolkit/blob/main/STL_oM/STLSettings.cs#L39",
+      "label": "DecimalPlaces(BH.oM.Adapters.STL.Settings.STLSettings.DecimalPlaces)",
       "attributes": [
         "datatype"
       ]
@@ -105,146 +85,76 @@
   ],
   "property": [
     {
-      "id": "BH.oM.Adapters.STL.GeometryGroup-BH.oM.RDF.HasProperty-System.Collections.Generic.List`1[BH.oM.Geometry.IGeometry] Geometry",
+      "id": "BH.oM.Adapters.STL.GeometryGroup-HasProperty-BH.oM.Adapters.STL.GeometryGroup.Geometry",
       "type": "owl:ObjectProperty"
     },
     {
-      "id": "BH.oM.Adapters.STL.GeometryGroup-BH.oM.RDF.HasProperty-System.String FileName",
+      "id": "BH.oM.Adapters.STL.GeometryGroup.Geometry-IsAListOf-BH.oM.Geometry.IGeometry",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "GeometryGroup-HasProperty-FileName_57054E0D34BB2E4AAF5E4C9780E794E381B54B8F3EEC60A1D3BDA06B18C960D6",
       "type": "owl:DatatypeProperty"
     },
     {
-      "id": "BH.oM.Adapters.STL.GeometryGroup-BH.oM.RDF.IsA-BH.oM.Base.IBHoMObject",
-      "type": "owl:ObjectProperty"
-    },
-    {
-      "id": "BH.oM.Adapters.STL.GeometryGroup-BH.oM.RDF.IsA-BH.oM.Base.IObject",
-      "type": "owl:ObjectProperty"
-    },
-    {
-      "id": "BH.oM.Adapters.STL.GeometryGroup-BH.oM.RDF.IsSubclassOf-BH.oM.Base.BHoMObject",
-      "type": "owl:ObjectProperty"
-    },
-    {
-      "id": "BH.oM.Adapters.STL.Settings.STLSettings-BH.oM.RDF.HasProperty-System.String Directory",
+      "id": "STLSettings-HasProperty-Directory_27D881B759D625FC38E2B84A7561D70267FD2C9723E6D2F715E3A07CF36BCCD7",
       "type": "owl:DatatypeProperty"
     },
     {
-      "id": "BH.oM.Adapters.STL.Settings.STLSettings-BH.oM.RDF.HasProperty-Int32 DecimalPlaces",
+      "id": "STLSettings-HasProperty-DecimalPlaces_E3B3CA441D3C802E4E3F97CCD7D1D5DE8D7483B45B4C21E9326418D9B5E5F391",
       "type": "owl:DatatypeProperty"
-    },
-    {
-      "id": "BH.oM.Adapters.STL.Settings.STLSettings-BH.oM.RDF.IsA-BH.oM.Base.IBHoMObject",
-      "type": "owl:ObjectProperty"
-    },
-    {
-      "id": "BH.oM.Adapters.STL.Settings.STLSettings-BH.oM.RDF.IsA-BH.oM.Base.IObject",
-      "type": "owl:ObjectProperty"
-    },
-    {
-      "id": "BH.oM.Adapters.STL.Settings.STLSettings-BH.oM.RDF.IsSubclassOf-BH.oM.Base.BHoMObject",
-      "type": "owl:ObjectProperty"
     }
   ],
   "propertyAttribute": [
     {
-      "id": "BH.oM.Adapters.STL.GeometryGroup-BH.oM.RDF.HasProperty-System.Collections.Generic.List`1[BH.oM.Geometry.IGeometry] Geometry",
+      "id": "BH.oM.Adapters.STL.GeometryGroup-HasProperty-BH.oM.Adapters.STL.GeometryGroup.Geometry",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/HasProperty.cs",
+      "label": "HasProperty",
+      "attributes": [
+        "object"
+      ],
+      "domain": "BH.oM.Adapters.STL.GeometryGroup",
+      "range": "BH.oM.Adapters.STL.GeometryGroup.Geometry"
+    },
+    {
+      "id": "BH.oM.Adapters.STL.GeometryGroup.Geometry-IsAListOf-BH.oM.Geometry.IGeometry",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsAListOf.cs",
+      "label": "IsAListOf",
+      "attributes": [
+        "object"
+      ],
+      "domain": "BH.oM.Adapters.STL.GeometryGroup.Geometry",
+      "range": "BH.oM.Geometry.IGeometry"
+    },
+    {
+      "id": "GeometryGroup-HasProperty-FileName_57054E0D34BB2E4AAF5E4C9780E794E381B54B8F3EEC60A1D3BDA06B18C960D6",
       "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/HasProperty.cs",
       "label": "HasProperty",
       "attributes": [
         "datatype"
       ],
       "domain": "BH.oM.Adapters.STL.GeometryGroup",
-      "range": "Geometry-7E18ED652512555F0B1CC1F02CD604BE512D28400B55F8538C7393A87CACDB58-GeometryGroup-HasProperty"
+      "range": "BH.oM.Adapters.STL.GeometryGroup.FileName"
     },
     {
-      "id": "BH.oM.Adapters.STL.GeometryGroup-BH.oM.RDF.HasProperty-System.String FileName",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/HasProperty.cs",
-      "label": "HasProperty",
-      "attributes": [
-        "datatype"
-      ],
-      "domain": "BH.oM.Adapters.STL.GeometryGroup",
-      "range": "FileName-57054E0D34BB2E4AAF5E4C9780E794E381B54B8F3EEC60A1D3BDA06B18C960D6-GeometryGroup-HasProperty"
-    },
-    {
-      "id": "BH.oM.Adapters.STL.GeometryGroup-BH.oM.RDF.IsA-BH.oM.Base.IBHoMObject",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
-      "label": "IsA",
-      "attributes": [
-        "object"
-      ],
-      "domain": "BH.oM.Adapters.STL.GeometryGroup",
-      "range": "BH.oM.Base.IBHoMObject"
-    },
-    {
-      "id": "BH.oM.Adapters.STL.GeometryGroup-BH.oM.RDF.IsA-BH.oM.Base.IObject",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
-      "label": "IsA",
-      "attributes": [
-        "object"
-      ],
-      "domain": "BH.oM.Adapters.STL.GeometryGroup",
-      "range": "BH.oM.Base.IObject"
-    },
-    {
-      "id": "BH.oM.Adapters.STL.GeometryGroup-BH.oM.RDF.IsSubclassOf-BH.oM.Base.BHoMObject",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsSubclassOf.cs",
-      "label": "IsSubclassOf",
-      "attributes": [
-        "object"
-      ],
-      "domain": "BH.oM.Adapters.STL.GeometryGroup",
-      "range": "BH.oM.Base.BHoMObject"
-    },
-    {
-      "id": "BH.oM.Adapters.STL.Settings.STLSettings-BH.oM.RDF.HasProperty-System.String Directory",
+      "id": "STLSettings-HasProperty-Directory_27D881B759D625FC38E2B84A7561D70267FD2C9723E6D2F715E3A07CF36BCCD7",
       "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/HasProperty.cs",
       "label": "HasProperty",
       "attributes": [
         "datatype"
       ],
       "domain": "BH.oM.Adapters.STL.Settings.STLSettings",
-      "range": "Directory-27D881B759D625FC38E2B84A7561D70267FD2C9723E6D2F715E3A07CF36BCCD7-STLSettings-HasProperty"
+      "range": "BH.oM.Adapters.STL.Settings.STLSettings.Directory"
     },
     {
-      "id": "BH.oM.Adapters.STL.Settings.STLSettings-BH.oM.RDF.HasProperty-Int32 DecimalPlaces",
+      "id": "STLSettings-HasProperty-DecimalPlaces_E3B3CA441D3C802E4E3F97CCD7D1D5DE8D7483B45B4C21E9326418D9B5E5F391",
       "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/HasProperty.cs",
       "label": "HasProperty",
       "attributes": [
         "datatype"
       ],
       "domain": "BH.oM.Adapters.STL.Settings.STLSettings",
-      "range": "DecimalPlaces-E3B3CA441D3C802E4E3F97CCD7D1D5DE8D7483B45B4C21E9326418D9B5E5F391-STLSettings-HasProperty"
-    },
-    {
-      "id": "BH.oM.Adapters.STL.Settings.STLSettings-BH.oM.RDF.IsA-BH.oM.Base.IBHoMObject",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
-      "label": "IsA",
-      "attributes": [
-        "object"
-      ],
-      "domain": "BH.oM.Adapters.STL.Settings.STLSettings",
-      "range": "BH.oM.Base.IBHoMObject"
-    },
-    {
-      "id": "BH.oM.Adapters.STL.Settings.STLSettings-BH.oM.RDF.IsA-BH.oM.Base.IObject",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
-      "label": "IsA",
-      "attributes": [
-        "object"
-      ],
-      "domain": "BH.oM.Adapters.STL.Settings.STLSettings",
-      "range": "BH.oM.Base.IObject"
-    },
-    {
-      "id": "BH.oM.Adapters.STL.Settings.STLSettings-BH.oM.RDF.IsSubclassOf-BH.oM.Base.BHoMObject",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsSubclassOf.cs",
-      "label": "IsSubclassOf",
-      "attributes": [
-        "object"
-      ],
-      "domain": "BH.oM.Adapters.STL.Settings.STLSettings",
-      "range": "BH.oM.Base.BHoMObject"
+      "range": "BH.oM.Adapters.STL.Settings.STLSettings.DecimalPlaces"
     }
   ]
 }
