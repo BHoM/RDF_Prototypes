@@ -572,241 +572,436 @@
       "id": "BH.oM.Geometry.Arc",
       "iri": "https://github.com/BHoM/BHoM/blob/main/Geometry_oM/Curve/Arc.cs",
       "label": "Arc (BH.oM.Geometry)",
-      "attributes": []
+      "attributes": [
+        "object"
+      ],
+      "comment": {
+        "undefined": "A plane curve. A circular Arc, a curve, with a constant distance from a point, its centre, defined it the local angular domain between start and end angle."
+      }
     },
     {
       "id": "BH.oM.Geometry.Circle",
       "iri": "https://github.com/BHoM/BHoM/blob/main/Geometry_oM/Curve/Circle.cs",
       "label": "Circle (BH.oM.Geometry)",
-      "attributes": []
+      "attributes": [
+        "object"
+      ],
+      "comment": {
+        "undefined": "A plane curve. Standard circle defining a curve of constant distance from a point, its Centre."
+      }
     },
     {
       "id": "BH.oM.Geometry.Ellipse",
       "iri": "https://github.com/BHoM/BHoM/blob/main/Geometry_oM/Curve/Ellipse.cs",
       "label": "Ellipse (BH.oM.Geometry)",
-      "attributes": []
+      "attributes": [
+        "object"
+      ],
+      "comment": {
+        "undefined": "A plane curve. A standard ellipse defining a curve of constant combined distance around two foci.\nThe larger of the two radii defines the major axis of the Ellipse, and the line along which the two foci lie."
+      }
     },
     {
       "id": "BH.oM.Geometry.ICurve",
       "iri": "https://github.com/BHoM/BHoM/blob/main/Geometry_oM/Curve/ICurve.cs",
       "label": "ICurve (BH.oM.Geometry)",
-      "attributes": []
+      "attributes": [
+        "object"
+      ],
+      "comment": {
+        "undefined": "The interface for all one-dimensional geometrical objects."
+      }
     },
     {
       "id": "BH.oM.Geometry.Line",
       "iri": "https://github.com/BHoM/BHoM/blob/main/Geometry_oM/Curve/Line.cs",
       "label": "Line (BH.oM.Geometry)",
-      "attributes": []
+      "attributes": [
+        "object"
+      ],
+      "comment": {
+        "undefined": "A straight segment in space defining the shortest distance between two points in three-dimensional Euclidean geometry.\nThe Vector from Start to End defines the Line direction, which can be important for some applications."
+      }
     },
     {
       "id": "BH.oM.Geometry.NurbsCurve",
       "iri": "https://github.com/BHoM/BHoM/blob/main/Geometry_oM/Curve/NurbsCurve.cs",
       "label": "NurbsCurve (BH.oM.Geometry)",
-      "attributes": []
+      "attributes": [
+        "object"
+      ],
+      "comment": {
+        "undefined": "A non-uniform rational basis spline (or B-spline). Enables definition of smooth and continuous curves as piece-wise polynomial basis functions evaluated from discrete geometrical ControlPoints.\nA NurbsCurve, through its use of ControlPoint Weightings, has the ability to precisely represent the conic sections, such as the circle and parabolas etc."
+      }
     },
     {
       "id": "BH.oM.Geometry.PolyCurve",
       "iri": "https://github.com/BHoM/BHoM/blob/main/Geometry_oM/Curve/PolyCurve.cs",
       "label": "PolyCurve (BH.oM.Geometry)",
-      "attributes": []
+      "attributes": [
+        "object"
+      ],
+      "comment": {
+        "undefined": "A composite curve constructed by combining a collection of curves of any type. Whole PolyCurve integrity, continuity and closure is not guaranteed at creation. Discontinuous and/or multi-region definitions are possible, although not recommended as may cause unexpected results in method operating on PolyCurves."
+      }
     },
     {
       "id": "BH.oM.Geometry.Polyline",
       "iri": "https://github.com/BHoM/BHoM/blob/main/Geometry_oM/Curve/Polyline.cs",
       "label": "Polyline (BH.oM.Geometry)",
-      "attributes": []
+      "attributes": [
+        "object"
+      ],
+      "comment": {
+        "undefined": "A curve consisting of a continuous chain of straight line segments. The Polyline is considered closed if the first and last ControlPoints are coincident"
+      }
     },
     {
       "id": "BH.oM.Geometry.IGeometry",
       "iri": "https://github.com/BHoM/BHoM/blob/main/Geometry_oM/Interface/IGeometry.cs",
       "label": "IGeometry (BH.oM.Geometry)",
-      "attributes": []
+      "attributes": [
+        "object"
+      ],
+      "comment": {
+        "undefined": "The parent interface for all primative geometrical objects.\nIGeometry implements IObject - and not IBHoMObject. Equally primative geometrical objects do not inherit from the base BHoMObject class either. As primatives, the additional base BHoM properties are omitted for both efficency and performace."
+      }
     },
     {
       "id": "BH.oM.Geometry.IntegrationSlice",
       "iri": "https://github.com/BHoM/BHoM/blob/main/Geometry_oM/Math/IntegrationSlice.cs",
       "label": "IntegrationSlice (BH.oM.Geometry)",
-      "attributes": []
+      "attributes": [
+        "object"
+      ],
+      "comment": {
+        "undefined": "Describes a discrete finite slice of an area. Used for numerical approximation of an integration."
+      }
     },
     {
       "id": "BH.oM.Geometry.CellRelation",
       "iri": "https://github.com/BHoM/BHoM/blob/main/Geometry_oM/Mesh/CellRelation.cs",
       "label": "CellRelation (BH.oM.Geometry)",
-      "attributes": []
+      "attributes": [
+        "object"
+      ],
+      "comment": {
+        "undefined": "Details the index of the cells which is behind and infront of each Face."
+      }
     },
     {
       "id": "BH.oM.Geometry.Face",
       "iri": "https://github.com/BHoM/BHoM/blob/main/Geometry_oM/Mesh/Face.cs",
       "label": "Face (BH.oM.Geometry)",
-      "attributes": []
+      "attributes": [
+        "object"
+      ],
+      "comment": {
+        "undefined": "A triangular or quadrilateral shape forming the basis of a polygon Mesh. Defined by corner vertices referencing indices of a Point list. See BH.oM.Geometry.Mesh object for usage.\nA value of -1 for the fourth vertex D indicates the Face is triangular."
+      }
     },
     {
       "id": "BH.oM.Geometry.Mesh",
       "iri": "https://github.com/BHoM/BHoM/blob/main/Geometry_oM/Mesh/Mesh.cs",
       "label": "Mesh (BH.oM.Geometry)",
-      "attributes": []
+      "attributes": [
+        "object"
+      ],
+      "comment": {
+        "undefined": "A polygon mesh, defined by a list of triangular or quadrilateral Faces and their Vertices."
+      }
     },
     {
       "id": "BH.oM.Geometry.Mesh3D",
       "iri": "https://github.com/BHoM/BHoM/blob/main/Geometry_oM/Mesh/Mesh3D.cs",
       "label": "Mesh3D (BH.oM.Geometry)",
-      "attributes": []
+      "attributes": [
+        "object"
+      ],
+      "comment": {
+        "undefined": "A polygon mesh, defined by a list of triangular or quadrilateral Faces, Cells and their Vertices."
+      }
     },
     {
       "id": "BH.oM.Geometry.BoundingBox",
       "iri": "https://github.com/BHoM/BHoM/blob/main/Geometry_oM/Misc/BoundingBox.cs",
       "label": "BoundingBox (BH.oM.Geometry)",
-      "attributes": []
+      "attributes": [
+        "object"
+      ],
+      "comment": {
+        "undefined": "An axis aligned cuboid, which describes the smallest volume Box, oriented with the global coordinate system, that fully encompases a set of geometry.\nDefined by its two extreme corner Points, these six coordinate values of Min and Max X, Y and Z are combined to specify all eight Box corners."
+      }
     },
     {
       "id": "BH.oM.Geometry.CompositeGeometry",
       "iri": "https://github.com/BHoM/BHoM/blob/main/Geometry_oM/Misc/CompositeGeometry.cs",
       "label": "CompositeGeometry (BH.oM.Geometry)",
-      "attributes": []
+      "attributes": [
+        "object"
+      ],
+      "comment": {
+        "undefined": "A collection of multiple sets of Geometry of any or mixed type. Integrity, continuity and closure is not guaranteed. Discontinuous and/or mixed type definitions are possible, with no restrictions placed on how geometry can be combined."
+      }
     },
     {
       "id": "BH.oM.Geometry.Quaternion",
       "iri": "https://github.com/BHoM/BHoM/blob/main/Geometry_oM/Misc/Quaternion.cs",
       "label": "Quaternion (BH.oM.Geometry)",
-      "attributes": []
+      "attributes": [
+        "object"
+      ],
+      "comment": {
+        "undefined": "A four-dimensional vector, useful in calculation of affine transformations in three-dimensional space. See also BH.oM.Geometry.TransformMatrix."
+      }
     },
     {
       "id": "BH.oM.Geometry.SurfaceTrim",
       "iri": "https://github.com/BHoM/BHoM/blob/main/Geometry_oM/Misc/SurfaceTrim.cs",
       "label": "SurfaceTrim (BH.oM.Geometry)",
-      "attributes": []
+      "attributes": [
+        "object"
+      ],
+      "comment": {
+        "undefined": "A pair of curves representing the boundary of a trimmed surface in both global X, Y, Z coordinates (Curve3d) as well as local surface U, V parameter space (Curve2d).\nA Surface Trim is immutable to ensure compatiblity of both curves."
+      }
     },
     {
       "id": "BH.oM.Geometry.Tolerance",
       "iri": "https://github.com/BHoM/BHoM/blob/main/Geometry_oM/Misc/Tolerance.cs",
       "label": "Tolerance (BH.oM.Geometry)",
-      "attributes": []
+      "attributes": [
+        "object"
+      ]
     },
     {
       "id": "BH.oM.Geometry.TransformMatrix",
       "iri": "https://github.com/BHoM/BHoM/blob/main/Geometry_oM/Misc/TransformMatrix.cs",
       "label": "TransformMatrix (BH.oM.Geometry)",
-      "attributes": []
+      "attributes": [
+        "object"
+      ],
+      "comment": {
+        "undefined": "A 4x4 matrix describing linear tranformations in three-dimensional space, such as translations, rotations, reflections, scaling and shearing."
+      }
     },
     {
       "id": "BH.oM.Geometry.BoundaryRepresentation",
       "iri": "https://github.com/BHoM/BHoM/blob/main/Geometry_oM/Solid/BoundaryRepresentation.cs",
       "label": "BoundaryRepresentation (BH.oM.Geometry)",
-      "attributes": []
+      "attributes": [
+        "object"
+      ],
+      "comment": {
+        "undefined": "Solid representation defined by a collection of connected surfaces forming a closed volume"
+      }
     },
     {
       "id": "BH.oM.Geometry.Cone",
       "iri": "https://github.com/BHoM/BHoM/blob/main/Geometry_oM/Solid/Cone.cs",
       "label": "Cone (BH.oM.Geometry)",
-      "attributes": []
+      "attributes": [
+        "object"
+      ],
+      "comment": {
+        "undefined": "A solid circular right angled cone"
+      }
     },
     {
       "id": "BH.oM.Geometry.Cuboid",
       "iri": "https://github.com/BHoM/BHoM/blob/main/Geometry_oM/Solid/Cuboid.cs",
       "label": "Cuboid (BH.oM.Geometry)",
-      "attributes": []
+      "attributes": [
+        "object"
+      ],
+      "comment": {
+        "undefined": "A polyhedron. Standard cuboid consisting of six right-angled quadrilateral faces."
+      }
     },
     {
       "id": "BH.oM.Geometry.Cylinder",
       "iri": "https://github.com/BHoM/BHoM/blob/main/Geometry_oM/Solid/Cylinder.cs",
       "label": "Cylinder (BH.oM.Geometry)",
-      "attributes": []
+      "attributes": [
+        "object"
+      ],
+      "comment": {
+        "undefined": "A solid circular right angled cylinder."
+      }
     },
     {
       "id": "BH.oM.Geometry.ISolid",
       "iri": "https://github.com/BHoM/BHoM/blob/main/Geometry_oM/Solid/ISolid.cs",
       "label": "ISolid (BH.oM.Geometry)",
-      "attributes": []
+      "attributes": [
+        "object"
+      ],
+      "comment": {
+        "undefined": "The interface for all three-dimensional geometrical objects"
+      }
     },
     {
       "id": "BH.oM.Geometry.Sphere",
       "iri": "https://github.com/BHoM/BHoM/blob/main/Geometry_oM/Solid/Sphere.cs",
       "label": "Sphere (BH.oM.Geometry)",
-      "attributes": []
+      "attributes": [
+        "object"
+      ],
+      "comment": {
+        "undefined": "Standard sphere defining the closed bounding surface of constant distance from a point, its Centre"
+      }
     },
     {
       "id": "BH.oM.Geometry.Torus",
       "iri": "https://github.com/BHoM/BHoM/blob/main/Geometry_oM/Solid/Torus.cs",
       "label": "Torus (BH.oM.Geometry)",
-      "attributes": []
+      "attributes": [
+        "object"
+      ],
+      "comment": {
+        "undefined": "A standard solid circular ring torus, formed as a surface of revolution of a circle about an axis."
+      }
     },
     {
       "id": "BH.oM.Geometry.Extrusion",
       "iri": "https://github.com/BHoM/BHoM/blob/main/Geometry_oM/Surface/Extrusion.cs",
       "label": "Extrusion (BH.oM.Geometry)",
-      "attributes": []
+      "attributes": [
+        "object"
+      ],
+      "comment": {
+        "undefined": "A constant cross section surface, defined by a single profile curve and a linear axis."
+      }
     },
     {
       "id": "BH.oM.Geometry.ISurface",
       "iri": "https://github.com/BHoM/BHoM/blob/main/Geometry_oM/Surface/ISurface.cs",
       "label": "ISurface (BH.oM.Geometry)",
-      "attributes": []
+      "attributes": [
+        "object"
+      ],
+      "comment": {
+        "undefined": "The interface for two-dimensional geometrical objects."
+      }
     },
     {
       "id": "BH.oM.Geometry.Loft",
       "iri": "https://github.com/BHoM/BHoM/blob/main/Geometry_oM/Surface/Loft.cs",
       "label": "Loft (BH.oM.Geometry)",
-      "attributes": []
+      "attributes": [
+        "object"
+      ],
+      "comment": {
+        "undefined": "A free-form surface defined by a series of cross sectional Curves. The surface provides a continuous interpolation passing through each Curve in order."
+      }
     },
     {
       "id": "BH.oM.Geometry.NurbsSurface",
       "iri": "https://github.com/BHoM/BHoM/blob/main/Geometry_oM/Surface/NurbsSurface.cs",
       "label": "NurbsSurface (BH.oM.Geometry)",
-      "attributes": []
+      "attributes": [
+        "object"
+      ],
+      "comment": {
+        "undefined": "A free-form surface constructed as a UV grid of weighted NURBS ControlPoints. A continuous form is generated by approximating a two-directional network of piece-wise polynomial splines across the U and V directions, creating a smooth surface patch.\nSupports Inner and Outer Trim Curves which enable greater flexibility in final shape through allowing free-form boundaries to be cut across the underlying UV surface domain.\nA NurbsSurface is immutable as its defining properties are not mutually perpendicular to facilitate robust conversion between platforms.\nSee also BH.oM.Geometry.NurbsCurve for more info on non-uniform rational basis spline (or B-spline) weightings and other parameters."
+      }
     },
     {
       "id": "BH.oM.Geometry.Pipe",
       "iri": "https://github.com/BHoM/BHoM/blob/main/Geometry_oM/Surface/Pipe.cs",
       "label": "Pipe (BH.oM.Geometry)",
-      "attributes": []
+      "attributes": [
+        "object"
+      ],
+      "comment": {
+        "undefined": "A constant circular cross section surface, following a defined curve path."
+      }
     },
     {
       "id": "BH.oM.Geometry.PlanarSurface",
       "iri": "https://github.com/BHoM/BHoM/blob/main/Geometry_oM/Surface/PlanarSurface.cs",
       "label": "PlanarSurface (BH.oM.Geometry)",
-      "attributes": []
+      "attributes": [
+        "object"
+      ],
+      "comment": {
+        "undefined": "A surface defined by boundary edge curves lying in a common plane. Planarity toleraces default to the BH.oM.Geometry.Tolerace.Distance."
+      }
     },
     {
       "id": "BH.oM.Geometry.PolySurface",
       "iri": "https://github.com/BHoM/BHoM/blob/main/Geometry_oM/Surface/PolySurface.cs",
       "label": "PolySurface (BH.oM.Geometry)",
-      "attributes": []
+      "attributes": [
+        "object"
+      ],
+      "comment": {
+        "undefined": "A composite surface constructed by combining a collection of surfaces of any type. Whole PolySurface integrity, continuity and closure is not guaranteed at creation. Discontinuous and/or multi-region definitions are possible, although validity of some engine methods may vary depending on the PolySurface form."
+      }
     },
     {
       "id": "BH.oM.Geometry.Basis",
       "iri": "https://github.com/BHoM/BHoM/blob/main/Geometry_oM/Vector/Basis.cs",
       "label": "Basis (BH.oM.Geometry)",
-      "attributes": []
+      "attributes": [
+        "object"
+      ],
+      "comment": {
+        "undefined": "An ordered set of mutually orthogonal unit vectors defining three-dimensional orientation in space"
+      }
     },
     {
       "id": "BH.oM.Geometry.Plane",
       "iri": "https://github.com/BHoM/BHoM/blob/main/Geometry_oM/Vector/Plane.cs",
       "label": "Plane (BH.oM.Geometry)",
-      "attributes": []
+      "attributes": [
+        "object"
+      ],
+      "comment": {
+        "undefined": "Defines a flat infinite two-dimensional surface"
+      }
     },
     {
       "id": "BH.oM.Geometry.Point",
       "iri": "https://github.com/BHoM/BHoM/blob/main/Geometry_oM/Vector/Point.cs",
       "label": "Point (BH.oM.Geometry)",
-      "attributes": []
+      "attributes": [
+        "object"
+      ],
+      "comment": {
+        "undefined": "Defines a dimensionless location in three-dimensional space."
+      }
     },
     {
       "id": "BH.oM.Geometry.Vector",
       "iri": "https://github.com/BHoM/BHoM/blob/main/Geometry_oM/Vector/Vector.cs",
       "label": "Vector (BH.oM.Geometry)",
-      "attributes": []
+      "attributes": [
+        "object"
+      ],
+      "comment": {
+        "undefined": "Defines a direction and magnitude in three-dimensional Euclidean space."
+      }
     },
     {
       "id": "BH.oM.Geometry.CoordinateSystem.Cartesian",
       "iri": "https://github.com/BHoM/BHoM/blob/main/Geometry_oM/CoordinateSystem/Cartesian.cs",
       "label": "Cartesian (BH.oM.Geometry.CoordinateSystem)",
-      "attributes": []
+      "attributes": [
+        "object"
+      ],
+      "comment": {
+        "undefined": "A three-dimensional Cartesian coordinate system, as defined by a set of mutually orthogonal unit vectors and a common origin point"
+      }
     },
     {
       "id": "BH.oM.Geometry.Arc.CoordinateSystem",
       "iri": "https://github.com/BHoM/BHoM/blob/main/Geometry_oM/Curve/Arc.cs#L37",
       "label": "CoordinateSystem(BH.oM.Geometry.Arc.CoordinateSystem)",
-      "attributes": []
+      "attributes": [],
+      "comment": {
+        "undefined": "Defines Arc centre equal to Origin of the CoordinateSystem, as well as the orientation of the Arc in three-dimensional space, equal to local xy-Plane of the CoordinateSystem."
+      }
     },
     {
       "id": "BH.oM.Geometry.Arc.Radius",
@@ -837,28 +1032,42 @@
       "iri": "https://github.com/BHoM/BHoM/blob/main/Dimensional_oM/IElement1D.cs",
       "label": "IElement1D (BH.oM.Dimensional)",
       "attributes": [
+        "object",
         "external"
-      ]
+      ],
+      "comment": {
+        "undefined": "Enables geometrical operations to be performed on a Curve based spatial element, whilst preserving all other object properties as unchanged. /nObjects implementing this interface will be required to implement some base methods for getting and setting data in a way that maintains the object's other properties.Documentation detailing required extension methods can be found here: https://github.com/BHoM/documentation/wiki/IElement-required-extension-methods"
+      }
     },
     {
       "id": "BH.oM.Dimensional.IElement",
       "iri": "https://github.com/BHoM/BHoM/blob/main/Dimensional_oM/IElement.cs",
       "label": "IElement (BH.oM.Dimensional)",
       "attributes": [
+        "object",
         "external"
-      ]
+      ],
+      "comment": {
+        "undefined": "The common base interface for all the Spatial Dimensional Objects.This interface should not be implemented directly, only through its sub-interfaces.Methods operating on IElement assume a specific implementation of one or other of the sub-interfaces (i.e. IElement0D, IElement1D, IElement2D)"
+      }
     },
     {
       "id": "BH.oM.Geometry.Circle.Centre",
       "iri": "https://github.com/BHoM/BHoM/blob/main/Geometry_oM/Curve/Circle.cs#L36",
       "label": "Centre(BH.oM.Geometry.Circle.Centre)",
-      "attributes": []
+      "attributes": [],
+      "comment": {
+        "undefined": "Origin point defining location of the Circle in three-dimensional space."
+      }
     },
     {
       "id": "BH.oM.Geometry.Circle.Normal",
       "iri": "https://github.com/BHoM/BHoM/blob/main/Geometry_oM/Curve/Circle.cs#L39",
       "label": "Normal(BH.oM.Geometry.Circle.Normal)",
-      "attributes": []
+      "attributes": [],
+      "comment": {
+        "undefined": "Vector perpendicular to the plane in which the Circle lies."
+      }
     },
     {
       "id": "BH.oM.Geometry.Circle.Radius",
@@ -872,19 +1081,28 @@
       "id": "BH.oM.Geometry.Ellipse.Centre",
       "iri": "https://github.com/BHoM/BHoM/blob/main/Geometry_oM/Curve/Ellipse.cs#L38",
       "label": "Centre(BH.oM.Geometry.Ellipse.Centre)",
-      "attributes": []
+      "attributes": [],
+      "comment": {
+        "undefined": "Origin point defining location of the Ellipse in three-dimensional space."
+      }
     },
     {
       "id": "BH.oM.Geometry.Ellipse.Axis1",
       "iri": "https://github.com/BHoM/BHoM/blob/main/Geometry_oM/Curve/Ellipse.cs#L41",
       "label": "Axis1(BH.oM.Geometry.Ellipse.Axis1)",
-      "attributes": []
+      "attributes": [],
+      "comment": {
+        "undefined": "Together with Axis2 defines orientation in three-dimensional space. Direction only, and not magnitude, matters."
+      }
     },
     {
       "id": "BH.oM.Geometry.Ellipse.Axis2",
       "iri": "https://github.com/BHoM/BHoM/blob/main/Geometry_oM/Curve/Ellipse.cs#L44",
       "label": "Axis2(BH.oM.Geometry.Ellipse.Axis2)",
-      "attributes": []
+      "attributes": [],
+      "comment": {
+        "undefined": "Together with Axis1 defines orientation in three-dimensional space. Direction only, and not magnitude, matters."
+      }
     },
     {
       "id": "BH.oM.Geometry.Ellipse.Radius1",
@@ -1071,6 +1289,7 @@
       "iri": "https://github.com/BHoM/BHoM/blob/main/BHoM/Interface/IImmutable.cs",
       "label": "IImmutable (BH.oM.Base)",
       "attributes": [
+        "object",
         "external"
       ]
     },
@@ -1078,13 +1297,19 @@
       "id": "BH.oM.Geometry.BoundingBox.Min",
       "iri": "https://github.com/BHoM/BHoM/blob/main/Geometry_oM/Misc/BoundingBox.cs#L37",
       "label": "Min(BH.oM.Geometry.BoundingBox.Min)",
-      "attributes": []
+      "attributes": [],
+      "comment": {
+        "undefined": "The lower bound values for the X, Y and Z coordinates of the Box corner Points."
+      }
     },
     {
       "id": "BH.oM.Geometry.BoundingBox.Max",
       "iri": "https://github.com/BHoM/BHoM/blob/main/Geometry_oM/Misc/BoundingBox.cs#L40",
       "label": "Max(BH.oM.Geometry.BoundingBox.Max)",
-      "attributes": []
+      "attributes": [],
+      "comment": {
+        "undefined": "The upper bound values for the X, Y and Z coordinates of the Box corner Points."
+      }
     },
     {
       "id": "BH.oM.Geometry.CompositeGeometry.Elements",
@@ -1128,13 +1353,19 @@
       "id": "BH.oM.Geometry.SurfaceTrim.Curve3d",
       "iri": "https://github.com/BHoM/BHoM/blob/main/Geometry_oM/Misc/SurfaceTrim.cs#L38",
       "label": "Curve3d(BH.oM.Geometry.SurfaceTrim.Curve3d)",
-      "attributes": []
+      "attributes": [],
+      "comment": {
+        "undefined": "Trim Curve in global X, Y, Z coordinates."
+      }
     },
     {
       "id": "BH.oM.Geometry.SurfaceTrim.Curve2d",
       "iri": "https://github.com/BHoM/BHoM/blob/main/Geometry_oM/Misc/SurfaceTrim.cs#L41",
       "label": "Curve2d(BH.oM.Geometry.SurfaceTrim.Curve2d)",
-      "attributes": []
+      "attributes": [],
+      "comment": {
+        "undefined": "Trim Curve in local surface U, V coordinates."
+      }
     },
     {
       "id": "BH.oM.Geometry.TransformMatrix.Matrix",
@@ -1162,13 +1393,19 @@
       "id": "BH.oM.Geometry.Cone.Centre",
       "iri": "https://github.com/BHoM/BHoM/blob/main/Geometry_oM/Solid/Cone.cs#L36",
       "label": "Centre(BH.oM.Geometry.Cone.Centre)",
-      "attributes": []
+      "attributes": [],
+      "comment": {
+        "undefined": "Point defining the centre of the circular base"
+      }
     },
     {
       "id": "BH.oM.Geometry.Cone.Axis",
       "iri": "https://github.com/BHoM/BHoM/blob/main/Geometry_oM/Solid/Cone.cs#L39",
       "label": "Axis(BH.oM.Geometry.Cone.Axis)",
-      "attributes": []
+      "attributes": [],
+      "comment": {
+        "undefined": "Vector perperdicular to the Cone base. Defines the orientation in three-dimensional space"
+      }
     },
     {
       "id": "BH.oM.Geometry.Cone.Radius",
@@ -1190,7 +1427,10 @@
       "id": "BH.oM.Geometry.Cuboid.CoordinateSystem",
       "iri": "https://github.com/BHoM/BHoM/blob/main/Geometry_oM/Solid/Cuboid.cs#L36",
       "label": "CoordinateSystem(BH.oM.Geometry.Cuboid.CoordinateSystem)",
-      "attributes": []
+      "attributes": [],
+      "comment": {
+        "undefined": "Defines both the Cuboid centre as the CoordinateSystem Origin, as well as the orientation in three-dimensional space."
+      }
     },
     {
       "id": "BH.oM.Geometry.Cuboid.Length",
@@ -1220,13 +1460,19 @@
       "id": "BH.oM.Geometry.Cylinder.Centre",
       "iri": "https://github.com/BHoM/BHoM/blob/main/Geometry_oM/Solid/Cylinder.cs#L36",
       "label": "Centre(BH.oM.Geometry.Cylinder.Centre)",
-      "attributes": []
+      "attributes": [],
+      "comment": {
+        "undefined": "Point defining the centre of the circular base."
+      }
     },
     {
       "id": "BH.oM.Geometry.Cylinder.Axis",
       "iri": "https://github.com/BHoM/BHoM/blob/main/Geometry_oM/Solid/Cylinder.cs#L39",
       "label": "Axis(BH.oM.Geometry.Cylinder.Axis)",
-      "attributes": []
+      "attributes": [],
+      "comment": {
+        "undefined": "Vector perperdicular to the base. Defines the orientation in three-dimensional space."
+      }
     },
     {
       "id": "BH.oM.Geometry.Cylinder.Radius",
@@ -1248,7 +1494,10 @@
       "id": "BH.oM.Geometry.Sphere.Centre",
       "iri": "https://github.com/BHoM/BHoM/blob/main/Geometry_oM/Solid/Sphere.cs#L36",
       "label": "Centre(BH.oM.Geometry.Sphere.Centre)",
-      "attributes": []
+      "attributes": [],
+      "comment": {
+        "undefined": "Origin point defining location of the Sphere in three-dimensional space"
+      }
     },
     {
       "id": "BH.oM.Geometry.Sphere.Radius",
@@ -1262,13 +1511,19 @@
       "id": "BH.oM.Geometry.Torus.Centre",
       "iri": "https://github.com/BHoM/BHoM/blob/main/Geometry_oM/Solid/Torus.cs#L36",
       "label": "Centre(BH.oM.Geometry.Torus.Centre)",
-      "attributes": []
+      "attributes": [],
+      "comment": {
+        "undefined": "Origin point defining location of the Torus in three-dimensional space."
+      }
     },
     {
       "id": "BH.oM.Geometry.Torus.Axis",
       "iri": "https://github.com/BHoM/BHoM/blob/main/Geometry_oM/Solid/Torus.cs#L39",
       "label": "Axis(BH.oM.Geometry.Torus.Axis)",
-      "attributes": []
+      "attributes": [],
+      "comment": {
+        "undefined": "Vector defining the axis of revolution and the orientation of the Torus in three-dimensional space."
+      }
     },
     {
       "id": "BH.oM.Geometry.Torus.RadiusMajor",
@@ -1290,13 +1545,19 @@
       "id": "BH.oM.Geometry.Extrusion.Curve",
       "iri": "https://github.com/BHoM/BHoM/blob/main/Geometry_oM/Surface/Extrusion.cs#L36",
       "label": "Curve(BH.oM.Geometry.Extrusion.Curve)",
-      "attributes": []
+      "attributes": [],
+      "comment": {
+        "undefined": "The Extrusion profile curve defining the constant cross sectional shape. Idential curves can be recreated at any point along the Extrusion axis through intersection with the Surface."
+      }
     },
     {
       "id": "BH.oM.Geometry.Extrusion.Direction",
       "iri": "https://github.com/BHoM/BHoM/blob/main/Geometry_oM/Surface/Extrusion.cs#L40",
       "label": "Direction(BH.oM.Geometry.Extrusion.Direction)",
-      "attributes": []
+      "attributes": [],
+      "comment": {
+        "undefined": "The axis along which to translate the profile curve. The Vector magnitude determining the Extrusion length."
+      }
     },
     {
       "id": "BH.oM.Geometry.Extrusion.Capped",
@@ -1374,7 +1635,10 @@
       "id": "BH.oM.Geometry.Pipe.Centreline",
       "iri": "https://github.com/BHoM/BHoM/blob/main/Geometry_oM/Surface/Pipe.cs#L36",
       "label": "Centreline(BH.oM.Geometry.Pipe.Centreline)",
-      "attributes": []
+      "attributes": [],
+      "comment": {
+        "undefined": "Defines the central axis perpendicular to the circular cross sections, and thus the path along which the tubular surface follows."
+      }
     },
     {
       "id": "BH.oM.Geometry.Pipe.Radius",
@@ -1396,7 +1660,10 @@
       "id": "BH.oM.Geometry.PlanarSurface.ExternalBoundary",
       "iri": "https://github.com/BHoM/BHoM/blob/main/Geometry_oM/Surface/PlanarSurface.cs#L38",
       "label": "ExternalBoundary(BH.oM.Geometry.PlanarSurface.ExternalBoundary)",
-      "attributes": []
+      "attributes": [],
+      "comment": {
+        "undefined": "Closed planar curve defining the outer boundary of the surface."
+      }
     },
     {
       "id": "BH.oM.Geometry.PlanarSurface.InternalBoundaries",
@@ -1414,31 +1681,46 @@
       "id": "BH.oM.Geometry.Basis.X",
       "iri": "https://github.com/BHoM/BHoM/blob/main/Geometry_oM/Vector/Basis.cs#L36",
       "label": "X(BH.oM.Geometry.Basis.X)",
-      "attributes": []
+      "attributes": [],
+      "comment": {
+        "undefined": "Unit vector defining local x coordinate axis"
+      }
     },
     {
       "id": "BH.oM.Geometry.Basis.Y",
       "iri": "https://github.com/BHoM/BHoM/blob/main/Geometry_oM/Vector/Basis.cs#L39",
       "label": "Y(BH.oM.Geometry.Basis.Y)",
-      "attributes": []
+      "attributes": [],
+      "comment": {
+        "undefined": "Unit vector defining local y coordinate axis"
+      }
     },
     {
       "id": "BH.oM.Geometry.Basis.Z",
       "iri": "https://github.com/BHoM/BHoM/blob/main/Geometry_oM/Vector/Basis.cs#L42",
       "label": "Z(BH.oM.Geometry.Basis.Z)",
-      "attributes": []
+      "attributes": [],
+      "comment": {
+        "undefined": "Unit vector defining local z coordinate axis"
+      }
     },
     {
       "id": "BH.oM.Geometry.Plane.Origin",
       "iri": "https://github.com/BHoM/BHoM/blob/main/Geometry_oM/Vector/Plane.cs#L35",
       "label": "Origin(BH.oM.Geometry.Plane.Origin)",
-      "attributes": []
+      "attributes": [],
+      "comment": {
+        "undefined": "A point through which the plane passes"
+      }
     },
     {
       "id": "BH.oM.Geometry.Plane.Normal",
       "iri": "https://github.com/BHoM/BHoM/blob/main/Geometry_oM/Vector/Plane.cs#L38",
       "label": "Normal(BH.oM.Geometry.Plane.Normal)",
-      "attributes": []
+      "attributes": [],
+      "comment": {
+        "undefined": "Vector perpendicualar to the plane, defining the orientation in three-dimensional space"
+      }
     },
     {
       "id": "BH.oM.Geometry.Point.X",
@@ -1469,8 +1751,12 @@
       "iri": "https://github.com/BHoM/BHoM/blob/main/Dimensional_oM/IElement0D.cs",
       "label": "IElement0D (BH.oM.Dimensional)",
       "attributes": [
+        "object",
         "external"
-      ]
+      ],
+      "comment": {
+        "undefined": "Enables geometrical operations to be performed on a Point based spatial element, whilst preserving all other object properties as unchanged. /nObjects implementing this interface will be required to implement some base methods for getting and setting data in a way that maintains the object's other properties.Documentation detailing required extension methods can be found here: https://github.com/BHoM/documentation/wiki/IElement-required-extension-methods"
+      }
     },
     {
       "id": "BH.oM.Geometry.Vector.X",
@@ -1500,25 +1786,37 @@
       "id": "BH.oM.Geometry.CoordinateSystem.Cartesian.X",
       "iri": "https://github.com/BHoM/BHoM/blob/main/Geometry_oM/CoordinateSystem/Cartesian.cs#L36",
       "label": "X(BH.oM.Geometry.CoordinateSystem.Cartesian.X)",
-      "attributes": []
+      "attributes": [],
+      "comment": {
+        "undefined": "Unit vector defining local x coordinate axis"
+      }
     },
     {
       "id": "BH.oM.Geometry.CoordinateSystem.Cartesian.Y",
       "iri": "https://github.com/BHoM/BHoM/blob/main/Geometry_oM/CoordinateSystem/Cartesian.cs#L39",
       "label": "Y(BH.oM.Geometry.CoordinateSystem.Cartesian.Y)",
-      "attributes": []
+      "attributes": [],
+      "comment": {
+        "undefined": "Unit vector defining local y coordinate axis"
+      }
     },
     {
       "id": "BH.oM.Geometry.CoordinateSystem.Cartesian.Z",
       "iri": "https://github.com/BHoM/BHoM/blob/main/Geometry_oM/CoordinateSystem/Cartesian.cs#L42",
       "label": "Z(BH.oM.Geometry.CoordinateSystem.Cartesian.Z)",
-      "attributes": []
+      "attributes": [],
+      "comment": {
+        "undefined": "Unit vector defining local z coordinate axis"
+      }
     },
     {
       "id": "BH.oM.Geometry.CoordinateSystem.Cartesian.Origin",
       "iri": "https://github.com/BHoM/BHoM/blob/main/Geometry_oM/CoordinateSystem/Cartesian.cs#L45",
       "label": "Origin(BH.oM.Geometry.CoordinateSystem.Cartesian.Origin)",
-      "attributes": []
+      "attributes": [],
+      "comment": {
+        "undefined": "Location point in three-dimensional space defining (0,0,0) and the origin for each axis"
+      }
     }
   ],
   "property": [
@@ -2489,6 +2787,9 @@
       "attributes": [
         "object"
       ],
+      "comment": {
+        "undefined": "Can be used to describe that a thing belongs to a class; or that a thing is equivalent to another thing. When used for BHoM types, this describes C# interface implementation."
+      },
       "domain": "BH.oM.Geometry.Arc",
       "range": "BH.oM.Geometry.ICurve"
     },
@@ -2499,6 +2800,9 @@
       "attributes": [
         "object"
       ],
+      "comment": {
+        "undefined": "Can be used to describe that a thing belongs to a class; or that a thing is equivalent to another thing. When used for BHoM types, this describes C# interface implementation."
+      },
       "domain": "BH.oM.Geometry.Arc",
       "range": "BH.oM.Geometry.IGeometry"
     },
@@ -2509,6 +2813,9 @@
       "attributes": [
         "object"
       ],
+      "comment": {
+        "undefined": "Can be used to describe that a thing belongs to a class; or that a thing is equivalent to another thing. When used for BHoM types, this describes C# interface implementation."
+      },
       "domain": "BH.oM.Geometry.Arc",
       "range": "BH.oM.Dimensional.IElement1D"
     },
@@ -2519,6 +2826,9 @@
       "attributes": [
         "object"
       ],
+      "comment": {
+        "undefined": "Can be used to describe that a thing belongs to a class; or that a thing is equivalent to another thing. When used for BHoM types, this describes C# interface implementation."
+      },
       "domain": "BH.oM.Geometry.Arc",
       "range": "BH.oM.Dimensional.IElement"
     },
@@ -2579,6 +2889,9 @@
       "attributes": [
         "object"
       ],
+      "comment": {
+        "undefined": "Can be used to describe that a thing belongs to a class; or that a thing is equivalent to another thing. When used for BHoM types, this describes C# interface implementation."
+      },
       "domain": "BH.oM.Geometry.Circle",
       "range": "BH.oM.Geometry.ICurve"
     },
@@ -2589,6 +2902,9 @@
       "attributes": [
         "object"
       ],
+      "comment": {
+        "undefined": "Can be used to describe that a thing belongs to a class; or that a thing is equivalent to another thing. When used for BHoM types, this describes C# interface implementation."
+      },
       "domain": "BH.oM.Geometry.Circle",
       "range": "BH.oM.Geometry.IGeometry"
     },
@@ -2599,6 +2915,9 @@
       "attributes": [
         "object"
       ],
+      "comment": {
+        "undefined": "Can be used to describe that a thing belongs to a class; or that a thing is equivalent to another thing. When used for BHoM types, this describes C# interface implementation."
+      },
       "domain": "BH.oM.Geometry.Circle",
       "range": "BH.oM.Dimensional.IElement1D"
     },
@@ -2609,6 +2928,9 @@
       "attributes": [
         "object"
       ],
+      "comment": {
+        "undefined": "Can be used to describe that a thing belongs to a class; or that a thing is equivalent to another thing. When used for BHoM types, this describes C# interface implementation."
+      },
       "domain": "BH.oM.Geometry.Circle",
       "range": "BH.oM.Dimensional.IElement"
     },
@@ -2699,6 +3021,9 @@
       "attributes": [
         "object"
       ],
+      "comment": {
+        "undefined": "Can be used to describe that a thing belongs to a class; or that a thing is equivalent to another thing. When used for BHoM types, this describes C# interface implementation."
+      },
       "domain": "BH.oM.Geometry.Ellipse",
       "range": "BH.oM.Geometry.ICurve"
     },
@@ -2709,6 +3034,9 @@
       "attributes": [
         "object"
       ],
+      "comment": {
+        "undefined": "Can be used to describe that a thing belongs to a class; or that a thing is equivalent to another thing. When used for BHoM types, this describes C# interface implementation."
+      },
       "domain": "BH.oM.Geometry.Ellipse",
       "range": "BH.oM.Geometry.IGeometry"
     },
@@ -2719,6 +3047,9 @@
       "attributes": [
         "object"
       ],
+      "comment": {
+        "undefined": "Can be used to describe that a thing belongs to a class; or that a thing is equivalent to another thing. When used for BHoM types, this describes C# interface implementation."
+      },
       "domain": "BH.oM.Geometry.Ellipse",
       "range": "BH.oM.Dimensional.IElement1D"
     },
@@ -2729,6 +3060,9 @@
       "attributes": [
         "object"
       ],
+      "comment": {
+        "undefined": "Can be used to describe that a thing belongs to a class; or that a thing is equivalent to another thing. When used for BHoM types, this describes C# interface implementation."
+      },
       "domain": "BH.oM.Geometry.Ellipse",
       "range": "BH.oM.Dimensional.IElement"
     },
@@ -2739,6 +3073,9 @@
       "attributes": [
         "object"
       ],
+      "comment": {
+        "undefined": "Can be used to describe that a thing belongs to a class; or that a thing is equivalent to another thing. When used for BHoM types, this describes C# interface implementation."
+      },
       "domain": "BH.oM.Geometry.ICurve",
       "range": "BH.oM.Geometry.IGeometry"
     },
@@ -2749,6 +3086,9 @@
       "attributes": [
         "object"
       ],
+      "comment": {
+        "undefined": "Can be used to describe that a thing belongs to a class; or that a thing is equivalent to another thing. When used for BHoM types, this describes C# interface implementation."
+      },
       "domain": "BH.oM.Geometry.ICurve",
       "range": "BH.oM.Dimensional.IElement1D"
     },
@@ -2759,6 +3099,9 @@
       "attributes": [
         "object"
       ],
+      "comment": {
+        "undefined": "Can be used to describe that a thing belongs to a class; or that a thing is equivalent to another thing. When used for BHoM types, this describes C# interface implementation."
+      },
       "domain": "BH.oM.Geometry.ICurve",
       "range": "BH.oM.Dimensional.IElement"
     },
@@ -2819,6 +3162,9 @@
       "attributes": [
         "object"
       ],
+      "comment": {
+        "undefined": "Can be used to describe that a thing belongs to a class; or that a thing is equivalent to another thing. When used for BHoM types, this describes C# interface implementation."
+      },
       "domain": "BH.oM.Geometry.Line",
       "range": "BH.oM.Geometry.ICurve"
     },
@@ -2829,6 +3175,9 @@
       "attributes": [
         "object"
       ],
+      "comment": {
+        "undefined": "Can be used to describe that a thing belongs to a class; or that a thing is equivalent to another thing. When used for BHoM types, this describes C# interface implementation."
+      },
       "domain": "BH.oM.Geometry.Line",
       "range": "BH.oM.Geometry.IGeometry"
     },
@@ -2839,6 +3188,9 @@
       "attributes": [
         "object"
       ],
+      "comment": {
+        "undefined": "Can be used to describe that a thing belongs to a class; or that a thing is equivalent to another thing. When used for BHoM types, this describes C# interface implementation."
+      },
       "domain": "BH.oM.Geometry.Line",
       "range": "BH.oM.Dimensional.IElement1D"
     },
@@ -2849,6 +3201,9 @@
       "attributes": [
         "object"
       ],
+      "comment": {
+        "undefined": "Can be used to describe that a thing belongs to a class; or that a thing is equivalent to another thing. When used for BHoM types, this describes C# interface implementation."
+      },
       "domain": "BH.oM.Geometry.Line",
       "range": "BH.oM.Dimensional.IElement"
     },
@@ -2899,6 +3254,9 @@
       "attributes": [
         "object"
       ],
+      "comment": {
+        "undefined": "Can be used to describe that a thing belongs to a class; or that a thing is equivalent to another thing. When used for BHoM types, this describes C# interface implementation."
+      },
       "domain": "BH.oM.Geometry.NurbsCurve",
       "range": "BH.oM.Geometry.ICurve"
     },
@@ -2909,6 +3267,9 @@
       "attributes": [
         "object"
       ],
+      "comment": {
+        "undefined": "Can be used to describe that a thing belongs to a class; or that a thing is equivalent to another thing. When used for BHoM types, this describes C# interface implementation."
+      },
       "domain": "BH.oM.Geometry.NurbsCurve",
       "range": "BH.oM.Geometry.IGeometry"
     },
@@ -2919,6 +3280,9 @@
       "attributes": [
         "object"
       ],
+      "comment": {
+        "undefined": "Can be used to describe that a thing belongs to a class; or that a thing is equivalent to another thing. When used for BHoM types, this describes C# interface implementation."
+      },
       "domain": "BH.oM.Geometry.NurbsCurve",
       "range": "BH.oM.Dimensional.IElement1D"
     },
@@ -2929,6 +3293,9 @@
       "attributes": [
         "object"
       ],
+      "comment": {
+        "undefined": "Can be used to describe that a thing belongs to a class; or that a thing is equivalent to another thing. When used for BHoM types, this describes C# interface implementation."
+      },
       "domain": "BH.oM.Geometry.NurbsCurve",
       "range": "BH.oM.Dimensional.IElement"
     },
@@ -2959,6 +3326,9 @@
       "attributes": [
         "object"
       ],
+      "comment": {
+        "undefined": "Can be used to describe that a thing belongs to a class; or that a thing is equivalent to another thing. When used for BHoM types, this describes C# interface implementation."
+      },
       "domain": "BH.oM.Geometry.PolyCurve",
       "range": "BH.oM.Geometry.ICurve"
     },
@@ -2969,6 +3339,9 @@
       "attributes": [
         "object"
       ],
+      "comment": {
+        "undefined": "Can be used to describe that a thing belongs to a class; or that a thing is equivalent to another thing. When used for BHoM types, this describes C# interface implementation."
+      },
       "domain": "BH.oM.Geometry.PolyCurve",
       "range": "BH.oM.Geometry.IGeometry"
     },
@@ -2979,6 +3352,9 @@
       "attributes": [
         "object"
       ],
+      "comment": {
+        "undefined": "Can be used to describe that a thing belongs to a class; or that a thing is equivalent to another thing. When used for BHoM types, this describes C# interface implementation."
+      },
       "domain": "BH.oM.Geometry.PolyCurve",
       "range": "BH.oM.Dimensional.IElement1D"
     },
@@ -2989,6 +3365,9 @@
       "attributes": [
         "object"
       ],
+      "comment": {
+        "undefined": "Can be used to describe that a thing belongs to a class; or that a thing is equivalent to another thing. When used for BHoM types, this describes C# interface implementation."
+      },
       "domain": "BH.oM.Geometry.PolyCurve",
       "range": "BH.oM.Dimensional.IElement"
     },
@@ -3019,6 +3398,9 @@
       "attributes": [
         "object"
       ],
+      "comment": {
+        "undefined": "Can be used to describe that a thing belongs to a class; or that a thing is equivalent to another thing. When used for BHoM types, this describes C# interface implementation."
+      },
       "domain": "BH.oM.Geometry.Polyline",
       "range": "BH.oM.Geometry.ICurve"
     },
@@ -3029,6 +3411,9 @@
       "attributes": [
         "object"
       ],
+      "comment": {
+        "undefined": "Can be used to describe that a thing belongs to a class; or that a thing is equivalent to another thing. When used for BHoM types, this describes C# interface implementation."
+      },
       "domain": "BH.oM.Geometry.Polyline",
       "range": "BH.oM.Geometry.IGeometry"
     },
@@ -3039,6 +3424,9 @@
       "attributes": [
         "object"
       ],
+      "comment": {
+        "undefined": "Can be used to describe that a thing belongs to a class; or that a thing is equivalent to another thing. When used for BHoM types, this describes C# interface implementation."
+      },
       "domain": "BH.oM.Geometry.Polyline",
       "range": "BH.oM.Dimensional.IElement1D"
     },
@@ -3049,6 +3437,9 @@
       "attributes": [
         "object"
       ],
+      "comment": {
+        "undefined": "Can be used to describe that a thing belongs to a class; or that a thing is equivalent to another thing. When used for BHoM types, this describes C# interface implementation."
+      },
       "domain": "BH.oM.Geometry.Polyline",
       "range": "BH.oM.Dimensional.IElement"
     },
@@ -3119,6 +3510,9 @@
       "attributes": [
         "object"
       ],
+      "comment": {
+        "undefined": "Can be used to describe that a thing belongs to a class; or that a thing is equivalent to another thing. When used for BHoM types, this describes C# interface implementation."
+      },
       "domain": "BH.oM.Geometry.CellRelation",
       "range": "BH.oM.Geometry.IGeometry"
     },
@@ -3169,6 +3563,9 @@
       "attributes": [
         "object"
       ],
+      "comment": {
+        "undefined": "Can be used to describe that a thing belongs to a class; or that a thing is equivalent to another thing. When used for BHoM types, this describes C# interface implementation."
+      },
       "domain": "BH.oM.Geometry.Face",
       "range": "BH.oM.Geometry.IGeometry"
     },
@@ -3219,6 +3616,9 @@
       "attributes": [
         "object"
       ],
+      "comment": {
+        "undefined": "Can be used to describe that a thing belongs to a class; or that a thing is equivalent to another thing. When used for BHoM types, this describes C# interface implementation."
+      },
       "domain": "BH.oM.Geometry.Mesh",
       "range": "BH.oM.Geometry.IGeometry"
     },
@@ -3289,6 +3689,9 @@
       "attributes": [
         "object"
       ],
+      "comment": {
+        "undefined": "Can be used to describe that a thing belongs to a class; or that a thing is equivalent to another thing. When used for BHoM types, this describes C# interface implementation."
+      },
       "domain": "BH.oM.Geometry.Mesh3D",
       "range": "BH.oM.Geometry.IGeometry"
     },
@@ -3299,6 +3702,9 @@
       "attributes": [
         "object"
       ],
+      "comment": {
+        "undefined": "Can be used to describe that a thing belongs to a class; or that a thing is equivalent to another thing. When used for BHoM types, this describes C# interface implementation."
+      },
       "domain": "BH.oM.Geometry.Mesh3D",
       "range": "BH.oM.Base.IImmutable"
     },
@@ -3349,6 +3755,9 @@
       "attributes": [
         "object"
       ],
+      "comment": {
+        "undefined": "Can be used to describe that a thing belongs to a class; or that a thing is equivalent to another thing. When used for BHoM types, this describes C# interface implementation."
+      },
       "domain": "BH.oM.Geometry.BoundingBox",
       "range": "BH.oM.Geometry.IGeometry"
     },
@@ -3379,6 +3788,9 @@
       "attributes": [
         "object"
       ],
+      "comment": {
+        "undefined": "Can be used to describe that a thing belongs to a class; or that a thing is equivalent to another thing. When used for BHoM types, this describes C# interface implementation."
+      },
       "domain": "BH.oM.Geometry.CompositeGeometry",
       "range": "BH.oM.Geometry.IGeometry"
     },
@@ -3429,6 +3841,9 @@
       "attributes": [
         "object"
       ],
+      "comment": {
+        "undefined": "Can be used to describe that a thing belongs to a class; or that a thing is equivalent to another thing. When used for BHoM types, this describes C# interface implementation."
+      },
       "domain": "BH.oM.Geometry.Quaternion",
       "range": "BH.oM.Geometry.IGeometry"
     },
@@ -3479,6 +3894,9 @@
       "attributes": [
         "object"
       ],
+      "comment": {
+        "undefined": "Can be used to describe that a thing belongs to a class; or that a thing is equivalent to another thing. When used for BHoM types, this describes C# interface implementation."
+      },
       "domain": "BH.oM.Geometry.SurfaceTrim",
       "range": "BH.oM.Geometry.IGeometry"
     },
@@ -3489,6 +3907,9 @@
       "attributes": [
         "object"
       ],
+      "comment": {
+        "undefined": "Can be used to describe that a thing belongs to a class; or that a thing is equivalent to another thing. When used for BHoM types, this describes C# interface implementation."
+      },
       "domain": "BH.oM.Geometry.SurfaceTrim",
       "range": "BH.oM.Base.IImmutable"
     },
@@ -3509,6 +3930,9 @@
       "attributes": [
         "object"
       ],
+      "comment": {
+        "undefined": "Can be used to describe that a thing belongs to a class; or that a thing is equivalent to another thing. When used for BHoM types, this describes C# interface implementation."
+      },
       "domain": "BH.oM.Geometry.TransformMatrix",
       "range": "BH.oM.Geometry.IGeometry"
     },
@@ -3549,6 +3973,9 @@
       "attributes": [
         "object"
       ],
+      "comment": {
+        "undefined": "Can be used to describe that a thing belongs to a class; or that a thing is equivalent to another thing. When used for BHoM types, this describes C# interface implementation."
+      },
       "domain": "BH.oM.Geometry.BoundaryRepresentation",
       "range": "BH.oM.Geometry.ISolid"
     },
@@ -3559,6 +3986,9 @@
       "attributes": [
         "object"
       ],
+      "comment": {
+        "undefined": "Can be used to describe that a thing belongs to a class; or that a thing is equivalent to another thing. When used for BHoM types, this describes C# interface implementation."
+      },
       "domain": "BH.oM.Geometry.BoundaryRepresentation",
       "range": "BH.oM.Geometry.IGeometry"
     },
@@ -3569,6 +3999,9 @@
       "attributes": [
         "object"
       ],
+      "comment": {
+        "undefined": "Can be used to describe that a thing belongs to a class; or that a thing is equivalent to another thing. When used for BHoM types, this describes C# interface implementation."
+      },
       "domain": "BH.oM.Geometry.BoundaryRepresentation",
       "range": "BH.oM.Base.IImmutable"
     },
@@ -3639,6 +4072,9 @@
       "attributes": [
         "object"
       ],
+      "comment": {
+        "undefined": "Can be used to describe that a thing belongs to a class; or that a thing is equivalent to another thing. When used for BHoM types, this describes C# interface implementation."
+      },
       "domain": "BH.oM.Geometry.Cone",
       "range": "BH.oM.Geometry.ISolid"
     },
@@ -3649,6 +4085,9 @@
       "attributes": [
         "object"
       ],
+      "comment": {
+        "undefined": "Can be used to describe that a thing belongs to a class; or that a thing is equivalent to another thing. When used for BHoM types, this describes C# interface implementation."
+      },
       "domain": "BH.oM.Geometry.Cone",
       "range": "BH.oM.Geometry.IGeometry"
     },
@@ -3709,6 +4148,9 @@
       "attributes": [
         "object"
       ],
+      "comment": {
+        "undefined": "Can be used to describe that a thing belongs to a class; or that a thing is equivalent to another thing. When used for BHoM types, this describes C# interface implementation."
+      },
       "domain": "BH.oM.Geometry.Cuboid",
       "range": "BH.oM.Geometry.ISolid"
     },
@@ -3719,6 +4161,9 @@
       "attributes": [
         "object"
       ],
+      "comment": {
+        "undefined": "Can be used to describe that a thing belongs to a class; or that a thing is equivalent to another thing. When used for BHoM types, this describes C# interface implementation."
+      },
       "domain": "BH.oM.Geometry.Cuboid",
       "range": "BH.oM.Geometry.IGeometry"
     },
@@ -3789,6 +4234,9 @@
       "attributes": [
         "object"
       ],
+      "comment": {
+        "undefined": "Can be used to describe that a thing belongs to a class; or that a thing is equivalent to another thing. When used for BHoM types, this describes C# interface implementation."
+      },
       "domain": "BH.oM.Geometry.Cylinder",
       "range": "BH.oM.Geometry.ISolid"
     },
@@ -3799,6 +4247,9 @@
       "attributes": [
         "object"
       ],
+      "comment": {
+        "undefined": "Can be used to describe that a thing belongs to a class; or that a thing is equivalent to another thing. When used for BHoM types, this describes C# interface implementation."
+      },
       "domain": "BH.oM.Geometry.Cylinder",
       "range": "BH.oM.Geometry.IGeometry"
     },
@@ -3809,6 +4260,9 @@
       "attributes": [
         "object"
       ],
+      "comment": {
+        "undefined": "Can be used to describe that a thing belongs to a class; or that a thing is equivalent to another thing. When used for BHoM types, this describes C# interface implementation."
+      },
       "domain": "BH.oM.Geometry.ISolid",
       "range": "BH.oM.Geometry.IGeometry"
     },
@@ -3849,6 +4303,9 @@
       "attributes": [
         "object"
       ],
+      "comment": {
+        "undefined": "Can be used to describe that a thing belongs to a class; or that a thing is equivalent to another thing. When used for BHoM types, this describes C# interface implementation."
+      },
       "domain": "BH.oM.Geometry.Sphere",
       "range": "BH.oM.Geometry.ISolid"
     },
@@ -3859,6 +4316,9 @@
       "attributes": [
         "object"
       ],
+      "comment": {
+        "undefined": "Can be used to describe that a thing belongs to a class; or that a thing is equivalent to another thing. When used for BHoM types, this describes C# interface implementation."
+      },
       "domain": "BH.oM.Geometry.Sphere",
       "range": "BH.oM.Geometry.IGeometry"
     },
@@ -3929,6 +4389,9 @@
       "attributes": [
         "object"
       ],
+      "comment": {
+        "undefined": "Can be used to describe that a thing belongs to a class; or that a thing is equivalent to another thing. When used for BHoM types, this describes C# interface implementation."
+      },
       "domain": "BH.oM.Geometry.Torus",
       "range": "BH.oM.Geometry.ISolid"
     },
@@ -3939,6 +4402,9 @@
       "attributes": [
         "object"
       ],
+      "comment": {
+        "undefined": "Can be used to describe that a thing belongs to a class; or that a thing is equivalent to another thing. When used for BHoM types, this describes C# interface implementation."
+      },
       "domain": "BH.oM.Geometry.Torus",
       "range": "BH.oM.Geometry.IGeometry"
     },
@@ -3999,6 +4465,9 @@
       "attributes": [
         "object"
       ],
+      "comment": {
+        "undefined": "Can be used to describe that a thing belongs to a class; or that a thing is equivalent to another thing. When used for BHoM types, this describes C# interface implementation."
+      },
       "domain": "BH.oM.Geometry.Extrusion",
       "range": "BH.oM.Geometry.ISurface"
     },
@@ -4009,6 +4478,9 @@
       "attributes": [
         "object"
       ],
+      "comment": {
+        "undefined": "Can be used to describe that a thing belongs to a class; or that a thing is equivalent to another thing. When used for BHoM types, this describes C# interface implementation."
+      },
       "domain": "BH.oM.Geometry.Extrusion",
       "range": "BH.oM.Geometry.IGeometry"
     },
@@ -4019,6 +4491,9 @@
       "attributes": [
         "object"
       ],
+      "comment": {
+        "undefined": "Can be used to describe that a thing belongs to a class; or that a thing is equivalent to another thing. When used for BHoM types, this describes C# interface implementation."
+      },
       "domain": "BH.oM.Geometry.ISurface",
       "range": "BH.oM.Geometry.IGeometry"
     },
@@ -4049,6 +4524,9 @@
       "attributes": [
         "object"
       ],
+      "comment": {
+        "undefined": "Can be used to describe that a thing belongs to a class; or that a thing is equivalent to another thing. When used for BHoM types, this describes C# interface implementation."
+      },
       "domain": "BH.oM.Geometry.Loft",
       "range": "BH.oM.Geometry.ISurface"
     },
@@ -4059,6 +4537,9 @@
       "attributes": [
         "object"
       ],
+      "comment": {
+        "undefined": "Can be used to describe that a thing belongs to a class; or that a thing is equivalent to another thing. When used for BHoM types, this describes C# interface implementation."
+      },
       "domain": "BH.oM.Geometry.Loft",
       "range": "BH.oM.Geometry.IGeometry"
     },
@@ -4179,6 +4660,9 @@
       "attributes": [
         "object"
       ],
+      "comment": {
+        "undefined": "Can be used to describe that a thing belongs to a class; or that a thing is equivalent to another thing. When used for BHoM types, this describes C# interface implementation."
+      },
       "domain": "BH.oM.Geometry.NurbsSurface",
       "range": "BH.oM.Geometry.ISurface"
     },
@@ -4189,6 +4673,9 @@
       "attributes": [
         "object"
       ],
+      "comment": {
+        "undefined": "Can be used to describe that a thing belongs to a class; or that a thing is equivalent to another thing. When used for BHoM types, this describes C# interface implementation."
+      },
       "domain": "BH.oM.Geometry.NurbsSurface",
       "range": "BH.oM.Geometry.IGeometry"
     },
@@ -4199,6 +4686,9 @@
       "attributes": [
         "object"
       ],
+      "comment": {
+        "undefined": "Can be used to describe that a thing belongs to a class; or that a thing is equivalent to another thing. When used for BHoM types, this describes C# interface implementation."
+      },
       "domain": "BH.oM.Geometry.NurbsSurface",
       "range": "BH.oM.Base.IImmutable"
     },
@@ -4249,6 +4739,9 @@
       "attributes": [
         "object"
       ],
+      "comment": {
+        "undefined": "Can be used to describe that a thing belongs to a class; or that a thing is equivalent to another thing. When used for BHoM types, this describes C# interface implementation."
+      },
       "domain": "BH.oM.Geometry.Pipe",
       "range": "BH.oM.Geometry.ISurface"
     },
@@ -4259,6 +4752,9 @@
       "attributes": [
         "object"
       ],
+      "comment": {
+        "undefined": "Can be used to describe that a thing belongs to a class; or that a thing is equivalent to another thing. When used for BHoM types, this describes C# interface implementation."
+      },
       "domain": "BH.oM.Geometry.Pipe",
       "range": "BH.oM.Geometry.IGeometry"
     },
@@ -4309,6 +4805,9 @@
       "attributes": [
         "object"
       ],
+      "comment": {
+        "undefined": "Can be used to describe that a thing belongs to a class; or that a thing is equivalent to another thing. When used for BHoM types, this describes C# interface implementation."
+      },
       "domain": "BH.oM.Geometry.PlanarSurface",
       "range": "BH.oM.Geometry.ISurface"
     },
@@ -4319,6 +4818,9 @@
       "attributes": [
         "object"
       ],
+      "comment": {
+        "undefined": "Can be used to describe that a thing belongs to a class; or that a thing is equivalent to another thing. When used for BHoM types, this describes C# interface implementation."
+      },
       "domain": "BH.oM.Geometry.PlanarSurface",
       "range": "BH.oM.Geometry.IGeometry"
     },
@@ -4329,6 +4831,9 @@
       "attributes": [
         "object"
       ],
+      "comment": {
+        "undefined": "Can be used to describe that a thing belongs to a class; or that a thing is equivalent to another thing. When used for BHoM types, this describes C# interface implementation."
+      },
       "domain": "BH.oM.Geometry.PlanarSurface",
       "range": "BH.oM.Base.IImmutable"
     },
@@ -4359,6 +4864,9 @@
       "attributes": [
         "object"
       ],
+      "comment": {
+        "undefined": "Can be used to describe that a thing belongs to a class; or that a thing is equivalent to another thing. When used for BHoM types, this describes C# interface implementation."
+      },
       "domain": "BH.oM.Geometry.PolySurface",
       "range": "BH.oM.Geometry.ISurface"
     },
@@ -4369,6 +4877,9 @@
       "attributes": [
         "object"
       ],
+      "comment": {
+        "undefined": "Can be used to describe that a thing belongs to a class; or that a thing is equivalent to another thing. When used for BHoM types, this describes C# interface implementation."
+      },
       "domain": "BH.oM.Geometry.PolySurface",
       "range": "BH.oM.Geometry.IGeometry"
     },
@@ -4439,6 +4950,9 @@
       "attributes": [
         "object"
       ],
+      "comment": {
+        "undefined": "Can be used to describe that a thing belongs to a class; or that a thing is equivalent to another thing. When used for BHoM types, this describes C# interface implementation."
+      },
       "domain": "BH.oM.Geometry.Basis",
       "range": "BH.oM.Geometry.IGeometry"
     },
@@ -4449,6 +4963,9 @@
       "attributes": [
         "object"
       ],
+      "comment": {
+        "undefined": "Can be used to describe that a thing belongs to a class; or that a thing is equivalent to another thing. When used for BHoM types, this describes C# interface implementation."
+      },
       "domain": "BH.oM.Geometry.Basis",
       "range": "BH.oM.Base.IImmutable"
     },
@@ -4499,6 +5016,9 @@
       "attributes": [
         "object"
       ],
+      "comment": {
+        "undefined": "Can be used to describe that a thing belongs to a class; or that a thing is equivalent to another thing. When used for BHoM types, this describes C# interface implementation."
+      },
       "domain": "BH.oM.Geometry.Plane",
       "range": "BH.oM.Geometry.IGeometry"
     },
@@ -4539,6 +5059,9 @@
       "attributes": [
         "object"
       ],
+      "comment": {
+        "undefined": "Can be used to describe that a thing belongs to a class; or that a thing is equivalent to another thing. When used for BHoM types, this describes C# interface implementation."
+      },
       "domain": "BH.oM.Geometry.Point",
       "range": "BH.oM.Geometry.IGeometry"
     },
@@ -4549,6 +5072,9 @@
       "attributes": [
         "object"
       ],
+      "comment": {
+        "undefined": "Can be used to describe that a thing belongs to a class; or that a thing is equivalent to another thing. When used for BHoM types, this describes C# interface implementation."
+      },
       "domain": "BH.oM.Geometry.Point",
       "range": "BH.oM.Dimensional.IElement0D"
     },
@@ -4559,6 +5085,9 @@
       "attributes": [
         "object"
       ],
+      "comment": {
+        "undefined": "Can be used to describe that a thing belongs to a class; or that a thing is equivalent to another thing. When used for BHoM types, this describes C# interface implementation."
+      },
       "domain": "BH.oM.Geometry.Point",
       "range": "BH.oM.Dimensional.IElement"
     },
@@ -4599,6 +5128,9 @@
       "attributes": [
         "object"
       ],
+      "comment": {
+        "undefined": "Can be used to describe that a thing belongs to a class; or that a thing is equivalent to another thing. When used for BHoM types, this describes C# interface implementation."
+      },
       "domain": "BH.oM.Geometry.Vector",
       "range": "BH.oM.Geometry.IGeometry"
     },
@@ -4689,6 +5221,9 @@
       "attributes": [
         "object"
       ],
+      "comment": {
+        "undefined": "Can be used to describe that a thing belongs to a class; or that a thing is equivalent to another thing. When used for BHoM types, this describes C# interface implementation."
+      },
       "domain": "BH.oM.Geometry.CoordinateSystem.Cartesian",
       "range": "BH.oM.Geometry.IGeometry"
     },
@@ -4699,6 +5234,9 @@
       "attributes": [
         "object"
       ],
+      "comment": {
+        "undefined": "Can be used to describe that a thing belongs to a class; or that a thing is equivalent to another thing. When used for BHoM types, this describes C# interface implementation."
+      },
       "domain": "BH.oM.Geometry.CoordinateSystem.Cartesian",
       "range": "BH.oM.Base.IImmutable"
     }

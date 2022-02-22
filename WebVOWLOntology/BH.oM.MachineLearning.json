@@ -112,73 +112,97 @@
       "id": "BH.oM.MachineLearning.IScaler",
       "iri": "https://github.com/BHoM/BHoM/blob/main/MachineLearning_oM/IScaler.cs",
       "label": "IScaler (BH.oM.MachineLearning)",
-      "attributes": []
+      "attributes": [
+        "object"
+      ]
     },
     {
       "id": "BH.oM.MachineLearning.ITransformer",
       "iri": "https://github.com/BHoM/BHoM/blob/main/MachineLearning_oM/ITransformer.cs",
       "label": "ITransformer (BH.oM.MachineLearning)",
-      "attributes": []
+      "attributes": [
+        "object"
+      ]
     },
     {
       "id": "BH.oM.MachineLearning.LogisticRegression",
       "iri": "https://github.com/BHoM/BHoM/blob/main/MachineLearning_oM/LogisticRegression.cs",
       "label": "LogisticRegression (BH.oM.MachineLearning)",
-      "attributes": []
+      "attributes": [
+        "object"
+      ]
     },
     {
       "id": "BH.oM.MachineLearning.SupportVectorRegression",
       "iri": "https://github.com/BHoM/BHoM/blob/main/MachineLearning_oM/SupportVectorRegression.cs",
       "label": "SupportVectorRegression (BH.oM.MachineLearning)",
-      "attributes": []
+      "attributes": [
+        "object"
+      ]
     },
     {
       "id": "BH.oM.MachineLearning.PolynomialFeatures",
       "iri": "https://github.com/BHoM/MachineLearning_Toolkit/blob/main/MachineLearning_oM/PolynomialFeatures.cs",
       "label": "PolynomialFeatures (BH.oM.MachineLearning)",
-      "attributes": []
+      "attributes": [
+        "object"
+      ]
     },
     {
       "id": "BH.oM.MachineLearning.StandardScaler",
       "iri": "https://github.com/BHoM/MachineLearning_Toolkit/blob/main/MachineLearning_oM/StandardScaler.cs",
       "label": "StandardScaler (BH.oM.MachineLearning)",
-      "attributes": []
+      "attributes": [
+        "object"
+      ]
     },
     {
       "id": "BH.oM.MachineLearning.MinMaxScaler",
       "iri": "https://github.com/BHoM/MachineLearning_Toolkit/blob/main/MachineLearning_oM/MinMaxScaler.cs",
       "label": "MinMaxScaler (BH.oM.MachineLearning)",
-      "attributes": []
+      "attributes": [
+        "object"
+      ]
     },
     {
       "id": "BH.oM.MachineLearning.LinearRegression",
       "iri": "https://github.com/BHoM/MachineLearning_Toolkit/blob/main/MachineLearning_oM/LinearRegression.cs",
       "label": "LinearRegression (BH.oM.MachineLearning)",
-      "attributes": []
+      "attributes": [
+        "object"
+      ]
     },
     {
       "id": "BH.oM.MachineLearning.IRegressionModel",
       "iri": "https://github.com/BHoM/BHoM/blob/main/MachineLearning_oM/IRegressionModel.cs",
       "label": "IRegressionModel (BH.oM.MachineLearning)",
-      "attributes": []
+      "attributes": [
+        "object"
+      ]
     },
     {
       "id": "BH.oM.MachineLearning.Tensor",
       "iri": "https://github.com/BHoM/MachineLearning_Toolkit/blob/main/MachineLearning_oM/Tensor.cs",
       "label": "Tensor (BH.oM.MachineLearning)",
-      "attributes": []
+      "attributes": [
+        "object"
+      ]
     },
     {
       "id": "BH.oM.MachineLearning.Vision.Image",
       "iri": "https://github.com/BHoM/DataViz_Toolkit/blob/main/Old/Create/Image.cs",
       "label": "Image (BH.oM.MachineLearning.Vision)",
-      "attributes": []
+      "attributes": [
+        "object"
+      ]
     },
     {
       "id": "BH.oM.MachineLearning.Vision.DetectionResults",
       "iri": "https://github.com/BHoM/MachineLearning_Toolkit/blob/main/MachineLearning_oM/DetectionResults.cs",
       "label": "DetectionResults (BH.oM.MachineLearning.Vision)",
-      "attributes": []
+      "attributes": [
+        "object"
+      ]
     },
     {
       "id": "BH.oM.MachineLearning.LogisticRegression.SkLearnModel",
@@ -193,6 +217,7 @@
       "iri": "https://github.com/BHoM/BHoM/blob/main/BHoM/Interface/IImmutable.cs",
       "label": "IImmutable (BH.oM.Base)",
       "attributes": [
+        "object",
         "external"
       ]
     },
@@ -271,8 +296,12 @@
       "iri": "https://github.com/BHoM/BHoM/blob/main/Geometry_oM/Curve/Polyline.cs",
       "label": "Polyline (BH.oM.Geometry)",
       "attributes": [
+        "object",
         "external"
-      ]
+      ],
+      "comment": {
+        "undefined": "A curve consisting of a continuous chain of straight line segments. The Polyline is considered closed if the first and last ControlPoints are coincident"
+      }
     },
     {
       "id": "BH.oM.MachineLearning.Vision.DetectionResults.Categories",
@@ -419,6 +448,9 @@
       "attributes": [
         "object"
       ],
+      "comment": {
+        "undefined": "Can be used to describe that a thing belongs to a class; or that a thing is equivalent to another thing. When used for BHoM types, this describes C# interface implementation."
+      },
       "domain": "BH.oM.MachineLearning.LogisticRegression",
       "range": "BH.oM.MachineLearning.IRegressionModel"
     },
@@ -429,6 +461,9 @@
       "attributes": [
         "object"
       ],
+      "comment": {
+        "undefined": "Can be used to describe that a thing belongs to a class; or that a thing is equivalent to another thing. When used for BHoM types, this describes C# interface implementation."
+      },
       "domain": "BH.oM.MachineLearning.LogisticRegression",
       "range": "BH.oM.Base.IImmutable"
     },
@@ -449,6 +484,9 @@
       "attributes": [
         "object"
       ],
+      "comment": {
+        "undefined": "Can be used to describe that a thing belongs to a class; or that a thing is equivalent to another thing. When used for BHoM types, this describes C# interface implementation."
+      },
       "domain": "BH.oM.MachineLearning.SupportVectorRegression",
       "range": "BH.oM.MachineLearning.IRegressionModel"
     },
@@ -459,6 +497,9 @@
       "attributes": [
         "object"
       ],
+      "comment": {
+        "undefined": "Can be used to describe that a thing belongs to a class; or that a thing is equivalent to another thing. When used for BHoM types, this describes C# interface implementation."
+      },
       "domain": "BH.oM.MachineLearning.SupportVectorRegression",
       "range": "BH.oM.Base.IImmutable"
     },
@@ -479,6 +520,9 @@
       "attributes": [
         "object"
       ],
+      "comment": {
+        "undefined": "Can be used to describe that a thing belongs to a class; or that a thing is equivalent to another thing. When used for BHoM types, this describes C# interface implementation."
+      },
       "domain": "BH.oM.MachineLearning.PolynomialFeatures",
       "range": "BH.oM.MachineLearning.ITransformer"
     },
@@ -489,6 +533,9 @@
       "attributes": [
         "object"
       ],
+      "comment": {
+        "undefined": "Can be used to describe that a thing belongs to a class; or that a thing is equivalent to another thing. When used for BHoM types, this describes C# interface implementation."
+      },
       "domain": "BH.oM.MachineLearning.PolynomialFeatures",
       "range": "BH.oM.Base.IImmutable"
     },
@@ -509,6 +556,9 @@
       "attributes": [
         "object"
       ],
+      "comment": {
+        "undefined": "Can be used to describe that a thing belongs to a class; or that a thing is equivalent to another thing. When used for BHoM types, this describes C# interface implementation."
+      },
       "domain": "BH.oM.MachineLearning.StandardScaler",
       "range": "BH.oM.MachineLearning.IScaler"
     },
@@ -519,6 +569,9 @@
       "attributes": [
         "object"
       ],
+      "comment": {
+        "undefined": "Can be used to describe that a thing belongs to a class; or that a thing is equivalent to another thing. When used for BHoM types, this describes C# interface implementation."
+      },
       "domain": "BH.oM.MachineLearning.StandardScaler",
       "range": "BH.oM.Base.IImmutable"
     },
@@ -539,6 +592,9 @@
       "attributes": [
         "object"
       ],
+      "comment": {
+        "undefined": "Can be used to describe that a thing belongs to a class; or that a thing is equivalent to another thing. When used for BHoM types, this describes C# interface implementation."
+      },
       "domain": "BH.oM.MachineLearning.MinMaxScaler",
       "range": "BH.oM.MachineLearning.IScaler"
     },
@@ -549,6 +605,9 @@
       "attributes": [
         "object"
       ],
+      "comment": {
+        "undefined": "Can be used to describe that a thing belongs to a class; or that a thing is equivalent to another thing. When used for BHoM types, this describes C# interface implementation."
+      },
       "domain": "BH.oM.MachineLearning.MinMaxScaler",
       "range": "BH.oM.Base.IImmutable"
     },
@@ -569,6 +628,9 @@
       "attributes": [
         "object"
       ],
+      "comment": {
+        "undefined": "Can be used to describe that a thing belongs to a class; or that a thing is equivalent to another thing. When used for BHoM types, this describes C# interface implementation."
+      },
       "domain": "BH.oM.MachineLearning.LinearRegression",
       "range": "BH.oM.MachineLearning.IRegressionModel"
     },
@@ -579,6 +641,9 @@
       "attributes": [
         "object"
       ],
+      "comment": {
+        "undefined": "Can be used to describe that a thing belongs to a class; or that a thing is equivalent to another thing. When used for BHoM types, this describes C# interface implementation."
+      },
       "domain": "BH.oM.MachineLearning.LinearRegression",
       "range": "BH.oM.Base.IImmutable"
     },
@@ -609,6 +674,9 @@
       "attributes": [
         "object"
       ],
+      "comment": {
+        "undefined": "Can be used to describe that a thing belongs to a class; or that a thing is equivalent to another thing. When used for BHoM types, this describes C# interface implementation."
+      },
       "domain": "BH.oM.MachineLearning.Tensor",
       "range": "BH.oM.Base.IImmutable"
     },
@@ -629,6 +697,9 @@
       "attributes": [
         "object"
       ],
+      "comment": {
+        "undefined": "Can be used to describe that a thing belongs to a class; or that a thing is equivalent to another thing. When used for BHoM types, this describes C# interface implementation."
+      },
       "domain": "BH.oM.MachineLearning.Vision.Image",
       "range": "BH.oM.Base.IImmutable"
     },

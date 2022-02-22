@@ -156,43 +156,78 @@
       "id": "BH.oM.Adapters.Excel.CellAddress",
       "iri": "https://github.com/BHoM/Excel_Toolkit/blob/main/Excel_oM/Address/CellAddress.cs",
       "label": "CellAddress (BH.oM.Adapters.Excel)",
-      "attributes": []
+      "attributes": [
+        "object"
+      ],
+      "comment": {
+        "undefined": "Object representing a cell address: its column index as string and row index as integer."
+      }
     },
     {
       "id": "BH.oM.Adapters.Excel.CellRange",
       "iri": "https://github.com/BHoM/Excel_Toolkit/blob/main/Excel_oM/Address/CellRange.cs",
       "label": "CellRange (BH.oM.Adapters.Excel)",
-      "attributes": []
+      "attributes": [
+        "object"
+      ],
+      "comment": {
+        "undefined": "Object representing an orthogonal range between two cell in the spreadsheet."
+      }
     },
     {
       "id": "BH.oM.Adapters.Excel.CellContents",
       "iri": "https://github.com/BHoM/Excel_Toolkit/blob/main/Excel_oM/ClosedXML/CellContents.cs",
       "label": "CellContents (BH.oM.Adapters.Excel)",
-      "attributes": []
+      "attributes": [
+        "object"
+      ],
+      "comment": {
+        "undefined": "Object representing the information stored within a cell: the value and metadata related to it."
+      }
     },
     {
       "id": "BH.oM.Adapters.Excel.ExcelPushConfig",
       "iri": "https://github.com/BHoM/Excel_Toolkit/blob/main/Excel_oM/Config/ExcelPushConfig.cs",
       "label": "ExcelPushConfig (BH.oM.Adapters.Excel)",
-      "attributes": []
+      "attributes": [
+        "object"
+      ],
+      "comment": {
+        "undefined": "Configuration used for adapter interaction with Excel on Push action."
+      }
     },
     {
       "id": "BH.oM.Adapters.Excel.CellContentsRequest",
       "iri": "https://github.com/BHoM/Excel_Toolkit/blob/main/Excel_oM/Requests/CellContentsRequest.cs",
       "label": "CellContentsRequest (BH.oM.Adapters.Excel)",
-      "attributes": []
+      "attributes": [
+        "object"
+      ],
+      "comment": {
+        "undefined": "IRequest that pulls cells and their metadata from the excel file."
+      }
     },
     {
       "id": "BH.oM.Adapters.Excel.CellValuesRequest",
       "iri": "https://github.com/BHoM/Excel_Toolkit/blob/main/Excel_oM/Requests/CellValuesRequest.cs",
       "label": "CellValuesRequest (BH.oM.Adapters.Excel)",
-      "attributes": []
+      "attributes": [
+        "object"
+      ],
+      "comment": {
+        "undefined": "IRequest that pulls values only from the Excel file."
+      }
     },
     {
       "id": "BH.oM.Adapters.Excel.WorkbookProperties",
       "iri": "https://github.com/BHoM/Excel_Toolkit/blob/main/Excel_oM/ClosedXML/WorkbookProperties.cs",
       "label": "WorkbookProperties (BH.oM.Adapters.Excel)",
-      "attributes": []
+      "attributes": [
+        "object"
+      ],
+      "comment": {
+        "undefined": "Object representing the meta information of the workbook."
+      }
     },
     {
       "id": "BH.oM.Adapters.Excel.CellAddress.Column",
@@ -214,13 +249,19 @@
       "id": "BH.oM.Adapters.Excel.CellRange.From",
       "iri": "https://github.com/BHoM/Excel_Toolkit/blob/main/Excel_oM/Address/CellRange.cs#L36",
       "label": "From(BH.oM.Adapters.Excel.CellRange.From)",
-      "attributes": []
+      "attributes": [],
+      "comment": {
+        "undefined": "Starting (upper left) cell of the range."
+      }
     },
     {
       "id": "BH.oM.Adapters.Excel.CellRange.To",
       "iri": "https://github.com/BHoM/Excel_Toolkit/blob/main/Excel_oM/Address/CellRange.cs#L39",
       "label": "To(BH.oM.Adapters.Excel.CellRange.To)",
-      "attributes": []
+      "attributes": [],
+      "comment": {
+        "undefined": "Ending (bottom right) cell of the range."
+      }
     },
     {
       "id": "BH.oM.Adapters.Excel.CellContents.Comment",
@@ -242,7 +283,10 @@
       "id": "BH.oM.Adapters.Excel.CellContents.Address",
       "iri": "https://github.com/BHoM/Excel_Toolkit/blob/main/Excel_oM/ClosedXML/CellContents.cs#L43",
       "label": "Address(BH.oM.Adapters.Excel.CellContents.Address)",
-      "attributes": []
+      "attributes": [],
+      "comment": {
+        "undefined": "Address of the cell."
+      }
     },
     {
       "id": "BH.oM.Adapters.Excel.CellContents.DataType",
@@ -288,13 +332,19 @@
       "id": "BH.oM.Adapters.Excel.ExcelPushConfig.StartingCell",
       "iri": "https://github.com/BHoM/Excel_Toolkit/blob/main/Excel_oM/Config/ExcelPushConfig.cs#L36",
       "label": "StartingCell(BH.oM.Adapters.Excel.ExcelPushConfig.StartingCell)",
-      "attributes": []
+      "attributes": [],
+      "comment": {
+        "undefined": "The first cell that will be filled with the pushed objects, i.e. top-left cell of the populated space in the spreadsheet."
+      }
     },
     {
       "id": "BH.oM.Adapters.Excel.ExcelPushConfig.WorkbookProperties",
       "iri": "https://github.com/BHoM/Excel_Toolkit/blob/main/Excel_oM/Config/ExcelPushConfig.cs#L39",
       "label": "WorkbookProperties(BH.oM.Adapters.Excel.ExcelPushConfig.WorkbookProperties)",
-      "attributes": []
+      "attributes": [],
+      "comment": {
+        "undefined": "Properties to apply to workbook and contents. If not null, the meta information of the workbook will be updated on push."
+      }
     },
     {
       "id": "BH.oM.Adapter.ActionConfig",
@@ -316,13 +366,17 @@
       "id": "BH.oM.Adapters.Excel.CellContentsRequest.Range",
       "iri": "https://github.com/BHoM/Excel_Toolkit/blob/main/Excel_oM/Requests/CellContentsRequest.cs#L40",
       "label": "Range(BH.oM.Adapters.Excel.CellContentsRequest.Range)",
-      "attributes": []
+      "attributes": [],
+      "comment": {
+        "undefined": "Cell range to read. If left empty, entire extent of the spreadsheet starting from A1 is used."
+      }
     },
     {
       "id": "BH.oM.Data.Requests.IRequest",
       "iri": "https://github.com/BHoM/BHoM/blob/main/Data_oM/Requests/IRequest.cs",
       "label": "IRequest (BH.oM.Data.Requests)",
       "attributes": [
+        "object",
         "external"
       ]
     },
@@ -338,7 +392,10 @@
       "id": "BH.oM.Adapters.Excel.CellValuesRequest.Range",
       "iri": "https://github.com/BHoM/Excel_Toolkit/blob/main/Excel_oM/Requests/CellValuesRequest.cs#L40",
       "label": "Range(BH.oM.Adapters.Excel.CellValuesRequest.Range)",
-      "attributes": []
+      "attributes": [],
+      "comment": {
+        "undefined": "Cell range to read. If left empty, entire extent of the spreadsheet starting from A1 is used."
+      }
     },
     {
       "id": "BH.oM.Adapters.Excel.WorkbookProperties.Author",
@@ -813,6 +870,9 @@
       "attributes": [
         "object"
       ],
+      "comment": {
+        "undefined": "Can be used to describe that a thing belongs to a class; or that a thing is equivalent to another thing. When used for BHoM types, this describes C# interface implementation."
+      },
       "domain": "BH.oM.Adapters.Excel.CellContentsRequest",
       "range": "BH.oM.Data.Requests.IRequest"
     },
@@ -853,6 +913,9 @@
       "attributes": [
         "object"
       ],
+      "comment": {
+        "undefined": "Can be used to describe that a thing belongs to a class; or that a thing is equivalent to another thing. When used for BHoM types, this describes C# interface implementation."
+      },
       "domain": "BH.oM.Adapters.Excel.CellValuesRequest",
       "range": "BH.oM.Data.Requests.IRequest"
     },

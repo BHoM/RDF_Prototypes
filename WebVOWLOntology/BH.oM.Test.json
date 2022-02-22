@@ -280,73 +280,112 @@
       "id": "BH.oM.Test.ITestInformation",
       "iri": "https://github.com/BHoM/BHoM/blob/main/Test_oM/ITestInformation.cs",
       "label": "ITestInformation (BH.oM.Test)",
-      "attributes": []
+      "attributes": [
+        "object"
+      ]
     },
     {
       "id": "BH.oM.Test.TestStatus",
       "iri": "https://github.com/BHoM/BHoM/blob/main/Test_oM/TestStatus.cs",
       "label": "TestStatus (BH.oM.Test)",
-      "attributes": []
+      "attributes": [
+        "object"
+      ],
+      "comment": {
+        "undefined": "Defines the status of the Test Information. Designed to be very clear, concrete statuses, with minimal ambiguity."
+      }
     },
     {
       "id": "BH.oM.Test.UnitTests.TestData",
       "iri": "https://github.com/BHoM/BHoM/blob/main/Test_oM/UnitTests/TestData.cs",
       "label": "TestData (BH.oM.Test.UnitTests)",
-      "attributes": []
+      "attributes": [
+        "object"
+      ],
+      "comment": {
+        "undefined": "Defines input data and expected output data for one run of a particular unit test."
+      }
     },
     {
       "id": "BH.oM.Test.UnitTests.UnitTest",
       "iri": "https://github.com/BHoM/BHoM/blob/main/Test_oM/UnitTests/UnitTest.cs",
       "label": "UnitTest (BH.oM.Test.UnitTests)",
-      "attributes": []
+      "attributes": [
+        "object"
+      ],
+      "comment": {
+        "undefined": "Defines a data-driven unit test for a specific method. Class defines inputs, method to be run and expected output."
+      }
     },
     {
       "id": "BH.oM.Test.Results.InputOutputComparisonDiffingType",
       "iri": "https://github.com/BHoM/BHoM/blob/main/Test_oM/Results/Enums/InputOutputComparisonDiffingType.cs",
       "label": "InputOutputComparisonDiffingType (BH.oM.Test.Results)",
-      "attributes": []
+      "attributes": [
+        "object"
+      ]
     },
     {
       "id": "BH.oM.Test.Results.InputOutputComparisonType",
       "iri": "https://github.com/BHoM/BHoM/blob/main/Test_oM/Results/Enums/InputOutputComparisonType.cs",
       "label": "InputOutputComparisonType (BH.oM.Test.Results)",
-      "attributes": []
+      "attributes": [
+        "object"
+      ],
+      "comment": {
+        "undefined": "Type of difference or error of the result."
+      }
     },
     {
       "id": "BH.oM.Test.Results.EventMessage",
       "iri": "https://github.com/BHoM/BHoM/blob/main/Test_oM/Results/EventMessage.cs",
       "label": "EventMessage (BH.oM.Test.Results)",
-      "attributes": []
+      "attributes": [
+        "object"
+      ],
+      "comment": {
+        "undefined": "Class to store an event raised during the execution on a TestResult."
+      }
     },
     {
       "id": "BH.oM.Test.Results.InputOutputComparison",
       "iri": "https://github.com/BHoM/BHoM/blob/main/Test_oM/Results/InputOutputComparison.cs",
       "label": "InputOutputComparison (BH.oM.Test.Results)",
-      "attributes": []
+      "attributes": [
+        "object"
+      ]
     },
     {
       "id": "BH.oM.Test.Results.InputOutputComparisonDiffing",
       "iri": "https://github.com/BHoM/BHoM/blob/main/Test_oM/Results/InputOutputComparisonDiffing.cs",
       "label": "InputOutputComparisonDiffing (BH.oM.Test.Results)",
-      "attributes": []
+      "attributes": [
+        "object"
+      ]
     },
     {
       "id": "BH.oM.Test.Results.InputOutputComparisonSummary",
       "iri": "https://github.com/BHoM/BHoM/blob/main/Test_oM/Results/InputOutputComparisonSummary.cs",
       "label": "InputOutputComparisonSummary (BH.oM.Test.Results)",
-      "attributes": []
+      "attributes": [
+        "object"
+      ]
     },
     {
       "id": "BH.oM.Test.Results.InputOutputDifference",
       "iri": "https://github.com/BHoM/BHoM/blob/main/Test_oM/Results/InputOutputDifference.cs",
       "label": "InputOutputDifference (BH.oM.Test.Results)",
-      "attributes": []
+      "attributes": [
+        "object"
+      ]
     },
     {
       "id": "BH.oM.Test.Results.TestResult",
       "iri": "https://github.com/BHoM/BHoM/blob/main/Test_oM/Results/TestResult.cs",
       "label": "TestResult (BH.oM.Test.Results)",
-      "attributes": []
+      "attributes": [
+        "object"
+      ]
     },
     {
       "id": "BH.oM.Test.ITestInformation.Message",
@@ -385,6 +424,7 @@
       "iri": "https://github.com/BHoM/BHoM/blob/main/BHoM/Interface/IImmutable.cs",
       "label": "IImmutable (BH.oM.Base)",
       "attributes": [
+        "object",
         "external"
       ]
     },
@@ -414,7 +454,10 @@
       "id": "BH.oM.Test.Results.EventMessage.Status",
       "iri": "https://github.com/BHoM/BHoM/blob/main/Test_oM/Results/EventMessage.cs#L40",
       "label": "Status(BH.oM.Test.Results.EventMessage.Status)",
-      "attributes": []
+      "attributes": [],
+      "comment": {
+        "undefined": "Severity of the message."
+      }
     },
     {
       "id": "BH.oM.Test.Results.EventMessage.UTCTime",
@@ -481,24 +524,36 @@
       "iri": "https://github.com/BHoM/BHoM/blob/main/Analytical_oM/Results/IResultCollection.cs",
       "label": "IResultCollection<InputOutputDifference> (BH.oM.Analytical.Results)",
       "attributes": [
+        "object",
         "external"
-      ]
+      ],
+      "comment": {
+        "undefined": "Base interface for results classes that are a collection of individual results, for example IMeshResults."
+      }
     },
     {
       "id": "BH.oM.Analytical.Results.IResultCollection",
       "iri": "https://github.com/BHoM/BHoM/blob/main/Analytical_oM/Results/IResultCollection.cs",
       "label": "IResultCollection (BH.oM.Analytical.Results)",
       "attributes": [
+        "object",
         "external"
-      ]
+      ],
+      "comment": {
+        "undefined": "Non-generic base interface for result collections. The IResultCollection facilitates simpler filtering in the Engine. Classes are generally recommended to implement the IResultCollection<T> interface."
+      }
     },
     {
       "id": "BH.oM.Analytical.Results.IResult",
       "iri": "https://github.com/BHoM/BHoM/blob/main/Analytical_oM/Results/IResult.cs",
       "label": "IResult (BH.oM.Analytical.Results)",
       "attributes": [
+        "object",
         "external"
-      ]
+      ],
+      "comment": {
+        "undefined": "Base interface for all analytical results.\nFor expanded functionality, a result class should generally either implement the IResultItem or IResultCollection interface, or one of their sub-interfaces, rather than this interface directly."
+      }
     },
     {
       "id": "BH.oM.Test.Results.InputOutputComparisonDiffing.ObjectId",
@@ -575,24 +630,36 @@
       "iri": "https://github.com/BHoM/BHoM/blob/main/Analytical_oM/Results/IObjectIdResult.cs",
       "label": "IObjectIdResult (BH.oM.Analytical.Results)",
       "attributes": [
+        "object",
         "external"
-      ]
+      ],
+      "comment": {
+        "undefined": "Interface for Results belonging to a particular object. The owning object is identified and correlated to the Results by its ID."
+      }
     },
     {
       "id": "BH.oM.Analytical.Results.ICasedResult",
       "iri": "https://github.com/BHoM/BHoM/blob/main/Analytical_oM/Results/ICasedResult.cs",
       "label": "ICasedResult (BH.oM.Analytical.Results)",
       "attributes": [
+        "object",
         "external"
-      ]
+      ],
+      "comment": {
+        "undefined": "Interface for results that correspond to a particular case."
+      }
     },
     {
       "id": "BH.oM.Analytical.Results.ITimeStepResult",
       "iri": "https://github.com/BHoM/BHoM/blob/main/Analytical_oM/Results/ITimeStepResult.cs",
       "label": "ITimeStepResult (BH.oM.Analytical.Results)",
       "attributes": [
+        "object",
         "external"
-      ]
+      ],
+      "comment": {
+        "undefined": "Interface for results that correspond to a particular time step, for example a discrete result from a time history anlysis."
+      }
     },
     {
       "id": "BH.oM.Test.Results.InputOutputComparisonSummary.ObjectId",
@@ -748,7 +815,10 @@
       "id": "BH.oM.Test.Results.TestResult.Status",
       "iri": "https://github.com/BHoM/BHoM/blob/main/Test_oM/Results/TestResult.cs#L45",
       "label": "Status(BH.oM.Test.Results.TestResult.Status)",
-      "attributes": []
+      "attributes": [],
+      "comment": {
+        "undefined": "States whether the test was a success or not. Defaults to Error to ensure any defaults are investigated appropriately."
+      }
     },
     {
       "id": "BH.oM.Test.Results.TestResult.Information",
@@ -1161,6 +1231,9 @@
       "attributes": [
         "object"
       ],
+      "comment": {
+        "undefined": "Can be used to describe that a thing belongs to a class; or that a thing is equivalent to another thing. When used for BHoM types, this describes C# interface implementation."
+      },
       "domain": "BH.oM.Test.UnitTests.TestData",
       "range": "BH.oM.Base.IImmutable"
     },
@@ -1251,6 +1324,9 @@
       "attributes": [
         "object"
       ],
+      "comment": {
+        "undefined": "Can be used to describe that a thing belongs to a class; or that a thing is equivalent to another thing. When used for BHoM types, this describes C# interface implementation."
+      },
       "domain": "BH.oM.Test.Results.EventMessage",
       "range": "BH.oM.Test.ITestInformation"
     },
@@ -1341,6 +1417,9 @@
       "attributes": [
         "object"
       ],
+      "comment": {
+        "undefined": "Can be used to describe that a thing belongs to a class; or that a thing is equivalent to another thing. When used for BHoM types, this describes C# interface implementation."
+      },
       "domain": "BH.oM.Test.Results.InputOutputComparison",
       "range": "BH.oM.Analytical.Results.IResultCollection`1[[BH.oM.Test.Results.InputOutputDifference, Test_oM, Version=5.0.0.0, Culture=neutral, PublicKeyToken=null]]"
     },
@@ -1351,6 +1430,9 @@
       "attributes": [
         "object"
       ],
+      "comment": {
+        "undefined": "Can be used to describe that a thing belongs to a class; or that a thing is equivalent to another thing. When used for BHoM types, this describes C# interface implementation."
+      },
       "domain": "BH.oM.Test.Results.InputOutputComparison",
       "range": "BH.oM.Analytical.Results.IResultCollection"
     },
@@ -1361,6 +1443,9 @@
       "attributes": [
         "object"
       ],
+      "comment": {
+        "undefined": "Can be used to describe that a thing belongs to a class; or that a thing is equivalent to another thing. When used for BHoM types, this describes C# interface implementation."
+      },
       "domain": "BH.oM.Test.Results.InputOutputComparison",
       "range": "BH.oM.Base.IImmutable"
     },
@@ -1371,6 +1456,9 @@
       "attributes": [
         "object"
       ],
+      "comment": {
+        "undefined": "Can be used to describe that a thing belongs to a class; or that a thing is equivalent to another thing. When used for BHoM types, this describes C# interface implementation."
+      },
       "domain": "BH.oM.Test.Results.InputOutputComparison",
       "range": "BH.oM.Analytical.Results.IResult"
     },
@@ -1481,6 +1569,9 @@
       "attributes": [
         "object"
       ],
+      "comment": {
+        "undefined": "Can be used to describe that a thing belongs to a class; or that a thing is equivalent to another thing. When used for BHoM types, this describes C# interface implementation."
+      },
       "domain": "BH.oM.Test.Results.InputOutputComparisonDiffing",
       "range": "BH.oM.Analytical.Results.IObjectIdResult"
     },
@@ -1491,6 +1582,9 @@
       "attributes": [
         "object"
       ],
+      "comment": {
+        "undefined": "Can be used to describe that a thing belongs to a class; or that a thing is equivalent to another thing. When used for BHoM types, this describes C# interface implementation."
+      },
       "domain": "BH.oM.Test.Results.InputOutputComparisonDiffing",
       "range": "BH.oM.Analytical.Results.IResult"
     },
@@ -1501,6 +1595,9 @@
       "attributes": [
         "object"
       ],
+      "comment": {
+        "undefined": "Can be used to describe that a thing belongs to a class; or that a thing is equivalent to another thing. When used for BHoM types, this describes C# interface implementation."
+      },
       "domain": "BH.oM.Test.Results.InputOutputComparisonDiffing",
       "range": "BH.oM.Base.IImmutable"
     },
@@ -1511,6 +1608,9 @@
       "attributes": [
         "object"
       ],
+      "comment": {
+        "undefined": "Can be used to describe that a thing belongs to a class; or that a thing is equivalent to another thing. When used for BHoM types, this describes C# interface implementation."
+      },
       "domain": "BH.oM.Test.Results.InputOutputComparisonDiffing",
       "range": "BH.oM.Analytical.Results.ICasedResult"
     },
@@ -1521,6 +1621,9 @@
       "attributes": [
         "object"
       ],
+      "comment": {
+        "undefined": "Can be used to describe that a thing belongs to a class; or that a thing is equivalent to another thing. When used for BHoM types, this describes C# interface implementation."
+      },
       "domain": "BH.oM.Test.Results.InputOutputComparisonDiffing",
       "range": "BH.oM.Analytical.Results.ITimeStepResult"
     },
@@ -1651,6 +1754,9 @@
       "attributes": [
         "object"
       ],
+      "comment": {
+        "undefined": "Can be used to describe that a thing belongs to a class; or that a thing is equivalent to another thing. When used for BHoM types, this describes C# interface implementation."
+      },
       "domain": "BH.oM.Test.Results.InputOutputComparisonSummary",
       "range": "BH.oM.Analytical.Results.IObjectIdResult"
     },
@@ -1661,6 +1767,9 @@
       "attributes": [
         "object"
       ],
+      "comment": {
+        "undefined": "Can be used to describe that a thing belongs to a class; or that a thing is equivalent to another thing. When used for BHoM types, this describes C# interface implementation."
+      },
       "domain": "BH.oM.Test.Results.InputOutputComparisonSummary",
       "range": "BH.oM.Analytical.Results.IResult"
     },
@@ -1671,6 +1780,9 @@
       "attributes": [
         "object"
       ],
+      "comment": {
+        "undefined": "Can be used to describe that a thing belongs to a class; or that a thing is equivalent to another thing. When used for BHoM types, this describes C# interface implementation."
+      },
       "domain": "BH.oM.Test.Results.InputOutputComparisonSummary",
       "range": "BH.oM.Base.IImmutable"
     },
@@ -1681,6 +1793,9 @@
       "attributes": [
         "object"
       ],
+      "comment": {
+        "undefined": "Can be used to describe that a thing belongs to a class; or that a thing is equivalent to another thing. When used for BHoM types, this describes C# interface implementation."
+      },
       "domain": "BH.oM.Test.Results.InputOutputComparisonSummary",
       "range": "BH.oM.Analytical.Results.ICasedResult"
     },
@@ -1691,6 +1806,9 @@
       "attributes": [
         "object"
       ],
+      "comment": {
+        "undefined": "Can be used to describe that a thing belongs to a class; or that a thing is equivalent to another thing. When used for BHoM types, this describes C# interface implementation."
+      },
       "domain": "BH.oM.Test.Results.InputOutputComparisonSummary",
       "range": "BH.oM.Analytical.Results.ITimeStepResult"
     },
@@ -1771,6 +1889,9 @@
       "attributes": [
         "object"
       ],
+      "comment": {
+        "undefined": "Can be used to describe that a thing belongs to a class; or that a thing is equivalent to another thing. When used for BHoM types, this describes C# interface implementation."
+      },
       "domain": "BH.oM.Test.Results.InputOutputDifference",
       "range": "BH.oM.Analytical.Results.IObjectIdResult"
     },
@@ -1781,6 +1902,9 @@
       "attributes": [
         "object"
       ],
+      "comment": {
+        "undefined": "Can be used to describe that a thing belongs to a class; or that a thing is equivalent to another thing. When used for BHoM types, this describes C# interface implementation."
+      },
       "domain": "BH.oM.Test.Results.InputOutputDifference",
       "range": "BH.oM.Analytical.Results.IResult"
     },
@@ -1791,6 +1915,9 @@
       "attributes": [
         "object"
       ],
+      "comment": {
+        "undefined": "Can be used to describe that a thing belongs to a class; or that a thing is equivalent to another thing. When used for BHoM types, this describes C# interface implementation."
+      },
       "domain": "BH.oM.Test.Results.InputOutputDifference",
       "range": "BH.oM.Base.IImmutable"
     },
@@ -1801,6 +1928,9 @@
       "attributes": [
         "object"
       ],
+      "comment": {
+        "undefined": "Can be used to describe that a thing belongs to a class; or that a thing is equivalent to another thing. When used for BHoM types, this describes C# interface implementation."
+      },
       "domain": "BH.oM.Test.Results.InputOutputDifference",
       "range": "BH.oM.Analytical.Results.ICasedResult"
     },
@@ -1811,6 +1941,9 @@
       "attributes": [
         "object"
       ],
+      "comment": {
+        "undefined": "Can be used to describe that a thing belongs to a class; or that a thing is equivalent to another thing. When used for BHoM types, this describes C# interface implementation."
+      },
       "domain": "BH.oM.Test.Results.InputOutputDifference",
       "range": "BH.oM.Analytical.Results.ITimeStepResult"
     },
@@ -1901,6 +2034,9 @@
       "attributes": [
         "object"
       ],
+      "comment": {
+        "undefined": "Can be used to describe that a thing belongs to a class; or that a thing is equivalent to another thing. When used for BHoM types, this describes C# interface implementation."
+      },
       "domain": "BH.oM.Test.Results.TestResult",
       "range": "BH.oM.Test.ITestInformation"
     }

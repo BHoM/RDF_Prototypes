@@ -48,7 +48,12 @@
       "id": "BH.oM.AECDeltas.DeltaPayload",
       "iri": "https://github.com/BHoM/BHoM/blob/main/Diffing_oM/AECDeltas/DeltaPayload.cs",
       "label": "DeltaPayload (BH.oM.AECDeltas)",
-      "attributes": []
+      "attributes": [
+        "object"
+      ],
+      "comment": {
+        "undefined": "Class defined as per AECDeltas specification https://github.com/aecdeltas/aec-deltas-spec/wiki/Delta-Container-Specification#payload"
+      }
     },
     {
       "id": "BH.oM.AECDeltas.DeltaPayload.StreamId",
@@ -119,6 +124,7 @@
       "iri": "https://github.com/BHoM/BHoM/blob/main/BHoM/Interface/IImmutable.cs",
       "label": "IImmutable (BH.oM.Base)",
       "attributes": [
+        "object",
         "external"
       ]
     }
@@ -249,6 +255,9 @@
       "attributes": [
         "object"
       ],
+      "comment": {
+        "undefined": "Can be used to describe that a thing belongs to a class; or that a thing is equivalent to another thing. When used for BHoM types, this describes C# interface implementation."
+      },
       "domain": "BH.oM.AECDeltas.DeltaPayload",
       "range": "BH.oM.Base.IImmutable"
     }

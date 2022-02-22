@@ -212,49 +212,86 @@
       "id": "BH.oM.Lighting.Results.Mesh.MeshElementResult",
       "iri": "https://github.com/BHoM/BHoM/blob/main/Lighting_oM/Results/Mesh/MeshElementResult.cs",
       "label": "MeshElementResult (BH.oM.Lighting.Results.Mesh)",
-      "attributes": []
+      "attributes": [
+        "object"
+      ],
+      "comment": {
+        "undefined": "Base class for all discrete mesh element results, that is a result for an individual node. Stores all identifier information and how to sort the results in a collection"
+      }
     },
     {
       "id": "BH.oM.Lighting.Results.Mesh.MeshResult",
       "iri": "https://github.com/BHoM/BHoM/blob/main/Lighting_oM/Results/Mesh/MeshResult.cs",
       "label": "MeshResult (BH.oM.Lighting.Results.Mesh)",
-      "attributes": []
+      "attributes": [
+        "object"
+      ],
+      "comment": {
+        "undefined": "Full collection of discrete results for an AnalysisGrid for a specific Analysis."
+      }
     },
     {
       "id": "BH.oM.Lighting.Results.Illuminance.Lux",
       "iri": "https://github.com/BHoM/BHoM/blob/main/Lighting_oM/Results/Illuminance/Lux.cs",
       "label": "Lux (BH.oM.Lighting.Results.Illuminance)",
-      "attributes": []
+      "attributes": [
+        "object"
+      ],
+      "comment": {
+        "undefined": "Lux contains results for Lux analysis. Inherits from MeshElementResult which provides properties related to which node this Lux is recorded for"
+      }
     },
     {
       "id": "BH.oM.Lighting.Elements.Luminaire",
       "iri": "https://github.com/BHoM/BHoM/blob/main/Lighting_oM/Elements/Luminaire.cs",
       "label": "Luminaire (BH.oM.Lighting.Elements)",
-      "attributes": []
+      "attributes": [
+        "object"
+      ]
     },
     {
       "id": "BH.oM.Lighting.Elements.LuminaireType",
       "iri": "https://github.com/BHoM/BHoM/blob/main/Lighting_oM/Elements/LuminaireType.cs",
       "label": "LuminaireType (BH.oM.Lighting.Elements)",
-      "attributes": []
+      "attributes": [
+        "object"
+      ],
+      "comment": {
+        "undefined": "A LuminaireType containing manufacturer, dimensional, and other property data applied to a Luminaire."
+      }
     },
     {
       "id": "BH.oM.Lighting.Enums.MountingType",
       "iri": "https://github.com/BHoM/BHoM/blob/main/Lighting_oM/Elements/Enums/MountingType.cs",
       "label": "MountingType (BH.oM.Lighting.Enums)",
-      "attributes": []
+      "attributes": [
+        "object"
+      ],
+      "comment": {
+        "undefined": "The mounting method used for a specific luminaire type (eg CeilingMounted, Recessed, Pendant, etc) "
+      }
     },
     {
       "id": "BH.oM.Lighting.Analysis.AnalysisGrid",
       "iri": "https://github.com/BHoM/BHoM/blob/main/Lighting_oM/Analysis/AnalysisGrid.cs",
       "label": "AnalysisGrid (BH.oM.Lighting.Analysis)",
-      "attributes": []
+      "attributes": [
+        "object"
+      ],
+      "comment": {
+        "undefined": "An AnalysisGrid is used to define an area in 3D space that should be analysed for a given set of results, e.g. daylighting levels, wind levels, heat indexes, etc. - an AnalysisGrid can be used to represent a measurable bit of the environment, including a void in a space, or it can be used to represent a mesh on a panel for analysis"
+      }
     },
     {
       "id": "BH.oM.Lighting.Analysis.Node",
       "iri": "https://github.com/BHoM/BHoM/blob/main/Lighting_oM/Analysis/Node.cs",
       "label": "Node (BH.oM.Lighting.Analysis)",
-      "attributes": []
+      "attributes": [
+        "object"
+      ],
+      "comment": {
+        "undefined": "0D finite element for lighting analysis. Node class contains positional information and is used to build AnalysisGrids and provide links between model geometry and analytical results"
+      }
     },
     {
       "id": "BH.oM.Lighting.Results.Mesh.MeshElementResult.ObjectId",
@@ -293,22 +330,31 @@
       "iri": "https://github.com/BHoM/BHoM/blob/main/Analytical_oM/Results/IObjectIdResult.cs",
       "label": "IObjectIdResult (BH.oM.Analytical.Results)",
       "attributes": [
+        "object",
         "external"
-      ]
+      ],
+      "comment": {
+        "undefined": "Interface for Results belonging to a particular object. The owning object is identified and correlated to the Results by its ID."
+      }
     },
     {
       "id": "BH.oM.Analytical.Results.IResult",
       "iri": "https://github.com/BHoM/BHoM/blob/main/Analytical_oM/Results/IResult.cs",
       "label": "IResult (BH.oM.Analytical.Results)",
       "attributes": [
+        "object",
         "external"
-      ]
+      ],
+      "comment": {
+        "undefined": "Base interface for all analytical results.\nFor expanded functionality, a result class should generally either implement the IResultItem or IResultCollection interface, or one of their sub-interfaces, rather than this interface directly."
+      }
     },
     {
       "id": "BH.oM.Base.IImmutable",
       "iri": "https://github.com/BHoM/BHoM/blob/main/BHoM/Interface/IImmutable.cs",
       "label": "IImmutable (BH.oM.Base)",
       "attributes": [
+        "object",
         "external"
       ]
     },
@@ -317,16 +363,24 @@
       "iri": "https://github.com/BHoM/BHoM/blob/main/Analytical_oM/Results/ICasedResult.cs",
       "label": "ICasedResult (BH.oM.Analytical.Results)",
       "attributes": [
+        "object",
         "external"
-      ]
+      ],
+      "comment": {
+        "undefined": "Interface for results that correspond to a particular case."
+      }
     },
     {
       "id": "BH.oM.Analytical.Results.ITimeStepResult",
       "iri": "https://github.com/BHoM/BHoM/blob/main/Analytical_oM/Results/ITimeStepResult.cs",
       "label": "ITimeStepResult (BH.oM.Analytical.Results)",
       "attributes": [
+        "object",
         "external"
-      ]
+      ],
+      "comment": {
+        "undefined": "Interface for results that correspond to a particular time step, for example a discrete result from a time history anlysis."
+      }
     },
     {
       "id": "BH.oM.Lighting.Results.Mesh.MeshResult.ObjectId",
@@ -363,16 +417,24 @@
       "iri": "https://github.com/BHoM/BHoM/blob/main/Analytical_oM/Results/IResultCollection.cs",
       "label": "IResultCollection<MeshElementResult> (BH.oM.Analytical.Results)",
       "attributes": [
+        "object",
         "external"
-      ]
+      ],
+      "comment": {
+        "undefined": "Base interface for results classes that are a collection of individual results, for example IMeshResults."
+      }
     },
     {
       "id": "BH.oM.Analytical.Results.IResultCollection",
       "iri": "https://github.com/BHoM/BHoM/blob/main/Analytical_oM/Results/IResultCollection.cs",
       "label": "IResultCollection (BH.oM.Analytical.Results)",
       "attributes": [
+        "object",
         "external"
-      ]
+      ],
+      "comment": {
+        "undefined": "Non-generic base interface for result collections. The IResultCollection facilitates simpler filtering in the Engine. Classes are generally recommended to implement the IResultCollection<T> interface."
+      }
     },
     {
       "id": "BH.oM.Lighting.Results.Illuminance.Lux.LuxLevel",
@@ -386,15 +448,22 @@
       "id": "BH.oM.Lighting.Elements.Luminaire.Position",
       "iri": "https://github.com/BHoM/BHoM/blob/main/Lighting_oM/Elements/Luminaire.cs#L42",
       "label": "Position(BH.oM.Lighting.Elements.Luminaire.Position)",
-      "attributes": []
+      "attributes": [],
+      "comment": {
+        "undefined": "Position of the Luminaire in global Cartesian 3D space."
+      }
     },
     {
       "id": "BH.oM.Geometry.Point",
       "iri": "https://github.com/BHoM/BHoM/blob/main/Geometry_oM/Vector/Point.cs",
       "label": "Point (BH.oM.Geometry)",
       "attributes": [
+        "object",
         "external"
-      ]
+      ],
+      "comment": {
+        "undefined": "Defines a dimensionless location in three-dimensional space."
+      }
     },
     {
       "id": "BH.oM.Lighting.Elements.Luminaire.Type",
@@ -408,37 +477,55 @@
       "id": "BH.oM.Lighting.Elements.Luminaire.Direction",
       "iri": "https://github.com/BHoM/BHoM/blob/main/Lighting_oM/Elements/Luminaire.cs#L48",
       "label": "Direction(BH.oM.Lighting.Elements.Luminaire.Direction)",
-      "attributes": []
+      "attributes": [],
+      "comment": {
+        "undefined": "The direction that the Luminaire is oriented towards."
+      }
     },
     {
       "id": "BH.oM.Geometry.Vector",
       "iri": "https://github.com/BHoM/BHoM/blob/main/Geometry_oM/Vector/Vector.cs",
       "label": "Vector (BH.oM.Geometry)",
       "attributes": [
+        "object",
         "external"
-      ]
+      ],
+      "comment": {
+        "undefined": "Defines a direction and magnitude in three-dimensional Euclidean space."
+      }
     },
     {
       "id": "BH.oM.Lighting.Elements.Luminaire.LuminaireType",
       "iri": "https://github.com/BHoM/BHoM/blob/main/Lighting_oM/Elements/Luminaire.cs#L51",
       "label": "LuminaireType(BH.oM.Lighting.Elements.Luminaire.LuminaireType)",
-      "attributes": []
+      "attributes": [],
+      "comment": {
+        "undefined": "The Luminaire Type applied to the Luminaire."
+      }
     },
     {
       "id": "BH.oM.Dimensional.IElement0D",
       "iri": "https://github.com/BHoM/BHoM/blob/main/Dimensional_oM/IElement0D.cs",
       "label": "IElement0D (BH.oM.Dimensional)",
       "attributes": [
+        "object",
         "external"
-      ]
+      ],
+      "comment": {
+        "undefined": "Enables geometrical operations to be performed on a Point based spatial element, whilst preserving all other object properties as unchanged. /nObjects implementing this interface will be required to implement some base methods for getting and setting data in a way that maintains the object's other properties.Documentation detailing required extension methods can be found here: https://github.com/BHoM/documentation/wiki/IElement-required-extension-methods"
+      }
     },
     {
       "id": "BH.oM.Dimensional.IElement",
       "iri": "https://github.com/BHoM/BHoM/blob/main/Dimensional_oM/IElement.cs",
       "label": "IElement (BH.oM.Dimensional)",
       "attributes": [
+        "object",
         "external"
-      ]
+      ],
+      "comment": {
+        "undefined": "The common base interface for all the Spatial Dimensional Objects.This interface should not be implemented directly, only through its sub-interfaces.Methods operating on IElement assume a specific implementation of one or other of the sub-interfaces (i.e. IElement0D, IElement1D, IElement2D)"
+      }
     },
     {
       "id": "BH.oM.Lighting.Elements.LuminaireType.Manufacturer",
@@ -452,15 +539,22 @@
       "id": "BH.oM.Lighting.Elements.LuminaireType.LuminaireGeometry",
       "iri": "https://github.com/BHoM/BHoM/blob/main/Lighting_oM/Elements/LuminaireType.cs#L41",
       "label": "LuminaireGeometry(BH.oM.Lighting.Elements.LuminaireType.LuminaireGeometry)",
-      "attributes": []
+      "attributes": [],
+      "comment": {
+        "undefined": "Boundary Representation of the LuminaireType's Geometry"
+      }
     },
     {
       "id": "BH.oM.Geometry.BoundaryRepresentation",
       "iri": "https://github.com/BHoM/BHoM/blob/main/Geometry_oM/Solid/BoundaryRepresentation.cs",
       "label": "BoundaryRepresentation (BH.oM.Geometry)",
       "attributes": [
+        "object",
         "external"
-      ]
+      ],
+      "comment": {
+        "undefined": "Solid representation defined by a collection of connected surfaces forming a closed volume"
+      }
     },
     {
       "id": "BH.oM.Lighting.Elements.LuminaireType.Load",
@@ -514,15 +608,22 @@
       "id": "BH.oM.Lighting.Analysis.AnalysisGrid.BoundaryCurve",
       "iri": "https://github.com/BHoM/BHoM/blob/main/Lighting_oM/Analysis/AnalysisGrid.cs#L41",
       "label": "BoundaryCurve(BH.oM.Lighting.Analysis.AnalysisGrid.BoundaryCurve)",
-      "attributes": []
+      "attributes": [],
+      "comment": {
+        "undefined": "The BoundaryCurve is the outer-most edges of the AnalysisGrid. Nodes should not fall outside of this curve"
+      }
     },
     {
       "id": "BH.oM.Geometry.Polyline",
       "iri": "https://github.com/BHoM/BHoM/blob/main/Geometry_oM/Curve/Polyline.cs",
       "label": "Polyline (BH.oM.Geometry)",
       "attributes": [
+        "object",
         "external"
-      ]
+      ],
+      "comment": {
+        "undefined": "A curve consisting of a continuous chain of straight line segments. The Polyline is considered closed if the first and last ControlPoints are coincident"
+      }
     },
     {
       "id": "BH.oM.Lighting.Analysis.AnalysisGrid.InnerCurves",
@@ -556,7 +657,10 @@
       "id": "BH.oM.Lighting.Analysis.Node.Position",
       "iri": "https://github.com/BHoM/BHoM/blob/main/Lighting_oM/Analysis/Node.cs#L39",
       "label": "Position(BH.oM.Lighting.Analysis.Node.Position)",
-      "attributes": []
+      "attributes": [],
+      "comment": {
+        "undefined": "Position of the node in global Cartesian 3D space."
+      }
     },
     {
       "id": "BH.oM.Lighting.Analysis.Node.ID",
@@ -571,6 +675,7 @@
       "iri": "https://github.com/BHoM/BHoM/blob/main/Analytical_oM/Elements/INode.cs",
       "label": "INode (BH.oM.Analytical.Elements)",
       "attributes": [
+        "object",
         "external"
       ]
     },
@@ -579,6 +684,7 @@
       "iri": "https://github.com/BHoM/BHoM/blob/main/Analytical_oM/IAnalytical.cs",
       "label": "IAnalytical (BH.oM.Analytical)",
       "attributes": [
+        "object",
         "external"
       ]
     }
@@ -881,6 +987,9 @@
       "attributes": [
         "object"
       ],
+      "comment": {
+        "undefined": "Can be used to describe that a thing belongs to a class; or that a thing is equivalent to another thing. When used for BHoM types, this describes C# interface implementation."
+      },
       "domain": "BH.oM.Lighting.Results.Mesh.MeshElementResult",
       "range": "BH.oM.Analytical.Results.IObjectIdResult"
     },
@@ -891,6 +1000,9 @@
       "attributes": [
         "object"
       ],
+      "comment": {
+        "undefined": "Can be used to describe that a thing belongs to a class; or that a thing is equivalent to another thing. When used for BHoM types, this describes C# interface implementation."
+      },
       "domain": "BH.oM.Lighting.Results.Mesh.MeshElementResult",
       "range": "BH.oM.Analytical.Results.IResult"
     },
@@ -901,6 +1013,9 @@
       "attributes": [
         "object"
       ],
+      "comment": {
+        "undefined": "Can be used to describe that a thing belongs to a class; or that a thing is equivalent to another thing. When used for BHoM types, this describes C# interface implementation."
+      },
       "domain": "BH.oM.Lighting.Results.Mesh.MeshElementResult",
       "range": "BH.oM.Base.IImmutable"
     },
@@ -911,6 +1026,9 @@
       "attributes": [
         "object"
       ],
+      "comment": {
+        "undefined": "Can be used to describe that a thing belongs to a class; or that a thing is equivalent to another thing. When used for BHoM types, this describes C# interface implementation."
+      },
       "domain": "BH.oM.Lighting.Results.Mesh.MeshElementResult",
       "range": "BH.oM.Analytical.Results.ICasedResult"
     },
@@ -921,6 +1039,9 @@
       "attributes": [
         "object"
       ],
+      "comment": {
+        "undefined": "Can be used to describe that a thing belongs to a class; or that a thing is equivalent to another thing. When used for BHoM types, this describes C# interface implementation."
+      },
       "domain": "BH.oM.Lighting.Results.Mesh.MeshElementResult",
       "range": "BH.oM.Analytical.Results.ITimeStepResult"
     },
@@ -981,6 +1102,9 @@
       "attributes": [
         "object"
       ],
+      "comment": {
+        "undefined": "Can be used to describe that a thing belongs to a class; or that a thing is equivalent to another thing. When used for BHoM types, this describes C# interface implementation."
+      },
       "domain": "BH.oM.Lighting.Results.Mesh.MeshResult",
       "range": "BH.oM.Analytical.Results.IObjectIdResult"
     },
@@ -991,6 +1115,9 @@
       "attributes": [
         "object"
       ],
+      "comment": {
+        "undefined": "Can be used to describe that a thing belongs to a class; or that a thing is equivalent to another thing. When used for BHoM types, this describes C# interface implementation."
+      },
       "domain": "BH.oM.Lighting.Results.Mesh.MeshResult",
       "range": "BH.oM.Analytical.Results.IResult"
     },
@@ -1001,6 +1128,9 @@
       "attributes": [
         "object"
       ],
+      "comment": {
+        "undefined": "Can be used to describe that a thing belongs to a class; or that a thing is equivalent to another thing. When used for BHoM types, this describes C# interface implementation."
+      },
       "domain": "BH.oM.Lighting.Results.Mesh.MeshResult",
       "range": "BH.oM.Base.IImmutable"
     },
@@ -1011,6 +1141,9 @@
       "attributes": [
         "object"
       ],
+      "comment": {
+        "undefined": "Can be used to describe that a thing belongs to a class; or that a thing is equivalent to another thing. When used for BHoM types, this describes C# interface implementation."
+      },
       "domain": "BH.oM.Lighting.Results.Mesh.MeshResult",
       "range": "BH.oM.Analytical.Results.ICasedResult"
     },
@@ -1021,6 +1154,9 @@
       "attributes": [
         "object"
       ],
+      "comment": {
+        "undefined": "Can be used to describe that a thing belongs to a class; or that a thing is equivalent to another thing. When used for BHoM types, this describes C# interface implementation."
+      },
       "domain": "BH.oM.Lighting.Results.Mesh.MeshResult",
       "range": "BH.oM.Analytical.Results.ITimeStepResult"
     },
@@ -1031,6 +1167,9 @@
       "attributes": [
         "object"
       ],
+      "comment": {
+        "undefined": "Can be used to describe that a thing belongs to a class; or that a thing is equivalent to another thing. When used for BHoM types, this describes C# interface implementation."
+      },
       "domain": "BH.oM.Lighting.Results.Mesh.MeshResult",
       "range": "BH.oM.Analytical.Results.IResultCollection`1[[BH.oM.Lighting.Results.Mesh.MeshElementResult, Lighting_oM, Version=5.0.0.0, Culture=neutral, PublicKeyToken=null]]"
     },
@@ -1041,6 +1180,9 @@
       "attributes": [
         "object"
       ],
+      "comment": {
+        "undefined": "Can be used to describe that a thing belongs to a class; or that a thing is equivalent to another thing. When used for BHoM types, this describes C# interface implementation."
+      },
       "domain": "BH.oM.Lighting.Results.Mesh.MeshResult",
       "range": "BH.oM.Analytical.Results.IResultCollection"
     },
@@ -1061,6 +1203,9 @@
       "attributes": [
         "object"
       ],
+      "comment": {
+        "undefined": "Can be used to describe that a thing belongs to a class; or that a thing is equivalent to another thing. When used for BHoM types, this describes C# interface implementation."
+      },
       "domain": "BH.oM.Lighting.Results.Illuminance.Lux",
       "range": "BH.oM.Analytical.Results.IObjectIdResult"
     },
@@ -1071,6 +1216,9 @@
       "attributes": [
         "object"
       ],
+      "comment": {
+        "undefined": "Can be used to describe that a thing belongs to a class; or that a thing is equivalent to another thing. When used for BHoM types, this describes C# interface implementation."
+      },
       "domain": "BH.oM.Lighting.Results.Illuminance.Lux",
       "range": "BH.oM.Analytical.Results.IResult"
     },
@@ -1081,6 +1229,9 @@
       "attributes": [
         "object"
       ],
+      "comment": {
+        "undefined": "Can be used to describe that a thing belongs to a class; or that a thing is equivalent to another thing. When used for BHoM types, this describes C# interface implementation."
+      },
       "domain": "BH.oM.Lighting.Results.Illuminance.Lux",
       "range": "BH.oM.Base.IImmutable"
     },
@@ -1091,6 +1242,9 @@
       "attributes": [
         "object"
       ],
+      "comment": {
+        "undefined": "Can be used to describe that a thing belongs to a class; or that a thing is equivalent to another thing. When used for BHoM types, this describes C# interface implementation."
+      },
       "domain": "BH.oM.Lighting.Results.Illuminance.Lux",
       "range": "BH.oM.Analytical.Results.ICasedResult"
     },
@@ -1101,6 +1255,9 @@
       "attributes": [
         "object"
       ],
+      "comment": {
+        "undefined": "Can be used to describe that a thing belongs to a class; or that a thing is equivalent to another thing. When used for BHoM types, this describes C# interface implementation."
+      },
       "domain": "BH.oM.Lighting.Results.Illuminance.Lux",
       "range": "BH.oM.Analytical.Results.ITimeStepResult"
     },
@@ -1191,6 +1348,9 @@
       "attributes": [
         "object"
       ],
+      "comment": {
+        "undefined": "Can be used to describe that a thing belongs to a class; or that a thing is equivalent to another thing. When used for BHoM types, this describes C# interface implementation."
+      },
       "domain": "BH.oM.Lighting.Elements.Luminaire",
       "range": "BH.oM.Dimensional.IElement0D"
     },
@@ -1201,6 +1361,9 @@
       "attributes": [
         "object"
       ],
+      "comment": {
+        "undefined": "Can be used to describe that a thing belongs to a class; or that a thing is equivalent to another thing. When used for BHoM types, this describes C# interface implementation."
+      },
       "domain": "BH.oM.Lighting.Elements.Luminaire",
       "range": "BH.oM.Dimensional.IElement"
     },
@@ -1381,6 +1544,9 @@
       "attributes": [
         "object"
       ],
+      "comment": {
+        "undefined": "Can be used to describe that a thing belongs to a class; or that a thing is equivalent to another thing. When used for BHoM types, this describes C# interface implementation."
+      },
       "domain": "BH.oM.Lighting.Analysis.AnalysisGrid",
       "range": "BH.oM.Base.IImmutable"
     },
@@ -1421,6 +1587,9 @@
       "attributes": [
         "object"
       ],
+      "comment": {
+        "undefined": "Can be used to describe that a thing belongs to a class; or that a thing is equivalent to another thing. When used for BHoM types, this describes C# interface implementation."
+      },
       "domain": "BH.oM.Lighting.Analysis.Node",
       "range": "BH.oM.Dimensional.IElement0D"
     },
@@ -1431,6 +1600,9 @@
       "attributes": [
         "object"
       ],
+      "comment": {
+        "undefined": "Can be used to describe that a thing belongs to a class; or that a thing is equivalent to another thing. When used for BHoM types, this describes C# interface implementation."
+      },
       "domain": "BH.oM.Lighting.Analysis.Node",
       "range": "BH.oM.Dimensional.IElement"
     },
@@ -1441,6 +1613,9 @@
       "attributes": [
         "object"
       ],
+      "comment": {
+        "undefined": "Can be used to describe that a thing belongs to a class; or that a thing is equivalent to another thing. When used for BHoM types, this describes C# interface implementation."
+      },
       "domain": "BH.oM.Lighting.Analysis.Node",
       "range": "BH.oM.Analytical.Elements.INode"
     },
@@ -1451,6 +1626,9 @@
       "attributes": [
         "object"
       ],
+      "comment": {
+        "undefined": "Can be used to describe that a thing belongs to a class; or that a thing is equivalent to another thing. When used for BHoM types, this describes C# interface implementation."
+      },
       "domain": "BH.oM.Lighting.Analysis.Node",
       "range": "BH.oM.Analytical.IAnalytical"
     }

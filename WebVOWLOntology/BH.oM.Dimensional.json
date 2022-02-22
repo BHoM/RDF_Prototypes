@@ -20,19 +20,34 @@
       "id": "BH.oM.Dimensional.IElement",
       "iri": "https://github.com/BHoM/BHoM/blob/main/Dimensional_oM/IElement.cs",
       "label": "IElement (BH.oM.Dimensional)",
-      "attributes": []
+      "attributes": [
+        "object"
+      ],
+      "comment": {
+        "undefined": "The common base interface for all the Spatial Dimensional Objects.This interface should not be implemented directly, only through its sub-interfaces.Methods operating on IElement assume a specific implementation of one or other of the sub-interfaces (i.e. IElement0D, IElement1D, IElement2D)"
+      }
     },
     {
       "id": "BH.oM.Dimensional.IElement0D",
       "iri": "https://github.com/BHoM/BHoM/blob/main/Dimensional_oM/IElement0D.cs",
       "label": "IElement0D (BH.oM.Dimensional)",
-      "attributes": []
+      "attributes": [
+        "object"
+      ],
+      "comment": {
+        "undefined": "Enables geometrical operations to be performed on a Point based spatial element, whilst preserving all other object properties as unchanged. /nObjects implementing this interface will be required to implement some base methods for getting and setting data in a way that maintains the object's other properties.Documentation detailing required extension methods can be found here: https://github.com/BHoM/documentation/wiki/IElement-required-extension-methods"
+      }
     },
     {
       "id": "BH.oM.Dimensional.IElementM",
       "iri": "https://github.com/BHoM/BHoM/blob/main/Dimensional_oM/IElementM.cs",
       "label": "IElementM (BH.oM.Dimensional)",
-      "attributes": []
+      "attributes": [
+        "object"
+      ],
+      "comment": {
+        "undefined": "Enables Mass based operations to be performed on elements with materiality\nEnsures the material composition of a physical object is represented, defined as proportions of discrete types of material forming the object's total solid volume.\nObjects implementing this Interface will be required to implement some base methods for getting and setting data in a way that maintains the object's other properties.\nDocumentation detailing required extension methods can be found here: https://github.com/BHoM/documentation/wiki/IElement-required-extension-methods"
+      }
     }
   ],
   "property": [
@@ -49,6 +64,9 @@
       "attributes": [
         "object"
       ],
+      "comment": {
+        "undefined": "Can be used to describe that a thing belongs to a class; or that a thing is equivalent to another thing. When used for BHoM types, this describes C# interface implementation."
+      },
       "domain": "BH.oM.Dimensional.IElement0D",
       "range": "BH.oM.Dimensional.IElement"
     }

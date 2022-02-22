@@ -72,25 +72,33 @@
       "id": "BH.oM.CableNetDesign.EquilibrateMethod",
       "iri": "https://github.com/BHoM/StructuralEngineering_Toolkit/blob/main/CableNetDesign_oM/EquilibrateMethod/EquilibrateMethod.cs",
       "label": "EquilibrateMethod (BH.oM.CableNetDesign)",
-      "attributes": []
+      "attributes": [
+        "object"
+      ]
     },
     {
       "id": "BH.oM.CableNetDesign.BarAndForcePair",
       "iri": "https://github.com/BHoM/StructuralEngineering_Toolkit/blob/main/CableNetDesign_oM/Structural/Results/BarAndForcePair.cs",
       "label": "BarAndForcePair (BH.oM.CableNetDesign)",
-      "attributes": []
+      "attributes": [
+        "object"
+      ]
     },
     {
       "id": "BH.oM.CableNetDesign.CableRelaxationResult",
       "iri": "https://github.com/BHoM/StructuralEngineering_Toolkit/blob/main/CableNetDesign_oM/Structural/Results/CableRelaxationResult.cs",
       "label": "CableRelaxationResult (BH.oM.CableNetDesign)",
-      "attributes": []
+      "attributes": [
+        "object"
+      ]
     },
     {
       "id": "BH.oM.CableNetDesign.Fragments.SlackLengthFragment",
       "iri": "https://github.com/BHoM/StructuralEngineering_Toolkit/blob/main/CableNetDesign_oM/Fragments/SlackLengthFragment.cs",
       "label": "SlackLengthFragment (BH.oM.CableNetDesign.Fragments)",
-      "attributes": []
+      "attributes": [
+        "object"
+      ]
     },
     {
       "id": "BH.oM.CableNetDesign.EquilibrateMethod.Method",
@@ -119,8 +127,12 @@
       "iri": "https://github.com/BHoM/BHoM/blob/main/Structure_oM/Elements/Bar.cs",
       "label": "Bar (BH.oM.Structure.Elements)",
       "attributes": [
+        "object",
         "external"
-      ]
+      ],
+      "comment": {
+        "undefined": "1D finite element for structural analysis. Linear 2-noded element defined by a start and end node.For structural conventions and orientation of the bar please see https://github.com/BHoM/documentation/wiki/BHoM-Structural-Conventions."
+      }
     },
     {
       "id": "BH.oM.CableNetDesign.BarAndForcePair.Force",
@@ -133,8 +145,12 @@
       "iri": "https://github.com/BHoM/BHoM/blob/main/Structure_oM/Results/Bar Results/BarForce.cs",
       "label": "BarForce (BH.oM.Structure.Results)",
       "attributes": [
+        "object",
         "external"
-      ]
+      ],
+      "comment": {
+        "undefined": "Resulting section forces in local coordinates along the bar."
+      }
     },
     {
       "id": "BH.oM.CableNetDesign.CableRelaxationResult.ElementResults",
@@ -153,6 +169,7 @@
       "iri": "https://github.com/BHoM/FormFinding_Toolkit/blob/main/FormFinding_oM/RelaxSystem.cs",
       "label": "RelaxSystem (BH.oM.FormFinding)",
       "attributes": [
+        "object",
         "external"
       ]
     },
@@ -177,6 +194,7 @@
       "iri": "https://github.com/BHoM/BHoM/blob/main/BHoM/Interface/IFragment.cs",
       "label": "IFragment (BH.oM.Base)",
       "attributes": [
+        "object",
         "external"
       ]
     }
@@ -363,6 +381,9 @@
       "attributes": [
         "object"
       ],
+      "comment": {
+        "undefined": "Can be used to describe that a thing belongs to a class; or that a thing is equivalent to another thing. When used for BHoM types, this describes C# interface implementation."
+      },
       "domain": "BH.oM.CableNetDesign.Fragments.SlackLengthFragment",
       "range": "BH.oM.Base.IFragment"
     }

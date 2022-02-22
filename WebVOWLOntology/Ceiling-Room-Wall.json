@@ -116,19 +116,25 @@
       "id": "BH.oM.Architecture.Elements.Ceiling",
       "iri": "https://github.com/BHoM/BHoM/blob/main/Architecture_oM/Elements/Ceiling.cs",
       "label": "Ceiling (BH.oM.Architecture.Elements)",
-      "attributes": []
+      "attributes": [
+        "object"
+      ]
     },
     {
       "id": "BH.oM.Architecture.Elements.Room",
       "iri": "https://github.com/BHoM/BHoM/blob/main/Architecture_oM/Elements/Room.cs",
       "label": "Room (BH.oM.Architecture.Elements)",
-      "attributes": []
+      "attributes": [
+        "object"
+      ]
     },
     {
       "id": "BH.oM.Physical.Elements.Wall",
       "iri": "https://github.com/BHoM/BHoM/blob/main/Physical_oM/Elements/Wall.cs",
       "label": "Wall (BH.oM.Physical.Elements)",
-      "attributes": []
+      "attributes": [
+        "object"
+      ]
     },
     {
       "id": "BH.oM.Architecture.Elements.Ceiling.Surface",
@@ -141,8 +147,12 @@
       "iri": "https://github.com/BHoM/BHoM/blob/main/Geometry_oM/Surface/ISurface.cs",
       "label": "ISurface (BH.oM.Geometry)",
       "attributes": [
+        "object",
         "external"
-      ]
+      ],
+      "comment": {
+        "undefined": "The interface for two-dimensional geometrical objects."
+      }
     },
     {
       "id": "BH.oM.Architecture.Elements.Ceiling.Construction",
@@ -155,6 +165,7 @@
       "iri": "https://github.com/BHoM/BHoM/blob/main/Physical_oM/Constructions/Construction.cs",
       "label": "Construction (BH.oM.Physical.Constructions)",
       "attributes": [
+        "object",
         "external"
       ]
     },
@@ -168,23 +179,33 @@
       "id": "BH.oM.Architecture.Elements.CeilingTile",
       "iri": "https://github.com/BHoM/BHoM/blob/main/Architecture_oM/Elements/CeilingTile.cs",
       "label": "CeilingTile (BH.oM.Architecture.Elements)",
-      "attributes": []
+      "attributes": [
+        "object"
+      ]
     },
     {
       "id": "BH.oM.Dimensional.IElement2D",
       "iri": "https://github.com/BHoM/BHoM/blob/main/Dimensional_oM/IElement2D.cs",
       "label": "IElement2D (BH.oM.Dimensional)",
       "attributes": [
+        "object",
         "external"
-      ]
+      ],
+      "comment": {
+        "undefined": "Enables geometrical operations to be performed on an edge curve based two-dimensional spatial element, whilst preserving all other object properties as unchanged. /nThe interface expects the outline to be constructed of IElement1D elements and allows for internal IElement2D elements.Objects implementing this interface will be required to implement some base methods for getting and setting data in a way that maintains the object's other properties.Documentation detailing required extension methods can be found here: https://github.com/BHoM/documentation/wiki/IElement-required-extension-methods"
+      }
     },
     {
       "id": "BH.oM.Dimensional.IElement",
       "iri": "https://github.com/BHoM/BHoM/blob/main/Dimensional_oM/IElement.cs",
       "label": "IElement (BH.oM.Dimensional)",
       "attributes": [
+        "object",
         "external"
-      ]
+      ],
+      "comment": {
+        "undefined": "The common base interface for all the Spatial Dimensional Objects.This interface should not be implemented directly, only through its sub-interfaces.Methods operating on IElement assume a specific implementation of one or other of the sub-interfaces (i.e. IElement0D, IElement1D, IElement2D)"
+      }
     },
     {
       "id": "BH.oM.Architecture.Elements.Room.Perimeter",
@@ -197,8 +218,12 @@
       "iri": "https://github.com/BHoM/BHoM/blob/main/Geometry_oM/Curve/ICurve.cs",
       "label": "ICurve (BH.oM.Geometry)",
       "attributes": [
+        "object",
         "external"
-      ]
+      ],
+      "comment": {
+        "undefined": "The interface for all one-dimensional geometrical objects."
+      }
     },
     {
       "id": "BH.oM.Architecture.Elements.Room.Location",
@@ -211,22 +236,31 @@
       "iri": "https://github.com/BHoM/BHoM/blob/main/Geometry_oM/Vector/Point.cs",
       "label": "Point (BH.oM.Geometry)",
       "attributes": [
+        "object",
         "external"
-      ]
+      ],
+      "comment": {
+        "undefined": "Defines a dimensionless location in three-dimensional space."
+      }
     },
     {
       "id": "BH.oM.Analytical.Elements.IRegion",
       "iri": "https://github.com/BHoM/BHoM/blob/main/Analytical_oM/Elements/IRegion.cs",
       "label": "IRegion (BH.oM.Analytical.Elements)",
       "attributes": [
+        "object",
         "external"
-      ]
+      ],
+      "comment": {
+        "undefined": "Base interface for analytical elements defined by a single closed perimiter curve."
+      }
     },
     {
       "id": "BH.oM.Analytical.IAnalytical",
       "iri": "https://github.com/BHoM/BHoM/blob/main/Analytical_oM/IAnalytical.cs",
       "label": "IAnalytical (BH.oM.Analytical)",
       "attributes": [
+        "object",
         "external"
       ]
     },
@@ -247,6 +281,7 @@
       "iri": "https://github.com/BHoM/BHoM/blob/main/Physical_oM/Constructions/IConstruction.cs",
       "label": "IConstruction (BH.oM.Physical.Constructions)",
       "attributes": [
+        "object",
         "external"
       ]
     },
@@ -260,7 +295,9 @@
       "id": "BH.oM.Physical.Elements.IOpening",
       "iri": "https://github.com/BHoM/BHoM/blob/main/Physical_oM/Elements/IOpening.cs",
       "label": "IOpening (BH.oM.Physical.Elements)",
-      "attributes": []
+      "attributes": [
+        "object"
+      ]
     },
     {
       "id": "BH.oM.Physical.Elements.Wall.Offset",
@@ -272,19 +309,24 @@
       "id": "BH.oM.Physical.Elements.Offset",
       "iri": "https://github.com/BHoM/BHoM/blob/main/Physical_oM/Enums/Offset.cs",
       "label": "Offset (BH.oM.Physical.Elements)",
-      "attributes": []
+      "attributes": [
+        "object"
+      ]
     },
     {
       "id": "BH.oM.Physical.Elements.ISurface",
       "iri": "https://github.com/BHoM/BHoM/blob/main/Physical_oM/Elements/ISurface.cs",
       "label": "ISurface (BH.oM.Physical.Elements)",
-      "attributes": []
+      "attributes": [
+        "object"
+      ]
     },
     {
       "id": "BH.oM.Physical.IPhysical",
       "iri": "https://github.com/BHoM/BHoM/blob/main/Physical_oM/IPhysical.cs",
       "label": "IPhysical (BH.oM.Physical)",
       "attributes": [
+        "object",
         "external"
       ]
     },
@@ -293,8 +335,12 @@
       "iri": "https://github.com/BHoM/BHoM/blob/main/Dimensional_oM/IElementM.cs",
       "label": "IElementM (BH.oM.Dimensional)",
       "attributes": [
+        "object",
         "external"
-      ]
+      ],
+      "comment": {
+        "undefined": "Enables Mass based operations to be performed on elements with materiality\nEnsures the material composition of a physical object is represented, defined as proportions of discrete types of material forming the object's total solid volume.\nObjects implementing this Interface will be required to implement some base methods for getting and setting data in a way that maintains the object's other properties.\nDocumentation detailing required extension methods can be found here: https://github.com/BHoM/documentation/wiki/IElement-required-extension-methods"
+      }
     }
   ],
   "property": [
@@ -483,6 +529,9 @@
       "attributes": [
         "object"
       ],
+      "comment": {
+        "undefined": "Can be used to describe that a thing belongs to a class; or that a thing is equivalent to another thing. When used for BHoM types, this describes C# interface implementation."
+      },
       "domain": "BH.oM.Architecture.Elements.Ceiling",
       "range": "BH.oM.Dimensional.IElement2D"
     },
@@ -493,6 +542,9 @@
       "attributes": [
         "object"
       ],
+      "comment": {
+        "undefined": "Can be used to describe that a thing belongs to a class; or that a thing is equivalent to another thing. When used for BHoM types, this describes C# interface implementation."
+      },
       "domain": "BH.oM.Architecture.Elements.Ceiling",
       "range": "BH.oM.Dimensional.IElement"
     },
@@ -543,6 +595,9 @@
       "attributes": [
         "object"
       ],
+      "comment": {
+        "undefined": "Can be used to describe that a thing belongs to a class; or that a thing is equivalent to another thing. When used for BHoM types, this describes C# interface implementation."
+      },
       "domain": "BH.oM.Architecture.Elements.Room",
       "range": "BH.oM.Analytical.Elements.IRegion"
     },
@@ -553,6 +608,9 @@
       "attributes": [
         "object"
       ],
+      "comment": {
+        "undefined": "Can be used to describe that a thing belongs to a class; or that a thing is equivalent to another thing. When used for BHoM types, this describes C# interface implementation."
+      },
       "domain": "BH.oM.Architecture.Elements.Room",
       "range": "BH.oM.Analytical.IAnalytical"
     },
@@ -563,6 +621,9 @@
       "attributes": [
         "object"
       ],
+      "comment": {
+        "undefined": "Can be used to describe that a thing belongs to a class; or that a thing is equivalent to another thing. When used for BHoM types, this describes C# interface implementation."
+      },
       "domain": "BH.oM.Architecture.Elements.Room",
       "range": "BH.oM.Dimensional.IElement2D"
     },
@@ -573,6 +634,9 @@
       "attributes": [
         "object"
       ],
+      "comment": {
+        "undefined": "Can be used to describe that a thing belongs to a class; or that a thing is equivalent to another thing. When used for BHoM types, this describes C# interface implementation."
+      },
       "domain": "BH.oM.Architecture.Elements.Room",
       "range": "BH.oM.Dimensional.IElement"
     },
@@ -663,6 +727,9 @@
       "attributes": [
         "object"
       ],
+      "comment": {
+        "undefined": "Can be used to describe that a thing belongs to a class; or that a thing is equivalent to another thing. When used for BHoM types, this describes C# interface implementation."
+      },
       "domain": "BH.oM.Physical.Elements.Wall",
       "range": "BH.oM.Physical.Elements.ISurface"
     },
@@ -673,6 +740,9 @@
       "attributes": [
         "object"
       ],
+      "comment": {
+        "undefined": "Can be used to describe that a thing belongs to a class; or that a thing is equivalent to another thing. When used for BHoM types, this describes C# interface implementation."
+      },
       "domain": "BH.oM.Physical.Elements.Wall",
       "range": "BH.oM.Physical.IPhysical"
     },
@@ -683,6 +753,9 @@
       "attributes": [
         "object"
       ],
+      "comment": {
+        "undefined": "Can be used to describe that a thing belongs to a class; or that a thing is equivalent to another thing. When used for BHoM types, this describes C# interface implementation."
+      },
       "domain": "BH.oM.Physical.Elements.Wall",
       "range": "BH.oM.Dimensional.IElement2D"
     },
@@ -693,6 +766,9 @@
       "attributes": [
         "object"
       ],
+      "comment": {
+        "undefined": "Can be used to describe that a thing belongs to a class; or that a thing is equivalent to another thing. When used for BHoM types, this describes C# interface implementation."
+      },
       "domain": "BH.oM.Physical.Elements.Wall",
       "range": "BH.oM.Dimensional.IElement"
     },
@@ -703,6 +779,9 @@
       "attributes": [
         "object"
       ],
+      "comment": {
+        "undefined": "Can be used to describe that a thing belongs to a class; or that a thing is equivalent to another thing. When used for BHoM types, this describes C# interface implementation."
+      },
       "domain": "BH.oM.Physical.Elements.Wall",
       "range": "BH.oM.Dimensional.IElementM"
     }

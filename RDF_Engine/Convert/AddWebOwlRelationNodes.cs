@@ -145,31 +145,15 @@ namespace BH.Engine.RDF
                 return;
 
             // See if we have yet to add a Node for the Relation.Subject (domain) type.
-            if (!addedTypes.Contains(domainType))
-            {
-                // We need to add the type of this property as a node.
-                classArray.AddToIdTypeArray(domainTypeNodeId, "owl:Class");
-
-                classAttributeArray.AddToAttributeArray(domainTypeNodeId, rangeType.GithubURI(), rangeType.DescriptiveName(true), !rangeType.IsInNamespace(internalNamespaces) ?? false);
-
-                addedTypes.Add(domainType.GetTypeInfo());
-            }
+            AddWebOwlClassNodes(domainType, classArray, classAttributeArray, addedTypes, internalNamespaces);
 
             // See if we have yet to add a Node for the Relation.Object (range) type.
-            if (!addedTypes.Contains(rangeType))
-            {
-                // We need to add the type of this property as a node.
-                classArray.AddToIdTypeArray(rangeTypeNodeId, "owl:Class");
-
-                classAttributeArray.AddToAttributeArray(rangeTypeNodeId, rangeType.GithubURI(), rangeType.DescriptiveName(true), !rangeType.IsInNamespace(internalNamespaces) ?? false);
-
-                addedTypes.Add(rangeType.GetTypeInfo());
-            }
+            AddWebOwlClassNodes(rangeType, classArray, classAttributeArray, addedTypes, internalNamespaces);
 
             // Add the "IsA" relation to link this property to the corresponding type node.
             string propertyTypeRelationId = isARelation.WebVOWLNodeId();
             propertyArray.AddToIdTypeArray(propertyTypeRelationId, "owl:ObjectProperty");
-            propertyAttributeArray.AddToAttributeArray(propertyTypeRelationId, typeof(IsA).GithubURI(), typeof(IsA).Name, false, new List<string>() { "object" }, new List<string>() { domainType.WebVOWLNodeId() }, new List<string>() { rangeType.WebVOWLNodeId() }, label_iriBased: null);
+            propertyAttributeArray.AddToAttributeArray(propertyTypeRelationId, typeof(IsA).GithubURI(), typeof(IsA).Name, false, new List<string>() { "object" }, typeof(IsA).DescriptionInAttribute(), new List<string>() { domainType.WebVOWLNodeId() }, new List<string>() { rangeType.WebVOWLNodeId() });
         }
 
         /***************************************************/
@@ -208,29 +192,22 @@ namespace BH.Engine.RDF
                 // Add the PropertyNameNode. This node will contain the name of the property.
                 string propertyNameNodeId = rangePropertyInfo.DeclaringType.FullName + "." + rangePropertyInfo.Name;
                 classArray.AddToIdTypeArray(propertyNameNodeId, "owl:Class");
-                classAttributeArray.AddToAttributeArray(propertyNameNodeId, rangePropertyInfo.GithubURI(), rangePropertyInfo.DescriptiveName());
+                classAttributeArray.AddToAttributeArray(propertyNameNodeId, rangePropertyInfo.GithubURI(), rangePropertyInfo.DescriptiveName(), false, null, rangePropertyInfo.DescriptionInAttribute());
 
                 // Add the "HasProperty" relation between the parent type and the PropertyNameNode.
                 string classHasPropertyNameRelationId = domainType.WebVOWLNodeId() + "-HasProperty-" + propertyNameNodeId;
                 propertyArray.AddToIdTypeArray(classHasPropertyNameRelationId, "owl:ObjectProperty");
-                propertyAttributeArray.AddToAttributeArray(classHasPropertyNameRelationId, hasPropertyRelation.GetType().GithubURI(), hasPropertyRelation.GetType().Name, false, new List<string>() { "object" }, new List<string>() { domainType.WebVOWLNodeId() }, new List<string>() { propertyNameNodeId });
+                propertyAttributeArray.AddToAttributeArray(classHasPropertyNameRelationId, hasPropertyRelation.GetType().GithubURI(), hasPropertyRelation.GetType().Name, false, new List<string>() { "object" }, domain: new List<string>() { domainType.WebVOWLNodeId() }, range: new List<string>() { propertyNameNodeId });
 
                 // Now deal with the property Type.
-                string propertyTypeNodeId = rangePropertyInfo.PropertyType.WebVOWLNodeId();
 
                 // See if we have yet to add a Node for the property type.
-                if (!addedTypes.Contains(rangePropertyInfo.PropertyType))
-                {
-                    // We need to add the type of this property as a node.
-                    classArray.AddToIdTypeArray(propertyTypeNodeId, "owl:Class");
-                    classAttributeArray.AddToAttributeArray(propertyTypeNodeId, rangePropertyInfo.PropertyType.GithubURI(), rangePropertyInfo.PropertyType.DescriptiveName(true), !rangePropertyInfo.PropertyType.IsInNamespace(internalNamespaces) ?? false);
-                    addedTypes.Add(rangePropertyInfo.PropertyType.GetTypeInfo());
-                }
+                string propertyTypeNodeId = AddWebOwlClassNodes(rangePropertyInfo.PropertyType, classArray, classAttributeArray, addedTypes, internalNamespaces);
 
                 // Add the "IsA" relation between the PropertyNameNode and the PropertyTypeNode.
                 string propertyNameIsATypeRelationId = propertyNameNodeId + "-IsA-" + propertyTypeNodeId;
                 propertyArray.AddToIdTypeArray(propertyNameIsATypeRelationId, "owl:ObjectProperty");
-                propertyAttributeArray.AddToAttributeArray(propertyNameIsATypeRelationId, typeof(IsA).GithubURI(), typeof(IsA).Name, false, new List<string>() { "object" }, new List<string>() { propertyNameNodeId }, new List<string>() { propertyTypeNodeId });
+                propertyAttributeArray.AddToAttributeArray(propertyNameIsATypeRelationId, typeof(IsA).GithubURI(), typeof(IsA).Name, false, new List<string>() { "object" }, domain: new List<string>() { propertyNameNodeId }, range: new List<string>() { propertyTypeNodeId });
 
                 return;
             }
@@ -247,25 +224,18 @@ namespace BH.Engine.RDF
                 // Add the "HasProperty" relation between the parent type and the PropertyNameNode.
                 string classHasPropertyNameRelationId = domainType.WebVOWLNodeId() + "-HasProperty-" + propertyNameNodeId;
                 propertyArray.AddToIdTypeArray(classHasPropertyNameRelationId, "owl:ObjectProperty");
-                propertyAttributeArray.AddToAttributeArray(classHasPropertyNameRelationId, hasPropertyRelation.GetType().GithubURI(), hasPropertyRelation.GetType().Name, false, new List<string>() { "object" }, new List<string>() { domainType.WebVOWLNodeId() }, new List<string>() { propertyNameNodeId });
+                propertyAttributeArray.AddToAttributeArray(classHasPropertyNameRelationId, hasPropertyRelation.GetType().GithubURI(), hasPropertyRelation.GetType().Name, false, new List<string>() { "object" }, domain: new List<string>() { domainType.WebVOWLNodeId() }, range: new List<string>() { propertyNameNodeId });
 
                 // Now deal with the property Type. In this case, the PropertyTypeNode will contain the generic argument type.
                 Type ienumerableType = genericBHoMArgs.First();
-                string propertyTypeNodeId = ienumerableType.WebVOWLNodeId();
 
                 // See if we have yet to add a Node for the property type.
-                if (!addedTypes.Contains(ienumerableType))
-                {
-                    // We need to add the type of this property as a node.
-                    classArray.AddToIdTypeArray(propertyTypeNodeId, "owl:Class");
-                    classAttributeArray.AddToAttributeArray(propertyTypeNodeId, ienumerableType.GithubURI(), ienumerableType.DescriptiveName(true), !ienumerableType.IsInNamespace(internalNamespaces) ?? false);
-                    addedTypes.Add(ienumerableType.GetTypeInfo());
-                }
+                string propertyTypeNodeId = AddWebOwlClassNodes(ienumerableType, classArray, classAttributeArray, addedTypes, internalNamespaces);
 
                 // Add the IsAListOf relation.
                 string propertyNameIsATypeRelationId = propertyNameNodeId + "-IsAListOf-" + propertyTypeNodeId;
                 propertyArray.AddToIdTypeArray(propertyNameIsATypeRelationId, "owl:ObjectProperty");
-                propertyAttributeArray.AddToAttributeArray(propertyNameIsATypeRelationId, typeof(IsAListOf).GithubURI(), typeof(IsAListOf).Name, false, new List<string>() { "object" }, new List<string>() { propertyNameNodeId }, new List<string>() { propertyTypeNodeId });
+                propertyAttributeArray.AddToAttributeArray(propertyNameIsATypeRelationId, typeof(IsAListOf).GithubURI(), typeof(IsAListOf).Name, false, new List<string>() { "object" }, domain: new List<string>() { propertyNameNodeId }, range: new List<string>() { propertyTypeNodeId });
 
                 return;
             }
@@ -280,7 +250,7 @@ namespace BH.Engine.RDF
             // Add the relation connection.
             string propertyTypeRelationId = hasPropertyRelation.WebVOWLNodeId();
             propertyArray.AddToIdTypeArray(propertyTypeRelationId, "owl:DatatypeProperty");
-            propertyAttributeArray.AddToAttributeArray(propertyTypeRelationId, hasPropertyRelation.GetType().GithubURI(), hasPropertyRelation.GetType().Name, false, new List<string>() { "datatype" }, new List<string>() { domainType.WebVOWLNodeId() }, new List<string>() { rangeClassId });
+            propertyAttributeArray.AddToAttributeArray(propertyTypeRelationId, hasPropertyRelation.GetType().GithubURI(), hasPropertyRelation.GetType().Name, false, new List<string>() { "datatype" }, domain: new List<string>() { domainType.WebVOWLNodeId() }, range: new List<string>() { rangeClassId });
 
         }
 
@@ -337,7 +307,7 @@ namespace BH.Engine.RDF
             // Add the "IsA" relation to link this property to the corresponding type node.
             string propertyTypeRelationId = requiresPropertyRelation.WebVOWLNodeId();
             propertyArray.AddToIdTypeArray(propertyTypeRelationId, "owl:DatatypeProperty");
-            propertyAttributeArray.AddToAttributeArray(propertyTypeRelationId, typeof(RequiresProperty).GithubURI(), typeof(RequiresProperty).Name, false, new List<string>() { "datatype" }, new List<string>() { domainType.WebVOWLNodeId() }, new List<string>() { rangePi.WebVOWLNodeId() });
+            propertyAttributeArray.AddToAttributeArray(propertyTypeRelationId, typeof(RequiresProperty).GithubURI(), typeof(RequiresProperty).Name, false, new List<string>() { "datatype" }, domain: new List<string>() { domainType.WebVOWLNodeId() }, range: new List<string>() { rangePi.WebVOWLNodeId() });
         }
     }
 }

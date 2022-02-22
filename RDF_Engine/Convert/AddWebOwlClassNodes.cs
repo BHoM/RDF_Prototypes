@@ -17,9 +17,31 @@ namespace BH.Engine.RDF
 {
     public static partial class Convert
     {
+        private static string AddWebOwlClassNodes(Type type, JArray classArray, JArray classAttributeArray, HashSet<Type> addedTypes, HashSet<string> internalNamespaces = null)
+        {
+            string typeId = type.WebVOWLNodeId();
+
+            if (addedTypes.Contains(type))
+                return typeId;
+
+            Uri typeUri = type.GithubURI();
+            string comment = type.DescriptionInAttribute();
+            bool isExternal = !type.IsInNamespace(internalNamespaces) ?? false;
+
+            // 1) CLASS
+            classArray.AddToIdTypeArray(typeId, "owl:Class");
+
+            // 2) CLASS ATTRIBUTE
+            classAttributeArray.AddToAttributeArray(typeId, typeUri, type.DescriptiveName(true), isExternal, new List<string>() { "object" }, comment);
+
+            addedTypes.Add(type.GetTypeInfo());
+
+            return typeId;
+        }
+
         private static string AddWebOwlClassNodes(PropertyInfo pInfo, JArray classArray, JArray classAttributeArray, HashSet<Type> addedTypes)
         {
-            string propertyNodeId = pInfo.PropertyType.WebVOWLNodeId();
+            string propertyNodeId = pInfo.WebVOWLNodeId();
 
             // Check if we need to add a class node for the property type.
             if (!addedTypes.Contains(pInfo.PropertyType))
@@ -35,28 +57,6 @@ namespace BH.Engine.RDF
             }
 
             return propertyNodeId;
-        }
-
-        private static string AddWebOwlClassNodes(Type type, JArray classArray, JArray classAttributeArray, HashSet<Type> addedTypes)
-        {
-            string typeId = type.WebVOWLNodeId();
-            Uri typeUri = type.GithubURI();
-
-            if (typeUri == null)
-                return typeId;
-
-            if (!addedTypes.Contains(type))
-            {
-                // 1) CLASS
-                classArray.AddToIdTypeArray(typeId, "owl:Class");
-
-                // 2) CLASS ATTRIBUTE
-                classAttributeArray.AddToAttributeArray(typeId, typeUri, type.DescriptiveName(true));
-
-                addedTypes.Add(type);
-            }
-
-            return typeId;
         }
     }
 }

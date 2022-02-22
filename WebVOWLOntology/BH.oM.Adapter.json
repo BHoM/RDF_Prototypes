@@ -196,133 +196,225 @@
       "id": "BH.oM.Adapter.PullType",
       "iri": "https://github.com/BHoM/BHoM_Adapter/blob/main/Adapter_oM/Enums/PullType.cs",
       "label": "PullType (BH.oM.Adapter)",
-      "attributes": []
+      "attributes": [
+        "object"
+      ]
     },
     {
       "id": "BH.oM.Adapter.PushType",
       "iri": "https://github.com/BHoM/BHoM_Adapter/blob/main/Adapter_oM/Enums/PushType.cs",
       "label": "PushType (BH.oM.Adapter)",
-      "attributes": []
+      "attributes": [
+        "object"
+      ],
+      "comment": {
+        "undefined": "Controls which type of export should be done by the Adapter `Push` action."
+      }
     },
     {
       "id": "BH.oM.Adapter.IExecuteCommand",
       "iri": "https://github.com/BHoM/BHoM_Adapter/blob/main/Adapter_oM/ExecuteCommands/_IExecuteCommand.cs",
       "label": "IExecuteCommand (BH.oM.Adapter)",
-      "attributes": []
+      "attributes": [
+        "object"
+      ],
+      "comment": {
+        "undefined": "Classes implementing IExecuteCommand are commands compatible with the `Execute` Adapter Action."
+      }
     },
     {
       "id": "BH.oM.Adapter.FileSettings",
       "iri": "https://github.com/BHoM/BHoM_Adapter/blob/main/Adapter_oM/FileSettings.cs",
       "label": "FileSettings (BH.oM.Adapter)",
-      "attributes": []
+      "attributes": [
+        "object"
+      ],
+      "comment": {
+        "undefined": "The fileSettings, file name and directory, to use with an adapter for push and pull"
+      }
     },
     {
       "id": "BH.oM.Adapter.IBHoMAdapter",
       "iri": "https://github.com/BHoM/BHoM_Adapter/blob/main/Adapter_oM/IBHoMAdapter.cs",
       "label": "IBHoMAdapter (BH.oM.Adapter)",
-      "attributes": []
+      "attributes": [
+        "object"
+      ]
     },
     {
       "id": "BH.oM.Adapter.IAdapterModule",
       "iri": "https://github.com/BHoM/BHoM_Adapter/blob/main/Adapter_oM/Module/IAdapterModule.cs",
       "label": "IAdapterModule (BH.oM.Adapter)",
-      "attributes": []
+      "attributes": [
+        "object"
+      ]
     },
     {
       "id": "BH.oM.Adapter.ICopyPropertiesModule`1",
       "iri": "https://github.com/BHoM/BHoM_Adapter/blob/main/Adapter_oM/Module/ICopyPropertiesModule.cs",
       "label": "ICopyPropertiesModule<T> (BH.oM.Adapter)",
-      "attributes": []
+      "attributes": [
+        "object"
+      ]
     },
     {
       "id": "BH.oM.Adapter.IGetDependencyModule`2",
       "iri": "https://github.com/BHoM/BHoM_Adapter/blob/main/Adapter_oM/Module/IGetDependencyModule.cs",
       "label": "IGetDependencyModule<T,P> (BH.oM.Adapter)",
-      "attributes": []
+      "attributes": [
+        "object"
+      ],
+      "comment": {
+        "undefined": "Module for fetching dependency objects of a type P from a IEnumerable with objects of type T."
+      }
     },
     {
       "id": "BH.oM.Adapter.ModuleSet",
       "iri": "https://github.com/BHoM/BHoM_Adapter/blob/main/Adapter_oM/Module/ModuleSet.cs",
       "label": "ModuleSet (BH.oM.Adapter)",
-      "attributes": []
+      "attributes": [
+        "object"
+      ]
     },
     {
       "id": "BH.oM.Adapter.ObjectWrapper",
       "iri": "https://github.com/BHoM/BHoM_Adapter/blob/main/Adapter_oM/ObjectWrapper.cs",
       "label": "ObjectWrapper (BH.oM.Adapter)",
-      "attributes": []
+      "attributes": [
+        "object"
+      ]
     },
     {
       "id": "BH.oM.Adapter.ActionConfig",
       "iri": "https://github.com/BHoM/BHoM_Adapter/blob/main/Adapter_oM/Settings-Config/ActionConfig.cs",
       "label": "ActionConfig (BH.oM.Adapter)",
-      "attributes": []
+      "attributes": [
+        "object"
+      ],
+      "comment": {
+        "undefined": "Configurations specific for an Adapter Action (Push, Pull, etc).\nConsider that your tookit might have a more specific implementation available. Try to look for [your toolkit name]ActionConfig."
+      }
     },
     {
       "id": "BH.oM.Adapter.AdapterSettings",
       "iri": "https://github.com/BHoM/BHoM_Adapter/blob/main/Adapter_oM/Settings-Config/AdapterSettings.cs",
       "label": "AdapterSettings (BH.oM.Adapter)",
-      "attributes": []
+      "attributes": [
+        "object"
+      ],
+      "comment": {
+        "undefined": "General settings for any Adapter, to be specified when instantiating the Adapter.Implement this class to make your own Toolkit settings, e.g. SpeckleAdapterSettings."
+      }
     },
     {
       "id": "BH.oM.Adapter.Commands.Analyse",
       "iri": "https://github.com/BHoM/BHoM_Adapter/blob/main/Adapter_oM/ExecuteCommands/Analyse.cs",
       "label": "Analyse (BH.oM.Adapter.Commands)",
-      "attributes": []
+      "attributes": [
+        "object"
+      ],
+      "comment": {
+        "undefined": "Used to instruct the external software to run an Analysis."
+      }
     },
     {
       "id": "BH.oM.Adapter.Commands.AnalyseLoadCases",
       "iri": "https://github.com/BHoM/BHoM_Adapter/blob/main/Adapter_oM/ExecuteCommands/AnalyseLoadCases.cs",
       "label": "AnalyseLoadCases (BH.oM.Adapter.Commands)",
-      "attributes": []
+      "attributes": [
+        "object"
+      ],
+      "comment": {
+        "undefined": "Used to instruct the external software to run an Analysis on certain load cases."
+      }
     },
     {
       "id": "BH.oM.Adapter.Commands.ClearResults",
       "iri": "https://github.com/BHoM/BHoM_Adapter/blob/main/Adapter_oM/ExecuteCommands/ClearResults.cs",
       "label": "ClearResults (BH.oM.Adapter.Commands)",
-      "attributes": []
+      "attributes": [
+        "object"
+      ],
+      "comment": {
+        "undefined": "Used to instruct the external software to clear/delete results from a file or model."
+      }
     },
     {
       "id": "BH.oM.Adapter.Commands.Close",
       "iri": "https://github.com/BHoM/BHoM_Adapter/blob/main/Adapter_oM/ExecuteCommands/Close.cs",
       "label": "Close (BH.oM.Adapter.Commands)",
-      "attributes": []
+      "attributes": [
+        "object"
+      ],
+      "comment": {
+        "undefined": "Used to instruct the external software to close a file."
+      }
     },
     {
       "id": "BH.oM.Adapter.Commands.CustomCommand",
       "iri": "https://github.com/BHoM/BHoM_Adapter/blob/main/Adapter_oM/ExecuteCommands/CustomCommand.cs",
       "label": "CustomCommand (BH.oM.Adapter.Commands)",
-      "attributes": []
+      "attributes": [
+        "object"
+      ],
+      "comment": {
+        "undefined": "Used to instruct the external software to run a certain command."
+      }
     },
     {
       "id": "BH.oM.Adapter.Commands.Exit",
       "iri": "https://github.com/BHoM/BHoM_Adapter/blob/main/Adapter_oM/ExecuteCommands/Exit.cs",
       "label": "Exit (BH.oM.Adapter.Commands)",
-      "attributes": []
+      "attributes": [
+        "object"
+      ],
+      "comment": {
+        "undefined": "Used to instruct the adapter to exit the software. The adapter will generally not be useable after running this command as the link to the software will be broken."
+      }
     },
     {
       "id": "BH.oM.Adapter.Commands.NewModel",
       "iri": "https://github.com/BHoM/BHoM_Adapter/blob/main/Adapter_oM/ExecuteCommands/NewModel.cs",
       "label": "NewModel (BH.oM.Adapter.Commands)",
-      "attributes": []
+      "attributes": [
+        "object"
+      ],
+      "comment": {
+        "undefined": "Used to instruct the external software to open/create a new model."
+      }
     },
     {
       "id": "BH.oM.Adapter.Commands.Open",
       "iri": "https://github.com/BHoM/BHoM_Adapter/blob/main/Adapter_oM/ExecuteCommands/Open.cs",
       "label": "Open (BH.oM.Adapter.Commands)",
-      "attributes": []
+      "attributes": [
+        "object"
+      ],
+      "comment": {
+        "undefined": "Used to instruct the external software to open a file."
+      }
     },
     {
       "id": "BH.oM.Adapter.Commands.Save",
       "iri": "https://github.com/BHoM/BHoM_Adapter/blob/main/Adapter_oM/ExecuteCommands/Save.cs",
       "label": "Save (BH.oM.Adapter.Commands)",
-      "attributes": []
+      "attributes": [
+        "object"
+      ],
+      "comment": {
+        "undefined": "Used to instruct the external software to save a file or model."
+      }
     },
     {
       "id": "BH.oM.Adapter.Commands.SaveAs",
       "iri": "https://github.com/BHoM/BHoM_Adapter/blob/main/Adapter_oM/ExecuteCommands/SaveAs.cs",
       "label": "SaveAs (BH.oM.Adapter.Commands)",
-      "attributes": []
+      "attributes": [
+        "object"
+      ],
+      "comment": {
+        "undefined": "Used to instruct the external software to `save as...` a file or model."
+      }
     },
     {
       "id": "BH.oM.Adapter.FileSettings.FileName",
@@ -400,15 +492,22 @@
       "id": "BH.oM.Adapter.ActionConfig.DiffingConfig",
       "iri": "https://github.com/BHoM/BHoM_Adapter/blob/main/Adapter_oM/Settings-Config/ActionConfig.cs#L46",
       "label": "DiffingConfig(BH.oM.Adapter.ActionConfig.DiffingConfig)",
-      "attributes": []
+      "attributes": [],
+      "comment": {
+        "undefined": "Configurations for the Diffing hashing. Requires `AllowHashForComparing` to be set to true."
+      }
     },
     {
       "id": "BH.oM.Diffing.DiffingConfig",
       "iri": "https://github.com/BHoM/BHoM/blob/main/Diffing_oM/DiffingConfig.cs",
       "label": "DiffingConfig (BH.oM.Diffing)",
       "attributes": [
+        "object",
         "external"
-      ]
+      ],
+      "comment": {
+        "undefined": "General configurations for the Diffing process, including settings for the Hash computation."
+      }
     },
     {
       "id": "BH.oM.Adapter.AdapterSettings.WrapNonBHoMObjects",
@@ -755,6 +854,9 @@
       "attributes": [
         "object"
       ],
+      "comment": {
+        "undefined": "Can be used to describe that a thing belongs to a class; or that a thing is equivalent to another thing. When used for BHoM types, this describes C# interface implementation."
+      },
       "domain": "BH.oM.Adapter.ICopyPropertiesModule`1",
       "range": "BH.oM.Adapter.IAdapterModule"
     },
@@ -765,6 +867,9 @@
       "attributes": [
         "object"
       ],
+      "comment": {
+        "undefined": "Can be used to describe that a thing belongs to a class; or that a thing is equivalent to another thing. When used for BHoM types, this describes C# interface implementation."
+      },
       "domain": "BH.oM.Adapter.IGetDependencyModule`2",
       "range": "BH.oM.Adapter.IAdapterModule"
     },
@@ -905,6 +1010,9 @@
       "attributes": [
         "object"
       ],
+      "comment": {
+        "undefined": "Can be used to describe that a thing belongs to a class; or that a thing is equivalent to another thing. When used for BHoM types, this describes C# interface implementation."
+      },
       "domain": "BH.oM.Adapter.Commands.Analyse",
       "range": "BH.oM.Adapter.IExecuteCommand"
     },
@@ -925,6 +1033,9 @@
       "attributes": [
         "object"
       ],
+      "comment": {
+        "undefined": "Can be used to describe that a thing belongs to a class; or that a thing is equivalent to another thing. When used for BHoM types, this describes C# interface implementation."
+      },
       "domain": "BH.oM.Adapter.Commands.AnalyseLoadCases",
       "range": "BH.oM.Adapter.IExecuteCommand"
     },
@@ -935,6 +1046,9 @@
       "attributes": [
         "object"
       ],
+      "comment": {
+        "undefined": "Can be used to describe that a thing belongs to a class; or that a thing is equivalent to another thing. When used for BHoM types, this describes C# interface implementation."
+      },
       "domain": "BH.oM.Adapter.Commands.ClearResults",
       "range": "BH.oM.Adapter.IExecuteCommand"
     },
@@ -955,6 +1069,9 @@
       "attributes": [
         "object"
       ],
+      "comment": {
+        "undefined": "Can be used to describe that a thing belongs to a class; or that a thing is equivalent to another thing. When used for BHoM types, this describes C# interface implementation."
+      },
       "domain": "BH.oM.Adapter.Commands.Close",
       "range": "BH.oM.Adapter.IExecuteCommand"
     },
@@ -975,6 +1092,9 @@
       "attributes": [
         "object"
       ],
+      "comment": {
+        "undefined": "Can be used to describe that a thing belongs to a class; or that a thing is equivalent to another thing. When used for BHoM types, this describes C# interface implementation."
+      },
       "domain": "BH.oM.Adapter.Commands.CustomCommand",
       "range": "BH.oM.Adapter.IExecuteCommand"
     },
@@ -995,6 +1115,9 @@
       "attributes": [
         "object"
       ],
+      "comment": {
+        "undefined": "Can be used to describe that a thing belongs to a class; or that a thing is equivalent to another thing. When used for BHoM types, this describes C# interface implementation."
+      },
       "domain": "BH.oM.Adapter.Commands.Exit",
       "range": "BH.oM.Adapter.IExecuteCommand"
     },
@@ -1005,6 +1128,9 @@
       "attributes": [
         "object"
       ],
+      "comment": {
+        "undefined": "Can be used to describe that a thing belongs to a class; or that a thing is equivalent to another thing. When used for BHoM types, this describes C# interface implementation."
+      },
       "domain": "BH.oM.Adapter.Commands.NewModel",
       "range": "BH.oM.Adapter.IExecuteCommand"
     },
@@ -1025,6 +1151,9 @@
       "attributes": [
         "object"
       ],
+      "comment": {
+        "undefined": "Can be used to describe that a thing belongs to a class; or that a thing is equivalent to another thing. When used for BHoM types, this describes C# interface implementation."
+      },
       "domain": "BH.oM.Adapter.Commands.Open",
       "range": "BH.oM.Adapter.IExecuteCommand"
     },
@@ -1035,6 +1164,9 @@
       "attributes": [
         "object"
       ],
+      "comment": {
+        "undefined": "Can be used to describe that a thing belongs to a class; or that a thing is equivalent to another thing. When used for BHoM types, this describes C# interface implementation."
+      },
       "domain": "BH.oM.Adapter.Commands.Save",
       "range": "BH.oM.Adapter.IExecuteCommand"
     },
@@ -1055,6 +1187,9 @@
       "attributes": [
         "object"
       ],
+      "comment": {
+        "undefined": "Can be used to describe that a thing belongs to a class; or that a thing is equivalent to another thing. When used for BHoM types, this describes C# interface implementation."
+      },
       "domain": "BH.oM.Adapter.Commands.SaveAs",
       "range": "BH.oM.Adapter.IExecuteCommand"
     }

@@ -33,6 +33,7 @@ namespace BH.Engine.RDF
         // This can add data to the `classAttribute` and `propertyAttribute` arrays.
         public static void AddToAttributeArray(this JArray attributeArray, string id, Uri uri, string label_en, bool isExternal = false,
             List<string> attributes = null,
+            string comment = null,
             List<string> domain = null, List<string> range = null,
             string label_iriBased = null)
         {
@@ -59,6 +60,13 @@ namespace BH.Engine.RDF
 
             attributeArrayObj.Add(new JProperty("attributes", attributes.ToJArray()));
 
+            // // - Comment
+            if (!string.IsNullOrWhiteSpace(comment))
+            {
+                JObject commentObject = new JObject();
+                commentObject.Add(new JProperty("undefined", comment)); // only supports an 'undefined' comment property, it seems.
+                attributeArrayObj.Add(new JProperty("comment", commentObject));
+            }
 
             // // - Domain and range
             domain = domain?.Where(s => !string.IsNullOrWhiteSpace(s)).ToList();

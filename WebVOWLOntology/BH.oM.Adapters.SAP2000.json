@@ -228,73 +228,103 @@
       "id": "BH.oM.Adapters.SAP2000.SAP2000PushConfig",
       "iri": "https://github.com/BHoM/SAP2000_Toolkit/blob/main/SAP2000_oM/Config/SAP2000PushConfig.cs",
       "label": "SAP2000PushConfig (BH.oM.Adapters.SAP2000)",
-      "attributes": []
+      "attributes": [
+        "object"
+      ],
+      "comment": {
+        "undefined": "This Config can be specified in the `ActionConfig` input of any Adapter Action (e.g. Push)."
+      }
     },
     {
       "id": "BH.oM.Adapters.SAP2000.SteelDesignCode",
       "iri": "https://github.com/BHoM/SAP2000_Toolkit/blob/main/SAP2000_oM/Enums/SteelDesignCode.cs",
       "label": "SteelDesignCode (BH.oM.Adapters.SAP2000)",
-      "attributes": []
+      "attributes": [
+        "object"
+      ],
+      "comment": {
+        "undefined": "Defines the Design Code used for result extraction."
+      }
     },
     {
       "id": "BH.oM.Adapters.SAP2000.BarDesignProcedureType",
       "iri": "https://github.com/BHoM/SAP2000_Toolkit/blob/main/SAP2000_oM/Enums/BarDesignProcedureType.cs",
       "label": "BarDesignProcedureType (BH.oM.Adapters.SAP2000)",
-      "attributes": []
+      "attributes": [
+        "object"
+      ]
     },
     {
       "id": "BH.oM.Adapters.SAP2000.BarInsertionPointLocation",
       "iri": "https://github.com/BHoM/SAP2000_Toolkit/blob/main/SAP2000_oM/Enums/BarInsertionPointLocation.cs",
       "label": "BarInsertionPointLocation (BH.oM.Adapters.SAP2000)",
-      "attributes": []
+      "attributes": [
+        "object"
+      ]
     },
     {
       "id": "BH.oM.Adapters.SAP2000.SDShapeType",
       "iri": "https://github.com/BHoM/SAP2000_Toolkit/blob/main/SAP2000_oM/Enums/SDShapeType.cs",
       "label": "SDShapeType (BH.oM.Adapters.SAP2000)",
-      "attributes": []
+      "attributes": [
+        "object"
+      ]
     },
     {
       "id": "BH.oM.Adapters.SAP2000.SAP2000Id",
       "iri": "https://github.com/BHoM/SAP2000_Toolkit/blob/main/SAP2000_oM/Fragments/SAP2000Id.cs",
       "label": "SAP2000Id (BH.oM.Adapters.SAP2000)",
-      "attributes": []
+      "attributes": [
+        "object"
+      ]
     },
     {
       "id": "BH.oM.Adapters.SAP2000.ShellType",
       "iri": "https://github.com/BHoM/SAP2000_Toolkit/blob/main/SAP2000_oM/Enums/ShellType.cs",
       "label": "ShellType (BH.oM.Adapters.SAP2000)",
-      "attributes": []
+      "attributes": [
+        "object"
+      ]
     },
     {
       "id": "BH.oM.Adapters.SAP2000.Requests.SteelUtilisationRequest",
       "iri": "https://github.com/BHoM/SAP2000_Toolkit/blob/main/SAP2000_oM/Requests/SteelUtilisationRequest.cs",
       "label": "SteelUtilisationRequest (BH.oM.Adapters.SAP2000.Requests)",
-      "attributes": []
+      "attributes": [
+        "object"
+      ]
     },
     {
       "id": "BH.oM.Adapters.SAP2000.Elements.BarInsertionPoint",
       "iri": "https://github.com/BHoM/SAP2000_Toolkit/blob/main/SAP2000_oM/Fragments/BarInsertionPoint.cs",
       "label": "BarInsertionPoint (BH.oM.Adapters.SAP2000.Elements)",
-      "attributes": []
+      "attributes": [
+        "object"
+      ]
     },
     {
       "id": "BH.oM.Adapters.SAP2000.Elements.BarDesignProcedure",
       "iri": "https://github.com/BHoM/SAP2000_Toolkit/blob/main/SAP2000_oM/Fragments/BarDesignProcedure.cs",
       "label": "BarDesignProcedure (BH.oM.Adapters.SAP2000.Elements)",
-      "attributes": []
+      "attributes": [
+        "object"
+      ]
     },
     {
       "id": "BH.oM.Adapters.SAP2000.Elements.BarAutoMesh",
       "iri": "https://github.com/BHoM/SAP2000_Toolkit/blob/main/SAP2000_oM/Fragments/BarAutoMesh.cs",
       "label": "BarAutoMesh (BH.oM.Adapters.SAP2000.Elements)",
-      "attributes": []
+      "attributes": [
+        "object"
+      ]
     },
     {
       "id": "BH.oM.Adapters.SAP2000.Results.AISCSteelUtilisation",
       "iri": "https://github.com/BHoM/SAP2000_Toolkit/blob/main/SAP2000_oM/Elements/AISCSteelUtilisation.cs",
       "label": "AISCSteelUtilisation (BH.oM.Adapters.SAP2000.Results)",
-      "attributes": []
+      "attributes": [
+        "object"
+      ]
     },
     {
       "id": "BH.oM.Adapters.SAP2000.SAP2000PushConfig.ReplaceLoads",
@@ -341,6 +371,7 @@
       "iri": "https://github.com/BHoM/BHoM/blob/main/BHoM/Interface/IAdapterId.cs",
       "label": "IAdapterId (BH.oM.Base)",
       "attributes": [
+        "object",
         "external"
       ]
     },
@@ -349,6 +380,7 @@
       "iri": "https://github.com/BHoM/BHoM/blob/main/BHoM/Interface/IFragment.cs",
       "label": "IFragment (BH.oM.Base)",
       "attributes": [
+        "object",
         "external"
       ]
     },
@@ -357,14 +389,21 @@
       "iri": "https://github.com/BHoM/BHoM/blob/main/BHoM/Interface/IPersistentAdapterId.cs",
       "label": "IPersistentAdapterId (BH.oM.Base)",
       "attributes": [
+        "object",
         "external"
-      ]
+      ],
+      "comment": {
+        "undefined": "Requires a Fragment to contain a PersistentId, imported through an Adapter, that can be used to track an object."
+      }
     },
     {
       "id": "BH.oM.Adapters.SAP2000.Requests.SteelUtilisationRequest.Code",
       "iri": "https://github.com/BHoM/SAP2000_Toolkit/blob/main/SAP2000_oM/Requests/SteelUtilisationRequest.cs#L41",
       "label": "Code(BH.oM.Adapters.SAP2000.Requests.SteelUtilisationRequest.Code)",
-      "attributes": []
+      "attributes": [],
+      "comment": {
+        "undefined": "Defines which code to get steel utilization design results for."
+      }
     },
     {
       "id": "BH.oM.Adapters.SAP2000.Requests.SteelUtilisationRequest.Cases",
@@ -395,6 +434,7 @@
       "iri": "https://github.com/BHoM/BHoM/blob/main/Structure_oM/Requests/IStructuralResultRequest.cs",
       "label": "IStructuralResultRequest (BH.oM.Structure.Requests)",
       "attributes": [
+        "object",
         "external"
       ]
     },
@@ -403,6 +443,7 @@
       "iri": "https://github.com/BHoM/BHoM/blob/main/Data_oM/Requests/IResultRequest.cs",
       "label": "IResultRequest (BH.oM.Data.Requests)",
       "attributes": [
+        "object",
         "external"
       ]
     },
@@ -411,6 +452,7 @@
       "iri": "https://github.com/BHoM/BHoM/blob/main/Data_oM/Requests/IRequest.cs",
       "label": "IRequest (BH.oM.Data.Requests)",
       "attributes": [
+        "object",
         "external"
       ]
     },
@@ -418,7 +460,10 @@
       "id": "BH.oM.Adapters.SAP2000.Elements.BarInsertionPoint.InsertionPoint",
       "iri": "https://github.com/BHoM/SAP2000_Toolkit/blob/main/SAP2000_oM/Fragments/BarInsertionPoint.cs#L36",
       "label": "InsertionPoint(BH.oM.Adapters.SAP2000.Elements.BarInsertionPoint.InsertionPoint)",
-      "attributes": []
+      "attributes": [],
+      "comment": {
+        "undefined": "Bar insertion point based on cross section."
+      }
     },
     {
       "id": "BH.oM.Adapters.SAP2000.Elements.BarInsertionPoint.ModifyStiffness",
@@ -432,7 +477,10 @@
       "id": "BH.oM.Adapters.SAP2000.Elements.BarDesignProcedure.DesignProcedure",
       "iri": "https://github.com/BHoM/SAP2000_Toolkit/blob/main/SAP2000_oM/Fragments/BarDesignProcedure.cs#L36",
       "label": "DesignProcedure(BH.oM.Adapters.SAP2000.Elements.BarDesignProcedure.DesignProcedure)",
-      "attributes": []
+      "attributes": [],
+      "comment": {
+        "undefined": "Design procedure based on material type."
+      }
     },
     {
       "id": "BH.oM.Adapters.SAP2000.Elements.BarAutoMesh.AutoMesh",
@@ -567,30 +615,43 @@
       "iri": "https://github.com/BHoM/BHoM/blob/main/Structure_oM/Results/IStructuralResult.cs",
       "label": "IStructuralResult (BH.oM.Structure.Results)",
       "attributes": [
+        "object",
         "external"
-      ]
+      ],
+      "comment": {
+        "undefined": "Base interface for all structural results. Adds ModeNumber as a property in addition to the one from the base IResult"
+      }
     },
     {
       "id": "BH.oM.Analytical.Results.IObjectIdResult",
       "iri": "https://github.com/BHoM/BHoM/blob/main/Analytical_oM/Results/IObjectIdResult.cs",
       "label": "IObjectIdResult (BH.oM.Analytical.Results)",
       "attributes": [
+        "object",
         "external"
-      ]
+      ],
+      "comment": {
+        "undefined": "Interface for Results belonging to a particular object. The owning object is identified and correlated to the Results by its ID."
+      }
     },
     {
       "id": "BH.oM.Analytical.Results.IResult",
       "iri": "https://github.com/BHoM/BHoM/blob/main/Analytical_oM/Results/IResult.cs",
       "label": "IResult (BH.oM.Analytical.Results)",
       "attributes": [
+        "object",
         "external"
-      ]
+      ],
+      "comment": {
+        "undefined": "Base interface for all analytical results.\nFor expanded functionality, a result class should generally either implement the IResultItem or IResultCollection interface, or one of their sub-interfaces, rather than this interface directly."
+      }
     },
     {
       "id": "BH.oM.Base.IImmutable",
       "iri": "https://github.com/BHoM/BHoM/blob/main/BHoM/Interface/IImmutable.cs",
       "label": "IImmutable (BH.oM.Base)",
       "attributes": [
+        "object",
         "external"
       ]
     },
@@ -599,32 +660,48 @@
       "iri": "https://github.com/BHoM/BHoM/blob/main/Analytical_oM/Results/ICasedResult.cs",
       "label": "ICasedResult (BH.oM.Analytical.Results)",
       "attributes": [
+        "object",
         "external"
-      ]
+      ],
+      "comment": {
+        "undefined": "Interface for results that correspond to a particular case."
+      }
     },
     {
       "id": "BH.oM.Analytical.Results.ITimeStepResult",
       "iri": "https://github.com/BHoM/BHoM/blob/main/Analytical_oM/Results/ITimeStepResult.cs",
       "label": "ITimeStepResult (BH.oM.Analytical.Results)",
       "attributes": [
+        "object",
         "external"
-      ]
+      ],
+      "comment": {
+        "undefined": "Interface for results that correspond to a particular time step, for example a discrete result from a time history anlysis."
+      }
     },
     {
       "id": "BH.oM.Analytical.Results.IElement1DResult",
       "iri": "https://github.com/BHoM/BHoM/blob/main/Analytical_oM/Results/IElement1DResult.cs",
       "label": "IElement1DResult (BH.oM.Analytical.Results)",
       "attributes": [
+        "object",
         "external"
-      ]
+      ],
+      "comment": {
+        "undefined": "Base interface for results, corresponding to a discrete result at a particular position along a one-dimensional element."
+      }
     },
     {
       "id": "BH.oM.Analytical.Results.IResultItem",
       "iri": "https://github.com/BHoM/BHoM/blob/main/Analytical_oM/Results/IResultItem.cs",
       "label": "IResultItem (BH.oM.Analytical.Results)",
       "attributes": [
+        "object",
         "external"
-      ]
+      ],
+      "comment": {
+        "undefined": "Base interface to flag that the result is a simple result line.\nA class implementing the IResultItem interface should only contain basic properties such as doubles, ints, strings, DateTime and similar.\nFor instance, a class implementing this interface could be represented as a single row in a table (e.g. Excel or a SQL database) with its properties explicitly readable."
+      }
     },
     {
       "id": "BH.oM.Structure.Results.BarResult",
@@ -891,6 +968,9 @@
       "attributes": [
         "object"
       ],
+      "comment": {
+        "undefined": "Can be used to describe that a thing belongs to a class; or that a thing is equivalent to another thing. When used for BHoM types, this describes C# interface implementation."
+      },
       "domain": "BH.oM.Adapters.SAP2000.SAP2000Id",
       "range": "BH.oM.Base.IAdapterId"
     },
@@ -901,6 +981,9 @@
       "attributes": [
         "object"
       ],
+      "comment": {
+        "undefined": "Can be used to describe that a thing belongs to a class; or that a thing is equivalent to another thing. When used for BHoM types, this describes C# interface implementation."
+      },
       "domain": "BH.oM.Adapters.SAP2000.SAP2000Id",
       "range": "BH.oM.Base.IFragment"
     },
@@ -911,6 +994,9 @@
       "attributes": [
         "object"
       ],
+      "comment": {
+        "undefined": "Can be used to describe that a thing belongs to a class; or that a thing is equivalent to another thing. When used for BHoM types, this describes C# interface implementation."
+      },
       "domain": "BH.oM.Adapters.SAP2000.SAP2000Id",
       "range": "BH.oM.Base.IPersistentAdapterId"
     },
@@ -971,6 +1057,9 @@
       "attributes": [
         "object"
       ],
+      "comment": {
+        "undefined": "Can be used to describe that a thing belongs to a class; or that a thing is equivalent to another thing. When used for BHoM types, this describes C# interface implementation."
+      },
       "domain": "BH.oM.Adapters.SAP2000.Requests.SteelUtilisationRequest",
       "range": "BH.oM.Structure.Requests.IStructuralResultRequest"
     },
@@ -981,6 +1070,9 @@
       "attributes": [
         "object"
       ],
+      "comment": {
+        "undefined": "Can be used to describe that a thing belongs to a class; or that a thing is equivalent to another thing. When used for BHoM types, this describes C# interface implementation."
+      },
       "domain": "BH.oM.Adapters.SAP2000.Requests.SteelUtilisationRequest",
       "range": "BH.oM.Data.Requests.IResultRequest"
     },
@@ -991,6 +1083,9 @@
       "attributes": [
         "object"
       ],
+      "comment": {
+        "undefined": "Can be used to describe that a thing belongs to a class; or that a thing is equivalent to another thing. When used for BHoM types, this describes C# interface implementation."
+      },
       "domain": "BH.oM.Adapters.SAP2000.Requests.SteelUtilisationRequest",
       "range": "BH.oM.Data.Requests.IRequest"
     },
@@ -1031,6 +1126,9 @@
       "attributes": [
         "object"
       ],
+      "comment": {
+        "undefined": "Can be used to describe that a thing belongs to a class; or that a thing is equivalent to another thing. When used for BHoM types, this describes C# interface implementation."
+      },
       "domain": "BH.oM.Adapters.SAP2000.Elements.BarInsertionPoint",
       "range": "BH.oM.Base.IFragment"
     },
@@ -1061,6 +1159,9 @@
       "attributes": [
         "object"
       ],
+      "comment": {
+        "undefined": "Can be used to describe that a thing belongs to a class; or that a thing is equivalent to another thing. When used for BHoM types, this describes C# interface implementation."
+      },
       "domain": "BH.oM.Adapters.SAP2000.Elements.BarDesignProcedure",
       "range": "BH.oM.Base.IFragment"
     },
@@ -1121,6 +1222,9 @@
       "attributes": [
         "object"
       ],
+      "comment": {
+        "undefined": "Can be used to describe that a thing belongs to a class; or that a thing is equivalent to another thing. When used for BHoM types, this describes C# interface implementation."
+      },
       "domain": "BH.oM.Adapters.SAP2000.Elements.BarAutoMesh",
       "range": "BH.oM.Base.IFragment"
     },
@@ -1241,6 +1345,9 @@
       "attributes": [
         "object"
       ],
+      "comment": {
+        "undefined": "Can be used to describe that a thing belongs to a class; or that a thing is equivalent to another thing. When used for BHoM types, this describes C# interface implementation."
+      },
       "domain": "BH.oM.Adapters.SAP2000.Results.AISCSteelUtilisation",
       "range": "BH.oM.Structure.Results.IStructuralResult"
     },
@@ -1251,6 +1358,9 @@
       "attributes": [
         "object"
       ],
+      "comment": {
+        "undefined": "Can be used to describe that a thing belongs to a class; or that a thing is equivalent to another thing. When used for BHoM types, this describes C# interface implementation."
+      },
       "domain": "BH.oM.Adapters.SAP2000.Results.AISCSteelUtilisation",
       "range": "BH.oM.Analytical.Results.IObjectIdResult"
     },
@@ -1261,6 +1371,9 @@
       "attributes": [
         "object"
       ],
+      "comment": {
+        "undefined": "Can be used to describe that a thing belongs to a class; or that a thing is equivalent to another thing. When used for BHoM types, this describes C# interface implementation."
+      },
       "domain": "BH.oM.Adapters.SAP2000.Results.AISCSteelUtilisation",
       "range": "BH.oM.Analytical.Results.IResult"
     },
@@ -1271,6 +1384,9 @@
       "attributes": [
         "object"
       ],
+      "comment": {
+        "undefined": "Can be used to describe that a thing belongs to a class; or that a thing is equivalent to another thing. When used for BHoM types, this describes C# interface implementation."
+      },
       "domain": "BH.oM.Adapters.SAP2000.Results.AISCSteelUtilisation",
       "range": "BH.oM.Base.IImmutable"
     },
@@ -1281,6 +1397,9 @@
       "attributes": [
         "object"
       ],
+      "comment": {
+        "undefined": "Can be used to describe that a thing belongs to a class; or that a thing is equivalent to another thing. When used for BHoM types, this describes C# interface implementation."
+      },
       "domain": "BH.oM.Adapters.SAP2000.Results.AISCSteelUtilisation",
       "range": "BH.oM.Analytical.Results.ICasedResult"
     },
@@ -1291,6 +1410,9 @@
       "attributes": [
         "object"
       ],
+      "comment": {
+        "undefined": "Can be used to describe that a thing belongs to a class; or that a thing is equivalent to another thing. When used for BHoM types, this describes C# interface implementation."
+      },
       "domain": "BH.oM.Adapters.SAP2000.Results.AISCSteelUtilisation",
       "range": "BH.oM.Analytical.Results.ITimeStepResult"
     },
@@ -1301,6 +1423,9 @@
       "attributes": [
         "object"
       ],
+      "comment": {
+        "undefined": "Can be used to describe that a thing belongs to a class; or that a thing is equivalent to another thing. When used for BHoM types, this describes C# interface implementation."
+      },
       "domain": "BH.oM.Adapters.SAP2000.Results.AISCSteelUtilisation",
       "range": "BH.oM.Analytical.Results.IElement1DResult"
     },
@@ -1311,6 +1436,9 @@
       "attributes": [
         "object"
       ],
+      "comment": {
+        "undefined": "Can be used to describe that a thing belongs to a class; or that a thing is equivalent to another thing. When used for BHoM types, this describes C# interface implementation."
+      },
       "domain": "BH.oM.Adapters.SAP2000.Results.AISCSteelUtilisation",
       "range": "BH.oM.Analytical.Results.IResultItem"
     },

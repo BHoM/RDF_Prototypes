@@ -344,211 +344,356 @@
       "id": "BH.oM.Analytical.IAnalytical",
       "iri": "https://github.com/BHoM/BHoM/blob/main/Analytical_oM/IAnalytical.cs",
       "label": "IAnalytical (BH.oM.Analytical)",
-      "attributes": []
+      "attributes": [
+        "object"
+      ]
     },
     {
       "id": "BH.oM.Analytical.Results.ICasedResult",
       "iri": "https://github.com/BHoM/BHoM/blob/main/Analytical_oM/Results/ICasedResult.cs",
       "label": "ICasedResult (BH.oM.Analytical.Results)",
-      "attributes": []
+      "attributes": [
+        "object"
+      ],
+      "comment": {
+        "undefined": "Interface for results that correspond to a particular case."
+      }
     },
     {
       "id": "BH.oM.Analytical.Results.IElement1DResult",
       "iri": "https://github.com/BHoM/BHoM/blob/main/Analytical_oM/Results/IElement1DResult.cs",
       "label": "IElement1DResult (BH.oM.Analytical.Results)",
-      "attributes": []
+      "attributes": [
+        "object"
+      ],
+      "comment": {
+        "undefined": "Base interface for results, corresponding to a discrete result at a particular position along a one-dimensional element."
+      }
     },
     {
       "id": "BH.oM.Analytical.Results.IMeshElementResult",
       "iri": "https://github.com/BHoM/BHoM/blob/main/Analytical_oM/Results/IMeshElementResult.cs",
       "label": "IMeshElementResult (BH.oM.Analytical.Results)",
-      "attributes": []
+      "attributes": [
+        "object"
+      ],
+      "comment": {
+        "undefined": "Base interface for mesh element results. This is the result for a single discrete node or face of the mesh the result aligns with."
+      }
     },
     {
       "id": "BH.oM.Analytical.Results.IMeshResult`1",
       "iri": "https://github.com/BHoM/BHoM/blob/main/Analytical_oM/Results/IMeshResult.cs",
       "label": "IMeshResult<T> (BH.oM.Analytical.Results)",
-      "attributes": []
+      "attributes": [
+        "object"
+      ],
+      "comment": {
+        "undefined": "Base interface for any Mesh result class which is a collection of discrete MeshElementResults."
+      }
     },
     {
       "id": "BH.oM.Analytical.Results.IObjectIdResult",
       "iri": "https://github.com/BHoM/BHoM/blob/main/Analytical_oM/Results/IObjectIdResult.cs",
       "label": "IObjectIdResult (BH.oM.Analytical.Results)",
-      "attributes": []
+      "attributes": [
+        "object"
+      ],
+      "comment": {
+        "undefined": "Interface for Results belonging to a particular object. The owning object is identified and correlated to the Results by its ID."
+      }
     },
     {
       "id": "BH.oM.Analytical.Results.IObjectResult",
       "iri": "https://github.com/BHoM/BHoM/blob/main/Analytical_oM/Results/IObjectResult.cs",
       "label": "IObjectResult (BH.oM.Analytical.Results)",
-      "attributes": []
+      "attributes": [
+        "object"
+      ],
+      "comment": {
+        "undefined": "Base interface for result classes where the values apply to the entire object referenced to with the ObjectID."
+      }
     },
     {
       "id": "BH.oM.Analytical.Results.IResult",
       "iri": "https://github.com/BHoM/BHoM/blob/main/Analytical_oM/Results/IResult.cs",
       "label": "IResult (BH.oM.Analytical.Results)",
-      "attributes": []
+      "attributes": [
+        "object"
+      ],
+      "comment": {
+        "undefined": "Base interface for all analytical results.\nFor expanded functionality, a result class should generally either implement the IResultItem or IResultCollection interface, or one of their sub-interfaces, rather than this interface directly."
+      }
     },
     {
       "id": "BH.oM.Analytical.Results.IResultCollection",
       "iri": "https://github.com/BHoM/BHoM/blob/main/Analytical_oM/Results/IResultCollection.cs",
       "label": "IResultCollection (BH.oM.Analytical.Results)",
-      "attributes": []
+      "attributes": [
+        "object"
+      ],
+      "comment": {
+        "undefined": "Non-generic base interface for result collections. The IResultCollection facilitates simpler filtering in the Engine. Classes are generally recommended to implement the IResultCollection<T> interface."
+      }
     },
     {
       "id": "BH.oM.Analytical.Results.IResultItem",
       "iri": "https://github.com/BHoM/BHoM/blob/main/Analytical_oM/Results/IResultItem.cs",
       "label": "IResultItem (BH.oM.Analytical.Results)",
-      "attributes": []
+      "attributes": [
+        "object"
+      ],
+      "comment": {
+        "undefined": "Base interface to flag that the result is a simple result line.\nA class implementing the IResultItem interface should only contain basic properties such as doubles, ints, strings, DateTime and similar.\nFor instance, a class implementing this interface could be represented as a single row in a table (e.g. Excel or a SQL database) with its properties explicitly readable."
+      }
     },
     {
       "id": "BH.oM.Analytical.Results.ITimeStepResult",
       "iri": "https://github.com/BHoM/BHoM/blob/main/Analytical_oM/Results/ITimeStepResult.cs",
       "label": "ITimeStepResult (BH.oM.Analytical.Results)",
-      "attributes": []
+      "attributes": [
+        "object"
+      ],
+      "comment": {
+        "undefined": "Interface for results that correspond to a particular time step, for example a discrete result from a time history anlysis."
+      }
     },
     {
       "id": "BH.oM.Analytical.Fragments.IDependencyFragment",
       "iri": "https://github.com/BHoM/BHoM/blob/main/Analytical_oM/Fragments/IDependencyFragment.cs",
       "label": "IDependencyFragment (BH.oM.Analytical.Fragments)",
-      "attributes": []
+      "attributes": [
+        "object"
+      ],
+      "comment": {
+        "undefined": "Interface common to all DependencyFragments."
+      }
     },
     {
       "id": "BH.oM.Analytical.Fragments.IProjectionFragment",
       "iri": "https://github.com/BHoM/BHoM/blob/main/Analytical_oM/Fragments/IProjectionFragment.cs",
       "label": "IProjectionFragment (BH.oM.Analytical.Fragments)",
-      "attributes": []
+      "attributes": [
+        "object"
+      ],
+      "comment": {
+        "undefined": "Interface common to all ProjectionFragments."
+      }
     },
     {
       "id": "BH.oM.Analytical.Fragments.ProjectionFragment",
       "iri": "https://github.com/BHoM/BHoM/blob/main/Analytical_oM/Fragments/ProjectionFragment.cs",
       "label": "ProjectionFragment (BH.oM.Analytical.Fragments)",
-      "attributes": []
+      "attributes": [
+        "object"
+      ],
+      "comment": {
+        "undefined": "Fragment used to define entity projection metadata."
+      }
     },
     {
       "id": "BH.oM.Analytical.Fragments.RoutingFragment",
       "iri": "https://github.com/BHoM/BHoM/blob/main/Analytical_oM/Fragments/RoutingFragment.cs",
       "label": "RoutingFragment (BH.oM.Analytical.Fragments)",
-      "attributes": []
+      "attributes": [
+        "object"
+      ],
+      "comment": {
+        "undefined": "Fragment used in the computation of shortest paths."
+      }
     },
     {
       "id": "BH.oM.Analytical.Fragments.SourcesDependencyFragment",
       "iri": "https://github.com/BHoM/BHoM/blob/main/Analytical_oM/Fragments/SourcesDependencyFragment.cs",
       "label": "SourcesDependencyFragment (BH.oM.Analytical.Fragments)",
-      "attributes": []
+      "attributes": [
+        "object"
+      ],
+      "comment": {
+        "undefined": "Dependency fragment used to define one or more Relations that originate at the specified sources and use the IBHoMObject owning this fragment as the target."
+      }
     },
     {
       "id": "BH.oM.Analytical.Fragments.TargetsDependencyFragment",
       "iri": "https://github.com/BHoM/BHoM/blob/main/Analytical_oM/Fragments/TargetsDependencyFragment.cs",
       "label": "TargetsDependencyFragment (BH.oM.Analytical.Fragments)",
-      "attributes": []
+      "attributes": [
+        "object"
+      ],
+      "comment": {
+        "undefined": "Dependency fragment used to define one or more Relations that terminate at the specified targets and use the IBHoMObject owning this fragment as the source."
+      }
     },
     {
       "id": "BH.oM.Analytical.Elements.Graph",
       "iri": "https://github.com/BHoM/BHoM/blob/main/Analytical_oM/Elements/Graph/Graph.cs",
       "label": "Graph (BH.oM.Analytical.Elements)",
-      "attributes": []
+      "attributes": [
+        "object"
+      ],
+      "comment": {
+        "undefined": "A set of IBHoMObject entities and the relations between them."
+      }
     },
     {
       "id": "BH.oM.Analytical.Elements.IRelation",
       "iri": "https://github.com/BHoM/BHoM/blob/main/Analytical_oM/Elements/Graph/IRelation.cs",
       "label": "IRelation (BH.oM.Analytical.Elements)",
-      "attributes": []
+      "attributes": [
+        "object"
+      ],
+      "comment": {
+        "undefined": "Interface common to all Relation objects."
+      }
     },
     {
       "id": "BH.oM.Analytical.Elements.GeometricProjection",
       "iri": "https://github.com/BHoM/BHoM/blob/main/Analytical_oM/Elements/Graph/Projection/GeometricProjection.cs",
       "label": "GeometricProjection (BH.oM.Analytical.Elements)",
-      "attributes": []
+      "attributes": [
+        "object"
+      ],
+      "comment": {
+        "undefined": "Geometry projection for Graphs."
+      }
     },
     {
       "id": "BH.oM.Analytical.Elements.GraphicalProjection",
       "iri": "https://github.com/BHoM/BHoM/blob/main/Analytical_oM/Elements/Graph/Projection/GraphicalProjection.cs",
       "label": "GraphicalProjection (BH.oM.Analytical.Elements)",
-      "attributes": []
+      "attributes": [
+        "object"
+      ],
+      "comment": {
+        "undefined": "Graphical projection for Graphs."
+      }
     },
     {
       "id": "BH.oM.Analytical.Elements.IProjection",
       "iri": "https://github.com/BHoM/BHoM/blob/main/Analytical_oM/Elements/Graph/Projection/IProjection.cs",
       "label": "IProjection (BH.oM.Analytical.Elements)",
-      "attributes": []
+      "attributes": [
+        "object"
+      ],
+      "comment": {
+        "undefined": "Interface common to all graph projections."
+      }
     },
     {
       "id": "BH.oM.Analytical.Elements.SpatialProjection",
       "iri": "https://github.com/BHoM/BHoM/blob/main/Analytical_oM/Elements/Graph/Projection/SpatialProjection.cs",
       "label": "SpatialProjection (BH.oM.Analytical.Elements)",
-      "attributes": []
+      "attributes": [
+        "object"
+      ],
+      "comment": {
+        "undefined": "Spatial Projection for Graphs."
+      }
     },
     {
       "id": "BH.oM.Analytical.Elements.Relation",
       "iri": "https://github.com/BHoM/BHoM/blob/main/Analytical_oM/Elements/Graph/Relation.cs",
       "label": "Relation (BH.oM.Analytical.Elements)",
-      "attributes": []
+      "attributes": [
+        "object"
+      ],
+      "comment": {
+        "undefined": "Base class for all Relation classes."
+      }
     },
     {
       "id": "BH.oM.Analytical.Elements.RelationDirection",
       "iri": "https://github.com/BHoM/BHoM/blob/main/Analytical_oM/Elements/Graph/RelationDirection.cs",
       "label": "RelationDirection (BH.oM.Analytical.Elements)",
-      "attributes": []
+      "attributes": [
+        "object"
+      ]
     },
     {
       "id": "BH.oM.Analytical.Elements.IEdge",
       "iri": "https://github.com/BHoM/BHoM/blob/main/Analytical_oM/Elements/IEdge.cs",
       "label": "IEdge (BH.oM.Analytical.Elements)",
-      "attributes": []
+      "attributes": [
+        "object"
+      ]
     },
     {
       "id": "BH.oM.Analytical.Elements.IFace",
       "iri": "https://github.com/BHoM/BHoM/blob/main/Analytical_oM/Elements/IFace.cs",
       "label": "IFace (BH.oM.Analytical.Elements)",
-      "attributes": []
+      "attributes": [
+        "object"
+      ]
     },
     {
       "id": "BH.oM.Analytical.Elements.ILink`1",
       "iri": "https://github.com/BHoM/BHoM/blob/main/Analytical_oM/Elements/ILink.cs",
       "label": "ILink<TNode> (BH.oM.Analytical.Elements)",
-      "attributes": []
+      "attributes": [
+        "object"
+      ]
     },
     {
       "id": "BH.oM.Analytical.Elements.IMesh`2",
       "iri": "https://github.com/BHoM/BHoM/blob/main/Analytical_oM/Elements/IMesh.cs",
       "label": "IMesh<TNode,TFace> (BH.oM.Analytical.Elements)",
-      "attributes": []
+      "attributes": [
+        "object"
+      ]
     },
     {
       "id": "BH.oM.Analytical.Elements.INode",
       "iri": "https://github.com/BHoM/BHoM/blob/main/Analytical_oM/Elements/INode.cs",
       "label": "INode (BH.oM.Analytical.Elements)",
-      "attributes": []
+      "attributes": [
+        "object"
+      ]
     },
     {
       "id": "BH.oM.Analytical.Elements.IOpening`1",
       "iri": "https://github.com/BHoM/BHoM/blob/main/Analytical_oM/Elements/IOpening.cs",
       "label": "IOpening<TEdge> (BH.oM.Analytical.Elements)",
-      "attributes": []
+      "attributes": [
+        "object"
+      ]
     },
     {
       "id": "BH.oM.Analytical.Elements.IPanel`2",
       "iri": "https://github.com/BHoM/BHoM/blob/main/Analytical_oM/Elements/IPanel.cs",
       "label": "IPanel<TEdge,TOpening> (BH.oM.Analytical.Elements)",
-      "attributes": []
+      "attributes": [
+        "object"
+      ]
     },
     {
       "id": "BH.oM.Analytical.Elements.IRegion",
       "iri": "https://github.com/BHoM/BHoM/blob/main/Analytical_oM/Elements/IRegion.cs",
       "label": "IRegion (BH.oM.Analytical.Elements)",
-      "attributes": []
+      "attributes": [
+        "object"
+      ],
+      "comment": {
+        "undefined": "Base interface for analytical elements defined by a single closed perimiter curve."
+      }
     },
     {
       "id": "BH.oM.Analytical.Elements.ISurface",
       "iri": "https://github.com/BHoM/BHoM/blob/main/Analytical_oM/Elements/ISurface.cs",
       "label": "ISurface (BH.oM.Analytical.Elements)",
-      "attributes": []
+      "attributes": [
+        "object"
+      ]
     },
     {
       "id": "BH.oM.Analytical.Elements.ShortestPathResult",
       "iri": "https://github.com/BHoM/BHoM/blob/main/Analytical_oM/Results/ShortestPathResult.cs",
       "label": "ShortestPathResult (BH.oM.Analytical.Elements)",
-      "attributes": []
+      "attributes": [
+        "object"
+      ],
+      "comment": {
+        "undefined": "Results associated with the computation of shortest paths."
+      }
     },
     {
       "id": "BH.oM.Analytical.Results.ICasedResult.ResultCase",
@@ -563,6 +708,7 @@
       "iri": "https://github.com/BHoM/BHoM/blob/main/BHoM/Interface/IImmutable.cs",
       "label": "IImmutable (BH.oM.Base)",
       "attributes": [
+        "object",
         "external"
       ]
     },
@@ -587,6 +733,7 @@
       "iri": "https://github.com/BHoM/BHoM/blob/main/BHoM/Interface/IFragment.cs",
       "label": "IFragment (BH.oM.Base)",
       "attributes": [
+        "object",
         "external"
       ]
     },
@@ -657,8 +804,12 @@
       "iri": "https://github.com/BHoM/BHoM/blob/main/Geometry_oM/Curve/ICurve.cs",
       "label": "ICurve (BH.oM.Geometry)",
       "attributes": [
+        "object",
         "external"
-      ]
+      ],
+      "comment": {
+        "undefined": "The interface for all one-dimensional geometrical objects."
+      }
     },
     {
       "id": "BH.oM.Analytical.Fragments.TargetsDependencyFragment.Targets",
@@ -685,6 +836,7 @@
       "iri": "https://github.com/BHoM/BHoM/blob/main/BHoM/Interface/IBHoMObject.cs",
       "label": "IBHoMObject (BH.oM.Base)",
       "attributes": [
+        "object",
         "external"
       ]
     },
@@ -713,8 +865,12 @@
       "iri": "https://github.com/BHoM/BHoM/blob/main/Graphics_oM/Views/IView.cs",
       "label": "IView (BH.oM.Graphics.Views)",
       "attributes": [
+        "object",
         "external"
-      ]
+      ],
+      "comment": {
+        "undefined": "Base interface for all graphics view objects."
+      }
     },
     {
       "id": "BH.oM.Analytical.Elements.Relation.Source",
@@ -736,7 +892,10 @@
       "id": "BH.oM.Analytical.Elements.Relation.Subgraph",
       "iri": "https://github.com/BHoM/BHoM/blob/main/Analytical_oM/Elements/Graph/Relation.cs#L48",
       "label": "Subgraph(BH.oM.Analytical.Elements.Relation.Subgraph)",
-      "attributes": []
+      "attributes": [],
+      "comment": {
+        "undefined": "This Relation's sub Graph."
+      }
     },
     {
       "id": "BH.oM.Analytical.Elements.Relation.Weight",
@@ -750,23 +909,34 @@
       "id": "BH.oM.Analytical.Elements.Relation.Curve",
       "iri": "https://github.com/BHoM/BHoM/blob/main/Analytical_oM/Elements/Graph/Relation.cs#L54",
       "label": "Curve(BH.oM.Analytical.Elements.Relation.Curve)",
-      "attributes": []
+      "attributes": [],
+      "comment": {
+        "undefined": "Curve that represents the link between the source and target entities."
+      }
     },
     {
       "id": "BH.oM.Dimensional.IElement1D",
       "iri": "https://github.com/BHoM/BHoM/blob/main/Dimensional_oM/IElement1D.cs",
       "label": "IElement1D (BH.oM.Dimensional)",
       "attributes": [
+        "object",
         "external"
-      ]
+      ],
+      "comment": {
+        "undefined": "Enables geometrical operations to be performed on a Curve based spatial element, whilst preserving all other object properties as unchanged. /nObjects implementing this interface will be required to implement some base methods for getting and setting data in a way that maintains the object's other properties.Documentation detailing required extension methods can be found here: https://github.com/BHoM/documentation/wiki/IElement-required-extension-methods"
+      }
     },
     {
       "id": "BH.oM.Dimensional.IElement",
       "iri": "https://github.com/BHoM/BHoM/blob/main/Dimensional_oM/IElement.cs",
       "label": "IElement (BH.oM.Dimensional)",
       "attributes": [
+        "object",
         "external"
-      ]
+      ],
+      "comment": {
+        "undefined": "The common base interface for all the Spatial Dimensional Objects.This interface should not be implemented directly, only through its sub-interfaces.Methods operating on IElement assume a specific implementation of one or other of the sub-interfaces (i.e. IElement0D, IElement1D, IElement2D)"
+      }
     },
     {
       "id": "BH.oM.Analytical.Elements.IFace.NodeListIndices",
@@ -813,8 +983,12 @@
       "iri": "https://github.com/BHoM/BHoM/blob/main/Dimensional_oM/IElement0D.cs",
       "label": "IElement0D (BH.oM.Dimensional)",
       "attributes": [
+        "object",
         "external"
-      ]
+      ],
+      "comment": {
+        "undefined": "Enables geometrical operations to be performed on a Point based spatial element, whilst preserving all other object properties as unchanged. /nObjects implementing this interface will be required to implement some base methods for getting and setting data in a way that maintains the object's other properties.Documentation detailing required extension methods can be found here: https://github.com/BHoM/documentation/wiki/IElement-required-extension-methods"
+      }
     },
     {
       "id": "BH.oM.Analytical.Elements.IOpening`1.Edges",
@@ -829,8 +1003,12 @@
       "iri": "https://github.com/BHoM/BHoM/blob/main/Dimensional_oM/IElement2D.cs",
       "label": "IElement2D (BH.oM.Dimensional)",
       "attributes": [
+        "object",
         "external"
-      ]
+      ],
+      "comment": {
+        "undefined": "Enables geometrical operations to be performed on an edge curve based two-dimensional spatial element, whilst preserving all other object properties as unchanged. /nThe interface expects the outline to be constructed of IElement1D elements and allows for internal IElement2D elements.Objects implementing this interface will be required to implement some base methods for getting and setting data in a way that maintains the object's other properties.Documentation detailing required extension methods can be found here: https://github.com/BHoM/documentation/wiki/IElement-required-extension-methods"
+      }
     },
     {
       "id": "BH.oM.Analytical.Elements.IPanel`2.ExternalEdges",
@@ -1449,6 +1627,9 @@
       "attributes": [
         "object"
       ],
+      "comment": {
+        "undefined": "Can be used to describe that a thing belongs to a class; or that a thing is equivalent to another thing. When used for BHoM types, this describes C# interface implementation."
+      },
       "domain": "BH.oM.Analytical.Results.ICasedResult",
       "range": "BH.oM.Analytical.Results.IResult"
     },
@@ -1459,6 +1640,9 @@
       "attributes": [
         "object"
       ],
+      "comment": {
+        "undefined": "Can be used to describe that a thing belongs to a class; or that a thing is equivalent to another thing. When used for BHoM types, this describes C# interface implementation."
+      },
       "domain": "BH.oM.Analytical.Results.ICasedResult",
       "range": "BH.oM.Base.IImmutable"
     },
@@ -1489,6 +1673,9 @@
       "attributes": [
         "object"
       ],
+      "comment": {
+        "undefined": "Can be used to describe that a thing belongs to a class; or that a thing is equivalent to another thing. When used for BHoM types, this describes C# interface implementation."
+      },
       "domain": "BH.oM.Analytical.Results.IElement1DResult",
       "range": "BH.oM.Analytical.Results.IResult"
     },
@@ -1499,6 +1686,9 @@
       "attributes": [
         "object"
       ],
+      "comment": {
+        "undefined": "Can be used to describe that a thing belongs to a class; or that a thing is equivalent to another thing. When used for BHoM types, this describes C# interface implementation."
+      },
       "domain": "BH.oM.Analytical.Results.IElement1DResult",
       "range": "BH.oM.Base.IImmutable"
     },
@@ -1509,6 +1699,9 @@
       "attributes": [
         "object"
       ],
+      "comment": {
+        "undefined": "Can be used to describe that a thing belongs to a class; or that a thing is equivalent to another thing. When used for BHoM types, this describes C# interface implementation."
+      },
       "domain": "BH.oM.Analytical.Results.IElement1DResult",
       "range": "BH.oM.Analytical.Results.IObjectIdResult"
     },
@@ -1519,6 +1712,9 @@
       "attributes": [
         "object"
       ],
+      "comment": {
+        "undefined": "Can be used to describe that a thing belongs to a class; or that a thing is equivalent to another thing. When used for BHoM types, this describes C# interface implementation."
+      },
       "domain": "BH.oM.Analytical.Results.IElement1DResult",
       "range": "BH.oM.Analytical.Results.IResultItem"
     },
@@ -1549,6 +1745,9 @@
       "attributes": [
         "object"
       ],
+      "comment": {
+        "undefined": "Can be used to describe that a thing belongs to a class; or that a thing is equivalent to another thing. When used for BHoM types, this describes C# interface implementation."
+      },
       "domain": "BH.oM.Analytical.Results.IMeshElementResult",
       "range": "BH.oM.Analytical.Results.IResult"
     },
@@ -1559,6 +1758,9 @@
       "attributes": [
         "object"
       ],
+      "comment": {
+        "undefined": "Can be used to describe that a thing belongs to a class; or that a thing is equivalent to another thing. When used for BHoM types, this describes C# interface implementation."
+      },
       "domain": "BH.oM.Analytical.Results.IMeshElementResult",
       "range": "BH.oM.Base.IImmutable"
     },
@@ -1569,6 +1771,9 @@
       "attributes": [
         "object"
       ],
+      "comment": {
+        "undefined": "Can be used to describe that a thing belongs to a class; or that a thing is equivalent to another thing. When used for BHoM types, this describes C# interface implementation."
+      },
       "domain": "BH.oM.Analytical.Results.IMeshElementResult",
       "range": "BH.oM.Analytical.Results.IResultItem"
     },
@@ -1579,6 +1784,9 @@
       "attributes": [
         "object"
       ],
+      "comment": {
+        "undefined": "Can be used to describe that a thing belongs to a class; or that a thing is equivalent to another thing. When used for BHoM types, this describes C# interface implementation."
+      },
       "domain": "BH.oM.Analytical.Results.IMeshResult`1",
       "range": "BH.oM.Analytical.Results.IObjectIdResult"
     },
@@ -1589,6 +1797,9 @@
       "attributes": [
         "object"
       ],
+      "comment": {
+        "undefined": "Can be used to describe that a thing belongs to a class; or that a thing is equivalent to another thing. When used for BHoM types, this describes C# interface implementation."
+      },
       "domain": "BH.oM.Analytical.Results.IMeshResult`1",
       "range": "BH.oM.Analytical.Results.IResult"
     },
@@ -1599,6 +1810,9 @@
       "attributes": [
         "object"
       ],
+      "comment": {
+        "undefined": "Can be used to describe that a thing belongs to a class; or that a thing is equivalent to another thing. When used for BHoM types, this describes C# interface implementation."
+      },
       "domain": "BH.oM.Analytical.Results.IMeshResult`1",
       "range": "BH.oM.Base.IImmutable"
     },
@@ -1609,6 +1823,9 @@
       "attributes": [
         "object"
       ],
+      "comment": {
+        "undefined": "Can be used to describe that a thing belongs to a class; or that a thing is equivalent to another thing. When used for BHoM types, this describes C# interface implementation."
+      },
       "domain": "BH.oM.Analytical.Results.IMeshResult`1",
       "range": "BH.oM.Analytical.Results.IResultCollection"
     },
@@ -1629,6 +1846,9 @@
       "attributes": [
         "object"
       ],
+      "comment": {
+        "undefined": "Can be used to describe that a thing belongs to a class; or that a thing is equivalent to another thing. When used for BHoM types, this describes C# interface implementation."
+      },
       "domain": "BH.oM.Analytical.Results.IObjectIdResult",
       "range": "BH.oM.Analytical.Results.IResult"
     },
@@ -1639,6 +1859,9 @@
       "attributes": [
         "object"
       ],
+      "comment": {
+        "undefined": "Can be used to describe that a thing belongs to a class; or that a thing is equivalent to another thing. When used for BHoM types, this describes C# interface implementation."
+      },
       "domain": "BH.oM.Analytical.Results.IObjectIdResult",
       "range": "BH.oM.Base.IImmutable"
     },
@@ -1649,6 +1872,9 @@
       "attributes": [
         "object"
       ],
+      "comment": {
+        "undefined": "Can be used to describe that a thing belongs to a class; or that a thing is equivalent to another thing. When used for BHoM types, this describes C# interface implementation."
+      },
       "domain": "BH.oM.Analytical.Results.IObjectResult",
       "range": "BH.oM.Analytical.Results.IResult"
     },
@@ -1659,6 +1885,9 @@
       "attributes": [
         "object"
       ],
+      "comment": {
+        "undefined": "Can be used to describe that a thing belongs to a class; or that a thing is equivalent to another thing. When used for BHoM types, this describes C# interface implementation."
+      },
       "domain": "BH.oM.Analytical.Results.IObjectResult",
       "range": "BH.oM.Base.IImmutable"
     },
@@ -1669,6 +1898,9 @@
       "attributes": [
         "object"
       ],
+      "comment": {
+        "undefined": "Can be used to describe that a thing belongs to a class; or that a thing is equivalent to another thing. When used for BHoM types, this describes C# interface implementation."
+      },
       "domain": "BH.oM.Analytical.Results.IObjectResult",
       "range": "BH.oM.Analytical.Results.IObjectIdResult"
     },
@@ -1679,6 +1911,9 @@
       "attributes": [
         "object"
       ],
+      "comment": {
+        "undefined": "Can be used to describe that a thing belongs to a class; or that a thing is equivalent to another thing. When used for BHoM types, this describes C# interface implementation."
+      },
       "domain": "BH.oM.Analytical.Results.IObjectResult",
       "range": "BH.oM.Analytical.Results.IResultItem"
     },
@@ -1689,6 +1924,9 @@
       "attributes": [
         "object"
       ],
+      "comment": {
+        "undefined": "Can be used to describe that a thing belongs to a class; or that a thing is equivalent to another thing. When used for BHoM types, this describes C# interface implementation."
+      },
       "domain": "BH.oM.Analytical.Results.IResult",
       "range": "BH.oM.Base.IImmutable"
     },
@@ -1699,6 +1937,9 @@
       "attributes": [
         "object"
       ],
+      "comment": {
+        "undefined": "Can be used to describe that a thing belongs to a class; or that a thing is equivalent to another thing. When used for BHoM types, this describes C# interface implementation."
+      },
       "domain": "BH.oM.Analytical.Results.IResultCollection",
       "range": "BH.oM.Base.IImmutable"
     },
@@ -1709,6 +1950,9 @@
       "attributes": [
         "object"
       ],
+      "comment": {
+        "undefined": "Can be used to describe that a thing belongs to a class; or that a thing is equivalent to another thing. When used for BHoM types, this describes C# interface implementation."
+      },
       "domain": "BH.oM.Analytical.Results.IResultCollection",
       "range": "BH.oM.Analytical.Results.IResult"
     },
@@ -1719,6 +1963,9 @@
       "attributes": [
         "object"
       ],
+      "comment": {
+        "undefined": "Can be used to describe that a thing belongs to a class; or that a thing is equivalent to another thing. When used for BHoM types, this describes C# interface implementation."
+      },
       "domain": "BH.oM.Analytical.Results.IResultItem",
       "range": "BH.oM.Analytical.Results.IResult"
     },
@@ -1729,6 +1976,9 @@
       "attributes": [
         "object"
       ],
+      "comment": {
+        "undefined": "Can be used to describe that a thing belongs to a class; or that a thing is equivalent to another thing. When used for BHoM types, this describes C# interface implementation."
+      },
       "domain": "BH.oM.Analytical.Results.IResultItem",
       "range": "BH.oM.Base.IImmutable"
     },
@@ -1749,6 +1999,9 @@
       "attributes": [
         "object"
       ],
+      "comment": {
+        "undefined": "Can be used to describe that a thing belongs to a class; or that a thing is equivalent to another thing. When used for BHoM types, this describes C# interface implementation."
+      },
       "domain": "BH.oM.Analytical.Results.ITimeStepResult",
       "range": "BH.oM.Analytical.Results.IResult"
     },
@@ -1759,6 +2012,9 @@
       "attributes": [
         "object"
       ],
+      "comment": {
+        "undefined": "Can be used to describe that a thing belongs to a class; or that a thing is equivalent to another thing. When used for BHoM types, this describes C# interface implementation."
+      },
       "domain": "BH.oM.Analytical.Results.ITimeStepResult",
       "range": "BH.oM.Base.IImmutable"
     },
@@ -1769,6 +2025,9 @@
       "attributes": [
         "object"
       ],
+      "comment": {
+        "undefined": "Can be used to describe that a thing belongs to a class; or that a thing is equivalent to another thing. When used for BHoM types, this describes C# interface implementation."
+      },
       "domain": "BH.oM.Analytical.Fragments.IDependencyFragment",
       "range": "BH.oM.Base.IFragment"
     },
@@ -1779,6 +2038,9 @@
       "attributes": [
         "object"
       ],
+      "comment": {
+        "undefined": "Can be used to describe that a thing belongs to a class; or that a thing is equivalent to another thing. When used for BHoM types, this describes C# interface implementation."
+      },
       "domain": "BH.oM.Analytical.Fragments.IProjectionFragment",
       "range": "BH.oM.Base.IFragment"
     },
@@ -1799,6 +2061,9 @@
       "attributes": [
         "object"
       ],
+      "comment": {
+        "undefined": "Can be used to describe that a thing belongs to a class; or that a thing is equivalent to another thing. When used for BHoM types, this describes C# interface implementation."
+      },
       "domain": "BH.oM.Analytical.Fragments.ProjectionFragment",
       "range": "BH.oM.Analytical.Fragments.IProjectionFragment"
     },
@@ -1809,6 +2074,9 @@
       "attributes": [
         "object"
       ],
+      "comment": {
+        "undefined": "Can be used to describe that a thing belongs to a class; or that a thing is equivalent to another thing. When used for BHoM types, this describes C# interface implementation."
+      },
       "domain": "BH.oM.Analytical.Fragments.ProjectionFragment",
       "range": "BH.oM.Base.IFragment"
     },
@@ -1869,6 +2137,9 @@
       "attributes": [
         "object"
       ],
+      "comment": {
+        "undefined": "Can be used to describe that a thing belongs to a class; or that a thing is equivalent to another thing. When used for BHoM types, this describes C# interface implementation."
+      },
       "domain": "BH.oM.Analytical.Fragments.RoutingFragment",
       "range": "BH.oM.Base.IFragment"
     },
@@ -1909,6 +2180,9 @@
       "attributes": [
         "object"
       ],
+      "comment": {
+        "undefined": "Can be used to describe that a thing belongs to a class; or that a thing is equivalent to another thing. When used for BHoM types, this describes C# interface implementation."
+      },
       "domain": "BH.oM.Analytical.Fragments.SourcesDependencyFragment",
       "range": "BH.oM.Analytical.Fragments.IDependencyFragment"
     },
@@ -1919,6 +2193,9 @@
       "attributes": [
         "object"
       ],
+      "comment": {
+        "undefined": "Can be used to describe that a thing belongs to a class; or that a thing is equivalent to another thing. When used for BHoM types, this describes C# interface implementation."
+      },
       "domain": "BH.oM.Analytical.Fragments.SourcesDependencyFragment",
       "range": "BH.oM.Base.IFragment"
     },
@@ -1959,6 +2236,9 @@
       "attributes": [
         "object"
       ],
+      "comment": {
+        "undefined": "Can be used to describe that a thing belongs to a class; or that a thing is equivalent to another thing. When used for BHoM types, this describes C# interface implementation."
+      },
       "domain": "BH.oM.Analytical.Fragments.TargetsDependencyFragment",
       "range": "BH.oM.Analytical.Fragments.IDependencyFragment"
     },
@@ -1969,6 +2249,9 @@
       "attributes": [
         "object"
       ],
+      "comment": {
+        "undefined": "Can be used to describe that a thing belongs to a class; or that a thing is equivalent to another thing. When used for BHoM types, this describes C# interface implementation."
+      },
       "domain": "BH.oM.Analytical.Fragments.TargetsDependencyFragment",
       "range": "BH.oM.Base.IFragment"
     },
@@ -2069,6 +2352,9 @@
       "attributes": [
         "object"
       ],
+      "comment": {
+        "undefined": "Can be used to describe that a thing belongs to a class; or that a thing is equivalent to another thing. When used for BHoM types, this describes C# interface implementation."
+      },
       "domain": "BH.oM.Analytical.Elements.GeometricProjection",
       "range": "BH.oM.Analytical.Elements.IProjection"
     },
@@ -2099,6 +2385,9 @@
       "attributes": [
         "object"
       ],
+      "comment": {
+        "undefined": "Can be used to describe that a thing belongs to a class; or that a thing is equivalent to another thing. When used for BHoM types, this describes C# interface implementation."
+      },
       "domain": "BH.oM.Analytical.Elements.GraphicalProjection",
       "range": "BH.oM.Analytical.Elements.IProjection"
     },
@@ -2109,6 +2398,9 @@
       "attributes": [
         "object"
       ],
+      "comment": {
+        "undefined": "Can be used to describe that a thing belongs to a class; or that a thing is equivalent to another thing. When used for BHoM types, this describes C# interface implementation."
+      },
       "domain": "BH.oM.Analytical.Elements.SpatialProjection",
       "range": "BH.oM.Analytical.Elements.IProjection"
     },
@@ -2189,6 +2481,9 @@
       "attributes": [
         "object"
       ],
+      "comment": {
+        "undefined": "Can be used to describe that a thing belongs to a class; or that a thing is equivalent to another thing. When used for BHoM types, this describes C# interface implementation."
+      },
       "domain": "BH.oM.Analytical.Elements.Relation",
       "range": "BH.oM.Analytical.Elements.IRelation"
     },
@@ -2209,6 +2504,9 @@
       "attributes": [
         "object"
       ],
+      "comment": {
+        "undefined": "Can be used to describe that a thing belongs to a class; or that a thing is equivalent to another thing. When used for BHoM types, this describes C# interface implementation."
+      },
       "domain": "BH.oM.Analytical.Elements.IEdge",
       "range": "BH.oM.Analytical.IAnalytical"
     },
@@ -2219,6 +2517,9 @@
       "attributes": [
         "object"
       ],
+      "comment": {
+        "undefined": "Can be used to describe that a thing belongs to a class; or that a thing is equivalent to another thing. When used for BHoM types, this describes C# interface implementation."
+      },
       "domain": "BH.oM.Analytical.Elements.IEdge",
       "range": "BH.oM.Dimensional.IElement1D"
     },
@@ -2229,6 +2530,9 @@
       "attributes": [
         "object"
       ],
+      "comment": {
+        "undefined": "Can be used to describe that a thing belongs to a class; or that a thing is equivalent to another thing. When used for BHoM types, this describes C# interface implementation."
+      },
       "domain": "BH.oM.Analytical.Elements.IEdge",
       "range": "BH.oM.Dimensional.IElement"
     },
@@ -2249,6 +2553,9 @@
       "attributes": [
         "object"
       ],
+      "comment": {
+        "undefined": "Can be used to describe that a thing belongs to a class; or that a thing is equivalent to another thing. When used for BHoM types, this describes C# interface implementation."
+      },
       "domain": "BH.oM.Analytical.Elements.IFace",
       "range": "BH.oM.Analytical.IAnalytical"
     },
@@ -2279,6 +2586,9 @@
       "attributes": [
         "object"
       ],
+      "comment": {
+        "undefined": "Can be used to describe that a thing belongs to a class; or that a thing is equivalent to another thing. When used for BHoM types, this describes C# interface implementation."
+      },
       "domain": "BH.oM.Analytical.Elements.ILink`1",
       "range": "BH.oM.Analytical.IAnalytical"
     },
@@ -2289,6 +2599,9 @@
       "attributes": [
         "object"
       ],
+      "comment": {
+        "undefined": "Can be used to describe that a thing belongs to a class; or that a thing is equivalent to another thing. When used for BHoM types, this describes C# interface implementation."
+      },
       "domain": "BH.oM.Analytical.Elements.ILink`1",
       "range": "BH.oM.Dimensional.IElement1D"
     },
@@ -2299,6 +2612,9 @@
       "attributes": [
         "object"
       ],
+      "comment": {
+        "undefined": "Can be used to describe that a thing belongs to a class; or that a thing is equivalent to another thing. When used for BHoM types, this describes C# interface implementation."
+      },
       "domain": "BH.oM.Analytical.Elements.ILink`1",
       "range": "BH.oM.Dimensional.IElement"
     },
@@ -2329,6 +2645,9 @@
       "attributes": [
         "object"
       ],
+      "comment": {
+        "undefined": "Can be used to describe that a thing belongs to a class; or that a thing is equivalent to another thing. When used for BHoM types, this describes C# interface implementation."
+      },
       "domain": "BH.oM.Analytical.Elements.IMesh`2",
       "range": "BH.oM.Analytical.IAnalytical"
     },
@@ -2349,6 +2668,9 @@
       "attributes": [
         "object"
       ],
+      "comment": {
+        "undefined": "Can be used to describe that a thing belongs to a class; or that a thing is equivalent to another thing. When used for BHoM types, this describes C# interface implementation."
+      },
       "domain": "BH.oM.Analytical.Elements.INode",
       "range": "BH.oM.Analytical.IAnalytical"
     },
@@ -2359,6 +2681,9 @@
       "attributes": [
         "object"
       ],
+      "comment": {
+        "undefined": "Can be used to describe that a thing belongs to a class; or that a thing is equivalent to another thing. When used for BHoM types, this describes C# interface implementation."
+      },
       "domain": "BH.oM.Analytical.Elements.INode",
       "range": "BH.oM.Dimensional.IElement0D"
     },
@@ -2369,6 +2694,9 @@
       "attributes": [
         "object"
       ],
+      "comment": {
+        "undefined": "Can be used to describe that a thing belongs to a class; or that a thing is equivalent to another thing. When used for BHoM types, this describes C# interface implementation."
+      },
       "domain": "BH.oM.Analytical.Elements.INode",
       "range": "BH.oM.Dimensional.IElement"
     },
@@ -2389,6 +2717,9 @@
       "attributes": [
         "object"
       ],
+      "comment": {
+        "undefined": "Can be used to describe that a thing belongs to a class; or that a thing is equivalent to another thing. When used for BHoM types, this describes C# interface implementation."
+      },
       "domain": "BH.oM.Analytical.Elements.IOpening`1",
       "range": "BH.oM.Analytical.IAnalytical"
     },
@@ -2399,6 +2730,9 @@
       "attributes": [
         "object"
       ],
+      "comment": {
+        "undefined": "Can be used to describe that a thing belongs to a class; or that a thing is equivalent to another thing. When used for BHoM types, this describes C# interface implementation."
+      },
       "domain": "BH.oM.Analytical.Elements.IOpening`1",
       "range": "BH.oM.Dimensional.IElement2D"
     },
@@ -2409,6 +2743,9 @@
       "attributes": [
         "object"
       ],
+      "comment": {
+        "undefined": "Can be used to describe that a thing belongs to a class; or that a thing is equivalent to another thing. When used for BHoM types, this describes C# interface implementation."
+      },
       "domain": "BH.oM.Analytical.Elements.IOpening`1",
       "range": "BH.oM.Dimensional.IElement"
     },
@@ -2439,6 +2776,9 @@
       "attributes": [
         "object"
       ],
+      "comment": {
+        "undefined": "Can be used to describe that a thing belongs to a class; or that a thing is equivalent to another thing. When used for BHoM types, this describes C# interface implementation."
+      },
       "domain": "BH.oM.Analytical.Elements.IPanel`2",
       "range": "BH.oM.Analytical.IAnalytical"
     },
@@ -2449,6 +2789,9 @@
       "attributes": [
         "object"
       ],
+      "comment": {
+        "undefined": "Can be used to describe that a thing belongs to a class; or that a thing is equivalent to another thing. When used for BHoM types, this describes C# interface implementation."
+      },
       "domain": "BH.oM.Analytical.Elements.IPanel`2",
       "range": "BH.oM.Dimensional.IElement2D"
     },
@@ -2459,6 +2802,9 @@
       "attributes": [
         "object"
       ],
+      "comment": {
+        "undefined": "Can be used to describe that a thing belongs to a class; or that a thing is equivalent to another thing. When used for BHoM types, this describes C# interface implementation."
+      },
       "domain": "BH.oM.Analytical.Elements.IPanel`2",
       "range": "BH.oM.Dimensional.IElement"
     },
@@ -2479,6 +2825,9 @@
       "attributes": [
         "object"
       ],
+      "comment": {
+        "undefined": "Can be used to describe that a thing belongs to a class; or that a thing is equivalent to another thing. When used for BHoM types, this describes C# interface implementation."
+      },
       "domain": "BH.oM.Analytical.Elements.IRegion",
       "range": "BH.oM.Analytical.IAnalytical"
     },
@@ -2489,6 +2838,9 @@
       "attributes": [
         "object"
       ],
+      "comment": {
+        "undefined": "Can be used to describe that a thing belongs to a class; or that a thing is equivalent to another thing. When used for BHoM types, this describes C# interface implementation."
+      },
       "domain": "BH.oM.Analytical.Elements.IRegion",
       "range": "BH.oM.Dimensional.IElement2D"
     },
@@ -2499,6 +2851,9 @@
       "attributes": [
         "object"
       ],
+      "comment": {
+        "undefined": "Can be used to describe that a thing belongs to a class; or that a thing is equivalent to another thing. When used for BHoM types, this describes C# interface implementation."
+      },
       "domain": "BH.oM.Analytical.Elements.IRegion",
       "range": "BH.oM.Dimensional.IElement"
     },
@@ -2519,6 +2874,9 @@
       "attributes": [
         "object"
       ],
+      "comment": {
+        "undefined": "Can be used to describe that a thing belongs to a class; or that a thing is equivalent to another thing. When used for BHoM types, this describes C# interface implementation."
+      },
       "domain": "BH.oM.Analytical.Elements.ISurface",
       "range": "BH.oM.Analytical.IAnalytical"
     },
@@ -2659,6 +3017,9 @@
       "attributes": [
         "object"
       ],
+      "comment": {
+        "undefined": "Can be used to describe that a thing belongs to a class; or that a thing is equivalent to another thing. When used for BHoM types, this describes C# interface implementation."
+      },
       "domain": "BH.oM.Analytical.Elements.ShortestPathResult",
       "range": "BH.oM.Analytical.Results.IObjectIdResult"
     },
@@ -2669,6 +3030,9 @@
       "attributes": [
         "object"
       ],
+      "comment": {
+        "undefined": "Can be used to describe that a thing belongs to a class; or that a thing is equivalent to another thing. When used for BHoM types, this describes C# interface implementation."
+      },
       "domain": "BH.oM.Analytical.Elements.ShortestPathResult",
       "range": "BH.oM.Analytical.Results.IResult"
     },
@@ -2679,6 +3043,9 @@
       "attributes": [
         "object"
       ],
+      "comment": {
+        "undefined": "Can be used to describe that a thing belongs to a class; or that a thing is equivalent to another thing. When used for BHoM types, this describes C# interface implementation."
+      },
       "domain": "BH.oM.Analytical.Elements.ShortestPathResult",
       "range": "BH.oM.Base.IImmutable"
     },
@@ -2689,6 +3056,9 @@
       "attributes": [
         "object"
       ],
+      "comment": {
+        "undefined": "Can be used to describe that a thing belongs to a class; or that a thing is equivalent to another thing. When used for BHoM types, this describes C# interface implementation."
+      },
       "domain": "BH.oM.Analytical.Elements.ShortestPathResult",
       "range": "BH.oM.Analytical.Results.ICasedResult"
     },
@@ -2699,6 +3069,9 @@
       "attributes": [
         "object"
       ],
+      "comment": {
+        "undefined": "Can be used to describe that a thing belongs to a class; or that a thing is equivalent to another thing. When used for BHoM types, this describes C# interface implementation."
+      },
       "domain": "BH.oM.Analytical.Elements.ShortestPathResult",
       "range": "BH.oM.Analytical.Results.ITimeStepResult"
     }

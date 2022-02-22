@@ -280,73 +280,100 @@
       "id": "BH.oM.Acoustic.Constants",
       "iri": "https://github.com/BHoM/BHoM/blob/main/Acoustic_oM/Constants.cs",
       "label": "Constants (BH.oM.Acoustic)",
-      "attributes": []
+      "attributes": [
+        "object"
+      ]
     },
     {
       "id": "BH.oM.Acoustic.Panel",
       "iri": "https://github.com/BHoM/BHoM/blob/main/Acoustic_oM/Elements/Panel.cs",
       "label": "Panel (BH.oM.Acoustic)",
-      "attributes": []
+      "attributes": [
+        "object"
+      ]
     },
     {
       "id": "BH.oM.Acoustic.Ray",
       "iri": "https://github.com/BHoM/BHoM/blob/main/Acoustic_oM/Elements/Ray.cs",
       "label": "Ray (BH.oM.Acoustic)",
-      "attributes": []
+      "attributes": [
+        "object"
+      ]
     },
     {
       "id": "BH.oM.Acoustic.Receiver",
       "iri": "https://github.com/BHoM/BHoM/blob/main/Acoustic_oM/Elements/Receiver.cs",
       "label": "Receiver (BH.oM.Acoustic)",
-      "attributes": []
+      "attributes": [
+        "object"
+      ]
     },
     {
       "id": "BH.oM.Acoustic.Room",
       "iri": "https://github.com/BHoM/BHoM/blob/main/Acoustic_oM/Elements/Room.cs",
       "label": "Room (BH.oM.Acoustic)",
-      "attributes": []
+      "attributes": [
+        "object"
+      ],
+      "comment": {
+        "undefined": "An acoustics room is defined by the criteria related to the sound within the space, as well as its geometry"
+      }
     },
     {
       "id": "BH.oM.Acoustic.Speaker",
       "iri": "https://github.com/BHoM/BHoM/blob/main/Acoustic_oM/Elements/Speaker.cs",
       "label": "Speaker (BH.oM.Acoustic)",
-      "attributes": []
+      "attributes": [
+        "object"
+      ]
     },
     {
       "id": "BH.oM.Acoustic.Frequency",
       "iri": "https://github.com/BHoM/BHoM/blob/main/Acoustic_oM/Frequency.cs",
       "label": "Frequency (BH.oM.Acoustic)",
-      "attributes": []
+      "attributes": [
+        "object"
+      ]
     },
     {
       "id": "BH.oM.Acoustic.IAcousticParameter",
       "iri": "https://github.com/BHoM/BHoM/blob/main/Acoustic_oM/Parameters/IAcousticParameter.cs",
       "label": "IAcousticParameter (BH.oM.Acoustic)",
-      "attributes": []
+      "attributes": [
+        "object"
+      ]
     },
     {
       "id": "BH.oM.Acoustic.Rasti",
       "iri": "https://github.com/BHoM/BHoM/blob/main/Acoustic_oM/Parameters/Rasti.cs",
       "label": "Rasti (BH.oM.Acoustic)",
-      "attributes": []
+      "attributes": [
+        "object"
+      ]
     },
     {
       "id": "BH.oM.Acoustic.RT60",
       "iri": "https://github.com/BHoM/BHoM/blob/main/Acoustic_oM/Parameters/RT60.cs",
       "label": "RT60 (BH.oM.Acoustic)",
-      "attributes": []
+      "attributes": [
+        "object"
+      ]
     },
     {
       "id": "BH.oM.Acoustic.SnRatio",
       "iri": "https://github.com/BHoM/BHoM/blob/main/Acoustic_oM/Parameters/SnRatio.cs",
       "label": "SnRatio (BH.oM.Acoustic)",
-      "attributes": []
+      "attributes": [
+        "object"
+      ]
     },
     {
       "id": "BH.oM.Acoustic.SoundLevel",
       "iri": "https://github.com/BHoM/BHoM/blob/main/Acoustic_oM/Parameters/SoundLevel.cs",
       "label": "SoundLevel (BH.oM.Acoustic)",
-      "attributes": []
+      "attributes": [
+        "object"
+      ]
     },
     {
       "id": "BH.oM.Acoustic.Panel.Surface",
@@ -359,8 +386,12 @@
       "iri": "https://github.com/BHoM/BHoM/blob/main/Geometry_oM/Mesh/Mesh.cs",
       "label": "Mesh (BH.oM.Geometry)",
       "attributes": [
+        "object",
         "external"
-      ]
+      ],
+      "comment": {
+        "undefined": "A polygon mesh, defined by a list of triangular or quadrilateral Faces and their Vertices."
+      }
     },
     {
       "id": "BH.oM.Acoustic.Panel.PanelID",
@@ -387,8 +418,12 @@
       "iri": "https://github.com/BHoM/BHoM/blob/main/Geometry_oM/Curve/Polyline.cs",
       "label": "Polyline (BH.oM.Geometry)",
       "attributes": [
+        "object",
         "external"
-      ]
+      ],
+      "comment": {
+        "undefined": "A curve consisting of a continuous chain of straight line segments. The Polyline is considered closed if the first and last ControlPoints are coincident"
+      }
     },
     {
       "id": "BH.oM.Acoustic.Ray.SpeakerID",
@@ -425,8 +460,12 @@
       "iri": "https://github.com/BHoM/BHoM/blob/main/Geometry_oM/Vector/Point.cs",
       "label": "Point (BH.oM.Geometry)",
       "attributes": [
+        "object",
         "external"
-      ]
+      ],
+      "comment": {
+        "undefined": "Defines a dimensionless location in three-dimensional space."
+      }
     },
     {
       "id": "BH.oM.Acoustic.Receiver.Category",
@@ -455,8 +494,12 @@
       "iri": "https://github.com/BHoM/BHoM/blob/main/Geometry_oM/Surface/PolySurface.cs",
       "label": "PolySurface (BH.oM.Geometry)",
       "attributes": [
+        "object",
         "external"
-      ]
+      ],
+      "comment": {
+        "undefined": "A composite surface constructed by combining a collection of surfaces of any type. Whole PolySurface integrity, continuity and closure is not guaranteed at creation. Discontinuous and/or multi-region definitions are possible, although validity of some engine methods may vary depending on the PolySurface form."
+      }
     },
     {
       "id": "BH.oM.Acoustic.Room.Area",
@@ -593,8 +636,12 @@
       "iri": "https://github.com/BHoM/BHoM/blob/main/Geometry_oM/Vector/Vector.cs",
       "label": "Vector (BH.oM.Geometry)",
       "attributes": [
+        "object",
         "external"
-      ]
+      ],
+      "comment": {
+        "undefined": "Defines a direction and magnitude in three-dimensional Euclidean space."
+      }
     },
     {
       "id": "BH.oM.Acoustic.Speaker.EmissiveLevel",
@@ -1583,6 +1630,9 @@
       "attributes": [
         "object"
       ],
+      "comment": {
+        "undefined": "Can be used to describe that a thing belongs to a class; or that a thing is equivalent to another thing. When used for BHoM types, this describes C# interface implementation."
+      },
       "domain": "BH.oM.Acoustic.Rasti",
       "range": "BH.oM.Acoustic.IAcousticParameter"
     },
@@ -1643,6 +1693,9 @@
       "attributes": [
         "object"
       ],
+      "comment": {
+        "undefined": "Can be used to describe that a thing belongs to a class; or that a thing is equivalent to another thing. When used for BHoM types, this describes C# interface implementation."
+      },
       "domain": "BH.oM.Acoustic.RT60",
       "range": "BH.oM.Acoustic.IAcousticParameter"
     },
@@ -1703,6 +1756,9 @@
       "attributes": [
         "object"
       ],
+      "comment": {
+        "undefined": "Can be used to describe that a thing belongs to a class; or that a thing is equivalent to another thing. When used for BHoM types, this describes C# interface implementation."
+      },
       "domain": "BH.oM.Acoustic.SnRatio",
       "range": "BH.oM.Acoustic.IAcousticParameter"
     },
@@ -1763,6 +1819,9 @@
       "attributes": [
         "object"
       ],
+      "comment": {
+        "undefined": "Can be used to describe that a thing belongs to a class; or that a thing is equivalent to another thing. When used for BHoM types, this describes C# interface implementation."
+      },
       "domain": "BH.oM.Acoustic.SoundLevel",
       "range": "BH.oM.Acoustic.IAcousticParameter"
     }

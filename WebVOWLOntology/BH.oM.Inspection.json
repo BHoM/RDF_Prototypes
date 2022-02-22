@@ -180,25 +180,45 @@
       "id": "BH.oM.Inspection.Audit",
       "iri": "https://github.com/BHoM/BHoM/blob/main/Inspection_oM/Audit.cs",
       "label": "Audit (BH.oM.Inspection)",
-      "attributes": []
+      "attributes": [
+        "object"
+      ],
+      "comment": {
+        "undefined": "An audit that covers all information associated with a single inspection. This includes issues, areas inspected, project information, construction progress, and distribution information."
+      }
     },
     {
       "id": "BH.oM.Inspection.Comment",
       "iri": "https://github.com/BHoM/BHoM/blob/main/Inspection_oM/Comment.cs",
       "label": "Comment (BH.oM.Inspection)",
-      "attributes": []
+      "attributes": [
+        "object"
+      ],
+      "comment": {
+        "undefined": "A comment on an Issue typically identifying either the nature of the issue, the actions being taken to resolve the issue, or the approval / rejection of actions taken."
+      }
     },
     {
       "id": "BH.oM.Inspection.InstallationProgress",
       "iri": "https://github.com/BHoM/BHoM/blob/main/Inspection_oM/InstallationProgress.cs",
       "label": "InstallationProgress (BH.oM.Inspection)",
-      "attributes": []
+      "attributes": [
+        "object"
+      ],
+      "comment": {
+        "undefined": "Installation progress in a specific area associated with an audit, including image filepaths as applicable"
+      }
     },
     {
       "id": "BH.oM.Inspection.Issue",
       "iri": "https://github.com/BHoM/BHoM/blob/main/Inspection_oM/Issue.cs",
       "label": "Issue (BH.oM.Inspection)",
-      "attributes": []
+      "attributes": [
+        "object"
+      ],
+      "comment": {
+        "undefined": "An issue belonging to an audit"
+      }
     },
     {
       "id": "BH.oM.Inspection.Audit.Title",
@@ -482,15 +502,22 @@
       "id": "BH.oM.Inspection.Issue.Position",
       "iri": "https://github.com/BHoM/BHoM/blob/main/Inspection_oM/Issue.cs#L70",
       "label": "Position(BH.oM.Inspection.Issue.Position)",
-      "attributes": []
+      "attributes": [],
+      "comment": {
+        "undefined": "Location of the issue in 3D space in terms of the project's coordinate system"
+      }
     },
     {
       "id": "BH.oM.Geometry.Point",
       "iri": "https://github.com/BHoM/BHoM/blob/main/Geometry_oM/Vector/Point.cs",
       "label": "Point (BH.oM.Geometry)",
       "attributes": [
+        "object",
         "external"
-      ]
+      ],
+      "comment": {
+        "undefined": "Defines a dimensionless location in three-dimensional space."
+      }
     },
     {
       "id": "BH.oM.Inspection.Issue.Comments",

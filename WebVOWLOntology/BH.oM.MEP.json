@@ -1344,409 +1344,680 @@
       "id": "BH.oM.MEP.Fixtures.Sprinkler",
       "iri": "https://github.com/BHoM/BuildingEnvironments_Toolkit/blob/main/BuildingEnvironments_oM/Elements/Sprinkler.cs",
       "label": "Sprinkler (BH.oM.MEP.Fixtures)",
-      "attributes": []
+      "attributes": [
+        "object"
+      ]
     },
     {
       "id": "BH.oM.MEP.System.CableTray",
       "iri": "https://github.com/BHoM/BHoM/blob/main/MEP_oM/System/CableTray.cs",
       "label": "CableTray (BH.oM.MEP.System)",
-      "attributes": []
+      "attributes": [
+        "object"
+      ],
+      "comment": {
+        "undefined": "A Cable Tray object is a passageway which conveys material (typically cables)"
+      }
     },
     {
       "id": "BH.oM.MEP.System.Duct",
       "iri": "https://github.com/BHoM/BHoM/blob/main/MEP_oM/System/Duct.cs",
       "label": "Duct (BH.oM.MEP.System)",
-      "attributes": []
+      "attributes": [
+        "object"
+      ],
+      "comment": {
+        "undefined": "A duct object is a passageway which conveys material (typically air)"
+      }
     },
     {
       "id": "BH.oM.MEP.System.FlowSystem",
       "iri": "https://github.com/BHoM/BHoM/blob/main/MEP_oM/System/FlowSystem.cs",
       "label": "FlowSystem (BH.oM.MEP.System)",
-      "attributes": []
+      "attributes": [
+        "object"
+      ],
+      "comment": {
+        "undefined": "A collection of IFlow Objects to be utilised throughout a defined system."
+      }
     },
     {
       "id": "BH.oM.MEP.System.IFlow",
       "iri": "https://github.com/BHoM/BHoM/blob/main/MEP_oM/System/IFlow.cs",
       "label": "IFlow (BH.oM.MEP.System)",
-      "attributes": []
+      "attributes": [
+        "object"
+      ],
+      "comment": {
+        "undefined": "Base interface for all flow-based objects. These objects are capable of containing a material or element that flows through the object."
+      }
     },
     {
       "id": "BH.oM.MEP.System.ISystemType",
       "iri": "https://github.com/BHoM/BHoM/blob/main/MEP_oM/System/ISystemType.cs",
       "label": "ISystemType (BH.oM.MEP.System)",
-      "attributes": []
+      "attributes": [
+        "object"
+      ],
+      "comment": {
+        "undefined": "An MEP system to determine flow types."
+      }
     },
     {
       "id": "BH.oM.MEP.System.MechanicalSystem",
       "iri": "https://github.com/BHoM/BHoM/blob/main/MEP_oM/System/MechanicalSystem.cs",
       "label": "MechanicalSystem (BH.oM.MEP.System)",
-      "attributes": []
+      "attributes": [
+        "object"
+      ],
+      "comment": {
+        "undefined": "Mechanical systems are qualified by their ability to convey air, water, etc to a building/room/area"
+      }
     },
     {
       "id": "BH.oM.MEP.System.Node",
       "iri": "https://github.com/BHoM/BHoM/blob/main/MEP_oM/System/Node.cs",
       "label": "Node (BH.oM.MEP.System)",
-      "attributes": []
+      "attributes": [
+        "object"
+      ],
+      "comment": {
+        "undefined": "0D finite element for structural analysis. Node class contains positional information as well as orientation and support."
+      }
     },
     {
       "id": "BH.oM.MEP.System.Pipe",
       "iri": "https://github.com/BHoM/BHoM/blob/main/MEP_oM/System/Pipe.cs",
       "label": "Pipe (BH.oM.MEP.System)",
-      "attributes": []
+      "attributes": [
+        "object"
+      ],
+      "comment": {
+        "undefined": "A pipe object is a passageway which conveys material (water, waste, glycol)"
+      }
     },
     {
       "id": "BH.oM.MEP.System.Wire",
       "iri": "https://github.com/BHoM/BHoM/blob/main/MEP_oM/System/Wire.cs",
       "label": "Wire (BH.oM.MEP.System)",
-      "attributes": []
+      "attributes": [
+        "object"
+      ],
+      "comment": {
+        "undefined": "Wire object to work within an MEP systems."
+      }
     },
     {
       "id": "BH.oM.MEP.System.WireSegment",
       "iri": "https://github.com/BHoM/BHoM/blob/main/MEP_oM/System/WireSegment.cs",
       "label": "WireSegment (BH.oM.MEP.System)",
-      "attributes": []
+      "attributes": [
+        "object"
+      ],
+      "comment": {
+        "undefined": "An object containing a collection of Wires to work within an MEP systems."
+      }
     },
     {
       "id": "BH.oM.MEP.System.SectionProperties.CableTraySectionProperty",
       "iri": "https://github.com/BHoM/BHoM/blob/main/MEP_oM/System/SectionProperties/CableTraySectionProperty.cs",
       "label": "CableTraySectionProperty (BH.oM.MEP.System.SectionProperties)",
-      "attributes": []
+      "attributes": [
+        "object"
+      ]
     },
     {
       "id": "BH.oM.MEP.System.SectionProperties.DuctSectionProperty",
       "iri": "https://github.com/BHoM/BHoM/blob/main/MEP_oM/System/SectionProperties/DuctSectionProperty.cs",
       "label": "DuctSectionProperty (BH.oM.MEP.System.SectionProperties)",
-      "attributes": []
+      "attributes": [
+        "object"
+      ]
     },
     {
       "id": "BH.oM.MEP.System.SectionProperties.IFlowSectionProperty",
       "iri": "https://github.com/BHoM/BHoM/blob/main/MEP_oM/System/SectionProperties/IFlowSectionProperty.cs",
       "label": "IFlowSectionProperty (BH.oM.MEP.System.SectionProperties)",
-      "attributes": []
+      "attributes": [
+        "object"
+      ]
     },
     {
       "id": "BH.oM.MEP.System.SectionProperties.PipeSectionProperty",
       "iri": "https://github.com/BHoM/BHoM/blob/main/MEP_oM/System/SectionProperties/PipeSectionProperty.cs",
       "label": "PipeSectionProperty (BH.oM.MEP.System.SectionProperties)",
-      "attributes": []
+      "attributes": [
+        "object"
+      ]
     },
     {
       "id": "BH.oM.MEP.System.SectionProperties.SectionProfile",
       "iri": "https://github.com/BHoM/BHoM/blob/main/MEP_oM/System/SectionProperties/SectionProfile.cs",
       "label": "SectionProfile (BH.oM.MEP.System.SectionProperties)",
-      "attributes": []
+      "attributes": [
+        "object"
+      ]
     },
     {
       "id": "BH.oM.MEP.System.SectionProperties.WireSectionProperty",
       "iri": "https://github.com/BHoM/BHoM/blob/main/MEP_oM/System/SectionProperties/WireSectionProperty.cs",
       "label": "WireSectionProperty (BH.oM.MEP.System.SectionProperties)",
-      "attributes": []
+      "attributes": [
+        "object"
+      ]
     },
     {
       "id": "BH.oM.MEP.System.MaterialFragments.CableTrayMaterial",
       "iri": "https://github.com/BHoM/BHoM/blob/main/MEP_oM/System/MaterialFragments/CableTrayMaterial.cs",
       "label": "CableTrayMaterial (BH.oM.MEP.System.MaterialFragments)",
-      "attributes": []
+      "attributes": [
+        "object"
+      ]
     },
     {
       "id": "BH.oM.MEP.System.MaterialFragments.DuctMaterial",
       "iri": "https://github.com/BHoM/BHoM/blob/main/MEP_oM/System/MaterialFragments/DuctMaterial.cs",
       "label": "DuctMaterial (BH.oM.MEP.System.MaterialFragments)",
-      "attributes": []
+      "attributes": [
+        "object"
+      ]
     },
     {
       "id": "BH.oM.MEP.System.MaterialFragments.IInsulationMaterial",
       "iri": "https://github.com/BHoM/BHoM/blob/main/MEP_oM/System/MaterialFragments/IInsulationMaterial.cs",
       "label": "IInsulationMaterial (BH.oM.MEP.System.MaterialFragments)",
-      "attributes": []
+      "attributes": [
+        "object"
+      ],
+      "comment": {
+        "undefined": "Insulation is the material surrounding a duct, pipe or wire which mitigates the loss of the internal conditions of the fluid within the object."
+      }
     },
     {
       "id": "BH.oM.MEP.System.MaterialFragments.IMEPMaterial",
       "iri": "https://github.com/BHoM/BHoM/blob/main/MEP_oM/System/MaterialFragments/IMEPMaterial.cs",
       "label": "IMEPMaterial (BH.oM.MEP.System.MaterialFragments)",
-      "attributes": []
+      "attributes": [
+        "object"
+      ],
+      "comment": {
+        "undefined": "Base interface for MEP materials used by MEP properties or as a fragment of the physical material."
+      }
     },
     {
       "id": "BH.oM.MEP.System.MaterialFragments.InsulationMaterial",
       "iri": "https://github.com/BHoM/BHoM/blob/main/MEP_oM/System/MaterialFragments/InsulationMaterial.cs",
       "label": "InsulationMaterial (BH.oM.MEP.System.MaterialFragments)",
-      "attributes": []
+      "attributes": [
+        "object"
+      ]
     },
     {
       "id": "BH.oM.MEP.System.MaterialFragments.LiningMaterial",
       "iri": "https://github.com/BHoM/BHoM/blob/main/MEP_oM/System/MaterialFragments/LiningMaterial.cs",
       "label": "LiningMaterial (BH.oM.MEP.System.MaterialFragments)",
-      "attributes": []
+      "attributes": [
+        "object"
+      ]
     },
     {
       "id": "BH.oM.MEP.System.MaterialFragments.PipeMaterial",
       "iri": "https://github.com/BHoM/BHoM/blob/main/MEP_oM/System/MaterialFragments/PipeMaterial.cs",
       "label": "PipeMaterial (BH.oM.MEP.System.MaterialFragments)",
-      "attributes": []
+      "attributes": [
+        "object"
+      ]
     },
     {
       "id": "BH.oM.MEP.System.MaterialFragments.WireMaterial",
       "iri": "https://github.com/BHoM/BHoM/blob/main/MEP_oM/System/MaterialFragments/WireMaterial.cs",
       "label": "WireMaterial (BH.oM.MEP.System.MaterialFragments)",
-      "attributes": []
+      "attributes": [
+        "object"
+      ]
     },
     {
       "id": "BH.oM.MEP.System.Fittings.Fitting",
       "iri": "https://github.com/BHoM/BHoM/blob/main/MEP_oM/System/Fittings/Fitting.cs",
       "label": "Fitting (BH.oM.MEP.System.Fittings)",
-      "attributes": []
+      "attributes": [
+        "object"
+      ],
+      "comment": {
+        "undefined": "A fitting object used to describe interfaces between or along linear MEP elements."
+      }
     },
     {
       "id": "BH.oM.MEP.System.Dampers.Damper",
       "iri": "https://github.com/BHoM/BHoM/blob/main/MEP_oM/System/Dampers/Damper.cs",
       "label": "Damper (BH.oM.MEP.System.Dampers)",
-      "attributes": []
+      "attributes": [
+        "object"
+      ],
+      "comment": {
+        "undefined": "A device used to control the flow within a duct system (fire smoke damper, volume damper, etc.)"
+      }
     },
     {
       "id": "BH.oM.MEP.System.Dampers.VolumeDamper",
       "iri": "https://github.com/BHoM/BHoM/blob/main/MEP_oM/System/Dampers/VolumeDamper.cs",
       "label": "VolumeDamper (BH.oM.MEP.System.Dampers)",
-      "attributes": []
+      "attributes": [
+        "object"
+      ],
+      "comment": {
+        "undefined": "A type of damper used to control the flow of air in a mechanical system."
+      }
     },
     {
       "id": "BH.oM.MEP.System.Dampers.Valve",
       "iri": "https://github.com/BHoM/BHoM/blob/main/MEP_oM/System/Valves/Valve.cs",
       "label": "Valve (BH.oM.MEP.System.Dampers)",
-      "attributes": []
+      "attributes": [
+        "object"
+      ],
+      "comment": {
+        "undefined": "A device used to control the flow within a piping system (ball valve, check valve, etc.)"
+      }
     },
     {
       "id": "BH.oM.MEP.Fragments.GeometryFragment",
       "iri": "https://github.com/BHoM/BHoM/blob/main/MEP_oM/Fragments/GeometryFragment.cs",
       "label": "GeometryFragment (BH.oM.MEP.Fragments)",
-      "attributes": []
+      "attributes": [
+        "object"
+      ]
     },
     {
       "id": "BH.oM.MEP.Fragments.IdentityFragment",
       "iri": "https://github.com/BHoM/BHoM/blob/main/MEP_oM/Fragments/IdentityFragment.cs",
       "label": "IdentityFragment (BH.oM.MEP.Fragments)",
-      "attributes": []
+      "attributes": [
+        "object"
+      ]
     },
     {
       "id": "BH.oM.MEP.Fragments.PlumbingFlowFragment",
       "iri": "https://github.com/BHoM/BHoM/blob/main/MEP_oM/Fragments/PlumbingFlowFragment.cs",
       "label": "PlumbingFlowFragment (BH.oM.MEP.Fragments)",
-      "attributes": []
+      "attributes": [
+        "object"
+      ]
     },
     {
       "id": "BH.oM.MEP.Fragments.PlumbingLoadingFixtureUnitFragment",
       "iri": "https://github.com/BHoM/BHoM/blob/main/MEP_oM/Fragments/PlumbingLoadingFixtureUnitFragment.cs",
       "label": "PlumbingLoadingFixtureUnitFragment (BH.oM.MEP.Fragments)",
-      "attributes": []
+      "attributes": [
+        "object"
+      ]
     },
     {
       "id": "BH.oM.MEP.Fixtures.AirTerminal",
       "iri": "https://github.com/BHoM/BHoM/blob/main/MEP_oM/Fixtures/AirTerminal.cs",
       "label": "AirTerminal (BH.oM.MEP.Fixtures)",
-      "attributes": []
+      "attributes": [
+        "object"
+      ],
+      "comment": {
+        "undefined": "A device used to regulate the volume of air to or from an air handling unit, variable air volume device or similar, to or from the occupied space. These devices may be ducted or connect directly to a plenum, in which case no duct connection will be present."
+      }
     },
     {
       "id": "BH.oM.MEP.Fixtures.CommercialFixtureUsage",
       "iri": "https://github.com/BHoM/BHoM/blob/main/MEP_oM/Fixtures/CommercialFixtureUsage.cs",
       "label": "CommercialFixtureUsage (BH.oM.MEP.Fixtures)",
-      "attributes": []
+      "attributes": [
+        "object"
+      ],
+      "comment": {
+        "undefined": "Fixture Usage data for commercial plumbing fixtures."
+      }
     },
     {
       "id": "BH.oM.MEP.Fixtures.ElectricalFixture",
       "iri": "https://github.com/BHoM/BHoM/blob/main/MEP_oM/Fixtures/ElectricalFixture.cs",
       "label": "ElectricalFixture (BH.oM.MEP.Fixtures)",
-      "attributes": []
+      "attributes": [
+        "object"
+      ],
+      "comment": {
+        "undefined": "A device used to convey electricity e.g. duplex sockets/receptacles, disconnect/isolator switches (for electrified mechanical equipment), floors boxes."
+      }
     },
     {
       "id": "BH.oM.MEP.Fixtures.FireAlarmDevice",
       "iri": "https://github.com/BHoM/BHoM/blob/main/MEP_oM/Fixtures/FireAlarmDevice.cs",
       "label": "FireAlarmDevice (BH.oM.MEP.Fixtures)",
-      "attributes": []
+      "attributes": [
+        "object"
+      ],
+      "comment": {
+        "undefined": "A device used to warn building occupants of emergencies (smoke, fire, carbon monoxide) by means of audio or visual appliances (smoke detectors, speaker strobes, heat detectors.)"
+      }
     },
     {
       "id": "BH.oM.MEP.Fixtures.IFixtureFlow",
       "iri": "https://github.com/BHoM/BHoM/blob/main/MEP_oM/Fixtures/IFixtureFlow.cs",
       "label": "IFixtureFlow (BH.oM.MEP.Fixtures)",
-      "attributes": []
+      "attributes": [
+        "object"
+      ],
+      "comment": {
+        "undefined": "Base interface for all Fixture Flow objects. These objects are capable of containing a material or element that flows through the object."
+      }
     },
     {
       "id": "BH.oM.MEP.Fixtures.IFixtureUsage",
       "iri": "https://github.com/BHoM/BHoM/blob/main/MEP_oM/Fixtures/IFixtureUsage.cs",
       "label": "IFixtureUsage (BH.oM.MEP.Fixtures)",
-      "attributes": []
+      "attributes": [
+        "object"
+      ],
+      "comment": {
+        "undefined": "Base interface for all Fixture objects. These objects are capable of containing a material or element that flows through the object."
+      }
     },
     {
       "id": "BH.oM.MEP.Fixtures.LightFixture",
       "iri": "https://github.com/BHoM/BHoM/blob/main/MEP_oM/Fixtures/LightFixture.cs",
       "label": "LightFixture (BH.oM.MEP.Fixtures)",
-      "attributes": []
+      "attributes": [
+        "object"
+      ],
+      "comment": {
+        "undefined": "A light fixture is an electrical device that provides illumination."
+      }
     },
     {
       "id": "BH.oM.MEP.Fixtures.PlumbingFixture",
       "iri": "https://github.com/BHoM/BHoM/blob/main/MEP_oM/Fixtures/PlumbingFixture.cs",
       "label": "PlumbingFixture (BH.oM.MEP.Fixtures)",
-      "attributes": []
+      "attributes": [
+        "object"
+      ],
+      "comment": {
+        "undefined": "A device used to convey public health (plumbing) fluids (water, waste.)"
+      }
     },
     {
       "id": "BH.oM.MEP.Fixtures.PlumbingFixtureFlow",
       "iri": "https://github.com/BHoM/BHoM/blob/main/MEP_oM/Fixtures/PlumbingFixtureFlow.cs",
       "label": "PlumbingFixtureFlow (BH.oM.MEP.Fixtures)",
-      "attributes": []
+      "attributes": [
+        "object"
+      ],
+      "comment": {
+        "undefined": "Flow properties of a plumbing fixture"
+      }
     },
     {
       "id": "BH.oM.MEP.Fixtures.ResidentialFixtureUsage",
       "iri": "https://github.com/BHoM/BHoM/blob/main/MEP_oM/Fixtures/ResidentialFixtureUsage.cs",
       "label": "ResidentialFixtureUsage (BH.oM.MEP.Fixtures)",
-      "attributes": []
+      "attributes": [
+        "object"
+      ],
+      "comment": {
+        "undefined": "Fixture Usage data for residential plumbing fixtures."
+      }
     },
     {
       "id": "BH.oM.MEP.Equipment.AirHandlingUnit",
       "iri": "https://github.com/BHoM/BHoM/blob/main/MEP_oM/Equipment/AirHandlingUnit.cs",
       "label": "AirHandlingUnit (BH.oM.MEP.Equipment)",
-      "attributes": []
+      "attributes": [
+        "object"
+      ],
+      "comment": {
+        "undefined": "Air Handling Units are devices which house fans, filter, coils, and energy wheels which produce heated and cooled fresh/partially recirculated air to a building"
+      }
     },
     {
       "id": "BH.oM.MEP.Equipment.ElectricalEquipment",
       "iri": "https://github.com/BHoM/BHoM/blob/main/MEP_oM/Equipment/ElectricalEquipment.cs",
       "label": "ElectricalEquipment (BH.oM.MEP.Equipment)",
-      "attributes": []
+      "attributes": [
+        "object"
+      ]
     },
     {
       "id": "BH.oM.MEP.Equipment.FanCoilUnit",
       "iri": "https://github.com/BHoM/BHoM/blob/main/MEP_oM/Equipment/FanCoilUnit.cs",
       "label": "FanCoilUnit (BH.oM.MEP.Equipment)",
-      "attributes": []
+      "attributes": [
+        "object"
+      ],
+      "comment": {
+        "undefined": "Fan Coil Units are devices that use a coil and a fan to heat or cool a space"
+      }
     },
     {
       "id": "BH.oM.MEP.Equipment.IEquipment",
       "iri": "https://github.com/BHoM/BHoM/blob/main/MEP_oM/Equipment/IEquipment.cs",
       "label": "IEquipment (BH.oM.MEP.Equipment)",
-      "attributes": []
+      "attributes": [
+        "object"
+      ]
     },
     {
       "id": "BH.oM.MEP.Equipment.MechanicalEquipment",
       "iri": "https://github.com/BHoM/BHoM/blob/main/MEP_oM/Equipment/MechanicalEquipment.cs",
       "label": "MechanicalEquipment (BH.oM.MEP.Equipment)",
-      "attributes": []
+      "attributes": [
+        "object"
+      ]
     },
     {
       "id": "BH.oM.MEP.Equipment.Parts.AirHandlingUnitBase",
       "iri": "https://github.com/BHoM/BHoM/blob/main/MEP_oM/Equipment/Parts/AirHandlingUnitBase.cs",
       "label": "AirHandlingUnitBase (BH.oM.MEP.Equipment.Parts)",
-      "attributes": []
+      "attributes": [
+        "object"
+      ],
+      "comment": {
+        "undefined": "Air Handling Units are devices which house fans, filter, coils, and energy wheels which produce heated and cooled fresh/partially recirculated air to a building"
+      }
     },
     {
       "id": "BH.oM.MEP.Equipment.Parts.CoolingCoil",
       "iri": "https://github.com/BHoM/BHoM/blob/main/MEP_oM/Equipment/Parts/CoolingCoil.cs",
       "label": "CoolingCoil (BH.oM.MEP.Equipment.Parts)",
-      "attributes": []
+      "attributes": [
+        "object"
+      ],
+      "comment": {
+        "undefined": "Cooling coils allow fluids (air) to lower their temperature as they pass through the coil"
+      }
     },
     {
       "id": "BH.oM.MEP.Equipment.Parts.ElectricalConnector",
       "iri": "https://github.com/BHoM/BHoM/blob/main/MEP_oM/Equipment/Parts/ElectricalConnector.cs",
       "label": "ElectricalConnector (BH.oM.MEP.Equipment.Parts)",
-      "attributes": []
+      "attributes": [
+        "object"
+      ],
+      "comment": {
+        "undefined": "Electrical Connectors are the devices (motors, disconnects/isolators) that serve as a source of power for mechanical equipment"
+      }
     },
     {
       "id": "BH.oM.MEP.Equipment.Parts.EnergyWheel",
       "iri": "https://github.com/BHoM/BHoM/blob/main/MEP_oM/Equipment/Parts/EnergyWheel.cs",
       "label": "EnergyWheel (BH.oM.MEP.Equipment.Parts)",
-      "attributes": []
+      "attributes": [
+        "object"
+      ],
+      "comment": {
+        "undefined": "Energy wheels are devices that capture sensible and/or latent heat from air which would otherwise be lost to the atmosphere"
+      }
     },
     {
       "id": "BH.oM.MEP.Equipment.Parts.Fan",
       "iri": "https://github.com/BHoM/BHoM/blob/main/MEP_oM/Equipment/Parts/Fan.cs",
       "label": "Fan (BH.oM.MEP.Equipment.Parts)",
-      "attributes": []
+      "attributes": [
+        "object"
+      ],
+      "comment": {
+        "undefined": "Fans are devices that create a current of air (used for ventilation and cooling) by rotating blades"
+      }
     },
     {
       "id": "BH.oM.MEP.Equipment.Parts.Filter",
       "iri": "https://github.com/BHoM/BHoM/blob/main/MEP_oM/Equipment/Parts/Filter.cs",
       "label": "Filter (BH.oM.MEP.Equipment.Parts)",
-      "attributes": []
+      "attributes": [
+        "object"
+      ],
+      "comment": {
+        "undefined": "Filters are devices that remove solid particles from a system"
+      }
     },
     {
       "id": "BH.oM.MEP.Equipment.Parts.HeatingCoil",
       "iri": "https://github.com/BHoM/BHoM/blob/main/MEP_oM/Equipment/Parts/HeatingCoil.cs",
       "label": "HeatingCoil (BH.oM.MEP.Equipment.Parts)",
-      "attributes": []
+      "attributes": [
+        "object"
+      ],
+      "comment": {
+        "undefined": "Heating coils allow fluids (air) to raise their temperature as they pass through the coil"
+      }
     },
     {
       "id": "BH.oM.MEP.Equipment.Parts.IPart",
       "iri": "https://github.com/BHoM/BHoM/blob/main/MEP_oM/Equipment/Parts/IPart.cs",
       "label": "IPart (BH.oM.MEP.Equipment.Parts)",
-      "attributes": []
+      "attributes": [
+        "object"
+      ]
     },
     {
       "id": "BH.oM.MEP.Enums.DamperType",
       "iri": "https://github.com/BHoM/BHoM/blob/main/MEP_oM/Enums/DamperType.cs",
       "label": "DamperType (BH.oM.MEP.Enums)",
-      "attributes": []
+      "attributes": [
+        "object"
+      ],
+      "comment": {
+        "undefined": "A type of damper used in ductwork (volume damper, fire smoke damper, etc.)"
+      }
     },
     {
       "id": "BH.oM.MEP.Enums.ElectricalEquipmentType",
       "iri": "https://github.com/BHoM/BHoM/blob/main/MEP_oM/Enums/ElectricalEquipmentType.cs",
       "label": "ElectricalEquipmentType (BH.oM.MEP.Enums)",
-      "attributes": []
+      "attributes": [
+        "object"
+      ],
+      "comment": {
+        "undefined": "A type of electrical equipment (switchgear, panelboard, transformer.)"
+      }
     },
     {
       "id": "BH.oM.MEP.Enums.ElectricalFixtureType",
       "iri": "https://github.com/BHoM/BHoM/blob/main/MEP_oM/Enums/ElectricalFixtureType.cs",
       "label": "ElectricalFixtureType (BH.oM.MEP.Enums)",
-      "attributes": []
+      "attributes": [
+        "object"
+      ],
+      "comment": {
+        "undefined": "A type of electrical fixture (duplex/quad socket/receptacle, floor box, or disconnect/isolator switch.)"
+      }
     },
     {
       "id": "BH.oM.MEP.Enums.FireAlarmDeviceType",
       "iri": "https://github.com/BHoM/BHoM/blob/main/MEP_oM/Enums/FireAlarmDeviceType.cs",
       "label": "FireAlarmDeviceType (BH.oM.MEP.Enums)",
-      "attributes": []
+      "attributes": [
+        "object"
+      ],
+      "comment": {
+        "undefined": "A type of fire alarm device (smoke detector, heat detector, speaker strobe.)"
+      }
     },
     {
       "id": "BH.oM.MEP.Enums.FittingType",
       "iri": "https://github.com/BHoM/BHoM/blob/main/MEP_oM/Enums/FittingType.cs",
       "label": "FittingType (BH.oM.MEP.Enums)",
-      "attributes": []
+      "attributes": [
+        "object"
+      ],
+      "comment": {
+        "undefined": "A type of fitting used to transition from one segment of linear MEP object to another."
+      }
     },
     {
       "id": "BH.oM.MEP.Enums.FluidType",
       "iri": "https://github.com/BHoM/BHoM/blob/main/MEP_oM/Enums/FluidType.cs",
       "label": "FluidType (BH.oM.MEP.Enums)",
-      "attributes": []
+      "attributes": [
+        "object"
+      ],
+      "comment": {
+        "undefined": "A fluid type that flows within any system's flow objects."
+      }
     },
     {
       "id": "BH.oM.MEP.Enums.MechanicalEquipmentType",
       "iri": "https://github.com/BHoM/BHoM/blob/main/MEP_oM/Enums/MechanicalEquipmentType.cs",
       "label": "MechanicalEquipmentType (BH.oM.MEP.Enums)",
-      "attributes": []
+      "attributes": [
+        "object"
+      ],
+      "comment": {
+        "undefined": "A type of mechanical equipment (air handling unit, boiler, chiller, fan coil unit.)"
+      }
     },
     {
       "id": "BH.oM.MEP.Enums.PipeTypes",
       "iri": "https://github.com/BHoM/BHoM/blob/main/MEP_oM/Enums/PipeTypes.cs",
       "label": "PipeTypes (BH.oM.MEP.Enums)",
-      "attributes": []
+      "attributes": [
+        "object"
+      ],
+      "comment": {
+        "undefined": "The type of pipe (e.g. Sanitary, Storm, Domestic Cold Water)"
+      }
     },
     {
       "id": "BH.oM.MEP.Enums.PlumbingFixtureType",
       "iri": "https://github.com/BHoM/BHoM/blob/main/MEP_oM/Enums/PlumbingFixtureType.cs",
       "label": "PlumbingFixtureType (BH.oM.MEP.Enums)",
-      "attributes": []
+      "attributes": [
+        "object"
+      ],
+      "comment": {
+        "undefined": "A type of plumbing fixture (water closet (toilet), lavatory, urinal.)"
+      }
     },
     {
       "id": "BH.oM.MEP.Enums.ValveType",
       "iri": "https://github.com/BHoM/BHoM/blob/main/MEP_oM/Enums/ValveType.cs",
       "label": "ValveType (BH.oM.MEP.Enums)",
-      "attributes": []
+      "attributes": [
+        "object"
+      ],
+      "comment": {
+        "undefined": "A type of piping valve (gate valve, globe valve, check valve, etc.)"
+      }
     },
     {
       "id": "BH.oM.MEP.Fixtures.Sprinkler.SprinklerType",
       "iri": "https://github.com/BHoM/BuildingEnvironments_Toolkit/blob/main/BuildingEnvironments_oM/Elements/Sprinkler.cs#L27",
       "label": "SprinklerType(BH.oM.MEP.Fixtures.Sprinkler.SprinklerType)",
-      "attributes": []
+      "attributes": [],
+      "comment": {
+        "undefined": "Indicates the orientation of the sprinkler head. e.g. pendent, upright, sidewall"
+      }
     },
     {
       "id": "BH.oM.Environment.SpaceCriteria.SprinklerType",
       "iri": "https://github.com/BHoM/BuildingEnvironments_Toolkit/blob/main/BuildingEnvironments_oM/Enums/SprinklerType.cs",
       "label": "SprinklerType (BH.oM.Environment.SpaceCriteria)",
       "attributes": [
+        "object",
         "external"
       ]
     },
@@ -1786,13 +2057,17 @@
       "id": "BH.oM.MEP.Fixtures.Sprinkler.SprinklerSystemType",
       "iri": "https://github.com/BHoM/BuildingEnvironments_Toolkit/blob/main/BuildingEnvironments_oM/Elements/Sprinkler.cs#L43",
       "label": "SprinklerSystemType(BH.oM.MEP.Fixtures.Sprinkler.SprinklerSystemType)",
-      "attributes": []
+      "attributes": [],
+      "comment": {
+        "undefined": "State of sprinkler before use. e.g. dry, wet, or preaction"
+      }
     },
     {
       "id": "BH.oM.Environment.SpaceCriteria.SprinklerSystemType",
       "iri": "https://github.com/BHoM/BHoM/blob/main/Environment_oM/SpaceCriteria/Enums/SprinklerSystemType.cs",
       "label": "SprinklerSystemType (BH.oM.Environment.SpaceCriteria)",
       "attributes": [
+        "object",
         "external"
       ]
     },
@@ -1801,50 +2076,75 @@
       "iri": "https://github.com/BHoM/BHoM/blob/main/Dimensional_oM/IElement1D.cs",
       "label": "IElement1D (BH.oM.Dimensional)",
       "attributes": [
+        "object",
         "external"
-      ]
+      ],
+      "comment": {
+        "undefined": "Enables geometrical operations to be performed on a Curve based spatial element, whilst preserving all other object properties as unchanged. /nObjects implementing this interface will be required to implement some base methods for getting and setting data in a way that maintains the object's other properties.Documentation detailing required extension methods can be found here: https://github.com/BHoM/documentation/wiki/IElement-required-extension-methods"
+      }
     },
     {
       "id": "BH.oM.Dimensional.IElement",
       "iri": "https://github.com/BHoM/BHoM/blob/main/Dimensional_oM/IElement.cs",
       "label": "IElement (BH.oM.Dimensional)",
       "attributes": [
+        "object",
         "external"
-      ]
+      ],
+      "comment": {
+        "undefined": "The common base interface for all the Spatial Dimensional Objects.This interface should not be implemented directly, only through its sub-interfaces.Methods operating on IElement assume a specific implementation of one or other of the sub-interfaces (i.e. IElement0D, IElement1D, IElement2D)"
+      }
     },
     {
       "id": "BH.oM.Dimensional.IElementM",
       "iri": "https://github.com/BHoM/BHoM/blob/main/Dimensional_oM/IElementM.cs",
       "label": "IElementM (BH.oM.Dimensional)",
       "attributes": [
+        "object",
         "external"
-      ]
+      ],
+      "comment": {
+        "undefined": "Enables Mass based operations to be performed on elements with materiality\nEnsures the material composition of a physical object is represented, defined as proportions of discrete types of material forming the object's total solid volume.\nObjects implementing this Interface will be required to implement some base methods for getting and setting data in a way that maintains the object's other properties.\nDocumentation detailing required extension methods can be found here: https://github.com/BHoM/documentation/wiki/IElement-required-extension-methods"
+      }
     },
     {
       "id": "BH.oM.MEP.System.CableTray.StartPoint",
       "iri": "https://github.com/BHoM/BHoM/blob/main/MEP_oM/System/CableTray.cs#L40",
       "label": "StartPoint(BH.oM.MEP.System.CableTray.StartPoint)",
-      "attributes": []
+      "attributes": [],
+      "comment": {
+        "undefined": "The point at which the Cable Tray object begins."
+      }
     },
     {
       "id": "BH.oM.Geometry.Point",
       "iri": "https://github.com/BHoM/BHoM/blob/main/Geometry_oM/Vector/Point.cs",
       "label": "Point (BH.oM.Geometry)",
       "attributes": [
+        "object",
         "external"
-      ]
+      ],
+      "comment": {
+        "undefined": "Defines a dimensionless location in three-dimensional space."
+      }
     },
     {
       "id": "BH.oM.MEP.System.CableTray.EndPoint",
       "iri": "https://github.com/BHoM/BHoM/blob/main/MEP_oM/System/CableTray.cs#L43",
       "label": "EndPoint(BH.oM.MEP.System.CableTray.EndPoint)",
-      "attributes": []
+      "attributes": [],
+      "comment": {
+        "undefined": "The point at which the Cable Tray object ends."
+      }
     },
     {
       "id": "BH.oM.MEP.System.CableTray.SectionProperty",
       "iri": "https://github.com/BHoM/BHoM/blob/main/MEP_oM/System/CableTray.cs#L46",
       "label": "SectionProperty(BH.oM.MEP.System.CableTray.SectionProperty)",
-      "attributes": []
+      "attributes": [],
+      "comment": {
+        "undefined": "The Cable Tray section property defines the shape (rectangular) and its associated properties (height, width, material, thickness/gauge)."
+      }
     },
     {
       "id": "BH.oM.MEP.System.CableTray.OrientationAngle",
@@ -1858,13 +2158,19 @@
       "id": "BH.oM.MEP.System.Duct.StartPoint",
       "iri": "https://github.com/BHoM/BHoM/blob/main/MEP_oM/System/Duct.cs#L40",
       "label": "StartPoint(BH.oM.MEP.System.Duct.StartPoint)",
-      "attributes": []
+      "attributes": [],
+      "comment": {
+        "undefined": "The point at which the Duct object begins."
+      }
     },
     {
       "id": "BH.oM.MEP.System.Duct.EndPoint",
       "iri": "https://github.com/BHoM/BHoM/blob/main/MEP_oM/System/Duct.cs#L43",
       "label": "EndPoint(BH.oM.MEP.System.Duct.EndPoint)",
-      "attributes": []
+      "attributes": [],
+      "comment": {
+        "undefined": "The point at which the Duct object ends."
+      }
     },
     {
       "id": "BH.oM.MEP.System.Duct.FlowRate",
@@ -1878,7 +2184,10 @@
       "id": "BH.oM.MEP.System.Duct.SectionProperty",
       "iri": "https://github.com/BHoM/BHoM/blob/main/MEP_oM/System/Duct.cs#L49",
       "label": "SectionProperty(BH.oM.MEP.System.Duct.SectionProperty)",
-      "attributes": []
+      "attributes": [],
+      "comment": {
+        "undefined": "The Duct section property defines the shape (round, rectangular, ovular) and its associated properties (height, width, radius, material, thickness/gauge)."
+      }
     },
     {
       "id": "BH.oM.MEP.System.Duct.OrientationAngle",
@@ -1898,13 +2207,19 @@
       "id": "BH.oM.MEP.System.FlowSystem.SystemType",
       "iri": "https://github.com/BHoM/BHoM/blob/main/MEP_oM/System/FlowSystem.cs#L41",
       "label": "SystemType(BH.oM.MEP.System.FlowSystem.SystemType)",
-      "attributes": []
+      "attributes": [],
+      "comment": {
+        "undefined": "A specific system type to be applied to the flow objects. The system type describes the material conveyed by the system (supply air, cold water), therefore determining the behaviours of the system"
+      }
     },
     {
       "id": "BH.oM.MEP.System.MechanicalSystem.FluidType",
       "iri": "https://github.com/BHoM/BHoM/blob/main/MEP_oM/System/MechanicalSystem.cs#L37",
       "label": "FluidType(BH.oM.MEP.System.MechanicalSystem.FluidType)",
-      "attributes": []
+      "attributes": [],
+      "comment": {
+        "undefined": "Fluid type that flows throughout the specified flow objects."
+      }
     },
     {
       "id": "BH.oM.MEP.System.MechanicalSystem.FluidTemperature",
@@ -1934,21 +2249,29 @@
       "id": "BH.oM.MEP.System.Node.Position",
       "iri": "https://github.com/BHoM/BHoM/blob/main/MEP_oM/System/Node.cs#L39",
       "label": "Position(BH.oM.MEP.System.Node.Position)",
-      "attributes": []
+      "attributes": [],
+      "comment": {
+        "undefined": "Position of the node in global Cartesian 3D space."
+      }
     },
     {
       "id": "BH.oM.Dimensional.IElement0D",
       "iri": "https://github.com/BHoM/BHoM/blob/main/Dimensional_oM/IElement0D.cs",
       "label": "IElement0D (BH.oM.Dimensional)",
       "attributes": [
+        "object",
         "external"
-      ]
+      ],
+      "comment": {
+        "undefined": "Enables geometrical operations to be performed on a Point based spatial element, whilst preserving all other object properties as unchanged. /nObjects implementing this interface will be required to implement some base methods for getting and setting data in a way that maintains the object's other properties.Documentation detailing required extension methods can be found here: https://github.com/BHoM/documentation/wiki/IElement-required-extension-methods"
+      }
     },
     {
       "id": "BH.oM.Analytical.Elements.INode",
       "iri": "https://github.com/BHoM/BHoM/blob/main/Analytical_oM/Elements/INode.cs",
       "label": "INode (BH.oM.Analytical.Elements)",
       "attributes": [
+        "object",
         "external"
       ]
     },
@@ -1957,6 +2280,7 @@
       "iri": "https://github.com/BHoM/BHoM/blob/main/Analytical_oM/IAnalytical.cs",
       "label": "IAnalytical (BH.oM.Analytical)",
       "attributes": [
+        "object",
         "external"
       ]
     },
@@ -1964,13 +2288,19 @@
       "id": "BH.oM.MEP.System.Pipe.StartPoint",
       "iri": "https://github.com/BHoM/BHoM/blob/main/MEP_oM/System/Pipe.cs#L39",
       "label": "StartPoint(BH.oM.MEP.System.Pipe.StartPoint)",
-      "attributes": []
+      "attributes": [],
+      "comment": {
+        "undefined": "The point at which the Pipe object begins."
+      }
     },
     {
       "id": "BH.oM.MEP.System.Pipe.EndPoint",
       "iri": "https://github.com/BHoM/BHoM/blob/main/MEP_oM/System/Pipe.cs#L42",
       "label": "EndPoint(BH.oM.MEP.System.Pipe.EndPoint)",
-      "attributes": []
+      "attributes": [],
+      "comment": {
+        "undefined": "The point at which the Pipe object ends."
+      }
     },
     {
       "id": "BH.oM.MEP.System.Pipe.FlowRate",
@@ -1984,7 +2314,10 @@
       "id": "BH.oM.MEP.System.Pipe.SectionProperty",
       "iri": "https://github.com/BHoM/BHoM/blob/main/MEP_oM/System/Pipe.cs#L48",
       "label": "SectionProperty(BH.oM.MEP.System.Pipe.SectionProperty)",
-      "attributes": []
+      "attributes": [],
+      "comment": {
+        "undefined": "The pipe section property defines the shape and its associated properties (radius, material, thickness)."
+      }
     },
     {
       "id": "BH.oM.MEP.System.Wire.WireSegments",
@@ -1996,13 +2329,19 @@
       "id": "BH.oM.MEP.System.WireSegment.StartPoint",
       "iri": "https://github.com/BHoM/BHoM/blob/main/MEP_oM/System/WireSegment.cs#L39",
       "label": "StartPoint(BH.oM.MEP.System.WireSegment.StartPoint)",
-      "attributes": []
+      "attributes": [],
+      "comment": {
+        "undefined": "The point at which the Wire object begins."
+      }
     },
     {
       "id": "BH.oM.MEP.System.WireSegment.EndPoint",
       "iri": "https://github.com/BHoM/BHoM/blob/main/MEP_oM/System/WireSegment.cs#L42",
       "label": "EndPoint(BH.oM.MEP.System.WireSegment.EndPoint)",
-      "attributes": []
+      "attributes": [],
+      "comment": {
+        "undefined": "The point at which the Wire object ends."
+      }
     },
     {
       "id": "BH.oM.MEP.System.WireSegment.FlowRate",
@@ -2016,19 +2355,26 @@
       "id": "BH.oM.MEP.System.WireSegment.SectionProperty",
       "iri": "https://github.com/BHoM/BHoM/blob/main/MEP_oM/System/WireSegment.cs#L48",
       "label": "SectionProperty(BH.oM.MEP.System.WireSegment.SectionProperty)",
-      "attributes": []
+      "attributes": [],
+      "comment": {
+        "undefined": "Section property of the Wire, containing all material as well as profile geometry and dimensions, where applicable."
+      }
     },
     {
       "id": "BH.oM.MEP.System.SectionProperties.CableTraySectionProperty.Material",
       "iri": "https://github.com/BHoM/BHoM/blob/main/MEP_oM/System/SectionProperties/CableTraySectionProperty.cs#L38",
       "label": "Material(BH.oM.MEP.System.SectionProperties.CableTraySectionProperty.Material)",
-      "attributes": []
+      "attributes": [],
+      "comment": {
+        "undefined": "The cable tray material is the primary material that the it is composed of."
+      }
     },
     {
       "id": "BH.oM.Physical.Materials.Material",
       "iri": "https://github.com/BHoM/BHoM/blob/main/Physical_oM/Materials/Material.cs",
       "label": "Material (BH.oM.Physical.Materials)",
       "attributes": [
+        "object",
         "external"
       ]
     },
@@ -2036,7 +2382,10 @@
       "id": "BH.oM.MEP.System.SectionProperties.CableTraySectionProperty.SectionProfile",
       "iri": "https://github.com/BHoM/BHoM/blob/main/MEP_oM/System/SectionProperties/CableTraySectionProperty.cs#L41",
       "label": "SectionProfile(BH.oM.MEP.System.SectionProperties.CableTraySectionProperty.SectionProfile)",
-      "attributes": []
+      "attributes": [],
+      "comment": {
+        "undefined": "The section profile of the object that will determine its use within a System."
+      }
     },
     {
       "id": "BH.oM.MEP.System.SectionProperties.CableTraySectionProperty.ElementSolidArea",
@@ -2059,6 +2408,7 @@
       "iri": "https://github.com/BHoM/BHoM/blob/main/BHoM/Interface/IImmutable.cs",
       "label": "IImmutable (BH.oM.Base)",
       "attributes": [
+        "object",
         "external"
       ]
     },
@@ -2066,19 +2416,28 @@
       "id": "BH.oM.MEP.System.SectionProperties.DuctSectionProperty.DuctMaterial",
       "iri": "https://github.com/BHoM/BHoM/blob/main/MEP_oM/System/SectionProperties/DuctSectionProperty.cs#L33",
       "label": "DuctMaterial(BH.oM.MEP.System.SectionProperties.DuctSectionProperty.DuctMaterial)",
-      "attributes": []
+      "attributes": [],
+      "comment": {
+        "undefined": "The duct material is the primary material that the duct is composed of (galvanized sheet metal, aluminium)"
+      }
     },
     {
       "id": "BH.oM.MEP.System.SectionProperties.DuctSectionProperty.InsulationMaterial",
       "iri": "https://github.com/BHoM/BHoM/blob/main/MEP_oM/System/SectionProperties/DuctSectionProperty.cs#L36",
       "label": "InsulationMaterial(BH.oM.MEP.System.SectionProperties.DuctSectionProperty.InsulationMaterial)",
-      "attributes": []
+      "attributes": [],
+      "comment": {
+        "undefined": "The insulation is the layer of material outside of the duct material, meant to insulate the internal conditions of the material being conveyed."
+      }
     },
     {
       "id": "BH.oM.MEP.System.SectionProperties.DuctSectionProperty.LiningMaterial",
       "iri": "https://github.com/BHoM/BHoM/blob/main/MEP_oM/System/SectionProperties/DuctSectionProperty.cs#L39",
       "label": "LiningMaterial(BH.oM.MEP.System.SectionProperties.DuctSectionProperty.LiningMaterial)",
-      "attributes": []
+      "attributes": [],
+      "comment": {
+        "undefined": "The lining is the layer of material inside of the duct material, meant to insulate the internal conditions of the material being conveyed."
+      }
     },
     {
       "id": "BH.oM.MEP.System.SectionProperties.DuctSectionProperty.HydraulicDiameter",
@@ -2100,7 +2459,10 @@
       "id": "BH.oM.MEP.System.SectionProperties.DuctSectionProperty.SectionProfile",
       "iri": "https://github.com/BHoM/BHoM/blob/main/MEP_oM/System/SectionProperties/DuctSectionProperty.cs#L48",
       "label": "SectionProfile(BH.oM.MEP.System.SectionProperties.DuctSectionProperty.SectionProfile)",
-      "attributes": []
+      "attributes": [],
+      "comment": {
+        "undefined": "The section profile of the object that will determine its use within a System."
+      }
     },
     {
       "id": "BH.oM.MEP.System.SectionProperties.DuctSectionProperty.ElementSolidArea",
@@ -2154,19 +2516,28 @@
       "id": "BH.oM.MEP.System.SectionProperties.PipeSectionProperty.PipeMaterial",
       "iri": "https://github.com/BHoM/BHoM/blob/main/MEP_oM/System/SectionProperties/PipeSectionProperty.cs#L33",
       "label": "PipeMaterial(BH.oM.MEP.System.SectionProperties.PipeSectionProperty.PipeMaterial)",
-      "attributes": []
+      "attributes": [],
+      "comment": {
+        "undefined": "The pipe material is the primary material that the pipe is composed of (copper, black steel, PEX)"
+      }
     },
     {
       "id": "BH.oM.MEP.System.SectionProperties.PipeSectionProperty.InsulationMaterial",
       "iri": "https://github.com/BHoM/BHoM/blob/main/MEP_oM/System/SectionProperties/PipeSectionProperty.cs#L36",
       "label": "InsulationMaterial(BH.oM.MEP.System.SectionProperties.PipeSectionProperty.InsulationMaterial)",
-      "attributes": []
+      "attributes": [],
+      "comment": {
+        "undefined": "The insulation is the layer of material outside of the pipe material, meant to insulate the internal conditions of the material being conveyed."
+      }
     },
     {
       "id": "BH.oM.MEP.System.SectionProperties.PipeSectionProperty.SectionProfile",
       "iri": "https://github.com/BHoM/BHoM/blob/main/MEP_oM/System/SectionProperties/PipeSectionProperty.cs#L39",
       "label": "SectionProfile(BH.oM.MEP.System.SectionProperties.PipeSectionProperty.SectionProfile)",
-      "attributes": []
+      "attributes": [],
+      "comment": {
+        "undefined": "The section profile of the object that will determine its use within a System."
+      }
     },
     {
       "id": "BH.oM.MEP.System.SectionProperties.PipeSectionProperty.ElementSolidArea",
@@ -2220,45 +2591,67 @@
       "id": "BH.oM.MEP.System.SectionProperties.SectionProfile.ElementProfile",
       "iri": "https://github.com/BHoM/BHoM/blob/main/MEP_oM/System/SectionProperties/SectionProfile.cs#L32",
       "label": "ElementProfile(BH.oM.MEP.System.SectionProperties.SectionProfile.ElementProfile)",
-      "attributes": []
+      "attributes": [],
+      "comment": {
+        "undefined": "ShapeProfile of the element itself. This is the base ShapeProfile that determines the overall shape of the IFlow object."
+      }
     },
     {
       "id": "BH.oM.Spatial.ShapeProfiles.IProfile",
       "iri": "https://github.com/BHoM/BHoM/blob/main/Spatial_oM/ShapeProfiles/IProfile.cs",
       "label": "IProfile (BH.oM.Spatial.ShapeProfiles)",
       "attributes": [
+        "object",
         "external"
-      ]
+      ],
+      "comment": {
+        "undefined": "Base interface for all shape profiles."
+      }
     },
     {
       "id": "BH.oM.MEP.System.SectionProperties.SectionProfile.LiningProfile",
       "iri": "https://github.com/BHoM/BHoM/blob/main/MEP_oM/System/SectionProperties/SectionProfile.cs#L35",
       "label": "LiningProfile(BH.oM.MEP.System.SectionProperties.SectionProfile.LiningProfile)",
-      "attributes": []
+      "attributes": [],
+      "comment": {
+        "undefined": "ShapeProfile of the element's interior lining."
+      }
     },
     {
       "id": "BH.oM.MEP.System.SectionProperties.SectionProfile.InsulationProfile",
       "iri": "https://github.com/BHoM/BHoM/blob/main/MEP_oM/System/SectionProperties/SectionProfile.cs#L38",
       "label": "InsulationProfile(BH.oM.MEP.System.SectionProperties.SectionProfile.InsulationProfile)",
-      "attributes": []
+      "attributes": [],
+      "comment": {
+        "undefined": "ShapeProfile of the element's exterior insulation."
+      }
     },
     {
       "id": "BH.oM.MEP.System.SectionProperties.WireSectionProperty.ConductiveMaterial",
       "iri": "https://github.com/BHoM/BHoM/blob/main/MEP_oM/System/SectionProperties/WireSectionProperty.cs#L33",
       "label": "ConductiveMaterial(BH.oM.MEP.System.SectionProperties.WireSectionProperty.ConductiveMaterial)",
-      "attributes": []
+      "attributes": [],
+      "comment": {
+        "undefined": "The wire material is the primary material that the wire is composed of (copper, aluminium)."
+      }
     },
     {
       "id": "BH.oM.MEP.System.SectionProperties.WireSectionProperty.InsulationMaterial",
       "iri": "https://github.com/BHoM/BHoM/blob/main/MEP_oM/System/SectionProperties/WireSectionProperty.cs#L36",
       "label": "InsulationMaterial(BH.oM.MEP.System.SectionProperties.WireSectionProperty.InsulationMaterial)",
-      "attributes": []
+      "attributes": [],
+      "comment": {
+        "undefined": "The insulation is the layer of material outside of the conductive material, meant to insulate the internal conditions of the conductive material."
+      }
     },
     {
       "id": "BH.oM.MEP.System.SectionProperties.WireSectionProperty.SectionProfile",
       "iri": "https://github.com/BHoM/BHoM/blob/main/MEP_oM/System/SectionProperties/WireSectionProperty.cs#L39",
       "label": "SectionProfile(BH.oM.MEP.System.SectionProperties.WireSectionProperty.SectionProfile)",
-      "attributes": []
+      "attributes": [],
+      "comment": {
+        "undefined": "The section profile of the object that will determine its use within a System."
+      }
     },
     {
       "id": "BH.oM.MEP.System.SectionProperties.WireSectionProperty.ElementSolidArea",
@@ -2321,6 +2714,7 @@
       "iri": "https://github.com/BHoM/BHoM/blob/main/Physical_oM/Materials/IMaterialProperties.cs",
       "label": "IMaterialProperties (BH.oM.Physical.Materials)",
       "attributes": [
+        "object",
         "external"
       ]
     },
@@ -2337,6 +2731,7 @@
       "iri": "https://github.com/BHoM/BHoM/blob/main/BHoM/Interface/IFragment.cs",
       "label": "IFragment (BH.oM.Base)",
       "attributes": [
+        "object",
         "external"
       ]
     },
@@ -2400,7 +2795,10 @@
       "id": "BH.oM.MEP.System.Fittings.Fitting.Location",
       "iri": "https://github.com/BHoM/BHoM/blob/main/MEP_oM/System/Fittings/Fitting.cs#L40",
       "label": "Location(BH.oM.MEP.System.Fittings.Fitting.Location)",
-      "attributes": []
+      "attributes": [],
+      "comment": {
+        "undefined": "The point at which the Fitting occurs."
+      }
     },
     {
       "id": "BH.oM.MEP.System.Fittings.Fitting.ConnectionsLocation",
@@ -2412,13 +2810,19 @@
       "id": "BH.oM.MEP.System.Fittings.Fitting.Type",
       "iri": "https://github.com/BHoM/BHoM/blob/main/MEP_oM/System/Fittings/Fitting.cs#L46",
       "label": "Type(BH.oM.MEP.System.Fittings.Fitting.Type)",
-      "attributes": []
+      "attributes": [],
+      "comment": {
+        "undefined": "The type of fitting connected to an element."
+      }
     },
     {
       "id": "BH.oM.MEP.System.Dampers.Damper.Location",
       "iri": "https://github.com/BHoM/BHoM/blob/main/MEP_oM/System/Dampers/Damper.cs#L39",
       "label": "Location(BH.oM.MEP.System.Dampers.Damper.Location)",
-      "attributes": []
+      "attributes": [],
+      "comment": {
+        "undefined": "The point in space for the location of the object."
+      }
     },
     {
       "id": "BH.oM.MEP.System.Dampers.Damper.OrientationAngle",
@@ -2432,7 +2836,10 @@
       "id": "BH.oM.MEP.System.Dampers.Damper.DamperType",
       "iri": "https://github.com/BHoM/BHoM/blob/main/MEP_oM/System/Dampers/Damper.cs#L46",
       "label": "DamperType(BH.oM.MEP.System.Dampers.Damper.DamperType)",
-      "attributes": []
+      "attributes": [],
+      "comment": {
+        "undefined": "A type which describes the damper more specifically whether it's a fire smoke damper, volume damper or balancing damper."
+      }
     },
     {
       "id": "BH.oM.MEP.System.Dampers.Damper.PressureDrop",
@@ -2446,7 +2853,10 @@
       "id": "BH.oM.MEP.System.Dampers.VolumeDamper.Location",
       "iri": "https://github.com/BHoM/BHoM/blob/main/MEP_oM/System/Dampers/VolumeDamper.cs#L38",
       "label": "Location(BH.oM.MEP.System.Dampers.VolumeDamper.Location)",
-      "attributes": []
+      "attributes": [],
+      "comment": {
+        "undefined": "The point in space for the location of the object."
+      }
     },
     {
       "id": "BH.oM.MEP.System.Dampers.VolumeDamper.OrientationAngle",
@@ -2468,7 +2878,10 @@
       "id": "BH.oM.MEP.System.Dampers.Valve.Location",
       "iri": "https://github.com/BHoM/BHoM/blob/main/MEP_oM/System/Valves/Valve.cs#L39",
       "label": "Location(BH.oM.MEP.System.Dampers.Valve.Location)",
-      "attributes": []
+      "attributes": [],
+      "comment": {
+        "undefined": "The point in space for the location of the object."
+      }
     },
     {
       "id": "BH.oM.MEP.System.Dampers.Valve.OrientationAngle",
@@ -2482,7 +2895,10 @@
       "id": "BH.oM.MEP.System.Dampers.Valve.ValveType",
       "iri": "https://github.com/BHoM/BHoM/blob/main/MEP_oM/System/Valves/Valve.cs#L46",
       "label": "ValveType(BH.oM.MEP.System.Dampers.Valve.ValveType)",
-      "attributes": []
+      "attributes": [],
+      "comment": {
+        "undefined": "A type which describes the valve, more specifically whether it's a check valve, gate valve, etc."
+      }
     },
     {
       "id": "BH.oM.MEP.System.Dampers.Valve.PressureDrop",
@@ -2503,8 +2919,12 @@
       "iri": "https://github.com/BHoM/BHoM/blob/main/Geometry_oM/Interface/IGeometry.cs",
       "label": "IGeometry (BH.oM.Geometry)",
       "attributes": [
+        "object",
         "external"
-      ]
+      ],
+      "comment": {
+        "undefined": "The parent interface for all primative geometrical objects.\nIGeometry implements IObject - and not IBHoMObject. Equally primative geometrical objects do not inherit from the base BHoMObject class either. As primatives, the additional base BHoM properties are omitted for both efficency and performace."
+      }
     },
     {
       "id": "BH.oM.MEP.Fragments.IdentityFragment.Manufacturer",
@@ -2598,7 +3018,10 @@
       "id": "BH.oM.MEP.Fixtures.AirTerminal.Location",
       "iri": "https://github.com/BHoM/BHoM/blob/main/MEP_oM/Fixtures/AirTerminal.cs#L40",
       "label": "Location(BH.oM.MEP.Fixtures.AirTerminal.Location)",
-      "attributes": []
+      "attributes": [],
+      "comment": {
+        "undefined": "The point in space for the location of the object."
+      }
     },
     {
       "id": "BH.oM.MEP.Fixtures.AirTerminal.OrientationAngle",
@@ -2628,7 +3051,10 @@
       "id": "BH.oM.MEP.Fixtures.AirTerminal.ConnectedDuctProperties",
       "iri": "https://github.com/BHoM/BHoM/blob/main/MEP_oM/Fixtures/AirTerminal.cs#L55",
       "label": "ConnectedDuctProperties(BH.oM.MEP.Fixtures.AirTerminal.ConnectedDuctProperties)",
-      "attributes": []
+      "attributes": [],
+      "comment": {
+        "undefined": "The DuctSectionProperties for the duct connected to the air terminal."
+      }
     },
     {
       "id": "BH.oM.MEP.Fixtures.CommercialFixtureUsage.KitchenFaucetNumberOfUsesMale",
@@ -2738,7 +3164,10 @@
       "id": "BH.oM.MEP.Fixtures.ElectricalFixture.Location",
       "iri": "https://github.com/BHoM/BHoM/blob/main/MEP_oM/Fixtures/ElectricalFixture.cs#L40",
       "label": "Location(BH.oM.MEP.Fixtures.ElectricalFixture.Location)",
-      "attributes": []
+      "attributes": [],
+      "comment": {
+        "undefined": "The point in space for the location of the object."
+      }
     },
     {
       "id": "BH.oM.MEP.Fixtures.ElectricalFixture.OrientationAngle",
@@ -2752,7 +3181,10 @@
       "id": "BH.oM.MEP.Fixtures.ElectricalFixture.ElectricalFixtureType",
       "iri": "https://github.com/BHoM/BHoM/blob/main/MEP_oM/Fixtures/ElectricalFixture.cs#L47",
       "label": "ElectricalFixtureType(BH.oM.MEP.Fixtures.ElectricalFixture.ElectricalFixtureType)",
-      "attributes": []
+      "attributes": [],
+      "comment": {
+        "undefined": "A type which describes the electrical fixture more specifically whether it's a duplex or quad receptacle/socket, a floor box or a disconnect/isolator switch."
+      }
     },
     {
       "id": "BH.oM.MEP.Fixtures.ElectricalFixture.GroundFaultCircuitInterrupter",
@@ -2782,7 +3214,10 @@
       "id": "BH.oM.MEP.Fixtures.FireAlarmDevice.Location",
       "iri": "https://github.com/BHoM/BHoM/blob/main/MEP_oM/Fixtures/FireAlarmDevice.cs#L40",
       "label": "Location(BH.oM.MEP.Fixtures.FireAlarmDevice.Location)",
-      "attributes": []
+      "attributes": [],
+      "comment": {
+        "undefined": "The point in space for the location of the object."
+      }
     },
     {
       "id": "BH.oM.MEP.Fixtures.FireAlarmDevice.OrientationAngle",
@@ -2796,13 +3231,19 @@
       "id": "BH.oM.MEP.Fixtures.FireAlarmDevice.FireAlarmDeviceType",
       "iri": "https://github.com/BHoM/BHoM/blob/main/MEP_oM/Fixtures/FireAlarmDevice.cs#L47",
       "label": "FireAlarmDeviceType(BH.oM.MEP.Fixtures.FireAlarmDevice.FireAlarmDeviceType)",
-      "attributes": []
+      "attributes": [],
+      "comment": {
+        "undefined": "A type which describes the fire alarm device more specifically whether it's a smoke detector, carbon monoxide detector or speaker strobe."
+      }
     },
     {
       "id": "BH.oM.MEP.Fixtures.LightFixture.Location",
       "iri": "https://github.com/BHoM/BHoM/blob/main/MEP_oM/Fixtures/LightFixture.cs#L40",
       "label": "Location(BH.oM.MEP.Fixtures.LightFixture.Location)",
-      "attributes": []
+      "attributes": [],
+      "comment": {
+        "undefined": "The point in space for the location of the object."
+      }
     },
     {
       "id": "BH.oM.MEP.Fixtures.LightFixture.OrientationAngle",
@@ -2854,7 +3295,10 @@
       "id": "BH.oM.MEP.Fixtures.PlumbingFixture.Location",
       "iri": "https://github.com/BHoM/BHoM/blob/main/MEP_oM/Fixtures/PlumbingFixture.cs#L40",
       "label": "Location(BH.oM.MEP.Fixtures.PlumbingFixture.Location)",
-      "attributes": []
+      "attributes": [],
+      "comment": {
+        "undefined": "The point in space for the location of the object."
+      }
     },
     {
       "id": "BH.oM.MEP.Fixtures.PlumbingFixture.OrientationAngle",
@@ -2868,19 +3312,28 @@
       "id": "BH.oM.MEP.Fixtures.PlumbingFixture.PlumbingFixtureType",
       "iri": "https://github.com/BHoM/BHoM/blob/main/MEP_oM/Fixtures/PlumbingFixture.cs#L47",
       "label": "PlumbingFixtureType(BH.oM.MEP.Fixtures.PlumbingFixture.PlumbingFixtureType)",
-      "attributes": []
+      "attributes": [],
+      "comment": {
+        "undefined": "A type which describes the plumbing fixture more specifically whether it's a water closet (toilet), urinal or lavatory."
+      }
     },
     {
       "id": "BH.oM.MEP.Fixtures.PlumbingFixture.Flow",
       "iri": "https://github.com/BHoM/BHoM/blob/main/MEP_oM/Fixtures/PlumbingFixture.cs#L50",
       "label": "Flow(BH.oM.MEP.Fixtures.PlumbingFixture.Flow)",
-      "attributes": []
+      "attributes": [],
+      "comment": {
+        "undefined": "Depiction of the plumbing flow associated with the plumbing fixture (cold water, hot water and drainage.)"
+      }
     },
     {
       "id": "BH.oM.MEP.Fixtures.PlumbingFixture.LoadingFixtureUnits",
       "iri": "https://github.com/BHoM/BHoM/blob/main/MEP_oM/Fixtures/PlumbingFixture.cs#L53",
       "label": "LoadingFixtureUnits(BH.oM.MEP.Fixtures.PlumbingFixture.LoadingFixtureUnits)",
-      "attributes": []
+      "attributes": [],
+      "comment": {
+        "undefined": "Depiction of the plumbing loading/fixture units associated with the plumbing fixture (cold water, hot water and drainage.)"
+      }
     },
     {
       "id": "BH.oM.MEP.Fixtures.PlumbingFixtureFlow.ClothesWasherVolumePerUse",
@@ -3100,7 +3553,10 @@
       "id": "BH.oM.MEP.Equipment.ElectricalEquipment.Location",
       "iri": "https://github.com/BHoM/BHoM/blob/main/MEP_oM/Equipment/ElectricalEquipment.cs#L41",
       "label": "Location(BH.oM.MEP.Equipment.ElectricalEquipment.Location)",
-      "attributes": []
+      "attributes": [],
+      "comment": {
+        "undefined": "The point in space for the location of the object."
+      }
     },
     {
       "id": "BH.oM.MEP.Equipment.ElectricalEquipment.OrientationAngle",
@@ -3114,7 +3570,10 @@
       "id": "BH.oM.MEP.Equipment.ElectricalEquipment.ElectricalEquipmentType",
       "iri": "https://github.com/BHoM/BHoM/blob/main/MEP_oM/Equipment/ElectricalEquipment.cs#L48",
       "label": "ElectricalEquipmentType(BH.oM.MEP.Equipment.ElectricalEquipment.ElectricalEquipmentType)",
-      "attributes": []
+      "attributes": [],
+      "comment": {
+        "undefined": "A type which describes the electrical equipment, more specifically whether it's switchgear, panelboard, transformer, etc."
+      }
     },
     {
       "id": "BH.oM.MEP.Equipment.ElectricalEquipment.Parts",
@@ -3140,7 +3599,10 @@
       "id": "BH.oM.MEP.Equipment.MechanicalEquipment.Location",
       "iri": "https://github.com/BHoM/BHoM/blob/main/MEP_oM/Equipment/MechanicalEquipment.cs#L41",
       "label": "Location(BH.oM.MEP.Equipment.MechanicalEquipment.Location)",
-      "attributes": []
+      "attributes": [],
+      "comment": {
+        "undefined": "The point in space for the location of the object."
+      }
     },
     {
       "id": "BH.oM.MEP.Equipment.MechanicalEquipment.OrientationAngle",
@@ -3154,7 +3616,10 @@
       "id": "BH.oM.MEP.Equipment.MechanicalEquipment.MechanicalEquipmentType",
       "iri": "https://github.com/BHoM/BHoM/blob/main/MEP_oM/Equipment/MechanicalEquipment.cs#L48",
       "label": "MechanicalEquipmentType(BH.oM.MEP.Equipment.MechanicalEquipment.MechanicalEquipmentType)",
-      "attributes": []
+      "attributes": [],
+      "comment": {
+        "undefined": "A type which describes the mechanical equipment more specifically whether it's an air handling unit, fan coil unit, boiler or chiller."
+      }
     },
     {
       "id": "BH.oM.MEP.Equipment.MechanicalEquipment.Parts",
@@ -5517,6 +5982,9 @@
       "attributes": [
         "object"
       ],
+      "comment": {
+        "undefined": "Can be used to describe that a thing belongs to a class; or that a thing is equivalent to another thing. When used for BHoM types, this describes C# interface implementation."
+      },
       "domain": "BH.oM.MEP.Fixtures.Sprinkler",
       "range": "BH.oM.Dimensional.IElement1D"
     },
@@ -5527,6 +5995,9 @@
       "attributes": [
         "object"
       ],
+      "comment": {
+        "undefined": "Can be used to describe that a thing belongs to a class; or that a thing is equivalent to another thing. When used for BHoM types, this describes C# interface implementation."
+      },
       "domain": "BH.oM.MEP.Fixtures.Sprinkler",
       "range": "BH.oM.Dimensional.IElement"
     },
@@ -5537,6 +6008,9 @@
       "attributes": [
         "object"
       ],
+      "comment": {
+        "undefined": "Can be used to describe that a thing belongs to a class; or that a thing is equivalent to another thing. When used for BHoM types, this describes C# interface implementation."
+      },
       "domain": "BH.oM.MEP.Fixtures.Sprinkler",
       "range": "BH.oM.Dimensional.IElementM"
     },
@@ -5617,6 +6091,9 @@
       "attributes": [
         "object"
       ],
+      "comment": {
+        "undefined": "Can be used to describe that a thing belongs to a class; or that a thing is equivalent to another thing. When used for BHoM types, this describes C# interface implementation."
+      },
       "domain": "BH.oM.MEP.System.CableTray",
       "range": "BH.oM.Dimensional.IElement1D"
     },
@@ -5627,6 +6104,9 @@
       "attributes": [
         "object"
       ],
+      "comment": {
+        "undefined": "Can be used to describe that a thing belongs to a class; or that a thing is equivalent to another thing. When used for BHoM types, this describes C# interface implementation."
+      },
       "domain": "BH.oM.MEP.System.CableTray",
       "range": "BH.oM.Dimensional.IElement"
     },
@@ -5637,6 +6117,9 @@
       "attributes": [
         "object"
       ],
+      "comment": {
+        "undefined": "Can be used to describe that a thing belongs to a class; or that a thing is equivalent to another thing. When used for BHoM types, this describes C# interface implementation."
+      },
       "domain": "BH.oM.MEP.System.CableTray",
       "range": "BH.oM.Dimensional.IElementM"
     },
@@ -5647,6 +6130,9 @@
       "attributes": [
         "object"
       ],
+      "comment": {
+        "undefined": "Can be used to describe that a thing belongs to a class; or that a thing is equivalent to another thing. When used for BHoM types, this describes C# interface implementation."
+      },
       "domain": "BH.oM.MEP.System.CableTray",
       "range": "BH.oM.MEP.System.IFlow"
     },
@@ -5737,6 +6223,9 @@
       "attributes": [
         "object"
       ],
+      "comment": {
+        "undefined": "Can be used to describe that a thing belongs to a class; or that a thing is equivalent to another thing. When used for BHoM types, this describes C# interface implementation."
+      },
       "domain": "BH.oM.MEP.System.Duct",
       "range": "BH.oM.MEP.System.IFlow"
     },
@@ -5747,6 +6236,9 @@
       "attributes": [
         "object"
       ],
+      "comment": {
+        "undefined": "Can be used to describe that a thing belongs to a class; or that a thing is equivalent to another thing. When used for BHoM types, this describes C# interface implementation."
+      },
       "domain": "BH.oM.MEP.System.Duct",
       "range": "BH.oM.Dimensional.IElement1D"
     },
@@ -5757,6 +6249,9 @@
       "attributes": [
         "object"
       ],
+      "comment": {
+        "undefined": "Can be used to describe that a thing belongs to a class; or that a thing is equivalent to another thing. When used for BHoM types, this describes C# interface implementation."
+      },
       "domain": "BH.oM.MEP.System.Duct",
       "range": "BH.oM.Dimensional.IElement"
     },
@@ -5767,6 +6262,9 @@
       "attributes": [
         "object"
       ],
+      "comment": {
+        "undefined": "Can be used to describe that a thing belongs to a class; or that a thing is equivalent to another thing. When used for BHoM types, this describes C# interface implementation."
+      },
       "domain": "BH.oM.MEP.System.Duct",
       "range": "BH.oM.Dimensional.IElementM"
     },
@@ -5817,6 +6315,9 @@
       "attributes": [
         "object"
       ],
+      "comment": {
+        "undefined": "Can be used to describe that a thing belongs to a class; or that a thing is equivalent to another thing. When used for BHoM types, this describes C# interface implementation."
+      },
       "domain": "BH.oM.MEP.System.FlowSystem",
       "range": "BH.oM.Dimensional.IElement1D"
     },
@@ -5827,6 +6328,9 @@
       "attributes": [
         "object"
       ],
+      "comment": {
+        "undefined": "Can be used to describe that a thing belongs to a class; or that a thing is equivalent to another thing. When used for BHoM types, this describes C# interface implementation."
+      },
       "domain": "BH.oM.MEP.System.FlowSystem",
       "range": "BH.oM.Dimensional.IElement"
     },
@@ -5837,6 +6341,9 @@
       "attributes": [
         "object"
       ],
+      "comment": {
+        "undefined": "Can be used to describe that a thing belongs to a class; or that a thing is equivalent to another thing. When used for BHoM types, this describes C# interface implementation."
+      },
       "domain": "BH.oM.MEP.System.FlowSystem",
       "range": "BH.oM.Dimensional.IElementM"
     },
@@ -5867,6 +6374,9 @@
       "attributes": [
         "object"
       ],
+      "comment": {
+        "undefined": "Can be used to describe that a thing belongs to a class; or that a thing is equivalent to another thing. When used for BHoM types, this describes C# interface implementation."
+      },
       "domain": "BH.oM.MEP.System.IFlow",
       "range": "BH.oM.Dimensional.IElement1D"
     },
@@ -5877,6 +6387,9 @@
       "attributes": [
         "object"
       ],
+      "comment": {
+        "undefined": "Can be used to describe that a thing belongs to a class; or that a thing is equivalent to another thing. When used for BHoM types, this describes C# interface implementation."
+      },
       "domain": "BH.oM.MEP.System.IFlow",
       "range": "BH.oM.Dimensional.IElement"
     },
@@ -5887,6 +6400,9 @@
       "attributes": [
         "object"
       ],
+      "comment": {
+        "undefined": "Can be used to describe that a thing belongs to a class; or that a thing is equivalent to another thing. When used for BHoM types, this describes C# interface implementation."
+      },
       "domain": "BH.oM.MEP.System.IFlow",
       "range": "BH.oM.Dimensional.IElementM"
     },
@@ -5947,6 +6463,9 @@
       "attributes": [
         "object"
       ],
+      "comment": {
+        "undefined": "Can be used to describe that a thing belongs to a class; or that a thing is equivalent to another thing. When used for BHoM types, this describes C# interface implementation."
+      },
       "domain": "BH.oM.MEP.System.MechanicalSystem",
       "range": "BH.oM.MEP.System.ISystemType"
     },
@@ -5977,6 +6496,9 @@
       "attributes": [
         "object"
       ],
+      "comment": {
+        "undefined": "Can be used to describe that a thing belongs to a class; or that a thing is equivalent to another thing. When used for BHoM types, this describes C# interface implementation."
+      },
       "domain": "BH.oM.MEP.System.Node",
       "range": "BH.oM.Dimensional.IElement0D"
     },
@@ -5987,6 +6509,9 @@
       "attributes": [
         "object"
       ],
+      "comment": {
+        "undefined": "Can be used to describe that a thing belongs to a class; or that a thing is equivalent to another thing. When used for BHoM types, this describes C# interface implementation."
+      },
       "domain": "BH.oM.MEP.System.Node",
       "range": "BH.oM.Dimensional.IElement"
     },
@@ -5997,6 +6522,9 @@
       "attributes": [
         "object"
       ],
+      "comment": {
+        "undefined": "Can be used to describe that a thing belongs to a class; or that a thing is equivalent to another thing. When used for BHoM types, this describes C# interface implementation."
+      },
       "domain": "BH.oM.MEP.System.Node",
       "range": "BH.oM.Analytical.Elements.INode"
     },
@@ -6007,6 +6535,9 @@
       "attributes": [
         "object"
       ],
+      "comment": {
+        "undefined": "Can be used to describe that a thing belongs to a class; or that a thing is equivalent to another thing. When used for BHoM types, this describes C# interface implementation."
+      },
       "domain": "BH.oM.MEP.System.Node",
       "range": "BH.oM.Analytical.IAnalytical"
     },
@@ -6087,6 +6618,9 @@
       "attributes": [
         "object"
       ],
+      "comment": {
+        "undefined": "Can be used to describe that a thing belongs to a class; or that a thing is equivalent to another thing. When used for BHoM types, this describes C# interface implementation."
+      },
       "domain": "BH.oM.MEP.System.Pipe",
       "range": "BH.oM.MEP.System.IFlow"
     },
@@ -6097,6 +6631,9 @@
       "attributes": [
         "object"
       ],
+      "comment": {
+        "undefined": "Can be used to describe that a thing belongs to a class; or that a thing is equivalent to another thing. When used for BHoM types, this describes C# interface implementation."
+      },
       "domain": "BH.oM.MEP.System.Pipe",
       "range": "BH.oM.Dimensional.IElement1D"
     },
@@ -6107,6 +6644,9 @@
       "attributes": [
         "object"
       ],
+      "comment": {
+        "undefined": "Can be used to describe that a thing belongs to a class; or that a thing is equivalent to another thing. When used for BHoM types, this describes C# interface implementation."
+      },
       "domain": "BH.oM.MEP.System.Pipe",
       "range": "BH.oM.Dimensional.IElement"
     },
@@ -6117,6 +6657,9 @@
       "attributes": [
         "object"
       ],
+      "comment": {
+        "undefined": "Can be used to describe that a thing belongs to a class; or that a thing is equivalent to another thing. When used for BHoM types, this describes C# interface implementation."
+      },
       "domain": "BH.oM.MEP.System.Pipe",
       "range": "BH.oM.Dimensional.IElementM"
     },
@@ -6147,6 +6690,9 @@
       "attributes": [
         "object"
       ],
+      "comment": {
+        "undefined": "Can be used to describe that a thing belongs to a class; or that a thing is equivalent to another thing. When used for BHoM types, this describes C# interface implementation."
+      },
       "domain": "BH.oM.MEP.System.Wire",
       "range": "BH.oM.Dimensional.IElementM"
     },
@@ -6227,6 +6773,9 @@
       "attributes": [
         "object"
       ],
+      "comment": {
+        "undefined": "Can be used to describe that a thing belongs to a class; or that a thing is equivalent to another thing. When used for BHoM types, this describes C# interface implementation."
+      },
       "domain": "BH.oM.MEP.System.WireSegment",
       "range": "BH.oM.MEP.System.IFlow"
     },
@@ -6237,6 +6786,9 @@
       "attributes": [
         "object"
       ],
+      "comment": {
+        "undefined": "Can be used to describe that a thing belongs to a class; or that a thing is equivalent to another thing. When used for BHoM types, this describes C# interface implementation."
+      },
       "domain": "BH.oM.MEP.System.WireSegment",
       "range": "BH.oM.Dimensional.IElement1D"
     },
@@ -6247,6 +6799,9 @@
       "attributes": [
         "object"
       ],
+      "comment": {
+        "undefined": "Can be used to describe that a thing belongs to a class; or that a thing is equivalent to another thing. When used for BHoM types, this describes C# interface implementation."
+      },
       "domain": "BH.oM.MEP.System.WireSegment",
       "range": "BH.oM.Dimensional.IElement"
     },
@@ -6257,6 +6812,9 @@
       "attributes": [
         "object"
       ],
+      "comment": {
+        "undefined": "Can be used to describe that a thing belongs to a class; or that a thing is equivalent to another thing. When used for BHoM types, this describes C# interface implementation."
+      },
       "domain": "BH.oM.MEP.System.WireSegment",
       "range": "BH.oM.Dimensional.IElementM"
     },
@@ -6327,6 +6885,9 @@
       "attributes": [
         "object"
       ],
+      "comment": {
+        "undefined": "Can be used to describe that a thing belongs to a class; or that a thing is equivalent to another thing. When used for BHoM types, this describes C# interface implementation."
+      },
       "domain": "BH.oM.MEP.System.SectionProperties.CableTraySectionProperty",
       "range": "BH.oM.Base.IImmutable"
     },
@@ -6497,6 +7058,9 @@
       "attributes": [
         "object"
       ],
+      "comment": {
+        "undefined": "Can be used to describe that a thing belongs to a class; or that a thing is equivalent to another thing. When used for BHoM types, this describes C# interface implementation."
+      },
       "domain": "BH.oM.MEP.System.SectionProperties.DuctSectionProperty",
       "range": "BH.oM.MEP.System.SectionProperties.IFlowSectionProperty"
     },
@@ -6507,6 +7071,9 @@
       "attributes": [
         "object"
       ],
+      "comment": {
+        "undefined": "Can be used to describe that a thing belongs to a class; or that a thing is equivalent to another thing. When used for BHoM types, this describes C# interface implementation."
+      },
       "domain": "BH.oM.MEP.System.SectionProperties.DuctSectionProperty",
       "range": "BH.oM.Base.IImmutable"
     },
@@ -6637,6 +7204,9 @@
       "attributes": [
         "object"
       ],
+      "comment": {
+        "undefined": "Can be used to describe that a thing belongs to a class; or that a thing is equivalent to another thing. When used for BHoM types, this describes C# interface implementation."
+      },
       "domain": "BH.oM.MEP.System.SectionProperties.PipeSectionProperty",
       "range": "BH.oM.MEP.System.SectionProperties.IFlowSectionProperty"
     },
@@ -6647,6 +7217,9 @@
       "attributes": [
         "object"
       ],
+      "comment": {
+        "undefined": "Can be used to describe that a thing belongs to a class; or that a thing is equivalent to another thing. When used for BHoM types, this describes C# interface implementation."
+      },
       "domain": "BH.oM.MEP.System.SectionProperties.PipeSectionProperty",
       "range": "BH.oM.Base.IImmutable"
     },
@@ -6717,6 +7290,9 @@
       "attributes": [
         "object"
       ],
+      "comment": {
+        "undefined": "Can be used to describe that a thing belongs to a class; or that a thing is equivalent to another thing. When used for BHoM types, this describes C# interface implementation."
+      },
       "domain": "BH.oM.MEP.System.SectionProperties.SectionProfile",
       "range": "BH.oM.Base.IImmutable"
     },
@@ -6847,6 +7423,9 @@
       "attributes": [
         "object"
       ],
+      "comment": {
+        "undefined": "Can be used to describe that a thing belongs to a class; or that a thing is equivalent to another thing. When used for BHoM types, this describes C# interface implementation."
+      },
       "domain": "BH.oM.MEP.System.SectionProperties.WireSectionProperty",
       "range": "BH.oM.MEP.System.SectionProperties.IFlowSectionProperty"
     },
@@ -6857,6 +7436,9 @@
       "attributes": [
         "object"
       ],
+      "comment": {
+        "undefined": "Can be used to describe that a thing belongs to a class; or that a thing is equivalent to another thing. When used for BHoM types, this describes C# interface implementation."
+      },
       "domain": "BH.oM.MEP.System.SectionProperties.WireSectionProperty",
       "range": "BH.oM.Base.IImmutable"
     },
@@ -6867,6 +7449,9 @@
       "attributes": [
         "object"
       ],
+      "comment": {
+        "undefined": "Can be used to describe that a thing belongs to a class; or that a thing is equivalent to another thing. When used for BHoM types, this describes C# interface implementation."
+      },
       "domain": "BH.oM.MEP.System.MaterialFragments.CableTrayMaterial",
       "range": "BH.oM.MEP.System.MaterialFragments.IMEPMaterial"
     },
@@ -6887,6 +7472,9 @@
       "attributes": [
         "object"
       ],
+      "comment": {
+        "undefined": "Can be used to describe that a thing belongs to a class; or that a thing is equivalent to another thing. When used for BHoM types, this describes C# interface implementation."
+      },
       "domain": "BH.oM.MEP.System.MaterialFragments.DuctMaterial",
       "range": "BH.oM.MEP.System.MaterialFragments.IMEPMaterial"
     },
@@ -6897,6 +7485,9 @@
       "attributes": [
         "object"
       ],
+      "comment": {
+        "undefined": "Can be used to describe that a thing belongs to a class; or that a thing is equivalent to another thing. When used for BHoM types, this describes C# interface implementation."
+      },
       "domain": "BH.oM.MEP.System.MaterialFragments.DuctMaterial",
       "range": "BH.oM.Physical.Materials.IMaterialProperties"
     },
@@ -6927,6 +7518,9 @@
       "attributes": [
         "object"
       ],
+      "comment": {
+        "undefined": "Can be used to describe that a thing belongs to a class; or that a thing is equivalent to another thing. When used for BHoM types, this describes C# interface implementation."
+      },
       "domain": "BH.oM.MEP.System.MaterialFragments.IInsulationMaterial",
       "range": "BH.oM.Base.IFragment"
     },
@@ -6937,6 +7531,9 @@
       "attributes": [
         "object"
       ],
+      "comment": {
+        "undefined": "Can be used to describe that a thing belongs to a class; or that a thing is equivalent to another thing. When used for BHoM types, this describes C# interface implementation."
+      },
       "domain": "BH.oM.MEP.System.MaterialFragments.IInsulationMaterial",
       "range": "BH.oM.Physical.Materials.IMaterialProperties"
     },
@@ -6967,6 +7564,9 @@
       "attributes": [
         "object"
       ],
+      "comment": {
+        "undefined": "Can be used to describe that a thing belongs to a class; or that a thing is equivalent to another thing. When used for BHoM types, this describes C# interface implementation."
+      },
       "domain": "BH.oM.MEP.System.MaterialFragments.InsulationMaterial",
       "range": "BH.oM.MEP.System.MaterialFragments.IMEPMaterial"
     },
@@ -6977,6 +7577,9 @@
       "attributes": [
         "object"
       ],
+      "comment": {
+        "undefined": "Can be used to describe that a thing belongs to a class; or that a thing is equivalent to another thing. When used for BHoM types, this describes C# interface implementation."
+      },
       "domain": "BH.oM.MEP.System.MaterialFragments.InsulationMaterial",
       "range": "BH.oM.MEP.System.MaterialFragments.IInsulationMaterial"
     },
@@ -6987,6 +7590,9 @@
       "attributes": [
         "object"
       ],
+      "comment": {
+        "undefined": "Can be used to describe that a thing belongs to a class; or that a thing is equivalent to another thing. When used for BHoM types, this describes C# interface implementation."
+      },
       "domain": "BH.oM.MEP.System.MaterialFragments.InsulationMaterial",
       "range": "BH.oM.Base.IFragment"
     },
@@ -6997,6 +7603,9 @@
       "attributes": [
         "object"
       ],
+      "comment": {
+        "undefined": "Can be used to describe that a thing belongs to a class; or that a thing is equivalent to another thing. When used for BHoM types, this describes C# interface implementation."
+      },
       "domain": "BH.oM.MEP.System.MaterialFragments.InsulationMaterial",
       "range": "BH.oM.Physical.Materials.IMaterialProperties"
     },
@@ -7037,6 +7646,9 @@
       "attributes": [
         "object"
       ],
+      "comment": {
+        "undefined": "Can be used to describe that a thing belongs to a class; or that a thing is equivalent to another thing. When used for BHoM types, this describes C# interface implementation."
+      },
       "domain": "BH.oM.MEP.System.MaterialFragments.LiningMaterial",
       "range": "BH.oM.MEP.System.MaterialFragments.IMEPMaterial"
     },
@@ -7047,6 +7659,9 @@
       "attributes": [
         "object"
       ],
+      "comment": {
+        "undefined": "Can be used to describe that a thing belongs to a class; or that a thing is equivalent to another thing. When used for BHoM types, this describes C# interface implementation."
+      },
       "domain": "BH.oM.MEP.System.MaterialFragments.LiningMaterial",
       "range": "BH.oM.MEP.System.MaterialFragments.IInsulationMaterial"
     },
@@ -7057,6 +7672,9 @@
       "attributes": [
         "object"
       ],
+      "comment": {
+        "undefined": "Can be used to describe that a thing belongs to a class; or that a thing is equivalent to another thing. When used for BHoM types, this describes C# interface implementation."
+      },
       "domain": "BH.oM.MEP.System.MaterialFragments.LiningMaterial",
       "range": "BH.oM.Base.IFragment"
     },
@@ -7067,6 +7685,9 @@
       "attributes": [
         "object"
       ],
+      "comment": {
+        "undefined": "Can be used to describe that a thing belongs to a class; or that a thing is equivalent to another thing. When used for BHoM types, this describes C# interface implementation."
+      },
       "domain": "BH.oM.MEP.System.MaterialFragments.LiningMaterial",
       "range": "BH.oM.Physical.Materials.IMaterialProperties"
     },
@@ -7087,6 +7708,9 @@
       "attributes": [
         "object"
       ],
+      "comment": {
+        "undefined": "Can be used to describe that a thing belongs to a class; or that a thing is equivalent to another thing. When used for BHoM types, this describes C# interface implementation."
+      },
       "domain": "BH.oM.MEP.System.MaterialFragments.PipeMaterial",
       "range": "BH.oM.MEP.System.MaterialFragments.IMEPMaterial"
     },
@@ -7097,6 +7721,9 @@
       "attributes": [
         "object"
       ],
+      "comment": {
+        "undefined": "Can be used to describe that a thing belongs to a class; or that a thing is equivalent to another thing. When used for BHoM types, this describes C# interface implementation."
+      },
       "domain": "BH.oM.MEP.System.MaterialFragments.PipeMaterial",
       "range": "BH.oM.Physical.Materials.IMaterialProperties"
     },
@@ -7117,6 +7744,9 @@
       "attributes": [
         "object"
       ],
+      "comment": {
+        "undefined": "Can be used to describe that a thing belongs to a class; or that a thing is equivalent to another thing. When used for BHoM types, this describes C# interface implementation."
+      },
       "domain": "BH.oM.MEP.System.MaterialFragments.WireMaterial",
       "range": "BH.oM.MEP.System.MaterialFragments.IMEPMaterial"
     },
@@ -7127,6 +7757,9 @@
       "attributes": [
         "object"
       ],
+      "comment": {
+        "undefined": "Can be used to describe that a thing belongs to a class; or that a thing is equivalent to another thing. When used for BHoM types, this describes C# interface implementation."
+      },
       "domain": "BH.oM.MEP.System.MaterialFragments.WireMaterial",
       "range": "BH.oM.Physical.Materials.IMaterialProperties"
     },
@@ -7197,6 +7830,9 @@
       "attributes": [
         "object"
       ],
+      "comment": {
+        "undefined": "Can be used to describe that a thing belongs to a class; or that a thing is equivalent to another thing. When used for BHoM types, this describes C# interface implementation."
+      },
       "domain": "BH.oM.MEP.System.Fittings.Fitting",
       "range": "BH.oM.Dimensional.IElement0D"
     },
@@ -7207,6 +7843,9 @@
       "attributes": [
         "object"
       ],
+      "comment": {
+        "undefined": "Can be used to describe that a thing belongs to a class; or that a thing is equivalent to another thing. When used for BHoM types, this describes C# interface implementation."
+      },
       "domain": "BH.oM.MEP.System.Fittings.Fitting",
       "range": "BH.oM.Dimensional.IElement"
     },
@@ -7277,6 +7916,9 @@
       "attributes": [
         "object"
       ],
+      "comment": {
+        "undefined": "Can be used to describe that a thing belongs to a class; or that a thing is equivalent to another thing. When used for BHoM types, this describes C# interface implementation."
+      },
       "domain": "BH.oM.MEP.System.Dampers.Damper",
       "range": "BH.oM.Dimensional.IElement0D"
     },
@@ -7287,6 +7929,9 @@
       "attributes": [
         "object"
       ],
+      "comment": {
+        "undefined": "Can be used to describe that a thing belongs to a class; or that a thing is equivalent to another thing. When used for BHoM types, this describes C# interface implementation."
+      },
       "domain": "BH.oM.MEP.System.Dampers.Damper",
       "range": "BH.oM.Dimensional.IElement"
     },
@@ -7337,6 +7982,9 @@
       "attributes": [
         "object"
       ],
+      "comment": {
+        "undefined": "Can be used to describe that a thing belongs to a class; or that a thing is equivalent to another thing. When used for BHoM types, this describes C# interface implementation."
+      },
       "domain": "BH.oM.MEP.System.Dampers.VolumeDamper",
       "range": "BH.oM.Dimensional.IElement0D"
     },
@@ -7347,6 +7995,9 @@
       "attributes": [
         "object"
       ],
+      "comment": {
+        "undefined": "Can be used to describe that a thing belongs to a class; or that a thing is equivalent to another thing. When used for BHoM types, this describes C# interface implementation."
+      },
       "domain": "BH.oM.MEP.System.Dampers.VolumeDamper",
       "range": "BH.oM.Dimensional.IElement"
     },
@@ -7417,6 +8068,9 @@
       "attributes": [
         "object"
       ],
+      "comment": {
+        "undefined": "Can be used to describe that a thing belongs to a class; or that a thing is equivalent to another thing. When used for BHoM types, this describes C# interface implementation."
+      },
       "domain": "BH.oM.MEP.System.Dampers.Valve",
       "range": "BH.oM.Dimensional.IElement0D"
     },
@@ -7427,6 +8081,9 @@
       "attributes": [
         "object"
       ],
+      "comment": {
+        "undefined": "Can be used to describe that a thing belongs to a class; or that a thing is equivalent to another thing. When used for BHoM types, this describes C# interface implementation."
+      },
       "domain": "BH.oM.MEP.System.Dampers.Valve",
       "range": "BH.oM.Dimensional.IElement"
     },
@@ -7457,6 +8114,9 @@
       "attributes": [
         "object"
       ],
+      "comment": {
+        "undefined": "Can be used to describe that a thing belongs to a class; or that a thing is equivalent to another thing. When used for BHoM types, this describes C# interface implementation."
+      },
       "domain": "BH.oM.MEP.Fragments.GeometryFragment",
       "range": "BH.oM.Base.IFragment"
     },
@@ -7517,6 +8177,9 @@
       "attributes": [
         "object"
       ],
+      "comment": {
+        "undefined": "Can be used to describe that a thing belongs to a class; or that a thing is equivalent to another thing. When used for BHoM types, this describes C# interface implementation."
+      },
       "domain": "BH.oM.MEP.Fragments.IdentityFragment",
       "range": "BH.oM.Base.IFragment"
     },
@@ -7557,6 +8220,9 @@
       "attributes": [
         "object"
       ],
+      "comment": {
+        "undefined": "Can be used to describe that a thing belongs to a class; or that a thing is equivalent to another thing. When used for BHoM types, this describes C# interface implementation."
+      },
       "domain": "BH.oM.MEP.Fragments.PlumbingFlowFragment",
       "range": "BH.oM.Base.IFragment"
     },
@@ -7597,6 +8263,9 @@
       "attributes": [
         "object"
       ],
+      "comment": {
+        "undefined": "Can be used to describe that a thing belongs to a class; or that a thing is equivalent to another thing. When used for BHoM types, this describes C# interface implementation."
+      },
       "domain": "BH.oM.MEP.Fragments.PlumbingLoadingFixtureUnitFragment",
       "range": "BH.oM.Base.IFragment"
     },
@@ -7677,6 +8346,9 @@
       "attributes": [
         "object"
       ],
+      "comment": {
+        "undefined": "Can be used to describe that a thing belongs to a class; or that a thing is equivalent to another thing. When used for BHoM types, this describes C# interface implementation."
+      },
       "domain": "BH.oM.MEP.Fixtures.AirTerminal",
       "range": "BH.oM.Dimensional.IElement0D"
     },
@@ -7687,6 +8359,9 @@
       "attributes": [
         "object"
       ],
+      "comment": {
+        "undefined": "Can be used to describe that a thing belongs to a class; or that a thing is equivalent to another thing. When used for BHoM types, this describes C# interface implementation."
+      },
       "domain": "BH.oM.MEP.Fixtures.AirTerminal",
       "range": "BH.oM.Dimensional.IElement"
     },
@@ -7827,6 +8502,9 @@
       "attributes": [
         "object"
       ],
+      "comment": {
+        "undefined": "Can be used to describe that a thing belongs to a class; or that a thing is equivalent to another thing. When used for BHoM types, this describes C# interface implementation."
+      },
       "domain": "BH.oM.MEP.Fixtures.CommercialFixtureUsage",
       "range": "BH.oM.MEP.Fixtures.IFixtureUsage"
     },
@@ -7837,6 +8515,9 @@
       "attributes": [
         "object"
       ],
+      "comment": {
+        "undefined": "Can be used to describe that a thing belongs to a class; or that a thing is equivalent to another thing. When used for BHoM types, this describes C# interface implementation."
+      },
       "domain": "BH.oM.MEP.Fixtures.CommercialFixtureUsage",
       "range": "BH.oM.Base.IImmutable"
     },
@@ -7927,6 +8608,9 @@
       "attributes": [
         "object"
       ],
+      "comment": {
+        "undefined": "Can be used to describe that a thing belongs to a class; or that a thing is equivalent to another thing. When used for BHoM types, this describes C# interface implementation."
+      },
       "domain": "BH.oM.MEP.Fixtures.ElectricalFixture",
       "range": "BH.oM.Dimensional.IElement0D"
     },
@@ -7937,6 +8621,9 @@
       "attributes": [
         "object"
       ],
+      "comment": {
+        "undefined": "Can be used to describe that a thing belongs to a class; or that a thing is equivalent to another thing. When used for BHoM types, this describes C# interface implementation."
+      },
       "domain": "BH.oM.MEP.Fixtures.ElectricalFixture",
       "range": "BH.oM.Dimensional.IElement"
     },
@@ -7997,6 +8684,9 @@
       "attributes": [
         "object"
       ],
+      "comment": {
+        "undefined": "Can be used to describe that a thing belongs to a class; or that a thing is equivalent to another thing. When used for BHoM types, this describes C# interface implementation."
+      },
       "domain": "BH.oM.MEP.Fixtures.FireAlarmDevice",
       "range": "BH.oM.Dimensional.IElement0D"
     },
@@ -8007,6 +8697,9 @@
       "attributes": [
         "object"
       ],
+      "comment": {
+        "undefined": "Can be used to describe that a thing belongs to a class; or that a thing is equivalent to another thing. When used for BHoM types, this describes C# interface implementation."
+      },
       "domain": "BH.oM.MEP.Fixtures.FireAlarmDevice",
       "range": "BH.oM.Dimensional.IElement"
     },
@@ -8017,6 +8710,9 @@
       "attributes": [
         "object"
       ],
+      "comment": {
+        "undefined": "Can be used to describe that a thing belongs to a class; or that a thing is equivalent to another thing. When used for BHoM types, this describes C# interface implementation."
+      },
       "domain": "BH.oM.MEP.Fixtures.IFixtureUsage",
       "range": "BH.oM.Base.IImmutable"
     },
@@ -8117,6 +8813,9 @@
       "attributes": [
         "object"
       ],
+      "comment": {
+        "undefined": "Can be used to describe that a thing belongs to a class; or that a thing is equivalent to another thing. When used for BHoM types, this describes C# interface implementation."
+      },
       "domain": "BH.oM.MEP.Fixtures.LightFixture",
       "range": "BH.oM.Dimensional.IElement0D"
     },
@@ -8127,6 +8826,9 @@
       "attributes": [
         "object"
       ],
+      "comment": {
+        "undefined": "Can be used to describe that a thing belongs to a class; or that a thing is equivalent to another thing. When used for BHoM types, this describes C# interface implementation."
+      },
       "domain": "BH.oM.MEP.Fixtures.LightFixture",
       "range": "BH.oM.Dimensional.IElement"
     },
@@ -8227,6 +8929,9 @@
       "attributes": [
         "object"
       ],
+      "comment": {
+        "undefined": "Can be used to describe that a thing belongs to a class; or that a thing is equivalent to another thing. When used for BHoM types, this describes C# interface implementation."
+      },
       "domain": "BH.oM.MEP.Fixtures.PlumbingFixture",
       "range": "BH.oM.Dimensional.IElement0D"
     },
@@ -8237,6 +8942,9 @@
       "attributes": [
         "object"
       ],
+      "comment": {
+        "undefined": "Can be used to describe that a thing belongs to a class; or that a thing is equivalent to another thing. When used for BHoM types, this describes C# interface implementation."
+      },
       "domain": "BH.oM.MEP.Fixtures.PlumbingFixture",
       "range": "BH.oM.Dimensional.IElement"
     },
@@ -8347,6 +9055,9 @@
       "attributes": [
         "object"
       ],
+      "comment": {
+        "undefined": "Can be used to describe that a thing belongs to a class; or that a thing is equivalent to another thing. When used for BHoM types, this describes C# interface implementation."
+      },
       "domain": "BH.oM.MEP.Fixtures.PlumbingFixtureFlow",
       "range": "BH.oM.MEP.Fixtures.IFixtureFlow"
     },
@@ -8487,6 +9198,9 @@
       "attributes": [
         "object"
       ],
+      "comment": {
+        "undefined": "Can be used to describe that a thing belongs to a class; or that a thing is equivalent to another thing. When used for BHoM types, this describes C# interface implementation."
+      },
       "domain": "BH.oM.MEP.Fixtures.ResidentialFixtureUsage",
       "range": "BH.oM.MEP.Fixtures.IFixtureUsage"
     },
@@ -8497,6 +9211,9 @@
       "attributes": [
         "object"
       ],
+      "comment": {
+        "undefined": "Can be used to describe that a thing belongs to a class; or that a thing is equivalent to another thing. When used for BHoM types, this describes C# interface implementation."
+      },
       "domain": "BH.oM.MEP.Fixtures.ResidentialFixtureUsage",
       "range": "BH.oM.Base.IImmutable"
     },
@@ -8557,6 +9274,9 @@
       "attributes": [
         "object"
       ],
+      "comment": {
+        "undefined": "Can be used to describe that a thing belongs to a class; or that a thing is equivalent to another thing. When used for BHoM types, this describes C# interface implementation."
+      },
       "domain": "BH.oM.MEP.Equipment.AirHandlingUnit",
       "range": "BH.oM.MEP.Equipment.IEquipment"
     },
@@ -8647,6 +9367,9 @@
       "attributes": [
         "object"
       ],
+      "comment": {
+        "undefined": "Can be used to describe that a thing belongs to a class; or that a thing is equivalent to another thing. When used for BHoM types, this describes C# interface implementation."
+      },
       "domain": "BH.oM.MEP.Equipment.ElectricalEquipment",
       "range": "BH.oM.MEP.Equipment.IEquipment"
     },
@@ -8657,6 +9380,9 @@
       "attributes": [
         "object"
       ],
+      "comment": {
+        "undefined": "Can be used to describe that a thing belongs to a class; or that a thing is equivalent to another thing. When used for BHoM types, this describes C# interface implementation."
+      },
       "domain": "BH.oM.MEP.Equipment.ElectricalEquipment",
       "range": "BH.oM.Dimensional.IElement0D"
     },
@@ -8667,6 +9393,9 @@
       "attributes": [
         "object"
       ],
+      "comment": {
+        "undefined": "Can be used to describe that a thing belongs to a class; or that a thing is equivalent to another thing. When used for BHoM types, this describes C# interface implementation."
+      },
       "domain": "BH.oM.MEP.Equipment.ElectricalEquipment",
       "range": "BH.oM.Dimensional.IElement"
     },
@@ -8697,6 +9426,9 @@
       "attributes": [
         "object"
       ],
+      "comment": {
+        "undefined": "Can be used to describe that a thing belongs to a class; or that a thing is equivalent to another thing. When used for BHoM types, this describes C# interface implementation."
+      },
       "domain": "BH.oM.MEP.Equipment.FanCoilUnit",
       "range": "BH.oM.MEP.Equipment.IEquipment"
     },
@@ -8797,6 +9529,9 @@
       "attributes": [
         "object"
       ],
+      "comment": {
+        "undefined": "Can be used to describe that a thing belongs to a class; or that a thing is equivalent to another thing. When used for BHoM types, this describes C# interface implementation."
+      },
       "domain": "BH.oM.MEP.Equipment.MechanicalEquipment",
       "range": "BH.oM.MEP.Equipment.IEquipment"
     },
@@ -8807,6 +9542,9 @@
       "attributes": [
         "object"
       ],
+      "comment": {
+        "undefined": "Can be used to describe that a thing belongs to a class; or that a thing is equivalent to another thing. When used for BHoM types, this describes C# interface implementation."
+      },
       "domain": "BH.oM.MEP.Equipment.MechanicalEquipment",
       "range": "BH.oM.Dimensional.IElement0D"
     },
@@ -8817,6 +9555,9 @@
       "attributes": [
         "object"
       ],
+      "comment": {
+        "undefined": "Can be used to describe that a thing belongs to a class; or that a thing is equivalent to another thing. When used for BHoM types, this describes C# interface implementation."
+      },
       "domain": "BH.oM.MEP.Equipment.MechanicalEquipment",
       "range": "BH.oM.Dimensional.IElement"
     },
@@ -8937,6 +9678,9 @@
       "attributes": [
         "object"
       ],
+      "comment": {
+        "undefined": "Can be used to describe that a thing belongs to a class; or that a thing is equivalent to another thing. When used for BHoM types, this describes C# interface implementation."
+      },
       "domain": "BH.oM.MEP.Equipment.Parts.AirHandlingUnitBase",
       "range": "BH.oM.MEP.Equipment.Parts.IPart"
     },
@@ -9047,6 +9791,9 @@
       "attributes": [
         "object"
       ],
+      "comment": {
+        "undefined": "Can be used to describe that a thing belongs to a class; or that a thing is equivalent to another thing. When used for BHoM types, this describes C# interface implementation."
+      },
       "domain": "BH.oM.MEP.Equipment.Parts.CoolingCoil",
       "range": "BH.oM.MEP.Equipment.Parts.IPart"
     },
@@ -9147,6 +9894,9 @@
       "attributes": [
         "object"
       ],
+      "comment": {
+        "undefined": "Can be used to describe that a thing belongs to a class; or that a thing is equivalent to another thing. When used for BHoM types, this describes C# interface implementation."
+      },
       "domain": "BH.oM.MEP.Equipment.Parts.ElectricalConnector",
       "range": "BH.oM.MEP.Equipment.Parts.IPart"
     },
@@ -9377,6 +10127,9 @@
       "attributes": [
         "object"
       ],
+      "comment": {
+        "undefined": "Can be used to describe that a thing belongs to a class; or that a thing is equivalent to another thing. When used for BHoM types, this describes C# interface implementation."
+      },
       "domain": "BH.oM.MEP.Equipment.Parts.EnergyWheel",
       "range": "BH.oM.MEP.Equipment.Parts.IPart"
     },
@@ -9467,6 +10220,9 @@
       "attributes": [
         "object"
       ],
+      "comment": {
+        "undefined": "Can be used to describe that a thing belongs to a class; or that a thing is equivalent to another thing. When used for BHoM types, this describes C# interface implementation."
+      },
       "domain": "BH.oM.MEP.Equipment.Parts.Fan",
       "range": "BH.oM.MEP.Equipment.Parts.IPart"
     },
@@ -9527,6 +10283,9 @@
       "attributes": [
         "object"
       ],
+      "comment": {
+        "undefined": "Can be used to describe that a thing belongs to a class; or that a thing is equivalent to another thing. When used for BHoM types, this describes C# interface implementation."
+      },
       "domain": "BH.oM.MEP.Equipment.Parts.Filter",
       "range": "BH.oM.MEP.Equipment.Parts.IPart"
     },
@@ -9607,6 +10366,9 @@
       "attributes": [
         "object"
       ],
+      "comment": {
+        "undefined": "Can be used to describe that a thing belongs to a class; or that a thing is equivalent to another thing. When used for BHoM types, this describes C# interface implementation."
+      },
       "domain": "BH.oM.MEP.Equipment.Parts.HeatingCoil",
       "range": "BH.oM.MEP.Equipment.Parts.IPart"
     }

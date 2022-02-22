@@ -31,11 +31,11 @@ namespace BH.oM.CodeAnalysis.ConsoleApp
                 "BH.oM.Base.BHoMObject",
             };
 
-            //Tests_Alessio.WriteWebVOWLOntology(new List<string> {
-            //    "BH.oM.Architecture.Elements.Ceiling",
-            //    "BH.oM.Physical.Elements.Wall",
-            //    "BH.oM.Architecture.Elements.Room"
-            //}, exceptions: exceptions);
+            Tests_Alessio.WriteWebVOWLOntology(new List<string> {
+                "BH.oM.Architecture.Elements.Ceiling",
+                "BH.oM.Physical.Elements.Wall",
+                "BH.oM.Architecture.Elements.Room"
+            }, exceptions: exceptions);
 
             Tests_Alessio.WriteWebVOWLOntologiesPerNamespace();
 

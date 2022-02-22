@@ -184,67 +184,89 @@
       "id": "BH.oM.FormFinding.NodeConstraint",
       "iri": "https://github.com/BHoM/FormFinding_Toolkit/blob/main/FormFinding_oM/BoundaryConditions/NodeConstraint.cs",
       "label": "NodeConstraint (BH.oM.FormFinding)",
-      "attributes": []
+      "attributes": [
+        "object"
+      ]
     },
     {
       "id": "BH.oM.FormFinding.VaryingNodeConstraint",
       "iri": "https://github.com/BHoM/FormFinding_Toolkit/blob/main/FormFinding_oM/BoundaryConditions/VaryingNodeConstraint.cs",
       "label": "VaryingNodeConstraint (BH.oM.FormFinding)",
-      "attributes": []
+      "attributes": [
+        "object"
+      ]
     },
     {
       "id": "BH.oM.FormFinding.TensionOnlySpring",
       "iri": "https://github.com/BHoM/FormFinding_Toolkit/blob/main/FormFinding_oM/ForceObjects/TensionOnlySpring.cs",
       "label": "TensionOnlySpring (BH.oM.FormFinding)",
-      "attributes": []
+      "attributes": [
+        "object"
+      ]
     },
     {
       "id": "BH.oM.FormFinding.ConstantForce",
       "iri": "https://github.com/BHoM/FormFinding_Toolkit/blob/main/FormFinding_oM/ForceObjects/ConstantForce.cs",
       "label": "ConstantForce (BH.oM.FormFinding)",
-      "attributes": []
+      "attributes": [
+        "object"
+      ]
     },
     {
       "id": "BH.oM.FormFinding.ConstantHorizontalForce",
       "iri": "https://github.com/BHoM/FormFinding_Toolkit/blob/main/FormFinding_oM/ForceObjects/ConstantHorizontalForce.cs",
       "label": "ConstantHorizontalForce (BH.oM.FormFinding)",
-      "attributes": []
+      "attributes": [
+        "object"
+      ]
     },
     {
       "id": "BH.oM.FormFinding.Spring",
       "iri": "https://github.com/BHoM/FormFinding_Toolkit/blob/main/FormFinding_oM/ForceObjects/Spring.cs",
       "label": "Spring (BH.oM.FormFinding)",
-      "attributes": []
+      "attributes": [
+        "object"
+      ]
     },
     {
       "id": "BH.oM.FormFinding.UnaryForce",
       "iri": "https://github.com/BHoM/FormFinding_Toolkit/blob/main/FormFinding_oM/ForceObjects/UnaryForce.cs",
       "label": "UnaryForce (BH.oM.FormFinding)",
-      "attributes": []
+      "attributes": [
+        "object"
+      ]
     },
     {
       "id": "BH.oM.FormFinding.IBoundaryCondition",
       "iri": "https://github.com/BHoM/FormFinding_Toolkit/blob/main/FormFinding_oM/Interfaces/IBoundaryCondition.cs",
       "label": "IBoundaryCondition (BH.oM.FormFinding)",
-      "attributes": []
+      "attributes": [
+        "object"
+      ]
     },
     {
       "id": "BH.oM.FormFinding.IForceObject",
       "iri": "https://github.com/BHoM/FormFinding_Toolkit/blob/main/FormFinding_oM/Interfaces/IForceObject.cs",
       "label": "IForceObject (BH.oM.FormFinding)",
-      "attributes": []
+      "attributes": [
+        "object"
+      ]
     },
     {
       "id": "BH.oM.FormFinding.RelaxNode",
       "iri": "https://github.com/BHoM/FormFinding_Toolkit/blob/main/FormFinding_oM/RelaxNode.cs",
       "label": "RelaxNode (BH.oM.FormFinding)",
-      "attributes": []
+      "attributes": [
+        "object"
+      ]
     },
     {
       "id": "BH.oM.FormFinding.RelaxSystem",
       "iri": "https://github.com/BHoM/FormFinding_Toolkit/blob/main/FormFinding_oM/RelaxSystem.cs",
       "label": "RelaxSystem (BH.oM.FormFinding)",
-      "attributes": []
+      "attributes": [
+        "object"
+      ]
     },
     {
       "id": "BH.oM.FormFinding.NodeConstraint.Nodes",
@@ -256,7 +278,9 @@
       "id": "BH.oM.FormFinding.RelaxNode[]",
       "iri": "https://github.com/BHoM/FormFinding_Toolkit/blob/main/FormFinding_oM/RelaxNode.cs",
       "label": "RelaxNode (BH.oM.FormFinding)",
-      "attributes": []
+      "attributes": [
+        "object"
+      ]
     },
     {
       "id": "BH.oM.FormFinding.VaryingNodeConstraint.Nodes",
@@ -315,6 +339,7 @@
       "iri": "https://github.com/BHoM/BHoM/blob/main/Geometry_oM/Vector/Vector.cs",
       "label": "Vector (BH.oM.Geometry)",
       "attributes": [
+        "object",
         "external"
       ]
     },
@@ -415,8 +440,12 @@
       "iri": "https://github.com/BHoM/BHoM/blob/main/Geometry_oM/Vector/Point.cs",
       "label": "Point (BH.oM.Geometry)",
       "attributes": [
+        "object",
         "external"
-      ]
+      ],
+      "comment": {
+        "undefined": "Defines a dimensionless location in three-dimensional space."
+      }
     },
     {
       "id": "BH.oM.FormFinding.RelaxNode.Force",
@@ -429,8 +458,12 @@
       "iri": "https://github.com/BHoM/BHoM/blob/main/Geometry_oM/Vector/Vector.cs",
       "label": "Vector (BH.oM.Geometry)",
       "attributes": [
+        "object",
         "external"
-      ]
+      ],
+      "comment": {
+        "undefined": "Defines a direction and magnitude in three-dimensional Euclidean space."
+      }
     },
     {
       "id": "BH.oM.FormFinding.RelaxNode.Velocity",
@@ -731,6 +764,9 @@
       "attributes": [
         "object"
       ],
+      "comment": {
+        "undefined": "Can be used to describe that a thing belongs to a class; or that a thing is equivalent to another thing. When used for BHoM types, this describes C# interface implementation."
+      },
       "domain": "BH.oM.FormFinding.NodeConstraint",
       "range": "BH.oM.FormFinding.IBoundaryCondition"
     },
@@ -791,6 +827,9 @@
       "attributes": [
         "object"
       ],
+      "comment": {
+        "undefined": "Can be used to describe that a thing belongs to a class; or that a thing is equivalent to another thing. When used for BHoM types, this describes C# interface implementation."
+      },
       "domain": "BH.oM.FormFinding.VaryingNodeConstraint",
       "range": "BH.oM.FormFinding.IBoundaryCondition"
     },
@@ -861,6 +900,9 @@
       "attributes": [
         "object"
       ],
+      "comment": {
+        "undefined": "Can be used to describe that a thing belongs to a class; or that a thing is equivalent to another thing. When used for BHoM types, this describes C# interface implementation."
+      },
       "domain": "BH.oM.FormFinding.TensionOnlySpring",
       "range": "BH.oM.FormFinding.IForceObject"
     },
@@ -921,6 +963,9 @@
       "attributes": [
         "object"
       ],
+      "comment": {
+        "undefined": "Can be used to describe that a thing belongs to a class; or that a thing is equivalent to another thing. When used for BHoM types, this describes C# interface implementation."
+      },
       "domain": "BH.oM.FormFinding.ConstantForce",
       "range": "BH.oM.FormFinding.IForceObject"
     },
@@ -981,6 +1026,9 @@
       "attributes": [
         "object"
       ],
+      "comment": {
+        "undefined": "Can be used to describe that a thing belongs to a class; or that a thing is equivalent to another thing. When used for BHoM types, this describes C# interface implementation."
+      },
       "domain": "BH.oM.FormFinding.ConstantHorizontalForce",
       "range": "BH.oM.FormFinding.IForceObject"
     },
@@ -1051,6 +1099,9 @@
       "attributes": [
         "object"
       ],
+      "comment": {
+        "undefined": "Can be used to describe that a thing belongs to a class; or that a thing is equivalent to another thing. When used for BHoM types, this describes C# interface implementation."
+      },
       "domain": "BH.oM.FormFinding.Spring",
       "range": "BH.oM.FormFinding.IForceObject"
     },
@@ -1101,6 +1152,9 @@
       "attributes": [
         "object"
       ],
+      "comment": {
+        "undefined": "Can be used to describe that a thing belongs to a class; or that a thing is equivalent to another thing. When used for BHoM types, this describes C# interface implementation."
+      },
       "domain": "BH.oM.FormFinding.UnaryForce",
       "range": "BH.oM.FormFinding.IForceObject"
     },

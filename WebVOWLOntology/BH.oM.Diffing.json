@@ -208,49 +208,86 @@
       "id": "BH.oM.Diffing.Delta",
       "iri": "https://github.com/BHoM/BHoM/blob/main/Diffing_oM/Delta.cs",
       "label": "Delta (BH.oM.Diffing)",
-      "attributes": []
+      "attributes": [
+        "object"
+      ],
+      "comment": {
+        "undefined": "Contains the Diff plus context information: parent Stream, Timestamp, etc."
+      }
     },
     {
       "id": "BH.oM.Diffing.Diff",
       "iri": "https://github.com/BHoM/BHoM/blob/main/Diffing_oM/Diff.cs",
       "label": "Diff (BH.oM.Diffing)",
-      "attributes": []
+      "attributes": [
+        "object"
+      ],
+      "comment": {
+        "undefined": "Represents the differences between two sets of objects."
+      }
     },
     {
       "id": "BH.oM.Diffing.DiffingConfig",
       "iri": "https://github.com/BHoM/BHoM/blob/main/Diffing_oM/DiffingConfig.cs",
       "label": "DiffingConfig (BH.oM.Diffing)",
-      "attributes": []
+      "attributes": [
+        "object"
+      ],
+      "comment": {
+        "undefined": "General configurations for the Diffing process, including settings for the Hash computation."
+      }
     },
     {
       "id": "BH.oM.Diffing.ObjectDifferences",
       "iri": "https://github.com/BHoM/BHoM/blob/main/Diffing_oM/ObjectDifferences.cs",
       "label": "ObjectDifferences (BH.oM.Diffing)",
-      "attributes": []
+      "attributes": [
+        "object"
+      ],
+      "comment": {
+        "undefined": "Represents all the differences found between a Previous and Following version of an object."
+      }
     },
     {
       "id": "BH.oM.Diffing.PropertyDifference",
       "iri": "https://github.com/BHoM/BHoM/blob/main/Diffing_oM/PropertyDifference.cs",
       "label": "PropertyDifference (BH.oM.Diffing)",
-      "attributes": []
+      "attributes": [
+        "object"
+      ],
+      "comment": {
+        "undefined": "Represents a difference found between a Previous and Following version of an object."
+      }
     },
     {
       "id": "BH.oM.Diffing.Revision",
       "iri": "https://github.com/BHoM/BHoM/blob/main/Diffing_oM/Revision.cs",
       "label": "Revision (BH.oM.Diffing)",
-      "attributes": []
+      "attributes": [
+        "object"
+      ]
     },
     {
       "id": "BH.oM.Diffing.RevisionFragment",
       "iri": "https://github.com/BHoM/BHoM/blob/main/Diffing_oM/RevisionFragment.cs",
       "label": "RevisionFragment (BH.oM.Diffing)",
-      "attributes": []
+      "attributes": [
+        "object"
+      ],
+      "comment": {
+        "undefined": "Stores the current and previous Hash of the parent BHoMObject, as assigned after the inclusion in a Revision."
+      }
     },
     {
       "id": "BH.oM.Diffing.StreamPointer",
       "iri": "https://github.com/BHoM/BHoM/blob/main/Diffing_oM/StreamPointer.cs",
       "label": "StreamPointer (BH.oM.Diffing)",
-      "attributes": []
+      "attributes": [
+        "object"
+      ],
+      "comment": {
+        "undefined": "Points to a specific Stream. Can be used to generate a new Stream and StreamId."
+      }
     },
     {
       "id": "BH.oM.Diffing.Delta.StreamId",
@@ -264,7 +301,10 @@
       "id": "BH.oM.Diffing.Delta.Diff",
       "iri": "https://github.com/BHoM/BHoM/blob/main/Diffing_oM/Delta.cs#L44",
       "label": "Diff(BH.oM.Diffing.Delta.Diff)",
-      "attributes": []
+      "attributes": [],
+      "comment": {
+        "undefined": "Represent the differences between two sets of objects."
+      }
     },
     {
       "id": "BH.oM.Diffing.Delta.Revision_from",
@@ -311,6 +351,7 @@
       "iri": "https://github.com/BHoM/BHoM/blob/main/BHoM/Interface/IImmutable.cs",
       "label": "IImmutable (BH.oM.Base)",
       "attributes": [
+        "object",
         "external"
       ]
     },
@@ -356,21 +397,31 @@
       "id": "BH.oM.Diffing.Diff.DiffingConfig",
       "iri": "https://github.com/BHoM/BHoM/blob/main/Diffing_oM/Diff.cs#L57",
       "label": "DiffingConfig(BH.oM.Diffing.Diff.DiffingConfig)",
-      "attributes": []
+      "attributes": [],
+      "comment": {
+        "undefined": "Default diffing settings for this Stream. Hashes of objects contained in this stream will be computed based on these configs."
+      }
     },
     {
       "id": "BH.oM.Diffing.DiffingConfig.ComparisonConfig",
       "iri": "https://github.com/BHoM/BHoM/blob/main/Diffing_oM/DiffingConfig.cs#L41",
       "label": "ComparisonConfig(BH.oM.Diffing.DiffingConfig.ComparisonConfig)",
-      "attributes": []
+      "attributes": [],
+      "comment": {
+        "undefined": "Settings to determine the uniqueness of an Object."
+      }
     },
     {
       "id": "BH.oM.Base.BaseComparisonConfig",
       "iri": "https://github.com/BHoM/BHoM/blob/main/BHoM/BaseComparisonConfig.cs",
       "label": "BaseComparisonConfig (BH.oM.Base)",
       "attributes": [
+        "object",
         "external"
-      ]
+      ],
+      "comment": {
+        "undefined": "Settings to determine the uniqueness of an Object, i.e. when comparing and when computing the object Hash."
+      }
     },
     {
       "id": "BH.oM.Diffing.DiffingConfig.EnablePropertyDiffing",
@@ -510,7 +561,10 @@
       "id": "BH.oM.Diffing.Revision.RevisionDiffConfing",
       "iri": "https://github.com/BHoM/BHoM/blob/main/Diffing_oM/Revision.cs#L62",
       "label": "RevisionDiffConfing(BH.oM.Diffing.Revision.RevisionDiffConfing)",
-      "attributes": []
+      "attributes": [],
+      "comment": {
+        "undefined": "Diffing settings for this Revision. Hashes of objects contained in this stream will be computed based on these configs."
+      }
     },
     {
       "id": "BH.oM.Diffing.RevisionFragment.Hash",
@@ -533,14 +587,19 @@
       "iri": "https://github.com/BHoM/BHoM/blob/main/BHoM/Interface/IHashFragment.cs",
       "label": "IHashFragment (BH.oM.Base)",
       "attributes": [
+        "object",
         "external"
-      ]
+      ],
+      "comment": {
+        "undefined": "Stores the hash of the parent BHoMObject."
+      }
     },
     {
       "id": "BH.oM.Base.IFragment",
       "iri": "https://github.com/BHoM/BHoM/blob/main/BHoM/Interface/IFragment.cs",
       "label": "IFragment (BH.oM.Base)",
       "attributes": [
+        "object",
         "external"
       ]
     },
@@ -871,6 +930,9 @@
       "attributes": [
         "object"
       ],
+      "comment": {
+        "undefined": "Can be used to describe that a thing belongs to a class; or that a thing is equivalent to another thing. When used for BHoM types, this describes C# interface implementation."
+      },
       "domain": "BH.oM.Diffing.Delta",
       "range": "BH.oM.Base.IImmutable"
     },
@@ -961,6 +1023,9 @@
       "attributes": [
         "object"
       ],
+      "comment": {
+        "undefined": "Can be used to describe that a thing belongs to a class; or that a thing is equivalent to another thing. When used for BHoM types, this describes C# interface implementation."
+      },
       "domain": "BH.oM.Diffing.Diff",
       "range": "BH.oM.Base.IImmutable"
     },
@@ -1191,6 +1256,9 @@
       "attributes": [
         "object"
       ],
+      "comment": {
+        "undefined": "Can be used to describe that a thing belongs to a class; or that a thing is equivalent to another thing. When used for BHoM types, this describes C# interface implementation."
+      },
       "domain": "BH.oM.Diffing.Revision",
       "range": "BH.oM.Base.IImmutable"
     },
@@ -1221,6 +1289,9 @@
       "attributes": [
         "object"
       ],
+      "comment": {
+        "undefined": "Can be used to describe that a thing belongs to a class; or that a thing is equivalent to another thing. When used for BHoM types, this describes C# interface implementation."
+      },
       "domain": "BH.oM.Diffing.RevisionFragment",
       "range": "BH.oM.Base.IHashFragment"
     },
@@ -1231,6 +1302,9 @@
       "attributes": [
         "object"
       ],
+      "comment": {
+        "undefined": "Can be used to describe that a thing belongs to a class; or that a thing is equivalent to another thing. When used for BHoM types, this describes C# interface implementation."
+      },
       "domain": "BH.oM.Diffing.RevisionFragment",
       "range": "BH.oM.Base.IFragment"
     },
@@ -1241,6 +1315,9 @@
       "attributes": [
         "object"
       ],
+      "comment": {
+        "undefined": "Can be used to describe that a thing belongs to a class; or that a thing is equivalent to another thing. When used for BHoM types, this describes C# interface implementation."
+      },
       "domain": "BH.oM.Diffing.RevisionFragment",
       "range": "BH.oM.Base.IImmutable"
     },
@@ -1291,6 +1368,9 @@
       "attributes": [
         "object"
       ],
+      "comment": {
+        "undefined": "Can be used to describe that a thing belongs to a class; or that a thing is equivalent to another thing. When used for BHoM types, this describes C# interface implementation."
+      },
       "domain": "BH.oM.Diffing.StreamPointer",
       "range": "BH.oM.Base.IImmutable"
     }

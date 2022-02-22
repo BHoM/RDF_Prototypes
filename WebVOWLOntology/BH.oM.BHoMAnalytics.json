@@ -104,13 +104,20 @@
       "id": "BH.oM.BHoMAnalytics.ToolkitSettings",
       "iri": "https://github.com/BHoM/BHoMAnalytics_Toolkit/blob/main/BHoMAnalytics_oM/ToolkitSettings.cs",
       "label": "ToolkitSettings (BH.oM.BHoMAnalytics)",
-      "attributes": []
+      "attributes": [
+        "object"
+      ],
+      "comment": {
+        "undefined": "Settings for the BHoMAnalytics toolkit. This contains the reference to the database where to save the analytics data as well as the method in charge to do so."
+      }
     },
     {
       "id": "BH.oM.BHoMAnalytics.UsageEntry",
       "iri": "https://github.com/BHoM/BHoMAnalytics_Toolkit/blob/main/BHoMAnalytics_oM/UsageEntry.cs",
       "label": "UsageEntry (BH.oM.BHoMAnalytics)",
-      "attributes": []
+      "attributes": [
+        "object"
+      ]
     },
     {
       "id": "BH.oM.BHoMAnalytics.ToolkitSettings.ServerAddress",
@@ -149,22 +156,31 @@
       "iri": "https://github.com/BHoM/BHoM/blob/main/BHoM/Interface/ISettings.cs",
       "label": "ISettings (BH.oM.Base)",
       "attributes": [
+        "object",
         "external"
-      ]
+      ],
+      "comment": {
+        "undefined": "Toolkit Settings that need to be saved permanently."
+      }
     },
     {
       "id": "BH.oM.UI.IInitialisationSettings",
       "iri": "https://github.com/BHoM/BHoM_UI/blob/main/UI_oM/Interfaces/IInitialisationSettings.cs",
       "label": "IInitialisationSettings (BH.oM.UI)",
       "attributes": [
+        "object",
         "external"
-      ]
+      ],
+      "comment": {
+        "undefined": "Toolkit Settings that contain an initialisation method to be ran when the UI starts."
+      }
     },
     {
       "id": "BH.oM.Base.IImmutable",
       "iri": "https://github.com/BHoM/BHoM/blob/main/BHoM/Interface/IImmutable.cs",
       "label": "IImmutable (BH.oM.Base)",
       "attributes": [
+        "object",
         "external"
       ]
     },
@@ -283,6 +299,7 @@
       "iri": "https://github.com/BHoM/BHoM/blob/main/BHoM/Debugging/Event.cs",
       "label": "Event (BH.oM.Base.Debugging)",
       "attributes": [
+        "object",
         "external"
       ]
     }
@@ -425,6 +442,9 @@
       "attributes": [
         "object"
       ],
+      "comment": {
+        "undefined": "Can be used to describe that a thing belongs to a class; or that a thing is equivalent to another thing. When used for BHoM types, this describes C# interface implementation."
+      },
       "domain": "BH.oM.BHoMAnalytics.ToolkitSettings",
       "range": "BH.oM.Base.ISettings"
     },
@@ -435,6 +455,9 @@
       "attributes": [
         "object"
       ],
+      "comment": {
+        "undefined": "Can be used to describe that a thing belongs to a class; or that a thing is equivalent to another thing. When used for BHoM types, this describes C# interface implementation."
+      },
       "domain": "BH.oM.BHoMAnalytics.ToolkitSettings",
       "range": "BH.oM.UI.IInitialisationSettings"
     },
@@ -445,6 +468,9 @@
       "attributes": [
         "object"
       ],
+      "comment": {
+        "undefined": "Can be used to describe that a thing belongs to a class; or that a thing is equivalent to another thing. When used for BHoM types, this describes C# interface implementation."
+      },
       "domain": "BH.oM.BHoMAnalytics.ToolkitSettings",
       "range": "BH.oM.Base.IImmutable"
     },

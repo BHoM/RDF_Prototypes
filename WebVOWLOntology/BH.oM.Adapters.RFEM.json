@@ -36,13 +36,20 @@
       "id": "BH.oM.Adapters.RFEM.RFEMId",
       "iri": "https://github.com/BHoM/RFEM_Toolkit/blob/main/RFEM_oM/Fragments/RFEMId.cs",
       "label": "RFEMId (BH.oM.Adapters.RFEM)",
-      "attributes": []
+      "attributes": [
+        "object"
+      ]
     },
     {
       "id": "BH.oM.Adapters.RFEM.RFEMSettings",
       "iri": "https://github.com/BHoM/RFEM_Toolkit/blob/main/RFEM_oM/RFEMSettings.cs",
       "label": "RFEMSettings (BH.oM.Adapters.RFEM)",
-      "attributes": []
+      "attributes": [
+        "object"
+      ],
+      "comment": {
+        "undefined": "This Config can be specified in the `ActionConfig` input of any Adapter Action (e.g. Push)."
+      }
     },
     {
       "id": "BH.oM.Adapters.RFEM.RFEMId.Id",
@@ -57,6 +64,7 @@
       "iri": "https://github.com/BHoM/BHoM/blob/main/BHoM/Interface/IAdapterId.cs",
       "label": "IAdapterId (BH.oM.Base)",
       "attributes": [
+        "object",
         "external"
       ]
     },
@@ -65,6 +73,7 @@
       "iri": "https://github.com/BHoM/BHoM/blob/main/BHoM/Interface/IFragment.cs",
       "label": "IFragment (BH.oM.Base)",
       "attributes": [
+        "object",
         "external"
       ]
     },
@@ -125,6 +134,9 @@
       "attributes": [
         "object"
       ],
+      "comment": {
+        "undefined": "Can be used to describe that a thing belongs to a class; or that a thing is equivalent to another thing. When used for BHoM types, this describes C# interface implementation."
+      },
       "domain": "BH.oM.Adapters.RFEM.RFEMId",
       "range": "BH.oM.Base.IAdapterId"
     },
@@ -135,6 +147,9 @@
       "attributes": [
         "object"
       ],
+      "comment": {
+        "undefined": "Can be used to describe that a thing belongs to a class; or that a thing is equivalent to another thing. When used for BHoM types, this describes C# interface implementation."
+      },
       "domain": "BH.oM.Adapters.RFEM.RFEMId",
       "range": "BH.oM.Base.IFragment"
     },

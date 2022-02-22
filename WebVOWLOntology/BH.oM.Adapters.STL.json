@@ -36,13 +36,20 @@
       "id": "BH.oM.Adapters.STL.GeometryGroup",
       "iri": "https://github.com/BHoM/STL_Toolkit/blob/main/STL_oM/GeometryGroup.cs",
       "label": "GeometryGroup (BH.oM.Adapters.STL)",
-      "attributes": []
+      "attributes": [
+        "object"
+      ],
+      "comment": {
+        "undefined": "This object can be used to group geometry to push to a specific file. Useful if pushing groups of geometry related to specific representations, for example, a group of panels to one file, and a group of bars to another."
+      }
     },
     {
       "id": "BH.oM.Adapters.STL.Settings.STLSettings",
       "iri": "https://github.com/BHoM/STL_Toolkit/blob/main/STL_oM/STLSettings.cs",
       "label": "STLSettings (BH.oM.Adapters.STL.Settings)",
-      "attributes": []
+      "attributes": [
+        "object"
+      ]
     },
     {
       "id": "BH.oM.Adapters.STL.GeometryGroup.Geometry",
@@ -55,8 +62,12 @@
       "iri": "https://github.com/BHoM/BHoM/blob/main/Geometry_oM/Interface/IGeometry.cs",
       "label": "IGeometry (BH.oM.Geometry)",
       "attributes": [
+        "object",
         "external"
-      ]
+      ],
+      "comment": {
+        "undefined": "The parent interface for all primative geometrical objects.\nIGeometry implements IObject - and not IBHoMObject. Equally primative geometrical objects do not inherit from the base BHoMObject class either. As primatives, the additional base BHoM properties are omitted for both efficency and performace."
+      }
     },
     {
       "id": "BH.oM.Adapters.STL.GeometryGroup.FileName",
