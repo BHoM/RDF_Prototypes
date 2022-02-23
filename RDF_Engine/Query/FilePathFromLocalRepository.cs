@@ -94,7 +94,7 @@ namespace BH.Engine.RDF
             }
 
             if (matchingFilePaths.Count != 1)
-                log.RecordWarning($"Could not find filepath for Type `{type.FullName}`", true);
+                log.RecordWarning($"Could not find filepath for Type `{typeNameValidChars}`", true);
 
             filepath = matchingFilePaths.FirstOrDefault();
 

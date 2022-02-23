@@ -7,19 +7,19 @@
       "type": "owl:Class"
     },
     {
-      "id": "OldDocument-4C64C95955DF4549D6080EDBF8D78FFB89D5AEC541FE63D1C76137ACBF6200F5-VersioningEvent-HasProperty",
+      "id": "BH.oM.Versioning.VersioningEvent.OldDocument",
       "type": "rdfs:Datatype"
     },
     {
-      "id": "NewDocument-95F48905579F7CA0A3AC7540FAA1F5DDAC4F6D39DD3EBF45CA5438FBE630502E-VersioningEvent-HasProperty",
+      "id": "BH.oM.Versioning.VersioningEvent.NewDocument",
       "type": "rdfs:Datatype"
     },
     {
-      "id": "OldVersion-C0FFFD5B14CC9E67B03D4CCA75A256F6DBCCAE7E4EF151507371F8FC2AB27A7A-VersioningEvent-HasProperty",
+      "id": "BH.oM.Versioning.VersioningEvent.OldVersion",
       "type": "rdfs:Datatype"
     },
     {
-      "id": "NewVersion-8AA6553A185D94A7B93CEFAFDBD486E88A47B7E443A2F22FEE6E886E21145CDE-VersioningEvent-HasProperty",
+      "id": "BH.oM.Versioning.VersioningEvent.NewVersion",
       "type": "rdfs:Datatype"
     },
     {
@@ -28,14 +28,6 @@
     },
     {
       "id": "BH.oM.Base.Debugging.EventType",
-      "type": "owl:Class"
-    },
-    {
-      "id": "BH.oM.Base.IBHoMObject",
-      "type": "owl:Class"
-    },
-    {
-      "id": "BH.oM.Base.IObject",
       "type": "owl:Class"
     },
     {
@@ -48,36 +40,38 @@
       "id": "BH.oM.Versioning.VersioningEvent",
       "iri": "https://github.com/BHoM/BHoM/blob/main/Versioning_oM/VersioningEvent.cs",
       "label": "VersioningEvent (BH.oM.Versioning)",
-      "attributes": []
+      "attributes": [
+        "object"
+      ]
     },
     {
-      "id": "OldDocument-4C64C95955DF4549D6080EDBF8D78FFB89D5AEC541FE63D1C76137ACBF6200F5-VersioningEvent-HasProperty",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/HasProperty.cs",
-      "label": "OldDocument (BH.oM.Versioning.VersioningEvent.OldDocument)",
+      "id": "BH.oM.Versioning.VersioningEvent.OldDocument",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/Versioning_oM/VersioningEvent.cs#L39",
+      "label": "OldDocument(BH.oM.Versioning.VersioningEvent.OldDocument)",
       "attributes": [
         "datatype"
       ]
     },
     {
-      "id": "NewDocument-95F48905579F7CA0A3AC7540FAA1F5DDAC4F6D39DD3EBF45CA5438FBE630502E-VersioningEvent-HasProperty",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/HasProperty.cs",
-      "label": "NewDocument (BH.oM.Versioning.VersioningEvent.NewDocument)",
+      "id": "BH.oM.Versioning.VersioningEvent.NewDocument",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/Versioning_oM/VersioningEvent.cs#L41",
+      "label": "NewDocument(BH.oM.Versioning.VersioningEvent.NewDocument)",
       "attributes": [
         "datatype"
       ]
     },
     {
-      "id": "OldVersion-C0FFFD5B14CC9E67B03D4CCA75A256F6DBCCAE7E4EF151507371F8FC2AB27A7A-VersioningEvent-HasProperty",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/HasProperty.cs",
-      "label": "OldVersion (BH.oM.Versioning.VersioningEvent.OldVersion)",
+      "id": "BH.oM.Versioning.VersioningEvent.OldVersion",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/Versioning_oM/VersioningEvent.cs#L43",
+      "label": "OldVersion(BH.oM.Versioning.VersioningEvent.OldVersion)",
       "attributes": [
         "datatype"
       ]
     },
     {
-      "id": "NewVersion-8AA6553A185D94A7B93CEFAFDBD486E88A47B7E443A2F22FEE6E886E21145CDE-VersioningEvent-HasProperty",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/HasProperty.cs",
-      "label": "NewVersion (BH.oM.Versioning.VersioningEvent.NewVersion)",
+      "id": "BH.oM.Versioning.VersioningEvent.NewVersion",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/Versioning_oM/VersioningEvent.cs#L45",
+      "label": "NewVersion(BH.oM.Versioning.VersioningEvent.NewVersion)",
       "attributes": [
         "datatype"
       ]
@@ -85,7 +79,7 @@
     {
       "id": "BH.oM.Versioning.VersioningEvent.Type",
       "iri": "https://github.com/BHoM/BHoM/blob/main/Versioning_oM/VersioningEvent.cs#L47",
-      "label": "Type (BH.oM.Versioning.VersioningEvent.Type)",
+      "label": "Type(BH.oM.Versioning.VersioningEvent.Type)",
       "attributes": []
     },
     {
@@ -93,106 +87,99 @@
       "iri": "https://github.com/BHoM/BHoM/blob/main/BHoM/Debugging/EventType.cs",
       "label": "EventType (BH.oM.Base.Debugging)",
       "attributes": [
+        "object",
         "external"
       ]
     },
     {
-      "id": "BH.oM.Base.IBHoMObject",
-      "iri": "https://github.com/BHoM/BHoM/blob/main/BHoM/Interface/IBHoMObject.cs",
-      "label": "IBHoMObject",
-      "attributes": []
-    },
-    {
-      "id": "BH.oM.Base.IObject",
-      "iri": "https://github.com/BHoM/BHoM/blob/main/BHoM/Interface/IObject.cs",
-      "label": "IObject",
-      "attributes": []
-    },
-    {
       "id": "BH.oM.Base.Debugging.Event",
       "iri": "https://github.com/BHoM/BHoM/blob/main/BHoM/Debugging/Event.cs",
-      "label": "Event",
-      "attributes": []
+      "label": "Event (BH.oM.Base.Debugging)",
+      "attributes": [
+        "external"
+      ]
     }
   ],
   "property": [
     {
-      "id": "BH.oM.Versioning.VersioningEvent-BH.oM.RDF.HasProperty-System.String OldDocument",
+      "id": "VersioningEvent-HasProperty-OldDocument_4C64C95955DF4549D6080EDBF8D78FFB89D5AEC541FE63D1C76137ACBF6200F5",
       "type": "owl:DatatypeProperty"
     },
     {
-      "id": "BH.oM.Versioning.VersioningEvent-BH.oM.RDF.HasProperty-System.String NewDocument",
+      "id": "VersioningEvent-HasProperty-NewDocument_95F48905579F7CA0A3AC7540FAA1F5DDAC4F6D39DD3EBF45CA5438FBE630502E",
       "type": "owl:DatatypeProperty"
     },
     {
-      "id": "BH.oM.Versioning.VersioningEvent-BH.oM.RDF.HasProperty-System.String OldVersion",
+      "id": "VersioningEvent-HasProperty-OldVersion_C0FFFD5B14CC9E67B03D4CCA75A256F6DBCCAE7E4EF151507371F8FC2AB27A7A",
       "type": "owl:DatatypeProperty"
     },
     {
-      "id": "BH.oM.Versioning.VersioningEvent-BH.oM.RDF.HasProperty-System.String NewVersion",
+      "id": "VersioningEvent-HasProperty-NewVersion_8AA6553A185D94A7B93CEFAFDBD486E88A47B7E443A2F22FEE6E886E21145CDE",
       "type": "owl:DatatypeProperty"
+    },
+    {
+      "id": "BH.oM.Versioning.VersioningEvent-HasProperty-BH.oM.Versioning.VersioningEvent.Type",
+      "type": "owl:ObjectProperty"
     },
     {
       "id": "BH.oM.Versioning.VersioningEvent.Type-IsA-BH.oM.Base.Debugging.EventType",
       "type": "owl:ObjectProperty"
     },
     {
-      "id": "BH.oM.Versioning.VersioningEvent-BH.oM.RDF.HasProperty-BH.oM.Base.Debugging.EventType Type",
-      "type": "owl:ObjectProperty"
-    },
-    {
-      "id": "BH.oM.Versioning.VersioningEvent-BH.oM.RDF.IsA-BH.oM.Base.IBHoMObject",
-      "type": "owl:ObjectProperty"
-    },
-    {
-      "id": "BH.oM.Versioning.VersioningEvent-BH.oM.RDF.IsA-BH.oM.Base.IObject",
-      "type": "owl:ObjectProperty"
-    },
-    {
-      "id": "BH.oM.Versioning.VersioningEvent-BH.oM.RDF.IsSubclassOf-BH.oM.Base.Debugging.Event",
-      "type": "owl:ObjectProperty"
+      "id": "VersioningEvent-IsSubclassOf-Event_038BA251645596E39FBB8263193601CE1BC0874094B818F37376B4D562780552",
+      "type": "rdfs:subClassOf"
     }
   ],
   "propertyAttribute": [
     {
-      "id": "BH.oM.Versioning.VersioningEvent-BH.oM.RDF.HasProperty-System.String OldDocument",
+      "id": "VersioningEvent-HasProperty-OldDocument_4C64C95955DF4549D6080EDBF8D78FFB89D5AEC541FE63D1C76137ACBF6200F5",
       "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/HasProperty.cs",
       "label": "HasProperty",
       "attributes": [
         "datatype"
       ],
       "domain": "BH.oM.Versioning.VersioningEvent",
-      "range": "OldDocument-4C64C95955DF4549D6080EDBF8D78FFB89D5AEC541FE63D1C76137ACBF6200F5-VersioningEvent-HasProperty"
+      "range": "BH.oM.Versioning.VersioningEvent.OldDocument"
     },
     {
-      "id": "BH.oM.Versioning.VersioningEvent-BH.oM.RDF.HasProperty-System.String NewDocument",
+      "id": "VersioningEvent-HasProperty-NewDocument_95F48905579F7CA0A3AC7540FAA1F5DDAC4F6D39DD3EBF45CA5438FBE630502E",
       "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/HasProperty.cs",
       "label": "HasProperty",
       "attributes": [
         "datatype"
       ],
       "domain": "BH.oM.Versioning.VersioningEvent",
-      "range": "NewDocument-95F48905579F7CA0A3AC7540FAA1F5DDAC4F6D39DD3EBF45CA5438FBE630502E-VersioningEvent-HasProperty"
+      "range": "BH.oM.Versioning.VersioningEvent.NewDocument"
     },
     {
-      "id": "BH.oM.Versioning.VersioningEvent-BH.oM.RDF.HasProperty-System.String OldVersion",
+      "id": "VersioningEvent-HasProperty-OldVersion_C0FFFD5B14CC9E67B03D4CCA75A256F6DBCCAE7E4EF151507371F8FC2AB27A7A",
       "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/HasProperty.cs",
       "label": "HasProperty",
       "attributes": [
         "datatype"
       ],
       "domain": "BH.oM.Versioning.VersioningEvent",
-      "range": "OldVersion-C0FFFD5B14CC9E67B03D4CCA75A256F6DBCCAE7E4EF151507371F8FC2AB27A7A-VersioningEvent-HasProperty"
+      "range": "BH.oM.Versioning.VersioningEvent.OldVersion"
     },
     {
-      "id": "BH.oM.Versioning.VersioningEvent-BH.oM.RDF.HasProperty-System.String NewVersion",
+      "id": "VersioningEvent-HasProperty-NewVersion_8AA6553A185D94A7B93CEFAFDBD486E88A47B7E443A2F22FEE6E886E21145CDE",
       "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/HasProperty.cs",
       "label": "HasProperty",
       "attributes": [
         "datatype"
       ],
       "domain": "BH.oM.Versioning.VersioningEvent",
-      "range": "NewVersion-8AA6553A185D94A7B93CEFAFDBD486E88A47B7E443A2F22FEE6E886E21145CDE-VersioningEvent-HasProperty"
+      "range": "BH.oM.Versioning.VersioningEvent.NewVersion"
+    },
+    {
+      "id": "BH.oM.Versioning.VersioningEvent-HasProperty-BH.oM.Versioning.VersioningEvent.Type",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/HasProperty.cs",
+      "label": "HasProperty",
+      "attributes": [
+        "object"
+      ],
+      "domain": "BH.oM.Versioning.VersioningEvent",
+      "range": "BH.oM.Versioning.VersioningEvent.Type"
     },
     {
       "id": "BH.oM.Versioning.VersioningEvent.Type-IsA-BH.oM.Base.Debugging.EventType",
@@ -205,37 +192,9 @@
       "range": "BH.oM.Base.Debugging.EventType"
     },
     {
-      "id": "BH.oM.Versioning.VersioningEvent-BH.oM.RDF.HasProperty-BH.oM.Base.Debugging.EventType Type",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/HasProperty.cs",
-      "label": "HasProperty",
-      "attributes": [],
-      "domain": "BH.oM.Versioning.VersioningEvent",
-      "range": "BH.oM.Versioning.VersioningEvent.Type"
-    },
-    {
-      "id": "BH.oM.Versioning.VersioningEvent-BH.oM.RDF.IsA-BH.oM.Base.IBHoMObject",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
-      "label": "IsA",
-      "attributes": [
-        "object"
-      ],
-      "domain": "BH.oM.Versioning.VersioningEvent",
-      "range": "BH.oM.Base.IBHoMObject"
-    },
-    {
-      "id": "BH.oM.Versioning.VersioningEvent-BH.oM.RDF.IsA-BH.oM.Base.IObject",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
-      "label": "IsA",
-      "attributes": [
-        "object"
-      ],
-      "domain": "BH.oM.Versioning.VersioningEvent",
-      "range": "BH.oM.Base.IObject"
-    },
-    {
-      "id": "BH.oM.Versioning.VersioningEvent-BH.oM.RDF.IsSubclassOf-BH.oM.Base.Debugging.Event",
+      "id": "VersioningEvent-IsSubclassOf-Event_038BA251645596E39FBB8263193601CE1BC0874094B818F37376B4D562780552",
       "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsSubclassOf.cs",
-      "label": "IsSubclassOf",
+      "label": "IsA",
       "attributes": [
         "object"
       ],

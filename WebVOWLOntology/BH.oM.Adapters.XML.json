@@ -71,35 +71,35 @@
       "type": "owl:Class"
     },
     {
-      "id": "Buildings-68DE7DBD0B0E46040991F55637A56EAE00BCFEA070513B43F53AC605A92AF8A3-GBXMLDocumentBuilder-HasProperty",
-      "type": "rdfs:Datatype"
-    },
-    {
-      "id": "ElementsAsSpaces-0C1C2C567508C7C6078372EACF8F2A76630698594858726A4D9953346CB629C7-GBXMLDocumentBuilder-HasProperty",
-      "type": "rdfs:Datatype"
-    },
-    {
-      "id": "ShadingElements-266495E10083857B466309A7AFD97D3466C6EE0B0D172E196EFD67138AFA914F-GBXMLDocumentBuilder-HasProperty",
-      "type": "rdfs:Datatype"
-    },
-    {
-      "id": "Levels-DE851D9F397D0BD5F2D29B72E0E9B9BA62047EFAB6767CAE909BA248767B38BD-GBXMLDocumentBuilder-HasProperty",
-      "type": "rdfs:Datatype"
-    },
-    {
-      "id": "UnassignedPanels-21D2635FC4537BB904A31DC2268F34DDA89055D15BA15A9916C7D36C54E5B00B-GBXMLDocumentBuilder-HasProperty",
-      "type": "rdfs:Datatype"
-    },
-    {
-      "id": "BH.oM.Base.IBHoMObject",
+      "id": "BH.oM.Adapters.XML.GBXMLDocumentBuilder.Buildings",
       "type": "owl:Class"
     },
     {
-      "id": "BH.oM.Base.IObject",
+      "id": "BH.oM.Environment.Elements.Building",
       "type": "owl:Class"
     },
     {
-      "id": "BH.oM.Base.BHoMObject",
+      "id": "BH.oM.Adapters.XML.GBXMLDocumentBuilder.ElementsAsSpaces",
+      "type": "rdfs:Datatype"
+    },
+    {
+      "id": "BH.oM.Adapters.XML.GBXMLDocumentBuilder.ShadingElements",
+      "type": "owl:Class"
+    },
+    {
+      "id": "BH.oM.Environment.Elements.Panel",
+      "type": "owl:Class"
+    },
+    {
+      "id": "BH.oM.Adapters.XML.GBXMLDocumentBuilder.Levels",
+      "type": "owl:Class"
+    },
+    {
+      "id": "BH.oM.Spatial.SettingOut.Level",
+      "type": "owl:Class"
+    },
+    {
+      "id": "BH.oM.Adapters.XML.GBXMLDocumentBuilder.UnassignedPanels",
       "type": "owl:Class"
     },
     {
@@ -135,15 +135,15 @@
       "type": "owl:Class"
     },
     {
-      "id": "ReferenceLatitude-267C462CFBC9395DF271CD8D9E976F274EE38CB3BB00D915F15D03FF737E67B2-GeoReference-HasProperty",
+      "id": "BH.oM.Adapters.XML.GeoReference.ReferenceLatitude",
       "type": "rdfs:Datatype"
     },
     {
-      "id": "ReferenceLongitude-73F41A22D57A10772956754C279DF937B9D1053A14EA7EDB899C19D9C97D2C75-GeoReference-HasProperty",
+      "id": "BH.oM.Adapters.XML.GeoReference.ReferenceLongitude",
       "type": "rdfs:Datatype"
     },
     {
-      "id": "ReferenceAltitude-1D05520F53938EE61C980F90724182AD57F211FF03A8FB67CC69AFA103090084-GeoReference-HasProperty",
+      "id": "BH.oM.Adapters.XML.GeoReference.ReferenceAltitude",
       "type": "rdfs:Datatype"
     },
     {
@@ -151,19 +151,23 @@
       "type": "owl:Class"
     },
     {
-      "id": "KMLGeometries-DE51D16D8404CD940FCBB7ABE3E170C3480F1AB5BC632C715D4E2610BF47406D-KMLDocumentBuilder-HasProperty",
-      "type": "rdfs:Datatype"
+      "id": "BH.oM.Adapters.XML.KMLDocumentBuilder.KMLGeometries",
+      "type": "owl:Class"
     },
     {
       "id": "BH.oM.Adapters.XML.KMLGeometry.GeoReference",
       "type": "owl:Class"
     },
     {
-      "id": "Geometries-7EF30B3785C21924B95CA6654B5C631390ABE8EED4EF57073B7505CB3F55A860-KMLGeometry-HasProperty",
-      "type": "rdfs:Datatype"
+      "id": "BH.oM.Adapters.XML.KMLGeometry.Geometries",
+      "type": "owl:Class"
     },
     {
-      "id": "Description-97EC4550146B4C83F31BA45352C286509A9B8A450F0A0D3005A7E8C888909268-KMLGeometry-HasProperty",
+      "id": "BH.oM.Geometry.IGeometry",
+      "type": "owl:Class"
+    },
+    {
+      "id": "BH.oM.Adapters.XML.KMLGeometry.Description",
       "type": "rdfs:Datatype"
     },
     {
@@ -179,23 +183,23 @@
       "type": "owl:Class"
     },
     {
-      "id": "ReplaceCurtainWalls-19AE0E90C025DCBA4679647D21B9FE0FEC3457656793C025F70E4F859AE923FC-GBXMLSettings-HasProperty",
+      "id": "BH.oM.Adapters.XML.Settings.GBXMLSettings.ReplaceCurtainWalls",
       "type": "rdfs:Datatype"
     },
     {
-      "id": "ReplaceSolidOpeningsIntoDoors-264D9C9C83ECED1121C7FEDB3B6E5970D8B59675DC81B9A9A84DF775E3BA8C32-GBXMLSettings-HasProperty",
+      "id": "BH.oM.Adapters.XML.Settings.GBXMLSettings.ReplaceSolidOpeningsIntoDoors",
       "type": "rdfs:Datatype"
     },
     {
-      "id": "IncludeConstructions-3D97A1EC63C129250093B76CB04CC2001C7ED665E9E27BEEF3AB4E5AAB720642-GBXMLSettings-HasProperty",
+      "id": "BH.oM.Adapters.XML.Settings.GBXMLSettings.IncludeConstructions",
       "type": "rdfs:Datatype"
     },
     {
-      "id": "FixIncorrectAirTypes-E479A1D63FEFD245F6A6010DA41EBD317D3029ECC046FE7595B914C7D1DB1C27-GBXMLSettings-HasProperty",
+      "id": "BH.oM.Adapters.XML.Settings.GBXMLSettings.FixIncorrectAirTypes",
       "type": "rdfs:Datatype"
     },
     {
-      "id": "NewFile-9A1CECDFCC5AC7F0F6D07B7A259467CE4F3AD77451763604DD00DCBA0E2DA956-GBXMLSettings-HasProperty",
+      "id": "BH.oM.Adapters.XML.Settings.GBXMLSettings.NewFile",
       "type": "rdfs:Datatype"
     },
     {
@@ -207,19 +211,19 @@
       "type": "owl:Class"
     },
     {
-      "id": "DistanceTolerance-15232514486729C44A15ED8BC83A16E9906F617D7936AE5D9A9F3E522AEAC0D8-GBXMLSettings-HasProperty",
+      "id": "BH.oM.Adapters.XML.Settings.GBXMLSettings.DistanceTolerance",
       "type": "rdfs:Datatype"
     },
     {
-      "id": "PlanarTolerance-209C6C203BA873AFD36EBB5CCAEEDEE954DD3EB6168C9DF8E65927A0D59DAD8A-GBXMLSettings-HasProperty",
+      "id": "BH.oM.Adapters.XML.Settings.GBXMLSettings.PlanarTolerance",
       "type": "rdfs:Datatype"
     },
     {
-      "id": "OffsetDistance-812B702F7646CBA3FE190190CB68830B54938143AEFA63C757011BB0FC61731C-GBXMLSettings-HasProperty",
+      "id": "BH.oM.Adapters.XML.Settings.GBXMLSettings.OffsetDistance",
       "type": "rdfs:Datatype"
     },
     {
-      "id": "AngleTolerance-C44AF5A30A1306534E4D4279162F7CC2A5CA502716162C2B7101CC43E7D99229-GBXMLSettings-HasProperty",
+      "id": "BH.oM.Adapters.XML.Settings.GBXMLSettings.AngleTolerance",
       "type": "rdfs:Datatype"
     },
     {
@@ -235,7 +239,7 @@
       "type": "owl:Class"
     },
     {
-      "id": "NewFile-802CB5169A361B3598B9ED13CCA1719CFE1FE0A0F64D2243408CE5EAF65544BB-KMLSettings-HasProperty",
+      "id": "BH.oM.Adapters.XML.Settings.KMLSettings.NewFile",
       "type": "rdfs:Datatype"
     }
   ],
@@ -244,190 +248,240 @@
       "id": "BH.oM.Adapters.XML.AreaUnit",
       "iri": "https://github.com/BHoM/XML_Toolkit/blob/main/XML_oM/GBXML/Enums/AreaUnit.cs",
       "label": "AreaUnit (BH.oM.Adapters.XML)",
-      "attributes": []
+      "attributes": [
+        "object"
+      ]
     },
     {
       "id": "BH.oM.Adapters.XML.LengthUnit",
       "iri": "https://github.com/BHoM/XML_Toolkit/blob/main/XML_oM/GBXML/Enums/LengthUnit.cs",
       "label": "LengthUnit (BH.oM.Adapters.XML)",
-      "attributes": []
+      "attributes": [
+        "object"
+      ]
     },
     {
       "id": "BH.oM.Adapters.XML.TemperatureUnit",
       "iri": "https://github.com/BHoM/XML_Toolkit/blob/main/XML_oM/GBXML/Enums/TemperatureUnit.cs",
       "label": "TemperatureUnit (BH.oM.Adapters.XML)",
-      "attributes": []
+      "attributes": [
+        "object"
+      ]
     },
     {
       "id": "BH.oM.Adapters.XML.VolumeUnit",
       "iri": "https://github.com/BHoM/XML_Toolkit/blob/main/XML_oM/GBXML/Enums/VolumeUnit.cs",
       "label": "VolumeUnit (BH.oM.Adapters.XML)",
-      "attributes": []
+      "attributes": [
+        "object"
+      ]
     },
     {
       "id": "BH.oM.Adapters.XML.GBXMLDocumentBuilder",
       "iri": "https://github.com/BHoM/XML_Toolkit/blob/main/XML_oM/GBXML/GBXMLDocumentBuilder.cs",
       "label": "GBXMLDocumentBuilder (BH.oM.Adapters.XML)",
-      "attributes": []
+      "attributes": [
+        "object"
+      ]
     },
     {
       "id": "BH.oM.Adapters.XML.GBXMLUnitSetUp",
       "iri": "https://github.com/BHoM/XML_Toolkit/blob/main/XML_oM/GBXML/GBXMLUnitSetUp.cs",
       "label": "GBXMLUnitSetUp (BH.oM.Adapters.XML)",
-      "attributes": []
+      "attributes": [
+        "object"
+      ]
     },
     {
       "id": "BH.oM.Adapters.XML.GeoReference",
       "iri": "https://github.com/BHoM/XML_Toolkit/blob/main/XML_oM/KML/GeoReference.cs",
       "label": "GeoReference (BH.oM.Adapters.XML)",
-      "attributes": []
+      "attributes": [
+        "object"
+      ]
     },
     {
       "id": "BH.oM.Adapters.XML.KMLDocumentBuilder",
       "iri": "https://github.com/BHoM/XML_Toolkit/blob/main/XML_oM/KML/KMLDocumentBuilder.cs",
       "label": "KMLDocumentBuilder (BH.oM.Adapters.XML)",
-      "attributes": []
+      "attributes": [
+        "object"
+      ]
     },
     {
       "id": "BH.oM.Adapters.XML.KMLGeometry",
       "iri": "https://github.com/BHoM/XML_Toolkit/blob/main/XML_oM/KML/KMLGeometry.cs",
       "label": "KMLGeometry (BH.oM.Adapters.XML)",
-      "attributes": []
+      "attributes": [
+        "object"
+      ]
     },
     {
       "id": "BH.oM.Adapters.XML.XMLConfig",
       "iri": "https://github.com/BHoM/XML_Toolkit/blob/main/XML_oM/XMLConfig.cs",
       "label": "XMLConfig (BH.oM.Adapters.XML)",
-      "attributes": []
+      "attributes": [
+        "object"
+      ],
+      "comment": {
+        "undefined": "Define configuration settings for pushing and pulling XML files using the XML Adapter"
+      }
     },
     {
       "id": "BH.oM.Adapters.XML.Settings.IXMLSettings",
       "iri": "https://github.com/BHoM/XML_Toolkit/blob/main/XML_oM/Settings/IXMLSettings.cs",
       "label": "IXMLSettings (BH.oM.Adapters.XML.Settings)",
-      "attributes": []
+      "attributes": [
+        "object"
+      ]
     },
     {
       "id": "BH.oM.Adapters.XML.Settings.GBXMLSettings",
       "iri": "https://github.com/BHoM/XML_Toolkit/blob/main/XML_oM/Settings/GBXMLSettings.cs",
       "label": "GBXMLSettings (BH.oM.Adapters.XML.Settings)",
-      "attributes": []
+      "attributes": [
+        "object"
+      ]
     },
     {
       "id": "BH.oM.Adapters.XML.Settings.KMLSettings",
       "iri": "https://github.com/BHoM/XML_Toolkit/blob/main/XML_oM/Settings/KMLSettings.cs",
       "label": "KMLSettings (BH.oM.Adapters.XML.Settings)",
-      "attributes": []
+      "attributes": [
+        "object"
+      ]
     },
     {
       "id": "BH.oM.Adapters.XML.Enums.AltitudeMode",
       "iri": "https://github.com/BHoM/XML_Toolkit/blob/main/XML_oM/Enums/AltitudeMode.cs",
       "label": "AltitudeMode (BH.oM.Adapters.XML.Enums)",
-      "attributes": []
+      "attributes": [
+        "object"
+      ]
     },
     {
       "id": "BH.oM.Adapters.XML.Enums.ExportDetail",
       "iri": "https://github.com/BHoM/XML_Toolkit/blob/main/XML_oM/Enums/ExportDetail.cs",
       "label": "ExportDetail (BH.oM.Adapters.XML.Enums)",
-      "attributes": []
+      "attributes": [
+        "object"
+      ]
     },
     {
       "id": "BH.oM.Adapters.XML.Enums.Schema",
       "iri": "https://github.com/BHoM/XML_Toolkit/blob/main/XML_oM/Enums/Schema.cs",
       "label": "Schema (BH.oM.Adapters.XML.Enums)",
-      "attributes": []
+      "attributes": [
+        "object"
+      ],
+      "comment": {
+        "undefined": "Defines the XML Schema that is being used within the context of the XML Toolkit"
+      }
     },
     {
       "id": "BH.oM.Adapters.XML.Enums.UnitType",
       "iri": "https://github.com/BHoM/XML_Toolkit/blob/main/XML_oM/Enums/UnitType.cs",
       "label": "UnitType (BH.oM.Adapters.XML.Enums)",
+      "attributes": [
+        "object"
+      ]
+    },
+    {
+      "id": "BH.oM.Adapters.XML.GBXMLDocumentBuilder.Buildings",
+      "iri": "https://github.com/BHoM/XML_Toolkit/blob/main/XML_oM/GBXML/GBXMLDocumentBuilder.cs",
+      "label": "Buildings(BH.oM.Adapters.XML.GBXMLDocumentBuilder.Buildings)",
       "attributes": []
     },
     {
-      "id": "Buildings-68DE7DBD0B0E46040991F55637A56EAE00BCFEA070513B43F53AC605A92AF8A3-GBXMLDocumentBuilder-HasProperty",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/HasProperty.cs",
-      "label": "Buildings (BH.oM.Adapters.XML.GBXMLDocumentBuilder.Buildings)",
+      "id": "BH.oM.Environment.Elements.Building",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/Environment_oM/Elements/Building.cs",
+      "label": "Building (BH.oM.Environment.Elements)",
+      "attributes": [
+        "object",
+        "external"
+      ],
+      "comment": {
+        "undefined": "This building object is used for setting the location and building type, which is required for some environmental workflows"
+      }
+    },
+    {
+      "id": "BH.oM.Adapters.XML.GBXMLDocumentBuilder.ElementsAsSpaces",
+      "iri": "https://github.com/BHoM/XML_Toolkit/blob/main/XML_oM/GBXML/GBXMLDocumentBuilder.cs",
+      "label": "ElementsAsSpaces(BH.oM.Adapters.XML.GBXMLDocumentBuilder.ElementsAsSpaces)",
       "attributes": [
         "datatype"
       ]
     },
     {
-      "id": "ElementsAsSpaces-0C1C2C567508C7C6078372EACF8F2A76630698594858726A4D9953346CB629C7-GBXMLDocumentBuilder-HasProperty",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/HasProperty.cs",
-      "label": "ElementsAsSpaces (BH.oM.Adapters.XML.GBXMLDocumentBuilder.ElementsAsSpaces)",
-      "attributes": [
-        "datatype"
-      ]
-    },
-    {
-      "id": "ShadingElements-266495E10083857B466309A7AFD97D3466C6EE0B0D172E196EFD67138AFA914F-GBXMLDocumentBuilder-HasProperty",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/HasProperty.cs",
-      "label": "ShadingElements (BH.oM.Adapters.XML.GBXMLDocumentBuilder.ShadingElements)",
-      "attributes": [
-        "datatype"
-      ]
-    },
-    {
-      "id": "Levels-DE851D9F397D0BD5F2D29B72E0E9B9BA62047EFAB6767CAE909BA248767B38BD-GBXMLDocumentBuilder-HasProperty",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/HasProperty.cs",
-      "label": "Levels (BH.oM.Adapters.XML.GBXMLDocumentBuilder.Levels)",
-      "attributes": [
-        "datatype"
-      ]
-    },
-    {
-      "id": "UnassignedPanels-21D2635FC4537BB904A31DC2268F34DDA89055D15BA15A9916C7D36C54E5B00B-GBXMLDocumentBuilder-HasProperty",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/HasProperty.cs",
-      "label": "UnassignedPanels (BH.oM.Adapters.XML.GBXMLDocumentBuilder.UnassignedPanels)",
-      "attributes": [
-        "datatype"
-      ]
-    },
-    {
-      "id": "BH.oM.Base.IBHoMObject",
-      "iri": "https://github.com/BHoM/BHoM/blob/main/BHoM/Interface/IBHoMObject.cs",
-      "label": "IBHoMObject",
+      "id": "BH.oM.Adapters.XML.GBXMLDocumentBuilder.ShadingElements",
+      "iri": "https://github.com/BHoM/XML_Toolkit/blob/main/XML_oM/GBXML/GBXMLDocumentBuilder.cs",
+      "label": "ShadingElements(BH.oM.Adapters.XML.GBXMLDocumentBuilder.ShadingElements)",
       "attributes": []
     },
     {
-      "id": "BH.oM.Base.IObject",
-      "iri": "https://github.com/BHoM/BHoM/blob/main/BHoM/Interface/IObject.cs",
-      "label": "IObject",
+      "id": "BH.oM.Environment.Elements.Panel",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/Environment_oM/Elements/Panel.cs",
+      "label": "Panel (BH.oM.Environment.Elements)",
+      "attributes": [
+        "object",
+        "external"
+      ],
+      "comment": {
+        "undefined": "An environmental object used to define planar surfaces of a space (e.g. Wall, Floor, Roof)"
+      }
+    },
+    {
+      "id": "BH.oM.Adapters.XML.GBXMLDocumentBuilder.Levels",
+      "iri": "https://github.com/BHoM/XML_Toolkit/blob/main/XML_oM/GBXML/GBXMLDocumentBuilder.cs",
+      "label": "Levels(BH.oM.Adapters.XML.GBXMLDocumentBuilder.Levels)",
       "attributes": []
     },
     {
-      "id": "BH.oM.Base.BHoMObject",
-      "iri": "https://github.com/BHoM/BHoM/blob/main/BHoM/BHoMObject.cs",
-      "label": "BHoMObject",
+      "id": "BH.oM.Spatial.SettingOut.Level",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/Spatial_oM/SettingOut/Level.cs",
+      "label": "Level (BH.oM.Spatial.SettingOut)",
+      "attributes": [
+        "object",
+        "external"
+      ],
+      "comment": {
+        "undefined": "Defines a horizontal plane, or infinite flat two-dimensional surface, based on a height measured along the global Z axis and origin."
+      }
+    },
+    {
+      "id": "BH.oM.Adapters.XML.GBXMLDocumentBuilder.UnassignedPanels",
+      "iri": "https://github.com/BHoM/XML_Toolkit/blob/main/XML_oM/GBXML/GBXMLDocumentBuilder.cs",
+      "label": "UnassignedPanels(BH.oM.Adapters.XML.GBXMLDocumentBuilder.UnassignedPanels)",
       "attributes": []
     },
     {
       "id": "BH.oM.Adapters.XML.GBXMLUnitSetUp.TemperatureUnit",
       "iri": "https://github.com/BHoM/XML_Toolkit/blob/main/XML_oM/GBXML/GBXMLUnitSetUp.cs#L36",
-      "label": "TemperatureUnit (BH.oM.Adapters.XML.GBXMLUnitSetUp.TemperatureUnit)",
+      "label": "TemperatureUnit(BH.oM.Adapters.XML.GBXMLUnitSetUp.TemperatureUnit)",
       "attributes": []
     },
     {
       "id": "BH.oM.Adapters.XML.GBXMLUnitSetUp.LengthUnit",
       "iri": "https://github.com/BHoM/XML_Toolkit/blob/main/XML_oM/GBXML/GBXMLUnitSetUp.cs#L38",
-      "label": "LengthUnit (BH.oM.Adapters.XML.GBXMLUnitSetUp.LengthUnit)",
+      "label": "LengthUnit(BH.oM.Adapters.XML.GBXMLUnitSetUp.LengthUnit)",
       "attributes": []
     },
     {
       "id": "BH.oM.Adapters.XML.GBXMLUnitSetUp.AreaUnit",
       "iri": "https://github.com/BHoM/XML_Toolkit/blob/main/XML_oM/GBXML/GBXMLUnitSetUp.cs#L40",
-      "label": "AreaUnit (BH.oM.Adapters.XML.GBXMLUnitSetUp.AreaUnit)",
+      "label": "AreaUnit(BH.oM.Adapters.XML.GBXMLUnitSetUp.AreaUnit)",
       "attributes": []
     },
     {
       "id": "BH.oM.Adapters.XML.GBXMLUnitSetUp.VolumeUnit",
       "iri": "https://github.com/BHoM/XML_Toolkit/blob/main/XML_oM/GBXML/GBXMLUnitSetUp.cs#L42",
-      "label": "VolumeUnit (BH.oM.Adapters.XML.GBXMLUnitSetUp.VolumeUnit)",
+      "label": "VolumeUnit(BH.oM.Adapters.XML.GBXMLUnitSetUp.VolumeUnit)",
       "attributes": []
     },
     {
       "id": "BH.oM.Adapters.XML.GeoReference.NorthVector",
       "iri": "https://github.com/BHoM/XML_Toolkit/blob/main/XML_oM/KML/GeoReference.cs#L38",
-      "label": "NorthVector (BH.oM.Adapters.XML.GeoReference.NorthVector)",
+      "label": "NorthVector(BH.oM.Adapters.XML.GeoReference.NorthVector)",
       "attributes": []
     },
     {
@@ -435,13 +489,17 @@
       "iri": "https://github.com/BHoM/BHoM/blob/main/Geometry_oM/Vector/Vector.cs",
       "label": "Vector (BH.oM.Geometry)",
       "attributes": [
+        "object",
         "external"
-      ]
+      ],
+      "comment": {
+        "undefined": "Defines a direction and magnitude in three-dimensional Euclidean space."
+      }
     },
     {
       "id": "BH.oM.Adapters.XML.GeoReference.Reference",
       "iri": "https://github.com/BHoM/XML_Toolkit/blob/main/XML_oM/KML/GeoReference.cs#L40",
-      "label": "Reference (BH.oM.Adapters.XML.GeoReference.Reference)",
+      "label": "Reference(BH.oM.Adapters.XML.GeoReference.Reference)",
       "attributes": []
     },
     {
@@ -449,29 +507,33 @@
       "iri": "https://github.com/BHoM/BHoM/blob/main/Geometry_oM/Vector/Point.cs",
       "label": "Point (BH.oM.Geometry)",
       "attributes": [
+        "object",
         "external"
-      ]
+      ],
+      "comment": {
+        "undefined": "Defines a dimensionless location in three-dimensional space."
+      }
     },
     {
-      "id": "ReferenceLatitude-267C462CFBC9395DF271CD8D9E976F274EE38CB3BB00D915F15D03FF737E67B2-GeoReference-HasProperty",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/HasProperty.cs",
-      "label": "ReferenceLatitude (BH.oM.Adapters.XML.GeoReference.ReferenceLatitude)",
+      "id": "BH.oM.Adapters.XML.GeoReference.ReferenceLatitude",
+      "iri": "https://github.com/BHoM/XML_Toolkit/blob/main/XML_oM/KML/GeoReference.cs#L42",
+      "label": "ReferenceLatitude(BH.oM.Adapters.XML.GeoReference.ReferenceLatitude)",
       "attributes": [
         "datatype"
       ]
     },
     {
-      "id": "ReferenceLongitude-73F41A22D57A10772956754C279DF937B9D1053A14EA7EDB899C19D9C97D2C75-GeoReference-HasProperty",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/HasProperty.cs",
-      "label": "ReferenceLongitude (BH.oM.Adapters.XML.GeoReference.ReferenceLongitude)",
+      "id": "BH.oM.Adapters.XML.GeoReference.ReferenceLongitude",
+      "iri": "https://github.com/BHoM/XML_Toolkit/blob/main/XML_oM/KML/GeoReference.cs#L44",
+      "label": "ReferenceLongitude(BH.oM.Adapters.XML.GeoReference.ReferenceLongitude)",
       "attributes": [
         "datatype"
       ]
     },
     {
-      "id": "ReferenceAltitude-1D05520F53938EE61C980F90724182AD57F211FF03A8FB67CC69AFA103090084-GeoReference-HasProperty",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/HasProperty.cs",
-      "label": "ReferenceAltitude (BH.oM.Adapters.XML.GeoReference.ReferenceAltitude)",
+      "id": "BH.oM.Adapters.XML.GeoReference.ReferenceAltitude",
+      "iri": "https://github.com/BHoM/XML_Toolkit/blob/main/XML_oM/KML/GeoReference.cs#L46",
+      "label": "ReferenceAltitude(BH.oM.Adapters.XML.GeoReference.ReferenceAltitude)",
       "attributes": [
         "datatype"
       ]
@@ -479,35 +541,43 @@
     {
       "id": "BH.oM.Adapters.XML.GeoReference.AltitudeMode",
       "iri": "https://github.com/BHoM/XML_Toolkit/blob/main/XML_oM/KML/GeoReference.cs#L48",
-      "label": "AltitudeMode (BH.oM.Adapters.XML.GeoReference.AltitudeMode)",
+      "label": "AltitudeMode(BH.oM.Adapters.XML.GeoReference.AltitudeMode)",
       "attributes": []
     },
     {
-      "id": "KMLGeometries-DE51D16D8404CD940FCBB7ABE3E170C3480F1AB5BC632C715D4E2610BF47406D-KMLDocumentBuilder-HasProperty",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/HasProperty.cs",
-      "label": "KMLGeometries (BH.oM.Adapters.XML.KMLDocumentBuilder.KMLGeometries)",
-      "attributes": [
-        "datatype"
-      ]
+      "id": "BH.oM.Adapters.XML.KMLDocumentBuilder.KMLGeometries",
+      "iri": "https://github.com/BHoM/XML_Toolkit/blob/main/XML_oM/KML/KMLDocumentBuilder.cs#L34",
+      "label": "KMLGeometries(BH.oM.Adapters.XML.KMLDocumentBuilder.KMLGeometries)",
+      "attributes": []
     },
     {
       "id": "BH.oM.Adapters.XML.KMLGeometry.GeoReference",
       "iri": "https://github.com/BHoM/XML_Toolkit/blob/main/XML_oM/KML/KMLGeometry.cs#L34",
-      "label": "GeoReference (BH.oM.Adapters.XML.KMLGeometry.GeoReference)",
+      "label": "GeoReference(BH.oM.Adapters.XML.KMLGeometry.GeoReference)",
       "attributes": []
     },
     {
-      "id": "Geometries-7EF30B3785C21924B95CA6654B5C631390ABE8EED4EF57073B7505CB3F55A860-KMLGeometry-HasProperty",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/HasProperty.cs",
-      "label": "Geometries (BH.oM.Adapters.XML.KMLGeometry.Geometries)",
-      "attributes": [
-        "datatype"
-      ]
+      "id": "BH.oM.Adapters.XML.KMLGeometry.Geometries",
+      "iri": "https://github.com/BHoM/XML_Toolkit/blob/main/XML_oM/KML/KMLGeometry.cs",
+      "label": "Geometries(BH.oM.Adapters.XML.KMLGeometry.Geometries)",
+      "attributes": []
     },
     {
-      "id": "Description-97EC4550146B4C83F31BA45352C286509A9B8A450F0A0D3005A7E8C888909268-KMLGeometry-HasProperty",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/HasProperty.cs",
-      "label": "Description (BH.oM.Adapters.XML.KMLGeometry.Description)",
+      "id": "BH.oM.Geometry.IGeometry",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/Geometry_oM/Interface/IGeometry.cs",
+      "label": "IGeometry (BH.oM.Geometry)",
+      "attributes": [
+        "object",
+        "external"
+      ],
+      "comment": {
+        "undefined": "The parent interface for all primative geometrical objects.\nIGeometry implements IObject - and not IBHoMObject. Equally primative geometrical objects do not inherit from the base BHoMObject class either. As primatives, the additional base BHoM properties are omitted for both efficency and performace."
+      }
+    },
+    {
+      "id": "BH.oM.Adapters.XML.KMLGeometry.Description",
+      "iri": "https://github.com/BHoM/XML_Toolkit/blob/main/XML_oM/KML/KMLGeometry.cs#L38",
+      "label": "Description(BH.oM.Adapters.XML.KMLGeometry.Description)",
       "attributes": [
         "datatype"
       ]
@@ -515,57 +585,65 @@
     {
       "id": "BH.oM.Adapters.XML.XMLConfig.Schema",
       "iri": "https://github.com/BHoM/XML_Toolkit/blob/main/XML_oM/XMLConfig.cs#L41",
-      "label": "Schema (BH.oM.Adapters.XML.XMLConfig.Schema)",
-      "attributes": []
+      "label": "Schema(BH.oM.Adapters.XML.XMLConfig.Schema)",
+      "attributes": [],
+      "comment": {
+        "undefined": "Define the schema which the XML Adapter should be operating with"
+      }
     },
     {
       "id": "BH.oM.Adapters.XML.XMLConfig.Settings",
       "iri": "https://github.com/BHoM/XML_Toolkit/blob/main/XML_oM/XMLConfig.cs#L44",
-      "label": "Settings (BH.oM.Adapters.XML.XMLConfig.Settings)",
-      "attributes": []
+      "label": "Settings(BH.oM.Adapters.XML.XMLConfig.Settings)",
+      "attributes": [],
+      "comment": {
+        "undefined": "Set optional settings to use when pushing or pulling XML based on the chosen schema"
+      }
     },
     {
       "id": "BH.oM.Adapter.ActionConfig",
       "iri": "https://github.com/BHoM/BHoM_Adapter/blob/main/Adapter_oM/Settings-Config/ActionConfig.cs",
-      "label": "ActionConfig",
-      "attributes": []
+      "label": "ActionConfig (BH.oM.Adapter)",
+      "attributes": [
+        "external"
+      ]
     },
     {
-      "id": "ReplaceCurtainWalls-19AE0E90C025DCBA4679647D21B9FE0FEC3457656793C025F70E4F859AE923FC-GBXMLSettings-HasProperty",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/HasProperty.cs",
-      "label": "ReplaceCurtainWalls (BH.oM.Adapters.XML.Settings.GBXMLSettings.ReplaceCurtainWalls)",
+      "id": "BH.oM.Adapters.XML.Settings.GBXMLSettings.ReplaceCurtainWalls",
+      "iri": "https://github.com/BHoM/XML_Toolkit/blob/main/XML_oM/Settings/GBXMLSettings.cs#L40",
+      "label": "ReplaceCurtainWalls(BH.oM.Adapters.XML.Settings.GBXMLSettings.ReplaceCurtainWalls)",
       "attributes": [
         "datatype"
       ]
     },
     {
-      "id": "ReplaceSolidOpeningsIntoDoors-264D9C9C83ECED1121C7FEDB3B6E5970D8B59675DC81B9A9A84DF775E3BA8C32-GBXMLSettings-HasProperty",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/HasProperty.cs",
-      "label": "ReplaceSolidOpeningsIntoDoors (BH.oM.Adapters.XML.Settings.GBXMLSettings.ReplaceSolidOpeningsIntoDoors)",
+      "id": "BH.oM.Adapters.XML.Settings.GBXMLSettings.ReplaceSolidOpeningsIntoDoors",
+      "iri": "https://github.com/BHoM/XML_Toolkit/blob/main/XML_oM/Settings/GBXMLSettings.cs#L43",
+      "label": "ReplaceSolidOpeningsIntoDoors(BH.oM.Adapters.XML.Settings.GBXMLSettings.ReplaceSolidOpeningsIntoDoors)",
       "attributes": [
         "datatype"
       ]
     },
     {
-      "id": "IncludeConstructions-3D97A1EC63C129250093B76CB04CC2001C7ED665E9E27BEEF3AB4E5AAB720642-GBXMLSettings-HasProperty",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/HasProperty.cs",
-      "label": "IncludeConstructions (BH.oM.Adapters.XML.Settings.GBXMLSettings.IncludeConstructions)",
+      "id": "BH.oM.Adapters.XML.Settings.GBXMLSettings.IncludeConstructions",
+      "iri": "https://github.com/BHoM/XML_Toolkit/blob/main/XML_oM/Settings/GBXMLSettings.cs#L46",
+      "label": "IncludeConstructions(BH.oM.Adapters.XML.Settings.GBXMLSettings.IncludeConstructions)",
       "attributes": [
         "datatype"
       ]
     },
     {
-      "id": "FixIncorrectAirTypes-E479A1D63FEFD245F6A6010DA41EBD317D3029ECC046FE7595B914C7D1DB1C27-GBXMLSettings-HasProperty",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/HasProperty.cs",
-      "label": "FixIncorrectAirTypes (BH.oM.Adapters.XML.Settings.GBXMLSettings.FixIncorrectAirTypes)",
+      "id": "BH.oM.Adapters.XML.Settings.GBXMLSettings.FixIncorrectAirTypes",
+      "iri": "https://github.com/BHoM/XML_Toolkit/blob/main/XML_oM/Settings/GBXMLSettings.cs#L49",
+      "label": "FixIncorrectAirTypes(BH.oM.Adapters.XML.Settings.GBXMLSettings.FixIncorrectAirTypes)",
       "attributes": [
         "datatype"
       ]
     },
     {
-      "id": "NewFile-9A1CECDFCC5AC7F0F6D07B7A259467CE4F3AD77451763604DD00DCBA0E2DA956-GBXMLSettings-HasProperty",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/HasProperty.cs",
-      "label": "NewFile (BH.oM.Adapters.XML.Settings.GBXMLSettings.NewFile)",
+      "id": "BH.oM.Adapters.XML.Settings.GBXMLSettings.NewFile",
+      "iri": "https://github.com/BHoM/XML_Toolkit/blob/main/XML_oM/Settings/GBXMLSettings.cs#L52",
+      "label": "NewFile(BH.oM.Adapters.XML.Settings.GBXMLSettings.NewFile)",
       "attributes": [
         "datatype"
       ]
@@ -573,43 +651,49 @@
     {
       "id": "BH.oM.Adapters.XML.Settings.GBXMLSettings.ResultsUnitType",
       "iri": "https://github.com/BHoM/XML_Toolkit/blob/main/XML_oM/Settings/GBXMLSettings.cs#L55",
-      "label": "ResultsUnitType (BH.oM.Adapters.XML.Settings.GBXMLSettings.ResultsUnitType)",
-      "attributes": []
+      "label": "ResultsUnitType(BH.oM.Adapters.XML.Settings.GBXMLSettings.ResultsUnitType)",
+      "attributes": [],
+      "comment": {
+        "undefined": "Set the unit type for the results to be either SI or Imperial. Default SI"
+      }
     },
     {
       "id": "BH.oM.Adapters.XML.Settings.GBXMLSettings.ExportDetail",
       "iri": "https://github.com/BHoM/XML_Toolkit/blob/main/XML_oM/Settings/GBXMLSettings.cs#L58",
-      "label": "ExportDetail (BH.oM.Adapters.XML.Settings.GBXMLSettings.ExportDetail)",
-      "attributes": []
+      "label": "ExportDetail(BH.oM.Adapters.XML.Settings.GBXMLSettings.ExportDetail)",
+      "attributes": [],
+      "comment": {
+        "undefined": "Set the detail of your export to be either full (whole building), shell (exterior walls only), or spaces (each individual space as its own XML file). Default full"
+      }
     },
     {
-      "id": "DistanceTolerance-15232514486729C44A15ED8BC83A16E9906F617D7936AE5D9A9F3E522AEAC0D8-GBXMLSettings-HasProperty",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/HasProperty.cs",
-      "label": "DistanceTolerance (BH.oM.Adapters.XML.Settings.GBXMLSettings.DistanceTolerance)",
+      "id": "BH.oM.Adapters.XML.Settings.GBXMLSettings.DistanceTolerance",
+      "iri": "https://github.com/BHoM/XML_Toolkit/blob/main/XML_oM/Settings/GBXMLSettings.cs#L61",
+      "label": "DistanceTolerance(BH.oM.Adapters.XML.Settings.GBXMLSettings.DistanceTolerance)",
       "attributes": [
         "datatype"
       ]
     },
     {
-      "id": "PlanarTolerance-209C6C203BA873AFD36EBB5CCAEEDEE954DD3EB6168C9DF8E65927A0D59DAD8A-GBXMLSettings-HasProperty",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/HasProperty.cs",
-      "label": "PlanarTolerance (BH.oM.Adapters.XML.Settings.GBXMLSettings.PlanarTolerance)",
+      "id": "BH.oM.Adapters.XML.Settings.GBXMLSettings.PlanarTolerance",
+      "iri": "https://github.com/BHoM/XML_Toolkit/blob/main/XML_oM/Settings/GBXMLSettings.cs#L64",
+      "label": "PlanarTolerance(BH.oM.Adapters.XML.Settings.GBXMLSettings.PlanarTolerance)",
       "attributes": [
         "datatype"
       ]
     },
     {
-      "id": "OffsetDistance-812B702F7646CBA3FE190190CB68830B54938143AEFA63C757011BB0FC61731C-GBXMLSettings-HasProperty",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/HasProperty.cs",
-      "label": "OffsetDistance (BH.oM.Adapters.XML.Settings.GBXMLSettings.OffsetDistance)",
+      "id": "BH.oM.Adapters.XML.Settings.GBXMLSettings.OffsetDistance",
+      "iri": "https://github.com/BHoM/XML_Toolkit/blob/main/XML_oM/Settings/GBXMLSettings.cs#L67",
+      "label": "OffsetDistance(BH.oM.Adapters.XML.Settings.GBXMLSettings.OffsetDistance)",
       "attributes": [
         "datatype"
       ]
     },
     {
-      "id": "AngleTolerance-C44AF5A30A1306534E4D4279162F7CC2A5CA502716162C2B7101CC43E7D99229-GBXMLSettings-HasProperty",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/HasProperty.cs",
-      "label": "AngleTolerance (BH.oM.Adapters.XML.Settings.GBXMLSettings.AngleTolerance)",
+      "id": "BH.oM.Adapters.XML.Settings.GBXMLSettings.AngleTolerance",
+      "iri": "https://github.com/BHoM/XML_Toolkit/blob/main/XML_oM/Settings/GBXMLSettings.cs#L70",
+      "label": "AngleTolerance(BH.oM.Adapters.XML.Settings.GBXMLSettings.AngleTolerance)",
       "attributes": [
         "datatype"
       ]
@@ -617,27 +701,34 @@
     {
       "id": "BH.oM.Adapters.XML.Settings.GBXMLSettings.RoundingSettings",
       "iri": "https://github.com/BHoM/XML_Toolkit/blob/main/XML_oM/Settings/GBXMLSettings.cs#L73",
-      "label": "RoundingSettings (BH.oM.Adapters.XML.Settings.GBXMLSettings.RoundingSettings)",
-      "attributes": []
+      "label": "RoundingSettings(BH.oM.Adapters.XML.Settings.GBXMLSettings.RoundingSettings)",
+      "attributes": [],
+      "comment": {
+        "undefined": "Set the rounding options for numerical outputs to be used within gbXML creation. Default is per the Rounding Settings defaults"
+      }
     },
     {
       "id": "BH.oM.XML.GBXML.RoundingSettings",
       "iri": "https://github.com/BHoM/XML_Toolkit/blob/main/XML_oM/GBXML/RoundingSettings.cs",
       "label": "RoundingSettings (BH.oM.XML.GBXML)",
       "attributes": [
+        "object",
         "external"
       ]
     },
     {
       "id": "BH.oM.Adapters.XML.Settings.GBXMLSettings.UnitSetUp",
       "iri": "https://github.com/BHoM/XML_Toolkit/blob/main/XML_oM/Settings/GBXMLSettings.cs#L76",
-      "label": "UnitSetUp (BH.oM.Adapters.XML.Settings.GBXMLSettings.UnitSetUp)",
-      "attributes": []
+      "label": "UnitSetUp(BH.oM.Adapters.XML.Settings.GBXMLSettings.UnitSetUp)",
+      "attributes": [],
+      "comment": {
+        "undefined": "Set the units to be used for the export of a gbXML file. Default units will be in SI using the defaults of the GBXMLSetUp object if none are provided"
+      }
     },
     {
-      "id": "NewFile-802CB5169A361B3598B9ED13CCA1719CFE1FE0A0F64D2243408CE5EAF65544BB-KMLSettings-HasProperty",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/HasProperty.cs",
-      "label": "NewFile (BH.oM.Adapters.XML.Settings.KMLSettings.NewFile)",
+      "id": "BH.oM.Adapters.XML.Settings.KMLSettings.NewFile",
+      "iri": "https://github.com/BHoM/XML_Toolkit/blob/main/XML_oM/Settings/KMLSettings.cs#L39",
+      "label": "NewFile(BH.oM.Adapters.XML.Settings.KMLSettings.NewFile)",
       "attributes": [
         "datatype"
       ]
@@ -645,99 +736,43 @@
   ],
   "property": [
     {
-      "id": "BH.oM.Adapters.XML.AreaUnit-BH.oM.RDF.IsA-System.IComparable",
-      "type": "owl:DatatypeProperty"
-    },
-    {
-      "id": "BH.oM.Adapters.XML.AreaUnit-BH.oM.RDF.IsA-System.IFormattable",
-      "type": "owl:DatatypeProperty"
-    },
-    {
-      "id": "BH.oM.Adapters.XML.AreaUnit-BH.oM.RDF.IsA-System.IConvertible",
-      "type": "owl:DatatypeProperty"
-    },
-    {
-      "id": "BH.oM.Adapters.XML.AreaUnit-BH.oM.RDF.IsSubclassOf-System.Enum",
-      "type": "owl:DatatypeProperty"
-    },
-    {
-      "id": "BH.oM.Adapters.XML.LengthUnit-BH.oM.RDF.IsA-System.IComparable",
-      "type": "owl:DatatypeProperty"
-    },
-    {
-      "id": "BH.oM.Adapters.XML.LengthUnit-BH.oM.RDF.IsA-System.IFormattable",
-      "type": "owl:DatatypeProperty"
-    },
-    {
-      "id": "BH.oM.Adapters.XML.LengthUnit-BH.oM.RDF.IsA-System.IConvertible",
-      "type": "owl:DatatypeProperty"
-    },
-    {
-      "id": "BH.oM.Adapters.XML.LengthUnit-BH.oM.RDF.IsSubclassOf-System.Enum",
-      "type": "owl:DatatypeProperty"
-    },
-    {
-      "id": "BH.oM.Adapters.XML.TemperatureUnit-BH.oM.RDF.IsA-System.IComparable",
-      "type": "owl:DatatypeProperty"
-    },
-    {
-      "id": "BH.oM.Adapters.XML.TemperatureUnit-BH.oM.RDF.IsA-System.IFormattable",
-      "type": "owl:DatatypeProperty"
-    },
-    {
-      "id": "BH.oM.Adapters.XML.TemperatureUnit-BH.oM.RDF.IsA-System.IConvertible",
-      "type": "owl:DatatypeProperty"
-    },
-    {
-      "id": "BH.oM.Adapters.XML.TemperatureUnit-BH.oM.RDF.IsSubclassOf-System.Enum",
-      "type": "owl:DatatypeProperty"
-    },
-    {
-      "id": "BH.oM.Adapters.XML.VolumeUnit-BH.oM.RDF.IsA-System.IComparable",
-      "type": "owl:DatatypeProperty"
-    },
-    {
-      "id": "BH.oM.Adapters.XML.VolumeUnit-BH.oM.RDF.IsA-System.IFormattable",
-      "type": "owl:DatatypeProperty"
-    },
-    {
-      "id": "BH.oM.Adapters.XML.VolumeUnit-BH.oM.RDF.IsA-System.IConvertible",
-      "type": "owl:DatatypeProperty"
-    },
-    {
-      "id": "BH.oM.Adapters.XML.VolumeUnit-BH.oM.RDF.IsSubclassOf-System.Enum",
-      "type": "owl:DatatypeProperty"
-    },
-    {
-      "id": "BH.oM.Adapters.XML.GBXMLDocumentBuilder-BH.oM.RDF.HasProperty-System.Collections.Generic.List`1[BH.oM.Environment.Elements.Building] Buildings",
+      "id": "BH.oM.Adapters.XML.GBXMLDocumentBuilder-HasProperty-BH.oM.Adapters.XML.GBXMLDocumentBuilder.Buildings",
       "type": "owl:ObjectProperty"
     },
     {
-      "id": "BH.oM.Adapters.XML.GBXMLDocumentBuilder-BH.oM.RDF.HasProperty-System.Collections.Generic.List`1[System.Collections.Generic.List`1[BH.oM.Environment.Elements.Panel]] ElementsAsSpaces",
+      "id": "BH.oM.Adapters.XML.GBXMLDocumentBuilder.Buildings-IsAListOf-BH.oM.Environment.Elements.Building",
       "type": "owl:ObjectProperty"
     },
     {
-      "id": "BH.oM.Adapters.XML.GBXMLDocumentBuilder-BH.oM.RDF.HasProperty-System.Collections.Generic.List`1[BH.oM.Environment.Elements.Panel] ShadingElements",
+      "id": "GBXMLDocumentBuilder-HasProperty-ElementsAsSpaces_0C1C2C567508C7C6078372EACF8F2A76630698594858726A4D9953346CB629C7",
+      "type": "owl:DatatypeProperty"
+    },
+    {
+      "id": "BH.oM.Adapters.XML.GBXMLDocumentBuilder-HasProperty-BH.oM.Adapters.XML.GBXMLDocumentBuilder.ShadingElements",
       "type": "owl:ObjectProperty"
     },
     {
-      "id": "BH.oM.Adapters.XML.GBXMLDocumentBuilder-BH.oM.RDF.HasProperty-System.Collections.Generic.List`1[BH.oM.Spatial.SettingOut.Level] Levels",
+      "id": "BH.oM.Adapters.XML.GBXMLDocumentBuilder.ShadingElements-IsAListOf-BH.oM.Environment.Elements.Panel",
       "type": "owl:ObjectProperty"
     },
     {
-      "id": "BH.oM.Adapters.XML.GBXMLDocumentBuilder-BH.oM.RDF.HasProperty-System.Collections.Generic.List`1[BH.oM.Environment.Elements.Panel] UnassignedPanels",
+      "id": "BH.oM.Adapters.XML.GBXMLDocumentBuilder-HasProperty-BH.oM.Adapters.XML.GBXMLDocumentBuilder.Levels",
       "type": "owl:ObjectProperty"
     },
     {
-      "id": "BH.oM.Adapters.XML.GBXMLDocumentBuilder-BH.oM.RDF.IsA-BH.oM.Base.IBHoMObject",
+      "id": "BH.oM.Adapters.XML.GBXMLDocumentBuilder.Levels-IsAListOf-BH.oM.Spatial.SettingOut.Level",
       "type": "owl:ObjectProperty"
     },
     {
-      "id": "BH.oM.Adapters.XML.GBXMLDocumentBuilder-BH.oM.RDF.IsA-BH.oM.Base.IObject",
+      "id": "BH.oM.Adapters.XML.GBXMLDocumentBuilder-HasProperty-BH.oM.Adapters.XML.GBXMLDocumentBuilder.UnassignedPanels",
       "type": "owl:ObjectProperty"
     },
     {
-      "id": "BH.oM.Adapters.XML.GBXMLDocumentBuilder-BH.oM.RDF.IsSubclassOf-BH.oM.Base.BHoMObject",
+      "id": "BH.oM.Adapters.XML.GBXMLDocumentBuilder.UnassignedPanels-IsAListOf-BH.oM.Environment.Elements.Panel",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "BH.oM.Adapters.XML.GBXMLUnitSetUp-HasProperty-BH.oM.Adapters.XML.GBXMLUnitSetUp.TemperatureUnit",
       "type": "owl:ObjectProperty"
     },
     {
@@ -745,7 +780,7 @@
       "type": "owl:ObjectProperty"
     },
     {
-      "id": "BH.oM.Adapters.XML.GBXMLUnitSetUp-BH.oM.RDF.HasProperty-BH.oM.Adapters.XML.TemperatureUnit TemperatureUnit",
+      "id": "BH.oM.Adapters.XML.GBXMLUnitSetUp-HasProperty-BH.oM.Adapters.XML.GBXMLUnitSetUp.LengthUnit",
       "type": "owl:ObjectProperty"
     },
     {
@@ -753,7 +788,7 @@
       "type": "owl:ObjectProperty"
     },
     {
-      "id": "BH.oM.Adapters.XML.GBXMLUnitSetUp-BH.oM.RDF.HasProperty-BH.oM.Adapters.XML.LengthUnit LengthUnit",
+      "id": "BH.oM.Adapters.XML.GBXMLUnitSetUp-HasProperty-BH.oM.Adapters.XML.GBXMLUnitSetUp.AreaUnit",
       "type": "owl:ObjectProperty"
     },
     {
@@ -761,7 +796,7 @@
       "type": "owl:ObjectProperty"
     },
     {
-      "id": "BH.oM.Adapters.XML.GBXMLUnitSetUp-BH.oM.RDF.HasProperty-BH.oM.Adapters.XML.AreaUnit AreaUnit",
+      "id": "BH.oM.Adapters.XML.GBXMLUnitSetUp-HasProperty-BH.oM.Adapters.XML.GBXMLUnitSetUp.VolumeUnit",
       "type": "owl:ObjectProperty"
     },
     {
@@ -769,19 +804,7 @@
       "type": "owl:ObjectProperty"
     },
     {
-      "id": "BH.oM.Adapters.XML.GBXMLUnitSetUp-BH.oM.RDF.HasProperty-BH.oM.Adapters.XML.VolumeUnit VolumeUnit",
-      "type": "owl:ObjectProperty"
-    },
-    {
-      "id": "BH.oM.Adapters.XML.GBXMLUnitSetUp-BH.oM.RDF.IsA-BH.oM.Base.IBHoMObject",
-      "type": "owl:ObjectProperty"
-    },
-    {
-      "id": "BH.oM.Adapters.XML.GBXMLUnitSetUp-BH.oM.RDF.IsA-BH.oM.Base.IObject",
-      "type": "owl:ObjectProperty"
-    },
-    {
-      "id": "BH.oM.Adapters.XML.GBXMLUnitSetUp-BH.oM.RDF.IsSubclassOf-BH.oM.Base.BHoMObject",
+      "id": "BH.oM.Adapters.XML.GeoReference-HasProperty-BH.oM.Adapters.XML.GeoReference.NorthVector",
       "type": "owl:ObjectProperty"
     },
     {
@@ -789,7 +812,7 @@
       "type": "owl:ObjectProperty"
     },
     {
-      "id": "BH.oM.Adapters.XML.GeoReference-BH.oM.RDF.HasProperty-BH.oM.Geometry.Vector NorthVector",
+      "id": "BH.oM.Adapters.XML.GeoReference-HasProperty-BH.oM.Adapters.XML.GeoReference.Reference",
       "type": "owl:ObjectProperty"
     },
     {
@@ -797,55 +820,35 @@
       "type": "owl:ObjectProperty"
     },
     {
-      "id": "BH.oM.Adapters.XML.GeoReference-BH.oM.RDF.HasProperty-BH.oM.Geometry.Point Reference",
+      "id": "GeoReference-HasProperty-ReferenceLatitude_267C462CFBC9395DF271CD8D9E976F274EE38CB3BB00D915F15D03FF737E67B2",
+      "type": "owl:DatatypeProperty"
+    },
+    {
+      "id": "GeoReference-HasProperty-ReferenceLongitude_73F41A22D57A10772956754C279DF937B9D1053A14EA7EDB899C19D9C97D2C75",
+      "type": "owl:DatatypeProperty"
+    },
+    {
+      "id": "GeoReference-HasProperty-ReferenceAltitude_1D05520F53938EE61C980F90724182AD57F211FF03A8FB67CC69AFA103090084",
+      "type": "owl:DatatypeProperty"
+    },
+    {
+      "id": "BH.oM.Adapters.XML.GeoReference-HasProperty-BH.oM.Adapters.XML.GeoReference.AltitudeMode",
       "type": "owl:ObjectProperty"
-    },
-    {
-      "id": "BH.oM.Adapters.XML.GeoReference-BH.oM.RDF.HasProperty-Double ReferenceLatitude",
-      "type": "owl:DatatypeProperty"
-    },
-    {
-      "id": "BH.oM.Adapters.XML.GeoReference-BH.oM.RDF.HasProperty-Double ReferenceLongitude",
-      "type": "owl:DatatypeProperty"
-    },
-    {
-      "id": "BH.oM.Adapters.XML.GeoReference-BH.oM.RDF.HasProperty-Double ReferenceAltitude",
-      "type": "owl:DatatypeProperty"
     },
     {
       "id": "BH.oM.Adapters.XML.GeoReference.AltitudeMode-IsA-BH.oM.Adapters.XML.Enums.AltitudeMode",
       "type": "owl:ObjectProperty"
     },
     {
-      "id": "BH.oM.Adapters.XML.GeoReference-BH.oM.RDF.HasProperty-BH.oM.Adapters.XML.Enums.AltitudeMode AltitudeMode",
+      "id": "BH.oM.Adapters.XML.KMLDocumentBuilder-HasProperty-BH.oM.Adapters.XML.KMLDocumentBuilder.KMLGeometries",
       "type": "owl:ObjectProperty"
     },
     {
-      "id": "BH.oM.Adapters.XML.GeoReference-BH.oM.RDF.IsA-BH.oM.Base.IBHoMObject",
+      "id": "BH.oM.Adapters.XML.KMLDocumentBuilder.KMLGeometries-IsAListOf-BH.oM.Adapters.XML.KMLGeometry",
       "type": "owl:ObjectProperty"
     },
     {
-      "id": "BH.oM.Adapters.XML.GeoReference-BH.oM.RDF.IsA-BH.oM.Base.IObject",
-      "type": "owl:ObjectProperty"
-    },
-    {
-      "id": "BH.oM.Adapters.XML.GeoReference-BH.oM.RDF.IsSubclassOf-BH.oM.Base.BHoMObject",
-      "type": "owl:ObjectProperty"
-    },
-    {
-      "id": "BH.oM.Adapters.XML.KMLDocumentBuilder-BH.oM.RDF.HasProperty-System.Collections.Generic.List`1[BH.oM.Adapters.XML.KMLGeometry] KMLGeometries",
-      "type": "owl:ObjectProperty"
-    },
-    {
-      "id": "BH.oM.Adapters.XML.KMLDocumentBuilder-BH.oM.RDF.IsA-BH.oM.Base.IBHoMObject",
-      "type": "owl:ObjectProperty"
-    },
-    {
-      "id": "BH.oM.Adapters.XML.KMLDocumentBuilder-BH.oM.RDF.IsA-BH.oM.Base.IObject",
-      "type": "owl:ObjectProperty"
-    },
-    {
-      "id": "BH.oM.Adapters.XML.KMLDocumentBuilder-BH.oM.RDF.IsSubclassOf-BH.oM.Base.BHoMObject",
+      "id": "BH.oM.Adapters.XML.KMLGeometry-HasProperty-BH.oM.Adapters.XML.KMLGeometry.GeoReference",
       "type": "owl:ObjectProperty"
     },
     {
@@ -853,27 +856,19 @@
       "type": "owl:ObjectProperty"
     },
     {
-      "id": "BH.oM.Adapters.XML.KMLGeometry-BH.oM.RDF.HasProperty-BH.oM.Adapters.XML.GeoReference GeoReference",
+      "id": "BH.oM.Adapters.XML.KMLGeometry-HasProperty-BH.oM.Adapters.XML.KMLGeometry.Geometries",
       "type": "owl:ObjectProperty"
     },
     {
-      "id": "BH.oM.Adapters.XML.KMLGeometry-BH.oM.RDF.HasProperty-System.Collections.Generic.List`1[BH.oM.Geometry.IGeometry] Geometries",
+      "id": "BH.oM.Adapters.XML.KMLGeometry.Geometries-IsAListOf-BH.oM.Geometry.IGeometry",
       "type": "owl:ObjectProperty"
     },
     {
-      "id": "BH.oM.Adapters.XML.KMLGeometry-BH.oM.RDF.HasProperty-System.String Description",
+      "id": "KMLGeometry-HasProperty-Description_97EC4550146B4C83F31BA45352C286509A9B8A450F0A0D3005A7E8C888909268",
       "type": "owl:DatatypeProperty"
     },
     {
-      "id": "BH.oM.Adapters.XML.KMLGeometry-BH.oM.RDF.IsA-BH.oM.Base.IBHoMObject",
-      "type": "owl:ObjectProperty"
-    },
-    {
-      "id": "BH.oM.Adapters.XML.KMLGeometry-BH.oM.RDF.IsA-BH.oM.Base.IObject",
-      "type": "owl:ObjectProperty"
-    },
-    {
-      "id": "BH.oM.Adapters.XML.KMLGeometry-BH.oM.RDF.IsSubclassOf-BH.oM.Base.BHoMObject",
+      "id": "BH.oM.Adapters.XML.XMLConfig-HasProperty-BH.oM.Adapters.XML.XMLConfig.Schema",
       "type": "owl:ObjectProperty"
     },
     {
@@ -881,7 +876,7 @@
       "type": "owl:ObjectProperty"
     },
     {
-      "id": "BH.oM.Adapters.XML.XMLConfig-BH.oM.RDF.HasProperty-BH.oM.Adapters.XML.Enums.Schema Schema",
+      "id": "BH.oM.Adapters.XML.XMLConfig-HasProperty-BH.oM.Adapters.XML.XMLConfig.Settings",
       "type": "owl:ObjectProperty"
     },
     {
@@ -889,43 +884,39 @@
       "type": "owl:ObjectProperty"
     },
     {
-      "id": "BH.oM.Adapters.XML.XMLConfig-BH.oM.RDF.HasProperty-BH.oM.Adapters.XML.Settings.IXMLSettings Settings",
+      "id": "XMLConfig-IsSubclassOf-ActionConfig_76904165CCED51A8551FB2B3183167B50166D23B9C9CDD267418DB0DD8CAB68C",
+      "type": "rdfs:subClassOf"
+    },
+    {
+      "id": "GBXMLSettings-HasProperty-ReplaceCurtainWalls_19AE0E90C025DCBA4679647D21B9FE0FEC3457656793C025F70E4F859AE923FC",
+      "type": "owl:DatatypeProperty"
+    },
+    {
+      "id": "GBXMLSettings-HasProperty-ReplaceSolidOpeningsIntoDoors_264D9C9C83ECED1121C7FEDB3B6E5970D8B59675DC81B9A9A84DF775E3BA8C32",
+      "type": "owl:DatatypeProperty"
+    },
+    {
+      "id": "GBXMLSettings-HasProperty-IncludeConstructions_3D97A1EC63C129250093B76CB04CC2001C7ED665E9E27BEEF3AB4E5AAB720642",
+      "type": "owl:DatatypeProperty"
+    },
+    {
+      "id": "GBXMLSettings-HasProperty-FixIncorrectAirTypes_E479A1D63FEFD245F6A6010DA41EBD317D3029ECC046FE7595B914C7D1DB1C27",
+      "type": "owl:DatatypeProperty"
+    },
+    {
+      "id": "GBXMLSettings-HasProperty-NewFile_9A1CECDFCC5AC7F0F6D07B7A259467CE4F3AD77451763604DD00DCBA0E2DA956",
+      "type": "owl:DatatypeProperty"
+    },
+    {
+      "id": "BH.oM.Adapters.XML.Settings.GBXMLSettings-HasProperty-BH.oM.Adapters.XML.Settings.GBXMLSettings.ResultsUnitType",
       "type": "owl:ObjectProperty"
-    },
-    {
-      "id": "BH.oM.Adapters.XML.XMLConfig-BH.oM.RDF.IsA-BH.oM.Base.IObject",
-      "type": "owl:ObjectProperty"
-    },
-    {
-      "id": "BH.oM.Adapters.XML.XMLConfig-BH.oM.RDF.IsSubclassOf-BH.oM.Adapter.ActionConfig",
-      "type": "owl:ObjectProperty"
-    },
-    {
-      "id": "BH.oM.Adapters.XML.Settings.GBXMLSettings-BH.oM.RDF.HasProperty-Boolean ReplaceCurtainWalls",
-      "type": "owl:DatatypeProperty"
-    },
-    {
-      "id": "BH.oM.Adapters.XML.Settings.GBXMLSettings-BH.oM.RDF.HasProperty-Boolean ReplaceSolidOpeningsIntoDoors",
-      "type": "owl:DatatypeProperty"
-    },
-    {
-      "id": "BH.oM.Adapters.XML.Settings.GBXMLSettings-BH.oM.RDF.HasProperty-Boolean IncludeConstructions",
-      "type": "owl:DatatypeProperty"
-    },
-    {
-      "id": "BH.oM.Adapters.XML.Settings.GBXMLSettings-BH.oM.RDF.HasProperty-Boolean FixIncorrectAirTypes",
-      "type": "owl:DatatypeProperty"
-    },
-    {
-      "id": "BH.oM.Adapters.XML.Settings.GBXMLSettings-BH.oM.RDF.HasProperty-Boolean NewFile",
-      "type": "owl:DatatypeProperty"
     },
     {
       "id": "BH.oM.Adapters.XML.Settings.GBXMLSettings.ResultsUnitType-IsA-BH.oM.Adapters.XML.Enums.UnitType",
       "type": "owl:ObjectProperty"
     },
     {
-      "id": "BH.oM.Adapters.XML.Settings.GBXMLSettings-BH.oM.RDF.HasProperty-BH.oM.Adapters.XML.Enums.UnitType ResultsUnitType",
+      "id": "BH.oM.Adapters.XML.Settings.GBXMLSettings-HasProperty-BH.oM.Adapters.XML.Settings.GBXMLSettings.ExportDetail",
       "type": "owl:ObjectProperty"
     },
     {
@@ -933,31 +924,31 @@
       "type": "owl:ObjectProperty"
     },
     {
-      "id": "BH.oM.Adapters.XML.Settings.GBXMLSettings-BH.oM.RDF.HasProperty-BH.oM.Adapters.XML.Enums.ExportDetail ExportDetail",
+      "id": "GBXMLSettings-HasProperty-DistanceTolerance_15232514486729C44A15ED8BC83A16E9906F617D7936AE5D9A9F3E522AEAC0D8",
+      "type": "owl:DatatypeProperty"
+    },
+    {
+      "id": "GBXMLSettings-HasProperty-PlanarTolerance_209C6C203BA873AFD36EBB5CCAEEDEE954DD3EB6168C9DF8E65927A0D59DAD8A",
+      "type": "owl:DatatypeProperty"
+    },
+    {
+      "id": "GBXMLSettings-HasProperty-OffsetDistance_812B702F7646CBA3FE190190CB68830B54938143AEFA63C757011BB0FC61731C",
+      "type": "owl:DatatypeProperty"
+    },
+    {
+      "id": "GBXMLSettings-HasProperty-AngleTolerance_C44AF5A30A1306534E4D4279162F7CC2A5CA502716162C2B7101CC43E7D99229",
+      "type": "owl:DatatypeProperty"
+    },
+    {
+      "id": "BH.oM.Adapters.XML.Settings.GBXMLSettings-HasProperty-BH.oM.Adapters.XML.Settings.GBXMLSettings.RoundingSettings",
       "type": "owl:ObjectProperty"
-    },
-    {
-      "id": "BH.oM.Adapters.XML.Settings.GBXMLSettings-BH.oM.RDF.HasProperty-Double DistanceTolerance",
-      "type": "owl:DatatypeProperty"
-    },
-    {
-      "id": "BH.oM.Adapters.XML.Settings.GBXMLSettings-BH.oM.RDF.HasProperty-Double PlanarTolerance",
-      "type": "owl:DatatypeProperty"
-    },
-    {
-      "id": "BH.oM.Adapters.XML.Settings.GBXMLSettings-BH.oM.RDF.HasProperty-Double OffsetDistance",
-      "type": "owl:DatatypeProperty"
-    },
-    {
-      "id": "BH.oM.Adapters.XML.Settings.GBXMLSettings-BH.oM.RDF.HasProperty-Double AngleTolerance",
-      "type": "owl:DatatypeProperty"
     },
     {
       "id": "BH.oM.Adapters.XML.Settings.GBXMLSettings.RoundingSettings-IsA-BH.oM.XML.GBXML.RoundingSettings",
       "type": "owl:ObjectProperty"
     },
     {
-      "id": "BH.oM.Adapters.XML.Settings.GBXMLSettings-BH.oM.RDF.HasProperty-BH.oM.XML.GBXML.RoundingSettings RoundingSettings",
+      "id": "BH.oM.Adapters.XML.Settings.GBXMLSettings-HasProperty-BH.oM.Adapters.XML.Settings.GBXMLSettings.UnitSetUp",
       "type": "owl:ObjectProperty"
     },
     {
@@ -965,286 +956,118 @@
       "type": "owl:ObjectProperty"
     },
     {
-      "id": "BH.oM.Adapters.XML.Settings.GBXMLSettings-BH.oM.RDF.HasProperty-BH.oM.Adapters.XML.GBXMLUnitSetUp UnitSetUp",
+      "id": "GBXMLSettings-IsA-IXMLSettings_CE8F19747CAE5CB98787AEDF76F96E7E668661A8246C9D013DE1C4A155C2FE4D",
       "type": "owl:ObjectProperty"
     },
     {
-      "id": "BH.oM.Adapters.XML.Settings.GBXMLSettings-BH.oM.RDF.IsA-BH.oM.Base.IBHoMObject",
+      "id": "KMLSettings-HasProperty-NewFile_802CB5169A361B3598B9ED13CCA1719CFE1FE0A0F64D2243408CE5EAF65544BB",
+      "type": "owl:DatatypeProperty"
+    },
+    {
+      "id": "KMLSettings-IsA-IXMLSettings_6B1FDCB926C400D65A832C0C61E13CBF57C0A1AD3C82381712D578DBA80B3893",
       "type": "owl:ObjectProperty"
-    },
-    {
-      "id": "BH.oM.Adapters.XML.Settings.GBXMLSettings-BH.oM.RDF.IsA-BH.oM.Base.IObject",
-      "type": "owl:ObjectProperty"
-    },
-    {
-      "id": "BH.oM.Adapters.XML.Settings.GBXMLSettings-BH.oM.RDF.IsA-BH.oM.Adapters.XML.Settings.IXMLSettings",
-      "type": "owl:ObjectProperty"
-    },
-    {
-      "id": "BH.oM.Adapters.XML.Settings.GBXMLSettings-BH.oM.RDF.IsSubclassOf-BH.oM.Base.BHoMObject",
-      "type": "owl:ObjectProperty"
-    },
-    {
-      "id": "BH.oM.Adapters.XML.Settings.KMLSettings-BH.oM.RDF.HasProperty-Boolean NewFile",
-      "type": "owl:DatatypeProperty"
-    },
-    {
-      "id": "BH.oM.Adapters.XML.Settings.KMLSettings-BH.oM.RDF.IsA-BH.oM.Base.IBHoMObject",
-      "type": "owl:ObjectProperty"
-    },
-    {
-      "id": "BH.oM.Adapters.XML.Settings.KMLSettings-BH.oM.RDF.IsA-BH.oM.Base.IObject",
-      "type": "owl:ObjectProperty"
-    },
-    {
-      "id": "BH.oM.Adapters.XML.Settings.KMLSettings-BH.oM.RDF.IsA-BH.oM.Adapters.XML.Settings.IXMLSettings",
-      "type": "owl:ObjectProperty"
-    },
-    {
-      "id": "BH.oM.Adapters.XML.Settings.KMLSettings-BH.oM.RDF.IsSubclassOf-BH.oM.Base.BHoMObject",
-      "type": "owl:ObjectProperty"
-    },
-    {
-      "id": "BH.oM.Adapters.XML.Enums.AltitudeMode-BH.oM.RDF.IsA-System.IComparable",
-      "type": "owl:DatatypeProperty"
-    },
-    {
-      "id": "BH.oM.Adapters.XML.Enums.AltitudeMode-BH.oM.RDF.IsA-System.IFormattable",
-      "type": "owl:DatatypeProperty"
-    },
-    {
-      "id": "BH.oM.Adapters.XML.Enums.AltitudeMode-BH.oM.RDF.IsA-System.IConvertible",
-      "type": "owl:DatatypeProperty"
-    },
-    {
-      "id": "BH.oM.Adapters.XML.Enums.AltitudeMode-BH.oM.RDF.IsSubclassOf-System.Enum",
-      "type": "owl:DatatypeProperty"
-    },
-    {
-      "id": "BH.oM.Adapters.XML.Enums.ExportDetail-BH.oM.RDF.IsA-System.IComparable",
-      "type": "owl:DatatypeProperty"
-    },
-    {
-      "id": "BH.oM.Adapters.XML.Enums.ExportDetail-BH.oM.RDF.IsA-System.IFormattable",
-      "type": "owl:DatatypeProperty"
-    },
-    {
-      "id": "BH.oM.Adapters.XML.Enums.ExportDetail-BH.oM.RDF.IsA-System.IConvertible",
-      "type": "owl:DatatypeProperty"
-    },
-    {
-      "id": "BH.oM.Adapters.XML.Enums.ExportDetail-BH.oM.RDF.IsSubclassOf-System.Enum",
-      "type": "owl:DatatypeProperty"
-    },
-    {
-      "id": "BH.oM.Adapters.XML.Enums.Schema-BH.oM.RDF.IsA-System.IComparable",
-      "type": "owl:DatatypeProperty"
-    },
-    {
-      "id": "BH.oM.Adapters.XML.Enums.Schema-BH.oM.RDF.IsA-System.IFormattable",
-      "type": "owl:DatatypeProperty"
-    },
-    {
-      "id": "BH.oM.Adapters.XML.Enums.Schema-BH.oM.RDF.IsA-System.IConvertible",
-      "type": "owl:DatatypeProperty"
-    },
-    {
-      "id": "BH.oM.Adapters.XML.Enums.Schema-BH.oM.RDF.IsSubclassOf-System.Enum",
-      "type": "owl:DatatypeProperty"
-    },
-    {
-      "id": "BH.oM.Adapters.XML.Enums.UnitType-BH.oM.RDF.IsA-System.IComparable",
-      "type": "owl:DatatypeProperty"
-    },
-    {
-      "id": "BH.oM.Adapters.XML.Enums.UnitType-BH.oM.RDF.IsA-System.IFormattable",
-      "type": "owl:DatatypeProperty"
-    },
-    {
-      "id": "BH.oM.Adapters.XML.Enums.UnitType-BH.oM.RDF.IsA-System.IConvertible",
-      "type": "owl:DatatypeProperty"
-    },
-    {
-      "id": "BH.oM.Adapters.XML.Enums.UnitType-BH.oM.RDF.IsSubclassOf-System.Enum",
-      "type": "owl:DatatypeProperty"
     }
   ],
   "propertyAttribute": [
     {
-      "id": "BH.oM.Adapters.XML.AreaUnit-BH.oM.RDF.IsA-System.IComparable",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
-      "label": "IsA",
-      "attributes": []
-    },
-    {
-      "id": "BH.oM.Adapters.XML.AreaUnit-BH.oM.RDF.IsA-System.IFormattable",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
-      "label": "IsA",
-      "attributes": []
-    },
-    {
-      "id": "BH.oM.Adapters.XML.AreaUnit-BH.oM.RDF.IsA-System.IConvertible",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
-      "label": "IsA",
-      "attributes": []
-    },
-    {
-      "id": "BH.oM.Adapters.XML.AreaUnit-BH.oM.RDF.IsSubclassOf-System.Enum",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsSubclassOf.cs",
-      "label": "IsSubclassOf",
-      "attributes": []
-    },
-    {
-      "id": "BH.oM.Adapters.XML.LengthUnit-BH.oM.RDF.IsA-System.IComparable",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
-      "label": "IsA",
-      "attributes": []
-    },
-    {
-      "id": "BH.oM.Adapters.XML.LengthUnit-BH.oM.RDF.IsA-System.IFormattable",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
-      "label": "IsA",
-      "attributes": []
-    },
-    {
-      "id": "BH.oM.Adapters.XML.LengthUnit-BH.oM.RDF.IsA-System.IConvertible",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
-      "label": "IsA",
-      "attributes": []
-    },
-    {
-      "id": "BH.oM.Adapters.XML.LengthUnit-BH.oM.RDF.IsSubclassOf-System.Enum",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsSubclassOf.cs",
-      "label": "IsSubclassOf",
-      "attributes": []
-    },
-    {
-      "id": "BH.oM.Adapters.XML.TemperatureUnit-BH.oM.RDF.IsA-System.IComparable",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
-      "label": "IsA",
-      "attributes": []
-    },
-    {
-      "id": "BH.oM.Adapters.XML.TemperatureUnit-BH.oM.RDF.IsA-System.IFormattable",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
-      "label": "IsA",
-      "attributes": []
-    },
-    {
-      "id": "BH.oM.Adapters.XML.TemperatureUnit-BH.oM.RDF.IsA-System.IConvertible",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
-      "label": "IsA",
-      "attributes": []
-    },
-    {
-      "id": "BH.oM.Adapters.XML.TemperatureUnit-BH.oM.RDF.IsSubclassOf-System.Enum",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsSubclassOf.cs",
-      "label": "IsSubclassOf",
-      "attributes": []
-    },
-    {
-      "id": "BH.oM.Adapters.XML.VolumeUnit-BH.oM.RDF.IsA-System.IComparable",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
-      "label": "IsA",
-      "attributes": []
-    },
-    {
-      "id": "BH.oM.Adapters.XML.VolumeUnit-BH.oM.RDF.IsA-System.IFormattable",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
-      "label": "IsA",
-      "attributes": []
-    },
-    {
-      "id": "BH.oM.Adapters.XML.VolumeUnit-BH.oM.RDF.IsA-System.IConvertible",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
-      "label": "IsA",
-      "attributes": []
-    },
-    {
-      "id": "BH.oM.Adapters.XML.VolumeUnit-BH.oM.RDF.IsSubclassOf-System.Enum",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsSubclassOf.cs",
-      "label": "IsSubclassOf",
-      "attributes": []
-    },
-    {
-      "id": "BH.oM.Adapters.XML.GBXMLDocumentBuilder-BH.oM.RDF.HasProperty-System.Collections.Generic.List`1[BH.oM.Environment.Elements.Building] Buildings",
+      "id": "BH.oM.Adapters.XML.GBXMLDocumentBuilder-HasProperty-BH.oM.Adapters.XML.GBXMLDocumentBuilder.Buildings",
       "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/HasProperty.cs",
       "label": "HasProperty",
-      "attributes": [
-        "datatype"
-      ],
-      "domain": "BH.oM.Adapters.XML.GBXMLDocumentBuilder",
-      "range": "Buildings-68DE7DBD0B0E46040991F55637A56EAE00BCFEA070513B43F53AC605A92AF8A3-GBXMLDocumentBuilder-HasProperty"
-    },
-    {
-      "id": "BH.oM.Adapters.XML.GBXMLDocumentBuilder-BH.oM.RDF.HasProperty-System.Collections.Generic.List`1[System.Collections.Generic.List`1[BH.oM.Environment.Elements.Panel]] ElementsAsSpaces",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/HasProperty.cs",
-      "label": "HasProperty",
-      "attributes": [
-        "datatype"
-      ],
-      "domain": "BH.oM.Adapters.XML.GBXMLDocumentBuilder",
-      "range": "ElementsAsSpaces-0C1C2C567508C7C6078372EACF8F2A76630698594858726A4D9953346CB629C7-GBXMLDocumentBuilder-HasProperty"
-    },
-    {
-      "id": "BH.oM.Adapters.XML.GBXMLDocumentBuilder-BH.oM.RDF.HasProperty-System.Collections.Generic.List`1[BH.oM.Environment.Elements.Panel] ShadingElements",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/HasProperty.cs",
-      "label": "HasProperty",
-      "attributes": [
-        "datatype"
-      ],
-      "domain": "BH.oM.Adapters.XML.GBXMLDocumentBuilder",
-      "range": "ShadingElements-266495E10083857B466309A7AFD97D3466C6EE0B0D172E196EFD67138AFA914F-GBXMLDocumentBuilder-HasProperty"
-    },
-    {
-      "id": "BH.oM.Adapters.XML.GBXMLDocumentBuilder-BH.oM.RDF.HasProperty-System.Collections.Generic.List`1[BH.oM.Spatial.SettingOut.Level] Levels",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/HasProperty.cs",
-      "label": "HasProperty",
-      "attributes": [
-        "datatype"
-      ],
-      "domain": "BH.oM.Adapters.XML.GBXMLDocumentBuilder",
-      "range": "Levels-DE851D9F397D0BD5F2D29B72E0E9B9BA62047EFAB6767CAE909BA248767B38BD-GBXMLDocumentBuilder-HasProperty"
-    },
-    {
-      "id": "BH.oM.Adapters.XML.GBXMLDocumentBuilder-BH.oM.RDF.HasProperty-System.Collections.Generic.List`1[BH.oM.Environment.Elements.Panel] UnassignedPanels",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/HasProperty.cs",
-      "label": "HasProperty",
-      "attributes": [
-        "datatype"
-      ],
-      "domain": "BH.oM.Adapters.XML.GBXMLDocumentBuilder",
-      "range": "UnassignedPanels-21D2635FC4537BB904A31DC2268F34DDA89055D15BA15A9916C7D36C54E5B00B-GBXMLDocumentBuilder-HasProperty"
-    },
-    {
-      "id": "BH.oM.Adapters.XML.GBXMLDocumentBuilder-BH.oM.RDF.IsA-BH.oM.Base.IBHoMObject",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
-      "label": "IsA",
       "attributes": [
         "object"
       ],
       "domain": "BH.oM.Adapters.XML.GBXMLDocumentBuilder",
-      "range": "BH.oM.Base.IBHoMObject"
+      "range": "BH.oM.Adapters.XML.GBXMLDocumentBuilder.Buildings"
     },
     {
-      "id": "BH.oM.Adapters.XML.GBXMLDocumentBuilder-BH.oM.RDF.IsA-BH.oM.Base.IObject",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
-      "label": "IsA",
+      "id": "BH.oM.Adapters.XML.GBXMLDocumentBuilder.Buildings-IsAListOf-BH.oM.Environment.Elements.Building",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsAListOf.cs",
+      "label": "IsAListOf",
+      "attributes": [
+        "object"
+      ],
+      "domain": "BH.oM.Adapters.XML.GBXMLDocumentBuilder.Buildings",
+      "range": "BH.oM.Environment.Elements.Building"
+    },
+    {
+      "id": "GBXMLDocumentBuilder-HasProperty-ElementsAsSpaces_0C1C2C567508C7C6078372EACF8F2A76630698594858726A4D9953346CB629C7",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/HasProperty.cs",
+      "label": "HasProperty",
+      "attributes": [
+        "datatype"
+      ],
+      "domain": "BH.oM.Adapters.XML.GBXMLDocumentBuilder",
+      "range": "BH.oM.Adapters.XML.GBXMLDocumentBuilder.ElementsAsSpaces"
+    },
+    {
+      "id": "BH.oM.Adapters.XML.GBXMLDocumentBuilder-HasProperty-BH.oM.Adapters.XML.GBXMLDocumentBuilder.ShadingElements",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/HasProperty.cs",
+      "label": "HasProperty",
       "attributes": [
         "object"
       ],
       "domain": "BH.oM.Adapters.XML.GBXMLDocumentBuilder",
-      "range": "BH.oM.Base.IObject"
+      "range": "BH.oM.Adapters.XML.GBXMLDocumentBuilder.ShadingElements"
     },
     {
-      "id": "BH.oM.Adapters.XML.GBXMLDocumentBuilder-BH.oM.RDF.IsSubclassOf-BH.oM.Base.BHoMObject",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsSubclassOf.cs",
-      "label": "IsSubclassOf",
+      "id": "BH.oM.Adapters.XML.GBXMLDocumentBuilder.ShadingElements-IsAListOf-BH.oM.Environment.Elements.Panel",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsAListOf.cs",
+      "label": "IsAListOf",
+      "attributes": [
+        "object"
+      ],
+      "domain": "BH.oM.Adapters.XML.GBXMLDocumentBuilder.ShadingElements",
+      "range": "BH.oM.Environment.Elements.Panel"
+    },
+    {
+      "id": "BH.oM.Adapters.XML.GBXMLDocumentBuilder-HasProperty-BH.oM.Adapters.XML.GBXMLDocumentBuilder.Levels",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/HasProperty.cs",
+      "label": "HasProperty",
       "attributes": [
         "object"
       ],
       "domain": "BH.oM.Adapters.XML.GBXMLDocumentBuilder",
-      "range": "BH.oM.Base.BHoMObject"
+      "range": "BH.oM.Adapters.XML.GBXMLDocumentBuilder.Levels"
+    },
+    {
+      "id": "BH.oM.Adapters.XML.GBXMLDocumentBuilder.Levels-IsAListOf-BH.oM.Spatial.SettingOut.Level",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsAListOf.cs",
+      "label": "IsAListOf",
+      "attributes": [
+        "object"
+      ],
+      "domain": "BH.oM.Adapters.XML.GBXMLDocumentBuilder.Levels",
+      "range": "BH.oM.Spatial.SettingOut.Level"
+    },
+    {
+      "id": "BH.oM.Adapters.XML.GBXMLDocumentBuilder-HasProperty-BH.oM.Adapters.XML.GBXMLDocumentBuilder.UnassignedPanels",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/HasProperty.cs",
+      "label": "HasProperty",
+      "attributes": [
+        "object"
+      ],
+      "domain": "BH.oM.Adapters.XML.GBXMLDocumentBuilder",
+      "range": "BH.oM.Adapters.XML.GBXMLDocumentBuilder.UnassignedPanels"
+    },
+    {
+      "id": "BH.oM.Adapters.XML.GBXMLDocumentBuilder.UnassignedPanels-IsAListOf-BH.oM.Environment.Elements.Panel",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsAListOf.cs",
+      "label": "IsAListOf",
+      "attributes": [
+        "object"
+      ],
+      "domain": "BH.oM.Adapters.XML.GBXMLDocumentBuilder.UnassignedPanels",
+      "range": "BH.oM.Environment.Elements.Panel"
+    },
+    {
+      "id": "BH.oM.Adapters.XML.GBXMLUnitSetUp-HasProperty-BH.oM.Adapters.XML.GBXMLUnitSetUp.TemperatureUnit",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/HasProperty.cs",
+      "label": "HasProperty",
+      "attributes": [
+        "object"
+      ],
+      "domain": "BH.oM.Adapters.XML.GBXMLUnitSetUp",
+      "range": "BH.oM.Adapters.XML.GBXMLUnitSetUp.TemperatureUnit"
     },
     {
       "id": "BH.oM.Adapters.XML.GBXMLUnitSetUp.TemperatureUnit-IsA-BH.oM.Adapters.XML.TemperatureUnit",
@@ -1257,12 +1080,14 @@
       "range": "BH.oM.Adapters.XML.TemperatureUnit"
     },
     {
-      "id": "BH.oM.Adapters.XML.GBXMLUnitSetUp-BH.oM.RDF.HasProperty-BH.oM.Adapters.XML.TemperatureUnit TemperatureUnit",
+      "id": "BH.oM.Adapters.XML.GBXMLUnitSetUp-HasProperty-BH.oM.Adapters.XML.GBXMLUnitSetUp.LengthUnit",
       "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/HasProperty.cs",
       "label": "HasProperty",
-      "attributes": [],
+      "attributes": [
+        "object"
+      ],
       "domain": "BH.oM.Adapters.XML.GBXMLUnitSetUp",
-      "range": "BH.oM.Adapters.XML.GBXMLUnitSetUp.TemperatureUnit"
+      "range": "BH.oM.Adapters.XML.GBXMLUnitSetUp.LengthUnit"
     },
     {
       "id": "BH.oM.Adapters.XML.GBXMLUnitSetUp.LengthUnit-IsA-BH.oM.Adapters.XML.LengthUnit",
@@ -1275,12 +1100,14 @@
       "range": "BH.oM.Adapters.XML.LengthUnit"
     },
     {
-      "id": "BH.oM.Adapters.XML.GBXMLUnitSetUp-BH.oM.RDF.HasProperty-BH.oM.Adapters.XML.LengthUnit LengthUnit",
+      "id": "BH.oM.Adapters.XML.GBXMLUnitSetUp-HasProperty-BH.oM.Adapters.XML.GBXMLUnitSetUp.AreaUnit",
       "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/HasProperty.cs",
       "label": "HasProperty",
-      "attributes": [],
+      "attributes": [
+        "object"
+      ],
       "domain": "BH.oM.Adapters.XML.GBXMLUnitSetUp",
-      "range": "BH.oM.Adapters.XML.GBXMLUnitSetUp.LengthUnit"
+      "range": "BH.oM.Adapters.XML.GBXMLUnitSetUp.AreaUnit"
     },
     {
       "id": "BH.oM.Adapters.XML.GBXMLUnitSetUp.AreaUnit-IsA-BH.oM.Adapters.XML.AreaUnit",
@@ -1293,12 +1120,14 @@
       "range": "BH.oM.Adapters.XML.AreaUnit"
     },
     {
-      "id": "BH.oM.Adapters.XML.GBXMLUnitSetUp-BH.oM.RDF.HasProperty-BH.oM.Adapters.XML.AreaUnit AreaUnit",
+      "id": "BH.oM.Adapters.XML.GBXMLUnitSetUp-HasProperty-BH.oM.Adapters.XML.GBXMLUnitSetUp.VolumeUnit",
       "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/HasProperty.cs",
       "label": "HasProperty",
-      "attributes": [],
+      "attributes": [
+        "object"
+      ],
       "domain": "BH.oM.Adapters.XML.GBXMLUnitSetUp",
-      "range": "BH.oM.Adapters.XML.GBXMLUnitSetUp.AreaUnit"
+      "range": "BH.oM.Adapters.XML.GBXMLUnitSetUp.VolumeUnit"
     },
     {
       "id": "BH.oM.Adapters.XML.GBXMLUnitSetUp.VolumeUnit-IsA-BH.oM.Adapters.XML.VolumeUnit",
@@ -1311,42 +1140,14 @@
       "range": "BH.oM.Adapters.XML.VolumeUnit"
     },
     {
-      "id": "BH.oM.Adapters.XML.GBXMLUnitSetUp-BH.oM.RDF.HasProperty-BH.oM.Adapters.XML.VolumeUnit VolumeUnit",
+      "id": "BH.oM.Adapters.XML.GeoReference-HasProperty-BH.oM.Adapters.XML.GeoReference.NorthVector",
       "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/HasProperty.cs",
       "label": "HasProperty",
-      "attributes": [],
-      "domain": "BH.oM.Adapters.XML.GBXMLUnitSetUp",
-      "range": "BH.oM.Adapters.XML.GBXMLUnitSetUp.VolumeUnit"
-    },
-    {
-      "id": "BH.oM.Adapters.XML.GBXMLUnitSetUp-BH.oM.RDF.IsA-BH.oM.Base.IBHoMObject",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
-      "label": "IsA",
       "attributes": [
         "object"
       ],
-      "domain": "BH.oM.Adapters.XML.GBXMLUnitSetUp",
-      "range": "BH.oM.Base.IBHoMObject"
-    },
-    {
-      "id": "BH.oM.Adapters.XML.GBXMLUnitSetUp-BH.oM.RDF.IsA-BH.oM.Base.IObject",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
-      "label": "IsA",
-      "attributes": [
-        "object"
-      ],
-      "domain": "BH.oM.Adapters.XML.GBXMLUnitSetUp",
-      "range": "BH.oM.Base.IObject"
-    },
-    {
-      "id": "BH.oM.Adapters.XML.GBXMLUnitSetUp-BH.oM.RDF.IsSubclassOf-BH.oM.Base.BHoMObject",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsSubclassOf.cs",
-      "label": "IsSubclassOf",
-      "attributes": [
-        "object"
-      ],
-      "domain": "BH.oM.Adapters.XML.GBXMLUnitSetUp",
-      "range": "BH.oM.Base.BHoMObject"
+      "domain": "BH.oM.Adapters.XML.GeoReference",
+      "range": "BH.oM.Adapters.XML.GeoReference.NorthVector"
     },
     {
       "id": "BH.oM.Adapters.XML.GeoReference.NorthVector-IsA-BH.oM.Geometry.Vector",
@@ -1359,12 +1160,14 @@
       "range": "BH.oM.Geometry.Vector"
     },
     {
-      "id": "BH.oM.Adapters.XML.GeoReference-BH.oM.RDF.HasProperty-BH.oM.Geometry.Vector NorthVector",
+      "id": "BH.oM.Adapters.XML.GeoReference-HasProperty-BH.oM.Adapters.XML.GeoReference.Reference",
       "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/HasProperty.cs",
       "label": "HasProperty",
-      "attributes": [],
+      "attributes": [
+        "object"
+      ],
       "domain": "BH.oM.Adapters.XML.GeoReference",
-      "range": "BH.oM.Adapters.XML.GeoReference.NorthVector"
+      "range": "BH.oM.Adapters.XML.GeoReference.Reference"
     },
     {
       "id": "BH.oM.Adapters.XML.GeoReference.Reference-IsA-BH.oM.Geometry.Point",
@@ -1377,42 +1180,44 @@
       "range": "BH.oM.Geometry.Point"
     },
     {
-      "id": "BH.oM.Adapters.XML.GeoReference-BH.oM.RDF.HasProperty-BH.oM.Geometry.Point Reference",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/HasProperty.cs",
-      "label": "HasProperty",
-      "attributes": [],
-      "domain": "BH.oM.Adapters.XML.GeoReference",
-      "range": "BH.oM.Adapters.XML.GeoReference.Reference"
-    },
-    {
-      "id": "BH.oM.Adapters.XML.GeoReference-BH.oM.RDF.HasProperty-Double ReferenceLatitude",
+      "id": "GeoReference-HasProperty-ReferenceLatitude_267C462CFBC9395DF271CD8D9E976F274EE38CB3BB00D915F15D03FF737E67B2",
       "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/HasProperty.cs",
       "label": "HasProperty",
       "attributes": [
         "datatype"
       ],
       "domain": "BH.oM.Adapters.XML.GeoReference",
-      "range": "ReferenceLatitude-267C462CFBC9395DF271CD8D9E976F274EE38CB3BB00D915F15D03FF737E67B2-GeoReference-HasProperty"
+      "range": "BH.oM.Adapters.XML.GeoReference.ReferenceLatitude"
     },
     {
-      "id": "BH.oM.Adapters.XML.GeoReference-BH.oM.RDF.HasProperty-Double ReferenceLongitude",
+      "id": "GeoReference-HasProperty-ReferenceLongitude_73F41A22D57A10772956754C279DF937B9D1053A14EA7EDB899C19D9C97D2C75",
       "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/HasProperty.cs",
       "label": "HasProperty",
       "attributes": [
         "datatype"
       ],
       "domain": "BH.oM.Adapters.XML.GeoReference",
-      "range": "ReferenceLongitude-73F41A22D57A10772956754C279DF937B9D1053A14EA7EDB899C19D9C97D2C75-GeoReference-HasProperty"
+      "range": "BH.oM.Adapters.XML.GeoReference.ReferenceLongitude"
     },
     {
-      "id": "BH.oM.Adapters.XML.GeoReference-BH.oM.RDF.HasProperty-Double ReferenceAltitude",
+      "id": "GeoReference-HasProperty-ReferenceAltitude_1D05520F53938EE61C980F90724182AD57F211FF03A8FB67CC69AFA103090084",
       "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/HasProperty.cs",
       "label": "HasProperty",
       "attributes": [
         "datatype"
       ],
       "domain": "BH.oM.Adapters.XML.GeoReference",
-      "range": "ReferenceAltitude-1D05520F53938EE61C980F90724182AD57F211FF03A8FB67CC69AFA103090084-GeoReference-HasProperty"
+      "range": "BH.oM.Adapters.XML.GeoReference.ReferenceAltitude"
+    },
+    {
+      "id": "BH.oM.Adapters.XML.GeoReference-HasProperty-BH.oM.Adapters.XML.GeoReference.AltitudeMode",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/HasProperty.cs",
+      "label": "HasProperty",
+      "attributes": [
+        "object"
+      ],
+      "domain": "BH.oM.Adapters.XML.GeoReference",
+      "range": "BH.oM.Adapters.XML.GeoReference.AltitudeMode"
     },
     {
       "id": "BH.oM.Adapters.XML.GeoReference.AltitudeMode-IsA-BH.oM.Adapters.XML.Enums.AltitudeMode",
@@ -1425,82 +1230,34 @@
       "range": "BH.oM.Adapters.XML.Enums.AltitudeMode"
     },
     {
-      "id": "BH.oM.Adapters.XML.GeoReference-BH.oM.RDF.HasProperty-BH.oM.Adapters.XML.Enums.AltitudeMode AltitudeMode",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/HasProperty.cs",
-      "label": "HasProperty",
-      "attributes": [],
-      "domain": "BH.oM.Adapters.XML.GeoReference",
-      "range": "BH.oM.Adapters.XML.GeoReference.AltitudeMode"
-    },
-    {
-      "id": "BH.oM.Adapters.XML.GeoReference-BH.oM.RDF.IsA-BH.oM.Base.IBHoMObject",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
-      "label": "IsA",
-      "attributes": [
-        "object"
-      ],
-      "domain": "BH.oM.Adapters.XML.GeoReference",
-      "range": "BH.oM.Base.IBHoMObject"
-    },
-    {
-      "id": "BH.oM.Adapters.XML.GeoReference-BH.oM.RDF.IsA-BH.oM.Base.IObject",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
-      "label": "IsA",
-      "attributes": [
-        "object"
-      ],
-      "domain": "BH.oM.Adapters.XML.GeoReference",
-      "range": "BH.oM.Base.IObject"
-    },
-    {
-      "id": "BH.oM.Adapters.XML.GeoReference-BH.oM.RDF.IsSubclassOf-BH.oM.Base.BHoMObject",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsSubclassOf.cs",
-      "label": "IsSubclassOf",
-      "attributes": [
-        "object"
-      ],
-      "domain": "BH.oM.Adapters.XML.GeoReference",
-      "range": "BH.oM.Base.BHoMObject"
-    },
-    {
-      "id": "BH.oM.Adapters.XML.KMLDocumentBuilder-BH.oM.RDF.HasProperty-System.Collections.Generic.List`1[BH.oM.Adapters.XML.KMLGeometry] KMLGeometries",
+      "id": "BH.oM.Adapters.XML.KMLDocumentBuilder-HasProperty-BH.oM.Adapters.XML.KMLDocumentBuilder.KMLGeometries",
       "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/HasProperty.cs",
       "label": "HasProperty",
       "attributes": [
-        "datatype"
-      ],
-      "domain": "BH.oM.Adapters.XML.KMLDocumentBuilder",
-      "range": "KMLGeometries-DE51D16D8404CD940FCBB7ABE3E170C3480F1AB5BC632C715D4E2610BF47406D-KMLDocumentBuilder-HasProperty"
-    },
-    {
-      "id": "BH.oM.Adapters.XML.KMLDocumentBuilder-BH.oM.RDF.IsA-BH.oM.Base.IBHoMObject",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
-      "label": "IsA",
-      "attributes": [
         "object"
       ],
       "domain": "BH.oM.Adapters.XML.KMLDocumentBuilder",
-      "range": "BH.oM.Base.IBHoMObject"
+      "range": "BH.oM.Adapters.XML.KMLDocumentBuilder.KMLGeometries"
     },
     {
-      "id": "BH.oM.Adapters.XML.KMLDocumentBuilder-BH.oM.RDF.IsA-BH.oM.Base.IObject",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
-      "label": "IsA",
+      "id": "BH.oM.Adapters.XML.KMLDocumentBuilder.KMLGeometries-IsAListOf-BH.oM.Adapters.XML.KMLGeometry",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsAListOf.cs",
+      "label": "IsAListOf",
       "attributes": [
         "object"
       ],
-      "domain": "BH.oM.Adapters.XML.KMLDocumentBuilder",
-      "range": "BH.oM.Base.IObject"
+      "domain": "BH.oM.Adapters.XML.KMLDocumentBuilder.KMLGeometries",
+      "range": "BH.oM.Adapters.XML.KMLGeometry"
     },
     {
-      "id": "BH.oM.Adapters.XML.KMLDocumentBuilder-BH.oM.RDF.IsSubclassOf-BH.oM.Base.BHoMObject",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsSubclassOf.cs",
-      "label": "IsSubclassOf",
+      "id": "BH.oM.Adapters.XML.KMLGeometry-HasProperty-BH.oM.Adapters.XML.KMLGeometry.GeoReference",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/HasProperty.cs",
+      "label": "HasProperty",
       "attributes": [
         "object"
       ],
-      "domain": "BH.oM.Adapters.XML.KMLDocumentBuilder",
-      "range": "BH.oM.Base.BHoMObject"
+      "domain": "BH.oM.Adapters.XML.KMLGeometry",
+      "range": "BH.oM.Adapters.XML.KMLGeometry.GeoReference"
     },
     {
       "id": "BH.oM.Adapters.XML.KMLGeometry.GeoReference-IsA-BH.oM.Adapters.XML.GeoReference",
@@ -1513,62 +1270,44 @@
       "range": "BH.oM.Adapters.XML.GeoReference"
     },
     {
-      "id": "BH.oM.Adapters.XML.KMLGeometry-BH.oM.RDF.HasProperty-BH.oM.Adapters.XML.GeoReference GeoReference",
+      "id": "BH.oM.Adapters.XML.KMLGeometry-HasProperty-BH.oM.Adapters.XML.KMLGeometry.Geometries",
       "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/HasProperty.cs",
       "label": "HasProperty",
-      "attributes": [],
+      "attributes": [
+        "object"
+      ],
       "domain": "BH.oM.Adapters.XML.KMLGeometry",
-      "range": "BH.oM.Adapters.XML.KMLGeometry.GeoReference"
+      "range": "BH.oM.Adapters.XML.KMLGeometry.Geometries"
     },
     {
-      "id": "BH.oM.Adapters.XML.KMLGeometry-BH.oM.RDF.HasProperty-System.Collections.Generic.List`1[BH.oM.Geometry.IGeometry] Geometries",
+      "id": "BH.oM.Adapters.XML.KMLGeometry.Geometries-IsAListOf-BH.oM.Geometry.IGeometry",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsAListOf.cs",
+      "label": "IsAListOf",
+      "attributes": [
+        "object"
+      ],
+      "domain": "BH.oM.Adapters.XML.KMLGeometry.Geometries",
+      "range": "BH.oM.Geometry.IGeometry"
+    },
+    {
+      "id": "KMLGeometry-HasProperty-Description_97EC4550146B4C83F31BA45352C286509A9B8A450F0A0D3005A7E8C888909268",
       "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/HasProperty.cs",
       "label": "HasProperty",
       "attributes": [
         "datatype"
       ],
       "domain": "BH.oM.Adapters.XML.KMLGeometry",
-      "range": "Geometries-7EF30B3785C21924B95CA6654B5C631390ABE8EED4EF57073B7505CB3F55A860-KMLGeometry-HasProperty"
+      "range": "BH.oM.Adapters.XML.KMLGeometry.Description"
     },
     {
-      "id": "BH.oM.Adapters.XML.KMLGeometry-BH.oM.RDF.HasProperty-System.String Description",
+      "id": "BH.oM.Adapters.XML.XMLConfig-HasProperty-BH.oM.Adapters.XML.XMLConfig.Schema",
       "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/HasProperty.cs",
       "label": "HasProperty",
       "attributes": [
-        "datatype"
-      ],
-      "domain": "BH.oM.Adapters.XML.KMLGeometry",
-      "range": "Description-97EC4550146B4C83F31BA45352C286509A9B8A450F0A0D3005A7E8C888909268-KMLGeometry-HasProperty"
-    },
-    {
-      "id": "BH.oM.Adapters.XML.KMLGeometry-BH.oM.RDF.IsA-BH.oM.Base.IBHoMObject",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
-      "label": "IsA",
-      "attributes": [
         "object"
       ],
-      "domain": "BH.oM.Adapters.XML.KMLGeometry",
-      "range": "BH.oM.Base.IBHoMObject"
-    },
-    {
-      "id": "BH.oM.Adapters.XML.KMLGeometry-BH.oM.RDF.IsA-BH.oM.Base.IObject",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
-      "label": "IsA",
-      "attributes": [
-        "object"
-      ],
-      "domain": "BH.oM.Adapters.XML.KMLGeometry",
-      "range": "BH.oM.Base.IObject"
-    },
-    {
-      "id": "BH.oM.Adapters.XML.KMLGeometry-BH.oM.RDF.IsSubclassOf-BH.oM.Base.BHoMObject",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsSubclassOf.cs",
-      "label": "IsSubclassOf",
-      "attributes": [
-        "object"
-      ],
-      "domain": "BH.oM.Adapters.XML.KMLGeometry",
-      "range": "BH.oM.Base.BHoMObject"
+      "domain": "BH.oM.Adapters.XML.XMLConfig",
+      "range": "BH.oM.Adapters.XML.XMLConfig.Schema"
     },
     {
       "id": "BH.oM.Adapters.XML.XMLConfig.Schema-IsA-BH.oM.Adapters.XML.Enums.Schema",
@@ -1581,12 +1320,14 @@
       "range": "BH.oM.Adapters.XML.Enums.Schema"
     },
     {
-      "id": "BH.oM.Adapters.XML.XMLConfig-BH.oM.RDF.HasProperty-BH.oM.Adapters.XML.Enums.Schema Schema",
+      "id": "BH.oM.Adapters.XML.XMLConfig-HasProperty-BH.oM.Adapters.XML.XMLConfig.Settings",
       "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/HasProperty.cs",
       "label": "HasProperty",
-      "attributes": [],
+      "attributes": [
+        "object"
+      ],
       "domain": "BH.oM.Adapters.XML.XMLConfig",
-      "range": "BH.oM.Adapters.XML.XMLConfig.Schema"
+      "range": "BH.oM.Adapters.XML.XMLConfig.Settings"
     },
     {
       "id": "BH.oM.Adapters.XML.XMLConfig.Settings-IsA-BH.oM.Adapters.XML.Settings.IXMLSettings",
@@ -1599,27 +1340,9 @@
       "range": "BH.oM.Adapters.XML.Settings.IXMLSettings"
     },
     {
-      "id": "BH.oM.Adapters.XML.XMLConfig-BH.oM.RDF.HasProperty-BH.oM.Adapters.XML.Settings.IXMLSettings Settings",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/HasProperty.cs",
-      "label": "HasProperty",
-      "attributes": [],
-      "domain": "BH.oM.Adapters.XML.XMLConfig",
-      "range": "BH.oM.Adapters.XML.XMLConfig.Settings"
-    },
-    {
-      "id": "BH.oM.Adapters.XML.XMLConfig-BH.oM.RDF.IsA-BH.oM.Base.IObject",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
-      "label": "IsA",
-      "attributes": [
-        "object"
-      ],
-      "domain": "BH.oM.Adapters.XML.XMLConfig",
-      "range": "BH.oM.Base.IObject"
-    },
-    {
-      "id": "BH.oM.Adapters.XML.XMLConfig-BH.oM.RDF.IsSubclassOf-BH.oM.Adapter.ActionConfig",
+      "id": "XMLConfig-IsSubclassOf-ActionConfig_76904165CCED51A8551FB2B3183167B50166D23B9C9CDD267418DB0DD8CAB68C",
       "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsSubclassOf.cs",
-      "label": "IsSubclassOf",
+      "label": "IsA",
       "attributes": [
         "object"
       ],
@@ -1627,54 +1350,64 @@
       "range": "BH.oM.Adapter.ActionConfig"
     },
     {
-      "id": "BH.oM.Adapters.XML.Settings.GBXMLSettings-BH.oM.RDF.HasProperty-Boolean ReplaceCurtainWalls",
+      "id": "GBXMLSettings-HasProperty-ReplaceCurtainWalls_19AE0E90C025DCBA4679647D21B9FE0FEC3457656793C025F70E4F859AE923FC",
       "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/HasProperty.cs",
       "label": "HasProperty",
       "attributes": [
         "datatype"
       ],
       "domain": "BH.oM.Adapters.XML.Settings.GBXMLSettings",
-      "range": "ReplaceCurtainWalls-19AE0E90C025DCBA4679647D21B9FE0FEC3457656793C025F70E4F859AE923FC-GBXMLSettings-HasProperty"
+      "range": "BH.oM.Adapters.XML.Settings.GBXMLSettings.ReplaceCurtainWalls"
     },
     {
-      "id": "BH.oM.Adapters.XML.Settings.GBXMLSettings-BH.oM.RDF.HasProperty-Boolean ReplaceSolidOpeningsIntoDoors",
+      "id": "GBXMLSettings-HasProperty-ReplaceSolidOpeningsIntoDoors_264D9C9C83ECED1121C7FEDB3B6E5970D8B59675DC81B9A9A84DF775E3BA8C32",
       "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/HasProperty.cs",
       "label": "HasProperty",
       "attributes": [
         "datatype"
       ],
       "domain": "BH.oM.Adapters.XML.Settings.GBXMLSettings",
-      "range": "ReplaceSolidOpeningsIntoDoors-264D9C9C83ECED1121C7FEDB3B6E5970D8B59675DC81B9A9A84DF775E3BA8C32-GBXMLSettings-HasProperty"
+      "range": "BH.oM.Adapters.XML.Settings.GBXMLSettings.ReplaceSolidOpeningsIntoDoors"
     },
     {
-      "id": "BH.oM.Adapters.XML.Settings.GBXMLSettings-BH.oM.RDF.HasProperty-Boolean IncludeConstructions",
+      "id": "GBXMLSettings-HasProperty-IncludeConstructions_3D97A1EC63C129250093B76CB04CC2001C7ED665E9E27BEEF3AB4E5AAB720642",
       "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/HasProperty.cs",
       "label": "HasProperty",
       "attributes": [
         "datatype"
       ],
       "domain": "BH.oM.Adapters.XML.Settings.GBXMLSettings",
-      "range": "IncludeConstructions-3D97A1EC63C129250093B76CB04CC2001C7ED665E9E27BEEF3AB4E5AAB720642-GBXMLSettings-HasProperty"
+      "range": "BH.oM.Adapters.XML.Settings.GBXMLSettings.IncludeConstructions"
     },
     {
-      "id": "BH.oM.Adapters.XML.Settings.GBXMLSettings-BH.oM.RDF.HasProperty-Boolean FixIncorrectAirTypes",
+      "id": "GBXMLSettings-HasProperty-FixIncorrectAirTypes_E479A1D63FEFD245F6A6010DA41EBD317D3029ECC046FE7595B914C7D1DB1C27",
       "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/HasProperty.cs",
       "label": "HasProperty",
       "attributes": [
         "datatype"
       ],
       "domain": "BH.oM.Adapters.XML.Settings.GBXMLSettings",
-      "range": "FixIncorrectAirTypes-E479A1D63FEFD245F6A6010DA41EBD317D3029ECC046FE7595B914C7D1DB1C27-GBXMLSettings-HasProperty"
+      "range": "BH.oM.Adapters.XML.Settings.GBXMLSettings.FixIncorrectAirTypes"
     },
     {
-      "id": "BH.oM.Adapters.XML.Settings.GBXMLSettings-BH.oM.RDF.HasProperty-Boolean NewFile",
+      "id": "GBXMLSettings-HasProperty-NewFile_9A1CECDFCC5AC7F0F6D07B7A259467CE4F3AD77451763604DD00DCBA0E2DA956",
       "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/HasProperty.cs",
       "label": "HasProperty",
       "attributes": [
         "datatype"
       ],
       "domain": "BH.oM.Adapters.XML.Settings.GBXMLSettings",
-      "range": "NewFile-9A1CECDFCC5AC7F0F6D07B7A259467CE4F3AD77451763604DD00DCBA0E2DA956-GBXMLSettings-HasProperty"
+      "range": "BH.oM.Adapters.XML.Settings.GBXMLSettings.NewFile"
+    },
+    {
+      "id": "BH.oM.Adapters.XML.Settings.GBXMLSettings-HasProperty-BH.oM.Adapters.XML.Settings.GBXMLSettings.ResultsUnitType",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/HasProperty.cs",
+      "label": "HasProperty",
+      "attributes": [
+        "object"
+      ],
+      "domain": "BH.oM.Adapters.XML.Settings.GBXMLSettings",
+      "range": "BH.oM.Adapters.XML.Settings.GBXMLSettings.ResultsUnitType"
     },
     {
       "id": "BH.oM.Adapters.XML.Settings.GBXMLSettings.ResultsUnitType-IsA-BH.oM.Adapters.XML.Enums.UnitType",
@@ -1687,12 +1420,14 @@
       "range": "BH.oM.Adapters.XML.Enums.UnitType"
     },
     {
-      "id": "BH.oM.Adapters.XML.Settings.GBXMLSettings-BH.oM.RDF.HasProperty-BH.oM.Adapters.XML.Enums.UnitType ResultsUnitType",
+      "id": "BH.oM.Adapters.XML.Settings.GBXMLSettings-HasProperty-BH.oM.Adapters.XML.Settings.GBXMLSettings.ExportDetail",
       "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/HasProperty.cs",
       "label": "HasProperty",
-      "attributes": [],
+      "attributes": [
+        "object"
+      ],
       "domain": "BH.oM.Adapters.XML.Settings.GBXMLSettings",
-      "range": "BH.oM.Adapters.XML.Settings.GBXMLSettings.ResultsUnitType"
+      "range": "BH.oM.Adapters.XML.Settings.GBXMLSettings.ExportDetail"
     },
     {
       "id": "BH.oM.Adapters.XML.Settings.GBXMLSettings.ExportDetail-IsA-BH.oM.Adapters.XML.Enums.ExportDetail",
@@ -1705,52 +1440,54 @@
       "range": "BH.oM.Adapters.XML.Enums.ExportDetail"
     },
     {
-      "id": "BH.oM.Adapters.XML.Settings.GBXMLSettings-BH.oM.RDF.HasProperty-BH.oM.Adapters.XML.Enums.ExportDetail ExportDetail",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/HasProperty.cs",
-      "label": "HasProperty",
-      "attributes": [],
-      "domain": "BH.oM.Adapters.XML.Settings.GBXMLSettings",
-      "range": "BH.oM.Adapters.XML.Settings.GBXMLSettings.ExportDetail"
-    },
-    {
-      "id": "BH.oM.Adapters.XML.Settings.GBXMLSettings-BH.oM.RDF.HasProperty-Double DistanceTolerance",
+      "id": "GBXMLSettings-HasProperty-DistanceTolerance_15232514486729C44A15ED8BC83A16E9906F617D7936AE5D9A9F3E522AEAC0D8",
       "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/HasProperty.cs",
       "label": "HasProperty",
       "attributes": [
         "datatype"
       ],
       "domain": "BH.oM.Adapters.XML.Settings.GBXMLSettings",
-      "range": "DistanceTolerance-15232514486729C44A15ED8BC83A16E9906F617D7936AE5D9A9F3E522AEAC0D8-GBXMLSettings-HasProperty"
+      "range": "BH.oM.Adapters.XML.Settings.GBXMLSettings.DistanceTolerance"
     },
     {
-      "id": "BH.oM.Adapters.XML.Settings.GBXMLSettings-BH.oM.RDF.HasProperty-Double PlanarTolerance",
+      "id": "GBXMLSettings-HasProperty-PlanarTolerance_209C6C203BA873AFD36EBB5CCAEEDEE954DD3EB6168C9DF8E65927A0D59DAD8A",
       "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/HasProperty.cs",
       "label": "HasProperty",
       "attributes": [
         "datatype"
       ],
       "domain": "BH.oM.Adapters.XML.Settings.GBXMLSettings",
-      "range": "PlanarTolerance-209C6C203BA873AFD36EBB5CCAEEDEE954DD3EB6168C9DF8E65927A0D59DAD8A-GBXMLSettings-HasProperty"
+      "range": "BH.oM.Adapters.XML.Settings.GBXMLSettings.PlanarTolerance"
     },
     {
-      "id": "BH.oM.Adapters.XML.Settings.GBXMLSettings-BH.oM.RDF.HasProperty-Double OffsetDistance",
+      "id": "GBXMLSettings-HasProperty-OffsetDistance_812B702F7646CBA3FE190190CB68830B54938143AEFA63C757011BB0FC61731C",
       "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/HasProperty.cs",
       "label": "HasProperty",
       "attributes": [
         "datatype"
       ],
       "domain": "BH.oM.Adapters.XML.Settings.GBXMLSettings",
-      "range": "OffsetDistance-812B702F7646CBA3FE190190CB68830B54938143AEFA63C757011BB0FC61731C-GBXMLSettings-HasProperty"
+      "range": "BH.oM.Adapters.XML.Settings.GBXMLSettings.OffsetDistance"
     },
     {
-      "id": "BH.oM.Adapters.XML.Settings.GBXMLSettings-BH.oM.RDF.HasProperty-Double AngleTolerance",
+      "id": "GBXMLSettings-HasProperty-AngleTolerance_C44AF5A30A1306534E4D4279162F7CC2A5CA502716162C2B7101CC43E7D99229",
       "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/HasProperty.cs",
       "label": "HasProperty",
       "attributes": [
         "datatype"
       ],
       "domain": "BH.oM.Adapters.XML.Settings.GBXMLSettings",
-      "range": "AngleTolerance-C44AF5A30A1306534E4D4279162F7CC2A5CA502716162C2B7101CC43E7D99229-GBXMLSettings-HasProperty"
+      "range": "BH.oM.Adapters.XML.Settings.GBXMLSettings.AngleTolerance"
+    },
+    {
+      "id": "BH.oM.Adapters.XML.Settings.GBXMLSettings-HasProperty-BH.oM.Adapters.XML.Settings.GBXMLSettings.RoundingSettings",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/HasProperty.cs",
+      "label": "HasProperty",
+      "attributes": [
+        "object"
+      ],
+      "domain": "BH.oM.Adapters.XML.Settings.GBXMLSettings",
+      "range": "BH.oM.Adapters.XML.Settings.GBXMLSettings.RoundingSettings"
     },
     {
       "id": "BH.oM.Adapters.XML.Settings.GBXMLSettings.RoundingSettings-IsA-BH.oM.XML.GBXML.RoundingSettings",
@@ -1763,12 +1500,14 @@
       "range": "BH.oM.XML.GBXML.RoundingSettings"
     },
     {
-      "id": "BH.oM.Adapters.XML.Settings.GBXMLSettings-BH.oM.RDF.HasProperty-BH.oM.XML.GBXML.RoundingSettings RoundingSettings",
+      "id": "BH.oM.Adapters.XML.Settings.GBXMLSettings-HasProperty-BH.oM.Adapters.XML.Settings.GBXMLSettings.UnitSetUp",
       "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/HasProperty.cs",
       "label": "HasProperty",
-      "attributes": [],
+      "attributes": [
+        "object"
+      ],
       "domain": "BH.oM.Adapters.XML.Settings.GBXMLSettings",
-      "range": "BH.oM.Adapters.XML.Settings.GBXMLSettings.RoundingSettings"
+      "range": "BH.oM.Adapters.XML.Settings.GBXMLSettings.UnitSetUp"
     },
     {
       "id": "BH.oM.Adapters.XML.Settings.GBXMLSettings.UnitSetUp-IsA-BH.oM.Adapters.XML.GBXMLUnitSetUp",
@@ -1781,198 +1520,40 @@
       "range": "BH.oM.Adapters.XML.GBXMLUnitSetUp"
     },
     {
-      "id": "BH.oM.Adapters.XML.Settings.GBXMLSettings-BH.oM.RDF.HasProperty-BH.oM.Adapters.XML.GBXMLUnitSetUp UnitSetUp",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/HasProperty.cs",
-      "label": "HasProperty",
-      "attributes": [],
-      "domain": "BH.oM.Adapters.XML.Settings.GBXMLSettings",
-      "range": "BH.oM.Adapters.XML.Settings.GBXMLSettings.UnitSetUp"
-    },
-    {
-      "id": "BH.oM.Adapters.XML.Settings.GBXMLSettings-BH.oM.RDF.IsA-BH.oM.Base.IBHoMObject",
+      "id": "GBXMLSettings-IsA-IXMLSettings_CE8F19747CAE5CB98787AEDF76F96E7E668661A8246C9D013DE1C4A155C2FE4D",
       "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
       "label": "IsA",
       "attributes": [
         "object"
       ],
-      "domain": "BH.oM.Adapters.XML.Settings.GBXMLSettings",
-      "range": "BH.oM.Base.IBHoMObject"
-    },
-    {
-      "id": "BH.oM.Adapters.XML.Settings.GBXMLSettings-BH.oM.RDF.IsA-BH.oM.Base.IObject",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
-      "label": "IsA",
-      "attributes": [
-        "object"
-      ],
-      "domain": "BH.oM.Adapters.XML.Settings.GBXMLSettings",
-      "range": "BH.oM.Base.IObject"
-    },
-    {
-      "id": "BH.oM.Adapters.XML.Settings.GBXMLSettings-BH.oM.RDF.IsA-BH.oM.Adapters.XML.Settings.IXMLSettings",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
-      "label": "IsA",
-      "attributes": [
-        "object"
-      ],
+      "comment": {
+        "undefined": "Can be used to describe that a thing belongs to a class; or that a thing is equivalent to another thing. When used for BHoM types, this describes C# interface implementation."
+      },
       "domain": "BH.oM.Adapters.XML.Settings.GBXMLSettings",
       "range": "BH.oM.Adapters.XML.Settings.IXMLSettings"
     },
     {
-      "id": "BH.oM.Adapters.XML.Settings.GBXMLSettings-BH.oM.RDF.IsSubclassOf-BH.oM.Base.BHoMObject",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsSubclassOf.cs",
-      "label": "IsSubclassOf",
-      "attributes": [
-        "object"
-      ],
-      "domain": "BH.oM.Adapters.XML.Settings.GBXMLSettings",
-      "range": "BH.oM.Base.BHoMObject"
-    },
-    {
-      "id": "BH.oM.Adapters.XML.Settings.KMLSettings-BH.oM.RDF.HasProperty-Boolean NewFile",
+      "id": "KMLSettings-HasProperty-NewFile_802CB5169A361B3598B9ED13CCA1719CFE1FE0A0F64D2243408CE5EAF65544BB",
       "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/HasProperty.cs",
       "label": "HasProperty",
       "attributes": [
         "datatype"
       ],
       "domain": "BH.oM.Adapters.XML.Settings.KMLSettings",
-      "range": "NewFile-802CB5169A361B3598B9ED13CCA1719CFE1FE0A0F64D2243408CE5EAF65544BB-KMLSettings-HasProperty"
+      "range": "BH.oM.Adapters.XML.Settings.KMLSettings.NewFile"
     },
     {
-      "id": "BH.oM.Adapters.XML.Settings.KMLSettings-BH.oM.RDF.IsA-BH.oM.Base.IBHoMObject",
+      "id": "KMLSettings-IsA-IXMLSettings_6B1FDCB926C400D65A832C0C61E13CBF57C0A1AD3C82381712D578DBA80B3893",
       "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
       "label": "IsA",
       "attributes": [
         "object"
       ],
-      "domain": "BH.oM.Adapters.XML.Settings.KMLSettings",
-      "range": "BH.oM.Base.IBHoMObject"
-    },
-    {
-      "id": "BH.oM.Adapters.XML.Settings.KMLSettings-BH.oM.RDF.IsA-BH.oM.Base.IObject",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
-      "label": "IsA",
-      "attributes": [
-        "object"
-      ],
-      "domain": "BH.oM.Adapters.XML.Settings.KMLSettings",
-      "range": "BH.oM.Base.IObject"
-    },
-    {
-      "id": "BH.oM.Adapters.XML.Settings.KMLSettings-BH.oM.RDF.IsA-BH.oM.Adapters.XML.Settings.IXMLSettings",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
-      "label": "IsA",
-      "attributes": [
-        "object"
-      ],
+      "comment": {
+        "undefined": "Can be used to describe that a thing belongs to a class; or that a thing is equivalent to another thing. When used for BHoM types, this describes C# interface implementation."
+      },
       "domain": "BH.oM.Adapters.XML.Settings.KMLSettings",
       "range": "BH.oM.Adapters.XML.Settings.IXMLSettings"
-    },
-    {
-      "id": "BH.oM.Adapters.XML.Settings.KMLSettings-BH.oM.RDF.IsSubclassOf-BH.oM.Base.BHoMObject",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsSubclassOf.cs",
-      "label": "IsSubclassOf",
-      "attributes": [
-        "object"
-      ],
-      "domain": "BH.oM.Adapters.XML.Settings.KMLSettings",
-      "range": "BH.oM.Base.BHoMObject"
-    },
-    {
-      "id": "BH.oM.Adapters.XML.Enums.AltitudeMode-BH.oM.RDF.IsA-System.IComparable",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
-      "label": "IsA",
-      "attributes": []
-    },
-    {
-      "id": "BH.oM.Adapters.XML.Enums.AltitudeMode-BH.oM.RDF.IsA-System.IFormattable",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
-      "label": "IsA",
-      "attributes": []
-    },
-    {
-      "id": "BH.oM.Adapters.XML.Enums.AltitudeMode-BH.oM.RDF.IsA-System.IConvertible",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
-      "label": "IsA",
-      "attributes": []
-    },
-    {
-      "id": "BH.oM.Adapters.XML.Enums.AltitudeMode-BH.oM.RDF.IsSubclassOf-System.Enum",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsSubclassOf.cs",
-      "label": "IsSubclassOf",
-      "attributes": []
-    },
-    {
-      "id": "BH.oM.Adapters.XML.Enums.ExportDetail-BH.oM.RDF.IsA-System.IComparable",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
-      "label": "IsA",
-      "attributes": []
-    },
-    {
-      "id": "BH.oM.Adapters.XML.Enums.ExportDetail-BH.oM.RDF.IsA-System.IFormattable",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
-      "label": "IsA",
-      "attributes": []
-    },
-    {
-      "id": "BH.oM.Adapters.XML.Enums.ExportDetail-BH.oM.RDF.IsA-System.IConvertible",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
-      "label": "IsA",
-      "attributes": []
-    },
-    {
-      "id": "BH.oM.Adapters.XML.Enums.ExportDetail-BH.oM.RDF.IsSubclassOf-System.Enum",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsSubclassOf.cs",
-      "label": "IsSubclassOf",
-      "attributes": []
-    },
-    {
-      "id": "BH.oM.Adapters.XML.Enums.Schema-BH.oM.RDF.IsA-System.IComparable",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
-      "label": "IsA",
-      "attributes": []
-    },
-    {
-      "id": "BH.oM.Adapters.XML.Enums.Schema-BH.oM.RDF.IsA-System.IFormattable",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
-      "label": "IsA",
-      "attributes": []
-    },
-    {
-      "id": "BH.oM.Adapters.XML.Enums.Schema-BH.oM.RDF.IsA-System.IConvertible",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
-      "label": "IsA",
-      "attributes": []
-    },
-    {
-      "id": "BH.oM.Adapters.XML.Enums.Schema-BH.oM.RDF.IsSubclassOf-System.Enum",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsSubclassOf.cs",
-      "label": "IsSubclassOf",
-      "attributes": []
-    },
-    {
-      "id": "BH.oM.Adapters.XML.Enums.UnitType-BH.oM.RDF.IsA-System.IComparable",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
-      "label": "IsA",
-      "attributes": []
-    },
-    {
-      "id": "BH.oM.Adapters.XML.Enums.UnitType-BH.oM.RDF.IsA-System.IFormattable",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
-      "label": "IsA",
-      "attributes": []
-    },
-    {
-      "id": "BH.oM.Adapters.XML.Enums.UnitType-BH.oM.RDF.IsA-System.IConvertible",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
-      "label": "IsA",
-      "attributes": []
-    },
-    {
-      "id": "BH.oM.Adapters.XML.Enums.UnitType-BH.oM.RDF.IsSubclassOf-System.Enum",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsSubclassOf.cs",
-      "label": "IsSubclassOf",
-      "attributes": []
     }
   ]
 }

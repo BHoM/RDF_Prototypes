@@ -7,28 +7,28 @@
       "type": "owl:Class"
     },
     {
-      "id": "BH.oM.Base.FragmentSet",
-      "type": "owl:Class"
-    },
-    {
       "id": "BH.oM.Base.BHoMObject.BHoM_Guid",
-      "type": "owl:Class"
+      "type": "rdfs:Datatype"
     },
     {
       "id": "BH.oM.Base.BHoMObject.Name",
-      "type": "owl:Class"
+      "type": "rdfs:Datatype"
     },
     {
       "id": "BH.oM.Base.BHoMObject.Fragments",
       "type": "owl:Class"
     },
     {
-      "id": "BH.oM.Base.BHoMObject.Tags",
+      "id": "BH.oM.Base.FragmentSet",
       "type": "owl:Class"
     },
     {
+      "id": "BH.oM.Base.BHoMObject.Tags",
+      "type": "rdfs:Datatype"
+    },
+    {
       "id": "BH.oM.Base.BHoMObject.CustomData",
-      "type": "owl:Class"
+      "type": "rdfs:Datatype"
     },
     {
       "id": "BH.oM.Base.IBHoMObject",
@@ -37,14 +37,6 @@
     {
       "id": "BH.oM.Base.IObject",
       "type": "owl:Class"
-    },
-    {
-      "id": "System.Object",
-      "type": "owl:Class"
-    },
-    {
-      "id": "System.Collections.ObjectModel.KeyedCollection",
-      "type": "owl:Class"
     }
   ],
   "classAttribute": [
@@ -52,20 +44,16 @@
       "id": "BH.oM.Base.BHoMObject",
       "iri": "https://github.com/BHoM/BHoM/blob/main/BHoM/BHoMObject.cs",
       "label": "BHoMObject (BH.oM.Base)",
-      "attributes": []
-    },
-    {
-      "id": "BH.oM.Base.FragmentSet",
-      "iri": "https://github.com/BHoM/BHoM/blob/main/BHoM/FragmentSet.cs",
-      "label": "FragmentSet (BH.oM.Base)",
-      "attributes": []
+      "attributes": [
+        "object"
+      ]
     },
     {
       "id": "BH.oM.Base.BHoMObject.BHoM_Guid",
       "iri": "https://github.com/BHoM/BHoM/blob/main/BHoM/BHoMObject.cs#L34",
       "label": "BHoM_Guid(BH.oM.Base.BHoMObject.BHoM_Guid)",
       "attributes": [
-        "object"
+        "datatype"
       ]
     },
     {
@@ -73,7 +61,7 @@
       "iri": "https://github.com/BHoM/BHoM/blob/main/BHoM/BHoMObject.cs#L36",
       "label": "Name(BH.oM.Base.BHoMObject.Name)",
       "attributes": [
-        "object"
+        "datatype"
       ]
     },
     {
@@ -83,11 +71,19 @@
       "attributes": []
     },
     {
+      "id": "BH.oM.Base.FragmentSet",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/BHoM/FragmentSet.cs",
+      "label": "FragmentSet (BH.oM.Base)",
+      "attributes": [
+        "object"
+      ]
+    },
+    {
       "id": "BH.oM.Base.BHoMObject.Tags",
       "iri": "https://github.com/BHoM/BHoM/blob/main/BHoM/BHoMObject.cs#L40",
       "label": "Tags(BH.oM.Base.BHoMObject.Tags)",
       "attributes": [
-        "object"
+        "datatype"
       ]
     },
     {
@@ -95,46 +91,34 @@
       "iri": "https://github.com/BHoM/BHoM/blob/main/BHoM/BHoMObject.cs#L42",
       "label": "CustomData(BH.oM.Base.BHoMObject.CustomData)",
       "attributes": [
-        "object"
+        "datatype"
       ]
     },
     {
       "id": "BH.oM.Base.IBHoMObject",
       "iri": "https://github.com/BHoM/BHoM/blob/main/BHoM/Interface/IBHoMObject.cs",
       "label": "IBHoMObject (BH.oM.Base)",
-      "attributes": []
+      "attributes": [
+        "object"
+      ]
     },
     {
       "id": "BH.oM.Base.IObject",
       "iri": "https://github.com/BHoM/BHoM/blob/main/BHoM/Interface/IObject.cs",
       "label": "IObject (BH.oM.Base)",
-      "attributes": []
-    },
-    {
-      "id": "System.Object",
-      "iri": null,
-      "label": "Object (System)",
       "attributes": [
-        "external"
-      ]
-    },
-    {
-      "id": "System.Collections.ObjectModel.KeyedCollection",
-      "iri": null,
-      "label": "KeyedCollection<Type,IFragment> (System.Collections.ObjectModel)",
-      "attributes": [
-        "external"
+        "object"
       ]
     }
   ],
   "property": [
     {
       "id": "BHoMObject-HasProperty-BHoM_Guid_8DD4FC3BF42DE45BD6F7CA027731FAF4B6C4EC3EF0408D0AC6D569D7D0BA135C",
-      "type": "owl:ObjectProperty"
+      "type": "owl:DatatypeProperty"
     },
     {
       "id": "BHoMObject-HasProperty-Name_C89BD1918E32C81C301FA4AEAC4F504CCBFA81C34AE9E8B4279BB52E739A9323",
-      "type": "owl:ObjectProperty"
+      "type": "owl:DatatypeProperty"
     },
     {
       "id": "BH.oM.Base.BHoMObject-HasProperty-BH.oM.Base.BHoMObject.Fragments",
@@ -146,11 +130,11 @@
     },
     {
       "id": "BHoMObject-HasProperty-Tags_19A34329DC9C6BEB81293950676267062031BE42D49425C47FE2F8176894C4A2",
-      "type": "owl:ObjectProperty"
+      "type": "owl:DatatypeProperty"
     },
     {
       "id": "BHoMObject-HasProperty-CustomData_269F7E4A961EBDA28B63F45CDE1CE26775BE6B188367DC5213B8C6D41DCC7DB0",
-      "type": "owl:ObjectProperty"
+      "type": "owl:DatatypeProperty"
     },
     {
       "id": "BHoMObject-IsA-IBHoMObject_477BD74340BED9FA358EF34710894A1B7B85A097E2332104889663EDF9280D91",
@@ -159,18 +143,6 @@
     {
       "id": "BHoMObject-IsA-IObject_081E332C7C6E8ECBB04F85F7030F1CE07E4BEBE212DCA03D66D402E1A7C22392",
       "type": "owl:ObjectProperty"
-    },
-    {
-      "id": "BHoMObject-IsSubclassOf-Object_635514A45CDC50DFD59C0DBEA4F2F6E425996DFAA983D98E48BCE914AD7FCDEF",
-      "type": "rdfs:subClassOf"
-    },
-    {
-      "id": "FragmentSet-IsA-IObject_1C97FE684BA7D8C812D953A63D4514DCB3622FA9F3BA982FE85B22860DBB70BC",
-      "type": "owl:ObjectProperty"
-    },
-    {
-      "id": "FragmentSet-IsSubclassOf-KeyedCollection`2_FF20BE5FC3D0C3A8D118A6C0790132B4310F0C458522D504DB0DE98B5DD14DF6",
-      "type": "rdfs:subClassOf"
     }
   ],
   "propertyAttribute": [
@@ -179,7 +151,7 @@
       "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/HasProperty.cs",
       "label": "HasProperty",
       "attributes": [
-        "object"
+        "datatype"
       ],
       "domain": "BH.oM.Base.BHoMObject",
       "range": "BH.oM.Base.BHoMObject.BHoM_Guid"
@@ -189,7 +161,7 @@
       "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/HasProperty.cs",
       "label": "HasProperty",
       "attributes": [
-        "object"
+        "datatype"
       ],
       "domain": "BH.oM.Base.BHoMObject",
       "range": "BH.oM.Base.BHoMObject.Name"
@@ -219,7 +191,7 @@
       "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/HasProperty.cs",
       "label": "HasProperty",
       "attributes": [
-        "object"
+        "datatype"
       ],
       "domain": "BH.oM.Base.BHoMObject",
       "range": "BH.oM.Base.BHoMObject.Tags"
@@ -229,7 +201,7 @@
       "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/HasProperty.cs",
       "label": "HasProperty",
       "attributes": [
-        "object"
+        "datatype"
       ],
       "domain": "BH.oM.Base.BHoMObject",
       "range": "BH.oM.Base.BHoMObject.CustomData"
@@ -241,6 +213,9 @@
       "attributes": [
         "object"
       ],
+      "comment": {
+        "undefined": "Can be used to describe that a thing belongs to a class; or that a thing is equivalent to another thing. When used for BHoM types, this describes C# interface implementation."
+      },
       "domain": "BH.oM.Base.BHoMObject",
       "range": "BH.oM.Base.IBHoMObject"
     },
@@ -251,38 +226,11 @@
       "attributes": [
         "object"
       ],
+      "comment": {
+        "undefined": "Can be used to describe that a thing belongs to a class; or that a thing is equivalent to another thing. When used for BHoM types, this describes C# interface implementation."
+      },
       "domain": "BH.oM.Base.BHoMObject",
       "range": "BH.oM.Base.IObject"
-    },
-    {
-      "id": "BHoMObject-IsSubclassOf-Object_635514A45CDC50DFD59C0DBEA4F2F6E425996DFAA983D98E48BCE914AD7FCDEF",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsSubclassOf.cs",
-      "label": "IsA",
-      "attributes": [
-        "object"
-      ],
-      "domain": "System.Object",
-      "range": "System.Object"
-    },
-    {
-      "id": "FragmentSet-IsA-IObject_1C97FE684BA7D8C812D953A63D4514DCB3622FA9F3BA982FE85B22860DBB70BC",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
-      "label": "IsA",
-      "attributes": [
-        "object"
-      ],
-      "domain": "BH.oM.Base.FragmentSet",
-      "range": "BH.oM.Base.IObject"
-    },
-    {
-      "id": "FragmentSet-IsSubclassOf-KeyedCollection`2_FF20BE5FC3D0C3A8D118A6C0790132B4310F0C458522D504DB0DE98B5DD14DF6",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsSubclassOf.cs",
-      "label": "IsA",
-      "attributes": [
-        "object"
-      ],
-      "domain": "System.Collections.ObjectModel.KeyedCollection`2[[System.Type, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089],[BH.oM.Base.IFragment, BHoM, Version=5.0.0.0, Culture=neutral, PublicKeyToken=null]]",
-      "range": "System.Collections.ObjectModel.KeyedCollection`2[[System.Type, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089],[BH.oM.Base.IFragment, BHoM, Version=5.0.0.0, Culture=neutral, PublicKeyToken=null]]"
     }
   ]
 }

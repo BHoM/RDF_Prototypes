@@ -1,4 +1,5 @@
 ﻿using System;
+using System.CodeDom.Compiler;
 using System.Collections;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -12,6 +13,12 @@ namespace BH.Engine.RDF
 {
     public static partial class Query
     {
+        [Description("Returns the Full Name of the input Type, only including characters that are alphanumeric, dots and/or greek letters (which are useful for BH.oM.Structure objects properties).")]
+        public static string FullNameValidChars(this PropertyInfo pi)
+        {
+            return $"{RemoveInvalidChars(pi.DeclaringType.FullName)}.{pi.Name}";
+        }
+
         [Description("Returns the Full Name of the input Type, only including characters that are alphanumeric, dots and/or greek letters (which are useful for BH.oM.Structure objects properties).")]
         public static string FullNameValidChars(this Type type)
         {

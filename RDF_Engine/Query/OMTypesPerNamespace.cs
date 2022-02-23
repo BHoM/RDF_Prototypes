@@ -21,10 +21,11 @@ namespace BH.Engine.RDF
             if (namespaceToConsider != null && namespaceToConsider.All(f => !string.IsNullOrWhiteSpace(f)))
                 oMTypes = oMTypes.Where(t => namespaceToConsider.Any(nsf =>
                 {
+                    string typeFullName = t.FullNameValidChars();
                     if (nsf.StartsWith("BH."))
-                        return t.Namespace.StartsWith(nsf);
+                        return typeFullName.StartsWith(nsf);
                     else
-                        return t.Namespace.Contains(nsf);
+                        return typeFullName.Contains(nsf);
                 })).ToList();
 
 
@@ -32,9 +33,9 @@ namespace BH.Engine.RDF
                 oMTypes = oMTypes.Where(t => typeNamesToConsider.Any(tn =>
                 {
                     if (tn.StartsWith("BH."))
-                        return t.Name == tn;
+                        return t.FullNameValidChars() == tn;
                     else
-                        return t.Name.Contains(tn);
+                        return t.NameValidChars().Contains(tn);
                 })).ToList();
 
 
