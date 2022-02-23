@@ -240,7 +240,7 @@ namespace BH.Engine.RDF
                 if (!addedTypes.Contains(classHasPropertyNameRelationId))
                 {
                     propertyArray.AddToIdTypeArray(classHasPropertyNameRelationId, "owl:ObjectProperty");
-                    propertyAttributeArray.AddToAttributeArray(classHasPropertyNameRelationId, hasPropertyRelation.GetType().GithubURI(), hasPropertyRelation.Object.DescriptiveName(), false, new List<string>() { "object" }, domain: new List<string>() { domainType.WebVOWLNodeId() }, range: new List<string>() { propertyNameNodeId });
+                    propertyAttributeArray.AddToAttributeArray(classHasPropertyNameRelationId, hasPropertyRelation.GetType().GithubURI(), hasPropertyRelation.DescriptiveName(), false, new List<string>() { "object" }, domain: new List<string>() { domainType.WebVOWLNodeId() }, range: new List<string>() { propertyNameNodeId });
                     addedTypes.Add(classHasPropertyNameRelationId);
                 }
 

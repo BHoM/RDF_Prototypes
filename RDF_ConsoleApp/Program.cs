@@ -37,6 +37,18 @@ namespace BH.oM.CodeAnalysis.ConsoleApp
             //}, relationRecursion: 1); // this is ok
 
             Engine.RDF.Compute.WriteWebVOWLOntology(new List<string> {
+                "BH.oM.Base.BHoMObject",
+            }, relationRecursion: 0);
+
+            Engine.RDF.Compute.WriteWebVOWLOntology(new List<string> {
+                "BH.oM.Base.BHoMObject",
+            }, relationRecursion: 1);
+
+            Engine.RDF.Compute.WriteWebVOWLOntology(new List<string> {
+                "BH.oM.Base.BHoMObject",
+            }, relationRecursion: 2);
+
+            Engine.RDF.Compute.WriteWebVOWLOntology(new List<string> {
                 "BH.oM.Physical.Elements.Column",
             }, relationRecursion: 0);
 
