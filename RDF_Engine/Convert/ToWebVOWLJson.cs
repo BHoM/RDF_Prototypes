@@ -22,7 +22,7 @@ namespace BH.Engine.RDF
         /***************************************************/
 
         [Description("Convert a Graph ontological representation of (BHoM) types and their relations into a Json format readable by WebVOWL (http://vowl.visualdataweb.org/webvowl.html).")]
-        public static string ToWebVOWLJson(Dictionary<TypeInfo, List<IRelation>> dictionaryGraph, HashSet<string> internalNamespaces = null, HashSet<string> exceptions = null)
+        public static string ToWebVOWLJson(Dictionary<TypeInfo, List<IRelation>> dictionaryGraph, HashSet<string> internalNamespaces = null, HashSet<string> exceptions = null, int relationRecursion = 0)
         {
             if (dictionaryGraph == null)
                 return null;
@@ -43,7 +43,7 @@ namespace BH.Engine.RDF
             JArray classAttributeArray = new JArray();
 
             // Iterate the Types in the dictionary. Each type will be a node in the graph.
-            HashSet<Type> addedTypes = new HashSet<Type>(); // There could be Types that were not gathered yet and that could emerge from the targets of the Relations.
+            HashSet<string> addedTypes = new HashSet<string>(); // There could be Types that were not gathered yet and that could emerge from the targets of the Relations.
 
             foreach (TypeInfo type in dictionaryGraph.Keys)
                 AddWebOwlClassNodes(type, classArray, classAttributeArray, addedTypes);
@@ -55,7 +55,7 @@ namespace BH.Engine.RDF
             List<IRelation> allRelations = dictionaryGraph.Values.SelectMany(v => v).ToList();
             foreach (IRelation relation in allRelations)
             {
-                AddWebOwlRelationNodes(relation as dynamic, classArray, classAttributeArray, addedTypes, propertyArray, propertyAttributeArray, internalNamespaces, exceptions);
+                AddWebOwlRelationNodes(relation as dynamic, classArray, classAttributeArray, addedTypes, propertyArray, propertyAttributeArray, internalNamespaces, exceptions, relationRecursion);
             }
 
             rdfJsonObject.Add(new JProperty("class", classArray));

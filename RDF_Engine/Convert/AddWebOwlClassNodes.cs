@@ -17,11 +17,11 @@ namespace BH.Engine.RDF
 {
     public static partial class Convert
     {
-        private static string AddWebOwlClassNodes(Type type, JArray classArray, JArray classAttributeArray, HashSet<Type> addedTypes, HashSet<string> internalNamespaces = null)
+        private static string AddWebOwlClassNodes(Type type, JArray classArray, JArray classAttributeArray, HashSet<string> addedTypes, HashSet<string> internalNamespaces = null)
         {
             string typeId = type.WebVOWLNodeId();
 
-            if (addedTypes.Contains(type))
+            if (addedTypes.Contains(typeId))
                 return typeId;
 
             Uri typeUri = type.GithubURI();
@@ -34,17 +34,17 @@ namespace BH.Engine.RDF
             // 2) CLASS ATTRIBUTE
             classAttributeArray.AddToAttributeArray(typeId, typeUri, type.DescriptiveName(true), isExternal, new List<string>() { "object" }, comment);
 
-            addedTypes.Add(type.GetTypeInfo());
+            addedTypes.Add(typeId);
 
             return typeId;
         }
 
-        private static string AddWebOwlClassNodes(PropertyInfo pInfo, JArray classArray, JArray classAttributeArray, HashSet<Type> addedTypes)
+        private static string AddWebOwlClassNodes(PropertyInfo pInfo, JArray classArray, JArray classAttributeArray, HashSet<string> addedTypes)
         {
             string propertyNodeId = pInfo.WebVOWLNodeId();
 
             // Check if we need to add a class node for the property type.
-            if (!addedTypes.Contains(pInfo.PropertyType))
+            if (!addedTypes.Contains(propertyNodeId))
             {
 
                 // 1) CLASS
@@ -53,7 +53,7 @@ namespace BH.Engine.RDF
                 // 2) CLASS ATTRIBUTE
                 classAttributeArray.AddToAttributeArray(propertyNodeId, pInfo.GithubURI(), pInfo.DescriptiveName());
 
-                addedTypes.Add(pInfo.PropertyType);
+                addedTypes.Add(propertyNodeId);
             }
 
             return propertyNodeId;

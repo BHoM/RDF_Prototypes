@@ -31,13 +31,50 @@ namespace BH.oM.CodeAnalysis.ConsoleApp
                 "BH.oM.Base.BHoMObject",
             };
 
-            Tests_Alessio.WriteWebVOWLOntology(new List<string> {
+            //Engine.RDF.Compute.WriteWebVOWLOntology(new List<string> {
+            //    "BH.oM.Base.IBHoMObject",
+            //    "BH.oM.Base.BHoMObject",
+            //}, relationRecursion: 1); // this is ok
+
+            Engine.RDF.Compute.WriteWebVOWLOntology(new List<string> {
+                "BH.oM.Physical.Elements.Column",
+            }, relationRecursion: 0);
+
+            Engine.RDF.Compute.WriteWebVOWLOntology(new List<string> {
+                "BH.oM.Architecture.Elements.Ceiling",
+            }, relationRecursion: 0);
+
+            Engine.RDF.Compute.WriteWebVOWLOntology(new List<string> {
+                "BH.oM.Architecture.Elements.Ceiling",
+            }, relationRecursion: 1);
+
+            Engine.RDF.Compute.WriteWebVOWLOntology(new List<string> {
+                "BH.oM.Architecture.Elements.Ceiling",
+            }, relationRecursion: 2);
+
+            Engine.RDF.Compute.WriteWebVOWLOntology(new List<string> {
                 "BH.oM.Architecture.Elements.Ceiling",
                 "BH.oM.Physical.Elements.Wall",
-                "BH.oM.Architecture.Elements.Room"
-            }, exceptions: exceptions);
+                "BH.oM.Architecture.Elements.Room",
+                "BH.oM.Physical.Elements.Column"
+            }, relationRecursion: 1);
 
-            Tests_Alessio.WriteWebVOWLOntologiesPerNamespace();
+            Engine.RDF.Compute.WriteWebVOWLOntology(new List<string> {
+                "BH.oM.Architecture.Elements.Ceiling",
+                "BH.oM.Physical.Elements.Wall",
+                "BH.oM.Architecture.Elements.Room",
+                "BH.oM.Physical.Elements.Column"
+            }, relationRecursion: 2);
+
+            Engine.RDF.Compute.WriteWebVOWLOntology(new List<string> {
+                "BH.oM.Architecture.Elements.Ceiling",
+                "BH.oM.Physical.Elements.Wall",
+                "BH.oM.Architecture.Elements.Room",
+                "BH.oM.Physical.Elements.Column"
+            }, relationRecursion: 99);
+
+
+            //Engine.RDF.Compute.WriteWebVOWLOntologiesPerNamespace();
 
             // Invoke all static methods in `Tests_Alessio` class
             //typeof(Tests_Alessio).GetMethods().Where(mi => mi.IsStatic).ToList().ForEach(mi => mi.Invoke(null, null));
