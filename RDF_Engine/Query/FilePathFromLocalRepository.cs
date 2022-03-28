@@ -21,15 +21,9 @@ namespace BH.Engine.RDF
             "For example, for the type `BH.oM.Structure.Elements.Bar`, the method will look for 'Bar.cs', and the filepath will have to contain the 'namespaceGroup' called `Structure`.")]
         public static string FilePathFromLocalRepository(this Type type, string repositoryRoot, string cacheRootDirectory = null, bool relative = false)
         {
-
-            repositoryRoot = "C:/Users/diels/source/repos";
-
-
             if (string.IsNullOrWhiteSpace(repositoryRoot) || !Directory.Exists(repositoryRoot))
             {
                 repositoryRoot = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.UserProfile), "GitHub");
-              
-
                 if (!Directory.Exists(repositoryRoot))
                 {
                     log.RecordError($"Could not find Local repository directory on disk at path: {repositoryRoot}", true);
