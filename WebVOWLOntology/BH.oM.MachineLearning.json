@@ -52,43 +52,55 @@
     },
     {
       "id": "BH.oM.MachineLearning.LogisticRegression.SkLearnModel",
-      "type": "rdfs:Datatype"
+      "type": "owl:Class"
+    },
+    {
+      "id": "BH.oM.Base.IBHoMObject",
+      "type": "owl:Class"
+    },
+    {
+      "id": "BH.oM.Base.IObject",
+      "type": "owl:Class"
     },
     {
       "id": "BH.oM.Base.IImmutable",
       "type": "owl:Class"
     },
     {
-      "id": "BH.oM.MachineLearning.SupportVectorRegression.SkLearnModel",
-      "type": "rdfs:Datatype"
-    },
-    {
-      "id": "BH.oM.MachineLearning.PolynomialFeatures.SkLearnTransformer",
-      "type": "rdfs:Datatype"
-    },
-    {
-      "id": "BH.oM.MachineLearning.StandardScaler.SkLearnScaler",
-      "type": "rdfs:Datatype"
-    },
-    {
-      "id": "BH.oM.MachineLearning.MinMaxScaler.SkLearnScaler",
-      "type": "rdfs:Datatype"
-    },
-    {
-      "id": "BH.oM.MachineLearning.LinearRegression.SkLearnModel",
-      "type": "rdfs:Datatype"
-    },
-    {
-      "id": "BH.oM.MachineLearning.IRegressionModel.SkLearnModel",
+      "id": "BH.oM.Base.BHoMObject",
       "type": "owl:Class"
     },
     {
-      "id": "BH.oM.MachineLearning.Tensor.NumpyArray",
+      "id": "BH.oM.MachineLearning.SupportVectorRegression.SkLearnModel",
+      "type": "owl:Class"
+    },
+    {
+      "id": "BH.oM.MachineLearning.PolynomialFeatures.SkLearnTransformer",
+      "type": "owl:Class"
+    },
+    {
+      "id": "BH.oM.MachineLearning.StandardScaler.SkLearnScaler",
+      "type": "owl:Class"
+    },
+    {
+      "id": "BH.oM.MachineLearning.MinMaxScaler.SkLearnScaler",
+      "type": "owl:Class"
+    },
+    {
+      "id": "BH.oM.MachineLearning.LinearRegression.SkLearnModel",
+      "type": "owl:Class"
+    },
+    {
+      "id": "BH.oM.MachineLearning.IRegressionModel.SkLearnModel",
       "type": "rdfs:Datatype"
     },
     {
+      "id": "BH.oM.MachineLearning.Tensor.NumpyArray",
+      "type": "owl:Class"
+    },
+    {
       "id": "BH.oM.MachineLearning.Vision.Image.Data",
-      "type": "rdfs:Datatype"
+      "type": "owl:Class"
     },
     {
       "id": "BH.oM.MachineLearning.Vision.DetectionResults.Boxes",
@@ -100,11 +112,11 @@
     },
     {
       "id": "BH.oM.MachineLearning.Vision.DetectionResults.Categories",
-      "type": "rdfs:Datatype"
+      "type": "owl:Class"
     },
     {
       "id": "BH.oM.MachineLearning.Vision.DetectionResults.Scores",
-      "type": "rdfs:Datatype"
+      "type": "owl:Class"
     }
   ],
   "classAttribute": [
@@ -213,11 +225,37 @@
       ]
     },
     {
+      "id": "BH.oM.Base.IBHoMObject",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/BHoM/Interface/IBHoMObject.cs",
+      "label": "IBHoMObject (BH.oM.Base)",
+      "attributes": [
+        "object",
+        "external"
+      ]
+    },
+    {
+      "id": "BH.oM.Base.IObject",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/BHoM/Interface/IObject.cs",
+      "label": "IObject (BH.oM.Base)",
+      "attributes": [
+        "object",
+        "external"
+      ]
+    },
+    {
       "id": "BH.oM.Base.IImmutable",
       "iri": "https://github.com/BHoM/BHoM/blob/main/BHoM/Interface/IImmutable.cs",
       "label": "IImmutable (BH.oM.Base)",
       "attributes": [
         "object",
+        "external"
+      ]
+    },
+    {
+      "id": "BH.oM.Base.BHoMObject",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/BHoM/BHoMObject.cs",
+      "label": "BHoMObject (BH.oM.Base)",
+      "attributes": [
         "external"
       ]
     },
@@ -326,6 +364,14 @@
       "type": "owl:DatatypeProperty"
     },
     {
+      "id": "LogisticRegression-IsA-IBHoMObject_AE90291E7E601EB08AF845E40FF358D65107722F3B35B525867A79B8383FC5DA",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "LogisticRegression-IsA-IObject_C4A7EC0EEBE2833C9F9951977028437EB62405D7D8DF667950B4257C17D30434",
+      "type": "owl:ObjectProperty"
+    },
+    {
       "id": "LogisticRegression-IsA-IRegressionModel_121CF8F5765B5DEAAE89B6CC3BBE636DD9036E9F178B11A38A2EF110306B7073",
       "type": "owl:ObjectProperty"
     },
@@ -334,8 +380,20 @@
       "type": "owl:ObjectProperty"
     },
     {
+      "id": "LogisticRegression-IsSubclassOf-BHoMObject_0A4CBBED37E4CA32C06208CAFE8846B385CE37397625317E2A5AD28F66DAB23C",
+      "type": "rdfs:subClassOf"
+    },
+    {
       "id": "SupportVectorRegression-HasProperty-SkLearnModel_165A944994A134EDB03CA089829CFD22A5C3E4C55CFC3228292DCC0EA108C343",
       "type": "owl:DatatypeProperty"
+    },
+    {
+      "id": "SupportVectorRegression-IsA-IBHoMObject_CBC913BF739C6B54131DE664A26573F27CF9BE9592983CD5E7008862442D8F46",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "SupportVectorRegression-IsA-IObject_9906D397056A34D27CA70A83937AA3197BDF786FDB4851CA1EF9DA9DACF88722",
+      "type": "owl:ObjectProperty"
     },
     {
       "id": "SupportVectorRegression-IsA-IRegressionModel_FB926880338F01D8F9DC65E76E6B436348689C87CA9A03088AA64E7337F01A34",
@@ -346,8 +404,20 @@
       "type": "owl:ObjectProperty"
     },
     {
+      "id": "SupportVectorRegression-IsSubclassOf-BHoMObject_FAB56D5F09F51789843A9B0CC2330E6655706407B5A64D5828D4E6B6BEA4E62E",
+      "type": "rdfs:subClassOf"
+    },
+    {
       "id": "PolynomialFeatures-HasProperty-SkLearnTransformer_06308E3E2130E3445F8B11F363F911889FDAF3F6107FA9740EAC8D0B7977459E",
       "type": "owl:DatatypeProperty"
+    },
+    {
+      "id": "PolynomialFeatures-IsA-IBHoMObject_D5AD05895D4FE2A6652DDD973696F2C25F2BD6C930406DC8257DDDD78DB58217",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "PolynomialFeatures-IsA-IObject_BE50A999452E1488C33C8B1CF6285235C34579B4CDD348B3775E5E862659A06F",
+      "type": "owl:ObjectProperty"
     },
     {
       "id": "PolynomialFeatures-IsA-ITransformer_04CCF381097373996B28F75FB6FA1CD120216C7BB209B0D38C7F1AF1FA776F92",
@@ -358,8 +428,20 @@
       "type": "owl:ObjectProperty"
     },
     {
+      "id": "PolynomialFeatures-IsSubclassOf-BHoMObject_177C3460239A923AC281539E7CBCBA7231BB6C36B47CEA56AC09AD3756789D2B",
+      "type": "rdfs:subClassOf"
+    },
+    {
       "id": "StandardScaler-HasProperty-SkLearnScaler_90D3153596DA1AB5C8FCC849ED5CCC8EEF645B7E064BBC68DFCC8D40EFAB7BE5",
       "type": "owl:DatatypeProperty"
+    },
+    {
+      "id": "StandardScaler-IsA-IBHoMObject_E345B3EFB42FC77696D5C4A0EE43A38BF7F98CCE658F8A555228618C337B1961",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "StandardScaler-IsA-IObject_3A6EFE9C905A475A317109A7203BBB6E9B508F6DA288E74135BBF2B9D821321C",
+      "type": "owl:ObjectProperty"
     },
     {
       "id": "StandardScaler-IsA-IScaler_E5E1B8EA976DAF3DD5DAF226694E52083FE2A4D28F436022397259EA7D984F7D",
@@ -370,8 +452,20 @@
       "type": "owl:ObjectProperty"
     },
     {
+      "id": "StandardScaler-IsSubclassOf-BHoMObject_1184EC17C0ADA52607D5399112921460E9C98975C62F1CB1D7EAA4194E24711F",
+      "type": "rdfs:subClassOf"
+    },
+    {
       "id": "MinMaxScaler-HasProperty-SkLearnScaler_67D7AA86C7BDAF67DB1B83E9CF0C6BC175CC56AE6D7EC6E07E9DB228CD4F092F",
       "type": "owl:DatatypeProperty"
+    },
+    {
+      "id": "MinMaxScaler-IsA-IBHoMObject_8FAA99AB19C3E0C5CBDD718201875CEF48970068D48755FDD9A88733B93EA5C1",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "MinMaxScaler-IsA-IObject_6187657FE8286F7C8B544E790E8BEBBC7983CD3DD365D1AEFBF29A809F4C08CF",
+      "type": "owl:ObjectProperty"
     },
     {
       "id": "MinMaxScaler-IsA-IScaler_AB588FEFECDD736846D40ABBB1DA115A3D77672C989403F6AD92B5B50D689449",
@@ -382,8 +476,20 @@
       "type": "owl:ObjectProperty"
     },
     {
+      "id": "MinMaxScaler-IsSubclassOf-BHoMObject_C41348B3E5EADC76037D1016600C24EFAC84217847601116821F95FF8C452573",
+      "type": "rdfs:subClassOf"
+    },
+    {
       "id": "LinearRegression-HasProperty-SkLearnModel_9E7314AD9086B4255379689AE492F7010E8E75F876BC1137CA89F04FDDC15F7A",
       "type": "owl:DatatypeProperty"
+    },
+    {
+      "id": "LinearRegression-IsA-IBHoMObject_3C9F8D5662CD2E714DA89F0C56B7A9017764B5DA39AAFA21CB231303E7939008",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "LinearRegression-IsA-IObject_ACB56347C0BE6A392E062AC187D74B5A3E3D3040BEB70959C2563A65D3990DF5",
+      "type": "owl:ObjectProperty"
     },
     {
       "id": "LinearRegression-IsA-IRegressionModel_915DD1E5C8EF311BAE5E10A4A8F2BE8FABF6E5730E02AC188EEFEFEBD3DACD5B",
@@ -394,6 +500,10 @@
       "type": "owl:ObjectProperty"
     },
     {
+      "id": "LinearRegression-IsSubclassOf-BHoMObject_92E8CCA640BE663DD404BB463C183A6B3482D7B3F2A92543D39D440459CC92C1",
+      "type": "rdfs:subClassOf"
+    },
+    {
       "id": "IRegressionModel-RequiresProperty-SkLearnModel_05A5E61454AB47AF4F17680CBB984216EEF52A1147F480448F8D7BD36D3B38F1",
       "type": "owl:DatatypeProperty"
     },
@@ -402,16 +512,40 @@
       "type": "owl:DatatypeProperty"
     },
     {
+      "id": "Tensor-IsA-IBHoMObject_EBB63FC133A55AD77EFCA559810996BDFFC81CA9449AB300188607A8A30B035D",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "Tensor-IsA-IObject_CEE8AA3D0A954D186FA562367D6CC829C41E95D52C0A286CBE4BE526C49FE38E",
+      "type": "owl:ObjectProperty"
+    },
+    {
       "id": "Tensor-IsA-IImmutable_F814A3B33F7A08D9D672122CB6DC391E93C402126A424AE3FB367A05332EA7CA",
       "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "Tensor-IsSubclassOf-BHoMObject_053E3A3E27E0BC544420CF6835EB3F6BB5DBC1C5DD7D720EFB3BFAF8BFA307D1",
+      "type": "rdfs:subClassOf"
     },
     {
       "id": "Image-HasProperty-Data_6CCBBA7E6C3E9679D72C988DCFD30C1338E27FDCEE893B52B0FD355A45ACFE76",
       "type": "owl:DatatypeProperty"
     },
     {
+      "id": "Image-IsA-IBHoMObject_F8892BA04C3A7A822C78E3E222F5F373A1EA3DDCEDC1BF80B81CCC9B37563F98",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "Image-IsA-IObject_3D8FF021EAE5E48B4869617C50D6949334EE116EEDECF5D81EC2B3D9AA2336FC",
+      "type": "owl:ObjectProperty"
+    },
+    {
       "id": "Image-IsA-IImmutable_60B2EFD0B19253640F7998CE94ABF76B1919096E1BF111FAE89959E1B3D23EE3",
       "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "Image-IsSubclassOf-BHoMObject_1A9132A37FDB3EAF4E1691CCC2189C9F8C981BA298B7282839509C8EC9FDBFBD",
+      "type": "rdfs:subClassOf"
     },
     {
       "id": "BH.oM.MachineLearning.Vision.DetectionResults-HasProperty-BH.oM.MachineLearning.Vision.DetectionResults.Boxes",
@@ -442,6 +576,32 @@
       "range": "BH.oM.MachineLearning.LogisticRegression.SkLearnModel"
     },
     {
+      "id": "LogisticRegression-IsA-IBHoMObject_AE90291E7E601EB08AF845E40FF358D65107722F3B35B525867A79B8383FC5DA",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "label": "IsA",
+      "attributes": [
+        "object"
+      ],
+      "comment": {
+        "undefined": "Can be used to describe that a thing belongs to a class; or that a thing is equivalent to another thing. When used for BHoM types, this describes C# interface implementation."
+      },
+      "domain": "BH.oM.MachineLearning.LogisticRegression",
+      "range": "BH.oM.Base.IBHoMObject"
+    },
+    {
+      "id": "LogisticRegression-IsA-IObject_C4A7EC0EEBE2833C9F9951977028437EB62405D7D8DF667950B4257C17D30434",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "label": "IsA",
+      "attributes": [
+        "object"
+      ],
+      "comment": {
+        "undefined": "Can be used to describe that a thing belongs to a class; or that a thing is equivalent to another thing. When used for BHoM types, this describes C# interface implementation."
+      },
+      "domain": "BH.oM.MachineLearning.LogisticRegression",
+      "range": "BH.oM.Base.IObject"
+    },
+    {
       "id": "LogisticRegression-IsA-IRegressionModel_121CF8F5765B5DEAAE89B6CC3BBE636DD9036E9F178B11A38A2EF110306B7073",
       "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
       "label": "IsA",
@@ -468,6 +628,16 @@
       "range": "BH.oM.Base.IImmutable"
     },
     {
+      "id": "LogisticRegression-IsSubclassOf-BHoMObject_0A4CBBED37E4CA32C06208CAFE8846B385CE37397625317E2A5AD28F66DAB23C",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsSubclassOf.cs",
+      "label": "IsA",
+      "attributes": [
+        "object"
+      ],
+      "domain": "BH.oM.MachineLearning.LogisticRegression",
+      "range": "BH.oM.Base.BHoMObject"
+    },
+    {
       "id": "SupportVectorRegression-HasProperty-SkLearnModel_165A944994A134EDB03CA089829CFD22A5C3E4C55CFC3228292DCC0EA108C343",
       "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/HasProperty.cs",
       "label": "HasProperty",
@@ -476,6 +646,32 @@
       ],
       "domain": "BH.oM.MachineLearning.SupportVectorRegression",
       "range": "BH.oM.MachineLearning.SupportVectorRegression.SkLearnModel"
+    },
+    {
+      "id": "SupportVectorRegression-IsA-IBHoMObject_CBC913BF739C6B54131DE664A26573F27CF9BE9592983CD5E7008862442D8F46",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "label": "IsA",
+      "attributes": [
+        "object"
+      ],
+      "comment": {
+        "undefined": "Can be used to describe that a thing belongs to a class; or that a thing is equivalent to another thing. When used for BHoM types, this describes C# interface implementation."
+      },
+      "domain": "BH.oM.MachineLearning.SupportVectorRegression",
+      "range": "BH.oM.Base.IBHoMObject"
+    },
+    {
+      "id": "SupportVectorRegression-IsA-IObject_9906D397056A34D27CA70A83937AA3197BDF786FDB4851CA1EF9DA9DACF88722",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "label": "IsA",
+      "attributes": [
+        "object"
+      ],
+      "comment": {
+        "undefined": "Can be used to describe that a thing belongs to a class; or that a thing is equivalent to another thing. When used for BHoM types, this describes C# interface implementation."
+      },
+      "domain": "BH.oM.MachineLearning.SupportVectorRegression",
+      "range": "BH.oM.Base.IObject"
     },
     {
       "id": "SupportVectorRegression-IsA-IRegressionModel_FB926880338F01D8F9DC65E76E6B436348689C87CA9A03088AA64E7337F01A34",
@@ -504,6 +700,16 @@
       "range": "BH.oM.Base.IImmutable"
     },
     {
+      "id": "SupportVectorRegression-IsSubclassOf-BHoMObject_FAB56D5F09F51789843A9B0CC2330E6655706407B5A64D5828D4E6B6BEA4E62E",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsSubclassOf.cs",
+      "label": "IsA",
+      "attributes": [
+        "object"
+      ],
+      "domain": "BH.oM.MachineLearning.SupportVectorRegression",
+      "range": "BH.oM.Base.BHoMObject"
+    },
+    {
       "id": "PolynomialFeatures-HasProperty-SkLearnTransformer_06308E3E2130E3445F8B11F363F911889FDAF3F6107FA9740EAC8D0B7977459E",
       "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/HasProperty.cs",
       "label": "HasProperty",
@@ -512,6 +718,32 @@
       ],
       "domain": "BH.oM.MachineLearning.PolynomialFeatures",
       "range": "BH.oM.MachineLearning.PolynomialFeatures.SkLearnTransformer"
+    },
+    {
+      "id": "PolynomialFeatures-IsA-IBHoMObject_D5AD05895D4FE2A6652DDD973696F2C25F2BD6C930406DC8257DDDD78DB58217",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "label": "IsA",
+      "attributes": [
+        "object"
+      ],
+      "comment": {
+        "undefined": "Can be used to describe that a thing belongs to a class; or that a thing is equivalent to another thing. When used for BHoM types, this describes C# interface implementation."
+      },
+      "domain": "BH.oM.MachineLearning.PolynomialFeatures",
+      "range": "BH.oM.Base.IBHoMObject"
+    },
+    {
+      "id": "PolynomialFeatures-IsA-IObject_BE50A999452E1488C33C8B1CF6285235C34579B4CDD348B3775E5E862659A06F",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "label": "IsA",
+      "attributes": [
+        "object"
+      ],
+      "comment": {
+        "undefined": "Can be used to describe that a thing belongs to a class; or that a thing is equivalent to another thing. When used for BHoM types, this describes C# interface implementation."
+      },
+      "domain": "BH.oM.MachineLearning.PolynomialFeatures",
+      "range": "BH.oM.Base.IObject"
     },
     {
       "id": "PolynomialFeatures-IsA-ITransformer_04CCF381097373996B28F75FB6FA1CD120216C7BB209B0D38C7F1AF1FA776F92",
@@ -540,6 +772,16 @@
       "range": "BH.oM.Base.IImmutable"
     },
     {
+      "id": "PolynomialFeatures-IsSubclassOf-BHoMObject_177C3460239A923AC281539E7CBCBA7231BB6C36B47CEA56AC09AD3756789D2B",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsSubclassOf.cs",
+      "label": "IsA",
+      "attributes": [
+        "object"
+      ],
+      "domain": "BH.oM.MachineLearning.PolynomialFeatures",
+      "range": "BH.oM.Base.BHoMObject"
+    },
+    {
       "id": "StandardScaler-HasProperty-SkLearnScaler_90D3153596DA1AB5C8FCC849ED5CCC8EEF645B7E064BBC68DFCC8D40EFAB7BE5",
       "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/HasProperty.cs",
       "label": "HasProperty",
@@ -548,6 +790,32 @@
       ],
       "domain": "BH.oM.MachineLearning.StandardScaler",
       "range": "BH.oM.MachineLearning.StandardScaler.SkLearnScaler"
+    },
+    {
+      "id": "StandardScaler-IsA-IBHoMObject_E345B3EFB42FC77696D5C4A0EE43A38BF7F98CCE658F8A555228618C337B1961",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "label": "IsA",
+      "attributes": [
+        "object"
+      ],
+      "comment": {
+        "undefined": "Can be used to describe that a thing belongs to a class; or that a thing is equivalent to another thing. When used for BHoM types, this describes C# interface implementation."
+      },
+      "domain": "BH.oM.MachineLearning.StandardScaler",
+      "range": "BH.oM.Base.IBHoMObject"
+    },
+    {
+      "id": "StandardScaler-IsA-IObject_3A6EFE9C905A475A317109A7203BBB6E9B508F6DA288E74135BBF2B9D821321C",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "label": "IsA",
+      "attributes": [
+        "object"
+      ],
+      "comment": {
+        "undefined": "Can be used to describe that a thing belongs to a class; or that a thing is equivalent to another thing. When used for BHoM types, this describes C# interface implementation."
+      },
+      "domain": "BH.oM.MachineLearning.StandardScaler",
+      "range": "BH.oM.Base.IObject"
     },
     {
       "id": "StandardScaler-IsA-IScaler_E5E1B8EA976DAF3DD5DAF226694E52083FE2A4D28F436022397259EA7D984F7D",
@@ -576,6 +844,16 @@
       "range": "BH.oM.Base.IImmutable"
     },
     {
+      "id": "StandardScaler-IsSubclassOf-BHoMObject_1184EC17C0ADA52607D5399112921460E9C98975C62F1CB1D7EAA4194E24711F",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsSubclassOf.cs",
+      "label": "IsA",
+      "attributes": [
+        "object"
+      ],
+      "domain": "BH.oM.MachineLearning.StandardScaler",
+      "range": "BH.oM.Base.BHoMObject"
+    },
+    {
       "id": "MinMaxScaler-HasProperty-SkLearnScaler_67D7AA86C7BDAF67DB1B83E9CF0C6BC175CC56AE6D7EC6E07E9DB228CD4F092F",
       "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/HasProperty.cs",
       "label": "HasProperty",
@@ -584,6 +862,32 @@
       ],
       "domain": "BH.oM.MachineLearning.MinMaxScaler",
       "range": "BH.oM.MachineLearning.MinMaxScaler.SkLearnScaler"
+    },
+    {
+      "id": "MinMaxScaler-IsA-IBHoMObject_8FAA99AB19C3E0C5CBDD718201875CEF48970068D48755FDD9A88733B93EA5C1",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "label": "IsA",
+      "attributes": [
+        "object"
+      ],
+      "comment": {
+        "undefined": "Can be used to describe that a thing belongs to a class; or that a thing is equivalent to another thing. When used for BHoM types, this describes C# interface implementation."
+      },
+      "domain": "BH.oM.MachineLearning.MinMaxScaler",
+      "range": "BH.oM.Base.IBHoMObject"
+    },
+    {
+      "id": "MinMaxScaler-IsA-IObject_6187657FE8286F7C8B544E790E8BEBBC7983CD3DD365D1AEFBF29A809F4C08CF",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "label": "IsA",
+      "attributes": [
+        "object"
+      ],
+      "comment": {
+        "undefined": "Can be used to describe that a thing belongs to a class; or that a thing is equivalent to another thing. When used for BHoM types, this describes C# interface implementation."
+      },
+      "domain": "BH.oM.MachineLearning.MinMaxScaler",
+      "range": "BH.oM.Base.IObject"
     },
     {
       "id": "MinMaxScaler-IsA-IScaler_AB588FEFECDD736846D40ABBB1DA115A3D77672C989403F6AD92B5B50D689449",
@@ -612,6 +916,16 @@
       "range": "BH.oM.Base.IImmutable"
     },
     {
+      "id": "MinMaxScaler-IsSubclassOf-BHoMObject_C41348B3E5EADC76037D1016600C24EFAC84217847601116821F95FF8C452573",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsSubclassOf.cs",
+      "label": "IsA",
+      "attributes": [
+        "object"
+      ],
+      "domain": "BH.oM.MachineLearning.MinMaxScaler",
+      "range": "BH.oM.Base.BHoMObject"
+    },
+    {
       "id": "LinearRegression-HasProperty-SkLearnModel_9E7314AD9086B4255379689AE492F7010E8E75F876BC1137CA89F04FDDC15F7A",
       "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/HasProperty.cs",
       "label": "HasProperty",
@@ -620,6 +934,32 @@
       ],
       "domain": "BH.oM.MachineLearning.LinearRegression",
       "range": "BH.oM.MachineLearning.LinearRegression.SkLearnModel"
+    },
+    {
+      "id": "LinearRegression-IsA-IBHoMObject_3C9F8D5662CD2E714DA89F0C56B7A9017764B5DA39AAFA21CB231303E7939008",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "label": "IsA",
+      "attributes": [
+        "object"
+      ],
+      "comment": {
+        "undefined": "Can be used to describe that a thing belongs to a class; or that a thing is equivalent to another thing. When used for BHoM types, this describes C# interface implementation."
+      },
+      "domain": "BH.oM.MachineLearning.LinearRegression",
+      "range": "BH.oM.Base.IBHoMObject"
+    },
+    {
+      "id": "LinearRegression-IsA-IObject_ACB56347C0BE6A392E062AC187D74B5A3E3D3040BEB70959C2563A65D3990DF5",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "label": "IsA",
+      "attributes": [
+        "object"
+      ],
+      "comment": {
+        "undefined": "Can be used to describe that a thing belongs to a class; or that a thing is equivalent to another thing. When used for BHoM types, this describes C# interface implementation."
+      },
+      "domain": "BH.oM.MachineLearning.LinearRegression",
+      "range": "BH.oM.Base.IObject"
     },
     {
       "id": "LinearRegression-IsA-IRegressionModel_915DD1E5C8EF311BAE5E10A4A8F2BE8FABF6E5730E02AC188EEFEFEBD3DACD5B",
@@ -648,6 +988,16 @@
       "range": "BH.oM.Base.IImmutable"
     },
     {
+      "id": "LinearRegression-IsSubclassOf-BHoMObject_92E8CCA640BE663DD404BB463C183A6B3482D7B3F2A92543D39D440459CC92C1",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsSubclassOf.cs",
+      "label": "IsA",
+      "attributes": [
+        "object"
+      ],
+      "domain": "BH.oM.MachineLearning.LinearRegression",
+      "range": "BH.oM.Base.BHoMObject"
+    },
+    {
       "id": "IRegressionModel-RequiresProperty-SkLearnModel_05A5E61454AB47AF4F17680CBB984216EEF52A1147F480448F8D7BD36D3B38F1",
       "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/RequiresProperty.cs",
       "label": "RequiresProperty",
@@ -668,6 +1018,32 @@
       "range": "BH.oM.MachineLearning.Tensor.NumpyArray"
     },
     {
+      "id": "Tensor-IsA-IBHoMObject_EBB63FC133A55AD77EFCA559810996BDFFC81CA9449AB300188607A8A30B035D",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "label": "IsA",
+      "attributes": [
+        "object"
+      ],
+      "comment": {
+        "undefined": "Can be used to describe that a thing belongs to a class; or that a thing is equivalent to another thing. When used for BHoM types, this describes C# interface implementation."
+      },
+      "domain": "BH.oM.MachineLearning.Tensor",
+      "range": "BH.oM.Base.IBHoMObject"
+    },
+    {
+      "id": "Tensor-IsA-IObject_CEE8AA3D0A954D186FA562367D6CC829C41E95D52C0A286CBE4BE526C49FE38E",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "label": "IsA",
+      "attributes": [
+        "object"
+      ],
+      "comment": {
+        "undefined": "Can be used to describe that a thing belongs to a class; or that a thing is equivalent to another thing. When used for BHoM types, this describes C# interface implementation."
+      },
+      "domain": "BH.oM.MachineLearning.Tensor",
+      "range": "BH.oM.Base.IObject"
+    },
+    {
       "id": "Tensor-IsA-IImmutable_F814A3B33F7A08D9D672122CB6DC391E93C402126A424AE3FB367A05332EA7CA",
       "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
       "label": "IsA",
@@ -681,6 +1057,16 @@
       "range": "BH.oM.Base.IImmutable"
     },
     {
+      "id": "Tensor-IsSubclassOf-BHoMObject_053E3A3E27E0BC544420CF6835EB3F6BB5DBC1C5DD7D720EFB3BFAF8BFA307D1",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsSubclassOf.cs",
+      "label": "IsA",
+      "attributes": [
+        "object"
+      ],
+      "domain": "BH.oM.MachineLearning.Tensor",
+      "range": "BH.oM.Base.BHoMObject"
+    },
+    {
       "id": "Image-HasProperty-Data_6CCBBA7E6C3E9679D72C988DCFD30C1338E27FDCEE893B52B0FD355A45ACFE76",
       "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/HasProperty.cs",
       "label": "HasProperty",
@@ -689,6 +1075,32 @@
       ],
       "domain": "BH.oM.MachineLearning.Vision.Image",
       "range": "BH.oM.MachineLearning.Vision.Image.Data"
+    },
+    {
+      "id": "Image-IsA-IBHoMObject_F8892BA04C3A7A822C78E3E222F5F373A1EA3DDCEDC1BF80B81CCC9B37563F98",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "label": "IsA",
+      "attributes": [
+        "object"
+      ],
+      "comment": {
+        "undefined": "Can be used to describe that a thing belongs to a class; or that a thing is equivalent to another thing. When used for BHoM types, this describes C# interface implementation."
+      },
+      "domain": "BH.oM.MachineLearning.Vision.Image",
+      "range": "BH.oM.Base.IBHoMObject"
+    },
+    {
+      "id": "Image-IsA-IObject_3D8FF021EAE5E48B4869617C50D6949334EE116EEDECF5D81EC2B3D9AA2336FC",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "label": "IsA",
+      "attributes": [
+        "object"
+      ],
+      "comment": {
+        "undefined": "Can be used to describe that a thing belongs to a class; or that a thing is equivalent to another thing. When used for BHoM types, this describes C# interface implementation."
+      },
+      "domain": "BH.oM.MachineLearning.Vision.Image",
+      "range": "BH.oM.Base.IObject"
     },
     {
       "id": "Image-IsA-IImmutable_60B2EFD0B19253640F7998CE94ABF76B1919096E1BF111FAE89959E1B3D23EE3",
@@ -702,6 +1114,16 @@
       },
       "domain": "BH.oM.MachineLearning.Vision.Image",
       "range": "BH.oM.Base.IImmutable"
+    },
+    {
+      "id": "Image-IsSubclassOf-BHoMObject_1A9132A37FDB3EAF4E1691CCC2189C9F8C981BA298B7282839509C8EC9FDBFBD",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsSubclassOf.cs",
+      "label": "IsA",
+      "attributes": [
+        "object"
+      ],
+      "domain": "BH.oM.MachineLearning.Vision.Image",
+      "range": "BH.oM.Base.BHoMObject"
     },
     {
       "id": "BH.oM.MachineLearning.Vision.DetectionResults-HasProperty-BH.oM.MachineLearning.Vision.DetectionResults.Boxes",

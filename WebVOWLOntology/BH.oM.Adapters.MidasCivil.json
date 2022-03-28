@@ -32,75 +32,87 @@
     },
     {
       "id": "BH.oM.Adapters.MidasCivil.Metadata.ProjectNumber",
-      "type": "rdfs:Datatype"
+      "type": "owl:Class"
     },
     {
       "id": "BH.oM.Adapters.MidasCivil.Metadata.ProjectName",
-      "type": "rdfs:Datatype"
+      "type": "owl:Class"
     },
     {
       "id": "BH.oM.Adapters.MidasCivil.Metadata.Location",
-      "type": "rdfs:Datatype"
+      "type": "owl:Class"
     },
     {
       "id": "BH.oM.Adapters.MidasCivil.Metadata.Client",
-      "type": "rdfs:Datatype"
+      "type": "owl:Class"
     },
     {
       "id": "BH.oM.Adapters.MidasCivil.Metadata.DesignStage",
-      "type": "rdfs:Datatype"
+      "type": "owl:Class"
     },
     {
       "id": "BH.oM.Adapters.MidasCivil.Metadata.ProjectLead",
-      "type": "rdfs:Datatype"
+      "type": "owl:Class"
     },
     {
       "id": "BH.oM.Adapters.MidasCivil.Metadata.Revision",
-      "type": "rdfs:Datatype"
+      "type": "owl:Class"
     },
     {
       "id": "BH.oM.Adapters.MidasCivil.Metadata.Author",
-      "type": "rdfs:Datatype"
+      "type": "owl:Class"
     },
     {
       "id": "BH.oM.Adapters.MidasCivil.Metadata.CreationDate",
-      "type": "rdfs:Datatype"
+      "type": "owl:Class"
     },
     {
       "id": "BH.oM.Adapters.MidasCivil.Metadata.Email",
-      "type": "rdfs:Datatype"
+      "type": "owl:Class"
     },
     {
       "id": "BH.oM.Adapters.MidasCivil.Metadata.Description",
-      "type": "rdfs:Datatype"
+      "type": "owl:Class"
     },
     {
       "id": "BH.oM.Adapters.MidasCivil.Metadata.Discipline",
-      "type": "rdfs:Datatype"
+      "type": "owl:Class"
     },
     {
       "id": "BH.oM.Adapters.MidasCivil.Metadata.Reviews",
       "type": "owl:Class"
     },
     {
+      "id": "BH.oM.Base.IBHoMObject",
+      "type": "owl:Class"
+    },
+    {
+      "id": "BH.oM.Base.IObject",
+      "type": "owl:Class"
+    },
+    {
+      "id": "BH.oM.Base.BHoMObject",
+      "type": "owl:Class"
+    },
+    {
       "id": "BH.oM.Adapters.MidasCivil.Review.Reviewer",
-      "type": "rdfs:Datatype"
+      "type": "owl:Class"
     },
     {
       "id": "BH.oM.Adapters.MidasCivil.Review.ReviewDate",
-      "type": "rdfs:Datatype"
+      "type": "owl:Class"
     },
     {
       "id": "BH.oM.Adapters.MidasCivil.Review.Comments",
-      "type": "rdfs:Datatype"
+      "type": "owl:Class"
     },
     {
       "id": "BH.oM.Adapters.MidasCivil.Review.Approved",
-      "type": "rdfs:Datatype"
+      "type": "owl:Class"
     },
     {
       "id": "BH.oM.Adapters.MidasCivil.MidasCivilId.Id",
-      "type": "rdfs:Datatype"
+      "type": "owl:Class"
     },
     {
       "id": "BH.oM.Base.IAdapterId",
@@ -271,6 +283,32 @@
       "attributes": []
     },
     {
+      "id": "BH.oM.Base.IBHoMObject",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/BHoM/Interface/IBHoMObject.cs",
+      "label": "IBHoMObject (BH.oM.Base)",
+      "attributes": [
+        "object",
+        "external"
+      ]
+    },
+    {
+      "id": "BH.oM.Base.IObject",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/BHoM/Interface/IObject.cs",
+      "label": "IObject (BH.oM.Base)",
+      "attributes": [
+        "object",
+        "external"
+      ]
+    },
+    {
+      "id": "BH.oM.Base.BHoMObject",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/BHoM/BHoMObject.cs",
+      "label": "BHoMObject (BH.oM.Base)",
+      "attributes": [
+        "external"
+      ]
+    },
+    {
       "id": "BH.oM.Adapters.MidasCivil.Review.Reviewer",
       "iri": "https://github.com/BHoM/MidasCivil_Toolkit/blob/main/MidasCivil_oM/Settings/Review.cs#L33",
       "label": "Reviewer(BH.oM.Adapters.MidasCivil.Review.Reviewer)",
@@ -387,6 +425,18 @@
       "type": "owl:ObjectProperty"
     },
     {
+      "id": "Metadata-IsA-IBHoMObject_B4849C04C3FE37FD241895EBB54CFF0C81959AEA938FC9983383018DB555F372",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "Metadata-IsA-IObject_CE01620F487AC941FDC0DAB398A21310EDC9CF5A8E1CEB91B6B63BF5E6740344",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "Metadata-IsSubclassOf-BHoMObject_EFE3BA841D6AE46B2095CFB6BDE98D8A6C756B2A5C9E0CB9A348F4184E481D5A",
+      "type": "rdfs:subClassOf"
+    },
+    {
       "id": "Review-HasProperty-Reviewer_13CB2EA7E2A1D7DD938A57904296581D476B7DB5954E3C91D6C998C0D51AF93C",
       "type": "owl:DatatypeProperty"
     },
@@ -403,6 +453,18 @@
       "type": "owl:DatatypeProperty"
     },
     {
+      "id": "Review-IsA-IBHoMObject_1A252B49385217FB89EA250968A7954160767136FCA880A4AB3471F6D59A885E",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "Review-IsA-IObject_F4EFFBD161FD187A9796557296AE1A48D719DDD5AF0DFC7CBB622C61A1CB7902",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "Review-IsSubclassOf-BHoMObject_6EAA4DA926F70991441858EAD611ED35B42F9D6E144783BE073A1E0B16637987",
+      "type": "rdfs:subClassOf"
+    },
+    {
       "id": "MidasCivilId-HasProperty-Id_4684652913475BEE0CE06A667F1C7EC3EB8E213CD490EAAA66ADE85CF945AC44",
       "type": "owl:DatatypeProperty"
     },
@@ -412,6 +474,10 @@
     },
     {
       "id": "MidasCivilId-IsA-IFragment_E4E1136DE4530CB5898BFDEBCD81A83C95151006D5661ACBD23CF2D514CCD13B",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "MidasCivilId-IsA-IObject_C4DECC793A6325B7533051AFF78AA4C237FD803F7E0A0F486EFBA5004B9278B6",
       "type": "owl:ObjectProperty"
     }
   ],
@@ -557,6 +623,42 @@
       "range": "BH.oM.Adapters.MidasCivil.Review"
     },
     {
+      "id": "Metadata-IsA-IBHoMObject_B4849C04C3FE37FD241895EBB54CFF0C81959AEA938FC9983383018DB555F372",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "label": "IsA",
+      "attributes": [
+        "object"
+      ],
+      "comment": {
+        "undefined": "Can be used to describe that a thing belongs to a class; or that a thing is equivalent to another thing. When used for BHoM types, this describes C# interface implementation."
+      },
+      "domain": "BH.oM.Adapters.MidasCivil.Metadata",
+      "range": "BH.oM.Base.IBHoMObject"
+    },
+    {
+      "id": "Metadata-IsA-IObject_CE01620F487AC941FDC0DAB398A21310EDC9CF5A8E1CEB91B6B63BF5E6740344",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "label": "IsA",
+      "attributes": [
+        "object"
+      ],
+      "comment": {
+        "undefined": "Can be used to describe that a thing belongs to a class; or that a thing is equivalent to another thing. When used for BHoM types, this describes C# interface implementation."
+      },
+      "domain": "BH.oM.Adapters.MidasCivil.Metadata",
+      "range": "BH.oM.Base.IObject"
+    },
+    {
+      "id": "Metadata-IsSubclassOf-BHoMObject_EFE3BA841D6AE46B2095CFB6BDE98D8A6C756B2A5C9E0CB9A348F4184E481D5A",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsSubclassOf.cs",
+      "label": "IsA",
+      "attributes": [
+        "object"
+      ],
+      "domain": "BH.oM.Adapters.MidasCivil.Metadata",
+      "range": "BH.oM.Base.BHoMObject"
+    },
+    {
       "id": "Review-HasProperty-Reviewer_13CB2EA7E2A1D7DD938A57904296581D476B7DB5954E3C91D6C998C0D51AF93C",
       "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/HasProperty.cs",
       "label": "HasProperty",
@@ -597,6 +699,42 @@
       "range": "BH.oM.Adapters.MidasCivil.Review.Approved"
     },
     {
+      "id": "Review-IsA-IBHoMObject_1A252B49385217FB89EA250968A7954160767136FCA880A4AB3471F6D59A885E",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "label": "IsA",
+      "attributes": [
+        "object"
+      ],
+      "comment": {
+        "undefined": "Can be used to describe that a thing belongs to a class; or that a thing is equivalent to another thing. When used for BHoM types, this describes C# interface implementation."
+      },
+      "domain": "BH.oM.Adapters.MidasCivil.Review",
+      "range": "BH.oM.Base.IBHoMObject"
+    },
+    {
+      "id": "Review-IsA-IObject_F4EFFBD161FD187A9796557296AE1A48D719DDD5AF0DFC7CBB622C61A1CB7902",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "label": "IsA",
+      "attributes": [
+        "object"
+      ],
+      "comment": {
+        "undefined": "Can be used to describe that a thing belongs to a class; or that a thing is equivalent to another thing. When used for BHoM types, this describes C# interface implementation."
+      },
+      "domain": "BH.oM.Adapters.MidasCivil.Review",
+      "range": "BH.oM.Base.IObject"
+    },
+    {
+      "id": "Review-IsSubclassOf-BHoMObject_6EAA4DA926F70991441858EAD611ED35B42F9D6E144783BE073A1E0B16637987",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsSubclassOf.cs",
+      "label": "IsA",
+      "attributes": [
+        "object"
+      ],
+      "domain": "BH.oM.Adapters.MidasCivil.Review",
+      "range": "BH.oM.Base.BHoMObject"
+    },
+    {
       "id": "MidasCivilId-HasProperty-Id_4684652913475BEE0CE06A667F1C7EC3EB8E213CD490EAAA66ADE85CF945AC44",
       "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/HasProperty.cs",
       "label": "HasProperty",
@@ -631,6 +769,19 @@
       },
       "domain": "BH.oM.Adapters.MidasCivil.MidasCivilId",
       "range": "BH.oM.Base.IFragment"
+    },
+    {
+      "id": "MidasCivilId-IsA-IObject_C4DECC793A6325B7533051AFF78AA4C237FD803F7E0A0F486EFBA5004B9278B6",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "label": "IsA",
+      "attributes": [
+        "object"
+      ],
+      "comment": {
+        "undefined": "Can be used to describe that a thing belongs to a class; or that a thing is equivalent to another thing. When used for BHoM types, this describes C# interface implementation."
+      },
+      "domain": "BH.oM.Adapters.MidasCivil.MidasCivilId",
+      "range": "BH.oM.Base.IObject"
     }
   ]
 }

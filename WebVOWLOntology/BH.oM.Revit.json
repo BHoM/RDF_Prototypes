@@ -7,11 +7,23 @@
       "type": "owl:Class"
     },
     {
+      "id": "BH.oM.Revit.AddinManagementSettings",
+      "type": "owl:Class"
+    },
+    {
+      "id": "BH.oM.Revit.DockablePaneSettings",
+      "type": "owl:Class"
+    },
+    {
+      "id": "BH.oM.Revit.IApplicationServiceSettings",
+      "type": "owl:Class"
+    },
+    {
       "id": "BH.oM.Revit.IRevitSettings",
       "type": "owl:Class"
     },
     {
-      "id": "BH.oM.Revit.MainSettings",
+      "id": "BH.oM.Revit.UIManagementSettings",
       "type": "owl:Class"
     },
     {
@@ -31,7 +43,11 @@
       "type": "owl:Class"
     },
     {
-      "id": "BH.oM.Revit.Logging.IRevitLog",
+      "id": "BH.oM.Revit.Logging.BaseRevitLogItem",
+      "type": "owl:Class"
+    },
+    {
+      "id": "BH.oM.Revit.Logging.IRevitLog`1",
       "type": "owl:Class"
     },
     {
@@ -39,7 +55,7 @@
       "type": "owl:Class"
     },
     {
-      "id": "BH.oM.Revit.Logging.StandardRevitLog",
+      "id": "BH.oM.Revit.Logging.StandardRevitLog`1",
       "type": "owl:Class"
     },
     {
@@ -92,23 +108,47 @@
     },
     {
       "id": "BH.oM.Revit.PinnedItemInfo.Method",
-      "type": "rdfs:Datatype"
+      "type": "owl:Class"
     },
     {
       "id": "BH.oM.Revit.PinnedItemInfo.TabName",
-      "type": "rdfs:Datatype"
+      "type": "owl:Class"
     },
     {
       "id": "BH.oM.Revit.PinnedItemInfo.PanelName",
-      "type": "rdfs:Datatype"
+      "type": "owl:Class"
     },
     {
-      "id": "BH.oM.Revit.MainSettings.AddinFolders",
-      "type": "rdfs:Datatype"
+      "id": "BH.oM.Base.IBHoMObject",
+      "type": "owl:Class"
     },
     {
-      "id": "BH.oM.Revit.MainSettings.ShowPaneOnStartup",
-      "type": "rdfs:Datatype"
+      "id": "BH.oM.Base.IObject",
+      "type": "owl:Class"
+    },
+    {
+      "id": "BH.oM.Base.BHoMObject",
+      "type": "owl:Class"
+    },
+    {
+      "id": "BH.oM.Revit.AddinManagementSettings.AddinFolders",
+      "type": "owl:Class"
+    },
+    {
+      "id": "BH.oM.Revit.AddinManagementSettings.LoadedAddins",
+      "type": "owl:Class"
+    },
+    {
+      "id": "BH.oM.Base.ISettings",
+      "type": "owl:Class"
+    },
+    {
+      "id": "BH.oM.Revit.DockablePaneSettings.ShowPaneOnStartup",
+      "type": "owl:Class"
+    },
+    {
+      "id": "BH.oM.Revit.UIManagementSettings.PinnedItems",
+      "type": "owl:Class"
     },
     {
       "id": "BH.oM.Revit.Scenarios.ElementFilter.Request",
@@ -120,31 +160,35 @@
     },
     {
       "id": "BH.oM.Revit.Scenarios.ElementFilter.ElementIndex",
-      "type": "rdfs:Datatype"
+      "type": "owl:Class"
     },
     {
       "id": "BH.oM.Revit.Scenarios.IScenario.Filters",
-      "type": "owl:Class"
+      "type": "rdfs:Datatype"
     },
     {
       "id": "BH.oM.Revit.Scenarios.IScenario.ExpressionString",
-      "type": "owl:Class"
+      "type": "rdfs:Datatype"
     },
     {
-      "id": "BH.oM.Revit.Logging.IRevitLog.Items",
-      "type": "owl:Class"
+      "id": "BH.oM.Revit.Logging.IRevitLog`1.Items",
+      "type": "rdfs:Datatype"
     },
     {
-      "id": "BH.oM.Revit.Logging.StandardRevitLog.Items",
+      "id": "BH.oM.Revit.Logging.IRevitLog`1.Name",
+      "type": "rdfs:Datatype"
+    },
+    {
+      "id": "BH.oM.Revit.Logging.StandardRevitLog`1.Items",
       "type": "owl:Class"
     },
     {
       "id": "BH.oM.Revit.Attributes.ComboBoxAttribute.ParentSettings",
-      "type": "rdfs:Datatype"
+      "type": "owl:Class"
     },
     {
       "id": "BH.oM.Revit.Attributes.ComboBoxAttribute.UpdateOnDocumentChange",
-      "type": "rdfs:Datatype"
+      "type": "owl:Class"
     },
     {
       "id": "BH.oM.Base.IImmutable",
@@ -152,47 +196,47 @@
     },
     {
       "id": "BH.oM.Revit.Attributes.TagsAttribute.Tags",
-      "type": "rdfs:Datatype"
+      "type": "owl:Class"
     },
     {
       "id": "BH.oM.Revit.Attributes.SplitButtonAttribute.SplitButtonName",
-      "type": "rdfs:Datatype"
+      "type": "owl:Class"
     },
     {
       "id": "BH.oM.Revit.Attributes.UIEnabledAttribute.Enabled",
-      "type": "rdfs:Datatype"
+      "type": "owl:Class"
     },
     {
       "id": "BH.oM.Revit.Attributes.IconFileNameAttribute.FileName",
-      "type": "rdfs:Datatype"
+      "type": "owl:Class"
     },
     {
       "id": "BH.oM.Revit.Attributes.NameAttribute.Name",
-      "type": "rdfs:Datatype"
+      "type": "owl:Class"
     },
     {
       "id": "BH.oM.Revit.Attributes.PanelNameAttribute.PanelName",
-      "type": "rdfs:Datatype"
+      "type": "owl:Class"
     },
     {
       "id": "BH.oM.Revit.Attributes.TabNameAttribute.TabName",
-      "type": "rdfs:Datatype"
+      "type": "owl:Class"
     },
     {
       "id": "BH.oM.Revit.Attributes.ToolTipAttribute.Text",
-      "type": "rdfs:Datatype"
+      "type": "owl:Class"
     },
     {
       "id": "BH.oM.Revit.Attributes.ToolTipImageFileNameAttribute.FileName",
-      "type": "rdfs:Datatype"
+      "type": "owl:Class"
     },
     {
       "id": "BH.oM.Revit.RevitHostFragment.HostId",
-      "type": "rdfs:Datatype"
+      "type": "owl:Class"
     },
     {
       "id": "BH.oM.Revit.RevitHostFragment.LinkDocument",
-      "type": "rdfs:Datatype"
+      "type": "owl:Class"
     },
     {
       "id": "BH.oM.Base.IFragment",
@@ -212,6 +256,39 @@
       }
     },
     {
+      "id": "BH.oM.Revit.AddinManagementSettings",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/Revit_oM/AddinManagementSettings.cs",
+      "label": "AddinManagementSettings (BH.oM.Revit)",
+      "attributes": [
+        "object"
+      ],
+      "comment": {
+        "undefined": "Object containing the information about legacy Revit addins managed by BuroHappold_Revit_Toolkit."
+      }
+    },
+    {
+      "id": "BH.oM.Revit.DockablePaneSettings",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/Revit_oM/DockablePaneSettings.cs",
+      "label": "DockablePaneSettings (BH.oM.Revit)",
+      "attributes": [
+        "object"
+      ],
+      "comment": {
+        "undefined": "Object containing the information about BuroHappold_Revit_Toolkit dockable pane."
+      }
+    },
+    {
+      "id": "BH.oM.Revit.IApplicationServiceSettings",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/Revit_oM/IApplicationServiceSettings.cs",
+      "label": "IApplicationServiceSettings (BH.oM.Revit)",
+      "attributes": [
+        "object"
+      ],
+      "comment": {
+        "undefined": "An interface that indicates that the implementing class is a application service settings class meant to be managed by BuroHappold_Revit_Toolkit."
+      }
+    },
+    {
       "id": "BH.oM.Revit.IRevitSettings",
       "iri": "https://github.com/BHoM/BHoM/blob/main/Revit_oM/IRevitSettings.cs",
       "label": "IRevitSettings (BH.oM.Revit)",
@@ -219,18 +296,18 @@
         "object"
       ],
       "comment": {
-        "undefined": "An interface that indicates that the implementing class is a settings class meant to be managed by BuroHappold_Revit_Toolkit."
+        "undefined": "An interface that indicates that the implementing class is a standard settings class meant to be managed by BuroHappold_Revit_Toolkit."
       }
     },
     {
-      "id": "BH.oM.Revit.MainSettings",
-      "iri": "https://github.com/BHoM/BHoM/blob/main/Revit_oM/MainSettings.cs",
-      "label": "MainSettings (BH.oM.Revit)",
+      "id": "BH.oM.Revit.UIManagementSettings",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/Revit_oM/UIManagementSettings.cs",
+      "label": "UIManagementSettings (BH.oM.Revit)",
       "attributes": [
         "object"
       ],
       "comment": {
-        "undefined": "Main settings of BuroHappold_Revit_Toolkit."
+        "undefined": "Object containing the information about Revit ribbon items managed by BuroHappold_Revit_Toolkit."
       }
     },
     {
@@ -278,9 +355,20 @@
       }
     },
     {
-      "id": "BH.oM.Revit.Logging.IRevitLog",
+      "id": "BH.oM.Revit.Logging.BaseRevitLogItem",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/Revit_oM/Logging/BaseRevitLogItem.cs",
+      "label": "BaseRevitLogItem (BH.oM.Revit.Logging)",
+      "attributes": [
+        "object"
+      ],
+      "comment": {
+        "undefined": "Base type for all Revit log items."
+      }
+    },
+    {
+      "id": "BH.oM.Revit.Logging.IRevitLog`1",
       "iri": "https://github.com/BHoM/BHoM/blob/main/Revit_oM/Logging/IRevitLog.cs",
-      "label": "IRevitLog (BH.oM.Revit.Logging)",
+      "label": "IRevitLog<T> (BH.oM.Revit.Logging)",
       "attributes": [
         "object"
       ],
@@ -300,9 +388,9 @@
       }
     },
     {
-      "id": "BH.oM.Revit.Logging.StandardRevitLog",
+      "id": "BH.oM.Revit.Logging.StandardRevitLog`1",
       "iri": "https://github.com/BHoM/BHoM/blob/main/Revit_oM/Logging/StandardRevitLog.cs",
-      "label": "StandardRevitLog (BH.oM.Revit.Logging)",
+      "label": "StandardRevitLog<T> (BH.oM.Revit.Logging)",
       "attributes": [
         "object"
       ],
@@ -467,20 +555,72 @@
       ]
     },
     {
-      "id": "BH.oM.Revit.MainSettings.AddinFolders",
+      "id": "BH.oM.Base.IBHoMObject",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/BHoM/Interface/IBHoMObject.cs",
+      "label": "IBHoMObject (BH.oM.Base)",
+      "attributes": [
+        "object",
+        "external"
+      ]
+    },
+    {
+      "id": "BH.oM.Base.IObject",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/BHoM/Interface/IObject.cs",
+      "label": "IObject (BH.oM.Base)",
+      "attributes": [
+        "object",
+        "external"
+      ]
+    },
+    {
+      "id": "BH.oM.Base.BHoMObject",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/BHoM/BHoMObject.cs",
+      "label": "BHoMObject (BH.oM.Base)",
+      "attributes": [
+        "external"
+      ]
+    },
+    {
+      "id": "BH.oM.Revit.AddinManagementSettings.AddinFolders",
       "iri": null,
-      "label": "AddinFolders(BH.oM.Revit.MainSettings.AddinFolders)",
+      "label": "AddinFolders(BH.oM.Revit.AddinManagementSettings.AddinFolders)",
       "attributes": [
         "datatype"
       ]
     },
     {
-      "id": "BH.oM.Revit.MainSettings.ShowPaneOnStartup",
+      "id": "BH.oM.Revit.AddinManagementSettings.LoadedAddins",
       "iri": null,
-      "label": "ShowPaneOnStartup(BH.oM.Revit.MainSettings.ShowPaneOnStartup)",
+      "label": "LoadedAddins(BH.oM.Revit.AddinManagementSettings.LoadedAddins)",
       "attributes": [
         "datatype"
       ]
+    },
+    {
+      "id": "BH.oM.Base.ISettings",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/BHoM/Interface/ISettings.cs",
+      "label": "ISettings (BH.oM.Base)",
+      "attributes": [
+        "object",
+        "external"
+      ],
+      "comment": {
+        "undefined": "Toolkit Settings that need to be saved permanently."
+      }
+    },
+    {
+      "id": "BH.oM.Revit.DockablePaneSettings.ShowPaneOnStartup",
+      "iri": null,
+      "label": "ShowPaneOnStartup(BH.oM.Revit.DockablePaneSettings.ShowPaneOnStartup)",
+      "attributes": [
+        "datatype"
+      ]
+    },
+    {
+      "id": "BH.oM.Revit.UIManagementSettings.PinnedItems",
+      "iri": null,
+      "label": "PinnedItems(BH.oM.Revit.UIManagementSettings.PinnedItems)",
+      "attributes": []
     },
     {
       "id": "BH.oM.Revit.Scenarios.ElementFilter.Request",
@@ -525,7 +665,7 @@
       ]
     },
     {
-      "id": "BH.oM.Revit.Logging.IRevitLog.Items",
+      "id": "BH.oM.Revit.Logging.IRevitLog`1.Items",
       "iri": null,
       "label": "Items(BH.oM.Revit.Logging.IRevitLog.Items)",
       "attributes": [
@@ -533,10 +673,20 @@
       ]
     },
     {
-      "id": "BH.oM.Revit.Logging.StandardRevitLog.Items",
+      "id": "BH.oM.Revit.Logging.IRevitLog`1.Name",
+      "iri": null,
+      "label": "Name(BH.oM.Revit.Logging.IRevitLog.Name)",
+      "attributes": [
+        "datatype"
+      ]
+    },
+    {
+      "id": "BH.oM.Revit.Logging.StandardRevitLog`1.Items",
       "iri": null,
       "label": "Items(BH.oM.Revit.Logging.StandardRevitLog.Items)",
-      "attributes": []
+      "attributes": [
+        "datatype"
+      ]
     },
     {
       "id": "BH.oM.Revit.Attributes.ComboBoxAttribute.ParentSettings",
@@ -675,16 +825,112 @@
       "type": "owl:DatatypeProperty"
     },
     {
-      "id": "MainSettings-HasProperty-AddinFolders_EBCCDFE844F8E5B4EB0AFA2D872B9A33152C9E3468BB6E332C869213016B0031",
-      "type": "owl:DatatypeProperty"
-    },
-    {
-      "id": "MainSettings-HasProperty-ShowPaneOnStartup_A1F4BF97D8C13F4F4DF94395EC8D4334DCB6DB7528AA66D516A655D5CDFB6C6A",
-      "type": "owl:DatatypeProperty"
-    },
-    {
-      "id": "MainSettings-IsA-IRevitSettings_A41D74B3BE9505872B83968CE5E8BFADBB7EF53781D02055CDD8B39631ADB504",
+      "id": "PinnedItemInfo-IsA-IBHoMObject_C7F1D947434BDDA720960C3041E771D4EC0A181CFB95038FAEC4D6964E8E8A79",
       "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "PinnedItemInfo-IsA-IObject_0AF46A185E0144AC66CDC557D4669037821767950CCCB26A704C4EA4C1D4B0B4",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "PinnedItemInfo-IsSubclassOf-BHoMObject_5EB1997081B56770C6862204CD199735E6D362ABEDFED1E239F03328E6245D3F",
+      "type": "rdfs:subClassOf"
+    },
+    {
+      "id": "AddinManagementSettings-HasProperty-AddinFolders_79908F94B2D0C406164535247884A910004125F88DE84788DFFF176DC02203FE",
+      "type": "owl:DatatypeProperty"
+    },
+    {
+      "id": "AddinManagementSettings-HasProperty-LoadedAddins_4D466C792E6ADAEE7B67390742F478FCD4701C553A970B70E9EA994BB5C3D700",
+      "type": "owl:DatatypeProperty"
+    },
+    {
+      "id": "AddinManagementSettings-IsA-IBHoMObject_D51C45C4EE1C9FE02EBBEC450F3DA0A53998B0139BB10E7F53584032D18BB855",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "AddinManagementSettings-IsA-IObject_81D4BF65EC95AD52ABAC65FA72F7EA895EA3BEF0474BFB160D379A142F875F57",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "AddinManagementSettings-IsA-IApplicationServiceSettings_255C22ED8907679EE05871ACF95258B910F6FEB1B2E90226C6EFE41FB541D0CC",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "AddinManagementSettings-IsA-ISettings_856E8FB7D17C9631F0FA65DD7B58ACDB07ED0F68E50618F2868FC5BFC4EC829E",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "AddinManagementSettings-IsSubclassOf-BHoMObject_02B33BCBA0657CDDEC7F41E8B8C67BC131AEA921738E942E1E2CC0C49AF5B5FC",
+      "type": "rdfs:subClassOf"
+    },
+    {
+      "id": "DockablePaneSettings-HasProperty-ShowPaneOnStartup_089DC8C1C945EAD617BD0C9E10D4625E3178A019DEFCDB307089D1E2DA4E492B",
+      "type": "owl:DatatypeProperty"
+    },
+    {
+      "id": "DockablePaneSettings-IsA-IBHoMObject_0B2114B9D027DE6F37A4EFDB6198482B7EDEDAA7E7050E09362506DBD299E9FD",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "DockablePaneSettings-IsA-IObject_E6531C2E9D2628E3121DA984136FD0363229503F8784279B03717A892BB73F61",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "DockablePaneSettings-IsA-IApplicationServiceSettings_8CDB6E6C72068A800F88408C6A36264570BC5B33A10D5D9DB8B09448D92A237C",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "DockablePaneSettings-IsA-ISettings_A4FA811222D0504A89CE3320EB8B23FC41DEBE8537DACC12A236E21A73A29FBA",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "DockablePaneSettings-IsSubclassOf-BHoMObject_7BC07D069EB19416CD8E0DC33AF98F2FA8A04BA066B1D853E9572C950FBFA9C3",
+      "type": "rdfs:subClassOf"
+    },
+    {
+      "id": "IApplicationServiceSettings-IsA-ISettings_F1E42A62D5FD61226A27E9BF8DBC8FF8DC1E5E1A0E6D34B287B53F458749E23A",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "IApplicationServiceSettings-IsA-IObject_B65BB48AFCA94C7F67FEF414FE54B0452AF294069DCDCCB8D96CD6EA8F2F89C6",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "IRevitSettings-IsA-ISettings_6BDAE60F660E0B94C3CAB63A86C2ABEE76562E34CA64E29CCD1313B0B5A42840",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "IRevitSettings-IsA-IObject_A706998D1812D9CB45FB7D5DC4500EEB64288AFAF251F4B6F5C3BFF547EC18DB",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "BH.oM.Revit.UIManagementSettings-HasProperty-BH.oM.Revit.UIManagementSettings.PinnedItems",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "BH.oM.Revit.UIManagementSettings.PinnedItems-IsAListOf-BH.oM.Revit.PinnedItemInfo",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "UIManagementSettings-IsA-IBHoMObject_0E760C56CAC14888F1A9ADA7023C0B9811DEA1CC19C65BFE00A33073197FA9C0",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "UIManagementSettings-IsA-IObject_54F6837CC461FAEE033C88A8214693B26AA13C8F3F9F4113E0F80FA861A6BA15",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "UIManagementSettings-IsA-IApplicationServiceSettings_E53CA885B1B01644334F0C136F026664A049EEF8E3B7A4B58F92A22171C30AEC",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "UIManagementSettings-IsA-ISettings_E91AE18340D8D99046BEE518A091542A6704051565F975FD9758B9D99FF6B37A",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "UIManagementSettings-IsSubclassOf-BHoMObject_5A94CFE8051BD4B14DF254B416794942BEDB5B13B0167821675DCA0DB9CED4C5",
+      "type": "rdfs:subClassOf"
     },
     {
       "id": "BH.oM.Revit.Scenarios.ElementFilter-HasProperty-BH.oM.Revit.Scenarios.ElementFilter.Request",
@@ -697,6 +943,18 @@
     {
       "id": "ElementFilter-HasProperty-ElementIndex_3D7125881E18DBA001D3CAD09C8CBF4A6B85B3CFE60DD42FF3BAC642B98DAD08",
       "type": "owl:DatatypeProperty"
+    },
+    {
+      "id": "ElementFilter-IsA-IBHoMObject_AAC4A7DBEE8450DE62B29A5F15E17B0F40975E3D4064FFECA85B39F8C4C162A5",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "ElementFilter-IsA-IObject_C6811975F587FE53CAF6E925EB972A3B38F4B255FF37FFB9D79512801F805FD4",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "ElementFilter-IsSubclassOf-BHoMObject_62E42C7C77DC095B61B9E231D8502FBC9C93F438FD72884DE7E895DEDE243A45",
+      "type": "rdfs:subClassOf"
     },
     {
       "id": "IScenario-RequiresProperty-Filters_1F15BC6AED28C37399899C75BCDCE0FC29F483BAF383C3218641CA5BDE89C34E",
@@ -715,24 +973,48 @@
       "type": "owl:ObjectProperty"
     },
     {
-      "id": "IRevitLog-RequiresProperty-Items_C9A3954E0D38E1EB66C0C38447B85E36C53A997CED23E952604E292C72FDA5AB",
+      "id": "BaseRevitLogItem-IsA-IBHoMObject_AA84B396BEEE4DEBC5F1926EA12C8A394EBAF2C9003CE95700EE28553CEF38BE",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "BaseRevitLogItem-IsA-IObject_14033452DE82519963EAC019C0F11584850E4901640B32221BBEC1D6737F4835",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "BaseRevitLogItem-IsA-IRevitLogItem_A73992B94F2A47E467C271EB6F2DA6782DDB53CD0163428BD4AE30FB13BB0047",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "BaseRevitLogItem-IsSubclassOf-BHoMObject_C12EC8C12F859D633AA549BE93E50A02F2536FAA04E7EC05109A0156C4DC382C",
+      "type": "rdfs:subClassOf"
+    },
+    {
+      "id": "IRevitLog`1-RequiresProperty-Items_4B515A0B96EE796B630F1A5627403764AF175A22D04A7D784883424172C0AE0B",
       "type": "owl:DatatypeProperty"
     },
     {
-      "id": "IRevitLog-RequiresProperty-Name_131F643BD2A205744AC7500DB8340A123430005EF24A9AD0149B5D2E5894F83F",
+      "id": "IRevitLog`1-RequiresProperty-Name_C1A9D7783A6A80D6A00A9DD24516263B07ECE4015AF0A9A892D939A1F9A2C263",
       "type": "owl:DatatypeProperty"
     },
     {
-      "id": "BH.oM.Revit.Logging.StandardRevitLog-HasProperty-BH.oM.Revit.Logging.StandardRevitLog.Items",
+      "id": "IRevitLogItem-IsA-IObject_042853BC364822B0C71B50F3FC906219320C2A8D7BCC89F8A27AE69D2856E90F",
       "type": "owl:ObjectProperty"
     },
     {
-      "id": "BH.oM.Revit.Logging.StandardRevitLog.Items-IsAListOf-BH.oM.Revit.Logging.IRevitLogItem",
+      "id": "StandardRevitLog`1-HasProperty-Items_8AEEF3F082A69E00655F1F4EB15A874A26336A52ABCE84C55D43CDFBD63FC686",
+      "type": "owl:DatatypeProperty"
+    },
+    {
+      "id": "StandardRevitLog`1-IsA-IBHoMObject_E52A633ED017C5F61ABB3D1295A473997E9B2B6EBE17D1EC3AD455E6160BCEBB",
       "type": "owl:ObjectProperty"
     },
     {
-      "id": "StandardRevitLog-IsA-IRevitLog_868F42D3F637D156F7B0ED63D80F42266B9D578CC44C4AEF64B0255141227A5B",
+      "id": "StandardRevitLog`1-IsA-IObject_1A92E058D492C59EE6AAC7D7951914007656288F0D1F999BCB49577D0675A715",
       "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "StandardRevitLog`1-IsSubclassOf-BHoMObject_F936230899DC9323475C99C025FBD7EE820477ED398137E89C577375246112DB",
+      "type": "rdfs:subClassOf"
     },
     {
       "id": "ComboBoxAttribute-HasProperty-ParentSettings_34F9EE7C454D062D6A51C897FA93C915E9A901BB62E94D7DC5870CF2311E32E7",
@@ -747,7 +1029,15 @@
       "type": "owl:ObjectProperty"
     },
     {
+      "id": "ComboBoxAttribute-IsA-IObject_92394B321FD8AD0076BAA8D8E3F1624117AF8DABB389052EB1D8250AE9B33D21",
+      "type": "owl:ObjectProperty"
+    },
+    {
       "id": "ManualTransactionAttribute-IsA-IImmutable_FFB856DBAEA6B2942E8BDB7A171EDE4F9BC13AF91D6E34AE897B0E969A5B3678",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "ManualTransactionAttribute-IsA-IObject_AFDC6FE2826EECA8B241D35412CDD2FFFB19176CC6C8F4B043002EBDE5D250EA",
       "type": "owl:ObjectProperty"
     },
     {
@@ -759,11 +1049,19 @@
       "type": "owl:ObjectProperty"
     },
     {
+      "id": "TagsAttribute-IsA-IObject_E99C0EA87403571A2396FDE7270BE92F4C59655FD98FA1B261BC1489C6E2EC55",
+      "type": "owl:ObjectProperty"
+    },
+    {
       "id": "SplitButtonAttribute-HasProperty-SplitButtonName_9192CCE9561C99E988E840034F44EDF697E8FC3F04DDB623ACCE288F620D1FD9",
       "type": "owl:DatatypeProperty"
     },
     {
       "id": "SplitButtonAttribute-IsA-IImmutable_630C03E2D277151A5D0CC2BD4FB7B0BC8EA1613F5AA6186D47389EB3E31F7280",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "SplitButtonAttribute-IsA-IObject_D3E7B3354883740D4E9BEED9DCD258B3F26020618F739285EF65E84862EFAD05",
       "type": "owl:ObjectProperty"
     },
     {
@@ -775,11 +1073,19 @@
       "type": "owl:ObjectProperty"
     },
     {
+      "id": "UIEnabledAttribute-IsA-IObject_32F01CFF9B17DAC3CE7F0F73B830B4B39B494D76E54262E25DD644451DD85774",
+      "type": "owl:ObjectProperty"
+    },
+    {
       "id": "IconFileNameAttribute-HasProperty-FileName_008A1EFAA43E1AC28B558E2BB71DA7904BAE8996BE2BD64826460CE27591156A",
       "type": "owl:DatatypeProperty"
     },
     {
       "id": "IconFileNameAttribute-IsA-IImmutable_90196D008562B63B63A3D52F75E7CF7CE1BC5133499C90348A55C2A409A858A7",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "IconFileNameAttribute-IsA-IObject_7D6D71729C46F7BB029748D2A673648EDB477D6005D3F01DA2F857ABE2CFBA88",
       "type": "owl:ObjectProperty"
     },
     {
@@ -791,11 +1097,19 @@
       "type": "owl:ObjectProperty"
     },
     {
+      "id": "NameAttribute-IsA-IObject_285A312803954718567BFD40CE7A438F1B4EB98174FC7DBCC4CFAA90E4EF7489",
+      "type": "owl:ObjectProperty"
+    },
+    {
       "id": "PanelNameAttribute-HasProperty-PanelName_3C73935F505C7A8A99DFA97AFFD71BEA7D4CC94EDF6A2A93F31922136FBE0148",
       "type": "owl:DatatypeProperty"
     },
     {
       "id": "PanelNameAttribute-IsA-IImmutable_88A99623D533FF5A245413E1855094110D8EC95BD0B9C8F3BCB7AA67C30264DF",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "PanelNameAttribute-IsA-IObject_8E302782D67D8B75C66B1AE5EC65D9C0BBE459208DC3D9958D81C6611869AEC4",
       "type": "owl:ObjectProperty"
     },
     {
@@ -807,6 +1121,10 @@
       "type": "owl:ObjectProperty"
     },
     {
+      "id": "TabNameAttribute-IsA-IObject_8F0B8B6DE36BE85D83D31F8E1BF54C10B995880FB7BD4F01ACEF07E6ADFF13FC",
+      "type": "owl:ObjectProperty"
+    },
+    {
       "id": "ToolTipAttribute-HasProperty-Text_AAA6E4FD92F5C9D7E958BDEA1FB1839F7EA0277BBCDE23F5EBE113EABDAECDFC",
       "type": "owl:DatatypeProperty"
     },
@@ -815,11 +1133,19 @@
       "type": "owl:ObjectProperty"
     },
     {
+      "id": "ToolTipAttribute-IsA-IObject_9C7A71FB1576BA50D666259C7638B2D714961DD50F5E2D1E56178ABD1D24D63D",
+      "type": "owl:ObjectProperty"
+    },
+    {
       "id": "ToolTipImageFileNameAttribute-HasProperty-FileName_35BA94527130D9E49433119C248DAF413EDBC3B56D5D421BC6511C0E7512AE61",
       "type": "owl:DatatypeProperty"
     },
     {
       "id": "ToolTipImageFileNameAttribute-IsA-IImmutable_E78C717ECB225340D2D8A8ABBC2EE84EFB81BE640FCA6CD7255D89A3343038A4",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "ToolTipImageFileNameAttribute-IsA-IObject_0CBE13A9C5CE81B93080BC9DC44958EC0A9B7B58179D145A893D865CC865DE3A",
       "type": "owl:ObjectProperty"
     },
     {
@@ -832,6 +1158,10 @@
     },
     {
       "id": "RevitHostFragment-IsA-IFragment_F9A8CA82BC6C0ED98B6088ED3AABE4773A631DCB98DF80D6BA79C7A5BBC101C4",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "RevitHostFragment-IsA-IObject_FD0DC509043022D0DCB5565A95EA46E48CD72EF336B6BFE0B2A36DAD2DD2EF05",
       "type": "owl:ObjectProperty"
     },
     {
@@ -871,27 +1201,7 @@
       "range": "BH.oM.Revit.PinnedItemInfo.PanelName"
     },
     {
-      "id": "MainSettings-HasProperty-AddinFolders_EBCCDFE844F8E5B4EB0AFA2D872B9A33152C9E3468BB6E332C869213016B0031",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/HasProperty.cs",
-      "label": "HasProperty",
-      "attributes": [
-        "datatype"
-      ],
-      "domain": "BH.oM.Revit.MainSettings",
-      "range": "BH.oM.Revit.MainSettings.AddinFolders"
-    },
-    {
-      "id": "MainSettings-HasProperty-ShowPaneOnStartup_A1F4BF97D8C13F4F4DF94395EC8D4334DCB6DB7528AA66D516A655D5CDFB6C6A",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/HasProperty.cs",
-      "label": "HasProperty",
-      "attributes": [
-        "datatype"
-      ],
-      "domain": "BH.oM.Revit.MainSettings",
-      "range": "BH.oM.Revit.MainSettings.ShowPaneOnStartup"
-    },
-    {
-      "id": "MainSettings-IsA-IRevitSettings_A41D74B3BE9505872B83968CE5E8BFADBB7EF53781D02055CDD8B39631ADB504",
+      "id": "PinnedItemInfo-IsA-IBHoMObject_C7F1D947434BDDA720960C3041E771D4EC0A181CFB95038FAEC4D6964E8E8A79",
       "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
       "label": "IsA",
       "attributes": [
@@ -900,8 +1210,319 @@
       "comment": {
         "undefined": "Can be used to describe that a thing belongs to a class; or that a thing is equivalent to another thing. When used for BHoM types, this describes C# interface implementation."
       },
-      "domain": "BH.oM.Revit.MainSettings",
-      "range": "BH.oM.Revit.IRevitSettings"
+      "domain": "BH.oM.Revit.PinnedItemInfo",
+      "range": "BH.oM.Base.IBHoMObject"
+    },
+    {
+      "id": "PinnedItemInfo-IsA-IObject_0AF46A185E0144AC66CDC557D4669037821767950CCCB26A704C4EA4C1D4B0B4",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "label": "IsA",
+      "attributes": [
+        "object"
+      ],
+      "comment": {
+        "undefined": "Can be used to describe that a thing belongs to a class; or that a thing is equivalent to another thing. When used for BHoM types, this describes C# interface implementation."
+      },
+      "domain": "BH.oM.Revit.PinnedItemInfo",
+      "range": "BH.oM.Base.IObject"
+    },
+    {
+      "id": "PinnedItemInfo-IsSubclassOf-BHoMObject_5EB1997081B56770C6862204CD199735E6D362ABEDFED1E239F03328E6245D3F",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsSubclassOf.cs",
+      "label": "IsA",
+      "attributes": [
+        "object"
+      ],
+      "domain": "BH.oM.Revit.PinnedItemInfo",
+      "range": "BH.oM.Base.BHoMObject"
+    },
+    {
+      "id": "AddinManagementSettings-HasProperty-AddinFolders_79908F94B2D0C406164535247884A910004125F88DE84788DFFF176DC02203FE",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/HasProperty.cs",
+      "label": "HasProperty",
+      "attributes": [
+        "datatype"
+      ],
+      "domain": "BH.oM.Revit.AddinManagementSettings",
+      "range": "BH.oM.Revit.AddinManagementSettings.AddinFolders"
+    },
+    {
+      "id": "AddinManagementSettings-HasProperty-LoadedAddins_4D466C792E6ADAEE7B67390742F478FCD4701C553A970B70E9EA994BB5C3D700",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/HasProperty.cs",
+      "label": "HasProperty",
+      "attributes": [
+        "datatype"
+      ],
+      "domain": "BH.oM.Revit.AddinManagementSettings",
+      "range": "BH.oM.Revit.AddinManagementSettings.LoadedAddins"
+    },
+    {
+      "id": "AddinManagementSettings-IsA-IBHoMObject_D51C45C4EE1C9FE02EBBEC450F3DA0A53998B0139BB10E7F53584032D18BB855",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "label": "IsA",
+      "attributes": [
+        "object"
+      ],
+      "comment": {
+        "undefined": "Can be used to describe that a thing belongs to a class; or that a thing is equivalent to another thing. When used for BHoM types, this describes C# interface implementation."
+      },
+      "domain": "BH.oM.Revit.AddinManagementSettings",
+      "range": "BH.oM.Base.IBHoMObject"
+    },
+    {
+      "id": "AddinManagementSettings-IsA-IObject_81D4BF65EC95AD52ABAC65FA72F7EA895EA3BEF0474BFB160D379A142F875F57",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "label": "IsA",
+      "attributes": [
+        "object"
+      ],
+      "comment": {
+        "undefined": "Can be used to describe that a thing belongs to a class; or that a thing is equivalent to another thing. When used for BHoM types, this describes C# interface implementation."
+      },
+      "domain": "BH.oM.Revit.AddinManagementSettings",
+      "range": "BH.oM.Base.IObject"
+    },
+    {
+      "id": "AddinManagementSettings-IsA-IApplicationServiceSettings_255C22ED8907679EE05871ACF95258B910F6FEB1B2E90226C6EFE41FB541D0CC",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "label": "IsA",
+      "attributes": [
+        "object"
+      ],
+      "comment": {
+        "undefined": "Can be used to describe that a thing belongs to a class; or that a thing is equivalent to another thing. When used for BHoM types, this describes C# interface implementation."
+      },
+      "domain": "BH.oM.Revit.AddinManagementSettings",
+      "range": "BH.oM.Revit.IApplicationServiceSettings"
+    },
+    {
+      "id": "AddinManagementSettings-IsA-ISettings_856E8FB7D17C9631F0FA65DD7B58ACDB07ED0F68E50618F2868FC5BFC4EC829E",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "label": "IsA",
+      "attributes": [
+        "object"
+      ],
+      "comment": {
+        "undefined": "Can be used to describe that a thing belongs to a class; or that a thing is equivalent to another thing. When used for BHoM types, this describes C# interface implementation."
+      },
+      "domain": "BH.oM.Revit.AddinManagementSettings",
+      "range": "BH.oM.Base.ISettings"
+    },
+    {
+      "id": "AddinManagementSettings-IsSubclassOf-BHoMObject_02B33BCBA0657CDDEC7F41E8B8C67BC131AEA921738E942E1E2CC0C49AF5B5FC",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsSubclassOf.cs",
+      "label": "IsA",
+      "attributes": [
+        "object"
+      ],
+      "domain": "BH.oM.Revit.AddinManagementSettings",
+      "range": "BH.oM.Base.BHoMObject"
+    },
+    {
+      "id": "DockablePaneSettings-HasProperty-ShowPaneOnStartup_089DC8C1C945EAD617BD0C9E10D4625E3178A019DEFCDB307089D1E2DA4E492B",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/HasProperty.cs",
+      "label": "HasProperty",
+      "attributes": [
+        "datatype"
+      ],
+      "domain": "BH.oM.Revit.DockablePaneSettings",
+      "range": "BH.oM.Revit.DockablePaneSettings.ShowPaneOnStartup"
+    },
+    {
+      "id": "DockablePaneSettings-IsA-IBHoMObject_0B2114B9D027DE6F37A4EFDB6198482B7EDEDAA7E7050E09362506DBD299E9FD",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "label": "IsA",
+      "attributes": [
+        "object"
+      ],
+      "comment": {
+        "undefined": "Can be used to describe that a thing belongs to a class; or that a thing is equivalent to another thing. When used for BHoM types, this describes C# interface implementation."
+      },
+      "domain": "BH.oM.Revit.DockablePaneSettings",
+      "range": "BH.oM.Base.IBHoMObject"
+    },
+    {
+      "id": "DockablePaneSettings-IsA-IObject_E6531C2E9D2628E3121DA984136FD0363229503F8784279B03717A892BB73F61",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "label": "IsA",
+      "attributes": [
+        "object"
+      ],
+      "comment": {
+        "undefined": "Can be used to describe that a thing belongs to a class; or that a thing is equivalent to another thing. When used for BHoM types, this describes C# interface implementation."
+      },
+      "domain": "BH.oM.Revit.DockablePaneSettings",
+      "range": "BH.oM.Base.IObject"
+    },
+    {
+      "id": "DockablePaneSettings-IsA-IApplicationServiceSettings_8CDB6E6C72068A800F88408C6A36264570BC5B33A10D5D9DB8B09448D92A237C",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "label": "IsA",
+      "attributes": [
+        "object"
+      ],
+      "comment": {
+        "undefined": "Can be used to describe that a thing belongs to a class; or that a thing is equivalent to another thing. When used for BHoM types, this describes C# interface implementation."
+      },
+      "domain": "BH.oM.Revit.DockablePaneSettings",
+      "range": "BH.oM.Revit.IApplicationServiceSettings"
+    },
+    {
+      "id": "DockablePaneSettings-IsA-ISettings_A4FA811222D0504A89CE3320EB8B23FC41DEBE8537DACC12A236E21A73A29FBA",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "label": "IsA",
+      "attributes": [
+        "object"
+      ],
+      "comment": {
+        "undefined": "Can be used to describe that a thing belongs to a class; or that a thing is equivalent to another thing. When used for BHoM types, this describes C# interface implementation."
+      },
+      "domain": "BH.oM.Revit.DockablePaneSettings",
+      "range": "BH.oM.Base.ISettings"
+    },
+    {
+      "id": "DockablePaneSettings-IsSubclassOf-BHoMObject_7BC07D069EB19416CD8E0DC33AF98F2FA8A04BA066B1D853E9572C950FBFA9C3",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsSubclassOf.cs",
+      "label": "IsA",
+      "attributes": [
+        "object"
+      ],
+      "domain": "BH.oM.Revit.DockablePaneSettings",
+      "range": "BH.oM.Base.BHoMObject"
+    },
+    {
+      "id": "IApplicationServiceSettings-IsA-ISettings_F1E42A62D5FD61226A27E9BF8DBC8FF8DC1E5E1A0E6D34B287B53F458749E23A",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "label": "IsA",
+      "attributes": [
+        "object"
+      ],
+      "comment": {
+        "undefined": "Can be used to describe that a thing belongs to a class; or that a thing is equivalent to another thing. When used for BHoM types, this describes C# interface implementation."
+      },
+      "domain": "BH.oM.Revit.IApplicationServiceSettings",
+      "range": "BH.oM.Base.ISettings"
+    },
+    {
+      "id": "IApplicationServiceSettings-IsA-IObject_B65BB48AFCA94C7F67FEF414FE54B0452AF294069DCDCCB8D96CD6EA8F2F89C6",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "label": "IsA",
+      "attributes": [
+        "object"
+      ],
+      "comment": {
+        "undefined": "Can be used to describe that a thing belongs to a class; or that a thing is equivalent to another thing. When used for BHoM types, this describes C# interface implementation."
+      },
+      "domain": "BH.oM.Revit.IApplicationServiceSettings",
+      "range": "BH.oM.Base.IObject"
+    },
+    {
+      "id": "IRevitSettings-IsA-ISettings_6BDAE60F660E0B94C3CAB63A86C2ABEE76562E34CA64E29CCD1313B0B5A42840",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "label": "IsA",
+      "attributes": [
+        "object"
+      ],
+      "comment": {
+        "undefined": "Can be used to describe that a thing belongs to a class; or that a thing is equivalent to another thing. When used for BHoM types, this describes C# interface implementation."
+      },
+      "domain": "BH.oM.Revit.IRevitSettings",
+      "range": "BH.oM.Base.ISettings"
+    },
+    {
+      "id": "IRevitSettings-IsA-IObject_A706998D1812D9CB45FB7D5DC4500EEB64288AFAF251F4B6F5C3BFF547EC18DB",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "label": "IsA",
+      "attributes": [
+        "object"
+      ],
+      "comment": {
+        "undefined": "Can be used to describe that a thing belongs to a class; or that a thing is equivalent to another thing. When used for BHoM types, this describes C# interface implementation."
+      },
+      "domain": "BH.oM.Revit.IRevitSettings",
+      "range": "BH.oM.Base.IObject"
+    },
+    {
+      "id": "BH.oM.Revit.UIManagementSettings-HasProperty-BH.oM.Revit.UIManagementSettings.PinnedItems",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/HasProperty.cs",
+      "label": "HasProperty",
+      "attributes": [
+        "object"
+      ],
+      "domain": "BH.oM.Revit.UIManagementSettings",
+      "range": "BH.oM.Revit.UIManagementSettings.PinnedItems"
+    },
+    {
+      "id": "BH.oM.Revit.UIManagementSettings.PinnedItems-IsAListOf-BH.oM.Revit.PinnedItemInfo",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsAListOf.cs",
+      "label": "IsAListOf",
+      "attributes": [
+        "object"
+      ],
+      "domain": "BH.oM.Revit.UIManagementSettings.PinnedItems",
+      "range": "BH.oM.Revit.PinnedItemInfo"
+    },
+    {
+      "id": "UIManagementSettings-IsA-IBHoMObject_0E760C56CAC14888F1A9ADA7023C0B9811DEA1CC19C65BFE00A33073197FA9C0",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "label": "IsA",
+      "attributes": [
+        "object"
+      ],
+      "comment": {
+        "undefined": "Can be used to describe that a thing belongs to a class; or that a thing is equivalent to another thing. When used for BHoM types, this describes C# interface implementation."
+      },
+      "domain": "BH.oM.Revit.UIManagementSettings",
+      "range": "BH.oM.Base.IBHoMObject"
+    },
+    {
+      "id": "UIManagementSettings-IsA-IObject_54F6837CC461FAEE033C88A8214693B26AA13C8F3F9F4113E0F80FA861A6BA15",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "label": "IsA",
+      "attributes": [
+        "object"
+      ],
+      "comment": {
+        "undefined": "Can be used to describe that a thing belongs to a class; or that a thing is equivalent to another thing. When used for BHoM types, this describes C# interface implementation."
+      },
+      "domain": "BH.oM.Revit.UIManagementSettings",
+      "range": "BH.oM.Base.IObject"
+    },
+    {
+      "id": "UIManagementSettings-IsA-IApplicationServiceSettings_E53CA885B1B01644334F0C136F026664A049EEF8E3B7A4B58F92A22171C30AEC",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "label": "IsA",
+      "attributes": [
+        "object"
+      ],
+      "comment": {
+        "undefined": "Can be used to describe that a thing belongs to a class; or that a thing is equivalent to another thing. When used for BHoM types, this describes C# interface implementation."
+      },
+      "domain": "BH.oM.Revit.UIManagementSettings",
+      "range": "BH.oM.Revit.IApplicationServiceSettings"
+    },
+    {
+      "id": "UIManagementSettings-IsA-ISettings_E91AE18340D8D99046BEE518A091542A6704051565F975FD9758B9D99FF6B37A",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "label": "IsA",
+      "attributes": [
+        "object"
+      ],
+      "comment": {
+        "undefined": "Can be used to describe that a thing belongs to a class; or that a thing is equivalent to another thing. When used for BHoM types, this describes C# interface implementation."
+      },
+      "domain": "BH.oM.Revit.UIManagementSettings",
+      "range": "BH.oM.Base.ISettings"
+    },
+    {
+      "id": "UIManagementSettings-IsSubclassOf-BHoMObject_5A94CFE8051BD4B14DF254B416794942BEDB5B13B0167821675DCA0DB9CED4C5",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsSubclassOf.cs",
+      "label": "IsA",
+      "attributes": [
+        "object"
+      ],
+      "domain": "BH.oM.Revit.UIManagementSettings",
+      "range": "BH.oM.Base.BHoMObject"
     },
     {
       "id": "BH.oM.Revit.Scenarios.ElementFilter-HasProperty-BH.oM.Revit.Scenarios.ElementFilter.Request",
@@ -932,6 +1553,42 @@
       ],
       "domain": "BH.oM.Revit.Scenarios.ElementFilter",
       "range": "BH.oM.Revit.Scenarios.ElementFilter.ElementIndex"
+    },
+    {
+      "id": "ElementFilter-IsA-IBHoMObject_AAC4A7DBEE8450DE62B29A5F15E17B0F40975E3D4064FFECA85B39F8C4C162A5",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "label": "IsA",
+      "attributes": [
+        "object"
+      ],
+      "comment": {
+        "undefined": "Can be used to describe that a thing belongs to a class; or that a thing is equivalent to another thing. When used for BHoM types, this describes C# interface implementation."
+      },
+      "domain": "BH.oM.Revit.Scenarios.ElementFilter",
+      "range": "BH.oM.Base.IBHoMObject"
+    },
+    {
+      "id": "ElementFilter-IsA-IObject_C6811975F587FE53CAF6E925EB972A3B38F4B255FF37FFB9D79512801F805FD4",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "label": "IsA",
+      "attributes": [
+        "object"
+      ],
+      "comment": {
+        "undefined": "Can be used to describe that a thing belongs to a class; or that a thing is equivalent to another thing. When used for BHoM types, this describes C# interface implementation."
+      },
+      "domain": "BH.oM.Revit.Scenarios.ElementFilter",
+      "range": "BH.oM.Base.IObject"
+    },
+    {
+      "id": "ElementFilter-IsSubclassOf-BHoMObject_62E42C7C77DC095B61B9E231D8502FBC9C93F438FD72884DE7E895DEDE243A45",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsSubclassOf.cs",
+      "label": "IsA",
+      "attributes": [
+        "object"
+      ],
+      "domain": "BH.oM.Revit.Scenarios.ElementFilter",
+      "range": "BH.oM.Base.BHoMObject"
     },
     {
       "id": "IScenario-RequiresProperty-Filters_1F15BC6AED28C37399899C75BCDCE0FC29F483BAF383C3218641CA5BDE89C34E",
@@ -980,47 +1637,7 @@
       "range": "BH.oM.Revit.Scenarios.IScenario"
     },
     {
-      "id": "IRevitLog-RequiresProperty-Items_C9A3954E0D38E1EB66C0C38447B85E36C53A997CED23E952604E292C72FDA5AB",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/RequiresProperty.cs",
-      "label": "RequiresProperty",
-      "attributes": [
-        "datatype"
-      ],
-      "domain": "BH.oM.Revit.Logging.IRevitLog",
-      "range": "BH.oM.Revit.Logging.IRevitLog.Items"
-    },
-    {
-      "id": "IRevitLog-RequiresProperty-Name_131F643BD2A205744AC7500DB8340A123430005EF24A9AD0149B5D2E5894F83F",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/RequiresProperty.cs",
-      "label": "RequiresProperty",
-      "attributes": [
-        "datatype"
-      ],
-      "domain": "BH.oM.Revit.Logging.IRevitLog",
-      "range": "BH.oM.Revit.Logging.IRevitLog.Name"
-    },
-    {
-      "id": "BH.oM.Revit.Logging.StandardRevitLog-HasProperty-BH.oM.Revit.Logging.StandardRevitLog.Items",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/HasProperty.cs",
-      "label": "HasProperty",
-      "attributes": [
-        "object"
-      ],
-      "domain": "BH.oM.Revit.Logging.StandardRevitLog",
-      "range": "BH.oM.Revit.Logging.StandardRevitLog.Items"
-    },
-    {
-      "id": "BH.oM.Revit.Logging.StandardRevitLog.Items-IsAListOf-BH.oM.Revit.Logging.IRevitLogItem",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsAListOf.cs",
-      "label": "IsAListOf",
-      "attributes": [
-        "object"
-      ],
-      "domain": "BH.oM.Revit.Logging.StandardRevitLog.Items",
-      "range": "BH.oM.Revit.Logging.IRevitLogItem"
-    },
-    {
-      "id": "StandardRevitLog-IsA-IRevitLog_868F42D3F637D156F7B0ED63D80F42266B9D578CC44C4AEF64B0255141227A5B",
+      "id": "BaseRevitLogItem-IsA-IBHoMObject_AA84B396BEEE4DEBC5F1926EA12C8A394EBAF2C9003CE95700EE28553CEF38BE",
       "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
       "label": "IsA",
       "attributes": [
@@ -1029,8 +1646,123 @@
       "comment": {
         "undefined": "Can be used to describe that a thing belongs to a class; or that a thing is equivalent to another thing. When used for BHoM types, this describes C# interface implementation."
       },
-      "domain": "BH.oM.Revit.Logging.StandardRevitLog",
-      "range": "BH.oM.Revit.Logging.IRevitLog"
+      "domain": "BH.oM.Revit.Logging.BaseRevitLogItem",
+      "range": "BH.oM.Base.IBHoMObject"
+    },
+    {
+      "id": "BaseRevitLogItem-IsA-IObject_14033452DE82519963EAC019C0F11584850E4901640B32221BBEC1D6737F4835",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "label": "IsA",
+      "attributes": [
+        "object"
+      ],
+      "comment": {
+        "undefined": "Can be used to describe that a thing belongs to a class; or that a thing is equivalent to another thing. When used for BHoM types, this describes C# interface implementation."
+      },
+      "domain": "BH.oM.Revit.Logging.BaseRevitLogItem",
+      "range": "BH.oM.Base.IObject"
+    },
+    {
+      "id": "BaseRevitLogItem-IsA-IRevitLogItem_A73992B94F2A47E467C271EB6F2DA6782DDB53CD0163428BD4AE30FB13BB0047",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "label": "IsA",
+      "attributes": [
+        "object"
+      ],
+      "comment": {
+        "undefined": "Can be used to describe that a thing belongs to a class; or that a thing is equivalent to another thing. When used for BHoM types, this describes C# interface implementation."
+      },
+      "domain": "BH.oM.Revit.Logging.BaseRevitLogItem",
+      "range": "BH.oM.Revit.Logging.IRevitLogItem"
+    },
+    {
+      "id": "BaseRevitLogItem-IsSubclassOf-BHoMObject_C12EC8C12F859D633AA549BE93E50A02F2536FAA04E7EC05109A0156C4DC382C",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsSubclassOf.cs",
+      "label": "IsA",
+      "attributes": [
+        "object"
+      ],
+      "domain": "BH.oM.Revit.Logging.BaseRevitLogItem",
+      "range": "BH.oM.Base.BHoMObject"
+    },
+    {
+      "id": "IRevitLog`1-RequiresProperty-Items_4B515A0B96EE796B630F1A5627403764AF175A22D04A7D784883424172C0AE0B",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/RequiresProperty.cs",
+      "label": "RequiresProperty",
+      "attributes": [
+        "datatype"
+      ],
+      "domain": "BH.oM.Revit.Logging.IRevitLog`1",
+      "range": "BH.oM.Revit.Logging.IRevitLog`1.Items"
+    },
+    {
+      "id": "IRevitLog`1-RequiresProperty-Name_C1A9D7783A6A80D6A00A9DD24516263B07ECE4015AF0A9A892D939A1F9A2C263",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/RequiresProperty.cs",
+      "label": "RequiresProperty",
+      "attributes": [
+        "datatype"
+      ],
+      "domain": "BH.oM.Revit.Logging.IRevitLog`1",
+      "range": "BH.oM.Revit.Logging.IRevitLog`1.Name"
+    },
+    {
+      "id": "IRevitLogItem-IsA-IObject_042853BC364822B0C71B50F3FC906219320C2A8D7BCC89F8A27AE69D2856E90F",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "label": "IsA",
+      "attributes": [
+        "object"
+      ],
+      "comment": {
+        "undefined": "Can be used to describe that a thing belongs to a class; or that a thing is equivalent to another thing. When used for BHoM types, this describes C# interface implementation."
+      },
+      "domain": "BH.oM.Revit.Logging.IRevitLogItem",
+      "range": "BH.oM.Base.IObject"
+    },
+    {
+      "id": "StandardRevitLog`1-HasProperty-Items_8AEEF3F082A69E00655F1F4EB15A874A26336A52ABCE84C55D43CDFBD63FC686",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/HasProperty.cs",
+      "label": "HasProperty",
+      "attributes": [
+        "datatype"
+      ],
+      "domain": "BH.oM.Revit.Logging.StandardRevitLog`1",
+      "range": "BH.oM.Revit.Logging.StandardRevitLog`1.Items"
+    },
+    {
+      "id": "StandardRevitLog`1-IsA-IBHoMObject_E52A633ED017C5F61ABB3D1295A473997E9B2B6EBE17D1EC3AD455E6160BCEBB",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "label": "IsA",
+      "attributes": [
+        "object"
+      ],
+      "comment": {
+        "undefined": "Can be used to describe that a thing belongs to a class; or that a thing is equivalent to another thing. When used for BHoM types, this describes C# interface implementation."
+      },
+      "domain": "BH.oM.Revit.Logging.StandardRevitLog`1",
+      "range": "BH.oM.Base.IBHoMObject"
+    },
+    {
+      "id": "StandardRevitLog`1-IsA-IObject_1A92E058D492C59EE6AAC7D7951914007656288F0D1F999BCB49577D0675A715",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "label": "IsA",
+      "attributes": [
+        "object"
+      ],
+      "comment": {
+        "undefined": "Can be used to describe that a thing belongs to a class; or that a thing is equivalent to another thing. When used for BHoM types, this describes C# interface implementation."
+      },
+      "domain": "BH.oM.Revit.Logging.StandardRevitLog`1",
+      "range": "BH.oM.Base.IObject"
+    },
+    {
+      "id": "StandardRevitLog`1-IsSubclassOf-BHoMObject_F936230899DC9323475C99C025FBD7EE820477ED398137E89C577375246112DB",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsSubclassOf.cs",
+      "label": "IsA",
+      "attributes": [
+        "object"
+      ],
+      "domain": "BH.oM.Revit.Logging.StandardRevitLog`1",
+      "range": "BH.oM.Base.BHoMObject"
     },
     {
       "id": "ComboBoxAttribute-HasProperty-ParentSettings_34F9EE7C454D062D6A51C897FA93C915E9A901BB62E94D7DC5870CF2311E32E7",
@@ -1066,6 +1798,19 @@
       "range": "BH.oM.Base.IImmutable"
     },
     {
+      "id": "ComboBoxAttribute-IsA-IObject_92394B321FD8AD0076BAA8D8E3F1624117AF8DABB389052EB1D8250AE9B33D21",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "label": "IsA",
+      "attributes": [
+        "object"
+      ],
+      "comment": {
+        "undefined": "Can be used to describe that a thing belongs to a class; or that a thing is equivalent to another thing. When used for BHoM types, this describes C# interface implementation."
+      },
+      "domain": "BH.oM.Revit.Attributes.ComboBoxAttribute",
+      "range": "BH.oM.Base.IObject"
+    },
+    {
       "id": "ManualTransactionAttribute-IsA-IImmutable_FFB856DBAEA6B2942E8BDB7A171EDE4F9BC13AF91D6E34AE897B0E969A5B3678",
       "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
       "label": "IsA",
@@ -1077,6 +1822,19 @@
       },
       "domain": "BH.oM.Revit.Attributes.ManualTransactionAttribute",
       "range": "BH.oM.Base.IImmutable"
+    },
+    {
+      "id": "ManualTransactionAttribute-IsA-IObject_AFDC6FE2826EECA8B241D35412CDD2FFFB19176CC6C8F4B043002EBDE5D250EA",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "label": "IsA",
+      "attributes": [
+        "object"
+      ],
+      "comment": {
+        "undefined": "Can be used to describe that a thing belongs to a class; or that a thing is equivalent to another thing. When used for BHoM types, this describes C# interface implementation."
+      },
+      "domain": "BH.oM.Revit.Attributes.ManualTransactionAttribute",
+      "range": "BH.oM.Base.IObject"
     },
     {
       "id": "TagsAttribute-HasProperty-Tags_830C16D58B6577DFF263D80304F7A807A136F3FE6D9C5DDB481F802C4F8E2327",
@@ -1102,6 +1860,19 @@
       "range": "BH.oM.Base.IImmutable"
     },
     {
+      "id": "TagsAttribute-IsA-IObject_E99C0EA87403571A2396FDE7270BE92F4C59655FD98FA1B261BC1489C6E2EC55",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "label": "IsA",
+      "attributes": [
+        "object"
+      ],
+      "comment": {
+        "undefined": "Can be used to describe that a thing belongs to a class; or that a thing is equivalent to another thing. When used for BHoM types, this describes C# interface implementation."
+      },
+      "domain": "BH.oM.Revit.Attributes.TagsAttribute",
+      "range": "BH.oM.Base.IObject"
+    },
+    {
       "id": "SplitButtonAttribute-HasProperty-SplitButtonName_9192CCE9561C99E988E840034F44EDF697E8FC3F04DDB623ACCE288F620D1FD9",
       "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/HasProperty.cs",
       "label": "HasProperty",
@@ -1123,6 +1894,19 @@
       },
       "domain": "BH.oM.Revit.Attributes.SplitButtonAttribute",
       "range": "BH.oM.Base.IImmutable"
+    },
+    {
+      "id": "SplitButtonAttribute-IsA-IObject_D3E7B3354883740D4E9BEED9DCD258B3F26020618F739285EF65E84862EFAD05",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "label": "IsA",
+      "attributes": [
+        "object"
+      ],
+      "comment": {
+        "undefined": "Can be used to describe that a thing belongs to a class; or that a thing is equivalent to another thing. When used for BHoM types, this describes C# interface implementation."
+      },
+      "domain": "BH.oM.Revit.Attributes.SplitButtonAttribute",
+      "range": "BH.oM.Base.IObject"
     },
     {
       "id": "UIEnabledAttribute-HasProperty-Enabled_F922D9857D70F91D09DD234593F86183AD344BEAC97B6E6907CF137B0871B156",
@@ -1148,6 +1932,19 @@
       "range": "BH.oM.Base.IImmutable"
     },
     {
+      "id": "UIEnabledAttribute-IsA-IObject_32F01CFF9B17DAC3CE7F0F73B830B4B39B494D76E54262E25DD644451DD85774",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "label": "IsA",
+      "attributes": [
+        "object"
+      ],
+      "comment": {
+        "undefined": "Can be used to describe that a thing belongs to a class; or that a thing is equivalent to another thing. When used for BHoM types, this describes C# interface implementation."
+      },
+      "domain": "BH.oM.Revit.Attributes.UIEnabledAttribute",
+      "range": "BH.oM.Base.IObject"
+    },
+    {
       "id": "IconFileNameAttribute-HasProperty-FileName_008A1EFAA43E1AC28B558E2BB71DA7904BAE8996BE2BD64826460CE27591156A",
       "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/HasProperty.cs",
       "label": "HasProperty",
@@ -1169,6 +1966,19 @@
       },
       "domain": "BH.oM.Revit.Attributes.IconFileNameAttribute",
       "range": "BH.oM.Base.IImmutable"
+    },
+    {
+      "id": "IconFileNameAttribute-IsA-IObject_7D6D71729C46F7BB029748D2A673648EDB477D6005D3F01DA2F857ABE2CFBA88",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "label": "IsA",
+      "attributes": [
+        "object"
+      ],
+      "comment": {
+        "undefined": "Can be used to describe that a thing belongs to a class; or that a thing is equivalent to another thing. When used for BHoM types, this describes C# interface implementation."
+      },
+      "domain": "BH.oM.Revit.Attributes.IconFileNameAttribute",
+      "range": "BH.oM.Base.IObject"
     },
     {
       "id": "NameAttribute-HasProperty-Name_0592F73B4D148A42B1A07EC7885760EAD8DDB66588565113C42586B3B19C69DB",
@@ -1194,6 +2004,19 @@
       "range": "BH.oM.Base.IImmutable"
     },
     {
+      "id": "NameAttribute-IsA-IObject_285A312803954718567BFD40CE7A438F1B4EB98174FC7DBCC4CFAA90E4EF7489",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "label": "IsA",
+      "attributes": [
+        "object"
+      ],
+      "comment": {
+        "undefined": "Can be used to describe that a thing belongs to a class; or that a thing is equivalent to another thing. When used for BHoM types, this describes C# interface implementation."
+      },
+      "domain": "BH.oM.Revit.Attributes.NameAttribute",
+      "range": "BH.oM.Base.IObject"
+    },
+    {
       "id": "PanelNameAttribute-HasProperty-PanelName_3C73935F505C7A8A99DFA97AFFD71BEA7D4CC94EDF6A2A93F31922136FBE0148",
       "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/HasProperty.cs",
       "label": "HasProperty",
@@ -1215,6 +2038,19 @@
       },
       "domain": "BH.oM.Revit.Attributes.PanelNameAttribute",
       "range": "BH.oM.Base.IImmutable"
+    },
+    {
+      "id": "PanelNameAttribute-IsA-IObject_8E302782D67D8B75C66B1AE5EC65D9C0BBE459208DC3D9958D81C6611869AEC4",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "label": "IsA",
+      "attributes": [
+        "object"
+      ],
+      "comment": {
+        "undefined": "Can be used to describe that a thing belongs to a class; or that a thing is equivalent to another thing. When used for BHoM types, this describes C# interface implementation."
+      },
+      "domain": "BH.oM.Revit.Attributes.PanelNameAttribute",
+      "range": "BH.oM.Base.IObject"
     },
     {
       "id": "TabNameAttribute-HasProperty-TabName_E73C6C1D4589E1EB4F4C108223778DFF7995A2F5846B7B2AFCD3E7F2FB2C74FD",
@@ -1240,6 +2076,19 @@
       "range": "BH.oM.Base.IImmutable"
     },
     {
+      "id": "TabNameAttribute-IsA-IObject_8F0B8B6DE36BE85D83D31F8E1BF54C10B995880FB7BD4F01ACEF07E6ADFF13FC",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "label": "IsA",
+      "attributes": [
+        "object"
+      ],
+      "comment": {
+        "undefined": "Can be used to describe that a thing belongs to a class; or that a thing is equivalent to another thing. When used for BHoM types, this describes C# interface implementation."
+      },
+      "domain": "BH.oM.Revit.Attributes.TabNameAttribute",
+      "range": "BH.oM.Base.IObject"
+    },
+    {
       "id": "ToolTipAttribute-HasProperty-Text_AAA6E4FD92F5C9D7E958BDEA1FB1839F7EA0277BBCDE23F5EBE113EABDAECDFC",
       "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/HasProperty.cs",
       "label": "HasProperty",
@@ -1263,6 +2112,19 @@
       "range": "BH.oM.Base.IImmutable"
     },
     {
+      "id": "ToolTipAttribute-IsA-IObject_9C7A71FB1576BA50D666259C7638B2D714961DD50F5E2D1E56178ABD1D24D63D",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "label": "IsA",
+      "attributes": [
+        "object"
+      ],
+      "comment": {
+        "undefined": "Can be used to describe that a thing belongs to a class; or that a thing is equivalent to another thing. When used for BHoM types, this describes C# interface implementation."
+      },
+      "domain": "BH.oM.Revit.Attributes.ToolTipAttribute",
+      "range": "BH.oM.Base.IObject"
+    },
+    {
       "id": "ToolTipImageFileNameAttribute-HasProperty-FileName_35BA94527130D9E49433119C248DAF413EDBC3B56D5D421BC6511C0E7512AE61",
       "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/HasProperty.cs",
       "label": "HasProperty",
@@ -1284,6 +2146,19 @@
       },
       "domain": "BH.oM.Revit.Attributes.ToolTipImageFileNameAttribute",
       "range": "BH.oM.Base.IImmutable"
+    },
+    {
+      "id": "ToolTipImageFileNameAttribute-IsA-IObject_0CBE13A9C5CE81B93080BC9DC44958EC0A9B7B58179D145A893D865CC865DE3A",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "label": "IsA",
+      "attributes": [
+        "object"
+      ],
+      "comment": {
+        "undefined": "Can be used to describe that a thing belongs to a class; or that a thing is equivalent to another thing. When used for BHoM types, this describes C# interface implementation."
+      },
+      "domain": "BH.oM.Revit.Attributes.ToolTipImageFileNameAttribute",
+      "range": "BH.oM.Base.IObject"
     },
     {
       "id": "RevitHostFragment-HasProperty-HostId_573837931A2F340FAF9ADFD5FFBB465817AB470A16589C6C2033E7B49D78B185",
@@ -1317,6 +2192,19 @@
       },
       "domain": "BH.oM.Revit.RevitHostFragment",
       "range": "BH.oM.Base.IFragment"
+    },
+    {
+      "id": "RevitHostFragment-IsA-IObject_FD0DC509043022D0DCB5565A95EA46E48CD72EF336B6BFE0B2A36DAD2DD2EF05",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "label": "IsA",
+      "attributes": [
+        "object"
+      ],
+      "comment": {
+        "undefined": "Can be used to describe that a thing belongs to a class; or that a thing is equivalent to another thing. When used for BHoM types, this describes C# interface implementation."
+      },
+      "domain": "BH.oM.Revit.RevitHostFragment",
+      "range": "BH.oM.Base.IObject"
     },
     {
       "id": "RevitHostFragment-IsA-IImmutable_2E1192C7B1D652450005D9034E9992EC8DDFF75BF1835C1D5D9A5EEEB7465724",

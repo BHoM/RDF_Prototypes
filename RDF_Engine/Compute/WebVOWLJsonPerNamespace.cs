@@ -12,16 +12,16 @@ namespace BH.Engine.RDF
 {
     public static partial class Compute
     {
-        public static SortedDictionary<string, string> WebVOWLJsonPerNamespace(List<TypeInfo> oMTypes, List<string> namespaceToConsider = null, List<string> typeNamesToConsider = null, int namespaceGroupDepth = 3)
+        public static SortedDictionary<string, string> WebVOWLJsonPerNamespace(List<TypeInfo> oMTypes, TBoxSettings settings, List<string> namespaceToConsider = null, List<string> typeNamesToConsider = null, int namespaceGroupDepth = 3)
         {
             var oMTypesPerNamespace = Query.OMTypesPerNamespace(oMTypes, namespaceToConsider, typeNamesToConsider, namespaceGroupDepth);
 
-            var res = WebVOWLJsonPerNamespace(oMTypesPerNamespace);
+            var res = WebVOWLJsonPerNamespace(oMTypesPerNamespace, settings);
 
             return res;
         }
 
-        public static SortedDictionary<string, string> WebVOWLJsonPerNamespace(IDictionary<string, List<TypeInfo>> oMTypesGroupsPerNamespace)
+        public static SortedDictionary<string, string> WebVOWLJsonPerNamespace(IDictionary<string, List<TypeInfo>> oMTypesGroupsPerNamespace, TBoxSettings settings)
         {
             SortedDictionary<string, string> result = new SortedDictionary<string, string>(new NaturalSortComparer<string>());
 
@@ -29,7 +29,7 @@ namespace BH.Engine.RDF
             {
                 // Extract a dictionary representation of the BHoM Ontology Graph
                 Dictionary<TypeInfo, List<IRelation>> dictionaryGraph = kv.Value.DictionaryGraphFromTypeInfos();
-                string webVOWLJson = Engine.RDF.Convert.ToWebVOWLJson(dictionaryGraph, new HashSet<string> { kv.Key });
+                string webVOWLJson = Engine.RDF.Convert.ToWebVOWLJson(dictionaryGraph, settings, new HashSet<string> { kv.Key });
 
                 result[kv.Key] = webVOWLJson;
             }

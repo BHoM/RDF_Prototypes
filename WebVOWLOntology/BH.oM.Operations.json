@@ -8,31 +8,43 @@
     },
     {
       "id": "BH.oM.Operations.ScriptUsage.Description",
-      "type": "rdfs:Datatype"
+      "type": "owl:Class"
     },
     {
       "id": "BH.oM.Operations.ScriptUsage.Date",
-      "type": "rdfs:Datatype"
+      "type": "owl:Class"
     },
     {
       "id": "BH.oM.Operations.ScriptUsage.User",
-      "type": "rdfs:Datatype"
+      "type": "owl:Class"
     },
     {
       "id": "BH.oM.Operations.ScriptUsage.Computer",
-      "type": "rdfs:Datatype"
+      "type": "owl:Class"
     },
     {
       "id": "BH.oM.Operations.ScriptUsage.Application",
-      "type": "rdfs:Datatype"
+      "type": "owl:Class"
     },
     {
       "id": "BH.oM.Operations.ScriptUsage.UI",
-      "type": "rdfs:Datatype"
+      "type": "owl:Class"
     },
     {
       "id": "BH.oM.Operations.ScriptUsage.Script_Id",
-      "type": "rdfs:Datatype"
+      "type": "owl:Class"
+    },
+    {
+      "id": "BH.oM.Base.IBHoMObject",
+      "type": "owl:Class"
+    },
+    {
+      "id": "BH.oM.Base.IObject",
+      "type": "owl:Class"
+    },
+    {
+      "id": "BH.oM.Base.BHoMObject",
+      "type": "owl:Class"
     }
   ],
   "classAttribute": [
@@ -99,6 +111,32 @@
       "attributes": [
         "datatype"
       ]
+    },
+    {
+      "id": "BH.oM.Base.IBHoMObject",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/BHoM/Interface/IBHoMObject.cs",
+      "label": "IBHoMObject (BH.oM.Base)",
+      "attributes": [
+        "object",
+        "external"
+      ]
+    },
+    {
+      "id": "BH.oM.Base.IObject",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/BHoM/Interface/IObject.cs",
+      "label": "IObject (BH.oM.Base)",
+      "attributes": [
+        "object",
+        "external"
+      ]
+    },
+    {
+      "id": "BH.oM.Base.BHoMObject",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/BHoM/BHoMObject.cs",
+      "label": "BHoMObject (BH.oM.Base)",
+      "attributes": [
+        "external"
+      ]
     }
   ],
   "property": [
@@ -129,6 +167,18 @@
     {
       "id": "ScriptUsage-HasProperty-Script_Id_B3ABBFBF372CC413356B12CF8F7A0540A620AB314BEA565F01B636C92C324EEC",
       "type": "owl:DatatypeProperty"
+    },
+    {
+      "id": "ScriptUsage-IsA-IBHoMObject_ED38BCAA20A290409226EC907489F346AB2C309B25884E779691F5E01979123C",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "ScriptUsage-IsA-IObject_BF901209E8D0A02B9989E8E2DFD4C190C41578454393B55CEF0D2DBEDFB14EEF",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "ScriptUsage-IsSubclassOf-BHoMObject_C87A816866FC166EE2A6DBFC1E58947A7553630CFA8BEB8A9264B2337F1DFBD4",
+      "type": "rdfs:subClassOf"
     }
   ],
   "propertyAttribute": [
@@ -201,6 +251,42 @@
       ],
       "domain": "BH.oM.Operations.ScriptUsage",
       "range": "BH.oM.Operations.ScriptUsage.Script_Id"
+    },
+    {
+      "id": "ScriptUsage-IsA-IBHoMObject_ED38BCAA20A290409226EC907489F346AB2C309B25884E779691F5E01979123C",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "label": "IsA",
+      "attributes": [
+        "object"
+      ],
+      "comment": {
+        "undefined": "Can be used to describe that a thing belongs to a class; or that a thing is equivalent to another thing. When used for BHoM types, this describes C# interface implementation."
+      },
+      "domain": "BH.oM.Operations.ScriptUsage",
+      "range": "BH.oM.Base.IBHoMObject"
+    },
+    {
+      "id": "ScriptUsage-IsA-IObject_BF901209E8D0A02B9989E8E2DFD4C190C41578454393B55CEF0D2DBEDFB14EEF",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "label": "IsA",
+      "attributes": [
+        "object"
+      ],
+      "comment": {
+        "undefined": "Can be used to describe that a thing belongs to a class; or that a thing is equivalent to another thing. When used for BHoM types, this describes C# interface implementation."
+      },
+      "domain": "BH.oM.Operations.ScriptUsage",
+      "range": "BH.oM.Base.IObject"
+    },
+    {
+      "id": "ScriptUsage-IsSubclassOf-BHoMObject_C87A816866FC166EE2A6DBFC1E58947A7553630CFA8BEB8A9264B2337F1DFBD4",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsSubclassOf.cs",
+      "label": "IsA",
+      "attributes": [
+        "object"
+      ],
+      "domain": "BH.oM.Operations.ScriptUsage",
+      "range": "BH.oM.Base.BHoMObject"
     }
   ]
 }

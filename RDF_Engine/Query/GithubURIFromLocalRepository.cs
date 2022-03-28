@@ -1,5 +1,6 @@
 ﻿using BH.oM.Base;
 using BH.oM.Base.Attributes;
+using BH.oM.RDF;
 using System;
 using System.Collections;
 using System.Collections.Generic;
@@ -15,25 +16,20 @@ namespace BH.Engine.RDF
 {
     public static partial class Query
     {
-        private static Uri m_BHoMGithubOrganization = new Uri(@"https://github.com/BHoM/");
-
-        public static Uri GithubURIFromLocalRepository(this Type typeToSearch, string githubRootDirectory = null, Uri githubOrganisation = null, string cacheRootDirectory = null)
+        public static Uri GithubURIFromLocalRepository(this Type typeToSearch, TBoxSettings settings)
         {
             if (typeToSearch.Name.StartsWith("<>c__"))
                 return null;
 
-            string typeFilePath = typeToSearch.FilePathFromLocalRepository(githubRootDirectory, cacheRootDirectory, true);
+            string typeFilePath = typeToSearch.FilePathFromLocalRepository(settings, true);
 
             if (!string.IsNullOrWhiteSpace(typeFilePath))
             {
                 var pathComponents = typeFilePath.Split(Path.DirectorySeparatorChar).Where(pc => !string.IsNullOrWhiteSpace(pc)).ToList();
 
-                if (githubOrganisation == null)
-                    githubOrganisation = m_BHoMGithubOrganization;
-
                 try
                 {
-                    Uri URL = CombineUris(githubOrganisation, pathComponents[0], "/blob/main/", string.Join("/", pathComponents.Skip(1)));
+                    Uri URL = CombineUris(settings.GithubOrganisation, pathComponents[0], "/blob/main/", string.Join("/", pathComponents.Skip(1)));
                     return URL;
                 }
                 catch { }
@@ -42,11 +38,11 @@ namespace BH.Engine.RDF
             return null;
         }
 
-        public static Uri GithubURIFromLocalRepository(this MemberInfo pi, string githubRootDirectory = null, Uri githubOrganisation = null, string cacheRootDirectory = null)
+        public static Uri GithubURIFromLocalRepository(this MemberInfo pi, TBoxSettings settings)
         {
-            Uri declaringTypeUri = pi.DeclaringType.GithubURIFromLocalRepository(githubRootDirectory, githubOrganisation, cacheRootDirectory);
+            Uri declaringTypeUri = pi.DeclaringType.GithubURIFromLocalRepository(settings);
 
-            int lineNumber = Compute.LineNumber(pi as dynamic, githubRootDirectory, cacheRootDirectory);
+            int lineNumber = Compute.LineNumber(pi as dynamic, settings);
 
             if (lineNumber < 0)
                 return declaringTypeUri;

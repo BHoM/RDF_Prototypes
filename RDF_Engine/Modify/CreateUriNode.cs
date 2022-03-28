@@ -1,4 +1,5 @@
 ﻿using BH.oM.Base;
+using BH.oM.RDF;
 using System;
 using System.Collections;
 using System.Collections.Generic;
@@ -15,7 +16,7 @@ namespace BH.Engine.RDF
     public static partial class Modify
     {
         [Description("Modifies the Given RDF IGraph adding to it a URI Node, which is obtained by inferring the ")]
-        public static IUriNode CreateUriNode(this IGraph graph, Type t)
+        public static IUriNode CreateUriNode(this IGraph graph, Type t, TBoxSettings settings)
         {
             if (!t.FullName.StartsWith("BH.oM"))
             {
@@ -23,7 +24,7 @@ namespace BH.Engine.RDF
                 return null;
             }    
 
-            return graph.CreateUriNode(t.GithubURI()); // UriFactory.Create(t.UriFromType()
+            return graph.CreateUriNode(t.GithubURI(settings)); // UriFactory.Create(t.UriFromType()
         }
     }
 }

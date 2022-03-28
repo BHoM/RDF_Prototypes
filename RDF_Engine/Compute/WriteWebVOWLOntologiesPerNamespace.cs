@@ -16,10 +16,11 @@ namespace BH.Engine.RDF
 {
     public static partial class Compute
     {
-        public static void WriteWebVOWLOntologiesPerNamespace(string saveDirRelativeToRepoRoot = "WebVOWLOntology")
+        public static void WriteWebVOWLOntologiesPerNamespace(TBoxSettings settings)
         {
             List<Assembly> oMassemblies = BH.Engine.RDF.Compute.LoadAssembliesInDirectory(true);
             List<TypeInfo> oMTypes = oMassemblies.BHoMTypes();
+            string saveDirRelativeToRepoRoot = settings.SaveDir_RelativeToRoot;
 
             // Take a subset of the types avaialble to reduce the size of the output graph. This can become a Filter function.
             //IEnumerable<TypeInfo> onlyBaseOmTypes = oMTypes.Where(t => t != null && t.Namespace != null && t.Namespace.EndsWith("BH.oM.Base")).ToList();
@@ -27,7 +28,7 @@ namespace BH.Engine.RDF
             //onlyBaseOmTypes = onlyBaseOmTypes.Where(t => t.Name.Contains("Output"));
             //onlyBaseOmTypes = onlyBaseOmTypes.Where(t => t.Name.Contains("ComparisonConfig"));
 
-            SortedDictionary<string, string> webVOWLJsonsPerNamespace = Engine.RDF.Compute.WebVOWLJsonPerNamespace(oMTypes);
+            SortedDictionary<string, string> webVOWLJsonsPerNamespace = Engine.RDF.Compute.WebVOWLJsonPerNamespace(oMTypes, settings);
 
             // Save all generated ontologies to file
             foreach (var kv in webVOWLJsonsPerNamespace)

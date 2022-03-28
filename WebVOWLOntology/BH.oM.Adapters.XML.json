@@ -80,7 +80,7 @@
     },
     {
       "id": "BH.oM.Adapters.XML.GBXMLDocumentBuilder.ElementsAsSpaces",
-      "type": "rdfs:Datatype"
+      "type": "owl:Class"
     },
     {
       "id": "BH.oM.Adapters.XML.GBXMLDocumentBuilder.ShadingElements",
@@ -100,6 +100,18 @@
     },
     {
       "id": "BH.oM.Adapters.XML.GBXMLDocumentBuilder.UnassignedPanels",
+      "type": "owl:Class"
+    },
+    {
+      "id": "BH.oM.Base.IBHoMObject",
+      "type": "owl:Class"
+    },
+    {
+      "id": "BH.oM.Base.IObject",
+      "type": "owl:Class"
+    },
+    {
+      "id": "BH.oM.Base.BHoMObject",
       "type": "owl:Class"
     },
     {
@@ -136,15 +148,15 @@
     },
     {
       "id": "BH.oM.Adapters.XML.GeoReference.ReferenceLatitude",
-      "type": "rdfs:Datatype"
+      "type": "owl:Class"
     },
     {
       "id": "BH.oM.Adapters.XML.GeoReference.ReferenceLongitude",
-      "type": "rdfs:Datatype"
+      "type": "owl:Class"
     },
     {
       "id": "BH.oM.Adapters.XML.GeoReference.ReferenceAltitude",
-      "type": "rdfs:Datatype"
+      "type": "owl:Class"
     },
     {
       "id": "BH.oM.Adapters.XML.GeoReference.AltitudeMode",
@@ -168,7 +180,7 @@
     },
     {
       "id": "BH.oM.Adapters.XML.KMLGeometry.Description",
-      "type": "rdfs:Datatype"
+      "type": "owl:Class"
     },
     {
       "id": "BH.oM.Adapters.XML.XMLConfig.Schema",
@@ -184,23 +196,23 @@
     },
     {
       "id": "BH.oM.Adapters.XML.Settings.GBXMLSettings.ReplaceCurtainWalls",
-      "type": "rdfs:Datatype"
+      "type": "owl:Class"
     },
     {
       "id": "BH.oM.Adapters.XML.Settings.GBXMLSettings.ReplaceSolidOpeningsIntoDoors",
-      "type": "rdfs:Datatype"
+      "type": "owl:Class"
     },
     {
       "id": "BH.oM.Adapters.XML.Settings.GBXMLSettings.IncludeConstructions",
-      "type": "rdfs:Datatype"
+      "type": "owl:Class"
     },
     {
       "id": "BH.oM.Adapters.XML.Settings.GBXMLSettings.FixIncorrectAirTypes",
-      "type": "rdfs:Datatype"
+      "type": "owl:Class"
     },
     {
       "id": "BH.oM.Adapters.XML.Settings.GBXMLSettings.NewFile",
-      "type": "rdfs:Datatype"
+      "type": "owl:Class"
     },
     {
       "id": "BH.oM.Adapters.XML.Settings.GBXMLSettings.ResultsUnitType",
@@ -212,19 +224,19 @@
     },
     {
       "id": "BH.oM.Adapters.XML.Settings.GBXMLSettings.DistanceTolerance",
-      "type": "rdfs:Datatype"
+      "type": "owl:Class"
     },
     {
       "id": "BH.oM.Adapters.XML.Settings.GBXMLSettings.PlanarTolerance",
-      "type": "rdfs:Datatype"
+      "type": "owl:Class"
     },
     {
       "id": "BH.oM.Adapters.XML.Settings.GBXMLSettings.OffsetDistance",
-      "type": "rdfs:Datatype"
+      "type": "owl:Class"
     },
     {
       "id": "BH.oM.Adapters.XML.Settings.GBXMLSettings.AngleTolerance",
-      "type": "rdfs:Datatype"
+      "type": "owl:Class"
     },
     {
       "id": "BH.oM.Adapters.XML.Settings.GBXMLSettings.RoundingSettings",
@@ -240,7 +252,7 @@
     },
     {
       "id": "BH.oM.Adapters.XML.Settings.KMLSettings.NewFile",
-      "type": "rdfs:Datatype"
+      "type": "owl:Class"
     }
   ],
   "classAttribute": [
@@ -453,6 +465,32 @@
       "iri": "https://github.com/BHoM/XML_Toolkit/blob/main/XML_oM/GBXML/GBXMLDocumentBuilder.cs",
       "label": "UnassignedPanels(BH.oM.Adapters.XML.GBXMLDocumentBuilder.UnassignedPanels)",
       "attributes": []
+    },
+    {
+      "id": "BH.oM.Base.IBHoMObject",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/BHoM/Interface/IBHoMObject.cs",
+      "label": "IBHoMObject (BH.oM.Base)",
+      "attributes": [
+        "object",
+        "external"
+      ]
+    },
+    {
+      "id": "BH.oM.Base.IObject",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/BHoM/Interface/IObject.cs",
+      "label": "IObject (BH.oM.Base)",
+      "attributes": [
+        "object",
+        "external"
+      ]
+    },
+    {
+      "id": "BH.oM.Base.BHoMObject",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/BHoM/BHoMObject.cs",
+      "label": "BHoMObject (BH.oM.Base)",
+      "attributes": [
+        "external"
+      ]
     },
     {
       "id": "BH.oM.Adapters.XML.GBXMLUnitSetUp.TemperatureUnit",
@@ -772,6 +810,18 @@
       "type": "owl:ObjectProperty"
     },
     {
+      "id": "GBXMLDocumentBuilder-IsA-IBHoMObject_0AF814F861AACAD43884E2223C286CE6CAFA5C372992608136C84A1E6F36BF66",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "GBXMLDocumentBuilder-IsA-IObject_029A35BCBADEFB32096A0F6351E6DAA614CBFC7C70D17AEE8F52FA805261374B",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "GBXMLDocumentBuilder-IsSubclassOf-BHoMObject_4A1188685EF0AE072B71543AA87E54E16C57484D75C37FDC8F207EA933B98BBD",
+      "type": "rdfs:subClassOf"
+    },
+    {
       "id": "BH.oM.Adapters.XML.GBXMLUnitSetUp-HasProperty-BH.oM.Adapters.XML.GBXMLUnitSetUp.TemperatureUnit",
       "type": "owl:ObjectProperty"
     },
@@ -802,6 +852,18 @@
     {
       "id": "BH.oM.Adapters.XML.GBXMLUnitSetUp.VolumeUnit-IsA-BH.oM.Adapters.XML.VolumeUnit",
       "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "GBXMLUnitSetUp-IsA-IBHoMObject_1847FE50D53BDC31B678686E046759C7DFD8C2CD0BE0722F73DC8899D7373C02",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "GBXMLUnitSetUp-IsA-IObject_BBF8CC614422C4D40D28B130E9E231025CDBD20E4374EFC4245FF36259A3DDCD",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "GBXMLUnitSetUp-IsSubclassOf-BHoMObject_7A0F2D7EA26A4C983FE82A19CFDFED4545BE6796046D0E47F9F6F4B332457317",
+      "type": "rdfs:subClassOf"
     },
     {
       "id": "BH.oM.Adapters.XML.GeoReference-HasProperty-BH.oM.Adapters.XML.GeoReference.NorthVector",
@@ -840,12 +902,36 @@
       "type": "owl:ObjectProperty"
     },
     {
+      "id": "GeoReference-IsA-IBHoMObject_D92B66A9AD9C4009DC0C254212FF715815F130167DA28CD6AEB3F41B1E393719",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "GeoReference-IsA-IObject_C95D320CDBDB8064E859EFB846B5FC145B49CFF10F8933FA5578076E13E1A78B",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "GeoReference-IsSubclassOf-BHoMObject_44C980A91B7D9B3D7886F67192C3DCB2B1EE55943627DB741D4BE1C770F7B2CE",
+      "type": "rdfs:subClassOf"
+    },
+    {
       "id": "BH.oM.Adapters.XML.KMLDocumentBuilder-HasProperty-BH.oM.Adapters.XML.KMLDocumentBuilder.KMLGeometries",
       "type": "owl:ObjectProperty"
     },
     {
       "id": "BH.oM.Adapters.XML.KMLDocumentBuilder.KMLGeometries-IsAListOf-BH.oM.Adapters.XML.KMLGeometry",
       "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "KMLDocumentBuilder-IsA-IBHoMObject_A3728B893EB4E9CB582605E1068D162C6E9F4B42931958404523DAD78E236569",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "KMLDocumentBuilder-IsA-IObject_94B2AD9E866F3CD820283FCD77A13B71821EF6D21861569CA066F765E7DEDEF6",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "KMLDocumentBuilder-IsSubclassOf-BHoMObject_EC500A1646FC7537449A9769EC554381814B7773ABC1EFAC47E32F3991308F19",
+      "type": "rdfs:subClassOf"
     },
     {
       "id": "BH.oM.Adapters.XML.KMLGeometry-HasProperty-BH.oM.Adapters.XML.KMLGeometry.GeoReference",
@@ -868,6 +954,18 @@
       "type": "owl:DatatypeProperty"
     },
     {
+      "id": "KMLGeometry-IsA-IBHoMObject_F2A563278608F33DA67DCCE86C8BABE92211A50EA554AD894B2847F7EEF9257B",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "KMLGeometry-IsA-IObject_8FEBE1D7D733F945511F7DEFA7FEB65E340771CCA16B5D892BEEC33BBBA452BA",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "KMLGeometry-IsSubclassOf-BHoMObject_044A0B6D6DF43D1C203DE257CFC9BC5A9A7028502A65A59EC11380923AF96350",
+      "type": "rdfs:subClassOf"
+    },
+    {
       "id": "BH.oM.Adapters.XML.XMLConfig-HasProperty-BH.oM.Adapters.XML.XMLConfig.Schema",
       "type": "owl:ObjectProperty"
     },
@@ -881,6 +979,10 @@
     },
     {
       "id": "BH.oM.Adapters.XML.XMLConfig.Settings-IsA-BH.oM.Adapters.XML.Settings.IXMLSettings",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "XMLConfig-IsA-IObject_A7470F0D74401D18E2A9DAE43997151EF69EC352CF9BBED990CEFDD5C7B12F1A",
       "type": "owl:ObjectProperty"
     },
     {
@@ -956,16 +1058,40 @@
       "type": "owl:ObjectProperty"
     },
     {
+      "id": "GBXMLSettings-IsA-IBHoMObject_B67BB2C96FA4A470E768E247D55BE694E7608869AE0996D58E6F9483ACCAA6DE",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "GBXMLSettings-IsA-IObject_CCA778EFCCCA390807975441C66BBC466B1A64567249C920825BC03B6A599AFF",
+      "type": "owl:ObjectProperty"
+    },
+    {
       "id": "GBXMLSettings-IsA-IXMLSettings_CE8F19747CAE5CB98787AEDF76F96E7E668661A8246C9D013DE1C4A155C2FE4D",
       "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "GBXMLSettings-IsSubclassOf-BHoMObject_8AFEE131A41D7B64D61CD3ECEA4DEB2E253B7331303B945D9037F318E0A1F5CC",
+      "type": "rdfs:subClassOf"
     },
     {
       "id": "KMLSettings-HasProperty-NewFile_802CB5169A361B3598B9ED13CCA1719CFE1FE0A0F64D2243408CE5EAF65544BB",
       "type": "owl:DatatypeProperty"
     },
     {
+      "id": "KMLSettings-IsA-IBHoMObject_F18C6D6DDC7790C6544756967CB9A7945B4B4ACB8D1A076C934393C38E8EFEA2",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "KMLSettings-IsA-IObject_B80501A2FEAB3280B0AE3AD3B30006F3121D31B5342873208BB368C07F639A1E",
+      "type": "owl:ObjectProperty"
+    },
+    {
       "id": "KMLSettings-IsA-IXMLSettings_6B1FDCB926C400D65A832C0C61E13CBF57C0A1AD3C82381712D578DBA80B3893",
       "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "KMLSettings-IsSubclassOf-BHoMObject_6536FEADB8861FE3CCC8E3ED6B0D7BC4E1D19AFD4E65E7AC1E67312B50F9C25C",
+      "type": "rdfs:subClassOf"
     }
   ],
   "propertyAttribute": [
@@ -1060,6 +1186,42 @@
       "range": "BH.oM.Environment.Elements.Panel"
     },
     {
+      "id": "GBXMLDocumentBuilder-IsA-IBHoMObject_0AF814F861AACAD43884E2223C286CE6CAFA5C372992608136C84A1E6F36BF66",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "label": "IsA",
+      "attributes": [
+        "object"
+      ],
+      "comment": {
+        "undefined": "Can be used to describe that a thing belongs to a class; or that a thing is equivalent to another thing. When used for BHoM types, this describes C# interface implementation."
+      },
+      "domain": "BH.oM.Adapters.XML.GBXMLDocumentBuilder",
+      "range": "BH.oM.Base.IBHoMObject"
+    },
+    {
+      "id": "GBXMLDocumentBuilder-IsA-IObject_029A35BCBADEFB32096A0F6351E6DAA614CBFC7C70D17AEE8F52FA805261374B",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "label": "IsA",
+      "attributes": [
+        "object"
+      ],
+      "comment": {
+        "undefined": "Can be used to describe that a thing belongs to a class; or that a thing is equivalent to another thing. When used for BHoM types, this describes C# interface implementation."
+      },
+      "domain": "BH.oM.Adapters.XML.GBXMLDocumentBuilder",
+      "range": "BH.oM.Base.IObject"
+    },
+    {
+      "id": "GBXMLDocumentBuilder-IsSubclassOf-BHoMObject_4A1188685EF0AE072B71543AA87E54E16C57484D75C37FDC8F207EA933B98BBD",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsSubclassOf.cs",
+      "label": "IsA",
+      "attributes": [
+        "object"
+      ],
+      "domain": "BH.oM.Adapters.XML.GBXMLDocumentBuilder",
+      "range": "BH.oM.Base.BHoMObject"
+    },
+    {
       "id": "BH.oM.Adapters.XML.GBXMLUnitSetUp-HasProperty-BH.oM.Adapters.XML.GBXMLUnitSetUp.TemperatureUnit",
       "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/HasProperty.cs",
       "label": "HasProperty",
@@ -1138,6 +1300,42 @@
       ],
       "domain": "BH.oM.Adapters.XML.GBXMLUnitSetUp.VolumeUnit",
       "range": "BH.oM.Adapters.XML.VolumeUnit"
+    },
+    {
+      "id": "GBXMLUnitSetUp-IsA-IBHoMObject_1847FE50D53BDC31B678686E046759C7DFD8C2CD0BE0722F73DC8899D7373C02",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "label": "IsA",
+      "attributes": [
+        "object"
+      ],
+      "comment": {
+        "undefined": "Can be used to describe that a thing belongs to a class; or that a thing is equivalent to another thing. When used for BHoM types, this describes C# interface implementation."
+      },
+      "domain": "BH.oM.Adapters.XML.GBXMLUnitSetUp",
+      "range": "BH.oM.Base.IBHoMObject"
+    },
+    {
+      "id": "GBXMLUnitSetUp-IsA-IObject_BBF8CC614422C4D40D28B130E9E231025CDBD20E4374EFC4245FF36259A3DDCD",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "label": "IsA",
+      "attributes": [
+        "object"
+      ],
+      "comment": {
+        "undefined": "Can be used to describe that a thing belongs to a class; or that a thing is equivalent to another thing. When used for BHoM types, this describes C# interface implementation."
+      },
+      "domain": "BH.oM.Adapters.XML.GBXMLUnitSetUp",
+      "range": "BH.oM.Base.IObject"
+    },
+    {
+      "id": "GBXMLUnitSetUp-IsSubclassOf-BHoMObject_7A0F2D7EA26A4C983FE82A19CFDFED4545BE6796046D0E47F9F6F4B332457317",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsSubclassOf.cs",
+      "label": "IsA",
+      "attributes": [
+        "object"
+      ],
+      "domain": "BH.oM.Adapters.XML.GBXMLUnitSetUp",
+      "range": "BH.oM.Base.BHoMObject"
     },
     {
       "id": "BH.oM.Adapters.XML.GeoReference-HasProperty-BH.oM.Adapters.XML.GeoReference.NorthVector",
@@ -1230,6 +1428,42 @@
       "range": "BH.oM.Adapters.XML.Enums.AltitudeMode"
     },
     {
+      "id": "GeoReference-IsA-IBHoMObject_D92B66A9AD9C4009DC0C254212FF715815F130167DA28CD6AEB3F41B1E393719",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "label": "IsA",
+      "attributes": [
+        "object"
+      ],
+      "comment": {
+        "undefined": "Can be used to describe that a thing belongs to a class; or that a thing is equivalent to another thing. When used for BHoM types, this describes C# interface implementation."
+      },
+      "domain": "BH.oM.Adapters.XML.GeoReference",
+      "range": "BH.oM.Base.IBHoMObject"
+    },
+    {
+      "id": "GeoReference-IsA-IObject_C95D320CDBDB8064E859EFB846B5FC145B49CFF10F8933FA5578076E13E1A78B",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "label": "IsA",
+      "attributes": [
+        "object"
+      ],
+      "comment": {
+        "undefined": "Can be used to describe that a thing belongs to a class; or that a thing is equivalent to another thing. When used for BHoM types, this describes C# interface implementation."
+      },
+      "domain": "BH.oM.Adapters.XML.GeoReference",
+      "range": "BH.oM.Base.IObject"
+    },
+    {
+      "id": "GeoReference-IsSubclassOf-BHoMObject_44C980A91B7D9B3D7886F67192C3DCB2B1EE55943627DB741D4BE1C770F7B2CE",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsSubclassOf.cs",
+      "label": "IsA",
+      "attributes": [
+        "object"
+      ],
+      "domain": "BH.oM.Adapters.XML.GeoReference",
+      "range": "BH.oM.Base.BHoMObject"
+    },
+    {
       "id": "BH.oM.Adapters.XML.KMLDocumentBuilder-HasProperty-BH.oM.Adapters.XML.KMLDocumentBuilder.KMLGeometries",
       "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/HasProperty.cs",
       "label": "HasProperty",
@@ -1248,6 +1482,42 @@
       ],
       "domain": "BH.oM.Adapters.XML.KMLDocumentBuilder.KMLGeometries",
       "range": "BH.oM.Adapters.XML.KMLGeometry"
+    },
+    {
+      "id": "KMLDocumentBuilder-IsA-IBHoMObject_A3728B893EB4E9CB582605E1068D162C6E9F4B42931958404523DAD78E236569",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "label": "IsA",
+      "attributes": [
+        "object"
+      ],
+      "comment": {
+        "undefined": "Can be used to describe that a thing belongs to a class; or that a thing is equivalent to another thing. When used for BHoM types, this describes C# interface implementation."
+      },
+      "domain": "BH.oM.Adapters.XML.KMLDocumentBuilder",
+      "range": "BH.oM.Base.IBHoMObject"
+    },
+    {
+      "id": "KMLDocumentBuilder-IsA-IObject_94B2AD9E866F3CD820283FCD77A13B71821EF6D21861569CA066F765E7DEDEF6",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "label": "IsA",
+      "attributes": [
+        "object"
+      ],
+      "comment": {
+        "undefined": "Can be used to describe that a thing belongs to a class; or that a thing is equivalent to another thing. When used for BHoM types, this describes C# interface implementation."
+      },
+      "domain": "BH.oM.Adapters.XML.KMLDocumentBuilder",
+      "range": "BH.oM.Base.IObject"
+    },
+    {
+      "id": "KMLDocumentBuilder-IsSubclassOf-BHoMObject_EC500A1646FC7537449A9769EC554381814B7773ABC1EFAC47E32F3991308F19",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsSubclassOf.cs",
+      "label": "IsA",
+      "attributes": [
+        "object"
+      ],
+      "domain": "BH.oM.Adapters.XML.KMLDocumentBuilder",
+      "range": "BH.oM.Base.BHoMObject"
     },
     {
       "id": "BH.oM.Adapters.XML.KMLGeometry-HasProperty-BH.oM.Adapters.XML.KMLGeometry.GeoReference",
@@ -1300,6 +1570,42 @@
       "range": "BH.oM.Adapters.XML.KMLGeometry.Description"
     },
     {
+      "id": "KMLGeometry-IsA-IBHoMObject_F2A563278608F33DA67DCCE86C8BABE92211A50EA554AD894B2847F7EEF9257B",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "label": "IsA",
+      "attributes": [
+        "object"
+      ],
+      "comment": {
+        "undefined": "Can be used to describe that a thing belongs to a class; or that a thing is equivalent to another thing. When used for BHoM types, this describes C# interface implementation."
+      },
+      "domain": "BH.oM.Adapters.XML.KMLGeometry",
+      "range": "BH.oM.Base.IBHoMObject"
+    },
+    {
+      "id": "KMLGeometry-IsA-IObject_8FEBE1D7D733F945511F7DEFA7FEB65E340771CCA16B5D892BEEC33BBBA452BA",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "label": "IsA",
+      "attributes": [
+        "object"
+      ],
+      "comment": {
+        "undefined": "Can be used to describe that a thing belongs to a class; or that a thing is equivalent to another thing. When used for BHoM types, this describes C# interface implementation."
+      },
+      "domain": "BH.oM.Adapters.XML.KMLGeometry",
+      "range": "BH.oM.Base.IObject"
+    },
+    {
+      "id": "KMLGeometry-IsSubclassOf-BHoMObject_044A0B6D6DF43D1C203DE257CFC9BC5A9A7028502A65A59EC11380923AF96350",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsSubclassOf.cs",
+      "label": "IsA",
+      "attributes": [
+        "object"
+      ],
+      "domain": "BH.oM.Adapters.XML.KMLGeometry",
+      "range": "BH.oM.Base.BHoMObject"
+    },
+    {
       "id": "BH.oM.Adapters.XML.XMLConfig-HasProperty-BH.oM.Adapters.XML.XMLConfig.Schema",
       "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/HasProperty.cs",
       "label": "HasProperty",
@@ -1338,6 +1644,19 @@
       ],
       "domain": "BH.oM.Adapters.XML.XMLConfig.Settings",
       "range": "BH.oM.Adapters.XML.Settings.IXMLSettings"
+    },
+    {
+      "id": "XMLConfig-IsA-IObject_A7470F0D74401D18E2A9DAE43997151EF69EC352CF9BBED990CEFDD5C7B12F1A",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "label": "IsA",
+      "attributes": [
+        "object"
+      ],
+      "comment": {
+        "undefined": "Can be used to describe that a thing belongs to a class; or that a thing is equivalent to another thing. When used for BHoM types, this describes C# interface implementation."
+      },
+      "domain": "BH.oM.Adapters.XML.XMLConfig",
+      "range": "BH.oM.Base.IObject"
     },
     {
       "id": "XMLConfig-IsSubclassOf-ActionConfig_76904165CCED51A8551FB2B3183167B50166D23B9C9CDD267418DB0DD8CAB68C",
@@ -1520,6 +1839,32 @@
       "range": "BH.oM.Adapters.XML.GBXMLUnitSetUp"
     },
     {
+      "id": "GBXMLSettings-IsA-IBHoMObject_B67BB2C96FA4A470E768E247D55BE694E7608869AE0996D58E6F9483ACCAA6DE",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "label": "IsA",
+      "attributes": [
+        "object"
+      ],
+      "comment": {
+        "undefined": "Can be used to describe that a thing belongs to a class; or that a thing is equivalent to another thing. When used for BHoM types, this describes C# interface implementation."
+      },
+      "domain": "BH.oM.Adapters.XML.Settings.GBXMLSettings",
+      "range": "BH.oM.Base.IBHoMObject"
+    },
+    {
+      "id": "GBXMLSettings-IsA-IObject_CCA778EFCCCA390807975441C66BBC466B1A64567249C920825BC03B6A599AFF",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "label": "IsA",
+      "attributes": [
+        "object"
+      ],
+      "comment": {
+        "undefined": "Can be used to describe that a thing belongs to a class; or that a thing is equivalent to another thing. When used for BHoM types, this describes C# interface implementation."
+      },
+      "domain": "BH.oM.Adapters.XML.Settings.GBXMLSettings",
+      "range": "BH.oM.Base.IObject"
+    },
+    {
       "id": "GBXMLSettings-IsA-IXMLSettings_CE8F19747CAE5CB98787AEDF76F96E7E668661A8246C9D013DE1C4A155C2FE4D",
       "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
       "label": "IsA",
@@ -1533,6 +1878,16 @@
       "range": "BH.oM.Adapters.XML.Settings.IXMLSettings"
     },
     {
+      "id": "GBXMLSettings-IsSubclassOf-BHoMObject_8AFEE131A41D7B64D61CD3ECEA4DEB2E253B7331303B945D9037F318E0A1F5CC",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsSubclassOf.cs",
+      "label": "IsA",
+      "attributes": [
+        "object"
+      ],
+      "domain": "BH.oM.Adapters.XML.Settings.GBXMLSettings",
+      "range": "BH.oM.Base.BHoMObject"
+    },
+    {
       "id": "KMLSettings-HasProperty-NewFile_802CB5169A361B3598B9ED13CCA1719CFE1FE0A0F64D2243408CE5EAF65544BB",
       "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/HasProperty.cs",
       "label": "HasProperty",
@@ -1541,6 +1896,32 @@
       ],
       "domain": "BH.oM.Adapters.XML.Settings.KMLSettings",
       "range": "BH.oM.Adapters.XML.Settings.KMLSettings.NewFile"
+    },
+    {
+      "id": "KMLSettings-IsA-IBHoMObject_F18C6D6DDC7790C6544756967CB9A7945B4B4ACB8D1A076C934393C38E8EFEA2",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "label": "IsA",
+      "attributes": [
+        "object"
+      ],
+      "comment": {
+        "undefined": "Can be used to describe that a thing belongs to a class; or that a thing is equivalent to another thing. When used for BHoM types, this describes C# interface implementation."
+      },
+      "domain": "BH.oM.Adapters.XML.Settings.KMLSettings",
+      "range": "BH.oM.Base.IBHoMObject"
+    },
+    {
+      "id": "KMLSettings-IsA-IObject_B80501A2FEAB3280B0AE3AD3B30006F3121D31B5342873208BB368C07F639A1E",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "label": "IsA",
+      "attributes": [
+        "object"
+      ],
+      "comment": {
+        "undefined": "Can be used to describe that a thing belongs to a class; or that a thing is equivalent to another thing. When used for BHoM types, this describes C# interface implementation."
+      },
+      "domain": "BH.oM.Adapters.XML.Settings.KMLSettings",
+      "range": "BH.oM.Base.IObject"
     },
     {
       "id": "KMLSettings-IsA-IXMLSettings_6B1FDCB926C400D65A832C0C61E13CBF57C0A1AD3C82381712D578DBA80B3893",
@@ -1554,6 +1935,16 @@
       },
       "domain": "BH.oM.Adapters.XML.Settings.KMLSettings",
       "range": "BH.oM.Adapters.XML.Settings.IXMLSettings"
+    },
+    {
+      "id": "KMLSettings-IsSubclassOf-BHoMObject_6536FEADB8861FE3CCC8E3ED6B0D7BC4E1D19AFD4E65E7AC1E67312B50F9C25C",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsSubclassOf.cs",
+      "label": "IsA",
+      "attributes": [
+        "object"
+      ],
+      "domain": "BH.oM.Adapters.XML.Settings.KMLSettings",
+      "range": "BH.oM.Base.BHoMObject"
     }
   ]
 }

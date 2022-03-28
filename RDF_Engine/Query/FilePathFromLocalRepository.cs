@@ -1,5 +1,6 @@
 ﻿using BH.oM.Base;
 using BH.oM.Base.Attributes;
+using BH.oM.RDF;
 using System;
 using System.Collections;
 using System.Collections.Generic;
@@ -19,26 +20,27 @@ namespace BH.Engine.RDF
 
         [Description("The method will look for a file named using standard BHoM filename convention for Types. " +
             "For example, for the type `BH.oM.Structure.Elements.Bar`, the method will look for 'Bar.cs', and the filepath will have to contain the 'namespaceGroup' called `Structure`.")]
-        public static string FilePathFromLocalRepository(this Type type, string repositoryRoot, string cacheRootDirectory = null, bool relative = false)
+        public static string FilePathFromLocalRepository(this Type type, TBoxSettings settings, bool getRelativePath = false)
         {
+            if (settings == null)
+                settings = new TBoxSettings();
+
+            string repositoryRoot = settings.RepositoryRootPath;
+
             if (string.IsNullOrWhiteSpace(repositoryRoot) || !Directory.Exists(repositoryRoot))
             {
-                repositoryRoot = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.UserProfile), "GitHub");
-                if (!Directory.Exists(repositoryRoot))
-                {
-                    log.RecordError($"Could not find Local repository directory on disk at path: {repositoryRoot}", true);
-                    return null;
-                }
+                log.RecordError($"Could not find Local repository directory on disk at path: {repositoryRoot}", true);
+                return null;
             }
 
             string filepath = null;
 
             // Check the cached types first.
             if (m_cachedTypeFilePaths?.TryGetValue(type, out filepath) ?? false)
-                return relative ? filepath?.Replace(repositoryRoot, "") : filepath;
+                return getRelativePath ? filepath?.Replace(repositoryRoot, "") : filepath;
 
             string typeNameValidChars = type.NameValidChars();
-            HashSet<string> allFilePaths = Compute.FilesInRepo(repositoryRoot, cacheRootDirectory);
+            HashSet<string> allFilePaths = Compute.FilesInRepo(repositoryRoot, settings);
 
             string nameSpaceGroup = type.Namespace.Split('.')[2]; // [2] selects anything exactly after `BH.oM.` or `BH.Engine.`
 
@@ -101,7 +103,7 @@ namespace BH.Engine.RDF
             // Store in cache.
             m_cachedTypeFilePaths[type] = filepath;
 
-            return relative ? filepath?.Replace(repositoryRoot, "") : filepath; // if not found, this returns null.
+            return getRelativePath ? filepath?.Replace(repositoryRoot, "") : filepath; // if not found, this returns null.
         }
     }
 }

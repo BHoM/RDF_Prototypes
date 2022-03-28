@@ -52,11 +52,15 @@
     },
     {
       "id": "BH.oM.Adapters.SAP2000.SAP2000PushConfig.ReplaceLoads",
-      "type": "rdfs:Datatype"
+      "type": "owl:Class"
     },
     {
       "id": "BH.oM.Adapters.SAP2000.SAP2000PushConfig.UpdateOnlyBarPropAssigns",
-      "type": "rdfs:Datatype"
+      "type": "owl:Class"
+    },
+    {
+      "id": "BH.oM.Base.IObject",
+      "type": "owl:Class"
     },
     {
       "id": "BH.oM.Adapter.ActionConfig",
@@ -64,11 +68,11 @@
     },
     {
       "id": "BH.oM.Adapters.SAP2000.SAP2000Id.Id",
-      "type": "rdfs:Datatype"
+      "type": "owl:Class"
     },
     {
       "id": "BH.oM.Adapters.SAP2000.SAP2000Id.PersistentId",
-      "type": "rdfs:Datatype"
+      "type": "owl:Class"
     },
     {
       "id": "BH.oM.Base.IAdapterId",
@@ -88,15 +92,15 @@
     },
     {
       "id": "BH.oM.Adapters.SAP2000.Requests.SteelUtilisationRequest.Cases",
-      "type": "rdfs:Datatype"
+      "type": "owl:Class"
     },
     {
       "id": "BH.oM.Adapters.SAP2000.Requests.SteelUtilisationRequest.Modes",
-      "type": "rdfs:Datatype"
+      "type": "owl:Class"
     },
     {
       "id": "BH.oM.Adapters.SAP2000.Requests.SteelUtilisationRequest.ObjectIds",
-      "type": "rdfs:Datatype"
+      "type": "owl:Class"
     },
     {
       "id": "BH.oM.Structure.Requests.IStructuralResultRequest",
@@ -116,7 +120,7 @@
     },
     {
       "id": "BH.oM.Adapters.SAP2000.Elements.BarInsertionPoint.ModifyStiffness",
-      "type": "rdfs:Datatype"
+      "type": "owl:Class"
     },
     {
       "id": "BH.oM.Adapters.SAP2000.Elements.BarDesignProcedure.DesignProcedure",
@@ -124,67 +128,67 @@
     },
     {
       "id": "BH.oM.Adapters.SAP2000.Elements.BarAutoMesh.AutoMesh",
-      "type": "rdfs:Datatype"
+      "type": "owl:Class"
     },
     {
       "id": "BH.oM.Adapters.SAP2000.Elements.BarAutoMesh.AutoMeshAtPoints",
-      "type": "rdfs:Datatype"
+      "type": "owl:Class"
     },
     {
       "id": "BH.oM.Adapters.SAP2000.Elements.BarAutoMesh.AutoMeshAtLines",
-      "type": "rdfs:Datatype"
+      "type": "owl:Class"
     },
     {
       "id": "BH.oM.Adapters.SAP2000.Elements.BarAutoMesh.NumSegs",
-      "type": "rdfs:Datatype"
+      "type": "owl:Class"
     },
     {
       "id": "BH.oM.Adapters.SAP2000.Elements.BarAutoMesh.AutoMeshMaxLength",
-      "type": "rdfs:Datatype"
+      "type": "owl:Class"
     },
     {
       "id": "BH.oM.Adapters.SAP2000.Results.AISCSteelUtilisation.DesignCodeReference",
-      "type": "rdfs:Datatype"
+      "type": "owl:Class"
     },
     {
       "id": "BH.oM.Adapters.SAP2000.Results.AISCSteelUtilisation.MajorEffectiveLength",
-      "type": "rdfs:Datatype"
+      "type": "owl:Class"
     },
     {
       "id": "BH.oM.Adapters.SAP2000.Results.AISCSteelUtilisation.MinorEffectiveLength",
-      "type": "rdfs:Datatype"
+      "type": "owl:Class"
     },
     {
       "id": "BH.oM.Adapters.SAP2000.Results.AISCSteelUtilisation.DesignType",
-      "type": "rdfs:Datatype"
+      "type": "owl:Class"
     },
     {
       "id": "BH.oM.Adapters.SAP2000.Results.AISCSteelUtilisation.TotalRatio",
-      "type": "rdfs:Datatype"
+      "type": "owl:Class"
     },
     {
       "id": "BH.oM.Adapters.SAP2000.Results.AISCSteelUtilisation.TensionCompressionRatio",
-      "type": "rdfs:Datatype"
+      "type": "owl:Class"
     },
     {
       "id": "BH.oM.Adapters.SAP2000.Results.AISCSteelUtilisation.MajorShearRatio",
-      "type": "rdfs:Datatype"
+      "type": "owl:Class"
     },
     {
       "id": "BH.oM.Adapters.SAP2000.Results.AISCSteelUtilisation.MinorShearRatio",
-      "type": "rdfs:Datatype"
+      "type": "owl:Class"
     },
     {
       "id": "BH.oM.Adapters.SAP2000.Results.AISCSteelUtilisation.TorsionRatio",
-      "type": "rdfs:Datatype"
+      "type": "owl:Class"
     },
     {
       "id": "BH.oM.Adapters.SAP2000.Results.AISCSteelUtilisation.MajorBendingRatio",
-      "type": "rdfs:Datatype"
+      "type": "owl:Class"
     },
     {
       "id": "BH.oM.Adapters.SAP2000.Results.AISCSteelUtilisation.MinorBendingRatio",
-      "type": "rdfs:Datatype"
+      "type": "owl:Class"
     },
     {
       "id": "BH.oM.Structure.Results.IStructuralResult",
@@ -340,6 +344,15 @@
       "label": "UpdateOnlyBarPropAssigns(BH.oM.Adapters.SAP2000.SAP2000PushConfig.UpdateOnlyBarPropAssigns)",
       "attributes": [
         "datatype"
+      ]
+    },
+    {
+      "id": "BH.oM.Base.IObject",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/BHoM/Interface/IObject.cs",
+      "label": "IObject (BH.oM.Base)",
+      "attributes": [
+        "object",
+        "external"
       ]
     },
     {
@@ -722,6 +735,10 @@
       "type": "owl:DatatypeProperty"
     },
     {
+      "id": "SAP2000PushConfig-IsA-IObject_2CF0F7EF89DE9A4E8AAF0791E9C9434042B14F5DAF163FA8E302D1179BC95E19",
+      "type": "owl:ObjectProperty"
+    },
+    {
       "id": "SAP2000PushConfig-IsSubclassOf-ActionConfig_9174770576FB5FFC539EA343C49CB25F19E539748A07622779054A592B1911B9",
       "type": "rdfs:subClassOf"
     },
@@ -739,6 +756,10 @@
     },
     {
       "id": "SAP2000Id-IsA-IFragment_38E4EA5AE5973642149A928D7003E3CA7CDFB70074A092A361546A9DD6E90752",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "SAP2000Id-IsA-IObject_FD525689E99AF08AA4C04ADB700D22503E1615DA12D8B6BB373BA12E3364652E",
       "type": "owl:ObjectProperty"
     },
     {
@@ -778,6 +799,10 @@
       "type": "owl:ObjectProperty"
     },
     {
+      "id": "SteelUtilisationRequest-IsA-IObject_B2DF4E3689BC1CE8D80DEF6A5B4706A0E441B89578DF163F068A1FC84967334F",
+      "type": "owl:ObjectProperty"
+    },
+    {
       "id": "BH.oM.Adapters.SAP2000.Elements.BarInsertionPoint-HasProperty-BH.oM.Adapters.SAP2000.Elements.BarInsertionPoint.InsertionPoint",
       "type": "owl:ObjectProperty"
     },
@@ -794,6 +819,10 @@
       "type": "owl:ObjectProperty"
     },
     {
+      "id": "BarInsertionPoint-IsA-IObject_55A6B878D031281E26D99BD47D8F8C37536E1553351B960DCF2A1D7A3F115581",
+      "type": "owl:ObjectProperty"
+    },
+    {
       "id": "BH.oM.Adapters.SAP2000.Elements.BarDesignProcedure-HasProperty-BH.oM.Adapters.SAP2000.Elements.BarDesignProcedure.DesignProcedure",
       "type": "owl:ObjectProperty"
     },
@@ -803,6 +832,10 @@
     },
     {
       "id": "BarDesignProcedure-IsA-IFragment_20A5BB544C430FA3672600491952A0B82D6439925AECDB25943C61DE7004923B",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "BarDesignProcedure-IsA-IObject_CBD2A05AE185D78B97C40BFA45F2A19850FBC50B6350C33BF23F2F52E6B63ACE",
       "type": "owl:ObjectProperty"
     },
     {
@@ -827,6 +860,10 @@
     },
     {
       "id": "BarAutoMesh-IsA-IFragment_A2819C5A4E5DBA9C0FD9BF53A6517FE33DAC31994671C121AD0EF3BA09DCDB34",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "BarAutoMesh-IsA-IObject_7C82299168F1E6B3AEBCED2988E3ABC6AEF4701277015FB37D6D81C0D46594E1",
       "type": "owl:ObjectProperty"
     },
     {
@@ -886,6 +923,10 @@
       "type": "owl:ObjectProperty"
     },
     {
+      "id": "AISCSteelUtilisation-IsA-IObject_18ED2580635071F6A97885E9031D631DB2013456CA5F66ECE7DFA0CAD95CC9CA",
+      "type": "owl:ObjectProperty"
+    },
+    {
       "id": "AISCSteelUtilisation-IsA-IImmutable_99D6F644322204C6787E1F3B8316F52736FC9CEB98425D90F0BABDB9FDCDFAE2",
       "type": "owl:ObjectProperty"
     },
@@ -930,6 +971,19 @@
       ],
       "domain": "BH.oM.Adapters.SAP2000.SAP2000PushConfig",
       "range": "BH.oM.Adapters.SAP2000.SAP2000PushConfig.UpdateOnlyBarPropAssigns"
+    },
+    {
+      "id": "SAP2000PushConfig-IsA-IObject_2CF0F7EF89DE9A4E8AAF0791E9C9434042B14F5DAF163FA8E302D1179BC95E19",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "label": "IsA",
+      "attributes": [
+        "object"
+      ],
+      "comment": {
+        "undefined": "Can be used to describe that a thing belongs to a class; or that a thing is equivalent to another thing. When used for BHoM types, this describes C# interface implementation."
+      },
+      "domain": "BH.oM.Adapters.SAP2000.SAP2000PushConfig",
+      "range": "BH.oM.Base.IObject"
     },
     {
       "id": "SAP2000PushConfig-IsSubclassOf-ActionConfig_9174770576FB5FFC539EA343C49CB25F19E539748A07622779054A592B1911B9",
@@ -986,6 +1040,19 @@
       },
       "domain": "BH.oM.Adapters.SAP2000.SAP2000Id",
       "range": "BH.oM.Base.IFragment"
+    },
+    {
+      "id": "SAP2000Id-IsA-IObject_FD525689E99AF08AA4C04ADB700D22503E1615DA12D8B6BB373BA12E3364652E",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "label": "IsA",
+      "attributes": [
+        "object"
+      ],
+      "comment": {
+        "undefined": "Can be used to describe that a thing belongs to a class; or that a thing is equivalent to another thing. When used for BHoM types, this describes C# interface implementation."
+      },
+      "domain": "BH.oM.Adapters.SAP2000.SAP2000Id",
+      "range": "BH.oM.Base.IObject"
     },
     {
       "id": "SAP2000Id-IsA-IPersistentAdapterId_A9AFD9A69BF1F1C88719E9B096CD342CF2B48A4BFF4238579D422391526CDF8E",
@@ -1090,6 +1157,19 @@
       "range": "BH.oM.Data.Requests.IRequest"
     },
     {
+      "id": "SteelUtilisationRequest-IsA-IObject_B2DF4E3689BC1CE8D80DEF6A5B4706A0E441B89578DF163F068A1FC84967334F",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "label": "IsA",
+      "attributes": [
+        "object"
+      ],
+      "comment": {
+        "undefined": "Can be used to describe that a thing belongs to a class; or that a thing is equivalent to another thing. When used for BHoM types, this describes C# interface implementation."
+      },
+      "domain": "BH.oM.Adapters.SAP2000.Requests.SteelUtilisationRequest",
+      "range": "BH.oM.Base.IObject"
+    },
+    {
       "id": "BH.oM.Adapters.SAP2000.Elements.BarInsertionPoint-HasProperty-BH.oM.Adapters.SAP2000.Elements.BarInsertionPoint.InsertionPoint",
       "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/HasProperty.cs",
       "label": "HasProperty",
@@ -1133,6 +1213,19 @@
       "range": "BH.oM.Base.IFragment"
     },
     {
+      "id": "BarInsertionPoint-IsA-IObject_55A6B878D031281E26D99BD47D8F8C37536E1553351B960DCF2A1D7A3F115581",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "label": "IsA",
+      "attributes": [
+        "object"
+      ],
+      "comment": {
+        "undefined": "Can be used to describe that a thing belongs to a class; or that a thing is equivalent to another thing. When used for BHoM types, this describes C# interface implementation."
+      },
+      "domain": "BH.oM.Adapters.SAP2000.Elements.BarInsertionPoint",
+      "range": "BH.oM.Base.IObject"
+    },
+    {
       "id": "BH.oM.Adapters.SAP2000.Elements.BarDesignProcedure-HasProperty-BH.oM.Adapters.SAP2000.Elements.BarDesignProcedure.DesignProcedure",
       "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/HasProperty.cs",
       "label": "HasProperty",
@@ -1164,6 +1257,19 @@
       },
       "domain": "BH.oM.Adapters.SAP2000.Elements.BarDesignProcedure",
       "range": "BH.oM.Base.IFragment"
+    },
+    {
+      "id": "BarDesignProcedure-IsA-IObject_CBD2A05AE185D78B97C40BFA45F2A19850FBC50B6350C33BF23F2F52E6B63ACE",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "label": "IsA",
+      "attributes": [
+        "object"
+      ],
+      "comment": {
+        "undefined": "Can be used to describe that a thing belongs to a class; or that a thing is equivalent to another thing. When used for BHoM types, this describes C# interface implementation."
+      },
+      "domain": "BH.oM.Adapters.SAP2000.Elements.BarDesignProcedure",
+      "range": "BH.oM.Base.IObject"
     },
     {
       "id": "BarAutoMesh-HasProperty-AutoMesh_85485975852ED6C307FC903795348F3C220603EB1566ADBDC707AB7A4D091796",
@@ -1227,6 +1333,19 @@
       },
       "domain": "BH.oM.Adapters.SAP2000.Elements.BarAutoMesh",
       "range": "BH.oM.Base.IFragment"
+    },
+    {
+      "id": "BarAutoMesh-IsA-IObject_7C82299168F1E6B3AEBCED2988E3ABC6AEF4701277015FB37D6D81C0D46594E1",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "label": "IsA",
+      "attributes": [
+        "object"
+      ],
+      "comment": {
+        "undefined": "Can be used to describe that a thing belongs to a class; or that a thing is equivalent to another thing. When used for BHoM types, this describes C# interface implementation."
+      },
+      "domain": "BH.oM.Adapters.SAP2000.Elements.BarAutoMesh",
+      "range": "BH.oM.Base.IObject"
     },
     {
       "id": "AISCSteelUtilisation-HasProperty-DesignCodeReference_3B33C3C4579A11B8480DA2F2F2E8EADAF920836357BDAB6E738263AA921FDA4F",
@@ -1376,6 +1495,19 @@
       },
       "domain": "BH.oM.Adapters.SAP2000.Results.AISCSteelUtilisation",
       "range": "BH.oM.Analytical.Results.IResult"
+    },
+    {
+      "id": "AISCSteelUtilisation-IsA-IObject_18ED2580635071F6A97885E9031D631DB2013456CA5F66ECE7DFA0CAD95CC9CA",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "label": "IsA",
+      "attributes": [
+        "object"
+      ],
+      "comment": {
+        "undefined": "Can be used to describe that a thing belongs to a class; or that a thing is equivalent to another thing. When used for BHoM types, this describes C# interface implementation."
+      },
+      "domain": "BH.oM.Adapters.SAP2000.Results.AISCSteelUtilisation",
+      "range": "BH.oM.Base.IObject"
     },
     {
       "id": "AISCSteelUtilisation-IsA-IImmutable_99D6F644322204C6787E1F3B8316F52736FC9CEB98425D90F0BABDB9FDCDFAE2",

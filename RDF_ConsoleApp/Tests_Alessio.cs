@@ -25,7 +25,7 @@ namespace BH.oM.CodeAnalysis.ConsoleApp
 
         [Description("Tries to create an ontology with a `Room` and `Column` class, to say that they both are subclass of `IObject`." +
             "TODO: This currently does not visualise in WebVOWL. Find out how to make it work.")]
-        public static void RoomColumnSubClassOfIObject()
+        public static void RoomColumnSubClassOfIObject(TBoxSettings settings)
         {
             IGraph g = new Graph();
 
@@ -42,9 +42,9 @@ namespace BH.oM.CodeAnalysis.ConsoleApp
             var rdfsSubclassOf = g.CreateUriNode("rdfs:subclassOf");
 
             // Create three Uri Nodes for an iObject, a Room and a Column
-            IUriNode iObject = g.CreateUriNode(typeof(IObject));
-            IUriNode room = g.CreateUriNode(typeof(Room));
-            IUriNode column = g.CreateUriNode(typeof(Column));
+            IUriNode iObject = g.CreateUriNode(typeof(IObject), settings);
+            IUriNode room = g.CreateUriNode(typeof(Room), settings);
+            IUriNode column = g.CreateUriNode(typeof(Column), settings);
 
             // Set the is a class relationship
             g.Assert(iObject, a, owlClass);
@@ -61,7 +61,7 @@ namespace BH.oM.CodeAnalysis.ConsoleApp
 
         [Description("Tries to create an ontology with a `Room` and `Column` class, to say that they both are subclass of `IObject`." +
             "TODO: This currently does not visualise in WebVOWL. Find out how to make it work.")]
-        public static void RoomColumnSubClassOfIObject_OntologyGraph()
+        public static void RoomColumnSubClassOfIObject_OntologyGraph(TBoxSettings settings)
         {
             OntologyGraph g = new OntologyGraph();
 
@@ -77,9 +77,9 @@ namespace BH.oM.CodeAnalysis.ConsoleApp
             IUriNode rdfsSubclassOf = g.CreateUriNode("rdfs:subclassOf");
 
             // Create three Uri Nodes for an iObject, a Room and a Column
-            OntologyClass iObject = g.CreateOntologyClass(typeof(IObject));
-            OntologyClass room = g.CreateOntologyClass(typeof(Room));
-            OntologyClass column = g.CreateOntologyClass(typeof(Column));
+            OntologyClass iObject = g.CreateOntologyClass(typeof(IObject), settings);
+            OntologyClass room = g.CreateOntologyClass(typeof(Room), settings);
+            OntologyClass column = g.CreateOntologyClass(typeof(Column), settings);
 
             //// Set the is a class relationship
             //g.Assert(iObject, a, iObject_owlClass);

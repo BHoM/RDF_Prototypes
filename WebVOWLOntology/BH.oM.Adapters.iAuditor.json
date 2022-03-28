@@ -8,15 +8,19 @@
     },
     {
       "id": "BH.oM.Adapters.iAuditor.iAuditorConfig.Id",
-      "type": "rdfs:Datatype"
+      "type": "owl:Class"
     },
     {
       "id": "BH.oM.Adapters.iAuditor.iAuditorConfig.AssetFilePath",
-      "type": "rdfs:Datatype"
+      "type": "owl:Class"
     },
     {
       "id": "BH.oM.Adapters.iAuditor.iAuditorConfig.IncludeAssetFiles",
-      "type": "rdfs:Datatype"
+      "type": "owl:Class"
+    },
+    {
+      "id": "BH.oM.Base.IObject",
+      "type": "owl:Class"
     },
     {
       "id": "BH.oM.Adapter.ActionConfig",
@@ -60,6 +64,15 @@
       ]
     },
     {
+      "id": "BH.oM.Base.IObject",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/BHoM/Interface/IObject.cs",
+      "label": "IObject (BH.oM.Base)",
+      "attributes": [
+        "object",
+        "external"
+      ]
+    },
+    {
       "id": "BH.oM.Adapter.ActionConfig",
       "iri": "https://github.com/BHoM/BHoM_Adapter/blob/main/Adapter_oM/Settings-Config/ActionConfig.cs",
       "label": "ActionConfig (BH.oM.Adapter)",
@@ -80,6 +93,10 @@
     {
       "id": "iAuditorConfig-HasProperty-IncludeAssetFiles_C5DD79D7F2E19DFE1D4EFE4C7625A2928CB43CCE03C64B65D092A99C3E330738",
       "type": "owl:DatatypeProperty"
+    },
+    {
+      "id": "iAuditorConfig-IsA-IObject_6D70C3A59A973D76C2E6C58DBAB266221979152024EFB8CB83D4360C0B79EF22",
+      "type": "owl:ObjectProperty"
     },
     {
       "id": "iAuditorConfig-IsSubclassOf-ActionConfig_D5364A5ABB02015B765E5946A2D7606E38AA9F345AA973C638892F56E8915EA8",
@@ -116,6 +133,19 @@
       ],
       "domain": "BH.oM.Adapters.iAuditor.iAuditorConfig",
       "range": "BH.oM.Adapters.iAuditor.iAuditorConfig.IncludeAssetFiles"
+    },
+    {
+      "id": "iAuditorConfig-IsA-IObject_6D70C3A59A973D76C2E6C58DBAB266221979152024EFB8CB83D4360C0B79EF22",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "label": "IsA",
+      "attributes": [
+        "object"
+      ],
+      "comment": {
+        "undefined": "Can be used to describe that a thing belongs to a class; or that a thing is equivalent to another thing. When used for BHoM types, this describes C# interface implementation."
+      },
+      "domain": "BH.oM.Adapters.iAuditor.iAuditorConfig",
+      "range": "BH.oM.Base.IObject"
     },
     {
       "id": "iAuditorConfig-IsSubclassOf-ActionConfig_D5364A5ABB02015B765E5946A2D7606E38AA9F345AA973C638892F56E8915EA8",

@@ -8,35 +8,39 @@
     },
     {
       "id": "BH.oM.AECDeltas.DeltaPayload.StreamId",
-      "type": "rdfs:Datatype"
+      "type": "owl:Class"
     },
     {
       "id": "BH.oM.AECDeltas.DeltaPayload.Diff",
-      "type": "rdfs:Datatype"
+      "type": "owl:Class"
     },
     {
       "id": "BH.oM.AECDeltas.DeltaPayload.Revision_from",
-      "type": "rdfs:Datatype"
+      "type": "owl:Class"
     },
     {
       "id": "BH.oM.AECDeltas.DeltaPayload.Revision_to",
-      "type": "rdfs:Datatype"
+      "type": "owl:Class"
     },
     {
       "id": "BH.oM.AECDeltas.DeltaPayload.Timestamp",
-      "type": "rdfs:Datatype"
+      "type": "owl:Class"
     },
     {
       "id": "BH.oM.AECDeltas.DeltaPayload.Signature",
-      "type": "rdfs:Datatype"
+      "type": "owl:Class"
     },
     {
       "id": "BH.oM.AECDeltas.DeltaPayload.Sender",
-      "type": "rdfs:Datatype"
+      "type": "owl:Class"
     },
     {
       "id": "BH.oM.AECDeltas.DeltaPayload.Comment",
-      "type": "rdfs:Datatype"
+      "type": "owl:Class"
+    },
+    {
+      "id": "BH.oM.Base.IObject",
+      "type": "owl:Class"
     },
     {
       "id": "BH.oM.Base.IImmutable",
@@ -120,6 +124,15 @@
       ]
     },
     {
+      "id": "BH.oM.Base.IObject",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/BHoM/Interface/IObject.cs",
+      "label": "IObject (BH.oM.Base)",
+      "attributes": [
+        "object",
+        "external"
+      ]
+    },
+    {
       "id": "BH.oM.Base.IImmutable",
       "iri": "https://github.com/BHoM/BHoM/blob/main/BHoM/Interface/IImmutable.cs",
       "label": "IImmutable (BH.oM.Base)",
@@ -161,6 +174,10 @@
     {
       "id": "DeltaPayload-HasProperty-Comment_9A9A7D869D669342D34842FB0ED13415058AF53992AE3C21F17482F0F340EE99",
       "type": "owl:DatatypeProperty"
+    },
+    {
+      "id": "DeltaPayload-IsA-IObject_9058C94D3BCA873EA195C307FCF4BFBA1A9493AFA4683224372832D57B9F9F46",
+      "type": "owl:ObjectProperty"
     },
     {
       "id": "DeltaPayload-IsA-IImmutable_AC53AC9AAAE838337CF41F05A57696AC6BAEA3FE88A3F89E449867C5D3A0400D",
@@ -247,6 +264,19 @@
       ],
       "domain": "BH.oM.AECDeltas.DeltaPayload",
       "range": "BH.oM.AECDeltas.DeltaPayload.Comment"
+    },
+    {
+      "id": "DeltaPayload-IsA-IObject_9058C94D3BCA873EA195C307FCF4BFBA1A9493AFA4683224372832D57B9F9F46",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "label": "IsA",
+      "attributes": [
+        "object"
+      ],
+      "comment": {
+        "undefined": "Can be used to describe that a thing belongs to a class; or that a thing is equivalent to another thing. When used for BHoM types, this describes C# interface implementation."
+      },
+      "domain": "BH.oM.AECDeltas.DeltaPayload",
+      "range": "BH.oM.Base.IObject"
     },
     {
       "id": "DeltaPayload-IsA-IImmutable_AC53AC9AAAE838337CF41F05A57696AC6BAEA3FE88A3F89E449867C5D3A0400D",

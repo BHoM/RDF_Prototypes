@@ -1,0 +1,865 @@
+{
+  "comment": "Generated from BHoM RDF_Prototypes",
+  "namespace": [],
+  "class": [
+    {
+      "id": "BH.oM.Adapters.SQL.UpsertCommand",
+      "type": "owl:Class"
+    },
+    {
+      "id": "BH.oM.Adapters.SQL.PushConfig",
+      "type": "owl:Class"
+    },
+    {
+      "id": "BH.oM.Adapters.SQL.UpdateCommand",
+      "type": "owl:Class"
+    },
+    {
+      "id": "BH.oM.Adapters.SQL.CustomRequest",
+      "type": "owl:Class"
+    },
+    {
+      "id": "BH.oM.Adapters.SQL.ITypeStrongRequest",
+      "type": "owl:Class"
+    },
+    {
+      "id": "BH.oM.Adapters.SQL.ISingleTableRequest",
+      "type": "owl:Class"
+    },
+    {
+      "id": "BH.oM.Adapters.SQL.TableRequest",
+      "type": "owl:Class"
+    },
+    {
+      "id": "BH.oM.Adapters.SQL.UpsertCommand.PrimaryKey",
+      "type": "owl:Class"
+    },
+    {
+      "id": "BH.oM.Adapters.SQL.UpsertCommand.DefaultPrimaryKeyValue",
+      "type": "owl:Class"
+    },
+    {
+      "id": "BH.oM.Adapters.SQL.UpsertCommand.PrimaryKeyType",
+      "type": "owl:Class"
+    },
+    {
+      "id": "BH.oM.Adapters.SQL.UpsertCommand.ObjectsToUpsert",
+      "type": "owl:Class"
+    },
+    {
+      "id": "BH.oM.Adapters.SQL.UpsertCommand.Table",
+      "type": "owl:Class"
+    },
+    {
+      "id": "BH.oM.Adapter.IExecuteCommand",
+      "type": "owl:Class"
+    },
+    {
+      "id": "BH.oM.Base.IObject",
+      "type": "owl:Class"
+    },
+    {
+      "id": "BH.oM.Adapters.SQL.PushConfig.Table",
+      "type": "owl:Class"
+    },
+    {
+      "id": "BH.oM.Adapters.SQL.PushConfig.DataType",
+      "type": "owl:Class"
+    },
+    {
+      "id": "BH.oM.Adapter.ActionConfig",
+      "type": "owl:Class"
+    },
+    {
+      "id": "BH.oM.Adapters.SQL.UpdateCommand.Filter",
+      "type": "owl:Class"
+    },
+    {
+      "id": "BH.oM.Adapters.SQL.UpdateCommand.Changes",
+      "type": "owl:Class"
+    },
+    {
+      "id": "BH.oM.Adapters.SQL.UpdateCommand.Table",
+      "type": "owl:Class"
+    },
+    {
+      "id": "BH.oM.Adapters.SQL.UpdateCommand.DataType",
+      "type": "owl:Class"
+    },
+    {
+      "id": "BH.oM.Adapters.SQL.CustomRequest.Query",
+      "type": "owl:Class"
+    },
+    {
+      "id": "BH.oM.Adapters.SQL.CustomRequest.DataType",
+      "type": "owl:Class"
+    },
+    {
+      "id": "BH.oM.Data.Requests.IRequest",
+      "type": "owl:Class"
+    },
+    {
+      "id": "BH.oM.Adapters.SQL.ITypeStrongRequest.DataType",
+      "type": "rdfs:Datatype"
+    },
+    {
+      "id": "BH.oM.Adapters.SQL.ISingleTableRequest.Table",
+      "type": "rdfs:Datatype"
+    },
+    {
+      "id": "BH.oM.Adapters.SQL.TableRequest.Table",
+      "type": "owl:Class"
+    },
+    {
+      "id": "BH.oM.Adapters.SQL.TableRequest.Columns",
+      "type": "owl:Class"
+    },
+    {
+      "id": "BH.oM.Adapters.SQL.TableRequest.Filter",
+      "type": "owl:Class"
+    },
+    {
+      "id": "BH.oM.Adapters.SQL.TableRequest.DataType",
+      "type": "owl:Class"
+    }
+  ],
+  "classAttribute": [
+    {
+      "id": "BH.oM.Adapters.SQL.UpsertCommand",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/SQL_oM/UpsertCommand.cs",
+      "label": "UpsertCommand (BH.oM.Adapters.SQL)",
+      "attributes": [
+        "object"
+      ],
+      "comment": {
+        "undefined": "Specify objects to update or insert (upsert) depending on whether existing data exists. If the data does not exist based on the Primary Key given, then the data is inserted into the table. If the data did previously exist, then its columns are updated."
+      }
+    },
+    {
+      "id": "BH.oM.Adapters.SQL.PushConfig",
+      "iri": "https://github.com/BHoM/3DRepo_Toolkit/blob/main/TDRepo_oM/Configs/PushConfig.cs",
+      "label": "PushConfig (BH.oM.Adapters.SQL)",
+      "attributes": [
+        "object"
+      ]
+    },
+    {
+      "id": "BH.oM.Adapters.SQL.UpdateCommand",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/SQL_oM/UpdateCommand.cs",
+      "label": "UpdateCommand (BH.oM.Adapters.SQL)",
+      "attributes": [
+        "object"
+      ]
+    },
+    {
+      "id": "BH.oM.Adapters.SQL.CustomRequest",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/Data_oM/Requests/CustomRequest.cs",
+      "label": "CustomRequest (BH.oM.Adapters.SQL)",
+      "attributes": [
+        "object"
+      ]
+    },
+    {
+      "id": "BH.oM.Adapters.SQL.ITypeStrongRequest",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/SQL_oM/ITypeStrongRequest.cs",
+      "label": "ITypeStrongRequest (BH.oM.Adapters.SQL)",
+      "attributes": [
+        "object"
+      ]
+    },
+    {
+      "id": "BH.oM.Adapters.SQL.ISingleTableRequest",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/SQL_oM/ISingleTableRequest.cs",
+      "label": "ISingleTableRequest (BH.oM.Adapters.SQL)",
+      "attributes": [
+        "object"
+      ]
+    },
+    {
+      "id": "BH.oM.Adapters.SQL.TableRequest",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/SQL_oM/TableRequest.cs",
+      "label": "TableRequest (BH.oM.Adapters.SQL)",
+      "attributes": [
+        "object"
+      ]
+    },
+    {
+      "id": "BH.oM.Adapters.SQL.UpsertCommand.PrimaryKey",
+      "iri": null,
+      "label": "PrimaryKey(BH.oM.Adapters.SQL.UpsertCommand.PrimaryKey)",
+      "attributes": [
+        "datatype"
+      ]
+    },
+    {
+      "id": "BH.oM.Adapters.SQL.UpsertCommand.DefaultPrimaryKeyValue",
+      "iri": null,
+      "label": "DefaultPrimaryKeyValue(BH.oM.Adapters.SQL.UpsertCommand.DefaultPrimaryKeyValue)",
+      "attributes": [
+        "datatype"
+      ]
+    },
+    {
+      "id": "BH.oM.Adapters.SQL.UpsertCommand.PrimaryKeyType",
+      "iri": null,
+      "label": "PrimaryKeyType(BH.oM.Adapters.SQL.UpsertCommand.PrimaryKeyType)",
+      "attributes": [
+        "datatype"
+      ]
+    },
+    {
+      "id": "BH.oM.Adapters.SQL.UpsertCommand.ObjectsToUpsert",
+      "iri": null,
+      "label": "ObjectsToUpsert(BH.oM.Adapters.SQL.UpsertCommand.ObjectsToUpsert)",
+      "attributes": [
+        "datatype"
+      ]
+    },
+    {
+      "id": "BH.oM.Adapters.SQL.UpsertCommand.Table",
+      "iri": null,
+      "label": "Table(BH.oM.Adapters.SQL.UpsertCommand.Table)",
+      "attributes": [
+        "datatype"
+      ]
+    },
+    {
+      "id": "BH.oM.Adapter.IExecuteCommand",
+      "iri": "https://github.com/BHoM/BHoM_Adapter/blob/main/Adapter_oM/ExecuteCommands/_IExecuteCommand.cs",
+      "label": "IExecuteCommand (BH.oM.Adapter)",
+      "attributes": [
+        "object",
+        "external"
+      ],
+      "comment": {
+        "undefined": "Classes implementing IExecuteCommand are commands compatible with the `Execute` Adapter Action."
+      }
+    },
+    {
+      "id": "BH.oM.Base.IObject",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/BHoM/Interface/IObject.cs",
+      "label": "IObject (BH.oM.Base)",
+      "attributes": [
+        "object",
+        "external"
+      ]
+    },
+    {
+      "id": "BH.oM.Adapters.SQL.PushConfig.Table",
+      "iri": "https://github.com/BHoM/3DRepo_Toolkit/blob/main/TDRepo_oM/Configs/PushConfig.cs",
+      "label": "Table(BH.oM.Adapters.SQL.PushConfig.Table)",
+      "attributes": [
+        "datatype"
+      ]
+    },
+    {
+      "id": "BH.oM.Adapters.SQL.PushConfig.DataType",
+      "iri": "https://github.com/BHoM/3DRepo_Toolkit/blob/main/TDRepo_oM/Configs/PushConfig.cs",
+      "label": "DataType(BH.oM.Adapters.SQL.PushConfig.DataType)",
+      "attributes": [
+        "datatype"
+      ]
+    },
+    {
+      "id": "BH.oM.Adapter.ActionConfig",
+      "iri": "https://github.com/BHoM/BHoM_Adapter/blob/main/Adapter_oM/Settings-Config/ActionConfig.cs",
+      "label": "ActionConfig (BH.oM.Adapter)",
+      "attributes": [
+        "external"
+      ]
+    },
+    {
+      "id": "BH.oM.Adapters.SQL.UpdateCommand.Filter",
+      "iri": null,
+      "label": "Filter(BH.oM.Adapters.SQL.UpdateCommand.Filter)",
+      "attributes": [
+        "datatype"
+      ]
+    },
+    {
+      "id": "BH.oM.Adapters.SQL.UpdateCommand.Changes",
+      "iri": null,
+      "label": "Changes(BH.oM.Adapters.SQL.UpdateCommand.Changes)",
+      "attributes": [
+        "datatype"
+      ]
+    },
+    {
+      "id": "BH.oM.Adapters.SQL.UpdateCommand.Table",
+      "iri": null,
+      "label": "Table(BH.oM.Adapters.SQL.UpdateCommand.Table)",
+      "attributes": [
+        "datatype"
+      ]
+    },
+    {
+      "id": "BH.oM.Adapters.SQL.UpdateCommand.DataType",
+      "iri": null,
+      "label": "DataType(BH.oM.Adapters.SQL.UpdateCommand.DataType)",
+      "attributes": [
+        "datatype"
+      ]
+    },
+    {
+      "id": "BH.oM.Adapters.SQL.CustomRequest.Query",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/Data_oM/Requests/CustomRequest.cs",
+      "label": "Query(BH.oM.Adapters.SQL.CustomRequest.Query)",
+      "attributes": [
+        "datatype"
+      ]
+    },
+    {
+      "id": "BH.oM.Adapters.SQL.CustomRequest.DataType",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/Data_oM/Requests/CustomRequest.cs",
+      "label": "DataType(BH.oM.Adapters.SQL.CustomRequest.DataType)",
+      "attributes": [
+        "datatype"
+      ]
+    },
+    {
+      "id": "BH.oM.Data.Requests.IRequest",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/Data_oM/Requests/IRequest.cs",
+      "label": "IRequest (BH.oM.Data.Requests)",
+      "attributes": [
+        "object",
+        "external"
+      ]
+    },
+    {
+      "id": "BH.oM.Adapters.SQL.ITypeStrongRequest.DataType",
+      "iri": null,
+      "label": "DataType(BH.oM.Adapters.SQL.ITypeStrongRequest.DataType)",
+      "attributes": [
+        "datatype"
+      ]
+    },
+    {
+      "id": "BH.oM.Adapters.SQL.ISingleTableRequest.Table",
+      "iri": null,
+      "label": "Table(BH.oM.Adapters.SQL.ISingleTableRequest.Table)",
+      "attributes": [
+        "datatype"
+      ]
+    },
+    {
+      "id": "BH.oM.Adapters.SQL.TableRequest.Table",
+      "iri": null,
+      "label": "Table(BH.oM.Adapters.SQL.TableRequest.Table)",
+      "attributes": [
+        "datatype"
+      ]
+    },
+    {
+      "id": "BH.oM.Adapters.SQL.TableRequest.Columns",
+      "iri": null,
+      "label": "Columns(BH.oM.Adapters.SQL.TableRequest.Columns)",
+      "attributes": [
+        "datatype"
+      ]
+    },
+    {
+      "id": "BH.oM.Adapters.SQL.TableRequest.Filter",
+      "iri": null,
+      "label": "Filter(BH.oM.Adapters.SQL.TableRequest.Filter)",
+      "attributes": [
+        "datatype"
+      ]
+    },
+    {
+      "id": "BH.oM.Adapters.SQL.TableRequest.DataType",
+      "iri": null,
+      "label": "DataType(BH.oM.Adapters.SQL.TableRequest.DataType)",
+      "attributes": [
+        "datatype"
+      ]
+    }
+  ],
+  "property": [
+    {
+      "id": "UpsertCommand-HasProperty-PrimaryKey_5122594C6417799620F8D954B606398A2C4DF669A2B555AA99BAF39589D6AA9A",
+      "type": "owl:DatatypeProperty"
+    },
+    {
+      "id": "UpsertCommand-HasProperty-DefaultPrimaryKeyValue_FAFCFE89164A1E9984FF9D1D7A850243BED59C39D48F6F7CCE939943749CEDF0",
+      "type": "owl:DatatypeProperty"
+    },
+    {
+      "id": "UpsertCommand-HasProperty-PrimaryKeyType_4E6802341C85E8FEA3949834955DE68F120DA0F2DF7D9A261246DA9EA53195C4",
+      "type": "owl:DatatypeProperty"
+    },
+    {
+      "id": "UpsertCommand-HasProperty-ObjectsToUpsert_0C146B95DD1F0CF58C1367951DB8EB355047AD5BAB5F20851BC159662C98C916",
+      "type": "owl:DatatypeProperty"
+    },
+    {
+      "id": "UpsertCommand-HasProperty-Table_49608C5044C132B9F12171B2A7A837BD88942F612F02E8576324C0BA2D00121D",
+      "type": "owl:DatatypeProperty"
+    },
+    {
+      "id": "UpsertCommand-IsA-IExecuteCommand_D61498B899378AFBF3C71F6B81FA9A5DFB70836923899870FC5A927238E92308",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "UpsertCommand-IsA-IObject_FA8CA3F586A6A86BDB222DB82E20EF019739E8C5AC117D3477D590F7EEBF3C94",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "PushConfig-HasProperty-Table_259361B45017FE1B1C58AB7A58F8FA369EAA6F754B8D705FDA88EFF612BD906A",
+      "type": "owl:DatatypeProperty"
+    },
+    {
+      "id": "PushConfig-HasProperty-DataType_AA6216DB3ECFE01EAEC0DB9D1D15C1116FD0291B9FB8343615BBFC760050777D",
+      "type": "owl:DatatypeProperty"
+    },
+    {
+      "id": "PushConfig-IsA-IObject_5A5304D1369EDE186EB0480CC04C2C83C9EB7A9D259F51E1335C306FDFCC3EFE",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "PushConfig-IsSubclassOf-ActionConfig_CA8F986A9DC3B756E9DEC8621E89BF4006A76529FA4F9F18CF4EBDA05802A33E",
+      "type": "rdfs:subClassOf"
+    },
+    {
+      "id": "UpdateCommand-HasProperty-Filter_B5CAAAA45E5C06155A2579CD78B662B8FEC921F393D7281A9D9483E184167B28",
+      "type": "owl:DatatypeProperty"
+    },
+    {
+      "id": "UpdateCommand-HasProperty-Changes_FA175AA2B1C63FB3203583A83D2AA510B1BC2AE835EF14E308ED7CB514E69576",
+      "type": "owl:DatatypeProperty"
+    },
+    {
+      "id": "UpdateCommand-HasProperty-Table_38FBEC5D17754C3005CF17F547408AB1425BC2AEB7CD41BA6A4E3129D787A45D",
+      "type": "owl:DatatypeProperty"
+    },
+    {
+      "id": "UpdateCommand-HasProperty-DataType_F2196C9617EF9B0263E61AAA85192B03CB1D11C76D0424C16EC057B5FF1ABB04",
+      "type": "owl:DatatypeProperty"
+    },
+    {
+      "id": "UpdateCommand-IsA-IExecuteCommand_928BFF3CE582C109B5C29DE65DA782A315776FF41232AEF9201AA90FEFAB113E",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "UpdateCommand-IsA-IObject_EA354A7CCB6709C86205FE4E96FAE2EF9317D96B3A257547822A8083F3E75BD0",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "CustomRequest-HasProperty-Query_4A4ED0628C822FD820FBEA2971B686D6DC6AD584EDB801E539E5E57FB9FC1544",
+      "type": "owl:DatatypeProperty"
+    },
+    {
+      "id": "CustomRequest-HasProperty-DataType_B284AE22C8D53706EDDF18EF83394AB244CDF8CD5371EB85827D1862E8DEF664",
+      "type": "owl:DatatypeProperty"
+    },
+    {
+      "id": "CustomRequest-IsA-IRequest_30BE93B500F9367ADFF2B6DDFEACBEC66167C357F6D31DC7682AA8D16A63C249",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "CustomRequest-IsA-IObject_F8DD0B13D21D7789CBE7437708612058744D61E2244DDD067683DA2AF00A48FE",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "CustomRequest-IsA-ITypeStrongRequest_04396ED7FC21756260CC2344BAE76034DEB687ED9AE71A773614F243A4A60ECE",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "ITypeStrongRequest-RequiresProperty-DataType_DCE03F92AA6B4CC90E087143B8BC44198627EF5A2C49FBBF6FBC8421C69781D2",
+      "type": "owl:DatatypeProperty"
+    },
+    {
+      "id": "ISingleTableRequest-RequiresProperty-Table_E5E6E4B096F9B5133B885BA5518B56D33D7F0401D80B4066329B7E7892C65422",
+      "type": "owl:DatatypeProperty"
+    },
+    {
+      "id": "TableRequest-HasProperty-Table_B7AE53BA1D72C400A7FA01B2DA07CDF1F7305D7E9666130FB842CDD383A39F50",
+      "type": "owl:DatatypeProperty"
+    },
+    {
+      "id": "TableRequest-HasProperty-Columns_77DE4F6B8B70FEBBED3084A7381D68B034576E83B52F4CF2BA9A1A40E5423948",
+      "type": "owl:DatatypeProperty"
+    },
+    {
+      "id": "TableRequest-HasProperty-Filter_DF03160D63C37B243F35E1A968E67C7526FB5D1850007581EAC6A8670F0592E8",
+      "type": "owl:DatatypeProperty"
+    },
+    {
+      "id": "TableRequest-HasProperty-DataType_D976C276ED5EEA9B846CB45D7F5E172CE1A11852240612406AEC68473993CFBF",
+      "type": "owl:DatatypeProperty"
+    },
+    {
+      "id": "TableRequest-IsA-IRequest_5B53920473A44A7C2B1A0780D6E507F804BF77AF4DC9A1290159B38EDBCB7447",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "TableRequest-IsA-IObject_D2A48196F8D04C51C243CF47D0DBE252E1D398B8F28B226EB29E3C0A4B458319",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "TableRequest-IsA-ITypeStrongRequest_1EBB9C7FCF98EE850C7B4647E3033EF56B29969A6155119677A06C477E048BAB",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "TableRequest-IsA-ISingleTableRequest_2213E455582437E7FB8BFD06ED6A567FCC1200CBBE8A6E69736C070DECF21112",
+      "type": "owl:ObjectProperty"
+    }
+  ],
+  "propertyAttribute": [
+    {
+      "id": "UpsertCommand-HasProperty-PrimaryKey_5122594C6417799620F8D954B606398A2C4DF669A2B555AA99BAF39589D6AA9A",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/HasProperty.cs",
+      "label": "HasProperty",
+      "attributes": [
+        "datatype"
+      ],
+      "domain": "BH.oM.Adapters.SQL.UpsertCommand",
+      "range": "BH.oM.Adapters.SQL.UpsertCommand.PrimaryKey"
+    },
+    {
+      "id": "UpsertCommand-HasProperty-DefaultPrimaryKeyValue_FAFCFE89164A1E9984FF9D1D7A850243BED59C39D48F6F7CCE939943749CEDF0",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/HasProperty.cs",
+      "label": "HasProperty",
+      "attributes": [
+        "datatype"
+      ],
+      "domain": "BH.oM.Adapters.SQL.UpsertCommand",
+      "range": "BH.oM.Adapters.SQL.UpsertCommand.DefaultPrimaryKeyValue"
+    },
+    {
+      "id": "UpsertCommand-HasProperty-PrimaryKeyType_4E6802341C85E8FEA3949834955DE68F120DA0F2DF7D9A261246DA9EA53195C4",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/HasProperty.cs",
+      "label": "HasProperty",
+      "attributes": [
+        "datatype"
+      ],
+      "domain": "BH.oM.Adapters.SQL.UpsertCommand",
+      "range": "BH.oM.Adapters.SQL.UpsertCommand.PrimaryKeyType"
+    },
+    {
+      "id": "UpsertCommand-HasProperty-ObjectsToUpsert_0C146B95DD1F0CF58C1367951DB8EB355047AD5BAB5F20851BC159662C98C916",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/HasProperty.cs",
+      "label": "HasProperty",
+      "attributes": [
+        "datatype"
+      ],
+      "domain": "BH.oM.Adapters.SQL.UpsertCommand",
+      "range": "BH.oM.Adapters.SQL.UpsertCommand.ObjectsToUpsert"
+    },
+    {
+      "id": "UpsertCommand-HasProperty-Table_49608C5044C132B9F12171B2A7A837BD88942F612F02E8576324C0BA2D00121D",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/HasProperty.cs",
+      "label": "HasProperty",
+      "attributes": [
+        "datatype"
+      ],
+      "domain": "BH.oM.Adapters.SQL.UpsertCommand",
+      "range": "BH.oM.Adapters.SQL.UpsertCommand.Table"
+    },
+    {
+      "id": "UpsertCommand-IsA-IExecuteCommand_D61498B899378AFBF3C71F6B81FA9A5DFB70836923899870FC5A927238E92308",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "label": "IsA",
+      "attributes": [
+        "object"
+      ],
+      "comment": {
+        "undefined": "Can be used to describe that a thing belongs to a class; or that a thing is equivalent to another thing. When used for BHoM types, this describes C# interface implementation."
+      },
+      "domain": "BH.oM.Adapters.SQL.UpsertCommand",
+      "range": "BH.oM.Adapter.IExecuteCommand"
+    },
+    {
+      "id": "UpsertCommand-IsA-IObject_FA8CA3F586A6A86BDB222DB82E20EF019739E8C5AC117D3477D590F7EEBF3C94",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "label": "IsA",
+      "attributes": [
+        "object"
+      ],
+      "comment": {
+        "undefined": "Can be used to describe that a thing belongs to a class; or that a thing is equivalent to another thing. When used for BHoM types, this describes C# interface implementation."
+      },
+      "domain": "BH.oM.Adapters.SQL.UpsertCommand",
+      "range": "BH.oM.Base.IObject"
+    },
+    {
+      "id": "PushConfig-HasProperty-Table_259361B45017FE1B1C58AB7A58F8FA369EAA6F754B8D705FDA88EFF612BD906A",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/HasProperty.cs",
+      "label": "HasProperty",
+      "attributes": [
+        "datatype"
+      ],
+      "domain": "BH.oM.Adapters.SQL.PushConfig",
+      "range": "BH.oM.Adapters.SQL.PushConfig.Table"
+    },
+    {
+      "id": "PushConfig-HasProperty-DataType_AA6216DB3ECFE01EAEC0DB9D1D15C1116FD0291B9FB8343615BBFC760050777D",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/HasProperty.cs",
+      "label": "HasProperty",
+      "attributes": [
+        "datatype"
+      ],
+      "domain": "BH.oM.Adapters.SQL.PushConfig",
+      "range": "BH.oM.Adapters.SQL.PushConfig.DataType"
+    },
+    {
+      "id": "PushConfig-IsA-IObject_5A5304D1369EDE186EB0480CC04C2C83C9EB7A9D259F51E1335C306FDFCC3EFE",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "label": "IsA",
+      "attributes": [
+        "object"
+      ],
+      "comment": {
+        "undefined": "Can be used to describe that a thing belongs to a class; or that a thing is equivalent to another thing. When used for BHoM types, this describes C# interface implementation."
+      },
+      "domain": "BH.oM.Adapters.SQL.PushConfig",
+      "range": "BH.oM.Base.IObject"
+    },
+    {
+      "id": "PushConfig-IsSubclassOf-ActionConfig_CA8F986A9DC3B756E9DEC8621E89BF4006A76529FA4F9F18CF4EBDA05802A33E",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsSubclassOf.cs",
+      "label": "IsA",
+      "attributes": [
+        "object"
+      ],
+      "domain": "BH.oM.Adapters.SQL.PushConfig",
+      "range": "BH.oM.Adapter.ActionConfig"
+    },
+    {
+      "id": "UpdateCommand-HasProperty-Filter_B5CAAAA45E5C06155A2579CD78B662B8FEC921F393D7281A9D9483E184167B28",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/HasProperty.cs",
+      "label": "HasProperty",
+      "attributes": [
+        "datatype"
+      ],
+      "domain": "BH.oM.Adapters.SQL.UpdateCommand",
+      "range": "BH.oM.Adapters.SQL.UpdateCommand.Filter"
+    },
+    {
+      "id": "UpdateCommand-HasProperty-Changes_FA175AA2B1C63FB3203583A83D2AA510B1BC2AE835EF14E308ED7CB514E69576",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/HasProperty.cs",
+      "label": "HasProperty",
+      "attributes": [
+        "datatype"
+      ],
+      "domain": "BH.oM.Adapters.SQL.UpdateCommand",
+      "range": "BH.oM.Adapters.SQL.UpdateCommand.Changes"
+    },
+    {
+      "id": "UpdateCommand-HasProperty-Table_38FBEC5D17754C3005CF17F547408AB1425BC2AEB7CD41BA6A4E3129D787A45D",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/HasProperty.cs",
+      "label": "HasProperty",
+      "attributes": [
+        "datatype"
+      ],
+      "domain": "BH.oM.Adapters.SQL.UpdateCommand",
+      "range": "BH.oM.Adapters.SQL.UpdateCommand.Table"
+    },
+    {
+      "id": "UpdateCommand-HasProperty-DataType_F2196C9617EF9B0263E61AAA85192B03CB1D11C76D0424C16EC057B5FF1ABB04",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/HasProperty.cs",
+      "label": "HasProperty",
+      "attributes": [
+        "datatype"
+      ],
+      "domain": "BH.oM.Adapters.SQL.UpdateCommand",
+      "range": "BH.oM.Adapters.SQL.UpdateCommand.DataType"
+    },
+    {
+      "id": "UpdateCommand-IsA-IExecuteCommand_928BFF3CE582C109B5C29DE65DA782A315776FF41232AEF9201AA90FEFAB113E",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "label": "IsA",
+      "attributes": [
+        "object"
+      ],
+      "comment": {
+        "undefined": "Can be used to describe that a thing belongs to a class; or that a thing is equivalent to another thing. When used for BHoM types, this describes C# interface implementation."
+      },
+      "domain": "BH.oM.Adapters.SQL.UpdateCommand",
+      "range": "BH.oM.Adapter.IExecuteCommand"
+    },
+    {
+      "id": "UpdateCommand-IsA-IObject_EA354A7CCB6709C86205FE4E96FAE2EF9317D96B3A257547822A8083F3E75BD0",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "label": "IsA",
+      "attributes": [
+        "object"
+      ],
+      "comment": {
+        "undefined": "Can be used to describe that a thing belongs to a class; or that a thing is equivalent to another thing. When used for BHoM types, this describes C# interface implementation."
+      },
+      "domain": "BH.oM.Adapters.SQL.UpdateCommand",
+      "range": "BH.oM.Base.IObject"
+    },
+    {
+      "id": "CustomRequest-HasProperty-Query_4A4ED0628C822FD820FBEA2971B686D6DC6AD584EDB801E539E5E57FB9FC1544",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/HasProperty.cs",
+      "label": "HasProperty",
+      "attributes": [
+        "datatype"
+      ],
+      "domain": "BH.oM.Adapters.SQL.CustomRequest",
+      "range": "BH.oM.Adapters.SQL.CustomRequest.Query"
+    },
+    {
+      "id": "CustomRequest-HasProperty-DataType_B284AE22C8D53706EDDF18EF83394AB244CDF8CD5371EB85827D1862E8DEF664",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/HasProperty.cs",
+      "label": "HasProperty",
+      "attributes": [
+        "datatype"
+      ],
+      "domain": "BH.oM.Adapters.SQL.CustomRequest",
+      "range": "BH.oM.Adapters.SQL.CustomRequest.DataType"
+    },
+    {
+      "id": "CustomRequest-IsA-IRequest_30BE93B500F9367ADFF2B6DDFEACBEC66167C357F6D31DC7682AA8D16A63C249",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "label": "IsA",
+      "attributes": [
+        "object"
+      ],
+      "comment": {
+        "undefined": "Can be used to describe that a thing belongs to a class; or that a thing is equivalent to another thing. When used for BHoM types, this describes C# interface implementation."
+      },
+      "domain": "BH.oM.Adapters.SQL.CustomRequest",
+      "range": "BH.oM.Data.Requests.IRequest"
+    },
+    {
+      "id": "CustomRequest-IsA-IObject_F8DD0B13D21D7789CBE7437708612058744D61E2244DDD067683DA2AF00A48FE",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "label": "IsA",
+      "attributes": [
+        "object"
+      ],
+      "comment": {
+        "undefined": "Can be used to describe that a thing belongs to a class; or that a thing is equivalent to another thing. When used for BHoM types, this describes C# interface implementation."
+      },
+      "domain": "BH.oM.Adapters.SQL.CustomRequest",
+      "range": "BH.oM.Base.IObject"
+    },
+    {
+      "id": "CustomRequest-IsA-ITypeStrongRequest_04396ED7FC21756260CC2344BAE76034DEB687ED9AE71A773614F243A4A60ECE",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "label": "IsA",
+      "attributes": [
+        "object"
+      ],
+      "comment": {
+        "undefined": "Can be used to describe that a thing belongs to a class; or that a thing is equivalent to another thing. When used for BHoM types, this describes C# interface implementation."
+      },
+      "domain": "BH.oM.Adapters.SQL.CustomRequest",
+      "range": "BH.oM.Adapters.SQL.ITypeStrongRequest"
+    },
+    {
+      "id": "ITypeStrongRequest-RequiresProperty-DataType_DCE03F92AA6B4CC90E087143B8BC44198627EF5A2C49FBBF6FBC8421C69781D2",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/RequiresProperty.cs",
+      "label": "RequiresProperty",
+      "attributes": [
+        "datatype"
+      ],
+      "domain": "BH.oM.Adapters.SQL.ITypeStrongRequest",
+      "range": "BH.oM.Adapters.SQL.ITypeStrongRequest.DataType"
+    },
+    {
+      "id": "ISingleTableRequest-RequiresProperty-Table_E5E6E4B096F9B5133B885BA5518B56D33D7F0401D80B4066329B7E7892C65422",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/RequiresProperty.cs",
+      "label": "RequiresProperty",
+      "attributes": [
+        "datatype"
+      ],
+      "domain": "BH.oM.Adapters.SQL.ISingleTableRequest",
+      "range": "BH.oM.Adapters.SQL.ISingleTableRequest.Table"
+    },
+    {
+      "id": "TableRequest-HasProperty-Table_B7AE53BA1D72C400A7FA01B2DA07CDF1F7305D7E9666130FB842CDD383A39F50",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/HasProperty.cs",
+      "label": "HasProperty",
+      "attributes": [
+        "datatype"
+      ],
+      "domain": "BH.oM.Adapters.SQL.TableRequest",
+      "range": "BH.oM.Adapters.SQL.TableRequest.Table"
+    },
+    {
+      "id": "TableRequest-HasProperty-Columns_77DE4F6B8B70FEBBED3084A7381D68B034576E83B52F4CF2BA9A1A40E5423948",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/HasProperty.cs",
+      "label": "HasProperty",
+      "attributes": [
+        "datatype"
+      ],
+      "domain": "BH.oM.Adapters.SQL.TableRequest",
+      "range": "BH.oM.Adapters.SQL.TableRequest.Columns"
+    },
+    {
+      "id": "TableRequest-HasProperty-Filter_DF03160D63C37B243F35E1A968E67C7526FB5D1850007581EAC6A8670F0592E8",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/HasProperty.cs",
+      "label": "HasProperty",
+      "attributes": [
+        "datatype"
+      ],
+      "domain": "BH.oM.Adapters.SQL.TableRequest",
+      "range": "BH.oM.Adapters.SQL.TableRequest.Filter"
+    },
+    {
+      "id": "TableRequest-HasProperty-DataType_D976C276ED5EEA9B846CB45D7F5E172CE1A11852240612406AEC68473993CFBF",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/HasProperty.cs",
+      "label": "HasProperty",
+      "attributes": [
+        "datatype"
+      ],
+      "domain": "BH.oM.Adapters.SQL.TableRequest",
+      "range": "BH.oM.Adapters.SQL.TableRequest.DataType"
+    },
+    {
+      "id": "TableRequest-IsA-IRequest_5B53920473A44A7C2B1A0780D6E507F804BF77AF4DC9A1290159B38EDBCB7447",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "label": "IsA",
+      "attributes": [
+        "object"
+      ],
+      "comment": {
+        "undefined": "Can be used to describe that a thing belongs to a class; or that a thing is equivalent to another thing. When used for BHoM types, this describes C# interface implementation."
+      },
+      "domain": "BH.oM.Adapters.SQL.TableRequest",
+      "range": "BH.oM.Data.Requests.IRequest"
+    },
+    {
+      "id": "TableRequest-IsA-IObject_D2A48196F8D04C51C243CF47D0DBE252E1D398B8F28B226EB29E3C0A4B458319",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "label": "IsA",
+      "attributes": [
+        "object"
+      ],
+      "comment": {
+        "undefined": "Can be used to describe that a thing belongs to a class; or that a thing is equivalent to another thing. When used for BHoM types, this describes C# interface implementation."
+      },
+      "domain": "BH.oM.Adapters.SQL.TableRequest",
+      "range": "BH.oM.Base.IObject"
+    },
+    {
+      "id": "TableRequest-IsA-ITypeStrongRequest_1EBB9C7FCF98EE850C7B4647E3033EF56B29969A6155119677A06C477E048BAB",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "label": "IsA",
+      "attributes": [
+        "object"
+      ],
+      "comment": {
+        "undefined": "Can be used to describe that a thing belongs to a class; or that a thing is equivalent to another thing. When used for BHoM types, this describes C# interface implementation."
+      },
+      "domain": "BH.oM.Adapters.SQL.TableRequest",
+      "range": "BH.oM.Adapters.SQL.ITypeStrongRequest"
+    },
+    {
+      "id": "TableRequest-IsA-ISingleTableRequest_2213E455582437E7FB8BFD06ED6A567FCC1200CBBE8A6E69736C070DECF21112",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "label": "IsA",
+      "attributes": [
+        "object"
+      ],
+      "comment": {
+        "undefined": "Can be used to describe that a thing belongs to a class; or that a thing is equivalent to another thing. When used for BHoM types, this describes C# interface implementation."
+      },
+      "domain": "BH.oM.Adapters.SQL.TableRequest",
+      "range": "BH.oM.Adapters.SQL.ISingleTableRequest"
+    }
+  ]
+}

@@ -8,19 +8,19 @@
     },
     {
       "id": "BH.oM.Versioning.VersioningEvent.OldDocument",
-      "type": "rdfs:Datatype"
+      "type": "owl:Class"
     },
     {
       "id": "BH.oM.Versioning.VersioningEvent.NewDocument",
-      "type": "rdfs:Datatype"
+      "type": "owl:Class"
     },
     {
       "id": "BH.oM.Versioning.VersioningEvent.OldVersion",
-      "type": "rdfs:Datatype"
+      "type": "owl:Class"
     },
     {
       "id": "BH.oM.Versioning.VersioningEvent.NewVersion",
-      "type": "rdfs:Datatype"
+      "type": "owl:Class"
     },
     {
       "id": "BH.oM.Versioning.VersioningEvent.Type",
@@ -28,6 +28,14 @@
     },
     {
       "id": "BH.oM.Base.Debugging.EventType",
+      "type": "owl:Class"
+    },
+    {
+      "id": "BH.oM.Base.IBHoMObject",
+      "type": "owl:Class"
+    },
+    {
+      "id": "BH.oM.Base.IObject",
       "type": "owl:Class"
     },
     {
@@ -92,6 +100,24 @@
       ]
     },
     {
+      "id": "BH.oM.Base.IBHoMObject",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/BHoM/Interface/IBHoMObject.cs",
+      "label": "IBHoMObject (BH.oM.Base)",
+      "attributes": [
+        "object",
+        "external"
+      ]
+    },
+    {
+      "id": "BH.oM.Base.IObject",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/BHoM/Interface/IObject.cs",
+      "label": "IObject (BH.oM.Base)",
+      "attributes": [
+        "object",
+        "external"
+      ]
+    },
+    {
       "id": "BH.oM.Base.Debugging.Event",
       "iri": "https://github.com/BHoM/BHoM/blob/main/BHoM/Debugging/Event.cs",
       "label": "Event (BH.oM.Base.Debugging)",
@@ -123,6 +149,14 @@
     },
     {
       "id": "BH.oM.Versioning.VersioningEvent.Type-IsA-BH.oM.Base.Debugging.EventType",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "VersioningEvent-IsA-IBHoMObject_4AE6D9D87A46839F3C33745CA7B80DBF6C88FCF93E4EC67268AACF7E61936840",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "VersioningEvent-IsA-IObject_E8352939DA364C8EACB862DF3F564248E8A5392DDAE35E23272D6DE446D51479",
       "type": "owl:ObjectProperty"
     },
     {
@@ -190,6 +224,32 @@
       ],
       "domain": "BH.oM.Versioning.VersioningEvent.Type",
       "range": "BH.oM.Base.Debugging.EventType"
+    },
+    {
+      "id": "VersioningEvent-IsA-IBHoMObject_4AE6D9D87A46839F3C33745CA7B80DBF6C88FCF93E4EC67268AACF7E61936840",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "label": "IsA",
+      "attributes": [
+        "object"
+      ],
+      "comment": {
+        "undefined": "Can be used to describe that a thing belongs to a class; or that a thing is equivalent to another thing. When used for BHoM types, this describes C# interface implementation."
+      },
+      "domain": "BH.oM.Versioning.VersioningEvent",
+      "range": "BH.oM.Base.IBHoMObject"
+    },
+    {
+      "id": "VersioningEvent-IsA-IObject_E8352939DA364C8EACB862DF3F564248E8A5392DDAE35E23272D6DE446D51479",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "label": "IsA",
+      "attributes": [
+        "object"
+      ],
+      "comment": {
+        "undefined": "Can be used to describe that a thing belongs to a class; or that a thing is equivalent to another thing. When used for BHoM types, this describes C# interface implementation."
+      },
+      "domain": "BH.oM.Versioning.VersioningEvent",
+      "range": "BH.oM.Base.IObject"
     },
     {
       "id": "VersioningEvent-IsSubclassOf-Event_038BA251645596E39FBB8263193601CE1BC0874094B818F37376B4D562780552",

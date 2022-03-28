@@ -15,6 +15,10 @@
       "type": "owl:Class"
     },
     {
+      "id": "BH.oM.Base.IObject",
+      "type": "owl:Class"
+    },
+    {
       "id": "BH.oM.Adapter.ActionConfig",
       "type": "owl:Class"
     }
@@ -53,6 +57,15 @@
       }
     },
     {
+      "id": "BH.oM.Base.IObject",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/BHoM/Interface/IObject.cs",
+      "label": "IObject (BH.oM.Base)",
+      "attributes": [
+        "object",
+        "external"
+      ]
+    },
+    {
       "id": "BH.oM.Adapter.ActionConfig",
       "iri": "https://github.com/BHoM/BHoM_Adapter/blob/main/Adapter_oM/Settings-Config/ActionConfig.cs",
       "label": "ActionConfig (BH.oM.Adapter)",
@@ -68,6 +81,10 @@
     },
     {
       "id": "BH.oM.Adapters.CFD.CFX.CFXConfig.CFXRunMode-IsA-BH.oM.CFD.CFX.CFXRunMode",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "CFXConfig-IsA-IObject_01C15D3DC49097B5F4F2D641617872A8368D527539D16179E8CDD808967C58CB",
       "type": "owl:ObjectProperty"
     },
     {
@@ -95,6 +112,19 @@
       ],
       "domain": "BH.oM.Adapters.CFD.CFX.CFXConfig.CFXRunMode",
       "range": "BH.oM.CFD.CFX.CFXRunMode"
+    },
+    {
+      "id": "CFXConfig-IsA-IObject_01C15D3DC49097B5F4F2D641617872A8368D527539D16179E8CDD808967C58CB",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "label": "IsA",
+      "attributes": [
+        "object"
+      ],
+      "comment": {
+        "undefined": "Can be used to describe that a thing belongs to a class; or that a thing is equivalent to another thing. When used for BHoM types, this describes C# interface implementation."
+      },
+      "domain": "BH.oM.Adapters.CFD.CFX.CFXConfig",
+      "range": "BH.oM.Base.IObject"
     },
     {
       "id": "CFXConfig-IsSubclassOf-ActionConfig_6535F04DCCC0A9B5176E6DB1E82F0C6FE613341C1DDE55752E04EB64C521DFB8",

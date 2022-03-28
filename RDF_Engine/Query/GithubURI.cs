@@ -1,6 +1,7 @@
 ﻿
 using BH.oM.Base;
 using BH.oM.Base.Attributes;
+using BH.oM.RDF;
 using System;
 using System.Collections;
 using System.Collections.Generic;
@@ -16,13 +17,13 @@ namespace BH.Engine.RDF
 {
     public static partial class Query
     {
-        public static Uri GithubURI(this Type typeToSearch, string githubRootDirectory = null, Uri githubOrganisation = null, string cacheRootDirectory = null)
+        public static Uri GithubURI(this Type typeToSearch, TBoxSettings settings)
         {
             if (!typeToSearch.IsBHoMType())
                 return null;
 
             // Try extracting the Github Uri by deriving it from a fileSystem search for a `.cs` file corresponding to the input Type.
-            Uri result = GithubURIFromLocalRepository(typeToSearch, githubRootDirectory, githubOrganisation, cacheRootDirectory);
+            Uri result = GithubURIFromLocalRepository(typeToSearch, settings);
             if (result == null)
             {
                 // If the previous fails, compose a GitHub uri by leveraging namespace/folder conventions. This will fail wherever conventions are not respected.
@@ -32,10 +33,10 @@ namespace BH.Engine.RDF
             return result;
         }
 
-        public static Uri GithubURI(this MemberInfo typeToSearch, string githubRootDirectory = null, Uri githubOrganisation = null, string cacheRootDirectory = null)
+        public static Uri GithubURI(this MemberInfo typeToSearch, TBoxSettings settings)
         {
             // Try extracting the Github Uri by deriving it from a fileSystem search for a `.cs` file corresponding to the input Type.
-            Uri result = GithubURIFromLocalRepository(typeToSearch as dynamic, githubRootDirectory, githubOrganisation, cacheRootDirectory);
+            Uri result = GithubURIFromLocalRepository(typeToSearch as dynamic, settings);
 
             return result;
         }

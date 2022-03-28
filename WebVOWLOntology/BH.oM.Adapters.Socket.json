@@ -8,7 +8,7 @@
     },
     {
       "id": "BH.oM.Adapters.Socket.DataPackage.Data",
-      "type": "rdfs:Datatype"
+      "type": "owl:Class"
     },
     {
       "id": "BH.oM.Adapters.Socket.DataPackage.Events",
@@ -20,7 +20,11 @@
     },
     {
       "id": "BH.oM.Adapters.Socket.DataPackage.Tag",
-      "type": "rdfs:Datatype"
+      "type": "owl:Class"
+    },
+    {
+      "id": "BH.oM.Base.IObject",
+      "type": "owl:Class"
     }
   ],
   "classAttribute": [
@@ -62,6 +66,15 @@
       "attributes": [
         "datatype"
       ]
+    },
+    {
+      "id": "BH.oM.Base.IObject",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/BHoM/Interface/IObject.cs",
+      "label": "IObject (BH.oM.Base)",
+      "attributes": [
+        "object",
+        "external"
+      ]
     }
   ],
   "property": [
@@ -80,6 +93,10 @@
     {
       "id": "DataPackage-HasProperty-Tag_22340EB8306F82D829F231A58B36B488D8A66FBD365FCE1BA979699389552185",
       "type": "owl:DatatypeProperty"
+    },
+    {
+      "id": "DataPackage-IsA-IObject_16068A2945BEE0B4E9E1765BCABEAFEDB85FE62FBE6E2C11007023584E6509EB",
+      "type": "owl:ObjectProperty"
     }
   ],
   "propertyAttribute": [
@@ -122,6 +139,19 @@
       ],
       "domain": "BH.oM.Adapters.Socket.DataPackage",
       "range": "BH.oM.Adapters.Socket.DataPackage.Tag"
+    },
+    {
+      "id": "DataPackage-IsA-IObject_16068A2945BEE0B4E9E1765BCABEAFEDB85FE62FBE6E2C11007023584E6509EB",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "label": "IsA",
+      "attributes": [
+        "object"
+      ],
+      "comment": {
+        "undefined": "Can be used to describe that a thing belongs to a class; or that a thing is equivalent to another thing. When used for BHoM types, this describes C# interface implementation."
+      },
+      "domain": "BH.oM.Adapters.Socket.DataPackage",
+      "range": "BH.oM.Base.IObject"
     }
   ]
 }

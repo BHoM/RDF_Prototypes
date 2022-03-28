@@ -17,14 +17,14 @@ namespace BH.Engine.RDF
 {
     public static partial class Convert
     {
-        private static string AddWebOwlClassNodes(Type type, JArray classArray, JArray classAttributeArray, HashSet<string> addedTypes, HashSet<string> internalNamespaces = null)
+        private static string AddWebOwlClassNodes(Type type, JArray classArray, JArray classAttributeArray, HashSet<string> addedTypes, TBoxSettings settings, HashSet<string> internalNamespaces = null)
         {
             string typeId = type.WebVOWLNodeId();
 
             if (addedTypes.Contains(typeId))
                 return typeId;
 
-            Uri typeUri = type.GithubURI();
+            Uri typeUri = type.GithubURI(settings);
             string comment = type.DescriptionInAttribute();
             bool isExternal = !type.IsInNamespace(internalNamespaces) ?? false;
 
@@ -39,7 +39,7 @@ namespace BH.Engine.RDF
             return typeId;
         }
 
-        private static string AddWebOwlClassNodes(PropertyInfo pInfo, JArray classArray, JArray classAttributeArray, HashSet<string> addedTypes)
+        private static string AddWebOwlClassNodes(PropertyInfo pInfo, JArray classArray, JArray classAttributeArray, HashSet<string> addedTypes, TBoxSettings settings)
         {
             string propertyNodeId = pInfo.WebVOWLNodeId();
 
@@ -51,7 +51,7 @@ namespace BH.Engine.RDF
                 classArray.AddToIdTypeArray(propertyNodeId, "owl:Class");
 
                 // 2) CLASS ATTRIBUTE
-                classAttributeArray.AddToAttributeArray(propertyNodeId, pInfo.GithubURI(), pInfo.DescriptiveName());
+                classAttributeArray.AddToAttributeArray(propertyNodeId, pInfo.GithubURI(settings), pInfo.DescriptiveName());
 
                 addedTypes.Add(propertyNodeId);
             }

@@ -1,4 +1,5 @@
-﻿using System;
+﻿using BH.oM.RDF;
+using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
@@ -11,8 +12,11 @@ namespace BH.Engine.RDF
 {
     public static partial class Compute
     {
-        public static HashSet<string> FilesInRepo(string parentRepoDirectoryPath, string cacheRootDirectory = null)
+        public static HashSet<string> FilesInRepo(string parentRepoDirectoryPath, TBoxSettings settings = null)
         {
+            if (settings == null)
+                settings = new TBoxSettings();
+
             if (string.IsNullOrWhiteSpace(parentRepoDirectoryPath) || !Directory.Exists(parentRepoDirectoryPath))
                 return null;
 
@@ -21,17 +25,11 @@ namespace BH.Engine.RDF
                 return m_allCsFilePaths;
 
             string[] files = null;
+            string cacheFilePath = Path.Combine(settings.CacheRootPath, settings.Cache_RepositoryAllFilePaths_FileName);
 
-            // Try to read from cached on disk.
-            if (cacheRootDirectory == null)
-                cacheRootDirectory = Directory.GetParent(Directory.GetParent(new Uri(Path.GetDirectoryName(Assembly.GetExecutingAssembly().CodeBase)).LocalPath).FullName).FullName;
-
-            string cacheFilePath = null;
-            if (!string.IsNullOrWhiteSpace(cacheRootDirectory))
-                cacheFilePath = cacheRootDirectory + "\\cached_GithubRootCsFilepaths.txt";
-
-            if (!string.IsNullOrWhiteSpace(cacheFilePath) && File.Exists(cacheFilePath))
+            if (!settings.ResetCache && !string.IsNullOrWhiteSpace(cacheFilePath) && File.Exists(cacheFilePath))
             {
+                // Read from cached disk file.
                 files = File.ReadAllLines(cacheFilePath);
             }
             else

@@ -8,15 +8,27 @@
     },
     {
       "id": "BH.oM.CSharp.Variable.Type",
-      "type": "rdfs:Datatype"
+      "type": "owl:Class"
     },
     {
       "id": "BH.oM.CSharp.Variable.Expression",
-      "type": "rdfs:Datatype"
+      "type": "owl:Class"
     },
     {
       "id": "BH.oM.CSharp.Variable.SourceId",
-      "type": "rdfs:Datatype"
+      "type": "owl:Class"
+    },
+    {
+      "id": "BH.oM.Base.IBHoMObject",
+      "type": "owl:Class"
+    },
+    {
+      "id": "BH.oM.Base.IObject",
+      "type": "owl:Class"
+    },
+    {
+      "id": "BH.oM.Base.BHoMObject",
+      "type": "owl:Class"
     }
   ],
   "classAttribute": [
@@ -54,6 +66,32 @@
       "attributes": [
         "datatype"
       ]
+    },
+    {
+      "id": "BH.oM.Base.IBHoMObject",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/BHoM/Interface/IBHoMObject.cs",
+      "label": "IBHoMObject (BH.oM.Base)",
+      "attributes": [
+        "object",
+        "external"
+      ]
+    },
+    {
+      "id": "BH.oM.Base.IObject",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/BHoM/Interface/IObject.cs",
+      "label": "IObject (BH.oM.Base)",
+      "attributes": [
+        "object",
+        "external"
+      ]
+    },
+    {
+      "id": "BH.oM.Base.BHoMObject",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/BHoM/BHoMObject.cs",
+      "label": "BHoMObject (BH.oM.Base)",
+      "attributes": [
+        "external"
+      ]
     }
   ],
   "property": [
@@ -68,6 +106,18 @@
     {
       "id": "Variable-HasProperty-SourceId_01F83D887C07F8E94D4DE98BC7CA96A345F9D8E6DB23B915FB394D78737AE59A",
       "type": "owl:DatatypeProperty"
+    },
+    {
+      "id": "Variable-IsA-IBHoMObject_1CE70D3BF6A3A91B792F7CD1D0828BD9283354C8141083DC62A0D4F7123D47EF",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "Variable-IsA-IObject_A035C8F20AA303FC35F4055FBC418903EBCD3F66F8F1EF6115D9F6703C441FA1",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "Variable-IsSubclassOf-BHoMObject_3C349D3A3C83A284474347B4452362F9AC947BC2FDBCDEF4BCD84934A19093C6",
+      "type": "rdfs:subClassOf"
     }
   ],
   "propertyAttribute": [
@@ -100,6 +150,42 @@
       ],
       "domain": "BH.oM.CSharp.Variable",
       "range": "BH.oM.CSharp.Variable.SourceId"
+    },
+    {
+      "id": "Variable-IsA-IBHoMObject_1CE70D3BF6A3A91B792F7CD1D0828BD9283354C8141083DC62A0D4F7123D47EF",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "label": "IsA",
+      "attributes": [
+        "object"
+      ],
+      "comment": {
+        "undefined": "Can be used to describe that a thing belongs to a class; or that a thing is equivalent to another thing. When used for BHoM types, this describes C# interface implementation."
+      },
+      "domain": "BH.oM.CSharp.Variable",
+      "range": "BH.oM.Base.IBHoMObject"
+    },
+    {
+      "id": "Variable-IsA-IObject_A035C8F20AA303FC35F4055FBC418903EBCD3F66F8F1EF6115D9F6703C441FA1",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "label": "IsA",
+      "attributes": [
+        "object"
+      ],
+      "comment": {
+        "undefined": "Can be used to describe that a thing belongs to a class; or that a thing is equivalent to another thing. When used for BHoM types, this describes C# interface implementation."
+      },
+      "domain": "BH.oM.CSharp.Variable",
+      "range": "BH.oM.Base.IObject"
+    },
+    {
+      "id": "Variable-IsSubclassOf-BHoMObject_3C349D3A3C83A284474347B4452362F9AC947BC2FDBCDEF4BCD84934A19093C6",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsSubclassOf.cs",
+      "label": "IsA",
+      "attributes": [
+        "object"
+      ],
+      "domain": "BH.oM.CSharp.Variable",
+      "range": "BH.oM.Base.BHoMObject"
     }
   ]
 }

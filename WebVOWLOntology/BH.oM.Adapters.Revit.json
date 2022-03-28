@@ -35,6 +35,14 @@
       "type": "owl:Class"
     },
     {
+      "id": "BH.oM.Adapters.Revit.RevitTypeFragment",
+      "type": "owl:Class"
+    },
+    {
+      "id": "BH.oM.Adapters.Revit.RevitParameterDifference",
+      "type": "owl:Class"
+    },
+    {
       "id": "BH.oM.Adapters.Revit.Tolerance",
       "type": "owl:Class"
     },
@@ -275,6 +283,10 @@
       "type": "owl:Class"
     },
     {
+      "id": "BH.oM.Adapters.Revit.Enums.RevitParameterDifferenceType",
+      "type": "owl:Class"
+    },
+    {
       "id": "BH.oM.Adapters.Revit.Enums.TextComparisonType",
       "type": "owl:Class"
     },
@@ -312,11 +324,11 @@
     },
     {
       "id": "BH.oM.Adapters.Revit.RevitComparisonConfig.ParametersExceptions",
-      "type": "rdfs:Datatype"
+      "type": "owl:Class"
     },
     {
       "id": "BH.oM.Adapters.Revit.RevitComparisonConfig.ParametersToConsider",
-      "type": "rdfs:Datatype"
+      "type": "owl:Class"
     },
     {
       "id": "BH.oM.Adapters.Revit.RevitComparisonConfig.ParameterNumericTolerances",
@@ -335,20 +347,40 @@
       "type": "owl:Class"
     },
     {
+      "id": "BH.oM.Adapters.Revit.RevitComparisonConfig.RevitParams_ConsiderAddedAssigned",
+      "type": "owl:Class"
+    },
+    {
+      "id": "BH.oM.Adapters.Revit.RevitComparisonConfig.RevitParams_ConsiderAddedUnassigned",
+      "type": "owl:Class"
+    },
+    {
+      "id": "BH.oM.Adapters.Revit.RevitComparisonConfig.RevitParams_ConsiderRemovedAssigned",
+      "type": "owl:Class"
+    },
+    {
+      "id": "BH.oM.Adapters.Revit.RevitComparisonConfig.RevitParams_ConsiderRemovedUnassigned",
+      "type": "owl:Class"
+    },
+    {
+      "id": "BH.oM.Base.IObject",
+      "type": "owl:Class"
+    },
+    {
       "id": "BH.oM.Base.BaseComparisonConfig",
       "type": "owl:Class"
     },
     {
       "id": "BH.oM.Adapters.Revit.PullGeometryConfig.PullEdges",
-      "type": "rdfs:Datatype"
+      "type": "owl:Class"
     },
     {
       "id": "BH.oM.Adapters.Revit.PullGeometryConfig.PullSurfaces",
-      "type": "rdfs:Datatype"
+      "type": "owl:Class"
     },
     {
       "id": "BH.oM.Adapters.Revit.PullGeometryConfig.PullMeshes",
-      "type": "rdfs:Datatype"
+      "type": "owl:Class"
     },
     {
       "id": "BH.oM.Adapters.Revit.PullGeometryConfig.MeshDetailLevel",
@@ -356,11 +388,11 @@
     },
     {
       "id": "BH.oM.Adapters.Revit.PullGeometryConfig.IncludeNonVisible",
-      "type": "rdfs:Datatype"
+      "type": "owl:Class"
     },
     {
       "id": "BH.oM.Adapters.Revit.PullRepresentationConfig.PullRenderMesh",
-      "type": "rdfs:Datatype"
+      "type": "owl:Class"
     },
     {
       "id": "BH.oM.Adapters.Revit.PullRepresentationConfig.DetailLevel",
@@ -368,19 +400,19 @@
     },
     {
       "id": "BH.oM.Adapters.Revit.PullRepresentationConfig.IncludeNonVisible",
-      "type": "rdfs:Datatype"
+      "type": "owl:Class"
     },
     {
       "id": "BH.oM.Adapters.Revit.RevitRemoveConfig.SuppressFailureMessages",
-      "type": "rdfs:Datatype"
+      "type": "owl:Class"
     },
     {
       "id": "BH.oM.Adapters.Revit.RevitRemoveConfig.IncludeClosedWorksets",
-      "type": "rdfs:Datatype"
+      "type": "owl:Class"
     },
     {
       "id": "BH.oM.Adapters.Revit.RevitRemoveConfig.RemovePinned",
-      "type": "rdfs:Datatype"
+      "type": "owl:Class"
     },
     {
       "id": "BH.oM.Adapter.ActionConfig",
@@ -388,7 +420,15 @@
     },
     {
       "id": "BH.oM.Adapters.Revit.ClonedType.SourceTypeId",
-      "type": "rdfs:Datatype"
+      "type": "owl:Class"
+    },
+    {
+      "id": "BH.oM.Base.IBHoMObject",
+      "type": "owl:Class"
+    },
+    {
+      "id": "BH.oM.Base.BHoMObject",
+      "type": "owl:Class"
     },
     {
       "id": "BH.oM.Adapters.Revit.RevitGeometry.Edges",
@@ -424,7 +464,7 @@
     },
     {
       "id": "BH.oM.Adapters.Revit.RevitMaterialTakeOff.TotalVolume",
-      "type": "rdfs:Datatype"
+      "type": "owl:Class"
     },
     {
       "id": "BH.oM.Adapters.Revit.RevitMaterialTakeOff.MaterialComposition",
@@ -443,20 +483,48 @@
       "type": "owl:Class"
     },
     {
+      "id": "BH.oM.Adapters.Revit.RevitParameterDifference.Name",
+      "type": "owl:Class"
+    },
+    {
+      "id": "BH.oM.Adapters.Revit.RevitParameterDifference.Description",
+      "type": "owl:Class"
+    },
+    {
+      "id": "BH.oM.Adapters.Revit.RevitParameterDifference.PastValue",
+      "type": "owl:Class"
+    },
+    {
+      "id": "BH.oM.Adapters.Revit.RevitParameterDifference.FollowingValue",
+      "type": "owl:Class"
+    },
+    {
+      "id": "BH.oM.Adapters.Revit.RevitParameterDifference.FullName",
+      "type": "owl:Class"
+    },
+    {
+      "id": "BH.oM.Adapters.Revit.RevitParameterDifference.DifferenceType",
+      "type": "owl:Class"
+    },
+    {
+      "id": "BH.oM.Diffing.IPropertyDifference",
+      "type": "owl:Class"
+    },
+    {
       "id": "BH.oM.Adapters.Revit.FamilyLibrary.Files",
       "type": "owl:Class"
     },
     {
       "id": "BH.oM.Adapters.Revit.RevitPushConfig.SuppressFailureMessages",
-      "type": "rdfs:Datatype"
+      "type": "owl:Class"
     },
     {
       "id": "BH.oM.Adapters.Revit.RevitPushConfig.IncludeClosedWorksets",
-      "type": "rdfs:Datatype"
+      "type": "owl:Class"
     },
     {
       "id": "BH.oM.Adapters.Revit.RevitPushConfig.SetLocationOnUpdate",
-      "type": "rdfs:Datatype"
+      "type": "owl:Class"
     },
     {
       "id": "BH.oM.Adapters.Revit.RevitPullConfig.Discipline",
@@ -464,11 +532,11 @@
     },
     {
       "id": "BH.oM.Adapters.Revit.RevitPullConfig.IncludeClosedWorksets",
-      "type": "rdfs:Datatype"
+      "type": "owl:Class"
     },
     {
       "id": "BH.oM.Adapters.Revit.RevitPullConfig.IncludeNestedElements",
-      "type": "rdfs:Datatype"
+      "type": "owl:Class"
     },
     {
       "id": "BH.oM.Adapters.Revit.RevitPullConfig.GeometryConfig",
@@ -480,23 +548,23 @@
     },
     {
       "id": "BH.oM.Adapters.Revit.RevitPullConfig.PullMaterialTakeOff",
-      "type": "rdfs:Datatype"
+      "type": "owl:Class"
     },
     {
       "id": "BH.oM.Adapters.Revit.RevitFilePreview.Path",
-      "type": "rdfs:Datatype"
+      "type": "owl:Class"
     },
     {
       "id": "BH.oM.Adapters.Revit.RevitFilePreview.CategoryName",
-      "type": "rdfs:Datatype"
+      "type": "owl:Class"
     },
     {
       "id": "BH.oM.Adapters.Revit.RevitFilePreview.FamilyName",
-      "type": "rdfs:Datatype"
+      "type": "owl:Class"
     },
     {
       "id": "BH.oM.Adapters.Revit.RevitFilePreview.FamilyTypeNames",
-      "type": "rdfs:Datatype"
+      "type": "owl:Class"
     },
     {
       "id": "BH.oM.Adapters.Revit.Settings.FamilyLoadSettings.FamilyLibrary",
@@ -504,23 +572,23 @@
     },
     {
       "id": "BH.oM.Adapters.Revit.Settings.FamilyLoadSettings.OverwriteFamily",
-      "type": "rdfs:Datatype"
+      "type": "owl:Class"
     },
     {
       "id": "BH.oM.Adapters.Revit.Settings.FamilyLoadSettings.OverwriteParameterValues",
-      "type": "rdfs:Datatype"
+      "type": "owl:Class"
     },
     {
       "id": "BH.oM.Adapters.Revit.Settings.ConnectionSettings.PushPort",
-      "type": "rdfs:Datatype"
+      "type": "owl:Class"
     },
     {
       "id": "BH.oM.Adapters.Revit.Settings.ConnectionSettings.PullPort",
-      "type": "rdfs:Datatype"
+      "type": "owl:Class"
     },
     {
       "id": "BH.oM.Adapters.Revit.Settings.ConnectionSettings.MaxMinutesToWait",
-      "type": "rdfs:Datatype"
+      "type": "owl:Class"
     },
     {
       "id": "BH.oM.Adapters.Revit.Settings.MappingSettings.ParameterMaps",
@@ -532,11 +600,11 @@
     },
     {
       "id": "BH.oM.Adapters.Revit.Settings.MappingSettings.TagsParameter",
-      "type": "rdfs:Datatype"
+      "type": "owl:Class"
     },
     {
       "id": "BH.oM.Adapters.Revit.Settings.MappingSettings.MaterialGradeParameter",
-      "type": "rdfs:Datatype"
+      "type": "owl:Class"
     },
     {
       "id": "BH.oM.Adapters.Revit.Settings.RevitSettings.ConnectionSettings",
@@ -552,23 +620,23 @@
     },
     {
       "id": "BH.oM.Adapters.Revit.Settings.RevitSettings.DistanceTolerance",
-      "type": "rdfs:Datatype"
+      "type": "owl:Class"
     },
     {
       "id": "BH.oM.Adapters.Revit.Settings.RevitSettings.AngleTolerance",
-      "type": "rdfs:Datatype"
+      "type": "owl:Class"
     },
     {
       "id": "BH.oM.Adapters.Revit.Properties.InstanceProperties.CategoryName",
-      "type": "rdfs:Datatype"
+      "type": "owl:Class"
     },
     {
       "id": "BH.oM.Adapters.Revit.Requests.FilterByLink.LinkName",
-      "type": "rdfs:Datatype"
+      "type": "owl:Class"
     },
     {
       "id": "BH.oM.Adapters.Revit.Requests.FilterByLink.CaseSensitive",
-      "type": "rdfs:Datatype"
+      "type": "owl:Class"
     },
     {
       "id": "BH.oM.Data.Requests.IRequest",
@@ -576,79 +644,79 @@
     },
     {
       "id": "BH.oM.Adapters.Revit.Requests.FilterByScopeBox.BoxName",
-      "type": "rdfs:Datatype"
-    },
-    {
-      "id": "BH.oM.Adapters.Revit.Requests.FilterLinkInstance.LinkName",
-      "type": "rdfs:Datatype"
-    },
-    {
-      "id": "BH.oM.Adapters.Revit.Requests.FilterLinkInstance.CaseSensitive",
-      "type": "rdfs:Datatype"
-    },
-    {
-      "id": "BH.oM.Adapters.Revit.Requests.IParameterRequest.ParameterName",
       "type": "owl:Class"
     },
     {
-      "id": "BH.oM.Adapters.Revit.Requests.FilterByCategory.CategoryName",
+      "id": "BH.oM.Adapters.Revit.Requests.FilterLinkInstance.LinkName",
+      "type": "owl:Class"
+    },
+    {
+      "id": "BH.oM.Adapters.Revit.Requests.FilterLinkInstance.CaseSensitive",
+      "type": "owl:Class"
+    },
+    {
+      "id": "BH.oM.Adapters.Revit.Requests.IParameterRequest.ParameterName",
       "type": "rdfs:Datatype"
+    },
+    {
+      "id": "BH.oM.Adapters.Revit.Requests.FilterByCategory.CategoryName",
+      "type": "owl:Class"
     },
     {
       "id": "BH.oM.Adapters.Revit.Requests.FilterByCategory.CaseSensitive",
-      "type": "rdfs:Datatype"
+      "type": "owl:Class"
     },
     {
       "id": "BH.oM.Adapters.Revit.Requests.FilterByDBTypeName.TypeName",
-      "type": "rdfs:Datatype"
+      "type": "owl:Class"
     },
     {
       "id": "BH.oM.Adapters.Revit.Requests.FilterByElementIds.ElementIds",
-      "type": "rdfs:Datatype"
+      "type": "owl:Class"
     },
     {
       "id": "BH.oM.Adapters.Revit.Requests.FilterByFamilyAndTypeName.FamilyName",
-      "type": "rdfs:Datatype"
+      "type": "owl:Class"
     },
     {
       "id": "BH.oM.Adapters.Revit.Requests.FilterByFamilyAndTypeName.FamilyTypeName",
-      "type": "rdfs:Datatype"
+      "type": "owl:Class"
     },
     {
       "id": "BH.oM.Adapters.Revit.Requests.FilterByFamilyAndTypeName.CaseSensitive",
-      "type": "rdfs:Datatype"
+      "type": "owl:Class"
     },
     {
       "id": "BH.oM.Adapters.Revit.Requests.FilterByFamilyType.FamilyTypeId",
-      "type": "rdfs:Datatype"
+      "type": "owl:Class"
     },
     {
       "id": "BH.oM.Adapters.Revit.Requests.FilterByParameterBool.ParameterName",
-      "type": "rdfs:Datatype"
+      "type": "owl:Class"
     },
     {
       "id": "BH.oM.Adapters.Revit.Requests.FilterByParameterBool.Value",
-      "type": "rdfs:Datatype"
+      "type": "owl:Class"
     },
     {
       "id": "BH.oM.Adapters.Revit.Requests.FilterByParameterElementId.ParameterName",
-      "type": "rdfs:Datatype"
+      "type": "owl:Class"
     },
     {
       "id": "BH.oM.Adapters.Revit.Requests.FilterByParameterElementId.ElementId",
-      "type": "rdfs:Datatype"
+      "type": "owl:Class"
     },
     {
       "id": "BH.oM.Adapters.Revit.Requests.FilterByParameterExistence.ParameterName",
-      "type": "rdfs:Datatype"
+      "type": "owl:Class"
     },
     {
       "id": "BH.oM.Adapters.Revit.Requests.FilterByParameterExistence.ParameterExists",
-      "type": "rdfs:Datatype"
+      "type": "owl:Class"
     },
     {
       "id": "BH.oM.Adapters.Revit.Requests.FilterByParameterInteger.ParameterName",
-      "type": "rdfs:Datatype"
+      "type": "owl:Class"
     },
     {
       "id": "BH.oM.Adapters.Revit.Requests.FilterByParameterInteger.NumberComparisonType",
@@ -656,11 +724,11 @@
     },
     {
       "id": "BH.oM.Adapters.Revit.Requests.FilterByParameterInteger.Value",
-      "type": "rdfs:Datatype"
+      "type": "owl:Class"
     },
     {
       "id": "BH.oM.Adapters.Revit.Requests.FilterByParameterNumber.ParameterName",
-      "type": "rdfs:Datatype"
+      "type": "owl:Class"
     },
     {
       "id": "BH.oM.Adapters.Revit.Requests.FilterByParameterNumber.NumberComparisonType",
@@ -668,19 +736,19 @@
     },
     {
       "id": "BH.oM.Adapters.Revit.Requests.FilterByParameterNumber.Value",
-      "type": "rdfs:Datatype"
+      "type": "owl:Class"
     },
     {
       "id": "BH.oM.Adapters.Revit.Requests.FilterByParameterNumber.Tolerance",
-      "type": "rdfs:Datatype"
+      "type": "owl:Class"
     },
     {
       "id": "BH.oM.Adapters.Revit.Requests.FilterByParameterNumber.ConvertUnits",
-      "type": "rdfs:Datatype"
+      "type": "owl:Class"
     },
     {
       "id": "BH.oM.Adapters.Revit.Requests.FilterByParameterText.ParameterName",
-      "type": "rdfs:Datatype"
+      "type": "owl:Class"
     },
     {
       "id": "BH.oM.Adapters.Revit.Requests.FilterByParameterText.TextComparisonType",
@@ -688,67 +756,67 @@
     },
     {
       "id": "BH.oM.Adapters.Revit.Requests.FilterByParameterText.Value",
-      "type": "rdfs:Datatype"
+      "type": "owl:Class"
     },
     {
       "id": "BH.oM.Adapters.Revit.Requests.FilterBySelectionSet.SelectionSetName",
-      "type": "rdfs:Datatype"
+      "type": "owl:Class"
     },
     {
       "id": "BH.oM.Adapters.Revit.Requests.FilterByUniqueIds.UniqueIds",
-      "type": "rdfs:Datatype"
+      "type": "owl:Class"
     },
     {
       "id": "BH.oM.Adapters.Revit.Requests.FilterByUsage.Used",
-      "type": "rdfs:Datatype"
+      "type": "owl:Class"
     },
     {
       "id": "BH.oM.Adapters.Revit.Requests.FilterByViewSpecific.ViewId",
-      "type": "rdfs:Datatype"
+      "type": "owl:Class"
     },
     {
       "id": "BH.oM.Adapters.Revit.Requests.FilterByVisibleInView.ViewId",
-      "type": "rdfs:Datatype"
+      "type": "owl:Class"
     },
     {
       "id": "BH.oM.Adapters.Revit.Requests.FilterByWorkset.WorksetName",
-      "type": "rdfs:Datatype"
+      "type": "owl:Class"
     },
     {
       "id": "BH.oM.Adapters.Revit.Requests.FilterFamilyByName.FamilyName",
-      "type": "rdfs:Datatype"
+      "type": "owl:Class"
     },
     {
       "id": "BH.oM.Adapters.Revit.Requests.FilterFamilyByName.CaseSensitive",
-      "type": "rdfs:Datatype"
+      "type": "owl:Class"
     },
     {
       "id": "BH.oM.Adapters.Revit.Requests.FilterFamilyTypeByName.FamilyName",
-      "type": "rdfs:Datatype"
+      "type": "owl:Class"
     },
     {
       "id": "BH.oM.Adapters.Revit.Requests.FilterFamilyTypeByName.FamilyTypeName",
-      "type": "rdfs:Datatype"
+      "type": "owl:Class"
     },
     {
       "id": "BH.oM.Adapters.Revit.Requests.FilterFamilyTypeByName.CaseSensitive",
-      "type": "rdfs:Datatype"
+      "type": "owl:Class"
     },
     {
       "id": "BH.oM.Adapters.Revit.Requests.FilterTypesOfFamily.FamilyId",
-      "type": "rdfs:Datatype"
+      "type": "owl:Class"
     },
     {
       "id": "BH.oM.Adapters.Revit.Requests.FilterViewByName.ViewName",
-      "type": "rdfs:Datatype"
+      "type": "owl:Class"
     },
     {
       "id": "BH.oM.Adapters.Revit.Requests.FilterViewByName.CaseSensitive",
-      "type": "rdfs:Datatype"
+      "type": "owl:Class"
     },
     {
       "id": "BH.oM.Adapters.Revit.Requests.FilterViewsByTemplate.TemplateId",
-      "type": "rdfs:Datatype"
+      "type": "owl:Class"
     },
     {
       "id": "BH.oM.Adapters.Revit.Requests.FilterViewsByType.RevitViewType",
@@ -756,83 +824,83 @@
     },
     {
       "id": "BH.oM.Adapters.Revit.Requests.FilterViewTemplateByName.TemplateName",
-      "type": "rdfs:Datatype"
-    },
-    {
-      "id": "BH.oM.Adapters.Revit.Requests.FilterViewTemplateByName.CaseSensitive",
-      "type": "rdfs:Datatype"
-    },
-    {
-      "id": "BH.oM.Adapters.Revit.Requests.FilterMemberElements.ParentId",
-      "type": "rdfs:Datatype"
-    },
-    {
-      "id": "BH.oM.Adapters.Revit.Parameters.IRevitParameterFragment.Parameters",
       "type": "owl:Class"
     },
     {
-      "id": "BH.oM.Adapters.Revit.Parameters.ParameterDefinition.ParameterGroup",
+      "id": "BH.oM.Adapters.Revit.Requests.FilterViewTemplateByName.CaseSensitive",
+      "type": "owl:Class"
+    },
+    {
+      "id": "BH.oM.Adapters.Revit.Requests.FilterMemberElements.ParentId",
+      "type": "owl:Class"
+    },
+    {
+      "id": "BH.oM.Adapters.Revit.Parameters.IRevitParameterFragment.Parameters",
       "type": "rdfs:Datatype"
+    },
+    {
+      "id": "BH.oM.Adapters.Revit.Parameters.ParameterDefinition.ParameterGroup",
+      "type": "owl:Class"
     },
     {
       "id": "BH.oM.Adapters.Revit.Parameters.ParameterDefinition.ParameterType",
-      "type": "rdfs:Datatype"
+      "type": "owl:Class"
     },
     {
       "id": "BH.oM.Adapters.Revit.Parameters.ParameterDefinition.Discipline",
-      "type": "rdfs:Datatype"
+      "type": "owl:Class"
     },
     {
       "id": "BH.oM.Adapters.Revit.Parameters.ParameterDefinition.Instance",
-      "type": "rdfs:Datatype"
+      "type": "owl:Class"
     },
     {
       "id": "BH.oM.Adapters.Revit.Parameters.ParameterDefinition.Categories",
-      "type": "rdfs:Datatype"
+      "type": "owl:Class"
     },
     {
       "id": "BH.oM.Adapters.Revit.Parameters.ParameterDefinition.Shared",
-      "type": "rdfs:Datatype"
+      "type": "owl:Class"
     },
     {
       "id": "BH.oM.Adapters.Revit.Parameters.RevitIdentifiers.PersistentId",
-      "type": "rdfs:Datatype"
+      "type": "owl:Class"
     },
     {
       "id": "BH.oM.Adapters.Revit.Parameters.RevitIdentifiers.ElementId",
-      "type": "rdfs:Datatype"
+      "type": "owl:Class"
     },
     {
       "id": "BH.oM.Adapters.Revit.Parameters.RevitIdentifiers.CategoryName",
-      "type": "rdfs:Datatype"
+      "type": "owl:Class"
     },
     {
       "id": "BH.oM.Adapters.Revit.Parameters.RevitIdentifiers.FamilyName",
-      "type": "rdfs:Datatype"
+      "type": "owl:Class"
     },
     {
       "id": "BH.oM.Adapters.Revit.Parameters.RevitIdentifiers.FamilyTypeName",
-      "type": "rdfs:Datatype"
+      "type": "owl:Class"
     },
     {
       "id": "BH.oM.Adapters.Revit.Parameters.RevitIdentifiers.FamilyTypeId",
-      "type": "rdfs:Datatype"
+      "type": "owl:Class"
     },
     {
       "id": "BH.oM.Adapters.Revit.Parameters.RevitIdentifiers.Workset",
-      "type": "rdfs:Datatype"
+      "type": "owl:Class"
     },
     {
       "id": "BH.oM.Adapters.Revit.Parameters.RevitIdentifiers.OwnerViewId",
-      "type": "rdfs:Datatype"
+      "type": "owl:Class"
     },
     {
       "id": "BH.oM.Adapters.Revit.Parameters.RevitIdentifiers.ParentElementId",
-      "type": "rdfs:Datatype"
+      "type": "owl:Class"
     },
     {
       "id": "BH.oM.Adapters.Revit.Parameters.RevitIdentifiers.LinkDocument",
-      "type": "rdfs:Datatype"
+      "type": "owl:Class"
     },
     {
       "id": "BH.oM.Base.IPersistentAdapterId",
@@ -840,11 +908,11 @@
     },
     {
       "id": "BH.oM.Adapters.Revit.Parameters.RevitParameter.Name",
-      "type": "rdfs:Datatype"
+      "type": "owl:Class"
     },
     {
       "id": "BH.oM.Adapters.Revit.Parameters.RevitParameter.Value",
-      "type": "rdfs:Datatype"
+      "type": "owl:Class"
     },
     {
       "id": "BH.oM.Adapters.Revit.Parameters.RevitParametersToPush.Parameters",
@@ -856,35 +924,39 @@
     },
     {
       "id": "BH.oM.Adapters.Revit.Mapping.FamilyMap.Type",
-      "type": "rdfs:Datatype"
+      "type": "owl:Class"
     },
     {
       "id": "BH.oM.Adapters.Revit.Mapping.FamilyMap.FamilyNames",
-      "type": "rdfs:Datatype"
+      "type": "owl:Class"
     },
     {
       "id": "BH.oM.Adapters.Revit.Mapping.ElementTypeParameterLink.PropertyName",
-      "type": "rdfs:Datatype"
+      "type": "owl:Class"
     },
     {
       "id": "BH.oM.Adapters.Revit.Mapping.ElementTypeParameterLink.ParameterNames",
-      "type": "rdfs:Datatype"
+      "type": "owl:Class"
     },
     {
       "id": "BH.oM.Adapters.Revit.Mapping.ElementParameterLink.PropertyName",
-      "type": "rdfs:Datatype"
+      "type": "owl:Class"
     },
     {
       "id": "BH.oM.Adapters.Revit.Mapping.ElementParameterLink.ParameterNames",
+      "type": "owl:Class"
+    },
+    {
+      "id": "BH.oM.Adapters.Revit.Mapping.IParameterLink.PropertyName",
       "type": "rdfs:Datatype"
     },
     {
       "id": "BH.oM.Adapters.Revit.Mapping.IParameterLink.ParameterNames",
-      "type": "owl:Class"
+      "type": "rdfs:Datatype"
     },
     {
       "id": "BH.oM.Adapters.Revit.Mapping.ParameterMap.Type",
-      "type": "rdfs:Datatype"
+      "type": "owl:Class"
     },
     {
       "id": "BH.oM.Adapters.Revit.Mapping.ParameterMap.ParameterLinks",
@@ -912,7 +984,7 @@
     },
     {
       "id": "BH.oM.Adapters.Revit.Elements.DraftingInstance.ViewName",
-      "type": "rdfs:Datatype"
+      "type": "owl:Class"
     },
     {
       "id": "BH.oM.Adapters.Revit.Elements.Family.PropertiesList",
@@ -924,15 +996,15 @@
     },
     {
       "id": "BH.oM.Adapters.Revit.Elements.ViewPlan.LevelName",
-      "type": "rdfs:Datatype"
+      "type": "owl:Class"
     },
     {
       "id": "BH.oM.Adapters.Revit.Elements.ViewPlan.ViewName",
-      "type": "rdfs:Datatype"
+      "type": "owl:Class"
     },
     {
       "id": "BH.oM.Adapters.Revit.Elements.ViewPlan.TemplateName",
-      "type": "rdfs:Datatype"
+      "type": "owl:Class"
     },
     {
       "id": "BH.oM.Adapters.Revit.Elements.ModelInstance.Properties",
@@ -960,10 +1032,26 @@
     },
     {
       "id": "BH.oM.Adapters.Revit.Elements.Viewport.SheetNumber",
-      "type": "rdfs:Datatype"
+      "type": "owl:Class"
     },
     {
       "id": "BH.oM.Adapters.Revit.Elements.Viewport.ViewName",
+      "type": "owl:Class"
+    },
+    {
+      "id": "BH.oM.Adapters.Revit.Elements.IView.InstanceProperties",
+      "type": "rdfs:Datatype"
+    },
+    {
+      "id": "BH.oM.Adapters.Revit.Elements.IInstance.Properties",
+      "type": "rdfs:Datatype"
+    },
+    {
+      "id": "BH.oM.Adapters.Revit.Elements.IInstance.Location",
+      "type": "rdfs:Datatype"
+    },
+    {
+      "id": "BH.oM.Adapters.Revit.Elements.IInstance.Orientation",
       "type": "rdfs:Datatype"
     },
     {
@@ -972,11 +1060,11 @@
     },
     {
       "id": "BH.oM.Adapters.Revit.Elements.Sheet.SheetName",
-      "type": "rdfs:Datatype"
+      "type": "owl:Class"
     },
     {
       "id": "BH.oM.Adapters.Revit.Elements.Sheet.SheetNumber",
-      "type": "rdfs:Datatype"
+      "type": "owl:Class"
     }
   ],
   "classAttribute": [
@@ -1066,6 +1154,28 @@
       ],
       "comment": {
         "undefined": "Fragment containing the representation extracted from Revit element represented by the BHoM object."
+      }
+    },
+    {
+      "id": "BH.oM.Adapters.Revit.RevitTypeFragment",
+      "iri": "https://github.com/BHoM/Revit_Toolkit/blob/main/Revit_oM/Misc/RevitTypeFragment.cs",
+      "label": "RevitTypeFragment (BH.oM.Adapters.Revit)",
+      "attributes": [
+        "object"
+      ],
+      "comment": {
+        "undefined": "Fragment containing information about element type of the Revit element correspondent to the object that owns it."
+      }
+    },
+    {
+      "id": "BH.oM.Adapters.Revit.RevitParameterDifference",
+      "iri": "https://github.com/BHoM/Revit_Toolkit/blob/main/Revit_oM/Misc/RevitParameterDifference.cs",
+      "label": "RevitParameterDifference (BH.oM.Adapters.Revit)",
+      "attributes": [
+        "object"
+      ],
+      "comment": {
+        "undefined": "Represents a difference in terms of RevitParameters found between a Previous and Following version of an object."
       }
     },
     {
@@ -1726,6 +1836,17 @@
       }
     },
     {
+      "id": "BH.oM.Adapters.Revit.Enums.RevitParameterDifferenceType",
+      "iri": "https://github.com/BHoM/Revit_Toolkit/blob/main/Revit_oM/Enums/RevitParameterDifferenceType.cs",
+      "label": "RevitParameterDifferenceType (BH.oM.Adapters.Revit.Enums)",
+      "attributes": [
+        "object"
+      ],
+      "comment": {
+        "undefined": "Specifies various kinds of Differences found between a pair of RevitParameters."
+      }
+    },
+    {
       "id": "BH.oM.Adapters.Revit.Enums.TextComparisonType",
       "iri": "https://github.com/BHoM/Revit_Toolkit/blob/main/Revit_oM/Enums/TextComparisonType.cs",
       "label": "TextComparisonType (BH.oM.Adapters.Revit.Enums)",
@@ -1877,6 +1998,47 @@
       }
     },
     {
+      "id": "BH.oM.Adapters.Revit.RevitComparisonConfig.RevitParams_ConsiderAddedAssigned",
+      "iri": "https://github.com/BHoM/Revit_Toolkit/blob/main/Revit_oM/Config/RevitComparisonConfig.cs#L60",
+      "label": "RevitParams_ConsiderAddedAssigned(BH.oM.Adapters.Revit.RevitComparisonConfig.RevitParams_ConsiderAddedAssigned)",
+      "attributes": [
+        "datatype"
+      ]
+    },
+    {
+      "id": "BH.oM.Adapters.Revit.RevitComparisonConfig.RevitParams_ConsiderAddedUnassigned",
+      "iri": "https://github.com/BHoM/Revit_Toolkit/blob/main/Revit_oM/Config/RevitComparisonConfig.cs#L63",
+      "label": "RevitParams_ConsiderAddedUnassigned(BH.oM.Adapters.Revit.RevitComparisonConfig.RevitParams_ConsiderAddedUnassigned)",
+      "attributes": [
+        "datatype"
+      ]
+    },
+    {
+      "id": "BH.oM.Adapters.Revit.RevitComparisonConfig.RevitParams_ConsiderRemovedAssigned",
+      "iri": "https://github.com/BHoM/Revit_Toolkit/blob/main/Revit_oM/Config/RevitComparisonConfig.cs#L66",
+      "label": "RevitParams_ConsiderRemovedAssigned(BH.oM.Adapters.Revit.RevitComparisonConfig.RevitParams_ConsiderRemovedAssigned)",
+      "attributes": [
+        "datatype"
+      ]
+    },
+    {
+      "id": "BH.oM.Adapters.Revit.RevitComparisonConfig.RevitParams_ConsiderRemovedUnassigned",
+      "iri": "https://github.com/BHoM/Revit_Toolkit/blob/main/Revit_oM/Config/RevitComparisonConfig.cs#L69",
+      "label": "RevitParams_ConsiderRemovedUnassigned(BH.oM.Adapters.Revit.RevitComparisonConfig.RevitParams_ConsiderRemovedUnassigned)",
+      "attributes": [
+        "datatype"
+      ]
+    },
+    {
+      "id": "BH.oM.Base.IObject",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/BHoM/Interface/IObject.cs",
+      "label": "IObject (BH.oM.Base)",
+      "attributes": [
+        "object",
+        "external"
+      ]
+    },
+    {
       "id": "BH.oM.Base.BaseComparisonConfig",
       "iri": "https://github.com/BHoM/BHoM/blob/main/BHoM/BaseComparisonConfig.cs",
       "label": "BaseComparisonConfig (BH.oM.Base)",
@@ -1988,6 +2150,23 @@
       "label": "SourceTypeId(BH.oM.Adapters.Revit.ClonedType.SourceTypeId)",
       "attributes": [
         "datatype"
+      ]
+    },
+    {
+      "id": "BH.oM.Base.IBHoMObject",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/BHoM/Interface/IBHoMObject.cs",
+      "label": "IBHoMObject (BH.oM.Base)",
+      "attributes": [
+        "object",
+        "external"
+      ]
+    },
+    {
+      "id": "BH.oM.Base.BHoMObject",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/BHoM/BHoMObject.cs",
+      "label": "BHoMObject (BH.oM.Base)",
+      "attributes": [
+        "external"
       ]
     },
     {
@@ -2105,6 +2284,67 @@
         "object",
         "external"
       ]
+    },
+    {
+      "id": "BH.oM.Adapters.Revit.RevitParameterDifference.Name",
+      "iri": "https://github.com/BHoM/Revit_Toolkit/blob/main/Revit_oM/Misc/RevitParameterDifference.cs#L33",
+      "label": "Name(BH.oM.Adapters.Revit.RevitParameterDifference.Name)",
+      "attributes": [
+        "datatype"
+      ]
+    },
+    {
+      "id": "BH.oM.Adapters.Revit.RevitParameterDifference.Description",
+      "iri": "https://github.com/BHoM/Revit_Toolkit/blob/main/Revit_oM/Misc/RevitParameterDifference.cs#L36",
+      "label": "Description(BH.oM.Adapters.Revit.RevitParameterDifference.Description)",
+      "attributes": [
+        "datatype"
+      ]
+    },
+    {
+      "id": "BH.oM.Adapters.Revit.RevitParameterDifference.PastValue",
+      "iri": "https://github.com/BHoM/Revit_Toolkit/blob/main/Revit_oM/Misc/RevitParameterDifference.cs#L39",
+      "label": "PastValue(BH.oM.Adapters.Revit.RevitParameterDifference.PastValue)",
+      "attributes": [
+        "datatype"
+      ]
+    },
+    {
+      "id": "BH.oM.Adapters.Revit.RevitParameterDifference.FollowingValue",
+      "iri": "https://github.com/BHoM/Revit_Toolkit/blob/main/Revit_oM/Misc/RevitParameterDifference.cs#L42",
+      "label": "FollowingValue(BH.oM.Adapters.Revit.RevitParameterDifference.FollowingValue)",
+      "attributes": [
+        "datatype"
+      ]
+    },
+    {
+      "id": "BH.oM.Adapters.Revit.RevitParameterDifference.FullName",
+      "iri": "https://github.com/BHoM/Revit_Toolkit/blob/main/Revit_oM/Misc/RevitParameterDifference.cs#L45",
+      "label": "FullName(BH.oM.Adapters.Revit.RevitParameterDifference.FullName)",
+      "attributes": [
+        "datatype"
+      ]
+    },
+    {
+      "id": "BH.oM.Adapters.Revit.RevitParameterDifference.DifferenceType",
+      "iri": "https://github.com/BHoM/Revit_Toolkit/blob/main/Revit_oM/Misc/RevitParameterDifference.cs#L48",
+      "label": "DifferenceType(BH.oM.Adapters.Revit.RevitParameterDifference.DifferenceType)",
+      "attributes": [],
+      "comment": {
+        "undefined": "Whether the RevitParameter that is Different was Modified, Removed or Added with respect to the old version of the owner object. Useful for filtering."
+      }
+    },
+    {
+      "id": "BH.oM.Diffing.IPropertyDifference",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/Diffing_oM/IPropertyDifference.cs",
+      "label": "IPropertyDifference (BH.oM.Diffing)",
+      "attributes": [
+        "object",
+        "external"
+      ],
+      "comment": {
+        "undefined": "Represents a difference found between a Previous and Following version of an object."
+      }
     },
     {
       "id": "BH.oM.Adapters.Revit.FamilyLibrary.Files",
@@ -2298,25 +2538,34 @@
     },
     {
       "id": "BH.oM.Adapters.Revit.Settings.RevitSettings.ConnectionSettings",
-      "iri": "https://github.com/BHoM/Revit_Toolkit/blob/main/Revit_oM/Settings/RevitSettings.cs#L37",
+      "iri": "https://github.com/BHoM/Revit_Toolkit/blob/main/Revit_oM/Settings/RevitSettings.cs#L38",
       "label": "ConnectionSettings(BH.oM.Adapters.Revit.Settings.RevitSettings.ConnectionSettings)",
-      "attributes": []
+      "attributes": [],
+      "comment": {
+        "undefined": "Socket connection settings (ports, timeout) for the adapter."
+      }
     },
     {
       "id": "BH.oM.Adapters.Revit.Settings.RevitSettings.FamilyLoadSettings",
-      "iri": "https://github.com/BHoM/Revit_Toolkit/blob/main/Revit_oM/Settings/RevitSettings.cs#L39",
+      "iri": "https://github.com/BHoM/Revit_Toolkit/blob/main/Revit_oM/Settings/RevitSettings.cs#L41",
       "label": "FamilyLoadSettings(BH.oM.Adapters.Revit.Settings.RevitSettings.FamilyLoadSettings)",
-      "attributes": []
+      "attributes": [],
+      "comment": {
+        "undefined": "Revit family load settings for the adapter."
+      }
     },
     {
       "id": "BH.oM.Adapters.Revit.Settings.RevitSettings.MappingSettings",
-      "iri": "https://github.com/BHoM/Revit_Toolkit/blob/main/Revit_oM/Settings/RevitSettings.cs#L41",
+      "iri": "https://github.com/BHoM/Revit_Toolkit/blob/main/Revit_oM/Settings/RevitSettings.cs#L44",
       "label": "MappingSettings(BH.oM.Adapters.Revit.Settings.RevitSettings.MappingSettings)",
-      "attributes": []
+      "attributes": [],
+      "comment": {
+        "undefined": "An entity holding information about the enforced convert relationships between Revit families and BHoM types on Pull as well as mapping between Revit parameters and BHoM object properties on Push/Pull."
+      }
     },
     {
       "id": "BH.oM.Adapters.Revit.Settings.RevitSettings.DistanceTolerance",
-      "iri": "https://github.com/BHoM/Revit_Toolkit/blob/main/Revit_oM/Settings/RevitSettings.cs#L45",
+      "iri": "https://github.com/BHoM/Revit_Toolkit/blob/main/Revit_oM/Settings/RevitSettings.cs#L48",
       "label": "DistanceTolerance(BH.oM.Adapters.Revit.Settings.RevitSettings.DistanceTolerance)",
       "attributes": [
         "datatype"
@@ -2324,7 +2573,7 @@
     },
     {
       "id": "BH.oM.Adapters.Revit.Settings.RevitSettings.AngleTolerance",
-      "iri": "https://github.com/BHoM/Revit_Toolkit/blob/main/Revit_oM/Settings/RevitSettings.cs#L49",
+      "iri": "https://github.com/BHoM/Revit_Toolkit/blob/main/Revit_oM/Settings/RevitSettings.cs#L52",
       "label": "AngleTolerance(BH.oM.Adapters.Revit.Settings.RevitSettings.AngleTolerance)",
       "attributes": [
         "datatype"
@@ -2976,6 +3225,14 @@
       ]
     },
     {
+      "id": "BH.oM.Adapters.Revit.Mapping.IParameterLink.PropertyName",
+      "iri": "https://github.com/BHoM/Revit_Toolkit/blob/main/Revit_oM/Mapping/IParameterLink.cs#L38",
+      "label": "PropertyName(BH.oM.Adapters.Revit.Mapping.IParameterLink.PropertyName)",
+      "attributes": [
+        "datatype"
+      ]
+    },
+    {
       "id": "BH.oM.Adapters.Revit.Mapping.IParameterLink.ParameterNames",
       "iri": "https://github.com/BHoM/Revit_Toolkit/blob/main/Revit_oM/Mapping/IParameterLink.cs#L41",
       "label": "ParameterNames(BH.oM.Adapters.Revit.Mapping.IParameterLink.ParameterNames)",
@@ -3169,6 +3426,38 @@
       ]
     },
     {
+      "id": "BH.oM.Adapters.Revit.Elements.IView.InstanceProperties",
+      "iri": "https://github.com/BHoM/Revit_Toolkit/blob/main/Revit_oM/Elements/IView.cs#L37",
+      "label": "InstanceProperties(BH.oM.Adapters.Revit.Elements.IView.InstanceProperties)",
+      "attributes": [
+        "datatype"
+      ]
+    },
+    {
+      "id": "BH.oM.Adapters.Revit.Elements.IInstance.Properties",
+      "iri": "https://github.com/BHoM/Revit_Toolkit/blob/main/Revit_oM/Elements/IInstance.cs#L38",
+      "label": "Properties(BH.oM.Adapters.Revit.Elements.IInstance.Properties)",
+      "attributes": [
+        "datatype"
+      ]
+    },
+    {
+      "id": "BH.oM.Adapters.Revit.Elements.IInstance.Location",
+      "iri": "https://github.com/BHoM/Revit_Toolkit/blob/main/Revit_oM/Elements/IInstance.cs#L41",
+      "label": "Location(BH.oM.Adapters.Revit.Elements.IInstance.Location)",
+      "attributes": [
+        "datatype"
+      ]
+    },
+    {
+      "id": "BH.oM.Adapters.Revit.Elements.IInstance.Orientation",
+      "iri": "https://github.com/BHoM/Revit_Toolkit/blob/main/Revit_oM/Elements/IInstance.cs#L44",
+      "label": "Orientation(BH.oM.Adapters.Revit.Elements.IInstance.Orientation)",
+      "attributes": [
+        "datatype"
+      ]
+    },
+    {
       "id": "BH.oM.Adapters.Revit.Elements.Sheet.InstanceProperties",
       "iri": "https://github.com/BHoM/Revit_Toolkit/blob/main/Revit_oM/Elements/Sheet.cs#L37",
       "label": "InstanceProperties(BH.oM.Adapters.Revit.Elements.Sheet.InstanceProperties)",
@@ -3220,6 +3509,26 @@
       "type": "owl:ObjectProperty"
     },
     {
+      "id": "RevitComparisonConfig-HasProperty-RevitParams_ConsiderAddedAssigned_5B4BC92A098D8B669100675BAE717751BA9A5466F7191724D0720A52257BDDB5",
+      "type": "owl:DatatypeProperty"
+    },
+    {
+      "id": "RevitComparisonConfig-HasProperty-RevitParams_ConsiderAddedUnassigned_B72971354BD1D78E58002AD5A877F127024795ECAC147F455B53DC2070371B9F",
+      "type": "owl:DatatypeProperty"
+    },
+    {
+      "id": "RevitComparisonConfig-HasProperty-RevitParams_ConsiderRemovedAssigned_4F3A0A670C4AA3DB0211BB663B6ABC40C7A76EDC5ACC468C11C01FAB57842051",
+      "type": "owl:DatatypeProperty"
+    },
+    {
+      "id": "RevitComparisonConfig-HasProperty-RevitParams_ConsiderRemovedUnassigned_02ADF1D521D0C78837F75309F37344D217911E8E0852654F5876FB7ED9AED216",
+      "type": "owl:DatatypeProperty"
+    },
+    {
+      "id": "RevitComparisonConfig-IsA-IObject_96924B025D8502490254295CE35E1629E4163302BFF2EC2655623BD6E151741B",
+      "type": "owl:ObjectProperty"
+    },
+    {
       "id": "RevitComparisonConfig-IsSubclassOf-BaseComparisonConfig_5AF6056248F2BB8BFA86F9BE8C71336D10A4B2AE238B1AB66F7602D81E056708",
       "type": "rdfs:subClassOf"
     },
@@ -3248,6 +3557,10 @@
       "type": "owl:DatatypeProperty"
     },
     {
+      "id": "PullGeometryConfig-IsA-IObject_466F4FE4C846F7DF1C711BF46A23A00705F3DF3E0349ECFAB02EBAC44EFE37A1",
+      "type": "owl:ObjectProperty"
+    },
+    {
       "id": "PullRepresentationConfig-HasProperty-PullRenderMesh_888CB855A4636C8AA811940A327E004C8C59C0091C99079E758027F7CEFA77F5",
       "type": "owl:DatatypeProperty"
     },
@@ -3264,6 +3577,10 @@
       "type": "owl:DatatypeProperty"
     },
     {
+      "id": "PullRepresentationConfig-IsA-IObject_FA6DDC9A6C99F56831CA22A16CAB270442F770EDB3AB64013517FE38D02D8E51",
+      "type": "owl:ObjectProperty"
+    },
+    {
       "id": "RevitRemoveConfig-HasProperty-SuppressFailureMessages_647982A919FEA60EF7AC5401CE8B35837884B02C4DB80E335ED075D7A3F51E8F",
       "type": "owl:DatatypeProperty"
     },
@@ -3276,12 +3593,28 @@
       "type": "owl:DatatypeProperty"
     },
     {
+      "id": "RevitRemoveConfig-IsA-IObject_AF0F7C95005D65EF1F58CF726BE0C707AB612B7B97126F64D2B33958D35672A9",
+      "type": "owl:ObjectProperty"
+    },
+    {
       "id": "RevitRemoveConfig-IsSubclassOf-ActionConfig_B1239C13AC88A671E5C127C325CA211D1E0C445A985F35BCE40B4DF29BDB3102",
       "type": "rdfs:subClassOf"
     },
     {
       "id": "ClonedType-HasProperty-SourceTypeId_8A96B04A2D9DF7EE28BB7B38DA0FB77B4A8C27041849E2A6D1B379BFB667A2F9",
       "type": "owl:DatatypeProperty"
+    },
+    {
+      "id": "ClonedType-IsA-IBHoMObject_7EDEBCACDEB91D7271FA9B2F86383A4EDDE2E8BA4B3B7C19E92724EA515F315D",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "ClonedType-IsA-IObject_C77F5867F5BB020155CC408A4158D452250299F7FF27CEEE2A1B3C7A4442719E",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "ClonedType-IsSubclassOf-BHoMObject_EF81F5636A116633A8362779282BDA65D6E19A74E1876B944A6C9F9E404000EC",
+      "type": "rdfs:subClassOf"
     },
     {
       "id": "BH.oM.Adapters.Revit.RevitGeometry-HasProperty-BH.oM.Adapters.Revit.RevitGeometry.Edges",
@@ -3312,6 +3645,10 @@
       "type": "owl:ObjectProperty"
     },
     {
+      "id": "RevitGeometry-IsA-IObject_8FBF6264ACA45CA13C1C92D3D863BA33EA95AA98533B1A57887AAE0E7991BB4D",
+      "type": "owl:ObjectProperty"
+    },
+    {
       "id": "RevitGeometry-IsA-IImmutable_C526845439DB6EFEFA8C03D0108516DB1E0F99068C43EFDE1B25C41E45F239B6",
       "type": "owl:ObjectProperty"
     },
@@ -3325,6 +3662,10 @@
     },
     {
       "id": "BH.oM.Adapters.Revit.RevitMaterialTakeOff.MaterialComposition-IsA-BH.oM.Physical.Materials.MaterialComposition",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "RevitMaterialTakeOff-IsA-IObject_06C394CD1006AF7D5F87FA044C0EC7B9E0BEEFDE64091A02F36BC6824D5AE482",
       "type": "owl:ObjectProperty"
     },
     {
@@ -3348,7 +3689,63 @@
       "type": "owl:ObjectProperty"
     },
     {
+      "id": "RevitRepresentation-IsA-IObject_21CFC1274E0E9D7072ACC542DB5459BF9EB0C3509E1E0F6A0A94D99A30D0514F",
+      "type": "owl:ObjectProperty"
+    },
+    {
       "id": "RevitRepresentation-IsA-IImmutable_3BF954E37CF899720764825ABD5BF6B849197E7F1A858000DBD664C78D5054CE",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "RevitTypeFragment-IsA-IBHoMObject_253FBD94E1D141A5617598AA99B18449DD1DE41D420DFB11E789DDC19DA7FE70",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "RevitTypeFragment-IsA-IObject_C2578F568E19188DE2EF991C6E315B300765CBC85E3298D71258FE97345E9FEA",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "RevitTypeFragment-IsA-IFragment_969E9054AD248073B4B88CACEB61BC030CC40B2B05649A6F015EBFC40999F3E2",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "RevitTypeFragment-IsSubclassOf-BHoMObject_04672AD57E0B80AF008B5652EE11C748FFF1BD989DD37D0B6E9CF24A2FB14EB7",
+      "type": "rdfs:subClassOf"
+    },
+    {
+      "id": "RevitParameterDifference-HasProperty-Name_7E6A36B1B499F1AA3B4FEE95A6DCC0164177942201C9E4A98858DCA45B69476F",
+      "type": "owl:DatatypeProperty"
+    },
+    {
+      "id": "RevitParameterDifference-HasProperty-Description_13C9C4E166A2C620236AE47497DC58BBA544F6B1207771AB6111D3070C09A20D",
+      "type": "owl:DatatypeProperty"
+    },
+    {
+      "id": "RevitParameterDifference-HasProperty-PastValue_7A82452D22D1388F1027A4FD69D746A1F3C5ADDEE97D075D9DF78F53DDE078C1",
+      "type": "owl:DatatypeProperty"
+    },
+    {
+      "id": "RevitParameterDifference-HasProperty-FollowingValue_0607AF5937F64C3D2AD1BED52A700F7001CFA3C9B58D86F17EC299E951373F50",
+      "type": "owl:DatatypeProperty"
+    },
+    {
+      "id": "RevitParameterDifference-HasProperty-FullName_F97BF689CC007579E2E770FB3E95EB8354BF16D57C80AF89955BFC733FABE94C",
+      "type": "owl:DatatypeProperty"
+    },
+    {
+      "id": "BH.oM.Adapters.Revit.RevitParameterDifference-HasProperty-BH.oM.Adapters.Revit.RevitParameterDifference.DifferenceType",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "BH.oM.Adapters.Revit.RevitParameterDifference.DifferenceType-IsA-BH.oM.Adapters.Revit.Enums.RevitParameterDifferenceType",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "RevitParameterDifference-IsA-IPropertyDifference_05767E77CF886E0F2AE1073CA51FC78916485AA2E6AA509195EBD7B05271174B",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "RevitParameterDifference-IsA-IObject_12E5ADAAE54E958B56027989A26A983B7E63088D088E226A9083F92E1674294A",
       "type": "owl:ObjectProperty"
     },
     {
@@ -3358,6 +3755,18 @@
     {
       "id": "BH.oM.Adapters.Revit.FamilyLibrary.Files-IsAListOf-BH.oM.Adapters.Revit.RevitFilePreview",
       "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "FamilyLibrary-IsA-IBHoMObject_853F3AEF41045EF0CDFE2C1CA550AC59CBCEF6DC21DB26ABAE7ADBA3578E0F12",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "FamilyLibrary-IsA-IObject_6F941A011D58A8AF6C7E5298717FAA4E6981655B72561F28F78CD92F934119E9",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "FamilyLibrary-IsSubclassOf-BHoMObject_B861CBBA00384B99A603C6EC170843198BC95B323A5C296B5491CFD94C4267FC",
+      "type": "rdfs:subClassOf"
     },
     {
       "id": "RevitPushConfig-HasProperty-SuppressFailureMessages_41A1523505D549E8F629B01DC6626BDF72AADF969E53AD9CA8C7A2F9AA912A68",
@@ -3370,6 +3779,10 @@
     {
       "id": "RevitPushConfig-HasProperty-SetLocationOnUpdate_178CB11D6AF24CE2BC184882A51478B0DFBD17DD94D0E64588901FA79AF3E29C",
       "type": "owl:DatatypeProperty"
+    },
+    {
+      "id": "RevitPushConfig-IsA-IObject_2E0652407D7B813D79C0B58E97E0414885BE613324F02B416B708790E32B8BED",
+      "type": "owl:ObjectProperty"
     },
     {
       "id": "RevitPushConfig-IsSubclassOf-ActionConfig_6958D6B3EECC3F71FBF0E9ABF5A3B4400FE5EF38C134F756F8BD3CC3B32A8772",
@@ -3412,6 +3825,10 @@
       "type": "owl:DatatypeProperty"
     },
     {
+      "id": "RevitPullConfig-IsA-IObject_EADE14B3CFF4946760D6B6E02301F772CDC084131AE603778168D58F8C2DD4CD",
+      "type": "owl:ObjectProperty"
+    },
+    {
       "id": "RevitPullConfig-IsSubclassOf-ActionConfig_9F047FC5E8291ACB935E3F5A642BD976FC0B0F2B1DBD18450728950D697989DA",
       "type": "rdfs:subClassOf"
     },
@@ -3432,8 +3849,20 @@
       "type": "owl:DatatypeProperty"
     },
     {
+      "id": "RevitFilePreview-IsA-IBHoMObject_86AD0E8B8625CEAF5A2E25AB849AFF0C29AE80F378B8E4E3CC035FF76F3526C6",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "RevitFilePreview-IsA-IObject_C060634EF9B459E724AC7DD8FC0E2BECFF7961228F98D6572E46E4A927B955CA",
+      "type": "owl:ObjectProperty"
+    },
+    {
       "id": "RevitFilePreview-IsA-IImmutable_46E656E4F91CD01C3F185AAA5953B10CC319AC69B9C81846D4D67D013470DAC0",
       "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "RevitFilePreview-IsSubclassOf-BHoMObject_6B56266CAF643114CA7EE0A205509D5E8697637A4BD4C893D3C0871904C7F349",
+      "type": "rdfs:subClassOf"
     },
     {
       "id": "BH.oM.Adapters.Revit.Settings.FamilyLoadSettings-HasProperty-BH.oM.Adapters.Revit.Settings.FamilyLoadSettings.FamilyLibrary",
@@ -3452,6 +3881,18 @@
       "type": "owl:DatatypeProperty"
     },
     {
+      "id": "FamilyLoadSettings-IsA-IBHoMObject_F26BC43FD22CD8BEF09835C286A4EBF568B04FFC8642320CBDD0A0DD00093C92",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "FamilyLoadSettings-IsA-IObject_0D49D2815AF81BAF43CF92619FE6A4C25616917EE3EF2C474506C515FB239F3C",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "FamilyLoadSettings-IsSubclassOf-BHoMObject_CD6B9392D40FBFD0CDEE79A67036689B94D90383C6DAD00A027F93A16B79D172",
+      "type": "rdfs:subClassOf"
+    },
+    {
       "id": "ConnectionSettings-HasProperty-PushPort_E0E5AFFF5B1B4003708DE2FE84EDBCBCFA7A1540277CCC7C3F186B919F7B5F6F",
       "type": "owl:DatatypeProperty"
     },
@@ -3462,6 +3903,18 @@
     {
       "id": "ConnectionSettings-HasProperty-MaxMinutesToWait_92ADE82F7070B2FBE16708214109AE0A461D96A75924E6EAB928D86146B7BDDD",
       "type": "owl:DatatypeProperty"
+    },
+    {
+      "id": "ConnectionSettings-IsA-IBHoMObject_FCD67D1758CD4CFBA56F17D9E6F7D246BC11CE607F5AD8F2AB922D3677D570D9",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "ConnectionSettings-IsA-IObject_661397633D3E7E2DEFAA0BE8B89D449EEDD9B844403117D8B1E7D13A6E90D894",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "ConnectionSettings-IsSubclassOf-BHoMObject_66410492610DF6E5F37FE638D61EA028E57211B6B6E2E6837FAD12A6D968304F",
+      "type": "rdfs:subClassOf"
     },
     {
       "id": "BH.oM.Adapters.Revit.Settings.MappingSettings-HasProperty-BH.oM.Adapters.Revit.Settings.MappingSettings.ParameterMaps",
@@ -3486,6 +3939,18 @@
     {
       "id": "MappingSettings-HasProperty-MaterialGradeParameter_CF9E503E78169142A0A37FCCBD5E7376F487AA7B05C13B65CD27A806FFAB7E30",
       "type": "owl:DatatypeProperty"
+    },
+    {
+      "id": "MappingSettings-IsA-IBHoMObject_E4EEADC0DCC7463B8329C04C33E64CDCE76A70DE8350673A1F933EC9C37D0176",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "MappingSettings-IsA-IObject_AB06E30CAFED8AB8554CC21B9647932E353D352BF114BCD2B2520D950DD1FAFB",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "MappingSettings-IsSubclassOf-BHoMObject_DC91E555F368D1437C2E8780690CBBD061892A5381C4403F0065C6E46E403C02",
+      "type": "rdfs:subClassOf"
     },
     {
       "id": "BH.oM.Adapters.Revit.Settings.RevitSettings-HasProperty-BH.oM.Adapters.Revit.Settings.RevitSettings.ConnectionSettings",
@@ -3520,8 +3985,32 @@
       "type": "owl:DatatypeProperty"
     },
     {
+      "id": "RevitSettings-IsA-IBHoMObject_FE77EE6DC8450787B76BFD3F954CE5051718F9D8C0CC200D1C965123D8CB7399",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "RevitSettings-IsA-IObject_F4A6FEA44FB8C52EAA741573DF8FBE395FD6CB90183EC63D9FA71615F295EA09",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "RevitSettings-IsSubclassOf-BHoMObject_85125257011164B3B1B6EC9A7F3F1B9AAACFF13AC690380C70444396C6D9EE37",
+      "type": "rdfs:subClassOf"
+    },
+    {
       "id": "InstanceProperties-HasProperty-CategoryName_219A4BD77B075DF28F0F6B000023F131213891B74080E78C9F70C6AF4D7B96AF",
       "type": "owl:DatatypeProperty"
+    },
+    {
+      "id": "InstanceProperties-IsA-IBHoMObject_400132F26C7880EC00BB78C80074CB345F0D3A4062E194B320F516549B4B9F26",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "InstanceProperties-IsA-IObject_93723BB7C092A19181E7881204AE9ECE8A94E13C54AF05BEB54FA8F468E67E96",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "InstanceProperties-IsSubclassOf-BHoMObject_A0B18888D312A5AB817DAC4327C17BFC6F9E47377A3956F98E2EB3B2C38EB610",
+      "type": "rdfs:subClassOf"
     },
     {
       "id": "FilterByLink-HasProperty-LinkName_328A882589B090D3B34DDD89C79AC631DC4B66920225AAE936AF6DF97DF2A755",
@@ -3536,6 +4025,10 @@
       "type": "owl:ObjectProperty"
     },
     {
+      "id": "FilterByLink-IsA-IObject_DB7B02D96BC58049F394D3276383BD2A7BDB23BF2BE091ECE5A21677B64DC492",
+      "type": "owl:ObjectProperty"
+    },
+    {
       "id": "FilterByScopeBox-HasProperty-BoxName_DD7B88CFA17CE3F3E5633F282920D5D6AEC85CFED913960B69A96E682E9BDCF6",
       "type": "owl:DatatypeProperty"
     },
@@ -3544,7 +4037,15 @@
       "type": "owl:ObjectProperty"
     },
     {
+      "id": "FilterByScopeBox-IsA-IObject_C279662CDFAE5520EB6AB165A7A1E5B3E86360CFB80FEF63CCDB2048E32EEC0A",
+      "type": "owl:ObjectProperty"
+    },
+    {
       "id": "FilterEverything-IsA-IRequest_90B22933A19E144477EB25924A18ECC8DD2DDFC4A7583F3BF3BFCB1A3A7E7068",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "FilterEverything-IsA-IObject_4FD0E14736F2862276C2808CD45D831FDB4970949743691A903D3DBB2E3D7496",
       "type": "owl:ObjectProperty"
     },
     {
@@ -3560,6 +4061,10 @@
       "type": "owl:ObjectProperty"
     },
     {
+      "id": "FilterLinkInstance-IsA-IObject_165428131A80AB56FE6AD2F196A6A1280C69E4AD1C4E4511DAAF28D2AD0E94A0",
+      "type": "owl:ObjectProperty"
+    },
+    {
       "id": "IParameterRequest-RequiresProperty-ParameterName_22AC0448A2D2EFCF6343AB646CF77FC898C2A7A0F4E8A44A7A2637408EB4559D",
       "type": "owl:DatatypeProperty"
     },
@@ -3568,7 +4073,15 @@
       "type": "owl:ObjectProperty"
     },
     {
+      "id": "IParameterRequest-IsA-IObject_40FED4F245AF8A3209E40F173AE8A60E96AB8AA0C19ACFD9458A7F567CFCEB0E",
+      "type": "owl:ObjectProperty"
+    },
+    {
       "id": "EnergyAnalysisModelRequest-IsA-IRequest_C4706503E05A37AC63BC4512163AA0F0B92252DF8FE6F31D564A8F9D885CD452",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "EnergyAnalysisModelRequest-IsA-IObject_EC77394A8340F6D9EBA1444AAB293BA63DE9C5FC572656FF86C6EA46614F6F3A",
       "type": "owl:ObjectProperty"
     },
     {
@@ -3576,7 +4089,15 @@
       "type": "owl:ObjectProperty"
     },
     {
+      "id": "FilterActiveView-IsA-IObject_24FC3C6CE1216D340D3B5F43D9AD27615D6DD527AE8749A16094DFEFA4AA1BE9",
+      "type": "owl:ObjectProperty"
+    },
+    {
       "id": "FilterByActiveWorkset-IsA-IRequest_986272C1B97E3399248F901AE4D78C6629CB52826E9D9367B7D1EEE24B1DA7FF",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "FilterByActiveWorkset-IsA-IObject_C239CDA1D02BDA4194DBEB7444CCC5DA021C4A322237CC51C1D41F26D94521CC",
       "type": "owl:ObjectProperty"
     },
     {
@@ -3592,6 +4113,10 @@
       "type": "owl:ObjectProperty"
     },
     {
+      "id": "FilterByCategory-IsA-IObject_B59094CB43939110C39CA7D5470C08456590512002B3C338E5A90B38D0C8C826",
+      "type": "owl:ObjectProperty"
+    },
+    {
       "id": "FilterByDBTypeName-HasProperty-TypeName_74F9F4992855E79512496F9EC4D9D4CB935C0FFCA0A955EC458507036CBA1D6F",
       "type": "owl:DatatypeProperty"
     },
@@ -3600,11 +4125,19 @@
       "type": "owl:ObjectProperty"
     },
     {
+      "id": "FilterByDBTypeName-IsA-IObject_4BFE49704662DFFF2F5687ED1DBDF0DE0C94EA0B1FD1B9D310674EE081F3D2C1",
+      "type": "owl:ObjectProperty"
+    },
+    {
       "id": "FilterByElementIds-HasProperty-ElementIds_2DD8761217DE3F1E4C5854FA0D433EEC240EB8367B72E4A69CAD791484467D91",
       "type": "owl:DatatypeProperty"
     },
     {
       "id": "FilterByElementIds-IsA-IRequest_FD9831BED77A0F568763443259BB07E4D9F71E2765984EC975A603595CBD1C7B",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "FilterByElementIds-IsA-IObject_B870FDC629CA8C878C2E66D8C060088BE8C1E7BBD0DE0C8031DAB42CF953F4C7",
       "type": "owl:ObjectProperty"
     },
     {
@@ -3624,11 +4157,19 @@
       "type": "owl:ObjectProperty"
     },
     {
+      "id": "FilterByFamilyAndTypeName-IsA-IObject_36CB8C480A66F4C88876DE593CD4876C2397FF074CD90B5CBDAB1B91E91FCD07",
+      "type": "owl:ObjectProperty"
+    },
+    {
       "id": "FilterByFamilyType-HasProperty-FamilyTypeId_CE75E823E269657EA7DB27C04179F90215D757A36B3DCB6DEF350F6115D8983D",
       "type": "owl:DatatypeProperty"
     },
     {
       "id": "FilterByFamilyType-IsA-IRequest_01B4A597457004CD08892A3B3E0EF06725368FE7BBDBF5BF8B7C33D7329EF751",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "FilterByFamilyType-IsA-IObject_FCD9AF7B44FC5542BDB27343BC9895375AE06F9A0E769259B0CF7F6926645E00",
       "type": "owl:ObjectProperty"
     },
     {
@@ -3652,6 +4193,10 @@
       "type": "owl:ObjectProperty"
     },
     {
+      "id": "FilterByParameterBool-IsA-IObject_FD4579716DD17F1D0C107DDD13F44B0EC8C5332CA75361DF2E76A4E9C62EE0BB",
+      "type": "owl:ObjectProperty"
+    },
+    {
       "id": "FilterByParameterElementId-HasProperty-ParameterName_EEFC4696F19A0ED3E7C95EC8CD7A540C1EB5D0682EB4939C698E1E7BB4D6047C",
       "type": "owl:DatatypeProperty"
     },
@@ -3672,6 +4217,10 @@
       "type": "owl:ObjectProperty"
     },
     {
+      "id": "FilterByParameterElementId-IsA-IObject_8F4708D6AEDFE33EAF7163B11E879EBA85A19FB572BD03042FFA142E3C0311D2",
+      "type": "owl:ObjectProperty"
+    },
+    {
       "id": "FilterByParameterExistence-HasProperty-ParameterName_CA60CCA3D13CD53AC4A13DB4245F966A305D2399E76DB9D34C3FD5701BF8410E",
       "type": "owl:DatatypeProperty"
     },
@@ -3685,6 +4234,10 @@
     },
     {
       "id": "FilterByParameterExistence-IsA-IRequest_FD2AE37B204C2A180DC54E21BD5A0FB9CFE007B9F6F959087C2BA68C5581F309",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "FilterByParameterExistence-IsA-IObject_2D4F4D2494E17D294158AB959F68841402FDDF04C7CE03DD25248C255E38A901",
       "type": "owl:ObjectProperty"
     },
     {
@@ -3713,6 +4266,10 @@
     },
     {
       "id": "FilterByParameterInteger-IsA-IRequest_EF315D53FF589FA5C4346A98435A6C78D0BB063731B8803D24FE2F241048EF28",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "FilterByParameterInteger-IsA-IObject_83E101C67FED2A06A1A574C39E7ACAEA04FA8CC70E022E8BC9F64A1A1CFA46E6",
       "type": "owl:ObjectProperty"
     },
     {
@@ -3752,6 +4309,10 @@
       "type": "owl:ObjectProperty"
     },
     {
+      "id": "FilterByParameterNumber-IsA-IObject_E33E5FDAFB8FADF952FFA705E2D32BCECC75897481ED841A452682FD0A548192",
+      "type": "owl:ObjectProperty"
+    },
+    {
       "id": "FilterByParameterText-HasProperty-ParameterName_D3A4D48961F0FF9581199AF6DB2E1D3F865A42F7DAD2EF87BD2541C992994AAD",
       "type": "owl:DatatypeProperty"
     },
@@ -3780,11 +4341,19 @@
       "type": "owl:ObjectProperty"
     },
     {
+      "id": "FilterByParameterText-IsA-IObject_EAC5261E828D82E334F2622E9BFD0903C13F33D88B291BFC872CA57455F5144E",
+      "type": "owl:ObjectProperty"
+    },
+    {
       "id": "FilterBySelectionSet-HasProperty-SelectionSetName_90672F75D5492CDF25F3E53F5DA26F6BCD7C7480F0D44526BE499B99C3A5B005",
       "type": "owl:DatatypeProperty"
     },
     {
       "id": "FilterBySelectionSet-IsA-IRequest_41D4E7945E6790BDAA9EEDEF83495DA2883737F9A3E799D352979F4EBDCD2394",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "FilterBySelectionSet-IsA-IObject_27491CAFB5DF19DB4D0B8F89708A61B7171E08CDDD8D4553D2019CBCEDAE8DEE",
       "type": "owl:ObjectProperty"
     },
     {
@@ -3796,11 +4365,19 @@
       "type": "owl:ObjectProperty"
     },
     {
+      "id": "FilterByUniqueIds-IsA-IObject_BF946A896A9AC7AA8FF3EC0CA02B5A0C0B7B3B2EA34985C241816241229E717C",
+      "type": "owl:ObjectProperty"
+    },
+    {
       "id": "FilterByUsage-HasProperty-Used_15C426AC8D904EB6D166A1CC85C64E0E64C37A00E76B5A4BE92BAEDCFE690497",
       "type": "owl:DatatypeProperty"
     },
     {
       "id": "FilterByUsage-IsA-IRequest_6D6FAD41DBAEEC83CF5474597B966BE8B0958319224FE8839E687271DA5B89B2",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "FilterByUsage-IsA-IObject_DE635CB38889B4A4A7FBB0F70A18875E975E2088DD3B18CC4EF0DA24369E0A29",
       "type": "owl:ObjectProperty"
     },
     {
@@ -3812,6 +4389,10 @@
       "type": "owl:ObjectProperty"
     },
     {
+      "id": "FilterByViewSpecific-IsA-IObject_54D4EA7287C0D251C2A2E01F443D5B7A2286D20232E5E9C3CC6F10BE7A67EDAD",
+      "type": "owl:ObjectProperty"
+    },
+    {
       "id": "FilterByVisibleInView-HasProperty-ViewId_72C83E2AD3FD15CB11C66BCF5CC6C54476C5EB8EAFEBA98FF607AACDBA6DE4B7",
       "type": "owl:DatatypeProperty"
     },
@@ -3820,11 +4401,19 @@
       "type": "owl:ObjectProperty"
     },
     {
+      "id": "FilterByVisibleInView-IsA-IObject_1961B9B530126FB7734FCEF2F89050C310A4EC1E2F60B65D4F690A3842DC1EE0",
+      "type": "owl:ObjectProperty"
+    },
+    {
       "id": "FilterByWorkset-HasProperty-WorksetName_C321EAA36D4299B7550766183F549C190A70C83E0DDF4204FCAC63718FBFC00E",
       "type": "owl:DatatypeProperty"
     },
     {
       "id": "FilterByWorkset-IsA-IRequest_46DAC5338B421B06A339238E623FC56E56E92A9338EF56A98841E30DCC5E9BA4",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "FilterByWorkset-IsA-IObject_FBFB9AFC6215F937F5B5C2313A0488111228BCE4C5D7C3B0F13373AADFF89BAB",
       "type": "owl:ObjectProperty"
     },
     {
@@ -3837,6 +4426,10 @@
     },
     {
       "id": "FilterFamilyByName-IsA-IRequest_DDF3D33A5DC3239F38DE9A6273725442505A9B91E953B801AA2778F399A2E41E",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "FilterFamilyByName-IsA-IObject_F25F548BD2CD715C6FC64353056B08B502A4764D4AE750A69FF94FF431D7DBEF",
       "type": "owl:ObjectProperty"
     },
     {
@@ -3856,6 +4449,10 @@
       "type": "owl:ObjectProperty"
     },
     {
+      "id": "FilterFamilyTypeByName-IsA-IObject_562D8A4F8F7D89311FED50ED3CEA834B76E189C8FCBE4676467EA9DBE6EC9022",
+      "type": "owl:ObjectProperty"
+    },
+    {
       "id": "FilterTypesOfFamily-HasProperty-FamilyId_F5DA13DF68B1C2EC282E514BCED69414DE71C3F775D7C763D4A0B2D343E32B18",
       "type": "owl:DatatypeProperty"
     },
@@ -3864,7 +4461,15 @@
       "type": "owl:ObjectProperty"
     },
     {
+      "id": "FilterTypesOfFamily-IsA-IObject_7A14A024090CF96EDDBDBCCCF70760ECC99B40651A937D6CCE1923D87E5F5503",
+      "type": "owl:ObjectProperty"
+    },
+    {
       "id": "FilterModelElements-IsA-IRequest_418F190B6A6E9B733E135715F0F73DEB07A8886A937B9272A9A0C325D14078A4",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "FilterModelElements-IsA-IObject_B321EDCCF2D7F60E741ED0CD3DA8D1116FF926DAC03431837E5B7394E2F31FE1",
       "type": "owl:ObjectProperty"
     },
     {
@@ -3880,11 +4485,19 @@
       "type": "owl:ObjectProperty"
     },
     {
+      "id": "FilterViewByName-IsA-IObject_053B289FC5CD986A3E39B7F54AF84CDD66F680DBE705E11CB23E9C2566113CAA",
+      "type": "owl:ObjectProperty"
+    },
+    {
       "id": "FilterViewsByTemplate-HasProperty-TemplateId_F2ACBA2153C32486073404030DE505B1BC61DA09626BDDA1B7DF33920AE40434",
       "type": "owl:DatatypeProperty"
     },
     {
       "id": "FilterViewsByTemplate-IsA-IRequest_02782E9AC2B75509157776030C2B70AA870919310EB7E517BDA1FBECE70962E6",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "FilterViewsByTemplate-IsA-IObject_21FA0EEB567ADA8198D926F6AB3A2CE939B32F35E36174392D9AE8B096ED0FAF",
       "type": "owl:ObjectProperty"
     },
     {
@@ -3900,6 +4513,10 @@
       "type": "owl:ObjectProperty"
     },
     {
+      "id": "FilterViewsByType-IsA-IObject_20CA34846CE7F20F80A758681298D15B914F057BC46F2B49D3E8D0D6B7C79C9D",
+      "type": "owl:ObjectProperty"
+    },
+    {
       "id": "FilterViewTemplateByName-HasProperty-TemplateName_79A95C55A900F11B997FE536E130A280AB48E5E1DD5ABE3A640C23E74FA0D890",
       "type": "owl:DatatypeProperty"
     },
@@ -3912,11 +4529,19 @@
       "type": "owl:ObjectProperty"
     },
     {
+      "id": "FilterViewTemplateByName-IsA-IObject_8E0867792C36E109A32AD419BFA4651F384ECB2D70EA0B26EC7D3CCC8D4E5493",
+      "type": "owl:ObjectProperty"
+    },
+    {
       "id": "FilterMemberElements-HasProperty-ParentId_57824E5074020774C03981A8C349DA5343A38C0FEE33DF08CADED4248613AD9C",
       "type": "owl:DatatypeProperty"
     },
     {
       "id": "FilterMemberElements-IsA-IRequest_563907D50DD381B9B113CA107CD3B990D10CD061D39F9D12372182A6C65C6770",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "FilterMemberElements-IsA-IObject_99290B7E31003BA38E71794EF02FDAB67F99EE7A832C2B9608FD217874F12AC5",
       "type": "owl:ObjectProperty"
     },
     {
@@ -3928,11 +4553,19 @@
       "type": "owl:ObjectProperty"
     },
     {
+      "id": "IParameterValueRequest-IsA-IObject_A4486025E85705788D27D005715777BDB31D316D0210E72721DE68BB51F06A9B",
+      "type": "owl:ObjectProperty"
+    },
+    {
       "id": "IRevitParameterFragment-RequiresProperty-Parameters_1119872DD8D1795ABBA8EE2683CF4ACFEA8079155862F5FA8BC291AA1F679F83",
       "type": "owl:DatatypeProperty"
     },
     {
       "id": "IRevitParameterFragment-IsA-IFragment_A0EFE6F088BE18D75C0CDDF8A17B0BD2B8FE24B6B11BF62E12EA4DF67BC2480D",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "IRevitParameterFragment-IsA-IObject_4AFA16737162B5782FBEB9C6E8883A73F36416442E35FAAEBC91BFA38155AAFB",
       "type": "owl:ObjectProperty"
     },
     {
@@ -3958,6 +4591,18 @@
     {
       "id": "ParameterDefinition-HasProperty-Shared_F28128495C6FE31829B5AE02E92757E6E333BC72A547154192037B4DE1D7747A",
       "type": "owl:DatatypeProperty"
+    },
+    {
+      "id": "ParameterDefinition-IsA-IBHoMObject_E1BD0AE0D8DD3785B070C64D6751E77A7F0CBBE6FAC0F80E163B5F143A10D997",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "ParameterDefinition-IsA-IObject_80AB179AFD6B119D3134DD3DB72753E6807CCD5520711A2385F9E8AE623D0E43",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "ParameterDefinition-IsSubclassOf-BHoMObject_E1FBA4D1E49E7D0F7DC2043E1F4CE074ECEA230DD5FCE444B6CEC309F102A144",
+      "type": "rdfs:subClassOf"
     },
     {
       "id": "RevitIdentifiers-HasProperty-PersistentId_2B072EBCD3D2793A5B2BA5C327E45E9526B04FE53FDAA7A7C4931246E3394B1A",
@@ -4008,6 +4653,10 @@
       "type": "owl:ObjectProperty"
     },
     {
+      "id": "RevitIdentifiers-IsA-IObject_96819BB6C3EAE5F5E325F0D2E7A54EFD761F88D33CF9FDB0896131C7DAE511BF",
+      "type": "owl:ObjectProperty"
+    },
+    {
       "id": "RevitIdentifiers-IsA-IImmutable_12EBF54FC11D1474372B7EB9AE340E54F51A8A117B3FD6AA032F0E7F2C80C3E9",
       "type": "owl:ObjectProperty"
     },
@@ -4020,11 +4669,23 @@
       "type": "owl:DatatypeProperty"
     },
     {
+      "id": "RevitParameter-IsA-IObject_A07435B32AFD4F26F672CC206D607826A0C40422F090A39B247E45F8CCFA157A",
+      "type": "owl:ObjectProperty"
+    },
+    {
       "id": "BH.oM.Adapters.Revit.Parameters.RevitParametersToPush-HasProperty-BH.oM.Adapters.Revit.Parameters.RevitParametersToPush.Parameters",
       "type": "owl:ObjectProperty"
     },
     {
       "id": "BH.oM.Adapters.Revit.Parameters.RevitParametersToPush.Parameters-IsAListOf-BH.oM.Adapters.Revit.Parameters.RevitParameter",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "RevitParametersToPush-IsA-IBHoMObject_4B57D341DDF960249EB10AEF3873AF4BA98DA0F581C15DA0A5164C4ED7C1C2C8",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "RevitParametersToPush-IsA-IObject_B4021DF61DFA154B683C7BC3009ADD300DE5453EA59AA27060B3A5AC0FA72F4A",
       "type": "owl:ObjectProperty"
     },
     {
@@ -4036,11 +4697,23 @@
       "type": "owl:ObjectProperty"
     },
     {
+      "id": "RevitParametersToPush-IsSubclassOf-BHoMObject_A4C8A64C6C88CD490073CFADC9AC2EBBFA5BC0EAF637E97E51864CCC39FE9B58",
+      "type": "rdfs:subClassOf"
+    },
+    {
       "id": "BH.oM.Adapters.Revit.Parameters.RevitPulledParameters-HasProperty-BH.oM.Adapters.Revit.Parameters.RevitPulledParameters.Parameters",
       "type": "owl:ObjectProperty"
     },
     {
       "id": "BH.oM.Adapters.Revit.Parameters.RevitPulledParameters.Parameters-IsAListOf-BH.oM.Adapters.Revit.Parameters.RevitParameter",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "RevitPulledParameters-IsA-IBHoMObject_0D1F660F69C95E8FF2D11244F20C04F7EAC98AECDEAEFD8B9EFB2711570CA1EA",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "RevitPulledParameters-IsA-IObject_1710C2B548F88A1935F36FA7EFBF28926D0859BD4C936703A08BD83980373793",
       "type": "owl:ObjectProperty"
     },
     {
@@ -4056,12 +4729,28 @@
       "type": "owl:ObjectProperty"
     },
     {
+      "id": "RevitPulledParameters-IsSubclassOf-BHoMObject_4740B5E822505A9A0AAE2CFABCD38B15E55CCDE9F58A50701F3C127D9C1A07F7",
+      "type": "rdfs:subClassOf"
+    },
+    {
       "id": "FamilyMap-HasProperty-Type_26805307FA013CC98F2CF17FBE8691D7E71AEFE227A67BDE8B0D1C16328DA672",
       "type": "owl:DatatypeProperty"
     },
     {
       "id": "FamilyMap-HasProperty-FamilyNames_650A3A91974977C55710E653D19D211CA12FDFACB212D239D4D4398D990DFE18",
       "type": "owl:DatatypeProperty"
+    },
+    {
+      "id": "FamilyMap-IsA-IBHoMObject_782E1FA606C9F50ED89216A78E695B66D1663AE7627D065E90C1EF138E5B8A58",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "FamilyMap-IsA-IObject_A87D2ED0E86B9A6F6AFC7970E25822306602FCE28274C71EC33C8EEC3CD44219",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "FamilyMap-IsSubclassOf-BHoMObject_BBED3818BB3DCF06D529123D5D160B5B7DACACDB31AE25BBF6EC10AD462402F8",
+      "type": "rdfs:subClassOf"
     },
     {
       "id": "ElementTypeParameterLink-HasProperty-PropertyName_AC7E54DEEC456CDE15A9EC38ACABBC41D8FBC935F8627CDAC365703B1F451DF3",
@@ -4072,8 +4761,20 @@
       "type": "owl:DatatypeProperty"
     },
     {
+      "id": "ElementTypeParameterLink-IsA-IBHoMObject_9FE9E162CB6F76AADA0FF380D11643F5C5DC5B53EB1FC74A3F83745DE8D7F231",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "ElementTypeParameterLink-IsA-IObject_3CD14E9660F0B900E0B980935EBF8622E0BEFC731C8EDCF470CD2D486198F410",
+      "type": "owl:ObjectProperty"
+    },
+    {
       "id": "ElementTypeParameterLink-IsA-IParameterLink_19CA9B7656F15B022B6309E410B8D7D1815047C5A8B646C7B5945FD2395ED6CC",
       "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "ElementTypeParameterLink-IsSubclassOf-BHoMObject_A0B9CA54C1A31AF6D3F7AFB2117B4673B3EC456C83F3517509340B41686AA253",
+      "type": "rdfs:subClassOf"
     },
     {
       "id": "ElementParameterLink-HasProperty-PropertyName_83ACE672AFDC553F396C3ED39276258778866042DEAA13370013B368A83D0EA3",
@@ -4084,8 +4785,20 @@
       "type": "owl:DatatypeProperty"
     },
     {
+      "id": "ElementParameterLink-IsA-IBHoMObject_F02A09D69A224FC8B72E23224DE1C50CB1DF9E4F567BED328C62F9A08F725CC3",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "ElementParameterLink-IsA-IObject_238340821D2D92F46AE7ED0C075F7CA221A7DBCCCE031EFF9B3ECF145BA1CB9D",
+      "type": "owl:ObjectProperty"
+    },
+    {
       "id": "ElementParameterLink-IsA-IParameterLink_39A576CF34FEBC8638BC116267839EDE45791DB8C10E5B967BD88D89BC3DC4E2",
       "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "ElementParameterLink-IsSubclassOf-BHoMObject_A353958746AF03973E92BE5242F2709E63F6743CBE2EB26E516487A135AAC53E",
+      "type": "rdfs:subClassOf"
     },
     {
       "id": "IParameterLink-RequiresProperty-PropertyName_4FFFBA7EB4E10C87508A42C1AAD80B3854CB6FD85D9D36CF4B86547B774BBB8E",
@@ -4094,6 +4807,14 @@
     {
       "id": "IParameterLink-RequiresProperty-ParameterNames_13919D09291BC0272C3DE3453BCC841302CDA7EC71DC8FBD112131D13DD53693",
       "type": "owl:DatatypeProperty"
+    },
+    {
+      "id": "IParameterLink-IsA-IBHoMObject_B9F3CF1B86C3EE3735E87AF0D1F5C2AB2F5C3B18F40172B1F5C8B84245A5AD09",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "IParameterLink-IsA-IObject_8FF26774D89776D6592620513CB78DF6720F1ADCC6C8909B4F490DD843036FAB",
+      "type": "owl:ObjectProperty"
     },
     {
       "id": "ParameterMap-HasProperty-Type_96EF525F69D60EF2367C6A71033ED8348D8126953AB0553855D2290BDBD200AB",
@@ -4106,6 +4827,18 @@
     {
       "id": "BH.oM.Adapters.Revit.Mapping.ParameterMap.ParameterLinks-IsAListOf-BH.oM.Adapters.Revit.Mapping.IParameterLink",
       "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "ParameterMap-IsA-IBHoMObject_D051795BD7C8BD446DB9D15BB286A3CA37ECF6D028425BFCF9A3E382CD2F6FDD",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "ParameterMap-IsA-IObject_6012B193B0A1AE67E4BA2FC58060D67AC5184B40BD60DE4237A2FEA4E4E6A1FE",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "ParameterMap-IsSubclassOf-BHoMObject_2741695F90609DEA8F338757F022CF80521E5AC5FD50A06D8C12635B4E3927E5",
+      "type": "rdfs:subClassOf"
     },
     {
       "id": "BH.oM.Adapters.Revit.Elements.DraftingInstance-HasProperty-BH.oM.Adapters.Revit.Elements.DraftingInstance.Properties",
@@ -4136,8 +4869,20 @@
       "type": "owl:DatatypeProperty"
     },
     {
+      "id": "DraftingInstance-IsA-IBHoMObject_6B40B621D62EDACBFCD493BF30BC83BD60851DB8919DB83DF73B01325DC4AD48",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "DraftingInstance-IsA-IObject_710CBAD2E8A576A69AB5C2F6045A316CE490231740D61A109ACF8CA2AE757F03",
+      "type": "owl:ObjectProperty"
+    },
+    {
       "id": "DraftingInstance-IsA-IInstance_E04FFABC2790C7625322636A1502D688A452513726D3696161E7F3ABA80F38AE",
       "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "DraftingInstance-IsSubclassOf-BHoMObject_7F58E9F3BC0DC1C293D25D979842E7A178DA2DFF96B687ABC809BAA77D7D37DA",
+      "type": "rdfs:subClassOf"
     },
     {
       "id": "BH.oM.Adapters.Revit.Elements.Family-HasProperty-BH.oM.Adapters.Revit.Elements.Family.PropertiesList",
@@ -4146,6 +4891,18 @@
     {
       "id": "BH.oM.Adapters.Revit.Elements.Family.PropertiesList-IsAListOf-BH.oM.Adapters.Revit.Properties.InstanceProperties",
       "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "Family-IsA-IBHoMObject_787E225CC3408CA8238B76997221F1BFC63E6401BA0DFCBBD0A3F108E1085723",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "Family-IsA-IObject_D47BAFABA8B92F13913FC26FC1644832ADF5BF1B08E506C35FBF655454E08A7D",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "Family-IsSubclassOf-BHoMObject_D7E69DA6527371C3ACB70480DA814F2829529C659946AA245A781B507C9CD4B8",
+      "type": "rdfs:subClassOf"
     },
     {
       "id": "BH.oM.Adapters.Revit.Elements.ViewPlan-HasProperty-BH.oM.Adapters.Revit.Elements.ViewPlan.InstanceProperties",
@@ -4168,8 +4925,20 @@
       "type": "owl:DatatypeProperty"
     },
     {
+      "id": "ViewPlan-IsA-IBHoMObject_FA9C6CE66DBE423E71B49BC5D72922E0946E2AC5448F01BC057CF2A69853A854",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "ViewPlan-IsA-IObject_1F4F5ABD7CEDA00C110D99CD770C97340452E3B080EF44AF4F51C51981A8B684",
+      "type": "owl:ObjectProperty"
+    },
+    {
       "id": "ViewPlan-IsA-IView_4F7C88A3F2B794A50A6742652A4BA832546B9D2F6B75878692515D2B0D20D003",
       "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "ViewPlan-IsSubclassOf-BHoMObject_FAC2A2CFE7E541E583F2701F15086A92C4E3D781E5BDFF1BBBF5645C1E194A2B",
+      "type": "rdfs:subClassOf"
     },
     {
       "id": "BH.oM.Adapters.Revit.Elements.ModelInstance-HasProperty-BH.oM.Adapters.Revit.Elements.ModelInstance.Properties",
@@ -4196,8 +4965,20 @@
       "type": "owl:ObjectProperty"
     },
     {
+      "id": "ModelInstance-IsA-IBHoMObject_19C0AEFEAAB45F3AE6CDBD6AEFC5535EABBE91ACEDC52772A3B8D35D050C70CD",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "ModelInstance-IsA-IObject_5AC4A5770FB7DB4B7080506311EFB66760A0DFC9E93BF5EC0EF87C3E322D3135",
+      "type": "owl:ObjectProperty"
+    },
+    {
       "id": "ModelInstance-IsA-IInstance_CA21DA55EF3604CA3D06243B121E319B1B5DB72B6CDC7F87B33A29E0CC9DF680",
       "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "ModelInstance-IsSubclassOf-BHoMObject_491BE24214C2F0C4AC681D10F42A9758A97B9DCF960DBC29EF7218833D3BF3BB",
+      "type": "rdfs:subClassOf"
     },
     {
       "id": "BH.oM.Adapters.Revit.Elements.Viewport-HasProperty-BH.oM.Adapters.Revit.Elements.Viewport.InstanceProperties",
@@ -4224,8 +5005,28 @@
       "type": "owl:DatatypeProperty"
     },
     {
+      "id": "Viewport-IsA-IBHoMObject_D69AAE7703A60833F6F50090AD2E172EF7DE30C232E62237CB32781461D1F99E",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "Viewport-IsA-IObject_F803CC44CD32710C7728AF9C6B4811329C3AF05ECF9A569BA55ABB126E63F522",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "Viewport-IsSubclassOf-BHoMObject_D29E2976F37877407441C182341719035F3891A103C329FACA57AFEA12A4DA0C",
+      "type": "rdfs:subClassOf"
+    },
+    {
       "id": "IView-RequiresProperty-InstanceProperties_4C3FBCD938442F865BBB792BE300FB463590DC48A51B442F5F13B928DEEB34E7",
       "type": "owl:DatatypeProperty"
+    },
+    {
+      "id": "IView-IsA-IBHoMObject_FFBF8AABF88B10CF126B02CB51702F834532ACEA83990A9FD20777E9F41B1957",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "IView-IsA-IObject_DFA693C7ABC2FE86D8827B15BFAB786713184D549A79400A2F16557FC69AE413",
+      "type": "owl:ObjectProperty"
     },
     {
       "id": "IInstance-RequiresProperty-Properties_D9ED0F35768EF3AB6928B6F96248DD5DAAB6B4C4D8A8ABFAE796925170C15BC9",
@@ -4238,6 +5039,14 @@
     {
       "id": "IInstance-RequiresProperty-Orientation_DCA6C7997743BDF92B8BBADF7ADAD01BB204C9AE7224588244A09EF243721ADA",
       "type": "owl:DatatypeProperty"
+    },
+    {
+      "id": "IInstance-IsA-IBHoMObject_4CD5DD2025C992C9C6046759F3AA8E0EC29E1E87759AC558C833991E0075996E",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "IInstance-IsA-IObject_B885A68E7FF326A57E52184338A282935A20A59BBB2191FD2143BC6D88DAFDED",
+      "type": "owl:ObjectProperty"
     },
     {
       "id": "BH.oM.Adapters.Revit.Elements.Sheet-HasProperty-BH.oM.Adapters.Revit.Elements.Sheet.InstanceProperties",
@@ -4254,6 +5063,18 @@
     {
       "id": "Sheet-HasProperty-SheetNumber_84C14ADFB47B18F5254945E8E2EDE4FED284E52E09EBA3DBCD4A328A0701CD0E",
       "type": "owl:DatatypeProperty"
+    },
+    {
+      "id": "Sheet-IsA-IBHoMObject_9C396B8DB0FE4B4C5F24F78E71857183BCE6FE2EDD37DF0F3E92A731AD55DD0F",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "Sheet-IsA-IObject_8265E20040DC297269006C43F16000E84358340A5E89E3ECD68C7F8591504B91",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "Sheet-IsSubclassOf-BHoMObject_66464707376FA1BE8709F49CE8FF2B8B858AA98EEB9AAD03E1AFB80A7E1867BA",
+      "type": "rdfs:subClassOf"
     }
   ],
   "propertyAttribute": [
@@ -4316,6 +5137,59 @@
       ],
       "domain": "BH.oM.Adapters.Revit.RevitComparisonConfig.ParameterSignificantFigures",
       "range": "BH.oM.Base.NamedSignificantFigures"
+    },
+    {
+      "id": "RevitComparisonConfig-HasProperty-RevitParams_ConsiderAddedAssigned_5B4BC92A098D8B669100675BAE717751BA9A5466F7191724D0720A52257BDDB5",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/HasProperty.cs",
+      "label": "HasProperty",
+      "attributes": [
+        "datatype"
+      ],
+      "domain": "BH.oM.Adapters.Revit.RevitComparisonConfig",
+      "range": "BH.oM.Adapters.Revit.RevitComparisonConfig.RevitParams_ConsiderAddedAssigned"
+    },
+    {
+      "id": "RevitComparisonConfig-HasProperty-RevitParams_ConsiderAddedUnassigned_B72971354BD1D78E58002AD5A877F127024795ECAC147F455B53DC2070371B9F",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/HasProperty.cs",
+      "label": "HasProperty",
+      "attributes": [
+        "datatype"
+      ],
+      "domain": "BH.oM.Adapters.Revit.RevitComparisonConfig",
+      "range": "BH.oM.Adapters.Revit.RevitComparisonConfig.RevitParams_ConsiderAddedUnassigned"
+    },
+    {
+      "id": "RevitComparisonConfig-HasProperty-RevitParams_ConsiderRemovedAssigned_4F3A0A670C4AA3DB0211BB663B6ABC40C7A76EDC5ACC468C11C01FAB57842051",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/HasProperty.cs",
+      "label": "HasProperty",
+      "attributes": [
+        "datatype"
+      ],
+      "domain": "BH.oM.Adapters.Revit.RevitComparisonConfig",
+      "range": "BH.oM.Adapters.Revit.RevitComparisonConfig.RevitParams_ConsiderRemovedAssigned"
+    },
+    {
+      "id": "RevitComparisonConfig-HasProperty-RevitParams_ConsiderRemovedUnassigned_02ADF1D521D0C78837F75309F37344D217911E8E0852654F5876FB7ED9AED216",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/HasProperty.cs",
+      "label": "HasProperty",
+      "attributes": [
+        "datatype"
+      ],
+      "domain": "BH.oM.Adapters.Revit.RevitComparisonConfig",
+      "range": "BH.oM.Adapters.Revit.RevitComparisonConfig.RevitParams_ConsiderRemovedUnassigned"
+    },
+    {
+      "id": "RevitComparisonConfig-IsA-IObject_96924B025D8502490254295CE35E1629E4163302BFF2EC2655623BD6E151741B",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "label": "IsA",
+      "attributes": [
+        "object"
+      ],
+      "comment": {
+        "undefined": "Can be used to describe that a thing belongs to a class; or that a thing is equivalent to another thing. When used for BHoM types, this describes C# interface implementation."
+      },
+      "domain": "BH.oM.Adapters.Revit.RevitComparisonConfig",
+      "range": "BH.oM.Base.IObject"
     },
     {
       "id": "RevitComparisonConfig-IsSubclassOf-BaseComparisonConfig_5AF6056248F2BB8BFA86F9BE8C71336D10A4B2AE238B1AB66F7602D81E056708",
@@ -4388,6 +5262,19 @@
       "range": "BH.oM.Adapters.Revit.PullGeometryConfig.IncludeNonVisible"
     },
     {
+      "id": "PullGeometryConfig-IsA-IObject_466F4FE4C846F7DF1C711BF46A23A00705F3DF3E0349ECFAB02EBAC44EFE37A1",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "label": "IsA",
+      "attributes": [
+        "object"
+      ],
+      "comment": {
+        "undefined": "Can be used to describe that a thing belongs to a class; or that a thing is equivalent to another thing. When used for BHoM types, this describes C# interface implementation."
+      },
+      "domain": "BH.oM.Adapters.Revit.PullGeometryConfig",
+      "range": "BH.oM.Base.IObject"
+    },
+    {
       "id": "PullRepresentationConfig-HasProperty-PullRenderMesh_888CB855A4636C8AA811940A327E004C8C59C0091C99079E758027F7CEFA77F5",
       "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/HasProperty.cs",
       "label": "HasProperty",
@@ -4428,6 +5315,19 @@
       "range": "BH.oM.Adapters.Revit.PullRepresentationConfig.IncludeNonVisible"
     },
     {
+      "id": "PullRepresentationConfig-IsA-IObject_FA6DDC9A6C99F56831CA22A16CAB270442F770EDB3AB64013517FE38D02D8E51",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "label": "IsA",
+      "attributes": [
+        "object"
+      ],
+      "comment": {
+        "undefined": "Can be used to describe that a thing belongs to a class; or that a thing is equivalent to another thing. When used for BHoM types, this describes C# interface implementation."
+      },
+      "domain": "BH.oM.Adapters.Revit.PullRepresentationConfig",
+      "range": "BH.oM.Base.IObject"
+    },
+    {
       "id": "RevitRemoveConfig-HasProperty-SuppressFailureMessages_647982A919FEA60EF7AC5401CE8B35837884B02C4DB80E335ED075D7A3F51E8F",
       "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/HasProperty.cs",
       "label": "HasProperty",
@@ -4458,6 +5358,19 @@
       "range": "BH.oM.Adapters.Revit.RevitRemoveConfig.RemovePinned"
     },
     {
+      "id": "RevitRemoveConfig-IsA-IObject_AF0F7C95005D65EF1F58CF726BE0C707AB612B7B97126F64D2B33958D35672A9",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "label": "IsA",
+      "attributes": [
+        "object"
+      ],
+      "comment": {
+        "undefined": "Can be used to describe that a thing belongs to a class; or that a thing is equivalent to another thing. When used for BHoM types, this describes C# interface implementation."
+      },
+      "domain": "BH.oM.Adapters.Revit.RevitRemoveConfig",
+      "range": "BH.oM.Base.IObject"
+    },
+    {
       "id": "RevitRemoveConfig-IsSubclassOf-ActionConfig_B1239C13AC88A671E5C127C325CA211D1E0C445A985F35BCE40B4DF29BDB3102",
       "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsSubclassOf.cs",
       "label": "IsA",
@@ -4476,6 +5389,42 @@
       ],
       "domain": "BH.oM.Adapters.Revit.ClonedType",
       "range": "BH.oM.Adapters.Revit.ClonedType.SourceTypeId"
+    },
+    {
+      "id": "ClonedType-IsA-IBHoMObject_7EDEBCACDEB91D7271FA9B2F86383A4EDDE2E8BA4B3B7C19E92724EA515F315D",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "label": "IsA",
+      "attributes": [
+        "object"
+      ],
+      "comment": {
+        "undefined": "Can be used to describe that a thing belongs to a class; or that a thing is equivalent to another thing. When used for BHoM types, this describes C# interface implementation."
+      },
+      "domain": "BH.oM.Adapters.Revit.ClonedType",
+      "range": "BH.oM.Base.IBHoMObject"
+    },
+    {
+      "id": "ClonedType-IsA-IObject_C77F5867F5BB020155CC408A4158D452250299F7FF27CEEE2A1B3C7A4442719E",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "label": "IsA",
+      "attributes": [
+        "object"
+      ],
+      "comment": {
+        "undefined": "Can be used to describe that a thing belongs to a class; or that a thing is equivalent to another thing. When used for BHoM types, this describes C# interface implementation."
+      },
+      "domain": "BH.oM.Adapters.Revit.ClonedType",
+      "range": "BH.oM.Base.IObject"
+    },
+    {
+      "id": "ClonedType-IsSubclassOf-BHoMObject_EF81F5636A116633A8362779282BDA65D6E19A74E1876B944A6C9F9E404000EC",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsSubclassOf.cs",
+      "label": "IsA",
+      "attributes": [
+        "object"
+      ],
+      "domain": "BH.oM.Adapters.Revit.ClonedType",
+      "range": "BH.oM.Base.BHoMObject"
     },
     {
       "id": "BH.oM.Adapters.Revit.RevitGeometry-HasProperty-BH.oM.Adapters.Revit.RevitGeometry.Edges",
@@ -4551,6 +5500,19 @@
       "range": "BH.oM.Base.IFragment"
     },
     {
+      "id": "RevitGeometry-IsA-IObject_8FBF6264ACA45CA13C1C92D3D863BA33EA95AA98533B1A57887AAE0E7991BB4D",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "label": "IsA",
+      "attributes": [
+        "object"
+      ],
+      "comment": {
+        "undefined": "Can be used to describe that a thing belongs to a class; or that a thing is equivalent to another thing. When used for BHoM types, this describes C# interface implementation."
+      },
+      "domain": "BH.oM.Adapters.Revit.RevitGeometry",
+      "range": "BH.oM.Base.IObject"
+    },
+    {
       "id": "RevitGeometry-IsA-IImmutable_C526845439DB6EFEFA8C03D0108516DB1E0F99068C43EFDE1B25C41E45F239B6",
       "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
       "label": "IsA",
@@ -4592,6 +5554,19 @@
       ],
       "domain": "BH.oM.Adapters.Revit.RevitMaterialTakeOff.MaterialComposition",
       "range": "BH.oM.Physical.Materials.MaterialComposition"
+    },
+    {
+      "id": "RevitMaterialTakeOff-IsA-IObject_06C394CD1006AF7D5F87FA044C0EC7B9E0BEEFDE64091A02F36BC6824D5AE482",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "label": "IsA",
+      "attributes": [
+        "object"
+      ],
+      "comment": {
+        "undefined": "Can be used to describe that a thing belongs to a class; or that a thing is equivalent to another thing. When used for BHoM types, this describes C# interface implementation."
+      },
+      "domain": "BH.oM.Adapters.Revit.RevitMaterialTakeOff",
+      "range": "BH.oM.Base.IObject"
     },
     {
       "id": "RevitMaterialTakeOff-IsA-IFragment_659573FF8685FDF1D242F0D33AB5E4DDA6DADE9F23AFF33B1A72A7AF877E0633",
@@ -4653,6 +5628,19 @@
       "range": "BH.oM.Base.IFragment"
     },
     {
+      "id": "RevitRepresentation-IsA-IObject_21CFC1274E0E9D7072ACC542DB5459BF9EB0C3509E1E0F6A0A94D99A30D0514F",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "label": "IsA",
+      "attributes": [
+        "object"
+      ],
+      "comment": {
+        "undefined": "Can be used to describe that a thing belongs to a class; or that a thing is equivalent to another thing. When used for BHoM types, this describes C# interface implementation."
+      },
+      "domain": "BH.oM.Adapters.Revit.RevitRepresentation",
+      "range": "BH.oM.Base.IObject"
+    },
+    {
       "id": "RevitRepresentation-IsA-IImmutable_3BF954E37CF899720764825ABD5BF6B849197E7F1A858000DBD664C78D5054CE",
       "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
       "label": "IsA",
@@ -4664,6 +5652,151 @@
       },
       "domain": "BH.oM.Adapters.Revit.RevitRepresentation",
       "range": "BH.oM.Base.IImmutable"
+    },
+    {
+      "id": "RevitTypeFragment-IsA-IBHoMObject_253FBD94E1D141A5617598AA99B18449DD1DE41D420DFB11E789DDC19DA7FE70",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "label": "IsA",
+      "attributes": [
+        "object"
+      ],
+      "comment": {
+        "undefined": "Can be used to describe that a thing belongs to a class; or that a thing is equivalent to another thing. When used for BHoM types, this describes C# interface implementation."
+      },
+      "domain": "BH.oM.Adapters.Revit.RevitTypeFragment",
+      "range": "BH.oM.Base.IBHoMObject"
+    },
+    {
+      "id": "RevitTypeFragment-IsA-IObject_C2578F568E19188DE2EF991C6E315B300765CBC85E3298D71258FE97345E9FEA",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "label": "IsA",
+      "attributes": [
+        "object"
+      ],
+      "comment": {
+        "undefined": "Can be used to describe that a thing belongs to a class; or that a thing is equivalent to another thing. When used for BHoM types, this describes C# interface implementation."
+      },
+      "domain": "BH.oM.Adapters.Revit.RevitTypeFragment",
+      "range": "BH.oM.Base.IObject"
+    },
+    {
+      "id": "RevitTypeFragment-IsA-IFragment_969E9054AD248073B4B88CACEB61BC030CC40B2B05649A6F015EBFC40999F3E2",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "label": "IsA",
+      "attributes": [
+        "object"
+      ],
+      "comment": {
+        "undefined": "Can be used to describe that a thing belongs to a class; or that a thing is equivalent to another thing. When used for BHoM types, this describes C# interface implementation."
+      },
+      "domain": "BH.oM.Adapters.Revit.RevitTypeFragment",
+      "range": "BH.oM.Base.IFragment"
+    },
+    {
+      "id": "RevitTypeFragment-IsSubclassOf-BHoMObject_04672AD57E0B80AF008B5652EE11C748FFF1BD989DD37D0B6E9CF24A2FB14EB7",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsSubclassOf.cs",
+      "label": "IsA",
+      "attributes": [
+        "object"
+      ],
+      "domain": "BH.oM.Adapters.Revit.RevitTypeFragment",
+      "range": "BH.oM.Base.BHoMObject"
+    },
+    {
+      "id": "RevitParameterDifference-HasProperty-Name_7E6A36B1B499F1AA3B4FEE95A6DCC0164177942201C9E4A98858DCA45B69476F",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/HasProperty.cs",
+      "label": "HasProperty",
+      "attributes": [
+        "datatype"
+      ],
+      "domain": "BH.oM.Adapters.Revit.RevitParameterDifference",
+      "range": "BH.oM.Adapters.Revit.RevitParameterDifference.Name"
+    },
+    {
+      "id": "RevitParameterDifference-HasProperty-Description_13C9C4E166A2C620236AE47497DC58BBA544F6B1207771AB6111D3070C09A20D",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/HasProperty.cs",
+      "label": "HasProperty",
+      "attributes": [
+        "datatype"
+      ],
+      "domain": "BH.oM.Adapters.Revit.RevitParameterDifference",
+      "range": "BH.oM.Adapters.Revit.RevitParameterDifference.Description"
+    },
+    {
+      "id": "RevitParameterDifference-HasProperty-PastValue_7A82452D22D1388F1027A4FD69D746A1F3C5ADDEE97D075D9DF78F53DDE078C1",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/HasProperty.cs",
+      "label": "HasProperty",
+      "attributes": [
+        "datatype"
+      ],
+      "domain": "BH.oM.Adapters.Revit.RevitParameterDifference",
+      "range": "BH.oM.Adapters.Revit.RevitParameterDifference.PastValue"
+    },
+    {
+      "id": "RevitParameterDifference-HasProperty-FollowingValue_0607AF5937F64C3D2AD1BED52A700F7001CFA3C9B58D86F17EC299E951373F50",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/HasProperty.cs",
+      "label": "HasProperty",
+      "attributes": [
+        "datatype"
+      ],
+      "domain": "BH.oM.Adapters.Revit.RevitParameterDifference",
+      "range": "BH.oM.Adapters.Revit.RevitParameterDifference.FollowingValue"
+    },
+    {
+      "id": "RevitParameterDifference-HasProperty-FullName_F97BF689CC007579E2E770FB3E95EB8354BF16D57C80AF89955BFC733FABE94C",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/HasProperty.cs",
+      "label": "HasProperty",
+      "attributes": [
+        "datatype"
+      ],
+      "domain": "BH.oM.Adapters.Revit.RevitParameterDifference",
+      "range": "BH.oM.Adapters.Revit.RevitParameterDifference.FullName"
+    },
+    {
+      "id": "BH.oM.Adapters.Revit.RevitParameterDifference-HasProperty-BH.oM.Adapters.Revit.RevitParameterDifference.DifferenceType",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/HasProperty.cs",
+      "label": "HasProperty",
+      "attributes": [
+        "object"
+      ],
+      "domain": "BH.oM.Adapters.Revit.RevitParameterDifference",
+      "range": "BH.oM.Adapters.Revit.RevitParameterDifference.DifferenceType"
+    },
+    {
+      "id": "BH.oM.Adapters.Revit.RevitParameterDifference.DifferenceType-IsA-BH.oM.Adapters.Revit.Enums.RevitParameterDifferenceType",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "label": "IsA",
+      "attributes": [
+        "object"
+      ],
+      "domain": "BH.oM.Adapters.Revit.RevitParameterDifference.DifferenceType",
+      "range": "BH.oM.Adapters.Revit.Enums.RevitParameterDifferenceType"
+    },
+    {
+      "id": "RevitParameterDifference-IsA-IPropertyDifference_05767E77CF886E0F2AE1073CA51FC78916485AA2E6AA509195EBD7B05271174B",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "label": "IsA",
+      "attributes": [
+        "object"
+      ],
+      "comment": {
+        "undefined": "Can be used to describe that a thing belongs to a class; or that a thing is equivalent to another thing. When used for BHoM types, this describes C# interface implementation."
+      },
+      "domain": "BH.oM.Adapters.Revit.RevitParameterDifference",
+      "range": "BH.oM.Diffing.IPropertyDifference"
+    },
+    {
+      "id": "RevitParameterDifference-IsA-IObject_12E5ADAAE54E958B56027989A26A983B7E63088D088E226A9083F92E1674294A",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "label": "IsA",
+      "attributes": [
+        "object"
+      ],
+      "comment": {
+        "undefined": "Can be used to describe that a thing belongs to a class; or that a thing is equivalent to another thing. When used for BHoM types, this describes C# interface implementation."
+      },
+      "domain": "BH.oM.Adapters.Revit.RevitParameterDifference",
+      "range": "BH.oM.Base.IObject"
     },
     {
       "id": "BH.oM.Adapters.Revit.FamilyLibrary-HasProperty-BH.oM.Adapters.Revit.FamilyLibrary.Files",
@@ -4684,6 +5817,42 @@
       ],
       "domain": "BH.oM.Adapters.Revit.FamilyLibrary.Files",
       "range": "BH.oM.Adapters.Revit.RevitFilePreview"
+    },
+    {
+      "id": "FamilyLibrary-IsA-IBHoMObject_853F3AEF41045EF0CDFE2C1CA550AC59CBCEF6DC21DB26ABAE7ADBA3578E0F12",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "label": "IsA",
+      "attributes": [
+        "object"
+      ],
+      "comment": {
+        "undefined": "Can be used to describe that a thing belongs to a class; or that a thing is equivalent to another thing. When used for BHoM types, this describes C# interface implementation."
+      },
+      "domain": "BH.oM.Adapters.Revit.FamilyLibrary",
+      "range": "BH.oM.Base.IBHoMObject"
+    },
+    {
+      "id": "FamilyLibrary-IsA-IObject_6F941A011D58A8AF6C7E5298717FAA4E6981655B72561F28F78CD92F934119E9",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "label": "IsA",
+      "attributes": [
+        "object"
+      ],
+      "comment": {
+        "undefined": "Can be used to describe that a thing belongs to a class; or that a thing is equivalent to another thing. When used for BHoM types, this describes C# interface implementation."
+      },
+      "domain": "BH.oM.Adapters.Revit.FamilyLibrary",
+      "range": "BH.oM.Base.IObject"
+    },
+    {
+      "id": "FamilyLibrary-IsSubclassOf-BHoMObject_B861CBBA00384B99A603C6EC170843198BC95B323A5C296B5491CFD94C4267FC",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsSubclassOf.cs",
+      "label": "IsA",
+      "attributes": [
+        "object"
+      ],
+      "domain": "BH.oM.Adapters.Revit.FamilyLibrary",
+      "range": "BH.oM.Base.BHoMObject"
     },
     {
       "id": "RevitPushConfig-HasProperty-SuppressFailureMessages_41A1523505D549E8F629B01DC6626BDF72AADF969E53AD9CA8C7A2F9AA912A68",
@@ -4714,6 +5883,19 @@
       ],
       "domain": "BH.oM.Adapters.Revit.RevitPushConfig",
       "range": "BH.oM.Adapters.Revit.RevitPushConfig.SetLocationOnUpdate"
+    },
+    {
+      "id": "RevitPushConfig-IsA-IObject_2E0652407D7B813D79C0B58E97E0414885BE613324F02B416B708790E32B8BED",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "label": "IsA",
+      "attributes": [
+        "object"
+      ],
+      "comment": {
+        "undefined": "Can be used to describe that a thing belongs to a class; or that a thing is equivalent to another thing. When used for BHoM types, this describes C# interface implementation."
+      },
+      "domain": "BH.oM.Adapters.Revit.RevitPushConfig",
+      "range": "BH.oM.Base.IObject"
     },
     {
       "id": "RevitPushConfig-IsSubclassOf-ActionConfig_6958D6B3EECC3F71FBF0E9ABF5A3B4400FE5EF38C134F756F8BD3CC3B32A8772",
@@ -4816,6 +5998,19 @@
       "range": "BH.oM.Adapters.Revit.RevitPullConfig.PullMaterialTakeOff"
     },
     {
+      "id": "RevitPullConfig-IsA-IObject_EADE14B3CFF4946760D6B6E02301F772CDC084131AE603778168D58F8C2DD4CD",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "label": "IsA",
+      "attributes": [
+        "object"
+      ],
+      "comment": {
+        "undefined": "Can be used to describe that a thing belongs to a class; or that a thing is equivalent to another thing. When used for BHoM types, this describes C# interface implementation."
+      },
+      "domain": "BH.oM.Adapters.Revit.RevitPullConfig",
+      "range": "BH.oM.Base.IObject"
+    },
+    {
       "id": "RevitPullConfig-IsSubclassOf-ActionConfig_9F047FC5E8291ACB935E3F5A642BD976FC0B0F2B1DBD18450728950D697989DA",
       "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsSubclassOf.cs",
       "label": "IsA",
@@ -4866,6 +6061,32 @@
       "range": "BH.oM.Adapters.Revit.RevitFilePreview.FamilyTypeNames"
     },
     {
+      "id": "RevitFilePreview-IsA-IBHoMObject_86AD0E8B8625CEAF5A2E25AB849AFF0C29AE80F378B8E4E3CC035FF76F3526C6",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "label": "IsA",
+      "attributes": [
+        "object"
+      ],
+      "comment": {
+        "undefined": "Can be used to describe that a thing belongs to a class; or that a thing is equivalent to another thing. When used for BHoM types, this describes C# interface implementation."
+      },
+      "domain": "BH.oM.Adapters.Revit.RevitFilePreview",
+      "range": "BH.oM.Base.IBHoMObject"
+    },
+    {
+      "id": "RevitFilePreview-IsA-IObject_C060634EF9B459E724AC7DD8FC0E2BECFF7961228F98D6572E46E4A927B955CA",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "label": "IsA",
+      "attributes": [
+        "object"
+      ],
+      "comment": {
+        "undefined": "Can be used to describe that a thing belongs to a class; or that a thing is equivalent to another thing. When used for BHoM types, this describes C# interface implementation."
+      },
+      "domain": "BH.oM.Adapters.Revit.RevitFilePreview",
+      "range": "BH.oM.Base.IObject"
+    },
+    {
       "id": "RevitFilePreview-IsA-IImmutable_46E656E4F91CD01C3F185AAA5953B10CC319AC69B9C81846D4D67D013470DAC0",
       "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
       "label": "IsA",
@@ -4877,6 +6098,16 @@
       },
       "domain": "BH.oM.Adapters.Revit.RevitFilePreview",
       "range": "BH.oM.Base.IImmutable"
+    },
+    {
+      "id": "RevitFilePreview-IsSubclassOf-BHoMObject_6B56266CAF643114CA7EE0A205509D5E8697637A4BD4C893D3C0871904C7F349",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsSubclassOf.cs",
+      "label": "IsA",
+      "attributes": [
+        "object"
+      ],
+      "domain": "BH.oM.Adapters.Revit.RevitFilePreview",
+      "range": "BH.oM.Base.BHoMObject"
     },
     {
       "id": "BH.oM.Adapters.Revit.Settings.FamilyLoadSettings-HasProperty-BH.oM.Adapters.Revit.Settings.FamilyLoadSettings.FamilyLibrary",
@@ -4919,6 +6150,42 @@
       "range": "BH.oM.Adapters.Revit.Settings.FamilyLoadSettings.OverwriteParameterValues"
     },
     {
+      "id": "FamilyLoadSettings-IsA-IBHoMObject_F26BC43FD22CD8BEF09835C286A4EBF568B04FFC8642320CBDD0A0DD00093C92",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "label": "IsA",
+      "attributes": [
+        "object"
+      ],
+      "comment": {
+        "undefined": "Can be used to describe that a thing belongs to a class; or that a thing is equivalent to another thing. When used for BHoM types, this describes C# interface implementation."
+      },
+      "domain": "BH.oM.Adapters.Revit.Settings.FamilyLoadSettings",
+      "range": "BH.oM.Base.IBHoMObject"
+    },
+    {
+      "id": "FamilyLoadSettings-IsA-IObject_0D49D2815AF81BAF43CF92619FE6A4C25616917EE3EF2C474506C515FB239F3C",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "label": "IsA",
+      "attributes": [
+        "object"
+      ],
+      "comment": {
+        "undefined": "Can be used to describe that a thing belongs to a class; or that a thing is equivalent to another thing. When used for BHoM types, this describes C# interface implementation."
+      },
+      "domain": "BH.oM.Adapters.Revit.Settings.FamilyLoadSettings",
+      "range": "BH.oM.Base.IObject"
+    },
+    {
+      "id": "FamilyLoadSettings-IsSubclassOf-BHoMObject_CD6B9392D40FBFD0CDEE79A67036689B94D90383C6DAD00A027F93A16B79D172",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsSubclassOf.cs",
+      "label": "IsA",
+      "attributes": [
+        "object"
+      ],
+      "domain": "BH.oM.Adapters.Revit.Settings.FamilyLoadSettings",
+      "range": "BH.oM.Base.BHoMObject"
+    },
+    {
       "id": "ConnectionSettings-HasProperty-PushPort_E0E5AFFF5B1B4003708DE2FE84EDBCBCFA7A1540277CCC7C3F186B919F7B5F6F",
       "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/HasProperty.cs",
       "label": "HasProperty",
@@ -4947,6 +6214,42 @@
       ],
       "domain": "BH.oM.Adapters.Revit.Settings.ConnectionSettings",
       "range": "BH.oM.Adapters.Revit.Settings.ConnectionSettings.MaxMinutesToWait"
+    },
+    {
+      "id": "ConnectionSettings-IsA-IBHoMObject_FCD67D1758CD4CFBA56F17D9E6F7D246BC11CE607F5AD8F2AB922D3677D570D9",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "label": "IsA",
+      "attributes": [
+        "object"
+      ],
+      "comment": {
+        "undefined": "Can be used to describe that a thing belongs to a class; or that a thing is equivalent to another thing. When used for BHoM types, this describes C# interface implementation."
+      },
+      "domain": "BH.oM.Adapters.Revit.Settings.ConnectionSettings",
+      "range": "BH.oM.Base.IBHoMObject"
+    },
+    {
+      "id": "ConnectionSettings-IsA-IObject_661397633D3E7E2DEFAA0BE8B89D449EEDD9B844403117D8B1E7D13A6E90D894",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "label": "IsA",
+      "attributes": [
+        "object"
+      ],
+      "comment": {
+        "undefined": "Can be used to describe that a thing belongs to a class; or that a thing is equivalent to another thing. When used for BHoM types, this describes C# interface implementation."
+      },
+      "domain": "BH.oM.Adapters.Revit.Settings.ConnectionSettings",
+      "range": "BH.oM.Base.IObject"
+    },
+    {
+      "id": "ConnectionSettings-IsSubclassOf-BHoMObject_66410492610DF6E5F37FE638D61EA028E57211B6B6E2E6837FAD12A6D968304F",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsSubclassOf.cs",
+      "label": "IsA",
+      "attributes": [
+        "object"
+      ],
+      "domain": "BH.oM.Adapters.Revit.Settings.ConnectionSettings",
+      "range": "BH.oM.Base.BHoMObject"
     },
     {
       "id": "BH.oM.Adapters.Revit.Settings.MappingSettings-HasProperty-BH.oM.Adapters.Revit.Settings.MappingSettings.ParameterMaps",
@@ -5007,6 +6310,42 @@
       ],
       "domain": "BH.oM.Adapters.Revit.Settings.MappingSettings",
       "range": "BH.oM.Adapters.Revit.Settings.MappingSettings.MaterialGradeParameter"
+    },
+    {
+      "id": "MappingSettings-IsA-IBHoMObject_E4EEADC0DCC7463B8329C04C33E64CDCE76A70DE8350673A1F933EC9C37D0176",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "label": "IsA",
+      "attributes": [
+        "object"
+      ],
+      "comment": {
+        "undefined": "Can be used to describe that a thing belongs to a class; or that a thing is equivalent to another thing. When used for BHoM types, this describes C# interface implementation."
+      },
+      "domain": "BH.oM.Adapters.Revit.Settings.MappingSettings",
+      "range": "BH.oM.Base.IBHoMObject"
+    },
+    {
+      "id": "MappingSettings-IsA-IObject_AB06E30CAFED8AB8554CC21B9647932E353D352BF114BCD2B2520D950DD1FAFB",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "label": "IsA",
+      "attributes": [
+        "object"
+      ],
+      "comment": {
+        "undefined": "Can be used to describe that a thing belongs to a class; or that a thing is equivalent to another thing. When used for BHoM types, this describes C# interface implementation."
+      },
+      "domain": "BH.oM.Adapters.Revit.Settings.MappingSettings",
+      "range": "BH.oM.Base.IObject"
+    },
+    {
+      "id": "MappingSettings-IsSubclassOf-BHoMObject_DC91E555F368D1437C2E8780690CBBD061892A5381C4403F0065C6E46E403C02",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsSubclassOf.cs",
+      "label": "IsA",
+      "attributes": [
+        "object"
+      ],
+      "domain": "BH.oM.Adapters.Revit.Settings.MappingSettings",
+      "range": "BH.oM.Base.BHoMObject"
     },
     {
       "id": "BH.oM.Adapters.Revit.Settings.RevitSettings-HasProperty-BH.oM.Adapters.Revit.Settings.RevitSettings.ConnectionSettings",
@@ -5089,6 +6428,42 @@
       "range": "BH.oM.Adapters.Revit.Settings.RevitSettings.AngleTolerance"
     },
     {
+      "id": "RevitSettings-IsA-IBHoMObject_FE77EE6DC8450787B76BFD3F954CE5051718F9D8C0CC200D1C965123D8CB7399",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "label": "IsA",
+      "attributes": [
+        "object"
+      ],
+      "comment": {
+        "undefined": "Can be used to describe that a thing belongs to a class; or that a thing is equivalent to another thing. When used for BHoM types, this describes C# interface implementation."
+      },
+      "domain": "BH.oM.Adapters.Revit.Settings.RevitSettings",
+      "range": "BH.oM.Base.IBHoMObject"
+    },
+    {
+      "id": "RevitSettings-IsA-IObject_F4A6FEA44FB8C52EAA741573DF8FBE395FD6CB90183EC63D9FA71615F295EA09",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "label": "IsA",
+      "attributes": [
+        "object"
+      ],
+      "comment": {
+        "undefined": "Can be used to describe that a thing belongs to a class; or that a thing is equivalent to another thing. When used for BHoM types, this describes C# interface implementation."
+      },
+      "domain": "BH.oM.Adapters.Revit.Settings.RevitSettings",
+      "range": "BH.oM.Base.IObject"
+    },
+    {
+      "id": "RevitSettings-IsSubclassOf-BHoMObject_85125257011164B3B1B6EC9A7F3F1B9AAACFF13AC690380C70444396C6D9EE37",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsSubclassOf.cs",
+      "label": "IsA",
+      "attributes": [
+        "object"
+      ],
+      "domain": "BH.oM.Adapters.Revit.Settings.RevitSettings",
+      "range": "BH.oM.Base.BHoMObject"
+    },
+    {
       "id": "InstanceProperties-HasProperty-CategoryName_219A4BD77B075DF28F0F6B000023F131213891B74080E78C9F70C6AF4D7B96AF",
       "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/HasProperty.cs",
       "label": "HasProperty",
@@ -5097,6 +6472,42 @@
       ],
       "domain": "BH.oM.Adapters.Revit.Properties.InstanceProperties",
       "range": "BH.oM.Adapters.Revit.Properties.InstanceProperties.CategoryName"
+    },
+    {
+      "id": "InstanceProperties-IsA-IBHoMObject_400132F26C7880EC00BB78C80074CB345F0D3A4062E194B320F516549B4B9F26",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "label": "IsA",
+      "attributes": [
+        "object"
+      ],
+      "comment": {
+        "undefined": "Can be used to describe that a thing belongs to a class; or that a thing is equivalent to another thing. When used for BHoM types, this describes C# interface implementation."
+      },
+      "domain": "BH.oM.Adapters.Revit.Properties.InstanceProperties",
+      "range": "BH.oM.Base.IBHoMObject"
+    },
+    {
+      "id": "InstanceProperties-IsA-IObject_93723BB7C092A19181E7881204AE9ECE8A94E13C54AF05BEB54FA8F468E67E96",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "label": "IsA",
+      "attributes": [
+        "object"
+      ],
+      "comment": {
+        "undefined": "Can be used to describe that a thing belongs to a class; or that a thing is equivalent to another thing. When used for BHoM types, this describes C# interface implementation."
+      },
+      "domain": "BH.oM.Adapters.Revit.Properties.InstanceProperties",
+      "range": "BH.oM.Base.IObject"
+    },
+    {
+      "id": "InstanceProperties-IsSubclassOf-BHoMObject_A0B18888D312A5AB817DAC4327C17BFC6F9E47377A3956F98E2EB3B2C38EB610",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsSubclassOf.cs",
+      "label": "IsA",
+      "attributes": [
+        "object"
+      ],
+      "domain": "BH.oM.Adapters.Revit.Properties.InstanceProperties",
+      "range": "BH.oM.Base.BHoMObject"
     },
     {
       "id": "FilterByLink-HasProperty-LinkName_328A882589B090D3B34DDD89C79AC631DC4B66920225AAE936AF6DF97DF2A755",
@@ -5132,6 +6543,19 @@
       "range": "BH.oM.Data.Requests.IRequest"
     },
     {
+      "id": "FilterByLink-IsA-IObject_DB7B02D96BC58049F394D3276383BD2A7BDB23BF2BE091ECE5A21677B64DC492",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "label": "IsA",
+      "attributes": [
+        "object"
+      ],
+      "comment": {
+        "undefined": "Can be used to describe that a thing belongs to a class; or that a thing is equivalent to another thing. When used for BHoM types, this describes C# interface implementation."
+      },
+      "domain": "BH.oM.Adapters.Revit.Requests.FilterByLink",
+      "range": "BH.oM.Base.IObject"
+    },
+    {
       "id": "FilterByScopeBox-HasProperty-BoxName_DD7B88CFA17CE3F3E5633F282920D5D6AEC85CFED913960B69A96E682E9BDCF6",
       "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/HasProperty.cs",
       "label": "HasProperty",
@@ -5155,6 +6579,19 @@
       "range": "BH.oM.Data.Requests.IRequest"
     },
     {
+      "id": "FilterByScopeBox-IsA-IObject_C279662CDFAE5520EB6AB165A7A1E5B3E86360CFB80FEF63CCDB2048E32EEC0A",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "label": "IsA",
+      "attributes": [
+        "object"
+      ],
+      "comment": {
+        "undefined": "Can be used to describe that a thing belongs to a class; or that a thing is equivalent to another thing. When used for BHoM types, this describes C# interface implementation."
+      },
+      "domain": "BH.oM.Adapters.Revit.Requests.FilterByScopeBox",
+      "range": "BH.oM.Base.IObject"
+    },
+    {
       "id": "FilterEverything-IsA-IRequest_90B22933A19E144477EB25924A18ECC8DD2DDFC4A7583F3BF3BFCB1A3A7E7068",
       "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
       "label": "IsA",
@@ -5166,6 +6603,19 @@
       },
       "domain": "BH.oM.Adapters.Revit.Requests.FilterEverything",
       "range": "BH.oM.Data.Requests.IRequest"
+    },
+    {
+      "id": "FilterEverything-IsA-IObject_4FD0E14736F2862276C2808CD45D831FDB4970949743691A903D3DBB2E3D7496",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "label": "IsA",
+      "attributes": [
+        "object"
+      ],
+      "comment": {
+        "undefined": "Can be used to describe that a thing belongs to a class; or that a thing is equivalent to another thing. When used for BHoM types, this describes C# interface implementation."
+      },
+      "domain": "BH.oM.Adapters.Revit.Requests.FilterEverything",
+      "range": "BH.oM.Base.IObject"
     },
     {
       "id": "FilterLinkInstance-HasProperty-LinkName_A3C7CC371F98A78F681482C956CEABADECED4437DC6D9977DFDB1C749D14F592",
@@ -5201,6 +6651,19 @@
       "range": "BH.oM.Data.Requests.IRequest"
     },
     {
+      "id": "FilterLinkInstance-IsA-IObject_165428131A80AB56FE6AD2F196A6A1280C69E4AD1C4E4511DAAF28D2AD0E94A0",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "label": "IsA",
+      "attributes": [
+        "object"
+      ],
+      "comment": {
+        "undefined": "Can be used to describe that a thing belongs to a class; or that a thing is equivalent to another thing. When used for BHoM types, this describes C# interface implementation."
+      },
+      "domain": "BH.oM.Adapters.Revit.Requests.FilterLinkInstance",
+      "range": "BH.oM.Base.IObject"
+    },
+    {
       "id": "IParameterRequest-RequiresProperty-ParameterName_22AC0448A2D2EFCF6343AB646CF77FC898C2A7A0F4E8A44A7A2637408EB4559D",
       "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/RequiresProperty.cs",
       "label": "RequiresProperty",
@@ -5224,6 +6687,19 @@
       "range": "BH.oM.Data.Requests.IRequest"
     },
     {
+      "id": "IParameterRequest-IsA-IObject_40FED4F245AF8A3209E40F173AE8A60E96AB8AA0C19ACFD9458A7F567CFCEB0E",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "label": "IsA",
+      "attributes": [
+        "object"
+      ],
+      "comment": {
+        "undefined": "Can be used to describe that a thing belongs to a class; or that a thing is equivalent to another thing. When used for BHoM types, this describes C# interface implementation."
+      },
+      "domain": "BH.oM.Adapters.Revit.Requests.IParameterRequest",
+      "range": "BH.oM.Base.IObject"
+    },
+    {
       "id": "EnergyAnalysisModelRequest-IsA-IRequest_C4706503E05A37AC63BC4512163AA0F0B92252DF8FE6F31D564A8F9D885CD452",
       "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
       "label": "IsA",
@@ -5235,6 +6711,19 @@
       },
       "domain": "BH.oM.Adapters.Revit.Requests.EnergyAnalysisModelRequest",
       "range": "BH.oM.Data.Requests.IRequest"
+    },
+    {
+      "id": "EnergyAnalysisModelRequest-IsA-IObject_EC77394A8340F6D9EBA1444AAB293BA63DE9C5FC572656FF86C6EA46614F6F3A",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "label": "IsA",
+      "attributes": [
+        "object"
+      ],
+      "comment": {
+        "undefined": "Can be used to describe that a thing belongs to a class; or that a thing is equivalent to another thing. When used for BHoM types, this describes C# interface implementation."
+      },
+      "domain": "BH.oM.Adapters.Revit.Requests.EnergyAnalysisModelRequest",
+      "range": "BH.oM.Base.IObject"
     },
     {
       "id": "FilterActiveView-IsA-IRequest_5039F8A5858A8DD95DF8435DC7DDD6C796972F0A49F43398BF69EE146CF6DFB5",
@@ -5250,6 +6739,19 @@
       "range": "BH.oM.Data.Requests.IRequest"
     },
     {
+      "id": "FilterActiveView-IsA-IObject_24FC3C6CE1216D340D3B5F43D9AD27615D6DD527AE8749A16094DFEFA4AA1BE9",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "label": "IsA",
+      "attributes": [
+        "object"
+      ],
+      "comment": {
+        "undefined": "Can be used to describe that a thing belongs to a class; or that a thing is equivalent to another thing. When used for BHoM types, this describes C# interface implementation."
+      },
+      "domain": "BH.oM.Adapters.Revit.Requests.FilterActiveView",
+      "range": "BH.oM.Base.IObject"
+    },
+    {
       "id": "FilterByActiveWorkset-IsA-IRequest_986272C1B97E3399248F901AE4D78C6629CB52826E9D9367B7D1EEE24B1DA7FF",
       "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
       "label": "IsA",
@@ -5261,6 +6763,19 @@
       },
       "domain": "BH.oM.Adapters.Revit.Requests.FilterByActiveWorkset",
       "range": "BH.oM.Data.Requests.IRequest"
+    },
+    {
+      "id": "FilterByActiveWorkset-IsA-IObject_C239CDA1D02BDA4194DBEB7444CCC5DA021C4A322237CC51C1D41F26D94521CC",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "label": "IsA",
+      "attributes": [
+        "object"
+      ],
+      "comment": {
+        "undefined": "Can be used to describe that a thing belongs to a class; or that a thing is equivalent to another thing. When used for BHoM types, this describes C# interface implementation."
+      },
+      "domain": "BH.oM.Adapters.Revit.Requests.FilterByActiveWorkset",
+      "range": "BH.oM.Base.IObject"
     },
     {
       "id": "FilterByCategory-HasProperty-CategoryName_F29290B3060A9AF3199498FD0A80E867442199B50EE2B2536C2C67DC23C278D3",
@@ -5296,6 +6811,19 @@
       "range": "BH.oM.Data.Requests.IRequest"
     },
     {
+      "id": "FilterByCategory-IsA-IObject_B59094CB43939110C39CA7D5470C08456590512002B3C338E5A90B38D0C8C826",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "label": "IsA",
+      "attributes": [
+        "object"
+      ],
+      "comment": {
+        "undefined": "Can be used to describe that a thing belongs to a class; or that a thing is equivalent to another thing. When used for BHoM types, this describes C# interface implementation."
+      },
+      "domain": "BH.oM.Adapters.Revit.Requests.FilterByCategory",
+      "range": "BH.oM.Base.IObject"
+    },
+    {
       "id": "FilterByDBTypeName-HasProperty-TypeName_74F9F4992855E79512496F9EC4D9D4CB935C0FFCA0A955EC458507036CBA1D6F",
       "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/HasProperty.cs",
       "label": "HasProperty",
@@ -5319,6 +6847,19 @@
       "range": "BH.oM.Data.Requests.IRequest"
     },
     {
+      "id": "FilterByDBTypeName-IsA-IObject_4BFE49704662DFFF2F5687ED1DBDF0DE0C94EA0B1FD1B9D310674EE081F3D2C1",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "label": "IsA",
+      "attributes": [
+        "object"
+      ],
+      "comment": {
+        "undefined": "Can be used to describe that a thing belongs to a class; or that a thing is equivalent to another thing. When used for BHoM types, this describes C# interface implementation."
+      },
+      "domain": "BH.oM.Adapters.Revit.Requests.FilterByDBTypeName",
+      "range": "BH.oM.Base.IObject"
+    },
+    {
       "id": "FilterByElementIds-HasProperty-ElementIds_2DD8761217DE3F1E4C5854FA0D433EEC240EB8367B72E4A69CAD791484467D91",
       "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/HasProperty.cs",
       "label": "HasProperty",
@@ -5340,6 +6881,19 @@
       },
       "domain": "BH.oM.Adapters.Revit.Requests.FilterByElementIds",
       "range": "BH.oM.Data.Requests.IRequest"
+    },
+    {
+      "id": "FilterByElementIds-IsA-IObject_B870FDC629CA8C878C2E66D8C060088BE8C1E7BBD0DE0C8031DAB42CF953F4C7",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "label": "IsA",
+      "attributes": [
+        "object"
+      ],
+      "comment": {
+        "undefined": "Can be used to describe that a thing belongs to a class; or that a thing is equivalent to another thing. When used for BHoM types, this describes C# interface implementation."
+      },
+      "domain": "BH.oM.Adapters.Revit.Requests.FilterByElementIds",
+      "range": "BH.oM.Base.IObject"
     },
     {
       "id": "FilterByFamilyAndTypeName-HasProperty-FamilyName_1518A4188F1CF1CA0521FC8DA587C7C13920EE47D4AA01CEDC007FC5EDD8F11F",
@@ -5385,6 +6939,19 @@
       "range": "BH.oM.Data.Requests.IRequest"
     },
     {
+      "id": "FilterByFamilyAndTypeName-IsA-IObject_36CB8C480A66F4C88876DE593CD4876C2397FF074CD90B5CBDAB1B91E91FCD07",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "label": "IsA",
+      "attributes": [
+        "object"
+      ],
+      "comment": {
+        "undefined": "Can be used to describe that a thing belongs to a class; or that a thing is equivalent to another thing. When used for BHoM types, this describes C# interface implementation."
+      },
+      "domain": "BH.oM.Adapters.Revit.Requests.FilterByFamilyAndTypeName",
+      "range": "BH.oM.Base.IObject"
+    },
+    {
       "id": "FilterByFamilyType-HasProperty-FamilyTypeId_CE75E823E269657EA7DB27C04179F90215D757A36B3DCB6DEF350F6115D8983D",
       "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/HasProperty.cs",
       "label": "HasProperty",
@@ -5406,6 +6973,19 @@
       },
       "domain": "BH.oM.Adapters.Revit.Requests.FilterByFamilyType",
       "range": "BH.oM.Data.Requests.IRequest"
+    },
+    {
+      "id": "FilterByFamilyType-IsA-IObject_FCD9AF7B44FC5542BDB27343BC9895375AE06F9A0E769259B0CF7F6926645E00",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "label": "IsA",
+      "attributes": [
+        "object"
+      ],
+      "comment": {
+        "undefined": "Can be used to describe that a thing belongs to a class; or that a thing is equivalent to another thing. When used for BHoM types, this describes C# interface implementation."
+      },
+      "domain": "BH.oM.Adapters.Revit.Requests.FilterByFamilyType",
+      "range": "BH.oM.Base.IObject"
     },
     {
       "id": "FilterByParameterBool-HasProperty-ParameterName_20B919DF92AD993D3502E98B44ACE5791321C99DBAC59A5590FE069355775749",
@@ -5467,6 +7047,19 @@
       "range": "BH.oM.Data.Requests.IRequest"
     },
     {
+      "id": "FilterByParameterBool-IsA-IObject_FD4579716DD17F1D0C107DDD13F44B0EC8C5332CA75361DF2E76A4E9C62EE0BB",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "label": "IsA",
+      "attributes": [
+        "object"
+      ],
+      "comment": {
+        "undefined": "Can be used to describe that a thing belongs to a class; or that a thing is equivalent to another thing. When used for BHoM types, this describes C# interface implementation."
+      },
+      "domain": "BH.oM.Adapters.Revit.Requests.FilterByParameterBool",
+      "range": "BH.oM.Base.IObject"
+    },
+    {
       "id": "FilterByParameterElementId-HasProperty-ParameterName_EEFC4696F19A0ED3E7C95EC8CD7A540C1EB5D0682EB4939C698E1E7BB4D6047C",
       "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/HasProperty.cs",
       "label": "HasProperty",
@@ -5526,6 +7119,19 @@
       "range": "BH.oM.Data.Requests.IRequest"
     },
     {
+      "id": "FilterByParameterElementId-IsA-IObject_8F4708D6AEDFE33EAF7163B11E879EBA85A19FB572BD03042FFA142E3C0311D2",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "label": "IsA",
+      "attributes": [
+        "object"
+      ],
+      "comment": {
+        "undefined": "Can be used to describe that a thing belongs to a class; or that a thing is equivalent to another thing. When used for BHoM types, this describes C# interface implementation."
+      },
+      "domain": "BH.oM.Adapters.Revit.Requests.FilterByParameterElementId",
+      "range": "BH.oM.Base.IObject"
+    },
+    {
       "id": "FilterByParameterExistence-HasProperty-ParameterName_CA60CCA3D13CD53AC4A13DB4245F966A305D2399E76DB9D34C3FD5701BF8410E",
       "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/HasProperty.cs",
       "label": "HasProperty",
@@ -5570,6 +7176,19 @@
       },
       "domain": "BH.oM.Adapters.Revit.Requests.FilterByParameterExistence",
       "range": "BH.oM.Data.Requests.IRequest"
+    },
+    {
+      "id": "FilterByParameterExistence-IsA-IObject_2D4F4D2494E17D294158AB959F68841402FDDF04C7CE03DD25248C255E38A901",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "label": "IsA",
+      "attributes": [
+        "object"
+      ],
+      "comment": {
+        "undefined": "Can be used to describe that a thing belongs to a class; or that a thing is equivalent to another thing. When used for BHoM types, this describes C# interface implementation."
+      },
+      "domain": "BH.oM.Adapters.Revit.Requests.FilterByParameterExistence",
+      "range": "BH.oM.Base.IObject"
     },
     {
       "id": "FilterByParameterInteger-HasProperty-ParameterName_2E2B5A3EE406312E5ACE57474648198F4723C18B8E5D194DF661A288546D66A4",
@@ -5649,6 +7268,19 @@
       },
       "domain": "BH.oM.Adapters.Revit.Requests.FilterByParameterInteger",
       "range": "BH.oM.Data.Requests.IRequest"
+    },
+    {
+      "id": "FilterByParameterInteger-IsA-IObject_83E101C67FED2A06A1A574C39E7ACAEA04FA8CC70E022E8BC9F64A1A1CFA46E6",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "label": "IsA",
+      "attributes": [
+        "object"
+      ],
+      "comment": {
+        "undefined": "Can be used to describe that a thing belongs to a class; or that a thing is equivalent to another thing. When used for BHoM types, this describes C# interface implementation."
+      },
+      "domain": "BH.oM.Adapters.Revit.Requests.FilterByParameterInteger",
+      "range": "BH.oM.Base.IObject"
     },
     {
       "id": "FilterByParameterNumber-HasProperty-ParameterName_DACB676238F7F31E99B5880EC795CFBFB858F2D022CB7578614D581B257578C3",
@@ -5750,6 +7382,19 @@
       "range": "BH.oM.Data.Requests.IRequest"
     },
     {
+      "id": "FilterByParameterNumber-IsA-IObject_E33E5FDAFB8FADF952FFA705E2D32BCECC75897481ED841A452682FD0A548192",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "label": "IsA",
+      "attributes": [
+        "object"
+      ],
+      "comment": {
+        "undefined": "Can be used to describe that a thing belongs to a class; or that a thing is equivalent to another thing. When used for BHoM types, this describes C# interface implementation."
+      },
+      "domain": "BH.oM.Adapters.Revit.Requests.FilterByParameterNumber",
+      "range": "BH.oM.Base.IObject"
+    },
+    {
       "id": "FilterByParameterText-HasProperty-ParameterName_D3A4D48961F0FF9581199AF6DB2E1D3F865A42F7DAD2EF87BD2541C992994AAD",
       "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/HasProperty.cs",
       "label": "HasProperty",
@@ -5829,6 +7474,19 @@
       "range": "BH.oM.Data.Requests.IRequest"
     },
     {
+      "id": "FilterByParameterText-IsA-IObject_EAC5261E828D82E334F2622E9BFD0903C13F33D88B291BFC872CA57455F5144E",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "label": "IsA",
+      "attributes": [
+        "object"
+      ],
+      "comment": {
+        "undefined": "Can be used to describe that a thing belongs to a class; or that a thing is equivalent to another thing. When used for BHoM types, this describes C# interface implementation."
+      },
+      "domain": "BH.oM.Adapters.Revit.Requests.FilterByParameterText",
+      "range": "BH.oM.Base.IObject"
+    },
+    {
       "id": "FilterBySelectionSet-HasProperty-SelectionSetName_90672F75D5492CDF25F3E53F5DA26F6BCD7C7480F0D44526BE499B99C3A5B005",
       "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/HasProperty.cs",
       "label": "HasProperty",
@@ -5850,6 +7508,19 @@
       },
       "domain": "BH.oM.Adapters.Revit.Requests.FilterBySelectionSet",
       "range": "BH.oM.Data.Requests.IRequest"
+    },
+    {
+      "id": "FilterBySelectionSet-IsA-IObject_27491CAFB5DF19DB4D0B8F89708A61B7171E08CDDD8D4553D2019CBCEDAE8DEE",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "label": "IsA",
+      "attributes": [
+        "object"
+      ],
+      "comment": {
+        "undefined": "Can be used to describe that a thing belongs to a class; or that a thing is equivalent to another thing. When used for BHoM types, this describes C# interface implementation."
+      },
+      "domain": "BH.oM.Adapters.Revit.Requests.FilterBySelectionSet",
+      "range": "BH.oM.Base.IObject"
     },
     {
       "id": "FilterByUniqueIds-HasProperty-UniqueIds_F5F1692CBE240A840318CF941AAE5A78D85ADDF7BB4A4692E01FFB71D909024C",
@@ -5875,6 +7546,19 @@
       "range": "BH.oM.Data.Requests.IRequest"
     },
     {
+      "id": "FilterByUniqueIds-IsA-IObject_BF946A896A9AC7AA8FF3EC0CA02B5A0C0B7B3B2EA34985C241816241229E717C",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "label": "IsA",
+      "attributes": [
+        "object"
+      ],
+      "comment": {
+        "undefined": "Can be used to describe that a thing belongs to a class; or that a thing is equivalent to another thing. When used for BHoM types, this describes C# interface implementation."
+      },
+      "domain": "BH.oM.Adapters.Revit.Requests.FilterByUniqueIds",
+      "range": "BH.oM.Base.IObject"
+    },
+    {
       "id": "FilterByUsage-HasProperty-Used_15C426AC8D904EB6D166A1CC85C64E0E64C37A00E76B5A4BE92BAEDCFE690497",
       "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/HasProperty.cs",
       "label": "HasProperty",
@@ -5896,6 +7580,19 @@
       },
       "domain": "BH.oM.Adapters.Revit.Requests.FilterByUsage",
       "range": "BH.oM.Data.Requests.IRequest"
+    },
+    {
+      "id": "FilterByUsage-IsA-IObject_DE635CB38889B4A4A7FBB0F70A18875E975E2088DD3B18CC4EF0DA24369E0A29",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "label": "IsA",
+      "attributes": [
+        "object"
+      ],
+      "comment": {
+        "undefined": "Can be used to describe that a thing belongs to a class; or that a thing is equivalent to another thing. When used for BHoM types, this describes C# interface implementation."
+      },
+      "domain": "BH.oM.Adapters.Revit.Requests.FilterByUsage",
+      "range": "BH.oM.Base.IObject"
     },
     {
       "id": "FilterByViewSpecific-HasProperty-ViewId_FEB03CEE60BA177EA3690DE88FE4DDABA577D0F604045A8FFC2387D2F4C875FC",
@@ -5921,6 +7618,19 @@
       "range": "BH.oM.Data.Requests.IRequest"
     },
     {
+      "id": "FilterByViewSpecific-IsA-IObject_54D4EA7287C0D251C2A2E01F443D5B7A2286D20232E5E9C3CC6F10BE7A67EDAD",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "label": "IsA",
+      "attributes": [
+        "object"
+      ],
+      "comment": {
+        "undefined": "Can be used to describe that a thing belongs to a class; or that a thing is equivalent to another thing. When used for BHoM types, this describes C# interface implementation."
+      },
+      "domain": "BH.oM.Adapters.Revit.Requests.FilterByViewSpecific",
+      "range": "BH.oM.Base.IObject"
+    },
+    {
       "id": "FilterByVisibleInView-HasProperty-ViewId_72C83E2AD3FD15CB11C66BCF5CC6C54476C5EB8EAFEBA98FF607AACDBA6DE4B7",
       "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/HasProperty.cs",
       "label": "HasProperty",
@@ -5944,6 +7654,19 @@
       "range": "BH.oM.Data.Requests.IRequest"
     },
     {
+      "id": "FilterByVisibleInView-IsA-IObject_1961B9B530126FB7734FCEF2F89050C310A4EC1E2F60B65D4F690A3842DC1EE0",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "label": "IsA",
+      "attributes": [
+        "object"
+      ],
+      "comment": {
+        "undefined": "Can be used to describe that a thing belongs to a class; or that a thing is equivalent to another thing. When used for BHoM types, this describes C# interface implementation."
+      },
+      "domain": "BH.oM.Adapters.Revit.Requests.FilterByVisibleInView",
+      "range": "BH.oM.Base.IObject"
+    },
+    {
       "id": "FilterByWorkset-HasProperty-WorksetName_C321EAA36D4299B7550766183F549C190A70C83E0DDF4204FCAC63718FBFC00E",
       "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/HasProperty.cs",
       "label": "HasProperty",
@@ -5965,6 +7688,19 @@
       },
       "domain": "BH.oM.Adapters.Revit.Requests.FilterByWorkset",
       "range": "BH.oM.Data.Requests.IRequest"
+    },
+    {
+      "id": "FilterByWorkset-IsA-IObject_FBFB9AFC6215F937F5B5C2313A0488111228BCE4C5D7C3B0F13373AADFF89BAB",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "label": "IsA",
+      "attributes": [
+        "object"
+      ],
+      "comment": {
+        "undefined": "Can be used to describe that a thing belongs to a class; or that a thing is equivalent to another thing. When used for BHoM types, this describes C# interface implementation."
+      },
+      "domain": "BH.oM.Adapters.Revit.Requests.FilterByWorkset",
+      "range": "BH.oM.Base.IObject"
     },
     {
       "id": "FilterFamilyByName-HasProperty-FamilyName_FA1CDAD5FC787765DC1BFA5E860CE184BC68BD4074A8F9CE01B3B69DBF1DBC20",
@@ -5998,6 +7734,19 @@
       },
       "domain": "BH.oM.Adapters.Revit.Requests.FilterFamilyByName",
       "range": "BH.oM.Data.Requests.IRequest"
+    },
+    {
+      "id": "FilterFamilyByName-IsA-IObject_F25F548BD2CD715C6FC64353056B08B502A4764D4AE750A69FF94FF431D7DBEF",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "label": "IsA",
+      "attributes": [
+        "object"
+      ],
+      "comment": {
+        "undefined": "Can be used to describe that a thing belongs to a class; or that a thing is equivalent to another thing. When used for BHoM types, this describes C# interface implementation."
+      },
+      "domain": "BH.oM.Adapters.Revit.Requests.FilterFamilyByName",
+      "range": "BH.oM.Base.IObject"
     },
     {
       "id": "FilterFamilyTypeByName-HasProperty-FamilyName_4E25AF320F543299B34C1BE03104131AF7C9CA662A49CE48F4DD02275CBDAE49",
@@ -6043,6 +7792,19 @@
       "range": "BH.oM.Data.Requests.IRequest"
     },
     {
+      "id": "FilterFamilyTypeByName-IsA-IObject_562D8A4F8F7D89311FED50ED3CEA834B76E189C8FCBE4676467EA9DBE6EC9022",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "label": "IsA",
+      "attributes": [
+        "object"
+      ],
+      "comment": {
+        "undefined": "Can be used to describe that a thing belongs to a class; or that a thing is equivalent to another thing. When used for BHoM types, this describes C# interface implementation."
+      },
+      "domain": "BH.oM.Adapters.Revit.Requests.FilterFamilyTypeByName",
+      "range": "BH.oM.Base.IObject"
+    },
+    {
       "id": "FilterTypesOfFamily-HasProperty-FamilyId_F5DA13DF68B1C2EC282E514BCED69414DE71C3F775D7C763D4A0B2D343E32B18",
       "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/HasProperty.cs",
       "label": "HasProperty",
@@ -6066,6 +7828,19 @@
       "range": "BH.oM.Data.Requests.IRequest"
     },
     {
+      "id": "FilterTypesOfFamily-IsA-IObject_7A14A024090CF96EDDBDBCCCF70760ECC99B40651A937D6CCE1923D87E5F5503",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "label": "IsA",
+      "attributes": [
+        "object"
+      ],
+      "comment": {
+        "undefined": "Can be used to describe that a thing belongs to a class; or that a thing is equivalent to another thing. When used for BHoM types, this describes C# interface implementation."
+      },
+      "domain": "BH.oM.Adapters.Revit.Requests.FilterTypesOfFamily",
+      "range": "BH.oM.Base.IObject"
+    },
+    {
       "id": "FilterModelElements-IsA-IRequest_418F190B6A6E9B733E135715F0F73DEB07A8886A937B9272A9A0C325D14078A4",
       "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
       "label": "IsA",
@@ -6077,6 +7852,19 @@
       },
       "domain": "BH.oM.Adapters.Revit.Requests.FilterModelElements",
       "range": "BH.oM.Data.Requests.IRequest"
+    },
+    {
+      "id": "FilterModelElements-IsA-IObject_B321EDCCF2D7F60E741ED0CD3DA8D1116FF926DAC03431837E5B7394E2F31FE1",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "label": "IsA",
+      "attributes": [
+        "object"
+      ],
+      "comment": {
+        "undefined": "Can be used to describe that a thing belongs to a class; or that a thing is equivalent to another thing. When used for BHoM types, this describes C# interface implementation."
+      },
+      "domain": "BH.oM.Adapters.Revit.Requests.FilterModelElements",
+      "range": "BH.oM.Base.IObject"
     },
     {
       "id": "FilterViewByName-HasProperty-ViewName_500EC0FB6E81C9BBBA02B9077507335BB0E4AA54EE78820C92B88ED169A43B1C",
@@ -6112,6 +7900,19 @@
       "range": "BH.oM.Data.Requests.IRequest"
     },
     {
+      "id": "FilterViewByName-IsA-IObject_053B289FC5CD986A3E39B7F54AF84CDD66F680DBE705E11CB23E9C2566113CAA",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "label": "IsA",
+      "attributes": [
+        "object"
+      ],
+      "comment": {
+        "undefined": "Can be used to describe that a thing belongs to a class; or that a thing is equivalent to another thing. When used for BHoM types, this describes C# interface implementation."
+      },
+      "domain": "BH.oM.Adapters.Revit.Requests.FilterViewByName",
+      "range": "BH.oM.Base.IObject"
+    },
+    {
       "id": "FilterViewsByTemplate-HasProperty-TemplateId_F2ACBA2153C32486073404030DE505B1BC61DA09626BDDA1B7DF33920AE40434",
       "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/HasProperty.cs",
       "label": "HasProperty",
@@ -6133,6 +7934,19 @@
       },
       "domain": "BH.oM.Adapters.Revit.Requests.FilterViewsByTemplate",
       "range": "BH.oM.Data.Requests.IRequest"
+    },
+    {
+      "id": "FilterViewsByTemplate-IsA-IObject_21FA0EEB567ADA8198D926F6AB3A2CE939B32F35E36174392D9AE8B096ED0FAF",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "label": "IsA",
+      "attributes": [
+        "object"
+      ],
+      "comment": {
+        "undefined": "Can be used to describe that a thing belongs to a class; or that a thing is equivalent to another thing. When used for BHoM types, this describes C# interface implementation."
+      },
+      "domain": "BH.oM.Adapters.Revit.Requests.FilterViewsByTemplate",
+      "range": "BH.oM.Base.IObject"
     },
     {
       "id": "BH.oM.Adapters.Revit.Requests.FilterViewsByType-HasProperty-BH.oM.Adapters.Revit.Requests.FilterViewsByType.RevitViewType",
@@ -6168,6 +7982,19 @@
       "range": "BH.oM.Data.Requests.IRequest"
     },
     {
+      "id": "FilterViewsByType-IsA-IObject_20CA34846CE7F20F80A758681298D15B914F057BC46F2B49D3E8D0D6B7C79C9D",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "label": "IsA",
+      "attributes": [
+        "object"
+      ],
+      "comment": {
+        "undefined": "Can be used to describe that a thing belongs to a class; or that a thing is equivalent to another thing. When used for BHoM types, this describes C# interface implementation."
+      },
+      "domain": "BH.oM.Adapters.Revit.Requests.FilterViewsByType",
+      "range": "BH.oM.Base.IObject"
+    },
+    {
       "id": "FilterViewTemplateByName-HasProperty-TemplateName_79A95C55A900F11B997FE536E130A280AB48E5E1DD5ABE3A640C23E74FA0D890",
       "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/HasProperty.cs",
       "label": "HasProperty",
@@ -6201,6 +8028,19 @@
       "range": "BH.oM.Data.Requests.IRequest"
     },
     {
+      "id": "FilterViewTemplateByName-IsA-IObject_8E0867792C36E109A32AD419BFA4651F384ECB2D70EA0B26EC7D3CCC8D4E5493",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "label": "IsA",
+      "attributes": [
+        "object"
+      ],
+      "comment": {
+        "undefined": "Can be used to describe that a thing belongs to a class; or that a thing is equivalent to another thing. When used for BHoM types, this describes C# interface implementation."
+      },
+      "domain": "BH.oM.Adapters.Revit.Requests.FilterViewTemplateByName",
+      "range": "BH.oM.Base.IObject"
+    },
+    {
       "id": "FilterMemberElements-HasProperty-ParentId_57824E5074020774C03981A8C349DA5343A38C0FEE33DF08CADED4248613AD9C",
       "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/HasProperty.cs",
       "label": "HasProperty",
@@ -6222,6 +8062,19 @@
       },
       "domain": "BH.oM.Adapters.Revit.Requests.FilterMemberElements",
       "range": "BH.oM.Data.Requests.IRequest"
+    },
+    {
+      "id": "FilterMemberElements-IsA-IObject_99290B7E31003BA38E71794EF02FDAB67F99EE7A832C2B9608FD217874F12AC5",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "label": "IsA",
+      "attributes": [
+        "object"
+      ],
+      "comment": {
+        "undefined": "Can be used to describe that a thing belongs to a class; or that a thing is equivalent to another thing. When used for BHoM types, this describes C# interface implementation."
+      },
+      "domain": "BH.oM.Adapters.Revit.Requests.FilterMemberElements",
+      "range": "BH.oM.Base.IObject"
     },
     {
       "id": "IParameterValueRequest-IsA-IParameterRequest_940B87D1C95A5F90AEED268DFA38A3EA30F7DFDB9BE5E3551169D0D1133CFF59",
@@ -6250,6 +8103,19 @@
       "range": "BH.oM.Data.Requests.IRequest"
     },
     {
+      "id": "IParameterValueRequest-IsA-IObject_A4486025E85705788D27D005715777BDB31D316D0210E72721DE68BB51F06A9B",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "label": "IsA",
+      "attributes": [
+        "object"
+      ],
+      "comment": {
+        "undefined": "Can be used to describe that a thing belongs to a class; or that a thing is equivalent to another thing. When used for BHoM types, this describes C# interface implementation."
+      },
+      "domain": "BH.oM.Adapters.Revit.Requests.IParameterValueRequest",
+      "range": "BH.oM.Base.IObject"
+    },
+    {
       "id": "IRevitParameterFragment-RequiresProperty-Parameters_1119872DD8D1795ABBA8EE2683CF4ACFEA8079155862F5FA8BC291AA1F679F83",
       "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/RequiresProperty.cs",
       "label": "RequiresProperty",
@@ -6271,6 +8137,19 @@
       },
       "domain": "BH.oM.Adapters.Revit.Parameters.IRevitParameterFragment",
       "range": "BH.oM.Base.IFragment"
+    },
+    {
+      "id": "IRevitParameterFragment-IsA-IObject_4AFA16737162B5782FBEB9C6E8883A73F36416442E35FAAEBC91BFA38155AAFB",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "label": "IsA",
+      "attributes": [
+        "object"
+      ],
+      "comment": {
+        "undefined": "Can be used to describe that a thing belongs to a class; or that a thing is equivalent to another thing. When used for BHoM types, this describes C# interface implementation."
+      },
+      "domain": "BH.oM.Adapters.Revit.Parameters.IRevitParameterFragment",
+      "range": "BH.oM.Base.IObject"
     },
     {
       "id": "ParameterDefinition-HasProperty-ParameterGroup_8DDEE67C7ECDB1AEB3C7A362C812C8EB1CD1E4BD2FDED1D84C2953C22F03DC00",
@@ -6331,6 +8210,42 @@
       ],
       "domain": "BH.oM.Adapters.Revit.Parameters.ParameterDefinition",
       "range": "BH.oM.Adapters.Revit.Parameters.ParameterDefinition.Shared"
+    },
+    {
+      "id": "ParameterDefinition-IsA-IBHoMObject_E1BD0AE0D8DD3785B070C64D6751E77A7F0CBBE6FAC0F80E163B5F143A10D997",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "label": "IsA",
+      "attributes": [
+        "object"
+      ],
+      "comment": {
+        "undefined": "Can be used to describe that a thing belongs to a class; or that a thing is equivalent to another thing. When used for BHoM types, this describes C# interface implementation."
+      },
+      "domain": "BH.oM.Adapters.Revit.Parameters.ParameterDefinition",
+      "range": "BH.oM.Base.IBHoMObject"
+    },
+    {
+      "id": "ParameterDefinition-IsA-IObject_80AB179AFD6B119D3134DD3DB72753E6807CCD5520711A2385F9E8AE623D0E43",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "label": "IsA",
+      "attributes": [
+        "object"
+      ],
+      "comment": {
+        "undefined": "Can be used to describe that a thing belongs to a class; or that a thing is equivalent to another thing. When used for BHoM types, this describes C# interface implementation."
+      },
+      "domain": "BH.oM.Adapters.Revit.Parameters.ParameterDefinition",
+      "range": "BH.oM.Base.IObject"
+    },
+    {
+      "id": "ParameterDefinition-IsSubclassOf-BHoMObject_E1FBA4D1E49E7D0F7DC2043E1F4CE074ECEA230DD5FCE444B6CEC309F102A144",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsSubclassOf.cs",
+      "label": "IsA",
+      "attributes": [
+        "object"
+      ],
+      "domain": "BH.oM.Adapters.Revit.Parameters.ParameterDefinition",
+      "range": "BH.oM.Base.BHoMObject"
     },
     {
       "id": "RevitIdentifiers-HasProperty-PersistentId_2B072EBCD3D2793A5B2BA5C327E45E9526B04FE53FDAA7A7C4931246E3394B1A",
@@ -6459,6 +8374,19 @@
       "range": "BH.oM.Base.IFragment"
     },
     {
+      "id": "RevitIdentifiers-IsA-IObject_96819BB6C3EAE5F5E325F0D2E7A54EFD761F88D33CF9FDB0896131C7DAE511BF",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "label": "IsA",
+      "attributes": [
+        "object"
+      ],
+      "comment": {
+        "undefined": "Can be used to describe that a thing belongs to a class; or that a thing is equivalent to another thing. When used for BHoM types, this describes C# interface implementation."
+      },
+      "domain": "BH.oM.Adapters.Revit.Parameters.RevitIdentifiers",
+      "range": "BH.oM.Base.IObject"
+    },
+    {
       "id": "RevitIdentifiers-IsA-IImmutable_12EBF54FC11D1474372B7EB9AE340E54F51A8A117B3FD6AA032F0E7F2C80C3E9",
       "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
       "label": "IsA",
@@ -6492,6 +8420,19 @@
       "range": "BH.oM.Adapters.Revit.Parameters.RevitParameter.Value"
     },
     {
+      "id": "RevitParameter-IsA-IObject_A07435B32AFD4F26F672CC206D607826A0C40422F090A39B247E45F8CCFA157A",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "label": "IsA",
+      "attributes": [
+        "object"
+      ],
+      "comment": {
+        "undefined": "Can be used to describe that a thing belongs to a class; or that a thing is equivalent to another thing. When used for BHoM types, this describes C# interface implementation."
+      },
+      "domain": "BH.oM.Adapters.Revit.Parameters.RevitParameter",
+      "range": "BH.oM.Base.IObject"
+    },
+    {
       "id": "BH.oM.Adapters.Revit.Parameters.RevitParametersToPush-HasProperty-BH.oM.Adapters.Revit.Parameters.RevitParametersToPush.Parameters",
       "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/HasProperty.cs",
       "label": "HasProperty",
@@ -6510,6 +8451,32 @@
       ],
       "domain": "BH.oM.Adapters.Revit.Parameters.RevitParametersToPush.Parameters",
       "range": "BH.oM.Adapters.Revit.Parameters.RevitParameter"
+    },
+    {
+      "id": "RevitParametersToPush-IsA-IBHoMObject_4B57D341DDF960249EB10AEF3873AF4BA98DA0F581C15DA0A5164C4ED7C1C2C8",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "label": "IsA",
+      "attributes": [
+        "object"
+      ],
+      "comment": {
+        "undefined": "Can be used to describe that a thing belongs to a class; or that a thing is equivalent to another thing. When used for BHoM types, this describes C# interface implementation."
+      },
+      "domain": "BH.oM.Adapters.Revit.Parameters.RevitParametersToPush",
+      "range": "BH.oM.Base.IBHoMObject"
+    },
+    {
+      "id": "RevitParametersToPush-IsA-IObject_B4021DF61DFA154B683C7BC3009ADD300DE5453EA59AA27060B3A5AC0FA72F4A",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "label": "IsA",
+      "attributes": [
+        "object"
+      ],
+      "comment": {
+        "undefined": "Can be used to describe that a thing belongs to a class; or that a thing is equivalent to another thing. When used for BHoM types, this describes C# interface implementation."
+      },
+      "domain": "BH.oM.Adapters.Revit.Parameters.RevitParametersToPush",
+      "range": "BH.oM.Base.IObject"
     },
     {
       "id": "RevitParametersToPush-IsA-IRevitParameterFragment_7F63243FB6CD324A09D2F2272B452176D664E778097B39615C7E536376C1CAFA",
@@ -6538,6 +8505,16 @@
       "range": "BH.oM.Base.IFragment"
     },
     {
+      "id": "RevitParametersToPush-IsSubclassOf-BHoMObject_A4C8A64C6C88CD490073CFADC9AC2EBBFA5BC0EAF637E97E51864CCC39FE9B58",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsSubclassOf.cs",
+      "label": "IsA",
+      "attributes": [
+        "object"
+      ],
+      "domain": "BH.oM.Adapters.Revit.Parameters.RevitParametersToPush",
+      "range": "BH.oM.Base.BHoMObject"
+    },
+    {
       "id": "BH.oM.Adapters.Revit.Parameters.RevitPulledParameters-HasProperty-BH.oM.Adapters.Revit.Parameters.RevitPulledParameters.Parameters",
       "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/HasProperty.cs",
       "label": "HasProperty",
@@ -6556,6 +8533,32 @@
       ],
       "domain": "BH.oM.Adapters.Revit.Parameters.RevitPulledParameters.Parameters",
       "range": "BH.oM.Adapters.Revit.Parameters.RevitParameter"
+    },
+    {
+      "id": "RevitPulledParameters-IsA-IBHoMObject_0D1F660F69C95E8FF2D11244F20C04F7EAC98AECDEAEFD8B9EFB2711570CA1EA",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "label": "IsA",
+      "attributes": [
+        "object"
+      ],
+      "comment": {
+        "undefined": "Can be used to describe that a thing belongs to a class; or that a thing is equivalent to another thing. When used for BHoM types, this describes C# interface implementation."
+      },
+      "domain": "BH.oM.Adapters.Revit.Parameters.RevitPulledParameters",
+      "range": "BH.oM.Base.IBHoMObject"
+    },
+    {
+      "id": "RevitPulledParameters-IsA-IObject_1710C2B548F88A1935F36FA7EFBF28926D0859BD4C936703A08BD83980373793",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "label": "IsA",
+      "attributes": [
+        "object"
+      ],
+      "comment": {
+        "undefined": "Can be used to describe that a thing belongs to a class; or that a thing is equivalent to another thing. When used for BHoM types, this describes C# interface implementation."
+      },
+      "domain": "BH.oM.Adapters.Revit.Parameters.RevitPulledParameters",
+      "range": "BH.oM.Base.IObject"
     },
     {
       "id": "RevitPulledParameters-IsA-IRevitParameterFragment_9072EF81C8D9A0CF414B59A5D00F248E592756521C4042C5C1632B66C27B7686",
@@ -6597,6 +8600,16 @@
       "range": "BH.oM.Base.IImmutable"
     },
     {
+      "id": "RevitPulledParameters-IsSubclassOf-BHoMObject_4740B5E822505A9A0AAE2CFABCD38B15E55CCDE9F58A50701F3C127D9C1A07F7",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsSubclassOf.cs",
+      "label": "IsA",
+      "attributes": [
+        "object"
+      ],
+      "domain": "BH.oM.Adapters.Revit.Parameters.RevitPulledParameters",
+      "range": "BH.oM.Base.BHoMObject"
+    },
+    {
       "id": "FamilyMap-HasProperty-Type_26805307FA013CC98F2CF17FBE8691D7E71AEFE227A67BDE8B0D1C16328DA672",
       "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/HasProperty.cs",
       "label": "HasProperty",
@@ -6615,6 +8628,42 @@
       ],
       "domain": "BH.oM.Adapters.Revit.Mapping.FamilyMap",
       "range": "BH.oM.Adapters.Revit.Mapping.FamilyMap.FamilyNames"
+    },
+    {
+      "id": "FamilyMap-IsA-IBHoMObject_782E1FA606C9F50ED89216A78E695B66D1663AE7627D065E90C1EF138E5B8A58",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "label": "IsA",
+      "attributes": [
+        "object"
+      ],
+      "comment": {
+        "undefined": "Can be used to describe that a thing belongs to a class; or that a thing is equivalent to another thing. When used for BHoM types, this describes C# interface implementation."
+      },
+      "domain": "BH.oM.Adapters.Revit.Mapping.FamilyMap",
+      "range": "BH.oM.Base.IBHoMObject"
+    },
+    {
+      "id": "FamilyMap-IsA-IObject_A87D2ED0E86B9A6F6AFC7970E25822306602FCE28274C71EC33C8EEC3CD44219",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "label": "IsA",
+      "attributes": [
+        "object"
+      ],
+      "comment": {
+        "undefined": "Can be used to describe that a thing belongs to a class; or that a thing is equivalent to another thing. When used for BHoM types, this describes C# interface implementation."
+      },
+      "domain": "BH.oM.Adapters.Revit.Mapping.FamilyMap",
+      "range": "BH.oM.Base.IObject"
+    },
+    {
+      "id": "FamilyMap-IsSubclassOf-BHoMObject_BBED3818BB3DCF06D529123D5D160B5B7DACACDB31AE25BBF6EC10AD462402F8",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsSubclassOf.cs",
+      "label": "IsA",
+      "attributes": [
+        "object"
+      ],
+      "domain": "BH.oM.Adapters.Revit.Mapping.FamilyMap",
+      "range": "BH.oM.Base.BHoMObject"
     },
     {
       "id": "ElementTypeParameterLink-HasProperty-PropertyName_AC7E54DEEC456CDE15A9EC38ACABBC41D8FBC935F8627CDAC365703B1F451DF3",
@@ -6637,6 +8686,32 @@
       "range": "BH.oM.Adapters.Revit.Mapping.ElementTypeParameterLink.ParameterNames"
     },
     {
+      "id": "ElementTypeParameterLink-IsA-IBHoMObject_9FE9E162CB6F76AADA0FF380D11643F5C5DC5B53EB1FC74A3F83745DE8D7F231",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "label": "IsA",
+      "attributes": [
+        "object"
+      ],
+      "comment": {
+        "undefined": "Can be used to describe that a thing belongs to a class; or that a thing is equivalent to another thing. When used for BHoM types, this describes C# interface implementation."
+      },
+      "domain": "BH.oM.Adapters.Revit.Mapping.ElementTypeParameterLink",
+      "range": "BH.oM.Base.IBHoMObject"
+    },
+    {
+      "id": "ElementTypeParameterLink-IsA-IObject_3CD14E9660F0B900E0B980935EBF8622E0BEFC731C8EDCF470CD2D486198F410",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "label": "IsA",
+      "attributes": [
+        "object"
+      ],
+      "comment": {
+        "undefined": "Can be used to describe that a thing belongs to a class; or that a thing is equivalent to another thing. When used for BHoM types, this describes C# interface implementation."
+      },
+      "domain": "BH.oM.Adapters.Revit.Mapping.ElementTypeParameterLink",
+      "range": "BH.oM.Base.IObject"
+    },
+    {
       "id": "ElementTypeParameterLink-IsA-IParameterLink_19CA9B7656F15B022B6309E410B8D7D1815047C5A8B646C7B5945FD2395ED6CC",
       "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
       "label": "IsA",
@@ -6648,6 +8723,16 @@
       },
       "domain": "BH.oM.Adapters.Revit.Mapping.ElementTypeParameterLink",
       "range": "BH.oM.Adapters.Revit.Mapping.IParameterLink"
+    },
+    {
+      "id": "ElementTypeParameterLink-IsSubclassOf-BHoMObject_A0B9CA54C1A31AF6D3F7AFB2117B4673B3EC456C83F3517509340B41686AA253",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsSubclassOf.cs",
+      "label": "IsA",
+      "attributes": [
+        "object"
+      ],
+      "domain": "BH.oM.Adapters.Revit.Mapping.ElementTypeParameterLink",
+      "range": "BH.oM.Base.BHoMObject"
     },
     {
       "id": "ElementParameterLink-HasProperty-PropertyName_83ACE672AFDC553F396C3ED39276258778866042DEAA13370013B368A83D0EA3",
@@ -6670,6 +8755,32 @@
       "range": "BH.oM.Adapters.Revit.Mapping.ElementParameterLink.ParameterNames"
     },
     {
+      "id": "ElementParameterLink-IsA-IBHoMObject_F02A09D69A224FC8B72E23224DE1C50CB1DF9E4F567BED328C62F9A08F725CC3",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "label": "IsA",
+      "attributes": [
+        "object"
+      ],
+      "comment": {
+        "undefined": "Can be used to describe that a thing belongs to a class; or that a thing is equivalent to another thing. When used for BHoM types, this describes C# interface implementation."
+      },
+      "domain": "BH.oM.Adapters.Revit.Mapping.ElementParameterLink",
+      "range": "BH.oM.Base.IBHoMObject"
+    },
+    {
+      "id": "ElementParameterLink-IsA-IObject_238340821D2D92F46AE7ED0C075F7CA221A7DBCCCE031EFF9B3ECF145BA1CB9D",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "label": "IsA",
+      "attributes": [
+        "object"
+      ],
+      "comment": {
+        "undefined": "Can be used to describe that a thing belongs to a class; or that a thing is equivalent to another thing. When used for BHoM types, this describes C# interface implementation."
+      },
+      "domain": "BH.oM.Adapters.Revit.Mapping.ElementParameterLink",
+      "range": "BH.oM.Base.IObject"
+    },
+    {
       "id": "ElementParameterLink-IsA-IParameterLink_39A576CF34FEBC8638BC116267839EDE45791DB8C10E5B967BD88D89BC3DC4E2",
       "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
       "label": "IsA",
@@ -6681,6 +8792,16 @@
       },
       "domain": "BH.oM.Adapters.Revit.Mapping.ElementParameterLink",
       "range": "BH.oM.Adapters.Revit.Mapping.IParameterLink"
+    },
+    {
+      "id": "ElementParameterLink-IsSubclassOf-BHoMObject_A353958746AF03973E92BE5242F2709E63F6743CBE2EB26E516487A135AAC53E",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsSubclassOf.cs",
+      "label": "IsA",
+      "attributes": [
+        "object"
+      ],
+      "domain": "BH.oM.Adapters.Revit.Mapping.ElementParameterLink",
+      "range": "BH.oM.Base.BHoMObject"
     },
     {
       "id": "IParameterLink-RequiresProperty-PropertyName_4FFFBA7EB4E10C87508A42C1AAD80B3854CB6FD85D9D36CF4B86547B774BBB8E",
@@ -6701,6 +8822,32 @@
       ],
       "domain": "BH.oM.Adapters.Revit.Mapping.IParameterLink",
       "range": "BH.oM.Adapters.Revit.Mapping.IParameterLink.ParameterNames"
+    },
+    {
+      "id": "IParameterLink-IsA-IBHoMObject_B9F3CF1B86C3EE3735E87AF0D1F5C2AB2F5C3B18F40172B1F5C8B84245A5AD09",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "label": "IsA",
+      "attributes": [
+        "object"
+      ],
+      "comment": {
+        "undefined": "Can be used to describe that a thing belongs to a class; or that a thing is equivalent to another thing. When used for BHoM types, this describes C# interface implementation."
+      },
+      "domain": "BH.oM.Adapters.Revit.Mapping.IParameterLink",
+      "range": "BH.oM.Base.IBHoMObject"
+    },
+    {
+      "id": "IParameterLink-IsA-IObject_8FF26774D89776D6592620513CB78DF6720F1ADCC6C8909B4F490DD843036FAB",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "label": "IsA",
+      "attributes": [
+        "object"
+      ],
+      "comment": {
+        "undefined": "Can be used to describe that a thing belongs to a class; or that a thing is equivalent to another thing. When used for BHoM types, this describes C# interface implementation."
+      },
+      "domain": "BH.oM.Adapters.Revit.Mapping.IParameterLink",
+      "range": "BH.oM.Base.IObject"
     },
     {
       "id": "ParameterMap-HasProperty-Type_96EF525F69D60EF2367C6A71033ED8348D8126953AB0553855D2290BDBD200AB",
@@ -6731,6 +8878,42 @@
       ],
       "domain": "BH.oM.Adapters.Revit.Mapping.ParameterMap.ParameterLinks",
       "range": "BH.oM.Adapters.Revit.Mapping.IParameterLink"
+    },
+    {
+      "id": "ParameterMap-IsA-IBHoMObject_D051795BD7C8BD446DB9D15BB286A3CA37ECF6D028425BFCF9A3E382CD2F6FDD",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "label": "IsA",
+      "attributes": [
+        "object"
+      ],
+      "comment": {
+        "undefined": "Can be used to describe that a thing belongs to a class; or that a thing is equivalent to another thing. When used for BHoM types, this describes C# interface implementation."
+      },
+      "domain": "BH.oM.Adapters.Revit.Mapping.ParameterMap",
+      "range": "BH.oM.Base.IBHoMObject"
+    },
+    {
+      "id": "ParameterMap-IsA-IObject_6012B193B0A1AE67E4BA2FC58060D67AC5184B40BD60DE4237A2FEA4E4E6A1FE",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "label": "IsA",
+      "attributes": [
+        "object"
+      ],
+      "comment": {
+        "undefined": "Can be used to describe that a thing belongs to a class; or that a thing is equivalent to another thing. When used for BHoM types, this describes C# interface implementation."
+      },
+      "domain": "BH.oM.Adapters.Revit.Mapping.ParameterMap",
+      "range": "BH.oM.Base.IObject"
+    },
+    {
+      "id": "ParameterMap-IsSubclassOf-BHoMObject_2741695F90609DEA8F338757F022CF80521E5AC5FD50A06D8C12635B4E3927E5",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsSubclassOf.cs",
+      "label": "IsA",
+      "attributes": [
+        "object"
+      ],
+      "domain": "BH.oM.Adapters.Revit.Mapping.ParameterMap",
+      "range": "BH.oM.Base.BHoMObject"
     },
     {
       "id": "BH.oM.Adapters.Revit.Elements.DraftingInstance-HasProperty-BH.oM.Adapters.Revit.Elements.DraftingInstance.Properties",
@@ -6803,6 +8986,32 @@
       "range": "BH.oM.Adapters.Revit.Elements.DraftingInstance.ViewName"
     },
     {
+      "id": "DraftingInstance-IsA-IBHoMObject_6B40B621D62EDACBFCD493BF30BC83BD60851DB8919DB83DF73B01325DC4AD48",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "label": "IsA",
+      "attributes": [
+        "object"
+      ],
+      "comment": {
+        "undefined": "Can be used to describe that a thing belongs to a class; or that a thing is equivalent to another thing. When used for BHoM types, this describes C# interface implementation."
+      },
+      "domain": "BH.oM.Adapters.Revit.Elements.DraftingInstance",
+      "range": "BH.oM.Base.IBHoMObject"
+    },
+    {
+      "id": "DraftingInstance-IsA-IObject_710CBAD2E8A576A69AB5C2F6045A316CE490231740D61A109ACF8CA2AE757F03",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "label": "IsA",
+      "attributes": [
+        "object"
+      ],
+      "comment": {
+        "undefined": "Can be used to describe that a thing belongs to a class; or that a thing is equivalent to another thing. When used for BHoM types, this describes C# interface implementation."
+      },
+      "domain": "BH.oM.Adapters.Revit.Elements.DraftingInstance",
+      "range": "BH.oM.Base.IObject"
+    },
+    {
       "id": "DraftingInstance-IsA-IInstance_E04FFABC2790C7625322636A1502D688A452513726D3696161E7F3ABA80F38AE",
       "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
       "label": "IsA",
@@ -6814,6 +9023,16 @@
       },
       "domain": "BH.oM.Adapters.Revit.Elements.DraftingInstance",
       "range": "BH.oM.Adapters.Revit.Elements.IInstance"
+    },
+    {
+      "id": "DraftingInstance-IsSubclassOf-BHoMObject_7F58E9F3BC0DC1C293D25D979842E7A178DA2DFF96B687ABC809BAA77D7D37DA",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsSubclassOf.cs",
+      "label": "IsA",
+      "attributes": [
+        "object"
+      ],
+      "domain": "BH.oM.Adapters.Revit.Elements.DraftingInstance",
+      "range": "BH.oM.Base.BHoMObject"
     },
     {
       "id": "BH.oM.Adapters.Revit.Elements.Family-HasProperty-BH.oM.Adapters.Revit.Elements.Family.PropertiesList",
@@ -6834,6 +9053,42 @@
       ],
       "domain": "BH.oM.Adapters.Revit.Elements.Family.PropertiesList",
       "range": "BH.oM.Adapters.Revit.Properties.InstanceProperties"
+    },
+    {
+      "id": "Family-IsA-IBHoMObject_787E225CC3408CA8238B76997221F1BFC63E6401BA0DFCBBD0A3F108E1085723",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "label": "IsA",
+      "attributes": [
+        "object"
+      ],
+      "comment": {
+        "undefined": "Can be used to describe that a thing belongs to a class; or that a thing is equivalent to another thing. When used for BHoM types, this describes C# interface implementation."
+      },
+      "domain": "BH.oM.Adapters.Revit.Elements.Family",
+      "range": "BH.oM.Base.IBHoMObject"
+    },
+    {
+      "id": "Family-IsA-IObject_D47BAFABA8B92F13913FC26FC1644832ADF5BF1B08E506C35FBF655454E08A7D",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "label": "IsA",
+      "attributes": [
+        "object"
+      ],
+      "comment": {
+        "undefined": "Can be used to describe that a thing belongs to a class; or that a thing is equivalent to another thing. When used for BHoM types, this describes C# interface implementation."
+      },
+      "domain": "BH.oM.Adapters.Revit.Elements.Family",
+      "range": "BH.oM.Base.IObject"
+    },
+    {
+      "id": "Family-IsSubclassOf-BHoMObject_D7E69DA6527371C3ACB70480DA814F2829529C659946AA245A781B507C9CD4B8",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsSubclassOf.cs",
+      "label": "IsA",
+      "attributes": [
+        "object"
+      ],
+      "domain": "BH.oM.Adapters.Revit.Elements.Family",
+      "range": "BH.oM.Base.BHoMObject"
     },
     {
       "id": "BH.oM.Adapters.Revit.Elements.ViewPlan-HasProperty-BH.oM.Adapters.Revit.Elements.ViewPlan.InstanceProperties",
@@ -6886,6 +9141,32 @@
       "range": "BH.oM.Adapters.Revit.Elements.ViewPlan.TemplateName"
     },
     {
+      "id": "ViewPlan-IsA-IBHoMObject_FA9C6CE66DBE423E71B49BC5D72922E0946E2AC5448F01BC057CF2A69853A854",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "label": "IsA",
+      "attributes": [
+        "object"
+      ],
+      "comment": {
+        "undefined": "Can be used to describe that a thing belongs to a class; or that a thing is equivalent to another thing. When used for BHoM types, this describes C# interface implementation."
+      },
+      "domain": "BH.oM.Adapters.Revit.Elements.ViewPlan",
+      "range": "BH.oM.Base.IBHoMObject"
+    },
+    {
+      "id": "ViewPlan-IsA-IObject_1F4F5ABD7CEDA00C110D99CD770C97340452E3B080EF44AF4F51C51981A8B684",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "label": "IsA",
+      "attributes": [
+        "object"
+      ],
+      "comment": {
+        "undefined": "Can be used to describe that a thing belongs to a class; or that a thing is equivalent to another thing. When used for BHoM types, this describes C# interface implementation."
+      },
+      "domain": "BH.oM.Adapters.Revit.Elements.ViewPlan",
+      "range": "BH.oM.Base.IObject"
+    },
+    {
       "id": "ViewPlan-IsA-IView_4F7C88A3F2B794A50A6742652A4BA832546B9D2F6B75878692515D2B0D20D003",
       "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
       "label": "IsA",
@@ -6897,6 +9178,16 @@
       },
       "domain": "BH.oM.Adapters.Revit.Elements.ViewPlan",
       "range": "BH.oM.Adapters.Revit.Elements.IView"
+    },
+    {
+      "id": "ViewPlan-IsSubclassOf-BHoMObject_FAC2A2CFE7E541E583F2701F15086A92C4E3D781E5BDFF1BBBF5645C1E194A2B",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsSubclassOf.cs",
+      "label": "IsA",
+      "attributes": [
+        "object"
+      ],
+      "domain": "BH.oM.Adapters.Revit.Elements.ViewPlan",
+      "range": "BH.oM.Base.BHoMObject"
     },
     {
       "id": "BH.oM.Adapters.Revit.Elements.ModelInstance-HasProperty-BH.oM.Adapters.Revit.Elements.ModelInstance.Properties",
@@ -6959,6 +9250,32 @@
       "range": "BH.oM.Geometry.Basis"
     },
     {
+      "id": "ModelInstance-IsA-IBHoMObject_19C0AEFEAAB45F3AE6CDBD6AEFC5535EABBE91ACEDC52772A3B8D35D050C70CD",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "label": "IsA",
+      "attributes": [
+        "object"
+      ],
+      "comment": {
+        "undefined": "Can be used to describe that a thing belongs to a class; or that a thing is equivalent to another thing. When used for BHoM types, this describes C# interface implementation."
+      },
+      "domain": "BH.oM.Adapters.Revit.Elements.ModelInstance",
+      "range": "BH.oM.Base.IBHoMObject"
+    },
+    {
+      "id": "ModelInstance-IsA-IObject_5AC4A5770FB7DB4B7080506311EFB66760A0DFC9E93BF5EC0EF87C3E322D3135",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "label": "IsA",
+      "attributes": [
+        "object"
+      ],
+      "comment": {
+        "undefined": "Can be used to describe that a thing belongs to a class; or that a thing is equivalent to another thing. When used for BHoM types, this describes C# interface implementation."
+      },
+      "domain": "BH.oM.Adapters.Revit.Elements.ModelInstance",
+      "range": "BH.oM.Base.IObject"
+    },
+    {
       "id": "ModelInstance-IsA-IInstance_CA21DA55EF3604CA3D06243B121E319B1B5DB72B6CDC7F87B33A29E0CC9DF680",
       "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
       "label": "IsA",
@@ -6970,6 +9287,16 @@
       },
       "domain": "BH.oM.Adapters.Revit.Elements.ModelInstance",
       "range": "BH.oM.Adapters.Revit.Elements.IInstance"
+    },
+    {
+      "id": "ModelInstance-IsSubclassOf-BHoMObject_491BE24214C2F0C4AC681D10F42A9758A97B9DCF960DBC29EF7218833D3BF3BB",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsSubclassOf.cs",
+      "label": "IsA",
+      "attributes": [
+        "object"
+      ],
+      "domain": "BH.oM.Adapters.Revit.Elements.ModelInstance",
+      "range": "BH.oM.Base.BHoMObject"
     },
     {
       "id": "BH.oM.Adapters.Revit.Elements.Viewport-HasProperty-BH.oM.Adapters.Revit.Elements.Viewport.InstanceProperties",
@@ -7032,6 +9359,42 @@
       "range": "BH.oM.Adapters.Revit.Elements.Viewport.ViewName"
     },
     {
+      "id": "Viewport-IsA-IBHoMObject_D69AAE7703A60833F6F50090AD2E172EF7DE30C232E62237CB32781461D1F99E",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "label": "IsA",
+      "attributes": [
+        "object"
+      ],
+      "comment": {
+        "undefined": "Can be used to describe that a thing belongs to a class; or that a thing is equivalent to another thing. When used for BHoM types, this describes C# interface implementation."
+      },
+      "domain": "BH.oM.Adapters.Revit.Elements.Viewport",
+      "range": "BH.oM.Base.IBHoMObject"
+    },
+    {
+      "id": "Viewport-IsA-IObject_F803CC44CD32710C7728AF9C6B4811329C3AF05ECF9A569BA55ABB126E63F522",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "label": "IsA",
+      "attributes": [
+        "object"
+      ],
+      "comment": {
+        "undefined": "Can be used to describe that a thing belongs to a class; or that a thing is equivalent to another thing. When used for BHoM types, this describes C# interface implementation."
+      },
+      "domain": "BH.oM.Adapters.Revit.Elements.Viewport",
+      "range": "BH.oM.Base.IObject"
+    },
+    {
+      "id": "Viewport-IsSubclassOf-BHoMObject_D29E2976F37877407441C182341719035F3891A103C329FACA57AFEA12A4DA0C",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsSubclassOf.cs",
+      "label": "IsA",
+      "attributes": [
+        "object"
+      ],
+      "domain": "BH.oM.Adapters.Revit.Elements.Viewport",
+      "range": "BH.oM.Base.BHoMObject"
+    },
+    {
       "id": "IView-RequiresProperty-InstanceProperties_4C3FBCD938442F865BBB792BE300FB463590DC48A51B442F5F13B928DEEB34E7",
       "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/RequiresProperty.cs",
       "label": "RequiresProperty",
@@ -7040,6 +9403,32 @@
       ],
       "domain": "BH.oM.Adapters.Revit.Elements.IView",
       "range": "BH.oM.Adapters.Revit.Elements.IView.InstanceProperties"
+    },
+    {
+      "id": "IView-IsA-IBHoMObject_FFBF8AABF88B10CF126B02CB51702F834532ACEA83990A9FD20777E9F41B1957",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "label": "IsA",
+      "attributes": [
+        "object"
+      ],
+      "comment": {
+        "undefined": "Can be used to describe that a thing belongs to a class; or that a thing is equivalent to another thing. When used for BHoM types, this describes C# interface implementation."
+      },
+      "domain": "BH.oM.Adapters.Revit.Elements.IView",
+      "range": "BH.oM.Base.IBHoMObject"
+    },
+    {
+      "id": "IView-IsA-IObject_DFA693C7ABC2FE86D8827B15BFAB786713184D549A79400A2F16557FC69AE413",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "label": "IsA",
+      "attributes": [
+        "object"
+      ],
+      "comment": {
+        "undefined": "Can be used to describe that a thing belongs to a class; or that a thing is equivalent to another thing. When used for BHoM types, this describes C# interface implementation."
+      },
+      "domain": "BH.oM.Adapters.Revit.Elements.IView",
+      "range": "BH.oM.Base.IObject"
     },
     {
       "id": "IInstance-RequiresProperty-Properties_D9ED0F35768EF3AB6928B6F96248DD5DAAB6B4C4D8A8ABFAE796925170C15BC9",
@@ -7070,6 +9459,32 @@
       ],
       "domain": "BH.oM.Adapters.Revit.Elements.IInstance",
       "range": "BH.oM.Adapters.Revit.Elements.IInstance.Orientation"
+    },
+    {
+      "id": "IInstance-IsA-IBHoMObject_4CD5DD2025C992C9C6046759F3AA8E0EC29E1E87759AC558C833991E0075996E",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "label": "IsA",
+      "attributes": [
+        "object"
+      ],
+      "comment": {
+        "undefined": "Can be used to describe that a thing belongs to a class; or that a thing is equivalent to another thing. When used for BHoM types, this describes C# interface implementation."
+      },
+      "domain": "BH.oM.Adapters.Revit.Elements.IInstance",
+      "range": "BH.oM.Base.IBHoMObject"
+    },
+    {
+      "id": "IInstance-IsA-IObject_B885A68E7FF326A57E52184338A282935A20A59BBB2191FD2143BC6D88DAFDED",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "label": "IsA",
+      "attributes": [
+        "object"
+      ],
+      "comment": {
+        "undefined": "Can be used to describe that a thing belongs to a class; or that a thing is equivalent to another thing. When used for BHoM types, this describes C# interface implementation."
+      },
+      "domain": "BH.oM.Adapters.Revit.Elements.IInstance",
+      "range": "BH.oM.Base.IObject"
     },
     {
       "id": "BH.oM.Adapters.Revit.Elements.Sheet-HasProperty-BH.oM.Adapters.Revit.Elements.Sheet.InstanceProperties",
@@ -7110,6 +9525,42 @@
       ],
       "domain": "BH.oM.Adapters.Revit.Elements.Sheet",
       "range": "BH.oM.Adapters.Revit.Elements.Sheet.SheetNumber"
+    },
+    {
+      "id": "Sheet-IsA-IBHoMObject_9C396B8DB0FE4B4C5F24F78E71857183BCE6FE2EDD37DF0F3E92A731AD55DD0F",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "label": "IsA",
+      "attributes": [
+        "object"
+      ],
+      "comment": {
+        "undefined": "Can be used to describe that a thing belongs to a class; or that a thing is equivalent to another thing. When used for BHoM types, this describes C# interface implementation."
+      },
+      "domain": "BH.oM.Adapters.Revit.Elements.Sheet",
+      "range": "BH.oM.Base.IBHoMObject"
+    },
+    {
+      "id": "Sheet-IsA-IObject_8265E20040DC297269006C43F16000E84358340A5E89E3ECD68C7F8591504B91",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "label": "IsA",
+      "attributes": [
+        "object"
+      ],
+      "comment": {
+        "undefined": "Can be used to describe that a thing belongs to a class; or that a thing is equivalent to another thing. When used for BHoM types, this describes C# interface implementation."
+      },
+      "domain": "BH.oM.Adapters.Revit.Elements.Sheet",
+      "range": "BH.oM.Base.IObject"
+    },
+    {
+      "id": "Sheet-IsSubclassOf-BHoMObject_66464707376FA1BE8709F49CE8FF2B8B858AA98EEB9AAD03E1AFB80A7E1867BA",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsSubclassOf.cs",
+      "label": "IsA",
+      "attributes": [
+        "object"
+      ],
+      "domain": "BH.oM.Adapters.Revit.Elements.Sheet",
+      "range": "BH.oM.Base.BHoMObject"
     }
   ]
 }
