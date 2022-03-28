@@ -127,20 +127,40 @@
       "type": "owl:Class"
     },
     {
-      "id": "BH.oM.Physical.Reinforcement.IReinforcingBar.CentreCurve",
+      "id": "BH.oM.Base.IBHoMObject",
       "type": "owl:Class"
     },
     {
-      "id": "BH.oM.Physical.Reinforcement.IReinforcingBar.Diameter",
+      "id": "BH.oM.Base.IObject",
       "type": "owl:Class"
+    },
+    {
+      "id": "BH.oM.Physical.Reinforcement.IReinforcingBar.CentreCurve",
+      "type": "rdfs:Datatype"
+    },
+    {
+      "id": "BH.oM.Physical.Reinforcement.IReinforcingBar.Diameter",
+      "type": "rdfs:Datatype"
+    },
+    {
+      "id": "BH.oM.Physical.Reinforcement.IReinforcingBar.Material",
+      "type": "rdfs:Datatype"
+    },
+    {
+      "id": "BH.oM.Physical.Reinforcement.IReinforcingBar.BendRadius",
+      "type": "rdfs:Datatype"
     },
     {
       "id": "BH.oM.Physical.Reinforcement.PrimaryReinforcingBar.CentreCurve",
       "type": "owl:Class"
     },
     {
+      "id": "BH.oM.Geometry.ICurve",
+      "type": "owl:Class"
+    },
+    {
       "id": "BH.oM.Physical.Reinforcement.PrimaryReinforcingBar.Diameter",
-      "type": "rdfs:Datatype"
+      "type": "owl:Class"
     },
     {
       "id": "BH.oM.Physical.Reinforcement.PrimaryReinforcingBar.Material",
@@ -148,7 +168,11 @@
     },
     {
       "id": "BH.oM.Physical.Reinforcement.PrimaryReinforcingBar.BendRadius",
-      "type": "rdfs:Datatype"
+      "type": "owl:Class"
+    },
+    {
+      "id": "BH.oM.Base.BHoMObject",
+      "type": "owl:Class"
     },
     {
       "id": "BH.oM.Physical.Reinforcement.ReinforcementFragment.ReinforcingBars",
@@ -164,7 +188,7 @@
     },
     {
       "id": "BH.oM.Physical.Reinforcement.Stirrup.Diameter",
-      "type": "rdfs:Datatype"
+      "type": "owl:Class"
     },
     {
       "id": "BH.oM.Physical.Reinforcement.Stirrup.Material",
@@ -172,7 +196,7 @@
     },
     {
       "id": "BH.oM.Physical.Reinforcement.Stirrup.BendRadius",
-      "type": "rdfs:Datatype"
+      "type": "owl:Class"
     },
     {
       "id": "BH.oM.Physical.Materials.Material.Properties",
@@ -184,7 +208,7 @@
     },
     {
       "id": "BH.oM.Physical.Materials.MaterialComposition.Ratios",
-      "type": "rdfs:Datatype"
+      "type": "owl:Class"
     },
     {
       "id": "BH.oM.Base.IImmutable",
@@ -204,7 +228,7 @@
     },
     {
       "id": "BH.oM.Physical.FramingProperties.ConstantFramingProperty.OrientationAngle",
-      "type": "rdfs:Datatype"
+      "type": "owl:Class"
     },
     {
       "id": "BH.oM.Physical.Elements.Beam.Location",
@@ -268,7 +292,7 @@
     },
     {
       "id": "BH.oM.Physical.Elements.ExplicitBulk.Volume",
-      "type": "rdfs:Datatype"
+      "type": "owl:Class"
     },
     {
       "id": "BH.oM.Physical.Elements.ExplicitBulk.MaterialComposition",
@@ -291,12 +315,36 @@
       "type": "owl:Class"
     },
     {
+      "id": "BH.oM.Physical.Elements.IFramingElement.Location",
+      "type": "rdfs:Datatype"
+    },
+    {
+      "id": "BH.oM.Physical.Elements.IFramingElement.Property",
+      "type": "rdfs:Datatype"
+    },
+    {
+      "id": "BH.oM.Physical.Elements.IOpening.Location",
+      "type": "rdfs:Datatype"
+    },
+    {
       "id": "BH.oM.Physical.Elements.ISolid.Geometry",
-      "type": "owl:Class"
+      "type": "rdfs:Datatype"
+    },
+    {
+      "id": "BH.oM.Physical.Elements.ISurface.Location",
+      "type": "rdfs:Datatype"
+    },
+    {
+      "id": "BH.oM.Physical.Elements.ISurface.Construction",
+      "type": "rdfs:Datatype"
     },
     {
       "id": "BH.oM.Physical.Elements.ISurface.Openings",
-      "type": "owl:Class"
+      "type": "rdfs:Datatype"
+    },
+    {
+      "id": "BH.oM.Physical.Elements.ISurface.Offset",
+      "type": "rdfs:Datatype"
     },
     {
       "id": "BH.oM.Physical.Elements.Pile.Location",
@@ -372,7 +420,7 @@
     },
     {
       "id": "BH.oM.Physical.Constructions.Layer.Thickness",
-      "type": "rdfs:Datatype"
+      "type": "owl:Class"
     }
   ],
   "classAttribute": [
@@ -640,6 +688,24 @@
       }
     },
     {
+      "id": "BH.oM.Base.IBHoMObject",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/BHoM/Interface/IBHoMObject.cs",
+      "label": "IBHoMObject (BH.oM.Base)",
+      "attributes": [
+        "object",
+        "external"
+      ]
+    },
+    {
+      "id": "BH.oM.Base.IObject",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/BHoM/Interface/IObject.cs",
+      "label": "IObject (BH.oM.Base)",
+      "attributes": [
+        "object",
+        "external"
+      ]
+    },
+    {
       "id": "BH.oM.Physical.Reinforcement.IReinforcingBar.CentreCurve",
       "iri": "https://github.com/BHoM/BHoM/blob/main/Physical_oM/Reinforcement/IReinforcingBar.cs#L45",
       "label": "CentreCurve(BH.oM.Physical.Reinforcement.IReinforcingBar.CentreCurve)",
@@ -656,12 +722,40 @@
       ]
     },
     {
+      "id": "BH.oM.Physical.Reinforcement.IReinforcingBar.Material",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/Physical_oM/Reinforcement/IReinforcingBar.cs#L50",
+      "label": "Material(BH.oM.Physical.Reinforcement.IReinforcingBar.Material)",
+      "attributes": [
+        "datatype"
+      ]
+    },
+    {
+      "id": "BH.oM.Physical.Reinforcement.IReinforcingBar.BendRadius",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/Physical_oM/Reinforcement/IReinforcingBar.cs#L54",
+      "label": "BendRadius(BH.oM.Physical.Reinforcement.IReinforcingBar.BendRadius)",
+      "attributes": [
+        "datatype"
+      ]
+    },
+    {
       "id": "BH.oM.Physical.Reinforcement.PrimaryReinforcingBar.CentreCurve",
       "iri": "https://github.com/BHoM/BHoM/blob/main/Physical_oM/Reinforcement/PrimaryReinforcingBar.cs#L40",
       "label": "CentreCurve(BH.oM.Physical.Reinforcement.PrimaryReinforcingBar.CentreCurve)",
       "attributes": [],
       "comment": {
         "undefined": "Centreline of the Reinforcing bar in three-dimensional space. When the BendRadius is sufficient for any kinks in the rebar, this can be defined as a polyline, ommiting any arcs in corners."
+      }
+    },
+    {
+      "id": "BH.oM.Geometry.ICurve",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/Geometry_oM/Curve/ICurve.cs",
+      "label": "ICurve (BH.oM.Geometry)",
+      "attributes": [
+        "object",
+        "external"
+      ],
+      "comment": {
+        "undefined": "The interface for all one-dimensional geometrical objects."
       }
     },
     {
@@ -684,6 +778,14 @@
       "label": "BendRadius(BH.oM.Physical.Reinforcement.PrimaryReinforcingBar.BendRadius)",
       "attributes": [
         "datatype"
+      ]
+    },
+    {
+      "id": "BH.oM.Base.BHoMObject",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/BHoM/BHoMObject.cs",
+      "label": "BHoMObject (BH.oM.Base)",
+      "attributes": [
+        "external"
       ]
     },
     {
@@ -952,6 +1054,30 @@
       "attributes": []
     },
     {
+      "id": "BH.oM.Physical.Elements.IFramingElement.Location",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/Physical_oM/Elements/IFramingElement.cs#L42",
+      "label": "Location(BH.oM.Physical.Elements.IFramingElement.Location)",
+      "attributes": [
+        "datatype"
+      ]
+    },
+    {
+      "id": "BH.oM.Physical.Elements.IFramingElement.Property",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/Physical_oM/Elements/IFramingElement.cs#L43",
+      "label": "Property(BH.oM.Physical.Elements.IFramingElement.Property)",
+      "attributes": [
+        "datatype"
+      ]
+    },
+    {
+      "id": "BH.oM.Physical.Elements.IOpening.Location",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/Physical_oM/Elements/IOpening.cs#L41",
+      "label": "Location(BH.oM.Physical.Elements.IOpening.Location)",
+      "attributes": [
+        "datatype"
+      ]
+    },
+    {
       "id": "BH.oM.Physical.Elements.ISolid.Geometry",
       "iri": "https://github.com/BHoM/BHoM/blob/main/Physical_oM/Elements/ISolid.cs",
       "label": "Geometry(BH.oM.Physical.Elements.ISolid.Geometry)",
@@ -960,9 +1086,33 @@
       ]
     },
     {
+      "id": "BH.oM.Physical.Elements.ISurface.Location",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/Physical_oM/Elements/ISurface.cs#L43",
+      "label": "Location(BH.oM.Physical.Elements.ISurface.Location)",
+      "attributes": [
+        "datatype"
+      ]
+    },
+    {
+      "id": "BH.oM.Physical.Elements.ISurface.Construction",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/Physical_oM/Elements/ISurface.cs#L44",
+      "label": "Construction(BH.oM.Physical.Elements.ISurface.Construction)",
+      "attributes": [
+        "datatype"
+      ]
+    },
+    {
       "id": "BH.oM.Physical.Elements.ISurface.Openings",
       "iri": "https://github.com/BHoM/BHoM/blob/main/Physical_oM/Elements/ISurface.cs#L45",
       "label": "Openings(BH.oM.Physical.Elements.ISurface.Openings)",
+      "attributes": [
+        "datatype"
+      ]
+    },
+    {
+      "id": "BH.oM.Physical.Elements.ISurface.Offset",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/Physical_oM/Elements/ISurface.cs#L46",
+      "label": "Offset(BH.oM.Physical.Elements.ISurface.Offset)",
       "attributes": [
         "datatype"
       ]
@@ -1095,6 +1245,14 @@
   ],
   "property": [
     {
+      "id": "IPhysical-IsA-IBHoMObject_419C7F867CE73CD8810D8371C7F84095434068ECDEE394FA168ACDDEB7A4862F",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "IPhysical-IsA-IObject_0243319E3041C4573F3E4B87080DB2CEA935411C9C505E80D944C0994A216738",
+      "type": "owl:ObjectProperty"
+    },
+    {
       "id": "IReinforcingBar-RequiresProperty-CentreCurve_CED375D648606EA66A106854509561A48310E51D2D7035C356E07C47CF1C2B76",
       "type": "owl:DatatypeProperty"
     },
@@ -1109,6 +1267,14 @@
     {
       "id": "IReinforcingBar-RequiresProperty-BendRadius_C4970A7CDF4DCB0664ECD7A24271404D76071EAE5793B8829D6163E237388444",
       "type": "owl:DatatypeProperty"
+    },
+    {
+      "id": "IReinforcingBar-IsA-IBHoMObject_C49D4967C105BA9C84810794F58FA692EEDDEF5D0213B8FCBB82757BBE05859A",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "IReinforcingBar-IsA-IObject_896E79430F4A88B78F3BDF67350CAD69F7FEF04CB48D456C591E725825ECD6B1",
+      "type": "owl:ObjectProperty"
     },
     {
       "id": "BH.oM.Physical.Reinforcement.PrimaryReinforcingBar-HasProperty-BH.oM.Physical.Reinforcement.PrimaryReinforcingBar.CentreCurve",
@@ -1135,8 +1301,20 @@
       "type": "owl:DatatypeProperty"
     },
     {
+      "id": "PrimaryReinforcingBar-IsA-IBHoMObject_5A588A73B69EC39CADECB53C8CAFFEBA4C39D1B960B706F286C320BACED39A79",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "PrimaryReinforcingBar-IsA-IObject_B516ED38CC7CFD52AC661AD5A46209ED9AD673BC8DBE6A382C5F5406A1EF93F2",
+      "type": "owl:ObjectProperty"
+    },
+    {
       "id": "PrimaryReinforcingBar-IsA-IReinforcingBar_2D717BE239C443084E90D67C2940BEFF114DB4F36DB566C3C93F127672A6B479",
       "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "PrimaryReinforcingBar-IsSubclassOf-BHoMObject_61058812DF98DDDCE73DD03910DA3A6A8E3E948B5550176B52C9C9CC0C10005E",
+      "type": "rdfs:subClassOf"
     },
     {
       "id": "BH.oM.Physical.Reinforcement.ReinforcementFragment-HasProperty-BH.oM.Physical.Reinforcement.ReinforcementFragment.ReinforcingBars",
@@ -1148,6 +1326,10 @@
     },
     {
       "id": "ReinforcementFragment-IsA-IFragment_757FCD2BC066ED27087B803A088BE1488F2BD4A30E590EF561735C0551995A1B",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "ReinforcementFragment-IsA-IObject_81E9EC37BA1A6FE6527012C528EB804C5F675D633BE5054F973F2ED8EC94F985",
       "type": "owl:ObjectProperty"
     },
     {
@@ -1175,7 +1357,27 @@
       "type": "owl:DatatypeProperty"
     },
     {
+      "id": "Stirrup-IsA-IBHoMObject_FAD1AB2C02C1938F10FE25952F3BEFFF6454AFE46406CE40D32E244A96805DF7",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "Stirrup-IsA-IObject_8F664DFFF1FA5BD515B40E8C10C2907C60E67A16BBCF5A78F2129BF8279C7E2B",
+      "type": "owl:ObjectProperty"
+    },
+    {
       "id": "Stirrup-IsA-IReinforcingBar_EE528B8CBCAE1BA6BAD253A72DAA282F3E8B75016547F7E060488BD555902C84",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "Stirrup-IsSubclassOf-BHoMObject_06C63FD283C078B8372ED31199FBA3C2117C36BDE4F6CEEEF59D25E64F58B15C",
+      "type": "rdfs:subClassOf"
+    },
+    {
+      "id": "IMaterialProperties-IsA-IBHoMObject_5B368E3E50CFF9F937A62010ACB2731348F6527BF1E6D099EE503262CFBEC59D",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "IMaterialProperties-IsA-IObject_5BECFEF8417C46C22AC5BE9CA36CCCF77AE23095039B9759080485A257DC24F0",
       "type": "owl:ObjectProperty"
     },
     {
@@ -1187,8 +1389,20 @@
       "type": "owl:ObjectProperty"
     },
     {
+      "id": "Material-IsA-IBHoMObject_249110177F9FDFAE3617B5D03FEBADCFAE35B13E643ACAE1870169DE6C8F4E07",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "Material-IsA-IObject_544E3D9FF063A6D3FF5999AA49AA98BE4F2D603CA1B78B86E1AAD3B26D85AE84",
+      "type": "owl:ObjectProperty"
+    },
+    {
       "id": "Material-IsA-IPhysical_F5B3F5AC7A5495028C57A72904F17147D9E0603290844ABB043639761CFE8094",
       "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "Material-IsSubclassOf-BHoMObject_30D75FF63FE547C95364F1AEE3659F574BECDC86ADC7F6C82D466C0FC7B07DC4",
+      "type": "rdfs:subClassOf"
     },
     {
       "id": "BH.oM.Physical.Materials.MaterialComposition-HasProperty-BH.oM.Physical.Materials.MaterialComposition.Materials",
@@ -1203,12 +1417,24 @@
       "type": "owl:DatatypeProperty"
     },
     {
+      "id": "MaterialComposition-IsA-IBHoMObject_457E046886C8971CD0F82FADECC7140817FEAAE98B69B93B48F0E3CA8DF84D34",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "MaterialComposition-IsA-IObject_2D896E61C3BBB18019677A6E14A70203C937C437CE499F4E69BBEA02A76A1273",
+      "type": "owl:ObjectProperty"
+    },
+    {
       "id": "MaterialComposition-IsA-IPhysical_5E10F58173E1CC6601AF4A102190E8E0CC0467CDF74DF3C27FED9D0446121E43",
       "type": "owl:ObjectProperty"
     },
     {
       "id": "MaterialComposition-IsA-IImmutable_3B0C572A836338A52ECBFD85D21730B66A39FC47D52CE571D27C08CA6E5A81AD",
       "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "MaterialComposition-IsSubclassOf-BHoMObject_642F2459387FA86C774D04EB47F16C4914C42118935483793A49643E8E70D35C",
+      "type": "rdfs:subClassOf"
     },
     {
       "id": "BH.oM.Physical.FramingProperties.ConstantFramingProperty-HasProperty-BH.oM.Physical.FramingProperties.ConstantFramingProperty.Profile",
@@ -1231,7 +1457,27 @@
       "type": "owl:DatatypeProperty"
     },
     {
+      "id": "ConstantFramingProperty-IsA-IBHoMObject_BBE6BBBB2BAB9C547414B3AC9EE4CBC3A21FC19E2D58146A118F4B443DB7F516",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "ConstantFramingProperty-IsA-IObject_7632B1412DEEF8EEAB92F4B164F9A4C8CAF422C25BE86AB8346F552B5BF178DC",
+      "type": "owl:ObjectProperty"
+    },
+    {
       "id": "ConstantFramingProperty-IsA-IFramingElementProperty_32EE351C2DCB719B365874283FCC0CFFE4300C4D81EB740AAA4AE35DC3407D21",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "ConstantFramingProperty-IsSubclassOf-BHoMObject_B89338EE8DB7D519A7DF52AD1F5E2BB44AD63749D6334DAFDF25D69FD1C4E7CC",
+      "type": "rdfs:subClassOf"
+    },
+    {
+      "id": "IFramingElementProperty-IsA-IBHoMObject_07160C438712D382B02EF9BA254942DC8933C08357795A529A2C7147B29D77CB",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "IFramingElementProperty-IsA-IObject_97C2E933AD697D494FE0B1DDD13B85A9C5EDA833BC63D7B25999DDAED671BDD8",
       "type": "owl:ObjectProperty"
     },
     {
@@ -1248,6 +1494,14 @@
     },
     {
       "id": "BH.oM.Physical.Elements.Beam.Property-IsA-BH.oM.Physical.FramingProperties.IFramingElementProperty",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "Beam-IsA-IBHoMObject_85148127ABE835CDFD794E6E6F73E1BF5FD5B5EFD7F62DEC9C5F1E6DBAC1F1EB",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "Beam-IsA-IObject_31A80D21B8E8D9D7F5BA26EBACD6E1EA509D50EF469A64F337E142E216A43497",
       "type": "owl:ObjectProperty"
     },
     {
@@ -1271,6 +1525,10 @@
       "type": "owl:ObjectProperty"
     },
     {
+      "id": "Beam-IsSubclassOf-BHoMObject_1F00E32252D2D7A87BD1108EEDAA54BA65F64921E6F7106558B07BCD8F46D8A2",
+      "type": "rdfs:subClassOf"
+    },
+    {
       "id": "BH.oM.Physical.Elements.Bracing-HasProperty-BH.oM.Physical.Elements.Bracing.Location",
       "type": "owl:ObjectProperty"
     },
@@ -1284,6 +1542,14 @@
     },
     {
       "id": "BH.oM.Physical.Elements.Bracing.Property-IsA-BH.oM.Physical.FramingProperties.IFramingElementProperty",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "Bracing-IsA-IBHoMObject_25D50F0A08E846E22A5153D968EB66312F009F3C175AE76250F6970776003D4F",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "Bracing-IsA-IObject_8E54B670A3800CACF52113E65D4CCA040E35C8EE0BA96D9CA71E110B919F33CF",
       "type": "owl:ObjectProperty"
     },
     {
@@ -1307,6 +1573,10 @@
       "type": "owl:ObjectProperty"
     },
     {
+      "id": "Bracing-IsSubclassOf-BHoMObject_A7F93FC1602DD57E88070A2316B13139E285AC97661D12F43D40D819C0E3A54D",
+      "type": "rdfs:subClassOf"
+    },
+    {
       "id": "BH.oM.Physical.Elements.Cable-HasProperty-BH.oM.Physical.Elements.Cable.Location",
       "type": "owl:ObjectProperty"
     },
@@ -1320,6 +1590,14 @@
     },
     {
       "id": "BH.oM.Physical.Elements.Cable.Property-IsA-BH.oM.Physical.FramingProperties.IFramingElementProperty",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "Cable-IsA-IBHoMObject_F91A732766C30B6EFA9B60F2DBE61F00D4DD08F40E43A0099A67AA9F1D796EAB",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "Cable-IsA-IObject_09C5B18333273D3E4AA38EBE1BA12F8192EA91FBA2875CCA84701E6FCC2F303E",
       "type": "owl:ObjectProperty"
     },
     {
@@ -1343,6 +1621,10 @@
       "type": "owl:ObjectProperty"
     },
     {
+      "id": "Cable-IsSubclassOf-BHoMObject_96398280488DE39C13408972150E4CD75059FB4C9F00C0A8484667E8297C67B2",
+      "type": "rdfs:subClassOf"
+    },
+    {
       "id": "BH.oM.Physical.Elements.Column-HasProperty-BH.oM.Physical.Elements.Column.Location",
       "type": "owl:ObjectProperty"
     },
@@ -1356,6 +1638,14 @@
     },
     {
       "id": "BH.oM.Physical.Elements.Column.Property-IsA-BH.oM.Physical.FramingProperties.IFramingElementProperty",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "Column-IsA-IBHoMObject_5F74DD7773B30F0454251657A9564CACE6C27A6E5BC9D9DF8560550F7FF7B258",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "Column-IsA-IObject_C652E2BA1849858873D6EF54AEF820B961EC31D160B02D449FA8587C42678AA3",
       "type": "owl:ObjectProperty"
     },
     {
@@ -1379,6 +1669,10 @@
       "type": "owl:ObjectProperty"
     },
     {
+      "id": "Column-IsSubclassOf-BHoMObject_8323BAF7DBAD546181C0342A1473F6EA5EB2881D69822E5AD405C827AC5B122B",
+      "type": "rdfs:subClassOf"
+    },
+    {
       "id": "BH.oM.Physical.Elements.Door-HasProperty-BH.oM.Physical.Elements.Door.Location",
       "type": "owl:ObjectProperty"
     },
@@ -1392,6 +1686,14 @@
     },
     {
       "id": "BH.oM.Physical.Elements.Door.Construction-IsA-BH.oM.Physical.Constructions.IConstruction",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "Door-IsA-IBHoMObject_3EF28E784FEDCCAD6C0D5C787CEC824E8F19416A4AF8A03CE252009AA0B9C66C",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "Door-IsA-IObject_AEE20C052F651AEB98042D92503E434FEED3799FC0D8BE5C23DB12DB1F42C63C",
       "type": "owl:ObjectProperty"
     },
     {
@@ -1415,6 +1717,10 @@
       "type": "owl:ObjectProperty"
     },
     {
+      "id": "Door-IsSubclassOf-BHoMObject_32C3AE9510514E2DB966F1AFA23721D7CD0B9C2DBEF4717F67B1036F54FEB1BB",
+      "type": "rdfs:subClassOf"
+    },
+    {
       "id": "ExplicitBulk-HasProperty-Volume_E1F4A825AD5F2C51B7AEB7E1EC358D127F9E14CAEE033E6E0DD884504C4D6041",
       "type": "owl:DatatypeProperty"
     },
@@ -1427,8 +1733,20 @@
       "type": "owl:ObjectProperty"
     },
     {
+      "id": "ExplicitBulk-IsA-IBHoMObject_143E02AC7A889285584C3A15EC40B495DE2B1FC3BBC58353A85B58BF5C09D10A",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "ExplicitBulk-IsA-IObject_DD539AF03DB48C291D302DDAAF479AB22BF706642E23B17CB8A039FCCDF9842E",
+      "type": "owl:ObjectProperty"
+    },
+    {
       "id": "ExplicitBulk-IsA-IElementM_D4E5414268982A57405107082D6989DA50C6AF70A9CAE60CD81A9365CE9EA40B",
       "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "ExplicitBulk-IsSubclassOf-BHoMObject_F0BC1C94F8C95A313B03EF1439F1307A2939E38246CED4FF38DCD8CC63125D77",
+      "type": "rdfs:subClassOf"
     },
     {
       "id": "BH.oM.Physical.Elements.Floor-HasProperty-BH.oM.Physical.Elements.Floor.Location",
@@ -1463,6 +1781,14 @@
       "type": "owl:ObjectProperty"
     },
     {
+      "id": "Floor-IsA-IBHoMObject_F9B3F434DE97F37587D8E68DEF82809457CFBA79DCDD1E63E9BFE7CCC69AE393",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "Floor-IsA-IObject_FB3545579C391B25876CC4EEC20985FF108F4C76FFF73B1FCA55F5BF0034F82A",
+      "type": "owl:ObjectProperty"
+    },
+    {
       "id": "Floor-IsA-ISurface_9E7937F905DB38FF5B523EC0A6BB28DCA6A51BD6EC991167CB2129360808DC2C",
       "type": "owl:ObjectProperty"
     },
@@ -1483,12 +1809,24 @@
       "type": "owl:ObjectProperty"
     },
     {
+      "id": "Floor-IsSubclassOf-BHoMObject_68B2E299CC7358F5516F1F2C9A67C20CF958338EF9C9676D84D7429354A98CAD",
+      "type": "rdfs:subClassOf"
+    },
+    {
       "id": "IFramingElement-RequiresProperty-Location_22575592A7C3C877168355BBAAA71A66E9770190F0A04B188950DF70B98CACCB",
       "type": "owl:DatatypeProperty"
     },
     {
       "id": "IFramingElement-RequiresProperty-Property_6BEC963F7ED33FCD8FEAE4E4C980DC83343C648AE8E6CBF7819E137ED6E728C7",
       "type": "owl:DatatypeProperty"
+    },
+    {
+      "id": "IFramingElement-IsA-IBHoMObject_77AE17B02233BBFE1664B8DB94B88A06E8550674BE4EF9D91B7E6B841A75AD32",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "IFramingElement-IsA-IObject_EFDB838CDD4241F553F172A22078842C9FF7FF58B66630E774D8215D7CF49606",
+      "type": "owl:ObjectProperty"
     },
     {
       "id": "IFramingElement-IsA-IPhysical_60233635B5F4693D4BEBE41EB3EE946362AB69F3B95D30FCC39F7D8C279B52E5",
@@ -1511,6 +1849,14 @@
       "type": "owl:DatatypeProperty"
     },
     {
+      "id": "IOpening-IsA-IBHoMObject_CF43E16823D7C67B5F26B2EF7D9A1BE73B5C451207AB92C294DBC75D7500F8D9",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "IOpening-IsA-IObject_786FD5BB3479C7338D58A4243DA2DCCEB4AC4AA2BBCDB9715189440CFD130C0C",
+      "type": "owl:ObjectProperty"
+    },
+    {
       "id": "IOpening-IsA-IPhysical_39DF41DED02B30319F14453C95B24B9FAD64E479B81FA8F875064888B2728D1C",
       "type": "owl:ObjectProperty"
     },
@@ -1525,6 +1871,14 @@
     {
       "id": "ISolid-RequiresProperty-Geometry_369C97F2BC2BFEE142AFCD70D595724FC921163A444107460E342A7FA872B2A0",
       "type": "owl:DatatypeProperty"
+    },
+    {
+      "id": "ISolid-IsA-IBHoMObject_3B5E9CB99EC15945BD4E56804DF6F2BE74D0649F0A79912635D9A0FDB7694C6E",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "ISolid-IsA-IObject_A1D15A527E9897C65DF25196D3FF7DCC30B41667B1B4BAC76B3EC16EC309595B",
+      "type": "owl:ObjectProperty"
     },
     {
       "id": "ISolid-IsA-IPhysical_6D3FFB0D5166E64F935DCB44E952438595A6706A58F675D1633BBA02E37F1747",
@@ -1549,6 +1903,14 @@
     {
       "id": "ISurface-RequiresProperty-Offset_32B2344280E349B7375250CAAF3A46A54308A287AC82D756A59E23DD8133343B",
       "type": "owl:DatatypeProperty"
+    },
+    {
+      "id": "ISurface-IsA-IBHoMObject_AE0D0F9E829E6473B086B7B04CAE4DCABC86540F98EC4381E5D65E074DD7A110",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "ISurface-IsA-IObject_F5AE762BBCD6379C35FDEF99273060E9D2286983D49BB59CEC6EF87A278CE82E",
+      "type": "owl:ObjectProperty"
     },
     {
       "id": "ISurface-IsA-IPhysical_3987BA94048AC90BFD425551AE1AB17D79E7766B704A02B238085C61794E9B7D",
@@ -1583,6 +1945,14 @@
       "type": "owl:ObjectProperty"
     },
     {
+      "id": "Pile-IsA-IBHoMObject_9E0F188C77257A8B70304141575300F5B8D2970CE237F4B134E9BE47D5772141",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "Pile-IsA-IObject_A204CC2EBC4DADA940B984C63B1A312B839048FD9373C02255A3C98D9103ED7A",
+      "type": "owl:ObjectProperty"
+    },
+    {
       "id": "Pile-IsA-IFramingElement_ABEC43954D1BEF099FA82D772C2789CE73D1407A7459F10E64999E3AFDB26408",
       "type": "owl:ObjectProperty"
     },
@@ -1601,6 +1971,10 @@
     {
       "id": "Pile-IsA-IElementM_AFF7C70C430D092E711FD4B065CEBA956D506027D4573CA389DDAD5FD883C27A",
       "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "Pile-IsSubclassOf-BHoMObject_3A12CB76F5BE7A05BEF9F42848D5EF444CF9A3E15264B6A9C621A1D25DE11BFA",
+      "type": "rdfs:subClassOf"
     },
     {
       "id": "BH.oM.Physical.Elements.Roof-HasProperty-BH.oM.Physical.Elements.Roof.Location",
@@ -1635,6 +2009,14 @@
       "type": "owl:ObjectProperty"
     },
     {
+      "id": "Roof-IsA-IBHoMObject_3F3B264E17F341EC19620A53DEF7C8C26035A5295C30B3F3C7A3809085E3C83F",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "Roof-IsA-IObject_4730F11095F76C9F4140225C944694AD550E019927CFAC82D75553C7BCD10D06",
+      "type": "owl:ObjectProperty"
+    },
+    {
       "id": "Roof-IsA-ISurface_7DA5B59D66393B356418731D00E6EC6CD056842C2C279CDD8E707CC2CF3E6DC9",
       "type": "owl:ObjectProperty"
     },
@@ -1655,6 +2037,10 @@
       "type": "owl:ObjectProperty"
     },
     {
+      "id": "Roof-IsSubclassOf-BHoMObject_8B1379B351AC2395753EC71F1A966B821A99244C845E14C92442046B4266EF5D",
+      "type": "rdfs:subClassOf"
+    },
+    {
       "id": "BH.oM.Physical.Elements.SolidBulk-HasProperty-BH.oM.Physical.Elements.SolidBulk.Geometry",
       "type": "owl:ObjectProperty"
     },
@@ -1671,6 +2057,14 @@
       "type": "owl:ObjectProperty"
     },
     {
+      "id": "SolidBulk-IsA-IBHoMObject_CCEA6ABBEF2D141DFA1C892BECDC7A051054FA935E2B0C9A94FC71EC70E152B3",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "SolidBulk-IsA-IObject_C2BFDAFC0486D88DBF9677B9FFC308135F4AEBA1426A6218B12BFC1619F60192",
+      "type": "owl:ObjectProperty"
+    },
+    {
       "id": "SolidBulk-IsA-ISolid_5A709BB996F1EF117C2FF3672B21A804DD2D24E8C9ACC2EEBE47164859754866",
       "type": "owl:ObjectProperty"
     },
@@ -1683,11 +2077,23 @@
       "type": "owl:ObjectProperty"
     },
     {
+      "id": "SolidBulk-IsSubclassOf-BHoMObject_1F6ABB41124384FDAFF73867A48AD54E9E4F4CD860BE6BFA24BEC06ACF276B18",
+      "type": "rdfs:subClassOf"
+    },
+    {
       "id": "BH.oM.Physical.Elements.Void-HasProperty-BH.oM.Physical.Elements.Void.Location",
       "type": "owl:ObjectProperty"
     },
     {
       "id": "BH.oM.Physical.Elements.Void.Location-IsA-BH.oM.Geometry.ISurface",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "Void-IsA-IBHoMObject_2403E727398AE4C8305BE37F446F8E53FB0436B3CE9B75DB823EBA9AD7F68EBC",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "Void-IsA-IObject_E7A65196B2541F27510CF449D2F61EFE87A9020E8EAC74B1AC2EA959D5B91E37",
       "type": "owl:ObjectProperty"
     },
     {
@@ -1705,6 +2111,10 @@
     {
       "id": "Void-IsA-IElement_06F9D4547CDBA22AE794657EC37C43A730F040D9B83E76A7B037BA239F7E47D6",
       "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "Void-IsSubclassOf-BHoMObject_B9278A79A3CE0982FE14A9586A2B82EBEB50F3ACAC7594562C7F847D7014FC9F",
+      "type": "rdfs:subClassOf"
     },
     {
       "id": "BH.oM.Physical.Elements.Wall-HasProperty-BH.oM.Physical.Elements.Wall.Location",
@@ -1739,6 +2149,14 @@
       "type": "owl:ObjectProperty"
     },
     {
+      "id": "Wall-IsA-IBHoMObject_5962BB26BD9DAE6BE3DB305C4632880F80335E711EA76BA08EE61967F2067751",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "Wall-IsA-IObject_CA0DFFC2B0AE0649968647EF24AC9EB044BAFBED1260E449A113852DE6A26133",
+      "type": "owl:ObjectProperty"
+    },
+    {
       "id": "Wall-IsA-ISurface_8E1A640F4B87CC579669D3B24BDD068DAEB0B8B25085D6014B26F39B74D50C3B",
       "type": "owl:ObjectProperty"
     },
@@ -1759,6 +2177,10 @@
       "type": "owl:ObjectProperty"
     },
     {
+      "id": "Wall-IsSubclassOf-BHoMObject_2A5C3915F39F9142F9CFE14DC780C89DE680BB29956AEBBD71262356CC9A8DD6",
+      "type": "rdfs:subClassOf"
+    },
+    {
       "id": "BH.oM.Physical.Elements.Window-HasProperty-BH.oM.Physical.Elements.Window.Location",
       "type": "owl:ObjectProperty"
     },
@@ -1772,6 +2194,14 @@
     },
     {
       "id": "BH.oM.Physical.Elements.Window.Construction-IsA-BH.oM.Physical.Constructions.IConstruction",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "Window-IsA-IBHoMObject_858CCB1C7A19614FDEF2CADA524566FBDDCEF84AD37E98713706C7B1BA51FAB0",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "Window-IsA-IObject_ED9865D3E36D140D16381AECD2D2164515C3BD2048981DCF10C92E66D4D7C14D",
       "type": "owl:ObjectProperty"
     },
     {
@@ -1795,6 +2225,10 @@
       "type": "owl:ObjectProperty"
     },
     {
+      "id": "Window-IsSubclassOf-BHoMObject_D1C5184B6725E94C53FD1F3AC975D51B003430ADC0BB5ED02C056A1DC6AECF27",
+      "type": "rdfs:subClassOf"
+    },
+    {
       "id": "BH.oM.Physical.Constructions.Construction-HasProperty-BH.oM.Physical.Constructions.Construction.Layers",
       "type": "owl:ObjectProperty"
     },
@@ -1803,11 +2237,31 @@
       "type": "owl:ObjectProperty"
     },
     {
+      "id": "Construction-IsA-IBHoMObject_6526F2B8F25135F104DB2E6FF791D8439C0FECD07EBA8B1511D91C218AC6AD6F",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "Construction-IsA-IObject_3A21594255D2BDD86097CBC52FA93790C8F60E560B8D68263F1BEB828C31044D",
+      "type": "owl:ObjectProperty"
+    },
+    {
       "id": "Construction-IsA-IConstruction_4EE5B04453B7F5F670C9AFABEC76091E09FD04D2D641D836B930895F3BFCD5A4",
       "type": "owl:ObjectProperty"
     },
     {
       "id": "Construction-IsA-IPhysical_D14DE10730997AC3CD6FF23486DB4A4C077B63EF2EDA9DCDD81A6CE8556907E1",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "Construction-IsSubclassOf-BHoMObject_0AF3B8C1011FAE7D028B784BA6810BE7DD525BB54375C6BD44802E017716A547",
+      "type": "rdfs:subClassOf"
+    },
+    {
+      "id": "IConstruction-IsA-IBHoMObject_80C149E2AB2539C89FFBCA861F536B2604300E3144669315EFFBE3CC9CE396FF",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "IConstruction-IsA-IObject_3F2AA4993EC262D287D0DFB90D7C95716D3BED3D8980A510F3785E546DA06F4C",
       "type": "owl:ObjectProperty"
     },
     {
@@ -1823,11 +2277,49 @@
       "type": "owl:DatatypeProperty"
     },
     {
+      "id": "Layer-IsA-IBHoMObject_3E8E4D7C67247E7A2BD8F320BF24C7A8F2EE6ABD029D83322F6B310652E99008",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "Layer-IsA-IObject_027F9F4512B6651796EDC1332DDD6844C710D030EDDF07516C9D98624BA0B7D6",
+      "type": "owl:ObjectProperty"
+    },
+    {
       "id": "Layer-IsA-IPhysical_39ED61EB63BAFEEAFC6C72DE452080A8FA3C385F26BF603B34EAAEEBA57C8F61",
       "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "Layer-IsSubclassOf-BHoMObject_F8627CCB163F089067FE5B7E967F7F727CA2E5B0F1425BC85132A7BBC1873FA4",
+      "type": "rdfs:subClassOf"
     }
   ],
   "propertyAttribute": [
+    {
+      "id": "IPhysical-IsA-IBHoMObject_419C7F867CE73CD8810D8371C7F84095434068ECDEE394FA168ACDDEB7A4862F",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "label": "IsA",
+      "attributes": [
+        "object"
+      ],
+      "comment": {
+        "undefined": "Can be used to describe that a thing belongs to a class; or that a thing is equivalent to another thing. When used for BHoM types, this describes C# interface implementation."
+      },
+      "domain": "BH.oM.Physical.IPhysical",
+      "range": "BH.oM.Base.IBHoMObject"
+    },
+    {
+      "id": "IPhysical-IsA-IObject_0243319E3041C4573F3E4B87080DB2CEA935411C9C505E80D944C0994A216738",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "label": "IsA",
+      "attributes": [
+        "object"
+      ],
+      "comment": {
+        "undefined": "Can be used to describe that a thing belongs to a class; or that a thing is equivalent to another thing. When used for BHoM types, this describes C# interface implementation."
+      },
+      "domain": "BH.oM.Physical.IPhysical",
+      "range": "BH.oM.Base.IObject"
+    },
     {
       "id": "IReinforcingBar-RequiresProperty-CentreCurve_CED375D648606EA66A106854509561A48310E51D2D7035C356E07C47CF1C2B76",
       "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/RequiresProperty.cs",
@@ -1867,6 +2359,32 @@
       ],
       "domain": "BH.oM.Physical.Reinforcement.IReinforcingBar",
       "range": "BH.oM.Physical.Reinforcement.IReinforcingBar.BendRadius"
+    },
+    {
+      "id": "IReinforcingBar-IsA-IBHoMObject_C49D4967C105BA9C84810794F58FA692EEDDEF5D0213B8FCBB82757BBE05859A",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "label": "IsA",
+      "attributes": [
+        "object"
+      ],
+      "comment": {
+        "undefined": "Can be used to describe that a thing belongs to a class; or that a thing is equivalent to another thing. When used for BHoM types, this describes C# interface implementation."
+      },
+      "domain": "BH.oM.Physical.Reinforcement.IReinforcingBar",
+      "range": "BH.oM.Base.IBHoMObject"
+    },
+    {
+      "id": "IReinforcingBar-IsA-IObject_896E79430F4A88B78F3BDF67350CAD69F7FEF04CB48D456C591E725825ECD6B1",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "label": "IsA",
+      "attributes": [
+        "object"
+      ],
+      "comment": {
+        "undefined": "Can be used to describe that a thing belongs to a class; or that a thing is equivalent to another thing. When used for BHoM types, this describes C# interface implementation."
+      },
+      "domain": "BH.oM.Physical.Reinforcement.IReinforcingBar",
+      "range": "BH.oM.Base.IObject"
     },
     {
       "id": "BH.oM.Physical.Reinforcement.PrimaryReinforcingBar-HasProperty-BH.oM.Physical.Reinforcement.PrimaryReinforcingBar.CentreCurve",
@@ -1929,6 +2447,32 @@
       "range": "BH.oM.Physical.Reinforcement.PrimaryReinforcingBar.BendRadius"
     },
     {
+      "id": "PrimaryReinforcingBar-IsA-IBHoMObject_5A588A73B69EC39CADECB53C8CAFFEBA4C39D1B960B706F286C320BACED39A79",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "label": "IsA",
+      "attributes": [
+        "object"
+      ],
+      "comment": {
+        "undefined": "Can be used to describe that a thing belongs to a class; or that a thing is equivalent to another thing. When used for BHoM types, this describes C# interface implementation."
+      },
+      "domain": "BH.oM.Physical.Reinforcement.PrimaryReinforcingBar",
+      "range": "BH.oM.Base.IBHoMObject"
+    },
+    {
+      "id": "PrimaryReinforcingBar-IsA-IObject_B516ED38CC7CFD52AC661AD5A46209ED9AD673BC8DBE6A382C5F5406A1EF93F2",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "label": "IsA",
+      "attributes": [
+        "object"
+      ],
+      "comment": {
+        "undefined": "Can be used to describe that a thing belongs to a class; or that a thing is equivalent to another thing. When used for BHoM types, this describes C# interface implementation."
+      },
+      "domain": "BH.oM.Physical.Reinforcement.PrimaryReinforcingBar",
+      "range": "BH.oM.Base.IObject"
+    },
+    {
       "id": "PrimaryReinforcingBar-IsA-IReinforcingBar_2D717BE239C443084E90D67C2940BEFF114DB4F36DB566C3C93F127672A6B479",
       "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
       "label": "IsA",
@@ -1940,6 +2484,16 @@
       },
       "domain": "BH.oM.Physical.Reinforcement.PrimaryReinforcingBar",
       "range": "BH.oM.Physical.Reinforcement.IReinforcingBar"
+    },
+    {
+      "id": "PrimaryReinforcingBar-IsSubclassOf-BHoMObject_61058812DF98DDDCE73DD03910DA3A6A8E3E948B5550176B52C9C9CC0C10005E",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsSubclassOf.cs",
+      "label": "IsA",
+      "attributes": [
+        "object"
+      ],
+      "domain": "BH.oM.Physical.Reinforcement.PrimaryReinforcingBar",
+      "range": "BH.oM.Base.BHoMObject"
     },
     {
       "id": "BH.oM.Physical.Reinforcement.ReinforcementFragment-HasProperty-BH.oM.Physical.Reinforcement.ReinforcementFragment.ReinforcingBars",
@@ -1973,6 +2527,19 @@
       },
       "domain": "BH.oM.Physical.Reinforcement.ReinforcementFragment",
       "range": "BH.oM.Base.IFragment"
+    },
+    {
+      "id": "ReinforcementFragment-IsA-IObject_81E9EC37BA1A6FE6527012C528EB804C5F675D633BE5054F973F2ED8EC94F985",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "label": "IsA",
+      "attributes": [
+        "object"
+      ],
+      "comment": {
+        "undefined": "Can be used to describe that a thing belongs to a class; or that a thing is equivalent to another thing. When used for BHoM types, this describes C# interface implementation."
+      },
+      "domain": "BH.oM.Physical.Reinforcement.ReinforcementFragment",
+      "range": "BH.oM.Base.IObject"
     },
     {
       "id": "BH.oM.Physical.Reinforcement.Stirrup-HasProperty-BH.oM.Physical.Reinforcement.Stirrup.CentreCurve",
@@ -2035,6 +2602,32 @@
       "range": "BH.oM.Physical.Reinforcement.Stirrup.BendRadius"
     },
     {
+      "id": "Stirrup-IsA-IBHoMObject_FAD1AB2C02C1938F10FE25952F3BEFFF6454AFE46406CE40D32E244A96805DF7",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "label": "IsA",
+      "attributes": [
+        "object"
+      ],
+      "comment": {
+        "undefined": "Can be used to describe that a thing belongs to a class; or that a thing is equivalent to another thing. When used for BHoM types, this describes C# interface implementation."
+      },
+      "domain": "BH.oM.Physical.Reinforcement.Stirrup",
+      "range": "BH.oM.Base.IBHoMObject"
+    },
+    {
+      "id": "Stirrup-IsA-IObject_8F664DFFF1FA5BD515B40E8C10C2907C60E67A16BBCF5A78F2129BF8279C7E2B",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "label": "IsA",
+      "attributes": [
+        "object"
+      ],
+      "comment": {
+        "undefined": "Can be used to describe that a thing belongs to a class; or that a thing is equivalent to another thing. When used for BHoM types, this describes C# interface implementation."
+      },
+      "domain": "BH.oM.Physical.Reinforcement.Stirrup",
+      "range": "BH.oM.Base.IObject"
+    },
+    {
       "id": "Stirrup-IsA-IReinforcingBar_EE528B8CBCAE1BA6BAD253A72DAA282F3E8B75016547F7E060488BD555902C84",
       "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
       "label": "IsA",
@@ -2046,6 +2639,42 @@
       },
       "domain": "BH.oM.Physical.Reinforcement.Stirrup",
       "range": "BH.oM.Physical.Reinforcement.IReinforcingBar"
+    },
+    {
+      "id": "Stirrup-IsSubclassOf-BHoMObject_06C63FD283C078B8372ED31199FBA3C2117C36BDE4F6CEEEF59D25E64F58B15C",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsSubclassOf.cs",
+      "label": "IsA",
+      "attributes": [
+        "object"
+      ],
+      "domain": "BH.oM.Physical.Reinforcement.Stirrup",
+      "range": "BH.oM.Base.BHoMObject"
+    },
+    {
+      "id": "IMaterialProperties-IsA-IBHoMObject_5B368E3E50CFF9F937A62010ACB2731348F6527BF1E6D099EE503262CFBEC59D",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "label": "IsA",
+      "attributes": [
+        "object"
+      ],
+      "comment": {
+        "undefined": "Can be used to describe that a thing belongs to a class; or that a thing is equivalent to another thing. When used for BHoM types, this describes C# interface implementation."
+      },
+      "domain": "BH.oM.Physical.Materials.IMaterialProperties",
+      "range": "BH.oM.Base.IBHoMObject"
+    },
+    {
+      "id": "IMaterialProperties-IsA-IObject_5BECFEF8417C46C22AC5BE9CA36CCCF77AE23095039B9759080485A257DC24F0",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "label": "IsA",
+      "attributes": [
+        "object"
+      ],
+      "comment": {
+        "undefined": "Can be used to describe that a thing belongs to a class; or that a thing is equivalent to another thing. When used for BHoM types, this describes C# interface implementation."
+      },
+      "domain": "BH.oM.Physical.Materials.IMaterialProperties",
+      "range": "BH.oM.Base.IObject"
     },
     {
       "id": "BH.oM.Physical.Materials.Material-HasProperty-BH.oM.Physical.Materials.Material.Properties",
@@ -2068,6 +2697,32 @@
       "range": "BH.oM.Physical.Materials.IMaterialProperties"
     },
     {
+      "id": "Material-IsA-IBHoMObject_249110177F9FDFAE3617B5D03FEBADCFAE35B13E643ACAE1870169DE6C8F4E07",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "label": "IsA",
+      "attributes": [
+        "object"
+      ],
+      "comment": {
+        "undefined": "Can be used to describe that a thing belongs to a class; or that a thing is equivalent to another thing. When used for BHoM types, this describes C# interface implementation."
+      },
+      "domain": "BH.oM.Physical.Materials.Material",
+      "range": "BH.oM.Base.IBHoMObject"
+    },
+    {
+      "id": "Material-IsA-IObject_544E3D9FF063A6D3FF5999AA49AA98BE4F2D603CA1B78B86E1AAD3B26D85AE84",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "label": "IsA",
+      "attributes": [
+        "object"
+      ],
+      "comment": {
+        "undefined": "Can be used to describe that a thing belongs to a class; or that a thing is equivalent to another thing. When used for BHoM types, this describes C# interface implementation."
+      },
+      "domain": "BH.oM.Physical.Materials.Material",
+      "range": "BH.oM.Base.IObject"
+    },
+    {
       "id": "Material-IsA-IPhysical_F5B3F5AC7A5495028C57A72904F17147D9E0603290844ABB043639761CFE8094",
       "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
       "label": "IsA",
@@ -2079,6 +2734,16 @@
       },
       "domain": "BH.oM.Physical.Materials.Material",
       "range": "BH.oM.Physical.IPhysical"
+    },
+    {
+      "id": "Material-IsSubclassOf-BHoMObject_30D75FF63FE547C95364F1AEE3659F574BECDC86ADC7F6C82D466C0FC7B07DC4",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsSubclassOf.cs",
+      "label": "IsA",
+      "attributes": [
+        "object"
+      ],
+      "domain": "BH.oM.Physical.Materials.Material",
+      "range": "BH.oM.Base.BHoMObject"
     },
     {
       "id": "BH.oM.Physical.Materials.MaterialComposition-HasProperty-BH.oM.Physical.Materials.MaterialComposition.Materials",
@@ -2111,6 +2776,32 @@
       "range": "BH.oM.Physical.Materials.MaterialComposition.Ratios"
     },
     {
+      "id": "MaterialComposition-IsA-IBHoMObject_457E046886C8971CD0F82FADECC7140817FEAAE98B69B93B48F0E3CA8DF84D34",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "label": "IsA",
+      "attributes": [
+        "object"
+      ],
+      "comment": {
+        "undefined": "Can be used to describe that a thing belongs to a class; or that a thing is equivalent to another thing. When used for BHoM types, this describes C# interface implementation."
+      },
+      "domain": "BH.oM.Physical.Materials.MaterialComposition",
+      "range": "BH.oM.Base.IBHoMObject"
+    },
+    {
+      "id": "MaterialComposition-IsA-IObject_2D896E61C3BBB18019677A6E14A70203C937C437CE499F4E69BBEA02A76A1273",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "label": "IsA",
+      "attributes": [
+        "object"
+      ],
+      "comment": {
+        "undefined": "Can be used to describe that a thing belongs to a class; or that a thing is equivalent to another thing. When used for BHoM types, this describes C# interface implementation."
+      },
+      "domain": "BH.oM.Physical.Materials.MaterialComposition",
+      "range": "BH.oM.Base.IObject"
+    },
+    {
       "id": "MaterialComposition-IsA-IPhysical_5E10F58173E1CC6601AF4A102190E8E0CC0467CDF74DF3C27FED9D0446121E43",
       "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
       "label": "IsA",
@@ -2135,6 +2826,16 @@
       },
       "domain": "BH.oM.Physical.Materials.MaterialComposition",
       "range": "BH.oM.Base.IImmutable"
+    },
+    {
+      "id": "MaterialComposition-IsSubclassOf-BHoMObject_642F2459387FA86C774D04EB47F16C4914C42118935483793A49643E8E70D35C",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsSubclassOf.cs",
+      "label": "IsA",
+      "attributes": [
+        "object"
+      ],
+      "domain": "BH.oM.Physical.Materials.MaterialComposition",
+      "range": "BH.oM.Base.BHoMObject"
     },
     {
       "id": "BH.oM.Physical.FramingProperties.ConstantFramingProperty-HasProperty-BH.oM.Physical.FramingProperties.ConstantFramingProperty.Profile",
@@ -2187,6 +2888,32 @@
       "range": "BH.oM.Physical.FramingProperties.ConstantFramingProperty.OrientationAngle"
     },
     {
+      "id": "ConstantFramingProperty-IsA-IBHoMObject_BBE6BBBB2BAB9C547414B3AC9EE4CBC3A21FC19E2D58146A118F4B443DB7F516",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "label": "IsA",
+      "attributes": [
+        "object"
+      ],
+      "comment": {
+        "undefined": "Can be used to describe that a thing belongs to a class; or that a thing is equivalent to another thing. When used for BHoM types, this describes C# interface implementation."
+      },
+      "domain": "BH.oM.Physical.FramingProperties.ConstantFramingProperty",
+      "range": "BH.oM.Base.IBHoMObject"
+    },
+    {
+      "id": "ConstantFramingProperty-IsA-IObject_7632B1412DEEF8EEAB92F4B164F9A4C8CAF422C25BE86AB8346F552B5BF178DC",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "label": "IsA",
+      "attributes": [
+        "object"
+      ],
+      "comment": {
+        "undefined": "Can be used to describe that a thing belongs to a class; or that a thing is equivalent to another thing. When used for BHoM types, this describes C# interface implementation."
+      },
+      "domain": "BH.oM.Physical.FramingProperties.ConstantFramingProperty",
+      "range": "BH.oM.Base.IObject"
+    },
+    {
       "id": "ConstantFramingProperty-IsA-IFramingElementProperty_32EE351C2DCB719B365874283FCC0CFFE4300C4D81EB740AAA4AE35DC3407D21",
       "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
       "label": "IsA",
@@ -2198,6 +2925,42 @@
       },
       "domain": "BH.oM.Physical.FramingProperties.ConstantFramingProperty",
       "range": "BH.oM.Physical.FramingProperties.IFramingElementProperty"
+    },
+    {
+      "id": "ConstantFramingProperty-IsSubclassOf-BHoMObject_B89338EE8DB7D519A7DF52AD1F5E2BB44AD63749D6334DAFDF25D69FD1C4E7CC",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsSubclassOf.cs",
+      "label": "IsA",
+      "attributes": [
+        "object"
+      ],
+      "domain": "BH.oM.Physical.FramingProperties.ConstantFramingProperty",
+      "range": "BH.oM.Base.BHoMObject"
+    },
+    {
+      "id": "IFramingElementProperty-IsA-IBHoMObject_07160C438712D382B02EF9BA254942DC8933C08357795A529A2C7147B29D77CB",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "label": "IsA",
+      "attributes": [
+        "object"
+      ],
+      "comment": {
+        "undefined": "Can be used to describe that a thing belongs to a class; or that a thing is equivalent to another thing. When used for BHoM types, this describes C# interface implementation."
+      },
+      "domain": "BH.oM.Physical.FramingProperties.IFramingElementProperty",
+      "range": "BH.oM.Base.IBHoMObject"
+    },
+    {
+      "id": "IFramingElementProperty-IsA-IObject_97C2E933AD697D494FE0B1DDD13B85A9C5EDA833BC63D7B25999DDAED671BDD8",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "label": "IsA",
+      "attributes": [
+        "object"
+      ],
+      "comment": {
+        "undefined": "Can be used to describe that a thing belongs to a class; or that a thing is equivalent to another thing. When used for BHoM types, this describes C# interface implementation."
+      },
+      "domain": "BH.oM.Physical.FramingProperties.IFramingElementProperty",
+      "range": "BH.oM.Base.IObject"
     },
     {
       "id": "BH.oM.Physical.Elements.Beam-HasProperty-BH.oM.Physical.Elements.Beam.Location",
@@ -2238,6 +3001,32 @@
       ],
       "domain": "BH.oM.Physical.Elements.Beam.Property",
       "range": "BH.oM.Physical.FramingProperties.IFramingElementProperty"
+    },
+    {
+      "id": "Beam-IsA-IBHoMObject_85148127ABE835CDFD794E6E6F73E1BF5FD5B5EFD7F62DEC9C5F1E6DBAC1F1EB",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "label": "IsA",
+      "attributes": [
+        "object"
+      ],
+      "comment": {
+        "undefined": "Can be used to describe that a thing belongs to a class; or that a thing is equivalent to another thing. When used for BHoM types, this describes C# interface implementation."
+      },
+      "domain": "BH.oM.Physical.Elements.Beam",
+      "range": "BH.oM.Base.IBHoMObject"
+    },
+    {
+      "id": "Beam-IsA-IObject_31A80D21B8E8D9D7F5BA26EBACD6E1EA509D50EF469A64F337E142E216A43497",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "label": "IsA",
+      "attributes": [
+        "object"
+      ],
+      "comment": {
+        "undefined": "Can be used to describe that a thing belongs to a class; or that a thing is equivalent to another thing. When used for BHoM types, this describes C# interface implementation."
+      },
+      "domain": "BH.oM.Physical.Elements.Beam",
+      "range": "BH.oM.Base.IObject"
     },
     {
       "id": "Beam-IsA-IFramingElement_CE6E3D30999ADF8C7AA543DF1E58E3AA723A79585B0E62ACB3C7B448984961E6",
@@ -2305,6 +3094,16 @@
       "range": "BH.oM.Dimensional.IElementM"
     },
     {
+      "id": "Beam-IsSubclassOf-BHoMObject_1F00E32252D2D7A87BD1108EEDAA54BA65F64921E6F7106558B07BCD8F46D8A2",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsSubclassOf.cs",
+      "label": "IsA",
+      "attributes": [
+        "object"
+      ],
+      "domain": "BH.oM.Physical.Elements.Beam",
+      "range": "BH.oM.Base.BHoMObject"
+    },
+    {
       "id": "BH.oM.Physical.Elements.Bracing-HasProperty-BH.oM.Physical.Elements.Bracing.Location",
       "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/HasProperty.cs",
       "label": "HasProperty",
@@ -2343,6 +3142,32 @@
       ],
       "domain": "BH.oM.Physical.Elements.Bracing.Property",
       "range": "BH.oM.Physical.FramingProperties.IFramingElementProperty"
+    },
+    {
+      "id": "Bracing-IsA-IBHoMObject_25D50F0A08E846E22A5153D968EB66312F009F3C175AE76250F6970776003D4F",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "label": "IsA",
+      "attributes": [
+        "object"
+      ],
+      "comment": {
+        "undefined": "Can be used to describe that a thing belongs to a class; or that a thing is equivalent to another thing. When used for BHoM types, this describes C# interface implementation."
+      },
+      "domain": "BH.oM.Physical.Elements.Bracing",
+      "range": "BH.oM.Base.IBHoMObject"
+    },
+    {
+      "id": "Bracing-IsA-IObject_8E54B670A3800CACF52113E65D4CCA040E35C8EE0BA96D9CA71E110B919F33CF",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "label": "IsA",
+      "attributes": [
+        "object"
+      ],
+      "comment": {
+        "undefined": "Can be used to describe that a thing belongs to a class; or that a thing is equivalent to another thing. When used for BHoM types, this describes C# interface implementation."
+      },
+      "domain": "BH.oM.Physical.Elements.Bracing",
+      "range": "BH.oM.Base.IObject"
     },
     {
       "id": "Bracing-IsA-IFramingElement_F04AAA85303F4B83269187EFD62EB5DD0986C82CDA3CB78493A29BF5F327CA06",
@@ -2410,6 +3235,16 @@
       "range": "BH.oM.Dimensional.IElementM"
     },
     {
+      "id": "Bracing-IsSubclassOf-BHoMObject_A7F93FC1602DD57E88070A2316B13139E285AC97661D12F43D40D819C0E3A54D",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsSubclassOf.cs",
+      "label": "IsA",
+      "attributes": [
+        "object"
+      ],
+      "domain": "BH.oM.Physical.Elements.Bracing",
+      "range": "BH.oM.Base.BHoMObject"
+    },
+    {
       "id": "BH.oM.Physical.Elements.Cable-HasProperty-BH.oM.Physical.Elements.Cable.Location",
       "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/HasProperty.cs",
       "label": "HasProperty",
@@ -2448,6 +3283,32 @@
       ],
       "domain": "BH.oM.Physical.Elements.Cable.Property",
       "range": "BH.oM.Physical.FramingProperties.IFramingElementProperty"
+    },
+    {
+      "id": "Cable-IsA-IBHoMObject_F91A732766C30B6EFA9B60F2DBE61F00D4DD08F40E43A0099A67AA9F1D796EAB",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "label": "IsA",
+      "attributes": [
+        "object"
+      ],
+      "comment": {
+        "undefined": "Can be used to describe that a thing belongs to a class; or that a thing is equivalent to another thing. When used for BHoM types, this describes C# interface implementation."
+      },
+      "domain": "BH.oM.Physical.Elements.Cable",
+      "range": "BH.oM.Base.IBHoMObject"
+    },
+    {
+      "id": "Cable-IsA-IObject_09C5B18333273D3E4AA38EBE1BA12F8192EA91FBA2875CCA84701E6FCC2F303E",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "label": "IsA",
+      "attributes": [
+        "object"
+      ],
+      "comment": {
+        "undefined": "Can be used to describe that a thing belongs to a class; or that a thing is equivalent to another thing. When used for BHoM types, this describes C# interface implementation."
+      },
+      "domain": "BH.oM.Physical.Elements.Cable",
+      "range": "BH.oM.Base.IObject"
     },
     {
       "id": "Cable-IsA-IFramingElement_2C08452DE981B3149BEF85121A9B6D77ED1C0975D6CB691F67547078FD58018F",
@@ -2515,6 +3376,16 @@
       "range": "BH.oM.Dimensional.IElementM"
     },
     {
+      "id": "Cable-IsSubclassOf-BHoMObject_96398280488DE39C13408972150E4CD75059FB4C9F00C0A8484667E8297C67B2",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsSubclassOf.cs",
+      "label": "IsA",
+      "attributes": [
+        "object"
+      ],
+      "domain": "BH.oM.Physical.Elements.Cable",
+      "range": "BH.oM.Base.BHoMObject"
+    },
+    {
       "id": "BH.oM.Physical.Elements.Column-HasProperty-BH.oM.Physical.Elements.Column.Location",
       "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/HasProperty.cs",
       "label": "HasProperty",
@@ -2553,6 +3424,32 @@
       ],
       "domain": "BH.oM.Physical.Elements.Column.Property",
       "range": "BH.oM.Physical.FramingProperties.IFramingElementProperty"
+    },
+    {
+      "id": "Column-IsA-IBHoMObject_5F74DD7773B30F0454251657A9564CACE6C27A6E5BC9D9DF8560550F7FF7B258",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "label": "IsA",
+      "attributes": [
+        "object"
+      ],
+      "comment": {
+        "undefined": "Can be used to describe that a thing belongs to a class; or that a thing is equivalent to another thing. When used for BHoM types, this describes C# interface implementation."
+      },
+      "domain": "BH.oM.Physical.Elements.Column",
+      "range": "BH.oM.Base.IBHoMObject"
+    },
+    {
+      "id": "Column-IsA-IObject_C652E2BA1849858873D6EF54AEF820B961EC31D160B02D449FA8587C42678AA3",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "label": "IsA",
+      "attributes": [
+        "object"
+      ],
+      "comment": {
+        "undefined": "Can be used to describe that a thing belongs to a class; or that a thing is equivalent to another thing. When used for BHoM types, this describes C# interface implementation."
+      },
+      "domain": "BH.oM.Physical.Elements.Column",
+      "range": "BH.oM.Base.IObject"
     },
     {
       "id": "Column-IsA-IFramingElement_B6B6463F34CDF61DCFF51BD10FA2E2585E8653C8E99ABF9D338D786C06F5982A",
@@ -2620,6 +3517,16 @@
       "range": "BH.oM.Dimensional.IElementM"
     },
     {
+      "id": "Column-IsSubclassOf-BHoMObject_8323BAF7DBAD546181C0342A1473F6EA5EB2881D69822E5AD405C827AC5B122B",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsSubclassOf.cs",
+      "label": "IsA",
+      "attributes": [
+        "object"
+      ],
+      "domain": "BH.oM.Physical.Elements.Column",
+      "range": "BH.oM.Base.BHoMObject"
+    },
+    {
       "id": "BH.oM.Physical.Elements.Door-HasProperty-BH.oM.Physical.Elements.Door.Location",
       "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/HasProperty.cs",
       "label": "HasProperty",
@@ -2658,6 +3565,32 @@
       ],
       "domain": "BH.oM.Physical.Elements.Door.Construction",
       "range": "BH.oM.Physical.Constructions.IConstruction"
+    },
+    {
+      "id": "Door-IsA-IBHoMObject_3EF28E784FEDCCAD6C0D5C787CEC824E8F19416A4AF8A03CE252009AA0B9C66C",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "label": "IsA",
+      "attributes": [
+        "object"
+      ],
+      "comment": {
+        "undefined": "Can be used to describe that a thing belongs to a class; or that a thing is equivalent to another thing. When used for BHoM types, this describes C# interface implementation."
+      },
+      "domain": "BH.oM.Physical.Elements.Door",
+      "range": "BH.oM.Base.IBHoMObject"
+    },
+    {
+      "id": "Door-IsA-IObject_AEE20C052F651AEB98042D92503E434FEED3799FC0D8BE5C23DB12DB1F42C63C",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "label": "IsA",
+      "attributes": [
+        "object"
+      ],
+      "comment": {
+        "undefined": "Can be used to describe that a thing belongs to a class; or that a thing is equivalent to another thing. When used for BHoM types, this describes C# interface implementation."
+      },
+      "domain": "BH.oM.Physical.Elements.Door",
+      "range": "BH.oM.Base.IObject"
     },
     {
       "id": "Door-IsA-IOpening_BF8B079AEEEFEFD549B1164064CDA5A9D495C00639F595720F4DC1AD990048E2",
@@ -2725,6 +3658,16 @@
       "range": "BH.oM.Dimensional.IElementM"
     },
     {
+      "id": "Door-IsSubclassOf-BHoMObject_32C3AE9510514E2DB966F1AFA23721D7CD0B9C2DBEF4717F67B1036F54FEB1BB",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsSubclassOf.cs",
+      "label": "IsA",
+      "attributes": [
+        "object"
+      ],
+      "domain": "BH.oM.Physical.Elements.Door",
+      "range": "BH.oM.Base.BHoMObject"
+    },
+    {
       "id": "ExplicitBulk-HasProperty-Volume_E1F4A825AD5F2C51B7AEB7E1EC358D127F9E14CAEE033E6E0DD884504C4D6041",
       "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/HasProperty.cs",
       "label": "HasProperty",
@@ -2755,6 +3698,32 @@
       "range": "BH.oM.Physical.Materials.MaterialComposition"
     },
     {
+      "id": "ExplicitBulk-IsA-IBHoMObject_143E02AC7A889285584C3A15EC40B495DE2B1FC3BBC58353A85B58BF5C09D10A",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "label": "IsA",
+      "attributes": [
+        "object"
+      ],
+      "comment": {
+        "undefined": "Can be used to describe that a thing belongs to a class; or that a thing is equivalent to another thing. When used for BHoM types, this describes C# interface implementation."
+      },
+      "domain": "BH.oM.Physical.Elements.ExplicitBulk",
+      "range": "BH.oM.Base.IBHoMObject"
+    },
+    {
+      "id": "ExplicitBulk-IsA-IObject_DD539AF03DB48C291D302DDAAF479AB22BF706642E23B17CB8A039FCCDF9842E",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "label": "IsA",
+      "attributes": [
+        "object"
+      ],
+      "comment": {
+        "undefined": "Can be used to describe that a thing belongs to a class; or that a thing is equivalent to another thing. When used for BHoM types, this describes C# interface implementation."
+      },
+      "domain": "BH.oM.Physical.Elements.ExplicitBulk",
+      "range": "BH.oM.Base.IObject"
+    },
+    {
       "id": "ExplicitBulk-IsA-IElementM_D4E5414268982A57405107082D6989DA50C6AF70A9CAE60CD81A9365CE9EA40B",
       "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
       "label": "IsA",
@@ -2766,6 +3735,16 @@
       },
       "domain": "BH.oM.Physical.Elements.ExplicitBulk",
       "range": "BH.oM.Dimensional.IElementM"
+    },
+    {
+      "id": "ExplicitBulk-IsSubclassOf-BHoMObject_F0BC1C94F8C95A313B03EF1439F1307A2939E38246CED4FF38DCD8CC63125D77",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsSubclassOf.cs",
+      "label": "IsA",
+      "attributes": [
+        "object"
+      ],
+      "domain": "BH.oM.Physical.Elements.ExplicitBulk",
+      "range": "BH.oM.Base.BHoMObject"
     },
     {
       "id": "BH.oM.Physical.Elements.Floor-HasProperty-BH.oM.Physical.Elements.Floor.Location",
@@ -2848,6 +3827,32 @@
       "range": "BH.oM.Physical.Elements.Offset"
     },
     {
+      "id": "Floor-IsA-IBHoMObject_F9B3F434DE97F37587D8E68DEF82809457CFBA79DCDD1E63E9BFE7CCC69AE393",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "label": "IsA",
+      "attributes": [
+        "object"
+      ],
+      "comment": {
+        "undefined": "Can be used to describe that a thing belongs to a class; or that a thing is equivalent to another thing. When used for BHoM types, this describes C# interface implementation."
+      },
+      "domain": "BH.oM.Physical.Elements.Floor",
+      "range": "BH.oM.Base.IBHoMObject"
+    },
+    {
+      "id": "Floor-IsA-IObject_FB3545579C391B25876CC4EEC20985FF108F4C76FFF73B1FCA55F5BF0034F82A",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "label": "IsA",
+      "attributes": [
+        "object"
+      ],
+      "comment": {
+        "undefined": "Can be used to describe that a thing belongs to a class; or that a thing is equivalent to another thing. When used for BHoM types, this describes C# interface implementation."
+      },
+      "domain": "BH.oM.Physical.Elements.Floor",
+      "range": "BH.oM.Base.IObject"
+    },
+    {
       "id": "Floor-IsA-ISurface_9E7937F905DB38FF5B523EC0A6BB28DCA6A51BD6EC991167CB2129360808DC2C",
       "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
       "label": "IsA",
@@ -2913,6 +3918,16 @@
       "range": "BH.oM.Dimensional.IElementM"
     },
     {
+      "id": "Floor-IsSubclassOf-BHoMObject_68B2E299CC7358F5516F1F2C9A67C20CF958338EF9C9676D84D7429354A98CAD",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsSubclassOf.cs",
+      "label": "IsA",
+      "attributes": [
+        "object"
+      ],
+      "domain": "BH.oM.Physical.Elements.Floor",
+      "range": "BH.oM.Base.BHoMObject"
+    },
+    {
       "id": "IFramingElement-RequiresProperty-Location_22575592A7C3C877168355BBAAA71A66E9770190F0A04B188950DF70B98CACCB",
       "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/RequiresProperty.cs",
       "label": "RequiresProperty",
@@ -2931,6 +3946,32 @@
       ],
       "domain": "BH.oM.Physical.Elements.IFramingElement",
       "range": "BH.oM.Physical.Elements.IFramingElement.Property"
+    },
+    {
+      "id": "IFramingElement-IsA-IBHoMObject_77AE17B02233BBFE1664B8DB94B88A06E8550674BE4EF9D91B7E6B841A75AD32",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "label": "IsA",
+      "attributes": [
+        "object"
+      ],
+      "comment": {
+        "undefined": "Can be used to describe that a thing belongs to a class; or that a thing is equivalent to another thing. When used for BHoM types, this describes C# interface implementation."
+      },
+      "domain": "BH.oM.Physical.Elements.IFramingElement",
+      "range": "BH.oM.Base.IBHoMObject"
+    },
+    {
+      "id": "IFramingElement-IsA-IObject_EFDB838CDD4241F553F172A22078842C9FF7FF58B66630E774D8215D7CF49606",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "label": "IsA",
+      "attributes": [
+        "object"
+      ],
+      "comment": {
+        "undefined": "Can be used to describe that a thing belongs to a class; or that a thing is equivalent to another thing. When used for BHoM types, this describes C# interface implementation."
+      },
+      "domain": "BH.oM.Physical.Elements.IFramingElement",
+      "range": "BH.oM.Base.IObject"
     },
     {
       "id": "IFramingElement-IsA-IPhysical_60233635B5F4693D4BEBE41EB3EE946362AB69F3B95D30FCC39F7D8C279B52E5",
@@ -2995,6 +4036,32 @@
       "range": "BH.oM.Physical.Elements.IOpening.Location"
     },
     {
+      "id": "IOpening-IsA-IBHoMObject_CF43E16823D7C67B5F26B2EF7D9A1BE73B5C451207AB92C294DBC75D7500F8D9",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "label": "IsA",
+      "attributes": [
+        "object"
+      ],
+      "comment": {
+        "undefined": "Can be used to describe that a thing belongs to a class; or that a thing is equivalent to another thing. When used for BHoM types, this describes C# interface implementation."
+      },
+      "domain": "BH.oM.Physical.Elements.IOpening",
+      "range": "BH.oM.Base.IBHoMObject"
+    },
+    {
+      "id": "IOpening-IsA-IObject_786FD5BB3479C7338D58A4243DA2DCCEB4AC4AA2BBCDB9715189440CFD130C0C",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "label": "IsA",
+      "attributes": [
+        "object"
+      ],
+      "comment": {
+        "undefined": "Can be used to describe that a thing belongs to a class; or that a thing is equivalent to another thing. When used for BHoM types, this describes C# interface implementation."
+      },
+      "domain": "BH.oM.Physical.Elements.IOpening",
+      "range": "BH.oM.Base.IObject"
+    },
+    {
       "id": "IOpening-IsA-IPhysical_39DF41DED02B30319F14453C95B24B9FAD64E479B81FA8F875064888B2728D1C",
       "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
       "label": "IsA",
@@ -3042,6 +4109,32 @@
       ],
       "domain": "BH.oM.Physical.Elements.ISolid",
       "range": "BH.oM.Physical.Elements.ISolid.Geometry"
+    },
+    {
+      "id": "ISolid-IsA-IBHoMObject_3B5E9CB99EC15945BD4E56804DF6F2BE74D0649F0A79912635D9A0FDB7694C6E",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "label": "IsA",
+      "attributes": [
+        "object"
+      ],
+      "comment": {
+        "undefined": "Can be used to describe that a thing belongs to a class; or that a thing is equivalent to another thing. When used for BHoM types, this describes C# interface implementation."
+      },
+      "domain": "BH.oM.Physical.Elements.ISolid",
+      "range": "BH.oM.Base.IBHoMObject"
+    },
+    {
+      "id": "ISolid-IsA-IObject_A1D15A527E9897C65DF25196D3FF7DCC30B41667B1B4BAC76B3EC16EC309595B",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "label": "IsA",
+      "attributes": [
+        "object"
+      ],
+      "comment": {
+        "undefined": "Can be used to describe that a thing belongs to a class; or that a thing is equivalent to another thing. When used for BHoM types, this describes C# interface implementation."
+      },
+      "domain": "BH.oM.Physical.Elements.ISolid",
+      "range": "BH.oM.Base.IObject"
     },
     {
       "id": "ISolid-IsA-IPhysical_6D3FFB0D5166E64F935DCB44E952438595A6706A58F675D1633BBA02E37F1747",
@@ -3108,6 +4201,32 @@
       ],
       "domain": "BH.oM.Physical.Elements.ISurface",
       "range": "BH.oM.Physical.Elements.ISurface.Offset"
+    },
+    {
+      "id": "ISurface-IsA-IBHoMObject_AE0D0F9E829E6473B086B7B04CAE4DCABC86540F98EC4381E5D65E074DD7A110",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "label": "IsA",
+      "attributes": [
+        "object"
+      ],
+      "comment": {
+        "undefined": "Can be used to describe that a thing belongs to a class; or that a thing is equivalent to another thing. When used for BHoM types, this describes C# interface implementation."
+      },
+      "domain": "BH.oM.Physical.Elements.ISurface",
+      "range": "BH.oM.Base.IBHoMObject"
+    },
+    {
+      "id": "ISurface-IsA-IObject_F5AE762BBCD6379C35FDEF99273060E9D2286983D49BB59CEC6EF87A278CE82E",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "label": "IsA",
+      "attributes": [
+        "object"
+      ],
+      "comment": {
+        "undefined": "Can be used to describe that a thing belongs to a class; or that a thing is equivalent to another thing. When used for BHoM types, this describes C# interface implementation."
+      },
+      "domain": "BH.oM.Physical.Elements.ISurface",
+      "range": "BH.oM.Base.IObject"
     },
     {
       "id": "ISurface-IsA-IPhysical_3987BA94048AC90BFD425551AE1AB17D79E7766B704A02B238085C61794E9B7D",
@@ -3202,6 +4321,32 @@
       "range": "BH.oM.Physical.FramingProperties.IFramingElementProperty"
     },
     {
+      "id": "Pile-IsA-IBHoMObject_9E0F188C77257A8B70304141575300F5B8D2970CE237F4B134E9BE47D5772141",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "label": "IsA",
+      "attributes": [
+        "object"
+      ],
+      "comment": {
+        "undefined": "Can be used to describe that a thing belongs to a class; or that a thing is equivalent to another thing. When used for BHoM types, this describes C# interface implementation."
+      },
+      "domain": "BH.oM.Physical.Elements.Pile",
+      "range": "BH.oM.Base.IBHoMObject"
+    },
+    {
+      "id": "Pile-IsA-IObject_A204CC2EBC4DADA940B984C63B1A312B839048FD9373C02255A3C98D9103ED7A",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "label": "IsA",
+      "attributes": [
+        "object"
+      ],
+      "comment": {
+        "undefined": "Can be used to describe that a thing belongs to a class; or that a thing is equivalent to another thing. When used for BHoM types, this describes C# interface implementation."
+      },
+      "domain": "BH.oM.Physical.Elements.Pile",
+      "range": "BH.oM.Base.IObject"
+    },
+    {
       "id": "Pile-IsA-IFramingElement_ABEC43954D1BEF099FA82D772C2789CE73D1407A7459F10E64999E3AFDB26408",
       "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
       "label": "IsA",
@@ -3265,6 +4410,16 @@
       },
       "domain": "BH.oM.Physical.Elements.Pile",
       "range": "BH.oM.Dimensional.IElementM"
+    },
+    {
+      "id": "Pile-IsSubclassOf-BHoMObject_3A12CB76F5BE7A05BEF9F42848D5EF444CF9A3E15264B6A9C621A1D25DE11BFA",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsSubclassOf.cs",
+      "label": "IsA",
+      "attributes": [
+        "object"
+      ],
+      "domain": "BH.oM.Physical.Elements.Pile",
+      "range": "BH.oM.Base.BHoMObject"
     },
     {
       "id": "BH.oM.Physical.Elements.Roof-HasProperty-BH.oM.Physical.Elements.Roof.Location",
@@ -3347,6 +4502,32 @@
       "range": "BH.oM.Physical.Elements.Offset"
     },
     {
+      "id": "Roof-IsA-IBHoMObject_3F3B264E17F341EC19620A53DEF7C8C26035A5295C30B3F3C7A3809085E3C83F",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "label": "IsA",
+      "attributes": [
+        "object"
+      ],
+      "comment": {
+        "undefined": "Can be used to describe that a thing belongs to a class; or that a thing is equivalent to another thing. When used for BHoM types, this describes C# interface implementation."
+      },
+      "domain": "BH.oM.Physical.Elements.Roof",
+      "range": "BH.oM.Base.IBHoMObject"
+    },
+    {
+      "id": "Roof-IsA-IObject_4730F11095F76C9F4140225C944694AD550E019927CFAC82D75553C7BCD10D06",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "label": "IsA",
+      "attributes": [
+        "object"
+      ],
+      "comment": {
+        "undefined": "Can be used to describe that a thing belongs to a class; or that a thing is equivalent to another thing. When used for BHoM types, this describes C# interface implementation."
+      },
+      "domain": "BH.oM.Physical.Elements.Roof",
+      "range": "BH.oM.Base.IObject"
+    },
+    {
       "id": "Roof-IsA-ISurface_7DA5B59D66393B356418731D00E6EC6CD056842C2C279CDD8E707CC2CF3E6DC9",
       "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
       "label": "IsA",
@@ -3412,6 +4593,16 @@
       "range": "BH.oM.Dimensional.IElementM"
     },
     {
+      "id": "Roof-IsSubclassOf-BHoMObject_8B1379B351AC2395753EC71F1A966B821A99244C845E14C92442046B4266EF5D",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsSubclassOf.cs",
+      "label": "IsA",
+      "attributes": [
+        "object"
+      ],
+      "domain": "BH.oM.Physical.Elements.Roof",
+      "range": "BH.oM.Base.BHoMObject"
+    },
+    {
       "id": "BH.oM.Physical.Elements.SolidBulk-HasProperty-BH.oM.Physical.Elements.SolidBulk.Geometry",
       "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/HasProperty.cs",
       "label": "HasProperty",
@@ -3450,6 +4641,32 @@
       ],
       "domain": "BH.oM.Physical.Elements.SolidBulk.MaterialComposition",
       "range": "BH.oM.Physical.Materials.MaterialComposition"
+    },
+    {
+      "id": "SolidBulk-IsA-IBHoMObject_CCEA6ABBEF2D141DFA1C892BECDC7A051054FA935E2B0C9A94FC71EC70E152B3",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "label": "IsA",
+      "attributes": [
+        "object"
+      ],
+      "comment": {
+        "undefined": "Can be used to describe that a thing belongs to a class; or that a thing is equivalent to another thing. When used for BHoM types, this describes C# interface implementation."
+      },
+      "domain": "BH.oM.Physical.Elements.SolidBulk",
+      "range": "BH.oM.Base.IBHoMObject"
+    },
+    {
+      "id": "SolidBulk-IsA-IObject_C2BFDAFC0486D88DBF9677B9FFC308135F4AEBA1426A6218B12BFC1619F60192",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "label": "IsA",
+      "attributes": [
+        "object"
+      ],
+      "comment": {
+        "undefined": "Can be used to describe that a thing belongs to a class; or that a thing is equivalent to another thing. When used for BHoM types, this describes C# interface implementation."
+      },
+      "domain": "BH.oM.Physical.Elements.SolidBulk",
+      "range": "BH.oM.Base.IObject"
     },
     {
       "id": "SolidBulk-IsA-ISolid_5A709BB996F1EF117C2FF3672B21A804DD2D24E8C9ACC2EEBE47164859754866",
@@ -3491,6 +4708,16 @@
       "range": "BH.oM.Dimensional.IElementM"
     },
     {
+      "id": "SolidBulk-IsSubclassOf-BHoMObject_1F6ABB41124384FDAFF73867A48AD54E9E4F4CD860BE6BFA24BEC06ACF276B18",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsSubclassOf.cs",
+      "label": "IsA",
+      "attributes": [
+        "object"
+      ],
+      "domain": "BH.oM.Physical.Elements.SolidBulk",
+      "range": "BH.oM.Base.BHoMObject"
+    },
+    {
       "id": "BH.oM.Physical.Elements.Void-HasProperty-BH.oM.Physical.Elements.Void.Location",
       "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/HasProperty.cs",
       "label": "HasProperty",
@@ -3509,6 +4736,32 @@
       ],
       "domain": "BH.oM.Physical.Elements.Void.Location",
       "range": "BH.oM.Geometry.ISurface"
+    },
+    {
+      "id": "Void-IsA-IBHoMObject_2403E727398AE4C8305BE37F446F8E53FB0436B3CE9B75DB823EBA9AD7F68EBC",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "label": "IsA",
+      "attributes": [
+        "object"
+      ],
+      "comment": {
+        "undefined": "Can be used to describe that a thing belongs to a class; or that a thing is equivalent to another thing. When used for BHoM types, this describes C# interface implementation."
+      },
+      "domain": "BH.oM.Physical.Elements.Void",
+      "range": "BH.oM.Base.IBHoMObject"
+    },
+    {
+      "id": "Void-IsA-IObject_E7A65196B2541F27510CF449D2F61EFE87A9020E8EAC74B1AC2EA959D5B91E37",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "label": "IsA",
+      "attributes": [
+        "object"
+      ],
+      "comment": {
+        "undefined": "Can be used to describe that a thing belongs to a class; or that a thing is equivalent to another thing. When used for BHoM types, this describes C# interface implementation."
+      },
+      "domain": "BH.oM.Physical.Elements.Void",
+      "range": "BH.oM.Base.IObject"
     },
     {
       "id": "Void-IsA-IOpening_071FC87736EF30B6B9A4E7182918F869C7728294A5547F078AAD9F8AF2D5EA91",
@@ -3561,6 +4814,16 @@
       },
       "domain": "BH.oM.Physical.Elements.Void",
       "range": "BH.oM.Dimensional.IElement"
+    },
+    {
+      "id": "Void-IsSubclassOf-BHoMObject_B9278A79A3CE0982FE14A9586A2B82EBEB50F3ACAC7594562C7F847D7014FC9F",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsSubclassOf.cs",
+      "label": "IsA",
+      "attributes": [
+        "object"
+      ],
+      "domain": "BH.oM.Physical.Elements.Void",
+      "range": "BH.oM.Base.BHoMObject"
     },
     {
       "id": "BH.oM.Physical.Elements.Wall-HasProperty-BH.oM.Physical.Elements.Wall.Location",
@@ -3643,6 +4906,32 @@
       "range": "BH.oM.Physical.Elements.Offset"
     },
     {
+      "id": "Wall-IsA-IBHoMObject_5962BB26BD9DAE6BE3DB305C4632880F80335E711EA76BA08EE61967F2067751",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "label": "IsA",
+      "attributes": [
+        "object"
+      ],
+      "comment": {
+        "undefined": "Can be used to describe that a thing belongs to a class; or that a thing is equivalent to another thing. When used for BHoM types, this describes C# interface implementation."
+      },
+      "domain": "BH.oM.Physical.Elements.Wall",
+      "range": "BH.oM.Base.IBHoMObject"
+    },
+    {
+      "id": "Wall-IsA-IObject_CA0DFFC2B0AE0649968647EF24AC9EB044BAFBED1260E449A113852DE6A26133",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "label": "IsA",
+      "attributes": [
+        "object"
+      ],
+      "comment": {
+        "undefined": "Can be used to describe that a thing belongs to a class; or that a thing is equivalent to another thing. When used for BHoM types, this describes C# interface implementation."
+      },
+      "domain": "BH.oM.Physical.Elements.Wall",
+      "range": "BH.oM.Base.IObject"
+    },
+    {
       "id": "Wall-IsA-ISurface_8E1A640F4B87CC579669D3B24BDD068DAEB0B8B25085D6014B26F39B74D50C3B",
       "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
       "label": "IsA",
@@ -3708,6 +4997,16 @@
       "range": "BH.oM.Dimensional.IElementM"
     },
     {
+      "id": "Wall-IsSubclassOf-BHoMObject_2A5C3915F39F9142F9CFE14DC780C89DE680BB29956AEBBD71262356CC9A8DD6",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsSubclassOf.cs",
+      "label": "IsA",
+      "attributes": [
+        "object"
+      ],
+      "domain": "BH.oM.Physical.Elements.Wall",
+      "range": "BH.oM.Base.BHoMObject"
+    },
+    {
       "id": "BH.oM.Physical.Elements.Window-HasProperty-BH.oM.Physical.Elements.Window.Location",
       "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/HasProperty.cs",
       "label": "HasProperty",
@@ -3746,6 +5045,32 @@
       ],
       "domain": "BH.oM.Physical.Elements.Window.Construction",
       "range": "BH.oM.Physical.Constructions.IConstruction"
+    },
+    {
+      "id": "Window-IsA-IBHoMObject_858CCB1C7A19614FDEF2CADA524566FBDDCEF84AD37E98713706C7B1BA51FAB0",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "label": "IsA",
+      "attributes": [
+        "object"
+      ],
+      "comment": {
+        "undefined": "Can be used to describe that a thing belongs to a class; or that a thing is equivalent to another thing. When used for BHoM types, this describes C# interface implementation."
+      },
+      "domain": "BH.oM.Physical.Elements.Window",
+      "range": "BH.oM.Base.IBHoMObject"
+    },
+    {
+      "id": "Window-IsA-IObject_ED9865D3E36D140D16381AECD2D2164515C3BD2048981DCF10C92E66D4D7C14D",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "label": "IsA",
+      "attributes": [
+        "object"
+      ],
+      "comment": {
+        "undefined": "Can be used to describe that a thing belongs to a class; or that a thing is equivalent to another thing. When used for BHoM types, this describes C# interface implementation."
+      },
+      "domain": "BH.oM.Physical.Elements.Window",
+      "range": "BH.oM.Base.IObject"
     },
     {
       "id": "Window-IsA-IOpening_1194D30269801D2538090DD14EDDA855E7445580C4EEFDCFBA01CE823278DD74",
@@ -3813,6 +5138,16 @@
       "range": "BH.oM.Dimensional.IElementM"
     },
     {
+      "id": "Window-IsSubclassOf-BHoMObject_D1C5184B6725E94C53FD1F3AC975D51B003430ADC0BB5ED02C056A1DC6AECF27",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsSubclassOf.cs",
+      "label": "IsA",
+      "attributes": [
+        "object"
+      ],
+      "domain": "BH.oM.Physical.Elements.Window",
+      "range": "BH.oM.Base.BHoMObject"
+    },
+    {
       "id": "BH.oM.Physical.Constructions.Construction-HasProperty-BH.oM.Physical.Constructions.Construction.Layers",
       "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/HasProperty.cs",
       "label": "HasProperty",
@@ -3831,6 +5166,32 @@
       ],
       "domain": "BH.oM.Physical.Constructions.Construction.Layers",
       "range": "BH.oM.Physical.Constructions.Layer"
+    },
+    {
+      "id": "Construction-IsA-IBHoMObject_6526F2B8F25135F104DB2E6FF791D8439C0FECD07EBA8B1511D91C218AC6AD6F",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "label": "IsA",
+      "attributes": [
+        "object"
+      ],
+      "comment": {
+        "undefined": "Can be used to describe that a thing belongs to a class; or that a thing is equivalent to another thing. When used for BHoM types, this describes C# interface implementation."
+      },
+      "domain": "BH.oM.Physical.Constructions.Construction",
+      "range": "BH.oM.Base.IBHoMObject"
+    },
+    {
+      "id": "Construction-IsA-IObject_3A21594255D2BDD86097CBC52FA93790C8F60E560B8D68263F1BEB828C31044D",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "label": "IsA",
+      "attributes": [
+        "object"
+      ],
+      "comment": {
+        "undefined": "Can be used to describe that a thing belongs to a class; or that a thing is equivalent to another thing. When used for BHoM types, this describes C# interface implementation."
+      },
+      "domain": "BH.oM.Physical.Constructions.Construction",
+      "range": "BH.oM.Base.IObject"
     },
     {
       "id": "Construction-IsA-IConstruction_4EE5B04453B7F5F670C9AFABEC76091E09FD04D2D641D836B930895F3BFCD5A4",
@@ -3857,6 +5218,42 @@
       },
       "domain": "BH.oM.Physical.Constructions.Construction",
       "range": "BH.oM.Physical.IPhysical"
+    },
+    {
+      "id": "Construction-IsSubclassOf-BHoMObject_0AF3B8C1011FAE7D028B784BA6810BE7DD525BB54375C6BD44802E017716A547",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsSubclassOf.cs",
+      "label": "IsA",
+      "attributes": [
+        "object"
+      ],
+      "domain": "BH.oM.Physical.Constructions.Construction",
+      "range": "BH.oM.Base.BHoMObject"
+    },
+    {
+      "id": "IConstruction-IsA-IBHoMObject_80C149E2AB2539C89FFBCA861F536B2604300E3144669315EFFBE3CC9CE396FF",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "label": "IsA",
+      "attributes": [
+        "object"
+      ],
+      "comment": {
+        "undefined": "Can be used to describe that a thing belongs to a class; or that a thing is equivalent to another thing. When used for BHoM types, this describes C# interface implementation."
+      },
+      "domain": "BH.oM.Physical.Constructions.IConstruction",
+      "range": "BH.oM.Base.IBHoMObject"
+    },
+    {
+      "id": "IConstruction-IsA-IObject_3F2AA4993EC262D287D0DFB90D7C95716D3BED3D8980A510F3785E546DA06F4C",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "label": "IsA",
+      "attributes": [
+        "object"
+      ],
+      "comment": {
+        "undefined": "Can be used to describe that a thing belongs to a class; or that a thing is equivalent to another thing. When used for BHoM types, this describes C# interface implementation."
+      },
+      "domain": "BH.oM.Physical.Constructions.IConstruction",
+      "range": "BH.oM.Base.IObject"
     },
     {
       "id": "BH.oM.Physical.Constructions.Layer-HasProperty-BH.oM.Physical.Constructions.Layer.Material",
@@ -3889,6 +5286,32 @@
       "range": "BH.oM.Physical.Constructions.Layer.Thickness"
     },
     {
+      "id": "Layer-IsA-IBHoMObject_3E8E4D7C67247E7A2BD8F320BF24C7A8F2EE6ABD029D83322F6B310652E99008",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "label": "IsA",
+      "attributes": [
+        "object"
+      ],
+      "comment": {
+        "undefined": "Can be used to describe that a thing belongs to a class; or that a thing is equivalent to another thing. When used for BHoM types, this describes C# interface implementation."
+      },
+      "domain": "BH.oM.Physical.Constructions.Layer",
+      "range": "BH.oM.Base.IBHoMObject"
+    },
+    {
+      "id": "Layer-IsA-IObject_027F9F4512B6651796EDC1332DDD6844C710D030EDDF07516C9D98624BA0B7D6",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "label": "IsA",
+      "attributes": [
+        "object"
+      ],
+      "comment": {
+        "undefined": "Can be used to describe that a thing belongs to a class; or that a thing is equivalent to another thing. When used for BHoM types, this describes C# interface implementation."
+      },
+      "domain": "BH.oM.Physical.Constructions.Layer",
+      "range": "BH.oM.Base.IObject"
+    },
+    {
       "id": "Layer-IsA-IPhysical_39ED61EB63BAFEEAFC6C72DE452080A8FA3C385F26BF603B34EAAEEBA57C8F61",
       "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
       "label": "IsA",
@@ -3900,6 +5323,16 @@
       },
       "domain": "BH.oM.Physical.Constructions.Layer",
       "range": "BH.oM.Physical.IPhysical"
+    },
+    {
+      "id": "Layer-IsSubclassOf-BHoMObject_F8627CCB163F089067FE5B7E967F7F727CA2E5B0F1425BC85132A7BBC1873FA4",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsSubclassOf.cs",
+      "label": "IsA",
+      "attributes": [
+        "object"
+      ],
+      "domain": "BH.oM.Physical.Constructions.Layer",
+      "range": "BH.oM.Base.BHoMObject"
     }
   ]
 }

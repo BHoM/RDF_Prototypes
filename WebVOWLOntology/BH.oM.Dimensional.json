@@ -13,6 +13,10 @@
     {
       "id": "BH.oM.Dimensional.IElementM",
       "type": "owl:Class"
+    },
+    {
+      "id": "BH.oM.Base.IObject",
+      "type": "owl:Class"
     }
   ],
   "classAttribute": [
@@ -48,15 +52,49 @@
       "comment": {
         "undefined": "Enables Mass based operations to be performed on elements with materiality\nEnsures the material composition of a physical object is represented, defined as proportions of discrete types of material forming the object's total solid volume.\nObjects implementing this Interface will be required to implement some base methods for getting and setting data in a way that maintains the object's other properties.\nDocumentation detailing required extension methods can be found here: https://github.com/BHoM/documentation/wiki/IElement-required-extension-methods"
       }
+    },
+    {
+      "id": "BH.oM.Base.IObject",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/BHoM/Interface/IObject.cs",
+      "label": "IObject (BH.oM.Base)",
+      "attributes": [
+        "object",
+        "external"
+      ]
     }
   ],
   "property": [
     {
+      "id": "IElement-IsA-IObject_81BCA553A32FCDFD2A5BB624504CFEB6172D630D65D8B91BDB23550A7861B68C",
+      "type": "owl:ObjectProperty"
+    },
+    {
       "id": "IElement0D-IsA-IElement_4661CA3113109C2D9FFCAB98286E32B6CBFAF4B838C399028A7160AFA13C15F6",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "IElement0D-IsA-IObject_949845942CEB49DD44686DE801DCD8DFE3ED82B74DA72B78700F4F809A950404",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "IElementM-IsA-IObject_CE61DA31C35DA3D456BA004B0EF7E8A18C681E42F938E1CC3B1B8DCF623959A5",
       "type": "owl:ObjectProperty"
     }
   ],
   "propertyAttribute": [
+    {
+      "id": "IElement-IsA-IObject_81BCA553A32FCDFD2A5BB624504CFEB6172D630D65D8B91BDB23550A7861B68C",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "label": "IsA",
+      "attributes": [
+        "object"
+      ],
+      "comment": {
+        "undefined": "Can be used to describe that a thing belongs to a class; or that a thing is equivalent to another thing. When used for BHoM types, this describes C# interface implementation."
+      },
+      "domain": "BH.oM.Dimensional.IElement",
+      "range": "BH.oM.Base.IObject"
+    },
     {
       "id": "IElement0D-IsA-IElement_4661CA3113109C2D9FFCAB98286E32B6CBFAF4B838C399028A7160AFA13C15F6",
       "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
@@ -69,6 +107,32 @@
       },
       "domain": "BH.oM.Dimensional.IElement0D",
       "range": "BH.oM.Dimensional.IElement"
+    },
+    {
+      "id": "IElement0D-IsA-IObject_949845942CEB49DD44686DE801DCD8DFE3ED82B74DA72B78700F4F809A950404",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "label": "IsA",
+      "attributes": [
+        "object"
+      ],
+      "comment": {
+        "undefined": "Can be used to describe that a thing belongs to a class; or that a thing is equivalent to another thing. When used for BHoM types, this describes C# interface implementation."
+      },
+      "domain": "BH.oM.Dimensional.IElement0D",
+      "range": "BH.oM.Base.IObject"
+    },
+    {
+      "id": "IElementM-IsA-IObject_CE61DA31C35DA3D456BA004B0EF7E8A18C681E42F938E1CC3B1B8DCF623959A5",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "label": "IsA",
+      "attributes": [
+        "object"
+      ],
+      "comment": {
+        "undefined": "Can be used to describe that a thing belongs to a class; or that a thing is equivalent to another thing. When used for BHoM types, this describes C# interface implementation."
+      },
+      "domain": "BH.oM.Dimensional.IElementM",
+      "range": "BH.oM.Base.IObject"
     }
   ]
 }

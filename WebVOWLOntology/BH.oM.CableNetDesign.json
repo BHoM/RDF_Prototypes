@@ -20,11 +20,23 @@
     },
     {
       "id": "BH.oM.CableNetDesign.EquilibrateMethod.Method",
-      "type": "rdfs:Datatype"
+      "type": "owl:Class"
     },
     {
       "id": "BH.oM.CableNetDesign.EquilibrateMethod.inputParameters",
-      "type": "rdfs:Datatype"
+      "type": "owl:Class"
+    },
+    {
+      "id": "BH.oM.Base.IBHoMObject",
+      "type": "owl:Class"
+    },
+    {
+      "id": "BH.oM.Base.IObject",
+      "type": "owl:Class"
+    },
+    {
+      "id": "BH.oM.Base.BHoMObject",
+      "type": "owl:Class"
     },
     {
       "id": "BH.oM.CableNetDesign.BarAndForcePair.Cable",
@@ -56,11 +68,11 @@
     },
     {
       "id": "BH.oM.CableNetDesign.Fragments.SlackLengthFragment.SlackLength",
-      "type": "rdfs:Datatype"
+      "type": "owl:Class"
     },
     {
       "id": "BH.oM.CableNetDesign.Fragments.SlackLengthFragment.KeepExtactForce",
-      "type": "rdfs:Datatype"
+      "type": "owl:Class"
     },
     {
       "id": "BH.oM.Base.IFragment",
@@ -114,6 +126,32 @@
       "label": "inputParameters(BH.oM.CableNetDesign.EquilibrateMethod.inputParameters)",
       "attributes": [
         "datatype"
+      ]
+    },
+    {
+      "id": "BH.oM.Base.IBHoMObject",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/BHoM/Interface/IBHoMObject.cs",
+      "label": "IBHoMObject (BH.oM.Base)",
+      "attributes": [
+        "object",
+        "external"
+      ]
+    },
+    {
+      "id": "BH.oM.Base.IObject",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/BHoM/Interface/IObject.cs",
+      "label": "IObject (BH.oM.Base)",
+      "attributes": [
+        "object",
+        "external"
+      ]
+    },
+    {
+      "id": "BH.oM.Base.BHoMObject",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/BHoM/BHoMObject.cs",
+      "label": "BHoMObject (BH.oM.Base)",
+      "attributes": [
+        "external"
       ]
     },
     {
@@ -209,6 +247,18 @@
       "type": "owl:DatatypeProperty"
     },
     {
+      "id": "EquilibrateMethod-IsA-IBHoMObject_6234E3DB7843B52AD3320B361EB096B84863E96A9989278755025C181CEB9914",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "EquilibrateMethod-IsA-IObject_07C4A841FA9B816500157E0F91ECE33A8433DA122B44DBD89583400B2485E7EF",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "EquilibrateMethod-IsSubclassOf-BHoMObject_9876D2811027D9E80D4E6487EC64581A1003CC5CEB102F9804FDC6112D2252C1",
+      "type": "rdfs:subClassOf"
+    },
+    {
       "id": "BH.oM.CableNetDesign.BarAndForcePair-HasProperty-BH.oM.CableNetDesign.BarAndForcePair.Cable",
       "type": "owl:ObjectProperty"
     },
@@ -223,6 +273,18 @@
     {
       "id": "BH.oM.CableNetDesign.BarAndForcePair.Force-IsA-BH.oM.Structure.Results.BarForce",
       "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "BarAndForcePair-IsA-IBHoMObject_F7B4D8D1E74CF8E742FC015A650FAEC513914B51389C2881A2891778B942BFAD",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "BarAndForcePair-IsA-IObject_58BBD4BAC3E0A79C7B9F2F1EC02949B9ECC1EC947187DF960F696AAE401A7EBE",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "BarAndForcePair-IsSubclassOf-BHoMObject_246D811C0A4609C228FAD31F50727223C11CF9C5CD4C90923923347A9B5DF940",
+      "type": "rdfs:subClassOf"
     },
     {
       "id": "BH.oM.CableNetDesign.CableRelaxationResult-HasProperty-BH.oM.CableNetDesign.CableRelaxationResult.ElementResults",
@@ -241,6 +303,18 @@
       "type": "owl:ObjectProperty"
     },
     {
+      "id": "CableRelaxationResult-IsA-IBHoMObject_ED02375F97B1B2277B6BFD0BD96D207901CD1510B84E018A03AC2A23E71C470E",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "CableRelaxationResult-IsA-IObject_F008687F48472B7862252F310F603231D2FB975E97784300F8857336FB2985DB",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "CableRelaxationResult-IsSubclassOf-BHoMObject_99EB99B329E5BE9467111C08FD8CE5F09FD1828E12F69929EC455FA9D1FFE6C2",
+      "type": "rdfs:subClassOf"
+    },
+    {
       "id": "SlackLengthFragment-HasProperty-SlackLength_E83191C2D4FF5C27DFB3E5D5F5D6EF4597FDEFB817BB5F751702BAF6E3B144E0",
       "type": "owl:DatatypeProperty"
     },
@@ -250,6 +324,10 @@
     },
     {
       "id": "SlackLengthFragment-IsA-IFragment_DC62AC2A5668BA2713A14DC67DA3E00EDE961A64E6EB02D084C56A5EAE3196C4",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "SlackLengthFragment-IsA-IObject_2CC6FE322EEACF66B773D9B3E344CBD3C030BF30D2EC33FEA228F2E1C801AD7D",
       "type": "owl:ObjectProperty"
     }
   ],
@@ -273,6 +351,42 @@
       ],
       "domain": "BH.oM.CableNetDesign.EquilibrateMethod",
       "range": "BH.oM.CableNetDesign.EquilibrateMethod.inputParameters"
+    },
+    {
+      "id": "EquilibrateMethod-IsA-IBHoMObject_6234E3DB7843B52AD3320B361EB096B84863E96A9989278755025C181CEB9914",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "label": "IsA",
+      "attributes": [
+        "object"
+      ],
+      "comment": {
+        "undefined": "Can be used to describe that a thing belongs to a class; or that a thing is equivalent to another thing. When used for BHoM types, this describes C# interface implementation."
+      },
+      "domain": "BH.oM.CableNetDesign.EquilibrateMethod",
+      "range": "BH.oM.Base.IBHoMObject"
+    },
+    {
+      "id": "EquilibrateMethod-IsA-IObject_07C4A841FA9B816500157E0F91ECE33A8433DA122B44DBD89583400B2485E7EF",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "label": "IsA",
+      "attributes": [
+        "object"
+      ],
+      "comment": {
+        "undefined": "Can be used to describe that a thing belongs to a class; or that a thing is equivalent to another thing. When used for BHoM types, this describes C# interface implementation."
+      },
+      "domain": "BH.oM.CableNetDesign.EquilibrateMethod",
+      "range": "BH.oM.Base.IObject"
+    },
+    {
+      "id": "EquilibrateMethod-IsSubclassOf-BHoMObject_9876D2811027D9E80D4E6487EC64581A1003CC5CEB102F9804FDC6112D2252C1",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsSubclassOf.cs",
+      "label": "IsA",
+      "attributes": [
+        "object"
+      ],
+      "domain": "BH.oM.CableNetDesign.EquilibrateMethod",
+      "range": "BH.oM.Base.BHoMObject"
     },
     {
       "id": "BH.oM.CableNetDesign.BarAndForcePair-HasProperty-BH.oM.CableNetDesign.BarAndForcePair.Cable",
@@ -315,6 +429,42 @@
       "range": "BH.oM.Structure.Results.BarForce"
     },
     {
+      "id": "BarAndForcePair-IsA-IBHoMObject_F7B4D8D1E74CF8E742FC015A650FAEC513914B51389C2881A2891778B942BFAD",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "label": "IsA",
+      "attributes": [
+        "object"
+      ],
+      "comment": {
+        "undefined": "Can be used to describe that a thing belongs to a class; or that a thing is equivalent to another thing. When used for BHoM types, this describes C# interface implementation."
+      },
+      "domain": "BH.oM.CableNetDesign.BarAndForcePair",
+      "range": "BH.oM.Base.IBHoMObject"
+    },
+    {
+      "id": "BarAndForcePair-IsA-IObject_58BBD4BAC3E0A79C7B9F2F1EC02949B9ECC1EC947187DF960F696AAE401A7EBE",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "label": "IsA",
+      "attributes": [
+        "object"
+      ],
+      "comment": {
+        "undefined": "Can be used to describe that a thing belongs to a class; or that a thing is equivalent to another thing. When used for BHoM types, this describes C# interface implementation."
+      },
+      "domain": "BH.oM.CableNetDesign.BarAndForcePair",
+      "range": "BH.oM.Base.IObject"
+    },
+    {
+      "id": "BarAndForcePair-IsSubclassOf-BHoMObject_246D811C0A4609C228FAD31F50727223C11CF9C5CD4C90923923347A9B5DF940",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsSubclassOf.cs",
+      "label": "IsA",
+      "attributes": [
+        "object"
+      ],
+      "domain": "BH.oM.CableNetDesign.BarAndForcePair",
+      "range": "BH.oM.Base.BHoMObject"
+    },
+    {
       "id": "BH.oM.CableNetDesign.CableRelaxationResult-HasProperty-BH.oM.CableNetDesign.CableRelaxationResult.ElementResults",
       "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/HasProperty.cs",
       "label": "HasProperty",
@@ -355,6 +505,42 @@
       "range": "BH.oM.FormFinding.RelaxSystem"
     },
     {
+      "id": "CableRelaxationResult-IsA-IBHoMObject_ED02375F97B1B2277B6BFD0BD96D207901CD1510B84E018A03AC2A23E71C470E",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "label": "IsA",
+      "attributes": [
+        "object"
+      ],
+      "comment": {
+        "undefined": "Can be used to describe that a thing belongs to a class; or that a thing is equivalent to another thing. When used for BHoM types, this describes C# interface implementation."
+      },
+      "domain": "BH.oM.CableNetDesign.CableRelaxationResult",
+      "range": "BH.oM.Base.IBHoMObject"
+    },
+    {
+      "id": "CableRelaxationResult-IsA-IObject_F008687F48472B7862252F310F603231D2FB975E97784300F8857336FB2985DB",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "label": "IsA",
+      "attributes": [
+        "object"
+      ],
+      "comment": {
+        "undefined": "Can be used to describe that a thing belongs to a class; or that a thing is equivalent to another thing. When used for BHoM types, this describes C# interface implementation."
+      },
+      "domain": "BH.oM.CableNetDesign.CableRelaxationResult",
+      "range": "BH.oM.Base.IObject"
+    },
+    {
+      "id": "CableRelaxationResult-IsSubclassOf-BHoMObject_99EB99B329E5BE9467111C08FD8CE5F09FD1828E12F69929EC455FA9D1FFE6C2",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsSubclassOf.cs",
+      "label": "IsA",
+      "attributes": [
+        "object"
+      ],
+      "domain": "BH.oM.CableNetDesign.CableRelaxationResult",
+      "range": "BH.oM.Base.BHoMObject"
+    },
+    {
       "id": "SlackLengthFragment-HasProperty-SlackLength_E83191C2D4FF5C27DFB3E5D5F5D6EF4597FDEFB817BB5F751702BAF6E3B144E0",
       "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/HasProperty.cs",
       "label": "HasProperty",
@@ -386,6 +572,19 @@
       },
       "domain": "BH.oM.CableNetDesign.Fragments.SlackLengthFragment",
       "range": "BH.oM.Base.IFragment"
+    },
+    {
+      "id": "SlackLengthFragment-IsA-IObject_2CC6FE322EEACF66B773D9B3E344CBD3C030BF30D2EC33FEA228F2E1C801AD7D",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "label": "IsA",
+      "attributes": [
+        "object"
+      ],
+      "comment": {
+        "undefined": "Can be used to describe that a thing belongs to a class; or that a thing is equivalent to another thing. When used for BHoM types, this describes C# interface implementation."
+      },
+      "domain": "BH.oM.CableNetDesign.Fragments.SlackLengthFragment",
+      "range": "BH.oM.Base.IObject"
     }
   ]
 }

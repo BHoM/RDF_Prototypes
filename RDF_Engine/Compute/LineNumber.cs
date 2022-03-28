@@ -1,5 +1,6 @@
 ﻿using BH.oM.Base;
 using BH.oM.Base.Attributes;
+using BH.oM.RDF;
 using System;
 using System.Collections;
 using System.Collections.Generic;
@@ -18,9 +19,9 @@ namespace BH.Engine.RDF
         private static Dictionary<string, List<string>> m_cachedFileLines = new Dictionary<string, List<string>>();
 
         [Description("Looks for the line number of a property in its `.cs` file by reading the file. Returns -1 if not found. 0 indicates the first line.")]
-        public static int LineNumber(PropertyInfo pi, string repositoryRoot, string cacheRootDirectory = null)
+        public static int LineNumber(PropertyInfo pi, TBoxSettings settings)
         {
-            string declaringTypeFilePath = pi.DeclaringType.FilePathFromLocalRepository(repositoryRoot);
+            string declaringTypeFilePath = pi.DeclaringType.FilePathFromLocalRepository(settings, false);
 
             List<string> lines = null;
 
@@ -43,9 +44,9 @@ namespace BH.Engine.RDF
             return index;
         }
 
-        public static int LineNumber(MemberInfo mi, string repositoryRoot, string cacheRootDirectory = null)
+        public static int LineNumber(MemberInfo mi, TBoxSettings settings)
         {
-            string declaringTypeFilePath = mi.DeclaringType.FilePathFromLocalRepository(repositoryRoot);
+            string declaringTypeFilePath = mi.DeclaringType.FilePathFromLocalRepository(settings);
 
             List<string> lines = null;
 

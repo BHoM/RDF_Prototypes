@@ -22,7 +22,7 @@ namespace BH.Engine.RDF
         /***************************************************/
 
         [Description("Convert a Graph ontological representation of (BHoM) types and their relations into a Json format readable by WebVOWL (http://vowl.visualdataweb.org/webvowl.html).")]
-        public static string ToWebVOWLJson(Dictionary<TypeInfo, List<IRelation>> dictionaryGraph, HashSet<string> internalNamespaces = null, HashSet<string> exceptions = null, int relationRecursion = 0)
+        public static string ToWebVOWLJson(Dictionary<TypeInfo, List<IRelation>> dictionaryGraph, TBoxSettings settings, HashSet<string> internalNamespaces = null, HashSet<string> exceptions = null, int relationRecursion = 0)
         {
             if (dictionaryGraph == null)
                 return null;
@@ -46,7 +46,7 @@ namespace BH.Engine.RDF
             HashSet<string> addedTypes = new HashSet<string>(); // There could be Types that were not gathered yet and that could emerge from the targets of the Relations.
 
             foreach (TypeInfo type in dictionaryGraph.Keys)
-                AddWebOwlClassNodes(type, classArray, classAttributeArray, addedTypes);
+                AddWebOwlClassNodes(type, classArray, classAttributeArray, addedTypes, settings);
 
             JArray propertyArray = new JArray();
             JArray propertyAttributeArray = new JArray();
@@ -55,7 +55,7 @@ namespace BH.Engine.RDF
             List<IRelation> allRelations = dictionaryGraph.Values.SelectMany(v => v).ToList();
             foreach (IRelation relation in allRelations)
             {
-                AddWebOwlRelationNodes(relation as dynamic, classArray, classAttributeArray, addedTypes, propertyArray, propertyAttributeArray, internalNamespaces, exceptions, relationRecursion);
+                AddWebOwlRelationNodes(relation as dynamic, classArray, classAttributeArray, addedTypes, settings: settings, propertyArray: propertyArray, propertyAttributeArray: propertyAttributeArray, internalNamespaces: internalNamespaces, exceptions: exceptions, recursionLevel: relationRecursion);
             }
 
             rdfJsonObject.Add(new JProperty("class", classArray));
@@ -110,7 +110,7 @@ namespace BH.Engine.RDF
 
         //            classArray.AddToIdTypeArray(subjectOrObjectNodeId, "owl:Class");
 
-        //            classAttributeArray.AddToAttributeArray(subjectOrObjectNodeId, relationObjectType.GithubURI(), label);
+        //            classAttributeArray.AddToAttributeArray(subjectOrObjectNodeId, relationObjectType.GithubURI(settings), label);
 
         //            addedTypes.Add(relationObjectType);
         //        }
@@ -133,7 +133,7 @@ namespace BH.Engine.RDF
 
         //    classArray.AddToIdTypeArray(subjectOrObjectNodeId, "rdfs:Datatype");
 
-        //    classAttributeArray.AddToAttributeArray(subjectOrObjectNodeId, relation.GetType().GithubURI(), subjectOrObject.DescriptiveName(), false, new List<string>() { "datatype" });
+        //    classAttributeArray.AddToAttributeArray(subjectOrObjectNodeId, relation.GetType().GithubURI(settings), subjectOrObject.DescriptiveName(), false, new List<string>() { "datatype" });
 
         //    propertyAttributes = new List<string>() { "datatype" };
         //    // Un-comment if we want to create `Literal` nodes for non-primitive, non-BHoM types.
@@ -160,7 +160,7 @@ namespace BH.Engine.RDF
         //        propertyArray.AddToIdTypeArray(relationId, "owl:ObjectProperty");
 
         //    // 4) PROPERTY ATTRIBUTE
-        //    propertyAttributeArray.AddToAttributeArray(relationId, relation.GetType().GithubURI(), relation.GetType().Name, false, objectPropertyAttribute, new List<string>() { relation.Subject }, new List<string>() { objectNodeId });
+        //    propertyAttributeArray.AddToAttributeArray(relationId, relation.GetType().GithubURI(settings), relation.GetType().Name, false, objectPropertyAttribute, new List<string>() { relation.Subject }, new List<string>() { objectNodeId });
         //}
 
        

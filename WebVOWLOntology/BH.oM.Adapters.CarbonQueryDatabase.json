@@ -16,19 +16,23 @@
     },
     {
       "id": "BH.oM.Adapters.CarbonQueryDatabase.CQDConfig.Id",
-      "type": "rdfs:Datatype"
+      "type": "owl:Class"
     },
     {
       "id": "BH.oM.Adapters.CarbonQueryDatabase.CQDConfig.Count",
-      "type": "rdfs:Datatype"
+      "type": "owl:Class"
     },
     {
       "id": "BH.oM.Adapters.CarbonQueryDatabase.CQDConfig.NameLike",
-      "type": "rdfs:Datatype"
+      "type": "owl:Class"
     },
     {
       "id": "BH.oM.Adapters.CarbonQueryDatabase.CQDConfig.PlantName",
-      "type": "rdfs:Datatype"
+      "type": "owl:Class"
+    },
+    {
+      "id": "BH.oM.Base.IObject",
+      "type": "owl:Class"
     },
     {
       "id": "BH.oM.Adapter.ActionConfig",
@@ -101,6 +105,15 @@
       ]
     },
     {
+      "id": "BH.oM.Base.IObject",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/BHoM/Interface/IObject.cs",
+      "label": "IObject (BH.oM.Base)",
+      "attributes": [
+        "object",
+        "external"
+      ]
+    },
+    {
       "id": "BH.oM.Adapter.ActionConfig",
       "iri": "https://github.com/BHoM/BHoM_Adapter/blob/main/Adapter_oM/Settings-Config/ActionConfig.cs",
       "label": "ActionConfig (BH.oM.Adapter)",
@@ -133,6 +146,10 @@
     {
       "id": "CQDConfig-HasProperty-PlantName_2568EF9BDD88FD42DCF250E8DB16DD95B7CCBDF9C7C3DFBBD661C53E76B08F70",
       "type": "owl:DatatypeProperty"
+    },
+    {
+      "id": "CQDConfig-IsA-IObject_7F8BEC0CE9218DB9223432BCE4698CCFA0FBB371DB682039B38424B6B4FDE7AD",
+      "type": "owl:ObjectProperty"
     },
     {
       "id": "CQDConfig-IsSubclassOf-ActionConfig_EDE3D59A85B7F33121A56BC640DA07107EC3ED75E7B106B4F773FEE6ED011C51",
@@ -199,6 +216,19 @@
       ],
       "domain": "BH.oM.Adapters.CarbonQueryDatabase.CQDConfig",
       "range": "BH.oM.Adapters.CarbonQueryDatabase.CQDConfig.PlantName"
+    },
+    {
+      "id": "CQDConfig-IsA-IObject_7F8BEC0CE9218DB9223432BCE4698CCFA0FBB371DB682039B38424B6B4FDE7AD",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "label": "IsA",
+      "attributes": [
+        "object"
+      ],
+      "comment": {
+        "undefined": "Can be used to describe that a thing belongs to a class; or that a thing is equivalent to another thing. When used for BHoM types, this describes C# interface implementation."
+      },
+      "domain": "BH.oM.Adapters.CarbonQueryDatabase.CQDConfig",
+      "range": "BH.oM.Base.IObject"
     },
     {
       "id": "CQDConfig-IsSubclassOf-ActionConfig_EDE3D59A85B7F33121A56BC640DA07107EC3ED75E7B106B4F773FEE6ED011C51",

@@ -35,7 +35,7 @@
       "type": "owl:Class"
     },
     {
-      "id": "BH.oM.Analytical.Results.IResultCollection",
+      "id": "BH.oM.Analytical.Results.IResultCollection`1",
       "type": "owl:Class"
     },
     {
@@ -44,6 +44,10 @@
     },
     {
       "id": "BH.oM.Analytical.Results.ITimeStepResult",
+      "type": "owl:Class"
+    },
+    {
+      "id": "BH.oM.Analytical.Results.ResultFilter",
       "type": "owl:Class"
     },
     {
@@ -144,6 +148,10 @@
     },
     {
       "id": "BH.oM.Analytical.Results.ICasedResult.ResultCase",
+      "type": "rdfs:Datatype"
+    },
+    {
+      "id": "BH.oM.Base.IObject",
       "type": "owl:Class"
     },
     {
@@ -152,10 +160,50 @@
     },
     {
       "id": "BH.oM.Analytical.Results.IElement1DResult.Position",
-      "type": "owl:Class"
+      "type": "rdfs:Datatype"
     },
     {
       "id": "BH.oM.Analytical.Results.IElement1DResult.Divisions",
+      "type": "rdfs:Datatype"
+    },
+    {
+      "id": "BH.oM.Analytical.Results.IMeshElementResult.NodeId",
+      "type": "rdfs:Datatype"
+    },
+    {
+      "id": "BH.oM.Analytical.Results.IMeshElementResult.MeshFaceId",
+      "type": "rdfs:Datatype"
+    },
+    {
+      "id": "BH.oM.Analytical.Results.IObjectIdResult.ObjectId",
+      "type": "rdfs:Datatype"
+    },
+    {
+      "id": "BH.oM.Analytical.Results.IResultCollection`1.Results",
+      "type": "rdfs:Datatype"
+    },
+    {
+      "id": "BH.oM.Analytical.Results.ITimeStepResult.TimeStep",
+      "type": "rdfs:Datatype"
+    },
+    {
+      "id": "BH.oM.Analytical.Results.ResultFilter.ResultCaseFilters",
+      "type": "owl:Class"
+    },
+    {
+      "id": "BH.oM.Analytical.Results.ResultFilter.ObjectIDFilters",
+      "type": "owl:Class"
+    },
+    {
+      "id": "BH.oM.Analytical.Results.ResultFilter.NodeIDFilters",
+      "type": "owl:Class"
+    },
+    {
+      "id": "BH.oM.Analytical.Results.ResultFilter.MeshFaceIDFilters",
+      "type": "owl:Class"
+    },
+    {
+      "id": "BH.oM.Analytical.Results.ResultFilter.TimeStepFilters",
       "type": "owl:Class"
     },
     {
@@ -164,31 +212,31 @@
     },
     {
       "id": "BH.oM.Analytical.Fragments.ProjectionFragment.GroupName",
-      "type": "rdfs:Datatype"
+      "type": "owl:Class"
     },
     {
       "id": "BH.oM.Analytical.Fragments.RoutingFragment.MinCostToSource",
-      "type": "rdfs:Datatype"
+      "type": "owl:Class"
     },
     {
       "id": "BH.oM.Analytical.Fragments.RoutingFragment.Cost",
-      "type": "rdfs:Datatype"
+      "type": "owl:Class"
     },
     {
       "id": "BH.oM.Analytical.Fragments.RoutingFragment.Visited",
-      "type": "rdfs:Datatype"
+      "type": "owl:Class"
     },
     {
       "id": "BH.oM.Analytical.Fragments.RoutingFragment.NearestToSource",
-      "type": "rdfs:Datatype"
+      "type": "owl:Class"
     },
     {
       "id": "BH.oM.Analytical.Fragments.RoutingFragment.StraightLineDistanceToTarget",
-      "type": "rdfs:Datatype"
+      "type": "owl:Class"
     },
     {
       "id": "BH.oM.Analytical.Fragments.SourcesDependencyFragment.Sources",
-      "type": "rdfs:Datatype"
+      "type": "owl:Class"
     },
     {
       "id": "BH.oM.Analytical.Fragments.SourcesDependencyFragment.Curves",
@@ -200,7 +248,7 @@
     },
     {
       "id": "BH.oM.Analytical.Fragments.TargetsDependencyFragment.Targets",
-      "type": "rdfs:Datatype"
+      "type": "owl:Class"
     },
     {
       "id": "BH.oM.Analytical.Fragments.TargetsDependencyFragment.Curves",
@@ -219,8 +267,28 @@
       "type": "owl:Class"
     },
     {
-      "id": "BH.oM.Analytical.Elements.IRelation.Source",
+      "id": "BH.oM.Base.BHoMObject",
       "type": "owl:Class"
+    },
+    {
+      "id": "BH.oM.Analytical.Elements.IRelation.Source",
+      "type": "rdfs:Datatype"
+    },
+    {
+      "id": "BH.oM.Analytical.Elements.IRelation.Target",
+      "type": "rdfs:Datatype"
+    },
+    {
+      "id": "BH.oM.Analytical.Elements.IRelation.Subgraph",
+      "type": "rdfs:Datatype"
+    },
+    {
+      "id": "BH.oM.Analytical.Elements.IRelation.Weight",
+      "type": "rdfs:Datatype"
+    },
+    {
+      "id": "BH.oM.Analytical.Elements.IRelation.Curve",
+      "type": "rdfs:Datatype"
     },
     {
       "id": "BH.oM.Analytical.Elements.GraphicalProjection.View",
@@ -232,11 +300,11 @@
     },
     {
       "id": "BH.oM.Analytical.Elements.Relation.Source",
-      "type": "rdfs:Datatype"
+      "type": "owl:Class"
     },
     {
       "id": "BH.oM.Analytical.Elements.Relation.Target",
-      "type": "rdfs:Datatype"
+      "type": "owl:Class"
     },
     {
       "id": "BH.oM.Analytical.Elements.Relation.Subgraph",
@@ -244,11 +312,15 @@
     },
     {
       "id": "BH.oM.Analytical.Elements.Relation.Weight",
-      "type": "rdfs:Datatype"
+      "type": "owl:Class"
     },
     {
       "id": "BH.oM.Analytical.Elements.Relation.Curve",
       "type": "owl:Class"
+    },
+    {
+      "id": "BH.oM.Analytical.Elements.IEdge.Curve",
+      "type": "rdfs:Datatype"
     },
     {
       "id": "BH.oM.Dimensional.IElement1D",
@@ -260,23 +332,27 @@
     },
     {
       "id": "BH.oM.Analytical.Elements.IFace.NodeListIndices",
-      "type": "owl:Class"
+      "type": "rdfs:Datatype"
     },
     {
       "id": "BH.oM.Analytical.Elements.ILink`1.StartNode",
-      "type": "owl:Class"
+      "type": "rdfs:Datatype"
+    },
+    {
+      "id": "BH.oM.Analytical.Elements.ILink`1.EndNode",
+      "type": "rdfs:Datatype"
     },
     {
       "id": "BH.oM.Analytical.Elements.IMesh`2.Nodes",
-      "type": "owl:Class"
+      "type": "rdfs:Datatype"
     },
     {
       "id": "BH.oM.Analytical.Elements.IMesh`2.Faces",
-      "type": "owl:Class"
+      "type": "rdfs:Datatype"
     },
     {
       "id": "BH.oM.Analytical.Elements.INode.Position",
-      "type": "owl:Class"
+      "type": "rdfs:Datatype"
     },
     {
       "id": "BH.oM.Dimensional.IElement0D",
@@ -284,7 +360,7 @@
     },
     {
       "id": "BH.oM.Analytical.Elements.IOpening`1.Edges",
-      "type": "owl:Class"
+      "type": "rdfs:Datatype"
     },
     {
       "id": "BH.oM.Dimensional.IElement2D",
@@ -292,27 +368,31 @@
     },
     {
       "id": "BH.oM.Analytical.Elements.IPanel`2.ExternalEdges",
-      "type": "owl:Class"
+      "type": "rdfs:Datatype"
     },
     {
       "id": "BH.oM.Analytical.Elements.IPanel`2.Openings",
-      "type": "owl:Class"
+      "type": "rdfs:Datatype"
+    },
+    {
+      "id": "BH.oM.Analytical.Elements.IRegion.Perimeter",
+      "type": "rdfs:Datatype"
     },
     {
       "id": "BH.oM.Analytical.Elements.ISurface.Extents",
-      "type": "owl:Class"
+      "type": "rdfs:Datatype"
     },
     {
       "id": "BH.oM.Analytical.Elements.ShortestPathResult.ObjectId",
-      "type": "rdfs:Datatype"
+      "type": "owl:Class"
     },
     {
       "id": "BH.oM.Analytical.Elements.ShortestPathResult.ResultCase",
-      "type": "rdfs:Datatype"
+      "type": "owl:Class"
     },
     {
       "id": "BH.oM.Analytical.Elements.ShortestPathResult.TimeStep",
-      "type": "rdfs:Datatype"
+      "type": "owl:Class"
     },
     {
       "id": "BH.oM.Analytical.Elements.ShortestPathResult.Path",
@@ -324,11 +404,11 @@
     },
     {
       "id": "BH.oM.Analytical.Elements.ShortestPathResult.Length",
-      "type": "rdfs:Datatype"
+      "type": "owl:Class"
     },
     {
       "id": "BH.oM.Analytical.Elements.ShortestPathResult.Cost",
-      "type": "rdfs:Datatype"
+      "type": "owl:Class"
     },
     {
       "id": "BH.oM.Analytical.Elements.ShortestPathResult.EntitiesVisited",
@@ -426,14 +506,14 @@
       }
     },
     {
-      "id": "BH.oM.Analytical.Results.IResultCollection",
+      "id": "BH.oM.Analytical.Results.IResultCollection`1",
       "iri": "https://github.com/BHoM/BHoM/blob/main/Analytical_oM/Results/IResultCollection.cs",
-      "label": "IResultCollection (BH.oM.Analytical.Results)",
+      "label": "IResultCollection<T> (BH.oM.Analytical.Results)",
       "attributes": [
         "object"
       ],
       "comment": {
-        "undefined": "Non-generic base interface for result collections. The IResultCollection facilitates simpler filtering in the Engine. Classes are generally recommended to implement the IResultCollection<T> interface."
+        "undefined": "Base interface for results classes that are a collection of individual results, for example IMeshResults."
       }
     },
     {
@@ -456,6 +536,17 @@
       ],
       "comment": {
         "undefined": "Interface for results that correspond to a particular time step, for example a discrete result from a time history anlysis."
+      }
+    },
+    {
+      "id": "BH.oM.Analytical.Results.ResultFilter",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/Analytical_oM/Results/ResultFilter.cs",
+      "label": "ResultFilter (BH.oM.Analytical.Results)",
+      "attributes": [
+        "object"
+      ],
+      "comment": {
+        "undefined": "Object to support filtering of results"
       }
     },
     {
@@ -704,6 +795,15 @@
       ]
     },
     {
+      "id": "BH.oM.Base.IObject",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/BHoM/Interface/IObject.cs",
+      "label": "IObject (BH.oM.Base)",
+      "attributes": [
+        "object",
+        "external"
+      ]
+    },
+    {
       "id": "BH.oM.Base.IImmutable",
       "iri": "https://github.com/BHoM/BHoM/blob/main/BHoM/Interface/IImmutable.cs",
       "label": "IImmutable (BH.oM.Base)",
@@ -724,6 +824,86 @@
       "id": "BH.oM.Analytical.Results.IElement1DResult.Divisions",
       "iri": "https://github.com/BHoM/BHoM/blob/main/Analytical_oM/Results/IElement1DResult.cs#L44",
       "label": "Divisions(BH.oM.Analytical.Results.IElement1DResult.Divisions)",
+      "attributes": [
+        "datatype"
+      ]
+    },
+    {
+      "id": "BH.oM.Analytical.Results.IMeshElementResult.NodeId",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/Analytical_oM/Results/IMeshElementResult.cs#L36",
+      "label": "NodeId(BH.oM.Analytical.Results.IMeshElementResult.NodeId)",
+      "attributes": [
+        "datatype"
+      ]
+    },
+    {
+      "id": "BH.oM.Analytical.Results.IMeshElementResult.MeshFaceId",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/Analytical_oM/Results/IMeshElementResult.cs#L39",
+      "label": "MeshFaceId(BH.oM.Analytical.Results.IMeshElementResult.MeshFaceId)",
+      "attributes": [
+        "datatype"
+      ]
+    },
+    {
+      "id": "BH.oM.Analytical.Results.IObjectIdResult.ObjectId",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/Analytical_oM/Results/IObjectIdResult.cs#L41",
+      "label": "ObjectId(BH.oM.Analytical.Results.IObjectIdResult.ObjectId)",
+      "attributes": [
+        "datatype"
+      ]
+    },
+    {
+      "id": "BH.oM.Analytical.Results.IResultCollection`1.Results",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/Analytical_oM/Results/IResultCollection.cs#L37",
+      "label": "Results(BH.oM.Analytical.Results.IResultCollection.Results)",
+      "attributes": [
+        "datatype"
+      ]
+    },
+    {
+      "id": "BH.oM.Analytical.Results.ITimeStepResult.TimeStep",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/Analytical_oM/Results/ITimeStepResult.cs#L41",
+      "label": "TimeStep(BH.oM.Analytical.Results.ITimeStepResult.TimeStep)",
+      "attributes": [
+        "datatype"
+      ]
+    },
+    {
+      "id": "BH.oM.Analytical.Results.ResultFilter.ResultCaseFilters",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/Analytical_oM/Results/ResultFilter.cs",
+      "label": "ResultCaseFilters(BH.oM.Analytical.Results.ResultFilter.ResultCaseFilters)",
+      "attributes": [
+        "datatype"
+      ]
+    },
+    {
+      "id": "BH.oM.Analytical.Results.ResultFilter.ObjectIDFilters",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/Analytical_oM/Results/ResultFilter.cs",
+      "label": "ObjectIDFilters(BH.oM.Analytical.Results.ResultFilter.ObjectIDFilters)",
+      "attributes": [
+        "datatype"
+      ]
+    },
+    {
+      "id": "BH.oM.Analytical.Results.ResultFilter.NodeIDFilters",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/Analytical_oM/Results/ResultFilter.cs",
+      "label": "NodeIDFilters(BH.oM.Analytical.Results.ResultFilter.NodeIDFilters)",
+      "attributes": [
+        "datatype"
+      ]
+    },
+    {
+      "id": "BH.oM.Analytical.Results.ResultFilter.MeshFaceIDFilters",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/Analytical_oM/Results/ResultFilter.cs",
+      "label": "MeshFaceIDFilters(BH.oM.Analytical.Results.ResultFilter.MeshFaceIDFilters)",
+      "attributes": [
+        "datatype"
+      ]
+    },
+    {
+      "id": "BH.oM.Analytical.Results.ResultFilter.TimeStepFilters",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/Analytical_oM/Results/ResultFilter.cs#L51",
+      "label": "TimeStepFilters(BH.oM.Analytical.Results.ResultFilter.TimeStepFilters)",
       "attributes": [
         "datatype"
       ]
@@ -847,9 +1027,49 @@
       "attributes": []
     },
     {
+      "id": "BH.oM.Base.BHoMObject",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/BHoM/BHoMObject.cs",
+      "label": "BHoMObject (BH.oM.Base)",
+      "attributes": [
+        "external"
+      ]
+    },
+    {
       "id": "BH.oM.Analytical.Elements.IRelation.Source",
       "iri": "https://github.com/BHoM/BHoM/blob/main/Analytical_oM/Elements/Graph/IRelation.cs#L41",
       "label": "Source(BH.oM.Analytical.Elements.IRelation.Source)",
+      "attributes": [
+        "datatype"
+      ]
+    },
+    {
+      "id": "BH.oM.Analytical.Elements.IRelation.Target",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/Analytical_oM/Elements/Graph/IRelation.cs#L43",
+      "label": "Target(BH.oM.Analytical.Elements.IRelation.Target)",
+      "attributes": [
+        "datatype"
+      ]
+    },
+    {
+      "id": "BH.oM.Analytical.Elements.IRelation.Subgraph",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/Analytical_oM/Elements/Graph/IRelation.cs#L45",
+      "label": "Subgraph(BH.oM.Analytical.Elements.IRelation.Subgraph)",
+      "attributes": [
+        "datatype"
+      ]
+    },
+    {
+      "id": "BH.oM.Analytical.Elements.IRelation.Weight",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/Analytical_oM/Elements/Graph/IRelation.cs#L47",
+      "label": "Weight(BH.oM.Analytical.Elements.IRelation.Weight)",
+      "attributes": [
+        "datatype"
+      ]
+    },
+    {
+      "id": "BH.oM.Analytical.Elements.IRelation.Curve",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/Analytical_oM/Elements/Graph/IRelation.cs#L49",
+      "label": "Curve(BH.oM.Analytical.Elements.IRelation.Curve)",
       "attributes": [
         "datatype"
       ]
@@ -915,6 +1135,14 @@
       }
     },
     {
+      "id": "BH.oM.Analytical.Elements.IEdge.Curve",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/Analytical_oM/Elements/IEdge.cs#L40",
+      "label": "Curve(BH.oM.Analytical.Elements.IEdge.Curve)",
+      "attributes": [
+        "datatype"
+      ]
+    },
+    {
       "id": "BH.oM.Dimensional.IElement1D",
       "iri": "https://github.com/BHoM/BHoM/blob/main/Dimensional_oM/IElement1D.cs",
       "label": "IElement1D (BH.oM.Dimensional)",
@@ -950,6 +1178,14 @@
       "id": "BH.oM.Analytical.Elements.ILink`1.StartNode",
       "iri": "https://github.com/BHoM/BHoM/blob/main/Analytical_oM/Elements/ILink.cs#L40",
       "label": "StartNode(BH.oM.Analytical.Elements.ILink.StartNode)",
+      "attributes": [
+        "datatype"
+      ]
+    },
+    {
+      "id": "BH.oM.Analytical.Elements.ILink`1.EndNode",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/Analytical_oM/Elements/ILink.cs#L42",
+      "label": "EndNode(BH.oM.Analytical.Elements.ILink.EndNode)",
       "attributes": [
         "datatype"
       ]
@@ -1022,6 +1258,14 @@
       "id": "BH.oM.Analytical.Elements.IPanel`2.Openings",
       "iri": "https://github.com/BHoM/BHoM/blob/main/Analytical_oM/Elements/IPanel.cs#L43",
       "label": "Openings(BH.oM.Analytical.Elements.IPanel.Openings)",
+      "attributes": [
+        "datatype"
+      ]
+    },
+    {
+      "id": "BH.oM.Analytical.Elements.IRegion.Perimeter",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/Analytical_oM/Elements/IRegion.cs#L42",
+      "label": "Perimeter(BH.oM.Analytical.Elements.IRegion.Perimeter)",
       "attributes": [
         "datatype"
       ]
@@ -1109,6 +1353,10 @@
       "type": "owl:ObjectProperty"
     },
     {
+      "id": "ICasedResult-IsA-IObject_A308DEF1637F15B2294E4B37593316438EDA721B350F8BC98F1780A208B7EED8",
+      "type": "owl:ObjectProperty"
+    },
+    {
       "id": "ICasedResult-IsA-IImmutable_0EB3035ED0DB9A29CA50AF310B1B2660773A1A2922D33D443DB5290FBC6C93C2",
       "type": "owl:ObjectProperty"
     },
@@ -1122,6 +1370,10 @@
     },
     {
       "id": "IElement1DResult-IsA-IResult_9D34959D97311A30048D22DDBB15F72DCB8FB7E0944A2058C05588057852B589",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "IElement1DResult-IsA-IObject_37994702CF68958D6147D17E4C8463A5350858A1D94ED0C7CC181E01F9292718",
       "type": "owl:ObjectProperty"
     },
     {
@@ -1149,6 +1401,10 @@
       "type": "owl:ObjectProperty"
     },
     {
+      "id": "IMeshElementResult-IsA-IObject_65E124BEB793B46D731A997CF19160D5FF18B82C64BB2A72331BCFAFA0E7817C",
+      "type": "owl:ObjectProperty"
+    },
+    {
       "id": "IMeshElementResult-IsA-IImmutable_6CA3D588A9BA08D2F1AE9C1F3403BA7EAA71E22F9E5974B8FAAAA643A67CB07A",
       "type": "owl:ObjectProperty"
     },
@@ -1165,11 +1421,11 @@
       "type": "owl:ObjectProperty"
     },
     {
-      "id": "IMeshResult`1-IsA-IImmutable_0BCFB2E2553D25ED543DAE134654CFE4C4798AC24583B7FEFF850D0B0D6A04C4",
+      "id": "IMeshResult`1-IsA-IObject_EB8A93D094B082D121F89B48303461DC774DB918905958A65ED2060B370252EC",
       "type": "owl:ObjectProperty"
     },
     {
-      "id": "IMeshResult`1-IsA-IResultCollection_9E9020AF319D4F6540F0B938B491F236722D684458E603983E5CBAB80D053785",
+      "id": "IMeshResult`1-IsA-IImmutable_0BCFB2E2553D25ED543DAE134654CFE4C4798AC24583B7FEFF850D0B0D6A04C4",
       "type": "owl:ObjectProperty"
     },
     {
@@ -1181,11 +1437,19 @@
       "type": "owl:ObjectProperty"
     },
     {
+      "id": "IObjectIdResult-IsA-IObject_D1AF23AB15830FD4B29BD2736D2AD4131E2A146EE8E95FFC4A0FA9134787BEE4",
+      "type": "owl:ObjectProperty"
+    },
+    {
       "id": "IObjectIdResult-IsA-IImmutable_923F4B1B2C723376AF35D75C4C09E8F9A1C0B881BA5358620790C2DE535F88EC",
       "type": "owl:ObjectProperty"
     },
     {
       "id": "IObjectResult-IsA-IResult_255A24F8CF9B3AFD54C3700D20CD9330127F296A2E0229D2EFEB219293C63E7B",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "IObjectResult-IsA-IObject_A5D726676837AD04CB786623A9141D3D9508650EC1DFA3A29D854ACDB624119B",
       "type": "owl:ObjectProperty"
     },
     {
@@ -1201,19 +1465,35 @@
       "type": "owl:ObjectProperty"
     },
     {
+      "id": "IResult-IsA-IObject_F351B29E83C6BEC5B9E74739E1D7DB3098BFB3E34A75C705A57B3FF2DAB330F1",
+      "type": "owl:ObjectProperty"
+    },
+    {
       "id": "IResult-IsA-IImmutable_649DE737E296DC693964777B1BE678F85630DBA2617960F2D4276E2BDECB278B",
       "type": "owl:ObjectProperty"
     },
     {
-      "id": "IResultCollection-IsA-IImmutable_F779F619A4E182631579DE58D2A90DB0E48561CD433E4FEF1FA6375641D10B30",
+      "id": "IResultCollection`1-RequiresProperty-Results_AC90F20DC36382A911B5F27C7ADFDD3774E3A6F485ABCE178415B8453E16EF89",
+      "type": "owl:DatatypeProperty"
+    },
+    {
+      "id": "IResultCollection`1-IsA-IResult_90C0EB4C0B38D76C6F28EE651F81C492401ECD67F6AB4033BFA3DB380B250CC0",
       "type": "owl:ObjectProperty"
     },
     {
-      "id": "IResultCollection-IsA-IResult_24288C3BEA5562B6E80132DBC3C5252FA6D2547B56804A2B90DE90256D587B9A",
+      "id": "IResultCollection`1-IsA-IObject_9C25DA9498C1FD40E478BD12C1EB0A15F438C832B62D03427E94BB6F423E17FF",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "IResultCollection`1-IsA-IImmutable_3FE2A0130F2FDF5F092807B744783E6914790C1AAA8F46B57B3EB59D79BA49E5",
       "type": "owl:ObjectProperty"
     },
     {
       "id": "IResultItem-IsA-IResult_9F70129BA3D212026300F1C975A7563A978D1C3932095B1D78ABB5372F44E295",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "IResultItem-IsA-IObject_98F75B168DC649F5BF8E7C747576397C4BE888E28E977DC5A1AC6E2943EEFF3C",
       "type": "owl:ObjectProperty"
     },
     {
@@ -1229,7 +1509,35 @@
       "type": "owl:ObjectProperty"
     },
     {
+      "id": "ITimeStepResult-IsA-IObject_F2DFE53E80921D9447492B7AE2E59412869630785A77394723E0DAE851A4432D",
+      "type": "owl:ObjectProperty"
+    },
+    {
       "id": "ITimeStepResult-IsA-IImmutable_6ABA4B20A0EDC8507DDD89036503979463CD2D48E1A30936F7F0D3356E8CBECB",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "ResultFilter-HasProperty-ResultCaseFilters_0EFA547D25635C4537D320A230BD38460A9CC7845C420AD9189FBBCCE6A4EB19",
+      "type": "owl:DatatypeProperty"
+    },
+    {
+      "id": "ResultFilter-HasProperty-ObjectIDFilters_0F3915E103B844B112184D631FDCAF201E2072357D682265E4806D73ADE0E214",
+      "type": "owl:DatatypeProperty"
+    },
+    {
+      "id": "ResultFilter-HasProperty-NodeIDFilters_7D19ABD5F81F01F1EC22FFBF86F578AD2CD1B80160F97E55615B313F46108C1D",
+      "type": "owl:DatatypeProperty"
+    },
+    {
+      "id": "ResultFilter-HasProperty-MeshFaceIDFilters_9A4A464B4256FCFE2A1C122E75E95EF2C40286C82EA86045DF9098F7D607EE1E",
+      "type": "owl:DatatypeProperty"
+    },
+    {
+      "id": "ResultFilter-HasProperty-TimeStepFilters_BF44AEA2EB10DDA3AF9B8A4337B886DD040AA4DF4F418825A197D311B08550D3",
+      "type": "owl:DatatypeProperty"
+    },
+    {
+      "id": "ResultFilter-IsA-IObject_ECDF07380317731A31E2D78B1F2447FB5B62A7A38D548223E889EB226C6DF77C",
       "type": "owl:ObjectProperty"
     },
     {
@@ -1237,7 +1545,15 @@
       "type": "owl:ObjectProperty"
     },
     {
+      "id": "IDependencyFragment-IsA-IObject_438D9C591DCC34CB93F34046F29EABF1E453A5BFABAB6DCCD40E2356E72A77E4",
+      "type": "owl:ObjectProperty"
+    },
+    {
       "id": "IProjectionFragment-IsA-IFragment_1C7D765BA687A85C9D9B49625E454D33D33EE0B63F9197332CA3F384112672B5",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "IProjectionFragment-IsA-IObject_91A661E61EE00C90A8C23D5CAA1232EA1C7DB7CB939E7F11F8B8C3ABE743DF55",
       "type": "owl:ObjectProperty"
     },
     {
@@ -1250,6 +1566,10 @@
     },
     {
       "id": "ProjectionFragment-IsA-IFragment_554FE3F61EEEDACC0ED5F561440801940ED2C9EB9F78EC15AC947C58B844D6DC",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "ProjectionFragment-IsA-IObject_F85BD271BF3F5D1A695C787046A6203E84AAE1DEA340DEE2B4C4DEC3E2CE2387",
       "type": "owl:ObjectProperty"
     },
     {
@@ -1277,6 +1597,10 @@
       "type": "owl:ObjectProperty"
     },
     {
+      "id": "RoutingFragment-IsA-IObject_835EF9D5BA8095ED128EFE0CC42416E511AFD2E6B276905798A87C8B12D9FD5F",
+      "type": "owl:ObjectProperty"
+    },
+    {
       "id": "SourcesDependencyFragment-HasProperty-Sources_FEACFC5404EF1353343BACD09B994D2DCD3318CFEB1D60F4A964972EAAC19535",
       "type": "owl:DatatypeProperty"
     },
@@ -1294,6 +1618,10 @@
     },
     {
       "id": "SourcesDependencyFragment-IsA-IFragment_3E3A57E33097607F3341B73951E056C7B92910DA224EFF2C14EB682E4C429283",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "SourcesDependencyFragment-IsA-IObject_0F4CE7B480EC966B38DA2E0C6F163AF514E3474F698959137FE2FE4986D9D6C2",
       "type": "owl:ObjectProperty"
     },
     {
@@ -1317,6 +1645,10 @@
       "type": "owl:ObjectProperty"
     },
     {
+      "id": "TargetsDependencyFragment-IsA-IObject_A7C3B46BB9FB893903893CA16C05B395B042AAC16CF428A504D8CF358B7635CB",
+      "type": "owl:ObjectProperty"
+    },
+    {
       "id": "BH.oM.Analytical.Elements.Graph-HasProperty-BH.oM.Analytical.Elements.Graph.Entities",
       "type": "owl:ObjectProperty"
     },
@@ -1331,6 +1663,18 @@
     {
       "id": "BH.oM.Analytical.Elements.Graph.Relations-IsAListOf-BH.oM.Analytical.Elements.IRelation",
       "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "Graph-IsA-IBHoMObject_5A15B235CB42C461395976E5642D80B377EB5F195894EEB0CDC2BAD1D7290A25",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "Graph-IsA-IObject_7F6A5780EB0847B440DB1AA2DADC89245292079320A1072D2C423A795AF91063",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "Graph-IsSubclassOf-BHoMObject_26387DB86CC08E1B3D49ECB802F5ED3CB003A2D628F6F0541821014952751DCE",
+      "type": "rdfs:subClassOf"
     },
     {
       "id": "IRelation-RequiresProperty-Source_E81A46F5F5C877971DCF5D35553CBA27AF26E3A64DB050CD185B4BE565A60A86",
@@ -1353,8 +1697,28 @@
       "type": "owl:DatatypeProperty"
     },
     {
+      "id": "IRelation-IsA-IBHoMObject_4DC177AA0A0E5C3BEDBF4794A6349CC8EFD9F6952D343A7A45BF34155C4E0166",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "IRelation-IsA-IObject_F35A24994AA8BE13DE2917021FD14639564E5FB06E2E6216B5DF2553A94222B6",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "GeometricProjection-IsA-IBHoMObject_9550D8E1C19EBE638BAC61EEE3373D1F610B484E25987138852982F60BE0E600",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "GeometricProjection-IsA-IObject_610F8FC444BE1A90895160FB70263AC7A07DBED111D7E9620942B317A645A924",
+      "type": "owl:ObjectProperty"
+    },
+    {
       "id": "GeometricProjection-IsA-IProjection_0104C4499CC6428ECF326F9691C53FF86F744066E6103C059C414AC7A7337FE7",
       "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "GeometricProjection-IsSubclassOf-BHoMObject_3A431B0BCEC6616242B24718D07B6D8EC4921BAD4FFA0AA4150269A212765210",
+      "type": "rdfs:subClassOf"
     },
     {
       "id": "BH.oM.Analytical.Elements.GraphicalProjection-HasProperty-BH.oM.Analytical.Elements.GraphicalProjection.View",
@@ -1365,12 +1729,44 @@
       "type": "owl:ObjectProperty"
     },
     {
+      "id": "GraphicalProjection-IsA-IBHoMObject_D39F742D29ED81A46A715B865731E5CF07952D0EBECF1A128BE75B642D66EB4F",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "GraphicalProjection-IsA-IObject_700A287B6D16E7358BBFD07B7C0B7A386DCA246D35D4258960BB3B77FF757A37",
+      "type": "owl:ObjectProperty"
+    },
+    {
       "id": "GraphicalProjection-IsA-IProjection_653FFDCB87901D628D27A4BFC0A52AF2B56E9FAEABCBD4064B59715A43979E8C",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "GraphicalProjection-IsSubclassOf-BHoMObject_454837071E92F05F8CF269780574BFD4BE244F405F5930B70046293C06D74E02",
+      "type": "rdfs:subClassOf"
+    },
+    {
+      "id": "IProjection-IsA-IBHoMObject_BB8D59965DBA91E0BB6603A1A302DF4DE1AEFF0F280255FAF5E45F79C67692D5",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "IProjection-IsA-IObject_EA78E4B506A63DC9594C5702CC722A0A7E47B428B480B60E87B6F4DB5916ACDC",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "SpatialProjection-IsA-IBHoMObject_B2898DE1D7987E26BDE6F09E79B8EE0C911B749B180E13406E0D35F3853FF59E",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "SpatialProjection-IsA-IObject_2A9FDD6FC930467C17C42A61E04F3A8056EAD662E209C6C0F1C5F7A9AA59AEF4",
       "type": "owl:ObjectProperty"
     },
     {
       "id": "SpatialProjection-IsA-IProjection_4CF53187E5CCDCE0BC11ACAF54CFC98777C3ECA7A519195F503865E67AAC108F",
       "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "SpatialProjection-IsSubclassOf-BHoMObject_78CA4B9752EF1B3A9F9E44A97A1C528AB82F95BF149782B5B3E370352663CCD1",
+      "type": "rdfs:subClassOf"
     },
     {
       "id": "Relation-HasProperty-Source_6B664FF39DE3FD257EB87C71F2C8EAC488F003133BFF78B3A242D1852D5E34C7",
@@ -1401,12 +1797,32 @@
       "type": "owl:ObjectProperty"
     },
     {
+      "id": "Relation-IsA-IBHoMObject_CC8B49B6A8CAFD328EE53819C159D95EB42722203C58E1C0FE60112B8126A433",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "Relation-IsA-IObject_6DE9553485E97895F1512042FE40947ACD8788E31EEBDE63FB7BD1D42087B565",
+      "type": "owl:ObjectProperty"
+    },
+    {
       "id": "Relation-IsA-IRelation_258AC24ECE3BBA970BEEE0AE56D855F53221051D1DAAF2E6C5BA1D4DFE2AC771",
       "type": "owl:ObjectProperty"
     },
     {
+      "id": "Relation-IsSubclassOf-BHoMObject_D00A08B2AFC13AE6925AA5D4CB2579C26878486B0E63C9229398A22B4B02E574",
+      "type": "rdfs:subClassOf"
+    },
+    {
       "id": "IEdge-RequiresProperty-Curve_5D6C02201A2D1F147AD5F22CE254BC3FCC256697556E6E677592DE06AF4E6685",
       "type": "owl:DatatypeProperty"
+    },
+    {
+      "id": "IEdge-IsA-IBHoMObject_791A834A140B0F514AA983B1FD31835CA92AD716BE30508184A8284B1C90C315",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "IEdge-IsA-IObject_02A4DE5388666584AE37A4B372614E6E1D1F4C876851A17EAD5ABB8A63BAD361",
+      "type": "owl:ObjectProperty"
     },
     {
       "id": "IEdge-IsA-IAnalytical_3B541F526BFB4C177302764E805558AC145758E57E2E6B0881B0FFB7C1E97349",
@@ -1425,6 +1841,14 @@
       "type": "owl:DatatypeProperty"
     },
     {
+      "id": "IFace-IsA-IBHoMObject_498CC024E4AC79BB24A6206E24583ADF5B9F5EB9972669736E9E85BE1ECAEAB8",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "IFace-IsA-IObject_4E2F612DA9C89EC41CFC8A471B61415A87A76632C20156B7CE1647A7B0DA17F3",
+      "type": "owl:ObjectProperty"
+    },
+    {
       "id": "IFace-IsA-IAnalytical_DD65FF1D6D27E22663F6E758C8B972D996025925887BE1ACE8E99C5D476DCEA3",
       "type": "owl:ObjectProperty"
     },
@@ -1435,6 +1859,14 @@
     {
       "id": "ILink`1-RequiresProperty-EndNode_6D5FB01DB3CF3B0886E729906C021AD9FB54DE397438D6D182304852D1D553D7",
       "type": "owl:DatatypeProperty"
+    },
+    {
+      "id": "ILink`1-IsA-IBHoMObject_18320E296369AF7582EA4F41128DD51CACCD8EC76D7CD4347F37D5A4DBFFBA40",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "ILink`1-IsA-IObject_C7DE59A6A8EFA990415648C8DA5F48AE753DB1D82DD5E1AC002D007074D65C80",
+      "type": "owl:ObjectProperty"
     },
     {
       "id": "ILink`1-IsA-IAnalytical_420D314192905CAB9A9F9546B64490D7A05502C53CD9290E46E40BFE80692781",
@@ -1457,12 +1889,28 @@
       "type": "owl:DatatypeProperty"
     },
     {
+      "id": "IMesh`2-IsA-IBHoMObject_1E3350156BD39C68EC8B0EA35477DEFDEFDC81D34A2D9E9C29C81F6F764F2944",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "IMesh`2-IsA-IObject_260A46591BA0751A8ABC3C7EB3605A86357940FBD8C0970B73606872A19B711A",
+      "type": "owl:ObjectProperty"
+    },
+    {
       "id": "IMesh`2-IsA-IAnalytical_3A9449F1A41A80039A150D0CBD6E8C9207980206BD571C2025BA378DE41756E6",
       "type": "owl:ObjectProperty"
     },
     {
       "id": "INode-RequiresProperty-Position_027B2087F3EF441ADB063C41DAC54A3A1762F741858FF218F5725FC79D5DC890",
       "type": "owl:DatatypeProperty"
+    },
+    {
+      "id": "INode-IsA-IBHoMObject_949EDD6157AE6783630C69644F061F14C5DA36FB1F6D5B4D95DE5B43D2280C7F",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "INode-IsA-IObject_9E3AAC0AD1F0B223438EE6D31AC0B73A355F5CA2A0CA671FB713DD23FC4B0ABB",
+      "type": "owl:ObjectProperty"
     },
     {
       "id": "INode-IsA-IAnalytical_D49A4E4EC880A9C21A68D21958689F0E9605A30289B851DE553292714648A880",
@@ -1479,6 +1927,14 @@
     {
       "id": "IOpening`1-RequiresProperty-Edges_683D51090DD87BAC59B09240FDA60D42DD53411C171789787C4CDFCE404D4CD2",
       "type": "owl:DatatypeProperty"
+    },
+    {
+      "id": "IOpening`1-IsA-IBHoMObject_581943BC16D9A5114D9479FB75AF8F232493DE120C79E4B033D7D9A42C26DEB5",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "IOpening`1-IsA-IObject_A535FD8C482C7E896E23A03D42E3EF3FF072E958F856900DE3FCEC14828C79F9",
+      "type": "owl:ObjectProperty"
     },
     {
       "id": "IOpening`1-IsA-IAnalytical_B73760AB3BE411169017C65574A332CB84241BD45E2880E908D74D52927399B6",
@@ -1501,6 +1957,14 @@
       "type": "owl:DatatypeProperty"
     },
     {
+      "id": "IPanel`2-IsA-IBHoMObject_A9197556FEB3CCCA6CFAD2C1753BCAB11239183F2EEB3A6F17719A6D6E1EFEC6",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "IPanel`2-IsA-IObject_35E4061A1CD78DD49EB18E78FF5D6726A87A2978FC44FDE8475252386CFAC33F",
+      "type": "owl:ObjectProperty"
+    },
+    {
       "id": "IPanel`2-IsA-IAnalytical_4D414B40AD1E7D90F1BA8D4146E85DD40EDA756D864F92A54A946B4B7C1112CB",
       "type": "owl:ObjectProperty"
     },
@@ -1517,6 +1981,14 @@
       "type": "owl:DatatypeProperty"
     },
     {
+      "id": "IRegion-IsA-IBHoMObject_C73D0735E39DEC9B9FF5188C809B234803E51183432DF40E253F34C5A2F4D6A6",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "IRegion-IsA-IObject_FCA420FAB918AF10084E46EEA9D2C4B40D14F132F9D0324E6B2A9275DC6DDF99",
+      "type": "owl:ObjectProperty"
+    },
+    {
       "id": "IRegion-IsA-IAnalytical_99B85CB2A6E01BBFD5FEB4E27B58675E20BBE7B302BDE0D7140F4E6F9C9B90AB",
       "type": "owl:ObjectProperty"
     },
@@ -1531,6 +2003,14 @@
     {
       "id": "ISurface-RequiresProperty-Extents_9C483C5D902E0D1A165DD4F00403B61BE0CA19BB904C881CA014A8744DDCBCAE",
       "type": "owl:DatatypeProperty"
+    },
+    {
+      "id": "ISurface-IsA-IBHoMObject_D41F74E5945EC23FCDE670E0CEBF393908BA088D11153FFFD95977A367D0ECE4",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "ISurface-IsA-IObject_FDD63FD2779164E0B2D82026553CF2E4BC05B6168EDDAF2DAADA778B00E884B1",
+      "type": "owl:ObjectProperty"
     },
     {
       "id": "ISurface-IsA-IAnalytical_6B1B455DD2C7C4FE9D2C26CB99F2BDD549233F80C71E1CDF0BCA6A917918DD73",
@@ -1597,6 +2077,10 @@
       "type": "owl:ObjectProperty"
     },
     {
+      "id": "ShortestPathResult-IsA-IObject_051D83D18584F178DA8B10282D518626BE55BD32AEB9702EBEE47443C491DC07",
+      "type": "owl:ObjectProperty"
+    },
+    {
       "id": "ShortestPathResult-IsA-IImmutable_5F1129D40D725853A541CA53181187305DE200D95A3BF73C3CA8744D67FBA463",
       "type": "owl:ObjectProperty"
     },
@@ -1632,6 +2116,19 @@
       },
       "domain": "BH.oM.Analytical.Results.ICasedResult",
       "range": "BH.oM.Analytical.Results.IResult"
+    },
+    {
+      "id": "ICasedResult-IsA-IObject_A308DEF1637F15B2294E4B37593316438EDA721B350F8BC98F1780A208B7EED8",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "label": "IsA",
+      "attributes": [
+        "object"
+      ],
+      "comment": {
+        "undefined": "Can be used to describe that a thing belongs to a class; or that a thing is equivalent to another thing. When used for BHoM types, this describes C# interface implementation."
+      },
+      "domain": "BH.oM.Analytical.Results.ICasedResult",
+      "range": "BH.oM.Base.IObject"
     },
     {
       "id": "ICasedResult-IsA-IImmutable_0EB3035ED0DB9A29CA50AF310B1B2660773A1A2922D33D443DB5290FBC6C93C2",
@@ -1678,6 +2175,19 @@
       },
       "domain": "BH.oM.Analytical.Results.IElement1DResult",
       "range": "BH.oM.Analytical.Results.IResult"
+    },
+    {
+      "id": "IElement1DResult-IsA-IObject_37994702CF68958D6147D17E4C8463A5350858A1D94ED0C7CC181E01F9292718",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "label": "IsA",
+      "attributes": [
+        "object"
+      ],
+      "comment": {
+        "undefined": "Can be used to describe that a thing belongs to a class; or that a thing is equivalent to another thing. When used for BHoM types, this describes C# interface implementation."
+      },
+      "domain": "BH.oM.Analytical.Results.IElement1DResult",
+      "range": "BH.oM.Base.IObject"
     },
     {
       "id": "IElement1DResult-IsA-IImmutable_2225E39A97F46636017801BCC8E6952FCBA24839808AF75DBF9B301D9D6C6A10",
@@ -1752,6 +2262,19 @@
       "range": "BH.oM.Analytical.Results.IResult"
     },
     {
+      "id": "IMeshElementResult-IsA-IObject_65E124BEB793B46D731A997CF19160D5FF18B82C64BB2A72331BCFAFA0E7817C",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "label": "IsA",
+      "attributes": [
+        "object"
+      ],
+      "comment": {
+        "undefined": "Can be used to describe that a thing belongs to a class; or that a thing is equivalent to another thing. When used for BHoM types, this describes C# interface implementation."
+      },
+      "domain": "BH.oM.Analytical.Results.IMeshElementResult",
+      "range": "BH.oM.Base.IObject"
+    },
+    {
       "id": "IMeshElementResult-IsA-IImmutable_6CA3D588A9BA08D2F1AE9C1F3403BA7EAA71E22F9E5974B8FAAAA643A67CB07A",
       "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
       "label": "IsA",
@@ -1804,6 +2327,19 @@
       "range": "BH.oM.Analytical.Results.IResult"
     },
     {
+      "id": "IMeshResult`1-IsA-IObject_EB8A93D094B082D121F89B48303461DC774DB918905958A65ED2060B370252EC",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "label": "IsA",
+      "attributes": [
+        "object"
+      ],
+      "comment": {
+        "undefined": "Can be used to describe that a thing belongs to a class; or that a thing is equivalent to another thing. When used for BHoM types, this describes C# interface implementation."
+      },
+      "domain": "BH.oM.Analytical.Results.IMeshResult`1",
+      "range": "BH.oM.Base.IObject"
+    },
+    {
       "id": "IMeshResult`1-IsA-IImmutable_0BCFB2E2553D25ED543DAE134654CFE4C4798AC24583B7FEFF850D0B0D6A04C4",
       "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
       "label": "IsA",
@@ -1815,19 +2351,6 @@
       },
       "domain": "BH.oM.Analytical.Results.IMeshResult`1",
       "range": "BH.oM.Base.IImmutable"
-    },
-    {
-      "id": "IMeshResult`1-IsA-IResultCollection_9E9020AF319D4F6540F0B938B491F236722D684458E603983E5CBAB80D053785",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
-      "label": "IsA",
-      "attributes": [
-        "object"
-      ],
-      "comment": {
-        "undefined": "Can be used to describe that a thing belongs to a class; or that a thing is equivalent to another thing. When used for BHoM types, this describes C# interface implementation."
-      },
-      "domain": "BH.oM.Analytical.Results.IMeshResult`1",
-      "range": "BH.oM.Analytical.Results.IResultCollection"
     },
     {
       "id": "IObjectIdResult-RequiresProperty-ObjectId_6B6EA838D66C304DA365A40E4DCC3E26AFD12B8D7E1F9A791B8DEF0AC73020A3",
@@ -1851,6 +2374,19 @@
       },
       "domain": "BH.oM.Analytical.Results.IObjectIdResult",
       "range": "BH.oM.Analytical.Results.IResult"
+    },
+    {
+      "id": "IObjectIdResult-IsA-IObject_D1AF23AB15830FD4B29BD2736D2AD4131E2A146EE8E95FFC4A0FA9134787BEE4",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "label": "IsA",
+      "attributes": [
+        "object"
+      ],
+      "comment": {
+        "undefined": "Can be used to describe that a thing belongs to a class; or that a thing is equivalent to another thing. When used for BHoM types, this describes C# interface implementation."
+      },
+      "domain": "BH.oM.Analytical.Results.IObjectIdResult",
+      "range": "BH.oM.Base.IObject"
     },
     {
       "id": "IObjectIdResult-IsA-IImmutable_923F4B1B2C723376AF35D75C4C09E8F9A1C0B881BA5358620790C2DE535F88EC",
@@ -1877,6 +2413,19 @@
       },
       "domain": "BH.oM.Analytical.Results.IObjectResult",
       "range": "BH.oM.Analytical.Results.IResult"
+    },
+    {
+      "id": "IObjectResult-IsA-IObject_A5D726676837AD04CB786623A9141D3D9508650EC1DFA3A29D854ACDB624119B",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "label": "IsA",
+      "attributes": [
+        "object"
+      ],
+      "comment": {
+        "undefined": "Can be used to describe that a thing belongs to a class; or that a thing is equivalent to another thing. When used for BHoM types, this describes C# interface implementation."
+      },
+      "domain": "BH.oM.Analytical.Results.IObjectResult",
+      "range": "BH.oM.Base.IObject"
     },
     {
       "id": "IObjectResult-IsA-IImmutable_3AE7703A862075C9DC4256E992FFAE6FB684369E90761EE3A9064B986AA41C9D",
@@ -1918,6 +2467,19 @@
       "range": "BH.oM.Analytical.Results.IResultItem"
     },
     {
+      "id": "IResult-IsA-IObject_F351B29E83C6BEC5B9E74739E1D7DB3098BFB3E34A75C705A57B3FF2DAB330F1",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "label": "IsA",
+      "attributes": [
+        "object"
+      ],
+      "comment": {
+        "undefined": "Can be used to describe that a thing belongs to a class; or that a thing is equivalent to another thing. When used for BHoM types, this describes C# interface implementation."
+      },
+      "domain": "BH.oM.Analytical.Results.IResult",
+      "range": "BH.oM.Base.IObject"
+    },
+    {
       "id": "IResult-IsA-IImmutable_649DE737E296DC693964777B1BE678F85630DBA2617960F2D4276E2BDECB278B",
       "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
       "label": "IsA",
@@ -1931,20 +2493,17 @@
       "range": "BH.oM.Base.IImmutable"
     },
     {
-      "id": "IResultCollection-IsA-IImmutable_F779F619A4E182631579DE58D2A90DB0E48561CD433E4FEF1FA6375641D10B30",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
-      "label": "IsA",
+      "id": "IResultCollection`1-RequiresProperty-Results_AC90F20DC36382A911B5F27C7ADFDD3774E3A6F485ABCE178415B8453E16EF89",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/RequiresProperty.cs",
+      "label": "RequiresProperty",
       "attributes": [
-        "object"
+        "datatype"
       ],
-      "comment": {
-        "undefined": "Can be used to describe that a thing belongs to a class; or that a thing is equivalent to another thing. When used for BHoM types, this describes C# interface implementation."
-      },
-      "domain": "BH.oM.Analytical.Results.IResultCollection",
-      "range": "BH.oM.Base.IImmutable"
+      "domain": "BH.oM.Analytical.Results.IResultCollection`1",
+      "range": "BH.oM.Analytical.Results.IResultCollection`1.Results"
     },
     {
-      "id": "IResultCollection-IsA-IResult_24288C3BEA5562B6E80132DBC3C5252FA6D2547B56804A2B90DE90256D587B9A",
+      "id": "IResultCollection`1-IsA-IResult_90C0EB4C0B38D76C6F28EE651F81C492401ECD67F6AB4033BFA3DB380B250CC0",
       "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
       "label": "IsA",
       "attributes": [
@@ -1953,8 +2512,34 @@
       "comment": {
         "undefined": "Can be used to describe that a thing belongs to a class; or that a thing is equivalent to another thing. When used for BHoM types, this describes C# interface implementation."
       },
-      "domain": "BH.oM.Analytical.Results.IResultCollection",
+      "domain": "BH.oM.Analytical.Results.IResultCollection`1",
       "range": "BH.oM.Analytical.Results.IResult"
+    },
+    {
+      "id": "IResultCollection`1-IsA-IObject_9C25DA9498C1FD40E478BD12C1EB0A15F438C832B62D03427E94BB6F423E17FF",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "label": "IsA",
+      "attributes": [
+        "object"
+      ],
+      "comment": {
+        "undefined": "Can be used to describe that a thing belongs to a class; or that a thing is equivalent to another thing. When used for BHoM types, this describes C# interface implementation."
+      },
+      "domain": "BH.oM.Analytical.Results.IResultCollection`1",
+      "range": "BH.oM.Base.IObject"
+    },
+    {
+      "id": "IResultCollection`1-IsA-IImmutable_3FE2A0130F2FDF5F092807B744783E6914790C1AAA8F46B57B3EB59D79BA49E5",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "label": "IsA",
+      "attributes": [
+        "object"
+      ],
+      "comment": {
+        "undefined": "Can be used to describe that a thing belongs to a class; or that a thing is equivalent to another thing. When used for BHoM types, this describes C# interface implementation."
+      },
+      "domain": "BH.oM.Analytical.Results.IResultCollection`1",
+      "range": "BH.oM.Base.IImmutable"
     },
     {
       "id": "IResultItem-IsA-IResult_9F70129BA3D212026300F1C975A7563A978D1C3932095B1D78ABB5372F44E295",
@@ -1968,6 +2553,19 @@
       },
       "domain": "BH.oM.Analytical.Results.IResultItem",
       "range": "BH.oM.Analytical.Results.IResult"
+    },
+    {
+      "id": "IResultItem-IsA-IObject_98F75B168DC649F5BF8E7C747576397C4BE888E28E977DC5A1AC6E2943EEFF3C",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "label": "IsA",
+      "attributes": [
+        "object"
+      ],
+      "comment": {
+        "undefined": "Can be used to describe that a thing belongs to a class; or that a thing is equivalent to another thing. When used for BHoM types, this describes C# interface implementation."
+      },
+      "domain": "BH.oM.Analytical.Results.IResultItem",
+      "range": "BH.oM.Base.IObject"
     },
     {
       "id": "IResultItem-IsA-IImmutable_7BF678C4420F29F254C26A6C0D336BEBBA53106E8D981F6BA3BACC8942862D85",
@@ -2006,6 +2604,19 @@
       "range": "BH.oM.Analytical.Results.IResult"
     },
     {
+      "id": "ITimeStepResult-IsA-IObject_F2DFE53E80921D9447492B7AE2E59412869630785A77394723E0DAE851A4432D",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "label": "IsA",
+      "attributes": [
+        "object"
+      ],
+      "comment": {
+        "undefined": "Can be used to describe that a thing belongs to a class; or that a thing is equivalent to another thing. When used for BHoM types, this describes C# interface implementation."
+      },
+      "domain": "BH.oM.Analytical.Results.ITimeStepResult",
+      "range": "BH.oM.Base.IObject"
+    },
+    {
       "id": "ITimeStepResult-IsA-IImmutable_6ABA4B20A0EDC8507DDD89036503979463CD2D48E1A30936F7F0D3356E8CBECB",
       "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
       "label": "IsA",
@@ -2017,6 +2628,69 @@
       },
       "domain": "BH.oM.Analytical.Results.ITimeStepResult",
       "range": "BH.oM.Base.IImmutable"
+    },
+    {
+      "id": "ResultFilter-HasProperty-ResultCaseFilters_0EFA547D25635C4537D320A230BD38460A9CC7845C420AD9189FBBCCE6A4EB19",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/HasProperty.cs",
+      "label": "HasProperty",
+      "attributes": [
+        "datatype"
+      ],
+      "domain": "BH.oM.Analytical.Results.ResultFilter",
+      "range": "BH.oM.Analytical.Results.ResultFilter.ResultCaseFilters"
+    },
+    {
+      "id": "ResultFilter-HasProperty-ObjectIDFilters_0F3915E103B844B112184D631FDCAF201E2072357D682265E4806D73ADE0E214",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/HasProperty.cs",
+      "label": "HasProperty",
+      "attributes": [
+        "datatype"
+      ],
+      "domain": "BH.oM.Analytical.Results.ResultFilter",
+      "range": "BH.oM.Analytical.Results.ResultFilter.ObjectIDFilters"
+    },
+    {
+      "id": "ResultFilter-HasProperty-NodeIDFilters_7D19ABD5F81F01F1EC22FFBF86F578AD2CD1B80160F97E55615B313F46108C1D",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/HasProperty.cs",
+      "label": "HasProperty",
+      "attributes": [
+        "datatype"
+      ],
+      "domain": "BH.oM.Analytical.Results.ResultFilter",
+      "range": "BH.oM.Analytical.Results.ResultFilter.NodeIDFilters"
+    },
+    {
+      "id": "ResultFilter-HasProperty-MeshFaceIDFilters_9A4A464B4256FCFE2A1C122E75E95EF2C40286C82EA86045DF9098F7D607EE1E",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/HasProperty.cs",
+      "label": "HasProperty",
+      "attributes": [
+        "datatype"
+      ],
+      "domain": "BH.oM.Analytical.Results.ResultFilter",
+      "range": "BH.oM.Analytical.Results.ResultFilter.MeshFaceIDFilters"
+    },
+    {
+      "id": "ResultFilter-HasProperty-TimeStepFilters_BF44AEA2EB10DDA3AF9B8A4337B886DD040AA4DF4F418825A197D311B08550D3",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/HasProperty.cs",
+      "label": "HasProperty",
+      "attributes": [
+        "datatype"
+      ],
+      "domain": "BH.oM.Analytical.Results.ResultFilter",
+      "range": "BH.oM.Analytical.Results.ResultFilter.TimeStepFilters"
+    },
+    {
+      "id": "ResultFilter-IsA-IObject_ECDF07380317731A31E2D78B1F2447FB5B62A7A38D548223E889EB226C6DF77C",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "label": "IsA",
+      "attributes": [
+        "object"
+      ],
+      "comment": {
+        "undefined": "Can be used to describe that a thing belongs to a class; or that a thing is equivalent to another thing. When used for BHoM types, this describes C# interface implementation."
+      },
+      "domain": "BH.oM.Analytical.Results.ResultFilter",
+      "range": "BH.oM.Base.IObject"
     },
     {
       "id": "IDependencyFragment-IsA-IFragment_2C871256CCB57B2599C1F0CFE344980D02C6C6C46E8896F3560E30DFBDC35E52",
@@ -2032,6 +2706,19 @@
       "range": "BH.oM.Base.IFragment"
     },
     {
+      "id": "IDependencyFragment-IsA-IObject_438D9C591DCC34CB93F34046F29EABF1E453A5BFABAB6DCCD40E2356E72A77E4",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "label": "IsA",
+      "attributes": [
+        "object"
+      ],
+      "comment": {
+        "undefined": "Can be used to describe that a thing belongs to a class; or that a thing is equivalent to another thing. When used for BHoM types, this describes C# interface implementation."
+      },
+      "domain": "BH.oM.Analytical.Fragments.IDependencyFragment",
+      "range": "BH.oM.Base.IObject"
+    },
+    {
       "id": "IProjectionFragment-IsA-IFragment_1C7D765BA687A85C9D9B49625E454D33D33EE0B63F9197332CA3F384112672B5",
       "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
       "label": "IsA",
@@ -2043,6 +2730,19 @@
       },
       "domain": "BH.oM.Analytical.Fragments.IProjectionFragment",
       "range": "BH.oM.Base.IFragment"
+    },
+    {
+      "id": "IProjectionFragment-IsA-IObject_91A661E61EE00C90A8C23D5CAA1232EA1C7DB7CB939E7F11F8B8C3ABE743DF55",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "label": "IsA",
+      "attributes": [
+        "object"
+      ],
+      "comment": {
+        "undefined": "Can be used to describe that a thing belongs to a class; or that a thing is equivalent to another thing. When used for BHoM types, this describes C# interface implementation."
+      },
+      "domain": "BH.oM.Analytical.Fragments.IProjectionFragment",
+      "range": "BH.oM.Base.IObject"
     },
     {
       "id": "ProjectionFragment-HasProperty-GroupName_29A1D344921339EE93D2E1727DC8A4D068EAC13BC2AA45E070CF34D0CEF47F17",
@@ -2079,6 +2779,19 @@
       },
       "domain": "BH.oM.Analytical.Fragments.ProjectionFragment",
       "range": "BH.oM.Base.IFragment"
+    },
+    {
+      "id": "ProjectionFragment-IsA-IObject_F85BD271BF3F5D1A695C787046A6203E84AAE1DEA340DEE2B4C4DEC3E2CE2387",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "label": "IsA",
+      "attributes": [
+        "object"
+      ],
+      "comment": {
+        "undefined": "Can be used to describe that a thing belongs to a class; or that a thing is equivalent to another thing. When used for BHoM types, this describes C# interface implementation."
+      },
+      "domain": "BH.oM.Analytical.Fragments.ProjectionFragment",
+      "range": "BH.oM.Base.IObject"
     },
     {
       "id": "RoutingFragment-HasProperty-MinCostToSource_45F0CE9A3FD2D754E41C4E34A8E55D9420D9AE4764354B2B649119332F721589",
@@ -2144,6 +2857,19 @@
       "range": "BH.oM.Base.IFragment"
     },
     {
+      "id": "RoutingFragment-IsA-IObject_835EF9D5BA8095ED128EFE0CC42416E511AFD2E6B276905798A87C8B12D9FD5F",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "label": "IsA",
+      "attributes": [
+        "object"
+      ],
+      "comment": {
+        "undefined": "Can be used to describe that a thing belongs to a class; or that a thing is equivalent to another thing. When used for BHoM types, this describes C# interface implementation."
+      },
+      "domain": "BH.oM.Analytical.Fragments.RoutingFragment",
+      "range": "BH.oM.Base.IObject"
+    },
+    {
       "id": "SourcesDependencyFragment-HasProperty-Sources_FEACFC5404EF1353343BACD09B994D2DCD3318CFEB1D60F4A964972EAAC19535",
       "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/HasProperty.cs",
       "label": "HasProperty",
@@ -2198,6 +2924,19 @@
       },
       "domain": "BH.oM.Analytical.Fragments.SourcesDependencyFragment",
       "range": "BH.oM.Base.IFragment"
+    },
+    {
+      "id": "SourcesDependencyFragment-IsA-IObject_0F4CE7B480EC966B38DA2E0C6F163AF514E3474F698959137FE2FE4986D9D6C2",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "label": "IsA",
+      "attributes": [
+        "object"
+      ],
+      "comment": {
+        "undefined": "Can be used to describe that a thing belongs to a class; or that a thing is equivalent to another thing. When used for BHoM types, this describes C# interface implementation."
+      },
+      "domain": "BH.oM.Analytical.Fragments.SourcesDependencyFragment",
+      "range": "BH.oM.Base.IObject"
     },
     {
       "id": "TargetsDependencyFragment-HasProperty-Targets_225A59F25B09504AD9F81179BEB17B426F8F5873A46B20025DD921793C226529",
@@ -2256,6 +2995,19 @@
       "range": "BH.oM.Base.IFragment"
     },
     {
+      "id": "TargetsDependencyFragment-IsA-IObject_A7C3B46BB9FB893903893CA16C05B395B042AAC16CF428A504D8CF358B7635CB",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "label": "IsA",
+      "attributes": [
+        "object"
+      ],
+      "comment": {
+        "undefined": "Can be used to describe that a thing belongs to a class; or that a thing is equivalent to another thing. When used for BHoM types, this describes C# interface implementation."
+      },
+      "domain": "BH.oM.Analytical.Fragments.TargetsDependencyFragment",
+      "range": "BH.oM.Base.IObject"
+    },
+    {
       "id": "BH.oM.Analytical.Elements.Graph-HasProperty-BH.oM.Analytical.Elements.Graph.Entities",
       "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/HasProperty.cs",
       "label": "HasProperty",
@@ -2294,6 +3046,42 @@
       ],
       "domain": "BH.oM.Analytical.Elements.Graph.Relations",
       "range": "BH.oM.Analytical.Elements.IRelation"
+    },
+    {
+      "id": "Graph-IsA-IBHoMObject_5A15B235CB42C461395976E5642D80B377EB5F195894EEB0CDC2BAD1D7290A25",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "label": "IsA",
+      "attributes": [
+        "object"
+      ],
+      "comment": {
+        "undefined": "Can be used to describe that a thing belongs to a class; or that a thing is equivalent to another thing. When used for BHoM types, this describes C# interface implementation."
+      },
+      "domain": "BH.oM.Analytical.Elements.Graph",
+      "range": "BH.oM.Base.IBHoMObject"
+    },
+    {
+      "id": "Graph-IsA-IObject_7F6A5780EB0847B440DB1AA2DADC89245292079320A1072D2C423A795AF91063",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "label": "IsA",
+      "attributes": [
+        "object"
+      ],
+      "comment": {
+        "undefined": "Can be used to describe that a thing belongs to a class; or that a thing is equivalent to another thing. When used for BHoM types, this describes C# interface implementation."
+      },
+      "domain": "BH.oM.Analytical.Elements.Graph",
+      "range": "BH.oM.Base.IObject"
+    },
+    {
+      "id": "Graph-IsSubclassOf-BHoMObject_26387DB86CC08E1B3D49ECB802F5ED3CB003A2D628F6F0541821014952751DCE",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsSubclassOf.cs",
+      "label": "IsA",
+      "attributes": [
+        "object"
+      ],
+      "domain": "BH.oM.Analytical.Elements.Graph",
+      "range": "BH.oM.Base.BHoMObject"
     },
     {
       "id": "IRelation-RequiresProperty-Source_E81A46F5F5C877971DCF5D35553CBA27AF26E3A64DB050CD185B4BE565A60A86",
@@ -2346,6 +3134,58 @@
       "range": "BH.oM.Analytical.Elements.IRelation.Curve"
     },
     {
+      "id": "IRelation-IsA-IBHoMObject_4DC177AA0A0E5C3BEDBF4794A6349CC8EFD9F6952D343A7A45BF34155C4E0166",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "label": "IsA",
+      "attributes": [
+        "object"
+      ],
+      "comment": {
+        "undefined": "Can be used to describe that a thing belongs to a class; or that a thing is equivalent to another thing. When used for BHoM types, this describes C# interface implementation."
+      },
+      "domain": "BH.oM.Analytical.Elements.IRelation",
+      "range": "BH.oM.Base.IBHoMObject"
+    },
+    {
+      "id": "IRelation-IsA-IObject_F35A24994AA8BE13DE2917021FD14639564E5FB06E2E6216B5DF2553A94222B6",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "label": "IsA",
+      "attributes": [
+        "object"
+      ],
+      "comment": {
+        "undefined": "Can be used to describe that a thing belongs to a class; or that a thing is equivalent to another thing. When used for BHoM types, this describes C# interface implementation."
+      },
+      "domain": "BH.oM.Analytical.Elements.IRelation",
+      "range": "BH.oM.Base.IObject"
+    },
+    {
+      "id": "GeometricProjection-IsA-IBHoMObject_9550D8E1C19EBE638BAC61EEE3373D1F610B484E25987138852982F60BE0E600",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "label": "IsA",
+      "attributes": [
+        "object"
+      ],
+      "comment": {
+        "undefined": "Can be used to describe that a thing belongs to a class; or that a thing is equivalent to another thing. When used for BHoM types, this describes C# interface implementation."
+      },
+      "domain": "BH.oM.Analytical.Elements.GeometricProjection",
+      "range": "BH.oM.Base.IBHoMObject"
+    },
+    {
+      "id": "GeometricProjection-IsA-IObject_610F8FC444BE1A90895160FB70263AC7A07DBED111D7E9620942B317A645A924",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "label": "IsA",
+      "attributes": [
+        "object"
+      ],
+      "comment": {
+        "undefined": "Can be used to describe that a thing belongs to a class; or that a thing is equivalent to another thing. When used for BHoM types, this describes C# interface implementation."
+      },
+      "domain": "BH.oM.Analytical.Elements.GeometricProjection",
+      "range": "BH.oM.Base.IObject"
+    },
+    {
       "id": "GeometricProjection-IsA-IProjection_0104C4499CC6428ECF326F9691C53FF86F744066E6103C059C414AC7A7337FE7",
       "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
       "label": "IsA",
@@ -2357,6 +3197,16 @@
       },
       "domain": "BH.oM.Analytical.Elements.GeometricProjection",
       "range": "BH.oM.Analytical.Elements.IProjection"
+    },
+    {
+      "id": "GeometricProjection-IsSubclassOf-BHoMObject_3A431B0BCEC6616242B24718D07B6D8EC4921BAD4FFA0AA4150269A212765210",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsSubclassOf.cs",
+      "label": "IsA",
+      "attributes": [
+        "object"
+      ],
+      "domain": "BH.oM.Analytical.Elements.GeometricProjection",
+      "range": "BH.oM.Base.BHoMObject"
     },
     {
       "id": "BH.oM.Analytical.Elements.GraphicalProjection-HasProperty-BH.oM.Analytical.Elements.GraphicalProjection.View",
@@ -2379,6 +3229,32 @@
       "range": "BH.oM.Graphics.Views.IView"
     },
     {
+      "id": "GraphicalProjection-IsA-IBHoMObject_D39F742D29ED81A46A715B865731E5CF07952D0EBECF1A128BE75B642D66EB4F",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "label": "IsA",
+      "attributes": [
+        "object"
+      ],
+      "comment": {
+        "undefined": "Can be used to describe that a thing belongs to a class; or that a thing is equivalent to another thing. When used for BHoM types, this describes C# interface implementation."
+      },
+      "domain": "BH.oM.Analytical.Elements.GraphicalProjection",
+      "range": "BH.oM.Base.IBHoMObject"
+    },
+    {
+      "id": "GraphicalProjection-IsA-IObject_700A287B6D16E7358BBFD07B7C0B7A386DCA246D35D4258960BB3B77FF757A37",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "label": "IsA",
+      "attributes": [
+        "object"
+      ],
+      "comment": {
+        "undefined": "Can be used to describe that a thing belongs to a class; or that a thing is equivalent to another thing. When used for BHoM types, this describes C# interface implementation."
+      },
+      "domain": "BH.oM.Analytical.Elements.GraphicalProjection",
+      "range": "BH.oM.Base.IObject"
+    },
+    {
       "id": "GraphicalProjection-IsA-IProjection_653FFDCB87901D628D27A4BFC0A52AF2B56E9FAEABCBD4064B59715A43979E8C",
       "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
       "label": "IsA",
@@ -2392,6 +3268,68 @@
       "range": "BH.oM.Analytical.Elements.IProjection"
     },
     {
+      "id": "GraphicalProjection-IsSubclassOf-BHoMObject_454837071E92F05F8CF269780574BFD4BE244F405F5930B70046293C06D74E02",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsSubclassOf.cs",
+      "label": "IsA",
+      "attributes": [
+        "object"
+      ],
+      "domain": "BH.oM.Analytical.Elements.GraphicalProjection",
+      "range": "BH.oM.Base.BHoMObject"
+    },
+    {
+      "id": "IProjection-IsA-IBHoMObject_BB8D59965DBA91E0BB6603A1A302DF4DE1AEFF0F280255FAF5E45F79C67692D5",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "label": "IsA",
+      "attributes": [
+        "object"
+      ],
+      "comment": {
+        "undefined": "Can be used to describe that a thing belongs to a class; or that a thing is equivalent to another thing. When used for BHoM types, this describes C# interface implementation."
+      },
+      "domain": "BH.oM.Analytical.Elements.IProjection",
+      "range": "BH.oM.Base.IBHoMObject"
+    },
+    {
+      "id": "IProjection-IsA-IObject_EA78E4B506A63DC9594C5702CC722A0A7E47B428B480B60E87B6F4DB5916ACDC",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "label": "IsA",
+      "attributes": [
+        "object"
+      ],
+      "comment": {
+        "undefined": "Can be used to describe that a thing belongs to a class; or that a thing is equivalent to another thing. When used for BHoM types, this describes C# interface implementation."
+      },
+      "domain": "BH.oM.Analytical.Elements.IProjection",
+      "range": "BH.oM.Base.IObject"
+    },
+    {
+      "id": "SpatialProjection-IsA-IBHoMObject_B2898DE1D7987E26BDE6F09E79B8EE0C911B749B180E13406E0D35F3853FF59E",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "label": "IsA",
+      "attributes": [
+        "object"
+      ],
+      "comment": {
+        "undefined": "Can be used to describe that a thing belongs to a class; or that a thing is equivalent to another thing. When used for BHoM types, this describes C# interface implementation."
+      },
+      "domain": "BH.oM.Analytical.Elements.SpatialProjection",
+      "range": "BH.oM.Base.IBHoMObject"
+    },
+    {
+      "id": "SpatialProjection-IsA-IObject_2A9FDD6FC930467C17C42A61E04F3A8056EAD662E209C6C0F1C5F7A9AA59AEF4",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "label": "IsA",
+      "attributes": [
+        "object"
+      ],
+      "comment": {
+        "undefined": "Can be used to describe that a thing belongs to a class; or that a thing is equivalent to another thing. When used for BHoM types, this describes C# interface implementation."
+      },
+      "domain": "BH.oM.Analytical.Elements.SpatialProjection",
+      "range": "BH.oM.Base.IObject"
+    },
+    {
       "id": "SpatialProjection-IsA-IProjection_4CF53187E5CCDCE0BC11ACAF54CFC98777C3ECA7A519195F503865E67AAC108F",
       "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
       "label": "IsA",
@@ -2403,6 +3341,16 @@
       },
       "domain": "BH.oM.Analytical.Elements.SpatialProjection",
       "range": "BH.oM.Analytical.Elements.IProjection"
+    },
+    {
+      "id": "SpatialProjection-IsSubclassOf-BHoMObject_78CA4B9752EF1B3A9F9E44A97A1C528AB82F95BF149782B5B3E370352663CCD1",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsSubclassOf.cs",
+      "label": "IsA",
+      "attributes": [
+        "object"
+      ],
+      "domain": "BH.oM.Analytical.Elements.SpatialProjection",
+      "range": "BH.oM.Base.BHoMObject"
     },
     {
       "id": "Relation-HasProperty-Source_6B664FF39DE3FD257EB87C71F2C8EAC488F003133BFF78B3A242D1852D5E34C7",
@@ -2475,6 +3423,32 @@
       "range": "BH.oM.Geometry.ICurve"
     },
     {
+      "id": "Relation-IsA-IBHoMObject_CC8B49B6A8CAFD328EE53819C159D95EB42722203C58E1C0FE60112B8126A433",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "label": "IsA",
+      "attributes": [
+        "object"
+      ],
+      "comment": {
+        "undefined": "Can be used to describe that a thing belongs to a class; or that a thing is equivalent to another thing. When used for BHoM types, this describes C# interface implementation."
+      },
+      "domain": "BH.oM.Analytical.Elements.Relation",
+      "range": "BH.oM.Base.IBHoMObject"
+    },
+    {
+      "id": "Relation-IsA-IObject_6DE9553485E97895F1512042FE40947ACD8788E31EEBDE63FB7BD1D42087B565",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "label": "IsA",
+      "attributes": [
+        "object"
+      ],
+      "comment": {
+        "undefined": "Can be used to describe that a thing belongs to a class; or that a thing is equivalent to another thing. When used for BHoM types, this describes C# interface implementation."
+      },
+      "domain": "BH.oM.Analytical.Elements.Relation",
+      "range": "BH.oM.Base.IObject"
+    },
+    {
       "id": "Relation-IsA-IRelation_258AC24ECE3BBA970BEEE0AE56D855F53221051D1DAAF2E6C5BA1D4DFE2AC771",
       "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
       "label": "IsA",
@@ -2488,6 +3462,16 @@
       "range": "BH.oM.Analytical.Elements.IRelation"
     },
     {
+      "id": "Relation-IsSubclassOf-BHoMObject_D00A08B2AFC13AE6925AA5D4CB2579C26878486B0E63C9229398A22B4B02E574",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsSubclassOf.cs",
+      "label": "IsA",
+      "attributes": [
+        "object"
+      ],
+      "domain": "BH.oM.Analytical.Elements.Relation",
+      "range": "BH.oM.Base.BHoMObject"
+    },
+    {
       "id": "IEdge-RequiresProperty-Curve_5D6C02201A2D1F147AD5F22CE254BC3FCC256697556E6E677592DE06AF4E6685",
       "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/RequiresProperty.cs",
       "label": "RequiresProperty",
@@ -2496,6 +3480,32 @@
       ],
       "domain": "BH.oM.Analytical.Elements.IEdge",
       "range": "BH.oM.Analytical.Elements.IEdge.Curve"
+    },
+    {
+      "id": "IEdge-IsA-IBHoMObject_791A834A140B0F514AA983B1FD31835CA92AD716BE30508184A8284B1C90C315",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "label": "IsA",
+      "attributes": [
+        "object"
+      ],
+      "comment": {
+        "undefined": "Can be used to describe that a thing belongs to a class; or that a thing is equivalent to another thing. When used for BHoM types, this describes C# interface implementation."
+      },
+      "domain": "BH.oM.Analytical.Elements.IEdge",
+      "range": "BH.oM.Base.IBHoMObject"
+    },
+    {
+      "id": "IEdge-IsA-IObject_02A4DE5388666584AE37A4B372614E6E1D1F4C876851A17EAD5ABB8A63BAD361",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "label": "IsA",
+      "attributes": [
+        "object"
+      ],
+      "comment": {
+        "undefined": "Can be used to describe that a thing belongs to a class; or that a thing is equivalent to another thing. When used for BHoM types, this describes C# interface implementation."
+      },
+      "domain": "BH.oM.Analytical.Elements.IEdge",
+      "range": "BH.oM.Base.IObject"
     },
     {
       "id": "IEdge-IsA-IAnalytical_3B541F526BFB4C177302764E805558AC145758E57E2E6B0881B0FFB7C1E97349",
@@ -2547,6 +3557,32 @@
       "range": "BH.oM.Analytical.Elements.IFace.NodeListIndices"
     },
     {
+      "id": "IFace-IsA-IBHoMObject_498CC024E4AC79BB24A6206E24583ADF5B9F5EB9972669736E9E85BE1ECAEAB8",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "label": "IsA",
+      "attributes": [
+        "object"
+      ],
+      "comment": {
+        "undefined": "Can be used to describe that a thing belongs to a class; or that a thing is equivalent to another thing. When used for BHoM types, this describes C# interface implementation."
+      },
+      "domain": "BH.oM.Analytical.Elements.IFace",
+      "range": "BH.oM.Base.IBHoMObject"
+    },
+    {
+      "id": "IFace-IsA-IObject_4E2F612DA9C89EC41CFC8A471B61415A87A76632C20156B7CE1647A7B0DA17F3",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "label": "IsA",
+      "attributes": [
+        "object"
+      ],
+      "comment": {
+        "undefined": "Can be used to describe that a thing belongs to a class; or that a thing is equivalent to another thing. When used for BHoM types, this describes C# interface implementation."
+      },
+      "domain": "BH.oM.Analytical.Elements.IFace",
+      "range": "BH.oM.Base.IObject"
+    },
+    {
       "id": "IFace-IsA-IAnalytical_DD65FF1D6D27E22663F6E758C8B972D996025925887BE1ACE8E99C5D476DCEA3",
       "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
       "label": "IsA",
@@ -2578,6 +3614,32 @@
       ],
       "domain": "BH.oM.Analytical.Elements.ILink`1",
       "range": "BH.oM.Analytical.Elements.ILink`1.EndNode"
+    },
+    {
+      "id": "ILink`1-IsA-IBHoMObject_18320E296369AF7582EA4F41128DD51CACCD8EC76D7CD4347F37D5A4DBFFBA40",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "label": "IsA",
+      "attributes": [
+        "object"
+      ],
+      "comment": {
+        "undefined": "Can be used to describe that a thing belongs to a class; or that a thing is equivalent to another thing. When used for BHoM types, this describes C# interface implementation."
+      },
+      "domain": "BH.oM.Analytical.Elements.ILink`1",
+      "range": "BH.oM.Base.IBHoMObject"
+    },
+    {
+      "id": "ILink`1-IsA-IObject_C7DE59A6A8EFA990415648C8DA5F48AE753DB1D82DD5E1AC002D007074D65C80",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "label": "IsA",
+      "attributes": [
+        "object"
+      ],
+      "comment": {
+        "undefined": "Can be used to describe that a thing belongs to a class; or that a thing is equivalent to another thing. When used for BHoM types, this describes C# interface implementation."
+      },
+      "domain": "BH.oM.Analytical.Elements.ILink`1",
+      "range": "BH.oM.Base.IObject"
     },
     {
       "id": "ILink`1-IsA-IAnalytical_420D314192905CAB9A9F9546B64490D7A05502C53CD9290E46E40BFE80692781",
@@ -2639,6 +3701,32 @@
       "range": "BH.oM.Analytical.Elements.IMesh`2.Faces"
     },
     {
+      "id": "IMesh`2-IsA-IBHoMObject_1E3350156BD39C68EC8B0EA35477DEFDEFDC81D34A2D9E9C29C81F6F764F2944",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "label": "IsA",
+      "attributes": [
+        "object"
+      ],
+      "comment": {
+        "undefined": "Can be used to describe that a thing belongs to a class; or that a thing is equivalent to another thing. When used for BHoM types, this describes C# interface implementation."
+      },
+      "domain": "BH.oM.Analytical.Elements.IMesh`2",
+      "range": "BH.oM.Base.IBHoMObject"
+    },
+    {
+      "id": "IMesh`2-IsA-IObject_260A46591BA0751A8ABC3C7EB3605A86357940FBD8C0970B73606872A19B711A",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "label": "IsA",
+      "attributes": [
+        "object"
+      ],
+      "comment": {
+        "undefined": "Can be used to describe that a thing belongs to a class; or that a thing is equivalent to another thing. When used for BHoM types, this describes C# interface implementation."
+      },
+      "domain": "BH.oM.Analytical.Elements.IMesh`2",
+      "range": "BH.oM.Base.IObject"
+    },
+    {
       "id": "IMesh`2-IsA-IAnalytical_3A9449F1A41A80039A150D0CBD6E8C9207980206BD571C2025BA378DE41756E6",
       "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
       "label": "IsA",
@@ -2660,6 +3748,32 @@
       ],
       "domain": "BH.oM.Analytical.Elements.INode",
       "range": "BH.oM.Analytical.Elements.INode.Position"
+    },
+    {
+      "id": "INode-IsA-IBHoMObject_949EDD6157AE6783630C69644F061F14C5DA36FB1F6D5B4D95DE5B43D2280C7F",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "label": "IsA",
+      "attributes": [
+        "object"
+      ],
+      "comment": {
+        "undefined": "Can be used to describe that a thing belongs to a class; or that a thing is equivalent to another thing. When used for BHoM types, this describes C# interface implementation."
+      },
+      "domain": "BH.oM.Analytical.Elements.INode",
+      "range": "BH.oM.Base.IBHoMObject"
+    },
+    {
+      "id": "INode-IsA-IObject_9E3AAC0AD1F0B223438EE6D31AC0B73A355F5CA2A0CA671FB713DD23FC4B0ABB",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "label": "IsA",
+      "attributes": [
+        "object"
+      ],
+      "comment": {
+        "undefined": "Can be used to describe that a thing belongs to a class; or that a thing is equivalent to another thing. When used for BHoM types, this describes C# interface implementation."
+      },
+      "domain": "BH.oM.Analytical.Elements.INode",
+      "range": "BH.oM.Base.IObject"
     },
     {
       "id": "INode-IsA-IAnalytical_D49A4E4EC880A9C21A68D21958689F0E9605A30289B851DE553292714648A880",
@@ -2709,6 +3823,32 @@
       ],
       "domain": "BH.oM.Analytical.Elements.IOpening`1",
       "range": "BH.oM.Analytical.Elements.IOpening`1.Edges"
+    },
+    {
+      "id": "IOpening`1-IsA-IBHoMObject_581943BC16D9A5114D9479FB75AF8F232493DE120C79E4B033D7D9A42C26DEB5",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "label": "IsA",
+      "attributes": [
+        "object"
+      ],
+      "comment": {
+        "undefined": "Can be used to describe that a thing belongs to a class; or that a thing is equivalent to another thing. When used for BHoM types, this describes C# interface implementation."
+      },
+      "domain": "BH.oM.Analytical.Elements.IOpening`1",
+      "range": "BH.oM.Base.IBHoMObject"
+    },
+    {
+      "id": "IOpening`1-IsA-IObject_A535FD8C482C7E896E23A03D42E3EF3FF072E958F856900DE3FCEC14828C79F9",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "label": "IsA",
+      "attributes": [
+        "object"
+      ],
+      "comment": {
+        "undefined": "Can be used to describe that a thing belongs to a class; or that a thing is equivalent to another thing. When used for BHoM types, this describes C# interface implementation."
+      },
+      "domain": "BH.oM.Analytical.Elements.IOpening`1",
+      "range": "BH.oM.Base.IObject"
     },
     {
       "id": "IOpening`1-IsA-IAnalytical_B73760AB3BE411169017C65574A332CB84241BD45E2880E908D74D52927399B6",
@@ -2770,6 +3910,32 @@
       "range": "BH.oM.Analytical.Elements.IPanel`2.Openings"
     },
     {
+      "id": "IPanel`2-IsA-IBHoMObject_A9197556FEB3CCCA6CFAD2C1753BCAB11239183F2EEB3A6F17719A6D6E1EFEC6",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "label": "IsA",
+      "attributes": [
+        "object"
+      ],
+      "comment": {
+        "undefined": "Can be used to describe that a thing belongs to a class; or that a thing is equivalent to another thing. When used for BHoM types, this describes C# interface implementation."
+      },
+      "domain": "BH.oM.Analytical.Elements.IPanel`2",
+      "range": "BH.oM.Base.IBHoMObject"
+    },
+    {
+      "id": "IPanel`2-IsA-IObject_35E4061A1CD78DD49EB18E78FF5D6726A87A2978FC44FDE8475252386CFAC33F",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "label": "IsA",
+      "attributes": [
+        "object"
+      ],
+      "comment": {
+        "undefined": "Can be used to describe that a thing belongs to a class; or that a thing is equivalent to another thing. When used for BHoM types, this describes C# interface implementation."
+      },
+      "domain": "BH.oM.Analytical.Elements.IPanel`2",
+      "range": "BH.oM.Base.IObject"
+    },
+    {
       "id": "IPanel`2-IsA-IAnalytical_4D414B40AD1E7D90F1BA8D4146E85DD40EDA756D864F92A54A946B4B7C1112CB",
       "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
       "label": "IsA",
@@ -2819,6 +3985,32 @@
       "range": "BH.oM.Analytical.Elements.IRegion.Perimeter"
     },
     {
+      "id": "IRegion-IsA-IBHoMObject_C73D0735E39DEC9B9FF5188C809B234803E51183432DF40E253F34C5A2F4D6A6",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "label": "IsA",
+      "attributes": [
+        "object"
+      ],
+      "comment": {
+        "undefined": "Can be used to describe that a thing belongs to a class; or that a thing is equivalent to another thing. When used for BHoM types, this describes C# interface implementation."
+      },
+      "domain": "BH.oM.Analytical.Elements.IRegion",
+      "range": "BH.oM.Base.IBHoMObject"
+    },
+    {
+      "id": "IRegion-IsA-IObject_FCA420FAB918AF10084E46EEA9D2C4B40D14F132F9D0324E6B2A9275DC6DDF99",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "label": "IsA",
+      "attributes": [
+        "object"
+      ],
+      "comment": {
+        "undefined": "Can be used to describe that a thing belongs to a class; or that a thing is equivalent to another thing. When used for BHoM types, this describes C# interface implementation."
+      },
+      "domain": "BH.oM.Analytical.Elements.IRegion",
+      "range": "BH.oM.Base.IObject"
+    },
+    {
       "id": "IRegion-IsA-IAnalytical_99B85CB2A6E01BBFD5FEB4E27B58675E20BBE7B302BDE0D7140F4E6F9C9B90AB",
       "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
       "label": "IsA",
@@ -2866,6 +4058,32 @@
       ],
       "domain": "BH.oM.Analytical.Elements.ISurface",
       "range": "BH.oM.Analytical.Elements.ISurface.Extents"
+    },
+    {
+      "id": "ISurface-IsA-IBHoMObject_D41F74E5945EC23FCDE670E0CEBF393908BA088D11153FFFD95977A367D0ECE4",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "label": "IsA",
+      "attributes": [
+        "object"
+      ],
+      "comment": {
+        "undefined": "Can be used to describe that a thing belongs to a class; or that a thing is equivalent to another thing. When used for BHoM types, this describes C# interface implementation."
+      },
+      "domain": "BH.oM.Analytical.Elements.ISurface",
+      "range": "BH.oM.Base.IBHoMObject"
+    },
+    {
+      "id": "ISurface-IsA-IObject_FDD63FD2779164E0B2D82026553CF2E4BC05B6168EDDAF2DAADA778B00E884B1",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "label": "IsA",
+      "attributes": [
+        "object"
+      ],
+      "comment": {
+        "undefined": "Can be used to describe that a thing belongs to a class; or that a thing is equivalent to another thing. When used for BHoM types, this describes C# interface implementation."
+      },
+      "domain": "BH.oM.Analytical.Elements.ISurface",
+      "range": "BH.oM.Base.IObject"
     },
     {
       "id": "ISurface-IsA-IAnalytical_6B1B455DD2C7C4FE9D2C26CB99F2BDD549233F80C71E1CDF0BCA6A917918DD73",
@@ -3035,6 +4253,19 @@
       },
       "domain": "BH.oM.Analytical.Elements.ShortestPathResult",
       "range": "BH.oM.Analytical.Results.IResult"
+    },
+    {
+      "id": "ShortestPathResult-IsA-IObject_051D83D18584F178DA8B10282D518626BE55BD32AEB9702EBEE47443C491DC07",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "label": "IsA",
+      "attributes": [
+        "object"
+      ],
+      "comment": {
+        "undefined": "Can be used to describe that a thing belongs to a class; or that a thing is equivalent to another thing. When used for BHoM types, this describes C# interface implementation."
+      },
+      "domain": "BH.oM.Analytical.Elements.ShortestPathResult",
+      "range": "BH.oM.Base.IObject"
     },
     {
       "id": "ShortestPathResult-IsA-IImmutable_5F1129D40D725853A541CA53181187305DE200D95A3BF73C3CA8744D67FBA463",

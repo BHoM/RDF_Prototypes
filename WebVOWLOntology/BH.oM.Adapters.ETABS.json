@@ -68,19 +68,19 @@
     },
     {
       "id": "BH.oM.Adapters.ETABS.ETABSId.Id",
-      "type": "rdfs:Datatype"
+      "type": "owl:Class"
     },
     {
       "id": "BH.oM.Adapters.ETABS.ETABSId.Label",
-      "type": "rdfs:Datatype"
+      "type": "owl:Class"
     },
     {
       "id": "BH.oM.Adapters.ETABS.ETABSId.Story",
-      "type": "rdfs:Datatype"
+      "type": "owl:Class"
     },
     {
       "id": "BH.oM.Adapters.ETABS.ETABSId.PersistentId",
-      "type": "rdfs:Datatype"
+      "type": "owl:Class"
     },
     {
       "id": "BH.oM.Base.IAdapterId",
@@ -88,6 +88,10 @@
     },
     {
       "id": "BH.oM.Base.IFragment",
+      "type": "owl:Class"
+    },
+    {
+      "id": "BH.oM.Base.IObject",
       "type": "owl:Class"
     },
     {
@@ -100,7 +104,7 @@
     },
     {
       "id": "BH.oM.Adapters.ETABS.EtabsSettings.ReplaceLoads",
-      "type": "rdfs:Datatype"
+      "type": "owl:Class"
     },
     {
       "id": "BH.oM.Adapters.ETABS.EtabsSettings.DatabaseSettings",
@@ -108,7 +112,7 @@
     },
     {
       "id": "BH.oM.Adapters.ETABS.Results.PierForce.Location",
-      "type": "rdfs:Datatype"
+      "type": "owl:Class"
     },
     {
       "id": "BH.oM.Structure.Results.IStructuralResult",
@@ -148,14 +152,22 @@
     },
     {
       "id": "BH.oM.Adapters.ETABS.Elements.AutoLengthOffset.AutoOffset",
-      "type": "rdfs:Datatype"
+      "type": "owl:Class"
     },
     {
       "id": "BH.oM.Adapters.ETABS.Elements.AutoLengthOffset.RigidZoneFactor",
-      "type": "rdfs:Datatype"
+      "type": "owl:Class"
     },
     {
       "id": "BH.oM.Adapters.ETABS.Elements.Diaphragm.Rigidity",
+      "type": "owl:Class"
+    },
+    {
+      "id": "BH.oM.Base.IBHoMObject",
+      "type": "owl:Class"
+    },
+    {
+      "id": "BH.oM.Base.BHoMObject",
       "type": "owl:Class"
     },
     {
@@ -164,7 +176,7 @@
     },
     {
       "id": "BH.oM.Adapters.ETABS.Elements.InsertionPoint.ModifyStiffness",
-      "type": "rdfs:Datatype"
+      "type": "owl:Class"
     },
     {
       "id": "BH.oM.Adapters.ETABS.Requests.PierAndSpandrelForceRequest.ResultType",
@@ -172,15 +184,15 @@
     },
     {
       "id": "BH.oM.Adapters.ETABS.Requests.PierAndSpandrelForceRequest.Cases",
-      "type": "rdfs:Datatype"
+      "type": "owl:Class"
     },
     {
       "id": "BH.oM.Adapters.ETABS.Requests.PierAndSpandrelForceRequest.Modes",
-      "type": "rdfs:Datatype"
+      "type": "owl:Class"
     },
     {
       "id": "BH.oM.Adapters.ETABS.Requests.PierAndSpandrelForceRequest.ObjectIds",
-      "type": "rdfs:Datatype"
+      "type": "owl:Class"
     },
     {
       "id": "BH.oM.Structure.Requests.IStructuralResultRequest",
@@ -385,6 +397,15 @@
       ]
     },
     {
+      "id": "BH.oM.Base.IObject",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/BHoM/Interface/IObject.cs",
+      "label": "IObject (BH.oM.Base)",
+      "attributes": [
+        "object",
+        "external"
+      ]
+    },
+    {
       "id": "BH.oM.Base.IPersistentAdapterId",
       "iri": "https://github.com/BHoM/BHoM/blob/main/BHoM/Interface/IPersistentAdapterId.cs",
       "label": "IPersistentAdapterId (BH.oM.Base)",
@@ -551,6 +572,23 @@
       "attributes": []
     },
     {
+      "id": "BH.oM.Base.IBHoMObject",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/BHoM/Interface/IBHoMObject.cs",
+      "label": "IBHoMObject (BH.oM.Base)",
+      "attributes": [
+        "object",
+        "external"
+      ]
+    },
+    {
+      "id": "BH.oM.Base.BHoMObject",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/BHoM/BHoMObject.cs",
+      "label": "BHoMObject (BH.oM.Base)",
+      "attributes": [
+        "external"
+      ]
+    },
+    {
       "id": "BH.oM.Adapters.ETABS.Elements.InsertionPoint.BarInsertionPoint",
       "iri": "https://github.com/BHoM/ETABS_Toolkit/blob/main/ETABS_oM/Fragments/InsertionPoint.cs#L40",
       "label": "BarInsertionPoint(BH.oM.Adapters.ETABS.Elements.InsertionPoint.BarInsertionPoint)",
@@ -657,6 +695,10 @@
       "type": "owl:ObjectProperty"
     },
     {
+      "id": "ETABSId-IsA-IObject_55DB7EA084DB8E655BA868F15CCBC28D9EBD70ABCDF21EDF0C66C88B5E67E677",
+      "type": "owl:ObjectProperty"
+    },
+    {
       "id": "ETABSId-IsA-IPersistentAdapterId_5C3839836DCE0D3CC234CDF73E96104187FF0AE2707EBEEB3A6819938C82D5D0",
       "type": "owl:ObjectProperty"
     },
@@ -669,6 +711,10 @@
       "type": "owl:ObjectProperty"
     },
     {
+      "id": "DatabaseSettings-IsA-IObject_C33F656C7D735E39CA014F0157820DFB6DD02A2E429EE41028E943999609E9B2",
+      "type": "owl:ObjectProperty"
+    },
+    {
       "id": "EtabsSettings-HasProperty-ReplaceLoads_F92D2C54495B5C23E9D0FDA715AB5C17DC7E272AB38FC61DD59811A8F69DDD54",
       "type": "owl:DatatypeProperty"
     },
@@ -678,6 +724,10 @@
     },
     {
       "id": "BH.oM.Adapters.ETABS.EtabsSettings.DatabaseSettings-IsA-BH.oM.Adapters.ETABS.DatabaseSettings",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "EtabsSettings-IsA-IObject_F7B816273A4E1294BD8489079B6C7F2DC8D2C8A25536F327B9F38B9751939623",
       "type": "owl:ObjectProperty"
     },
     {
@@ -694,6 +744,10 @@
     },
     {
       "id": "PierForce-IsA-IResult_212F2798E7FB2E277338C82A2F0E157F5E07761FAC0CBADE60A2D040B938FB06",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "PierForce-IsA-IObject_549F7C7C81A3F84DA35D77AE40123A453817277FD31FFCB034BFBB87F17686FA",
       "type": "owl:ObjectProperty"
     },
     {
@@ -733,6 +787,10 @@
       "type": "owl:ObjectProperty"
     },
     {
+      "id": "AutoLengthOffset-IsA-IObject_06DA137D298E65A061D99363C08B5E60A3A66BEB73D98BF46F7A2A40C74C482B",
+      "type": "owl:ObjectProperty"
+    },
+    {
       "id": "BH.oM.Adapters.ETABS.Elements.Diaphragm-HasProperty-BH.oM.Adapters.ETABS.Elements.Diaphragm.Rigidity",
       "type": "owl:ObjectProperty"
     },
@@ -741,7 +799,27 @@
       "type": "owl:ObjectProperty"
     },
     {
+      "id": "Diaphragm-IsA-IBHoMObject_BD03FC797C634FFBB0F1E2E62007C1B3E7ECEDDB47797D5FD3525BA585106BF7",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "Diaphragm-IsA-IObject_844A736C4ACFB29B797CFC949273ED1AC900874AEA2764965FDC7328EF5EDB80",
+      "type": "owl:ObjectProperty"
+    },
+    {
       "id": "Diaphragm-IsA-IFragment_A9A95EF439369DBE2D8BE912F21B27370CFB282CE5065427CAA9B5221437BAA6",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "Diaphragm-IsSubclassOf-BHoMObject_4E1242EA6E06C2CDC8AD83C56EB78CA2FBC8FB44F0827CDB9D3EA33F295C03C3",
+      "type": "rdfs:subClassOf"
+    },
+    {
+      "id": "Pier-IsA-IBHoMObject_870F3C0E541CD4486C5E09A92AF23A7AA40325AFFE547EA11AE0F7BAEE65AE83",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "Pier-IsA-IObject_4E6AC1E6BF1D0634519DF8AD2026CC1F8FB738A2F0951EAB6421CF5B1822A581",
       "type": "owl:ObjectProperty"
     },
     {
@@ -749,8 +827,24 @@
       "type": "owl:ObjectProperty"
     },
     {
+      "id": "Pier-IsSubclassOf-BHoMObject_78958B95281807E80FD31ABC9F8CBE4C92F8B3B31EA42D4AC2C597FD8F740AAD",
+      "type": "rdfs:subClassOf"
+    },
+    {
+      "id": "Spandrel-IsA-IBHoMObject_3DFFF91FEFD495235F288944D15B5DBCDE3894CD9BDE7B1839178433C9128710",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "Spandrel-IsA-IObject_9E26DABCCECA99A5DA50A7EDCFAED89C3362F8ECED04C11733A689FB610FEE46",
+      "type": "owl:ObjectProperty"
+    },
+    {
       "id": "Spandrel-IsA-IFragment_1A89600DC84E7424A1220EB9FB1C38FF9B20861E976BFD829F6FE03500C04B60",
       "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "Spandrel-IsSubclassOf-BHoMObject_0B1BC0E0C8A28CA2B03F469C0C71AC49B22ACD711389753AF9A9B9C985CCC441",
+      "type": "rdfs:subClassOf"
     },
     {
       "id": "BH.oM.Adapters.ETABS.Elements.InsertionPoint-HasProperty-BH.oM.Adapters.ETABS.Elements.InsertionPoint.BarInsertionPoint",
@@ -766,6 +860,10 @@
     },
     {
       "id": "InsertionPoint-IsA-IFragment_D914CC962DB3C2C16F91B61C65E97FC5D129FE423AD4A7E256CADE91E0AF0256",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "InsertionPoint-IsA-IObject_32B2FE2610CE43992F6A320DB6BE0667CA76046C0CEFFA31D5FAFFAFA98D4EF4",
       "type": "owl:ObjectProperty"
     },
     {
@@ -801,6 +899,10 @@
       "type": "owl:ObjectProperty"
     },
     {
+      "id": "PierAndSpandrelForceRequest-IsA-IObject_8B438ECB5FC157ABCE18B58131D00BAF1BC98C73DFB04943DF428E28D1EB12F7",
+      "type": "owl:ObjectProperty"
+    },
+    {
       "id": "BH.oM.Adapters.ETABS.Fragments.ShellTypeFragment-HasProperty-BH.oM.Adapters.ETABS.Fragments.ShellTypeFragment.ShellType",
       "type": "owl:ObjectProperty"
     },
@@ -810,6 +912,10 @@
     },
     {
       "id": "ShellTypeFragment-IsA-IFragment_2F266909E14E721FF22CFBD3B87CC81B4F4275DC1C996384192F6CE02E52739D",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "ShellTypeFragment-IsA-IObject_1FCBB7E00FDA8E82043FA18783587C7A0725776079E5369AB00371C6B43D00C9",
       "type": "owl:ObjectProperty"
     }
   ],
@@ -881,6 +987,19 @@
       "range": "BH.oM.Base.IFragment"
     },
     {
+      "id": "ETABSId-IsA-IObject_55DB7EA084DB8E655BA868F15CCBC28D9EBD70ABCDF21EDF0C66C88B5E67E677",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "label": "IsA",
+      "attributes": [
+        "object"
+      ],
+      "comment": {
+        "undefined": "Can be used to describe that a thing belongs to a class; or that a thing is equivalent to another thing. When used for BHoM types, this describes C# interface implementation."
+      },
+      "domain": "BH.oM.Adapters.ETABS.ETABSId",
+      "range": "BH.oM.Base.IObject"
+    },
+    {
       "id": "ETABSId-IsA-IPersistentAdapterId_5C3839836DCE0D3CC234CDF73E96104187FF0AE2707EBEEB3A6819938C82D5D0",
       "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
       "label": "IsA",
@@ -914,6 +1033,19 @@
       "range": "BH.oM.Adapters.ETABS.SectionDatabase"
     },
     {
+      "id": "DatabaseSettings-IsA-IObject_C33F656C7D735E39CA014F0157820DFB6DD02A2E429EE41028E943999609E9B2",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "label": "IsA",
+      "attributes": [
+        "object"
+      ],
+      "comment": {
+        "undefined": "Can be used to describe that a thing belongs to a class; or that a thing is equivalent to another thing. When used for BHoM types, this describes C# interface implementation."
+      },
+      "domain": "BH.oM.Adapters.ETABS.DatabaseSettings",
+      "range": "BH.oM.Base.IObject"
+    },
+    {
       "id": "EtabsSettings-HasProperty-ReplaceLoads_F92D2C54495B5C23E9D0FDA715AB5C17DC7E272AB38FC61DD59811A8F69DDD54",
       "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/HasProperty.cs",
       "label": "HasProperty",
@@ -942,6 +1074,19 @@
       ],
       "domain": "BH.oM.Adapters.ETABS.EtabsSettings.DatabaseSettings",
       "range": "BH.oM.Adapters.ETABS.DatabaseSettings"
+    },
+    {
+      "id": "EtabsSettings-IsA-IObject_F7B816273A4E1294BD8489079B6C7F2DC8D2C8A25536F327B9F38B9751939623",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "label": "IsA",
+      "attributes": [
+        "object"
+      ],
+      "comment": {
+        "undefined": "Can be used to describe that a thing belongs to a class; or that a thing is equivalent to another thing. When used for BHoM types, this describes C# interface implementation."
+      },
+      "domain": "BH.oM.Adapters.ETABS.EtabsSettings",
+      "range": "BH.oM.Base.IObject"
     },
     {
       "id": "PierForce-HasProperty-Location_7344D0E52D1159E5E22F5F3BAC9930A82DFBB5B80515D30E1F209C107E48B2B8",
@@ -991,6 +1136,19 @@
       },
       "domain": "BH.oM.Adapters.ETABS.Results.PierForce",
       "range": "BH.oM.Analytical.Results.IResult"
+    },
+    {
+      "id": "PierForce-IsA-IObject_549F7C7C81A3F84DA35D77AE40123A453817277FD31FFCB034BFBB87F17686FA",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "label": "IsA",
+      "attributes": [
+        "object"
+      ],
+      "comment": {
+        "undefined": "Can be used to describe that a thing belongs to a class; or that a thing is equivalent to another thing. When used for BHoM types, this describes C# interface implementation."
+      },
+      "domain": "BH.oM.Adapters.ETABS.Results.PierForce",
+      "range": "BH.oM.Base.IObject"
     },
     {
       "id": "PierForce-IsA-IImmutable_1CE0DD9D9F141158879D036C33D02E6633260BA55B75CA3B412B89B031032FC0",
@@ -1101,6 +1259,19 @@
       "range": "BH.oM.Base.IFragment"
     },
     {
+      "id": "AutoLengthOffset-IsA-IObject_06DA137D298E65A061D99363C08B5E60A3A66BEB73D98BF46F7A2A40C74C482B",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "label": "IsA",
+      "attributes": [
+        "object"
+      ],
+      "comment": {
+        "undefined": "Can be used to describe that a thing belongs to a class; or that a thing is equivalent to another thing. When used for BHoM types, this describes C# interface implementation."
+      },
+      "domain": "BH.oM.Adapters.ETABS.Elements.AutoLengthOffset",
+      "range": "BH.oM.Base.IObject"
+    },
+    {
       "id": "BH.oM.Adapters.ETABS.Elements.Diaphragm-HasProperty-BH.oM.Adapters.ETABS.Elements.Diaphragm.Rigidity",
       "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/HasProperty.cs",
       "label": "HasProperty",
@@ -1121,6 +1292,32 @@
       "range": "BH.oM.Adapters.ETABS.DiaphragmType"
     },
     {
+      "id": "Diaphragm-IsA-IBHoMObject_BD03FC797C634FFBB0F1E2E62007C1B3E7ECEDDB47797D5FD3525BA585106BF7",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "label": "IsA",
+      "attributes": [
+        "object"
+      ],
+      "comment": {
+        "undefined": "Can be used to describe that a thing belongs to a class; or that a thing is equivalent to another thing. When used for BHoM types, this describes C# interface implementation."
+      },
+      "domain": "BH.oM.Adapters.ETABS.Elements.Diaphragm",
+      "range": "BH.oM.Base.IBHoMObject"
+    },
+    {
+      "id": "Diaphragm-IsA-IObject_844A736C4ACFB29B797CFC949273ED1AC900874AEA2764965FDC7328EF5EDB80",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "label": "IsA",
+      "attributes": [
+        "object"
+      ],
+      "comment": {
+        "undefined": "Can be used to describe that a thing belongs to a class; or that a thing is equivalent to another thing. When used for BHoM types, this describes C# interface implementation."
+      },
+      "domain": "BH.oM.Adapters.ETABS.Elements.Diaphragm",
+      "range": "BH.oM.Base.IObject"
+    },
+    {
       "id": "Diaphragm-IsA-IFragment_A9A95EF439369DBE2D8BE912F21B27370CFB282CE5065427CAA9B5221437BAA6",
       "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
       "label": "IsA",
@@ -1132,6 +1329,42 @@
       },
       "domain": "BH.oM.Adapters.ETABS.Elements.Diaphragm",
       "range": "BH.oM.Base.IFragment"
+    },
+    {
+      "id": "Diaphragm-IsSubclassOf-BHoMObject_4E1242EA6E06C2CDC8AD83C56EB78CA2FBC8FB44F0827CDB9D3EA33F295C03C3",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsSubclassOf.cs",
+      "label": "IsA",
+      "attributes": [
+        "object"
+      ],
+      "domain": "BH.oM.Adapters.ETABS.Elements.Diaphragm",
+      "range": "BH.oM.Base.BHoMObject"
+    },
+    {
+      "id": "Pier-IsA-IBHoMObject_870F3C0E541CD4486C5E09A92AF23A7AA40325AFFE547EA11AE0F7BAEE65AE83",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "label": "IsA",
+      "attributes": [
+        "object"
+      ],
+      "comment": {
+        "undefined": "Can be used to describe that a thing belongs to a class; or that a thing is equivalent to another thing. When used for BHoM types, this describes C# interface implementation."
+      },
+      "domain": "BH.oM.Adapters.ETABS.Elements.Pier",
+      "range": "BH.oM.Base.IBHoMObject"
+    },
+    {
+      "id": "Pier-IsA-IObject_4E6AC1E6BF1D0634519DF8AD2026CC1F8FB738A2F0951EAB6421CF5B1822A581",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "label": "IsA",
+      "attributes": [
+        "object"
+      ],
+      "comment": {
+        "undefined": "Can be used to describe that a thing belongs to a class; or that a thing is equivalent to another thing. When used for BHoM types, this describes C# interface implementation."
+      },
+      "domain": "BH.oM.Adapters.ETABS.Elements.Pier",
+      "range": "BH.oM.Base.IObject"
     },
     {
       "id": "Pier-IsA-IFragment_FF062A854086E908AA001A96DA69F286DA712496DDBC559F587637C2F266EC43",
@@ -1147,6 +1380,42 @@
       "range": "BH.oM.Base.IFragment"
     },
     {
+      "id": "Pier-IsSubclassOf-BHoMObject_78958B95281807E80FD31ABC9F8CBE4C92F8B3B31EA42D4AC2C597FD8F740AAD",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsSubclassOf.cs",
+      "label": "IsA",
+      "attributes": [
+        "object"
+      ],
+      "domain": "BH.oM.Adapters.ETABS.Elements.Pier",
+      "range": "BH.oM.Base.BHoMObject"
+    },
+    {
+      "id": "Spandrel-IsA-IBHoMObject_3DFFF91FEFD495235F288944D15B5DBCDE3894CD9BDE7B1839178433C9128710",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "label": "IsA",
+      "attributes": [
+        "object"
+      ],
+      "comment": {
+        "undefined": "Can be used to describe that a thing belongs to a class; or that a thing is equivalent to another thing. When used for BHoM types, this describes C# interface implementation."
+      },
+      "domain": "BH.oM.Adapters.ETABS.Elements.Spandrel",
+      "range": "BH.oM.Base.IBHoMObject"
+    },
+    {
+      "id": "Spandrel-IsA-IObject_9E26DABCCECA99A5DA50A7EDCFAED89C3362F8ECED04C11733A689FB610FEE46",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "label": "IsA",
+      "attributes": [
+        "object"
+      ],
+      "comment": {
+        "undefined": "Can be used to describe that a thing belongs to a class; or that a thing is equivalent to another thing. When used for BHoM types, this describes C# interface implementation."
+      },
+      "domain": "BH.oM.Adapters.ETABS.Elements.Spandrel",
+      "range": "BH.oM.Base.IObject"
+    },
+    {
       "id": "Spandrel-IsA-IFragment_1A89600DC84E7424A1220EB9FB1C38FF9B20861E976BFD829F6FE03500C04B60",
       "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
       "label": "IsA",
@@ -1158,6 +1427,16 @@
       },
       "domain": "BH.oM.Adapters.ETABS.Elements.Spandrel",
       "range": "BH.oM.Base.IFragment"
+    },
+    {
+      "id": "Spandrel-IsSubclassOf-BHoMObject_0B1BC0E0C8A28CA2B03F469C0C71AC49B22ACD711389753AF9A9B9C985CCC441",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsSubclassOf.cs",
+      "label": "IsA",
+      "attributes": [
+        "object"
+      ],
+      "domain": "BH.oM.Adapters.ETABS.Elements.Spandrel",
+      "range": "BH.oM.Base.BHoMObject"
     },
     {
       "id": "BH.oM.Adapters.ETABS.Elements.InsertionPoint-HasProperty-BH.oM.Adapters.ETABS.Elements.InsertionPoint.BarInsertionPoint",
@@ -1201,6 +1480,19 @@
       },
       "domain": "BH.oM.Adapters.ETABS.Elements.InsertionPoint",
       "range": "BH.oM.Base.IFragment"
+    },
+    {
+      "id": "InsertionPoint-IsA-IObject_32B2FE2610CE43992F6A320DB6BE0667CA76046C0CEFFA31D5FAFFAFA98D4EF4",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "label": "IsA",
+      "attributes": [
+        "object"
+      ],
+      "comment": {
+        "undefined": "Can be used to describe that a thing belongs to a class; or that a thing is equivalent to another thing. When used for BHoM types, this describes C# interface implementation."
+      },
+      "domain": "BH.oM.Adapters.ETABS.Elements.InsertionPoint",
+      "range": "BH.oM.Base.IObject"
     },
     {
       "id": "BH.oM.Adapters.ETABS.Requests.PierAndSpandrelForceRequest-HasProperty-BH.oM.Adapters.ETABS.Requests.PierAndSpandrelForceRequest.ResultType",
@@ -1292,6 +1584,19 @@
       "range": "BH.oM.Data.Requests.IRequest"
     },
     {
+      "id": "PierAndSpandrelForceRequest-IsA-IObject_8B438ECB5FC157ABCE18B58131D00BAF1BC98C73DFB04943DF428E28D1EB12F7",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "label": "IsA",
+      "attributes": [
+        "object"
+      ],
+      "comment": {
+        "undefined": "Can be used to describe that a thing belongs to a class; or that a thing is equivalent to another thing. When used for BHoM types, this describes C# interface implementation."
+      },
+      "domain": "BH.oM.Adapters.ETABS.Requests.PierAndSpandrelForceRequest",
+      "range": "BH.oM.Base.IObject"
+    },
+    {
       "id": "BH.oM.Adapters.ETABS.Fragments.ShellTypeFragment-HasProperty-BH.oM.Adapters.ETABS.Fragments.ShellTypeFragment.ShellType",
       "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/HasProperty.cs",
       "label": "HasProperty",
@@ -1323,6 +1628,19 @@
       },
       "domain": "BH.oM.Adapters.ETABS.Fragments.ShellTypeFragment",
       "range": "BH.oM.Base.IFragment"
+    },
+    {
+      "id": "ShellTypeFragment-IsA-IObject_1FCBB7E00FDA8E82043FA18783587C7A0725776079E5369AB00371C6B43D00C9",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "label": "IsA",
+      "attributes": [
+        "object"
+      ],
+      "comment": {
+        "undefined": "Can be used to describe that a thing belongs to a class; or that a thing is equivalent to another thing. When used for BHoM types, this describes C# interface implementation."
+      },
+      "domain": "BH.oM.Adapters.ETABS.Fragments.ShellTypeFragment",
+      "range": "BH.oM.Base.IObject"
     }
   ]
 }

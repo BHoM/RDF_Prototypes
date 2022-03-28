@@ -12,7 +12,7 @@
     },
     {
       "id": "BH.oM.Adapters.RFEM.RFEMId.Id",
-      "type": "rdfs:Datatype"
+      "type": "owl:Class"
     },
     {
       "id": "BH.oM.Base.IAdapterId",
@@ -23,12 +23,16 @@
       "type": "owl:Class"
     },
     {
+      "id": "BH.oM.Base.IObject",
+      "type": "owl:Class"
+    },
+    {
       "id": "BH.oM.Adapters.RFEM.RFEMSettings.Is2DModel",
-      "type": "rdfs:Datatype"
+      "type": "owl:Class"
     },
     {
       "id": "BH.oM.Adapters.RFEM.RFEMSettings.ZIsUp",
-      "type": "rdfs:Datatype"
+      "type": "owl:Class"
     }
   ],
   "classAttribute": [
@@ -78,6 +82,15 @@
       ]
     },
     {
+      "id": "BH.oM.Base.IObject",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/BHoM/Interface/IObject.cs",
+      "label": "IObject (BH.oM.Base)",
+      "attributes": [
+        "object",
+        "external"
+      ]
+    },
+    {
       "id": "BH.oM.Adapters.RFEM.RFEMSettings.Is2DModel",
       "iri": "https://github.com/BHoM/RFEM_Toolkit/blob/main/RFEM_oM/RFEMSettings.cs#L39",
       "label": "Is2DModel(BH.oM.Adapters.RFEM.RFEMSettings.Is2DModel)",
@@ -108,12 +121,20 @@
       "type": "owl:ObjectProperty"
     },
     {
+      "id": "RFEMId-IsA-IObject_B8E79B893360337A87525FA8E0A9F17E8198F58667099C3456B6971494AD2E37",
+      "type": "owl:ObjectProperty"
+    },
+    {
       "id": "RFEMSettings-HasProperty-Is2DModel_92934DC8B40897F3749109F4442F346BDAE5778BA1BA017892598E72EDF36053",
       "type": "owl:DatatypeProperty"
     },
     {
       "id": "RFEMSettings-HasProperty-ZIsUp_058CD10A11ECEC4420E3ADC30CC5EADBF7CB3C4376EDCC841F508D2FA950D553",
       "type": "owl:DatatypeProperty"
+    },
+    {
+      "id": "RFEMSettings-IsA-IObject_C5E9D3E33596161915141C0CAE9EDFB9505A765E1EC729B304E1CB2B1719B979",
+      "type": "owl:ObjectProperty"
     }
   ],
   "propertyAttribute": [
@@ -154,6 +175,19 @@
       "range": "BH.oM.Base.IFragment"
     },
     {
+      "id": "RFEMId-IsA-IObject_B8E79B893360337A87525FA8E0A9F17E8198F58667099C3456B6971494AD2E37",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "label": "IsA",
+      "attributes": [
+        "object"
+      ],
+      "comment": {
+        "undefined": "Can be used to describe that a thing belongs to a class; or that a thing is equivalent to another thing. When used for BHoM types, this describes C# interface implementation."
+      },
+      "domain": "BH.oM.Adapters.RFEM.RFEMId",
+      "range": "BH.oM.Base.IObject"
+    },
+    {
       "id": "RFEMSettings-HasProperty-Is2DModel_92934DC8B40897F3749109F4442F346BDAE5778BA1BA017892598E72EDF36053",
       "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/HasProperty.cs",
       "label": "HasProperty",
@@ -172,6 +206,19 @@
       ],
       "domain": "BH.oM.Adapters.RFEM.RFEMSettings",
       "range": "BH.oM.Adapters.RFEM.RFEMSettings.ZIsUp"
+    },
+    {
+      "id": "RFEMSettings-IsA-IObject_C5E9D3E33596161915141C0CAE9EDFB9505A765E1EC729B304E1CB2B1719B979",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "label": "IsA",
+      "attributes": [
+        "object"
+      ],
+      "comment": {
+        "undefined": "Can be used to describe that a thing belongs to a class; or that a thing is equivalent to another thing. When used for BHoM types, this describes C# interface implementation."
+      },
+      "domain": "BH.oM.Adapters.RFEM.RFEMSettings",
+      "range": "BH.oM.Base.IObject"
     }
   ]
 }

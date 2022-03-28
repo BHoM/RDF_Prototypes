@@ -12,15 +12,27 @@
     },
     {
       "id": "BH.oM.Adapters.Civil3D.Civil3DConfig.InPort",
-      "type": "rdfs:Datatype"
+      "type": "owl:Class"
     },
     {
       "id": "BH.oM.Adapters.Civil3D.Civil3DConfig.ReturnPort",
-      "type": "rdfs:Datatype"
+      "type": "owl:Class"
     },
     {
       "id": "BH.oM.Adapters.Civil3D.Civil3DConfig.MaxMinutesToWait",
-      "type": "rdfs:Datatype"
+      "type": "owl:Class"
+    },
+    {
+      "id": "BH.oM.Base.IBHoMObject",
+      "type": "owl:Class"
+    },
+    {
+      "id": "BH.oM.Base.IObject",
+      "type": "owl:Class"
+    },
+    {
+      "id": "BH.oM.Base.BHoMObject",
+      "type": "owl:Class"
     }
   ],
   "classAttribute": [
@@ -63,6 +75,32 @@
       "attributes": [
         "datatype"
       ]
+    },
+    {
+      "id": "BH.oM.Base.IBHoMObject",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/BHoM/Interface/IBHoMObject.cs",
+      "label": "IBHoMObject (BH.oM.Base)",
+      "attributes": [
+        "object",
+        "external"
+      ]
+    },
+    {
+      "id": "BH.oM.Base.IObject",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/BHoM/Interface/IObject.cs",
+      "label": "IObject (BH.oM.Base)",
+      "attributes": [
+        "object",
+        "external"
+      ]
+    },
+    {
+      "id": "BH.oM.Base.BHoMObject",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/BHoM/BHoMObject.cs",
+      "label": "BHoMObject (BH.oM.Base)",
+      "attributes": [
+        "external"
+      ]
     }
   ],
   "property": [
@@ -77,6 +115,18 @@
     {
       "id": "Civil3DConfig-HasProperty-MaxMinutesToWait_061F1736C672A13CA7BC195F2061F043A458F6B075092ED63FFC7D0064372B7F",
       "type": "owl:DatatypeProperty"
+    },
+    {
+      "id": "Civil3DConfig-IsA-IBHoMObject_BF4DEEC3B81966CB544B429D77161A06BA2F874FA166F799BEB5016DEB96F0AD",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "Civil3DConfig-IsA-IObject_C10FE82871F9521BCA5B93931BD1278D957AC022588E1301F38841A4D70C5869",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "Civil3DConfig-IsSubclassOf-BHoMObject_65EC009E2102ABEA1C49799DBCEECED011EAA60329591248F4155AF2BA79E10D",
+      "type": "rdfs:subClassOf"
     }
   ],
   "propertyAttribute": [
@@ -109,6 +159,42 @@
       ],
       "domain": "BH.oM.Adapters.Civil3D.Civil3DConfig",
       "range": "BH.oM.Adapters.Civil3D.Civil3DConfig.MaxMinutesToWait"
+    },
+    {
+      "id": "Civil3DConfig-IsA-IBHoMObject_BF4DEEC3B81966CB544B429D77161A06BA2F874FA166F799BEB5016DEB96F0AD",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "label": "IsA",
+      "attributes": [
+        "object"
+      ],
+      "comment": {
+        "undefined": "Can be used to describe that a thing belongs to a class; or that a thing is equivalent to another thing. When used for BHoM types, this describes C# interface implementation."
+      },
+      "domain": "BH.oM.Adapters.Civil3D.Civil3DConfig",
+      "range": "BH.oM.Base.IBHoMObject"
+    },
+    {
+      "id": "Civil3DConfig-IsA-IObject_C10FE82871F9521BCA5B93931BD1278D957AC022588E1301F38841A4D70C5869",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "label": "IsA",
+      "attributes": [
+        "object"
+      ],
+      "comment": {
+        "undefined": "Can be used to describe that a thing belongs to a class; or that a thing is equivalent to another thing. When used for BHoM types, this describes C# interface implementation."
+      },
+      "domain": "BH.oM.Adapters.Civil3D.Civil3DConfig",
+      "range": "BH.oM.Base.IObject"
+    },
+    {
+      "id": "Civil3DConfig-IsSubclassOf-BHoMObject_65EC009E2102ABEA1C49799DBCEECED011EAA60329591248F4155AF2BA79E10D",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsSubclassOf.cs",
+      "label": "IsA",
+      "attributes": [
+        "object"
+      ],
+      "domain": "BH.oM.Adapters.Civil3D.Civil3DConfig",
+      "range": "BH.oM.Base.BHoMObject"
     }
   ]
 }

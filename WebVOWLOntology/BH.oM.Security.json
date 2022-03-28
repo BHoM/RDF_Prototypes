@@ -28,7 +28,7 @@
     },
     {
       "id": "BH.oM.Security.Elements.CameraDevice.HorizontalFieldOfView",
-      "type": "rdfs:Datatype"
+      "type": "owl:Class"
     },
     {
       "id": "BH.oM.Security.Elements.CameraDevice.Mounting",
@@ -40,7 +40,15 @@
     },
     {
       "id": "BH.oM.Security.Elements.CameraDevice.Megapixels",
-      "type": "rdfs:Datatype"
+      "type": "owl:Class"
+    },
+    {
+      "id": "BH.oM.Base.IBHoMObject",
+      "type": "owl:Class"
+    },
+    {
+      "id": "BH.oM.Base.IObject",
+      "type": "owl:Class"
     },
     {
       "id": "BH.oM.Dimensional.IElement0D",
@@ -52,6 +60,10 @@
     },
     {
       "id": "BH.oM.Dimensional.IElementM",
+      "type": "owl:Class"
+    },
+    {
+      "id": "BH.oM.Base.BHoMObject",
       "type": "owl:Class"
     }
   ],
@@ -154,6 +166,24 @@
       ]
     },
     {
+      "id": "BH.oM.Base.IBHoMObject",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/BHoM/Interface/IBHoMObject.cs",
+      "label": "IBHoMObject (BH.oM.Base)",
+      "attributes": [
+        "object",
+        "external"
+      ]
+    },
+    {
+      "id": "BH.oM.Base.IObject",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/BHoM/Interface/IObject.cs",
+      "label": "IObject (BH.oM.Base)",
+      "attributes": [
+        "object",
+        "external"
+      ]
+    },
+    {
       "id": "BH.oM.Dimensional.IElement0D",
       "iri": "https://github.com/BHoM/BHoM/blob/main/Dimensional_oM/IElement0D.cs",
       "label": "IElement0D (BH.oM.Dimensional)",
@@ -188,6 +218,14 @@
       "comment": {
         "undefined": "Enables Mass based operations to be performed on elements with materiality\nEnsures the material composition of a physical object is represented, defined as proportions of discrete types of material forming the object's total solid volume.\nObjects implementing this Interface will be required to implement some base methods for getting and setting data in a way that maintains the object's other properties.\nDocumentation detailing required extension methods can be found here: https://github.com/BHoM/documentation/wiki/IElement-required-extension-methods"
       }
+    },
+    {
+      "id": "BH.oM.Base.BHoMObject",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/BHoM/BHoMObject.cs",
+      "label": "BHoMObject (BH.oM.Base)",
+      "attributes": [
+        "external"
+      ]
     }
   ],
   "property": [
@@ -232,6 +270,14 @@
       "type": "owl:DatatypeProperty"
     },
     {
+      "id": "CameraDevice-IsA-IBHoMObject_E7FE400CE50E1C5C60929439AF790CA241D42A4095901D87061CA11F40DD516E",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "CameraDevice-IsA-IObject_2936ED46DA2E398DB44799CA217BFA8311918E2DDA007D2648745B500AEEFF5F",
+      "type": "owl:ObjectProperty"
+    },
+    {
       "id": "CameraDevice-IsA-IElement0D_A80A271F4AE7FC82A6AAB344FDFA74C12C0781EB5FA5BF09AE3D0F91F3EA629C",
       "type": "owl:ObjectProperty"
     },
@@ -242,6 +288,10 @@
     {
       "id": "CameraDevice-IsA-IElementM_02ED7EC409C544C7EF9E5D31294DB95AECE35651E794805DB68913AB0ACE023D",
       "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "CameraDevice-IsSubclassOf-BHoMObject_5B297C5FA0C73B8D66BE53465FFE7DA7AA02666DD33CB594C8F18CA3783A74D7",
+      "type": "rdfs:subClassOf"
     }
   ],
   "propertyAttribute": [
@@ -346,6 +396,32 @@
       "range": "BH.oM.Security.Elements.CameraDevice.Megapixels"
     },
     {
+      "id": "CameraDevice-IsA-IBHoMObject_E7FE400CE50E1C5C60929439AF790CA241D42A4095901D87061CA11F40DD516E",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "label": "IsA",
+      "attributes": [
+        "object"
+      ],
+      "comment": {
+        "undefined": "Can be used to describe that a thing belongs to a class; or that a thing is equivalent to another thing. When used for BHoM types, this describes C# interface implementation."
+      },
+      "domain": "BH.oM.Security.Elements.CameraDevice",
+      "range": "BH.oM.Base.IBHoMObject"
+    },
+    {
+      "id": "CameraDevice-IsA-IObject_2936ED46DA2E398DB44799CA217BFA8311918E2DDA007D2648745B500AEEFF5F",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "label": "IsA",
+      "attributes": [
+        "object"
+      ],
+      "comment": {
+        "undefined": "Can be used to describe that a thing belongs to a class; or that a thing is equivalent to another thing. When used for BHoM types, this describes C# interface implementation."
+      },
+      "domain": "BH.oM.Security.Elements.CameraDevice",
+      "range": "BH.oM.Base.IObject"
+    },
+    {
       "id": "CameraDevice-IsA-IElement0D_A80A271F4AE7FC82A6AAB344FDFA74C12C0781EB5FA5BF09AE3D0F91F3EA629C",
       "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
       "label": "IsA",
@@ -383,6 +459,16 @@
       },
       "domain": "BH.oM.Security.Elements.CameraDevice",
       "range": "BH.oM.Dimensional.IElementM"
+    },
+    {
+      "id": "CameraDevice-IsSubclassOf-BHoMObject_5B297C5FA0C73B8D66BE53465FFE7DA7AA02666DD33CB594C8F18CA3783A74D7",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsSubclassOf.cs",
+      "label": "IsA",
+      "attributes": [
+        "object"
+      ],
+      "domain": "BH.oM.Security.Elements.CameraDevice",
+      "range": "BH.oM.Base.BHoMObject"
     }
   ]
 }

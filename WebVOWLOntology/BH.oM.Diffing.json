@@ -11,7 +11,15 @@
       "type": "owl:Class"
     },
     {
+      "id": "BH.oM.Diffing.DifferenceType",
+      "type": "owl:Class"
+    },
+    {
       "id": "BH.oM.Diffing.DiffingConfig",
+      "type": "owl:Class"
+    },
+    {
+      "id": "BH.oM.Diffing.IPropertyDifference",
       "type": "owl:Class"
     },
     {
@@ -36,7 +44,7 @@
     },
     {
       "id": "BH.oM.Diffing.Delta.StreamId",
-      "type": "rdfs:Datatype"
+      "type": "owl:Class"
     },
     {
       "id": "BH.oM.Diffing.Delta.Diff",
@@ -44,23 +52,27 @@
     },
     {
       "id": "BH.oM.Diffing.Delta.Revision_from",
-      "type": "rdfs:Datatype"
+      "type": "owl:Class"
     },
     {
       "id": "BH.oM.Diffing.Delta.Revision_to",
-      "type": "rdfs:Datatype"
+      "type": "owl:Class"
     },
     {
       "id": "BH.oM.Diffing.Delta.Timestamp",
-      "type": "rdfs:Datatype"
+      "type": "owl:Class"
     },
     {
       "id": "BH.oM.Diffing.Delta.Author",
-      "type": "rdfs:Datatype"
+      "type": "owl:Class"
     },
     {
       "id": "BH.oM.Diffing.Delta.Comment",
-      "type": "rdfs:Datatype"
+      "type": "owl:Class"
+    },
+    {
+      "id": "BH.oM.Base.IObject",
+      "type": "owl:Class"
     },
     {
       "id": "BH.oM.Base.IImmutable",
@@ -68,19 +80,19 @@
     },
     {
       "id": "BH.oM.Diffing.Diff.AddedObjects",
-      "type": "rdfs:Datatype"
+      "type": "owl:Class"
     },
     {
       "id": "BH.oM.Diffing.Diff.RemovedObjects",
-      "type": "rdfs:Datatype"
+      "type": "owl:Class"
     },
     {
       "id": "BH.oM.Diffing.Diff.ModifiedObjects",
-      "type": "rdfs:Datatype"
+      "type": "owl:Class"
     },
     {
       "id": "BH.oM.Diffing.Diff.UnchangedObjects",
-      "type": "rdfs:Datatype"
+      "type": "owl:Class"
     },
     {
       "id": "BH.oM.Diffing.Diff.ModifiedObjectsDifferences",
@@ -100,83 +112,119 @@
     },
     {
       "id": "BH.oM.Diffing.DiffingConfig.EnablePropertyDiffing",
-      "type": "rdfs:Datatype"
+      "type": "owl:Class"
     },
     {
       "id": "BH.oM.Diffing.DiffingConfig.IncludeUnchangedObjects",
-      "type": "rdfs:Datatype"
+      "type": "owl:Class"
     },
     {
       "id": "BH.oM.Diffing.DiffingConfig.AllowDuplicateIds",
+      "type": "owl:Class"
+    },
+    {
+      "id": "BH.oM.Diffing.DiffingConfig.CustomObjectDifferencesComparers",
+      "type": "owl:Class"
+    },
+    {
+      "id": "BH.oM.Diffing.IPropertyDifference.Name",
+      "type": "rdfs:Datatype"
+    },
+    {
+      "id": "BH.oM.Diffing.IPropertyDifference.Description",
+      "type": "rdfs:Datatype"
+    },
+    {
+      "id": "BH.oM.Diffing.IPropertyDifference.PastValue",
+      "type": "rdfs:Datatype"
+    },
+    {
+      "id": "BH.oM.Diffing.IPropertyDifference.FollowingValue",
+      "type": "rdfs:Datatype"
+    },
+    {
+      "id": "BH.oM.Diffing.IPropertyDifference.FullName",
       "type": "rdfs:Datatype"
     },
     {
       "id": "BH.oM.Diffing.ObjectDifferences.PastObject",
-      "type": "rdfs:Datatype"
+      "type": "owl:Class"
     },
     {
       "id": "BH.oM.Diffing.ObjectDifferences.FollowingObject",
-      "type": "rdfs:Datatype"
+      "type": "owl:Class"
     },
     {
       "id": "BH.oM.Diffing.ObjectDifferences.Differences",
       "type": "owl:Class"
     },
     {
-      "id": "BH.oM.Diffing.PropertyDifference.DisplayName",
-      "type": "rdfs:Datatype"
+      "id": "BH.oM.Diffing.PropertyDifference.Name",
+      "type": "owl:Class"
+    },
+    {
+      "id": "BH.oM.Diffing.PropertyDifference.Description",
+      "type": "owl:Class"
     },
     {
       "id": "BH.oM.Diffing.PropertyDifference.PastValue",
-      "type": "rdfs:Datatype"
+      "type": "owl:Class"
     },
     {
       "id": "BH.oM.Diffing.PropertyDifference.FollowingValue",
-      "type": "rdfs:Datatype"
+      "type": "owl:Class"
     },
     {
       "id": "BH.oM.Diffing.PropertyDifference.FullName",
-      "type": "rdfs:Datatype"
+      "type": "owl:Class"
     },
     {
       "id": "BH.oM.Diffing.Revision.StreamId",
-      "type": "rdfs:Datatype"
+      "type": "owl:Class"
     },
     {
       "id": "BH.oM.Diffing.Revision.RevisionId",
-      "type": "rdfs:Datatype"
+      "type": "owl:Class"
     },
     {
       "id": "BH.oM.Diffing.Revision.RevisionName",
-      "type": "rdfs:Datatype"
+      "type": "owl:Class"
     },
     {
       "id": "BH.oM.Diffing.Revision.Timestamp",
-      "type": "rdfs:Datatype"
+      "type": "owl:Class"
     },
     {
       "id": "BH.oM.Diffing.Revision.Author",
-      "type": "rdfs:Datatype"
+      "type": "owl:Class"
     },
     {
       "id": "BH.oM.Diffing.Revision.Comment",
-      "type": "rdfs:Datatype"
+      "type": "owl:Class"
     },
     {
       "id": "BH.oM.Diffing.Revision.Objects",
-      "type": "rdfs:Datatype"
+      "type": "owl:Class"
     },
     {
       "id": "BH.oM.Diffing.Revision.RevisionDiffConfing",
       "type": "owl:Class"
     },
     {
+      "id": "BH.oM.Base.IBHoMObject",
+      "type": "owl:Class"
+    },
+    {
+      "id": "BH.oM.Base.BHoMObject",
+      "type": "owl:Class"
+    },
+    {
       "id": "BH.oM.Diffing.RevisionFragment.Hash",
-      "type": "rdfs:Datatype"
+      "type": "owl:Class"
     },
     {
       "id": "BH.oM.Diffing.RevisionFragment.PreviousHash",
-      "type": "rdfs:Datatype"
+      "type": "owl:Class"
     },
     {
       "id": "BH.oM.Base.IHashFragment",
@@ -188,19 +236,19 @@
     },
     {
       "id": "BH.oM.Diffing.StreamPointer.StreamId",
-      "type": "rdfs:Datatype"
+      "type": "owl:Class"
     },
     {
       "id": "BH.oM.Diffing.StreamPointer.StreamName",
-      "type": "rdfs:Datatype"
+      "type": "owl:Class"
     },
     {
       "id": "BH.oM.Diffing.StreamPointer.Description",
-      "type": "rdfs:Datatype"
+      "type": "owl:Class"
     },
     {
       "id": "BH.oM.Diffing.StreamPointer.Timestamp",
-      "type": "rdfs:Datatype"
+      "type": "owl:Class"
     }
   ],
   "classAttribute": [
@@ -227,6 +275,17 @@
       }
     },
     {
+      "id": "BH.oM.Diffing.DifferenceType",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/Diffing_oM/DifferenceType.cs",
+      "label": "DifferenceType (BH.oM.Diffing)",
+      "attributes": [
+        "object"
+      ],
+      "comment": {
+        "undefined": "Specifies various kinds of Differences. It can be useful to mark and filter specific implementations of IPropertyDifferences."
+      }
+    },
+    {
       "id": "BH.oM.Diffing.DiffingConfig",
       "iri": "https://github.com/BHoM/BHoM/blob/main/Diffing_oM/DiffingConfig.cs",
       "label": "DiffingConfig (BH.oM.Diffing)",
@@ -235,6 +294,17 @@
       ],
       "comment": {
         "undefined": "General configurations for the Diffing process, including settings for the Hash computation."
+      }
+    },
+    {
+      "id": "BH.oM.Diffing.IPropertyDifference",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/Diffing_oM/IPropertyDifference.cs",
+      "label": "IPropertyDifference (BH.oM.Diffing)",
+      "attributes": [
+        "object"
+      ],
+      "comment": {
+        "undefined": "Represents a difference found between a Previous and Following version of an object."
       }
     },
     {
@@ -347,6 +417,15 @@
       ]
     },
     {
+      "id": "BH.oM.Base.IObject",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/BHoM/Interface/IObject.cs",
+      "label": "IObject (BH.oM.Base)",
+      "attributes": [
+        "object",
+        "external"
+      ]
+    },
+    {
       "id": "BH.oM.Base.IImmutable",
       "iri": "https://github.com/BHoM/BHoM/blob/main/BHoM/Interface/IImmutable.cs",
       "label": "IImmutable (BH.oM.Base)",
@@ -448,6 +527,54 @@
       ]
     },
     {
+      "id": "BH.oM.Diffing.DiffingConfig.CustomObjectDifferencesComparers",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/Diffing_oM/DiffingConfig.cs#L60",
+      "label": "CustomObjectDifferencesComparers(BH.oM.Diffing.DiffingConfig.CustomObjectDifferencesComparers)",
+      "attributes": [
+        "datatype"
+      ]
+    },
+    {
+      "id": "BH.oM.Diffing.IPropertyDifference.Name",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/Diffing_oM/IPropertyDifference.cs#L38",
+      "label": "Name(BH.oM.Diffing.IPropertyDifference.Name)",
+      "attributes": [
+        "datatype"
+      ]
+    },
+    {
+      "id": "BH.oM.Diffing.IPropertyDifference.Description",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/Diffing_oM/IPropertyDifference.cs#L41",
+      "label": "Description(BH.oM.Diffing.IPropertyDifference.Description)",
+      "attributes": [
+        "datatype"
+      ]
+    },
+    {
+      "id": "BH.oM.Diffing.IPropertyDifference.PastValue",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/Diffing_oM/IPropertyDifference.cs#L44",
+      "label": "PastValue(BH.oM.Diffing.IPropertyDifference.PastValue)",
+      "attributes": [
+        "datatype"
+      ]
+    },
+    {
+      "id": "BH.oM.Diffing.IPropertyDifference.FollowingValue",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/Diffing_oM/IPropertyDifference.cs#L47",
+      "label": "FollowingValue(BH.oM.Diffing.IPropertyDifference.FollowingValue)",
+      "attributes": [
+        "datatype"
+      ]
+    },
+    {
+      "id": "BH.oM.Diffing.IPropertyDifference.FullName",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/Diffing_oM/IPropertyDifference.cs#L50",
+      "label": "FullName(BH.oM.Diffing.IPropertyDifference.FullName)",
+      "attributes": [
+        "datatype"
+      ]
+    },
+    {
       "id": "BH.oM.Diffing.ObjectDifferences.PastObject",
       "iri": "https://github.com/BHoM/BHoM/blob/main/Diffing_oM/ObjectDifferences.cs#L38",
       "label": "PastObject(BH.oM.Diffing.ObjectDifferences.PastObject)",
@@ -470,16 +597,24 @@
       "attributes": []
     },
     {
-      "id": "BH.oM.Diffing.PropertyDifference.DisplayName",
+      "id": "BH.oM.Diffing.PropertyDifference.Name",
       "iri": "https://github.com/BHoM/BHoM/blob/main/Diffing_oM/PropertyDifference.cs#L38",
-      "label": "DisplayName(BH.oM.Diffing.PropertyDifference.DisplayName)",
+      "label": "Name(BH.oM.Diffing.PropertyDifference.Name)",
+      "attributes": [
+        "datatype"
+      ]
+    },
+    {
+      "id": "BH.oM.Diffing.PropertyDifference.Description",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/Diffing_oM/PropertyDifference.cs#L41",
+      "label": "Description(BH.oM.Diffing.PropertyDifference.Description)",
       "attributes": [
         "datatype"
       ]
     },
     {
       "id": "BH.oM.Diffing.PropertyDifference.PastValue",
-      "iri": "https://github.com/BHoM/BHoM/blob/main/Diffing_oM/PropertyDifference.cs#L41",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/Diffing_oM/PropertyDifference.cs#L44",
       "label": "PastValue(BH.oM.Diffing.PropertyDifference.PastValue)",
       "attributes": [
         "datatype"
@@ -487,7 +622,7 @@
     },
     {
       "id": "BH.oM.Diffing.PropertyDifference.FollowingValue",
-      "iri": "https://github.com/BHoM/BHoM/blob/main/Diffing_oM/PropertyDifference.cs#L44",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/Diffing_oM/PropertyDifference.cs#L47",
       "label": "FollowingValue(BH.oM.Diffing.PropertyDifference.FollowingValue)",
       "attributes": [
         "datatype"
@@ -495,7 +630,7 @@
     },
     {
       "id": "BH.oM.Diffing.PropertyDifference.FullName",
-      "iri": "https://github.com/BHoM/BHoM/blob/main/Diffing_oM/PropertyDifference.cs#L47",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/Diffing_oM/PropertyDifference.cs#L50",
       "label": "FullName(BH.oM.Diffing.PropertyDifference.FullName)",
       "attributes": [
         "datatype"
@@ -565,6 +700,23 @@
       "comment": {
         "undefined": "Diffing settings for this Revision. Hashes of objects contained in this stream will be computed based on these configs."
       }
+    },
+    {
+      "id": "BH.oM.Base.IBHoMObject",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/BHoM/Interface/IBHoMObject.cs",
+      "label": "IBHoMObject (BH.oM.Base)",
+      "attributes": [
+        "object",
+        "external"
+      ]
+    },
+    {
+      "id": "BH.oM.Base.BHoMObject",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/BHoM/BHoMObject.cs",
+      "label": "BHoMObject (BH.oM.Base)",
+      "attributes": [
+        "external"
+      ]
     },
     {
       "id": "BH.oM.Diffing.RevisionFragment.Hash",
@@ -670,6 +822,10 @@
       "type": "owl:DatatypeProperty"
     },
     {
+      "id": "Delta-IsA-IObject_055551AA228FE142BCCC672E8725E1A62E9D85C8BBAE0C108ABDCFF0306CD2DD",
+      "type": "owl:ObjectProperty"
+    },
+    {
       "id": "Delta-IsA-IImmutable_C96F678271D688335563F505D1D548A883012BC2CA7D4904FE1337F016AC0D1A",
       "type": "owl:ObjectProperty"
     },
@@ -706,6 +862,10 @@
       "type": "owl:ObjectProperty"
     },
     {
+      "id": "Diff-IsA-IObject_B8BC2D05F1E84F0C49951944F47A0EC252B985EE9CBAD454BDFF7529872EBE71",
+      "type": "owl:ObjectProperty"
+    },
+    {
       "id": "Diff-IsA-IImmutable_3AAC05832A15A04A3EDCA17C62886D1EAF4A33C7660AC6FD21B1E7D92620BFB0",
       "type": "owl:ObjectProperty"
     },
@@ -730,6 +890,38 @@
       "type": "owl:DatatypeProperty"
     },
     {
+      "id": "DiffingConfig-HasProperty-CustomObjectDifferencesComparers_D7B2379364CDE64A6D27F39562208856E74D228ADBEDBAA294E227E3410EAB8C",
+      "type": "owl:DatatypeProperty"
+    },
+    {
+      "id": "DiffingConfig-IsA-IObject_1EE59775DF6A18A8660B74BE8D08D52F647D457BD0048B0A5F941E1F7742C313",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "IPropertyDifference-RequiresProperty-Name_ABDEAC70CCB59EA36EC257B0124A6E0B2D11466F92B8C97AD07CB334892DBC90",
+      "type": "owl:DatatypeProperty"
+    },
+    {
+      "id": "IPropertyDifference-RequiresProperty-Description_6D8D25BC87C8A37C0B5038A02CEFC04F7537C2C873BB350582BEC08FCDC5E024",
+      "type": "owl:DatatypeProperty"
+    },
+    {
+      "id": "IPropertyDifference-RequiresProperty-PastValue_B477F014EDEB55D8D489C54CE72B5CBE32F57BBE0ADBB7F9FB7556C17787681E",
+      "type": "owl:DatatypeProperty"
+    },
+    {
+      "id": "IPropertyDifference-RequiresProperty-FollowingValue_DBF43944B9DB4971C40658E0DC991FE699E0C6C94AFD0FEB56B1D57FA73ACF18",
+      "type": "owl:DatatypeProperty"
+    },
+    {
+      "id": "IPropertyDifference-RequiresProperty-FullName_2DAA565CBA4E53E69B290066D6DCC6BE8B63449FEAA4C73443B34AEA7189B328",
+      "type": "owl:DatatypeProperty"
+    },
+    {
+      "id": "IPropertyDifference-IsA-IObject_175EC6BC86D38608ECA67ED910660CF0AE00006E13D652CA6F49B586451E4980",
+      "type": "owl:ObjectProperty"
+    },
+    {
       "id": "ObjectDifferences-HasProperty-PastObject_89F0149145E6A9A03888C77DD0AA0701C7938CA0DFD18AF218F69AAF1DE7FC58",
       "type": "owl:DatatypeProperty"
     },
@@ -742,11 +934,19 @@
       "type": "owl:ObjectProperty"
     },
     {
-      "id": "BH.oM.Diffing.ObjectDifferences.Differences-IsAListOf-BH.oM.Diffing.PropertyDifference",
+      "id": "BH.oM.Diffing.ObjectDifferences.Differences-IsAListOf-BH.oM.Diffing.IPropertyDifference",
       "type": "owl:ObjectProperty"
     },
     {
-      "id": "PropertyDifference-HasProperty-DisplayName_CC04CEB290804863C16C7B507EC58D2ED480E88F4BEEF7872C86B18027C670E3",
+      "id": "ObjectDifferences-IsA-IObject_B1D25F55528CF0AB1480ED4A087B845BEF0BE9B7D5C67D3C36A24797EC1BB797",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "PropertyDifference-HasProperty-Name_7F9FAC9083EB1BF7A16F1676C8A31FF5771474D3455B73A2EAD7D3CF0C2B2158",
+      "type": "owl:DatatypeProperty"
+    },
+    {
+      "id": "PropertyDifference-HasProperty-Description_0E50BFC8DD15FAFA625F133B3DE5B2AC272D5FEC74EA6E99FC496BCDF0551024",
       "type": "owl:DatatypeProperty"
     },
     {
@@ -760,6 +960,14 @@
     {
       "id": "PropertyDifference-HasProperty-FullName_D824F5E183036D62E3B76071346BFB6E939263EFD5BBE87B294B92CBE6BB963E",
       "type": "owl:DatatypeProperty"
+    },
+    {
+      "id": "PropertyDifference-IsA-IPropertyDifference_B289951F169B75B809073B7EDEF645347C7A8C72D95CE5E4AD7A140E06ED9EF9",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "PropertyDifference-IsA-IObject_C59F881EBE721CAB635CF0F24B0BBE61D0E29655E825F3C7D1DF489D12C6B83E",
+      "type": "owl:ObjectProperty"
     },
     {
       "id": "Revision-HasProperty-StreamId_A8B715E003FC41D95A440A7DFAE421C55930981D01F5F0B130BC50D99CF642BC",
@@ -798,8 +1006,20 @@
       "type": "owl:ObjectProperty"
     },
     {
+      "id": "Revision-IsA-IBHoMObject_361949B9E8A5FCC258C494BA536B8ADBAEDB059CA1C1CD35CFF8B07FA5C462AA",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "Revision-IsA-IObject_25D6A243F3928038202D99AEB64E04C6B5147B9B4B6093AC454AB49E72CC3AA2",
+      "type": "owl:ObjectProperty"
+    },
+    {
       "id": "Revision-IsA-IImmutable_64815903334DD814E69E674B5207BF3319FE20B21A65CFBE93084093AE1DD684",
       "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "Revision-IsSubclassOf-BHoMObject_8329522F83CA18FAC5EE17DC7E1AC3F5CAB837C43E1E9D5B73E2F612EE4B5479",
+      "type": "rdfs:subClassOf"
     },
     {
       "id": "RevisionFragment-HasProperty-Hash_D04A67BA366DEB9EA5CB514D955F9818C3C5BBF18F90D6385041FCF343264080",
@@ -815,6 +1035,10 @@
     },
     {
       "id": "RevisionFragment-IsA-IFragment_F9FD49B4149CE4CFE1595787AE3FC07417AAB78A74ABA12B1F42D848F91E7F48",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "RevisionFragment-IsA-IObject_D5E997AACB1600A2E1D68F0EC5C4A5CFBC922D9FBDCB2135CE47797F8F2B05F8",
       "type": "owl:ObjectProperty"
     },
     {
@@ -838,8 +1062,20 @@
       "type": "owl:DatatypeProperty"
     },
     {
+      "id": "StreamPointer-IsA-IBHoMObject_8B0DA05DD6CCEF08128E61252FAC816D58D21BC81847D4AE7298FD1F733001D5",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "StreamPointer-IsA-IObject_7A6A456D93D0FDA4B5335E7FE32626131484EF9C5F9494B5150063E1193A56F1",
+      "type": "owl:ObjectProperty"
+    },
+    {
       "id": "StreamPointer-IsA-IImmutable_461CF7143DFC86F273F7AB745C40FF862CAA7BD7985717563244DA711FD2BFD6",
       "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "StreamPointer-IsSubclassOf-BHoMObject_CCAF8A3649ADB86D9BA914EA0AD48D0C423F3EFA76D6964207FE3B2061B0BE3A",
+      "type": "rdfs:subClassOf"
     }
   ],
   "propertyAttribute": [
@@ -922,6 +1158,19 @@
       ],
       "domain": "BH.oM.Diffing.Delta",
       "range": "BH.oM.Diffing.Delta.Comment"
+    },
+    {
+      "id": "Delta-IsA-IObject_055551AA228FE142BCCC672E8725E1A62E9D85C8BBAE0C108ABDCFF0306CD2DD",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "label": "IsA",
+      "attributes": [
+        "object"
+      ],
+      "comment": {
+        "undefined": "Can be used to describe that a thing belongs to a class; or that a thing is equivalent to another thing. When used for BHoM types, this describes C# interface implementation."
+      },
+      "domain": "BH.oM.Diffing.Delta",
+      "range": "BH.oM.Base.IObject"
     },
     {
       "id": "Delta-IsA-IImmutable_C96F678271D688335563F505D1D548A883012BC2CA7D4904FE1337F016AC0D1A",
@@ -1017,6 +1266,19 @@
       "range": "BH.oM.Diffing.DiffingConfig"
     },
     {
+      "id": "Diff-IsA-IObject_B8BC2D05F1E84F0C49951944F47A0EC252B985EE9CBAD454BDFF7529872EBE71",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "label": "IsA",
+      "attributes": [
+        "object"
+      ],
+      "comment": {
+        "undefined": "Can be used to describe that a thing belongs to a class; or that a thing is equivalent to another thing. When used for BHoM types, this describes C# interface implementation."
+      },
+      "domain": "BH.oM.Diffing.Diff",
+      "range": "BH.oM.Base.IObject"
+    },
+    {
       "id": "Diff-IsA-IImmutable_3AAC05832A15A04A3EDCA17C62886D1EAF4A33C7660AC6FD21B1E7D92620BFB0",
       "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
       "label": "IsA",
@@ -1080,6 +1342,92 @@
       "range": "BH.oM.Diffing.DiffingConfig.AllowDuplicateIds"
     },
     {
+      "id": "DiffingConfig-HasProperty-CustomObjectDifferencesComparers_D7B2379364CDE64A6D27F39562208856E74D228ADBEDBAA294E227E3410EAB8C",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/HasProperty.cs",
+      "label": "HasProperty",
+      "attributes": [
+        "datatype"
+      ],
+      "domain": "BH.oM.Diffing.DiffingConfig",
+      "range": "BH.oM.Diffing.DiffingConfig.CustomObjectDifferencesComparers"
+    },
+    {
+      "id": "DiffingConfig-IsA-IObject_1EE59775DF6A18A8660B74BE8D08D52F647D457BD0048B0A5F941E1F7742C313",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "label": "IsA",
+      "attributes": [
+        "object"
+      ],
+      "comment": {
+        "undefined": "Can be used to describe that a thing belongs to a class; or that a thing is equivalent to another thing. When used for BHoM types, this describes C# interface implementation."
+      },
+      "domain": "BH.oM.Diffing.DiffingConfig",
+      "range": "BH.oM.Base.IObject"
+    },
+    {
+      "id": "IPropertyDifference-RequiresProperty-Name_ABDEAC70CCB59EA36EC257B0124A6E0B2D11466F92B8C97AD07CB334892DBC90",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/RequiresProperty.cs",
+      "label": "RequiresProperty",
+      "attributes": [
+        "datatype"
+      ],
+      "domain": "BH.oM.Diffing.IPropertyDifference",
+      "range": "BH.oM.Diffing.IPropertyDifference.Name"
+    },
+    {
+      "id": "IPropertyDifference-RequiresProperty-Description_6D8D25BC87C8A37C0B5038A02CEFC04F7537C2C873BB350582BEC08FCDC5E024",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/RequiresProperty.cs",
+      "label": "RequiresProperty",
+      "attributes": [
+        "datatype"
+      ],
+      "domain": "BH.oM.Diffing.IPropertyDifference",
+      "range": "BH.oM.Diffing.IPropertyDifference.Description"
+    },
+    {
+      "id": "IPropertyDifference-RequiresProperty-PastValue_B477F014EDEB55D8D489C54CE72B5CBE32F57BBE0ADBB7F9FB7556C17787681E",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/RequiresProperty.cs",
+      "label": "RequiresProperty",
+      "attributes": [
+        "datatype"
+      ],
+      "domain": "BH.oM.Diffing.IPropertyDifference",
+      "range": "BH.oM.Diffing.IPropertyDifference.PastValue"
+    },
+    {
+      "id": "IPropertyDifference-RequiresProperty-FollowingValue_DBF43944B9DB4971C40658E0DC991FE699E0C6C94AFD0FEB56B1D57FA73ACF18",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/RequiresProperty.cs",
+      "label": "RequiresProperty",
+      "attributes": [
+        "datatype"
+      ],
+      "domain": "BH.oM.Diffing.IPropertyDifference",
+      "range": "BH.oM.Diffing.IPropertyDifference.FollowingValue"
+    },
+    {
+      "id": "IPropertyDifference-RequiresProperty-FullName_2DAA565CBA4E53E69B290066D6DCC6BE8B63449FEAA4C73443B34AEA7189B328",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/RequiresProperty.cs",
+      "label": "RequiresProperty",
+      "attributes": [
+        "datatype"
+      ],
+      "domain": "BH.oM.Diffing.IPropertyDifference",
+      "range": "BH.oM.Diffing.IPropertyDifference.FullName"
+    },
+    {
+      "id": "IPropertyDifference-IsA-IObject_175EC6BC86D38608ECA67ED910660CF0AE00006E13D652CA6F49B586451E4980",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "label": "IsA",
+      "attributes": [
+        "object"
+      ],
+      "comment": {
+        "undefined": "Can be used to describe that a thing belongs to a class; or that a thing is equivalent to another thing. When used for BHoM types, this describes C# interface implementation."
+      },
+      "domain": "BH.oM.Diffing.IPropertyDifference",
+      "range": "BH.oM.Base.IObject"
+    },
+    {
       "id": "ObjectDifferences-HasProperty-PastObject_89F0149145E6A9A03888C77DD0AA0701C7938CA0DFD18AF218F69AAF1DE7FC58",
       "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/HasProperty.cs",
       "label": "HasProperty",
@@ -1110,24 +1458,47 @@
       "range": "BH.oM.Diffing.ObjectDifferences.Differences"
     },
     {
-      "id": "BH.oM.Diffing.ObjectDifferences.Differences-IsAListOf-BH.oM.Diffing.PropertyDifference",
+      "id": "BH.oM.Diffing.ObjectDifferences.Differences-IsAListOf-BH.oM.Diffing.IPropertyDifference",
       "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsAListOf.cs",
       "label": "IsAListOf",
       "attributes": [
         "object"
       ],
       "domain": "BH.oM.Diffing.ObjectDifferences.Differences",
-      "range": "BH.oM.Diffing.PropertyDifference"
+      "range": "BH.oM.Diffing.IPropertyDifference"
     },
     {
-      "id": "PropertyDifference-HasProperty-DisplayName_CC04CEB290804863C16C7B507EC58D2ED480E88F4BEEF7872C86B18027C670E3",
+      "id": "ObjectDifferences-IsA-IObject_B1D25F55528CF0AB1480ED4A087B845BEF0BE9B7D5C67D3C36A24797EC1BB797",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "label": "IsA",
+      "attributes": [
+        "object"
+      ],
+      "comment": {
+        "undefined": "Can be used to describe that a thing belongs to a class; or that a thing is equivalent to another thing. When used for BHoM types, this describes C# interface implementation."
+      },
+      "domain": "BH.oM.Diffing.ObjectDifferences",
+      "range": "BH.oM.Base.IObject"
+    },
+    {
+      "id": "PropertyDifference-HasProperty-Name_7F9FAC9083EB1BF7A16F1676C8A31FF5771474D3455B73A2EAD7D3CF0C2B2158",
       "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/HasProperty.cs",
       "label": "HasProperty",
       "attributes": [
         "datatype"
       ],
       "domain": "BH.oM.Diffing.PropertyDifference",
-      "range": "BH.oM.Diffing.PropertyDifference.DisplayName"
+      "range": "BH.oM.Diffing.PropertyDifference.Name"
+    },
+    {
+      "id": "PropertyDifference-HasProperty-Description_0E50BFC8DD15FAFA625F133B3DE5B2AC272D5FEC74EA6E99FC496BCDF0551024",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/HasProperty.cs",
+      "label": "HasProperty",
+      "attributes": [
+        "datatype"
+      ],
+      "domain": "BH.oM.Diffing.PropertyDifference",
+      "range": "BH.oM.Diffing.PropertyDifference.Description"
     },
     {
       "id": "PropertyDifference-HasProperty-PastValue_58E859FCB346DAF6C778851BD97915E0C113DE70C42EACE0D74B05051E0BEEF1",
@@ -1158,6 +1529,32 @@
       ],
       "domain": "BH.oM.Diffing.PropertyDifference",
       "range": "BH.oM.Diffing.PropertyDifference.FullName"
+    },
+    {
+      "id": "PropertyDifference-IsA-IPropertyDifference_B289951F169B75B809073B7EDEF645347C7A8C72D95CE5E4AD7A140E06ED9EF9",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "label": "IsA",
+      "attributes": [
+        "object"
+      ],
+      "comment": {
+        "undefined": "Can be used to describe that a thing belongs to a class; or that a thing is equivalent to another thing. When used for BHoM types, this describes C# interface implementation."
+      },
+      "domain": "BH.oM.Diffing.PropertyDifference",
+      "range": "BH.oM.Diffing.IPropertyDifference"
+    },
+    {
+      "id": "PropertyDifference-IsA-IObject_C59F881EBE721CAB635CF0F24B0BBE61D0E29655E825F3C7D1DF489D12C6B83E",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "label": "IsA",
+      "attributes": [
+        "object"
+      ],
+      "comment": {
+        "undefined": "Can be used to describe that a thing belongs to a class; or that a thing is equivalent to another thing. When used for BHoM types, this describes C# interface implementation."
+      },
+      "domain": "BH.oM.Diffing.PropertyDifference",
+      "range": "BH.oM.Base.IObject"
     },
     {
       "id": "Revision-HasProperty-StreamId_A8B715E003FC41D95A440A7DFAE421C55930981D01F5F0B130BC50D99CF642BC",
@@ -1250,6 +1647,32 @@
       "range": "BH.oM.Diffing.DiffingConfig"
     },
     {
+      "id": "Revision-IsA-IBHoMObject_361949B9E8A5FCC258C494BA536B8ADBAEDB059CA1C1CD35CFF8B07FA5C462AA",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "label": "IsA",
+      "attributes": [
+        "object"
+      ],
+      "comment": {
+        "undefined": "Can be used to describe that a thing belongs to a class; or that a thing is equivalent to another thing. When used for BHoM types, this describes C# interface implementation."
+      },
+      "domain": "BH.oM.Diffing.Revision",
+      "range": "BH.oM.Base.IBHoMObject"
+    },
+    {
+      "id": "Revision-IsA-IObject_25D6A243F3928038202D99AEB64E04C6B5147B9B4B6093AC454AB49E72CC3AA2",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "label": "IsA",
+      "attributes": [
+        "object"
+      ],
+      "comment": {
+        "undefined": "Can be used to describe that a thing belongs to a class; or that a thing is equivalent to another thing. When used for BHoM types, this describes C# interface implementation."
+      },
+      "domain": "BH.oM.Diffing.Revision",
+      "range": "BH.oM.Base.IObject"
+    },
+    {
       "id": "Revision-IsA-IImmutable_64815903334DD814E69E674B5207BF3319FE20B21A65CFBE93084093AE1DD684",
       "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
       "label": "IsA",
@@ -1261,6 +1684,16 @@
       },
       "domain": "BH.oM.Diffing.Revision",
       "range": "BH.oM.Base.IImmutable"
+    },
+    {
+      "id": "Revision-IsSubclassOf-BHoMObject_8329522F83CA18FAC5EE17DC7E1AC3F5CAB837C43E1E9D5B73E2F612EE4B5479",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsSubclassOf.cs",
+      "label": "IsA",
+      "attributes": [
+        "object"
+      ],
+      "domain": "BH.oM.Diffing.Revision",
+      "range": "BH.oM.Base.BHoMObject"
     },
     {
       "id": "RevisionFragment-HasProperty-Hash_D04A67BA366DEB9EA5CB514D955F9818C3C5BBF18F90D6385041FCF343264080",
@@ -1307,6 +1740,19 @@
       },
       "domain": "BH.oM.Diffing.RevisionFragment",
       "range": "BH.oM.Base.IFragment"
+    },
+    {
+      "id": "RevisionFragment-IsA-IObject_D5E997AACB1600A2E1D68F0EC5C4A5CFBC922D9FBDCB2135CE47797F8F2B05F8",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "label": "IsA",
+      "attributes": [
+        "object"
+      ],
+      "comment": {
+        "undefined": "Can be used to describe that a thing belongs to a class; or that a thing is equivalent to another thing. When used for BHoM types, this describes C# interface implementation."
+      },
+      "domain": "BH.oM.Diffing.RevisionFragment",
+      "range": "BH.oM.Base.IObject"
     },
     {
       "id": "RevisionFragment-IsA-IImmutable_5C046E756030348DE337859693689EF38A520742AFDCF3CE5C3A611031791DEE",
@@ -1362,6 +1808,32 @@
       "range": "BH.oM.Diffing.StreamPointer.Timestamp"
     },
     {
+      "id": "StreamPointer-IsA-IBHoMObject_8B0DA05DD6CCEF08128E61252FAC816D58D21BC81847D4AE7298FD1F733001D5",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "label": "IsA",
+      "attributes": [
+        "object"
+      ],
+      "comment": {
+        "undefined": "Can be used to describe that a thing belongs to a class; or that a thing is equivalent to another thing. When used for BHoM types, this describes C# interface implementation."
+      },
+      "domain": "BH.oM.Diffing.StreamPointer",
+      "range": "BH.oM.Base.IBHoMObject"
+    },
+    {
+      "id": "StreamPointer-IsA-IObject_7A6A456D93D0FDA4B5335E7FE32626131484EF9C5F9494B5150063E1193A56F1",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "label": "IsA",
+      "attributes": [
+        "object"
+      ],
+      "comment": {
+        "undefined": "Can be used to describe that a thing belongs to a class; or that a thing is equivalent to another thing. When used for BHoM types, this describes C# interface implementation."
+      },
+      "domain": "BH.oM.Diffing.StreamPointer",
+      "range": "BH.oM.Base.IObject"
+    },
+    {
       "id": "StreamPointer-IsA-IImmutable_461CF7143DFC86F273F7AB745C40FF862CAA7BD7985717563244DA711FD2BFD6",
       "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
       "label": "IsA",
@@ -1373,6 +1845,16 @@
       },
       "domain": "BH.oM.Diffing.StreamPointer",
       "range": "BH.oM.Base.IImmutable"
+    },
+    {
+      "id": "StreamPointer-IsSubclassOf-BHoMObject_CCAF8A3649ADB86D9BA914EA0AD48D0C423F3EFA76D6964207FE3B2061B0BE3A",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsSubclassOf.cs",
+      "label": "IsA",
+      "attributes": [
+        "object"
+      ],
+      "domain": "BH.oM.Diffing.StreamPointer",
+      "range": "BH.oM.Base.BHoMObject"
     }
   ]
 }

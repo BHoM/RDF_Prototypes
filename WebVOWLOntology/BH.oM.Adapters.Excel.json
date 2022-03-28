@@ -32,11 +32,15 @@
     },
     {
       "id": "BH.oM.Adapters.Excel.CellAddress.Column",
-      "type": "rdfs:Datatype"
+      "type": "owl:Class"
     },
     {
       "id": "BH.oM.Adapters.Excel.CellAddress.Row",
-      "type": "rdfs:Datatype"
+      "type": "owl:Class"
+    },
+    {
+      "id": "BH.oM.Base.IObject",
+      "type": "owl:Class"
     },
     {
       "id": "BH.oM.Adapters.Excel.CellRange.From",
@@ -48,11 +52,11 @@
     },
     {
       "id": "BH.oM.Adapters.Excel.CellContents.Comment",
-      "type": "rdfs:Datatype"
+      "type": "owl:Class"
     },
     {
       "id": "BH.oM.Adapters.Excel.CellContents.Value",
-      "type": "rdfs:Datatype"
+      "type": "owl:Class"
     },
     {
       "id": "BH.oM.Adapters.Excel.CellContents.Address",
@@ -60,23 +64,31 @@
     },
     {
       "id": "BH.oM.Adapters.Excel.CellContents.DataType",
-      "type": "rdfs:Datatype"
+      "type": "owl:Class"
     },
     {
       "id": "BH.oM.Adapters.Excel.CellContents.FormulaA1",
-      "type": "rdfs:Datatype"
+      "type": "owl:Class"
     },
     {
       "id": "BH.oM.Adapters.Excel.CellContents.FormulaR1C1",
-      "type": "rdfs:Datatype"
+      "type": "owl:Class"
     },
     {
       "id": "BH.oM.Adapters.Excel.CellContents.HyperLink",
-      "type": "rdfs:Datatype"
+      "type": "owl:Class"
     },
     {
       "id": "BH.oM.Adapters.Excel.CellContents.RichText",
-      "type": "rdfs:Datatype"
+      "type": "owl:Class"
+    },
+    {
+      "id": "BH.oM.Base.IBHoMObject",
+      "type": "owl:Class"
+    },
+    {
+      "id": "BH.oM.Base.BHoMObject",
+      "type": "owl:Class"
     },
     {
       "id": "BH.oM.Adapters.Excel.ExcelPushConfig.StartingCell",
@@ -92,7 +104,7 @@
     },
     {
       "id": "BH.oM.Adapters.Excel.CellContentsRequest.Worksheet",
-      "type": "rdfs:Datatype"
+      "type": "owl:Class"
     },
     {
       "id": "BH.oM.Adapters.Excel.CellContentsRequest.Range",
@@ -104,7 +116,7 @@
     },
     {
       "id": "BH.oM.Adapters.Excel.CellValuesRequest.Worksheet",
-      "type": "rdfs:Datatype"
+      "type": "owl:Class"
     },
     {
       "id": "BH.oM.Adapters.Excel.CellValuesRequest.Range",
@@ -112,43 +124,43 @@
     },
     {
       "id": "BH.oM.Adapters.Excel.WorkbookProperties.Author",
-      "type": "rdfs:Datatype"
+      "type": "owl:Class"
     },
     {
       "id": "BH.oM.Adapters.Excel.WorkbookProperties.Title",
-      "type": "rdfs:Datatype"
+      "type": "owl:Class"
     },
     {
       "id": "BH.oM.Adapters.Excel.WorkbookProperties.Subject",
-      "type": "rdfs:Datatype"
+      "type": "owl:Class"
     },
     {
       "id": "BH.oM.Adapters.Excel.WorkbookProperties.Category",
-      "type": "rdfs:Datatype"
+      "type": "owl:Class"
     },
     {
       "id": "BH.oM.Adapters.Excel.WorkbookProperties.Keywords",
-      "type": "rdfs:Datatype"
+      "type": "owl:Class"
     },
     {
       "id": "BH.oM.Adapters.Excel.WorkbookProperties.Comments",
-      "type": "rdfs:Datatype"
+      "type": "owl:Class"
     },
     {
       "id": "BH.oM.Adapters.Excel.WorkbookProperties.Status",
-      "type": "rdfs:Datatype"
+      "type": "owl:Class"
     },
     {
       "id": "BH.oM.Adapters.Excel.WorkbookProperties.LastModifiedBy",
-      "type": "rdfs:Datatype"
+      "type": "owl:Class"
     },
     {
       "id": "BH.oM.Adapters.Excel.WorkbookProperties.Company",
-      "type": "rdfs:Datatype"
+      "type": "owl:Class"
     },
     {
       "id": "BH.oM.Adapters.Excel.WorkbookProperties.Manager",
-      "type": "rdfs:Datatype"
+      "type": "owl:Class"
     }
   ],
   "classAttribute": [
@@ -246,6 +258,15 @@
       ]
     },
     {
+      "id": "BH.oM.Base.IObject",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/BHoM/Interface/IObject.cs",
+      "label": "IObject (BH.oM.Base)",
+      "attributes": [
+        "object",
+        "external"
+      ]
+    },
+    {
       "id": "BH.oM.Adapters.Excel.CellRange.From",
       "iri": "https://github.com/BHoM/Excel_Toolkit/blob/main/Excel_oM/Address/CellRange.cs#L36",
       "label": "From(BH.oM.Adapters.Excel.CellRange.From)",
@@ -326,6 +347,23 @@
       "label": "RichText(BH.oM.Adapters.Excel.CellContents.RichText)",
       "attributes": [
         "datatype"
+      ]
+    },
+    {
+      "id": "BH.oM.Base.IBHoMObject",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/BHoM/Interface/IBHoMObject.cs",
+      "label": "IBHoMObject (BH.oM.Base)",
+      "attributes": [
+        "object",
+        "external"
+      ]
+    },
+    {
+      "id": "BH.oM.Base.BHoMObject",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/BHoM/BHoMObject.cs",
+      "label": "BHoMObject (BH.oM.Base)",
+      "attributes": [
+        "external"
       ]
     },
     {
@@ -488,6 +526,10 @@
       "type": "owl:DatatypeProperty"
     },
     {
+      "id": "CellAddress-IsA-IObject_E0D2746DFA9D63A480CD0F2E9741243A0D8CAAC86633F2B1CB24FFBE090EE1B0",
+      "type": "owl:ObjectProperty"
+    },
+    {
       "id": "BH.oM.Adapters.Excel.CellRange-HasProperty-BH.oM.Adapters.Excel.CellRange.From",
       "type": "owl:ObjectProperty"
     },
@@ -501,6 +543,10 @@
     },
     {
       "id": "BH.oM.Adapters.Excel.CellRange.To-IsA-BH.oM.Adapters.Excel.CellAddress",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "CellRange-IsA-IObject_D27F3968E574C27BA8AB1775FB04FA6B1A0C77CF1B53E2B3CDF3086CB0B143A0",
       "type": "owl:ObjectProperty"
     },
     {
@@ -540,6 +586,18 @@
       "type": "owl:DatatypeProperty"
     },
     {
+      "id": "CellContents-IsA-IBHoMObject_EF2C3D0F7D5D8A80B02BB4860869DFE090AABDDE6DC4DE030357965F120B3E87",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "CellContents-IsA-IObject_1B039E6D711DC38EE5B9151FEEDE0C8DA742FB00FDD565389072076B1FCBBD8D",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "CellContents-IsSubclassOf-BHoMObject_F8D287537006E67789E7B6B7B92F8679CCADC18FDEF15C8E642FFA548896DD47",
+      "type": "rdfs:subClassOf"
+    },
+    {
       "id": "BH.oM.Adapters.Excel.ExcelPushConfig-HasProperty-BH.oM.Adapters.Excel.ExcelPushConfig.StartingCell",
       "type": "owl:ObjectProperty"
     },
@@ -553,6 +611,10 @@
     },
     {
       "id": "BH.oM.Adapters.Excel.ExcelPushConfig.WorkbookProperties-IsA-BH.oM.Adapters.Excel.WorkbookProperties",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "ExcelPushConfig-IsA-IObject_755AFF9927E653FC47AF26590B3882288685DE444A7D44C16D15B339AB398B1E",
       "type": "owl:ObjectProperty"
     },
     {
@@ -576,6 +638,10 @@
       "type": "owl:ObjectProperty"
     },
     {
+      "id": "CellContentsRequest-IsA-IObject_53239BDD523631B0757B9B136D5826FED1AB5CB24E84A5C970CB1808F37B57A2",
+      "type": "owl:ObjectProperty"
+    },
+    {
       "id": "CellValuesRequest-HasProperty-Worksheet_C0691006D9E7AB8D4B3AB60F135E30109B612C6B066938E04BD76A1E54DE4038",
       "type": "owl:DatatypeProperty"
     },
@@ -589,6 +655,10 @@
     },
     {
       "id": "CellValuesRequest-IsA-IRequest_0C9C8FA23CEE96999B9C27A6357C2DD5B6DC6ABE894BE72895B7EA81D8572B01",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "CellValuesRequest-IsA-IObject_64A156323824E77466945DD0E78EE825F2972D2DD347F3DF88CBB0B9B5ABA9A4",
       "type": "owl:ObjectProperty"
     },
     {
@@ -630,6 +700,18 @@
     {
       "id": "WorkbookProperties-HasProperty-Manager_8688220B311BE6F47C65E2F17E6D4BE0FD60E89CAA7894FA10782853A6FE2E43",
       "type": "owl:DatatypeProperty"
+    },
+    {
+      "id": "WorkbookProperties-IsA-IBHoMObject_744F0A7021F176AEA700BC55942340A574A34C827874810DB1C8250BCA73DC22",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "WorkbookProperties-IsA-IObject_B04F8C03363FF8FD47DAA168A67EA1EFA53EC10974C47D26B63A02D45D47CC51",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "WorkbookProperties-IsSubclassOf-BHoMObject_D165B88B9336CCF6FEF1C7693B383796B8CCC50FF96E40E385655D45A570AFE6",
+      "type": "rdfs:subClassOf"
     }
   ],
   "propertyAttribute": [
@@ -652,6 +734,19 @@
       ],
       "domain": "BH.oM.Adapters.Excel.CellAddress",
       "range": "BH.oM.Adapters.Excel.CellAddress.Row"
+    },
+    {
+      "id": "CellAddress-IsA-IObject_E0D2746DFA9D63A480CD0F2E9741243A0D8CAAC86633F2B1CB24FFBE090EE1B0",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "label": "IsA",
+      "attributes": [
+        "object"
+      ],
+      "comment": {
+        "undefined": "Can be used to describe that a thing belongs to a class; or that a thing is equivalent to another thing. When used for BHoM types, this describes C# interface implementation."
+      },
+      "domain": "BH.oM.Adapters.Excel.CellAddress",
+      "range": "BH.oM.Base.IObject"
     },
     {
       "id": "BH.oM.Adapters.Excel.CellRange-HasProperty-BH.oM.Adapters.Excel.CellRange.From",
@@ -692,6 +787,19 @@
       ],
       "domain": "BH.oM.Adapters.Excel.CellRange.To",
       "range": "BH.oM.Adapters.Excel.CellAddress"
+    },
+    {
+      "id": "CellRange-IsA-IObject_D27F3968E574C27BA8AB1775FB04FA6B1A0C77CF1B53E2B3CDF3086CB0B143A0",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "label": "IsA",
+      "attributes": [
+        "object"
+      ],
+      "comment": {
+        "undefined": "Can be used to describe that a thing belongs to a class; or that a thing is equivalent to another thing. When used for BHoM types, this describes C# interface implementation."
+      },
+      "domain": "BH.oM.Adapters.Excel.CellRange",
+      "range": "BH.oM.Base.IObject"
     },
     {
       "id": "CellContents-HasProperty-Comment_617508F4DA3AF806A5C6FF506F387705CAF9DFCA09F90D4FCD17BD83ABADC112",
@@ -784,6 +892,42 @@
       "range": "BH.oM.Adapters.Excel.CellContents.RichText"
     },
     {
+      "id": "CellContents-IsA-IBHoMObject_EF2C3D0F7D5D8A80B02BB4860869DFE090AABDDE6DC4DE030357965F120B3E87",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "label": "IsA",
+      "attributes": [
+        "object"
+      ],
+      "comment": {
+        "undefined": "Can be used to describe that a thing belongs to a class; or that a thing is equivalent to another thing. When used for BHoM types, this describes C# interface implementation."
+      },
+      "domain": "BH.oM.Adapters.Excel.CellContents",
+      "range": "BH.oM.Base.IBHoMObject"
+    },
+    {
+      "id": "CellContents-IsA-IObject_1B039E6D711DC38EE5B9151FEEDE0C8DA742FB00FDD565389072076B1FCBBD8D",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "label": "IsA",
+      "attributes": [
+        "object"
+      ],
+      "comment": {
+        "undefined": "Can be used to describe that a thing belongs to a class; or that a thing is equivalent to another thing. When used for BHoM types, this describes C# interface implementation."
+      },
+      "domain": "BH.oM.Adapters.Excel.CellContents",
+      "range": "BH.oM.Base.IObject"
+    },
+    {
+      "id": "CellContents-IsSubclassOf-BHoMObject_F8D287537006E67789E7B6B7B92F8679CCADC18FDEF15C8E642FFA548896DD47",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsSubclassOf.cs",
+      "label": "IsA",
+      "attributes": [
+        "object"
+      ],
+      "domain": "BH.oM.Adapters.Excel.CellContents",
+      "range": "BH.oM.Base.BHoMObject"
+    },
+    {
       "id": "BH.oM.Adapters.Excel.ExcelPushConfig-HasProperty-BH.oM.Adapters.Excel.ExcelPushConfig.StartingCell",
       "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/HasProperty.cs",
       "label": "HasProperty",
@@ -822,6 +966,19 @@
       ],
       "domain": "BH.oM.Adapters.Excel.ExcelPushConfig.WorkbookProperties",
       "range": "BH.oM.Adapters.Excel.WorkbookProperties"
+    },
+    {
+      "id": "ExcelPushConfig-IsA-IObject_755AFF9927E653FC47AF26590B3882288685DE444A7D44C16D15B339AB398B1E",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "label": "IsA",
+      "attributes": [
+        "object"
+      ],
+      "comment": {
+        "undefined": "Can be used to describe that a thing belongs to a class; or that a thing is equivalent to another thing. When used for BHoM types, this describes C# interface implementation."
+      },
+      "domain": "BH.oM.Adapters.Excel.ExcelPushConfig",
+      "range": "BH.oM.Base.IObject"
     },
     {
       "id": "ExcelPushConfig-IsSubclassOf-ActionConfig_3518C94F09257719CA08FEBCD6520F6B79475B67FB3EB35879C9F85B7E433BA7",
@@ -877,6 +1034,19 @@
       "range": "BH.oM.Data.Requests.IRequest"
     },
     {
+      "id": "CellContentsRequest-IsA-IObject_53239BDD523631B0757B9B136D5826FED1AB5CB24E84A5C970CB1808F37B57A2",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "label": "IsA",
+      "attributes": [
+        "object"
+      ],
+      "comment": {
+        "undefined": "Can be used to describe that a thing belongs to a class; or that a thing is equivalent to another thing. When used for BHoM types, this describes C# interface implementation."
+      },
+      "domain": "BH.oM.Adapters.Excel.CellContentsRequest",
+      "range": "BH.oM.Base.IObject"
+    },
+    {
       "id": "CellValuesRequest-HasProperty-Worksheet_C0691006D9E7AB8D4B3AB60F135E30109B612C6B066938E04BD76A1E54DE4038",
       "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/HasProperty.cs",
       "label": "HasProperty",
@@ -918,6 +1088,19 @@
       },
       "domain": "BH.oM.Adapters.Excel.CellValuesRequest",
       "range": "BH.oM.Data.Requests.IRequest"
+    },
+    {
+      "id": "CellValuesRequest-IsA-IObject_64A156323824E77466945DD0E78EE825F2972D2DD347F3DF88CBB0B9B5ABA9A4",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "label": "IsA",
+      "attributes": [
+        "object"
+      ],
+      "comment": {
+        "undefined": "Can be used to describe that a thing belongs to a class; or that a thing is equivalent to another thing. When used for BHoM types, this describes C# interface implementation."
+      },
+      "domain": "BH.oM.Adapters.Excel.CellValuesRequest",
+      "range": "BH.oM.Base.IObject"
     },
     {
       "id": "WorkbookProperties-HasProperty-Author_96205C24813B066225F87EF1F5A4C3D12006C794A975D1B640446466E0545B22",
@@ -1018,6 +1201,42 @@
       ],
       "domain": "BH.oM.Adapters.Excel.WorkbookProperties",
       "range": "BH.oM.Adapters.Excel.WorkbookProperties.Manager"
+    },
+    {
+      "id": "WorkbookProperties-IsA-IBHoMObject_744F0A7021F176AEA700BC55942340A574A34C827874810DB1C8250BCA73DC22",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "label": "IsA",
+      "attributes": [
+        "object"
+      ],
+      "comment": {
+        "undefined": "Can be used to describe that a thing belongs to a class; or that a thing is equivalent to another thing. When used for BHoM types, this describes C# interface implementation."
+      },
+      "domain": "BH.oM.Adapters.Excel.WorkbookProperties",
+      "range": "BH.oM.Base.IBHoMObject"
+    },
+    {
+      "id": "WorkbookProperties-IsA-IObject_B04F8C03363FF8FD47DAA168A67EA1EFA53EC10974C47D26B63A02D45D47CC51",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "label": "IsA",
+      "attributes": [
+        "object"
+      ],
+      "comment": {
+        "undefined": "Can be used to describe that a thing belongs to a class; or that a thing is equivalent to another thing. When used for BHoM types, this describes C# interface implementation."
+      },
+      "domain": "BH.oM.Adapters.Excel.WorkbookProperties",
+      "range": "BH.oM.Base.IObject"
+    },
+    {
+      "id": "WorkbookProperties-IsSubclassOf-BHoMObject_D165B88B9336CCF6FEF1C7693B383796B8CCC50FF96E40E385655D45A570AFE6",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsSubclassOf.cs",
+      "label": "IsA",
+      "attributes": [
+        "object"
+      ],
+      "domain": "BH.oM.Adapters.Excel.WorkbookProperties",
+      "range": "BH.oM.Base.BHoMObject"
     }
   ]
 }

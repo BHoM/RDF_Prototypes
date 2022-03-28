@@ -28,7 +28,7 @@
     },
     {
       "id": "BH.oM.Adapters.Lusas.LusasId.Id",
-      "type": "rdfs:Datatype"
+      "type": "owl:Class"
     },
     {
       "id": "BH.oM.Base.IAdapterId",
@@ -39,7 +39,19 @@
       "type": "owl:Class"
     },
     {
+      "id": "BH.oM.Base.IObject",
+      "type": "owl:Class"
+    },
+    {
       "id": "BH.oM.Adapters.Lusas.LibrarySettings.SectionDatabase",
+      "type": "owl:Class"
+    },
+    {
+      "id": "BH.oM.Base.IBHoMObject",
+      "type": "owl:Class"
+    },
+    {
+      "id": "BH.oM.Base.BHoMObject",
       "type": "owl:Class"
     },
     {
@@ -56,15 +68,15 @@
     },
     {
       "id": "BH.oM.Adapters.Lusas.Fragments.MeshSettings2D.xDivisions",
-      "type": "rdfs:Datatype"
+      "type": "owl:Class"
     },
     {
       "id": "BH.oM.Adapters.Lusas.Fragments.MeshSettings2D.yDivisions",
-      "type": "rdfs:Datatype"
+      "type": "owl:Class"
     },
     {
       "id": "BH.oM.Adapters.Lusas.Fragments.MeshSettings2D.ElementSize",
-      "type": "rdfs:Datatype"
+      "type": "owl:Class"
     }
   ],
   "classAttribute": [
@@ -143,10 +155,36 @@
       ]
     },
     {
+      "id": "BH.oM.Base.IObject",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/BHoM/Interface/IObject.cs",
+      "label": "IObject (BH.oM.Base)",
+      "attributes": [
+        "object",
+        "external"
+      ]
+    },
+    {
       "id": "BH.oM.Adapters.Lusas.LibrarySettings.SectionDatabase",
       "iri": "https://github.com/BHoM/Lusas_Toolkit/blob/main/Lusas_oM/Settings/LibrarySettings.cs#L33",
       "label": "SectionDatabase(BH.oM.Adapters.Lusas.LibrarySettings.SectionDatabase)",
       "attributes": []
+    },
+    {
+      "id": "BH.oM.Base.IBHoMObject",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/BHoM/Interface/IBHoMObject.cs",
+      "label": "IBHoMObject (BH.oM.Base)",
+      "attributes": [
+        "object",
+        "external"
+      ]
+    },
+    {
+      "id": "BH.oM.Base.BHoMObject",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/BHoM/BHoMObject.cs",
+      "label": "BHoMObject (BH.oM.Base)",
+      "attributes": [
+        "external"
+      ]
     },
     {
       "id": "BH.oM.Adapters.Lusas.LusasConfig.LibrarySettings",
@@ -207,6 +245,10 @@
       "type": "owl:ObjectProperty"
     },
     {
+      "id": "LusasId-IsA-IObject_98F0B7140FA2EA7B0BAD5EA7F92800A1E04C4B41FDB5A119177C0663AC88CF9B",
+      "type": "owl:ObjectProperty"
+    },
+    {
       "id": "BH.oM.Adapters.Lusas.LibrarySettings-HasProperty-BH.oM.Adapters.Lusas.LibrarySettings.SectionDatabase",
       "type": "owl:ObjectProperty"
     },
@@ -215,12 +257,36 @@
       "type": "owl:ObjectProperty"
     },
     {
+      "id": "LibrarySettings-IsA-IBHoMObject_E1DF501A8A93D202D2F58759FE781804DEEDC98A701B410EB8F6C5D5A04E2376",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "LibrarySettings-IsA-IObject_EC824A388D66433D67EDB8C6BAE5FEC25297B4A9FFB7C242DD33B270DC439EB9",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "LibrarySettings-IsSubclassOf-BHoMObject_6C75BDAD9AFE36CB1A4107372828AC19CAA220A8DE8FF42763E85FF6B5780BED",
+      "type": "rdfs:subClassOf"
+    },
+    {
       "id": "BH.oM.Adapters.Lusas.LusasConfig-HasProperty-BH.oM.Adapters.Lusas.LusasConfig.LibrarySettings",
       "type": "owl:ObjectProperty"
     },
     {
       "id": "BH.oM.Adapters.Lusas.LusasConfig.LibrarySettings-IsA-BH.oM.Adapters.Lusas.LibrarySettings",
       "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "LusasConfig-IsA-IBHoMObject_93F1BD05EDD9DF74560F91B150EF4E395BF3647389408F7B9D96AC150256807B",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "LusasConfig-IsA-IObject_B58DEE5EAE6486D6B7C8A008338752578F58BAA21738BF9DDCB03F7F62F791FE",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "LusasConfig-IsSubclassOf-BHoMObject_1FDB1E180CE249C7509FDE20A1B22B2AF5127A07A83803402A189E3DABB704EB",
+      "type": "rdfs:subClassOf"
     },
     {
       "id": "BH.oM.Adapters.Lusas.Fragments.MeshSettings2D-HasProperty-BH.oM.Adapters.Lusas.Fragments.MeshSettings2D.SplitMethod",
@@ -243,8 +309,20 @@
       "type": "owl:DatatypeProperty"
     },
     {
+      "id": "MeshSettings2D-IsA-IBHoMObject_A5D545C7D8B01C47DC29C4B26002B17CC8711AFE214502B1443353B7F18BC043",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "MeshSettings2D-IsA-IObject_5182801D65A262DCF429AFF1C7EDDF50E1E12C5AB5408EB25425139F3D3BE8A5",
+      "type": "owl:ObjectProperty"
+    },
+    {
       "id": "MeshSettings2D-IsA-IFragment_4E5627725A50EFA02966A7F633E55D75DD6504E0A13B336A5907B747F7B93358",
       "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "MeshSettings2D-IsSubclassOf-BHoMObject_6E687E35605DBA79228539145A948E8D27B1F6F2034F70F8C2792E10E51E3F9F",
+      "type": "rdfs:subClassOf"
     }
   ],
   "propertyAttribute": [
@@ -285,6 +363,19 @@
       "range": "BH.oM.Base.IFragment"
     },
     {
+      "id": "LusasId-IsA-IObject_98F0B7140FA2EA7B0BAD5EA7F92800A1E04C4B41FDB5A119177C0663AC88CF9B",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "label": "IsA",
+      "attributes": [
+        "object"
+      ],
+      "comment": {
+        "undefined": "Can be used to describe that a thing belongs to a class; or that a thing is equivalent to another thing. When used for BHoM types, this describes C# interface implementation."
+      },
+      "domain": "BH.oM.Adapters.Lusas.LusasId",
+      "range": "BH.oM.Base.IObject"
+    },
+    {
       "id": "BH.oM.Adapters.Lusas.LibrarySettings-HasProperty-BH.oM.Adapters.Lusas.LibrarySettings.SectionDatabase",
       "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/HasProperty.cs",
       "label": "HasProperty",
@@ -305,6 +396,42 @@
       "range": "BH.oM.Adapters.Lusas.SectionLibrary"
     },
     {
+      "id": "LibrarySettings-IsA-IBHoMObject_E1DF501A8A93D202D2F58759FE781804DEEDC98A701B410EB8F6C5D5A04E2376",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "label": "IsA",
+      "attributes": [
+        "object"
+      ],
+      "comment": {
+        "undefined": "Can be used to describe that a thing belongs to a class; or that a thing is equivalent to another thing. When used for BHoM types, this describes C# interface implementation."
+      },
+      "domain": "BH.oM.Adapters.Lusas.LibrarySettings",
+      "range": "BH.oM.Base.IBHoMObject"
+    },
+    {
+      "id": "LibrarySettings-IsA-IObject_EC824A388D66433D67EDB8C6BAE5FEC25297B4A9FFB7C242DD33B270DC439EB9",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "label": "IsA",
+      "attributes": [
+        "object"
+      ],
+      "comment": {
+        "undefined": "Can be used to describe that a thing belongs to a class; or that a thing is equivalent to another thing. When used for BHoM types, this describes C# interface implementation."
+      },
+      "domain": "BH.oM.Adapters.Lusas.LibrarySettings",
+      "range": "BH.oM.Base.IObject"
+    },
+    {
+      "id": "LibrarySettings-IsSubclassOf-BHoMObject_6C75BDAD9AFE36CB1A4107372828AC19CAA220A8DE8FF42763E85FF6B5780BED",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsSubclassOf.cs",
+      "label": "IsA",
+      "attributes": [
+        "object"
+      ],
+      "domain": "BH.oM.Adapters.Lusas.LibrarySettings",
+      "range": "BH.oM.Base.BHoMObject"
+    },
+    {
       "id": "BH.oM.Adapters.Lusas.LusasConfig-HasProperty-BH.oM.Adapters.Lusas.LusasConfig.LibrarySettings",
       "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/HasProperty.cs",
       "label": "HasProperty",
@@ -323,6 +450,42 @@
       ],
       "domain": "BH.oM.Adapters.Lusas.LusasConfig.LibrarySettings",
       "range": "BH.oM.Adapters.Lusas.LibrarySettings"
+    },
+    {
+      "id": "LusasConfig-IsA-IBHoMObject_93F1BD05EDD9DF74560F91B150EF4E395BF3647389408F7B9D96AC150256807B",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "label": "IsA",
+      "attributes": [
+        "object"
+      ],
+      "comment": {
+        "undefined": "Can be used to describe that a thing belongs to a class; or that a thing is equivalent to another thing. When used for BHoM types, this describes C# interface implementation."
+      },
+      "domain": "BH.oM.Adapters.Lusas.LusasConfig",
+      "range": "BH.oM.Base.IBHoMObject"
+    },
+    {
+      "id": "LusasConfig-IsA-IObject_B58DEE5EAE6486D6B7C8A008338752578F58BAA21738BF9DDCB03F7F62F791FE",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "label": "IsA",
+      "attributes": [
+        "object"
+      ],
+      "comment": {
+        "undefined": "Can be used to describe that a thing belongs to a class; or that a thing is equivalent to another thing. When used for BHoM types, this describes C# interface implementation."
+      },
+      "domain": "BH.oM.Adapters.Lusas.LusasConfig",
+      "range": "BH.oM.Base.IObject"
+    },
+    {
+      "id": "LusasConfig-IsSubclassOf-BHoMObject_1FDB1E180CE249C7509FDE20A1B22B2AF5127A07A83803402A189E3DABB704EB",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsSubclassOf.cs",
+      "label": "IsA",
+      "attributes": [
+        "object"
+      ],
+      "domain": "BH.oM.Adapters.Lusas.LusasConfig",
+      "range": "BH.oM.Base.BHoMObject"
     },
     {
       "id": "BH.oM.Adapters.Lusas.Fragments.MeshSettings2D-HasProperty-BH.oM.Adapters.Lusas.Fragments.MeshSettings2D.SplitMethod",
@@ -375,6 +538,32 @@
       "range": "BH.oM.Adapters.Lusas.Fragments.MeshSettings2D.ElementSize"
     },
     {
+      "id": "MeshSettings2D-IsA-IBHoMObject_A5D545C7D8B01C47DC29C4B26002B17CC8711AFE214502B1443353B7F18BC043",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "label": "IsA",
+      "attributes": [
+        "object"
+      ],
+      "comment": {
+        "undefined": "Can be used to describe that a thing belongs to a class; or that a thing is equivalent to another thing. When used for BHoM types, this describes C# interface implementation."
+      },
+      "domain": "BH.oM.Adapters.Lusas.Fragments.MeshSettings2D",
+      "range": "BH.oM.Base.IBHoMObject"
+    },
+    {
+      "id": "MeshSettings2D-IsA-IObject_5182801D65A262DCF429AFF1C7EDDF50E1E12C5AB5408EB25425139F3D3BE8A5",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "label": "IsA",
+      "attributes": [
+        "object"
+      ],
+      "comment": {
+        "undefined": "Can be used to describe that a thing belongs to a class; or that a thing is equivalent to another thing. When used for BHoM types, this describes C# interface implementation."
+      },
+      "domain": "BH.oM.Adapters.Lusas.Fragments.MeshSettings2D",
+      "range": "BH.oM.Base.IObject"
+    },
+    {
       "id": "MeshSettings2D-IsA-IFragment_4E5627725A50EFA02966A7F633E55D75DD6504E0A13B336A5907B747F7B93358",
       "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
       "label": "IsA",
@@ -386,6 +575,16 @@
       },
       "domain": "BH.oM.Adapters.Lusas.Fragments.MeshSettings2D",
       "range": "BH.oM.Base.IFragment"
+    },
+    {
+      "id": "MeshSettings2D-IsSubclassOf-BHoMObject_6E687E35605DBA79228539145A948E8D27B1F6F2034F70F8C2792E10E51E3F9F",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsSubclassOf.cs",
+      "label": "IsA",
+      "attributes": [
+        "object"
+      ],
+      "domain": "BH.oM.Adapters.Lusas.Fragments.MeshSettings2D",
+      "range": "BH.oM.Base.BHoMObject"
     }
   ]
 }
