@@ -14,18 +14,12 @@ namespace BH.Engine.RDF
 {
     public static partial class Query
     {
-        public static List<IRelation> RelationsFromType(this Type oMType, List<IRelation> existingRelations = null, bool onlyDeclaredProperties = true)
+        public static void RelationsFromType(this Type oMType, List<IRelation> resultRelations, int recursionLevel = 0, int maxRecursion = int.MaxValue)
         {
-            List<IRelation> resultRelations = new List<IRelation>();
-            if (existingRelations != null)
-                resultRelations.AddRange(existingRelations);
-
             PropertyInfo[] properties = null;
 
-            if (onlyDeclaredProperties)
-                properties = oMType.GetProperties(System.Reflection.BindingFlags.Public | System.Reflection.BindingFlags.Instance | System.Reflection.BindingFlags.DeclaredOnly);
-            else
-                properties = oMType.GetProperties();
+            // Only get declared properties.
+            properties = oMType.GetProperties(System.Reflection.BindingFlags.Public | System.Reflection.BindingFlags.Instance | System.Reflection.BindingFlags.DeclaredOnly);
 
             IRelation propertyRelation = null;
             foreach (PropertyInfo property in properties)
@@ -33,7 +27,7 @@ namespace BH.Engine.RDF
                 if (oMType.IsInterface)
                     propertyRelation = new RequiresProperty() { Subject = oMType, Object = property };
                 else
-                    propertyRelation = new HasProperty() { Subject = oMType, Object = property };
+                    propertyRelation = new HasProperty<Type, PropertyInfo>() { Subject = oMType, Object = property };
 
                 resultRelations.Add(propertyRelation);
             }
@@ -48,9 +42,7 @@ namespace BH.Engine.RDF
 
             Type baseType = oMType.BaseType;
             if (baseType != null)
-                resultRelations.Add(new IsSubclassOf() { Subject = oMType, Object = baseType });
-
-            return resultRelations;
+                resultRelations.Add(new IsSubclassOf<Type, Type>() { Subject = oMType, Object = baseType });
         }
     }
 }
