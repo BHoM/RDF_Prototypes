@@ -15,12 +15,9 @@ namespace BH.Engine.RDF
     {
         [Description("Extracts a Dictionary representation of a Graph established by the input types and their code relationships." +
             "The Key of the dictionary is the Type, while the Value is the list of edges (relationships).")]
-        public static Dictionary<TypeInfo, List<IRelation>> DictionaryGraphFromTypeInfos(this IEnumerable<TypeInfo> oMTypes, Dictionary<TypeInfo, List<IRelation>> existingDictionaryGraph = null)
+        public static Dictionary<TypeInfo, List<IRelation>> DictionaryGraphFromTypeInfos(this IEnumerable<TypeInfo> oMTypes)
         {
             Dictionary<TypeInfo, List<IRelation>> dictionaryGraph = new Dictionary<TypeInfo, List<IRelation>>();
-
-            if (existingDictionaryGraph != null)
-                dictionaryGraph = existingDictionaryGraph.DeepClone();
 
             foreach (TypeInfo oMType in oMTypes)
             {

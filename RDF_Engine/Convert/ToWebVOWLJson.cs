@@ -43,10 +43,10 @@ namespace BH.Engine.RDF
             JArray classAttributeArray = new JArray();
 
             // Iterate the Types in the dictionary. Each type will be a node in the graph.
-            HashSet<string> addedTypes = new HashSet<string>(); // There could be Types that were not gathered yet and that could emerge from the targets of the Relations.
+            HashSet<string> addedWebVOWLNodeIds = new HashSet<string>(); // There could be Types that were not gathered yet and that could emerge from the targets of the Relations.
 
             foreach (TypeInfo type in dictionaryGraph.Keys)
-                AddWebOwlClassNodes(type, classArray, classAttributeArray, addedTypes, settings);
+                AddWebOwlClassNodes(type, classArray, classAttributeArray, addedWebVOWLNodeIds, settings);
 
             JArray propertyArray = new JArray();
             JArray propertyAttributeArray = new JArray();
@@ -55,7 +55,7 @@ namespace BH.Engine.RDF
             List<IRelation> allRelations = dictionaryGraph.Values.SelectMany(v => v).ToList();
             foreach (IRelation relation in allRelations)
             {
-                AddWebOwlRelationNodes(relation as dynamic, classArray, classAttributeArray, addedTypes, settings: settings, propertyArray: propertyArray, propertyAttributeArray: propertyAttributeArray, internalNamespaces: internalNamespaces, exceptions: exceptions, recursionLevel: relationRecursion);
+                AddWebOwlRelationNodes(relation as dynamic, classArray, classAttributeArray, addedWebVOWLNodeIds, settings: settings, propertyArray: propertyArray, propertyAttributeArray: propertyAttributeArray, internalNamespaces: internalNamespaces, exceptions: exceptions, recursionLevel: relationRecursion);
             }
 
             rdfJsonObject.Add(new JProperty("class", classArray));
@@ -73,7 +73,7 @@ namespace BH.Engine.RDF
 
         //private static void AddRelationObjectNodes(PropertyInfo relationObject, IRelation relation,
         //                                             JArray classArray,
-        //                                             JArray classAttributeArray, HashSet<TypeInfo> addedTypes,
+        //                                             JArray classAttributeArray, HashSet<TypeInfo> addedWebVOWLNodeIds,
         //                                             JArray propertyArray = null,
         //                                             JArray propertyAttributeArray = null,
         //                                             HashSet<string> internalNamespaces = null)
@@ -102,9 +102,9 @@ namespace BH.Engine.RDF
         //            if (pInfo.Name == "Tiles")
         //                subjectOrObjectNodeId = subjectOrObjectNodeId;
 
-        //            return AddPropertyNodes(pInfo, classArray, classAttributeArray, addedTypes, propertyArray, propertyAttributeArray, internalNamespaces);
+        //            return AddPropertyNodes(pInfo, classArray, classAttributeArray, addedWebVOWLNodeIds, propertyArray, propertyAttributeArray, internalNamespaces);
         //        }
-        //        else if (!addedTypes.Contains(relationObjectType))
+        //        else if (!addedWebVOWLNodeIds.Contains(relationObjectType))
         //        {
         //            string label = subjectOrObject.DescriptiveName();
 
@@ -112,7 +112,7 @@ namespace BH.Engine.RDF
 
         //            classAttributeArray.AddToAttributeArray(subjectOrObjectNodeId, relationObjectType.GithubURI(settings), label);
 
-        //            addedTypes.Add(relationObjectType);
+        //            addedWebVOWLNodeIds.Add(relationObjectType);
         //        }
 
         //        propertyAttributes = new List<string>() { "object" };

@@ -14,41 +14,52 @@ namespace BH.Engine.RDF
 {
     public static partial class Query
     {
-        public static List<IRelation> RelationsFromType(this Type oMType, List<IRelation> existingRelations = null, bool onlyDeclaredProperties = true)
+        public static List<IRelation> RelationsFromType(this Type type, bool recurse = false)
         {
             List<IRelation> resultRelations = new List<IRelation>();
-            if (existingRelations != null)
-                resultRelations.AddRange(existingRelations);
+
+            if (!type.IsBHoMType())
+                return new List<IRelation>();
 
             PropertyInfo[] properties = null;
-
-            if (onlyDeclaredProperties)
-                properties = oMType.GetProperties(System.Reflection.BindingFlags.Public | System.Reflection.BindingFlags.Instance | System.Reflection.BindingFlags.DeclaredOnly);
-            else
-                properties = oMType.GetProperties();
+            properties = type.GetProperties(System.Reflection.BindingFlags.Public | System.Reflection.BindingFlags.Instance | System.Reflection.BindingFlags.DeclaredOnly);
 
             IRelation propertyRelation = null;
-            foreach (PropertyInfo property in properties)
+            foreach (PropertyInfo pInfo in properties)
             {
-                if (oMType.IsInterface)
-                    propertyRelation = new RequiresProperty() { Subject = oMType, Object = property };
+                if (type.IsInterface)
+                    propertyRelation = new RequiresProperty() { Subject = type, Object = pInfo };
                 else
-                    propertyRelation = new HasProperty() { Subject = oMType, Object = property };
+                    propertyRelation = new HasProperty() { Subject = type, Object = pInfo };
 
                 resultRelations.Add(propertyRelation);
+
+                // Recurse for each property
+                if (recurse)
+                    resultRelations.AddRange(pInfo.PropertyType.RelationsFromType());
             }
 
-            Type[] implementedInterfaces = oMType.GetInterfaces();
+            Type[] implementedInterfaces = type.GetInterfaces();
             foreach (Type implementedInterface in implementedInterfaces)
             {
-                propertyRelation = new IsA() { Subject = oMType, Object = implementedInterface };
+                propertyRelation = new IsA() { Subject = type, Object = implementedInterface };
 
                 resultRelations.Add(propertyRelation);
+
+                // Recurse for each implemented interface
+                if (recurse)
+                    resultRelations.AddRange(implementedInterface.RelationsFromType());
             }
 
-            Type baseType = oMType.BaseType;
+            Type baseType = type.BaseType;
             if (baseType != null)
-                resultRelations.Add(new IsSubclassOf() { Subject = oMType, Object = baseType });
+            {
+                resultRelations.Add(new IsSubclassOf() { Subject = type, Object = baseType });
+
+                // Recurse for the base type
+                if (recurse)
+                    resultRelations.AddRange(baseType.RelationsFromType());
+            }
 
             return resultRelations;
         }
