@@ -7,8 +7,8 @@
     <ProjectGuid>{35CB5890-7BC1-4F9C-A63F-771F71124D6A}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>CodeAnalysis_oM</RootNamespace>
-    <AssemblyName>CodeAnalysis_oM</AssemblyName>
+    <RootNamespace>BH.oM.RDF</RootNamespace>
+    <AssemblyName>RDF_oM</AssemblyName>
     <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <Deterministic>true</Deterministic>
@@ -64,4 +64,8 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <PropertyGroup>
+    <PostBuildEvent>xcopy "$(TargetDir)$(TargetFileName)"  "C:\ProgramData\BHoM\Assemblies" /Y
+EXIT 0</PostBuildEvent>
+  </PropertyGroup>
 </Project>

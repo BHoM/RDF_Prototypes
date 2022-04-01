@@ -7,8 +7,8 @@
     <ProjectGuid>{9424302A-AAB4-41EA-B109-157BA549DE96}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>CodeAnalysis_Engine</RootNamespace>
-    <AssemblyName>CodeAnalysis_Engine</AssemblyName>
+    <RootNamespace>BH.Engine.RDF</RootNamespace>
+    <AssemblyName>RDF_Engine</AssemblyName>
     <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <Deterministic>true</Deterministic>
@@ -75,6 +75,7 @@
     <Compile Include="Compute\FilesInRepo.cs" />
     <Compile Include="Compute\WriteWebVOWLOntology.cs" />
     <Compile Include="Compute\WriteWebVOWLOntologiesPerNamespace.cs" />
+    <Compile Include="Query\RDFGraph.cs" />
     <Compile Include="Query\DescriptionInAttribute.cs" />
     <Compile Include="Compute\WriteToJsonFile.cs" />
     <Compile Include="Compute\WriteToXMLFile.cs" />
@@ -129,4 +130,8 @@
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <PropertyGroup>
+    <PostBuildEvent>xcopy "$(TargetDir)$(TargetFileName)"  "C:\ProgramData\BHoM\Assemblies" /Y
+EXIT 0</PostBuildEvent>
+  </PropertyGroup>
 </Project>
