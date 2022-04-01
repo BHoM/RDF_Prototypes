@@ -12,9 +12,9 @@ using System.Threading.Tasks;
 
 namespace BH.Engine.RDF
 {
-    public static partial class Query
-    {
-        [Description("Returns the name of a type as it would be written in a C# code file. E.g. for typeof(System.String) returns 'string'.")]
+	public static partial class Query
+	{
+		[Description("Returns the name of a type as it would be written in a C# code file. E.g. for typeof(System.String) returns 'string'.")]
 		public static string GetCodeName(this Type type, bool includeNamespace = false)
 		{
 			m_CodeDomProvider = m_CodeDomProvider ?? CodeDomProvider.CreateProvider("CSharp"); ; // cache provider.
@@ -52,5 +52,5 @@ namespace BH.Engine.RDF
 		}
 
 		private static CodeDomProvider m_CodeDomProvider = null;
-    }
+	}
 }
