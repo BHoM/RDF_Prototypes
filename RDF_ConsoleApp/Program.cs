@@ -37,7 +37,7 @@ namespace BH.oM.CodeAnalysis.ConsoleApp
             //}, relationRecursion: 1); // this is ok
 
             TBoxSettings settings = new TBoxSettings();
-            settings.ResetCache = false;
+            settings.WriteCacheFiles = true;
 
             Engine.RDF.Compute.WriteWebVOWLOntology(new List<string> {
                 "BH.oM.Base.BHoMObject", 

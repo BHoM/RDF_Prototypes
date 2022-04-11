@@ -25,9 +25,9 @@ namespace BH.Engine.RDF
                 return m_allCsFilePaths;
 
             string[] files = null;
-            string cacheFilePath = Path.Combine(settings.CacheRootPath, settings.Cache_RepositoryAllFilePaths_FileName);
+            string cacheFilePath = Path.Combine(settings.CacheRootPath, settings.CacheFileName_RepositoryAllFilePaths);
 
-            if (!settings.ResetCache && !string.IsNullOrWhiteSpace(cacheFilePath) && File.Exists(cacheFilePath))
+            if (settings.ReadCacheFiles && !string.IsNullOrWhiteSpace(cacheFilePath) && File.Exists(cacheFilePath))
             {
                 // Read from cached disk file.
                 files = File.ReadAllLines(cacheFilePath);
@@ -46,7 +46,7 @@ namespace BH.Engine.RDF
             }
 
             // Cache the results to disk.
-            if (files != null && !string.IsNullOrWhiteSpace(cacheFilePath))
+            if (settings.WriteCacheFiles && files != null && !string.IsNullOrWhiteSpace(cacheFilePath))
             {
                 Directory.CreateDirectory(Path.GetDirectoryName(cacheFilePath));
                 File.WriteAllLines(cacheFilePath, files);
