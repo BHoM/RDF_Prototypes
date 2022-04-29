@@ -36,7 +36,7 @@ namespace BH.oM.CodeAnalysis.ConsoleApp
             //    "BH.oM.Base.BHoMObject",
             //}, relationRecursion: 1); // this is ok
 
-            TBoxSettings settings = new TBoxSettings();
+            LocalRepositorySettings settings = new LocalRepositorySettings();
             settings.WriteCacheFiles = true;
 
             Engine.RDF.Compute.WriteWebVOWLOntology(new List<string> {

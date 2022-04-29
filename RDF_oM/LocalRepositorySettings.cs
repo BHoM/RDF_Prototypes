@@ -11,8 +11,7 @@ using System.Threading.Tasks;
 
 namespace BH.oM.RDF
 {
-    [Description("Describes a property that subclasses of a thing must own. Typically represents properties of a C# interface.")]
-    public class TBoxSettings : IObject
+    public class LocalRepositorySettings : IObject
     {
         public string RepositoryRootPath { get; set; } = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.UserProfile), "GitHub");
         public string CacheRootPath { get; set; } = Directory.GetParent(Directory.GetParent(new Uri(Path.GetDirectoryName(Assembly.GetExecutingAssembly().CodeBase)).LocalPath).FullName).FullName;
@@ -22,5 +21,6 @@ namespace BH.oM.RDF
         public Uri GithubOrganisation { get; set; } = new Uri(@"https://github.com/BHoM/");
         public bool ReadCacheFiles { get; set; } = true;
         public bool WriteCacheFiles { get; set; } = false;
+
     }
 }

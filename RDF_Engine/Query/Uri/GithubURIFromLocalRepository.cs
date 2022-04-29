@@ -16,7 +16,7 @@ namespace BH.Engine.RDF
 {
     public static partial class Query
     {
-        public static Uri GithubURIFromLocalRepository(this Type typeToSearch, TBoxSettings settings)
+        public static Uri GithubURIFromLocalRepository(this Type typeToSearch, LocalRepositorySettings settings)
         {
             if (typeToSearch.Name.StartsWith("<>c__"))
                 return null;
@@ -38,7 +38,7 @@ namespace BH.Engine.RDF
             return null;
         }
 
-        public static Uri GithubURIFromLocalRepository(this MemberInfo pi, TBoxSettings settings)
+        public static Uri GithubURIFromLocalRepository(this MemberInfo pi, LocalRepositorySettings settings)
         {
             Uri declaringTypeUri = pi.DeclaringType.GithubURIFromLocalRepository(settings);
 

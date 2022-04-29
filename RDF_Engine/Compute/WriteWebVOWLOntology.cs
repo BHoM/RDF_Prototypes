@@ -16,7 +16,7 @@ namespace BH.Engine.RDF
 {
     public static partial class Compute
     {
-        public static void WriteWebVOWLOntology(List<string> typeFullNames, TBoxSettings settings, string fileName = null, HashSet<string> exceptions = null, int relationRecursion = 0)
+        public static void WriteWebVOWLOntology(List<string> typeFullNames, LocalRepositorySettings settings, string fileName = null, HashSet<string> exceptions = null, int relationRecursion = 0)
         {
             List<Assembly> oMassemblies = BH.Engine.RDF.Compute.LoadAssembliesInDirectory(true);
 
@@ -26,7 +26,7 @@ namespace BH.Engine.RDF
             WriteWebVOWLOntology(correspondingOmTypes, settings, fileName, exceptions, relationRecursion);
         }
 
-        public static void WriteWebVOWLOntology(List<Type> types, TBoxSettings settings, string fileName = null,  HashSet<string> exceptions = null, int relationRecursion = 0)
+        public static void WriteWebVOWLOntology(List<Type> types, LocalRepositorySettings settings, string fileName = null,  HashSet<string> exceptions = null, int relationRecursion = 0)
         {
             if (string.IsNullOrWhiteSpace(fileName))
                 fileName = string.Join("-", types.Select(t => t.Name));
@@ -42,7 +42,7 @@ namespace BH.Engine.RDF
         }
 
 
-        private static void WriteWebVOWLOntology(List<TypeInfo> oMTypes, TBoxSettings settings, string fileName = null, HashSet<string> exceptions = null, int relationRecursion = 0)
+        private static void WriteWebVOWLOntology(List<TypeInfo> oMTypes, LocalRepositorySettings settings, string fileName = null, HashSet<string> exceptions = null, int relationRecursion = 0)
         {
             Dictionary<TypeInfo, List<IRelation>> dictionaryGraph = oMTypes.DictionaryGraphFromTypeInfos();
             string webVOWLJson = Engine.RDF.Convert.ToWebVOWLJson(dictionaryGraph, settings, internalNamespaces: new HashSet<string>(oMTypes.Select(t => t.Namespace)), exceptions: exceptions, relationRecursion: relationRecursion);

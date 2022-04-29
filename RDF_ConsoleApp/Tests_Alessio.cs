@@ -25,7 +25,7 @@ namespace BH.oM.CodeAnalysis.ConsoleApp
 
         [Description("Tries to create an ontology with a `Room` and `Column` class, to say that they both are subclass of `IObject`." +
             "TODO: This currently does not visualise in WebVOWL. Find out how to make it work.")]
-        public static void RoomColumnSubClassOfIObject(TBoxSettings settings)
+        public static void RoomColumnSubClassOfIObject(LocalRepositorySettings settings)
         {
             IGraph g = new Graph();
 
@@ -61,7 +61,7 @@ namespace BH.oM.CodeAnalysis.ConsoleApp
 
         [Description("Tries to create an ontology with a `Room` and `Column` class, to say that they both are subclass of `IObject`." +
             "TODO: This currently does not visualise in WebVOWL. Find out how to make it work.")]
-        public static void RoomColumnSubClassOfIObject_OntologyGraph(TBoxSettings settings)
+        public static void RoomColumnSubClassOfIObject_OntologyGraph(LocalRepositorySettings settings)
         {
             OntologyGraph g = new OntologyGraph();
 

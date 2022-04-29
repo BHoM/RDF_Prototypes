@@ -22,7 +22,7 @@ namespace BH.Engine.RDF
         /***************************************************/
 
         [Description("Convert a Graph ontological representation of (BHoM) types and their relations into a Json format readable by WebVOWL (http://vowl.visualdataweb.org/webvowl.html).")]
-        public static string ToWebVOWLJson(Dictionary<TypeInfo, List<IRelation>> dictionaryGraph, TBoxSettings settings, HashSet<string> internalNamespaces = null, HashSet<string> exceptions = null, int relationRecursion = 0)
+        public static string ToWebVOWLJson(Dictionary<TypeInfo, List<IRelation>> dictionaryGraph, LocalRepositorySettings settings, HashSet<string> internalNamespaces = null, HashSet<string> exceptions = null, int relationRecursion = 0)
         {
             if (dictionaryGraph == null)
                 return null;

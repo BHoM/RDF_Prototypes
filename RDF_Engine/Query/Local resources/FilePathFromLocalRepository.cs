@@ -20,10 +20,10 @@ namespace BH.Engine.RDF
 
         [Description("The method will look for a file named using standard BHoM filename convention for Types. " +
             "For example, for the type `BH.oM.Structure.Elements.Bar`, the method will look for 'Bar.cs', and the filepath will have to contain the 'namespaceGroup' called `Structure`.")]
-        public static string FilePathFromLocalRepository(this Type type, TBoxSettings settings, bool getRelativePath = false)
+        public static string FilePathFromLocalRepository(this Type type, LocalRepositorySettings settings, bool getRelativePath = false)
         {
             if (settings == null)
-                settings = new TBoxSettings();
+                settings = new LocalRepositorySettings();
 
             string repositoryRoot = settings.RepositoryRootPath;
 

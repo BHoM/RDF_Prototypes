@@ -17,9 +17,9 @@ namespace BH.Engine.RDF
 {
     public static partial class Convert
     {
-        private static string AddWebOwlClassNodes(Type type, JArray classArray, JArray classAttributeArray, HashSet<string> addedWebVOWLNodeIds, TBoxSettings settings, HashSet<string> internalNamespaces = null)
+        private static string AddWebOwlClassNodes(Type type, JArray classArray, JArray classAttributeArray, HashSet<string> addedWebVOWLNodeIds, LocalRepositorySettings settings, HashSet<string> internalNamespaces = null)
         {
-            string typeId = type.WebVOWLNodeId();
+            string typeId = type.UniqueNodeId();
 
             if (addedWebVOWLNodeIds.Contains(typeId))
                 return typeId;
@@ -39,9 +39,9 @@ namespace BH.Engine.RDF
             return typeId;
         }
 
-        private static string AddWebOwlClassNodes(PropertyInfo pInfo, JArray classArray, JArray classAttributeArray, HashSet<string> addedWebVOWLNodeIds, TBoxSettings settings)
+        private static string AddWebOwlClassNodes(PropertyInfo pInfo, JArray classArray, JArray classAttributeArray, HashSet<string> addedWebVOWLNodeIds, LocalRepositorySettings settings)
         {
-            string propertyNodeId = pInfo.WebVOWLNodeId();
+            string propertyNodeId = pInfo.UniqueNodeId();
 
             // Check if we need to add a class node for the property type.
             if (!addedWebVOWLNodeIds.Contains(propertyNodeId))

@@ -21,7 +21,7 @@ namespace BH.Engine.RDF
         private static Dictionary<PropertyInfo, int> m_cachedPinfoFileline = new Dictionary<PropertyInfo, int>();
 
         [Description("Looks for the line number of a property in its `.cs` file by reading the file. Returns -1 if not found. 0 indicates the first line.")]
-        public static int LineNumber(PropertyInfo pi, TBoxSettings settings)
+        public static int LineNumber(PropertyInfo pi, LocalRepositorySettings settings)
         {
             int index = -1;
 
@@ -54,7 +54,7 @@ namespace BH.Engine.RDF
             return index;
         }
 
-        private static bool ReadCache_PInfoFileline(TBoxSettings settings)
+        private static bool ReadCache_PInfoFileline(LocalRepositorySettings settings)
         {
             if (m_cachedPinfoFileline != null && m_cachedPinfoFileline.Any())
                 return true;
@@ -79,7 +79,7 @@ namespace BH.Engine.RDF
             return true;
         }
 
-        public static bool WriteCache_PInfoFileline(TBoxSettings settings)
+        public static bool WriteCache_PInfoFileline(LocalRepositorySettings settings)
         {
             if (m_cachedPinfoFileline == null && !m_cachedPinfoFileline.Any())
                 return false;
@@ -90,7 +90,7 @@ namespace BH.Engine.RDF
             return true;
         }
 
-        public static int LineNumber(MemberInfo mi, TBoxSettings settings)
+        public static int LineNumber(MemberInfo mi, LocalRepositorySettings settings)
         {
             string declaringTypeFilePath = mi.DeclaringType.FilePathFromLocalRepository(settings);
 
