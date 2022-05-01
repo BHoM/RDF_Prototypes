@@ -23,6 +23,8 @@ namespace BH.Engine.RDF
 
             if (m_cachedBaseTypes.TryGetValue(type, out baseTypes))
                 return baseTypes;
+            else
+                baseTypes = new List<Type>();
 
             baseTypes.AddRange(type.GetInterfaces());
 

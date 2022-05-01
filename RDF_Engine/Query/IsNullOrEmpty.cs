@@ -18,7 +18,8 @@ namespace BH.Engine.RDF
             if (obj == null)
                 return true;
 
-            if ((obj as IEnumerable).GetEnumerator().MoveNext())
+            IEnumerable ienum = obj as IEnumerable;
+            if (ienum != null && !ienum.GetEnumerator().MoveNext())
                 return true;
 
             return false;

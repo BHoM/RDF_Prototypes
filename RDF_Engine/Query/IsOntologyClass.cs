@@ -9,6 +9,7 @@ using System.Text;
 using System.Threading.Tasks;
 using BH.Engine.Base;
 using BH.Engine.Reflection;
+using BH.oM.Base;
 
 namespace BH.Engine.RDF
 {
@@ -16,14 +17,27 @@ namespace BH.Engine.RDF
     {
         public static bool IsOntologyClass(this Type type)
         {
-            // This method answer this question:
-            // do we want this type to appear as a class in the ontology?
+            // This method answers this question:
+            // is there (should there be) a Class in the ontology that corresponds to this Type?
+            // In general, this method should return true for BHoM types (e.g. Column, Bar, etc.), because they mostly correspond to Ontological classes.
+            // However, there are particular cases to consider.
 
             if (type.IsBHoMType())
-                return true; // yes, if it is a BHoM Type
+            {
+                // Not all BHoM types correspond to Ontology classes.
+                // Example: IBHoMObject.FragmentSet:
+                // FragmentSet is a BHoM type, but it is a collection of other objects.
+                // We need to define how we want to treat collectinos; in the meantime, we tranlsate it to a Data property ("SerialisedJson").
+                // ==> Other exceptions like this must be captured here.
+
+                if (typeof(FragmentSet).IsAssignableFrom(type))
+                    return false;
+
+                return true;
+            }
 
             // We need to work out what we want to do for everything else, including collections of BHoM Types (e.g. List<Beam>).
-            // For now, we assume that everything else will be stored as a serialised Json in the ontology.
+            // For now, we assume that everything else will be translated to a Data property ("SerialisedJson").
             return false;
         }
     }

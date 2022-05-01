@@ -24,72 +24,13 @@ namespace BH.oM.CodeAnalysis.ConsoleApp
     {
         public static void Main(string[] args = null)
         {
-            HashSet<string> exceptions = new HashSet<string>()
-            {
-                "BH.oM.Base.IObject",
-                "BH.oM.Base.IBHoMObject",
-                "BH.oM.Base.BHoMObject",
-            };
+            Column randomColumn = BH.Engine.RDF.Testing.Create.RandomObject<Column>();
+            CSharpGraph cSharpGraph = Engine.RDF.Compute.CSharpGraph(randomColumn, new OntologySettings());
+            string TTLGraph = Engine.RDF.Compute.TTLGraph(randomColumn, new OntologySettings());
 
-            //Engine.RDF.Compute.WriteWebVOWLOntology(new List<string> {
-            //    "BH.oM.Base.IBHoMObject",
-            //    "BH.oM.Base.BHoMObject",
-            //}, relationRecursion: 1); // this is ok
+            CustomObject customObject = BH.Engine.Base.Create.CustomObject(new Dictionary<string, object>() { { "firstProperty", 10 }, { "secondProperty", 20 } });
+            CSharpGraph cSharpGraph_customObj = Engine.RDF.Compute.CSharpGraph(customObject, new OntologySettings());
 
-            LocalRepositorySettings settings = new LocalRepositorySettings();
-            settings.WriteCacheFiles = true;
-
-            Engine.RDF.Compute.WriteWebVOWLOntology(new List<string> {
-                "BH.oM.Base.BHoMObject", 
-            }, settings, relationRecursion: 0);
-
-            Engine.RDF.Compute.WriteWebVOWLOntology(new List<string> {
-                "BH.oM.Base.BHoMObject",
-            }, settings, relationRecursion: 1);
-
-            Engine.RDF.Compute.WriteWebVOWLOntology(new List<string> {
-                "BH.oM.Base.BHoMObject",
-            }, settings, relationRecursion: 2);
-
-            Engine.RDF.Compute.WriteWebVOWLOntology(new List<string> {
-                "BH.oM.Physical.Elements.Column",
-            }, settings, relationRecursion: 0);
-
-            Engine.RDF.Compute.WriteWebVOWLOntology(new List<string> {
-                "BH.oM.Architecture.Elements.Ceiling",
-            }, settings, relationRecursion: 0);
-
-            Engine.RDF.Compute.WriteWebVOWLOntology(new List<string> {
-                "BH.oM.Architecture.Elements.Ceiling",
-            }, settings, relationRecursion: 1);
-
-            Engine.RDF.Compute.WriteWebVOWLOntology(new List<string> {
-                "BH.oM.Architecture.Elements.Ceiling",
-            }, settings, relationRecursion: 2);
-
-            Engine.RDF.Compute.WriteWebVOWLOntology(new List<string> {
-                "BH.oM.Architecture.Elements.Ceiling",
-                "BH.oM.Physical.Elements.Wall",
-                "BH.oM.Architecture.Elements.Room",
-                "BH.oM.Physical.Elements.Column"
-            }, settings, relationRecursion: 1);
-
-            Engine.RDF.Compute.WriteWebVOWLOntology(new List<string> {
-                "BH.oM.Architecture.Elements.Ceiling",
-                "BH.oM.Physical.Elements.Wall",
-                "BH.oM.Architecture.Elements.Room",
-                "BH.oM.Physical.Elements.Column"
-            }, settings, relationRecursion: 2);
-
-            Engine.RDF.Compute.WriteWebVOWLOntology(new List<string> {
-                "BH.oM.Architecture.Elements.Ceiling",
-                "BH.oM.Physical.Elements.Wall",
-                "BH.oM.Architecture.Elements.Room",
-                "BH.oM.Physical.Elements.Column"
-            }, settings, relationRecursion: 99);
-
-
-            Engine.RDF.Compute.WriteWebVOWLOntologiesPerNamespace(settings);
 
             // Invoke all static methods in `Tests_Alessio` class
             //typeof(Tests_Alessio).GetMethods().Where(mi => mi.IsStatic).ToList().ForEach(mi => mi.Invoke(null, null));

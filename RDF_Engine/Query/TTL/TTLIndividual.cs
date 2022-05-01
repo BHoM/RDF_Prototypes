@@ -28,13 +28,6 @@ namespace BH.Engine.RDF
             return composed;
         }
 
-        private static string ReplaceLastOccurenceOf(this string text, char ch, string replaceWith)
-        {
-            var lastComma = text.LastIndexOf(',');
-            if (lastComma != -1) 
-                text = text.Remove(lastComma, 1).Insert(lastComma, replaceWith);
 
-            return text;
-        }
     }
 }

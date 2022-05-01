@@ -72,11 +72,15 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Compute\TTLGraph.cs" />
     <Compile Include="Compute\FilesInRepo.cs" />
-    <Compile Include="Compute\TTLOntology.cs" />
+    <Compile Include="Compute\CSharpGraph.cs" />
     <Compile Include="Compute\WriteWebVOWLOntology.cs" />
     <Compile Include="Compute\WriteWebVOWLOntologiesPerNamespace.cs" />
-    <Compile Include="Modify\AddTTLSectionTitle.cs" />
+    <Compile Include="Convert\ToTTLGraph.cs" />
+    <Compile Include="Create\Testing\CustomObject.cs" />
+    <Compile Include="Create\Testing\RandomObject.cs" />
+    <Compile Include="Create\Testing\RandomObjects.cs" />
     <Compile Include="Create\CreateInstance.cs" />
     <Compile Include="Query\IsDataProperty.cs" />
     <Compile Include="Query\Reflection\PropertyDictionary.cs" />
@@ -84,6 +88,8 @@
     <Compile Include="Query\Reflection\ParentTypes.cs" />
     <Compile Include="Query\Reflection\PropertyInfos.cs" />
     <Compile Include="Query\IsOntologyClass.cs" />
+    <Compile Include="Query\TTL\TTLDataType.cs" />
+    <Compile Include="Query\ReplaceLastOccurenceOf.cs" />
     <Compile Include="Query\TTL\TTLIndividual.cs" />
     <Compile Include="Query\TTL\TTLDataProperty.cs" />
     <Compile Include="Query\TTL\TTLClass.cs" />
