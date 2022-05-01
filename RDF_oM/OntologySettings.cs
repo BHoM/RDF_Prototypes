@@ -25,7 +25,7 @@ namespace BH.oM.RDF
     [Description("Settings for the definition of an Ontology's T-Box.")]
     public class TBoxSettings : IObject
     {
-        public Type DefaultTypeForUnknowns { get; set; } = typeof(JsonSerialized);
+        // No settings for now.
     }
 
     [Description("Settings for the definition of an Ontology's A-Box.")]

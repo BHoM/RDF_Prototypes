@@ -2,6 +2,7 @@
 using BH.Engine.Base;
 using BH.oM.Base;
 using BH.oM.RDF;
+using Newtonsoft.Json;
 using Newtonsoft.Json.Linq;
 using System;
 using System.Collections;
@@ -68,11 +69,7 @@ namespace BH.Engine.RDF
 
             List<string> dataTypes = new List<string>();
 
-            // Default Data Type
-            if (cSharpGraph.OntologySettings.TBoxSettings.DefaultTypeForUnknowns == typeof(JsonSerialized))
-                dataTypes.Add(Query.TTLDataType<JsonSerialized>(cSharpGraph.OntologySettings, r));
-            else
-                throw new NotImplementedException($"No implementation for type {cSharpGraph.OntologySettings.TBoxSettings.DefaultTypeForUnknowns} used as {nameof(cSharpGraph.OntologySettings.TBoxSettings.DefaultTypeForUnknowns)}.");
+            dataTypes.Add(Query.TTLDataType_DefaultTypeForUnknownConversion(r));
 
             return dataTypes;
         }
@@ -100,7 +97,7 @@ namespace BH.Engine.RDF
                 }
 
                 // Class label
-                TTLClass += $@"\n\t\trdfs:label""{t.DescriptiveName()}""@en .";
+                TTLClass += "\n\t\t" + $@"rdfs:label""{t.DescriptiveName()}""@en .";
 
                 TTLClasses.Add(TTLClass);
             }
@@ -119,11 +116,11 @@ namespace BH.Engine.RDF
                 string TTLObjectProperty = "";
 
                 string propertyURI = rel.PropertyInfo.GithubURI(localRepositorySettings).ToString();
-                TTLObjectProperty += $"### {propertyURI}";
-                TTLObjectProperty += $":{rel.PropertyInfo.UniqueNodeId()} rdf:type owl:ObjectProperty ;";
-                TTLObjectProperty += $"rdfs:domain {rel.DomainClass.UniqueNodeId()} ;";
-                TTLObjectProperty += $"rdfs:range {rel.RangeClass.UniqueNodeId()} ;";
-                TTLObjectProperty += $@"rdfs:label ""{rel.PropertyInfo.DescriptiveName()}""@en .";
+                TTLObjectProperty += $"\n### {propertyURI}";
+                TTLObjectProperty += $"\n:{rel.PropertyInfo.UniqueNodeId()} rdf:type owl:ObjectProperty ;";
+                TTLObjectProperty += $"\nrdfs:domain {rel.DomainClass.UniqueNodeId()} ;";
+                TTLObjectProperty += $"\nrdfs:range {rel.RangeClass.UniqueNodeId()} ;";
+                TTLObjectProperty += "\n" + $@"rdfs:label ""{rel.PropertyInfo.DescriptiveName()}""@en .";
 
                 TTLObjectProperties.Add(TTLObjectProperty);
             }
@@ -137,32 +134,31 @@ namespace BH.Engine.RDF
 
             var hasPropertyRelation = cSharpGraph.ClassRelations.OfType<DataProperty>();
 
-            Type defaultTypeForUnknowns = cSharpGraph.OntologySettings.TBoxSettings.DefaultTypeForUnknowns;
-
             foreach (var rel in hasPropertyRelation)
             {
                 string TTLDataProperty = "";
 
                 string propertyURI = rel.PropertyInfo.GithubURI(localRepositorySettings).ToString();
-                TTLDataProperty += $"### {propertyURI}";
-                TTLDataProperty += $":{rel.PropertyInfo.UniqueNodeId()} rdf:type owl:ObjectProperty ;";
-                TTLDataProperty += $"rdfs:domain {rel.DomainClass.UniqueNodeId()} ;";
+                TTLDataProperty += $"\n### {propertyURI}";
+                TTLDataProperty += $"\n:{rel.PropertyInfo.UniqueNodeId()} rdf:type owl:ObjectProperty ;";
+                TTLDataProperty += $"\nrdfs:domain {rel.DomainClass.UniqueNodeId()} ;";
 
                 // We need to map the Range Type to a valid DataType.
-                string dataType = rel.RangeType.ToDataType(defaultTypeForUnknowns);
+                string dataType = rel.RangeType.ToDataType();
 
-                TTLDataProperty += $"rdfs:range {dataType} ;";
+                TTLDataProperty += $"\nrdfs:range {dataType} ;";
 
-                TTLDataProperty += $@"rdfs:label ""{rel.PropertyInfo.DescriptiveName()}""@en .";
+                TTLDataProperty += "\n" + $@"rdfs:label ""{rel.PropertyInfo.DescriptiveName()}""@en .";
 
                 TTLDataProperties.Add(TTLDataProperty);
             }
 
             // Add the IObject's DataProperty for the Default Data Type
-            string defaultDataType_IObjectProperty = $@"###  {defaultTypeForUnknowns.GithubURI(localRepositorySettings)}
-                {defaultTypeForUnknowns.DescriptiveName()} rdf:type owl:DatatypeProperty ;
+            Type defaultTypeForUnknownConversions = typeof(JsonSerialized);
+            string defaultDataType_IObjectProperty = "\n" + $@"###  {defaultTypeForUnknownConversions.GithubURI(localRepositorySettings)}
+                {defaultTypeForUnknownConversions.DescriptiveName()} rdf:type owl:DatatypeProperty ;
                 rdfs:domain :IObject ;
-                rdfs:range {defaultTypeForUnknowns.UniqueNodeId()} .";
+                rdfs:range {defaultTypeForUnknownConversions.UniqueNodeId()} .";
 
             return TTLDataProperties;
         }
@@ -178,9 +174,9 @@ namespace BH.Engine.RDF
                 string individualId = IndividualId(individual);
                 string individualUri = $"{ cSharpGraph.OntologySettings.ABoxSettings.IndividualsBaseAddress }/{individualId}";
 
-                TTLIndividual += $"### {individualUri}";
+                TTLIndividual += $"\n### {individualUri}";
                 TTLIndividual += $"\n<{individualUri}> rdf:type owl:NamedIndividual ,";
-                TTLIndividual += $"\n\t\t:{individual.GetType().UniqueNodeId()} ;";
+                TTLIndividual += $"\n\t\t{individual.GetType().UniqueNodeId()} ;";
 
                 IEnumerable<IndividualRelation> individualRelations = cSharpGraph.IndividualRelations.Where(r => r.Individual == individual);
 
@@ -191,15 +187,17 @@ namespace BH.Engine.RDF
 
                     if (iop != null)
                     {
-                        TTLIndividual += $":{iop.HasProperty.PropertyInfo.UniqueNodeId()} {iop.RangeIndividual.IndividualId()}";
+                        TTLIndividual += $"\n\t\t:{iop.HasProperty.PropertyInfo.UniqueNodeId()} {iop.RangeIndividual.IndividualId()} ;";
                     }
                     else if (idp != null)
                     {
-                        TTLIndividual += $":{idp.PropertyInfo.UniqueNodeId()} {idp.Value.ToString()}"; // TODO: insert serialized value here, when the individual's datatype is unknown
+                        TTLIndividual += "\n\t\t" + $@":{idp.PropertyInfo.UniqueNodeId()} ""{idp.GetStringValue()}"" ;"; // TODO: insert serialized value here, when the individual's datatype is unknown
                     }
                 }
 
                 TTLIndividual.ReplaceLastOccurenceOf(';', ".");
+
+                TTLIndividuals.Add(TTLIndividual);
             }
 
             return TTLIndividuals;
@@ -220,32 +218,44 @@ namespace BH.Engine.RDF
             return individualId;
         }
 
-        private static string ToDataType(this Type t, Type defaultTypeForUnknowns)
+        private static string GetStringValue(this IndividualDataProperty idp)
         {
-            if (t == typeof(string))
-                return "xsd:string";
+            Type individualObjectType = idp.Value.GetType();
+            if (ToOntologyDataType.ContainsKey(individualObjectType))
+                return idp.Value.ToString(); // we can just return the ToString()
 
-            if (t == typeof(bool))
-                return "xsd:boolean";
+            // We must use our fallback for unknown conversions, serializing to Json.
+            JsonSerializerSettings settings = new JsonSerializerSettings { TypeNameHandling = TypeNameHandling.Auto };
+            string serializedValue = JsonConvert.SerializeObject(idp.Value, settings);
 
-            if (t.IsNumericIntegralType())
-                return "xsd:integer";
-
-            if (t == typeof(double))
-                return "xsd:double";
-
-            if (t == typeof(float))
-                return "xsd:float";
-
-            if (t == typeof(decimal))
-                return "xsd:decimal";
-
-            if (t == typeof(Guid))
-                return "xsd:string";
-
-            // Fallback
-            return defaultTypeForUnknowns.UniqueNodeId(); // assumes that the Data Type is already added to the Graph under this Identifier.
+            return serializedValue;
         }
 
+        private static bool IsKnownDataType(Type t)
+        {
+            return ToOntologyDataType.ContainsKey(t);
+        }
+
+        private static string ToDataType(this Type t)
+        {
+            string ontologyDataType = null;
+            ToOntologyDataType.TryGetValue(t, out ontologyDataType);
+
+            if (ontologyDataType != null)
+                return ontologyDataType;
+
+            // Fallback
+            return typeof(JsonSerialized).UniqueNodeId(); // assumes that the Data Type is already added to the Graph under this Identifier.
+        }
+
+        private static Dictionary<Type, string> ToOntologyDataType = new Dictionary<Type, string>()
+        {
+            { typeof(string), "xsd:string" },
+            { typeof(bool), "xsd:boolean" },
+            { typeof(int), "xsd:integer" },
+            { typeof(float), "xsd:float" },
+            { typeof(decimal), "xsd:decimal" },
+            { typeof(Guid), "xsd:string"}
+        };
     }
 }

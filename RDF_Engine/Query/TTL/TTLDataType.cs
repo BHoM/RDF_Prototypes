@@ -12,15 +12,15 @@ namespace BH.Engine.RDF
 {
     public static partial class Query
     {
-        public static string TTLDataType<SerializedJson>(OntologySettings s, LocalRepositorySettings r)
+        public static string TTLDataType_DefaultTypeForUnknownConversion(LocalRepositorySettings r)
         {
-            string defaultDataTypeUri = s.TBoxSettings.DefaultTypeForUnknowns.GithubURI(r)?.ToString();
+            string defaultDataTypeUri = typeof(BH.oM.RDF.JsonSerialized).GithubURI(r)?.ToString();
 
             // TODO: add better guard against null, possibly adding mechanism to provide a defaultDataType URI rather than a Type.
             defaultDataTypeUri = defaultDataTypeUri ?? "https://github.com/BHoM/RDF_Prototypes/commit/ff8ccb68dbba5aeadb4a9a284f141eb1515e169a";
 
-            string TTLDataType = $"###  {defaultDataTypeUri}\n{typeof(SerializedJson).UniqueNodeId()} rdf:type rdfs:Datatype ;";
-            TTLDataType += $@"\nrdfs:label ""{typeof(SerializedJson).DescriptiveName()}""@en ;";
+            string TTLDataType = $"###  {defaultDataTypeUri}\n{typeof(BH.oM.RDF.JsonSerialized).UniqueNodeId()} rdf:type rdfs:Datatype ;";
+            TTLDataType += $@"\nrdfs:label ""{typeof(BH.oM.RDF.JsonSerialized).DescriptiveName()}""@en ;";
             TTLDataType += $"\nowl:equivalentClass xsd:string .";
 
             return TTLDataType;
