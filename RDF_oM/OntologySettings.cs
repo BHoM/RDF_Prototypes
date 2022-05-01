@@ -12,7 +12,7 @@ using System.Threading.Tasks;
 namespace BH.oM.RDF
 {
     [Description("Settings for the definition of an Ontology.")]
-    public class OntologySettings
+    public class OntologySettings : IObject
     {
         public string OntologyTitle { get; set; } = $"{DateTime.Now.ToString("yyMMdd-HHmmss")}_newBHoMOntology";
         public string OntologyDescription { get; set; } = $"New BHoM ontology";
@@ -23,15 +23,15 @@ namespace BH.oM.RDF
     }
 
     [Description("Settings for the definition of an Ontology's T-Box.")]
-    public class TBoxSettings
+    public class TBoxSettings : IObject
     {
-        // Currently, no option defined for this.
+        public Type DefaultTypeForUnknowns { get; set; } = typeof(JsonSerialized);
     }
 
     [Description("Settings for the definition of an Ontology's A-Box.")]
-    public class ABoxSettings
+    public class ABoxSettings : IObject
     {
-        public string InstancesBaseAddress { get; set; } = "https://www.intcdc.uni-stuttgart.de/internal/";
+        public string IndividualsBaseAddress { get; set; } = "https://www.intcdc.uni-stuttgart.de/internal/";
 
         [Description("If this is set to true, the ABox Ontology will be assigned an individual also for any Class Property that is set to a default value.")]
         public bool ConsiderDefaultPropertyValues { get; set; } = true;
