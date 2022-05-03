@@ -27,12 +27,24 @@ namespace BH.Engine.RDF
             string[] files = null;
             string cacheFilePath = Path.Combine(settings.CacheRootPath, settings.CacheFileName_RepositoryAllFilePaths);
 
+            bool cacheFileReadCorrectly = true;
             if (settings.ReadCacheFiles && !string.IsNullOrWhiteSpace(cacheFilePath) && File.Exists(cacheFilePath))
             {
                 // Read from cached disk file.
                 files = File.ReadAllLines(cacheFilePath);
+
+                // For safety, let`s check if the first 10 files exist on disk
+                foreach (var file in files)
+                {
+                    if (!File.Exists(file))
+                    {
+                        cacheFileReadCorrectly = false;
+                        break;
+                    }
+                }
             }
-            else
+
+            if (!cacheFileReadCorrectly)
             {
                 // Read the filesystem and get the .cs files.
                 files = Directory.GetFiles(parentRepoDirectoryPath, "*.cs", SearchOption.AllDirectories);
@@ -46,8 +58,11 @@ namespace BH.Engine.RDF
             }
 
             // Cache the results to disk.
-            if (settings.WriteCacheFiles && files != null && !string.IsNullOrWhiteSpace(cacheFilePath))
+            if ((settings.WriteCacheFiles && files != null && !string.IsNullOrWhiteSpace(cacheFilePath)) || !cacheFileReadCorrectly)
             {
+                if (File.Exists(cacheFilePath))
+                    File.Delete(cacheFilePath);
+
                 Directory.CreateDirectory(Path.GetDirectoryName(cacheFilePath));
                 File.WriteAllLines(cacheFilePath, files);
             }
