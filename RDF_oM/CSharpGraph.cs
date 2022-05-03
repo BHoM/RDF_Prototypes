@@ -15,7 +15,9 @@ namespace BH.oM.RDF
         public HashSet<Type> Classes { get; set; } = new HashSet<Type>();
 
         // Relations between Classes (TBox)
-        public HashSet<IClassRelation> ClassRelations { get; set; } = new HashSet<IClassRelation>(); // both ObjectProperties and DataProperties. Which one can be derived by PropertyInfo.PropertyType (the range type)
+        public HashSet<ObjectProperty> ObjectProperties { get; set; } = new HashSet<ObjectProperty>();
+
+        public HashSet<DataProperty> DataProperties { get; set; } = new HashSet<DataProperty>();
 
         // All individuals (A Box)
         public HashSet<object> AllIndividuals { get; set; } = new HashSet<object>();
@@ -29,14 +31,6 @@ namespace BH.oM.RDF
 
     public interface IClassRelation : IObject
     {
-    }
-
-    public class SubClassOfRelation : IClassRelation
-    {
-        public Type DomainClass { get; set; }
-
-        // This can be an interface or a parent class.
-        public Type RangeClass { get; set; }
     }
 
     public class ObjectProperty : IClassRelation // aka "HasProperty" when the range is another class in the Ontology.

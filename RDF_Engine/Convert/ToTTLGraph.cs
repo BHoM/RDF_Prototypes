@@ -78,26 +78,27 @@ namespace BH.Engine.RDF
         {
             List<string> TTLClasses = new List<string>();
 
-            foreach (var t in cSharpGraph.Classes)
+            foreach (var classType in cSharpGraph.Classes)
             {
                 string TTLClass = "";
 
                 // Declaration with Uri
-                string typeUri = t.GithubURI(localRepositorySettings).ToString();
+                string typeUri = classType.GithubURI(localRepositorySettings).ToString();
                 TTLClass += $"### {typeUri}";
 
                 // Class Identifier
-                TTLClass += $"\n:{t.UniqueNodeId()} rdf:type owl:Class";
+                TTLClass += $"\n:{classType.UniqueNodeId()} rdf:type owl:Class";
 
                 // Subclasses
-                var subClasses = cSharpGraph.ClassRelations.OfType<SubClassOfRelation>().Where(r => r.DomainClass == t).Select(r => r.RangeClass);
-                foreach (var subClass in subClasses)
+                List<Type> parentTypes = classType.ParentTypes().Where(t => t.IsOntologyClass()).ToList();
+
+                foreach (Type subClass in parentTypes)
                 {
                     TTLClass += $"\n\t\trdfs:subClassOf {subClass.UniqueNodeId()}";
                 }
 
                 // Class label
-                TTLClass += "\n\t\t" + $@"rdfs:label""{t.DescriptiveName()}""@en .";
+                TTLClass += "\n\t\t" + $@"rdfs:label""{classType.DescriptiveName()}""@en .";
 
                 TTLClasses.Add(TTLClass);
             }
@@ -109,20 +110,27 @@ namespace BH.Engine.RDF
         {
             List<string> TTLObjectProperties = new List<string>();
 
-            var hasPropertyRelation = cSharpGraph.ClassRelations.OfType<ObjectProperty>();
-
-            foreach (var rel in hasPropertyRelation)
+            for (int i = 0; i < cSharpGraph.ObjectProperties.Count; i++)
             {
-                string TTLObjectProperty = "";
+                var rel = cSharpGraph.ObjectProperties.ElementAt(i);
 
-                string propertyURI = rel.PropertyInfo.GithubURI(localRepositorySettings).ToString();
-                TTLObjectProperty += $"\n### {propertyURI}";
-                TTLObjectProperty += $"\n:{rel.PropertyInfo.UniqueNodeId()} rdf:type owl:ObjectProperty ;";
-                TTLObjectProperty += $"\nrdfs:domain {rel.DomainClass.UniqueNodeId()} ;";
-                TTLObjectProperty += $"\nrdfs:range {rel.RangeClass.UniqueNodeId()} ;";
-                TTLObjectProperty += "\n" + $@"rdfs:label ""{rel.PropertyInfo.DescriptiveName()}""@en .";
+                try
+                {
+                    string TTLObjectProperty = "";
 
-                TTLObjectProperties.Add(TTLObjectProperty);
+                    string propertyURI = rel.PropertyInfo.GithubURI(localRepositorySettings).ToString();
+                    TTLObjectProperty += $"\n### {propertyURI}";
+                    TTLObjectProperty += $"\n:{rel.PropertyInfo.UniqueNodeId()} rdf:type owl:ObjectProperty ;";
+                    TTLObjectProperty += $"\nrdfs:domain {rel.DomainClass.UniqueNodeId()} ;";
+                    TTLObjectProperty += $"\nrdfs:range {rel.RangeClass.UniqueNodeId()} ;";
+                    TTLObjectProperty += "\n" + $@"rdfs:label ""{rel.PropertyInfo.DescriptiveName()}""@en .";
+
+                    TTLObjectProperties.Add(TTLObjectProperty);
+                } 
+                catch(Exception e)
+                {
+                    log.RecordError($"Could not add the {nameof(CSharpGraph)}.{nameof(CSharpGraph.ObjectProperties)} at position {i}. Error:\n\t{e.ToString()}");
+                }
             }
 
             return TTLObjectProperties;
@@ -132,25 +140,32 @@ namespace BH.Engine.RDF
         {
             List<string> TTLDataProperties = new List<string>();
 
-            var hasPropertyRelation = cSharpGraph.ClassRelations.OfType<DataProperty>();
-
-            foreach (var rel in hasPropertyRelation)
+            for (int i = 0; i < cSharpGraph.DataProperties.Count; i++)
             {
-                string TTLDataProperty = "";
+                var rel = cSharpGraph.DataProperties.ElementAt(i);
 
-                string propertyURI = rel.PropertyInfo.GithubURI(localRepositorySettings).ToString();
-                TTLDataProperty += $"\n### {propertyURI}";
-                TTLDataProperty += $"\n:{rel.PropertyInfo.UniqueNodeId()} rdf:type owl:ObjectProperty ;";
-                TTLDataProperty += $"\nrdfs:domain {rel.DomainClass.UniqueNodeId()} ;";
+                try
+                {
+                    string TTLDataProperty = "";
 
-                // We need to map the Range Type to a valid DataType.
-                string dataType = rel.RangeType.ToDataType();
+                    string propertyURI = rel.PropertyInfo.GithubURI(localRepositorySettings).ToString();
+                    TTLDataProperty += $"\n### {propertyURI}";
+                    TTLDataProperty += $"\n:{rel.PropertyInfo.UniqueNodeId()} rdf:type owl:ObjectProperty ;";
+                    TTLDataProperty += $"\nrdfs:domain {rel.DomainClass.UniqueNodeId()} ;";
 
-                TTLDataProperty += $"\nrdfs:range {dataType} ;";
+                    // We need to map the Range Type to a valid DataType.
+                    string dataType = rel.RangeType.ToDataType();
 
-                TTLDataProperty += "\n" + $@"rdfs:label ""{rel.PropertyInfo.DescriptiveName()}""@en .";
+                    TTLDataProperty += $"\nrdfs:range {dataType} ;";
 
-                TTLDataProperties.Add(TTLDataProperty);
+                    TTLDataProperty += "\n" + $@"rdfs:label ""{rel.PropertyInfo.DescriptiveName()}""@en .";
+
+                    TTLDataProperties.Add(TTLDataProperty);
+                }
+                catch (Exception e)
+                {
+                    log.RecordError($"Could not add the {nameof(CSharpGraph)}.{nameof(CSharpGraph.DataProperties)} at position {i}. Error:\n\t{e.ToString()}");
+                }
             }
 
             // Add the IObject's DataProperty for the Default Data Type

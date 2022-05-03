@@ -42,12 +42,10 @@ namespace BH.Engine.RDF
             List<Type> parentTypes = type.ParentTypes();
             foreach (var parentType in parentTypes)
             {
-                if (!type.IsOntologyClass())
+                if (!parentType.IsOntologyClass())
                     continue;
 
                 AddToOntology(parentType);
-
-                m_cSharpGraph.ClassRelations.Add(new SubClassOfRelation() { DomainClass = type, RangeClass = parentType });
             }
         }
 
@@ -80,7 +78,7 @@ namespace BH.Engine.RDF
 
                 // Add the ObjectProperty to the Graph for the T-Box.
                 ObjectProperty hasPropertyRelation = new ObjectProperty() { PropertyInfo = pi, DomainClass = domainType, RangeClass = rangeType};
-                m_cSharpGraph.ClassRelations.Add(hasPropertyRelation);
+                m_cSharpGraph.ObjectProperties.Add(hasPropertyRelation);
 
                 // If the individual is non-null, we will need to add the individuals' relation to the Graph in order to define the A-Box.
                 if (individual == null) return;
@@ -108,7 +106,7 @@ namespace BH.Engine.RDF
 
                 // Add the ObjectProperty to the Graph for the T-Box.
                 DataProperty hasPropertyRelation = new DataProperty() { PropertyInfo = pi, DomainClass = domainType, RangeType = rangeType};
-                m_cSharpGraph.ClassRelations.Add(hasPropertyRelation);
+                m_cSharpGraph.DataProperties.Add(hasPropertyRelation);
 
                 // If the individual is non-null, we will need to add the individuals' relation to the Graph in order to define the A-Box.
                 if (individual == null) return;
