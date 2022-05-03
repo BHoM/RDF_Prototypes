@@ -222,7 +222,7 @@ namespace BH.Engine.RDF
                     }
                     else if (idp != null)
                     {
-                        TTLIndividual += "\n\t\t" + $@":{idp.PropertyInfo.UniqueNodeId()} ""{idp.GetStringValue()}"" ;"; // TODO: insert serialized value here, when the individual's datatype is unknown
+                        TTLIndividual += "\n\t\t" + $@":{idp.PropertyInfo.UniqueNodeId()} ""{idp.GetStringValue()}""^^{idp.Value.GetType().ToDataType()} ;"; // TODO: insert serialized value here, when the individual's datatype is unknown
                     }
                 }
 
