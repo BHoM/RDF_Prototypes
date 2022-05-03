@@ -20,7 +20,7 @@ namespace BH.Engine.RDF
             if (properties?.Any() ?? false)
                 foreach (var kv in properties)
                 {
-                    composed += string.Join($"\n\t\t:", kv.Key) + $"{kv.Value} ;";
+                    composed += string.Join($"\n\t\t:", kv.Key) + $@"""{kv.Value}""; ";
                 }
 
             composed = composed.ReplaceLastOccurenceOf(';', ".");
