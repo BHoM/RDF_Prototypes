@@ -27,11 +27,13 @@ namespace BH.Engine.RDF
             string[] files = null;
             string cacheFilePath = Path.Combine(settings.CacheRootPath, settings.CacheFileName_RepositoryAllFilePaths);
 
-            bool cacheFileReadCorrectly = true;
+            bool cacheFileReadCorrectly = false;
             if (settings.ReadCacheFiles && !string.IsNullOrWhiteSpace(cacheFilePath) && File.Exists(cacheFilePath))
             {
                 // Read from cached disk file.
                 files = File.ReadAllLines(cacheFilePath);
+
+                cacheFileReadCorrectly = files?.Any() ?? false;
 
                 // For safety, let`s check if the first 10 files exist on disk
                 foreach (var file in files)
@@ -55,6 +57,12 @@ namespace BH.Engine.RDF
                     !f.EndsWith("AssemblyAttributes.cs") &&
                     !(f.Contains("packages") && !f.Contains("src")) // removes nuget package source files
                     ).ToArray();
+            }
+
+            if (files.IsNullOrEmpty())
+            {
+                log.RecordError("Could not compute the file paths.");
+                return null;
             }
 
             // Cache the results to disk.
