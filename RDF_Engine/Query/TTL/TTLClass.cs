@@ -25,10 +25,13 @@ namespace BH.Engine.RDF
         {
             string composed = $"### {uri}";
             composed += $"\n{uniqueClassName} rdf:type owl:Class;";
-            if (parentClassUniqueIds?.Any() ?? false)
-                composed += string.Join($"\n\t\trdfs: subClassOf: ", parentClassUniqueIds) + ";";
 
-            composed += $@"\n\t\trdfs: label ""{en_label}""@en .";
+            foreach (var parentClassUniqueId in parentClassUniqueIds)
+            {
+                composed += "\n\t\t" + $"rdfs: subClassOf: {parentClassUniqueId};";
+            }
+
+            composed += "\n\t\t" + $@"rdfs: label ""{en_label}""@en .";
 
             return composed;
         }
