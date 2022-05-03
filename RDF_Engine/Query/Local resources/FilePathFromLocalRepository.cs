@@ -101,7 +101,12 @@ namespace BH.Engine.RDF
             filepath = matchingFilePaths.FirstOrDefault();
 
             // Store in cache.
-            m_cachedTypeFilePaths[type] = filepath;
+            if (!filepath.IsNullOrEmpty())
+                m_cachedTypeFilePaths[type] = filepath;
+            else
+            {
+                log.RecordWarning($"Could not compute repository filepath for type {type.FullName}.");
+            }
 
             return getRelativePath ? filepath?.Replace(repositoryRoot, "") : filepath; // if not found, this returns null.
         }
