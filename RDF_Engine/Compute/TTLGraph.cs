@@ -18,11 +18,11 @@ namespace BH.Engine.RDF
 {
     public static partial class Compute
     {
-        public static string TTLGraph(this IObject iObject, OntologySettings ontologySettings)
+        public static string TTLGraph(this IObject iObject, OntologySettings ontologySettings, LocalRepositorySettings localRepositorySettings)
         {
             CSharpGraph cSharpGraph = Engine.RDF.Compute.CSharpGraph(iObject, new OntologySettings());
 
-            string TTL = cSharpGraph.ToTTLGraph();
+            string TTL = cSharpGraph.ToTTLGraph(localRepositorySettings);
 
             return TTL;
         }
