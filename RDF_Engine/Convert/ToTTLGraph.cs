@@ -114,6 +114,14 @@ namespace BH.Engine.RDF
             {
                 var rel = cSharpGraph.ObjectProperties.ElementAt(i);
 
+                string gitHubUri = rel.PropertyInfo.GithubURI(localRepositorySettings)?.ToString();
+
+                if (gitHubUri.IsNullOrEmpty())
+                {
+                    log.RecordWarning($"Could not add the {nameof(CSharpGraph)}.{nameof(CSharpGraph.ObjectProperties)}: could not compute its URI.");
+                    continue;
+                }
+
                 try
                 {
                     string TTLObjectProperty = "";
@@ -143,6 +151,14 @@ namespace BH.Engine.RDF
             for (int i = 0; i < cSharpGraph.DataProperties.Count; i++)
             {
                 var rel = cSharpGraph.DataProperties.ElementAt(i);
+
+                string gitHubUri = rel.PropertyInfo.GithubURI(localRepositorySettings)?.ToString();
+
+                if (gitHubUri.IsNullOrEmpty())
+                {
+                    log.RecordWarning($"Could not add the {nameof(CSharpGraph)}.{nameof(CSharpGraph.DataProperties)}: could not compute its URI.");
+                    continue;
+                }
 
                 try
                 {

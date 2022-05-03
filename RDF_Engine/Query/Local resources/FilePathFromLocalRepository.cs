@@ -36,7 +36,7 @@ namespace BH.Engine.RDF
             string filepath = null;
 
             // Check the cached types first.
-            if (m_cachedTypeFilePaths?.TryGetValue(type, out filepath) ?? false)
+            if ((m_cachedTypeFilePaths?.TryGetValue(type, out filepath) ?? false) && !filepath.IsNullOrEmpty())
                 return getRelativePath ? filepath?.Replace(repositoryRoot, "") : filepath;
 
             string typeNameValidChars = type.NameValidChars();
