@@ -87,14 +87,14 @@ namespace BH.Engine.RDF
                 TTLClass += $"### {typeUri}";
 
                 // Class Identifier
-                TTLClass += $"\n:{classType.UniqueNodeId()} rdf:type owl:Class";
+                TTLClass += $"\n:{classType.UniqueNodeId()} rdf:type owl:Class;";
 
                 // Subclasses
                 List<Type> parentTypes = classType.ParentTypes().Where(t => t.IsOntologyClass()).ToList();
 
                 foreach (Type subClass in parentTypes)
                 {
-                    TTLClass += $"\n\t\trdfs:subClassOf {subClass.UniqueNodeId()}";
+                    TTLClass += $"\n\t\trdfs:subClassOf :{subClass.UniqueNodeId()};";
                 }
 
                 // Class label
@@ -129,13 +129,13 @@ namespace BH.Engine.RDF
                     string propertyURI = rel.PropertyInfo.GithubURI(localRepositorySettings).ToString();
                     TTLObjectProperty += $"\n### {propertyURI}";
                     TTLObjectProperty += $"\n:{rel.PropertyInfo.UniqueNodeId()} rdf:type owl:ObjectProperty ;";
-                    TTLObjectProperty += $"\nrdfs:domain {rel.DomainClass.UniqueNodeId()} ;";
-                    TTLObjectProperty += $"\nrdfs:range {rel.RangeClass.UniqueNodeId()} ;";
+                    TTLObjectProperty += $"\nrdfs:domain :{rel.DomainClass.UniqueNodeId()} ;";
+                    TTLObjectProperty += $"\nrdfs:range :{rel.RangeClass.UniqueNodeId()} ;";
                     TTLObjectProperty += "\n" + $@"rdfs:label ""{rel.PropertyInfo.DescriptiveName()}""@en .";
 
                     TTLObjectProperties.Add(TTLObjectProperty);
-                } 
-                catch(Exception e)
+                }
+                catch (Exception e)
                 {
                     log.RecordError($"Could not add the {nameof(CSharpGraph)}.{nameof(CSharpGraph.ObjectProperties)} at position {i}. Error:\n\t{e.ToString()}");
                 }
@@ -167,12 +167,15 @@ namespace BH.Engine.RDF
                     string propertyURI = rel.PropertyInfo.GithubURI(localRepositorySettings).ToString();
                     TTLDataProperty += $"\n### {propertyURI}";
                     TTLDataProperty += $"\n:{rel.PropertyInfo.UniqueNodeId()} rdf:type owl:ObjectProperty ;";
-                    TTLDataProperty += $"\nrdfs:domain {rel.DomainClass.UniqueNodeId()} ;";
+                    TTLDataProperty += $"\nrdfs:domain :{rel.DomainClass.UniqueNodeId()} ;";
 
                     // We need to map the Range Type to a valid DataType.
                     string dataType = rel.RangeType.ToDataType();
 
-                    TTLDataProperty += $"\nrdfs:range {dataType} ;";
+                    if (dataType == typeof(JsonSerialized).UniqueNodeId())
+                        TTLDataProperty += $"\nrdfs:range :{dataType} ;";
+                    else
+                        TTLDataProperty += $"\nrdfs:range {dataType} ;";
 
                     TTLDataProperty += "\n" + $@"rdfs:label ""{rel.PropertyInfo.DescriptiveName()}""@en .";
 
@@ -207,7 +210,7 @@ namespace BH.Engine.RDF
 
                 TTLIndividual += $"\n### {individualUri}";
                 TTLIndividual += $"\n<{individualUri}> rdf:type owl:NamedIndividual ,";
-                TTLIndividual += $"\n\t\t{individual.GetType().UniqueNodeId()} ;";
+                TTLIndividual += $"\n\t\t:{individual.GetType().UniqueNodeId()} ;";
 
                 IEnumerable<IndividualRelation> individualRelations = cSharpGraph.IndividualRelations.Where(r => r.Individual == individual);
 
@@ -222,11 +225,16 @@ namespace BH.Engine.RDF
                     }
                     else if (idp != null)
                     {
-                        TTLIndividual += "\n\t\t" + $@":{idp.PropertyInfo.UniqueNodeId()} ""{idp.GetStringValue()}""^^{idp.Value.GetType().ToDataType()} ;"; // TODO: insert serialized value here, when the individual's datatype is unknown
+                        TTLIndividual += "\n\t\t" + $@":{idp.PropertyInfo.UniqueNodeId()} ""{idp.GetStringValue()}""";
+
+                        string dataType = idp.Value.GetType().ToDataType();
+
+                        if (dataType == typeof(JsonSerialized).UniqueNodeId())
+                            TTLIndividual += $"^^:{ idp.Value.GetType().ToDataType()}.";
+                        else
+                            TTLIndividual += $"^^{ idp.Value.GetType().ToDataType()}."; // TODO: insert serialized value here, when the individual's datatype is unknown
                     }
                 }
-
-                TTLIndividual.ReplaceLastOccurenceOf(';', ".");
 
                 TTLIndividuals.Add(TTLIndividual);
             }
