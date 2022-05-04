@@ -16,7 +16,7 @@ namespace BH.Engine.RDF
             bool includeRdf = true, bool includeRdfs = true, 
             bool includeXml = true, bool includeXsd = true)
         {
-            string header = $"-jn @prefix : <{ontologyAddress}/> .";
+            string header = $"@prefix : <{ontologyAddress}/> .";
             if (includeOwl) header += "\n@prefix owl: <http://www.w3.org/2002/07/owl#> .";
             if (includeRdf) header += "\n@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .";
             if (includeXml) header += "\n@prefix xml: <http://www.w3.org/XML/1998/namespace> .";
