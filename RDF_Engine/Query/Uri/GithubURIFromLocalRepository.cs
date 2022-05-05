@@ -29,10 +29,15 @@ namespace BH.Engine.RDF
 
                 try
                 {
-                    Uri URL = CombineUris(settings.GithubOrganisation, pathComponents[0], "/blob/main/", string.Join("/", pathComponents.Skip(1)));
+                    var githubOrgUri = new Uri(settings.GithubOrganisationURL);
+
+                    Uri URL = CombineUris(githubOrgUri, pathComponents[0], "/blob/main/", string.Join("/", pathComponents.Skip(1)));
                     return URL;
                 }
-                catch { }
+                catch (Exception e)
+                {
+                    log.RecordWarning($"Could not compute the Uri from local repository for {typeToSearch}. Error: {e.ToString()}", true);
+                }
             }
 
             return null;
