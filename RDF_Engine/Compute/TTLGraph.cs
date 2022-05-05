@@ -20,7 +20,7 @@ namespace BH.Engine.RDF
     {
         public static string TTLGraph(this IObject iObject, OntologySettings ontologySettings, LocalRepositorySettings localRepositorySettings)
         {
-            CSharpGraph cSharpGraph = Engine.RDF.Compute.CSharpGraph(iObject, new OntologySettings());
+            CSharpGraph cSharpGraph = Engine.RDF.Compute.CSharpGraph(iObject, ontologySettings);
 
             string TTL = cSharpGraph.ToTTLGraph(localRepositorySettings);
 
