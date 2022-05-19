@@ -11,7 +11,7 @@ using System.Linq;
 using System.Reflection;
 using System.Text;
 using System.Threading.Tasks;
-using log = BH.oM.RDF.Log;
+
 
 namespace BH.Engine.RDF
 {
@@ -48,7 +48,7 @@ namespace BH.Engine.RDF
 
             if (domainType == null || rangeType == null)
             {
-                log.RecordError($"Cannot add IsA relation `{isSubclassOf.UniqueNodeId()}`");
+                Log.RecordError($"Cannot add IsA relation `{isSubclassOf.UniqueNodeId()}`");
                 return;
             }
 
@@ -104,7 +104,7 @@ namespace BH.Engine.RDF
 
             if (domainType == null || rangeType == null)
             {
-                log.RecordError($"Cannot add IsAListOf relation `{isAListOfRelation.UniqueNodeId()}`");
+                Log.RecordError($"Cannot add IsAListOf relation `{isAListOfRelation.UniqueNodeId()}`");
                 return;
             }
 
@@ -164,7 +164,7 @@ namespace BH.Engine.RDF
 
             if (domainType == null || rangeType == null)
             {
-                log.RecordError($"Cannot add IsA relation `{isARelation.UniqueNodeId()}`");
+                Log.RecordError($"Cannot add IsA relation `{isARelation.UniqueNodeId()}`");
                 return;
             }
 
@@ -213,13 +213,13 @@ namespace BH.Engine.RDF
 
             if (domainType == null)
             {
-                log.RecordError($"The {nameof(HasProperty)} relation `{hasPropertyRelation.UniqueNodeId()}` has its {nameof(IRelation.Subject)} of type `{hasPropertyRelation.Object.GetType().FullName}` instead of {nameof(Type)}.");
+                Log.RecordError($"The {nameof(HasProperty)} relation `{hasPropertyRelation.UniqueNodeId()}` has its {nameof(IRelation.Subject)} of type `{hasPropertyRelation.Object.GetType().FullName}` instead of {nameof(Type)}.");
                 return;
             }
 
             if (rangePropertyInfo == null)
             {
-                log.RecordError($"The {nameof(HasProperty)} relation `{hasPropertyRelation.UniqueNodeId()}` has its {nameof(IRelation.Object)} of type `{hasPropertyRelation.Object.GetType().FullName}` instead of {nameof(PropertyInfo)}.");
+                Log.RecordError($"The {nameof(HasProperty)} relation `{hasPropertyRelation.UniqueNodeId()}` has its {nameof(IRelation.Object)} of type `{hasPropertyRelation.Object.GetType().FullName}` instead of {nameof(PropertyInfo)}.");
                 return;
             }
 
@@ -363,7 +363,7 @@ namespace BH.Engine.RDF
 
             if (domainType == null || rangePi == null)
             {
-                log.RecordError($"Cannot add requiresPropertyRelation `{requiresPropertyRelation.UniqueNodeId()}`");
+                Log.RecordError($"Cannot add requiresPropertyRelation `{requiresPropertyRelation.UniqueNodeId()}`");
                 return;
             }
 

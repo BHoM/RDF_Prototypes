@@ -7,7 +7,7 @@ using System.Linq;
 using System.Reflection;
 using System.Text;
 using System.Threading.Tasks;
-using log = BH.oM.RDF.Log;
+
 
 namespace BH.Engine.RDF
 {
@@ -84,7 +84,7 @@ namespace BH.Engine.RDF
             catch (Exception e)
             {
                 Console.WriteLine(e.Message);
-                log.RecordError(e.Message);
+                Log.RecordError(e.Message);
             }
 
             return false;
@@ -106,7 +106,7 @@ namespace BH.Engine.RDF
             }
             catch (Exception e)
             {
-                log.RecordError(e.Message);
+                Log.RecordError(e.Message);
                 Console.WriteLine(e.Message);
             }
 

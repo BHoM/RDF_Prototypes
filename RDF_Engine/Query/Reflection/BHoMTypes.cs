@@ -6,7 +6,7 @@ using System.Linq;
 using System.Reflection;
 using System.Text;
 using System.Threading.Tasks;
-using log = BH.oM.RDF.Log;
+
 
 namespace BH.Engine.RDF
 {
@@ -34,7 +34,7 @@ namespace BH.Engine.RDF
                 }
                 catch (ReflectionTypeLoadException e)
                 {
-                    log.RecordError($"Could not load BHoM types from assembly {a.FullName}. Error(s):\n    {string.Join("\n    ", e.LoaderExceptions.Select(le => le.Message))}");
+                    Log.RecordError($"Could not load BHoM types from assembly {a.FullName}. Error(s):\n    {string.Join("\n    ", e.LoaderExceptions.Select(le => le.Message))}");
                 }
 
                 if (typesDefinedInAssembly != null)

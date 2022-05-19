@@ -10,7 +10,7 @@ using System.Linq;
 using System.Reflection;
 using System.Text;
 using System.Threading.Tasks;
-using log = BH.oM.RDF.Log;
+
 
 namespace BH.Engine.RDF
 {
@@ -29,7 +29,7 @@ namespace BH.Engine.RDF
 
             if (string.IsNullOrWhiteSpace(repositoryRoot) || !Directory.Exists(repositoryRoot))
             {
-                log.RecordError($"Could not find Local repository directory on disk at path: {repositoryRoot}", true);
+                Log.RecordError($"Could not find Local repository directory on disk at path: {repositoryRoot}", true);
                 return null;
             }
 
@@ -59,7 +59,7 @@ namespace BH.Engine.RDF
 
             if (matchingFilePaths.Count() > 1)
             {
-                log.RecordWarning($"Found more than one matching filepath for `{type.FullName}`: {string.Join(", ", matchingFilePaths)}", true);
+                Log.RecordWarning($"Found more than one matching filepath for `{type.FullName}`: {string.Join(", ", matchingFilePaths)}", true);
 
                 // Store null in cache, which is better than having to reperform the search.
                 m_cachedTypeFilePaths[type] = null;
@@ -96,7 +96,7 @@ namespace BH.Engine.RDF
             }
 
             if (matchingFilePaths.Count != 1)
-                log.RecordWarning($"Could not find filepath for Type `{typeNameValidChars}`", true);
+                Log.RecordWarning($"Could not find filepath for Type `{typeNameValidChars}`", true);
 
             filepath = matchingFilePaths.FirstOrDefault();
 
@@ -105,7 +105,7 @@ namespace BH.Engine.RDF
                 m_cachedTypeFilePaths[type] = filepath;
             else
             {
-                log.RecordWarning($"Could not compute repository filepath for type {type.FullName}.");
+                Log.RecordWarning($"Could not compute repository filepath for type {type.FullName}.");
             }
 
             return getRelativePath ? filepath?.Replace(repositoryRoot, "") : filepath; // if not found, this returns null.

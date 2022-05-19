@@ -11,7 +11,7 @@ using System.Threading.Tasks;
 
 namespace BH.Engine.RDF
 {
-    public static partial class Query
+    public static partial class Convert
     {
         public static List<string> TTLIndividuals(this CSharpGraph cSharpGraph, LocalRepositorySettings localRepositorySettings)
         {
@@ -21,7 +21,7 @@ namespace BH.Engine.RDF
             {
                 string TTLIndividual = "";
 
-                string individualId = IndividualId(individual);
+                string individualId = individual.IndividualId();
                 string individualUri = $"{ cSharpGraph.OntologySettings.ABoxSettings.IndividualsBaseAddress }/{individualId}";
 
                 TTLIndividual += $"\n### {individualUri}";

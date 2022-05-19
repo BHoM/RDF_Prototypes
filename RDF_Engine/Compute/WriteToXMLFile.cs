@@ -9,7 +9,7 @@ using System.Text;
 using System.Threading.Tasks;
 using VDS.RDF;
 using VDS.RDF.Writing;
-using log = BH.oM.RDF.Log;
+
 
 namespace BH.Engine.RDF
 {

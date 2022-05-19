@@ -9,7 +9,7 @@ using System.Linq;
 using System.Reflection;
 using System.Text;
 using System.Threading.Tasks;
-using log = BH.oM.RDF.Log;
+
 
 namespace BH.Engine.RDF
 {
@@ -67,7 +67,7 @@ namespace BH.Engine.RDF
 
             Uri uri = null;
             if (!Uri.TryCreate(result, UriKind.Absolute, out uri))
-                log.RecordError($"Could not compose a valid URL for type {t.FullName}", true);
+                Log.RecordError($"Could not compose a valid URL for type {t.FullName}", true);
 
             return uri;
         }

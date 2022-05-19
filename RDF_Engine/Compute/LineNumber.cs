@@ -11,7 +11,7 @@ using System.Linq;
 using System.Reflection;
 using System.Text;
 using System.Threading.Tasks;
-using log = BH.oM.RDF.Log;
+
 
 namespace BH.Engine.RDF
 {
@@ -47,7 +47,7 @@ namespace BH.Engine.RDF
                 ?? -1;
 
             if (index == -1)
-                log.RecordWarning($"Could not find Line Number of property {pi.FullNameValidChars()}");
+                Log.RecordWarning($"Could not find Line Number of property {pi.FullNameValidChars()}");
             else
                 m_cachedPinfoFileline[pi] = index;
 

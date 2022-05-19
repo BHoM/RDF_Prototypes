@@ -10,7 +10,7 @@ using System.Linq;
 using System.Reflection;
 using System.Text;
 using System.Threading.Tasks;
-using log = BH.oM.RDF.Log;
+
 
 namespace BH.Engine.RDF
 {
@@ -36,7 +36,7 @@ namespace BH.Engine.RDF
                 }
                 catch (Exception e)
                 {
-                    log.RecordWarning($"Could not compute the Uri from local repository for {typeToSearch}. Error: {e.ToString()}", true);
+                    Log.RecordWarning($"Could not compute the Uri from local repository for {typeToSearch}. Error: {e.ToString()}", true);
                 }
             }
 

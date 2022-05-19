@@ -9,7 +9,7 @@ using System.Text;
 using System.Threading.Tasks;
 using VDS.RDF;
 using VDS.RDF.Writing;
-using log = BH.oM.RDF.Log;
+
 
 namespace BH.Engine.RDF
 {
@@ -43,7 +43,7 @@ namespace BH.Engine.RDF
             }
             catch (Exception e)
             {
-                log.RecordError($"Could not write file `{filepath}`. Exception:\n{e.ToString()}");
+                Log.RecordError($"Could not write file `{filepath}`. Exception:\n{e.ToString()}");
             }
         }
     }

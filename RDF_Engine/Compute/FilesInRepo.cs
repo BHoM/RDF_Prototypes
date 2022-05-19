@@ -6,7 +6,7 @@ using System.Linq;
 using System.Reflection;
 using System.Text;
 using System.Threading.Tasks;
-using log = BH.oM.RDF.Log;
+
 
 namespace BH.Engine.RDF
 {
@@ -61,7 +61,7 @@ namespace BH.Engine.RDF
 
             if (files.IsNullOrEmpty())
             {
-                log.RecordError("Could not compute the file paths.");
+                Log.RecordError("Could not compute the file paths.");
                 return null;
             }
 

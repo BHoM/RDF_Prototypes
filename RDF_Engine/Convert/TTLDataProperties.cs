@@ -10,7 +10,7 @@ using System.Threading.Tasks;
 
 namespace BH.Engine.RDF
 {
-    public static partial class Query
+    public static partial class Convert
     {
         public static List<string> TTLDataProperties(this CSharpGraph cSharpGraph, LocalRepositorySettings localRepositorySettings)
         {

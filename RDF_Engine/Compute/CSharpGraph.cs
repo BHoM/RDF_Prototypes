@@ -10,7 +10,7 @@ using System.Text;
 using System.Threading.Tasks;
 using VDS.RDF;
 using VDS.RDF.Writing;
-using log = BH.oM.RDF.Log;
+
 using BH.Engine.Base;
 using BH.oM.RDF;
 

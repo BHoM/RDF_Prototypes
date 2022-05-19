@@ -9,7 +9,7 @@ using System.Reflection;
 using System.Text;
 using System.Threading.Tasks;
 using VDS.RDF;
-using log = BH.oM.RDF.Log;
+
 
 namespace BH.Engine.RDF
 {
@@ -20,7 +20,7 @@ namespace BH.Engine.RDF
         {
             if (!t.FullName.StartsWith("BH.oM"))
             {
-                log.RecordError("This method only supports BHoM types.");
+                Log.RecordError("This method only supports BHoM types.");
                 return null;
             }    
 
