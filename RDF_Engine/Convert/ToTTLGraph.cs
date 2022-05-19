@@ -286,6 +286,7 @@ namespace BH.Engine.RDF
             { typeof(string), "xsd:string" },
             { typeof(bool), "xsd:boolean" },
             { typeof(int), "xsd:integer" },
+            { typeof(double), "xsd:double" },
             { typeof(float), "xsd:float" },
             { typeof(decimal), "xsd:decimal" },
             { typeof(Guid), "xsd:string"}
