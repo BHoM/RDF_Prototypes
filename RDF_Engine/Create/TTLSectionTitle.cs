@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 
 namespace BH.Engine.RDF
 {
-    public static partial class Query
+    public static partial class Create
     {
         public static string TTLSectionTitle(this string title)
         {

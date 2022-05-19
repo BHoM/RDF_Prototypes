@@ -12,7 +12,18 @@ namespace BH.Engine.RDF
 {
     public static partial class Query
     {
-        public static string TTLDataType_DefaultTypeForUnknownConversion(LocalRepositorySettings r)
+        public static List<string> TTLDataTypes(this CSharpGraph cSharpGraph, LocalRepositorySettings r)
+        {
+            OntologySettings s = cSharpGraph.OntologySettings;
+
+            List<string> dataTypes = new List<string>();
+
+            dataTypes.Add(DefaultDataTypeForUnknownConversion(r));
+
+            return dataTypes;
+        }
+
+        private static string DefaultDataTypeForUnknownConversion(LocalRepositorySettings r)
         {
             string defaultDataTypeUri = typeof(BH.oM.RDF.JsonSerialized).GithubURI(r)?.ToString();
 
