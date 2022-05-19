@@ -22,7 +22,7 @@ namespace BH.Engine.RDF
         {
             m_cSharpGraph = new CSharpGraph() { OntologySettings = ontologySettings };
 
-            AddIndividualToOntology(iObject, iObject.GetType(), ontologySettings);
+            AddIndividualToOntology(iObject, ontologySettings);
 
             return m_cSharpGraph;
         }
@@ -58,7 +58,7 @@ namespace BH.Engine.RDF
         private static void AddToOntology(this PropertyInfo pi, object individual = null, OntologySettings ontologySettings = null)
         {
             // In C#'s Reflection, relations are represented with PropertyInfos.
-            // PropertyInfos may correspond to either ObjectProperties or DataProperties.
+            // In an ontology, PropertyInfos may correspond to either ObjectProperties or DataProperties.
 
             Type domainType = pi.DeclaringType;
             Type rangeType = pi.PropertyType;
@@ -96,7 +96,7 @@ namespace BH.Engine.RDF
                 m_cSharpGraph.IndividualRelations.Add(rel);
 
                 // Recurse for the individual's property value, which will be another individual.
-                AddIndividualToOntology(propertyValue, rangeType, ontologySettings);
+                AddIndividualToOntology(propertyValue, ontologySettings);
             }
             else
             {
@@ -125,9 +125,9 @@ namespace BH.Engine.RDF
             }
         }
 
-        private static void AddIndividualToOntology(object individual, Type individualType = null, OntologySettings ontologySettings = null)
+        private static void AddIndividualToOntology(object individual, OntologySettings ontologySettings = null)
         {
-            individualType = individualType ?? individual.GetType();
+            Type individualType = individual.GetType();
             ontologySettings = ontologySettings ?? new OntologySettings();
 
             // Only individuals that are of types mappable to Ontology classes can be added.
@@ -154,8 +154,5 @@ namespace BH.Engine.RDF
         /***************************************************/
 
         private static CSharpGraph m_cSharpGraph = new CSharpGraph();
-
-        private static string m_output_TBoxTTLOntology;
-        private static string m_output_ABoxTTLOntology;
     }
 }
