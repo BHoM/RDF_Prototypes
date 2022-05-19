@@ -35,7 +35,7 @@ namespace BH.Engine.RDF
 
         public static string DescriptiveName(this PropertyInfo pi, bool includeFullPath = true)
         {
-            return includeFullPath ? pi.Name + $"({pi.DeclaringType.FullNameValidChars()}.{pi.Name})" : pi.Name;
+            return includeFullPath ? pi.Name + $" ({pi.DeclaringType.FullNameValidChars()}.{pi.Name})" : pi.Name;
         }
 
         /***************************************************/
