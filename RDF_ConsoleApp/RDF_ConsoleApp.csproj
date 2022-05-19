@@ -1,105 +1,115 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
-	<Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
-	<PropertyGroup>
-		<Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
-		<Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-		<ProjectGuid>{E2EC7085-D4F5-4C1A-B2F0-FBFCBA0D1938}</ProjectGuid>
-		<OutputType>Exe</OutputType>
-		<RootNamespace>Development</RootNamespace>
-		<AssemblyName>Development</AssemblyName>
-		<TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
-		<FileAlignment>512</FileAlignment>
-		<AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
-		<Deterministic>true</Deterministic>
-	</PropertyGroup>
-	<PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
-		<PlatformTarget>AnyCPU</PlatformTarget>
-		<DebugSymbols>true</DebugSymbols>
-		<DebugType>full</DebugType>
-		<Optimize>false</Optimize>
-		<OutputPath>bin\Debug\</OutputPath>
-		<DefineConstants>DEBUG;TRACE</DefineConstants>
-		<ErrorReport>prompt</ErrorReport>
-		<WarningLevel>4</WarningLevel>
-	</PropertyGroup>
-	<PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
-		<PlatformTarget>AnyCPU</PlatformTarget>
-		<DebugType>pdbonly</DebugType>
-		<Optimize>true</Optimize>
-		<OutputPath>bin\Release\</OutputPath>
-		<DefineConstants>TRACE</DefineConstants>
-		<ErrorReport>prompt</ErrorReport>
-		<WarningLevel>4</WarningLevel>
-	</PropertyGroup>
-	<ItemGroup>
-		<Reference Include="Analytical_oM">
-			<HintPath>C:\ProgramData\BHoM\Assemblies\Analytical_oM.dll</HintPath>
-		</Reference>
-		<Reference Include="Architecture_oM">
-			<SpecificVersion>False</SpecificVersion>
-			<HintPath>C:\ProgramData\BHoM\Assemblies\Architecture_oM.dll</HintPath>
-		</Reference>
-		<Reference Include="BHoM">
-			<SpecificVersion>False</SpecificVersion>
-			<HintPath>C:\ProgramData\BHoM\Assemblies\BHoM.dll</HintPath>
-		</Reference>
-		<Reference Include="BHoM_Engine">
-			<SpecificVersion>False</SpecificVersion>
-			<HintPath>C:\ProgramData\BHoM\Assemblies\BHoM_Engine.dll</HintPath>
-		</Reference>
-		<Reference Include="dotNetRDF, Version=2.7.2.0, Culture=neutral, PublicKeyToken=6055ffe4c97cc780, processorArchitecture=MSIL">
-			<HintPath>..\packages\dotNetRDF.2.7.2\lib\net40\dotNetRDF.dll</HintPath>
-		</Reference>
-		<Reference Include="HtmlAgilityPack, Version=1.11.34.0, Culture=neutral, PublicKeyToken=bd319b19eaf3b43a, processorArchitecture=MSIL">
-			<HintPath>..\packages\HtmlAgilityPack.1.11.34\lib\Net45\HtmlAgilityPack.dll</HintPath>
-		</Reference>
-		<Reference Include="netstandard, Version=2.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51" />
-		<Reference Include="Newtonsoft.Json, Version=13.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
-			<HintPath>..\packages\Newtonsoft.Json.13.0.1\lib\net45\Newtonsoft.Json.dll</HintPath>
-		</Reference>
-		<Reference Include="Physical_oM">
-			<SpecificVersion>False</SpecificVersion>
-			<HintPath>C:\ProgramData\BHoM\Assemblies\Physical_oM.dll</HintPath>
-		</Reference>
-		<Reference Include="Reflection_Engine">
-			<SpecificVersion>False</SpecificVersion>
-			<HintPath>C:\ProgramData\BHoM\Assemblies\Reflection_Engine.dll</HintPath>
-		</Reference>
-		<Reference Include="System" />
-		<Reference Include="System.Configuration" />
-		<Reference Include="System.Core" />
-		<Reference Include="System.Security" />
-		<Reference Include="System.Web" />
-		<Reference Include="System.Xml.Linq" />
-		<Reference Include="System.Data.DataSetExtensions" />
-		<Reference Include="Microsoft.CSharp" />
-		<Reference Include="System.Data" />
-		<Reference Include="System.Net.Http" />
-		<Reference Include="System.Xml" />
-		<Reference Include="VDS.Common, Version=1.10.0.0, Culture=neutral, PublicKeyToken=ab5f4eb908061bf0, processorArchitecture=MSIL">
-			<HintPath>..\packages\VDS.Common.1.10.0\lib\net40-client\VDS.Common.dll</HintPath>
-		</Reference>
-	</ItemGroup>
-	<ItemGroup>
-		<Compile Include="Tests_Alessio.cs" />
-		<Compile Include="Tests_Diellza.cs" />
-		<Compile Include="Program.cs" />
-		<Compile Include="Properties\AssemblyInfo.cs" />
-	</ItemGroup>
-	<ItemGroup>
-		<None Include="App.config" />
-		<None Include="packages.config" />
-	</ItemGroup>
-	<ItemGroup>
-		<ProjectReference Include="..\RDF_Engine\RDF_Engine.csproj">
-			<Project>{9424302a-aab4-41ea-b109-157ba549de96}</Project>
-			<Name>RDF_Engine</Name>
-		</ProjectReference>
-		<ProjectReference Include="..\RDF_oM\RDF_oM.csproj">
-			<Project>{35cb5890-7bc1-4f9c-a63f-771f71124d6a}</Project>
-			<Name>RDF_oM</Name>
-		</ProjectReference>
-	</ItemGroup>
-	<Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{E2EC7085-D4F5-4C1A-B2F0-FBFCBA0D1938}</ProjectGuid>
+    <OutputType>Exe</OutputType>
+    <RootNamespace>Development</RootNamespace>
+    <AssemblyName>Development</AssemblyName>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Analytical_oM">
+      <HintPath>C:\ProgramData\BHoM\Assemblies\Analytical_oM.dll</HintPath>
+    </Reference>
+    <Reference Include="Architecture_oM">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\ProgramData\BHoM\Assemblies\Architecture_oM.dll</HintPath>
+    </Reference>
+    <Reference Include="BHoM">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\ProgramData\BHoM\Assemblies\BHoM.dll</HintPath>
+    </Reference>
+    <Reference Include="BHoM_Engine">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\ProgramData\BHoM\Assemblies\BHoM_Engine.dll</HintPath>
+    </Reference>
+    <Reference Include="Dimensional_oM">
+      <HintPath>C:\ProgramData\BHoM\Assemblies\Dimensional_oM.dll</HintPath>
+    </Reference>
+    <Reference Include="dotNetRDF, Version=2.7.2.0, Culture=neutral, PublicKeyToken=6055ffe4c97cc780, processorArchitecture=MSIL">
+      <HintPath>..\packages\dotNetRDF.2.7.2\lib\net40\dotNetRDF.dll</HintPath>
+    </Reference>
+    <Reference Include="Geometry_oM, Version=5.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\ProgramData\BHoM\Assemblies\Geometry_oM.dll</HintPath>
+    </Reference>
+    <Reference Include="HtmlAgilityPack, Version=1.11.34.0, Culture=neutral, PublicKeyToken=bd319b19eaf3b43a, processorArchitecture=MSIL">
+      <HintPath>..\packages\HtmlAgilityPack.1.11.34\lib\Net45\HtmlAgilityPack.dll</HintPath>
+    </Reference>
+    <Reference Include="netstandard, Version=2.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51" />
+    <Reference Include="Newtonsoft.Json, Version=13.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.13.0.1\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="Physical_oM">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\ProgramData\BHoM\Assemblies\Physical_oM.dll</HintPath>
+    </Reference>
+    <Reference Include="Reflection_Engine">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\ProgramData\BHoM\Assemblies\Reflection_Engine.dll</HintPath>
+    </Reference>
+    <Reference Include="Structure_oM">
+      <HintPath>C:\ProgramData\BHoM\Assemblies\Structure_oM.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+    <Reference Include="VDS.Common, Version=1.10.0.0, Culture=neutral, PublicKeyToken=ab5f4eb908061bf0, processorArchitecture=MSIL">
+      <HintPath>..\packages\VDS.Common.1.10.0\lib\net40-client\VDS.Common.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Tests_Alessio.cs" />
+    <Compile Include="Tests_Diellza.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\RDF_Engine\RDF_Engine.csproj">
+      <Project>{9424302a-aab4-41ea-b109-157ba549de96}</Project>
+      <Name>RDF_Engine</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\RDF_oM\RDF_oM.csproj">
+      <Project>{35cb5890-7bc1-4f9c-a63f-771f71124d6a}</Project>
+      <Name>RDF_oM</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

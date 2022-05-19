@@ -20,10 +20,10 @@ namespace BH.Engine.RDF
 
         [Description("The method will look for a file named using standard BHoM filename convention for Types. " +
             "For example, for the type `BH.oM.Structure.Elements.Bar`, the method will look for 'Bar.cs', and the filepath will have to contain the 'namespaceGroup' called `Structure`.")]
-        public static string FilePathFromLocalRepository(this Type type, TBoxSettings settings, bool getRelativePath = false)
+        public static string FilePathFromLocalRepository(this Type type, LocalRepositorySettings settings, bool getRelativePath = false)
         {
             if (settings == null)
-                settings = new TBoxSettings();
+                settings = new LocalRepositorySettings();
 
             string repositoryRoot = settings.RepositoryRootPath;
 
@@ -36,7 +36,7 @@ namespace BH.Engine.RDF
             string filepath = null;
 
             // Check the cached types first.
-            if (m_cachedTypeFilePaths?.TryGetValue(type, out filepath) ?? false)
+            if ((m_cachedTypeFilePaths?.TryGetValue(type, out filepath) ?? false) && !filepath.IsNullOrEmpty())
                 return getRelativePath ? filepath?.Replace(repositoryRoot, "") : filepath;
 
             string typeNameValidChars = type.NameValidChars();
@@ -101,7 +101,12 @@ namespace BH.Engine.RDF
             filepath = matchingFilePaths.FirstOrDefault();
 
             // Store in cache.
-            m_cachedTypeFilePaths[type] = filepath;
+            if (!filepath.IsNullOrEmpty())
+                m_cachedTypeFilePaths[type] = filepath;
+            else
+            {
+                log.RecordWarning($"Could not compute repository filepath for type {type.FullName}.");
+            }
 
             return getRelativePath ? filepath?.Replace(repositoryRoot, "") : filepath; // if not found, this returns null.
         }

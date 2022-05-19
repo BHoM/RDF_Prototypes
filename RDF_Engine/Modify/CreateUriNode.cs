@@ -16,7 +16,7 @@ namespace BH.Engine.RDF
     public static partial class Modify
     {
         [Description("Modifies the Given RDF IGraph adding to it a URI Node, which is obtained by inferring the ")]
-        public static IUriNode CreateUriNode(this IGraph graph, Type t, TBoxSettings settings)
+        public static IUriNode CreateUriNode(this IGraph graph, Type t, LocalRepositorySettings settings)
         {
             if (!t.FullName.StartsWith("BH.oM"))
             {

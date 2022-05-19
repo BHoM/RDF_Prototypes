@@ -11,14 +11,16 @@ using System.Threading.Tasks;
 
 namespace BH.oM.RDF
 {
-    [Description("Describes a property that subclasses of a thing must own. Typically represents properties of a C# interface.")]
-    public class TBoxSettings : IObject
+    public class LocalRepositorySettings : IObject
     {
         public string RepositoryRootPath { get; set; } = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.UserProfile), "GitHub");
         public string CacheRootPath { get; set; } = Directory.GetParent(Directory.GetParent(new Uri(Path.GetDirectoryName(Assembly.GetExecutingAssembly().CodeBase)).LocalPath).FullName).FullName;
-        public string Cache_RepositoryAllFilePaths_FileName { get; set; } = "cached_GithubRootCsFilepaths.txt";
+        public string CacheFileName_RepositoryAllFilePaths { get; set; } = "cached_RepositoryAllFilePaths.txt";
+        public string CacheFileName_PropertyInfoFileLines { get; set; } = "cached_PropertyInfoFileLines.txt";
         public string SaveDir_RelativeToRoot = "WebVOWLOntology";
-        public Uri GithubOrganisation { get; set; } = new Uri(@"https://github.com/BHoM/");
-        public bool ResetCache { get; set; } = false;
+        public string GithubOrganisationURL { get; set; } = "https://github.com/BHoM/";
+        public bool ReadCacheFiles { get; set; } = true;
+        public bool WriteCacheFiles { get; set; } = false;
+
     }
 }

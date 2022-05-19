@@ -11,8 +11,8 @@ namespace BH.Engine.RDF
 {
     public static partial class Query
     {
-        [Description("Get the only the declared (not derived) members available for the specified type.")]
-        public static MemberInfo[] DeclaredMembers(this Type type)
+        [Description("Get the only the declared (not derived) properties available for the specified type.")]
+        public static PropertyInfo[] DeclaredProperties(this Type type)
         {
             return type.GetProperties(System.Reflection.BindingFlags.Public
             | System.Reflection.BindingFlags.Instance

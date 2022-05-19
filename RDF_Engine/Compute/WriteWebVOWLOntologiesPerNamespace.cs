@@ -16,7 +16,7 @@ namespace BH.Engine.RDF
 {
     public static partial class Compute
     {
-        public static void WriteWebVOWLOntologiesPerNamespace(TBoxSettings settings)
+        public static void WriteWebVOWLOntologiesPerNamespace(LocalRepositorySettings settings)
         {
             List<Assembly> oMassemblies = BH.Engine.RDF.Compute.LoadAssembliesInDirectory(true);
             List<TypeInfo> oMTypes = oMassemblies.BHoMTypes();
