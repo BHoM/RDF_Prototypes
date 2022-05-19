@@ -12,11 +12,23 @@ using VDS.RDF;
 using VDS.RDF.Writing;
 using BH.Engine.Base;
 using BH.oM.RDF;
+using BH.oM.Base.Attributes;
 
 namespace BH.Engine.RDF
 {
     public static partial class Compute
     {
+        public static string TTLGraph(this List<IObject> iObjects, OntologySettings ontologySettings, LocalRepositorySettings localRepositorySettings)
+        {
+            CSharpGraph cSharpGraph = Engine.RDF.Compute.CSharpGraph(iObjects, ontologySettings);
+
+            string TTL = cSharpGraph.ToTTLGraph(localRepositorySettings);
+
+            return TTL;
+        }
+
+        [ToBeRemovedAttribute("1.0.0.0", "Use the TTLGraph method that takes a List input instead.")]
+        [Obsolete("Use the TTLGraph method that takes a List input instead.")]
         public static string TTLGraph(this IObject iObject, OntologySettings ontologySettings, LocalRepositorySettings localRepositorySettings)
         {
             CSharpGraph cSharpGraph = Engine.RDF.Compute.CSharpGraph(iObject, ontologySettings);

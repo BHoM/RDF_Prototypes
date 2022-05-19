@@ -13,11 +13,24 @@ using VDS.RDF.Writing;
 
 using BH.Engine.Base;
 using BH.oM.RDF;
+using BH.oM.Base.Attributes;
 
 namespace BH.Engine.RDF
 {
     public static partial class Compute
     {
+        public static CSharpGraph CSharpGraph(this List<IObject> iObjects, OntologySettings ontologySettings)
+        {
+            m_cSharpGraph = new CSharpGraph() { OntologySettings = ontologySettings };
+
+            foreach (var iObject in iObjects)
+                AddIndividualToOntology(iObject, ontologySettings);
+
+            return m_cSharpGraph;
+        }
+
+        [ToBeRemovedAttribute("1.0.0.0", "Use the TTLGraph method that takes a List input instead.")]
+        [Obsolete("Use the CSharpGraph method that takes a List input instead.")]
         public static CSharpGraph CSharpGraph(this IObject iObject, OntologySettings ontologySettings)
         {
             m_cSharpGraph = new CSharpGraph() { OntologySettings = ontologySettings };

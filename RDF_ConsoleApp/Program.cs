@@ -8,8 +8,8 @@ namespace BH.oM.CodeAnalysis.ConsoleApp
     {
         public static void Main(string[] args = null)
         {
-            string exportedTTL = TTLExportTests.Room();
-            Console.Write(exportedTTL);
+            Console.Write(TTLExportTests.Room());
+            Console.Write(TTLExportTests.RoomAndColumn());
 
             // Invoke all static methods in `TTLExportTests` class
             //typeof(TTLExportTests).GetMethods().Where(mi => mi.IsStatic).ToList().ForEach(mi => mi.Invoke(null, null));

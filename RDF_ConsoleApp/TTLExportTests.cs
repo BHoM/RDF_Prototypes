@@ -6,6 +6,7 @@ using BH.Engine.RDF;
 using BH.oM.RDF;
 using BH.oM.Physical.Elements;
 using BH.oM.Base;
+using Microsoft.VisualStudio.TestTools.UnitTesting;
 
 namespace BH.Test.RDF
 {
@@ -18,22 +19,33 @@ namespace BH.Test.RDF
             room.Location = new Point();
             room.Name = "A room object";
 
-            OntologySettings ontologySett = new OntologySettings();
-            LocalRepositorySettings localRepositorySett = new LocalRepositorySettings();
+            List<IObject> objectList = new List<IObject>() { room };
+            string TTL = objectList.TTLGraph(new OntologySettings(), new LocalRepositorySettings());
 
-            string TTL = room.TTLGraph(ontologySett, localRepositorySett);
             return TTL;
         }
 
         public static void Column()
         {
             Column randomColumn = BH.Engine.RDF.Testing.Create.RandomObject<Column>();
-            CSharpGraph cSharpGraph = Compute.CSharpGraph(randomColumn, new OntologySettings());
-            LocalRepositorySettings diellzasettings = new LocalRepositorySettings()
-            {
-                RepositoryRootPath = @"C:\Users\diels\source"
-            };
-            string TTLGraph = randomColumn.TTLGraph(new OntologySettings(), diellzasettings);
+
+            List<IObject> objectList = new List<IObject>() { randomColumn };
+            string TTLGraph = objectList.TTLGraph(new OntologySettings(), new LocalRepositorySettings());
+        }
+
+        public static string RoomAndColumn()
+        {
+            Room room = new Room();
+            room.Perimeter = new Polyline() { ControlPoints = new List<Point>() { new Point(), new Point() { X = 5, Y = 5, Z = 5 }, new Point() { X = 99 } } };
+            room.Location = new Point();
+            room.Name = "A room object";
+
+            Column randomColumn = BH.Engine.RDF.Testing.Create.RandomObject<Column>();
+
+            List<IObject> objectList = new List<IObject>() { room, randomColumn };
+            string TTLGraph = objectList.TTLGraph(new OntologySettings(), new LocalRepositorySettings());
+
+            return TTLGraph;
         }
 
         public static void CustomObject()
