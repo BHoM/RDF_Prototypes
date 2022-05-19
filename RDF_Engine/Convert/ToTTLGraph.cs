@@ -236,10 +236,9 @@ namespace BH.Engine.RDF
                     }
                 }
 
+                TTLIndividual = TTLIndividual.ReplaceLastOccurenceOf(';', ".");
                 TTLIndividuals.Add(TTLIndividual);
             }
-
-            TTLIndividuals[TTLIndividuals.Count - 1] = TTLIndividuals.Last().ReplaceLastOccurenceOf(';', ".");
 
             return TTLIndividuals;
         }

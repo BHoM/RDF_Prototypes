@@ -15,9 +15,9 @@ namespace BH.Engine.RDF
     {
         public static string ReplaceLastOccurenceOf(this string text, char ch, string replaceWith)
         {
-            var lastComma = text.LastIndexOf(',');
-            if (lastComma != -1) 
-                text = text.Remove(lastComma, 1).Insert(lastComma, replaceWith);
+            var lastOccurrence = text.LastIndexOf(ch);
+            if (lastOccurrence != -1) 
+                text = text.Remove(lastOccurrence, 1).Insert(lastOccurrence, replaceWith);
 
             return text;
         }
