@@ -23,9 +23,67 @@ namespace BH.oM.CodeAnalysis.ConsoleApp
     {
         private static string _fileDirectory = @"C:\temp\RDF_Prototypes_test";
 
+        public static void WebOwlOntology()
+        {
+            LocalRepositorySettings repoSettings = new LocalRepositorySettings();
+            repoSettings.WriteCacheFiles = true;
+
+            Engine.RDF.Compute.WriteWebVOWLOntology(new List<string> {
+                "BH.oM.Base.BHoMObject",
+            }, repoSettings, relationRecursion: 0);
+
+            Engine.RDF.Compute.WriteWebVOWLOntology(new List<string> {
+                "BH.oM.Base.BHoMObject",
+            }, repoSettings, relationRecursion: 1);
+
+            Engine.RDF.Compute.WriteWebVOWLOntology(new List<string> {
+                "BH.oM.Base.BHoMObject",
+            }, repoSettings, relationRecursion: 2);
+
+            Engine.RDF.Compute.WriteWebVOWLOntology(new List<string> {
+                "BH.oM.Physical.Elements.Column",
+            }, repoSettings, relationRecursion: 0);
+
+            Engine.RDF.Compute.WriteWebVOWLOntology(new List<string> {
+                "BH.oM.Architecture.Elements.Ceiling",
+            }, repoSettings, relationRecursion: 0);
+
+            Engine.RDF.Compute.WriteWebVOWLOntology(new List<string> {
+                "BH.oM.Architecture.Elements.Ceiling",
+            }, repoSettings, relationRecursion: 1);
+
+            Engine.RDF.Compute.WriteWebVOWLOntology(new List<string> {
+                "BH.oM.Architecture.Elements.Ceiling",
+            }, repoSettings, relationRecursion: 2);
+
+            Engine.RDF.Compute.WriteWebVOWLOntology(new List<string> {
+                "BH.oM.Architecture.Elements.Ceiling",
+                "BH.oM.Physical.Elements.Wall",
+                "BH.oM.Architecture.Elements.Room",
+                "BH.oM.Physical.Elements.Column"
+            }, repoSettings, relationRecursion: 1);
+
+            Engine.RDF.Compute.WriteWebVOWLOntology(new List<string> {
+                "BH.oM.Architecture.Elements.Ceiling",
+                "BH.oM.Physical.Elements.Wall",
+                "BH.oM.Architecture.Elements.Room",
+                "BH.oM.Physical.Elements.Column"
+            }, repoSettings, relationRecursion: 2);
+
+            Engine.RDF.Compute.WriteWebVOWLOntology(new List<string> {
+                "BH.oM.Architecture.Elements.Ceiling",
+                "BH.oM.Physical.Elements.Wall",
+                "BH.oM.Architecture.Elements.Room",
+                "BH.oM.Physical.Elements.Column"
+            }, repoSettings, relationRecursion: 99);
+
+
+            Engine.RDF.Compute.WriteWebVOWLOntologiesPerNamespace(repoSettings);
+        }
+
         [Description("Tries to create an ontology with a `Room` and `Column` class, to say that they both are subclass of `IObject`." +
             "TODO: This currently does not visualise in WebVOWL. Find out how to make it work.")]
-        public static void RoomColumnSubClassOfIObject(TBoxSettings settings)
+        public static void RoomColumnSubClassOfIObject(LocalRepositorySettings settings)
         {
             IGraph g = new Graph();
 
@@ -61,7 +119,7 @@ namespace BH.oM.CodeAnalysis.ConsoleApp
 
         [Description("Tries to create an ontology with a `Room` and `Column` class, to say that they both are subclass of `IObject`." +
             "TODO: This currently does not visualise in WebVOWL. Find out how to make it work.")]
-        public static void RoomColumnSubClassOfIObject_OntologyGraph(TBoxSettings settings)
+        public static void RoomColumnSubClassOfIObject_OntologyGraph(LocalRepositorySettings settings)
         {
             OntologyGraph g = new OntologyGraph();
 

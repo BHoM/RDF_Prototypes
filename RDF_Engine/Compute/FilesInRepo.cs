@@ -12,10 +12,10 @@ namespace BH.Engine.RDF
 {
     public static partial class Compute
     {
-        public static HashSet<string> FilesInRepo(string parentRepoDirectoryPath, TBoxSettings settings = null)
+        public static HashSet<string> FilesInRepo(string parentRepoDirectoryPath, LocalRepositorySettings settings = null)
         {
             if (settings == null)
-                settings = new TBoxSettings();
+                settings = new LocalRepositorySettings();
 
             if (string.IsNullOrWhiteSpace(parentRepoDirectoryPath) || !Directory.Exists(parentRepoDirectoryPath))
                 return null;
@@ -25,14 +25,28 @@ namespace BH.Engine.RDF
                 return m_allCsFilePaths;
 
             string[] files = null;
-            string cacheFilePath = Path.Combine(settings.CacheRootPath, settings.Cache_RepositoryAllFilePaths_FileName);
+            string cacheFilePath = Path.Combine(settings.CacheRootPath, settings.CacheFileName_RepositoryAllFilePaths);
 
-            if (!settings.ResetCache && !string.IsNullOrWhiteSpace(cacheFilePath) && File.Exists(cacheFilePath))
+            bool cacheFileReadCorrectly = false;
+            if (settings.ReadCacheFiles && !string.IsNullOrWhiteSpace(cacheFilePath) && File.Exists(cacheFilePath))
             {
                 // Read from cached disk file.
                 files = File.ReadAllLines(cacheFilePath);
+
+                cacheFileReadCorrectly = files?.Any() ?? false;
+
+                // For safety, let`s check if the first 10 files exist on disk
+                foreach (var file in files)
+                {
+                    if (!File.Exists(file))
+                    {
+                        cacheFileReadCorrectly = false;
+                        break;
+                    }
+                }
             }
-            else
+
+            if (!cacheFileReadCorrectly)
             {
                 // Read the filesystem and get the .cs files.
                 files = Directory.GetFiles(parentRepoDirectoryPath, "*.cs", SearchOption.AllDirectories);
@@ -45,9 +59,18 @@ namespace BH.Engine.RDF
                     ).ToArray();
             }
 
-            // Cache the results to disk.
-            if (files != null && !string.IsNullOrWhiteSpace(cacheFilePath))
+            if (files.IsNullOrEmpty())
             {
+                log.RecordError("Could not compute the file paths.");
+                return null;
+            }
+
+            // Cache the results to disk.
+            if ((settings.WriteCacheFiles && files != null && !string.IsNullOrWhiteSpace(cacheFilePath)) || !cacheFileReadCorrectly)
+            {
+                if (File.Exists(cacheFilePath))
+                    File.Delete(cacheFilePath);
+
                 Directory.CreateDirectory(Path.GetDirectoryName(cacheFilePath));
                 File.WriteAllLines(cacheFilePath, files);
             }

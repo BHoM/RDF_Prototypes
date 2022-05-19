@@ -17,11 +17,11 @@ namespace BH.Engine.RDF
 {
     public static partial class Convert
     {
-        private static string AddWebOwlClassNodes(Type type, JArray classArray, JArray classAttributeArray, HashSet<string> addedTypes, TBoxSettings settings, HashSet<string> internalNamespaces = null)
+        private static string AddWebOwlClassNodes(Type type, JArray classArray, JArray classAttributeArray, HashSet<string> addedWebVOWLNodeIds, LocalRepositorySettings settings, HashSet<string> internalNamespaces = null)
         {
-            string typeId = type.WebVOWLNodeId();
+            string typeId = type.UniqueNodeId();
 
-            if (addedTypes.Contains(typeId))
+            if (addedWebVOWLNodeIds.Contains(typeId))
                 return typeId;
 
             Uri typeUri = type.GithubURI(settings);
@@ -34,17 +34,17 @@ namespace BH.Engine.RDF
             // 2) CLASS ATTRIBUTE
             classAttributeArray.AddToAttributeArray(typeId, typeUri, type.DescriptiveName(true), isExternal, new List<string>() { "object" }, comment);
 
-            addedTypes.Add(typeId);
+            addedWebVOWLNodeIds.Add(typeId);
 
             return typeId;
         }
 
-        private static string AddWebOwlClassNodes(PropertyInfo pInfo, JArray classArray, JArray classAttributeArray, HashSet<string> addedTypes, TBoxSettings settings)
+        private static string AddWebOwlClassNodes(PropertyInfo pInfo, JArray classArray, JArray classAttributeArray, HashSet<string> addedWebVOWLNodeIds, LocalRepositorySettings settings)
         {
-            string propertyNodeId = pInfo.WebVOWLNodeId();
+            string propertyNodeId = pInfo.UniqueNodeId();
 
             // Check if we need to add a class node for the property type.
-            if (!addedTypes.Contains(propertyNodeId))
+            if (!addedWebVOWLNodeIds.Contains(propertyNodeId))
             {
 
                 // 1) CLASS
@@ -53,7 +53,7 @@ namespace BH.Engine.RDF
                 // 2) CLASS ATTRIBUTE
                 classAttributeArray.AddToAttributeArray(propertyNodeId, pInfo.GithubURI(settings), pInfo.DescriptiveName());
 
-                addedTypes.Add(propertyNodeId);
+                addedWebVOWLNodeIds.Add(propertyNodeId);
             }
 
             return propertyNodeId;

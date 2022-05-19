@@ -13,22 +13,22 @@ namespace BH.Engine.RDF
 {
     public static partial class Query
     {
-        public static string WebVOWLNodeId(this Type type)
+        public static string UniqueNodeId(this Type type)
         {
             return type.FullName;
         }
 
-        public static string WebVOWLNodeId(this TypeInfo typeInfo)
+        public static string UniqueNodeId(this TypeInfo typeInfo)
         {
             return typeInfo.FullName;
         }
 
-        public static string WebVOWLNodeId(this PropertyInfo propertyInfo)
+        public static string UniqueNodeId(this PropertyInfo propertyInfo)
         {
             return $"{propertyInfo.DeclaringType.FullName}.{propertyInfo.Name}";
         }
 
-        public static string WebVOWLNodeId(this IRelation relation)
+        public static string UniqueNodeId(this IRelation relation)
         {
             return $"{(relation.Subject as dynamic)?.Name ?? relation.Subject.GetType().Name}-{relation.GetType().Name}-{(relation.Object as dynamic)?.Name ?? relation.Object.GetType().Name}_{relation.Hash()}";
         }

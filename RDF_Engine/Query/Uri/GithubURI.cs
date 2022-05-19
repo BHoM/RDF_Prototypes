@@ -17,7 +17,7 @@ namespace BH.Engine.RDF
 {
     public static partial class Query
     {
-        public static Uri GithubURI(this Type typeToSearch, TBoxSettings settings)
+        public static Uri GithubURI(this Type typeToSearch, LocalRepositorySettings settings)
         {
             if (!typeToSearch.IsBHoMType())
                 return null;
@@ -33,7 +33,7 @@ namespace BH.Engine.RDF
             return result;
         }
 
-        public static Uri GithubURI(this MemberInfo typeToSearch, TBoxSettings settings)
+        public static Uri GithubURI(this MemberInfo typeToSearch, LocalRepositorySettings settings)
         {
             // Try extracting the Github Uri by deriving it from a fileSystem search for a `.cs` file corresponding to the input Type.
             Uri result = GithubURIFromLocalRepository(typeToSearch as dynamic, settings);

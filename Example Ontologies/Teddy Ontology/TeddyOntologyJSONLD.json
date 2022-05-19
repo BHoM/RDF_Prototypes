@@ -1,0 +1,175 @@
+{
+    "@graph": [
+        {
+            "@id": "https://w3id.org/tdy",
+            "@type": "owl:Ontology",
+            "comment": [
+                {
+                    "@language": "en",
+                    "@value": "Teddy Ontology for the description of information for static calculation"
+                },
+                {
+                    "@language": "de",
+                    "@value": "Teddy Ontologie zur Beschreibung von Informationen zur statischen Berechnung"
+                }
+            ],
+            "label": "Teddy",
+            "priorVersion": "http://w3id.org/tdy/0-02/",
+            "versionIRI": "http://w3id.org/tdy/0-03/",
+            "versionInfo": "0.03"
+        },
+        {
+            "@id": "https://w3id.org/tdy#Calculation",
+            "@type": "owl:Class",
+            "label": "calculation",
+            "subClassOf": "https://w3id.org/tdy#TeddyAttributes"
+        },
+        {
+            "@id": "https://w3id.org/tdy#ConcreteStrength",
+            "@type": "owl:Class",
+            "label": "concrete strength ",
+            "subClassOf": "https://w3id.org/tdy#TeddyAttributes"
+        },
+        {
+            "@id": "https://w3id.org/tdy#ContinuousElasticSupport",
+            "@type": "owl:Class",
+            "label": "continuous elastic support",
+            "subClassOf": "https://w3id.org/tdy#TeddyAttributes"
+        },
+        {
+            "@id": "https://w3id.org/tdy#Result",
+            "@type": "owl:Class",
+            "label": "result",
+            "subClassOf": "https://w3id.org/tdy#TeddyAttributes"
+        },
+        {
+            "@id": "https://w3id.org/tdy#Standard",
+            "@type": "owl:Class",
+            "label": "standard",
+            "subClassOf": "https://w3id.org/tdy#TeddyAttributes"
+        },
+        {
+            "@id": "https://w3id.org/tdy#TeddyAttributes",
+            "@type": "owl:Class",
+            "comment": "Super class for all attributes, which can be used for structual analysis.",
+            "label": "teddy attributes",
+            "subClassOf": [
+                "seas:Property",
+                "owl:Thing"
+            ]
+        },
+        {
+            "@id": "https://w3id.org/tdy#belongsToCalculation",
+            "@type": "owl:ObjectProperty",
+            "domain": [
+                "https://w3id.org/tdy#Result",
+                "owl:Thing"
+            ],
+            "label": "Result or thing that belongs to calculation",
+            "range": "https://w3id.org/tdy#Calculation",
+            "subPropertyOf": "seas:derivesFrom"
+        },
+        {
+            "@id": "https://w3id.org/tdy#belongsToGeometry",
+            "@type": "owl:ObjectProperty",
+            "domain": "https://w3id.org/tdy#Result",
+            "label": "Result that belongs to object with geometry",
+            "range": "owl:Thing",
+            "subPropertyOf": "seas:hasProperty"
+        },
+        {
+            "@id": "https://w3id.org/tdy#hasConcreteStrengthClass",
+            "@type": "owl:ObjectProperty",
+            "label": "has concrete strength class",
+            "range": "https://w3id.org/tdy#ConcreteStrength",
+            "subPropertyOf": "seas:hasProperty"
+        },
+        {
+            "@id": "https://w3id.org/tdy#hasContinuousElasticSupport",
+            "@type": "owl:ObjectProperty",
+            "label": "has continuous elastic support",
+            "range": "https://w3id.org/tdy#ContinuousElasticSupport",
+            "subPropertyOf": "seas:hasProperty"
+        },
+        {
+            "@id": "https://w3id.org/tdy#hasStandard",
+            "@type": "owl:ObjectProperty",
+            "label": "has standard",
+            "range": "https://w3id.org/tdy#Standard",
+            "subPropertyOf": "seas:hasProperty"
+        },
+        {
+            "@id": "https://w3id.org/tdy#isCESupportNumber",
+            "@type": "owl:DatatypeProperty",
+            "domain": "https://w3id.org/tdy#ContinuousElasticSupport",
+            "label": "continuous elastic support number",
+            "range": "xsd:double",
+            "subPropertyOf": "http://schema.org/value"
+        },
+        {
+            "@id": "https://w3id.org/tdy#isCStrengthName",
+            "@type": "owl:DatatypeProperty",
+            "domain": "https://w3id.org/tdy#ConcreteStrength",
+            "label": "concrete strength as string",
+            "range": "xsd:string",
+            "subPropertyOf": "http://schema.org/value"
+        },
+        {
+            "@id": "https://w3id.org/tdy#isResult",
+            "@type": "owl:DatatypeProperty",
+            "domain": "https://w3id.org/tdy#Result",
+            "label": "result as string",
+            "range": "xsd:string",
+            "subPropertyOf": "http://schema.org/value"
+        },
+        {
+            "@id": "https://w3id.org/tdy#isStandardName",
+            "@type": "owl:DatatypeProperty",
+            "domain": "https://w3id.org/tdy#Standard",
+            "label": "standard name as string",
+            "range": "xsd:string",
+            "subPropertyOf": "http://schema.org/value"
+        }
+    ],
+    "@context": {
+        "subClassOf": {
+            "@id": "http://www.w3.org/2000/01/rdf-schema#subClassOf",
+            "@type": "@id"
+        },
+        "label": {
+            "@id": "http://www.w3.org/2000/01/rdf-schema#label"
+        },
+        "subPropertyOf": {
+            "@id": "http://www.w3.org/2000/01/rdf-schema#subPropertyOf",
+            "@type": "@id"
+        },
+        "range": {
+            "@id": "http://www.w3.org/2000/01/rdf-schema#range",
+            "@type": "@id"
+        },
+        "versionInfo": {
+            "@id": "http://www.w3.org/2002/07/owl#versionInfo"
+        },
+        "versionIRI": {
+            "@id": "http://www.w3.org/2002/07/owl#versionIRI",
+            "@type": "@id"
+        },
+        "priorVersion": {
+            "@id": "http://www.w3.org/2002/07/owl#priorVersion",
+            "@type": "@id"
+        },
+        "comment": {
+            "@id": "http://www.w3.org/2000/01/rdf-schema#comment"
+        },
+        "domain": {
+            "@id": "http://www.w3.org/2000/01/rdf-schema#domain",
+            "@type": "@id"
+        },
+        "seas": "https://w3id.org/seas/",
+        "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+        "owl": "http://www.w3.org/2002/07/owl#",
+        "xml": "http://www.w3.org/XML/1998/namespace",
+        "xsd": "http://www.w3.org/2001/XMLSchema#",
+        "rdfs": "http://www.w3.org/2000/01/rdf-schema#"
+    }
+}

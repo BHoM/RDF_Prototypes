@@ -12,7 +12,7 @@ namespace BH.Engine.RDF
 {
     public static partial class Compute
     {
-        public static SortedDictionary<string, string> WebVOWLJsonPerNamespace(List<TypeInfo> oMTypes, TBoxSettings settings, List<string> namespaceToConsider = null, List<string> typeNamesToConsider = null, int namespaceGroupDepth = 3)
+        public static SortedDictionary<string, string> WebVOWLJsonPerNamespace(List<TypeInfo> oMTypes, LocalRepositorySettings settings, List<string> namespaceToConsider = null, List<string> typeNamesToConsider = null, int namespaceGroupDepth = 3)
         {
             var oMTypesPerNamespace = Query.OMTypesPerNamespace(oMTypes, namespaceToConsider, typeNamesToConsider, namespaceGroupDepth);
 
@@ -21,7 +21,7 @@ namespace BH.Engine.RDF
             return res;
         }
 
-        public static SortedDictionary<string, string> WebVOWLJsonPerNamespace(IDictionary<string, List<TypeInfo>> oMTypesGroupsPerNamespace, TBoxSettings settings)
+        public static SortedDictionary<string, string> WebVOWLJsonPerNamespace(IDictionary<string, List<TypeInfo>> oMTypesGroupsPerNamespace, LocalRepositorySettings settings)
         {
             SortedDictionary<string, string> result = new SortedDictionary<string, string>(new NaturalSortComparer<string>());
 
