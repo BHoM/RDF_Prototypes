@@ -17,9 +17,9 @@ using BH.oM.RDF;
 using System.ComponentModel;
 using VDS.RDF.Ontology;
 
-namespace BH.oM.CodeAnalysis.ConsoleApp
+namespace BH.Test.RDF
 {
-    public static partial class Tests_Alessio
+    public static partial class WebVOWL_Tests
     {
         private static string _fileDirectory = @"C:\temp\RDF_Prototypes_test";
 

@@ -17,6 +17,7 @@ using BH.oM.RDF;
 using Newtonsoft.Json.Linq;
 using BH.Engine.Base;
 using log = BH.oM.RDF.Log;
+using BH.Test.RDF;
 
 namespace BH.oM.CodeAnalysis.ConsoleApp
 {
@@ -24,20 +25,10 @@ namespace BH.oM.CodeAnalysis.ConsoleApp
     {
         public static void Main(string[] args = null)
         {
-            Column randomColumn = BH.Engine.RDF.Testing.Create.RandomObject<Column>();
-            CSharpGraph cSharpGraph = Engine.RDF.Compute.CSharpGraph(randomColumn, new OntologySettings());
-            LocalRepositorySettings diellzasettings = new LocalRepositorySettings()
-            {
-                RepositoryRootPath = @"C:\Users\diels\source"
-            };
-            string TTLGraph = Engine.RDF.Compute.TTLGraph(randomColumn, new OntologySettings(), diellzasettings);
+            string exportedTTL = TTLExportTests.Room();
 
-            CustomObject customObject = BH.Engine.Base.Create.CustomObject(new Dictionary<string, object>() { { "firstProperty", 10 }, { "secondProperty", 20 } });
-            CSharpGraph cSharpGraph_customObj = Engine.RDF.Compute.CSharpGraph(customObject, new OntologySettings());
-
-
-            // Invoke all static methods in `Tests_Alessio` class
-            //typeof(Tests_Alessio).GetMethods().Where(mi => mi.IsStatic).ToList().ForEach(mi => mi.Invoke(null, null));
+            // Invoke all static methods in `TTLExportTests` class
+            //typeof(TTLExportTests).GetMethods().Where(mi => mi.IsStatic).ToList().ForEach(mi => mi.Invoke(null, null));
 
             // Invoke all static methods in `Tests_Diellza` class
             //typeof(Tests_Diellza).GetMethods().Where(mi => mi.IsStatic).ToList().ForEach(mi => mi.Invoke(null, null));
