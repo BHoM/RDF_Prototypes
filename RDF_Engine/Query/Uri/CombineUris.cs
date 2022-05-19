@@ -14,6 +14,9 @@ namespace BH.Engine.RDF
         [Description("Combine the given strings and base uri in a single absolute Uri. More reliable than standard Uri.Combine.")]
         public static Uri CombineUris(this Uri baseUri, params string[] uris)
         {
+            if (baseUri == null)
+                return null;
+
             string combinedUriString = baseUri.ToString();
 
             if (combinedUriString.EndsWith("/"))
@@ -35,6 +38,13 @@ namespace BH.Engine.RDF
             Uri.TryCreate(combinedUriString, UriKind.Absolute, out result);
 
             return result;
+        }
+
+        public static Uri CombineUris(params string[] uris)
+        {
+            Uri baseUri = new Uri(uris.FirstOrDefault());
+
+            return CombineUris(baseUri, uris.Skip(1).ToArray());
         }
     }
 }

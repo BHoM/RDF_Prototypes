@@ -21,8 +21,7 @@ namespace BH.Engine.RDF
             {
                 string TTLIndividual = "";
 
-                string individualId = individual.IndividualId();
-                string individualUri = $"{ cSharpGraph.OntologySettings.ABoxSettings.IndividualsBaseAddress }/{individualId}";
+                string individualUri = individual.IndividualUri(cSharpGraph.OntologySettings).ToString();
 
                 TTLIndividual += $"\n### {individualUri}";
                 TTLIndividual += $"\n<{individualUri}> rdf:type owl:NamedIndividual ,";
@@ -47,7 +46,7 @@ namespace BH.Engine.RDF
                 IndividualObjectProperty iop = individualRelation as IndividualObjectProperty;
                 if (iop != null)
                 {
-                    TLLIndividualRelations += $"\n\t\t:{iop.HasProperty.PropertyInfo.UniqueNodeId()} {iop.RangeIndividual.IndividualId()} ;";
+                    TLLIndividualRelations += $"\n\t\t:{iop.HasProperty.PropertyInfo.UniqueNodeId()} <{iop.RangeIndividual.IndividualUri(cSharpGraph.OntologySettings)}> ;";
                 }
 
                 IndividualDataProperty idp = individualRelation as IndividualDataProperty;
