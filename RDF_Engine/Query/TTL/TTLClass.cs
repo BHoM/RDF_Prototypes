@@ -24,11 +24,11 @@ namespace BH.Engine.RDF
         public static string TTLClass(string uri, string uniqueClassName, string en_label, IEnumerable<string> parentClassUniqueIds = null)
         {
             string composed = $"### {uri}";
-            composed += $"\n{uniqueClassName} rdf:type owl:Class;";
-
+            composed += $"\n:{uniqueClassName} rdf:type owl:Class ;";
+            
             foreach (var parentClassUniqueId in parentClassUniqueIds)
             {
-                composed += "\n\t\t" + $"rdfs: subClassOf: {parentClassUniqueId};";
+                composed += "\n\t\t" + $"rdfs: subClassOf: :{parentClassUniqueId}" + ";";
             }
 
             composed += "\n\t\t" + $@"rdfs: label ""{en_label}""@en .";

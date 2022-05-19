@@ -26,7 +26,11 @@ namespace BH.oM.CodeAnalysis.ConsoleApp
         {
             Column randomColumn = BH.Engine.RDF.Testing.Create.RandomObject<Column>();
             CSharpGraph cSharpGraph = Engine.RDF.Compute.CSharpGraph(randomColumn, new OntologySettings());
-            string TTLGraph = Engine.RDF.Compute.TTLGraph(randomColumn, new OntologySettings());
+            LocalRepositorySettings diellzasettings = new LocalRepositorySettings()
+            {
+                RepositoryRootPath = @"C:\Users\diels\source"
+            };
+            string TTLGraph = Engine.RDF.Compute.TTLGraph(randomColumn, new OntologySettings(), diellzasettings);
 
             CustomObject customObject = BH.Engine.Base.Create.CustomObject(new Dictionary<string, object>() { { "firstProperty", 10 }, { "secondProperty", 20 } });
             CSharpGraph cSharpGraph_customObj = Engine.RDF.Compute.CSharpGraph(customObject, new OntologySettings());
