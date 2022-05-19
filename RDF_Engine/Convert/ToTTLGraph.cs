@@ -230,14 +230,16 @@ namespace BH.Engine.RDF
                         string dataType = idp.Value.GetType().ToDataType();
 
                         if (dataType == typeof(JsonSerialized).UniqueNodeId())
-                            TTLIndividual += $"^^:{ idp.Value.GetType().ToDataType()}.";
+                            TTLIndividual += $"^^:{ idp.Value.GetType().ToDataType()};";
                         else
-                            TTLIndividual += $"^^{ idp.Value.GetType().ToDataType()}."; // TODO: insert serialized value here, when the individual's datatype is unknown
+                            TTLIndividual += $"^^{ idp.Value.GetType().ToDataType()};"; // TODO: insert serialized value here, when the individual's datatype is unknown
                     }
                 }
 
                 TTLIndividuals.Add(TTLIndividual);
             }
+
+            TTLIndividuals[TTLIndividuals.Count - 1] = TTLIndividuals.Last().ReplaceLastOccurenceOf(';', ".");
 
             return TTLIndividuals;
         }
