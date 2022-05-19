@@ -28,35 +28,43 @@ namespace BH.Engine.RDF
                 TTLIndividual += $"\n<{individualUri}> rdf:type owl:NamedIndividual ,";
                 TTLIndividual += $"\n\t\t:{individual.GetType().UniqueNodeId()} ;";
 
-                IEnumerable<IndividualRelation> individualRelations = cSharpGraph.IndividualRelations.Where(r => r.Individual == individual);
-
-                foreach (IndividualRelation individualRelation in individualRelations)
-                {
-                    IndividualObjectProperty iop = individualRelation as IndividualObjectProperty;
-                    IndividualDataProperty idp = individualRelation as IndividualDataProperty;
-
-                    if (iop != null)
-                    {
-                        TTLIndividual += $"\n\t\t:{iop.HasProperty.PropertyInfo.UniqueNodeId()} {iop.RangeIndividual.IndividualId()} ;";
-                    }
-                    else if (idp != null)
-                    {
-                        TTLIndividual += "\n\t\t" + $@":{idp.PropertyInfo.UniqueNodeId()} ""{idp.StringValue()}""";
-
-                        string dataType = idp.Value.GetType().ToOntologyDataType();
-
-                        if (dataType == typeof(JsonSerialized).UniqueNodeId())
-                            TTLIndividual += $"^^:{ idp.Value.GetType().ToOntologyDataType()};";
-                        else
-                            TTLIndividual += $"^^{ idp.Value.GetType().ToOntologyDataType()};"; // TODO: insert serialized value here, when the individual's datatype is unknown
-                    }
-                }
+                TTLIndividual += TLLIndividualRelations(individual, cSharpGraph, localRepositorySettings);
 
                 TTLIndividual = TTLIndividual.ReplaceLastOccurenceOf(';', ".");
                 TTLIndividuals.Add(TTLIndividual);
             }
 
             return TTLIndividuals;
+        }
+
+        private static string TLLIndividualRelations(object individual, CSharpGraph cSharpGraph, LocalRepositorySettings localRepositorySettings)
+        {
+            string TLLIndividualRelations = "";
+            List<IndividualRelation> individualRelations = cSharpGraph.IndividualRelations.Where(r => r.Individual == individual).ToList();
+
+            foreach (IndividualRelation individualRelation in individualRelations)
+            {
+                IndividualObjectProperty iop = individualRelation as IndividualObjectProperty;
+                if (iop != null)
+                {
+                    TLLIndividualRelations += $"\n\t\t:{iop.HasProperty.PropertyInfo.UniqueNodeId()} {iop.RangeIndividual.IndividualId()} ;";
+                }
+
+                IndividualDataProperty idp = individualRelation as IndividualDataProperty;
+                if (idp != null)
+                {
+                    TLLIndividualRelations += "\n\t\t" + $@":{idp.PropertyInfo.UniqueNodeId()} ""{idp.StringValue()}""";
+
+                    string dataType = idp.Value.GetType().ToOntologyDataType();
+
+                    if (dataType == typeof(JsonSerialized).UniqueNodeId())
+                        TLLIndividualRelations += $"^^:{ idp.Value.GetType().ToOntologyDataType()};";
+                    else
+                        TLLIndividualRelations += $"^^{ idp.Value.GetType().ToOntologyDataType()};"; // TODO: insert serialized value here, when the individual's datatype is unknown
+                }
+            }
+
+            return TLLIndividualRelations;
         }
     }
 }
