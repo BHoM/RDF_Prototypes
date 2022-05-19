@@ -258,8 +258,10 @@ namespace BH.Engine.RDF
             // We must use our fallback for unknown conversions, serializing to Json.
             JsonSerializerSettings settings = new JsonSerializerSettings { TypeNameHandling = TypeNameHandling.Auto };
             string serializedValue = JsonConvert.SerializeObject(idp.Value, settings);
-
-            return serializedValue;
+            
+            // Encode to base64 to avoid escaping quote problems
+            var plainTextBytes = System.Text.Encoding.UTF8.GetBytes(serializedValue);
+            return System.Convert.ToBase64String(plainTextBytes);
         }
 
         private static bool IsKnownDataType(Type t)
