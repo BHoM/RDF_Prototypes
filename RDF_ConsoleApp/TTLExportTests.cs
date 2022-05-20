@@ -6,7 +6,6 @@ using BH.Engine.RDF;
 using BH.oM.RDF;
 using BH.oM.Physical.Elements;
 using BH.oM.Base;
-using Microsoft.VisualStudio.TestTools.UnitTesting;
 
 namespace BH.Test.RDF
 {
