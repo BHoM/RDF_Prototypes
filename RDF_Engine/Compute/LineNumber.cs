@@ -23,6 +23,19 @@ namespace BH.Engine.RDF
         [Description("Looks for the line number of a property in its `.cs` file by reading the file. Returns -1 if not found. 0 indicates the first line.")]
         public static int LineNumber(PropertyInfo pi, LocalRepositorySettings settings)
         {
+            // Null guards
+            if (pi == null)
+                return -1;
+
+            settings = settings ?? new LocalRepositorySettings();
+
+            // Custom Type guard
+            if (typeof(CustomType).IsAssignableFrom(pi.DeclaringType))
+            {
+                Log.RecordError($"Can not compute the code line number of property `{pi.Name}` that is of a {nameof(CustomType)} type.", true);
+                return -1;
+            }
+
             int index = -1;
 
             if (settings.ReadCacheFiles && ReadCache_PInfoFileline(settings) && m_cachedPinfoFileline.TryGetValue(pi, out index))

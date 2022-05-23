@@ -19,6 +19,9 @@ namespace BH.Engine.RDF
 {
     public static partial class Compute
     {
+        [Description("Returns an ontology graph that includes CSharp objects and types." +
+            "This methods takes in a list of objects as an input, so the resulting CSharp graph has both the T-Box and A-Box sections populated." +
+            "If you only are interested in the T-Box, use the other CSharpGraph() method that takes in a list of Types.")]
         public static CSharpGraph CSharpGraph(this List<IObject> iObjects, OntologySettings ontologySettings)
         {
             m_cSharpGraph = new CSharpGraph() { OntologySettings = ontologySettings };
@@ -28,6 +31,20 @@ namespace BH.Engine.RDF
 
             return m_cSharpGraph;
         }
+
+        [Description("Returns an ontology graph that includes CSharp objects and types. " +
+            "This methods takes in a list of Types as an input, so the resulting CSharp graph has only the T-Box." +
+            "For a complete graph that also includes the A-Box, use the other CSharpGraph() method that takes in a list of objects.")]
+        public static CSharpGraph CSharpGraph(this List<Type> types, OntologySettings ontologySettings)
+        {
+            m_cSharpGraph = new CSharpGraph() { OntologySettings = ontologySettings };
+
+            foreach (var type in types)
+                AddToOntology(type, ontologySettings.TBoxSettings);
+
+            return m_cSharpGraph;
+        }
+
 
         [ToBeRemovedAttribute("1.0.0.0", "Use the TTLGraph method that takes a List input instead.")]
         [Obsolete("Use the CSharpGraph method that takes a List input instead.")]
@@ -46,13 +63,16 @@ namespace BH.Engine.RDF
 
         private static void AddToOntology(this Type type, TBoxSettings tBoxSettings = null)
         {
+            if (type == typeof(CustomType))
+                return; // only add sub-types of CustomType.
+
             if (m_cSharpGraph.Classes.Contains(type))
                 return;
 
             if (type.IsOntologyClass())
                 m_cSharpGraph.Classes.Add(type);
 
-            List<Type> parentTypes = type.ParentTypes();
+            List<Type> parentTypes = type.BaseTypes();
             foreach (var parentType in parentTypes)
             {
                 if (!parentType.IsOntologyClass())
@@ -65,7 +85,15 @@ namespace BH.Engine.RDF
         private static void AddToOntology(this PropertyInfo[] pInfos, object obj = null, OntologySettings ontologySettings = null)
         {
             foreach (var pi in pInfos)
-                AddToOntology(pi, obj, ontologySettings);
+                AddToOntology(pi as dynamic, obj, ontologySettings);
+        }
+
+        private static void AddToOntology(this CustomPropertyInfo customPI, object individual = null, OntologySettings ontologySettings = null)
+        {
+            if (customPI.Name == "Type")
+                return; // do not add the `Type` property to the ontology for Custom Types.
+
+            AddToOntology((PropertyInfo)customPI, individual, ontologySettings);
         }
 
         private static void AddToOntology(this PropertyInfo pi, object individual = null, OntologySettings ontologySettings = null)
@@ -90,7 +118,7 @@ namespace BH.Engine.RDF
                 rangeType.AddToOntology();
 
                 // Add the ObjectProperty to the Graph for the T-Box.
-                ObjectProperty hasPropertyRelation = new ObjectProperty() { PropertyInfo = pi, DomainClass = domainType, RangeClass = rangeType};
+                ObjectProperty hasPropertyRelation = new ObjectProperty() { PropertyInfo = pi, DomainClass = domainType, RangeClass = rangeType };
                 m_cSharpGraph.ObjectProperties.Add(hasPropertyRelation);
 
                 // If the individual is non-null, we will need to add the individuals' relation to the Graph in order to define the A-Box.
@@ -113,12 +141,12 @@ namespace BH.Engine.RDF
             }
             else
             {
-                // DATA RELATION
+                // DATA PROPERTY RELATION
                 // We do not have an Ontology class corresponding to the rangeType:
                 // this PropertyInfo relation corresponds to a Data property.
 
                 // Add the ObjectProperty to the Graph for the T-Box.
-                DataProperty hasPropertyRelation = new DataProperty() { PropertyInfo = pi, DomainClass = domainType, RangeType = rangeType};
+                DataProperty hasPropertyRelation = new DataProperty() { PropertyInfo = pi, DomainClass = domainType, RangeType = rangeType };
                 m_cSharpGraph.DataProperties.Add(hasPropertyRelation);
 
                 // If the individual is non-null, we will need to add the individuals' relation to the Graph in order to define the A-Box.
@@ -140,7 +168,7 @@ namespace BH.Engine.RDF
 
         private static void AddIndividualToOntology(object individual, OntologySettings ontologySettings = null)
         {
-            Type individualType = individual.GetType();
+            Type individualType = individual.IndividualType(ontologySettings.TBoxSettings);
             ontologySettings = ontologySettings ?? new OntologySettings();
 
             // Only individuals that are of types mappable to Ontology classes can be added.

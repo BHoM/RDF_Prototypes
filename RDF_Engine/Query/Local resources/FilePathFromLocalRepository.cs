@@ -1,4 +1,5 @@
-﻿using BH.oM.Base;
+﻿using BH.Engine.Base;
+using BH.oM.Base;
 using BH.oM.Base.Attributes;
 using BH.oM.RDF;
 using System;
@@ -22,8 +23,20 @@ namespace BH.Engine.RDF
             "For example, for the type `BH.oM.Structure.Elements.Bar`, the method will look for 'Bar.cs', and the filepath will have to contain the 'namespaceGroup' called `Structure`.")]
         public static string FilePathFromLocalRepository(this Type type, LocalRepositorySettings settings, bool getRelativePath = false)
         {
+            // Null guards
+            if (type == null)
+                return null;
+
             if (settings == null)
                 settings = new LocalRepositorySettings();
+
+            // Custom type guard
+            if (type != typeof(CustomType) && type is CustomType)
+            {
+                // if the type is a subtype of `CustomType`, do not attempt to retrieve its file path.
+                Log.RecordWarning($"Can not compute the file path for type `{type.FullName}` that is derived from {nameof(CustomType)}.", true);
+                return null; 
+            }
 
             string repositoryRoot = settings.RepositoryRootPath;
 
@@ -95,6 +108,14 @@ namespace BH.Engine.RDF
                     Path.GetFileNameWithoutExtension(p).ToLower() == typeNameValidChars.ToLower()).ToList();
             }
 
+            if (!matchingFilePaths.Any() && !m_FilesCachefileWasRefreshed)
+            {
+                // Try refreshing the Files cache file and restart the process.
+                RefreshFilesCacheFile(settings);
+                return FilePathFromLocalRepository(type, settings, getRelativePath);
+            }
+
+
             if (matchingFilePaths.Count != 1)
                 Log.RecordWarning($"Could not find filepath for Type `{typeNameValidChars}`", true);
 
@@ -105,10 +126,25 @@ namespace BH.Engine.RDF
                 m_cachedTypeFilePaths[type] = filepath;
             else
             {
-                Log.RecordWarning($"Could not compute repository filepath for type {type.FullName}.");
+                Log.RecordWarning($"Could not compute repository filepath for type {type.FullName}.", true);
             }
 
             return getRelativePath ? filepath?.Replace(repositoryRoot, "") : filepath; // if not found, this returns null.
         }
+
+        private static void RefreshFilesCacheFile(LocalRepositorySettings settings)
+        {
+            if (m_FilesCachefileWasRefreshed)
+                return; // Was already refreshed in this session
+
+            string cacheFilePath = Path.Combine(settings.CacheRootPath, settings.CacheFileName_RepositoryAllFilePaths);
+
+            if (File.Exists(cacheFilePath))
+                File.Delete(cacheFilePath);
+
+            m_FilesCachefileWasRefreshed = true;
+        }
+
+        private static bool m_FilesCachefileWasRefreshed = false;
     }
 }

@@ -42,9 +42,9 @@ namespace BH.Engine.RDF
 
         public static Uri CombineUris(params string[] uris)
         {
-            Uri baseUri = new Uri(uris.FirstOrDefault());
+            UriBuilder uriBuilder = new UriBuilder(uris.FirstOrDefault());
 
-            return CombineUris(baseUri, uris.Skip(1).ToArray());
+            return CombineUris(uriBuilder.Uri, uris.Skip(1).ToArray());
         }
     }
 }

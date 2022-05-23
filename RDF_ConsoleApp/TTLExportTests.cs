@@ -11,6 +11,12 @@ namespace BH.Test.RDF
 {
     public static class TTLExportTests
     {
+        private static OntologySettings m_shortAddresses = new OntologySettings()
+        {
+            ABoxSettings = new ABoxSettings() { IndividualsBaseAddress = "individualsAddress" },
+            TBoxSettings = new TBoxSettings() { CustomTypesBaseAddress = "customTypesAddress" }
+        };
+
         public static string Room()
         {
             Room room = new Room();
@@ -49,10 +55,10 @@ namespace BH.Test.RDF
 
         public static string CustomObject()
         {
-            CustomObject customObject = BH.Engine.Base.Create.CustomObject(new Dictionary<string, object>() { { "Type", "Cassette" }, 
-                { "intProperty", 10 }, 
+            CustomObject customObject = BH.Engine.Base.Create.CustomObject(new Dictionary<string, object>() { { "Type", "Cassette" },
+                { "intProperty", 10 },
                 { "pointProperty", BH.Engine.RDF.Testing.Create.RandomObject<Point>() } });
-            CSharpGraph cSharpGraph_customObj = customObject.CSharpGraph(new OntologySettings());
+            CSharpGraph cSharpGraph_customObj = customObject.CSharpGraph(m_shortAddresses);
             string TTLGraph = cSharpGraph_customObj.ToTTLGraph(new LocalRepositorySettings());
 
             return TTLGraph;

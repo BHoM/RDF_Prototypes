@@ -25,13 +25,23 @@ namespace BH.oM.RDF
     [Description("Settings for the definition of an Ontology's T-Box.")]
     public class TBoxSettings : IObject
     {
-        // No settings for now.
+        [Description("The base address where the ontology definition for Custom Types will be hosted. Custom Types are produced when computing an ontology that includes BHoM CustomObjects.")]
+        public string CustomTypesBaseAddress { get; set; } = $"http://customizeMeFrom-OntologySettings.TBoxSettings.{nameof(CustomTypesBaseAddress)}";
+
+        [Description("If true, any CustomObject that has a Type key in its CustomData dictionary will be treated as if it was an instance of a custom class," +
+            "which will be called like the value stored in the Type key.")]
+        public bool TreatCustomObjectsWithTypeKeyAsTypes { get; set; } = true;
+
+        [Description("Key of the CustomData dictionary that will be sought in CustomObjects. If a value is found there, and if the above option is true," +
+            "the value will be used as if the CustomObject was a class called with this value.")]
+        public string CustomobjectsTypeKey { get; set; } = "Type";
     }
 
     [Description("Settings for the definition of an Ontology's A-Box.")]
     public class ABoxSettings : IObject
     {
-        public string IndividualsBaseAddress { get; set; } = "https://www.intcdc.uni-stuttgart.de/internal/";
+        [Description("The base address where the individuals will be hosted.")]
+        public string IndividualsBaseAddress { get; set; } = $"http://customizeMeFrom-OntologySettings.ABoxSettings.{nameof(IndividualsBaseAddress)}";
 
         [Description("If this is set to true, the ABox Ontology will be assigned an individual also for any Class Property that is set to a default value.")]
         public bool ConsiderDefaultPropertyValues { get; set; } = true;

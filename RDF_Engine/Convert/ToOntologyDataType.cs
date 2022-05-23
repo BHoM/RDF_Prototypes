@@ -22,7 +22,7 @@ namespace BH.Engine.RDF
                 return ontologyDataType;
 
             // Fallback
-            return typeof(JsonSerialized).UniqueNodeId(); // assumes that the Data Type is already added to the Graph under this Identifier.
+            return typeof(Base64JsonSerialized).UniqueNodeId(); // assumes that the Data Type is already added to the Graph under this Identifier.
         }
     }
 }

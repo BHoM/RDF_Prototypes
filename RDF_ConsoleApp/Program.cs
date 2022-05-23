@@ -20,8 +20,11 @@ namespace BH.oM.CodeAnalysis.ConsoleApp
             // Invoke all static methods in `Tests_Diellza` class
             //typeof(Tests_Diellza).GetMethods().Where(mi => mi.IsStatic).ToList().ForEach(mi => mi.Invoke(null, null));
 
-            Console.WriteLine("\nPress any key to exit.");
-            Console.ReadKey();
+            Console.WriteLine("\n\nPress ENTER to repeat, any other key to exit.");
+            var key = Console.ReadKey();
+            if (key.Key == ConsoleKey.Enter || key.Key == ConsoleKey.F15)
+                Main();
+
             Log.SaveLogToDisk("..\\..\\..\\log.txt");
         }
     }

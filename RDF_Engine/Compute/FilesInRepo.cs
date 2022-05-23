@@ -12,8 +12,6 @@ namespace BH.Engine.RDF
 {
     public static partial class Compute
     {
-
-
         public static HashSet<string> FilesInRepo(string parentRepoDirectoryPath, LocalRepositorySettings settings = null)
         {
             if (settings == null)
