@@ -36,7 +36,7 @@ namespace BH.Engine.RDF
                 }
 
                 // Class label
-                TTLClass += "\n\t\t" + $@"rdfs:label""{classType.DescriptiveName()}""@en .";
+                TTLClass += "\n\t\t" + $@"rdfs:label ""{classType.DescriptiveName()}""@en .";
 
                 TTLClasses.Add(TTLClass);
             }
