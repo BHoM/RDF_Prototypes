@@ -47,10 +47,15 @@ namespace BH.Test.RDF
             return TTLGraph;
         }
 
-        public static void CustomObject()
+        public static string CustomObject()
         {
-            CustomObject customObject = BH.Engine.Base.Create.CustomObject(new Dictionary<string, object>() { { "firstProperty", 10 }, { "secondProperty", 20 } });
+            CustomObject customObject = BH.Engine.Base.Create.CustomObject(new Dictionary<string, object>() { { "Type", "Cassette" }, 
+                { "intProperty", 10 }, 
+                { "pointProperty", BH.Engine.RDF.Testing.Create.RandomObject<Point>() } });
             CSharpGraph cSharpGraph_customObj = customObject.CSharpGraph(new OntologySettings());
+            string TTLGraph = cSharpGraph_customObj.ToTTLGraph(new LocalRepositorySettings());
+
+            return TTLGraph;
         }
     }
 }

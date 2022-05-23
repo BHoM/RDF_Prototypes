@@ -1,5 +1,6 @@
 ﻿using System;
 using BH.Engine.RDF;
+using BH.oM.RDF;
 using BH.Test.RDF;
 
 namespace BH.oM.CodeAnalysis.ConsoleApp
@@ -8,8 +9,10 @@ namespace BH.oM.CodeAnalysis.ConsoleApp
     {
         public static void Main(string[] args = null)
         {
-            Console.Write(TTLExportTests.Room());
-            Console.Write(TTLExportTests.RoomAndColumn());
+            Console.Write(TTLExportTests.CustomObject());
+
+            //Console.Write(TTLExportTests.Room());
+            //Console.Write(TTLExportTests.RoomAndColumn());
 
             // Invoke all static methods in `TTLExportTests` class
             //typeof(TTLExportTests).GetMethods().Where(mi => mi.IsStatic).ToList().ForEach(mi => mi.Invoke(null, null));
