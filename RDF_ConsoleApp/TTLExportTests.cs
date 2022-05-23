@@ -13,8 +13,8 @@ namespace BH.Test.RDF
     {
         private static OntologySettings m_shortAddresses = new OntologySettings()
         {
-            ABoxSettings = new ABoxSettings() { IndividualsBaseAddress = "individualsAddress" },
-            TBoxSettings = new TBoxSettings() { CustomTypesBaseAddress = "customTypesAddress" }
+            ABoxSettings = new ABoxSettings() { IndividualsBaseAddress = "individuals.Address" },
+            TBoxSettings = new TBoxSettings() { CustomTypesBaseAddress = "customTypes.Address" }
         };
 
         public static string Room()
@@ -59,6 +59,24 @@ namespace BH.Test.RDF
                 { "intProperty", 10 },
                 { "pointProperty", BH.Engine.RDF.Testing.Create.RandomObject<Point>() } });
             CSharpGraph cSharpGraph_customObj = customObject.CSharpGraph(m_shortAddresses);
+            string TTLGraph = cSharpGraph_customObj.ToTTLGraph(new LocalRepositorySettings());
+
+            return TTLGraph;
+        }
+
+        public static string Lists()
+        {
+            NurbsCurve nurbs = new NurbsCurve()
+            {
+                ControlPoints = new List<Point>()
+                {
+                    new Point(),
+                    new Point() { X = 1, Y = 1, Z = 1 },
+                    new Point() { X = 2, Y = 2, Z = 2 }
+                }
+            };
+
+            CSharpGraph cSharpGraph_customObj = nurbs.CSharpGraph(m_shortAddresses);
             string TTLGraph = cSharpGraph_customObj.ToTTLGraph(new LocalRepositorySettings());
 
             return TTLGraph;

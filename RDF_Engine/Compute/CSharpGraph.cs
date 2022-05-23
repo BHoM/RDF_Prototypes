@@ -69,6 +69,9 @@ namespace BH.Engine.RDF
             if (m_cSharpGraph.Classes.Contains(type))
                 return;
 
+            if (type.IsCollectionOfOntologyClasses())
+                type = type.InnermostType();
+
             if (type.IsOntologyClass())
                 m_cSharpGraph.Classes.Add(type);
 
@@ -109,7 +112,7 @@ namespace BH.Engine.RDF
             else
                 domainType.AddToOntology();
 
-            if (rangeType.IsOntologyClass())
+            if (pi.IsObjectProperty())
             {
                 // OBJECT PROPERTY RELATION
                 // The relation between Individuals corresponds to an ObjectPropertyRelation (between two Classes of the Ontology).
@@ -138,8 +141,10 @@ namespace BH.Engine.RDF
 
                 // Recurse for the individual's property value, which will be another individual.
                 AddIndividualToOntology(propertyValue, ontologySettings);
+                return;
             }
-            else
+
+            if (pi.IsDataProperty())
             {
                 // DATA PROPERTY RELATION
                 // We do not have an Ontology class corresponding to the rangeType:

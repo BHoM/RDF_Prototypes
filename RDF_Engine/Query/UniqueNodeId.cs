@@ -23,11 +23,6 @@ namespace BH.Engine.RDF
             return type.FullName;
         }
 
-        public static string _UniqueNodeId(this CustomType type)
-        {
-            return type.OntologicalUri.ToString();
-        }
-
         public static string _UniqueNodeId(this TypeInfo typeInfo)
         {
             // Custom Type exception.
@@ -40,11 +35,6 @@ namespace BH.Engine.RDF
         public static string _UniqueNodeId(this PropertyInfo propertyInfo)
         {
             return $"{propertyInfo.DeclaringType.FullName}.{propertyInfo.Name}";
-        }
-
-        public static string _UniqueNodeId(this CustomPropertyInfo propertyInfo)
-        {
-            return propertyInfo.OntologicalUri.ToString();
         }
 
         public static string _UniqueNodeId(this IRelation relation)

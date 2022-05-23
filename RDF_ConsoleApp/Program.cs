@@ -2,6 +2,8 @@
 using BH.Engine.RDF;
 using BH.oM.RDF;
 using BH.Test.RDF;
+using VDS.RDF;
+using VDS.RDF.Parsing;
 
 namespace BH.oM.CodeAnalysis.ConsoleApp
 {
@@ -9,7 +11,13 @@ namespace BH.oM.CodeAnalysis.ConsoleApp
     {
         public static void Main(string[] args = null)
         {
-            Console.Write(TTLExportTests.CustomObject());
+            string customObjectTTL = TTLExportTests.CustomObject();
+            Console.Write(customObjectTTL);
+
+            Graph g = new Graph();
+            StringParser.Parse(g, customObjectTTL);
+
+            //Console.Write(TTLExportTests.Lists());
 
             //Console.Write(TTLExportTests.Room());
             //Console.Write(TTLExportTests.RoomAndColumn());

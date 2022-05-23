@@ -36,8 +36,6 @@ namespace BH.Engine.RDF
                 return true;
             }
 
-            // We need to work out what we want to do for everything else, including collections of BHoM Types (e.g. List<Beam>).
-            // For now, we assume that everything else will be translated to a Data property ("SerialisedJson").
             return false;
         }
     }
