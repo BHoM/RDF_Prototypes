@@ -14,7 +14,7 @@ namespace BH.Engine.RDF
         public static Dictionary<Type, List<Type>> m_cachedBaseTypes = new Dictionary<Type, List<Type>>();
 
         [Description("Gets all implemented interfaces and any base type of a given type.")]
-        public static List<Type> ParentTypes(this Type type)
+        public static List<Type> BaseTypes(this Type type)
         {
             List<Type> baseTypes = new List<Type>();
 
