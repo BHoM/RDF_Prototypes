@@ -24,7 +24,7 @@ namespace BH.Engine.RDF
 
                 if (gitHubUri.IsNullOrEmpty())
                 {
-                    Log.RecordWarning($"Could not add the {nameof(CSharpGraph)}.{nameof(CSharpGraph.DataProperties)}: could not compute its URI.");
+                    Log.RecordWarning($"Could not add the DataProperty relation `{rel.PropertyInfo.Name}` of type `{rel.PropertyInfo.DeclaringType}`: could not compute its URI.");
                     continue;
                 }
 
@@ -40,7 +40,7 @@ namespace BH.Engine.RDF
                     // We need to map the Range Type to a valid DataType.
                     string dataType = rel.RangeType.ToOntologyDataType();
 
-                    if (dataType == typeof(JsonSerialized).UniqueNodeId())
+                    if (dataType == typeof(Base64JsonSerialized).UniqueNodeId())
                         TTLDataProperty += $"\nrdfs:range :{dataType} ;";
                     else
                         TTLDataProperty += $"\nrdfs:range {dataType} ;";
@@ -56,7 +56,7 @@ namespace BH.Engine.RDF
             }
 
             // Add the IObject's DataProperty for the Default Data Type
-            Type defaultTypeForUnknownConversions = typeof(JsonSerialized);
+            Type defaultTypeForUnknownConversions = typeof(Base64JsonSerialized);
             string defaultDataType_IObjectProperty = "\n" + $@"###  {defaultTypeForUnknownConversions.GithubURI(localRepositorySettings)}
                 {defaultTypeForUnknownConversions.DescriptiveName()} rdf:type owl:DatatypeProperty ;
                 rdfs:domain :IObject ;
