@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace BH.oM.RDF
 {
-    public class JsonSerialized
+    public class Base64JsonSerialized
     {
         // This class exists solely with the purpose of representing types
         // that are not convertible to an ontology class or an ontology data type.
