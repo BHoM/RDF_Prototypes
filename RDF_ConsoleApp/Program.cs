@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Linq;
 using BH.Engine.RDF;
 using BH.oM.RDF;
 using BH.Test.RDF;
@@ -11,16 +12,12 @@ namespace BH.oM.CodeAnalysis.ConsoleApp
     {
         public static void Main(string[] args = null)
         {
-            string customObjectTTL = TTLExportTests.CustomObject();
-            Console.Write(customObjectTTL);
+            TTLExportTests.CustomObject();
 
-            Graph g = new Graph();
-            StringParser.Parse(g, customObjectTTL);
+            TTLExportTests.Room();
 
-            //Console.Write(TTLExportTests.Lists());
+            TTLExportTests.RoomAndColumn();
 
-            //Console.Write(TTLExportTests.Room());
-            //Console.Write(TTLExportTests.RoomAndColumn());
 
             // Invoke all static methods in `TTLExportTests` class
             //typeof(TTLExportTests).GetMethods().Where(mi => mi.IsStatic).ToList().ForEach(mi => mi.Invoke(null, null));
