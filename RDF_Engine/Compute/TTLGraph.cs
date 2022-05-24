@@ -18,6 +18,8 @@ namespace BH.Engine.RDF
 {
     public static partial class Compute
     {
+        [Description("Computes a TTL ontology with the input IObjects. The ontology will include both T-Box and A-Box." +
+            "The T-Box is constructed from the Types of the input objects, and their relations, expressed via the CSharp object properties.")]
         public static string TTLGraph(this List<IObject> iObjects, OntologySettings ontologySettings, LocalRepositorySettings localRepositorySettings)
         {
             CSharpGraph cSharpGraph = Engine.RDF.Compute.CSharpGraph(iObjects, ontologySettings);
@@ -27,26 +29,17 @@ namespace BH.Engine.RDF
             return TTL;
         }
 
-        [ToBeRemovedAttribute("1.0.0.0", "Use the TTLGraph method that takes a List input instead.")]
-        [Obsolete("Use the TTLGraph method that takes a List input instead.")]
-        public static string TTLGraph(this IObject iObject, OntologySettings ontologySettings, LocalRepositorySettings localRepositorySettings)
+        /***************************************************/
+
+        [Description("Computes a TTL T-Box ontology with the input Types." +
+            "To compute an ontology that includes both T-Box and A-Box, use the TTLGraph method that takes a list of IObjects, and provide input objects (instances) instead of Types.")]
+        public static string TTLGraph(this List<Type> types, OntologySettings ontologySettings, LocalRepositorySettings localRepositorySettings)
         {
-            CSharpGraph cSharpGraph = Engine.RDF.Compute.CSharpGraph(iObject, ontologySettings);
+            CSharpGraph cSharpGraph = Engine.RDF.Compute.CSharpGraph(types, ontologySettings);
 
             string TTL = cSharpGraph.ToTTLGraph(localRepositorySettings);
 
             return TTL;
-        }
-
-        public static string TTLGraph(this Type type, OntologySettings ontologySettings)
-        {
-            if (!typeof(IObject).IsAssignableFrom(type))
-            {
-                BH.Engine.Base.Compute.RecordError("Cannot compute the Graph of a non-IObject type.");
-                return null;
-            }
-
-            throw new NotImplementedException("Not yet implemented");
         }
     }
 }

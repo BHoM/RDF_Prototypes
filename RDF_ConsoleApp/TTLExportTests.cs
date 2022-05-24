@@ -77,7 +77,8 @@ namespace BH.Test.RDF
             CustomObject customObject = BH.Engine.Base.Create.CustomObject(new Dictionary<string, object>() { { "Type", "Cassette" },
                 { "intProperty", 10 },
                 { "pointProperty", BH.Engine.RDF.Testing.Create.RandomObject<Point>() } });
-            CSharpGraph cSharpGraph_customObj = customObject.CSharpGraph(m_shortAddresses);
+
+            CSharpGraph cSharpGraph_customObj = Compute.CSharpGraph(new List<IObject>() { customObject }, m_shortAddresses);
             string TTLGraph = cSharpGraph_customObj.ToTTLGraph(new LocalRepositorySettings());
 
             Console.Write(TTLGraph);
@@ -100,7 +101,7 @@ namespace BH.Test.RDF
                 }
             };
 
-            CSharpGraph cSharpGraph_customObj = nurbs.CSharpGraph(m_shortAddresses);
+            CSharpGraph cSharpGraph_customObj = Compute.CSharpGraph(new List<IObject>() { nurbs }, m_shortAddresses);
             string TTLGraph = cSharpGraph_customObj.ToTTLGraph(new LocalRepositorySettings());
 
             return TTLGraph;

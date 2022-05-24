@@ -32,6 +32,8 @@ namespace BH.Engine.RDF
             return m_cSharpGraph;
         }
 
+        /***************************************************/
+
         [Description("Returns an ontology graph that includes CSharp objects and types. " +
             "This methods takes in a list of Types as an input, so the resulting CSharp graph has only the T-Box." +
             "For a complete graph that also includes the A-Box, use the other CSharpGraph() method that takes in a list of objects.")]
@@ -45,17 +47,6 @@ namespace BH.Engine.RDF
             return m_cSharpGraph;
         }
 
-
-        [ToBeRemovedAttribute("1.0.0.0", "Use the TTLGraph method that takes a List input instead.")]
-        [Obsolete("Use the CSharpGraph method that takes a List input instead.")]
-        public static CSharpGraph CSharpGraph(this IObject iObject, OntologySettings ontologySettings)
-        {
-            m_cSharpGraph = new CSharpGraph() { OntologySettings = ontologySettings };
-
-            AddIndividualToOntology(iObject, ontologySettings);
-
-            return m_cSharpGraph;
-        }
 
         /***************************************************/
         // Private methods

@@ -12,12 +12,11 @@ namespace BH.oM.CodeAnalysis.ConsoleApp
     {
         public static void Main(string[] args = null)
         {
-            TTLExportTests.CustomObject();
-
             TTLExportTests.Room();
 
             TTLExportTests.RoomAndColumn();
 
+            TTLExportTests.CustomObject();
 
             // Invoke all static methods in `TTLExportTests` class
             //typeof(TTLExportTests).GetMethods().Where(mi => mi.IsStatic).ToList().ForEach(mi => mi.Invoke(null, null));
