@@ -10,7 +10,7 @@ using System.Threading.Tasks;
 
 namespace BH.oM.RDF
 {
-    public partial class CustomType : Type
+    public partial class CustomType : Type, IEquatable<Type>
     {
         private Dictionary<string, Type> _propertyTypes = new Dictionary<string, Type>();
 
@@ -63,6 +63,49 @@ namespace BH.oM.RDF
 
             _propertyTypes = customObj.CustomData.Select(cd => new KeyValuePair<string, Type>(cd.Key, cd.Value.GetType())).ToDictionary(cv => cv.Key, cv => cv.Value);
         }
+
+        public override PropertyInfo[] GetProperties(BindingFlags bindingAttr)
+        {
+            List<CustomPropertyInfo> customProps = new List<CustomPropertyInfo>();
+            foreach (var item in _propertyTypes)
+                customProps.Add(new CustomPropertyInfo(this, item, TBoxSettings));
+
+            return customProps.ToArray();
+        }
+
+        private static Guid ToGuid(string source)
+        {
+            if (string.IsNullOrWhiteSpace(source))
+                return Guid.NewGuid();
+
+            byte[] stringbytes = Encoding.UTF8.GetBytes(source);
+            byte[] hashedBytes = new System.Security.Cryptography
+                .SHA1CryptoServiceProvider()
+                .ComputeHash(stringbytes);
+            Array.Resize(ref hashedBytes, 16);
+            return new Guid(hashedBytes);
+        }
+
+        public override bool Equals(Type other)
+        {
+            return null != other && FullName == other.FullName;
+        }
+
+        public override bool Equals(object obj)
+        {
+            return Equals(obj as Type);
+        }
+
+        public override int GetHashCode()
+        {
+            return FullName.GetHashCode();
+        }
+
+        // ------------------------------------------------------------------------ //
+        // Not implemented stuff, required for inheritance but otherwise not useful //
+        // ------------------------------------------------------------------------ //
+
+        #region NotImplementedStuff
 
         public override object InvokeMember(string name, BindingFlags invokeAttr, Binder binder, object target, object[] args, ParameterModifier[] modifiers, CultureInfo culture, string[] namedParameters)
         {
@@ -122,15 +165,6 @@ namespace BH.oM.RDF
         protected override PropertyInfo GetPropertyImpl(string name, BindingFlags bindingAttr, Binder binder, Type returnType, Type[] types, ParameterModifier[] modifiers)
         {
             throw new NotImplementedException();
-        }
-
-        public override PropertyInfo[] GetProperties(BindingFlags bindingAttr)
-        {
-            List<CustomPropertyInfo> customProps = new List<CustomPropertyInfo>();
-            foreach (var item in _propertyTypes)
-                customProps.Add(new CustomPropertyInfo(this, item, TBoxSettings));
-
-            return customProps.ToArray();
         }
 
         public override Type[] GetNestedTypes(BindingFlags bindingAttr)
@@ -203,17 +237,6 @@ namespace BH.oM.RDF
             throw new NotImplementedException();
         }
 
-        private static Guid ToGuid(string source)
-        {
-            if (string.IsNullOrWhiteSpace(source))
-                return Guid.NewGuid();
-
-            byte[] stringbytes = Encoding.UTF8.GetBytes(source);
-            byte[] hashedBytes = new System.Security.Cryptography
-                .SHA1CryptoServiceProvider()
-                .ComputeHash(stringbytes);
-            Array.Resize(ref hashedBytes, 16);
-            return new Guid(hashedBytes);
-        }
+        #endregion
     }
 }

@@ -54,8 +54,14 @@ namespace BH.Engine.RDF
 
         private static void AddToOntology(this Type type, TBoxSettings tBoxSettings = null)
         {
+            tBoxSettings = tBoxSettings ?? new TBoxSettings();
+
             if (type == typeof(CustomType))
                 return; // only add sub-types of CustomType.
+            
+            CustomType cType = type as CustomType;
+            if (cType != null && m_cSharpGraph.Classes.Contains(type)) 
+                throw new ArgumentException($"The input contained multiple CustomObjects with the same value `{cType.Name}` under the {nameof(TBoxSettings.CustomobjectsTypeKey)} `{tBoxSettings.CustomobjectsTypeKey}`. Only unique values for distinct Custom Objects are allowed.");
 
             if (m_cSharpGraph.Classes.Contains(type))
                 return;
@@ -171,7 +177,7 @@ namespace BH.Engine.RDF
             if (individualType.IsOntologyClass())
             {
                 if (!ontologySettings.ABoxSettings.ConsiderDefaultPropertyValues)
-                    throw new NotImplementedException($"Feature {nameof(ABoxSettings)}.{nameof(ontologySettings.ABoxSettings.ConsiderDefaultPropertyValues)} not yet implemented. Please set it to true.");
+                    throw new NotImplementedException($"Feature {nameof(ABoxSettings)}.{nameof(ABoxSettings.ConsiderDefaultPropertyValues)} not yet implemented. Please set it to true.");
 
                 // Make sure the individual type is among the ontology classes.
                 individualType.AddToOntology();

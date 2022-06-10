@@ -89,6 +89,23 @@ namespace BH.Test.RDF
             return TTLGraph;
         }
 
+        public static void CustomObject_SameType_Error()
+        {
+            CustomObject customObject1 = BH.Engine.Base.Create.CustomObject(new Dictionary<string, object>() { { "Type", "Cassette" } });
+            CustomObject customObject2 = BH.Engine.Base.Create.CustomObject(new Dictionary<string, object>() { { "Type", "Cassette" } });
+
+            try
+            {
+                Compute.CSharpGraph(new List<IObject>() { customObject1, customObject2 }, m_shortAddresses);
+            }
+            catch (ArgumentException e)
+            {
+                return;
+            }
+
+            throw new Exception("Exception should have been thrown before.");
+        }
+
         public static string Lists()
         {
             NurbsCurve nurbs = new NurbsCurve()
