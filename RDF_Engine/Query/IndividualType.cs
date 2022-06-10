@@ -20,7 +20,7 @@ namespace BH.Engine.RDF
                 return obj.GetType();
 
             if (obj.IsCustomObjectWithTypeKey())
-                return new CustomType((CustomObject)obj, tBoxSettings, tBoxSettings.CustomobjectsTypeKey);
+                return new CustomType((CustomObject)obj, tBoxSettings);
 
             return obj.GetType();
         }

@@ -12,7 +12,9 @@ namespace BH.oM.CodeAnalysis.ConsoleApp
     {
         public static void Main(string[] args = null)
         {
-            TTLExportTests.CustomObject_SameType_Error();
+            TTLExportTests.CustomObject_SameType_SameProperties_NoError();
+
+            TTLExportTests.CustomObject_SameType_DifferentProperties_Error();
 
             TTLExportTests.Room();
 

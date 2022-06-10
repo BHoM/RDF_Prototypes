@@ -16,7 +16,7 @@ namespace BH.Engine.RDF
         [Description("Checks whether a type is a bhom type.")]
         public static bool IsBHoMType(this Type t, bool noGenericsDuplicates = true)
         {
-            if (noGenericsDuplicates && t.Name.StartsWith("<>c__"))
+            if (t == null || (noGenericsDuplicates && t.Name.StartsWith("<>c__")))
                 return false;
 
             if (t == null)

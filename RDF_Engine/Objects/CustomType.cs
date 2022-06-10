@@ -36,10 +36,12 @@ namespace BH.oM.RDF
 
         public Uri OntologicalUri { get; }
 
-        public CustomType(CustomObject customObj, TBoxSettings tBoxSettings, string typeKey = "Type")
+        public List<string> PropertyNames { get; } = new List<string>();
+
+        public CustomType(CustomObject customObj, TBoxSettings tBoxSettings)
         {
             object typeNameObj = null;
-            if (!customObj.CustomData.TryGetValue(typeKey, out typeNameObj))
+            if (!customObj.CustomData.TryGetValue(tBoxSettings.CustomobjectsTypeKey, out typeNameObj))
                 throw new ArgumentException($"Could not extract the type name for this CustomObject; no value defined for `{typeNameObj}`.");
 
             Type thisClassType = this.GetType();
@@ -61,10 +63,11 @@ namespace BH.oM.RDF
             TBoxSettings = tBoxSettings;
             OntologicalUri = Query.CombineUris(tBoxSettings.CustomTypesBaseAddress, Name);
 
-            _propertyTypes = customObj.CustomData.Select(cd => new KeyValuePair<string, Type>(cd.Key, cd.Value.GetType())).ToDictionary(cv => cv.Key, cv => cv.Value);
+            PropertyNames = customObj.CustomData.Keys.Where(k => k != tBoxSettings.CustomobjectsTypeKey).ToList();
+            _propertyTypes = customObj.CustomData.Select(cd => new KeyValuePair<string, Type>(cd.Key, cd.Value?.GetType() ?? default(Type))).ToDictionary(cv => cv.Key, cv => cv.Value);
         }
 
-        public override PropertyInfo[] GetProperties(BindingFlags bindingAttr)
+        public override PropertyInfo[] GetProperties(BindingFlags bindingAttr = BindingFlags.Public)
         {
             List<CustomPropertyInfo> customProps = new List<CustomPropertyInfo>();
             foreach (var item in _propertyTypes)
@@ -86,19 +89,28 @@ namespace BH.oM.RDF
             return new Guid(hashedBytes);
         }
 
+        public bool Equals(CustomType other)
+        {
+            return null != other && FullName == other.FullName && !PropertyNames.Except(other.PropertyNames).Any();
+        }
+
         public override bool Equals(Type other)
         {
-            return null != other && FullName == other.FullName;
+            return Equals(other as CustomType);
         }
 
         public override bool Equals(object obj)
         {
-            return Equals(obj as Type);
+            return Equals(obj as CustomType);
         }
 
         public override int GetHashCode()
         {
-            return FullName.GetHashCode();
+            string stringKey = FullName + "_" + string.Join("-", PropertyNames);
+            byte[] strBytes = ASCIIEncoding.Default.GetBytes(stringKey);
+            int intKey = BitConverter.ToInt32(strBytes, 0);
+
+            return intKey;
         }
 
         // ------------------------------------------------------------------------ //

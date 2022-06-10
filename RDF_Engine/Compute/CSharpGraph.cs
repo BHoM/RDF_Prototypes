@@ -60,8 +60,8 @@ namespace BH.Engine.RDF
                 return; // only add sub-types of CustomType.
             
             CustomType cType = type as CustomType;
-            if (cType != null && m_cSharpGraph.Classes.Contains(type)) 
-                throw new ArgumentException($"The input contained multiple CustomObjects with the same value `{cType.Name}` under the {nameof(TBoxSettings.CustomobjectsTypeKey)} `{tBoxSettings.CustomobjectsTypeKey}`. Only unique values for distinct Custom Objects are allowed.");
+            if (cType != null && m_cSharpGraph.Classes.OfType<CustomType>().Where(ct => ct.Name == cType.Name).SelectMany(ct => ct.PropertyNames.Except(cType.PropertyNames)).Any()) 
+                throw new ArgumentException($"The input contained multiple CustomObjects with the same Type key `{cType.Name}` which had different properties. Make sure that all instances of `{cType.Name}` have the same property names.");
 
             if (m_cSharpGraph.Classes.Contains(type))
                 return;

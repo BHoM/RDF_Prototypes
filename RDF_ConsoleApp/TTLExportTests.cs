@@ -8,6 +8,7 @@ using BH.oM.Physical.Elements;
 using BH.oM.Base;
 using VDS.RDF;
 using VDS.RDF.Parsing;
+using System.Linq;
 
 namespace BH.Test.RDF
 {
@@ -89,11 +90,32 @@ namespace BH.Test.RDF
             return TTLGraph;
         }
 
-        public static void CustomObject_SameType_Error()
-        {
-            CustomObject customObject1 = BH.Engine.Base.Create.CustomObject(new Dictionary<string, object>() { { "Type", "Cassette" } });
-            CustomObject customObject2 = BH.Engine.Base.Create.CustomObject(new Dictionary<string, object>() { { "Type", "Cassette" } });
 
+        public static string CustomObject_SameType_SameProperties_NoError()
+        {
+            CustomObject customObject1 = BH.Engine.Base.Create.CustomObject(new Dictionary<string, object>() { { "Type", "Cassette" }, { "Prop1", 1 } });
+            CustomObject customObject2 = BH.Engine.Base.Create.CustomObject(new Dictionary<string, object>() { { "Type", "Cassette" }, { "Prop1", 999 } }); // same property assigned to the same "type", only with a different value
+
+            // No error or exception should be thrown by this call.
+            CSharpGraph cSharpGraph_customObj = Compute.CSharpGraph(new List<IObject>() { customObject1, customObject2 }, m_shortAddresses);
+            Assert.TotalCount(cSharpGraph_customObj.Classes.Where(c => c.Name == "Cassette").Count(), 1, "CustomTypes");
+
+            string TTLGraph = cSharpGraph_customObj.ToTTLGraph(new LocalRepositorySettings());
+
+            Console.Write(TTLGraph);
+
+            Graph g = new Graph();
+            StringParser.Parse(g, TTLGraph);
+
+            return TTLGraph;
+        }
+
+        public static void CustomObject_SameType_DifferentProperties_Error()
+        {
+            CustomObject customObject1 = BH.Engine.Base.Create.CustomObject(new Dictionary<string, object>() { { "Type", "Cassette" }, { "Prop1", null } });
+            CustomObject customObject2 = BH.Engine.Base.Create.CustomObject(new Dictionary<string, object>() { { "Type", "Cassette" }, { "Prop2", null } }); // different property assigned to the same "type"
+
+            // The following call should throw an error/exception.
             try
             {
                 Compute.CSharpGraph(new List<IObject>() { customObject1, customObject2 }, m_shortAddresses);
