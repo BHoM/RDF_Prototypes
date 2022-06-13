@@ -14,7 +14,12 @@ namespace BH.Engine.RDF
 {
     public static partial class Query
     {
-        public static bool IsCustomObjectWithTypeKey(this object obj, string typeKey = "Type")
+        public static bool IsCustomObjectWithTypeKey(this object obj, TBoxSettings tBoxSettings)
+        {
+            return obj.IsCustomObjectWithTypeKey(tBoxSettings.CustomobjectsTypeKey);
+        }
+
+        public static bool IsCustomObjectWithTypeKey(this object obj, string typeKey)
         {
             CustomObject co = obj as CustomObject;
             if (co != null)

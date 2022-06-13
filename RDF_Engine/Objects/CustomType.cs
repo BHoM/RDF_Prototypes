@@ -38,6 +38,21 @@ namespace BH.oM.RDF
 
         public List<string> PropertyNames { get; } = new List<string>();
 
+        public static Type GetCustomTypeIfPossible(object obj, TBoxSettings tBoxSettings)
+        {
+            if (obj == null)
+                return default(Type);
+
+            CustomObject customObj = obj as CustomObject;
+            if (customObj == null)
+                return obj.GetType();
+
+            if (!customObj.CustomData.ContainsKey(tBoxSettings.CustomobjectsTypeKey))
+                return typeof(CustomObject);
+
+            return new CustomType(customObj, tBoxSettings);
+        }
+
         public CustomType(CustomObject customObj, TBoxSettings tBoxSettings)
         {
             object typeNameObj = null;
@@ -54,7 +69,7 @@ namespace BH.oM.RDF
             FullName = thisClassType.FullName + $".{Name}";
             Namespace = thisClassType.Namespace;
             AssemblyQualifiedName = thisClassType.AssemblyQualifiedName;
-            BaseType = typeof(BHoMObject);
+            BaseType = typeof(CustomObject);
             UnderlyingSystemType = typeof(CustomObject);
 
             if (tBoxSettings == null)
@@ -64,7 +79,7 @@ namespace BH.oM.RDF
             OntologicalUri = Query.CombineUris(tBoxSettings.CustomTypesBaseAddress, Name);
 
             PropertyNames = customObj.CustomData.Keys.Where(k => k != tBoxSettings.CustomobjectsTypeKey).ToList();
-            _propertyTypes = customObj.CustomData.Select(cd => new KeyValuePair<string, Type>(cd.Key, cd.Value?.GetType() ?? default(Type))).ToDictionary(cv => cv.Key, cv => cv.Value);
+            _propertyTypes = customObj.CustomData.Select(cd => new KeyValuePair<string, Type>(cd.Key, GetCustomTypeIfPossible(cd.Value, tBoxSettings))).ToDictionary(cv => cv.Key, cv => cv.Value);
         }
 
         public override PropertyInfo[] GetProperties(BindingFlags bindingAttr = BindingFlags.Public)

@@ -115,17 +115,22 @@ namespace BH.Test.RDF
             CustomObject customObject1 = BH.Engine.Base.Create.CustomObject(new Dictionary<string, object>() { { "Type", "Cassette" }, { "Prop1", null } });
             CustomObject customObject2 = BH.Engine.Base.Create.CustomObject(new Dictionary<string, object>() { { "Type", "Cassette" }, { "Prop2", null } }); // different property assigned to the same "type"
 
-            // The following call should throw an error/exception.
-            try
-            {
-                Compute.CSharpGraph(new List<IObject>() { customObject1, customObject2 }, m_shortAddresses);
-            }
-            catch (ArgumentException e)
-            {
-                return;
-            }
+            Assert.ThrowsException(() => Compute.CSharpGraph(new List<IObject>() { customObject1, customObject2 }, m_shortAddresses));
+        }
 
-            throw new Exception("Exception should have been thrown before.");
+        public static void NestedCustomObjects()
+        {
+            CustomObject nestedObj2 = BH.Engine.Base.Create.CustomObject(new Dictionary<string, object>() { { "Type", "TileMaterial" }, { "MaterialKind", "Stone" } });
+            CustomObject nestedObj1 = BH.Engine.Base.Create.CustomObject(new Dictionary<string, object>() { { "Type", "SimpleTiles" }, { "TileDepth", 0.1 }, { "Material", nestedObj2 } });
+            CustomObject parent = BH.Engine.Base.Create.CustomObject(new Dictionary<string, object>() { { "Type", "Roof" }, { "Tiles", nestedObj1 } });
+
+            CSharpGraph cSharpGraph_customObj = Compute.CSharpGraph(new List<IObject>() { parent }, m_shortAddresses);
+            string TTLGraph = cSharpGraph_customObj.ToTTLGraph(new LocalRepositorySettings());
+
+            Console.Write(TTLGraph);
+
+            Graph g = new Graph();
+            StringParser.Parse(g, TTLGraph);
         }
 
         public static string Lists()

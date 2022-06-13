@@ -30,7 +30,7 @@ namespace BH.oM.RDF
 
         [Description("If true, any CustomObject that has a Type key in its CustomData dictionary will be treated as if it was an instance of a custom class," +
             "which will be called like the value stored in the Type key.")]
-        public bool TreatCustomObjectsWithTypeKeyAsTypes { get; set; } = true;
+        public bool TreatCustomObjectsWithTypeKeyAsCustomTypes { get; set; } = true;
 
         [Description("Key of the CustomData dictionary that will be sought in CustomObjects. If a value is found there, and if the above option is true," +
             "the value will be used as if the CustomObject was a class called with this value.")]

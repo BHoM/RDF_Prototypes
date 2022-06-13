@@ -25,7 +25,7 @@ namespace BH.Engine.RDF
 
                 TTLIndividual += $"\n### {individualUri}";
                 TTLIndividual += $"\n<{individualUri}> rdf:type owl:NamedIndividual ,";
-                TTLIndividual += $"\n\t\t:{individual.GetType().UniqueNodeId()} ;";
+                TTLIndividual += $"\n\t\t:{individual.IndividualType(cSharpGraph.OntologySettings.TBoxSettings).UniqueNodeId()} ;";
 
                 TTLIndividual += TLLIndividualRelations(individual, cSharpGraph, localRepositorySettings);
 

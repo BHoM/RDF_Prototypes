@@ -16,10 +16,12 @@ namespace BH.Engine.RDF
     {
         public static Type IndividualType(this object obj, TBoxSettings tBoxSettings)
         {
-            if (tBoxSettings == null || !tBoxSettings.TreatCustomObjectsWithTypeKeyAsTypes)
+            tBoxSettings = tBoxSettings ?? new TBoxSettings();
+
+            if (!tBoxSettings.TreatCustomObjectsWithTypeKeyAsCustomTypes)
                 return obj.GetType();
 
-            if (obj.IsCustomObjectWithTypeKey())
+            if (obj.IsCustomObjectWithTypeKey(tBoxSettings))
                 return new CustomType((CustomObject)obj, tBoxSettings);
 
             return obj.GetType();

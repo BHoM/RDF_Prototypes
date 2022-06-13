@@ -26,7 +26,7 @@ namespace BH.Engine.RDF
 
                 return copyright.Contains("BHoM");
             }
-            catch (Exception e)
+            catch
             {
                 BH.Engine.Base.Compute.RecordError($"Could not obtain copyright information for assembly {assembly.GetName().Name}");
             }
