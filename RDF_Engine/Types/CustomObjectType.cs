@@ -1,5 +1,6 @@
 ﻿using BH.Engine.RDF;
 using BH.oM.Base;
+using BH.oM.RDF;
 using System;
 using System.Collections.Generic;
 using System.Globalization;
@@ -8,10 +9,21 @@ using System.Reflection;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace BH.oM.RDF
+namespace BH.Engine.RDF.Types
 {
-    public partial class CustomType : Type, IEquatable<Type>
+    /// <summary>
+    /// Type used to represent the type of BH.oM.Base.CustomObject in a CSharpGraph.
+    /// CustomObjects are required to be interpreted as their own Type, called like the value stored in a specific Key of their CustomData dictionary.
+    /// This is so that users can create their own "Types" when creating CustomObjects.
+    /// These CustomObjectType can then be part of a CSharpGraph and be translated to an ontology format
+    /// using the same algorithm that deals with any other CSharp Type extracted from BHoM (or other sources).
+    /// </summary>
+    public partial class CustomObjectType : Type, IEquatable<Type>
     {
+        // ************************************ //
+        // Public properties                    //
+        // ************************************ //
+
         private Dictionary<string, Type> _propertyTypes = new Dictionary<string, Type>();
 
         public override Guid GUID { get; }
@@ -38,7 +50,49 @@ namespace BH.oM.RDF
 
         public List<string> PropertyNames { get; } = new List<string>();
 
-        public static Type GetCustomTypeIfPossible(object obj, TBoxSettings tBoxSettings)
+
+        // ************************************ //
+        // Ctor                                 //
+        // ************************************ //
+
+        public CustomObjectType(CustomObject customObj, TBoxSettings tBoxSettings)
+        {
+            object typeNameObj = null;
+            if (!customObj.CustomData.TryGetValue(tBoxSettings.CustomobjectsTypeKey, out typeNameObj))
+                throw new ArgumentException($"Could not extract the type name for this CustomObject; no value defined for `{typeNameObj}`.");
+
+            Type thisClassType = this.GetType();
+
+            Name = typeNameObj.ToString();
+
+            GUID = Query.GuidFromString(Name);
+            Module = thisClassType.Module;
+            Assembly = thisClassType.Assembly;
+            FullName = thisClassType.FullName + $".{Name}";
+            Namespace = thisClassType.Namespace;
+            AssemblyQualifiedName = thisClassType.AssemblyQualifiedName;
+            BaseType = typeof(CustomObject);
+            UnderlyingSystemType = typeof(CustomObject);
+
+            if (tBoxSettings == null)
+                throw new ArgumentException($"{nameof(TBoxSettings)} was null upon creation of CustomObjectType `{Name}`.");
+
+            TBoxSettings = tBoxSettings;
+            OntologicalUri = Query.CombineUris(tBoxSettings.CustomObjectTypesBaseAddress, Name);
+
+            PropertyNames = customObj.CustomData.Keys.Where(k => k != tBoxSettings.CustomobjectsTypeKey).ToList();
+            _propertyTypes = customObj.CustomData.Select(cd => new KeyValuePair<string, Type>(cd.Key, TryGetCustomObjectType(cd.Value, tBoxSettings))).ToDictionary(cv => cv.Key, cv => cv.Value);
+        }
+
+        // ************************************ //
+        // Public methods                       //
+        // ************************************ //
+
+        /// <summary>
+        /// If the input object is a BH.oM.Base.CustomObject with a Type key, return a CustomObjectType for it.
+        /// Otherwise, return the result of the GetType() on the input object.
+        /// </summary>
+        public static Type TryGetCustomObjectType(object obj, TBoxSettings tBoxSettings)
         {
             if (obj == null)
                 return default(Type);
@@ -50,36 +104,7 @@ namespace BH.oM.RDF
             if (!customObj.CustomData.ContainsKey(tBoxSettings.CustomobjectsTypeKey))
                 return typeof(CustomObject);
 
-            return new CustomType(customObj, tBoxSettings);
-        }
-
-        public CustomType(CustomObject customObj, TBoxSettings tBoxSettings)
-        {
-            object typeNameObj = null;
-            if (!customObj.CustomData.TryGetValue(tBoxSettings.CustomobjectsTypeKey, out typeNameObj))
-                throw new ArgumentException($"Could not extract the type name for this CustomObject; no value defined for `{typeNameObj}`.");
-
-            Type thisClassType = this.GetType();
-
-            Name = typeNameObj.ToString();
-
-            GUID = ToGuid(Name);
-            Module = thisClassType.Module;
-            Assembly = thisClassType.Assembly;
-            FullName = thisClassType.FullName + $".{Name}";
-            Namespace = thisClassType.Namespace;
-            AssemblyQualifiedName = thisClassType.AssemblyQualifiedName;
-            BaseType = typeof(CustomObject);
-            UnderlyingSystemType = typeof(CustomObject);
-
-            if (tBoxSettings == null)
-                throw new ArgumentException($"{nameof(TBoxSettings)} was null upon creation of CustomType `{Name}`.");
-
-            TBoxSettings = tBoxSettings;
-            OntologicalUri = Query.CombineUris(tBoxSettings.CustomTypesBaseAddress, Name);
-
-            PropertyNames = customObj.CustomData.Keys.Where(k => k != tBoxSettings.CustomobjectsTypeKey).ToList();
-            _propertyTypes = customObj.CustomData.Select(cd => new KeyValuePair<string, Type>(cd.Key, GetCustomTypeIfPossible(cd.Value, tBoxSettings))).ToDictionary(cv => cv.Key, cv => cv.Value);
+            return new CustomObjectType(customObj, tBoxSettings);
         }
 
         public override PropertyInfo[] GetProperties(BindingFlags bindingAttr = BindingFlags.Public)
@@ -91,32 +116,19 @@ namespace BH.oM.RDF
             return customProps.ToArray();
         }
 
-        private static Guid ToGuid(string source)
-        {
-            if (string.IsNullOrWhiteSpace(source))
-                return Guid.NewGuid();
-
-            byte[] stringbytes = Encoding.UTF8.GetBytes(source);
-            byte[] hashedBytes = new System.Security.Cryptography
-                .SHA1CryptoServiceProvider()
-                .ComputeHash(stringbytes);
-            Array.Resize(ref hashedBytes, 16);
-            return new Guid(hashedBytes);
-        }
-
-        public bool Equals(CustomType other)
+        public bool Equals(CustomObjectType other)
         {
             return null != other && FullName == other.FullName && !PropertyNames.Except(other.PropertyNames).Any();
         }
 
         public override bool Equals(Type other)
         {
-            return Equals(other as CustomType);
+            return Equals(other as CustomObjectType);
         }
 
         public override bool Equals(object obj)
         {
-            return Equals(obj as CustomType);
+            return Equals(obj as CustomObjectType);
         }
 
         public override int GetHashCode()

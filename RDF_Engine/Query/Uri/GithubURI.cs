@@ -1,4 +1,5 @@
 ﻿
+using BH.Engine.RDF.Types;
 using BH.oM.Base;
 using BH.oM.Base.Attributes;
 using BH.oM.RDF;
@@ -26,8 +27,8 @@ namespace BH.Engine.RDF
             repoSettings = repoSettings ?? new LocalRepositorySettings();
 
             // Custom types exception.
-            if (typeToSearch is CustomType)
-                return ((CustomType)typeToSearch).OntologicalUri;
+            if (typeToSearch is CustomObjectType)
+                return ((CustomObjectType)typeToSearch).OntologicalUri;
 
             // Try extracting the Github Uri by deriving it from a fileSystem search for a `.cs` file corresponding to the input Type.
             Uri result = GithubURIFromLocalRepository(typeToSearch, repoSettings);

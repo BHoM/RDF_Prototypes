@@ -1,4 +1,5 @@
 ﻿using BH.Engine.Base;
+using BH.Engine.RDF.Types;
 using BH.oM.RDF;
 using System;
 using System.Collections;
@@ -26,7 +27,7 @@ namespace BH.Engine.RDF
         public static string _UniqueNodeId(this TypeInfo typeInfo)
         {
             // Custom Type exception.
-            if (typeInfo.AsType() is CustomType)
+            if (typeInfo.AsType() is CustomObjectType)
                 return UniqueNodeId(typeInfo.AsType());
 
             return typeInfo.FullName;

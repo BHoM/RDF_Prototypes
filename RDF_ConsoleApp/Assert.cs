@@ -19,19 +19,39 @@ using System.Diagnostics;
 
 namespace BH.Test.RDF
 {
+    // Class that performs Unit Test checks, necessary because I could not get any Unit Testing library to work,
+    // likely due to .NET incompatibilities.
+    // If we can get other unit testing libraries to work, calls to this class can simply be replaced.
     public static partial class Assert
     {
+        public static void IsNotNull(object value, string error = null)
+        {
+            if (value == null)
+                RecordTestFailure(error);
+        }
+
         public static void IsTrue(bool value, string error = null)
         {
             if (!value)
                 RecordTestFailure(error);
         }
 
-        public static void TotalCount(int value, int targetValue, string variableName)
+        public static void Single<T>(this IEnumerable<T> iList, string variableName = null)
         {
-            if (value != targetValue)
-                RecordTestFailure($"Total {variableName} count should have been {targetValue} but was {value}.");
+            TotalCount(iList, 1, variableName);
+        }
 
+        public static void Single<T>(this IEnumerable<T> iList, object obj, string variableName = null)
+        {
+            TotalCount(iList.Where(o => o.Equals(obj)), 1, variableName);
+        }
+
+        public static void TotalCount<T>(this IEnumerable<T> iList, int expectedCount, string variableName = null)
+        {
+            int count = iList.Count();
+            variableName = string.IsNullOrWhiteSpace(variableName) ? "" : variableName + " ";
+            if (count != expectedCount)
+                RecordTestFailure($"Total {variableName}count should have been {expectedCount} but was {count}.");
         }
 
         public static void ThrowsException(Action method)

@@ -1,4 +1,5 @@
-﻿using BH.oM.RDF;
+﻿using BH.Engine.RDF.Types;
+using BH.oM.RDF;
 using System;
 using System.Collections;
 using System.Collections.Generic;
@@ -53,7 +54,7 @@ namespace BH.Engine.RDF
         public static string DescriptiveName(this Type t, bool includeNamespace = false)
         {
             // Custom Type exception.
-            if (t is CustomType)
+            if (t is CustomObjectType)
                 return t.Name;
 
             string descriptiveName = "";

@@ -1,4 +1,5 @@
-﻿using BH.oM.Base;
+﻿using BH.Engine.RDF.Types;
+using BH.oM.Base;
 using BH.oM.RDF;
 using Newtonsoft.Json;
 using System;
@@ -18,11 +19,11 @@ namespace BH.Engine.RDF
         {
             tBoxSettings = tBoxSettings ?? new TBoxSettings();
 
-            if (!tBoxSettings.TreatCustomObjectsWithTypeKeyAsCustomTypes)
+            if (!tBoxSettings.TreatCustomObjectsWithTypeKeyAsCustomObjectTypes)
                 return obj.GetType();
 
             if (obj.IsCustomObjectWithTypeKey(tBoxSettings))
-                return new CustomType((CustomObject)obj, tBoxSettings);
+                return new CustomObjectType((CustomObject)obj, tBoxSettings);
 
             return obj.GetType();
         }

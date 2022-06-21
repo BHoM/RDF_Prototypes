@@ -12,25 +12,10 @@ namespace BH.oM.CodeAnalysis.ConsoleApp
     {
         public static void Main(string[] args = null)
         {
-            TTLExportTests.NestedCustomObjects();
-
-            TTLExportTests.CustomObject_SameType_SameProperties_NoError();
-
-            TTLExportTests.CustomObject_SameType_DifferentProperties_Error();
-
-            TTLExportTests.Room();
-
-            TTLExportTests.RoomAndColumn();
-
-            TTLExportTests.CustomObject();
-
-            // Invoke all static methods in `TTLExportTests` class
-            //typeof(TTLExportTests).GetMethods().Where(mi => mi.IsStatic).ToList().ForEach(mi => mi.Invoke(null, null));
+            TTLExportTests.RunSelectedTests();
 
             // Invoke all static methods in `Tests_Diellza` class
             //typeof(Tests_Diellza).GetMethods().Where(mi => mi.IsStatic).ToList().ForEach(mi => mi.Invoke(null, null));
-
-            Assert.TestRecap();
 
             Console.WriteLine("\n\nPress ENTER to repeat, any other key to exit.");
             var key = Console.ReadKey();

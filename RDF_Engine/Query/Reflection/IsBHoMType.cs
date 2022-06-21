@@ -1,4 +1,5 @@
 ﻿using BH.Adapter;
+using BH.Engine.RDF.Types;
 using BH.oM.Base;
 using System;
 using System.Collections;
@@ -25,7 +26,7 @@ namespace BH.Engine.RDF
             // Guard against dynamically loaded assemblies from external locations
             if (!typeof(IObject).Module.FullyQualifiedName.Contains("C:\\ProgramData\\BHoM\\Assemblies") ||
                 !typeof(BHoMAdapter).Module.FullyQualifiedName.Contains("C:\\ProgramData\\BHoM\\Assemblies"))
-                return t.FullName?.StartsWith("BH.oM.") ?? false;
+                return (t.FullName?.StartsWith("BH.oM.") ?? false) || (t.FullName?.StartsWith(typeof(CustomObjectType).FullName) ?? false);
 
             return typeof(IObject).IsAssignableFrom(t) || typeof(BHoMAdapter).IsAssignableFrom(t);
         }

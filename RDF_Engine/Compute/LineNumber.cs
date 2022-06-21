@@ -1,4 +1,5 @@
-﻿using BH.oM.Base;
+﻿using BH.Engine.RDF.Types;
+using BH.oM.Base;
 using BH.oM.Base.Attributes;
 using BH.oM.RDF;
 using Newtonsoft.Json;
@@ -30,9 +31,9 @@ namespace BH.Engine.RDF
             settings = settings ?? new LocalRepositorySettings();
 
             // Custom Type guard
-            if (typeof(CustomType).IsAssignableFrom(pi.DeclaringType))
+            if (typeof(CustomObjectType).IsAssignableFrom(pi.DeclaringType))
             {
-                Log.RecordError($"Can not compute the code line number of property `{pi.Name}` that is of a {nameof(CustomType)} type.", true);
+                Log.RecordError($"Can not compute the code line number of property `{pi.Name}` that is of a {nameof(CustomObjectType)} type.", true);
                 return -1;
             }
 

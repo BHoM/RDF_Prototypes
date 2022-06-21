@@ -1,4 +1,5 @@
 ﻿using BH.Engine.Base;
+using BH.Engine.RDF.Types;
 using BH.oM.Base;
 using BH.oM.Base.Attributes;
 using BH.oM.RDF;
@@ -31,10 +32,10 @@ namespace BH.Engine.RDF
                 settings = new LocalRepositorySettings();
 
             // Custom type guard
-            if (type != typeof(CustomType) && type is CustomType)
+            if (type != typeof(CustomObjectType) && type is CustomObjectType)
             {
-                // if the type is a subtype of `CustomType`, do not attempt to retrieve its file path.
-                Log.RecordWarning($"Can not compute the file path for type `{type.FullName}` that is derived from {nameof(CustomType)}.", true);
+                // if the type is a subtype of `CustomObjectType`, do not attempt to retrieve its file path.
+                Log.RecordWarning($"Can not compute the file path for type `{type.FullName}` that is derived from {nameof(CustomObjectType)}.", true);
                 return null; 
             }
 

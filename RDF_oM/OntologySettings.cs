@@ -26,11 +26,11 @@ namespace BH.oM.RDF
     public class TBoxSettings : IObject
     {
         [Description("The base address where the ontology definition for Custom Types will be hosted. Custom Types are produced when computing an ontology that includes BHoM CustomObjects.")]
-        public string CustomTypesBaseAddress { get; set; } = $"http://customizeMeFrom-OntologySettings.TBoxSettings.{nameof(CustomTypesBaseAddress)}";
+        public string CustomObjectTypesBaseAddress { get; set; } = $"http://customizeMeFrom-OntologySettings.TBoxSettings.{nameof(CustomObjectTypesBaseAddress)}";
 
         [Description("If true, any CustomObject that has a Type key in its CustomData dictionary will be treated as if it was an instance of a custom class," +
             "which will be called like the value stored in the Type key.")]
-        public bool TreatCustomObjectsWithTypeKeyAsCustomTypes { get; set; } = true;
+        public bool TreatCustomObjectsWithTypeKeyAsCustomObjectTypes { get; set; } = true;
 
         [Description("Key of the CustomData dictionary that will be sought in CustomObjects. If a value is found there, and if the above option is true," +
             "the value will be used as if the CustomObject was a class called with this value.")]

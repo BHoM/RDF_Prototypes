@@ -22,7 +22,8 @@ namespace BH.Engine.RDF
             // if the range of the relation (= the property type) is an ontology class,
             // and so is the domain of the relation (the PropertyInfo's Declaring Type).
 
-            return pi.PropertyType.IsOntologyClass() && pi.DeclaringType.IsOntologyClass();
+            // Lists are also to be considered ObjectProperties: https://github.com/BHoM/RDF_Prototypes/issues/17
+            return pi.PropertyType.IsOntologyClass() && pi.DeclaringType.IsOntologyClass() || pi.IsListProperty();
         }
     }
 }

@@ -14,12 +14,6 @@ namespace BH.Test.RDF
 {
     public static class TTLExportTests
     {
-        private static OntologySettings m_shortAddresses = new OntologySettings()
-        {
-            ABoxSettings = new ABoxSettings() { IndividualsBaseAddress = "individuals.Address" },
-            TBoxSettings = new TBoxSettings() { CustomTypesBaseAddress = "customTypes.Address" }
-        };
-
         public static string Room()
         {
             Room room = new Room();
@@ -98,8 +92,9 @@ namespace BH.Test.RDF
 
             // No error or exception should be thrown by this call.
             CSharpGraph cSharpGraph_customObj = Compute.CSharpGraph(new List<IObject>() { customObject1, customObject2 }, m_shortAddresses);
-            Assert.TotalCount(cSharpGraph_customObj.Classes.Where(c => c.Name == "Cassette").Count(), 1, "CustomTypes");
-
+            Assert.Single(cSharpGraph_customObj.Classes.Where(c => c.Name == "Cassette"), "CustomObjectTypes");
+            Assert.TotalCount(cSharpGraph_customObj.AllIndividuals, 2, "AllIndividuals");
+            
             string TTLGraph = cSharpGraph_customObj.ToTTLGraph(new LocalRepositorySettings());
 
             Console.Write(TTLGraph);
@@ -125,6 +120,11 @@ namespace BH.Test.RDF
             CustomObject parent = BH.Engine.Base.Create.CustomObject(new Dictionary<string, object>() { { "Type", "Roof" }, { "Tiles", nestedObj1 } });
 
             CSharpGraph cSharpGraph_customObj = Compute.CSharpGraph(new List<IObject>() { parent }, m_shortAddresses);
+
+            Assert.IsNotNull(cSharpGraph_customObj.Classes.Single(c => c.Name == "TileMaterial"));
+            Assert.IsNotNull(cSharpGraph_customObj.Classes.Single(c => c.Name == "SimpleTiles"));
+            Assert.IsNotNull(cSharpGraph_customObj.Classes.Single(c => c.Name == "Roof"));
+
             string TTLGraph = cSharpGraph_customObj.ToTTLGraph(new LocalRepositorySettings());
 
             Console.Write(TTLGraph);
@@ -150,5 +150,49 @@ namespace BH.Test.RDF
 
             return TTLGraph;
         }
+
+        // ----------------------
+        // Run utilities
+        // ----------------------
+
+        public static void RunAll()
+        {
+            // Invoke all static methods in the given class class
+            typeof(TTLExportTests).GetMethods()
+                .Where(mi => mi.IsStatic && !mi.Name.Contains("Run")).ToList()
+                .ForEach(mi => mi.Invoke(null, null));
+
+            Assert.TestRecap();
+        }
+
+        public static void RunSelectedTests()
+        {
+            TTLExportTests.Lists();
+
+            TTLExportTests.NestedCustomObjects();
+
+            TTLExportTests.CustomObject_SameType_SameProperties_NoError();
+
+            TTLExportTests.CustomObject_SameType_DifferentProperties_Error();
+
+            TTLExportTests.Room();
+
+            TTLExportTests.RoomAndColumn();
+
+            TTLExportTests.CustomObject();
+
+            Assert.TestRecap();
+        }
+
+
+        // ----------------------
+        // Private fields
+        // ----------------------
+
+        private static OntologySettings m_shortAddresses = new OntologySettings()
+        {
+            ABoxSettings = new ABoxSettings() { IndividualsBaseAddress = "individuals.Address" },
+            TBoxSettings = new TBoxSettings() { CustomObjectTypesBaseAddress = "CustomObjectTypes.Address" }
+        };
     }
 }

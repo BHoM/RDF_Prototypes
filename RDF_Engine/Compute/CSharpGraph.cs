@@ -1,5 +1,4 @@
-﻿
-using BH.oM.Base;
+﻿using BH.oM.Base;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -10,10 +9,11 @@ using System.Text;
 using System.Threading.Tasks;
 using VDS.RDF;
 using VDS.RDF.Writing;
-
 using BH.Engine.Base;
 using BH.oM.RDF;
 using BH.oM.Base.Attributes;
+using BH.Engine.RDF.Types;
+using System.Collections;
 
 namespace BH.Engine.RDF
 {
@@ -56,18 +56,18 @@ namespace BH.Engine.RDF
         {
             tBoxSettings = tBoxSettings ?? new TBoxSettings();
 
-            if (type == typeof(CustomType))
-                return; // only add sub-types of CustomType.
+            if (type == typeof(CustomObjectType))
+                return; // only add sub-types of CustomObjectType.
             
-            CustomType cType = type as CustomType;
-            if (cType != null && m_cSharpGraph.Classes.OfType<CustomType>().Where(ct => ct.Name == cType.Name).SelectMany(ct => ct.PropertyNames.Except(cType.PropertyNames)).Any()) 
+            CustomObjectType cType = type as CustomObjectType;
+            if (cType != null && m_cSharpGraph.Classes.OfType<CustomObjectType>().Where(ct => ct.Name == cType.Name).SelectMany(ct => ct.PropertyNames.Except(cType.PropertyNames)).Any()) 
                 throw new ArgumentException($"The input contained multiple CustomObjects with the same Type key `{cType.Name}` which had different properties. Make sure that all instances of `{cType.Name}` have the same property names.");
 
             if (m_cSharpGraph.Classes.Contains(type))
                 return;
 
-            if (type.IsCollectionOfOntologyClasses())
-                type = type.InnermostType();
+            //if (type.IsCollectionOfOntologyClasses())
+            //    type = type.InnermostType();
 
             if (type.IsOntologyClass())
                 m_cSharpGraph.Classes.Add(type);
@@ -113,6 +113,26 @@ namespace BH.Engine.RDF
             {
                 // OBJECT PROPERTY RELATION
                 // The relation between Individuals corresponds to an ObjectPropertyRelation (between two Classes of the Ontology).
+
+                if (pi.IsListProperty() && individual != null)
+                {
+                    rangeType = new ListPropertyType(individual, pi, ontologySettings.TBoxSettings);
+
+                    IList list = pi.GetValue(individual) as IList;
+
+                    if (list != null && list.Count != 0)
+                    {
+                        foreach (var item in list)
+                        {
+                            m_cSharpGraph.AllIndividuals.Add(item);
+
+                            // Recurse for this individual's relations.
+                            var listItemProps = item.GetType().GetProperties();
+                            foreach (var prop in listItemProps)
+                                AddToOntology(prop, item, ontologySettings);
+                        }
+                    }
+                }
 
                 // Make sure the RangeType is added to the ontology.
                 rangeType.AddToOntology();

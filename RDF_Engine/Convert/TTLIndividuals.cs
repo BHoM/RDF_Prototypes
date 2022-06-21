@@ -19,6 +19,9 @@ namespace BH.Engine.RDF
 
             foreach (object individual in cSharpGraph.AllIndividuals)
             {
+                if (individual == null)
+                    continue;
+
                 string TTLIndividual = "";
 
                 string individualUri = individual.IndividualUri(cSharpGraph.OntologySettings).ToString();
@@ -46,7 +49,18 @@ namespace BH.Engine.RDF
                 IndividualObjectProperty iop = individualRelation as IndividualObjectProperty;
                 if (iop != null)
                 {
-                    TLLIndividualRelations += $"\n\t\t:{iop.HasProperty.PropertyInfo.UniqueNodeId()} <{iop.RangeIndividual.IndividualUri(cSharpGraph.OntologySettings)}> ;";
+                    // First check if the Object Property is a List.
+                    // This check is done here rather than at the CSharpGraph stage because not all output formats support lists.
+                    // TTL supports lists.
+                    if (iop.RangeIndividual.GetType().IsListOfOntologyClasses())
+                    {
+                        List<string> listIndividualsUris = (iop.RangeIndividual as IEnumerable<object>).Select(o => o.IndividualUri(cSharpGraph.OntologySettings).ToString()).ToList();
+                        TLLIndividualRelations += $"\n\t\t:{iop.HasProperty.PropertyInfo.UniqueNodeId()} rdf:list ({string.Join(", ", listIndividualsUris)});";
+                    }
+                    else 
+                        TLLIndividualRelations += $"\n\t\t:{iop.HasProperty.PropertyInfo.UniqueNodeId()} <{iop.RangeIndividual.IndividualUri(cSharpGraph.OntologySettings)}> ;";
+                    
+                    continue;
                 }
 
                 IndividualDataProperty idp = individualRelation as IndividualDataProperty;
@@ -60,6 +74,8 @@ namespace BH.Engine.RDF
                         TLLIndividualRelations += $"^^:{ idp.Value.GetType().ToOntologyDataType()};";
                     else
                         TLLIndividualRelations += $"^^{ idp.Value.GetType().ToOntologyDataType()};"; // TODO: insert serialized value here, when the individual's datatype is unknown
+
+                    continue;
                 }
             }
 
