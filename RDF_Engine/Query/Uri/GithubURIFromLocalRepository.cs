@@ -1,4 +1,5 @@
-﻿using BH.oM.Base;
+﻿using BH.Engine.RDF.Types;
+using BH.oM.Base;
 using BH.oM.Base.Attributes;
 using BH.oM.RDF;
 using System;
@@ -20,6 +21,10 @@ namespace BH.Engine.RDF
         {
             if (typeToSearch.Name.StartsWith("<>c__"))
                 return null;
+
+            ICustomRDFType customRDFType = typeToSearch as ICustomRDFType;
+            if (customRDFType != null)
+                return customRDFType.OntologicalUri;
 
             string typeFilePath = typeToSearch.FilePathFromLocalRepository(settings, true);
 

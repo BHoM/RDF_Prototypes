@@ -58,7 +58,10 @@ namespace BH.Engine.RDF
 
             if (type == typeof(CustomObjectType))
                 return; // only add sub-types of CustomObjectType.
-            
+
+            if (type == typeof(ListPropertyType))
+                return; // do not add type for list property.
+
             CustomObjectType cType = type as CustomObjectType;
             if (cType != null && m_cSharpGraph.Classes.OfType<CustomObjectType>().Where(ct => ct.Name == cType.Name).SelectMany(ct => ct.PropertyNames.Except(cType.PropertyNames)).Any()) 
                 throw new ArgumentException($"The input contained multiple CustomObjects with the same Type key `{cType.Name}` which had different properties. Make sure that all instances of `{cType.Name}` have the same property names.");

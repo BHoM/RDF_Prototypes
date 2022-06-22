@@ -19,6 +19,11 @@ namespace BH.Engine.RDF
             return _UniqueNodeId(obj as dynamic);
         }
 
+        public static string _UniqueNodeId(this ListPropertyType type)
+        {
+            return type.RDFTypeName;
+        }
+
         public static string _UniqueNodeId(this Type type)
         {
             return type.FullName;

@@ -18,7 +18,7 @@ namespace BH.Engine.RDF.Types
     /// These CustomObjectType can then be part of a CSharpGraph and be translated to an ontology format
     /// using the same algorithm that deals with any other CSharp Type extracted from BHoM (or other sources).
     /// </summary>
-    public partial class CustomObjectType : Type, IEquatable<Type>
+    public partial class CustomObjectType : ICustomRDFType
     {
         // ************************************ //
         // Public properties                    //
@@ -62,8 +62,9 @@ namespace BH.Engine.RDF.Types
                 throw new ArgumentException($"Could not extract the type name for this CustomObject; no value defined for `{typeNameObj}`.");
 
             Type thisClassType = this.GetType();
-
+            
             Name = typeNameObj.ToString();
+            RDFTypeName = Name;
 
             GUID = Query.GuidFromString(Name);
             Module = thisClassType.Module;

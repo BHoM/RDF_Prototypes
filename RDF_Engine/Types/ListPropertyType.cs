@@ -18,7 +18,7 @@ namespace BH.Engine.RDF.Types
     /// These CustomObjectType can then be part of a CSharpGraph and be translated to an ontology format
     /// using the same algorithm that deals with any other CSharp Type extracted from BHoM (or other sources).
     /// </summary>
-    public partial class ListPropertyType : Type, IEquatable<Type>
+    public partial class ListPropertyType : ICustomRDFType
     {
         // ************************************ //
         // Public properties                    //
@@ -42,10 +42,6 @@ namespace BH.Engine.RDF.Types
 
         public override string Name { get; }
 
-        public TBoxSettings TBoxSettings { get; }
-
-        public Uri OntologicalUri { get; }
-
 
         // ************************************ //
         // Ctor                                 //
@@ -60,8 +56,9 @@ namespace BH.Engine.RDF.Types
 
             Type thisClassType = this.GetType();
 
-            Name = "rdf:seq"; //$"{pi.DeclaringType.FullName.ToString()}.{pi.Name}_{obj.IndividualId()}";
+            Name = $"{pi.DeclaringType.FullName.ToString()}.{pi.Name}_{obj.IndividualId()}";
             FullName = Name; // thisClassType.FullName + $".{Name}";
+            RDFTypeName = "rdf:seq";
 
             GUID = Query.GuidFromString(Name);
             Module = thisClassType.Module;
