@@ -59,7 +59,7 @@ namespace BH.Engine.RDF
             if (type == typeof(CustomObjectType))
                 return; // only add sub-types of CustomObjectType.
 
-            if (type == typeof(ListPropertyType))
+            if (type is ListPropertyType)
                 return; // do not add type for list property.
 
             CustomObjectType cType = type as CustomObjectType;
