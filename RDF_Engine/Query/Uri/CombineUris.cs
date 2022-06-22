@@ -24,6 +24,9 @@ namespace BH.Engine.RDF
 
             foreach (string uri in uris)
             {
+                if (uri == null)
+                    continue;
+
                 string correctedUri = uri.Replace(@"\", "/");
                 if (correctedUri.StartsWith("/"))
                     correctedUri = correctedUri.Remove(0, 1);

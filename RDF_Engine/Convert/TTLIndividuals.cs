@@ -55,11 +55,20 @@ namespace BH.Engine.RDF
                     if (iop.RangeIndividual.GetType().IsListOfOntologyClasses())
                     {
                         List<string> listIndividualsUris = (iop.RangeIndividual as IEnumerable<object>).Select(o => o.IndividualUri(cSharpGraph.OntologySettings).ToString()).ToList();
-                        TLLIndividualRelations += $"\n\t\t:{iop.HasProperty.PropertyInfo.UniqueNodeId()} rdf:list ({string.Join(", ", listIndividualsUris)});";
+                        TLLIndividualRelations += $"\n\t\t:{iop.HasProperty.PropertyInfo.UniqueNodeId()} rdf:seq ;\n";
+
+                        for (int i = 0; i < listIndividualsUris.Count; i++)
+                        {
+                            string individualUri = listIndividualsUris[i];
+
+                            TLLIndividualRelations += $"\t\trdf:_{i} <{individualUri}> ;\n";
+                        }
+
+                        // TODO: Verify how to handle empty lists.
                     }
-                    else 
+                    else
                         TLLIndividualRelations += $"\n\t\t:{iop.HasProperty.PropertyInfo.UniqueNodeId()} <{iop.RangeIndividual.IndividualUri(cSharpGraph.OntologySettings)}> ;";
-                    
+
                     continue;
                 }
 

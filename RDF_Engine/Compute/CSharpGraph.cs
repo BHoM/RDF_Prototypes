@@ -127,7 +127,7 @@ namespace BH.Engine.RDF
                             m_cSharpGraph.AllIndividuals.Add(item);
 
                             // Recurse for this individual's relations.
-                            var listItemProps = item.GetType().GetProperties();
+                            PropertyInfo[] listItemProps = item?.GetType().GetProperties() ?? new PropertyInfo[] { };
                             foreach (var prop in listItemProps)
                                 AddToOntology(prop, item, ontologySettings);
                         }

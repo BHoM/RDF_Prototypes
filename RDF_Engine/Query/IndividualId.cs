@@ -16,6 +16,9 @@ namespace BH.Engine.RDF
     {
         public static string IndividualId(this object individual)
         {
+            if (individual == null)
+                return null;
+
             string individualId;
 
             IBHoMObject bHoMObject = individual as IBHoMObject;

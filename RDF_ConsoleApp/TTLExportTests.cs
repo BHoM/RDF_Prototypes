@@ -22,7 +22,7 @@ namespace BH.Test.RDF
             room.Name = "A room object";
 
             List<IObject> objectList = new List<IObject>() { room };
-            string TTLGraph = objectList.TTLGraph(new OntologySettings(), new LocalRepositorySettings());
+            string TTLGraph = objectList.TTLGraph(m_shortAddresses, new LocalRepositorySettings());
 
             Console.Write(TTLGraph);
 
@@ -37,7 +37,7 @@ namespace BH.Test.RDF
             Column randomColumn = BH.Engine.RDF.Testing.Create.RandomObject<Column>();
 
             List<IObject> objectList = new List<IObject>() { randomColumn };
-            string TTLGraph = objectList.TTLGraph(new OntologySettings(), new LocalRepositorySettings());
+            string TTLGraph = objectList.TTLGraph(m_shortAddresses, new LocalRepositorySettings());
 
             Console.Write(TTLGraph);
 

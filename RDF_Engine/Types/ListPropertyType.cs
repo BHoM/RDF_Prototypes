@@ -60,12 +60,12 @@ namespace BH.Engine.RDF.Types
 
             Type thisClassType = this.GetType();
 
-            Name = $"{pi.DeclaringType.FullName.ToString()}.{pi.Name}_{obj.IndividualId()}";
+            Name = "rdf:seq"; //$"{pi.DeclaringType.FullName.ToString()}.{pi.Name}_{obj.IndividualId()}";
+            FullName = Name; // thisClassType.FullName + $".{Name}";
 
             GUID = Query.GuidFromString(Name);
             Module = thisClassType.Module;
             Assembly = thisClassType.Assembly;
-            FullName = thisClassType.FullName + $".{Name}";
             Namespace = thisClassType.Namespace;
             AssemblyQualifiedName = thisClassType.AssemblyQualifiedName;
             BaseType = typeof(CustomObject);
