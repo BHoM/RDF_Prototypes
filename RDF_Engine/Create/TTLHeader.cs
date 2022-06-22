@@ -22,7 +22,7 @@ namespace BH.Engine.RDF
             if (includeXml) header += "\n@prefix xml: <http://www.w3.org/XML/1998/namespace> .";
             if (includeXsd) header += "\n@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .";
             if (includeRdfs) header += "\n@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .";
-            if (includeRdfs) header += "\n@prefix dc: <http://www.w3.org/2000/01/rdf-schema#> .";
+            if (includeRdfs) header += "\n@prefix dc: <http://purl.org/dc/elements/1.1/> .";
 
 
             header += "\n@base   " + $@"<{ontologyAddress}> .";
