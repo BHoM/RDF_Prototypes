@@ -34,7 +34,7 @@ namespace BH.Engine.RDF
 
                     string propertyURI = rel.PropertyInfo.GithubURI(localRepositorySettings).ToString();
                     TTLDataProperty += $"\n### {propertyURI}";
-                    TTLDataProperty += $"\n:{rel.PropertyInfo.UniqueNodeId()} rdf:type owl:ObjectProperty ;";
+                    TTLDataProperty += $"\n:{rel.PropertyInfo.UniqueNodeId()} rdf:type owl:DatatypeProperty ;";
                     TTLDataProperty += $"\nrdfs:domain :{rel.DomainClass.UniqueNodeId()} ;";
 
                     // We need to map the Range Type to a valid DataType.
