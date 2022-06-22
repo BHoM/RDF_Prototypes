@@ -54,7 +54,11 @@ namespace BH.Engine.RDF
                     // TTL supports lists.
                     if (iop.RangeIndividual.GetType().IsListOfOntologyClasses())
                     {
-                        List<string> listIndividualsUris = (iop.RangeIndividual as IEnumerable<object>).Select(o => o.IndividualUri(cSharpGraph.OntologySettings).ToString()).ToList();
+                        var individualList = iop.RangeIndividual as IEnumerable<object>;
+                        if (individualList == null)
+                            continue;
+
+                        List<string> listIndividualsUris = individualList.Where(o => o != null).Select(o => o.IndividualUri(cSharpGraph.OntologySettings).ToString()).ToList();
                         TLLIndividualRelations += $"\n\t\t:{iop.HasProperty.PropertyInfo.UniqueNodeId()} rdf:seq ;\n";
 
                         for (int i = 0; i < listIndividualsUris.Count; i++)
