@@ -148,6 +148,9 @@ namespace BH.Test.RDF
             CSharpGraph cSharpGraph_customObj = Compute.CSharpGraph(new List<IObject>() { nurbs }, m_shortAddresses);
             string TTLGraph = cSharpGraph_customObj.ToTTLGraph(new LocalRepositorySettings());
 
+            Graph g = new Graph();
+            StringParser.Parse(g, TTLGraph);
+
             return TTLGraph;
         }
 
