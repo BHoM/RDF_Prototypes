@@ -29,8 +29,29 @@ namespace BH.oM.RDF
         public OntologySettings OntologySettings { get; set; }
     }
 
-    public interface IClassRelation : IObject
+    public abstract class IClassRelation : IObject
     {
+        // CSharp PropertyInfos can be seen as the correspondant to Ontology Object Properties.
+        public PropertyInfo PropertyInfo { get; set; }
+
+        public override bool Equals(object obj)
+        {
+            IClassRelation clRel = obj as IClassRelation;
+            if (clRel == null || this.GetType() != obj.GetType())
+                return false;
+
+            return FullNameValidChars(PropertyInfo) == FullNameValidChars(clRel.PropertyInfo);
+        }
+
+        public override int GetHashCode()
+        {
+            return FullNameValidChars(PropertyInfo).GetHashCode();
+        }
+
+        private static string FullNameValidChars(PropertyInfo pi)
+        {
+            return $"{pi.DeclaringType.FullName}.{pi.Name}";
+        }
     }
 
     public class ObjectProperty : IClassRelation // aka "HasProperty" when the range is another class in the Ontology.
@@ -38,19 +59,13 @@ namespace BH.oM.RDF
         public Type DomainClass { get; set; }
 
         public Type RangeClass { get; set; }
-
-        // CSharp PropertyInfos can be seen as the correspondant to Ontology Object Properties.
-        public PropertyInfo PropertyInfo { get; set; }
     }
 
     public class DataProperty : IClassRelation // aka "HasProperty" when the range is NOT another class in the Ontology.
     {
         public Type DomainClass { get; set; }
 
-        public Type RangeType { get; set; } // In a DataProperty, the range will not correspond to an Ontology Class.
-
-        // CSharp PropertyInfos can be seen as the correspondant to Ontology Data Properties.
-        public PropertyInfo PropertyInfo { get; set; }
+        public Type RangeType { get; set; } // In a DataProperty, the range will NOT correspond to an Ontology Class.
     }
 
     public interface IndividualRelation : IObject
@@ -77,4 +92,6 @@ namespace BH.oM.RDF
         // PropertyInfo that generated this Data property of this individual.
         public PropertyInfo PropertyInfo { get; set; }
     }
+
+
 }
