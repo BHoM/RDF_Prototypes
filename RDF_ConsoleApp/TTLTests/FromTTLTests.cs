@@ -23,6 +23,7 @@ namespace BH.Test.RDF
             string TTLGraph = objectList.TTLGraph(m_shortAddresses, new LocalRepositorySettings());
 
             var bhomObjects = TTLGraph.ToBHoMInstances();
+
             Assert.IsEqual(p, bhomObjects.FirstOrDefault());
         }
 
@@ -40,7 +41,7 @@ namespace BH.Test.RDF
             Assert.IsEqual(room, bhomObjects.FirstOrDefault());
         }
 
-        public static string Column()
+        public static void Column()
         {
             Column randomColumn = BH.Engine.RDF.Testing.Create.RandomObject<Column>();
 
@@ -51,26 +52,31 @@ namespace BH.Test.RDF
 
             Assert.IsTTLParsable(TTLGraph);
 
-            return TTLGraph;
+            var bhomObjects = TTLGraph.ToBHoMInstances();
+            Assert.IsEqual(randomColumn, bhomObjects.FirstOrDefault());
         }
 
-        public static string RoomAndColumn()
+        public static void RoomAndColumn()
         {
             Room room = new Room();
             room.Perimeter = new Polyline() { ControlPoints = new List<Point>() { new Point(), new Point() { X = 5, Y = 5, Z = 5 }, new Point() { X = 99 } } };
-            room.Location = new Point();
+            room.Location = new Point() { X = 101, Y = 102, Z = 103 };
             room.Name = "A room object";
 
-            Column randomColumn = BH.Engine.RDF.Testing.Create.RandomObject<Column>();
+            Column column = new Column();
+            column.Location = new Polyline() { ControlPoints = new List<Point>() { new Point() { X = 101, Y = 102, Z = 103 }, new Point() { X = 201, Y = 202, Z = 203 } } };
+            column.Name = "A column object";
 
-            List<IObject> objectList = new List<IObject>() { room, randomColumn };
+            List<IObject> objectList = new List<IObject>() { room, column };
             string TTLGraph = objectList.TTLGraph(new OntologySettings(), new LocalRepositorySettings());
-
-            Console.Write(TTLGraph);
 
             Assert.IsTTLParsable(TTLGraph);
 
-            return TTLGraph;
+            var bhomObjects = TTLGraph.ToBHoMInstances();
+            Assert.IsEqual(objectList, bhomObjects);
+
+            bhomObjects[1] = new Column();
+            Assert.IsNotEqual(objectList, bhomObjects);
         }
 
         public static string CustomObject()
@@ -136,7 +142,7 @@ namespace BH.Test.RDF
             Assert.IsTTLParsable(TTLGraph);
         }
 
-        public static string Lists()
+        public static void IObject_PropertyList_OfObjects()
         {
             NurbsCurve nurbs = new NurbsCurve()
             {
@@ -155,7 +161,22 @@ namespace BH.Test.RDF
             
             var bhomObjects = TTLGraph.ToBHoMInstances();
 
-            return TTLGraph;
+            Assert.IsEqual(nurbs, bhomObjects.FirstOrDefault());
+        }
+
+        public static void IObject_PropertyList_OfPrimitives()
+        {
+            BHoMObject bhomObj = new BHoMObject();
+            bhomObj.CustomData["listOfPrimitives"] = new List<int>() { 1, 2, 3, 4 };
+
+            CSharpGraph cSharpGraph_customObj = Compute.CSharpGraph(new List<IObject>() { bhomObj }, m_shortAddresses);
+            string TTLGraph = cSharpGraph_customObj.ToTTLGraph(new LocalRepositorySettings());
+
+            Assert.IsTTLParsable(TTLGraph);
+
+            var convertedObj = TTLGraph.ToBHoMInstances().FirstOrDefault() as BHoMObject;
+
+            Assert.IsEqual(bhomObj.CustomData["listOfPrimitives"], convertedObj.CustomData["listOfPrimitives"]);
         }
 
         // ----------------------
@@ -174,13 +195,15 @@ namespace BH.Test.RDF
 
         public static void RunSelectedTests()
         {
+            RoomAndColumn();
 
             CustomObject();
 
-            Lists();
+            IObject_PropertyList_OfObjects();
+
+            IObject_PropertyList_OfPrimitives();
 
             Point();
-
 
             Room();
 
@@ -189,11 +212,6 @@ namespace BH.Test.RDF
             CustomObject_SameType_SameProperties_NoError();
 
             CustomObject_SameType_DifferentProperties_Error();
-
-            RoomAndColumn();
-
-
-            Assert.TestRecap();
         }
 
 

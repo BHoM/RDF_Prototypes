@@ -21,5 +21,21 @@ namespace BH.Engine.RDF
 
             return text;
         }
+
+        public static string EnsureEndingDot(this string text)
+        {
+            text = text.TrimEnd(' ');
+            text = text.TrimEnd('\n');
+
+            if (text.EndsWith("."))
+                return text;
+
+            var lastSemicolon = text.LastIndexOf(';');
+
+            if (text.EndsWith(";"))
+                text = text.Remove(lastSemicolon, 1);
+
+            return text + " .";
+        }
     }
 }

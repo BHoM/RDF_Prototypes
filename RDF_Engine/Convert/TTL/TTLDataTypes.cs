@@ -14,8 +14,6 @@ namespace BH.Engine.RDF
     {
         public static List<string> TTLDataTypes(this CSharpGraph cSharpGraph, LocalRepositorySettings r)
         {
-            OntologySettings s = cSharpGraph.OntologySettings;
-
             List<string> dataTypes = new List<string>();
 
             dataTypes.Add(DefaultDataTypeForUnknownConversion(r));

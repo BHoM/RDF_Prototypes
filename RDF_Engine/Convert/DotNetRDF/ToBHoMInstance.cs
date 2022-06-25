@@ -1,4 +1,5 @@
 ﻿using BH.oM.Base;
+using BH.oM.RDF;
 using System;
 using System.Collections;
 using System.Collections.Generic;
@@ -47,7 +48,10 @@ namespace BH.Engine.RDF
                 LiteralNode literalNode = predicateNode.Object as LiteralNode;
                 if (literalNode != null)
                 {
-                    propertyValue = literalNode.Value;
+                    if (literalNode.DataType.AbsolutePath.EndsWith(typeof(Base64JsonSerialized).FullName))
+                        propertyValue = literalNode.Value.FromBase64JsonSerialized();
+                    else
+                        propertyValue = literalNode.Value;
                 }
 
                 UriNode uriNode = predicateNode.Object as UriNode;

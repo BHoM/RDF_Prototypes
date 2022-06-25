@@ -1,6 +1,7 @@
 ﻿using BH.oM.Base;
 using BH.oM.RDF;
 using Newtonsoft.Json;
+using Newtonsoft.Json.Linq;
 using Newtonsoft.Json.Serialization;
 using System;
 using System.Collections;
@@ -42,6 +43,7 @@ namespace BH.Engine.RDF
             return decryptedObj;
         }
 
+        // ------------------------------------------- //
 
         private abstract class TypeWrapper
         {
@@ -82,7 +84,7 @@ namespace BH.Engine.RDF
 
         // ------------------------------------------- //
 
-        public static class JsonExtensions
+        internal static class JsonExtensions
         {
             static readonly IContractResolver globalResolver = new JsonSerializer().ContractResolver;
 
@@ -98,7 +100,10 @@ namespace BH.Engine.RDF
             {
                 var obj = UnConvert(json);
                 if ((obj is TypeWrapper wrapper))
-                    return (T)wrapper.ObjectValue;
+                    if (wrapper.ObjectValue is JObject)
+                        return UnConvert<T>(wrapper.ObjectValue.ToString());
+                    else
+                        return (T)wrapper.ObjectValue;
                 return (T)obj;
             }
 
@@ -112,6 +117,10 @@ namespace BH.Engine.RDF
 
             static object ToTypeWrapperIfRequired<T>(T obj, IContractResolver resolver = null)
             {
+                // Type information is redundant for string or bool
+                if (obj is bool || obj is string)
+                    return obj;
+
                 return TypeWrapper.CreateWrapper(obj);
             }
         }

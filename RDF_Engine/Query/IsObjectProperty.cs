@@ -23,7 +23,7 @@ namespace BH.Engine.RDF
             // and so is the domain of the relation (the PropertyInfo's Declaring Type).
 
             // Lists are also to be considered ObjectProperties: https://github.com/BHoM/RDF_Prototypes/issues/17
-            return pi.PropertyType.IsOntologyClass() && pi.DeclaringType.IsOntologyClass() || pi.IsListProperty();
+            return pi.PropertyType.IsOntologyClass() && pi.DeclaringType.IsOntologyClass() || pi.PropertyType.IsList();
         }
     }
 }

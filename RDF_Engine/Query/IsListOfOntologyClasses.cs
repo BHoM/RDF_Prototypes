@@ -15,13 +15,31 @@ namespace BH.Engine.RDF
 {
     public static partial class Query
     {
+        public static bool IsList(this Type t)
+        {
+            return typeof(IList).IsAssignableFrom(t);
+        }
+
         public static bool IsListOfOntologyClasses(this Type t)
         {
-            if (typeof(IList).IsAssignableFrom(t))
+            if (t.IsList())
             {
                 Type[] genericArgs = t.GetGenericArguments();
 
                 if (genericArgs.Length == 1 && genericArgs.First().IsOntologyClass())
+                    return true;
+            }
+
+            return false;
+        }
+
+        public static bool IsListOfDatatypes(this Type t)
+        {
+            if (t.IsList())
+            {
+                Type[] genericArgs = t.GetGenericArguments();
+
+                if (genericArgs.Length == 1 && genericArgs.First().IsDataType())
                     return true;
             }
 

@@ -16,6 +16,8 @@ namespace BH.oM.CodeAnalysis.ConsoleApp
 
             FromTTLTests.RunSelectedTests();
 
+            Assert.TestRecap();
+
             // Invoke all static methods in `Tests_Diellza` class
             //typeof(Tests_Diellza).GetMethods().Where(mi => mi.IsStatic).ToList().ForEach(mi => mi.Invoke(null, null));
 

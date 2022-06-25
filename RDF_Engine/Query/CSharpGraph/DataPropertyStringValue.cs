@@ -14,14 +14,19 @@ namespace BH.Engine.RDF
 {
     public static partial class Query
     {
-        public static string StringValue(this IndividualDataProperty idp)
+        public static string DataPropertyStringValue(this IndividualDataProperty idp)
         {
-            Type individualObjectType = idp.Value.GetType();
+            return DataPropertyStringValue(idp.Value);
+        }
+
+        public static string DataPropertyStringValue(object idpValue)
+        {
+            Type individualObjectType = idpValue.GetType();
             if (OntologyTypeMap.ToOntologyDataType.ContainsKey(individualObjectType))
-                return idp.Value.ToString(); // we can just return the ToString()
+                return idpValue.ToString(); // we can just return the ToString()
 
             // We must use our fallback for unknown conversions, serializing to Json.
-            return idp.Value.ToBase64JsonSerialized();
+            return idpValue.ToBase64JsonSerialized();
         }
     }
 }

@@ -32,7 +32,7 @@ namespace BH.Engine.RDF
 
                 TTLIndividual += TLLIndividualRelations(individual, cSharpGraph, localRepositorySettings);
 
-                TTLIndividual = TTLIndividual.ReplaceLastOccurenceOf(';', ".");
+                TTLIndividual = TTLIndividual.EnsureEndingDot();
                 TTLIndividuals.Add(TTLIndividual);
             }
 
@@ -55,7 +55,7 @@ namespace BH.Engine.RDF
                     if (iop.RangeIndividual.GetType().IsListOfOntologyClasses())
                     {
                         var individualList = iop.RangeIndividual as IEnumerable<object>;
-                        if (individualList == null)
+                        if (individualList.IsNullOrEmpty())
                             continue;
 
                         List<string> listIndividualsUris = individualList.Where(o => o != null).Select(o => o.IndividualUri(cSharpGraph.OntologySettings).ToString()).ToList();
@@ -67,10 +67,23 @@ namespace BH.Engine.RDF
 
                             TLLIndividualRelations += $"\t\trdf:_{i} <{individualUri}> ;\n";
                         }
+                    }
+                    else if (iop.RangeIndividual.GetType().IsListOfDatatypes())
+                    {
+                        var individualList = iop.RangeIndividual as IEnumerable;
+                        if (individualList.IsNullOrEmpty())
+                            continue;
 
-                        // TODO: Verify how to handle empty lists.
+                        TLLIndividualRelations += $"\n\t\t:{iop.HasProperty.PropertyInfo.UniqueNodeId()} ";
+
+                        List<string> stringValues = new List<string>();
+                        foreach (var value in individualList)
+                            stringValues.Add($"\"{Query.DataPropertyStringValue(value)}\"^^{value.GetType().ToOntologyDataType()}");
+
+                        TLLIndividualRelations += $"({string.Join(" ", stringValues)})";
                     }
                     else
+
                         TLLIndividualRelations += $"\n\t\t:{iop.HasProperty.PropertyInfo.UniqueNodeId()} <{iop.RangeIndividual.IndividualUri(cSharpGraph.OntologySettings)}> ;";
 
                     continue;
@@ -84,12 +97,12 @@ namespace BH.Engine.RDF
 
                     }
 
-                    TLLIndividualRelations += "\n\t\t" + $@":{idp.PropertyInfo.UniqueNodeId()} ""{idp.StringValue()}""";
+                    TLLIndividualRelations += "\n\t\t" + $@":{idp.PropertyInfo.UniqueNodeId()} ""{idp.DataPropertyStringValue()}""";
 
                     string dataType = idp.Value.GetType().ToOntologyDataType();
 
                     if (dataType == typeof(Base64JsonSerialized).UniqueNodeId())
-                        TLLIndividualRelations += $"^^:{ idp.Value.GetType().ToOntologyDataType()};";
+                        TLLIndividualRelations += $"^^:{idp.Value.GetType().ToOntologyDataType()};";
                     else
                         TLLIndividualRelations += $"^^{ idp.Value.GetType().ToOntologyDataType()};"; // TODO: insert serialized value here, when the individual's datatype is unknown
 

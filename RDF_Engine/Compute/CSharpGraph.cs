@@ -117,7 +117,7 @@ namespace BH.Engine.RDF
                 // OBJECT PROPERTY RELATION
                 // The relation between Individuals corresponds to an ObjectPropertyRelation (between two Classes of the Ontology).
 
-                if (pi.IsListProperty() && individual != null)
+                if (pi.PropertyType.IsListOfOntologyClasses() && individual != null)
                 {
                     rangeType = new ListPropertyType(individual, pi, ontologySettings.TBoxSettings);
 

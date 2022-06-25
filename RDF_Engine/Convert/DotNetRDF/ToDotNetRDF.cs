@@ -32,7 +32,14 @@ namespace BH.Engine.RDF
             TurtleParser turtleParser = new TurtleParser();
             TextReader reader = new StringReader(ttlGraph);
 
-            turtleParser.Load(g, reader);
+            try
+            {
+                turtleParser.Load(g, reader);
+            }
+            catch (Exception e)
+            {
+                Log.RecordError($"Could not convert textual TTL graph to a DotNetRDF OntologyGraph. Error:\n\t{e.ToString().SplitInLinesAndTabify()}");
+            }
 
             if (new OntologyGraph().Equals(g))
                 return null;

@@ -27,19 +27,36 @@ namespace BH.Test.RDF
             Assert.IsEqual(obj, decoded);
         }
 
+        public class TestClass
+        {
+            public string Name { get; set; } = "TestName";
+            public int Int { get; set; } = 999;
+        }
+
         public static void Base64Encoded()
         {
-            BHoMObject obj = new BHoMObject();
-            obj.CustomData["encoded"] = new KeyValuePair<string, string>("testKey", "testValue");
-            List<IObject> objectList = new List<IObject>() { obj };
+            BHoMObject bhomObj = new BHoMObject();
+
+            //var testEntry = new KeyValuePair<string, string>("testKey", "testValue");
+            var testEntry = new TestClass();
+            
+            bhomObj.CustomData["encoded"] = testEntry;
+
+            List<IObject> objectList = new List<IObject>() { bhomObj };
             string TTLGraph = objectList.TTLGraph(m_shortAddresses, new LocalRepositorySettings());
 
             Assert.IsTTLParsable(TTLGraph);
 
             OntologyResource individual = TTLGraph.Individuals().FirstOrDefault();
             string valueString = (individual.TriplesWithSubject.LastOrDefault().Object as LiteralNode)?.Value;
+
             object decryptedObj = valueString.FromBase64JsonSerialized();
-            Assert.IsEqual(obj.CustomData["encoded"], decryptedObj);
+
+            Dictionary<string, object> decryptedCustomData = decryptedObj as Dictionary<string, object>;
+
+            object decryptedEntry = decryptedCustomData["encoded"];
+
+            Assert.IsEqual(testEntry, decryptedEntry);
         }
 
         public static void Point()
@@ -65,8 +82,6 @@ namespace BH.Test.RDF
 
             List<IObject> objectList = new List<IObject>() { room };
             string TTLGraph = objectList.TTLGraph(m_shortAddresses, new LocalRepositorySettings());
-
-            Console.Write(TTLGraph);
 
             Assert.IsTTLParsable(TTLGraph);
 
@@ -169,11 +184,12 @@ namespace BH.Test.RDF
             Assert.IsTTLParsable(TTLGraph);
         }
 
-        public static void CustomType_ListProperty()
+        public static void CustomType_Property_ListOfPrimitives()
         {
             CustomObject co = new CustomObject();
-            co.CustomData[m_shortAddresses.TBoxSettings.CustomobjectsTypeKey] = "A test type";
-            co.CustomData["testListPrimitives"] = Enumerable.Range(0, 10);
+            co.CustomData[m_shortAddresses.TBoxSettings.CustomobjectsTypeKey] = "TestType";
+            List<int> listOPrimitives = Enumerable.Range(0, 10).ToList();
+            co.CustomData["testListPrimitives"] = listOPrimitives;
 
             CSharpGraph cSharpGraph_customObj = Compute.CSharpGraph(new List<IObject>() { co }, m_shortAddresses);
             string TTLGraph = cSharpGraph_customObj.ToTTLGraph(new LocalRepositorySettings());
@@ -181,7 +197,20 @@ namespace BH.Test.RDF
             Assert.IsTTLParsable(TTLGraph);
         }
 
-        public static string ListOfObjects()
+        public static void CustomType_Property_ListOfObjects()
+        {
+            CustomObject co = new CustomObject();
+            co.CustomData[m_shortAddresses.TBoxSettings.CustomobjectsTypeKey] = "TestType";
+            List<Point> listOfObjects = new List<Point>() { new oM.Geometry.Point() { X = 101, Y = 102 }, new Point() { X = 201, Y = 202 } };
+            co.CustomData["testListObjects"] = listOfObjects;
+
+            CSharpGraph cSharpGraph_customObj = Compute.CSharpGraph(new List<IObject>() { co }, m_shortAddresses);
+            string TTLGraph = cSharpGraph_customObj.ToTTLGraph(new LocalRepositorySettings());
+
+            Assert.IsTTLParsable(TTLGraph);
+        }
+
+        public static string BHoMObject_Property_ListOfObjects()
         {
             NurbsCurve nurbs = new NurbsCurve()
             {
@@ -196,14 +225,7 @@ namespace BH.Test.RDF
             CSharpGraph cSharpGraph_customObj = Compute.CSharpGraph(new List<IObject>() { nurbs }, m_shortAddresses);
             string TTLGraph = cSharpGraph_customObj.ToTTLGraph(new LocalRepositorySettings());
 
-            OntologyGraph g = new OntologyGraph();
-            //StringParser.Parse(g, TTLGraph);
-            TurtleParser turtleParser = new TurtleParser();
-            TextReader reader = new StringReader(TTLGraph);
-            turtleParser.Load(g, reader);
-
             Assert.IsTTLParsable(TTLGraph);
-
 
             return TTLGraph;
         }
@@ -224,15 +246,17 @@ namespace BH.Test.RDF
 
         public static void RunSelectedTests()
         {
-            CustomType_ListProperty();
+            CustomType_Property_ListOfPrimitives();
+
+            CustomType_Property_ListOfObjects();
+
+            BHoMObject_Property_ListOfObjects();
 
             EncodeDecode();
 
             Base64Encoded();
 
             Point();
-
-            ListOfObjects();
 
             NestedCustomObjects();
 
@@ -246,7 +270,6 @@ namespace BH.Test.RDF
 
             CustomObject();
 
-            Assert.TestRecap();
         }
 
 

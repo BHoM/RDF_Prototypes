@@ -26,6 +26,9 @@ namespace BH.Engine.RDF
 
         public static string _UniqueNodeId(this Type type)
         {
+            if (type.IsList())
+                return "rdf:list";
+
             return type.FullName;
         }
 
@@ -35,7 +38,7 @@ namespace BH.Engine.RDF
             if (typeInfo.AsType() is CustomObjectType)
                 return UniqueNodeId(typeInfo.AsType());
 
-            return typeInfo.FullName;
+            return typeInfo.AsType()._UniqueNodeId();
         }
 
         public static string _UniqueNodeId(this PropertyInfo propertyInfo)
