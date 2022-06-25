@@ -75,12 +75,13 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Compute\ReadTTL.cs" />
     <Compile Include="Compute\TTLGraph.cs" />
     <Compile Include="Compute\IO\FilesInRepo.cs" />
     <Compile Include="Compute\CSharpGraph.cs" />
     <Compile Include="Compute\WebVOWL\WriteWebVOWLOntology.cs" />
     <Compile Include="Compute\WebVOWL\WriteWebVOWLOntologiesPerNamespace.cs" />
-    <Compile Include="Convert\DotNetRDF\ToBHoMInstance.cs" />
+    <Compile Include="Convert\DotNetRDF\ToCSharpObject.cs" />
     <Compile Include="Convert\DotNetRDF\ToDotNetRDF.cs" />
     <Compile Include="Convert\Base64JsonSerialized.cs" />
     <Compile Include="Convert\TTL\ToTTLGraph.cs" />
@@ -88,7 +89,7 @@
     <Compile Include="Create\Testing\RandomObject.cs" />
     <Compile Include="Create\Testing\RandomObjects.cs" />
     <Compile Include="Create\CreateInstance.cs" />
-    <Compile Include="Convert\DotNetRDF\ToBHoMInstances.cs" />
+    <Compile Include="Convert\DotNetRDF\ToCSharpObjects.cs" />
     <Compile Include="Modify\SplitInLinesAndTabify.cs" />
     <Compile Include="Query\DotNetRDF\EquivalentBHoMType.cs" />
     <Compile Include="Query\DotNetRDF\IndividualOntologyResource.cs" />
@@ -185,6 +186,9 @@
   <PropertyGroup>
     <PostBuildEvent>xcopy "$(TargetDir)$(TargetFileName)"  "C:\ProgramData\BHoM\Assemblies" /Y
 xcopy "$(TargetDir)Newtonsoft.Json.dll" "C:\ProgramData\BHoM\Assemblies" /Y
+xcopy "$(TargetDir)dotNetRDF.dll" "C:\ProgramData\BHoM\Assemblies" /Y
+xcopy "$(TargetDir)VDS.Common.dll" "C:\ProgramData\BHoM\Assemblies" /Y
+xcopy "$(TargetDir)VDS.Common.dll" "C:\ProgramData\BHoM\Assemblies" /Y
 
 EXIT 0</PostBuildEvent>
   </PropertyGroup>

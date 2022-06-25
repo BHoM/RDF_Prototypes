@@ -14,7 +14,7 @@ namespace BH.Engine.RDF
 {
     public static partial class Convert
     {
-        public static List<object> ToBHoMInstances(this OntologyGraph dotNetRDFOntology)
+        public static List<object> ToCSharpObjects(this OntologyGraph dotNetRDFOntology)
         {
             var topIndividuals = dotNetRDFOntology.IndividualsNoOwner();
 
@@ -22,16 +22,16 @@ namespace BH.Engine.RDF
 
             foreach (OntologyResource individual in topIndividuals)
             {
-                object bhomInstance = individual.ToBHoMInstance(dotNetRDFOntology);
+                object bhomInstance = individual.ToCSharpObject(dotNetRDFOntology);
                 result.Add(bhomInstance);
             }
 
             return result;
         }
 
-        public static List<object> ToBHoMInstances(this string TTLOntology)
+        public static List<object> ToCSharpObjects(this string TTLOntology)
         {
-            return ToDotNetRDF(TTLOntology).ToBHoMInstances();
+            return ToDotNetRDF(TTLOntology).ToCSharpObjects();
         }
 
         public static Uri AbsoluteUri(this INode node)

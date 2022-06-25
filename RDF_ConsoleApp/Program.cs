@@ -12,9 +12,9 @@ namespace BH.oM.CodeAnalysis.ConsoleApp
     {
         public static void Main(string[] args = null)
         {
-            ToTTLTests.RunSelectedTests();
+            ToTTLTests.RunAll();
 
-            FromTTLTests.RunSelectedTests();
+            FromTTLTests.RunAll();
 
             Assert.TestRecap();
 

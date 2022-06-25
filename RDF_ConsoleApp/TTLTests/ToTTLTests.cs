@@ -69,8 +69,7 @@ namespace BH.Test.RDF
 
             List<OntologyResource> individuals = TTLGraph.Individuals();
 
-            var bhomObjects = TTLGraph.ToBHoMInstances();
-
+            var bhomObjects = TTLGraph.ToCSharpObjects();
         }
 
         public static string Room()

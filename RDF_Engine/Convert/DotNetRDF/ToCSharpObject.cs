@@ -15,14 +15,24 @@ namespace BH.Engine.RDF
 {
     public static partial class Convert
     {
-        public static object ToBHoMInstance(this OntologyResource individual, OntologyGraph dotNetRDFOntology)
+        public static object ToCSharpObject(this OntologyResource individual, OntologyGraph dotNetRDFOntology)
         {
             if (individual == null || dotNetRDFOntology == null)
                 return null;
 
             Type individualType = individual.EquivalentBHoMType();
 
-            object resultObject = Activator.CreateInstance(individualType);
+            object resultObject = null;
+
+            try
+            {
+                resultObject = Activator.CreateInstance(individualType);
+            }
+            catch (Exception e)
+            {
+                Log.RecordWarning($"The conversion does not support the type {individualType.FullName} yet. Error:\n{e.Message}");
+                return null;
+            }
 
             if (resultObject == null)
                 return null;
@@ -78,7 +88,7 @@ namespace BH.Engine.RDF
                         {
                             Triple listItemTriple = individual.TriplesWithSubject.ElementAt(kv.Value);
                             OntologyResource listIndividual = listItemTriple.Object.IndividualOntologyResource(dotNetRDFOntology);
-                            object convertedIndividual = listIndividual.ToBHoMInstance(dotNetRDFOntology);
+                            object convertedIndividual = listIndividual.ToCSharpObject(dotNetRDFOntology);
                             listValues.Add(convertedIndividual);
                         }
 
@@ -87,7 +97,7 @@ namespace BH.Engine.RDF
                     else
                     {
                         OntologyResource relatedIndividual = uriNode.IndividualOntologyResource(dotNetRDFOntology);
-                        propertyValue = relatedIndividual.ToBHoMInstance(dotNetRDFOntology);
+                        propertyValue = relatedIndividual.ToCSharpObject(dotNetRDFOntology);
                     }
                 }
 

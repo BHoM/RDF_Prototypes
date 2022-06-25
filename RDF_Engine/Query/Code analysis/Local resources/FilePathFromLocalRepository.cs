@@ -39,7 +39,7 @@ namespace BH.Engine.RDF
                 return null; 
             }
 
-            string repositoryRoot = settings.RepositoryRootPath;
+            string repositoryRoot = settings.GitRootPath;
 
             if (string.IsNullOrWhiteSpace(repositoryRoot) || !Directory.Exists(repositoryRoot))
             {

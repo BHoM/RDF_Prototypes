@@ -22,7 +22,7 @@ namespace BH.Test.RDF
             List<IObject> objectList = new List<IObject>() { p };
             string TTLGraph = objectList.TTLGraph(m_shortAddresses, new LocalRepositorySettings());
 
-            var bhomObjects = TTLGraph.ToBHoMInstances();
+            var bhomObjects = TTLGraph.ToCSharpObjects();
 
             Assert.IsEqual(p, bhomObjects.FirstOrDefault());
         }
@@ -37,7 +37,7 @@ namespace BH.Test.RDF
             List<IObject> objectList = new List<IObject>() { room };
             string TTLGraph = objectList.TTLGraph(m_shortAddresses, new LocalRepositorySettings());
 
-            var bhomObjects = TTLGraph.ToBHoMInstances();
+            var bhomObjects = TTLGraph.ToCSharpObjects();
             Assert.IsEqual(room, bhomObjects.FirstOrDefault());
         }
 
@@ -52,7 +52,7 @@ namespace BH.Test.RDF
 
             Assert.IsTTLParsable(TTLGraph);
 
-            var bhomObjects = TTLGraph.ToBHoMInstances();
+            var bhomObjects = TTLGraph.ToCSharpObjects();
             Assert.IsEqual(randomColumn, bhomObjects.FirstOrDefault());
         }
 
@@ -72,7 +72,7 @@ namespace BH.Test.RDF
 
             Assert.IsTTLParsable(TTLGraph);
 
-            var bhomObjects = TTLGraph.ToBHoMInstances();
+            var bhomObjects = TTLGraph.ToCSharpObjects();
             Assert.IsEqual(objectList, bhomObjects);
 
             bhomObjects[1] = new Column();
@@ -159,7 +159,7 @@ namespace BH.Test.RDF
 
             Assert.IsTTLParsable(TTLGraph);
             
-            var bhomObjects = TTLGraph.ToBHoMInstances();
+            var bhomObjects = TTLGraph.ToCSharpObjects();
 
             Assert.IsEqual(nurbs, bhomObjects.FirstOrDefault());
         }
@@ -174,7 +174,7 @@ namespace BH.Test.RDF
 
             Assert.IsTTLParsable(TTLGraph);
 
-            var convertedObj = TTLGraph.ToBHoMInstances().FirstOrDefault() as BHoMObject;
+            var convertedObj = TTLGraph.ToCSharpObjects().FirstOrDefault() as BHoMObject;
 
             Assert.IsEqual(bhomObj.CustomData["listOfPrimitives"], convertedObj.CustomData["listOfPrimitives"]);
         }
@@ -186,7 +186,7 @@ namespace BH.Test.RDF
         public static void RunAll()
         {
             // Invoke all static methods in the given class class
-            typeof(ToTTLTests).GetMethods()
+            typeof(FromTTLTests).GetMethods()
                 .Where(mi => mi.IsStatic && !mi.Name.Contains("Run")).ToList()
                 .ForEach(mi => mi.Invoke(null, null));
 
