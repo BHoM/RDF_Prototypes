@@ -1,6 +1,7 @@
 ﻿using BH.oM.RDF;
 using System;
 using System.Collections.Generic;
+using System.ComponentModel;
 using System.IO;
 using System.Linq;
 using System.Reflection;
@@ -12,12 +13,14 @@ namespace BH.Engine.RDF
 {
     public static partial class Compute
     {
-        public static HashSet<string> FilesInRepo(string parentRepoDirectoryPath, LocalRepositorySettings settings = null)
+        [Description("Returns All `.cs` file paths found in the specified Git root (e.g. C:/Users/username/GitHub)." +
+            "LocalRepositorySettings can be input to specify how to cache this operation to speed it up after its first computationl.")]
+        public static HashSet<string> FilesInRepo(string gitRootPath, LocalRepositorySettings settings = null)
         {
             if (settings == null)
                 settings = new LocalRepositorySettings();
 
-            if (string.IsNullOrWhiteSpace(parentRepoDirectoryPath) || !Directory.Exists(parentRepoDirectoryPath))
+            if (string.IsNullOrWhiteSpace(gitRootPath) || !Directory.Exists(gitRootPath))
                 return null;
 
             // Read from cached memory.
@@ -49,7 +52,7 @@ namespace BH.Engine.RDF
             if (!cacheFileReadCorrectly)
             {
                 // Read the filesystem and get the .cs files.
-                files = Directory.GetFiles(parentRepoDirectoryPath, "*.cs", SearchOption.AllDirectories);
+                files = Directory.GetFiles(gitRootPath, "*.cs", SearchOption.AllDirectories);
                 files = files.Where(f => 
                     !f.Contains("TemporaryGeneratedFile_") && 
                     !f.EndsWith("AssemblyInfo.cs") && 

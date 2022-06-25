@@ -16,6 +16,7 @@ using BH.oM.Physical.Elements;
 using BH.oM.RDF;
 using System.ComponentModel;
 using System.Diagnostics;
+using VDS.RDF.Ontology;
 
 namespace BH.Test.RDF
 {
@@ -24,9 +25,30 @@ namespace BH.Test.RDF
     // If we can get other unit testing libraries to work, calls to this class can simply be replaced.
     public static partial class Assert
     {
+        public static void IsTTLParsable(string ttl)
+        {
+            try
+            {
+                OntologyGraph g = BH.Engine.RDF.Convert.ToDotNetRDF(ttl);
+
+                if (g == null)
+                    RecordTestFailure("TTL was not parsable.");
+            }
+            catch
+            {
+                RecordTestFailure("TTL was not parsable.");
+            }
+        }
+
         public static void IsNotNull(object value, string error = null)
         {
             if (value == null)
+                RecordTestFailure(error);
+        }
+
+        public static void IsEqual(object obj1, object obj2, string error = null)
+        {
+            if (!obj1.Equals(obj2))
                 RecordTestFailure(error);
         }
 
@@ -91,10 +113,10 @@ namespace BH.Test.RDF
             Log.RecordError(separator + errorMessageToLog + separator);
         }
 
-        private static string GetCallerName(int stackIndex = 1)
+        private static string GetCallerName(int stackIndex = 3)
         {
-            string caller = new StackFrame(stackIndex).GetMethod().Name;
-            return caller;
+            var method = new StackFrame(stackIndex).GetMethod();
+            return $"`{method.DeclaringType.Name}.{method.Name}`";
         }
 
         internal static void TestRecap()

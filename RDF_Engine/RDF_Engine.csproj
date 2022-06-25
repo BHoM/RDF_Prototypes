@@ -80,11 +80,18 @@
     <Compile Include="Compute\CSharpGraph.cs" />
     <Compile Include="Compute\WriteWebVOWLOntology.cs" />
     <Compile Include="Compute\WriteWebVOWLOntologiesPerNamespace.cs" />
-    <Compile Include="Convert\ToTTLGraph.cs" />
+    <Compile Include="Convert\DotNetRDF\ToBHoMInstance.cs" />
+    <Compile Include="Convert\DotNetRDF\ToDotNetRDF.cs" />
+    <Compile Include="Convert\Base64JsonSerialized.cs" />
+    <Compile Include="Convert\TTL\ToTTLGraph.cs" />
     <Compile Include="Create\Testing\CustomObject.cs" />
     <Compile Include="Create\Testing\RandomObject.cs" />
     <Compile Include="Create\Testing\RandomObjects.cs" />
     <Compile Include="Create\CreateInstance.cs" />
+    <Compile Include="Convert\DotNetRDF\ToBHoMInstances.cs" />
+    <Compile Include="Query\DotNetRDF\EquivalentBHoMType.cs" />
+    <Compile Include="Query\DotNetRDF\IndividualOntologyResource.cs" />
+    <Compile Include="Query\DotNetRDF\Individuals.cs" />
     <Compile Include="Query\GuidFromString.cs" />
     <Compile Include="Query\IsListOfOntologyClasses.cs" />
     <Compile Include="Query\IsListProperty.cs" />
@@ -114,13 +121,13 @@
     <Compile Include="Convert\ToOntologyDataType.cs" />
     <Compile Include="Query\IndividualId.cs" />
     <Compile Include="Query\StringValue.cs" />
-    <Compile Include="Convert\TTLObjectProperties.cs" />
-    <Compile Include="Convert\TTLDataTypes.cs" />
+    <Compile Include="Convert\TTL\TTLObjectProperties.cs" />
+    <Compile Include="Convert\TTL\TTLDataTypes.cs" />
     <Compile Include="Query\ReplaceLastOccurenceOf.cs" />
     <Compile Include="Create\TTLAnnotationProperties.cs" />
-    <Compile Include="Convert\TTLIndividuals.cs" />
-    <Compile Include="Convert\TTLDataProperties.cs" />
-    <Compile Include="Convert\TTLClasses.cs" />
+    <Compile Include="Convert\TTL\TTLIndividuals.cs" />
+    <Compile Include="Convert\TTL\TTLDataProperties.cs" />
+    <Compile Include="Convert\TTL\TTLClasses.cs" />
     <Compile Include="Create\TTLHeader.cs" />
     <Compile Include="Create\TTLSectionTitle.cs" />
     <Compile Include="Query\IsNullOrEmpty.cs" />
@@ -130,8 +137,8 @@
     <Compile Include="Compute\WriteToJsonFile.cs" />
     <Compile Include="Compute\WriteToXMLFile.cs" />
     <Compile Include="Compute\LoadAssembliesInDirectory.cs" />
-    <Compile Include="Convert\AddWebOwlRelationNodes.cs" />
-    <Compile Include="Convert\AddWebOwlClassNodes.cs" />
+    <Compile Include="Convert\WebVOWL\AddWebOwlRelationNodes.cs" />
+    <Compile Include="Convert\WebVOWL\AddWebOwlClassNodes.cs" />
     <Compile Include="Modify\CreateOntologyClass.cs" />
     <Compile Include="Modify\AddToIdTypeArray.cs" />
     <Compile Include="Query\Reflection\AllNestedTypes.cs" />
@@ -161,7 +168,7 @@
     <Compile Include="Query\RelationsFromType.cs" />
     <Compile Include="Query\DictionaryGraphFromTypeInfos.cs" />
     <Compile Include="Query\OnlyAlphabetic.cs" />
-    <Compile Include="Convert\ToWebVOWLJson.cs" />
+    <Compile Include="Convert\TTL\ToWebVOWLJson.cs" />
     <Compile Include="Query\Reflection\DeclaredProperties.cs" />
     <Compile Include="Query\Uri\GithubURI.cs" />
     <Compile Include="Query\UniqueNodeId.cs" />
@@ -179,6 +186,7 @@
       <Name>RDF_oM</Name>
     </ProjectReference>
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <PropertyGroup>
     <PostBuildEvent>xcopy "$(TargetDir)$(TargetFileName)"  "C:\ProgramData\BHoM\Assemblies" /Y

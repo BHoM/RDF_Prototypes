@@ -12,7 +12,9 @@ namespace BH.oM.CodeAnalysis.ConsoleApp
     {
         public static void Main(string[] args = null)
         {
-            TTLExportTests.RunSelectedTests();
+            ToTTLTests.RunSelectedTests();
+
+            FromTTLTests.RunSelectedTests();
 
             // Invoke all static methods in `Tests_Diellza` class
             //typeof(Tests_Diellza).GetMethods().Where(mi => mi.IsStatic).ToList().ForEach(mi => mi.Invoke(null, null));

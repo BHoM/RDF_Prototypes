@@ -9,27 +9,35 @@ using BH.oM.Base;
 using VDS.RDF;
 using VDS.RDF.Parsing;
 using System.Linq;
+using System.IO;
+using VDS.RDF.Ontology;
 
 namespace BH.Test.RDF
 {
-    public static class TTLExportTests
+    public static class FromTTLTests
     {
-        public static string Room()
+        public static void Point()
+        {
+            Point p = new Point() { X = 101, Y = 102, Z = 103 };
+            List<IObject> objectList = new List<IObject>() { p };
+            string TTLGraph = objectList.TTLGraph(m_shortAddresses, new LocalRepositorySettings());
+
+            var bhomObjects = TTLGraph.ToBHoMInstances();
+            Assert.IsEqual(p, bhomObjects.FirstOrDefault());
+        }
+
+        public static void Room()
         {
             Room room = new Room();
-            room.Perimeter = new Polyline() { ControlPoints = new List<Point>() { new Point(), new Point() { X = 5, Y = 5, Z = 5 }, new Point() { X = 99 } } };
-            room.Location = new Point();
+            room.Perimeter = new Polyline() { ControlPoints = new List<Point>() { new Point() { X = 101, Y = 102, Z = 103 }, new Point() { X = 201, Y = 202, Z = 203 }, new Point() { X = 99 } } };
+            room.Location = new Point() { X = 901, Y = 902, Z = 903 };
             room.Name = "A room object";
 
             List<IObject> objectList = new List<IObject>() { room };
             string TTLGraph = objectList.TTLGraph(m_shortAddresses, new LocalRepositorySettings());
 
-            Console.Write(TTLGraph);
-
-            Graph g = new Graph();
-            StringParser.Parse(g, TTLGraph);
-
-            return TTLGraph;
+            var bhomObjects = TTLGraph.ToBHoMInstances();
+            Assert.IsEqual(room, bhomObjects.FirstOrDefault());
         }
 
         public static string Column()
@@ -41,8 +49,7 @@ namespace BH.Test.RDF
 
             Console.Write(TTLGraph);
 
-            Graph g = new Graph();
-            StringParser.Parse(g, TTLGraph);
+            Assert.IsTTLParsable(TTLGraph);
 
             return TTLGraph;
         }
@@ -61,8 +68,7 @@ namespace BH.Test.RDF
 
             Console.Write(TTLGraph);
 
-            Graph g = new Graph();
-            StringParser.Parse(g, TTLGraph);
+            Assert.IsTTLParsable(TTLGraph);
 
             return TTLGraph;
         }
@@ -78,8 +84,7 @@ namespace BH.Test.RDF
 
             Console.Write(TTLGraph);
 
-            Graph g = new Graph();
-            StringParser.Parse(g, TTLGraph);
+            Assert.IsTTLParsable(TTLGraph);
 
             return TTLGraph;
         }
@@ -94,13 +99,12 @@ namespace BH.Test.RDF
             CSharpGraph cSharpGraph_customObj = Compute.CSharpGraph(new List<IObject>() { customObject1, customObject2 }, m_shortAddresses);
             Assert.Single(cSharpGraph_customObj.Classes.Where(c => c.Name == "Cassette"), "CustomObjectTypes");
             Assert.TotalCount(cSharpGraph_customObj.AllIndividuals, 2, "AllIndividuals");
-            
+
             string TTLGraph = cSharpGraph_customObj.ToTTLGraph(new LocalRepositorySettings());
 
             Console.Write(TTLGraph);
 
-            Graph g = new Graph();
-            StringParser.Parse(g, TTLGraph);
+            Assert.IsTTLParsable(TTLGraph);
 
             return TTLGraph;
         }
@@ -129,8 +133,7 @@ namespace BH.Test.RDF
 
             Console.Write(TTLGraph);
 
-            Graph g = new Graph();
-            StringParser.Parse(g, TTLGraph);
+            Assert.IsTTLParsable(TTLGraph);
         }
 
         public static string Lists()
@@ -139,17 +142,18 @@ namespace BH.Test.RDF
             {
                 ControlPoints = new List<Point>()
                 {
-                    new Point(),
-                    new Point() { X = 1, Y = 1, Z = 1 },
-                    new Point() { X = 2, Y = 2, Z = 2 }
+                    new Point() { X = 101, Y = 102, Z = 103 },
+                    new Point() { X = 201, Y = 202, Z = 203 },
+                    new Point() { X = 301, Y = 302, Z = 303 }
                 }
             };
 
             CSharpGraph cSharpGraph_customObj = Compute.CSharpGraph(new List<IObject>() { nurbs }, m_shortAddresses);
             string TTLGraph = cSharpGraph_customObj.ToTTLGraph(new LocalRepositorySettings());
 
-            Graph g = new Graph();
-            StringParser.Parse(g, TTLGraph);
+            Assert.IsTTLParsable(TTLGraph);
+            
+            var bhomObjects = TTLGraph.ToBHoMInstances();
 
             return TTLGraph;
         }
@@ -161,7 +165,7 @@ namespace BH.Test.RDF
         public static void RunAll()
         {
             // Invoke all static methods in the given class class
-            typeof(TTLExportTests).GetMethods()
+            typeof(ToTTLTests).GetMethods()
                 .Where(mi => mi.IsStatic && !mi.Name.Contains("Run")).ToList()
                 .ForEach(mi => mi.Invoke(null, null));
 
@@ -170,22 +174,29 @@ namespace BH.Test.RDF
 
         public static void RunSelectedTests()
         {
-            TTLExportTests.Lists();
 
-            TTLExportTests.NestedCustomObjects();
+            CustomObject();
 
-            TTLExportTests.CustomObject_SameType_SameProperties_NoError();
+            Lists();
 
-            TTLExportTests.CustomObject_SameType_DifferentProperties_Error();
+            Point();
 
-            TTLExportTests.Room();
 
-            TTLExportTests.RoomAndColumn();
+            Room();
 
-            TTLExportTests.CustomObject();
+            NestedCustomObjects();
+
+            CustomObject_SameType_SameProperties_NoError();
+
+            CustomObject_SameType_DifferentProperties_Error();
+
+            RoomAndColumn();
+
 
             Assert.TestRecap();
         }
+
+
 
 
         // ----------------------

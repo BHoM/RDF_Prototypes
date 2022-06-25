@@ -21,7 +21,7 @@ namespace BH.Engine.RDF
         /**** Public Methods                            ****/
         /***************************************************/
 
-        [Description("Convert a Graph ontological representation of (BHoM) types and their relations into a Json format readable by WebVOWL (http://vowl.visualdataweb.org/webvowl.html).")]
+        [Description("Converts a Graph ontological representation of (BHoM) types and their relations into a TTL format.")]
         public static string ToTTLGraph(this CSharpGraph cSharpGraph, LocalRepositorySettings localRepositorySettings = null)
         {
             localRepositorySettings = localRepositorySettings ?? new LocalRepositorySettings();

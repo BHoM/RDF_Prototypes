@@ -16,6 +16,7 @@ namespace BH.Engine.RDF
         /**** Public Methods                            ****/
         /***************************************************/
 
+        [Description("Creates an instance of the given type, by using a specified contructor chosen via its index. 0 is the first ctor, 1 the second, and so on. Ctor input args can be specified.")]
         public static object CreateInstance(Type type, int ctorIndex = 0, params object[] args)
         {
             ConstructorInfo ctor = type.GetConstructors()[ctorIndex];
@@ -40,6 +41,7 @@ namespace BH.Engine.RDF
 
         /***************************************************/
 
+        [Description("Creates an instance of the given type, by using a specified contructor chosen via its index. 0 is the first ctor, 1 the second, and so on. Ctor input args can be specified.")]
         public static T CreateInstance<T>(int ctorIndex = 0, params object[] args)
         {
             ConstructorInfo ctor = typeof(T).GetConstructors()[ctorIndex];

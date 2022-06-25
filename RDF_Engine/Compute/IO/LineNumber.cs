@@ -21,7 +21,8 @@ namespace BH.Engine.RDF
         private static Dictionary<string, List<string>> m_cachedFileLines = new Dictionary<string, List<string>>();
         private static Dictionary<PropertyInfo, int> m_cachedPinfoFileline = new Dictionary<PropertyInfo, int>();
 
-        [Description("Looks for the line number of a property in its `.cs` file by reading the file. Returns -1 if not found. 0 indicates the first line.")]
+        [Description("Looks for the line number of a property in its `.cs` file by reading the file. Returns -1 if not found. 0 indicates the first line." +
+            "LocalRepositorySettings can be input to specify how to cache this operation to speed it up after its first computation.")]
         public static int LineNumber(PropertyInfo pi, LocalRepositorySettings settings)
         {
             // Null guards

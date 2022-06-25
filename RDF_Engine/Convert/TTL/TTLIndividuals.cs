@@ -79,6 +79,11 @@ namespace BH.Engine.RDF
                 IndividualDataProperty idp = individualRelation as IndividualDataProperty;
                 if (idp != null)
                 {
+                    if (idp.Value is IEnumerable)
+                    {
+
+                    }
+
                     TLLIndividualRelations += "\n\t\t" + $@":{idp.PropertyInfo.UniqueNodeId()} ""{idp.StringValue()}""";
 
                     string dataType = idp.Value.GetType().ToOntologyDataType();
