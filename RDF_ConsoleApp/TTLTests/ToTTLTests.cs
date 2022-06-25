@@ -179,8 +179,6 @@ namespace BH.Test.RDF
 
             string TTLGraph = cSharpGraph_customObj.ToTTLGraph(new LocalRepositorySettings());
 
-            Console.Write(TTLGraph);
-
             Assert.IsTTLParsable(TTLGraph);
         }
 
