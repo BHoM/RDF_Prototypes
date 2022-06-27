@@ -48,8 +48,6 @@ namespace BH.Test.RDF
             List<IObject> objectList = new List<IObject>() { randomColumn };
             string TTLGraph = objectList.TTLGraph(m_shortAddresses, new LocalRepositorySettings());
 
-            Console.Write(TTLGraph);
-
             Assert.IsTTLParsable(TTLGraph);
 
             var bhomObjects = TTLGraph.ToCSharpObjects();
@@ -88,8 +86,6 @@ namespace BH.Test.RDF
             CSharpGraph cSharpGraph_customObj = Compute.CSharpGraph(new List<IObject>() { customObject }, m_shortAddresses);
             string TTLGraph = cSharpGraph_customObj.ToTTLGraph(new LocalRepositorySettings());
 
-            Console.Write(TTLGraph);
-
             Assert.IsTTLParsable(TTLGraph);
 
             return TTLGraph;
@@ -107,8 +103,6 @@ namespace BH.Test.RDF
             Assert.TotalCount(cSharpGraph_customObj.AllIndividuals, 2, "AllIndividuals");
 
             string TTLGraph = cSharpGraph_customObj.ToTTLGraph(new LocalRepositorySettings());
-
-            Console.Write(TTLGraph);
 
             Assert.IsTTLParsable(TTLGraph);
 
@@ -136,8 +130,6 @@ namespace BH.Test.RDF
             Assert.IsNotNull(cSharpGraph_customObj.Classes.Single(c => c.Name == "Roof"));
 
             string TTLGraph = cSharpGraph_customObj.ToTTLGraph(new LocalRepositorySettings());
-
-            Console.Write(TTLGraph);
 
             Assert.IsTTLParsable(TTLGraph);
         }
@@ -179,6 +171,20 @@ namespace BH.Test.RDF
             Assert.IsEqual(bhomObj.CustomData["listOfPrimitives"], convertedObj.CustomData["listOfPrimitives"]);
         }
 
+        public static void CustomType_PropertyList_OfPrimitives()
+        {
+            CustomObject customObj = new CustomObject();
+            customObj.CustomData["listOfPrimitives"] = new List<int>() { 1, 2, 3, 4 };
+
+            string TTLGraph = new List<IObject>() { customObj }.TTLGraph(m_shortAddresses, new LocalRepositorySettings());
+
+            Assert.IsTTLParsable(TTLGraph);
+
+            var convertedObj = TTLGraph.ToCSharpObjects().FirstOrDefault() as CustomObject;
+
+            Assert.IsEqual(customObj.CustomData["listOfPrimitives"], convertedObj.CustomData["listOfPrimitives"]);
+        }
+
         // ----------------------
         // Run utilities
         // ----------------------
@@ -213,8 +219,6 @@ namespace BH.Test.RDF
 
             CustomObject_SameType_DifferentProperties_Error();
         }
-
-
 
 
         // ----------------------

@@ -138,7 +138,8 @@ namespace BH.Test.RDF
 
         internal static void TestRecap()
         {
-            string header = "\n\n\n\n\n ************ TEST RECAP ************\n";
+            string callerClassName = new StackFrame(1).GetMethod().DeclaringType.Name;
+            string header = $"\n\n\n\n\n ************ TEST RECAP FOR `{callerClassName}` ************\n";
             Log.RecordNote(header);
 
             if (_allErrors == null || !_allErrors.Any())

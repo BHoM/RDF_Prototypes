@@ -63,7 +63,7 @@ namespace BH.Engine.RDF
                 return; // do not add type for list property.
 
             CustomObjectType cType = type as CustomObjectType;
-            if (cType != null && m_cSharpGraph.Classes.OfType<CustomObjectType>().Where(ct => ct.Name == cType.Name).SelectMany(ct => ct.PropertyNames.Except(cType.PropertyNames)).Any()) 
+            if (cType != null && m_cSharpGraph.Classes.OfType<CustomObjectType>().Where(ct => ct.Name == cType.Name).SelectMany(ct => ct.PropertyNames.Except(cType.PropertyNames)).Any())
                 throw new ArgumentException($"The input contained multiple CustomObjects with the same Type key `{cType.Name}` which had different properties. Make sure that all instances of `{cType.Name}` have the same property names.");
 
             if (m_cSharpGraph.Classes.Contains(type))
@@ -85,21 +85,30 @@ namespace BH.Engine.RDF
             }
         }
 
-        private static void AddToOntology(this PropertyInfo[] pInfos, object obj = null, OntologySettings ontologySettings = null)
+        private static void AddToOntology(this PropertyInfo[] pInfos, OntologySettings ontologySettings, object obj = null)
         {
             foreach (var pi in pInfos)
-                AddToOntology(pi as dynamic, obj, ontologySettings);
+            {
+                if (pi is CustomPropertyInfo && obj != null)
+                {
+                    object individualPropertyValue = pi.GetValue(obj);
+                    AddToOntology((CustomPropertyInfo)pi, ontologySettings, obj, individualPropertyValue);
+                }
+                else
+                    AddToOntology(pi as dynamic, ontologySettings, obj);
+
+            }
         }
 
-        private static void AddToOntology(this CustomPropertyInfo customPI, object individual = null, OntologySettings ontologySettings = null)
+        private static void AddToOntology(this CustomPropertyInfo customPI, OntologySettings ontologySettings, object individual, object individualPropertyValue)
         {
             if (customPI.Name == "Type")
                 return; // do not add the `Type` property to the ontology for Custom Types.
 
-            AddToOntology((PropertyInfo)customPI, individual, ontologySettings);
+            AddToOntology((PropertyInfo)customPI, ontologySettings, individual, individualPropertyValue);
         }
 
-        private static void AddToOntology(this PropertyInfo pi, object individual = null, OntologySettings ontologySettings = null)
+        private static void AddToOntology(this PropertyInfo pi, OntologySettings ontologySettings, object individual, object individualPropertyValue = null)
         {
             // In C#'s Reflection, relations are represented with PropertyInfos.
             // In an ontology, PropertyInfos may correspond to either ObjectProperties or DataProperties.
@@ -117,7 +126,7 @@ namespace BH.Engine.RDF
                 // OBJECT PROPERTY RELATION
                 // The relation between Individuals corresponds to an ObjectPropertyRelation (between two Classes of the Ontology).
 
-                if (pi.PropertyType.IsListOfOntologyClasses() && individual != null)
+                if (pi.PropertyType.IsListOfOntologyClasses(individualPropertyValue) && individual != null)
                 {
                     rangeType = new ListPropertyType(individual, pi, ontologySettings.TBoxSettings);
 
@@ -131,8 +140,7 @@ namespace BH.Engine.RDF
 
                             // Recurse for this individual's relations.
                             PropertyInfo[] listItemProps = item?.GetType().GetProperties() ?? new PropertyInfo[] { };
-                            foreach (var prop in listItemProps)
-                                AddToOntology(prop, item, ontologySettings);
+                            AddToOntology(listItemProps, ontologySettings, item);
                         }
                     }
                 }
@@ -191,7 +199,7 @@ namespace BH.Engine.RDF
             }
         }
 
-        private static void AddIndividualToOntology(object individual, OntologySettings ontologySettings = null)
+        private static void AddIndividualToOntology(object individual, OntologySettings ontologySettings)
         {
             Type individualType = individual.IndividualType(ontologySettings.TBoxSettings);
             ontologySettings = ontologySettings ?? new OntologySettings();
@@ -211,7 +219,7 @@ namespace BH.Engine.RDF
 
             // Recurse for properties of this individual.
             PropertyInfo[] properties = individualType.GetProperties();
-            properties.AddToOntology(individual, ontologySettings);
+            properties.AddToOntology(ontologySettings, individual);
         }
 
 

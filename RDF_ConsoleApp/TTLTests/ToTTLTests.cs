@@ -39,7 +39,7 @@ namespace BH.Test.RDF
 
             //var testEntry = new KeyValuePair<string, string>("testKey", "testValue");
             var testEntry = new TestClass();
-            
+
             bhomObj.CustomData["encoded"] = testEntry;
 
             List<IObject> objectList = new List<IObject>() { bhomObj };
@@ -66,10 +66,6 @@ namespace BH.Test.RDF
             string TTLGraph = objectList.TTLGraph(m_shortAddresses, new LocalRepositorySettings());
 
             Assert.IsTTLParsable(TTLGraph);
-
-            List<OntologyResource> individuals = TTLGraph.Individuals();
-
-            var bhomObjects = TTLGraph.ToCSharpObjects();
         }
 
         public static string Room()
@@ -94,8 +90,6 @@ namespace BH.Test.RDF
             List<IObject> objectList = new List<IObject>() { randomColumn };
             string TTLGraph = objectList.TTLGraph(m_shortAddresses, new LocalRepositorySettings());
 
-            Console.Write(TTLGraph);
-
             Assert.IsTTLParsable(TTLGraph);
 
             return TTLGraph;
@@ -113,8 +107,6 @@ namespace BH.Test.RDF
             List<IObject> objectList = new List<IObject>() { room, randomColumn };
             string TTLGraph = objectList.TTLGraph(new OntologySettings(), new LocalRepositorySettings());
 
-            Console.Write(TTLGraph);
-
             Assert.IsTTLParsable(TTLGraph);
 
             return TTLGraph;
@@ -128,8 +120,6 @@ namespace BH.Test.RDF
 
             CSharpGraph cSharpGraph_customObj = Compute.CSharpGraph(new List<IObject>() { customObject }, m_shortAddresses);
             string TTLGraph = cSharpGraph_customObj.ToTTLGraph(new LocalRepositorySettings());
-
-            Console.Write(TTLGraph);
 
             Assert.IsTTLParsable(TTLGraph);
 
@@ -148,8 +138,6 @@ namespace BH.Test.RDF
             Assert.TotalCount(cSharpGraph_customObj.AllIndividuals, 2, "AllIndividuals");
 
             string TTLGraph = cSharpGraph_customObj.ToTTLGraph(new LocalRepositorySettings());
-
-            Console.Write(TTLGraph);
 
             Assert.IsTTLParsable(TTLGraph);
 
@@ -207,6 +195,22 @@ namespace BH.Test.RDF
             Assert.IsTTLParsable(TTLGraph);
         }
 
+        public static void CustomType_Property_BoxedListOfObjects()
+        {
+            CustomObject co = new CustomObject();
+            co.CustomData[m_shortAddresses.TBoxSettings.CustomobjectsTypeKey] = "TestType";
+
+            // This property is boxed into a System.Object
+            List<Point> listOfPoints = new List<Point>() { new oM.Geometry.Point() { X = 101, Y = 102 }, new Point() { X = 201, Y = 202 } };
+            List<object> boxedProperty = listOfPoints.OfType<object>().ToList();
+            co.CustomData["testListObjects"] = boxedProperty;
+
+            CSharpGraph cSharpGraph_customObj = Compute.CSharpGraph(new List<IObject>() { co }, m_shortAddresses);
+            string TTLGraph = cSharpGraph_customObj.ToTTLGraph(new LocalRepositorySettings());
+
+            Assert.IsTTLParsable(TTLGraph);
+        }
+
         public static string BHoMObject_Property_ListOfObjects()
         {
             NurbsCurve nurbs = new NurbsCurve()
@@ -227,6 +231,23 @@ namespace BH.Test.RDF
             return TTLGraph;
         }
 
+        public static string BHoMObject_Property_ListOfObjects_Boxed()
+        {
+            BHoMObject bhomObj = new BHoMObject();
+
+            bhomObj.CustomData["boxedListOfObjects"] = new List<object>() {
+                    new Point(),
+                    new Point() { X = 1, Y = 1, Z = 1 },
+                    new Point() { X = 2, Y = 2, Z = 2 }
+                };
+
+            string TTLGraph = new List<IObject>() { bhomObj }.TTLGraph(m_shortAddresses, new LocalRepositorySettings());
+
+            Assert.IsTTLParsable(TTLGraph); // This MUST return an encoded customData dictionary - its entry is not seen as property!
+
+            return TTLGraph;
+        }
+
         // ----------------------
         // Run utilities
         // ----------------------
@@ -243,6 +264,8 @@ namespace BH.Test.RDF
 
         public static void RunSelectedTests()
         {
+            CustomType_Property_BoxedListOfObjects();
+
             CustomType_Property_ListOfPrimitives();
 
             CustomType_Property_ListOfObjects();
@@ -266,7 +289,6 @@ namespace BH.Test.RDF
             RoomAndColumn();
 
             CustomObject();
-
         }
 
 
