@@ -44,9 +44,9 @@ namespace BH.Engine.RDF.Types
 
         public override string Name { get; }
 
-        public TBoxSettings TBoxSettings { get; }
+        public new TBoxSettings TBoxSettings { get; }
 
-        public Uri OntologicalUri { get; }
+        public new Uri OntologicalUri { get; }
 
         public List<string> PropertyNames { get; } = new List<string>();
 
