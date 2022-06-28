@@ -50,9 +50,6 @@
     <Reference Include="Newtonsoft.Json, Version=13.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
       <HintPath>..\packages\Newtonsoft.Json.13.0.1\lib\net45\Newtonsoft.Json.dll</HintPath>
     </Reference>
-    <Reference Include="QuikGraph, Version=2.3.0.0, Culture=neutral, PublicKeyToken=46bd58b0789759cb, processorArchitecture=MSIL">
-      <HintPath>..\packages\QuikGraph.2.3.0\lib\net45\QuikGraph.dll</HintPath>
-    </Reference>
     <Reference Include="Reflection_Engine">
       <HintPath>C:\ProgramData\BHoM\Assemblies\Reflection_Engine.dll</HintPath>
     </Reference>
@@ -189,6 +186,11 @@
 xcopy "$(TargetDir)Newtonsoft.Json.dll" "C:\ProgramData\BHoM\Assemblies" /Y
 xcopy "$(TargetDir)dotNetRDF.dll" "C:\ProgramData\BHoM\Assemblies" /Y
 xcopy "$(TargetDir)VDS.Common.dll" "C:\ProgramData\BHoM\Assemblies" /Y
+
+xcopy "$(TargetDir)$(TargetFileName)"  "$(SolutionDir)/_Assemblies" /Y
+xcopy "$(TargetDir)Newtonsoft.Json.dll" "$(SolutionDir)/_Assemblies" /Y
+xcopy "$(TargetDir)dotNetRDF.dll" "$(SolutionDir)/_Assemblies" /Y
+xcopy "$(TargetDir)VDS.Common.dll" "$(SolutionDir)/_Assemblies" /Y
 
 EXIT 0</PostBuildEvent>
   </PropertyGroup>
