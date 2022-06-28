@@ -59,7 +59,7 @@ namespace BH.Engine.RDF
                             continue;
 
                         List<string> listIndividualsUris = individualList.Where(o => o != null).Select(o => o.IndividualUri(cSharpGraph.OntologySettings).ToString()).ToList();
-                        TLLIndividualRelations += $"\n\t\t:{iop.HasProperty.PropertyInfo.UniqueNodeId()} rdf:seq ;\n";
+                        TLLIndividualRelations += $"\n\t\t:{iop.HasProperty.PropertyInfo.UniqueNodeId()} rdf:Seq ;\n";
 
                         for (int i = 0; i < listIndividualsUris.Count; i++)
                         {

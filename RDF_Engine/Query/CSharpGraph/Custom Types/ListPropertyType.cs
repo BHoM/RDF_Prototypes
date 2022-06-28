@@ -58,7 +58,7 @@ namespace BH.Engine.RDF.Types
 
             Name = $"{pi.DeclaringType.FullName.ToString()}.{pi.Name}_{obj.IndividualId()}";
             FullName = Name; // thisClassType.FullName + $".{Name}";
-            RDFTypeName = "rdf:seq";
+            RDFTypeName = "rdf:Seq";
 
             GUID = Query.GuidFromString(Name);
             Module = thisClassType.Module;
