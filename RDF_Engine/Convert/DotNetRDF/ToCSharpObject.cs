@@ -68,7 +68,10 @@ namespace BH.Engine.RDF
                 if (uriNode != null)
                 {
                     // Check if it is a List.
-                    if (uriNode.ToString() == "http://www.w3.org/1999/02/22-rdf-syntax-ns#seq")
+                    // Could not find a more reliable way that checking the uri address for mentions of "rdf" and "seq".
+                    string typeAddress = uriNode.ToString().ToLower();
+                    var typeAddressPortions = typeAddress.Split('#').SelectMany(p => p.Split('-')).SelectMany(p => p.Split('/')).ToList();
+                    if (typeAddressPortions.Contains("rdf") && typeAddressPortions.Contains("seq"))
                     {
                         SortedDictionary<int, int> listIdx_tripleIdx = new SortedDictionary<int, int>();
                         for (int i = 0; i < individual.TriplesWithSubject.Count(); i++)

@@ -211,7 +211,7 @@ namespace BH.Test.RDF
             Assert.IsTTLParsable(TTLGraph);
         }
 
-        public static string BHoMObject_Property_ListOfObjects()
+        public static string NurbsCurve_ControlPoints()
         {
             NurbsCurve nurbs = new NurbsCurve()
             {
@@ -270,7 +270,7 @@ namespace BH.Test.RDF
 
             CustomType_Property_ListOfObjects();
 
-            BHoMObject_Property_ListOfObjects();
+            NurbsCurve_ControlPoints();
 
             EncodeDecode();
 
