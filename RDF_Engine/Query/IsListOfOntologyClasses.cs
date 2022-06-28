@@ -22,31 +22,27 @@ namespace BH.Engine.RDF
 
         public static bool IsListOfOntologyClasses(this Type sourceType, object sourceObj)
         {
+            // Make sure the type is a List.
             if (!sourceType.IsList())
                 return false;
 
+            // Check the List generic argument.
             Type[] genericArgs = sourceType.GetGenericArguments();
 
             if (genericArgs.Length != 1)
                 return false;
 
+            // If the List generic arg can be translated to an Ontology class, job done.
             if (genericArgs.First() != typeof(System.Object))
-            {
                 return genericArgs.First().IsOntologyClass();
-            }
 
+            // If the List generic arg is System.Object, the objects may still be Ontology classes that have been boxed.
             if (genericArgs.First() == typeof(System.Object))
             {
-                // Let's see if the individual objects of the list have a common type.
                 List<object> objList = sourceObj as List<object>;
 
-                // Check if all objects have common parent types between each other.
-                HashSet<Type> commonParentTypes = objList.ListElementsCommonParentTypes();
-
-                // Check if at least one of the common parent types is an ontology class. If so, the list can be considered a list of ontology classes.
-                bool isAnyCommonParentTypeAnOntologyClass = commonParentTypes.Any(t => t.IsOntologyClass());
-
-                return isAnyCommonParentTypeAnOntologyClass;
+                // Unbox the objects and see if their actual type is an Ontology class.
+                return objList.All(o => o.GetType().IsOntologyClass());
             }
 
             return false;
