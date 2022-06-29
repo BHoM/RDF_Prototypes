@@ -136,9 +136,9 @@ namespace BH.Engine.RDF
                     {
                         foreach (var item in list)
                         {
-                            m_cSharpGraph.AllIndividuals.Add(item);
+                            //m_cSharpGraph.AllIndividuals.Add(item);
 
-                            //AddIndividualToOntology(item, ontologySettings);
+                            AddIndividualToOntology(item, ontologySettings);
 
                             // Recurse for this individual's relations.
                             PropertyInfo[] listItemProps = item?.GetType().GetProperties() ?? new PropertyInfo[] { };
