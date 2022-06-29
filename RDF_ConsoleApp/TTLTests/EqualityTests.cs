@@ -115,7 +115,7 @@ namespace BH.Test.RDF
             // Invoke all static methods in the given class class
             typeof(FromTTLTests).GetMethods()
                 .Where(mi => mi.IsStatic && !mi.Name.Contains("Run")).ToList()
-                .ForEach(mi => mi.Invoke(null, null));
+                .ForEach(mi => { m_ontologySettings.OntologyTitle = mi.Name; mi.Invoke(null, null); });
 
             Assert.TestRecap();
         }
@@ -136,7 +136,7 @@ namespace BH.Test.RDF
         // Private fields
         // ----------------------
 
-        private static OntologySettings m_shortAddresses = new OntologySettings()
+        private static OntologySettings m_ontologySettings = new OntologySettings()
         {
             ABoxSettings = new ABoxSettings() { IndividualsBaseAddress = "individuals.Address" },
             TBoxSettings = new TBoxSettings() { CustomObjectTypesBaseAddress = "CustomObjectTypes.Address" }

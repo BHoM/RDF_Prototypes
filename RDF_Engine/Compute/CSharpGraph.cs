@@ -228,18 +228,17 @@ namespace BH.Engine.RDF
             if (individualAsBHoMObj != null && !typeof(CustomObjectType).IsAssignableFrom(individualType))
             {
                 // It's not a Custom Type. Let's consider any entry in its CustomData dictionary as an extra property.
-                var customDataClone = individualAsBHoMObj.CustomData.DeepClone();
-                foreach (var entry in customDataClone)
+                foreach (var entry in individualAsBHoMObj.CustomData)
                 {
-                    CustomPropertyInfo customProp = new CustomPropertyInfo(individualType, entry.Key, entry.Value.GetType());
-                    properties.Add(customProp);
-                    //individualAsBHoMObj.CustomData.Remove(entry.Key);
+                    CustomPropertyInfo customProp = new CustomPropertyInfo(individualType, entry.Key, entry.Value?.GetType() ?? default(Type));
+
+                    int idx = properties.IndexOf(properties.Where(p => p.Name == nameof(BHoMObject.BHoM_Guid)).FirstOrDefault());
+                    if (idx != -1)
+                        properties.Insert(idx, customProp);
+                    else
+                        properties.Add(customProp);
                 }
             }
-
-            //var customDataProp = properties.Where(p => p.Name == "CustomData").FirstOrDefault();
-            //properties.Remove(customDataProp);
-            //properties.Add(customDataProp);
 
             // Recurse for properties of this individual.
             properties.AddToOntology(ontologySettings, individual);

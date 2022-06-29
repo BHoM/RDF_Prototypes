@@ -29,7 +29,7 @@ namespace BH.Engine.RDF
             if (type.IsList())
                 return "rdf:list";
 
-            return type.FullName;
+            return type.FullNameValidChars();
         }
 
         public static string _UniqueNodeId(this TypeInfo typeInfo)

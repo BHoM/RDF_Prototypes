@@ -123,16 +123,16 @@ namespace BH.Engine.RDF
                         OntologyResource relatedIndividual = uriNode.IndividualOntologyResource(dotNetRDFOntology);
                         propertyValue = relatedIndividual.ToCSharpObject(dotNetRDFOntology);
                     }
+
+                    if (propertyValue == null)
+                    {
+                        int asdaa = 0;
+                    }
                 }
 
                 PropertyInfo correspondingPInfo = typeProperties.FirstOrDefault(pi => pi.FullNameValidChars() == propertyFullName);
 
-                if (propertyFullName.Contains("aterial"))
-                {
-                    int asd = 0;
-                }
-
-                if (correspondingPInfo == null && isCustomType)
+                if (correspondingPInfo == null)
                 {
                     string propertyName = propertyFullName.Split('.').LastOrDefault();
                     correspondingPInfo = new Types.CustomPropertyInfo(individualType as Types.CustomObjectType, new KeyValuePair<string, Type>(propertyName, typeof(object)));
@@ -196,9 +196,17 @@ namespace BH.Engine.RDF
 
                 if (!setSuccessfully)
                 {
-                    Type propType = pValue.Value.GetType();
+                    Type propType = pValue.Value?.GetType() ?? default(Type);
                     var field = resultObject.GetType().GetField($"<{pValue.Key.Name}>k__BackingField", BindingFlags.Instance | BindingFlags.NonPublic);
-                    field.SetValue(resultObject, convertedValue);
+                    
+                    if (field != null)
+                        field.SetValue(resultObject, convertedValue);
+                    else
+                    {
+                        // Try set as Custom Data.
+                        if (resultObject is BHoMObject)
+                            (resultObject as dynamic).CustomData[pValue.Key.Name] = pValue.Value;
+                    }
                 }
             }
 

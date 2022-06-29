@@ -57,7 +57,7 @@ namespace BH.Test.RDF
                 var differencesText = string.Join("\n", differences.Select(d =>
                     $"{obj1.GetType().FullName}.{d.PropertyName} should have been {d.Object1Value} but was {d.Object2Value}."));
 
-                RecordTestFailure($"{obj1.GetType().FullName} should have been equal to the other object. Differences:\n\t{differencesText.SplitInLinesAndTabify()}");
+                RecordTestFailure($"{obj1.GetType().FullName} should have been equal to the other object." + (!differences.Any() ? "" : $"Differences:\n\t{differencesText.SplitInLinesAndTabify()}"));
             }
         }
 
@@ -71,6 +71,11 @@ namespace BH.Test.RDF
 
         private static bool AreObjectsEqual(object obj1, object obj2, out List<Difference> differences)
         {
+            differences = new List<Difference>();
+
+            if (obj1 != null && obj2 == null || obj1 == null)
+                return false;
+
             CompareLogic compareLogic = new CompareLogic();
             compareLogic.Config.CustomComparers.Add(new OnlyIEnumContents());
             ComparisonResult result = compareLogic.Compare(obj1, obj2);

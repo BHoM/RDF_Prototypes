@@ -80,7 +80,7 @@ namespace BH.Engine.RDF
                         foreach (var value in individualList)
                             stringValues.Add($"\"{Query.DataPropertyStringValue(value)}\"^^{value.GetType().ToOntologyDataType()}");
 
-                        TLLIndividualRelations += $"({string.Join(" ", stringValues)})";
+                        TLLIndividualRelations += $"({string.Join(" ", stringValues)});";
                     }
                     else
 

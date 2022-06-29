@@ -11,16 +11,48 @@ using VDS.RDF.Parsing;
 using System.Linq;
 using System.IO;
 using VDS.RDF.Ontology;
+using BH.oM.Structure.Elements;
 
 namespace BH.Test.RDF
 {
     public static class FromTTLTests
     {
+        public static void BHoMObject_CustomDataAsProperties()
+        {
+            Bar bhomObject = new Bar();
+            bhomObject.CustomData["SomeExtraDataProperty"] = 111;
+            bhomObject.CustomData["SomeExtraObjectProperty"] = new CustomObject()
+            {
+                CustomData = new Dictionary<string, object>
+                {
+                    {
+                        "ANewTypeInstance",
+                        new CustomObject()
+                        {
+                            CustomData = new Dictionary<string, object>()
+                            {
+                                { "Type", "ANewType" },
+                                { "SomeDataProperty", 999 }
+                            }
+                        }
+                    }
+                }
+            };
+
+            string TTLGraph = Compute.TTLGraph(new List<IObject>() { bhomObject }, m_ontologySettings, new LocalRepositorySettings());
+
+            Assert.IsTTLParsable(TTLGraph);
+
+            var bhomObjects = TTLGraph.ToCSharpObjects();
+
+            Assert.IsEqual(bhomObject, bhomObjects.FirstOrDefault());
+        }
+
         public static void Point()
         {
             Point p = new Point() { X = 101, Y = 102, Z = 103 };
             List<IObject> objectList = new List<IObject>() { p };
-            string TTLGraph = objectList.TTLGraph(m_shortAddresses, new LocalRepositorySettings());
+            string TTLGraph = objectList.TTLGraph(m_ontologySettings, new LocalRepositorySettings());
 
             Assert.IsTTLParsable(TTLGraph);
 
@@ -37,7 +69,7 @@ namespace BH.Test.RDF
             room.Name = "A room object";
 
             List<IObject> objectList = new List<IObject>() { room };
-            string TTLGraph = objectList.TTLGraph(m_shortAddresses, new LocalRepositorySettings());
+            string TTLGraph = objectList.TTLGraph(m_ontologySettings, new LocalRepositorySettings());
 
             Assert.IsTTLParsable(TTLGraph);
 
@@ -50,7 +82,7 @@ namespace BH.Test.RDF
             Column randomColumn = BH.Engine.RDF.Testing.Create.RandomObject<Column>();
 
             List<IObject> objectList = new List<IObject>() { randomColumn };
-            string TTLGraph = objectList.TTLGraph(m_shortAddresses, new LocalRepositorySettings());
+            string TTLGraph = objectList.TTLGraph(m_ontologySettings, new LocalRepositorySettings());
 
             Assert.IsTTLParsable(TTLGraph);
 
@@ -87,7 +119,7 @@ namespace BH.Test.RDF
                 { "intProperty", 10 },
                 { "pointProperty", BH.Engine.RDF.Testing.Create.RandomObject<Point>() } });
 
-            CSharpGraph cSharpGraph_customObj = Compute.CSharpGraph(new List<IObject>() { customObject }, m_shortAddresses);
+            CSharpGraph cSharpGraph_customObj = Compute.CSharpGraph(new List<IObject>() { customObject }, m_ontologySettings);
             string TTLGraph = cSharpGraph_customObj.ToTTLGraph(new LocalRepositorySettings());
 
             Assert.IsTTLParsable(TTLGraph);
@@ -106,7 +138,7 @@ namespace BH.Test.RDF
             CustomObject customObject1 = BH.Engine.Base.Create.CustomObject(new Dictionary<string, object>() { { "Type", "Roof" }, { "RoofShape", mesh } });
 
             // No error or exception should be thrown by this call.
-            string TTLGraph = new List<IObject>() { customObject1 }.TTLGraph(m_shortAddresses, new LocalRepositorySettings());
+            string TTLGraph = new List<IObject>() { customObject1 }.TTLGraph(m_ontologySettings, new LocalRepositorySettings());
 
             Assert.IsTTLParsable(TTLGraph);
 
@@ -123,7 +155,7 @@ namespace BH.Test.RDF
             CustomObject customObject2 = BH.Engine.Base.Create.CustomObject(new Dictionary<string, object>() { { "Type", "Cassette" }, { "Prop1", 999 } }); // same property assigned to the same "type", only with a different value
 
             // No error or exception should be thrown by this call.
-            CSharpGraph cSharpGraph_customObj = Compute.CSharpGraph(new List<IObject>() { customObject1, customObject2 }, m_shortAddresses);
+            CSharpGraph cSharpGraph_customObj = Compute.CSharpGraph(new List<IObject>() { customObject1, customObject2 }, m_ontologySettings);
             Assert.Single(cSharpGraph_customObj.Classes.Where(c => c.Name == "Cassette"), "CustomObjectTypes");
             Assert.TotalCount(cSharpGraph_customObj.AllIndividuals, 2, "AllIndividuals");
 
@@ -139,7 +171,7 @@ namespace BH.Test.RDF
             CustomObject customObject1 = BH.Engine.Base.Create.CustomObject(new Dictionary<string, object>() { { "Type", "Cassette" }, { "Prop1", null } });
             CustomObject customObject2 = BH.Engine.Base.Create.CustomObject(new Dictionary<string, object>() { { "Type", "Cassette" }, { "Prop2", null } }); // different property assigned to the same "type"
 
-            Assert.ThrowsException(() => Compute.CSharpGraph(new List<IObject>() { customObject1, customObject2 }, m_shortAddresses));
+            Assert.ThrowsException(() => Compute.CSharpGraph(new List<IObject>() { customObject1, customObject2 }, m_ontologySettings));
         }
 
         public static void NestedCustomObjects()
@@ -148,7 +180,7 @@ namespace BH.Test.RDF
             CustomObject nestedObj1 = BH.Engine.Base.Create.CustomObject(new Dictionary<string, object>() { { "Type", "SimpleTiles" }, { "TileDepth", 0.1 }, { "Material", nestedObj2 } });
             CustomObject parent = BH.Engine.Base.Create.CustomObject(new Dictionary<string, object>() { { "Type", "Roof" }, { "Tiles", nestedObj1 } });
 
-            CSharpGraph cSharpGraph_customObj = Compute.CSharpGraph(new List<IObject>() { parent }, m_shortAddresses);
+            CSharpGraph cSharpGraph_customObj = Compute.CSharpGraph(new List<IObject>() { parent }, m_ontologySettings);
 
             Assert.IsNotNull(cSharpGraph_customObj.Classes.Single(c => c.Name == "TileMaterial"));
             Assert.IsNotNull(cSharpGraph_customObj.Classes.Single(c => c.Name == "SimpleTiles"));
@@ -175,7 +207,7 @@ namespace BH.Test.RDF
                 }
             };
 
-            CSharpGraph cSharpGraph_customObj = Compute.CSharpGraph(new List<IObject>() { nurbs }, m_shortAddresses);
+            CSharpGraph cSharpGraph_customObj = Compute.CSharpGraph(new List<IObject>() { nurbs }, m_ontologySettings);
             string TTLGraph = cSharpGraph_customObj.ToTTLGraph(new LocalRepositorySettings());
 
             Assert.IsTTLParsable(TTLGraph);
@@ -190,14 +222,14 @@ namespace BH.Test.RDF
             BHoMObject bhomObj = new BHoMObject();
             bhomObj.CustomData["listOfPrimitives"] = new List<int>() { 1, 2, 3, 4 };
 
-            CSharpGraph cSharpGraph_customObj = Compute.CSharpGraph(new List<IObject>() { bhomObj }, m_shortAddresses);
+            CSharpGraph cSharpGraph_customObj = Compute.CSharpGraph(new List<IObject>() { bhomObj }, m_ontologySettings);
             string TTLGraph = cSharpGraph_customObj.ToTTLGraph(new LocalRepositorySettings());
 
             Assert.IsTTLParsable(TTLGraph);
 
-            var convertedObj = TTLGraph.ToCSharpObjects().FirstOrDefault() as BHoMObject;
+            var convertedObj = TTLGraph.ToCSharpObjects().FirstOrDefault();
 
-            Assert.IsEqual(bhomObj.CustomData["listOfPrimitives"], convertedObj.CustomData["listOfPrimitives"]);
+            Assert.IsEqual(bhomObj.CustomData["listOfPrimitives"], (convertedObj as BHoMObject)?.CustomData["listOfPrimitives"]);
         }
 
         public static void CustomType_PropertyList_OfPrimitives()
@@ -205,7 +237,7 @@ namespace BH.Test.RDF
             CustomObject customObj = new CustomObject();
             customObj.CustomData["listOfPrimitives"] = new List<int>() { 1, 2, 3, 4 };
 
-            string TTLGraph = new List<IObject>() { customObj }.TTLGraph(m_shortAddresses, new LocalRepositorySettings());
+            string TTLGraph = new List<IObject>() { customObj }.TTLGraph(m_ontologySettings, new LocalRepositorySettings());
 
             Assert.IsTTLParsable(TTLGraph);
 
@@ -223,7 +255,8 @@ namespace BH.Test.RDF
             // Invoke all static methods in the given class class
             typeof(FromTTLTests).GetMethods()
                 .Where(mi => mi.IsStatic && !mi.Name.Contains("Run")).ToList()
-                .ForEach(mi => mi.Invoke(null, null));
+                .ForEach(mi => { m_ontologySettings.OntologyTitle = mi.Name; mi.Invoke(null, null); });
+
 
             Assert.TestRecap();
         }
@@ -254,7 +287,7 @@ namespace BH.Test.RDF
         // Private fields
         // ----------------------
 
-        private static OntologySettings m_shortAddresses = new OntologySettings()
+        private static OntologySettings m_ontologySettings = new OntologySettings()
         {
             ABoxSettings = new ABoxSettings() { IndividualsBaseAddress = "individuals.Address" },
             TBoxSettings = new TBoxSettings() { CustomObjectTypesBaseAddress = "CustomObjectTypes.Address" }
