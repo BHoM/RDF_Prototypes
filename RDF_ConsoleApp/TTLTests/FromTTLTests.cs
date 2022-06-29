@@ -91,6 +91,28 @@ namespace BH.Test.RDF
             return TTLGraph;
         }
 
+        public static string CustomObject_MeshProperty()
+        {
+            BH.oM.Geometry.Mesh mesh = new Mesh()
+            {
+                Faces = new List<Face>() { new Face() { A = 101, B = 102, C = 103, D = 104 }, new Face() { A = 201, B = 202, C = 203, D = 204 } },
+                Vertices = new List<Point>() { new Point() { X = 801, Y = 802, Z = 803 }, new Point() { X = 901, Y = 902, Z = 903 } }
+            };
+
+            CustomObject customObject1 = BH.Engine.Base.Create.CustomObject(new Dictionary<string, object>() { { "Type", "Roof" }, { "RoofShape", mesh } });
+
+            // No error or exception should be thrown by this call.
+            string TTLGraph = new List<IObject>() { customObject1 }.TTLGraph(m_shortAddresses, new LocalRepositorySettings());
+
+            Assert.IsTTLParsable(TTLGraph);
+
+            List<object> convertedObjs = BH.Engine.RDF.Compute.ReadTTL(TTLGraph);
+
+            Assert.IsEqual(customObject1, convertedObjs.First());
+
+            return TTLGraph;
+        }
+
 
         public static string CustomObject_SameType_SameProperties_NoError()
         {
@@ -132,6 +154,10 @@ namespace BH.Test.RDF
             string TTLGraph = cSharpGraph_customObj.ToTTLGraph(new LocalRepositorySettings());
 
             Assert.IsTTLParsable(TTLGraph);
+
+            var bhomObjects = TTLGraph.ToCSharpObjects();
+
+            Assert.IsEqual(parent, bhomObjects.FirstOrDefault());
         }
 
         public static void IObject_PropertyList_OfObjects()
@@ -150,7 +176,7 @@ namespace BH.Test.RDF
             string TTLGraph = cSharpGraph_customObj.ToTTLGraph(new LocalRepositorySettings());
 
             Assert.IsTTLParsable(TTLGraph);
-            
+
             var bhomObjects = TTLGraph.ToCSharpObjects();
 
             Assert.IsEqual(nurbs, bhomObjects.FirstOrDefault());

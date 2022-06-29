@@ -12,6 +12,8 @@ namespace BH.oM.CodeAnalysis.ConsoleApp
     {
         public static void Main(string[] args = null)
         {
+            EqualityTests.RunAll();
+
             ToTTLTests.RunAll();
 
             FromTTLTests.RunAll();

@@ -35,7 +35,16 @@ namespace BH.Engine.RDF
             if (string.IsNullOrEmpty(bhomTypeFullName))
                 return default(Type);
 
-            Type bhomType = BH.Engine.Base.Query.AllTypeList().Where(t => t.FullName == bhomTypeFullName).First();
+            if (bhomTypeFullName.Contains(typeof(BH.Engine.RDF.Types.CustomObjectType).FullName))
+                return new Types.CustomObjectType(bhomTypeFullName.Split('.').Last());
+
+            Type bhomType = BH.Engine.Base.Query.AllTypeList().Where(t => t.FullName == bhomTypeFullName).FirstOrDefault();
+
+            if (bhomType == null)
+            {
+                Log.RecordWarning($"Could not find equivalent BHoM type for {bhomTypeFullName}. Using {typeof(BH.oM.Base.CustomObject).Name}.");
+                return typeof(BH.oM.Base.CustomObject);
+            }
 
             return bhomType;
         }

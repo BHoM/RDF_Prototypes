@@ -50,21 +50,38 @@ namespace BH.Test.RDF
 
         public static void IsEqual(object obj1, object obj2, string error = null)
         {
-            if (!AreObjectsEqual(obj1, obj2))
-                RecordTestFailure($"{obj1.GetType().FullName} should have been equal to the other object.");
+            List<Difference> differences = new List<Difference>();
+
+            if (!AreObjectsEqual(obj1, obj2, out differences))
+            {
+                var differencesText = string.Join("\n", differences.Select(d =>
+                    $"{obj1.GetType().FullName}.{d.PropertyName} should have been {d.Object1Value} but was {d.Object2Value}."));
+
+                RecordTestFailure($"{obj1.GetType().FullName} should have been equal to the other object. Differences:\n\t{differencesText.SplitInLinesAndTabify()}");
+            }
         }
 
         public static void IsNotEqual(object obj1, object obj2, string error = null)
         {
-            if (AreObjectsEqual(obj1, obj2))
+            List<Difference> differences = new List<Difference>();
+
+            if (AreObjectsEqual(obj1, obj2, out differences))
                 RecordTestFailure($"{obj1.GetType().FullName} should have been different to the other object.");
         }
 
-        private static bool AreObjectsEqual(object obj1, object obj2)
+        private static bool AreObjectsEqual(object obj1, object obj2, out List<Difference> differences)
         {
             CompareLogic compareLogic = new CompareLogic();
             compareLogic.Config.CustomComparers.Add(new OnlyIEnumContents());
             ComparisonResult result = compareLogic.Compare(obj1, obj2);
+
+            if (!result.AreEqual)
+            {
+                result.Differences.RemoveAll(d => true);
+                result.Differences.AddRange(m_nestedDifference);
+            }
+
+            differences = result.Differences;
 
             return result.AreEqual;
         }
@@ -181,35 +198,107 @@ namespace BH.Test.RDF
 
             public override void CompareType(CompareParms parms)
             {
+                m_nestedDifference = new List<Difference>();
+
                 var ienum1 = parms.Object1 as IEnumerable;
                 var ienum2 = parms.Object2 as IEnumerable;
 
+                List<Difference> listDiff = new List<Difference>();
+
                 if (ienum1 != null && ienum2 != null)
                 {
-                    List<object> list1 = new List<object>();
-                    List<object> list2 = new List<object>();
+                    listDiff = ListDiff(ienum1, ienum2);
 
-                    foreach (var item in ienum1)
-                        list1.Add(item);
-
-                    foreach (var item in ienum2)
-                        list2.Add(item);
-
-                    // Compare the lists. 
-                    // Because all the list elements were boxed in a System.Object,
-                    // this only returns the differences between the single elements.
-                    CompareLogic compareLogic = new CompareLogic();
-                    ComparisonResult result = compareLogic.Compare(list1, list2);
-
-                    // This is where granularity is lost.
-                    // The official documentation https://github.com/GregFinzer/Compare-Net-Objects/wiki/Custom-Comparers
-                    // points that we should return `AddDifference(parms)`,
-                    // however I don't know how to get `parms` from a given `result` object.
-                    // Returning a single difference for the entire lists.
-                    if (!result.AreEqual)
+                    if (listDiff != null && listDiff.Any())
+                    {
                         AddDifference(parms);
+                        m_nestedDifference = listDiff;
+
+                        return;
+                    }
+                }
+
+                CompareLogic compareLogic = new CompareLogic()
+                {
+                    Config = new KellermanSoftware.CompareNetObjects.ComparisonConfig()
+                    {
+                        TypesToIgnore = new List<Type>() { typeof(Guid) },
+                        DoublePrecision = 1e-6,
+                    }
+                };
+
+                ComparisonResult result = compareLogic.Compare(parms.Object1, parms.Object2);
+
+                if (!result.AreEqual)
+                {
+                    if (result.Differences.Count() == 1)
+                    {
+                        var firstDiff = result.Differences.FirstOrDefault();
+
+                        if (firstDiff.Object1 is IEnumerable)
+                        {
+                            ienum1 = firstDiff.Object1 as IEnumerable;
+                            ienum2 = firstDiff.Object2 as IEnumerable;
+
+                            listDiff = ListDiff(ienum1, ienum2);
+
+                            if (listDiff != null && listDiff.Any())
+                            {
+                                AddDifference(parms);
+                                m_nestedDifference = listDiff;
+                            }
+                        }
+
+                        return;
+                    }
+
+
+                    AddDifference(parms);
+
+                    m_nestedDifference = result.Differences;
                 }
             }
         }
+
+        private static List<Difference> ListDiff(IEnumerable ienum1, IEnumerable ienum2)
+        {
+            List<Difference> listDiff = null;
+
+            if (ienum1 != null && ienum2 != null)
+            {
+                List<object> list1 = new List<object>();
+                List<object> list2 = new List<object>();
+
+                foreach (var item in ienum1)
+                    list1.Add(item);
+
+                foreach (var item in ienum2)
+                    list2.Add(item);
+
+                list1 = list1.Where(li => li != null).ToList();
+                list2 = list2.Where(li => li != null).ToList();
+
+                // Compare the lists items.
+                // Because all the list elements were boxed in a System.Object,
+                // this only returns the differences between the single elements.
+                CompareLogic compareLogicList = new CompareLogic();
+
+                ComparisonResult resultLists = compareLogicList.Compare(list1, list2);
+
+                // This is where granularity is lost.
+                // The official documentation https://github.com/GregFinzer/Compare-Net-Objects/wiki/Custom-Comparers
+                // points that we should return `AddDifference(parms)`,
+                // however I don't know how to get `parms` from a given `result` object.
+                // Returning a single difference for the entire lists.
+                if (!resultLists.AreEqual)
+                {
+                    return resultLists.Differences;
+                }
+            }
+
+            return listDiff;
+        }
+
+        private static List<Difference> m_nestedDifference = new List<Difference>();
     }
 }

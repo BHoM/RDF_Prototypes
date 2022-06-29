@@ -21,6 +21,7 @@ namespace BH.Engine.RDF
                 return null;
 
             Type individualType = individual.EquivalentBHoMType();
+            bool isCustomType = typeof(Types.CustomObjectType).IsAssignableFrom(individualType.GetType());
 
             object resultObject = null;
 
@@ -37,16 +38,19 @@ namespace BH.Engine.RDF
             if (resultObject == null)
                 return null;
 
-            PropertyInfo[] typeProperties = individualType.GetProperties();
+            if (isCustomType)
+                (resultObject as CustomObject).CustomData[new TBoxSettings().CustomobjectsTypeKey] = individualType.Name;
+
+            List<PropertyInfo> typeProperties = individualType.GetProperties().ToList();
 
             // Get the equivalent properties
-            var propertyNodes = dotNetRDFOntology.OwlProperties.Where(p => p.UsedBy.Any(n => n.Types.Any(uriN => uriN.ToString().Contains(individualType.FullName)))).ToList();
+            List<OntologyProperty> propertyNodes = dotNetRDFOntology.OwlProperties.Where(p => p.UsedBy.Any(n => n.Types.Any(uriN => uriN.ToString().Contains(individualType.FullName)))).ToList();
 
             Dictionary<PropertyInfo, object> propertyValues = new Dictionary<PropertyInfo, object>();
             foreach (OntologyProperty propertyNode in propertyNodes)
             {
                 Triple predicateNode = propertyNode.TriplesWithPredicate
-                    .Where(t => (t.Subject as UriNode)?.Uri.Segments.LastOrDefault() == (individual.Resource as UriNode)?.Uri.Segments.LastOrDefault())
+                    .Where(t => (t.Subject as UriNode)?.Uri.Segments.LastOrDefault() == individual.Resource.Uri().Segments.LastOrDefault())
                     .FirstOrDefault();
 
                 if (predicateNode == null)
@@ -74,9 +78,21 @@ namespace BH.Engine.RDF
                     if (typeAddressPortions.Contains("rdf") && typeAddressPortions.Contains("seq"))
                     {
                         SortedDictionary<int, int> listIdx_tripleIdx = new SortedDictionary<int, int>();
+
+                        bool sequenceStarted = false;
+
                         for (int i = 0; i < individual.TriplesWithSubject.Count(); i++)
                         {
-                            Triple triple = individual.TriplesWithSubject?.ElementAtOrDefault(i);
+                            Triple triple = individual.TriplesWithSubject.ElementAtOrDefault(i);
+
+                            if (triple.Predicate.Uri().ToString().Contains(propertyFullName))
+                            {
+                                sequenceStarted = true;
+                                continue;
+                            }
+
+                            if (!sequenceStarted)
+                                continue;
 
                             int rdfListIndexFound = -1;
                             string predicateUri = (triple?.Predicate as UriNode)?.Uri.ToString();
@@ -84,6 +100,11 @@ namespace BH.Engine.RDF
 
                             if (int.TryParse(listIdxString, out rdfListIndexFound))
                                 listIdx_tripleIdx[rdfListIndexFound] = i;
+                            else
+                            {
+                                // Reached end of the sequence.
+                                break;
+                            }
                         }
 
                         List<object> listValues = new List<object>();
@@ -105,6 +126,18 @@ namespace BH.Engine.RDF
                 }
 
                 PropertyInfo correspondingPInfo = typeProperties.FirstOrDefault(pi => pi.FullNameValidChars() == propertyFullName);
+
+                if (propertyFullName.Contains("aterial"))
+                {
+                    int asd = 0;
+                }
+
+                if (correspondingPInfo == null && isCustomType)
+                {
+                    string propertyName = propertyFullName.Split('.').LastOrDefault();
+                    correspondingPInfo = new Types.CustomPropertyInfo(individualType as Types.CustomObjectType, new KeyValuePair<string, Type>(propertyName, typeof(object)), new TBoxSettings());
+                }
+
                 propertyValues[correspondingPInfo] = propertyValue;
             }
 
@@ -151,14 +184,30 @@ namespace BH.Engine.RDF
                     convertedValue = pValue.Value;
 
                 // Set the convertedValue to the property.
+                bool setSuccessfully = false;
                 try
                 {
                     pValue.Key.SetValue(resultObject, convertedValue);
+                    setSuccessfully = true;
                 }
-                catch { }
+                catch
+                {
+                }
+
+                if (!setSuccessfully)
+                {
+                    Type propType = pValue.Value.GetType();
+                    var field = resultObject.GetType().GetField($"<{pValue.Key.Name}>k__BackingField", BindingFlags.Instance | BindingFlags.NonPublic);
+                    field.SetValue(resultObject, convertedValue);
+                }
             }
 
             return resultObject;
+        }
+
+        private static Uri Uri(this INode node)
+        {
+            return (node as UriNode)?.Uri;
         }
     }
 }

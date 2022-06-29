@@ -138,6 +138,8 @@ namespace BH.Engine.RDF
                         {
                             m_cSharpGraph.AllIndividuals.Add(item);
 
+                            //AddIndividualToOntology(item, ontologySettings);
+
                             // Recurse for this individual's relations.
                             PropertyInfo[] listItemProps = item?.GetType().GetProperties() ?? new PropertyInfo[] { };
                             AddToOntology(listItemProps, ontologySettings, item);

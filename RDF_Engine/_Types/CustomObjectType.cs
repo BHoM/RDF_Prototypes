@@ -55,6 +55,11 @@ namespace BH.Engine.RDF.Types
         // Ctor                                 //
         // ************************************ //
 
+        public CustomObjectType(string objectTypeName) : this(new CustomObject() { CustomData = new Dictionary<string, object>() { { new TBoxSettings().CustomobjectsTypeKey, objectTypeName } } }, new TBoxSettings())
+        {
+
+        }
+
         public CustomObjectType(CustomObject customObj, TBoxSettings tBoxSettings)
         {
             object typeNameObj = null;

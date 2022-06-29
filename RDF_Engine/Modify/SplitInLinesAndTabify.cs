@@ -19,11 +19,16 @@ namespace BH.Engine.RDF
         [Description("Split the input string at whitespaces distant at most Nth characters. Join the result with newlines and a specified amount of tab every new line.")]
         public static string SplitInLinesAndTabify(this string longText, int tabAmount = 1, int maxCharsPerSplit = 0)
         {
+            string tab = "    ";
+
+            if (string.IsNullOrWhiteSpace(longText))
+                return longText;
+
             if (tabAmount < 0)
                 tabAmount = 0;
 
             if (maxCharsPerSplit < 1)
-                maxCharsPerSplit = 100 - (tabAmount - 1) * 30;
+                maxCharsPerSplit = 115 - (tabAmount - 1) * 30;
 
             maxCharsPerSplit = maxCharsPerSplit < 15 ? 15 : maxCharsPerSplit;
 
@@ -33,9 +38,10 @@ namespace BH.Engine.RDF
                               .Where(x => x.Length > 0)
                               .ToList();
 
-            string newLineJoiner = "\n" + string.Join("", Enumerable.Repeat("\t", tabAmount));
+            var tabs = string.Join("", Enumerable.Repeat(tab, tabAmount));
+            string newLineJoiner = "\n" + tabs;
 
-            return string.Join(newLineJoiner, output);
+            return tabs + string.Join(newLineJoiner, output);
         }
     }
 }
