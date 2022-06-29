@@ -247,14 +247,9 @@ namespace BH.Test.RDF
 
                             listDiff = ListDiff(ienum1, ienum2);
 
-                            if (listDiff != null && listDiff.Any())
-                            {
-                                AddDifference(parms);
-                                m_nestedDifference = listDiff;
-                            }
+                            if (listDiff == null || !listDiff.Any())
+                                return;
                         }
-
-                        return;
                     }
 
 
