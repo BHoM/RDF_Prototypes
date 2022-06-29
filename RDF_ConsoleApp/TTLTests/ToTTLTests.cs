@@ -11,11 +11,39 @@ using VDS.RDF.Parsing;
 using System.Linq;
 using System.IO;
 using VDS.RDF.Ontology;
+using BH.oM.Structure.Elements;
 
 namespace BH.Test.RDF
 {
     public static class ToTTLTests
     {
+        public static void BHoMObject_CustomDataAsProperties()
+        {
+            Bar bhomObject = new Bar();
+            bhomObject.CustomData["SomeExtraDataProperty"] = 111;
+            bhomObject.CustomData["SomeExtraObjectProperty"] = new CustomObject()
+            {
+                CustomData = new Dictionary<string, object>
+                {
+                    { 
+                        "AnObject",
+                        new CustomObject()
+                        {
+                            CustomData = new Dictionary<string, object>()
+                            {
+                                { "Type", "ANewType" },
+                                { "SomeDataProperty", 999 }
+                            }
+                        }
+                    } 
+                }
+            };
+
+            string TTLGraph = Compute.TTLGraph(new List<IObject>() { bhomObject }, m_shortAddresses, new LocalRepositorySettings());
+
+            Assert.IsTTLParsable(TTLGraph);
+        }
+
         public static void EncodeDecode()
         {
             var obj = new KeyValuePair<string, string>("testKey", "testValue");

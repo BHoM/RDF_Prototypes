@@ -17,6 +17,9 @@ namespace BH.Engine.RDF
     {
         public static Type IndividualType(this object obj, TBoxSettings tBoxSettings)
         {
+            if (obj == null)
+                return default(Type);
+
             tBoxSettings = tBoxSettings ?? new TBoxSettings();
 
             if (!tBoxSettings.TreatCustomObjectsWithTypeKeyAsCustomObjectTypes)

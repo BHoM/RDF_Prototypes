@@ -117,7 +117,7 @@ namespace BH.Engine.RDF.Types
         {
             List<CustomPropertyInfo> customProps = new List<CustomPropertyInfo>();
             foreach (var item in _propertyTypes)
-                customProps.Add(new CustomPropertyInfo(this, item, TBoxSettings));
+                customProps.Add(new CustomPropertyInfo(this, item));
 
             return customProps.ToArray();
         }

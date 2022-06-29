@@ -12,6 +12,8 @@ namespace BH.oM.CodeAnalysis.ConsoleApp
     {
         public static void Main(string[] args = null)
         {
+            ToTTLTests.BHoMObject_CustomDataAsProperties();
+
             EqualityTests.RunAll();
 
             ToTTLTests.RunAll();

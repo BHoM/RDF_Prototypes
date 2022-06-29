@@ -135,7 +135,7 @@ namespace BH.Engine.RDF
                 if (correspondingPInfo == null && isCustomType)
                 {
                     string propertyName = propertyFullName.Split('.').LastOrDefault();
-                    correspondingPInfo = new Types.CustomPropertyInfo(individualType as Types.CustomObjectType, new KeyValuePair<string, Type>(propertyName, typeof(object)), new TBoxSettings());
+                    correspondingPInfo = new Types.CustomPropertyInfo(individualType as Types.CustomObjectType, new KeyValuePair<string, Type>(propertyName, typeof(object)));
                 }
 
                 propertyValues[correspondingPInfo] = propertyValue;

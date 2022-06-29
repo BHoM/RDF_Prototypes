@@ -22,6 +22,8 @@ namespace BH.Test.RDF
             List<IObject> objectList = new List<IObject>() { p };
             string TTLGraph = objectList.TTLGraph(m_shortAddresses, new LocalRepositorySettings());
 
+            Assert.IsTTLParsable(TTLGraph);
+
             var bhomObjects = TTLGraph.ToCSharpObjects();
 
             Assert.IsEqual(p, bhomObjects.FirstOrDefault());
@@ -36,6 +38,8 @@ namespace BH.Test.RDF
 
             List<IObject> objectList = new List<IObject>() { room };
             string TTLGraph = objectList.TTLGraph(m_shortAddresses, new LocalRepositorySettings());
+
+            Assert.IsTTLParsable(TTLGraph);
 
             var bhomObjects = TTLGraph.ToCSharpObjects();
             Assert.IsEqual(room, bhomObjects.FirstOrDefault());
@@ -112,7 +116,6 @@ namespace BH.Test.RDF
 
             return TTLGraph;
         }
-
 
         public static string CustomObject_SameType_SameProperties_NoError()
         {

@@ -85,7 +85,7 @@ namespace BH.Engine.RDF
             }
         }
 
-        private static void AddToOntology(this PropertyInfo[] pInfos, OntologySettings ontologySettings, object obj = null)
+        private static void AddToOntology(this IEnumerable<PropertyInfo> pInfos, OntologySettings ontologySettings, object obj = null)
         {
             foreach (var pi in pInfos)
             {
@@ -203,6 +203,9 @@ namespace BH.Engine.RDF
 
         private static void AddIndividualToOntology(object individual, OntologySettings ontologySettings)
         {
+            if (individual == null)
+                return;
+
             Type individualType = individual.IndividualType(ontologySettings.TBoxSettings);
             ontologySettings = ontologySettings ?? new OntologySettings();
 
@@ -219,8 +222,26 @@ namespace BH.Engine.RDF
                 m_cSharpGraph.AllIndividuals.Add(individual);
             }
 
+            // Get this individual's properties.
+            List<PropertyInfo> properties = individualType.GetProperties().ToList();
+            BHoMObject individualAsBHoMObj = individual as BHoMObject;
+            if (individualAsBHoMObj != null && !typeof(CustomObjectType).IsAssignableFrom(individualType))
+            {
+                // It's not a Custom Type. Let's consider any entry in its CustomData dictionary as an extra property.
+                var customDataClone = individualAsBHoMObj.CustomData.DeepClone();
+                foreach (var entry in customDataClone)
+                {
+                    CustomPropertyInfo customProp = new CustomPropertyInfo(individualType, entry.Key, entry.Value.GetType());
+                    properties.Add(customProp);
+                    //individualAsBHoMObj.CustomData.Remove(entry.Key);
+                }
+            }
+
+            //var customDataProp = properties.Where(p => p.Name == "CustomData").FirstOrDefault();
+            //properties.Remove(customDataProp);
+            //properties.Add(customDataProp);
+
             // Recurse for properties of this individual.
-            PropertyInfo[] properties = individualType.GetProperties();
             properties.AddToOntology(ontologySettings, individual);
         }
 

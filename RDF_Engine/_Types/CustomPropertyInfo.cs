@@ -32,24 +32,34 @@ namespace BH.Engine.RDF.Types
 
         public override Type ReflectedType => throw new NotImplementedException();
 
-        public TBoxSettings TBoxSettings { get; }
-
-        public Uri OntologicalUri { get; }
-
         // ************************************ //
         // Ctor                                 //
         // ************************************ //
 
-        public CustomPropertyInfo(CustomObjectType declaringCustomObjectType, KeyValuePair<string, Type> propertyTypes, TBoxSettings tBoxSettings)
+        public CustomPropertyInfo(Type declaringType, string propertyName, Type propertyType)
         {
-            Name = propertyTypes.Key;
-            PropertyType = propertyTypes.Value;
-            TBoxSettings = tBoxSettings;
+            if (typeof(CustomObjectType).IsAssignableFrom(declaringType))
+                throw new ArgumentException("Cannot create custom property info for a non Custom type via this ctor.");
+
+            Name = propertyName;
+            PropertyType = propertyType;
+            DeclaringType = declaringType;
+        }
+        
+        public CustomPropertyInfo(CustomObjectType declaringCustomObjectType, string propertyName, Type propertyType)
+        {
+            Name = propertyName;
+            PropertyType = propertyType;
             DeclaringType = declaringCustomObjectType;
 
             // The ontological uri of this property is the Ontological Uri of the parent type
             // followed by an hashtag and the name of this property.
-            OntologicalUri = Query.CombineUris(declaringCustomObjectType.OntologicalUri + $"#{Name}");
+            //OntologicalUri = Query.CombineUris(declaringCustomObjectType.OntologicalUri + $"#{Name}");
+        }
+
+        public CustomPropertyInfo(CustomObjectType declaringCustomObjectType, KeyValuePair<string, Type> propertyTypes) : this(declaringCustomObjectType, propertyTypes.Key, propertyTypes.Value)
+        {
+
         }
 
         // ************************************ //
@@ -58,13 +68,13 @@ namespace BH.Engine.RDF.Types
 
         public override object GetValue(object obj, BindingFlags invokeAttr, Binder binder, object[] index, CultureInfo culture)
         {
-            CustomObject co = obj as CustomObject;
+            BHoMObject co = obj as BHoMObject;
             if (co == null)
-                throw new ArgumentException($"The input object must be a {nameof(CustomObject)}.");
+                throw new ArgumentException($"The input object must be a {nameof(BHoMObject)}.");
 
             object value = null;
             if (!co.CustomData.TryGetValue(this.Name, out value))
-                throw new ArgumentException($"The input {nameof(CustomObject)} does not have a {this.Name} key.");
+                throw new ArgumentException($"The input object does not have a {this.Name} key.");
 
             return value;
         }

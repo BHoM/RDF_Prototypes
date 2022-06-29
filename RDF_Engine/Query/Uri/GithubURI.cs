@@ -49,9 +49,9 @@ namespace BH.Engine.RDF
 
             repoSettings = repoSettings ?? new LocalRepositorySettings();
 
-            // Custom types exception.
+            // Custom property exception.
             if (miToSearch is CustomPropertyInfo)
-                return ((CustomPropertyInfo)miToSearch).OntologicalUri;
+                return Query.CombineUris(miToSearch.DeclaringType.GithubURI(repoSettings) + $"#{miToSearch.Name}");
 
             // Try extracting the Github Uri by deriving it from a fileSystem search for a `.cs` file corresponding to the input Type.
             Uri result = GithubURIFromLocalRepository(miToSearch as dynamic, repoSettings);
