@@ -19,5 +19,15 @@ namespace BH.oM.RDF
             { typeof(decimal), "xsd:decimal" },
             { typeof(Guid), "xsd:string"}
         };
+
+        public static Dictionary<string, Type> FromOntologyDataType = new Dictionary<string, Type>()
+        {
+            { "string",typeof(string) },
+            { "boolean", typeof(bool)},
+            { "integer" , typeof(int)},
+            { "double", typeof(double) },
+            { "float" , typeof(float)},
+            { "decimal", typeof(decimal)}
+        };
     }
 }

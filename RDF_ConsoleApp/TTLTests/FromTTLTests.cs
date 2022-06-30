@@ -195,7 +195,7 @@ namespace BH.Test.RDF
             Assert.IsEqual(parent, bhomObjects.FirstOrDefault());
         }
 
-        public static void IObject_PropertyList_OfObjects()
+        public static void NurbsCurve_PropertyList_OfObjects()
         {
             NurbsCurve nurbs = new NurbsCurve()
             {
@@ -217,7 +217,7 @@ namespace BH.Test.RDF
             Assert.IsEqual(nurbs, bhomObjects.FirstOrDefault());
         }
 
-        public static void IObject_PropertyList_OfPrimitives()
+        public static void BHoMObject_CustomData_PropertyList_OfPrimitives()
         {
             BHoMObject bhomObj = new BHoMObject();
             bhomObj.CustomData["listOfPrimitives"] = new List<int>() { 1, 2, 3, 4 };
@@ -230,6 +230,21 @@ namespace BH.Test.RDF
             var convertedObj = TTLGraph.ToCSharpObjects().FirstOrDefault();
 
             Assert.IsEqual(bhomObj.CustomData["listOfPrimitives"], (convertedObj as BHoMObject)?.CustomData["listOfPrimitives"]);
+        }
+
+        public static void FEMeshFace_PropertyList_OfPrimitives()
+        {
+            BH.oM.Structure.Elements.FEMeshFace bhomObj = new BH.oM.Structure.Elements.FEMeshFace();
+            bhomObj.NodeListIndices = new List<int>() { 1, 2, 3, 4 };
+
+            CSharpGraph cSharpGraph_customObj = Compute.CSharpGraph(new List<IObject>() { bhomObj }, m_ontologySettings);
+            string TTLGraph = cSharpGraph_customObj.ToTTLGraph(new LocalRepositorySettings());
+
+            Assert.IsTTLParsable(TTLGraph);
+
+            var convertedObj = TTLGraph.ToCSharpObjects().FirstOrDefault() as BH.oM.Structure.Elements.FEMeshFace;
+
+            Assert.IsEqual(bhomObj.NodeListIndices, convertedObj.NodeListIndices);
         }
 
         public static void CustomType_PropertyList_OfPrimitives()
@@ -266,10 +281,6 @@ namespace BH.Test.RDF
             RoomAndColumn();
 
             CustomObject();
-
-            IObject_PropertyList_OfObjects();
-
-            IObject_PropertyList_OfPrimitives();
 
             Point();
 

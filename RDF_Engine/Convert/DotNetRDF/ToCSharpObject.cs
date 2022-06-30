@@ -58,6 +58,7 @@ namespace BH.Engine.RDF
 
                 string propertyFullName = predicateNode.Predicate.BHoMSegment();
                 object propertyValue = null;
+                Type propertyType = typeof(object);
 
                 LiteralNode literalNode = predicateNode.Object as LiteralNode;
                 if (literalNode != null)
@@ -66,6 +67,8 @@ namespace BH.Engine.RDF
                         propertyValue = literalNode.Value.FromBase64JsonSerialized();
                     else
                         propertyValue = literalNode.Value;
+
+                    propertyType = BH.oM.RDF.OntologyTypeMap.FromOntologyDataType.Where(kv => kv.Key.Contains(literalNode.DataType.Fragment.OnlyAlphabetic())).FirstOrDefault().Value ?? typeof(object);
                 }
 
                 UriNode uriNode = predicateNode.Object as UriNode;
@@ -135,82 +138,112 @@ namespace BH.Engine.RDF
                 if (correspondingPInfo == null)
                 {
                     string propertyName = propertyFullName.Split('.').LastOrDefault();
-                    correspondingPInfo = new Types.CustomPropertyInfo(individualType as Types.CustomObjectType, new KeyValuePair<string, Type>(propertyName, typeof(object)));
+                    correspondingPInfo = new Types.CustomPropertyInfo(individualType as Types.CustomObjectType, new KeyValuePair<string, Type>(propertyName, propertyType));
                 }
 
-                propertyValues[correspondingPInfo] = propertyValue;
-            }
+                object convertedValue = ConvertValue(correspondingPInfo, propertyValue);
 
-            foreach (KeyValuePair<PropertyInfo, object> pValue in propertyValues)
-            {
-                object convertedValue = null;
-
-                try
-                {
-                    convertedValue = System.Convert.ChangeType(pValue.Value, pValue.Key.PropertyType);
-                }
-                catch { }
-
-                if (convertedValue == null)
-                {
-                    if (pValue.Key.PropertyType == typeof(Guid))
-                        convertedValue = new Guid(pValue.Value.ToString());
-                    else if (typeof(IList).IsAssignableFrom(pValue.Key.PropertyType))
-                    {
-                        List<object> valueList = pValue.Value as List<object>;
-
-                        if (valueList != null)
-                        {
-                            // Convert list of objects to list of specific inner type
-                            Type listGenericArgument = pValue.Key.PropertyType.GetGenericArguments()[0];
-                            var methodInfo = typeof(Queryable).GetMethod("OfType");
-                            var genericMethod = methodInfo?.MakeGenericMethod(listGenericArgument);
-                            try
-                            {
-                                Type listType = typeof(List<>).MakeGenericType(listGenericArgument);
-                                IList list = Activator.CreateInstance(listType) as IList;
-                                foreach (var item in pValue.Value as List<object>)
-                                    list.Add(item);
-
-                                convertedValue = list;
-                            }
-                            catch { }
-                        }
-                    }
-                }
-
-                // Fallback: try keeping the unconverted value.
-                if (convertedValue == null)
-                    convertedValue = pValue.Value;
-
-                // Set the convertedValue to the property.
-                bool setSuccessfully = false;
-                try
-                {
-                    pValue.Key.SetValue(resultObject, convertedValue);
-                    setSuccessfully = true;
-                }
-                catch
-                {
-                }
-
-                if (!setSuccessfully)
-                {
-                    Type propType = pValue.Value?.GetType() ?? default(Type);
-                    var field = resultObject.GetType().GetField($"<{pValue.Key.Name}>k__BackingField", BindingFlags.Instance | BindingFlags.NonPublic);
-                    
-                    if (field != null)
-                        field.SetValue(resultObject, convertedValue);
-                    else
-                    {
-                        // Try set as Custom Data.
-                        if (resultObject is BHoMObject)
-                            (resultObject as dynamic).CustomData[pValue.Key.Name] = pValue.Value;
-                    }
-                }
+                SetValueOnResultObject(ref resultObject, correspondingPInfo, convertedValue);
             }
 
             return resultObject;
+        }
+
+        private static void SetValueOnResultObject(ref object resultObject, PropertyInfo pInfo, object convertedValue)
+        {
+            // If the property is CustomData, first check whether it wasn't already set (e.g. via a CustomPropertyInfo set).
+            if (pInfo.Name == nameof(BHoMObject.CustomData) && resultObject is BHoMObject && convertedValue is Dictionary<string, object>)
+            {
+                BHoMObject resultBHoMObj = (BHoMObject)resultObject;
+
+                if (resultBHoMObj?.CustomData != null)
+                {
+                    // Only add CustomData keys that are not already set.
+                    foreach (var kv in (Dictionary<string, object>)convertedValue)
+                    {
+                        if (!resultBHoMObj.CustomData.ContainsKey(kv.Key))
+                            resultBHoMObj.CustomData[kv.Key] = kv.Value;
+                    }
+                    return;
+                }
+            }
+
+            // Set the convertedValue to the property.
+            try
+            {
+                pInfo.SetValue(resultObject, convertedValue);
+                return;
+            }
+            catch { }
+
+            var field = resultObject.GetType().GetField($"<{pInfo.Name}>k__BackingField", BindingFlags.Instance | BindingFlags.NonPublic);
+
+            if (field != null)
+            {
+                try
+                {
+                    field.SetValue(resultObject, convertedValue);
+                    return;
+                }
+                catch { }
+            }
+            else
+            {
+                // Try set as Custom Data.
+                if (resultObject is BHoMObject)
+                    try
+                    {
+                        (resultObject as dynamic).CustomData[pInfo.Name] = convertedValue;
+                        return;
+                    }
+                    catch { }
+            }
+
+            Log.RecordWarning($"Could not set property `{pInfo.Name}` on a {resultObject.GetType().FullName}.");
+        }
+
+        private static object ConvertValue(PropertyInfo pInfo, object value)
+        {
+            object convertedValue = null;
+
+            try
+            {
+                convertedValue = System.Convert.ChangeType(value, pInfo.PropertyType);
+            }
+            catch { }
+
+            if (convertedValue == null)
+            {
+                if (pInfo.PropertyType == typeof(Guid))
+                    convertedValue = new Guid(value.ToString());
+                else if (typeof(IList).IsAssignableFrom(pInfo.PropertyType))
+                {
+                    List<object> valueList = value as List<object>;
+
+                    if (valueList != null)
+                    {
+                        // Convert list of objects to list of specific inner type
+                        Type listGenericArgument = pInfo.PropertyType.GetGenericArguments()[0];
+                        var methodInfo = typeof(Queryable).GetMethod("OfType");
+                        var genericMethod = methodInfo?.MakeGenericMethod(listGenericArgument);
+                        try
+                        {
+                            Type listType = typeof(List<>).MakeGenericType(listGenericArgument);
+                            IList list = Activator.CreateInstance(listType) as IList;
+                            foreach (var item in value as List<object>)
+                                list.Add(item);
+
+                            convertedValue = list;
+                        }
+                        catch { }
+                    }
+                }
+            }
+
+            // Fallback: try keeping the unconverted value.
+            if (convertedValue == null)
+                convertedValue = value;
+            return convertedValue;
         }
 
         private static Uri Uri(this INode node)

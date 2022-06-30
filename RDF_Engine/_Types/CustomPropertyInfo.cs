@@ -86,9 +86,9 @@ namespace BH.Engine.RDF.Types
 
         public override void SetValue(object obj, object value, BindingFlags invokeAttr, Binder binder, object[] index, CultureInfo culture)
         {
-            CustomObject co = obj as CustomObject;
+            BHoMObject co = obj as BHoMObject;
             if (co == null)
-                throw new ArgumentException($"The input object must be a {nameof(CustomObject)}.");
+                throw new ArgumentException($"The input object must be a {nameof(BHoMObject)}.");
 
             co.CustomData[this.Name] = value;
         }
