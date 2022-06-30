@@ -27,6 +27,10 @@ namespace BH.Engine.RDF
         {
             localRepositorySettings = localRepositorySettings ?? new LocalRepositorySettings();
 
+            StreamWriter sw = null;
+            if (!string.IsNullOrWhiteSpace(filepath))
+                sw = new StreamWriter(filepath);
+            
             StringBuilder TTL = new StringBuilder();
 
             TTL.Append(Create.TTLHeader(cSharpGraph.OntologySettings.OntologyTitle, cSharpGraph.OntologySettings.OntologyDescription, cSharpGraph.OntologySettings.OntologyBaseAddress));
@@ -51,6 +55,9 @@ namespace BH.Engine.RDF
                 TTL.Append("Individuals".TTLSectionTitle());
                 cSharpGraph.TTLIndividuals(localRepositorySettings, TTL);
             }
+
+            if (sw != null)
+                sw.Write(TTL);
 
             return TTL.ToString();
         }
