@@ -15,6 +15,10 @@ namespace BH.Engine.RDF
 {
     public static partial class Convert
     {
+        /*************************************/
+        /*          Public methods           */
+        /*************************************/
+
         public static object ToCSharpObject(this OntologyResource individual, OntologyGraph dotNetRDFOntology)
         {
             if (individual == null || dotNetRDFOntology == null)
@@ -46,7 +50,6 @@ namespace BH.Engine.RDF
             // Get the equivalent properties
             List<OntologyProperty> propertyNodes = dotNetRDFOntology.OwlProperties.Where(p => p.UsedBy.Any(n => n.Types.Any(uriN => uriN.ToString().Contains(individualType.FullName)))).ToList();
 
-            Dictionary<PropertyInfo, object> propertyValues = new Dictionary<PropertyInfo, object>();
             foreach (OntologyProperty propertyNode in propertyNodes)
             {
                 Triple predicateNode = propertyNode.TriplesWithPredicate
@@ -59,6 +62,7 @@ namespace BH.Engine.RDF
                 string propertyFullName = predicateNode.Predicate.BHoMSegment();
                 object propertyValue = null;
                 Type propertyType = typeof(object);
+
 
                 LiteralNode literalNode = predicateNode.Object as LiteralNode;
                 if (literalNode != null)
@@ -126,11 +130,6 @@ namespace BH.Engine.RDF
                         OntologyResource relatedIndividual = uriNode.IndividualOntologyResource(dotNetRDFOntology);
                         propertyValue = relatedIndividual.ToCSharpObject(dotNetRDFOntology);
                     }
-
-                    if (propertyValue == null)
-                    {
-                        int asdaa = 0;
-                    }
                 }
 
                 PropertyInfo correspondingPInfo = typeProperties.FirstOrDefault(pi => pi.FullNameValidChars() == propertyFullName);
@@ -148,6 +147,11 @@ namespace BH.Engine.RDF
 
             return resultObject;
         }
+
+
+        /*************************************/
+        /*          Private methods          */
+        /*************************************/
 
         private static void SetValueOnResultObject(ref object resultObject, PropertyInfo pInfo, object convertedValue)
         {
@@ -202,6 +206,8 @@ namespace BH.Engine.RDF
             Log.RecordWarning($"Could not set property `{pInfo.Name}` on a {resultObject.GetType().FullName}.");
         }
 
+        /*************************************/
+
         private static object ConvertValue(PropertyInfo pInfo, object value)
         {
             object convertedValue = null;
@@ -245,6 +251,8 @@ namespace BH.Engine.RDF
                 convertedValue = value;
             return convertedValue;
         }
+
+        /*************************************/
 
         private static Uri Uri(this INode node)
         {
