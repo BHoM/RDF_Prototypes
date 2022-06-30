@@ -12,7 +12,7 @@ namespace BH.Engine.RDF
 {
     public static partial class Convert
     {
-        public static List<string> TTLObjectProperties(this CSharpGraph cSharpGraph, LocalRepositorySettings localRepositorySettings)
+        private static List<string> TTLObjectProperties(this CSharpGraph cSharpGraph, LocalRepositorySettings localRepositorySettings)
         {
             List<string> TTLObjectProperties = new List<string>();
 

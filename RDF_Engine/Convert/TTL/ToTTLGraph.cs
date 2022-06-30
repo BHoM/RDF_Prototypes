@@ -8,6 +8,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.ComponentModel;
+using System.IO;
 using System.Linq;
 using System.Reflection;
 using System.Text;
@@ -22,34 +23,36 @@ namespace BH.Engine.RDF
         /***************************************************/
 
         [Description("Converts a Graph ontological representation of (BHoM) types and their relations into a TTL format.")]
-        public static string ToTTLGraph(this CSharpGraph cSharpGraph, LocalRepositorySettings localRepositorySettings = null)
+        public static string ToTTLGraph(this CSharpGraph cSharpGraph, LocalRepositorySettings localRepositorySettings = null, string filepath = null)
         {
             localRepositorySettings = localRepositorySettings ?? new LocalRepositorySettings();
 
-            string TTL = Create.TTLHeader(cSharpGraph.OntologySettings.OntologyTitle, cSharpGraph.OntologySettings.OntologyDescription, cSharpGraph.OntologySettings.OntologyBaseAddress);
+            StringBuilder TTL = new StringBuilder();
 
-            TTL += "Annotation Properties".TTLSectionTitle();
-            TTL += string.Join("\n", Create.TTLAnnotationProperties());
+            TTL.Append(Create.TTLHeader(cSharpGraph.OntologySettings.OntologyTitle, cSharpGraph.OntologySettings.OntologyDescription, cSharpGraph.OntologySettings.OntologyBaseAddress));
 
-            TTL += "Datatypes".TTLSectionTitle();
-            TTL += string.Join("\n", cSharpGraph.TTLDataTypes(localRepositorySettings));
+            TTL.Append("Annotation Properties".TTLSectionTitle());
+            TTL.Append(string.Join("\n", Create.TTLAnnotationProperties()));
 
-            TTL += "Classes".TTLSectionTitle();
-            TTL += string.Join("\n\n", cSharpGraph.TTLClasses(localRepositorySettings));
+            TTL.Append("Datatypes".TTLSectionTitle());
+            TTL.Append(string.Join("\n", cSharpGraph.TTLDataTypes(localRepositorySettings)));
 
-            TTL += "Object Properties".TTLSectionTitle();
-            TTL += string.Join("\n\n", cSharpGraph.TTLObjectProperties(localRepositorySettings));
+            TTL.Append("Classes".TTLSectionTitle());
+            TTL.Append(string.Join("\n\n", cSharpGraph.TTLClasses(localRepositorySettings)));
 
-            TTL += "Data properties".TTLSectionTitle();
-            TTL += string.Join("\n\n", cSharpGraph.TTLDataProperties(localRepositorySettings));
+            TTL.Append("Object Properties".TTLSectionTitle());
+            TTL.Append(string.Join("\n\n", cSharpGraph.TTLObjectProperties(localRepositorySettings)));
+
+            TTL.Append("Data properties".TTLSectionTitle());
+            TTL.Append(string.Join("\n\n", cSharpGraph.TTLDataProperties(localRepositorySettings)));
 
             if (cSharpGraph.AllIndividuals?.Any() ?? false)
             {
-                TTL += "Individuals".TTLSectionTitle();
-                TTL += string.Join("\n\n", cSharpGraph.TTLIndividuals(localRepositorySettings));
+                TTL.Append("Individuals".TTLSectionTitle());
+                cSharpGraph.TTLIndividuals(localRepositorySettings, TTL);
             }
 
-            return TTL;
+            return TTL.ToString();
         }
     }
 }

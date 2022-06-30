@@ -19,6 +19,18 @@ namespace BH.Engine.RDF
     public static partial class Compute
     {
         [Description("Computes a TTL ontology with the input IObjects. The ontology will include both T-Box and A-Box." +
+             "The T-Box is constructed from the Types of the input objects, and their relations, expressed via the CSharp object properties.")]
+        public static string TTLGraph(this List<IObject> iObjects, string filePath, OntologySettings ontologySettings, LocalRepositorySettings localRepositorySettings)
+        {
+            CSharpGraph cSharpGraph = Engine.RDF.Compute.CSharpGraph(iObjects, ontologySettings);
+
+            string TTL = cSharpGraph.ToTTLGraph(localRepositorySettings);
+
+            return TTL;
+        }
+
+
+        [Description("Computes a TTL ontology with the input IObjects. The ontology will include both T-Box and A-Box." +
             "The T-Box is constructed from the Types of the input objects, and their relations, expressed via the CSharp object properties.")]
         public static string TTLGraph(this List<IObject> iObjects, OntologySettings ontologySettings, LocalRepositorySettings localRepositorySettings)
         {

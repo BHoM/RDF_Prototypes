@@ -13,10 +13,8 @@ namespace BH.Engine.RDF
 {
     public static partial class Convert
     {
-        public static List<string> TTLIndividuals(this CSharpGraph cSharpGraph, LocalRepositorySettings localRepositorySettings)
+        private static void TTLIndividuals(this CSharpGraph cSharpGraph, LocalRepositorySettings localRepositorySettings, StringBuilder stringBuilder)
         {
-            List<string> TTLIndividuals = new List<string>();
-
             foreach (object individual in cSharpGraph.AllIndividuals)
             {
                 if (individual == null)
@@ -33,10 +31,9 @@ namespace BH.Engine.RDF
                 TTLIndividual += TLLIndividualRelations(individual, cSharpGraph, localRepositorySettings);
 
                 TTLIndividual = TTLIndividual.EnsureEndingDot();
-                TTLIndividuals.Add(TTLIndividual);
-            }
 
-            return TTLIndividuals;
+                stringBuilder.Append("\n\n" + TTLIndividual);
+            }
         }
 
         private static string TLLIndividualRelations(object individual, CSharpGraph cSharpGraph, LocalRepositorySettings localRepositorySettings)
