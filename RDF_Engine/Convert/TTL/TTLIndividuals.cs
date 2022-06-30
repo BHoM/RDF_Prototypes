@@ -38,8 +38,8 @@ namespace BH.Engine.RDF
 
         private static string TLLIndividualRelations(object individual, CSharpGraph cSharpGraph, LocalRepositorySettings localRepositorySettings)
         {
-            string TLLIndividualRelations = "";
-            List<IndividualRelation> individualRelations = cSharpGraph.IndividualRelations.Where(r => r.Individual == individual).ToList();
+            StringBuilder TLLIndividualRelations = new StringBuilder();
+            IEnumerable<IndividualRelation> individualRelations = cSharpGraph.IndividualRelations.Where(r => r.Individual == individual);
 
             foreach (IndividualRelation individualRelation in individualRelations)
             {
@@ -56,13 +56,13 @@ namespace BH.Engine.RDF
                             continue;
 
                         List<string> listIndividualsUris = individualList.Where(o => o != null).Select(o => o.IndividualUri(cSharpGraph.OntologySettings).ToString()).ToList();
-                        TLLIndividualRelations += $"\n\t\t:{iop.HasProperty.PropertyInfo.UniqueNodeId()} rdf:Seq ;\n";
+                        TLLIndividualRelations.Append($"\n\t\t:{iop.HasProperty.PropertyInfo.UniqueNodeId()} rdf:Seq ;\n");
 
                         for (int i = 0; i < listIndividualsUris.Count; i++)
                         {
                             string individualUri = listIndividualsUris[i];
 
-                            TLLIndividualRelations += $"\t\trdf:_{i} <{individualUri}> ;\n";
+                            TLLIndividualRelations.Append($"\t\trdf:_{i} <{individualUri}> ;\n");
                         }
                     }
                     else if (iop.RangeIndividual.GetType().IsListOfDatatypes())
@@ -71,17 +71,17 @@ namespace BH.Engine.RDF
                         if (individualList.IsNullOrEmpty())
                             continue;
 
-                        TLLIndividualRelations += $"\n\t\t:{iop.HasProperty.PropertyInfo.UniqueNodeId()} ";
+                        TLLIndividualRelations.Append($"\n\t\t:{iop.HasProperty.PropertyInfo.UniqueNodeId()} ");
 
                         List<string> stringValues = new List<string>();
                         foreach (var value in individualList)
                             stringValues.Add($"\"{Query.DataPropertyStringValue(value)}\"^^{value.GetType().ToOntologyDataType()}");
 
-                        TLLIndividualRelations += $"({string.Join(" ", stringValues)});";
+                        TLLIndividualRelations.Append($"({string.Join(" ", stringValues)});");
                     }
                     else
 
-                        TLLIndividualRelations += $"\n\t\t:{iop.HasProperty.PropertyInfo.UniqueNodeId()} <{iop.RangeIndividual.IndividualUri(cSharpGraph.OntologySettings)}> ;";
+                        TLLIndividualRelations.Append($"\n\t\t:{iop.HasProperty.PropertyInfo.UniqueNodeId()} <{iop.RangeIndividual.IndividualUri(cSharpGraph.OntologySettings)}> ;");
 
                     continue;
                 }
@@ -94,20 +94,20 @@ namespace BH.Engine.RDF
 
                     }
 
-                    TLLIndividualRelations += "\n\t\t" + $@":{idp.PropertyInfo.UniqueNodeId()} ""{idp.DataPropertyStringValue()}""";
+                    TLLIndividualRelations.Append("\n\t\t" + $@":{idp.PropertyInfo.UniqueNodeId()} ""{idp.DataPropertyStringValue()}""");
 
                     string dataType = idp.Value.GetType().ToOntologyDataType();
 
                     if (dataType == typeof(Base64JsonSerialized).UniqueNodeId())
-                        TLLIndividualRelations += $"^^:{idp.Value.GetType().ToOntologyDataType()};";
+                        TLLIndividualRelations.Append($"^^:{idp.Value.GetType().ToOntologyDataType()};");
                     else
-                        TLLIndividualRelations += $"^^{ idp.Value.GetType().ToOntologyDataType()};"; // TODO: insert serialized value here, when the individual's datatype is unknown
+                        TLLIndividualRelations.Append($"^^{ idp.Value.GetType().ToOntologyDataType()};"); // TODO: insert serialized value here, when the individual's datatype is unknown
 
                     continue;
                 }
             }
 
-            return TLLIndividualRelations;
+            return TLLIndividualRelations.ToString();
         }
     }
 }
