@@ -37,6 +37,9 @@ namespace BH.Engine.RDF
                     TTLDataProperty += $"\n:{rel.PropertyInfo.UniqueNodeId()} rdf:type owl:DatatypeProperty ;";
                     TTLDataProperty += $"\nrdfs:domain :{rel.DomainClass.UniqueNodeId()} ;";
 
+                    if (rel.RangeType == null || rel.PropertyInfo == null)
+                        continue;
+
                     // We need to map the Range Type to a valid DataType.
                     string dataType = rel.RangeType.ToOntologyDataType();
 

@@ -32,6 +32,9 @@ namespace BH.Engine.RDF
                 {
                     string TTLObjectProperty = "";
 
+                    if (rel.RangeClass == null || rel.PropertyInfo == null)
+                        continue;
+
                     string propertyURI = rel.PropertyInfo.GithubURI(localRepositorySettings).ToString();
                     TTLObjectProperty += $"\n### {propertyURI}";
                     TTLObjectProperty += $"\n:{rel.PropertyInfo.UniqueNodeId()} rdf:type owl:ObjectProperty ;";
