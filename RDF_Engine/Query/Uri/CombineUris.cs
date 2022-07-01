@@ -11,6 +11,10 @@ namespace BH.Engine.RDF
 {
     public static partial class Query
     {
+        /***************************************************/
+        /**** Public Methods                            ****/
+        /***************************************************/
+
         [Description("Combine the given strings and base uri in a single absolute Uri. More reliable than standard Uri.Combine.")]
         public static Uri CombineUris(this Uri baseUri, params string[] uris)
         {
@@ -43,9 +47,12 @@ namespace BH.Engine.RDF
             return result;
         }
 
+        /***************************************************/
+
         public static Uri CombineUris(params string[] uris)
         {
-            UriBuilder uriBuilder = new UriBuilder(uris.FirstOrDefault());
+            UriBuilder uriBuilder = new UriBuilder();
+            uriBuilder = new UriBuilder(uris.FirstOrDefault());
 
             return CombineUris(uriBuilder.Uri, uris.Skip(1).ToArray());
         }

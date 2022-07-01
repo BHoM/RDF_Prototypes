@@ -46,8 +46,6 @@ namespace BH.Engine.RDF.Types
 
         public new TBoxSettings TBoxSettings { get; }
 
-        public new Uri OntologicalUri { get; }
-
         public List<string> PropertyNames { get; } = new List<string>();
 
 
@@ -84,7 +82,6 @@ namespace BH.Engine.RDF.Types
                 throw new ArgumentException($"{nameof(TBoxSettings)} was null upon creation of CustomObjectType `{Name}`.");
 
             TBoxSettings = tBoxSettings;
-            OntologicalUri = Query.CombineUris(tBoxSettings.CustomObjectTypesBaseAddress, Name);
 
             PropertyNames = customObj.CustomData.Keys.Where(k => k != tBoxSettings.CustomobjectsTypeKey).ToList();
             _propertyTypes = customObj.CustomData.Select(cd => new KeyValuePair<string, Type>(cd.Key, TryGetCustomObjectType(cd.Value, tBoxSettings))).ToDictionary(cv => cv.Key, cv => cv.Value);

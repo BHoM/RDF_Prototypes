@@ -72,7 +72,6 @@ namespace BH.Engine.RDF.Types
                 throw new ArgumentException($"{nameof(TBoxSettings)} was null upon creation of CustomObjectType `{Name}`.");
 
             TBoxSettings = tBoxSettings;
-            OntologicalUri = Query.CombineUris(tBoxSettings.CustomObjectTypesBaseAddress, Name);
         }
 
         // ************************************ //

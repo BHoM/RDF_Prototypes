@@ -13,8 +13,6 @@ namespace BH.Engine.RDF.Types
     {
         public string RDFTypeName { get; protected set; }
 
-        public Uri OntologicalUri { get; protected set; }
-
         public TBoxSettings TBoxSettings { get; protected set; }
     }
 }
