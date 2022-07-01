@@ -22,11 +22,11 @@ namespace BH.Engine.RDF
         [Description("Returns an ontology graph that includes CSharp objects and types." +
             "This methods takes in a list of objects as an input, so the resulting CSharp graph has both the T-Box and A-Box sections populated." +
             "If you only are interested in the T-Box, use the other CSharpGraph() method that takes in a list of Types.")]
-        public static CSharpGraph CSharpGraph(this List<IObject> iObjects, OntologySettings ontologySettings)
+        public static CSharpGraph CSharpGraph(this List<object> objects, OntologySettings ontologySettings)
         {
             m_cSharpGraph = new CSharpGraph() { OntologySettings = ontologySettings };
 
-            foreach (var iObject in iObjects)
+            foreach (var iObject in objects)
                 AddIndividualToOntology(iObject, ontologySettings);
 
             return m_cSharpGraph;
@@ -156,7 +156,15 @@ namespace BH.Engine.RDF
 
                 // If the individual is non-null, we will need to add the individuals' relation to the Graph in order to define the A-Box.
                 if (individual == null) return;
-                object propertyValue = pi.CanRead ? pi.GetValue(individual) : null;
+                object propertyValue = null;
+                try
+                {
+                    propertyValue = pi.CanRead ? pi.GetValue(individual) : null;
+                }
+                catch
+                {
+
+                }
                 if (!ontologySettings.ABoxSettings.ConsiderNullOrEmptyPropertyValues && propertyValue.IsNullOrEmpty())
                     return;
 
@@ -186,7 +194,17 @@ namespace BH.Engine.RDF
 
                 // If the individual is non-null, we will need to add the individuals' relation to the Graph in order to define the A-Box.
                 if (individual == null) return;
-                object propertyValue = pi.CanRead ? pi.GetValue(individual) : null;
+                object propertyValue = null;
+
+                try
+                {
+                    propertyValue = pi.CanRead ? pi.GetValue(individual) : null;
+                }
+                catch
+                {
+
+                }
+
                 if (!ontologySettings.ABoxSettings.ConsiderNullOrEmptyPropertyValues && propertyValue.IsNullOrEmpty())
                     return;
 
@@ -230,7 +248,7 @@ namespace BH.Engine.RDF
                 // It's not a Custom Type. Let's consider any entry in its CustomData dictionary as an extra property.
                 foreach (var entry in individualAsBHoMObj.CustomData)
                 {
-                    CustomPropertyInfo customProp = new CustomPropertyInfo(individualType, entry.Key, entry.Value?.GetType() ?? default(Type));
+                    CustomPropertyInfo customProp = new CustomPropertyInfo(individualType, entry.Key, entry.Value?.GetType() ?? typeof(object));
 
                     int idx = properties.IndexOf(properties.Where(p => p.Name == nameof(BHoMObject.BHoM_Guid)).FirstOrDefault());
                     if (idx != -1)

@@ -26,7 +26,7 @@ namespace BH.Engine.RDF
         public static int LineNumber(PropertyInfo pi, LocalRepositorySettings settings)
         {
             // Null guards
-            if (pi == null)
+            if (pi == null || pi is CustomPropertyInfo || !pi.DeclaringType.IsBHoMType())
                 return -1;
 
             settings = settings ?? new LocalRepositorySettings();

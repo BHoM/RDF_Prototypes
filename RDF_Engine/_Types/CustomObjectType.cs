@@ -72,7 +72,7 @@ namespace BH.Engine.RDF.Types
             GUID = Query.GuidFromString(Name);
             Module = thisClassType.Module;
             Assembly = thisClassType.Assembly;
-            FullName = thisClassType.FullName + $".{Name}";
+            FullName = Name; // do not prepend this class' namespace or name. Not useful.
             Namespace = thisClassType.Namespace;
             AssemblyQualifiedName = thisClassType.AssemblyQualifiedName;
             BaseType = typeof(CustomObject);
@@ -226,7 +226,7 @@ namespace BH.Engine.RDF.Types
 
         protected override TypeAttributes GetAttributeFlagsImpl()
         {
-            throw new NotImplementedException();
+            return TypeAttributes.Public;
         }
 
         protected override bool IsArrayImpl()

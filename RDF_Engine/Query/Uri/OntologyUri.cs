@@ -44,7 +44,7 @@ namespace BH.Engine.RDF
             {
                 // Uri for CustomType
                 if (type is ICustomRDFType)
-                    return Query.CombineUris(tBoxSettings.CustomObjectTypesBaseAddress, type.Name);
+                    return Query.CombineUris(tBoxSettings.CustomObjectTypesBaseAddress, type.NameValidChars());
 
                 Uri githubUri = type.GithubURI(tBoxSettings, repoSettings);
                 if (githubUri != null)
@@ -52,13 +52,12 @@ namespace BH.Engine.RDF
             }
 
             // Use default base Uri for unknown types.
-            Uri defaultUri = null;
-            if (System.Uri.TryCreate(tBoxSettings.DefaultBaseUriForUnknownTypes + type.Name, UriKind.Absolute, out defaultUri))
-                return customUri;
+            if (System.Uri.TryCreate(tBoxSettings.DefaultBaseUriForUnknownTypes, UriKind.Absolute, out _))
+                return CombineUris(tBoxSettings.DefaultBaseUriForUnknownTypes, type.NameValidChars());
             else
                 Log.RecordWarning($"Default base URI for `{tBoxSettings.DefaultBaseUriForUnknownTypes}` specified for unknown types is invalid.");
 
-            return new Uri(new TBoxSettings().DefaultBaseUriForUnknownTypes + $"#{type.Name}");
+            return new Uri(new TBoxSettings().DefaultBaseUriForUnknownTypes + $"#{type.NameValidChars()}");
         }
 
         /***************************************************/

@@ -25,7 +25,7 @@ namespace BH.Engine.RDF
         public static string FilePathFromLocalRepository(this Type type, LocalRepositorySettings settings, bool getRelativePath = false)
         {
             // Null guards
-            if (type == null)
+            if (type == null || !type.IsBHoMType() || type is ICustomRDFType)
                 return null;
 
             if (settings == null)
