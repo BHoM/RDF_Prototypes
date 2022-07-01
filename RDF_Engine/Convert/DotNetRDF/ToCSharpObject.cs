@@ -67,12 +67,8 @@ namespace BH.Engine.RDF
                 LiteralNode literalNode = predicateNode.Object as LiteralNode;
                 if (literalNode != null)
                 {
-                    if (literalNode.DataType.AbsolutePath.EndsWith(typeof(Base64JsonSerialized).FullName))
-                        propertyValue = literalNode.Value.FromBase64JsonSerialized();
-                    else
-                        propertyValue = literalNode.Value;
-
-                    propertyType = BH.oM.RDF.OntologyTypeMap.FromOntologyDataType.Where(kv => kv.Key.Contains(literalNode.DataType.Fragment.OnlyAlphabetic())).FirstOrDefault().Value ?? typeof(object);
+                    propertyValue = literalNode.GetPropertyValue();
+                    propertyType = literalNode.GetPropertyType();
                 }
 
                 UriNode uriNode = predicateNode.Object as UriNode;
@@ -132,6 +128,50 @@ namespace BH.Engine.RDF
                     }
                 }
 
+                if (predicateNode.Object is BlankNode)
+                {
+                    BlankNode listStart = (BlankNode)predicateNode.Object;
+
+                    string nextId = listStart.InternalID;
+
+                    List<object> listValues = new List<object>();
+                    Type listItemsType = null;
+
+                    for (int i = 0; i < dotNetRDFOntology.Triples.Count; i++)
+                    {
+                        Triple triple = dotNetRDFOntology.Triples.ElementAt(i);
+                        BlankNode bn = triple.Subject as BlankNode;
+
+                        if (bn == null)
+                            continue;
+
+                        if (bn.InternalID == nextId)
+                        {
+                            LiteralNode valueNode = triple.Object as LiteralNode;
+
+                            if (valueNode != null)
+                            {
+                                if (listItemsType == null)
+                                    listItemsType = GetPropertyType(valueNode);
+
+                                object listItemValue = ConvertValue(valueNode.GetPropertyValue(), listItemsType);
+                                listValues.Add(listItemValue);
+                                continue;
+                            }
+
+                            BlankNode objectBn = triple.Object as BlankNode;
+
+                            if (objectBn == null)
+                                break;
+
+                            nextId = objectBn.InternalID;
+                        }
+                    }
+
+                    propertyValue = listValues;
+                    propertyType = typeof(List<>).MakeGenericType(listItemsType ?? typeof(object));
+                }
+
                 PropertyInfo correspondingPInfo = typeProperties.FirstOrDefault(pi => pi.FullNameValidChars() == propertyFullName);
 
                 if (correspondingPInfo == null)
@@ -140,7 +180,7 @@ namespace BH.Engine.RDF
                     correspondingPInfo = new Types.CustomPropertyInfo(individualType as Types.CustomObjectType, new KeyValuePair<string, Type>(propertyName, propertyType));
                 }
 
-                object convertedValue = ConvertValue(correspondingPInfo, propertyValue);
+                object convertedValue = ConvertValue(propertyValue, correspondingPInfo.PropertyType);
 
                 SetValueOnResultObject(ref resultObject, correspondingPInfo, convertedValue);
             }
@@ -151,6 +191,31 @@ namespace BH.Engine.RDF
 
         /*************************************/
         /*          Private methods          */
+        /*************************************/
+
+        private static object GetPropertyValue(this LiteralNode literalNode)
+        {
+            if (literalNode == null)
+                return null;
+
+            if (literalNode.DataType.AbsolutePath.EndsWith(typeof(Base64JsonSerialized).FullName))
+                return literalNode.Value.FromBase64JsonSerialized();
+            else
+                return literalNode.Value;
+        }
+        
+        /*************************************/
+
+        private static Type GetPropertyType(this LiteralNode literalNode)
+        {
+            return GetPropertyType(literalNode.DataType.Fragment);
+        }
+
+        private static Type GetPropertyType(this string valueName)
+        {
+            return BH.oM.RDF.OntologyTypeMap.FromOntologyDataType.Where(kv => kv.Key.Contains(valueName.OnlyAlphabetic())).FirstOrDefault().Value ?? typeof(object);
+        }
+
         /*************************************/
 
         private static void SetValueOnResultObject(ref object resultObject, PropertyInfo pInfo, object convertedValue)
@@ -208,28 +273,28 @@ namespace BH.Engine.RDF
 
         /*************************************/
 
-        private static object ConvertValue(PropertyInfo pInfo, object value)
+        private static object ConvertValue(object value, Type destinationType)
         {
             object convertedValue = null;
 
             try
             {
-                convertedValue = System.Convert.ChangeType(value, pInfo.PropertyType);
+                convertedValue = System.Convert.ChangeType(value, destinationType);
             }
             catch { }
 
             if (convertedValue == null)
             {
-                if (pInfo.PropertyType == typeof(Guid))
+                if (destinationType == typeof(Guid))
                     convertedValue = new Guid(value.ToString());
-                else if (typeof(IList).IsAssignableFrom(pInfo.PropertyType))
+                else if (typeof(IList).IsAssignableFrom(destinationType))
                 {
                     List<object> valueList = value as List<object>;
 
                     if (valueList != null)
                     {
                         // Convert list of objects to list of specific inner type
-                        Type listGenericArgument = pInfo.PropertyType.GetGenericArguments()[0];
+                        Type listGenericArgument = destinationType.GetGenericArguments()[0];
                         var methodInfo = typeof(Queryable).GetMethod("OfType");
                         var genericMethod = methodInfo?.MakeGenericMethod(listGenericArgument);
                         try
