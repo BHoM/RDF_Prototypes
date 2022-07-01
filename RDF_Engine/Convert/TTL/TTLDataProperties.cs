@@ -20,7 +20,7 @@ namespace BH.Engine.RDF
             {
                 var rel = cSharpGraph.DataProperties.ElementAt(i);
 
-                string gitHubUri = rel.PropertyInfo.GithubURI(localRepositorySettings)?.ToString();
+                string gitHubUri = rel.PropertyInfo.OntologyURI(cSharpGraph.OntologySettings.TBoxSettings, localRepositorySettings)?.ToString();
 
                 if (gitHubUri.IsNullOrEmpty())
                 {
@@ -32,7 +32,7 @@ namespace BH.Engine.RDF
                 {
                     string TTLDataProperty = "";
 
-                    string propertyURI = rel.PropertyInfo.GithubURI(localRepositorySettings).ToString();
+                    string propertyURI = rel.PropertyInfo.OntologyURI(cSharpGraph.OntologySettings.TBoxSettings, localRepositorySettings).ToString();
                     TTLDataProperty += $"\n### {propertyURI}";
                     TTLDataProperty += $"\n:{rel.PropertyInfo.UniqueNodeId()} rdf:type owl:DatatypeProperty ;";
                     TTLDataProperty += $"\nrdfs:domain :{rel.DomainClass.UniqueNodeId()} ;";
@@ -60,7 +60,7 @@ namespace BH.Engine.RDF
 
             // Add the IObject's DataProperty for the Default Data Type
             Type defaultTypeForUnknownConversions = typeof(Base64JsonSerialized);
-            string defaultDataType_IObjectProperty = "\n" + $@"###  {defaultTypeForUnknownConversions.GithubURI(localRepositorySettings)}
+            string defaultDataType_IObjectProperty = "\n" + $@"###  {defaultTypeForUnknownConversions.OntologyUri(cSharpGraph.OntologySettings.TBoxSettings, localRepositorySettings)}
                 {defaultTypeForUnknownConversions.DescriptiveName()} rdf:type owl:DatatypeProperty ;
                 rdfs:domain :IObject ;
                 rdfs:range {defaultTypeForUnknownConversions.UniqueNodeId()} .";

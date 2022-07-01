@@ -20,7 +20,7 @@ namespace BH.Engine.RDF
             {
                 var rel = cSharpGraph.ObjectProperties.ElementAt(i);
 
-                string gitHubUri = rel.PropertyInfo.GithubURI(localRepositorySettings)?.ToString();
+                string gitHubUri = rel.PropertyInfo.OntologyURI(cSharpGraph.OntologySettings.TBoxSettings, localRepositorySettings)?.ToString();
 
                 if (gitHubUri.IsNullOrEmpty())
                 {
@@ -35,7 +35,7 @@ namespace BH.Engine.RDF
                     if (rel.RangeClass == null || rel.PropertyInfo == null)
                         continue;
 
-                    string propertyURI = rel.PropertyInfo.GithubURI(localRepositorySettings).ToString();
+                    string propertyURI = rel.PropertyInfo.OntologyURI(cSharpGraph.OntologySettings.TBoxSettings, localRepositorySettings).ToString();
                     TTLObjectProperty += $"\n### {propertyURI}";
                     TTLObjectProperty += $"\n:{rel.PropertyInfo.UniqueNodeId()} rdf:type owl:ObjectProperty ;";
                     TTLObjectProperty += $"\nrdfs:domain :{rel.DomainClass.UniqueNodeId()} ;";

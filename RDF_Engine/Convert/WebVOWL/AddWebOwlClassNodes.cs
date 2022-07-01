@@ -24,7 +24,7 @@ namespace BH.Engine.RDF
             if (addedWebVOWLNodeIds.Contains(typeId))
                 return typeId;
 
-            Uri typeUri = type.GithubURI(settings);
+            Uri typeUri = type.OntologyUri(new TBoxSettings(), settings);
             string comment = type.DescriptionInAttribute();
             bool isExternal = !type.IsInNamespace(internalNamespaces) ?? false;
 
@@ -51,7 +51,7 @@ namespace BH.Engine.RDF
                 classArray.AddToIdTypeArray(propertyNodeId, "owl:Class");
 
                 // 2) CLASS ATTRIBUTE
-                classAttributeArray.AddToAttributeArray(propertyNodeId, pInfo.GithubURI(settings), pInfo.DescriptiveName());
+                classAttributeArray.AddToAttributeArray(propertyNodeId, pInfo.OntologyURI(new TBoxSettings(), settings), pInfo.DescriptiveName());
 
                 addedWebVOWLNodeIds.Add(propertyNodeId);
             }

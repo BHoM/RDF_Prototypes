@@ -21,7 +21,7 @@ namespace BH.Engine.RDF
                 string TTLClass = "";
 
                 // Declaration with Uri
-                string typeUri = classType.GithubURI(localRepositorySettings).ToString();
+                string typeUri = classType.OntologyUri(cSharpGraph.OntologySettings.TBoxSettings, localRepositorySettings).ToString();
                 TTLClass += $"### {typeUri}";
 
                 // Class Identifier

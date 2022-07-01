@@ -16,14 +16,14 @@ namespace BH.Engine.RDF
         {
             List<string> dataTypes = new List<string>();
 
-            dataTypes.Add(DefaultDataTypeForUnknownConversion(r));
+            dataTypes.Add(DefaultDataTypeForUnknownConversion(cSharpGraph.OntologySettings.TBoxSettings, r));
 
             return dataTypes;
         }
 
-        private static string DefaultDataTypeForUnknownConversion(LocalRepositorySettings r)
+        private static string DefaultDataTypeForUnknownConversion(TBoxSettings tboxSettings, LocalRepositorySettings r)
         {
-            string defaultDataTypeUri = typeof(BH.oM.RDF.Base64JsonSerialized).GithubURI(r)?.ToString();
+            string defaultDataTypeUri = typeof(BH.oM.RDF.Base64JsonSerialized).OntologyUri(tboxSettings, r)?.ToString();
 
             // TODO: add better guard against null, possibly adding mechanism to provide a defaultDataType URI rather than a Type.
             defaultDataTypeUri = defaultDataTypeUri ?? "https://github.com/BHoM/RDF_Prototypes/commit/ff8ccb68dbba5aeadb4a9a284f141eb1515e169a";

@@ -16,7 +16,7 @@ namespace BH.Engine.RDF
     public static partial class Modify
     {
         [Description("Modifies the Given RDF IGraph adding to it a URI Node, which is obtained by inferring the ")]
-        public static IUriNode CreateUriNode(this IGraph graph, Type t, LocalRepositorySettings settings)
+        public static IUriNode CreateUriNode(this IGraph graph, Type t, LocalRepositorySettings settings, TBoxSettings tBoxSettings = null)
         {
             if (!t.FullName.StartsWith("BH.oM"))
             {
@@ -24,7 +24,7 @@ namespace BH.Engine.RDF
                 return null;
             }    
 
-            return graph.CreateUriNode(t.GithubURI(settings)); // UriFactory.Create(t.UriFromType()
+            return graph.CreateUriNode(t.OntologyUri(tBoxSettings ?? new TBoxSettings(), settings)); // UriFactory.Create(t.UriFromType()
         }
     }
 }
