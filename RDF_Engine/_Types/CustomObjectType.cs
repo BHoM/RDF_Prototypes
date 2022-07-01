@@ -32,7 +32,9 @@ namespace BH.Engine.RDF.Types
 
         public override Assembly Assembly { get; }
 
-        public override string FullName { get; }
+        public override string FullName { 
+            get; 
+        }
 
         public override string Namespace { get; }
 
@@ -42,7 +44,9 @@ namespace BH.Engine.RDF.Types
 
         public override Type UnderlyingSystemType { get; }
 
-        public override string Name { get; }
+        public override string Name { 
+            get; 
+        }
 
         public new TBoxSettings TBoxSettings { get; }
 
@@ -74,7 +78,7 @@ namespace BH.Engine.RDF.Types
             Assembly = thisClassType.Assembly;
             FullName = Name; // do not prepend this class' namespace or name. Not useful.
             Namespace = thisClassType.Namespace;
-            AssemblyQualifiedName = thisClassType.AssemblyQualifiedName;
+            AssemblyQualifiedName = Name;
             BaseType = typeof(CustomObject);
             UnderlyingSystemType = typeof(CustomObject);
 

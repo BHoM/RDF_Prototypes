@@ -16,13 +16,15 @@ namespace BH.Engine.RDF
         [Description("Returns the Full Name of the input Type, only including characters that are alphanumeric, dots and/or greek letters (which are useful for BH.oM.Structure objects properties).")]
         public static string FullNameValidChars(this PropertyInfo pi)
         {
-            return $"{RemoveInvalidChars(pi.DeclaringType.FullName)}.{pi.Name}";
+            return $"{FullNameValidChars(pi.DeclaringType)}.{pi.Name}";
         }
 
         [Description("Returns the Full Name of the input Type, only including characters that are alphanumeric, dots and/or greek letters (which are useful for BH.oM.Structure objects properties).")]
         public static string FullNameValidChars(this Type type)
         {
-            return RemoveInvalidChars(type.FullName ?? $"{type.Namespace}.{type.Name}");
+            string fullNamePlusReplaced = type.FullName.Replace('+', '.');
+
+            return RemoveInvalidChars(fullNamePlusReplaced ?? $"{type.Namespace}.{type.Name}");
         }
 
         /***************************************************/
