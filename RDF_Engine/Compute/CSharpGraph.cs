@@ -167,10 +167,6 @@ namespace BH.Engine.RDF
                     RangeIndividual = propertyValue
                 };
 
-                ////if (!individualFromProperty?.PropertyType?.IsList() ?? false)
-                //    if (m_cSharpGraph.IndividualRelations.OfType<IndividualObjectProperty>().Any(ir => ir.Equals(rel))) //"Contains" and Hashset do not work for some reason, despite overriding GetHashCode() and Equals(), and checking they identify duplicates correctly.
-                //        return;
-
                 if (m_cSharpGraph.IndividualRelations.Contains(rel))
                     return;
 
@@ -203,10 +199,6 @@ namespace BH.Engine.RDF
                     Value = propertyValue,
                     PropertyInfo = pi
                 };
-
-                ////if (!individualFromProperty?.PropertyType?.IsList() ?? false)
-                //    if (m_cSharpGraph.IndividualRelations.OfType<IndividualDataProperty>().Any(ir => ir.Equals(rel))) //"Contains" and Hashset do not work for some reason, despite overriding GetHashCode() and Equals(), and checking they identify duplicates correctly.
-                //        return;
 
                 m_cSharpGraph.IndividualRelations.Add(rel);
             }
