@@ -167,27 +167,7 @@ namespace BH.Engine.RDF
                     RangeIndividual = propertyValue
                 };
 
-                if (rel.HasProperty.PropertyInfo.Name == "pointProperty")
-                {
-                    int A = rel.Individual.GetHashCode();
-                    int B = rel.RangeIndividual.GetHashCode();
-                    int C = rel.HasProperty.DomainClass.GetHashCode();
-                    int D = rel.HasProperty.RangeClass.GetHashCode();
-                    int sum = A + B + C + D;
-
-                    IndividualObjectProperty addedRelation = (m_cSharpGraph.IndividualRelations.ToList().ElementAtOrDefault(1) as IndividualObjectProperty);
-                    int A1 = addedRelation?.Individual.GetHashCode() ?? 0;
-                    int B1 = addedRelation?.RangeIndividual.GetHashCode() ?? 0;
-                    int C1 = addedRelation?.HasProperty.DomainClass.GetHashCode() ?? 0;
-                    int D1 = addedRelation?.HasProperty.RangeClass.GetHashCode() ?? 0;
-                    int sum1 = A1 + B1 + C1 + D1;
-
-                    bool asdasfbnjig = sum == sum1;
-
-                    int ASD = int.MaxValue;
-                }
-
-                if (m_cSharpGraph.IndividualRelations.Any(ir => ir.Equals(rel))) //"Contains" and Hashset do not work for some reason, despite overriding GetHashCode() and Equals().
+                if (m_cSharpGraph.IndividualRelations.Any(ir => ir.Equals(rel))) //"Contains" and Hashset do not work for some reason, despite overriding GetHashCode() and Equals(), and checking they identify duplicates correctly.
                     return;
 
                 m_cSharpGraph.IndividualRelations.Add(rel);
@@ -220,7 +200,7 @@ namespace BH.Engine.RDF
                     PropertyInfo = pi
                 };
 
-                if (m_cSharpGraph.IndividualRelations.Any(ir => ir.Equals(rel))) //"Contains" and Hashset do not work for some reason, despite overriding GetHashCode() and Equals().
+                if (m_cSharpGraph.IndividualRelations.Any(ir => ir.Equals(rel))) //"Contains" and Hashset do not work for some reason, despite overriding GetHashCode() and Equals(), and checking they identify duplicates correctly.
                     return;
 
                 m_cSharpGraph.IndividualRelations.Add(rel);
