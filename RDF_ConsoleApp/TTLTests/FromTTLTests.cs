@@ -272,7 +272,10 @@ namespace BH.Test.RDF
             // Invoke all static methods in the given class class
             typeof(FromTTLTests).GetMethods()
                 .Where(mi => mi.IsStatic && !mi.Name.Contains("Run")).ToList()
-                .ForEach(mi => { m_ontologySettings.OntologyTitle = mi.Name; mi.Invoke(null, null); });
+                .ForEach(mi => {
+                    m_ontologySettings.OntologyTitle = mi.Name;
+                    try { mi.Invoke(null, null); } catch { Log.RecordError($"Runtime exception in {mi.DeclaringType.Name}.{mi.Name}"); }
+                });
 
 
             Assert.TestRecap();
