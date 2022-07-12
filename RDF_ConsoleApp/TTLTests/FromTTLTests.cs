@@ -64,8 +64,8 @@ namespace BH.Test.RDF
         public static void Room()
         {
             Room room = new Room();
-            room.Perimeter = new Polyline() { ControlPoints = new List<Point>() { new Point() { X = 101, Y = 102, Z = 103 }, new Point() { X = 201, Y = 202, Z = 203 }, new Point() { X = 99 } } };
-            room.Location = new Point() { X = 901, Y = 902, Z = 903 };
+            room.Perimeter = new Polyline() { ControlPoints = new List<Point>() { new Point() { X = 101, Y = 102, Z = 103 }, new Point() { X = 201, Y = 202, Z = 203 }, new Point() { X = 301, Y = 302, Z = 303 } } };
+            room.Location = new Point() { X = 401, Y = 402, Z = 403 };
             room.Name = "A room object";
 
             List<IObject> objectList = new List<IObject>() { room };
@@ -93,16 +93,18 @@ namespace BH.Test.RDF
         public static void RoomAndColumn()
         {
             Room room = new Room();
-            room.Perimeter = new Polyline() { ControlPoints = new List<Point>() { new Point(), new Point() { X = 5, Y = 5, Z = 5 }, new Point() { X = 99 } } };
-            room.Location = new Point() { X = 101, Y = 102, Z = 103 };
+            // Note the duplicate values for Y,Z in the first/second points of ControlPoints.
+            // The duplicate removal mechanism of the CSharpGraph should NOT identify these values as duplicates, as they are used in different points.
+            room.Perimeter = new Polyline() { ControlPoints = new List<Point>() { new Point() { X = 101, Y = 202, Z = 202 }, new Point() { X = 201, Y = 202, Z = 202 }, new Point() { X = 301, Y = 302, Z = 303 } } };
+            room.Location = new Point() { X = 401, Y = 402, Z = 403 };
             room.Name = "A room object";
 
             Column column = new Column();
-            column.Location = new Polyline() { ControlPoints = new List<Point>() { new Point() { X = 101, Y = 102, Z = 103 }, new Point() { X = 201, Y = 202, Z = 203 } } };
+            column.Location = new Polyline() { ControlPoints = new List<Point>() { new Point() { X = 501, Y = 502, Z = 503 }, new Point() { X = 601, Y = 602, Z = 603 } } };
             column.Name = "A column object";
 
             List<IObject> objectList = new List<IObject>() { room, column };
-            string TTLGraph = objectList.TTLGraph(new OntologySettings(), new LocalRepositorySettings());
+            string TTLGraph = objectList.TTLGraph(m_ontologySettings, new LocalRepositorySettings());
 
             Assert.IsTTLParsable(TTLGraph);
 

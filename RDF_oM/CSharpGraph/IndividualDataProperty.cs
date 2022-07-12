@@ -10,5 +10,26 @@ namespace BH.oM.RDF
 
         // PropertyInfo that generated this Data property of this individual.
         public PropertyInfo PropertyInfo { get; set; }
+
+        public override bool Equals(object obj)
+        {
+            IndividualDataProperty o = obj as IndividualDataProperty;
+            if (o == null)
+                return false;
+
+            return Individual.Equals(o.Individual) && Value.Equals(o.Value) &&
+                PropertyInfo.PropertyType == o.PropertyInfo.PropertyType && PropertyInfo.DeclaringType == o.PropertyInfo.DeclaringType &&
+                PropertyInfo.Name.Equals(o.PropertyInfo.Name);
+        }
+
+        public override int GetHashCode()
+        {
+            int A = Individual.GetHashCode();
+            int B = Value.GetHashCode();
+            int C = PropertyInfo.PropertyType.GetHashCode();
+            int D = PropertyInfo.DeclaringType.GetHashCode();
+            int E = PropertyInfo.Name.GetHashCode();
+            return A + B + C + D + E;
+        }
     }
 }

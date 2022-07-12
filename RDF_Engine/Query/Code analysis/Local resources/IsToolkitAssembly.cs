@@ -20,7 +20,7 @@ namespace BH.Engine.RDF
                 return true;
 
             var assemblies = Compute.LoadAssembliesInDirectory(dllDirectory, true, false);
-            var toolkitAssemblies = Query.ToolkitAssemblies(assemblies);
+            var toolkitAssemblies = RDF.Query.ToolkitAssemblies(assemblies);
 
             foreach (var kv in toolkitAssemblies)
             {

@@ -27,7 +27,7 @@ namespace BH.oM.RDF
             int B = RangeIndividual.GetHashCode();
             int C = HasProperty.DomainClass.GetHashCode();
             int D = HasProperty.RangeClass.GetHashCode();
-            return 1;
+            return A + B + C + D;
         }
     }
 }

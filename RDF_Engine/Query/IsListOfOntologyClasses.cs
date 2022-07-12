@@ -17,6 +17,9 @@ namespace BH.Engine.RDF
     {
         public static bool IsList(this Type t)
         {
+            if (t == null)
+                return false;
+
             return typeof(IList).IsAssignableFrom(t);
         }
 
@@ -37,7 +40,7 @@ namespace BH.Engine.RDF
                 return genericArgs.First().IsOntologyClass();
 
             // If the List generic arg is System.Object, the objects may still be Ontology classes that have been boxed.
-            if (genericArgs.First() == typeof(System.Object))
+            if (sourceObj != null && genericArgs.First() == typeof(System.Object))
             {
                 List<object> objList = sourceObj as List<object>;
 
