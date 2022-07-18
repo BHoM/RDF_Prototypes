@@ -29,8 +29,7 @@ namespace BH.Engine.RDF
             defaultDataTypeUri = defaultDataTypeUri ?? "https://github.com/BHoM/RDF_Prototypes/commit/ff8ccb68dbba5aeadb4a9a284f141eb1515e169a";
             
             string TTLDataType = $"### {defaultDataTypeUri}\n:{typeof(BH.oM.RDF.Base64JsonSerialized).UniqueNodeId()} rdf:type rdfs:Datatype ;";
-            TTLDataType += "\n"+$@"rdfs:label ""{typeof(BH.oM.RDF.Base64JsonSerialized).DescriptiveName()}""@en ;";
-            TTLDataType += $"\nowl:equivalentClass xsd:string .";
+            TTLDataType += "\n"+$@"rdfs:label ""{typeof(BH.oM.RDF.Base64JsonSerialized).DescriptiveName()}""@en .";
 
             return TTLDataType;
         }
