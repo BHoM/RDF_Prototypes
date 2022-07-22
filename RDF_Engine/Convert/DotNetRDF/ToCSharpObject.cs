@@ -279,7 +279,8 @@ namespace BH.Engine.RDF
 
             try
             {
-                convertedValue = System.Convert.ChangeType(value, destinationType);
+                if (object is IConvertible)
+                    convertedValue = System.Convert.ChangeType(value, destinationType);
             }
             catch { }
 
