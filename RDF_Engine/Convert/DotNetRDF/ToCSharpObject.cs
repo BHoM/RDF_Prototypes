@@ -203,7 +203,7 @@ namespace BH.Engine.RDF
             else
                 return literalNode.Value;
         }
-        
+
         /*************************************/
 
         private static Type GetPropertyType(this LiteralNode literalNode)
@@ -279,8 +279,7 @@ namespace BH.Engine.RDF
 
             try
             {
-                if (object is IConvertible)
-                    convertedValue = System.Convert.ChangeType(value, destinationType);
+                convertedValue = System.Convert.ChangeType(value, destinationType);
             }
             catch { }
 
