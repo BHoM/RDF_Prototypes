@@ -12,9 +12,13 @@ namespace BH.Engine.RDF
     public static partial class Convert
     {
         [Description("Attempts to get the properties of the object and use them to populate a BHoM CustomObject.")]
-        public static CustomObject ToCustomObject(this object obj)
+        public static IObject ToCustomObject(this object obj)
         {
+            if (obj is IObject)
+                return (IObject)obj;
+
             var customObject = new CustomObject();
+
             bool successfulConversion = false;
             // For Speckle custom objects, we can get the hidden dynamic members by attempting an invokation of GetMembers.
             var method = obj.GetType().GetMethods(BindingFlags.Public | BindingFlags.NonPublic | BindingFlags.Instance).Where(m => m.Name.Contains("GetMembers")).First();
@@ -24,7 +28,7 @@ namespace BH.Engine.RDF
                 var valuesDict = method.Invoke(obj, null) as Dictionary<string, object>;
                 if (valuesDict != null)
                     foreach (var kv in valuesDict)
-                        customObject.CustomData[kv.Key] = kv.Value;
+                        customObject.CustomData[kv.Key] = kv.Value.ToCustomObject();
                 successfulConversion = true;
             }
             if (!successfulConversion)
@@ -36,7 +40,7 @@ namespace BH.Engine.RDF
                 var publicProperties = obj.GetType().GetProperties(bindingFlags);
                 if (publicProperties != null)
                     foreach (var prop in publicProperties)
-                        customObject.CustomData[prop.Name] = prop.GetValue(obj);
+                        customObject.CustomData[prop.NameValidChars()] = prop.GetValue(obj).ToCustomObject();
             }
             return customObject;
         }
