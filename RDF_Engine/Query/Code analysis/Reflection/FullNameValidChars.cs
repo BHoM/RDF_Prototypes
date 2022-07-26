@@ -42,7 +42,7 @@ namespace BH.Engine.RDF
 
         /***************************************************/
 
-        private static string RemoveInvalidChars(string text)
+        public static string RemoveInvalidChars(string text)
         {
             if (text.Contains("`"))
             {

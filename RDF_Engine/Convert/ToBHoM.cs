@@ -7,6 +7,7 @@ using System.Reflection;
 using System.Text;
 using System.Threading.Tasks;
 using BH.Engine.Reflection;
+using System.Collections;
 
 namespace BH.Engine.RDF
 {
@@ -20,7 +21,7 @@ namespace BH.Engine.RDF
 
             Type objType = obj.GetType();
 
-            if (obj is IObject || objType.IsPrimitive())
+            if (obj is IObject || objType.IsPrimitive() || objType.IsIEnumOfPrimitives())
                 return obj;
 
             var customObject = new CustomObject();
@@ -33,7 +34,7 @@ namespace BH.Engine.RDF
                 var valuesDict = method.Invoke(obj, null) as Dictionary<string, object>;
                 if (valuesDict != null)
                     foreach (var kv in valuesDict)
-                        customObject.CustomData[kv.Key] = kv.Value.ToBHoM();
+                        customObject.CustomData[Query.RemoveInvalidChars(kv.Key)] = kv.Value.ToBHoM();
 
                 return customObject;
             }
@@ -49,6 +50,19 @@ namespace BH.Engine.RDF
                     customObject.CustomData[prop.NameValidChars()] = prop.GetValue(obj).ToBHoM();
 
             return customObject;
+        }
+
+        public static bool IsIEnumOfPrimitives(this Type t)
+        {
+            if (t is IEnumerable)
+            {
+                Type[] genericArgs = t.GetGenericArguments();
+
+                if (genericArgs.Length == 1 && (genericArgs.FirstOrDefault()?.IsPrimitive() ?? false))
+                    return true;
+            }
+
+            return false;
         }
     }
 }
