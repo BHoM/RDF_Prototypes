@@ -19,9 +19,8 @@ namespace BH.Engine.RDF
 
             var customObject = new CustomObject();
 
-            bool successfulConversion = false;
             // For Speckle custom objects, we can get the hidden dynamic members by attempting an invokation of GetMembers.
-            var method = obj.GetType().GetMethods(BindingFlags.Public | BindingFlags.NonPublic | BindingFlags.Instance).Where(m => m.Name.Contains("GetMembers")).First();
+            var method = obj.GetType().GetMethods(BindingFlags.Public | BindingFlags.NonPublic | BindingFlags.Instance).Where(m => m.Name.Contains("GetMembers")).FirstOrDefault();
             if (method != null)
             {
                 // The result should be castable if the original object was a speckle custom object.
@@ -29,19 +28,20 @@ namespace BH.Engine.RDF
                 if (valuesDict != null)
                     foreach (var kv in valuesDict)
                         customObject.CustomData[kv.Key] = kv.Value.ToCustomObject();
-                successfulConversion = true;
+
+                return customObject;
             }
-            if (!successfulConversion)
-            {
-                // TODO: decide whether to expose the option to get other properties (e.g private)
-                bool includePrivateProperties = false;
-                var bindingFlags = includePrivateProperties ? BindingFlags.NonPublic | BindingFlags.Public : BindingFlags.Public;
-                // Try to convert based on any public property.
-                var publicProperties = obj.GetType().GetProperties(bindingFlags);
-                if (publicProperties != null)
-                    foreach (var prop in publicProperties)
-                        customObject.CustomData[prop.NameValidChars()] = prop.GetValue(obj).ToCustomObject();
-            }
+
+
+            // TODO: decide whether to expose the option to get other properties (e.g private)
+            bool includePrivateProperties = false;
+            var bindingFlags = includePrivateProperties ? BindingFlags.NonPublic | BindingFlags.Public : BindingFlags.Public;
+            // Try to convert based on any public property.
+            var publicProperties = obj.GetType().GetProperties(bindingFlags);
+            if (publicProperties != null)
+                foreach (var prop in publicProperties)
+                    customObject.CustomData[prop.NameValidChars()] = prop.GetValue(obj).ToCustomObject();
+
             return customObject;
         }
     }
