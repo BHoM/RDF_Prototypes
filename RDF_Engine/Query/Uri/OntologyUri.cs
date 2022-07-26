@@ -34,7 +34,7 @@ namespace BH.Engine.RDF
             string customUriString = null;
             Uri customUri = null;
 
-            if (tBoxSettings.TypeUris.TryGetValue(type, out customUriString))
+            if (tBoxSettings.TypeUris?.TryGetValue(type, out customUriString) ?? false)
                 if (System.Uri.TryCreate(customUriString, UriKind.Absolute, out customUri))
                     return customUri;
                 else
