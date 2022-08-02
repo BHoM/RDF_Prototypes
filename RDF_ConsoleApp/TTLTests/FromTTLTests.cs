@@ -263,6 +263,19 @@ namespace BH.Test.RDF
             Assert.IsEqual(customObj.CustomData["listOfPrimitives"], convertedObj.CustomData["listOfPrimitives"]);
         }
 
+        public static void NonBHoMObject()
+        {
+            TestObjectClass nonBHoM = new TestObjectClass();
+            List<object> objectList = new List<object>() { nonBHoM };
+            string TTLGraph = objectList.TTLGraph(m_ontologySettings, new LocalRepositorySettings());
+
+            Assert.IsTTLParsable(TTLGraph);
+
+            var convertedObj = TTLGraph.ToCSharpObjects().FirstOrDefault();
+
+            Assert.IsEqual(nonBHoM, convertedObj);
+        }
+
         // ----------------------
         // Run utilities
         // ----------------------

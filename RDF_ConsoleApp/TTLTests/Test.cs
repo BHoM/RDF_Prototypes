@@ -5,7 +5,7 @@ namespace BH.Test.RDF
     /// <summary>
     /// Base class for tests, with customised settings.
     /// </summary>
-    public abstract class Test
+    public abstract partial class Test
     {
         public static LocalRepositorySettings m_localRepositorySettings = new LocalRepositorySettings()
         {

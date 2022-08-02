@@ -55,15 +55,10 @@ namespace BH.Test.RDF
             Assert.IsEqual(obj, decoded);
         }
 
-        public class TestClass
-        {
-            public string Name { get; set; } = "TestName";
-            public int IntegerNumber { get; set; } = 999;
-        }
 
         public static void NonBHoMObject()
         {
-            TestClass nonBHoM = new TestClass();
+            TestObjectClass nonBHoM = new TestObjectClass();
             List<object> objectList = new List<object>() { nonBHoM };
             string TTLGraph = objectList.TTLGraph(m_ontologySettings, new LocalRepositorySettings());
 
@@ -75,7 +70,7 @@ namespace BH.Test.RDF
             BHoMObject bhomObj = new BHoMObject();
 
             //var testEntry = new KeyValuePair<string, string>("testKey", "testValue");
-            var testEntry = new TestClass();
+            var testEntry = new TestObjectClass();
 
             bhomObj.CustomData["encoded"] = testEntry;
 
