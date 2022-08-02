@@ -8,16 +8,19 @@ namespace BH.Engine.RDF
 {
     public static class Log
     {
+        public static MessageLevel LogLevel = MessageLevel.Debug;
+
         private static List<string> m_allMessages = new List<string>();
         private static List<string> m_reportedErrors = new List<string>();
         private static List<string> m_reportedWarnings = new List<string>();
         private static List<string> m_reportedNotes = new List<string>();
 
-        private enum MessageLevel
+        public enum MessageLevel
         {
-            ERROR,
+            Note,
+            Debug,
             Warning,
-            Note
+            ERROR
         }
 
         public static void RecordError(string error, bool doNotRepeat = false, bool appendToPrevious = false)
@@ -35,6 +38,11 @@ namespace BH.Engine.RDF
             RecordMessage(MessageLevel.Note, note, doNotRepeat, appendToPrevious);
         }
 
+        public static void RecordDebugInfo(string debugInfo, bool doNotRepeat = false, bool appendToPrevious = false)
+        {
+            RecordMessage(MessageLevel.Debug, debugInfo, doNotRepeat, appendToPrevious);
+        }
+
         private static void RecordMessage(MessageLevel messageLevel, string message, bool doNotRepeat = false, bool appendToPrevious = false)
         {
             List<string> m_relevantMessages = GetMessages(messageLevel);
@@ -42,7 +50,9 @@ namespace BH.Engine.RDF
             if (doNotRepeat && m_relevantMessages.Contains(message))
                 return;
 
-            Console.WriteLine(message);
+            if (messageLevel >= LogLevel)
+                Console.WriteLine(message);
+
             ReportToUI(messageLevel, message);
 
             if (appendToPrevious && m_relevantMessages.Any())
