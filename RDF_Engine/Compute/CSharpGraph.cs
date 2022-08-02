@@ -85,30 +85,30 @@ namespace BH.Engine.RDF
             }
         }
 
-        private static void AddToOntology(this IEnumerable<PropertyInfo> pInfos, OntologySettings ontologySettings, object obj = null)
+        private static void AddToOntology(this IEnumerable<PropertyInfo> pInfos, OntologySettings ontologySettings, object obj = null, PropertyInfo fromProperty = null)
         {
             foreach (var pi in pInfos)
             {
                 if (pi is CustomPropertyInfo && obj != null)
                 {
                     object individualPropertyValue = pi.GetValue(obj);
-                    AddToOntology((CustomPropertyInfo)pi, ontologySettings, obj, individualPropertyValue);
+                    AddToOntology((CustomPropertyInfo)pi, ontologySettings, obj, fromProperty, individualPropertyValue);
                 }
                 else
-                    AddToOntology(pi as dynamic, ontologySettings, obj);
+                    AddToOntology(pi as dynamic, ontologySettings, obj, fromProperty);
 
             }
         }
 
-        private static void AddToOntology(this CustomPropertyInfo customPI, OntologySettings ontologySettings, object individual, object individualPropertyValue)
+        private static void AddToOntology(this CustomPropertyInfo customPI, OntologySettings ontologySettings, object individual, PropertyInfo fromProperty, object individualPropertyValue)
         {
             if (customPI.Name == "Type")
                 return; // do not add the `Type` property to the ontology for Custom Types.
 
-            AddToOntology((PropertyInfo)customPI, ontologySettings, individual, individualPropertyValue);
+            AddToOntology((PropertyInfo)customPI, ontologySettings, individual, fromProperty, individualPropertyValue);
         }
 
-        private static void AddToOntology(this PropertyInfo pi, OntologySettings ontologySettings, object individual, object individualPropertyValue = null)
+        private static void AddToOntology(this PropertyInfo pi, OntologySettings ontologySettings, object individual, PropertyInfo individualFromProperty, object individualPropertyValue = null)
         {
             // In C#'s Reflection, relations are represented with PropertyInfos.
             // In an ontology, PropertyInfos may correspond to either ObjectProperties or DataProperties.
@@ -138,11 +138,11 @@ namespace BH.Engine.RDF
                         {
                             //m_cSharpGraph.AllIndividuals.Add(item);
 
-                            AddIndividualToOntology(item, ontologySettings);
+                            AddIndividualToOntology(item, ontologySettings, pi);
 
                             // Recurse for this individual's relations.
                             PropertyInfo[] listItemProps = item?.GetType().GetProperties() ?? new PropertyInfo[] { };
-                            AddToOntology(listItemProps, ontologySettings, item);
+                            AddToOntology(listItemProps, ontologySettings, item, individualFromProperty);
                         }
                     }
                 }
@@ -174,6 +174,9 @@ namespace BH.Engine.RDF
                     Individual = individual,
                     RangeIndividual = propertyValue
                 };
+
+                if (m_cSharpGraph.IndividualRelations.Contains(rel))
+                    return;
 
                 m_cSharpGraph.IndividualRelations.Add(rel);
 
@@ -219,7 +222,7 @@ namespace BH.Engine.RDF
             }
         }
 
-        private static void AddIndividualToOntology(object individual, OntologySettings ontologySettings)
+        private static void AddIndividualToOntology(object individual, OntologySettings ontologySettings, PropertyInfo fromProperty = null)
         {
             if (individual == null)
                 return;
@@ -259,7 +262,7 @@ namespace BH.Engine.RDF
             }
 
             // Recurse for properties of this individual.
-            properties.AddToOntology(ontologySettings, individual);
+            properties.AddToOntology(ontologySettings, individual, fromProperty);
         }
 
 

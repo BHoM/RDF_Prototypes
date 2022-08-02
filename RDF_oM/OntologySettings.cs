@@ -43,8 +43,6 @@ namespace BH.oM.RDF
         public string CustomobjectsTypeKey { get; set; } = "Type";
     }
 
-
-
     [Description("Settings for the definition of an Ontology's A-Box.")]
     public class ABoxSettings : IObject
     {

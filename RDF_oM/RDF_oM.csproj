@@ -51,19 +51,23 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="CustomObjectWrapper.cs" />
+    <Compile Include="CSharpGraph\DataProperty.cs" />
+    <Compile Include="CSharpGraph\IClassRelation.cs" />
+    <Compile Include="CSharpGraph\IndividualDataProperty.cs" />
+    <Compile Include="CSharpGraph\IndividualObjectProperty.cs" />
+    <Compile Include="CSharpGraph\IndividualRelation.cs" />
+    <Compile Include="CSharpGraph\ObjectProperty.cs" />
     <Compile Include="OntologyTypeMap.cs" />
     <Compile Include="Base64JsonSerialized.cs" />
-    <Compile Include="CSharpGraph.cs" />
-    <Compile Include="BHoMTriple.cs" />
-    <Compile Include="IsAListOf.cs" />
+    <Compile Include="CSharpGraph\CSharpGraph.cs" />
+    <Compile Include="WebVOWL\IsAListOf.cs" />
     <Compile Include="OntologySettings.cs" />
     <Compile Include="NaturalSortComparer.cs" />
     <Compile Include="LocalRepositorySettings.cs" />
-    <Compile Include="RequiresProperty.cs" />
-    <Compile Include="IsA.cs" />
-    <Compile Include="HasProperty.cs" />
-    <Compile Include="IsSubclassOf.cs" />
+    <Compile Include="WebVOWL\RequiresProperty.cs" />
+    <Compile Include="WebVOWL\IsA.cs" />
+    <Compile Include="WebVOWL\HasProperty.cs" />
+    <Compile Include="WebVOWL\IsSubclassOf.cs" />
     <Compile Include="IRelation.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

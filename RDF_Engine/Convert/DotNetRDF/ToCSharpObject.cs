@@ -203,7 +203,7 @@ namespace BH.Engine.RDF
             else
                 return literalNode.Value;
         }
-        
+
         /*************************************/
 
         private static Type GetPropertyType(this LiteralNode literalNode)

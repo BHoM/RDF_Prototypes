@@ -29,15 +29,22 @@ namespace BH.Engine.RDF
 
         /***************************************************/
 
+        [Description("Returns the Name of the input PropertyInfo, only including characters that are alphanumeric, dots and/or greek letters (which are useful for BH.oM.Structure objects properties).")]
+        public static string NameValidChars(this PropertyInfo pi)
+        {
+            return RemoveInvalidChars(pi.Name);
+        }
+        
         [Description("Returns the Name of the input Type, only including characters that are alphanumeric, dots and/or greek letters (which are useful for BH.oM.Structure objects properties).")]
         public static string NameValidChars(this Type type)
         {
             return RemoveInvalidChars(type.Name);
         }
 
+
         /***************************************************/
 
-        private static string RemoveInvalidChars(string text)
+        public static string RemoveInvalidChars(string text)
         {
             if (text.Contains("`"))
             {

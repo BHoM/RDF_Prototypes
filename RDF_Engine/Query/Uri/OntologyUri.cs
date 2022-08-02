@@ -34,7 +34,7 @@ namespace BH.Engine.RDF
             string customUriString = null;
             Uri customUri = null;
 
-            if (tBoxSettings.TypeUris.TryGetValue(type, out customUriString))
+            if (tBoxSettings.TypeUris?.TryGetValue(type, out customUriString) ?? false)
                 if (System.Uri.TryCreate(customUriString, UriKind.Absolute, out customUri))
                     return customUri;
                 else
@@ -85,10 +85,10 @@ namespace BH.Engine.RDF
                     // This means that this property is actually an entry in the CustomData dictionary of the object.
                     // TODO: See how to deal with this scenario better. For now, returning the BHoM object Uri + #propertyName.
 
-                    return Query.CombineUris(miToSearch.DeclaringType.OntologyUri(tBoxSettings, repoSettings) + $"#{miToSearch.Name}");
+                    return RDF.Query.CombineUris((string)(RDF.Query.OntologyUri(miToSearch.DeclaringType, tBoxSettings, repoSettings) + $"#{miToSearch.Name}"));
                 }
 
-                return Query.CombineUris(miToSearch.DeclaringType.OntologyURI(tBoxSettings, repoSettings) + $"#{miToSearch.Name}");
+                return RDF.Query.CombineUris((string)(RDF.Query.OntologyURI(miToSearch.DeclaringType, tBoxSettings, repoSettings) + $"#{miToSearch.Name}"));
             }
 
             // Try extracting the Github Uri by deriving it from a fileSystem search for a `.cs` file corresponding to the input Type.

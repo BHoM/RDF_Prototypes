@@ -43,7 +43,7 @@ namespace BH.Engine.RDF
 
         public static string _UniqueNodeId(this PropertyInfo propertyInfo)
         {
-            return $"{propertyInfo.DeclaringType.FullName}.{propertyInfo.Name}";
+            return $"{propertyInfo.DeclaringType.FullNameValidChars()}.{propertyInfo.Name}";
         }
 
         public static string _UniqueNodeId(this IRelation relation)

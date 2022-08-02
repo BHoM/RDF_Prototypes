@@ -15,7 +15,7 @@ using BH.oM.Structure.Elements;
 
 namespace BH.Test.RDF
 {
-    public static class FromTTLTests
+    public class FromTTLTests : Test
     {
         public static void BHoMObject_CustomDataAsProperties()
         {
@@ -39,7 +39,7 @@ namespace BH.Test.RDF
                 }
             };
 
-            string TTLGraph = Compute.TTLGraph(new List<object>() { bhomObject }, m_ontologySettings, new LocalRepositorySettings());
+            string TTLGraph = Compute.TTLGraph(new List<IObject>() { bhomObject }, m_ontologySettings, m_localRepositorySettings);
 
             Assert.IsTTLParsable(TTLGraph);
 
@@ -51,8 +51,8 @@ namespace BH.Test.RDF
         public static void Point()
         {
             Point p = new Point() { X = 101, Y = 102, Z = 103 };
-            List<object> objectList = new List<object>() { p };
-            string TTLGraph = objectList.TTLGraph(m_ontologySettings, new LocalRepositorySettings());
+            List<IObject> objectList = new List<IObject>() { p };
+            string TTLGraph = objectList.TTLGraph(m_ontologySettings, m_localRepositorySettings);
 
             Assert.IsTTLParsable(TTLGraph);
 
@@ -64,12 +64,12 @@ namespace BH.Test.RDF
         public static void Room()
         {
             Room room = new Room();
-            room.Perimeter = new Polyline() { ControlPoints = new List<Point>() { new Point() { X = 101, Y = 102, Z = 103 }, new Point() { X = 201, Y = 202, Z = 203 }, new Point() { X = 99 } } };
-            room.Location = new Point() { X = 901, Y = 902, Z = 903 };
+            room.Perimeter = new Polyline() { ControlPoints = new List<Point>() { new Point() { X = 101, Y = 102, Z = 103 }, new Point() { X = 201, Y = 202, Z = 203 }, new Point() { X = 301, Y = 302, Z = 303 } } };
+            room.Location = new Point() { X = 401, Y = 402, Z = 403 };
             room.Name = "A room object";
 
-            List<object> objectList = new List<object>() { room };
-            string TTLGraph = objectList.TTLGraph(m_ontologySettings, new LocalRepositorySettings());
+            List<IObject> objectList = new List<IObject>() { room };
+            string TTLGraph = objectList.TTLGraph(m_ontologySettings, m_localRepositorySettings);
 
             Assert.IsTTLParsable(TTLGraph);
 
@@ -81,8 +81,8 @@ namespace BH.Test.RDF
         {
             Column randomColumn = BH.Engine.RDF.Testing.Create.RandomObject<Column>();
 
-            List<object> objectList = new List<object>() { randomColumn };
-            string TTLGraph = objectList.TTLGraph(m_ontologySettings, new LocalRepositorySettings());
+            List<IObject> objectList = new List<IObject>() { randomColumn };
+            string TTLGraph = objectList.TTLGraph(m_ontologySettings, m_localRepositorySettings);
 
             Assert.IsTTLParsable(TTLGraph);
 
@@ -93,16 +93,18 @@ namespace BH.Test.RDF
         public static void RoomAndColumn()
         {
             Room room = new Room();
-            room.Perimeter = new Polyline() { ControlPoints = new List<Point>() { new Point(), new Point() { X = 5, Y = 5, Z = 5 }, new Point() { X = 99 } } };
-            room.Location = new Point() { X = 101, Y = 102, Z = 103 };
+            // Note the duplicate values for Y,Z in the first/second points of ControlPoints.
+            // The duplicate removal mechanism of the CSharpGraph should NOT identify these values as duplicates, as they are used in different points.
+            room.Perimeter = new Polyline() { ControlPoints = new List<Point>() { new Point() { X = 101, Y = 202, Z = 202 }, new Point() { X = 201, Y = 202, Z = 202 }, new Point() { X = 301, Y = 302, Z = 303 } } };
+            room.Location = new Point() { X = 401, Y = 402, Z = 403 };
             room.Name = "A room object";
 
             Column column = new Column();
-            column.Location = new Polyline() { ControlPoints = new List<Point>() { new Point() { X = 101, Y = 102, Z = 103 }, new Point() { X = 201, Y = 202, Z = 203 } } };
+            column.Location = new Polyline() { ControlPoints = new List<Point>() { new Point() { X = 501, Y = 502, Z = 503 }, new Point() { X = 601, Y = 602, Z = 603 } } };
             column.Name = "A column object";
 
-            List<object> objectList = new List<object>() { room, column };
-            string TTLGraph = objectList.TTLGraph(new OntologySettings(), new LocalRepositorySettings());
+            List<IObject> objectList = new List<IObject>() { room, column };
+            string TTLGraph = objectList.TTLGraph(m_ontologySettings, m_localRepositorySettings);
 
             Assert.IsTTLParsable(TTLGraph);
 
@@ -119,8 +121,8 @@ namespace BH.Test.RDF
                 { "intProperty", 10 },
                 { "pointProperty", BH.Engine.RDF.Testing.Create.RandomObject<Point>() } });
 
-            CSharpGraph cSharpGraph_customObj = Compute.CSharpGraph(new List<object>() { customObject }, m_ontologySettings);
-            string TTLGraph = cSharpGraph_customObj.ToTTLGraph(new LocalRepositorySettings());
+            CSharpGraph cSharpGraph_customObj = Compute.CSharpGraph(new List<IObject>() { customObject }, m_ontologySettings);
+            string TTLGraph = cSharpGraph_customObj.ToTTLGraph(m_localRepositorySettings);
 
             Assert.IsTTLParsable(TTLGraph);
 
@@ -138,7 +140,7 @@ namespace BH.Test.RDF
             CustomObject customObject1 = BH.Engine.Base.Create.CustomObject(new Dictionary<string, object>() { { "Type", "Roof" }, { "RoofShape", mesh } });
 
             // No error or exception should be thrown by this call.
-            string TTLGraph = new List<object>() { customObject1 }.TTLGraph(m_ontologySettings, new LocalRepositorySettings());
+            string TTLGraph = new List<IObject>() { customObject1 }.TTLGraph(m_ontologySettings, m_localRepositorySettings);
 
             Assert.IsTTLParsable(TTLGraph);
 
@@ -159,7 +161,7 @@ namespace BH.Test.RDF
             Assert.Single(cSharpGraph_customObj.Classes.Where(c => c.Name == "Cassette"), "CustomObjectTypes");
             Assert.TotalCount(cSharpGraph_customObj.AllIndividuals, 2, "AllIndividuals");
 
-            string TTLGraph = cSharpGraph_customObj.ToTTLGraph(new LocalRepositorySettings());
+            string TTLGraph = cSharpGraph_customObj.ToTTLGraph(m_localRepositorySettings);
 
             Assert.IsTTLParsable(TTLGraph);
 
@@ -186,7 +188,7 @@ namespace BH.Test.RDF
             Assert.IsNotNull(cSharpGraph_customObj.Classes.Single(c => c.Name == "SimpleTiles"));
             Assert.IsNotNull(cSharpGraph_customObj.Classes.Single(c => c.Name == "Roof"));
 
-            string TTLGraph = cSharpGraph_customObj.ToTTLGraph(new LocalRepositorySettings());
+            string TTLGraph = cSharpGraph_customObj.ToTTLGraph(m_localRepositorySettings);
 
             Assert.IsTTLParsable(TTLGraph);
 
@@ -207,8 +209,8 @@ namespace BH.Test.RDF
                 }
             };
 
-            CSharpGraph cSharpGraph_customObj = Compute.CSharpGraph(new List<object>() { nurbs }, m_ontologySettings);
-            string TTLGraph = cSharpGraph_customObj.ToTTLGraph(new LocalRepositorySettings());
+            CSharpGraph cSharpGraph_customObj = Compute.CSharpGraph(new List<IObject>() { nurbs }, m_ontologySettings);
+            string TTLGraph = cSharpGraph_customObj.ToTTLGraph(m_localRepositorySettings);
 
             Assert.IsTTLParsable(TTLGraph);
 
@@ -222,8 +224,8 @@ namespace BH.Test.RDF
             BHoMObject bhomObj = new BHoMObject();
             bhomObj.CustomData["listOfPrimitives"] = new List<int>() { 1, 2, 3, 4 };
 
-            CSharpGraph cSharpGraph_customObj = Compute.CSharpGraph(new List<object>() { bhomObj }, m_ontologySettings);
-            string TTLGraph = cSharpGraph_customObj.ToTTLGraph(new LocalRepositorySettings());
+            CSharpGraph cSharpGraph_customObj = Compute.CSharpGraph(new List<IObject>() { bhomObj }, m_ontologySettings);
+            string TTLGraph = cSharpGraph_customObj.ToTTLGraph(m_localRepositorySettings);
 
             Assert.IsTTLParsable(TTLGraph);
 
@@ -237,8 +239,8 @@ namespace BH.Test.RDF
             BH.oM.Structure.Elements.FEMeshFace bhomObj = new BH.oM.Structure.Elements.FEMeshFace();
             bhomObj.NodeListIndices = new List<int>() { 1, 2, 3, 4 };
 
-            CSharpGraph cSharpGraph_customObj = Compute.CSharpGraph(new List<object>() { bhomObj }, m_ontologySettings);
-            string TTLGraph = cSharpGraph_customObj.ToTTLGraph(new LocalRepositorySettings());
+            CSharpGraph cSharpGraph_customObj = Compute.CSharpGraph(new List<IObject>() { bhomObj }, m_ontologySettings);
+            string TTLGraph = cSharpGraph_customObj.ToTTLGraph(m_localRepositorySettings);
 
             Assert.IsTTLParsable(TTLGraph);
 
@@ -252,7 +254,7 @@ namespace BH.Test.RDF
             CustomObject customObj = new CustomObject();
             customObj.CustomData["listOfPrimitives"] = new List<int>() { 1, 2, 3, 4 };
 
-            string TTLGraph = new List<object>() { customObj }.TTLGraph(m_ontologySettings, new LocalRepositorySettings());
+            string TTLGraph = new List<IObject>() { customObj }.TTLGraph(m_ontologySettings, m_localRepositorySettings);
 
             Assert.IsTTLParsable(TTLGraph);
 
@@ -270,7 +272,10 @@ namespace BH.Test.RDF
             // Invoke all static methods in the given class class
             typeof(FromTTLTests).GetMethods()
                 .Where(mi => mi.IsStatic && !mi.Name.Contains("Run")).ToList()
-                .ForEach(mi => { m_ontologySettings.OntologyTitle = mi.Name; mi.Invoke(null, null); });
+                .ForEach(mi => {
+                    m_ontologySettings.OntologyTitle = mi.Name;
+                    try { mi.Invoke(null, null); } catch { Log.RecordError($"Runtime exception in {mi.DeclaringType.Name}.{mi.Name}"); }
+                });
 
 
             Assert.TestRecap();
@@ -303,5 +308,8 @@ namespace BH.Test.RDF
             ABoxSettings = new ABoxSettings() { IndividualsBaseAddress = "individuals.Address" },
             TBoxSettings = new TBoxSettings() { CustomObjectTypesBaseAddress = "CustomObjectTypes.Address" }
         };
+
+
+
     }
 }

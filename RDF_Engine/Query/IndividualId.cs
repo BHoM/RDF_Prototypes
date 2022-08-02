@@ -4,10 +4,8 @@ using Newtonsoft.Json;
 using System;
 using System.Collections;
 using System.Collections.Generic;
-using System.ComponentModel;
 using System.Linq;
 using System.Reflection;
-using System.Text;
 using System.Threading.Tasks;
 
 namespace BH.Engine.RDF
@@ -19,17 +17,17 @@ namespace BH.Engine.RDF
             if (individual == null)
                 return null;
 
-            string individualId;
+            // If it is an IObject, simply use BHoM's Hash method.
+            IObject iObject = individual as IObject;
+            if (iObject != null)
+                return BH.Engine.Base.Query.Hash(iObject);
 
-            IBHoMObject bHoMObject = individual as IBHoMObject;
-            if (bHoMObject != null)
-                return bHoMObject.BHoM_Guid.ToString();
+            // Otherwise, obtain a static, repeatable Hash by serializing the object, encoding it in Base64, and then computing a hash of the resulting string.
+            // This is slow but should only happen in edge cases.
+            string base64Serialized = Convert.ToBase64JsonSerialized(individual);
+            string base64SerializedHash = Query.SHA256Hash(base64Serialized);
 
-            // TODO: What do we do when an individual does not have a Guid assigned?
-            // We could take its Hash, but that is not unique/repeatable. 
-            individualId = individual.GetHashCode().ToString();
-
-            return individualId;
+            return base64SerializedHash;
         }
     }
 }
