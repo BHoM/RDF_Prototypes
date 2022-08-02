@@ -19,6 +19,7 @@ namespace BH.Engine.RDF
     public static partial class Query
     {
         private static Dictionary<Type, string> m_cachedTypeFilePaths = new Dictionary<Type, string>();
+        private static Dictionary<string, string> m_validRepositoryRootPaths = new Dictionary<string, string>();
 
         [Description("The method will look for a file named using standard BHoM filename convention for Types. " +
             "For example, for the type `BH.oM.Structure.Elements.Bar`, the method will look for 'Bar.cs', and the filepath will have to contain the 'namespaceGroup' called `Structure`.")]
@@ -36,15 +37,38 @@ namespace BH.Engine.RDF
             {
                 // if the type is a subtype of `CustomObjectType`, do not attempt to retrieve its file path.
                 Log.RecordWarning($"Can not compute the file path for type `{type.FullName}` that is derived from {nameof(CustomObjectType)}.", true);
-                return null; 
+                return null;
             }
 
             string repositoryRoot = settings.GitRootPath;
 
-            if (string.IsNullOrWhiteSpace(repositoryRoot) || !Directory.Exists(repositoryRoot))
+            if (m_validRepositoryRootPaths.ContainsKey(settings.GitRootPath))
+                repositoryRoot = m_validRepositoryRootPaths[repositoryRoot];
+
+            if (!repositoryRoot.IsValidRepositoryRootPath())
             {
-                Log.RecordError($"Could not find Local repository directory on disk at path: {repositoryRoot}", true);
-                return null;
+                bool invalidRepositoryRootWasSpecified = !string.IsNullOrWhiteSpace(repositoryRoot);
+                if (invalidRepositoryRootWasSpecified)
+                    Log.RecordWarning($"The path `{repositoryRoot}` that was specified in {nameof(LocalRepositorySettings)}.{nameof(LocalRepositorySettings.GitRootPath)} does not point to a valid repository root folder. " +
+                    $"A valid 'repository root path' points to a directory that contains, among other repositories, also the BHoM repository." +
+                    $"\nAn attempt to find a valid root path on disk will now be done.");
+                else
+                    Log.RecordNote($"No path specified in in {nameof(LocalRepositorySettings)}.{nameof(LocalRepositorySettings.GitRootPath)}." +
+                        "\nAn attempt to find a valid root path on disk will now be done.");
+
+                if (TryGetRepositoryRootPath(out repositoryRoot))
+                {
+                    Log.RecordMessage(invalidRepositoryRootWasSpecified ? Log.MessageLevel.Warning : Log.MessageLevel.Note, $"Using `{repositoryRoot}` as repository root path.");
+
+                    m_validRepositoryRootPaths[settings.GitRootPath] = repositoryRoot;
+                }
+                else
+                {
+                    Log.RecordError($"Could not find Local repository directory on disk at path: {repositoryRoot}." +
+                        $"Please specify a valid repository root path in {nameof(LocalRepositorySettings)}.{nameof(LocalRepositorySettings.GitRootPath)}." +
+                        $"A valid 'repository root path' points to a directory that contains, among other repositories, also the BHoM repository.", true);
+                    return null;
+                }
             }
 
             string filepath = null;
