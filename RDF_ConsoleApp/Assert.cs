@@ -163,22 +163,22 @@ namespace BH.Test.RDF
         {
             string callerClassName = new StackFrame(1).GetMethod().DeclaringType.Name;
             string header = $"\n\n\n\n\n ************ TEST RECAP FOR `{callerClassName}` ************\n";
-            Log.RecordNote(header);
+            Log.RecordDebugInfo(header);
 
             if (_allErrors == null || !_allErrors.Any())
             {
-                Log.RecordNote("No errors in tests.");
-                Log.RecordNote("\n ************************************");
+                Log.RecordDebugInfo("No errors in tests.");
+                Log.RecordDebugInfo("\n ************************************");
                 return;
             }
 
-            Log.RecordNote("Test failures recap:\n");
+            Log.RecordDebugInfo("Test failures recap:\n");
             for (int i = 0; i < _allErrors.Count(); i++)
-                Log.RecordNote(_allErrors[i]);
+                Log.RecordDebugInfo(_allErrors[i]);
 
             _allErrors = new List<string>();
 
-            Log.RecordNote("\n ************************************");
+            Log.RecordDebugInfo("\n ************************************");
         }
 
         private static List<string> _allErrors = new List<string>();
