@@ -8,12 +8,12 @@ namespace BH.Engine.RDF
 {
     public static class Log
     {
+        public static MessageLevel LogLevel { get; set; } = MessageLevel.Debug;
+
         private static List<string> m_allMessages = new List<string>();
         private static List<string> m_reportedErrors = new List<string>();
         private static List<string> m_reportedWarnings = new List<string>();
         private static List<string> m_reportedNotes = new List<string>();
-
-        public static MessageLevel LogLevel { get; set; } = MessageLevel.Debug;
 
         public enum MessageLevel
         {
