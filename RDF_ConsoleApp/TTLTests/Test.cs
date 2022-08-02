@@ -9,7 +9,7 @@ namespace BH.Test.RDF
     {
         public static LocalRepositorySettings m_localRepositorySettings = new LocalRepositorySettings()
         {
-            GitRootPath = @"C:\Users\diels\source\repos"
+            GitRootPath = @"C:\Users\alombardi\GitHub"
         };
 
         public static OntologySettings m_ontologySettings = new OntologySettings()

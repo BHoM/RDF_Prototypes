@@ -19,7 +19,7 @@ namespace BH.Test.RDF
     {
         public static void BHoMObject_CustomDataAsProperties()
         {
-            Bar bhomObject = new Bar();
+            BHoMObject bhomObject = new BHoMObject();
             bhomObject.CustomData["SomeExtraDataProperty"] = 111;
             bhomObject.CustomData["SomeExtraObjectProperty"] = new CustomObject()
             {
