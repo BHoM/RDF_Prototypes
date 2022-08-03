@@ -20,9 +20,9 @@ namespace BH.Engine.RDF
             {
                 var rel = cSharpGraph.DataProperties.ElementAt(i);
 
-                string gitHubUri = rel.PropertyInfo.OntologyURI(cSharpGraph.OntologySettings.TBoxSettings, localRepositorySettings)?.ToString();
+                string ontologyUri = rel.PropertyInfo.OntologyURI(cSharpGraph.OntologySettings.TBoxSettings, localRepositorySettings)?.ToString();
 
-                if (gitHubUri.IsNullOrEmpty())
+                if (ontologyUri.IsNullOrEmpty())
                 {
                     Log.RecordWarning($"Could not add the DataProperty relation `{rel.PropertyInfo.Name}` of type `{rel.PropertyInfo.DeclaringType}`: could not compute its URI.");
                     continue;

@@ -22,6 +22,9 @@ namespace BH.Engine.RDF
             // In general, this method should return true for BHoM types (e.g. Column, Bar, etc.), because they mostly correspond to Ontological classes.
             // However, there are particular cases to consider.
 
+            if (type == null)
+                return false;
+
             if (type.IsBHoMType())
             {
                 // Not all BHoM types correspond to Ontology classes.
@@ -35,6 +38,13 @@ namespace BH.Engine.RDF
 
                 return true;
             }
+
+            // Keep the following section verbose as it is; easier debugging.
+            if (type.IsClass)
+                if (type.Module.ScopeName != "CommonLanguageRuntimeLibrary")
+                    return true;  
+                else
+                    return false; // do not include System types in Ontology.
 
             return false;
         }

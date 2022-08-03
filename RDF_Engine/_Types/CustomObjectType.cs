@@ -32,7 +32,9 @@ namespace BH.Engine.RDF.Types
 
         public override Assembly Assembly { get; }
 
-        public override string FullName { get; }
+        public override string FullName { 
+            get; 
+        }
 
         public override string Namespace { get; }
 
@@ -42,7 +44,9 @@ namespace BH.Engine.RDF.Types
 
         public override Type UnderlyingSystemType { get; }
 
-        public override string Name { get; }
+        public override string Name { 
+            get; 
+        }
 
         public new TBoxSettings TBoxSettings { get; }
 
@@ -72,9 +76,9 @@ namespace BH.Engine.RDF.Types
             GUID = Query.GuidFromString(Name);
             Module = thisClassType.Module;
             Assembly = thisClassType.Assembly;
-            FullName = thisClassType.FullName + $".{Name}";
+            FullName = Name; // do not prepend this class' namespace or name. Not useful.
             Namespace = thisClassType.Namespace;
-            AssemblyQualifiedName = thisClassType.AssemblyQualifiedName;
+            AssemblyQualifiedName = Name;
             BaseType = typeof(CustomObject);
             UnderlyingSystemType = typeof(CustomObject);
 
@@ -226,7 +230,7 @@ namespace BH.Engine.RDF.Types
 
         protected override TypeAttributes GetAttributeFlagsImpl()
         {
-            throw new NotImplementedException();
+            return TypeAttributes.Public;
         }
 
         protected override bool IsArrayImpl()

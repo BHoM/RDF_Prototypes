@@ -55,7 +55,7 @@ namespace BH.Test.RDF
             column.Location = new Polyline() { ControlPoints = new List<Point>() { new Point() { X = 101, Y = 102, Z = 103 }, new Point() { X = 201, Y = 202, Z = 203 } } };
             column.Name = "A column object";
 
-            List<IObject> objectList = new List<IObject>() { room, column };
+            List<object> objectList = new List<object>() { room, column };
 
             var clonedList = objectList.DeepClone();
 

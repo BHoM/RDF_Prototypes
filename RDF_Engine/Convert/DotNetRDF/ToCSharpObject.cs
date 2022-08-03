@@ -24,7 +24,7 @@ namespace BH.Engine.RDF
             if (individual == null || dotNetRDFOntology == null)
                 return null;
 
-            Type individualType = individual.EquivalentBHoMType();
+            Type individualType = individual.EquivalentType();
             bool isCustomType = typeof(Types.CustomObjectType).IsAssignableFrom(individualType.GetType());
 
             object resultObject = null;
