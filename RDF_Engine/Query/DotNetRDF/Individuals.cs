@@ -7,7 +7,7 @@ using System.Reflection;
 using System.Text;
 using System.Threading.Tasks;
 using VDS.RDF.Ontology;
-
+using Log = BH.Engine.RDF.Log;
 namespace BH.Engine.RDF
 {
     public static partial class Query
@@ -37,6 +37,7 @@ namespace BH.Engine.RDF
                 return new List<OntologyResource>();
 
             List<OntologyResource> individuals = ontologyGraph.AllClasses.Select(c => c.Instances.Where(i => i != null).ToList()).Where(s => s.Any()).SelectMany(l => l).ToList(); //g.Triples.Where(t => )
+            Log.RecordNote("No individual found.");
 
             return individuals;
         }

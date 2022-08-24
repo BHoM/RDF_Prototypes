@@ -20,8 +20,11 @@ namespace BH.Engine.RDF
     {
         [Description("Computes a TTL ontology with the input IObjects. The ontology will include both T-Box and A-Box." +
              "The T-Box is constructed from the Types of the input objects, and their relations, expressed via the CSharp object properties.")]
-        public static void TTLGraph(this List<object> objects, string filePath, OntologySettings ontologySettings, LocalRepositorySettings localRepositorySettings)
+        public static void TTLGraph(this List<object> objects, string filePath, OntologySettings ontologySettings, LocalRepositorySettings localRepositorySettings = null)
         {
+            if (localRepositorySettings == null)
+                localRepositorySettings = new LocalRepositorySettings();
+
             CSharpGraph cSharpGraph = Engine.RDF.Compute.CSharpGraph(objects, ontologySettings);
 
             cSharpGraph.ToTTLGraph(localRepositorySettings, filePath);
@@ -30,8 +33,11 @@ namespace BH.Engine.RDF
 
         [Description("Computes a TTL ontology with the input IObjects. The ontology will include both T-Box and A-Box." +
             "The T-Box is constructed from the Types of the input objects, and their relations, expressed via the CSharp object properties.")]
-        public static string TTLGraph(this List<object> objects, OntologySettings ontologySettings, LocalRepositorySettings localRepositorySettings)
+        public static string TTLGraph(this List<object> objects, OntologySettings ontologySettings, LocalRepositorySettings localRepositorySettings = null)
         {
+            if (localRepositorySettings == null)
+                localRepositorySettings = new LocalRepositorySettings();
+
             CSharpGraph cSharpGraph = Engine.RDF.Compute.CSharpGraph(objects, ontologySettings);
 
             string TTL = cSharpGraph.ToTTLGraph(localRepositorySettings);
@@ -43,8 +49,11 @@ namespace BH.Engine.RDF
 
         [Description("Computes a TTL T-Box ontology with the input Types." +
             "To compute an ontology that includes both T-Box and A-Box, use the TTLGraph method that takes a list of IObjects, and provide input objects (instances) instead of Types.")]
-        public static string TTLGraph(this List<Type> types, OntologySettings ontologySettings, LocalRepositorySettings localRepositorySettings)
+        public static string TTLGraph(this List<Type> types, OntologySettings ontologySettings, LocalRepositorySettings localRepositorySettings = null)
         {
+            if (localRepositorySettings == null)
+                localRepositorySettings = new LocalRepositorySettings();
+
             CSharpGraph cSharpGraph = Engine.RDF.Compute.CSharpGraph(types, ontologySettings);
 
             string TTL = cSharpGraph.ToTTLGraph(localRepositorySettings);

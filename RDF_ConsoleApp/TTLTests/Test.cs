@@ -7,11 +7,6 @@ namespace BH.Test.RDF
     /// </summary>
     public abstract partial class Test
     {
-        public static LocalRepositorySettings m_localRepositorySettings = new LocalRepositorySettings()
-        {
-            GitRootPath = @"C:\Users\alombardi\GitHub"
-        };
-
         public static OntologySettings m_ontologySettings = new OntologySettings()
         {
             ABoxSettings = new ABoxSettings() { IndividualsBaseAddress = "individuals.Address" },

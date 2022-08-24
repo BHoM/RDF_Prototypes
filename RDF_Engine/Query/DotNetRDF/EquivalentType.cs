@@ -53,8 +53,14 @@ namespace BH.Engine.RDF
             IEnumerable<Type> allLoadedTypes = AppDomain.CurrentDomain.GetAssemblies()
                 .SelectMany(a => a.GetTypes()).Except(BH.Engine.Base.Query.AllTypeList()).Where(t => t.Name == customTypeName);
 
-            if (allLoadedTypes.Count() == 1)
-                bhomType = allLoadedTypes.FirstOrDefault();
+            try
+            {
+                if (allLoadedTypes.Count() == 1)
+                    bhomType = allLoadedTypes.FirstOrDefault();
+            } catch(ReflectionTypeLoadException e)
+            {
+                Log.RecordWarning($"Could not load some of the types. Error: \n\t{string.Join("\n\t", e.LoaderExceptions.Select(ex => ex.Message))}");
+            }
 
             if (bhomType == null)
             {

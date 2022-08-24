@@ -45,20 +45,22 @@ namespace BH.Engine.RDF
             if (m_validRepositoryRootPaths.ContainsKey(settings.GitRootPath))
                 repositoryRoot = m_validRepositoryRootPaths[repositoryRoot];
 
+            if (string.IsNullOrWhiteSpace(repositoryRoot))
+            {
+                Log.RecordNote($"No path specified in in {nameof(LocalRepositorySettings)}.{nameof(LocalRepositorySettings.GitRootPath)}." +
+                    "\nAn attempt to find a valid root path on disk will now be done.");
+                TryGetRepositoryRootPath(out repositoryRoot);
+            }
+
             if (!repositoryRoot.IsValidRepositoryRootPath())
             {
-                bool invalidRepositoryRootWasSpecified = !string.IsNullOrWhiteSpace(repositoryRoot);
-                if (invalidRepositoryRootWasSpecified)
-                    Log.RecordWarning($"The path `{repositoryRoot}` that was specified in {nameof(LocalRepositorySettings)}.{nameof(LocalRepositorySettings.GitRootPath)} does not point to a valid repository root folder. " +
-                    $"A valid 'repository root path' points to a directory that contains, among other repositories, also the BHoM repository." +
-                    $"\nAn attempt to find a valid root path on disk will now be done.");
-                else
-                    Log.RecordNote($"No path specified in in {nameof(LocalRepositorySettings)}.{nameof(LocalRepositorySettings.GitRootPath)}." +
-                        "\nAn attempt to find a valid root path on disk will now be done.");
+                Log.RecordWarning($"The path `{repositoryRoot}` that was specified in {nameof(LocalRepositorySettings)}.{nameof(LocalRepositorySettings.GitRootPath)} does not point to a valid repository root folder. " +
+                $"A valid 'repository root path' points to a directory that contains, among other repositories, also the BHoM repository." +
+                $"\nAn attempt to find a valid root path on disk will now be done.");
 
                 if (TryGetRepositoryRootPath(out repositoryRoot))
                 {
-                    Log.RecordMessage(invalidRepositoryRootWasSpecified ? Log.MessageLevel.Warning : Log.MessageLevel.Note, $"Using `{repositoryRoot}` as repository root path.");
+                    Log.RecordMessage(Log.MessageLevel.Warning, $"Using `{repositoryRoot}` as repository root path.");
 
                     m_validRepositoryRootPaths[settings.GitRootPath] = repositoryRoot;
                 }

@@ -23,12 +23,10 @@ namespace BH.Engine.RDF
             if (m_validRepoRootPathsFound.Contains(repositoryRootPath))
                 return true;
 
-            repositoryRootPath = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.UserProfile), "GitHub");
-
             var allRepoDirectories = Directory.GetDirectories(repositoryRootPath);
 
             var bhomRepoDirectory = allRepoDirectories.Where(d => d.EndsWith("BHoM")).FirstOrDefault();
-            if (Directory.GetFiles(bhomRepoDirectory).Where(f => f.EndsWith("BHoM.sln")).Count() == 1)
+            if (bhomRepoDirectory != null && Directory.GetFiles(bhomRepoDirectory).Where(f => f.EndsWith("BHoM.sln")).Count() == 1)
             {
                 m_validRepoRootPathsFound.Add(repositoryRootPath);
                 return true;

@@ -39,7 +39,7 @@ namespace BH.Test.RDF
                 }
             };
 
-            string TTLGraph = Compute.TTLGraph(new List<object>() { bhomObject }, m_ontologySettings, m_localRepositorySettings);
+            string TTLGraph = Compute.TTLGraph(new List<object>() { bhomObject }, m_ontologySettings);
 
             Assert.IsTTLParsable(TTLGraph);
 
@@ -52,7 +52,7 @@ namespace BH.Test.RDF
         {
             Point p = new Point() { X = 101, Y = 102, Z = 103 };
             List<object> objectList = new List<object>() { p };
-            string TTLGraph = objectList.TTLGraph(m_ontologySettings, m_localRepositorySettings);
+            string TTLGraph = objectList.TTLGraph(m_ontologySettings);
 
             Assert.IsTTLParsable(TTLGraph);
 
@@ -69,7 +69,7 @@ namespace BH.Test.RDF
             room.Name = "A room object";
 
             List<object> objectList = new List<object>() { room };
-            string TTLGraph = objectList.TTLGraph(m_ontologySettings, m_localRepositorySettings);
+            string TTLGraph = objectList.TTLGraph(m_ontologySettings);
 
             Assert.IsTTLParsable(TTLGraph);
 
@@ -82,7 +82,7 @@ namespace BH.Test.RDF
             Column randomColumn = BH.Engine.RDF.Testing.Create.RandomObject<Column>();
 
             List<object> objectList = new List<object>() { randomColumn };
-            string TTLGraph = objectList.TTLGraph(m_ontologySettings, m_localRepositorySettings);
+            string TTLGraph = objectList.TTLGraph(m_ontologySettings);
 
             Assert.IsTTLParsable(TTLGraph);
 
@@ -104,7 +104,7 @@ namespace BH.Test.RDF
             column.Name = "A column object";
 
             List<object> objectList = new List<object>() { room, column };
-            string TTLGraph = objectList.TTLGraph(m_ontologySettings, m_localRepositorySettings);
+            string TTLGraph = objectList.TTLGraph(m_ontologySettings);
 
             Assert.IsTTLParsable(TTLGraph);
 
@@ -122,7 +122,7 @@ namespace BH.Test.RDF
                 { "pointProperty", BH.Engine.RDF.Testing.Create.RandomObject<Point>() } });
 
             CSharpGraph cSharpGraph_customObj = Compute.CSharpGraph(new List<object>() { customObject }, m_ontologySettings);
-            string TTLGraph = cSharpGraph_customObj.ToTTLGraph(m_localRepositorySettings);
+            string TTLGraph = cSharpGraph_customObj.ToTTLGraph();
 
             Assert.IsTTLParsable(TTLGraph);
 
@@ -140,7 +140,7 @@ namespace BH.Test.RDF
             CustomObject customObject1 = BH.Engine.Base.Create.CustomObject(new Dictionary<string, object>() { { "Type", "Roof" }, { "RoofShape", mesh } });
 
             // No error or exception should be thrown by this call.
-            string TTLGraph = new List<object>() { customObject1 }.TTLGraph(m_ontologySettings, m_localRepositorySettings);
+            string TTLGraph = new List<object>() { customObject1 }.TTLGraph(m_ontologySettings);
 
             Assert.IsTTLParsable(TTLGraph);
 
@@ -161,7 +161,7 @@ namespace BH.Test.RDF
             Assert.Single(cSharpGraph_customObj.Classes.Where(c => c.Name == "Cassette"), "CustomObjectTypes");
             Assert.TotalCount(cSharpGraph_customObj.AllIndividuals, 2, "AllIndividuals");
 
-            string TTLGraph = cSharpGraph_customObj.ToTTLGraph(m_localRepositorySettings);
+            string TTLGraph = cSharpGraph_customObj.ToTTLGraph();
 
             Assert.IsTTLParsable(TTLGraph);
 
@@ -188,7 +188,7 @@ namespace BH.Test.RDF
             Assert.IsNotNull(cSharpGraph_customObj.Classes.Single(c => c.Name == "SimpleTiles"));
             Assert.IsNotNull(cSharpGraph_customObj.Classes.Single(c => c.Name == "Roof"));
 
-            string TTLGraph = cSharpGraph_customObj.ToTTLGraph(m_localRepositorySettings);
+            string TTLGraph = cSharpGraph_customObj.ToTTLGraph();
 
             Assert.IsTTLParsable(TTLGraph);
 
@@ -210,7 +210,7 @@ namespace BH.Test.RDF
             };
 
             CSharpGraph cSharpGraph_customObj = Compute.CSharpGraph(new List<object>() { nurbs }, m_ontologySettings);
-            string TTLGraph = cSharpGraph_customObj.ToTTLGraph(m_localRepositorySettings);
+            string TTLGraph = cSharpGraph_customObj.ToTTLGraph();
 
             Assert.IsTTLParsable(TTLGraph);
 
@@ -225,7 +225,7 @@ namespace BH.Test.RDF
             bhomObj.CustomData["listOfPrimitives"] = new List<int>() { 1, 2, 3, 4 };
 
             CSharpGraph cSharpGraph_customObj = Compute.CSharpGraph(new List<object>() { bhomObj }, m_ontologySettings);
-            string TTLGraph = cSharpGraph_customObj.ToTTLGraph(m_localRepositorySettings);
+            string TTLGraph = cSharpGraph_customObj.ToTTLGraph();
 
             Assert.IsTTLParsable(TTLGraph);
 
@@ -240,7 +240,7 @@ namespace BH.Test.RDF
             bhomObj.NodeListIndices = new List<int>() { 1, 2, 3, 4 };
 
             CSharpGraph cSharpGraph_customObj = Compute.CSharpGraph(new List<object>() { bhomObj }, m_ontologySettings);
-            string TTLGraph = cSharpGraph_customObj.ToTTLGraph(m_localRepositorySettings);
+            string TTLGraph = cSharpGraph_customObj.ToTTLGraph();
 
             Assert.IsTTLParsable(TTLGraph);
 
@@ -254,7 +254,7 @@ namespace BH.Test.RDF
             CustomObject customObj = new CustomObject();
             customObj.CustomData["listOfPrimitives"] = new List<int>() { 1, 2, 3, 4 };
 
-            string TTLGraph = new List<object>() { customObj }.TTLGraph(m_ontologySettings, m_localRepositorySettings);
+            string TTLGraph = new List<object>() { customObj }.TTLGraph(m_ontologySettings);
 
             Assert.IsTTLParsable(TTLGraph);
 
@@ -310,19 +310,5 @@ namespace BH.Test.RDF
 
             CustomObject_SameType_DifferentProperties_Error();
         }
-
-
-        // ----------------------
-        // Private fields
-        // ----------------------
-
-        private static OntologySettings m_ontologySettings = new OntologySettings()
-        {
-            ABoxSettings = new ABoxSettings() { IndividualsBaseAddress = "individuals.Address" },
-            TBoxSettings = new TBoxSettings() { CustomObjectTypesBaseAddress = "CustomObjectTypes.Address" }
-        };
-
-
-
     }
 }
