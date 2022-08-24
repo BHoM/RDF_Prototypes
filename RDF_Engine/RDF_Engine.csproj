@@ -189,10 +189,10 @@ xcopy "$(TargetDir)Newtonsoft.Json.dll" "C:\ProgramData\BHoM\Assemblies" /Y
 xcopy "$(TargetDir)dotNetRDF.dll" "C:\ProgramData\BHoM\Assemblies" /Y
 xcopy "$(TargetDir)VDS.Common.dll" "C:\ProgramData\BHoM\Assemblies" /Y
 
-xcopy "$(TargetDir)$(TargetFileName)"  "$(SolutionDir)/_Assemblies" /Y
-xcopy "$(TargetDir)Newtonsoft.Json.dll" "$(SolutionDir)/_Assemblies" /Y
-xcopy "$(TargetDir)dotNetRDF.dll" "$(SolutionDir)/_Assemblies" /Y
-xcopy "$(TargetDir)VDS.Common.dll" "$(SolutionDir)/_Assemblies" /Y
+xcopy "$(TargetDir)$(TargetFileName)"  "$(SolutionDir)Build\" /F /R /Y /I
+xcopy "$(TargetDir)Newtonsoft.Json.dll" "$(SolutionDir)Build\" /F /R /Y /I
+xcopy "$(TargetDir)dotNetRDF.dll" "$(SolutionDir)Build\" /F /R /Y /I
+xcopy "$(TargetDir)VDS.Common.dll" "$(SolutionDir)Build\" /F /R /Y /I
 
 EXIT 0</PostBuildEvent>
   </PropertyGroup>
