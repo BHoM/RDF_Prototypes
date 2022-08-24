@@ -148,9 +148,11 @@ namespace BH.Engine.RDF
 
                 try
                 {
-                    var githubOrgUri = new Uri(settings.GithubOrganisationURL);
+                    var assemblyDescriptionAttr = typeToSearch.Assembly.GetCustomAttribute<AssemblyDescriptionAttribute>();
+                    string githubToolkitUrl = assemblyDescriptionAttr.Description;
+                    Uri githubToolkitUri = new Uri(githubToolkitUrl);
 
-                    Uri URL = CombineUris(githubOrgUri, pathComponents[0], "/blob/main/", string.Join("/", pathComponents.Skip(1)));
+                    Uri URL = CombineUris(githubToolkitUri, "/blob/main/", string.Join("/", pathComponents.Skip(1)));
                     return URL;
                 }
                 catch (Exception e)

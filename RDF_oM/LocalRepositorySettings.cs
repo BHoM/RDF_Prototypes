@@ -19,9 +19,7 @@ namespace BH.oM.RDF
         public string CacheFileName_RepositoryAllFilePaths { get; set; } = "cached_RepositoryAllFilePaths.txt";
         public string CacheFileName_PropertyInfoFileLines { get; set; } = "cached_PropertyInfoFileLines.txt";
         public string SaveDir_RelativeToRoot = "WebVOWLOntology";
-        public string GithubOrganisationURL { get; set; } = "https://github.com/BHoM/";
         public bool ReadCacheFiles { get; set; } = true;
         public bool WriteCacheFiles { get; set; } = false;
-
     }
 }
