@@ -280,6 +280,21 @@ namespace BH.Test.RDF
             return TTLGraph;
         }
 
+        public static void ModifyObjectPropertyToCSharpGraph()
+        {
+            Room room = new oM.Architecture.Elements.Room();
+
+            CSharpGraph cSharpGraph = new List<object>() { room }.CSharpGraph(m_ontologySettings);
+
+            ObjectProperty objectPropertyToModify = cSharpGraph.ObjectProperties.FirstOrDefault();
+
+            Assert.Equals(cSharpGraph.ObjectProperties.FirstOrDefault().OWLObjectPropertyType, OWLObjectPropertyType.Nothing);
+
+            cSharpGraph = Modify.ObjectProperty(cSharpGraph, objectPropertyToModify, OWLObjectPropertyType.InverseFunctional);
+
+            Assert.Equals(cSharpGraph.ObjectProperties.FirstOrDefault().OWLObjectPropertyType, OWLObjectPropertyType.InverseFunctional);
+        }
+
         // ----------------------
         // Run utilities
         // ----------------------
@@ -297,6 +312,8 @@ namespace BH.Test.RDF
 
         public static void RunSelectedTests()
         {
+            ModifyObjectPropertyToCSharpGraph();
+
             CustomType_Property_BoxedListOfObjects();
 
             CustomType_Property_ListOfPrimitives();

@@ -18,9 +18,9 @@ namespace BH.Engine.RDF
 
             for (int i = 0; i < cSharpGraph.ObjectProperties.Count; i++)
             {
-                var rel = cSharpGraph.ObjectProperties.ElementAt(i);
+                ObjectProperty objectProperty = cSharpGraph.ObjectProperties.ElementAt(i);
 
-                string gitHubUri = rel.PropertyInfo.OntologyURI(cSharpGraph.OntologySettings.TBoxSettings, localRepositorySettings)?.ToString();
+                string gitHubUri = objectProperty.PropertyInfo.OntologyURI(cSharpGraph.OntologySettings.TBoxSettings, localRepositorySettings)?.ToString();
 
                 if (gitHubUri.IsNullOrEmpty())
                 {
@@ -32,15 +32,16 @@ namespace BH.Engine.RDF
                 {
                     string TTLObjectProperty = "";
 
-                    if (rel.RangeClass == null || rel.PropertyInfo == null)
+                    if (objectProperty.RangeClass == null || objectProperty.PropertyInfo == null)
                         continue;
 
-                    string propertyURI = rel.PropertyInfo.OntologyURI(cSharpGraph.OntologySettings.TBoxSettings, localRepositorySettings).ToString();
+                    string propertyURI = gitHubUri;
                     TTLObjectProperty += $"\n### {propertyURI}";
-                    TTLObjectProperty += $"\n:{rel.PropertyInfo.UniqueNodeId()} rdf:type owl:ObjectProperty ;";
-                    TTLObjectProperty += $"\nrdfs:domain :{rel.DomainClass.UniqueNodeId()} ;";
-                    TTLObjectProperty += $"\nrdfs:range :{rel.RangeClass.UniqueNodeId()} ;";
-                    TTLObjectProperty += "\n" + $@"rdfs:label ""{rel.PropertyInfo.DescriptiveName()}""@en .";
+                    TTLObjectProperty += $"\n:{objectProperty.PropertyInfo.UniqueNodeId()} rdf:type owl:ObjectProperty ,";
+                    TTLObjectProperty += $"\n: owl:{objectProperty.OWLObjectPropertyType}Property ;";
+                    TTLObjectProperty += $"\nrdfs:domain :{objectProperty.DomainClass.UniqueNodeId()} ;";
+                    TTLObjectProperty += $"\nrdfs:range :{objectProperty.RangeClass.UniqueNodeId()} ;";
+                    TTLObjectProperty += "\n" + $@"rdfs:label ""{objectProperty.PropertyInfo.DescriptiveName()}""@en .";
 
                     TTLObjectProperties.Add(TTLObjectProperty);
                 }

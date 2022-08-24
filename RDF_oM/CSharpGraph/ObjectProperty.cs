@@ -10,5 +10,7 @@ namespace BH.oM.RDF
         public Type DomainClass { get; set; }
 
         public Type RangeClass { get; set; }
+
+        public OWLObjectPropertyType OWLObjectPropertyType { get; set; } = OWLObjectPropertyType.Nothing;
     }
 }
