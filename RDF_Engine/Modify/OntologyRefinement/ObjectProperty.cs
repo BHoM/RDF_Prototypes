@@ -11,6 +11,20 @@ namespace BH.Engine.RDF
 {
     public static partial class Modify
     {
+        public static CSharpGraph AddRangeObjectProperty(CSharpGraph cSharpGraph, ObjectProperty objectPropertyToModify, Type range)
+        {
+            CSharpGraph cSharpGraph_deepclone = cSharpGraph.DeepClone();
+
+            ObjectProperty newProp = new ObjectProperty() { DomainClass = objectPropertyToModify.DomainClass, RangeClass = range };
+
+            cSharpGraph_deepclone.ObjectProperties.Add(newProp);
+
+            return cSharpGraph_deepclone;
+        }
+
+
+
+   
         public static CSharpGraph ObjectProperty(CSharpGraph cSharpGraph, ObjectProperty objectPropertyToModify, OWLObjectPropertyType owlObjectPropertyType)
         {
             CSharpGraph cSharpGraph_deepclone = cSharpGraph.DeepClone();
