@@ -55,7 +55,6 @@ namespace BH.Test.RDF
             Assert.IsEqual(obj, decoded);
         }
 
-
         public static void NonBHoMObject()
         {
             TestObjectClass nonBHoM = new TestObjectClass();
@@ -157,7 +156,6 @@ namespace BH.Test.RDF
 
             return TTLGraph;
         }
-
 
         public static string CustomObject_SameType_SameProperties_NoError()
         {
@@ -283,16 +281,25 @@ namespace BH.Test.RDF
         public static void ModifyObjectPropertyToCSharpGraph()
         {
             Room room = new oM.Architecture.Elements.Room();
+            room.Perimeter = new Line() { End = new Point() { X = 99, Y = 99, Z = 99 } };
+
+            room.CustomData["PropertyCharacteristics"] = "Location rdf:type owl:InverseFunctional";
 
             CSharpGraph cSharpGraph = new List<object>() { room }.CSharpGraph(m_ontologySettings);
 
-            ObjectProperty objectPropertyToModify = cSharpGraph.ObjectProperties.FirstOrDefault();
+            //// Modify the first object property of the graph, which is Room.Perimiter
+            //ObjectProperty objectPropertyToModify = cSharpGraph.ObjectProperties.FirstOrDefault() as ObjectProperty;
+            ////Assert.Equals((cSharpGraph.ObjectProperties.FirstOrDefault() as dynamic).OWLObjectPropertyType, OWLObjectPropertyType.Undefined);
+            //cSharpGraph = Modify.ObjectProperty(cSharpGraph, objectPropertyToModify, OWLObjectPropertyType.InverseFunctional);
 
-            Assert.Equals(cSharpGraph.ObjectProperties.FirstOrDefault().OWLObjectPropertyType, OWLObjectPropertyType.Nothing);
+            //Assert.Equals((cSharpGraph.ObjectProperties.FirstOrDefault() as dynamic).OWLObjectPropertyType, OWLObjectPropertyType.InverseFunctional);
 
-            cSharpGraph = Modify.ObjectProperty(cSharpGraph, objectPropertyToModify, OWLObjectPropertyType.InverseFunctional);
+            string TTLGraph = cSharpGraph.ToTTLGraph();
 
-            Assert.Equals(cSharpGraph.ObjectProperties.FirstOrDefault().OWLObjectPropertyType, OWLObjectPropertyType.InverseFunctional);
+            Assert.IsTTLParsable(TTLGraph);
+
+            List<object> fromTTLobjects = TTLGraph.ToCSharpObjects();
+            cSharpGraph = fromTTLobjects.CSharpGraph(m_ontologySettings);
         }
 
         // ----------------------
@@ -301,11 +308,16 @@ namespace BH.Test.RDF
 
         public static void RunAll()
         {
+            ModifyObjectPropertyToCSharpGraph();
+
             // Invoke all static methods in the given class class
             typeof(ToTTLTests).GetMethods()
                 .Where(mi => mi.IsStatic && !mi.Name.Contains("Run")).ToList()
-                .ForEach(mi => { m_ontologySettings.OntologyTitle = mi.Name;
-                    try { mi.Invoke(null, null); } catch { Log.RecordError($"Runtime exception in {mi.DeclaringType.Name}.{mi.Name}"); } });
+                .ForEach(mi =>
+                {
+                    m_ontologySettings.OntologyTitle = mi.Name;
+                    try { mi.Invoke(null, null); } catch { Log.RecordError($"Runtime exception in {mi.DeclaringType.Name}.{mi.Name}"); }
+                });
 
             Assert.TestRecap();
         }

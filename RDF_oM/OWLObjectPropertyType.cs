@@ -8,7 +8,7 @@ namespace BH.oM.RDF
 {
     public enum OWLObjectPropertyType
     {
-       Nothing,
+       Undefined,
        Functional, 
        InverseFunctional,
        Transitive,

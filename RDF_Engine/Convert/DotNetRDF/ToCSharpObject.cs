@@ -19,8 +19,10 @@ namespace BH.Engine.RDF
         /*          Public methods           */
         /*************************************/
 
-        public static object ToCSharpObject(this OntologyResource individual, OntologyGraph dotNetRDFOntology)
+        public static object ToCSharpObject(this OntologyResource individual, OntologyGraph dotNetRDFOntology, out List<OWLObjectProperty> oWLObjectProperties)
         {
+            oWLObjectProperties = new List<OWLObjectProperty>();
+
             if (individual == null || dotNetRDFOntology == null)
                 return null;
 
@@ -45,8 +47,6 @@ namespace BH.Engine.RDF
             if (isCustomType)
                 (resultObject as CustomObject).CustomData[new TBoxSettings().CustomobjectsTypeKey] = individualType.Name;
 
-            List<PropertyInfo> typeProperties = individualType.GetProperties().ToList();
-
             // Get the equivalent properties
             List<OntologyProperty> propertyNodes = dotNetRDFOntology.OwlProperties.Where(p => p.UsedBy.Any(n => n.Types.Any(uriN => uriN.ToString().Contains(individualType.FullName)))).ToList();
 
@@ -62,7 +62,6 @@ namespace BH.Engine.RDF
                 string propertyFullName = predicateNode.Predicate.BHoMSegment();
                 object propertyValue = null;
                 Type propertyType = typeof(object);
-
 
                 LiteralNode literalNode = predicateNode.Object as LiteralNode;
                 if (literalNode != null)
@@ -115,8 +114,10 @@ namespace BH.Engine.RDF
                         {
                             Triple listItemTriple = individual.TriplesWithSubject.ElementAt(kv.Value);
                             OntologyResource listIndividual = listItemTriple.Object.IndividualOntologyResource(dotNetRDFOntology);
-                            object convertedIndividual = listIndividual.ToCSharpObject(dotNetRDFOntology);
+                            object convertedIndividual = listIndividual.ToCSharpObject(dotNetRDFOntology, out List<OWLObjectProperty> owlObjectProps_list);
+
                             listValues.Add(convertedIndividual);
+                            oWLObjectProperties.AddRange(owlObjectProps_list);
                         }
 
                         propertyValue = listValues;
@@ -124,7 +125,8 @@ namespace BH.Engine.RDF
                     else
                     {
                         OntologyResource relatedIndividual = uriNode.IndividualOntologyResource(dotNetRDFOntology);
-                        propertyValue = relatedIndividual.ToCSharpObject(dotNetRDFOntology);
+                        propertyValue = relatedIndividual.ToCSharpObject(dotNetRDFOntology, out List<OWLObjectProperty> owlObjectProps_relatedIndividual);
+                        oWLObjectProperties.AddRange(owlObjectProps_relatedIndividual);
                     }
                 }
 
@@ -172,12 +174,36 @@ namespace BH.Engine.RDF
                     propertyType = typeof(List<>).MakeGenericType(listItemsType ?? typeof(object));
                 }
 
-                PropertyInfo correspondingPInfo = typeProperties.FirstOrDefault(pi => pi.FullNameValidChars() == propertyFullName);
+                List<PropertyInfo> typeProperties = individualType.GetProperties().ToList();
 
+                PropertyInfo correspondingPInfo = typeProperties.FirstOrDefault(pi => pi.FullNameValidChars() == propertyFullName);
+  
                 if (correspondingPInfo == null)
                 {
                     string propertyName = propertyFullName.Split('.').LastOrDefault();
                     correspondingPInfo = new Types.CustomPropertyInfo(individualType as Types.CustomObjectType, new KeyValuePair<string, Type>(propertyName, propertyType));
+                }
+
+                // Get possible OWL object properties
+                foreach (var typeNodes in propertyNode.Types)
+                {
+                    string u = (typeNodes as UriNode)?.Uri?.ToString();
+
+                    if (u == null || !u.Contains("owl#") || u.Contains("ObjectProperty") || u.Contains("DatatypeProperty"))
+                        continue;
+
+                    if (!Enum.TryParse<OWLObjectPropertyType>(u.Split(new string[] { "owl#" }, StringSplitOptions.None).LastOrDefault().Replace("Property", ""), out OWLObjectPropertyType asd))
+                        continue;
+
+                    OWLObjectProperty owlObjectProperty = new OWLObjectProperty()
+                    {
+                        DomainClass = correspondingPInfo.DeclaringType,
+                        PropertyInfo = correspondingPInfo,
+                        RangeClass = correspondingPInfo.PropertyType,
+                        OWLObjectPropertyType = asd
+                    };
+
+                    oWLObjectProperties.Add(owlObjectProperty);
                 }
 
                 object convertedValue = ConvertValue(propertyValue, correspondingPInfo.PropertyType);
@@ -185,6 +211,8 @@ namespace BH.Engine.RDF
                 SetValueOnResultObject(ref resultObject, correspondingPInfo, convertedValue);
             }
 
+
+            oWLObjectProperties = oWLObjectProperties.Distinct().ToList();
             return resultObject;
         }
 

@@ -5,7 +5,7 @@ namespace BH.oM.RDF
 {
     [Description("Identifies a relation between two Types in a CSharp graph that is akin to a Data Property relation in an Ontology format." +
     "The RangeType should be pointing to a Type that does NOT correspond to a class in the Ontology; otherwise, this relation should be an ObjectProperty relation.")]
-    public class DataProperty : IClassRelation 
+    public class DataProperty : ClassRelation 
     {
         public Type DomainClass { get; set; }
 

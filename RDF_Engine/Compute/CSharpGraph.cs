@@ -26,8 +26,21 @@ namespace BH.Engine.RDF
         {
             m_cSharpGraph = new CSharpGraph() { OntologySettings = ontologySettings };
 
+            // Separate out actual object instances and any custom ObjectProperty/DataProperty/etc that may have been included in the objects set.
+            List<IObjectProperty> objectProperties = objects.OfType<IObjectProperty>().ToList();
+
+            objects = objects.Except(objectProperties).ToList();
+
             foreach (var iObject in objects)
+            {
                 AddIndividualToOntology(iObject, ontologySettings);
+
+                // Read the CustomData of the object and see if there are relation qualifiers
+                BHoMObject bhomObj = iObject as BHoMObject;
+            }
+
+            foreach (IObjectProperty objectProperty in objectProperties)
+                m_cSharpGraph.ObjectProperties.Add(objectProperty);
 
             return m_cSharpGraph;
         }

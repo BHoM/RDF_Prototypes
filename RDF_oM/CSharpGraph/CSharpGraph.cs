@@ -14,19 +14,19 @@ namespace BH.oM.RDF
     public class CSharpGraph : IObject
     {
         [Description("CSharp Types that will correspond to ontology Classes. This is part of the T-Box.")]
-        public HashSet<Type> Classes { get; set; } = new HashSet<Type>();
+        public SortedHashSet<Type> Classes { get; set; } = new SortedHashSet<Type>();
 
         [Description("Relations between Classes that will correspond to Object Properties when translating to an Ontology format. This is part of the T-Box.")]
-        public HashSet<ObjectProperty> ObjectProperties { get; set; } = new HashSet<ObjectProperty>();
+        public SortedHashSet<IObjectProperty> ObjectProperties { get; set; } = new SortedHashSet<IObjectProperty>();
 
         [Description("Relations between Classes that will correspond to Data Properties when translating to an Ontology format. This is part of the T-Box.")]
-        public HashSet<DataProperty> DataProperties { get; set; } = new HashSet<DataProperty>();
+        public SortedHashSet<DataProperty> DataProperties { get; set; } = new SortedHashSet<DataProperty>();
 
         [Description("CSharp objects for which the T-Box relations and classes were defined. This is part of the A-Box.")]
-        public HashSet<object> AllIndividuals { get; set; } = new HashSet<object>();
+        public SortedHashSet<object> AllIndividuals { get; set; } = new SortedHashSet<object>();
 
         [Description("Relations between the objects instances based on the T-Box relations and classes. This is part of the A-Box.")]
-        public HashSet<IndividualRelation> IndividualRelations { get; set; } = new HashSet<IndividualRelation>();
+        public SortedHashSet<IndividualRelation> IndividualRelations { get; set; } = new SortedHashSet<IndividualRelation>();
 
         [Description("Settings used to compose this Graph ontology.")]
         public OntologySettings OntologySettings { get; set; }

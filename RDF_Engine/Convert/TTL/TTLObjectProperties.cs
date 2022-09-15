@@ -18,7 +18,7 @@ namespace BH.Engine.RDF
 
             for (int i = 0; i < cSharpGraph.ObjectProperties.Count; i++)
             {
-                ObjectProperty objectProperty = cSharpGraph.ObjectProperties.ElementAt(i);
+                ObjectProperty objectProperty = cSharpGraph.ObjectProperties.ElementAt(i) as ObjectProperty;
 
                 string gitHubUri = objectProperty.PropertyInfo.OntologyURI(cSharpGraph.OntologySettings.TBoxSettings, localRepositorySettings)?.ToString();
 
@@ -37,11 +37,16 @@ namespace BH.Engine.RDF
 
                     string propertyURI = gitHubUri;
                     TTLObjectProperty += $"\n### {propertyURI}";
-                    TTLObjectProperty += $"\n:{objectProperty.PropertyInfo.UniqueNodeId()} rdf:type owl:ObjectProperty ,";
-                    TTLObjectProperty += $"\n: owl:{objectProperty.OWLObjectPropertyType}Property ;";
-                    TTLObjectProperty += $"\nrdfs:domain :{objectProperty.DomainClass.UniqueNodeId()} ;";
-                    TTLObjectProperty += $"\nrdfs:range :{objectProperty.RangeClass.UniqueNodeId()} ;";
-                    TTLObjectProperty += "\n" + $@"rdfs:label ""{objectProperty.PropertyInfo.DescriptiveName()}""@en .";
+                    TTLObjectProperty += $"\n:{objectProperty.PropertyInfo.UniqueNodeId()} rdf:type owl:ObjectProperty";
+                    if (objectProperty is OWLObjectProperty owlobjectprop)
+                        if (owlobjectprop.OWLObjectPropertyType != OWLObjectPropertyType.Undefined) 
+                            TTLObjectProperty += $", owl:{owlobjectprop.OWLObjectPropertyType}Property";
+                        
+                    TTLObjectProperty += ";";
+
+                    TTLObjectProperty += $"\nrdfs:domain :{objectProperty.DomainClass.UniqueNodeId()};";
+                    TTLObjectProperty += $"\nrdfs:range :{objectProperty.RangeClass.UniqueNodeId()};";
+                    TTLObjectProperty += "\n" + $@"rdfs:label ""{objectProperty.PropertyInfo.DescriptiveName()}""@en.";
 
                     TTLObjectProperties.Add(TTLObjectProperty);
                 }

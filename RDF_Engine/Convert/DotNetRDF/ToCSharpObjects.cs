@@ -1,4 +1,5 @@
 ﻿using BH.oM.Base;
+using BH.oM.RDF;
 using System;
 using System.Collections;
 using System.Collections.Generic;
@@ -22,8 +23,9 @@ namespace BH.Engine.RDF
 
             foreach (OntologyResource individual in topIndividuals)
             {
-                object bhomInstance = individual.ToCSharpObject(dotNetRDFOntology);
+                object bhomInstance = individual.ToCSharpObject(dotNetRDFOntology, out List<OWLObjectProperty> owlObjectProperties);
                 result.Add(bhomInstance);
+                result.AddRange(owlObjectProperties);
             }
 
             return result;

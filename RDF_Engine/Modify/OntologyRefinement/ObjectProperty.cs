@@ -11,34 +11,31 @@ namespace BH.Engine.RDF
 {
     public static partial class Modify
     {
-        public static CSharpGraph AddRangeObjectProperty(CSharpGraph cSharpGraph, ObjectProperty objectPropertyToModify, Type range)
-        {
-            CSharpGraph cSharpGraph_deepclone = cSharpGraph.DeepClone();
-
-            ObjectProperty newProp = new ObjectProperty() { DomainClass = objectPropertyToModify.DomainClass, RangeClass = range };
-
-            cSharpGraph_deepclone.ObjectProperties.Add(newProp);
-
-            return cSharpGraph_deepclone;
-        }
-
-
-
-   
         public static CSharpGraph ObjectProperty(CSharpGraph cSharpGraph, ObjectProperty objectPropertyToModify, OWLObjectPropertyType owlObjectPropertyType)
         {
             CSharpGraph cSharpGraph_deepclone = cSharpGraph.DeepClone();
 
-            ObjectProperty objProp = cSharpGraph_deepclone.ObjectProperties.Where(op => op.Equals(objectPropertyToModify)).FirstOrDefault();
-            if (objProp == null)
+            for (int i = 0; i < cSharpGraph_deepclone.ObjectProperties.Count; i++)
             {
-                Log.RecordError($"Could not find ObjectProperty of name {objectPropertyToModify}.");
+                var objPropert = cSharpGraph_deepclone.ObjectProperties.ElementAtOrDefault(i);
+
+                if (objPropert == null || !objPropert.Equals(objectPropertyToModify))
+                    continue;
+
+                OWLObjectProperty oWLObjectProperty = new OWLObjectProperty();
+                oWLObjectProperty.DomainClass = objPropert.DomainClass;
+                oWLObjectProperty.RangeClass = objPropert.RangeClass;
+                oWLObjectProperty.PropertyInfo = objPropert.PropertyInfo;
+
+                oWLObjectProperty.OWLObjectPropertyType = owlObjectPropertyType;
+
+                cSharpGraph_deepclone.ObjectProperties[i] = oWLObjectProperty;
+
                 return cSharpGraph_deepclone;
             }
 
-            objProp.OWLObjectPropertyType = owlObjectPropertyType;
-
-            return cSharpGraph_deepclone;
+            Log.RecordError($"Could not find ObjectProperty of name {objectPropertyToModify}.");
+            return cSharpGraph;
         }
     }
 }

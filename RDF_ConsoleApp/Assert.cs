@@ -27,19 +27,25 @@ namespace BH.Test.RDF
     // If we can get other unit testing libraries to work, calls to this class can simply be replaced.
     public static partial class Assert
     {
-        public static void IsTTLParsable(string ttl)
+        public static bool IsTTLParsable(string ttl)
         {
             try
             {
                 OntologyGraph g = BH.Engine.RDF.Convert.ToDotNetRDF(ttl);
 
                 if (g == null)
+                {
                     RecordTestFailure("TTL was not parsable.");
+                    throw new ArgumentException("TTL was not parsable.");
+                }
             }
             catch
             {
                 RecordTestFailure("TTL was not parsable.");
+                throw new ArgumentException("TTL was not parsable.");
             }
+
+            return true;
         }
 
         public static void IsNotNull(object value, string error = null)
