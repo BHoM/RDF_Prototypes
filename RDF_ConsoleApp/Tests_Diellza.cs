@@ -31,13 +31,15 @@ namespace BH.oM.CodeAnalysis.ConsoleApp
 
 
             IGraph g = new Graph();
-           
+
 
             // Set the base uri for the ontology.
             //g.BaseUri = new Uri("https://github.com/BHoM/");
 
-            // Set the namespace of our Ontology
-          //  g.NamespaceMap.AddNamespace("bhom", UriFactory.Create("http://visualdataweb.org/newOntology/"));
+            /// // Set the namespace of our Ontology
+            /// / // Set the namespace of our Ontology
+            /// added comment
+            //  g.NamespaceMap.AddNamespace("bhom", UriFactory.Create("http://visualdataweb.org/newOntology/"));
 
             g.NamespaceMap.AddNamespace("owl", UriFactory.Create("http://www.w3.org/2002/07/owl"));
 
