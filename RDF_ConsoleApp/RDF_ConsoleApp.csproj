@@ -8,10 +8,11 @@
     <OutputType>Exe</OutputType>
     <RootNamespace>Development</RootNamespace>
     <AssemblyName>Development</AssemblyName>
-    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
     <Deterministic>true</Deterministic>
+    <TargetFrameworkProfile />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
@@ -96,13 +97,13 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assert.cs" />
+    <Compile Include="Program.cs" />
     <Compile Include="TTLTests\EqualityTests.cs" />
     <Compile Include="TTLTests\FromTTLTests.cs" />
     <Compile Include="TTLTests\Test.cs" />
     <Compile Include="TestObjectClass.cs" />
     <Compile Include="WebVOWLTests.cs" />
     <Compile Include="Tests_Diellza.cs" />
-    <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="TTLTests\ToTTLTests.cs" />
   </ItemGroup>
