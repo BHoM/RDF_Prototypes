@@ -196,6 +196,8 @@ xcopy "$(TargetDir)$(TargetFileName)"  "$(SolutionDir)Build\" /F /R /Y /I
 xcopy "$(TargetDir)Newtonsoft.Json.dll" "$(SolutionDir)Build\" /F /R /Y /I
 xcopy "$(TargetDir)dotNetRDF.dll" "$(SolutionDir)Build\" /F /R /Y /I
 xcopy "$(TargetDir)VDS.Common.dll" "$(SolutionDir)Build\" /F /R /Y /I
+xcopy "$(SolutionDir)repo-config.ttl" "C:\ProgramData\BHoM" /Y
+
 
 EXIT 0</PostBuildEvent>
   </PropertyGroup>
