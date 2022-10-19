@@ -41,6 +41,10 @@
     <Reference Include="BHoM_Engine">
       <HintPath>C:\ProgramData\BHoM\Assemblies\BHoM_Engine.dll</HintPath>
     </Reference>
+    <Reference Include="Geometry_oM, Version=5.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\ProgramData\BHoM\Assemblies\Geometry_oM.dll</HintPath>
+    </Reference>
     <Reference Include="netstandard, Version=2.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51" />
     <Reference Include="System" />
     <Reference Include="System.Core" />
@@ -58,6 +62,8 @@
     <Compile Include="CSharpGraph\IndividualObjectProperty.cs" />
     <Compile Include="CSharpGraph\IndividualRelation.cs" />
     <Compile Include="CSharpGraph\ObjectProperty.cs" />
+    <Compile Include="IRelation.cs" />
+    <Compile Include="IsRepresentationOf.cs" />
     <Compile Include="OntologyTypeMap.cs" />
     <Compile Include="Base64JsonSerialized.cs" />
     <Compile Include="CSharpGraph\CSharpGraph.cs" />
@@ -69,7 +75,7 @@
     <Compile Include="WebVOWL\IsA.cs" />
     <Compile Include="WebVOWL\HasProperty.cs" />
     <Compile Include="WebVOWL\IsSubclassOf.cs" />
-    <Compile Include="IRelation.cs" />
+    <Compile Include="IDirectionalRelation.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

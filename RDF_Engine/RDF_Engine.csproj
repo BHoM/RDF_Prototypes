@@ -44,6 +44,12 @@
     <Reference Include="dotNetRDF, Version=2.7.2.0, Culture=neutral, PublicKeyToken=6055ffe4c97cc780, processorArchitecture=MSIL">
       <HintPath>..\packages\dotNetRDF.2.7.2\lib\net40\dotNetRDF.dll</HintPath>
     </Reference>
+    <Reference Include="Geometry_Engine">
+      <HintPath>C:\ProgramData\BHoM\Assemblies\Geometry_Engine.dll</HintPath>
+    </Reference>
+    <Reference Include="Geometry_oM">
+      <HintPath>C:\ProgramData\BHoM\Assemblies\Geometry_oM.dll</HintPath>
+    </Reference>
     <Reference Include="HtmlAgilityPack, Version=1.11.34.0, Culture=neutral, PublicKeyToken=bd319b19eaf3b43a, processorArchitecture=MSIL">
       <HintPath>..\packages\HtmlAgilityPack.1.11.34\lib\Net45\HtmlAgilityPack.dll</HintPath>
     </Reference>
@@ -86,6 +92,8 @@
     <Compile Include="Convert\ToBase64JsonSerialized.cs" />
     <Compile Include="Convert\ToBHoM.cs" />
     <Compile Include="Convert\TTL\ToTTLGraph.cs" />
+    <Compile Include="Create\IsRepresentationOf.cs" />
+    <Compile Include="Create\OWLObjectProperty.cs" />
     <Compile Include="Create\Testing\CustomObject.cs" />
     <Compile Include="Create\Testing\RandomObject.cs" />
     <Compile Include="Create\Testing\RandomObjects.cs" />
@@ -100,6 +108,7 @@
     <Compile Include="Query\DotNetRDF\Individuals.cs" />
     <Compile Include="Query\GuidFromString.cs" />
     <Compile Include="Query\IsListOfOntologyClasses.cs" />
+    <Compile Include="Query\ObjectIdentity.cs" />
     <Compile Include="Query\SHA256Hash.cs" />
     <Compile Include="_Types\ICustomRDFType.cs" />
     <Compile Include="_Types\ListPropertyType.cs" />

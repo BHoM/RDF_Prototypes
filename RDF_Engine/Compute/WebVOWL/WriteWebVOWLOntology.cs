@@ -44,7 +44,7 @@ namespace BH.Engine.RDF
 
         private static void WriteWebVOWLOntology(List<TypeInfo> oMTypes, LocalRepositorySettings settings, string fileName = null, HashSet<string> exceptions = null, int relationRecursion = 0)
         {
-            Dictionary<TypeInfo, List<IRelation>> dictionaryGraph = oMTypes.DictionaryGraphFromTypeInfos();
+            Dictionary<TypeInfo, List<IDirectionalRelation>> dictionaryGraph = oMTypes.DictionaryGraphFromTypeInfos();
             string webVOWLJson = Engine.RDF.Convert.ToWebVOWLJson(dictionaryGraph, settings, internalNamespaces: new HashSet<string>(oMTypes.Select(t => t.Namespace)), exceptions: exceptions, relationRecursion: relationRecursion);
 
             if (string.IsNullOrWhiteSpace(fileName))

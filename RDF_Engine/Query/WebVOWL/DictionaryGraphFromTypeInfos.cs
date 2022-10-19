@@ -15,16 +15,16 @@ namespace BH.Engine.RDF
     {
         [Description("Extracts a Dictionary representation of a Graph established by the input types and their code relationships." +
             "The Key of the dictionary is the Type, while the Value is the list of edges (relationships).")]
-        public static Dictionary<TypeInfo, List<IRelation>> DictionaryGraphFromTypeInfos(this IEnumerable<TypeInfo> oMTypes)
+        public static Dictionary<TypeInfo, List<IDirectionalRelation>> DictionaryGraphFromTypeInfos(this IEnumerable<TypeInfo> oMTypes)
         {
-            Dictionary<TypeInfo, List<IRelation>> dictionaryGraph = new Dictionary<TypeInfo, List<IRelation>>();
+            Dictionary<TypeInfo, List<IDirectionalRelation>> dictionaryGraph = new Dictionary<TypeInfo, List<IDirectionalRelation>>();
 
             foreach (TypeInfo oMType in oMTypes)
             {
                 // Check if this Type has been already added to the Graph, otherwise initialise the edges list.
-                List<IRelation> edges = null;
+                List<IDirectionalRelation> edges = null;
                 if (!dictionaryGraph.TryGetValue(oMType, out edges))
-                    edges = new List<IRelation>();
+                    edges = new List<IDirectionalRelation>();
 
                 // Parse the existing code-relationships.
                 var relationsFromType = oMType.RelationsFromType();

@@ -46,7 +46,7 @@ namespace BH.Engine.RDF
             return $"{propertyInfo.DeclaringType.FullNameValidChars()}.{propertyInfo.Name}";
         }
 
-        public static string _UniqueNodeId(this IRelation relation)
+        public static string _UniqueNodeId(this IDirectionalRelation relation)
         {
             return $"{(relation.Subject as dynamic)?.Name ?? relation.Subject.GetType().Name}-{relation.GetType().Name}-{(relation.Object as dynamic)?.Name ?? relation.Object.GetType().Name}_{relation.Hash()}";
         }

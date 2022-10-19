@@ -22,7 +22,7 @@ namespace BH.Engine.RDF
         /***************************************************/
 
         [Description("Convert a Graph ontological representation of (BHoM) types and their relations into a Json format readable by WebVOWL (http://vowl.visualdataweb.org/webvowl.html).")]
-        public static string ToWebVOWLJson(Dictionary<TypeInfo, List<IRelation>> dictionaryGraph, LocalRepositorySettings settings, HashSet<string> internalNamespaces = null, HashSet<string> exceptions = null, int relationRecursion = 0)
+        public static string ToWebVOWLJson(Dictionary<TypeInfo, List<IDirectionalRelation>> dictionaryGraph, LocalRepositorySettings settings, HashSet<string> internalNamespaces = null, HashSet<string> exceptions = null, int relationRecursion = 0)
         {
             if (dictionaryGraph == null)
                 return null;
@@ -52,8 +52,8 @@ namespace BH.Engine.RDF
             JArray propertyAttributeArray = new JArray();
 
             // Iterate the IRelations in the dictionary. Each IRelation will be a link in the graph.
-            List<IRelation> allRelations = dictionaryGraph.Values.SelectMany(v => v).ToList();
-            foreach (IRelation relation in allRelations)
+            List<IDirectionalRelation> allRelations = dictionaryGraph.Values.SelectMany(v => v).ToList();
+            foreach (IDirectionalRelation relation in allRelations)
             {
                 AddWebOwlRelationNodes(relation as dynamic, classArray, classAttributeArray, addedWebVOWLNodeIds, settings: settings, propertyArray: propertyArray, propertyAttributeArray: propertyAttributeArray, internalNamespaces: internalNamespaces, exceptions: exceptions, recursionLevel: relationRecursion);
             }

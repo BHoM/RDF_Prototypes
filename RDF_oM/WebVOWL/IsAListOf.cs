@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 namespace BH.oM.RDF
 {
     [Description("Can be used to describe that a thing is list of classes.")]
-    public class IsAListOf : IRelation
+    public class IsAListOf : IDirectionalRelation
     {
         [Description("Thing that is a list of classes.")]
         public object Subject { get; set; }

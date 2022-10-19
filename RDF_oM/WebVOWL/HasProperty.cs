@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 namespace BH.oM.RDF
 {
     [Description("Describes a property owned by a thing or class of things.")]
-    public class HasProperty : IRelation
+    public class HasProperty : IDirectionalRelation
     {
         [Description("Thing or class that owns a certain property.")]
         public object Subject { get; set; }

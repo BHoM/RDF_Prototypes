@@ -14,17 +14,17 @@ namespace BH.Engine.RDF
 {
     public static partial class Query
     {
-        public static List<IRelation> RelationsFromType(this Type type, bool recurse = false)
+        public static List<IDirectionalRelation> RelationsFromType(this Type type, bool recurse = false)
         {
-            List<IRelation> resultRelations = new List<IRelation>();
+            List<IDirectionalRelation> resultRelations = new List<IDirectionalRelation>();
 
             if (!type.IsBHoMType())
-                return new List<IRelation>();
+                return new List<IDirectionalRelation>();
 
             PropertyInfo[] properties = null;
             properties = type.GetProperties(System.Reflection.BindingFlags.Public | System.Reflection.BindingFlags.Instance | System.Reflection.BindingFlags.DeclaredOnly);
 
-            IRelation propertyRelation = null;
+            IDirectionalRelation propertyRelation = null;
             foreach (PropertyInfo pInfo in properties)
             {
                 if (type.IsInterface)

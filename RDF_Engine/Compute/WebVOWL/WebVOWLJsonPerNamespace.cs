@@ -28,7 +28,7 @@ namespace BH.Engine.RDF
             foreach (var kv in oMTypesGroupsPerNamespace)
             {
                 // Extract a dictionary representation of the BHoM Ontology Graph
-                Dictionary<TypeInfo, List<IRelation>> dictionaryGraph = kv.Value.DictionaryGraphFromTypeInfos();
+                Dictionary<TypeInfo, List<IDirectionalRelation>> dictionaryGraph = kv.Value.DictionaryGraphFromTypeInfos();
                 string webVOWLJson = Engine.RDF.Convert.ToWebVOWLJson(dictionaryGraph, settings, new HashSet<string> { kv.Key });
 
                 result[kv.Key] = webVOWLJson;

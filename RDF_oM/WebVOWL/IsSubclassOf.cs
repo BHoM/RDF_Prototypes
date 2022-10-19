@@ -10,7 +10,7 @@ namespace BH.oM.RDF
 {
     [Description("Describes a class that is a subclass of another class. " +
         "When used with BHoM types, this describes C# inheritance.")]
-    public class IsSubclassOf : IRelation
+    public class IsSubclassOf : IDirectionalRelation
     {
         [Description("The parent.")]
         public object Subject { get; set; }

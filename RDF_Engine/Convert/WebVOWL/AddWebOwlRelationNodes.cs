@@ -74,7 +74,7 @@ namespace BH.Engine.RDF
             if (recursionLevel > 0)
             {
                 var relations = rangeType.RelationsFromType();
-                foreach (IRelation relation in relations)
+                foreach (IDirectionalRelation relation in relations)
                     AddWebOwlRelationNodes(relation as dynamic, classArray, classAttributeArray, addedWebVOWLNodeIds, settings: settings, propertyArray: propertyArray, propertyAttributeArray: propertyAttributeArray, internalNamespaces: internalNamespaces, exceptions: exceptions, recursionLevel: recursionLevel - 1);
             }
         }
@@ -129,7 +129,7 @@ namespace BH.Engine.RDF
             if (recursionLevel > 0)
             {
                 var relations = rangeType.RelationsFromType();
-                foreach (IRelation relation in relations)
+                foreach (IDirectionalRelation relation in relations)
                     AddWebOwlRelationNodes(relation as dynamic, classArray, classAttributeArray, addedWebVOWLNodeIds, settings: settings, propertyArray: propertyArray, propertyAttributeArray: propertyAttributeArray, internalNamespaces: internalNamespaces, exceptions: exceptions, recursionLevel: recursionLevel - 1);
             }
         }
@@ -189,7 +189,7 @@ namespace BH.Engine.RDF
             if (recursionLevel > 0)
             {
                 var relations = rangeType.RelationsFromType();
-                foreach (IRelation relation in relations)
+                foreach (IDirectionalRelation relation in relations)
                     AddWebOwlRelationNodes(relation as dynamic, classArray, classAttributeArray, addedWebVOWLNodeIds, settings: settings, propertyArray: propertyArray, propertyAttributeArray: propertyAttributeArray, internalNamespaces: internalNamespaces, exceptions: exceptions, recursionLevel: recursionLevel - 1);
             }
         }
@@ -213,13 +213,13 @@ namespace BH.Engine.RDF
 
             if (domainType == null)
             {
-                Log.RecordError($"The {nameof(HasProperty)} relation `{hasPropertyRelation.UniqueNodeId()}` has its {nameof(IRelation.Subject)} of type `{hasPropertyRelation.Object.GetType().FullName}` instead of {nameof(Type)}.");
+                Log.RecordError($"The {nameof(HasProperty)} relation `{hasPropertyRelation.UniqueNodeId()}` has its {nameof(IDirectionalRelation.Subject)} of type `{hasPropertyRelation.Object.GetType().FullName}` instead of {nameof(Type)}.");
                 return;
             }
 
             if (rangePropertyInfo == null)
             {
-                Log.RecordError($"The {nameof(HasProperty)} relation `{hasPropertyRelation.UniqueNodeId()}` has its {nameof(IRelation.Object)} of type `{hasPropertyRelation.Object.GetType().FullName}` instead of {nameof(PropertyInfo)}.");
+                Log.RecordError($"The {nameof(HasProperty)} relation `{hasPropertyRelation.UniqueNodeId()}` has its {nameof(IDirectionalRelation.Object)} of type `{hasPropertyRelation.Object.GetType().FullName}` instead of {nameof(PropertyInfo)}.");
                 return;
             }
 
@@ -266,7 +266,7 @@ namespace BH.Engine.RDF
                 if (recursionLevel > 0)
                 {
                     var relations = rangePropertyInfo.PropertyType.RelationsFromType();
-                    foreach (IRelation relation in relations)
+                    foreach (IDirectionalRelation relation in relations)
                         AddWebOwlRelationNodes(relation as dynamic, classArray, classAttributeArray, addedWebVOWLNodeIds, settings: settings, propertyArray: propertyArray, propertyAttributeArray: propertyAttributeArray, internalNamespaces: internalNamespaces, exceptions: exceptions, recursionLevel: recursionLevel - 1);
                 }
 
@@ -314,7 +314,7 @@ namespace BH.Engine.RDF
                 if (recursionLevel > 0)
                 {
                     var relations = ienumerableType.RelationsFromType();
-                    foreach (IRelation relation in relations)
+                    foreach (IDirectionalRelation relation in relations)
                         AddWebOwlRelationNodes(relation as dynamic, classArray, classAttributeArray, addedWebVOWLNodeIds, settings, propertyArray: propertyArray, propertyAttributeArray: propertyAttributeArray, internalNamespaces: internalNamespaces, exceptions: exceptions, recursionLevel: recursionLevel - 1);
                 }
                 return;
