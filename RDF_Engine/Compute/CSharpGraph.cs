@@ -96,7 +96,6 @@ namespace BH.Engine.RDF
                 }
                 else
                     AddToOntology(pi as dynamic, ontologySettings, obj, fromProperty);
-
             }
         }
 
@@ -113,8 +112,30 @@ namespace BH.Engine.RDF
             // In C#'s Reflection, relations are represented with PropertyInfos.
             // In an ontology, PropertyInfos may correspond to either ObjectProperties or DataProperties.
 
-            Type domainType = pi.DeclaringType;
+            Type domainType = null;
             Type rangeType = pi.PropertyType;
+
+            // Get all parent classes and parent interfaces of the Declaring type
+            List<Type> parentTypes = pi.DeclaringType.BaseTypes();
+
+            // Get all properties of them and
+            // if the input pi is among the parentProperties,
+            // then the domain type is the parent type.
+            foreach (Type parentType in parentTypes)
+            {
+                var parentProperties = parentType.GetProperties(BindingFlags.DeclaredOnly);
+                
+                if (parentProperties.Contains(pi))
+                {
+                    domainType = parentType;
+                    break;
+                }
+            }
+
+            if (domainType == null)
+                domainType = pi.DeclaringType;
+
+
 
             if (!domainType.IsOntologyClass())
                 return; // do not add Properties of classes that are not Ontology classes (e.g. if domainType is a String, we do not want to add its property Chars).
@@ -141,7 +162,7 @@ namespace BH.Engine.RDF
                             AddIndividualToOntology(item, ontologySettings, pi);
 
                             // Recurse for this individual's relations.
-                            PropertyInfo[] listItemProps = item?.GetType().GetProperties() ?? new PropertyInfo[] { };
+                            PropertyInfo[] listItemProps = item?.GetType().GetProperties(BindingFlags.DeclaredOnly) ?? new PropertyInfo[] { };
                             AddToOntology(listItemProps, ontologySettings, item, individualFromProperty);
                         }
                     }
@@ -244,7 +265,7 @@ namespace BH.Engine.RDF
             }
 
             // Get this individual's properties.
-            List<PropertyInfo> properties = individualType.GetProperties().ToList();
+            List<PropertyInfo> properties = individualType.GetProperties(BindingFlags.DeclaredOnly).ToList();
             BHoMObject individualAsBHoMObj = individual as BHoMObject;
             if (individualAsBHoMObj != null && !typeof(CustomObjectType).IsAssignableFrom(individualType))
             {
