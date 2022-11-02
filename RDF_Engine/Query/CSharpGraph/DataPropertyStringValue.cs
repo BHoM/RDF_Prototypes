@@ -22,7 +22,7 @@ namespace BH.Engine.RDF
         public static string DataPropertyStringValue(object idpValue)
         {
             Type individualObjectType = idpValue.GetType();
-            if (OntologyTypeMap.ToOntologyDataType.ContainsKey(individualObjectType))
+            if (OntologyDataTypeMap.ToOntologyDataType.ContainsKey(individualObjectType))
                 return idpValue.ToString(); // we can just return the ToString()
 
             // We must use our fallback for unknown conversions, serializing to Json.

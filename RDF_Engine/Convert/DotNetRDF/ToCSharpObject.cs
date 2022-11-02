@@ -213,7 +213,7 @@ namespace BH.Engine.RDF
 
         private static Type GetPropertyType(this string valueName)
         {
-            return BH.oM.RDF.OntologyTypeMap.FromOntologyDataType.Where(kv => kv.Key.Contains(valueName.OnlyAlphabetic())).FirstOrDefault().Value ?? typeof(object);
+            return BH.oM.RDF.OntologyDataTypeMap.FromOntologyDataType.Where(kv => kv.Key.Contains(valueName.OnlyAlphabetic())).FirstOrDefault().Value ?? typeof(object);
         }
 
         /*************************************/

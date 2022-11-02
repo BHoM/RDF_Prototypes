@@ -16,7 +16,7 @@ namespace BH.Engine.RDF
         public static string ToOntologyDataType(this Type t)
         {
             string ontologyDataType = null;
-            OntologyTypeMap.ToOntologyDataType.TryGetValue(t, out ontologyDataType);
+            OntologyDataTypeMap.ToOntologyDataType.TryGetValue(t, out ontologyDataType);
 
             if (ontologyDataType != null)
                 return ontologyDataType;
