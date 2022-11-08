@@ -112,7 +112,7 @@ namespace BH.Engine.RDF
             // In C#'s Reflection, relations are represented with PropertyInfos.
             // In an ontology, PropertyInfos may correspond to either ObjectProperties or DataProperties.
 
-            Type domainType = null;
+            Type domainType = pi.DeclaringType;
             Type rangeType = pi.PropertyType;
 
             // Get all parent classes and parent interfaces of the Declaring type
@@ -131,11 +131,6 @@ namespace BH.Engine.RDF
                     break;
                 }
             }
-
-            if (domainType == null)
-                domainType = pi.DeclaringType;
-
-
 
             if (!domainType.IsOntologyClass())
                 return; // do not add Properties of classes that are not Ontology classes (e.g. if domainType is a String, we do not want to add its property Chars).
