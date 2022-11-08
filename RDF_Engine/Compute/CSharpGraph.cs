@@ -126,7 +126,7 @@ namespace BH.Engine.RDF
             {
                 var parentProperties = parentType.GetProperties(BindingFlags.DeclaredOnly | BindingFlags.Instance | BindingFlags.Public);
 
-                if (parentProperties.Contains(pi))
+                if (parentProperties.Any(pp => pp.Name == pi.Name))
                 {
                     domainType = parentType;
                     break;
