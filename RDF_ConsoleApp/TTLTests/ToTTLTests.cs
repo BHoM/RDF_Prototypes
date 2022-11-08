@@ -108,7 +108,8 @@ namespace BH.Test.RDF
             room.Name = "A room object";
 
             List<object> objectList = new List<object>() { room };
-            string TTLGraph = objectList.TTLGraph(m_ontologySettings);
+            CSharpGraph CSharpGraph = objectList.CSharpGraph(m_ontologySettings);
+            string TTLGraph = CSharpGraph.ToTTLGraph();
 
             Assert.IsTTLParsable(TTLGraph);
 
