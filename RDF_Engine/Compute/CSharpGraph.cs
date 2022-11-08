@@ -123,7 +123,7 @@ namespace BH.Engine.RDF
             // then the domain type is the parent type.
             foreach (Type parentType in parentTypes)
             {
-                var parentProperties = parentType.GetProperties(BindingFlags.DeclaredOnly);
+                var parentProperties = parentType.GetProperties(BindingFlags.DeclaredOnly | BindingFlags.Instance | BindingFlags.Public);
                 
                 if (parentProperties.Contains(pi))
                 {
@@ -157,7 +157,7 @@ namespace BH.Engine.RDF
                             AddIndividualToOntology(item, ontologySettings, pi);
 
                             // Recurse for this individual's relations.
-                            PropertyInfo[] listItemProps = item?.GetType().GetProperties(BindingFlags.DeclaredOnly) ?? new PropertyInfo[] { };
+                            PropertyInfo[] listItemProps = item?.GetType().GetProperties(BindingFlags.DeclaredOnly | BindingFlags.Instance | BindingFlags.Public) ?? new PropertyInfo[] { };
                             AddToOntology(listItemProps, ontologySettings, item, individualFromProperty);
                         }
                     }
@@ -260,7 +260,7 @@ namespace BH.Engine.RDF
             }
 
             // Get this individual's properties.
-            List<PropertyInfo> properties = individualType.GetProperties(BindingFlags.DeclaredOnly).ToList();
+            List<PropertyInfo> properties = individualType.GetProperties(BindingFlags.DeclaredOnly | BindingFlags.Instance | BindingFlags.Public).ToList();
             BHoMObject individualAsBHoMObj = individual as BHoMObject;
             if (individualAsBHoMObj != null && !typeof(CustomObjectType).IsAssignableFrom(individualType))
             {
