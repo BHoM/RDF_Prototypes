@@ -51,7 +51,7 @@ namespace BH.Engine.RDF
             // Because the type could have been stored simply with a custom name (not a FullName that includes the namespace/assembly info),
             // we must limit this search by using the type name only. 
             IEnumerable<Type> allLoadedTypes = AppDomain.CurrentDomain.GetAssemblies()
-                .SelectMany(a => a.GetTypes()).Except(BH.Engine.Base.Query.AllTypeList()).Where(t => t.Name == customTypeName);
+                .SelectMany(a => a.TryGetTypes()).Except(BH.Engine.Base.Query.AllTypeList()).Where(t => t.Name == customTypeName);
 
             try
             {

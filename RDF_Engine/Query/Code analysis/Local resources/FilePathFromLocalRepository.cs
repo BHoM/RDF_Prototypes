@@ -54,9 +54,13 @@ namespace BH.Engine.RDF
 
             if (!repositoryRoot.IsValidRepositoryRootPath())
             {
-                Log.RecordWarning($"The path `{repositoryRoot}` that was specified in {nameof(LocalRepositorySettings)}.{nameof(LocalRepositorySettings.GitRootPath)} does not point to a valid repository root folder. " +
-                $"A valid 'repository root path' points to a directory that contains, among other repositories, also the BHoM repository." +
-                $"\nAn attempt to find a valid root path on disk will now be done.");
+                if (!string.IsNullOrWhiteSpace(repositoryRoot))
+                    Log.RecordWarning($"The path `{repositoryRoot}` that was specified in {nameof(LocalRepositorySettings)}.{nameof(LocalRepositorySettings.GitRootPath)} does not point to a valid repository root folder. " +
+                        $"A valid 'repository root path' points to a directory that contains, among other repositories, also the BHoM repository.");
+                else
+                    Log.RecordWarning($"No repository root path specified in {nameof(LocalRepositorySettings)}.{nameof(LocalRepositorySettings.GitRootPath)}.");
+
+                Log.RecordWarning($"An attempt to find a valid root path on disk will now be done.", doNotRepeat:true);
 
                 if (TryGetRepositoryRootPath(out repositoryRoot))
                 {
