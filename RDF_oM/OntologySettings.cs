@@ -18,7 +18,7 @@ namespace BH.oM.RDF
         public string OntologyDescription { get; set; } = $"New BHoM ontology";
         public string OntologyBaseAddress { get; set; } = "http://visualdataweb.org/";
 
-        public TBoxSettings TBoxSettings { get; set; } = new TBoxSettings();
+        public TBoxSettings TBoxSettings { get; set; } = new TBoxSettings() { CustomObjectTypesBaseAddress = "http://visualdataweb.org/" };
         public ABoxSettings ABoxSettings { get; set; } = new ABoxSettings();
     }
 
@@ -26,7 +26,7 @@ namespace BH.oM.RDF
     public class TBoxSettings : IObject
     {
         [Description("The base address where the ontology definition for Custom Types will be hosted. Custom Types are produced when computing an ontology that includes BHoM CustomObjects.")]
-        public string CustomObjectTypesBaseAddress { get; set; } = new OntologySettings().OntologyBaseAddress;//$"http://customizeMeFrom-OntologySettings.TBoxSettings.{nameof(CustomObjectTypesBaseAddress)}";
+        public string CustomObjectTypesBaseAddress { get; set; } = $"http://customizeMeFrom-OntologySettings.TBoxSettings.{nameof(CustomObjectTypesBaseAddress)}";
 
         [Description("Types found in this dictionary will use the corresponding string URI when converted to ontology.")]
         public Dictionary<Type, string> TypeUris { get; set; } = new Dictionary<Type, string>();
