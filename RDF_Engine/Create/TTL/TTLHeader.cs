@@ -27,8 +27,6 @@ namespace BH.Engine.RDF
             if (includeRdfs) header += "\n@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .";
             if (includeRdfs) header += "\n@prefix dc: <http://purl.org/dc/elements/1.1/> .";
 
-
-            
             header += "\n@base   " + $@"<{ontologyAddress}> .";
             
 
@@ -37,12 +35,6 @@ namespace BH.Engine.RDF
             header += "\n"+$@"<{ontologyAddress}> rdf:type owl:Ontology;
                           dc:title ""{ontologyTitle}""@en;
                           dc:description ""{ontologyDescription}""@en.";
-
-
-
-            //header += "\n# TypeUris: " + $@"{string.Join(";", ontologySettings.TBoxSettings.TypeUris.Select(KV => KV.Value.ToString() + "," + KV.Key.ToString()))}";
-            
-
 
             return header;
         }
