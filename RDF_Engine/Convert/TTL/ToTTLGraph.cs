@@ -37,7 +37,7 @@ namespace BH.Engine.RDF
             {
                 TTL = new StringBuilder();
 
-                TTL.Append(Create.TTLHeader(cSharpGraph.OntologySettings.OntologyTitle, cSharpGraph.OntologySettings.OntologyDescription, cSharpGraph.OntologySettings.OntologyBaseAddress));
+                TTL.Append(Create.TTLHeader(cSharpGraph.OntologySettings,cSharpGraph.OntologySettings.OntologyTitle, cSharpGraph.OntologySettings.OntologyDescription, cSharpGraph.OntologySettings.OntologyBaseAddress));
 
                 TTL.Append("Annotation Properties".TTLSectionTitle());
                 TTL.Append(string.Join("\n", Create.TTLAnnotationProperties()));
@@ -46,6 +46,33 @@ namespace BH.Engine.RDF
                 TTL.Append(string.Join("\n", cSharpGraph.TTLDataTypes(localRepositorySettings)));
 
                 TTL.Append("Classes".TTLSectionTitle());
+
+
+                // TypeUris
+
+                /*if (!object.Equals(cSharpGraph.OntologySettings.TBoxSettings.TreatCustomObjectsWithTypeKeyAsCustomObjectTypes, defaultSettings.OntologySettings.TBoxSettings.TreatCustomObjectsWithTypeKeyAsCustomObjectTypes))
+                {
+                    TTL.Append("\n#TreatCustomObjectsWithTypeKeyAsCustomObjectTypes: " + cSharpGraph.OntologySettings.TBoxSettings.TreatCustomObjectsWithTypeKeyAsCustomObjectTypes + " #TCOWTK");
+                }
+                */
+
+                if (cSharpGraph.OntologySettings.TBoxSettings.TreatCustomObjectsWithTypeKeyAsCustomObjectTypes != true) // add default property comparison
+                {
+                    TTL.Append("\n#TreatCustomObjectsWithTypeKeyAsCustomObjectTypes: " + cSharpGraph.OntologySettings.TBoxSettings.TreatCustomObjectsWithTypeKeyAsCustomObjectTypes + " #TCOWTK");
+                }
+
+                /*if (cSharpGraph.OntologySettings.TBoxSettings.DefaultBaseUriForUnknownTypes == true)
+                {
+                    TTL.Append("\n\n#TreatCustomObjectsWithTypeKeyAsCustomObjectTypes: " + cSharpGraph.OntologySettings.TBoxSettings.DefaultBaseUriForUnknownTypes + " #DBUFUT");
+                }
+                */
+
+                /*if (cSharpGraph.OntologySettings.TBoxSettings.CustomobjectsTypeKey == ) // If default
+                {
+                    TTL.Append("\n\n#CustomobjectsTypeKey: " + cSharpGraph.OntologySettings.TBoxSettings.CustomobjectsTypeKey + " #CTK");
+                }
+                */
+                
                 TTL.Append(string.Join("\n\n", cSharpGraph.TTLClasses(localRepositorySettings)));
 
                 TTL.Append("Object Properties".TTLSectionTitle());
@@ -57,9 +84,22 @@ namespace BH.Engine.RDF
                 if (cSharpGraph.AllIndividuals?.Any() ?? false)
                 {
                     TTL.Append("Individuals".TTLSectionTitle());
+                    TTL.Append("\n#IndividualsBaseAdress :URL " + cSharpGraph.OntologySettings.ABoxSettings.IndividualsBaseAddress + " #URL");
+
+                    if (cSharpGraph.OntologySettings.ABoxSettings.ConsiderDefaultPropertyValues != true) // replace with default settings!
+                    {
+                        TTL.Append("\n#ConsiderDefaultPropertyValues: " + cSharpGraph.OntologySettings.ABoxSettings.ConsiderDefaultPropertyValues + " #CDPV");
+                    }
+                    if (cSharpGraph.OntologySettings.ABoxSettings.ConsiderNullOrEmptyPropertyValues != false) // replace with default settings!
+                    {
+                        TTL.Append("\n#ConsiderNullOrEmptyPropertyValues: " + cSharpGraph.OntologySettings.ABoxSettings.ConsiderNullOrEmptyPropertyValues + " #CNOEPV");
+                    }
+
+
                     cSharpGraph.TTLIndividuals(localRepositorySettings, TTL);
                 }
             }
+
             catch { }
 
             if (sw != null)
