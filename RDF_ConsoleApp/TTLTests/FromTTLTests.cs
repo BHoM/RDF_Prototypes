@@ -144,9 +144,9 @@ namespace BH.Test.RDF
 
             Assert.IsTTLParsable(TTLGraph);
 
-            List<object> convertedObjs = BH.Engine.RDF.Compute.ReadTTL(TTLGraph);
+            Output<List<object>, OntologySettings> convertedObjs = BH.Engine.RDF.Compute.ReadTTL(TTLGraph);
 
-            Assert.IsEqual(customObject1, convertedObjs.First());
+            Assert.IsEqual(customObject1, convertedObjs.Item1.First());
 
             return TTLGraph;
         }
