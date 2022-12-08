@@ -37,7 +37,7 @@ namespace BH.Engine.RDF
             {
                 TTL = new StringBuilder();
 
-                TTL.Append(Create.TTLHeader(cSharpGraph.OntologySettings,cSharpGraph.OntologySettings.OntologyTitle, cSharpGraph.OntologySettings.OntologyDescription, cSharpGraph.OntologySettings.OntologyBaseAddress));
+                TTL.Append(Create.TTLHeader(cSharpGraph.OntologySettings, cSharpGraph.OntologySettings.OntologyTitle, cSharpGraph.OntologySettings.OntologyDescription, cSharpGraph.OntologySettings.OntologyBaseAddress));
 
                 TTL.Append("Annotation Properties".TTLSectionTitle());
                 TTL.Append(string.Join("\n", Create.TTLAnnotationProperties()));
@@ -47,32 +47,31 @@ namespace BH.Engine.RDF
 
                 TTL.Append("Classes".TTLSectionTitle());
 
+                // Write TBOX settings
+                var defaultTboxSettings = new TBoxSettings();
+                StringBuilder tBoxSettingsStringBuilder = new StringBuilder();
+                if (cSharpGraph.OntologySettings.TBoxSettings.TreatCustomObjectsWithTypeKeyAsCustomObjectTypes != defaultTboxSettings.TreatCustomObjectsWithTypeKeyAsCustomObjectTypes)
+                    tBoxSettingsStringBuilder.Append($"\n# {nameof(defaultTboxSettings.TreatCustomObjectsWithTypeKeyAsCustomObjectTypes)}: " + cSharpGraph.OntologySettings.TBoxSettings.TreatCustomObjectsWithTypeKeyAsCustomObjectTypes);
 
-                // TypeUris
+                if (cSharpGraph.OntologySettings.TBoxSettings.DefaultBaseUriForUnknownTypes != defaultTboxSettings.DefaultBaseUriForUnknownTypes)
+                    tBoxSettingsStringBuilder.Append($"\n# {nameof(defaultTboxSettings.DefaultBaseUriForUnknownTypes)}: " + cSharpGraph.OntologySettings.TBoxSettings.DefaultBaseUriForUnknownTypes);
 
-                /*if (!object.Equals(cSharpGraph.OntologySettings.TBoxSettings.TreatCustomObjectsWithTypeKeyAsCustomObjectTypes, defaultSettings.OntologySettings.TBoxSettings.TreatCustomObjectsWithTypeKeyAsCustomObjectTypes))
+                if (cSharpGraph.OntologySettings.TBoxSettings.CustomobjectsTypeKey != defaultTboxSettings.CustomobjectsTypeKey)
+                    tBoxSettingsStringBuilder.Append($"\n# {nameof(defaultTboxSettings.CustomobjectsTypeKey)}: " + cSharpGraph.OntologySettings.TBoxSettings.CustomobjectsTypeKey);
+
+                if (cSharpGraph.OntologySettings.TBoxSettings.TypeUris.Any())
                 {
-                    TTL.Append("\n#TreatCustomObjectsWithTypeKeyAsCustomObjectTypes: " + cSharpGraph.OntologySettings.TBoxSettings.TreatCustomObjectsWithTypeKeyAsCustomObjectTypes + " #TCOWTK");
-                }
-                */
-
-                if (cSharpGraph.OntologySettings.TBoxSettings.TreatCustomObjectsWithTypeKeyAsCustomObjectTypes != true) // add default property comparison
-                {
-                    TTL.Append("\n#TreatCustomObjectsWithTypeKeyAsCustomObjectTypes: " + cSharpGraph.OntologySettings.TBoxSettings.TreatCustomObjectsWithTypeKeyAsCustomObjectTypes + " #TCOWTK");
+                    string typeUriString = $@"{string.Join($"# {nameof(defaultTboxSettings.TypeUris)}:", cSharpGraph.OntologySettings.TBoxSettings.TypeUris.Select(KV => KV.Key.ToString() + ", " + KV.Value.ToString()))}";
+                    tBoxSettingsStringBuilder.Append($"\n# {nameof(defaultTboxSettings.TypeUris)}: " + typeUriString);
                 }
 
-                /*if (cSharpGraph.OntologySettings.TBoxSettings.DefaultBaseUriForUnknownTypes == true)
+                string tBoxSettingsString = tBoxSettingsStringBuilder.ToString();
+                if (tBoxSettingsString.Any())
                 {
-                    TTL.Append("\n\n#TreatCustomObjectsWithTypeKeyAsCustomObjectTypes: " + cSharpGraph.OntologySettings.TBoxSettings.DefaultBaseUriForUnknownTypes + " #DBUFUT");
+                    tBoxSettingsString = $"# {nameof(TBoxSettings)}" + tBoxSettingsString + $"\n# {nameof(TBoxSettings)}\n\n";
+                    TTL.Append(tBoxSettingsString);
                 }
-                */
 
-                /*if (cSharpGraph.OntologySettings.TBoxSettings.CustomobjectsTypeKey == ) // If default
-                {
-                    TTL.Append("\n\n#CustomobjectsTypeKey: " + cSharpGraph.OntologySettings.TBoxSettings.CustomobjectsTypeKey + " #CTK");
-                }
-                */
-                
                 TTL.Append(string.Join("\n\n", cSharpGraph.TTLClasses(localRepositorySettings)));
 
                 TTL.Append("Object Properties".TTLSectionTitle());
