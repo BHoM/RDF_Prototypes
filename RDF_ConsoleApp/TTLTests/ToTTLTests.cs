@@ -63,34 +63,7 @@ namespace BH.Test.RDF
             Assert.IsTTLParsable(TTLGraph);
         }
 
-        public static void CheckWritingOfTBoxABoxSettings()
-        {
-            Room room = new Room();
-            room.Perimeter = new Polyline() { ControlPoints = new List<Point>() { new Point(), new Point() { X = 5, Y = 5, Z = 5 }, new Point() { X = 99 } } };
-            room.Location = new Point();
-            room.Name = "A room object";
-
-            CustomObject co = new CustomObject();
-            co.CustomData[m_ontologySettings.TBoxSettings.CustomobjectsTypeKey] = "TestType";
-            List<Point> listOfObjects = new List<Point>() { new oM.Geometry.Point() { X = 101, Y = 102 }, new Point() { X = 201, Y = 202 } };
-            co.CustomData["testListObjects"] = listOfObjects;
-
-            List<object> objectList = new List<object>() { room, co };
-            string TTLGraph = objectList.TTLGraph(new OntologySettings()
-            {
-                TBoxSettings = new TBoxSettings()
-                {
-                    TreatCustomObjectsWithTypeKeyAsCustomObjectTypes = false,
-                    CustomobjectsTypeKey = "SomethingNotType",
-                    TypeUris = new Dictionary<Type, string>()
-                    {
-                        { typeof(Room), "http://someUri.com#room" }
-                    }
-                }
-            });
-
-            Assert.IsTTLParsable(TTLGraph);
-        }
+        
 
         public static void EncodeDecode()
         {
