@@ -80,20 +80,30 @@ namespace BH.Engine.RDF
                 TTL.Append("Data properties".TTLSectionTitle());
                 TTL.Append(string.Join("\n\n", cSharpGraph.TTLDataProperties(localRepositorySettings)));
 
+                // Write ABOX settings
+
+                var defaultAboxSettings = new ABoxSettings();
+                StringBuilder aBoxSettingsStringBuilder = new StringBuilder();
+
                 if (cSharpGraph.AllIndividuals?.Any() ?? false)
                 {
                     TTL.Append("Individuals".TTLSectionTitle());
-                    TTL.Append("\n#IndividualsBaseAdress :URL " + cSharpGraph.OntologySettings.ABoxSettings.IndividualsBaseAddress + " #URL");
 
-                    if (cSharpGraph.OntologySettings.ABoxSettings.ConsiderDefaultPropertyValues != true) // replace with default settings!
-                    {
-                        TTL.Append("\n#ConsiderDefaultPropertyValues: " + cSharpGraph.OntologySettings.ABoxSettings.ConsiderDefaultPropertyValues + " #CDPV");
-                    }
-                    if (cSharpGraph.OntologySettings.ABoxSettings.ConsiderNullOrEmptyPropertyValues != false) // replace with default settings!
-                    {
-                        TTL.Append("\n#ConsiderNullOrEmptyPropertyValues: " + cSharpGraph.OntologySettings.ABoxSettings.ConsiderNullOrEmptyPropertyValues + " #CNOEPV");
-                    }
+                    if (cSharpGraph.OntologySettings.ABoxSettings.IndividualsBaseAddress != defaultAboxSettings.IndividualsBaseAddress)
+                        aBoxSettingsStringBuilder.Append($"\n# {nameof(defaultAboxSettings.IndividualsBaseAddress)}: " + cSharpGraph.OntologySettings.ABoxSettings.IndividualsBaseAddress);
 
+                    if (cSharpGraph.OntologySettings.ABoxSettings.ConsiderDefaultPropertyValues != defaultAboxSettings.ConsiderDefaultPropertyValues)
+                        aBoxSettingsStringBuilder.Append($"\n# {nameof(defaultAboxSettings.ConsiderDefaultPropertyValues)}: " + cSharpGraph.OntologySettings.ABoxSettings.ConsiderDefaultPropertyValues);
+
+                    if (cSharpGraph.OntologySettings.ABoxSettings.ConsiderNullOrEmptyPropertyValues != defaultAboxSettings.ConsiderNullOrEmptyPropertyValues)
+                        aBoxSettingsStringBuilder.Append($"\n# {nameof(defaultAboxSettings.ConsiderNullOrEmptyPropertyValues)}: " + cSharpGraph.OntologySettings.ABoxSettings.ConsiderNullOrEmptyPropertyValues);
+
+                    string aBoxSettingsString = aBoxSettingsStringBuilder.ToString();
+                    if (aBoxSettingsString.Any())
+                    {
+                        aBoxSettingsString = $"# {nameof(ABoxSettings)}" + aBoxSettingsString + $"\n# {nameof(ABoxSettings)}\n\n";
+                        TTL.Append(aBoxSettingsString);
+                    }
 
                     cSharpGraph.TTLIndividuals(localRepositorySettings, TTL);
                 }

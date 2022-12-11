@@ -61,6 +61,10 @@ namespace BH.Engine.RDF
 
             if(!(customBaseAdress == null)) ontologySettings.TBoxSettings.CustomObjectTypesBaseAddress = customBaseAdress;
 
+
+            string tBoxSettingsSubString = Convert.GetStringBetweenCharacters(TTLtext, "# TBoxSettings", "# TBoxSettings");
+
+
             //string typeUri = Convert.GetStringBetweenCharacters(TTLtext, "# TypeUris: ", "#");
             //ontologySettings.TBoxSettings.TypeUris = typeUri.Split(';').ToDictionary(s => Type.GetType(s.Split(',').First()), s => s.Split(',').Last()) ;
 

@@ -58,7 +58,11 @@ namespace BH.Test.RDF
             co.CustomData["testListObjects"] = listOfObjects;
 
             List<object> objectList = new List<object>() { room, co };
-            string TTLGraph = objectList.TTLGraph(new OntologySettings());
+            string TTLGraph = objectList.TTLGraph(new OntologySettings() 
+            {
+                TBoxSettings = new TBoxSettings { TreatCustomObjectsWithTypeKeyAsCustomObjectTypes = false } ,
+                ABoxSettings = new ABoxSettings { IndividualsBaseAddress = "https://www.nondefaultURL.com"}
+            });
 
             Assert.IsTTLParsable(TTLGraph);
         }
