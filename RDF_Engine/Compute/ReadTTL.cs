@@ -13,6 +13,7 @@ using VDS.RDF.Writing;
 using BH.Engine.Base;
 using BH.oM.RDF;
 using BH.oM.Base.Attributes;
+using static System.Net.Mime.MediaTypeNames;
 
 namespace BH.Engine.RDF
 {
@@ -29,7 +30,6 @@ namespace BH.Engine.RDF
                 return new Output<List<object>, OntologySettings>();
 
             }
-            
 
             // ############### Ontology Settings ############### 
 
@@ -47,6 +47,7 @@ namespace BH.Engine.RDF
 
             // ############### TBOX Settings ############### 
 
+            // Custom Base Adress
             string customBaseAdress = null;
             string[] tokens = TTLtext.Split('#');
             foreach (string token in tokens)
@@ -61,42 +62,45 @@ namespace BH.Engine.RDF
 
             if(!(customBaseAdress == null)) ontologySettings.TBoxSettings.CustomObjectTypesBaseAddress = customBaseAdress;
 
-
-            string tBoxSettingsSubString = Convert.GetStringBetweenCharacters(TTLtext, "# TBoxSettings", "# TBoxSettings");
-
-
-            //string typeUri = Convert.GetStringBetweenCharacters(TTLtext, "# TypeUris: ", "#");
-            //ontologySettings.TBoxSettings.TypeUris = typeUri.Split(';').ToDictionary(s => Type.GetType(s.Split(',').First()), s => s.Split(',').Last()) ;
-
-            string treatAsCustomObjectTypes = Convert.GetStringBetweenCharacters(TTLtext, "#TreatCustomObjectsWithTypeKeyAsCustomObjectTypes: ", " #TCOWTK");
-            if (treatAsCustomObjectTypes != String.Empty)
-            {
-                ontologySettings.TBoxSettings.TreatCustomObjectsWithTypeKeyAsCustomObjectTypes = bool.Parse(treatAsCustomObjectTypes.ToLower());
-            }
             
+            // All 3 other Settings
+            TBoxSettings defaultTboxSettings = new TBoxSettings();
+            string tBoxSettingsSubString = Convert.GetStringBetweenCharacters(TTLtext, $"# {nameof(TBoxSettings)}", $"# {nameof(TBoxSettings)}");
+            string[] tBoxlines = tBoxSettingsSubString.Split(new string[] { "\r\n", "\r", "\n" }, StringSplitOptions.None);
 
-            string customObjectsTypeKey = Convert.GetStringBetweenCharacters(TTLtext, "# CustomobjectsTypeKey: ", "#");
-            ontologySettings.TBoxSettings.CustomobjectsTypeKey = customObjectsTypeKey;
+            string treatAsCustomObjectTypes = Convert.SearchAndReplaceString(tBoxlines, $"# {nameof(defaultTboxSettings.TreatCustomObjectsWithTypeKeyAsCustomObjectTypes)}: ");
+            if (treatAsCustomObjectTypes != String.Empty)
+                ontologySettings.TBoxSettings.TreatCustomObjectsWithTypeKeyAsCustomObjectTypes = bool.Parse(treatAsCustomObjectTypes.ToLower());
+            
+            string customObjectsTypeKey = Convert.SearchAndReplaceString(tBoxlines, $"# {nameof(defaultTboxSettings.CustomobjectsTypeKey)}: ");
+            if (customObjectsTypeKey != String.Empty)
+                ontologySettings.TBoxSettings.CustomobjectsTypeKey = customObjectsTypeKey;
+
+            string typeUri = Convert.SearchAndReplaceString(tBoxlines, $"# {nameof(defaultTboxSettings.TypeUris)}: ");
+            if (typeUri != String.Empty)
+                ontologySettings.TBoxSettings.TypeUris = typeUri.Split(';').ToDictionary(s => Type.GetType(s.Split(',').First()), s => s.Split(',').Last());
+
 
 
             // ############### ABOX Settings ############### 
 
-            string individualBaseAdress = Convert.GetStringBetweenCharacters(TTLtext, "#IndividualsBaseAdress :URL ", " #URL");
-            ontologySettings.ABoxSettings.IndividualsBaseAddress = individualBaseAdress;
+            ABoxSettings defaultAboxSettings = new ABoxSettings();
+            string aBoxSettingsSubString = Convert.GetStringBetweenCharacters(TTLtext, $"# {nameof(ABoxSettings)}", $"# {nameof(ABoxSettings)}");
+            string[] aBoxlines = aBoxSettingsSubString.Split(new string[] { "\r\n", "\r", "\n" }, StringSplitOptions.None);
 
-            string considerDefaultPropVal = Convert.GetStringBetweenCharacters(TTLtext, "#ConsiderDefaultPropertyValues: ", " #CDPV");
-            if (considerDefaultPropVal.IsNullOrEmpty())
-            {
+            string individualBaseAdress = Convert.SearchAndReplaceString(aBoxlines, $"# {nameof(defaultAboxSettings.IndividualsBaseAddress)}: ");
+            if (individualBaseAdress != String.Empty)
+                ontologySettings.ABoxSettings.IndividualsBaseAddress = individualBaseAdress;
+
+            string considerDefaultPropVal = Convert.SearchAndReplaceString(aBoxlines, $"# {nameof(defaultAboxSettings.ConsiderDefaultPropertyValues)}: ");
+            if (considerDefaultPropVal != String.Empty)
                 ontologySettings.ABoxSettings.ConsiderDefaultPropertyValues = bool.Parse(considerDefaultPropVal.ToLower());
-            }
-            
-            string considerNullPropVal = Convert.GetStringBetweenCharacters(TTLtext, "#ConsiderNullOrEmptyPropertyValues: ", " #CNOEPV");
-            if (considerNullPropVal.IsNullOrEmpty())
-            {
+
+            string considerNullPropVal = Convert.SearchAndReplaceString(aBoxlines, $"# {nameof(defaultAboxSettings.ConsiderNullOrEmptyPropertyValues)}: ");
+            if (considerDefaultPropVal != String.Empty)
                 ontologySettings.ABoxSettings.ConsiderNullOrEmptyPropertyValues = bool.Parse(considerNullPropVal.ToLower());
-            }
             
-            
+
 
             Output<List<object>, OntologySettings> output = new Output<List<object>, OntologySettings>
             {

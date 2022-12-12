@@ -48,7 +48,7 @@ namespace BH.Engine.RDF
                 TTL.Append("Classes".TTLSectionTitle());
 
                 // Write TBOX settings
-                var defaultTboxSettings = new TBoxSettings();
+                TBoxSettings defaultTboxSettings = new TBoxSettings();
                 StringBuilder tBoxSettingsStringBuilder = new StringBuilder();
                 if (cSharpGraph.OntologySettings.TBoxSettings.TreatCustomObjectsWithTypeKeyAsCustomObjectTypes != defaultTboxSettings.TreatCustomObjectsWithTypeKeyAsCustomObjectTypes)
                     tBoxSettingsStringBuilder.Append($"\n# {nameof(defaultTboxSettings.TreatCustomObjectsWithTypeKeyAsCustomObjectTypes)}: " + cSharpGraph.OntologySettings.TBoxSettings.TreatCustomObjectsWithTypeKeyAsCustomObjectTypes);
@@ -82,7 +82,7 @@ namespace BH.Engine.RDF
 
                 // Write ABOX settings
 
-                var defaultAboxSettings = new ABoxSettings();
+                ABoxSettings defaultAboxSettings = new ABoxSettings();
                 StringBuilder aBoxSettingsStringBuilder = new StringBuilder();
 
                 if (cSharpGraph.AllIndividuals?.Any() ?? false)
