@@ -3,20 +3,19 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using VDS.RDF.Query.Algebra;
 
 namespace BH.Engine.RDF
 {
     public static partial class Convert
     {
-        public static string GetUntilOrEmpty(string text, string stopAt)
+        public static string SearchAndReplaceString(string[] text, string stringToSearchfor)
         {
-            if (!String.IsNullOrWhiteSpace(text))
+            foreach (string line in text)
             {
-                int charLocation = text.IndexOf(stopAt, StringComparison.Ordinal);
-
-                if (charLocation > 0)
+                if (line.Contains(stringToSearchfor))
                 {
-                    return text.Substring(0,charLocation);
+                   return line.Replace(stringToSearchfor, string.Empty);
                 }
             }
 
@@ -24,3 +23,4 @@ namespace BH.Engine.RDF
         }
     }
 }
+

@@ -81,6 +81,7 @@ namespace BH.Test.RDF
 
 
             // Add logic to read back
+
             Output<List<object>, OntologySettings> bhomObjects_ontologySettings = BH.Engine.RDF.Compute.ReadTTL(TTLGraph);
 
             Assert.IsEqual(bhomObjects_ontologySettings.Item2, customOntologySettings);
