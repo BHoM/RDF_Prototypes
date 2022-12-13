@@ -60,7 +60,7 @@ namespace BH.Test.RDF
             List<object> objectList = new List<object>() { room, co };
             string TTLGraph = objectList.TTLGraph(new OntologySettings() 
             {
-                TBoxSettings = new TBoxSettings { TreatCustomObjectsWithTypeKeyAsCustomObjectTypes = false } ,
+                TBoxSettings = new TBoxSettings { TreatCustomObjectsWithTypeKeyAsCustomObjectTypes = false , CustomObjectTypesBaseAddress = "www.test.de"} ,
                 ABoxSettings = new ABoxSettings { IndividualsBaseAddress = "https://www.nondefaultURL.com"}
             });
 
