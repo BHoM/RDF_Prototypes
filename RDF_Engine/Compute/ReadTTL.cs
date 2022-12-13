@@ -14,6 +14,7 @@ using BH.Engine.Base;
 using BH.oM.RDF;
 using BH.oM.Base.Attributes;
 using static System.Net.Mime.MediaTypeNames;
+using Newtonsoft.Json.Linq;
 
 namespace BH.Engine.RDF
 {
@@ -67,10 +68,11 @@ namespace BH.Engine.RDF
             TBoxSettings defaultTboxSettings = new TBoxSettings();
             string tBoxSettingsSubString = Convert.GetStringBetweenCharacters(TTLtext, $"# {nameof(TBoxSettings)}", $"# {nameof(TBoxSettings)}");
             string[] tBoxlines = tBoxSettingsSubString.Split(new string[] { "\r\n", "\r", "\n" }, StringSplitOptions.None);
+            bool flag;
 
             string treatAsCustomObjectTypes = Convert.SearchAndReplaceString(tBoxlines, $"# {nameof(defaultTboxSettings.TreatCustomObjectsWithTypeKeyAsCustomObjectTypes)}: ");
-            if (treatAsCustomObjectTypes != String.Empty)
-                ontologySettings.TBoxSettings.TreatCustomObjectsWithTypeKeyAsCustomObjectTypes = bool.Parse(treatAsCustomObjectTypes.ToLower());
+            if (treatAsCustomObjectTypes != String.Empty && Boolean.TryParse(treatAsCustomObjectTypes, out flag))
+                ontologySettings.TBoxSettings.TreatCustomObjectsWithTypeKeyAsCustomObjectTypes = bool.TryParse(treatAsCustomObjectTypes,out flag);
             
             string customObjectsTypeKey = Convert.SearchAndReplaceString(tBoxlines, $"# {nameof(defaultTboxSettings.CustomobjectsTypeKey)}: ");
             if (customObjectsTypeKey != String.Empty)
@@ -79,7 +81,7 @@ namespace BH.Engine.RDF
             string typeUri = Convert.SearchAndReplaceString(tBoxlines, $"# {nameof(defaultTboxSettings.TypeUris)}: ");
             if (typeUri != String.Empty)
                 ontologySettings.TBoxSettings.TypeUris = typeUri.Split(';').ToDictionary(s => Type.GetType(s.Split(',').First()), s => s.Split(',').Last());
-
+            
 
 
             // ############### ABOX Settings ############### 
@@ -93,12 +95,12 @@ namespace BH.Engine.RDF
                 ontologySettings.ABoxSettings.IndividualsBaseAddress = individualBaseAdress;
 
             string considerDefaultPropVal = Convert.SearchAndReplaceString(aBoxlines, $"# {nameof(defaultAboxSettings.ConsiderDefaultPropertyValues)}: ");
-            if (considerDefaultPropVal != String.Empty)
-                ontologySettings.ABoxSettings.ConsiderDefaultPropertyValues = bool.Parse(considerDefaultPropVal.ToLower());
+            if (considerDefaultPropVal != String.Empty && Boolean.TryParse(considerDefaultPropVal, out flag))
+                ontologySettings.ABoxSettings.ConsiderDefaultPropertyValues = bool.TryParse(considerDefaultPropVal, out flag);
 
             string considerNullPropVal = Convert.SearchAndReplaceString(aBoxlines, $"# {nameof(defaultAboxSettings.ConsiderNullOrEmptyPropertyValues)}: ");
-            if (considerDefaultPropVal != String.Empty)
-                ontologySettings.ABoxSettings.ConsiderNullOrEmptyPropertyValues = bool.Parse(considerNullPropVal.ToLower());
+            if (considerDefaultPropVal != String.Empty && Boolean.TryParse(considerNullPropVal, out flag))
+                ontologySettings.ABoxSettings.ConsiderNullOrEmptyPropertyValues = bool.TryParse(considerNullPropVal, out flag);
             
 
 
@@ -118,14 +120,9 @@ namespace BH.Engine.RDF
                 return new Output<List<object>, OntologySettings>();
 
             string TTLtext = File.ReadAllText(TTLfilePath);
+            Output<List<object>, OntologySettings> readTTLOutput = ReadTTL(TTLtext);
 
-
-            Output<List<object>, OntologySettings> output = new Output<List<object>, OntologySettings>
-            {
-                Item1 = null /*ReadTTL(TTLtext)*/,
-                Item2 = new OntologySettings()
-            };
-            return output;
+            return readTTLOutput;
         }
 
     }
