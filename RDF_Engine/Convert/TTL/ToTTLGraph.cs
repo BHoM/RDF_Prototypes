@@ -62,9 +62,9 @@ namespace BH.Engine.RDF
                 if (cSharpGraph.OntologySettings.TBoxSettings.CustomobjectsTypeKey != defaultTboxSettings.CustomobjectsTypeKey)
                     tBoxSettingsStringBuilder.Append($"\n# {nameof(defaultTboxSettings.CustomobjectsTypeKey)}: " + cSharpGraph.OntologySettings.TBoxSettings.CustomobjectsTypeKey);
 
-                if (cSharpGraph.OntologySettings.TBoxSettings.TypeUris.Any())
+                if (cSharpGraph.OntologySettings.TBoxSettings.TypeUris?.Any() ?? false)
                 {
-                    string typeUriString = $@"{string.Join($"# {nameof(defaultTboxSettings.TypeUris)}:", cSharpGraph.OntologySettings.TBoxSettings.TypeUris.Select(KV => KV.Key.ToString() + ", " + KV.Value.ToString()))}";
+                    string typeUriString = $@"{string.Join($"\n# {nameof(defaultTboxSettings.TypeUris)}: ", cSharpGraph.OntologySettings.TBoxSettings.TypeUris.Select(KV => KV.Key.AssemblyQualifiedName + "; " + KV.Value.ToString() ))}";
                     tBoxSettingsStringBuilder.Append($"\n# {nameof(defaultTboxSettings.TypeUris)}: " + typeUriString);
                 }
 

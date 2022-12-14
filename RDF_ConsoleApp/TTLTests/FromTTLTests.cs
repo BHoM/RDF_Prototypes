@@ -70,7 +70,9 @@ namespace BH.Test.RDF
                     CustomobjectsTypeKey = "SomethingNotType",
                     TypeUris = new Dictionary<Type, string>()
                     {
-                        { typeof(Room), "http://someUri.com#room" }
+                        { typeof(Room), "http://someUri.com#room" },
+                        {typeof(CustomObject), "http://someotherUri.com#room" }
+
                     }
                 }
             };
