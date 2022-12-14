@@ -68,20 +68,32 @@ namespace BH.Engine.RDF
             TBoxSettings defaultTboxSettings = new TBoxSettings();
             string tBoxSettingsSubString = Convert.GetStringBetweenCharacters(TTLtext, $"# {nameof(TBoxSettings)}", $"# {nameof(TBoxSettings)}");
             string[] tBoxlines = tBoxSettingsSubString.Split(new string[] { "\r\n", "\r", "\n" }, StringSplitOptions.None);
-            bool flag;
 
-            string treatAsCustomObjectTypes = Convert.SearchAndReplaceString(tBoxlines, $"# {nameof(defaultTboxSettings.TreatCustomObjectsWithTypeKeyAsCustomObjectTypes)}: ");
-            if (treatAsCustomObjectTypes != String.Empty && Boolean.TryParse(treatAsCustomObjectTypes, out flag))
-                ontologySettings.TBoxSettings.TreatCustomObjectsWithTypeKeyAsCustomObjectTypes = bool.TryParse(treatAsCustomObjectTypes,out flag);
-            
-            string customObjectsTypeKey = Convert.SearchAndReplaceString(tBoxlines, $"# {nameof(defaultTboxSettings.CustomobjectsTypeKey)}: ");
-            if (customObjectsTypeKey != String.Empty)
+            string treatAsCustomObjectTypes_string = Convert.SearchAndReplaceString(tBoxlines, $"# {nameof(defaultTboxSettings.TreatCustomObjectsWithTypeKeyAsCustomObjectTypes)}: ").FirstOrDefault();
+            if (treatAsCustomObjectTypes_string.IsNullOrEmpty() && bool.TryParse(treatAsCustomObjectTypes_string, out bool treatAsCustomObjectTypes))
+                ontologySettings.TBoxSettings.TreatCustomObjectsWithTypeKeyAsCustomObjectTypes = treatAsCustomObjectTypes;
+
+
+            string customObjectsTypeKey = Convert.SearchAndReplaceString(tBoxlines, $"# {nameof(defaultTboxSettings.CustomobjectsTypeKey)}: ").FirstOrDefault();
+            if (customObjectsTypeKey.IsNullOrEmpty())
                 ontologySettings.TBoxSettings.CustomobjectsTypeKey = customObjectsTypeKey;
 
-            string typeUri = Convert.SearchAndReplaceString(tBoxlines, $"# {nameof(defaultTboxSettings.TypeUris)}: ");
-            if (typeUri != String.Empty)
-                ontologySettings.TBoxSettings.TypeUris = typeUri.Split(';').ToDictionary(s => Type.GetType(s.Split(',').First()), s => s.Split(',').Last());
-            
+            List<string> typeUris = Convert.SearchAndReplaceString(tBoxlines, $"# {nameof(defaultTboxSettings.TypeUris)}: ");
+            if (!typeUris.IsNullOrEmpty())
+            {
+                var type_uri_dict = new Dictionary<Type, string>();
+                foreach (var typeUri in typeUris)
+                {
+                    var kv = typeUri.Split(';');
+                    Type t = Type.GetType(kv.FirstOrDefault());
+                    string uri = kv.LastOrDefault();
+
+                    type_uri_dict[t] = uri;
+                }
+
+                ontologySettings.TBoxSettings.TypeUris = type_uri_dict;
+            }
+
 
 
             // ############### ABOX Settings ############### 
@@ -90,18 +102,19 @@ namespace BH.Engine.RDF
             string aBoxSettingsSubString = Convert.GetStringBetweenCharacters(TTLtext, $"# {nameof(ABoxSettings)}", $"# {nameof(ABoxSettings)}");
             string[] aBoxlines = aBoxSettingsSubString.Split(new string[] { "\r\n", "\r", "\n" }, StringSplitOptions.None);
 
-            string individualBaseAdress = Convert.SearchAndReplaceString(aBoxlines, $"# {nameof(defaultAboxSettings.IndividualsBaseAddress)}: ");
-            if (individualBaseAdress != String.Empty)
+            string individualBaseAdress = Convert.SearchAndReplaceString(aBoxlines, $"# {nameof(defaultAboxSettings.IndividualsBaseAddress)}: ").FirstOrDefault();
+            if (individualBaseAdress.IsNullOrEmpty())
                 ontologySettings.ABoxSettings.IndividualsBaseAddress = individualBaseAdress;
 
-            string considerDefaultPropVal = Convert.SearchAndReplaceString(aBoxlines, $"# {nameof(defaultAboxSettings.ConsiderDefaultPropertyValues)}: ");
-            if (considerDefaultPropVal != String.Empty && Boolean.TryParse(considerDefaultPropVal, out flag))
-                ontologySettings.ABoxSettings.ConsiderDefaultPropertyValues = bool.TryParse(considerDefaultPropVal, out flag);
+            string considerDefaultPropVal_string = Convert.SearchAndReplaceString(aBoxlines, $"# {nameof(defaultAboxSettings.ConsiderDefaultPropertyValues)}: ").FirstOrDefault();
+            if (considerDefaultPropVal_string.IsNullOrEmpty() && bool.TryParse(considerDefaultPropVal_string, out bool considerDefaultPropVal))
+                ontologySettings.ABoxSettings.ConsiderDefaultPropertyValues = considerDefaultPropVal;
 
-            string considerNullPropVal = Convert.SearchAndReplaceString(aBoxlines, $"# {nameof(defaultAboxSettings.ConsiderNullOrEmptyPropertyValues)}: ");
-            if (considerDefaultPropVal != String.Empty && Boolean.TryParse(considerNullPropVal, out flag))
-                ontologySettings.ABoxSettings.ConsiderNullOrEmptyPropertyValues = bool.TryParse(considerNullPropVal, out flag);
-            
+            string considerNullPropVal_string = Convert.SearchAndReplaceString(aBoxlines, $"# {nameof(defaultAboxSettings.ConsiderNullOrEmptyPropertyValues)}: ").FirstOrDefault();
+            if (considerNullPropVal_string.IsNullOrEmpty() && bool.TryParse(considerNullPropVal_string, out bool considerNullPropVal))
+                ontologySettings.ABoxSettings.ConsiderNullOrEmptyPropertyValues = considerNullPropVal;
+
+
 
 
             Output<List<object>, OntologySettings> output = new Output<List<object>, OntologySettings>
