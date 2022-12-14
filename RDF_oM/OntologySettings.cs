@@ -18,8 +18,16 @@ namespace BH.oM.RDF
         public string OntologyDescription { get; set; } = $"New BHoM ontology";
         public string OntologyBaseAddress { get; set; } = "http://visualdataweb.org/";
 
-        public TBoxSettings TBoxSettings { get; set; } = new TBoxSettings() { CustomObjectTypesBaseAddress = "http://visualdataweb.org/" };
+        public TBoxSettings TBoxSettings { get; set; } = new TBoxSettings();
         public ABoxSettings ABoxSettings { get; set; } = new ABoxSettings();
+
+        public OntologySettings()
+        {
+            TBoxSettings = new TBoxSettings()
+            {
+                CustomObjectTypesBaseAddress = OntologyBaseAddress
+            };
+        }
     }
 
     [Description("Settings for the definition of an Ontology's T-Box.")]
