@@ -16,11 +16,17 @@ namespace BH.Engine.RDF
     {
         public static bool IsCustomObjectWithTypeKey(this object obj, TBoxSettings tBoxSettings)
         {
+            if (obj.IsNullOrEmpty() || tBoxSettings.IsNullOrEmpty())
+                return false;   
+
             return obj.IsCustomObjectWithTypeKey(tBoxSettings.CustomobjectsTypeKey);
         }
 
         public static bool IsCustomObjectWithTypeKey(this object obj, string typeKey)
         {
+            if (typeKey.IsNullOrEmpty()) 
+                return false;
+
             CustomObject co = obj as CustomObject;
             if (co != null)
                 return co.CustomData.Keys.Contains(typeKey);
