@@ -56,9 +56,6 @@ namespace BH.Engine.RDF
                 if (cSharpGraph.OntologySettings.TBoxSettings.DefaultBaseUriForUnknownTypes != defaultTboxSettings.DefaultBaseUriForUnknownTypes)
                     tBoxSettingsStringBuilder.Append($"\n# {nameof(defaultTboxSettings.DefaultBaseUriForUnknownTypes)}: " + cSharpGraph.OntologySettings.TBoxSettings.DefaultBaseUriForUnknownTypes);
 
-                if (cSharpGraph.OntologySettings.TBoxSettings.CustomObjectTypesBaseAddress != defaultTboxSettings.CustomObjectTypesBaseAddress)
-                    tBoxSettingsStringBuilder.Append($"\n# {nameof(defaultTboxSettings.CustomObjectTypesBaseAddress)}: " + cSharpGraph.OntologySettings.TBoxSettings.CustomObjectTypesBaseAddress);
-
                 if (cSharpGraph.OntologySettings.TBoxSettings.CustomobjectsTypeKey != defaultTboxSettings.CustomobjectsTypeKey)
                     tBoxSettingsStringBuilder.Append($"\n# {nameof(defaultTboxSettings.CustomobjectsTypeKey)}: " + cSharpGraph.OntologySettings.TBoxSettings.CustomobjectsTypeKey);
 
