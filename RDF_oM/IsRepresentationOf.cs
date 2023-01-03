@@ -10,11 +10,18 @@ using System.Threading.Tasks;
 
 namespace BH.oM.RDF
 {
-    public class IsRepresentationOf : IRelation
+    public class EquivalentRepresentation : IRelation
     {
+        [Description("Set of objects that have an equivalent representation in the objects in set 2.")]
         public List<ObjectIdentity> Set1 { get; set; }
+
+        [Description("Set of objects that have an equivalent representation in the objects in set 1.")]
         public List<ObjectIdentity> Set2 { get; set; }
+
+        [Description("ComparisonConfing under which the equivalency of representation holds.")]
         public ComparisonConfig ComparisonConfig { get; set; }
+
+        [Description("Whether the equivalency of representation works in both ways. If false, only set1 to set2 is assumed.")]
         bool IsBidirectional { get; set; } = true;
     }
 

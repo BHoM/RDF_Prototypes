@@ -18,9 +18,9 @@ namespace BH.Engine.RDF
         /**** Public Methods                            ****/
         /***************************************************/
 
-        public static IsRepresentationOf IsRepresentationOf(List<IBHoMObject> set1, List<IBHoMObject> set2, ComparisonConfig cc = null)
+        public static EquivalentRepresentation EquivalentRepresentation(List<IBHoMObject> set1, List<IBHoMObject> set2, ComparisonConfig cc = null)
         {
-            IsRepresentationOf isRepresentationOf = new IsRepresentationOf();
+            EquivalentRepresentation isRepresentationOf = new EquivalentRepresentation();
             isRepresentationOf.Set1 = set1.Select(o => o.ObjectIdentity(cc)).ToList();
             isRepresentationOf.Set2 = set2.Select(o => o.ObjectIdentity(cc)).ToList();
 
