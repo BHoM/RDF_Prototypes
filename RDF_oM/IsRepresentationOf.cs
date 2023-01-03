@@ -21,6 +21,6 @@ namespace BH.oM.RDF
     public class ObjectIdentity : IObject
     {
         public string Hash { get; set; }
-        public Point IGeometryPoint { get; set; }
+        public double[] GeometryHash { get; set; }
     }
 }

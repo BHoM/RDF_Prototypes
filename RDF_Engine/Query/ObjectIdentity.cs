@@ -26,7 +26,7 @@ namespace BH.Engine.RDF
             cc.NamespaceExceptions.Add("Geometry");
 
             oi.Hash = iObj.Hash(cc);
-            oi.IGeometryPoint = iObj.IGeometry().ICentroid();
+            oi.GeometryHash = iObj.GeometryHash();
 
             return oi;
         }
