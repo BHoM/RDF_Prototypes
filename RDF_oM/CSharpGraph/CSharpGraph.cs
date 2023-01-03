@@ -11,7 +11,7 @@ namespace BH.oM.RDF
 {
     [Description("Graph obtained from a collection of CSharp objects via Reflection (metaprogramming)." +
         "The graph is structured in a way that no reflection should be needed when translating it to an Ontology format, e.g. TTL.")]
-    public class CSharpGraph : IObject
+    public class CSharpGraph : IObject 
     {
         [Description("CSharp Types that will correspond to ontology Classes. This is part of the T-Box.")]
         public HashSet<Type> Classes { get; set; } = new HashSet<Type>();

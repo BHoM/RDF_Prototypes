@@ -20,6 +20,14 @@ namespace BH.oM.RDF
 
         public TBoxSettings TBoxSettings { get; set; } = new TBoxSettings();
         public ABoxSettings ABoxSettings { get; set; } = new ABoxSettings();
+
+        public OntologySettings()
+        {
+            TBoxSettings = new TBoxSettings()
+            {
+                CustomObjectTypesBaseAddress = OntologyBaseAddress
+            };
+        }
     }
 
     [Description("Settings for the definition of an Ontology's T-Box.")]

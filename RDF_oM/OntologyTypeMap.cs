@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace BH.oM.RDF
 {
-    public static class OntologyTypeMap
+    public static class OntologyDataTypeMap
     {
         public static Dictionary<Type, string> ToOntologyDataType = new Dictionary<Type, string>()
         {

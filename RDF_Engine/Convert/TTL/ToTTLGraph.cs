@@ -37,7 +37,7 @@ namespace BH.Engine.RDF
             {
                 TTL = new StringBuilder();
 
-                TTL.Append(Create.TTLHeader(cSharpGraph.OntologySettings.OntologyTitle, cSharpGraph.OntologySettings.OntologyDescription, cSharpGraph.OntologySettings.OntologyBaseAddress));
+                TTL.Append(Create.TTLHeader(cSharpGraph.OntologySettings, cSharpGraph.OntologySettings.OntologyTitle, cSharpGraph.OntologySettings.OntologyDescription, cSharpGraph.OntologySettings.OntologyBaseAddress));
 
                 TTL.Append("Annotation Properties".TTLSectionTitle());
                 TTL.Append(string.Join("\n", Create.TTLAnnotationProperties()));
@@ -46,6 +46,32 @@ namespace BH.Engine.RDF
                 TTL.Append(string.Join("\n", cSharpGraph.TTLDataTypes(localRepositorySettings)));
 
                 TTL.Append("Classes".TTLSectionTitle());
+
+                // Write TBOX settings
+                TBoxSettings defaultTboxSettings = new TBoxSettings();
+                StringBuilder tBoxSettingsStringBuilder = new StringBuilder();
+                if (cSharpGraph.OntologySettings.TBoxSettings.TreatCustomObjectsWithTypeKeyAsCustomObjectTypes != defaultTboxSettings.TreatCustomObjectsWithTypeKeyAsCustomObjectTypes)
+                    tBoxSettingsStringBuilder.Append($"\n# {nameof(defaultTboxSettings.TreatCustomObjectsWithTypeKeyAsCustomObjectTypes)}: " + cSharpGraph.OntologySettings.TBoxSettings.TreatCustomObjectsWithTypeKeyAsCustomObjectTypes);
+
+                if (cSharpGraph.OntologySettings.TBoxSettings.DefaultBaseUriForUnknownTypes != defaultTboxSettings.DefaultBaseUriForUnknownTypes)
+                    tBoxSettingsStringBuilder.Append($"\n# {nameof(defaultTboxSettings.DefaultBaseUriForUnknownTypes)}: " + cSharpGraph.OntologySettings.TBoxSettings.DefaultBaseUriForUnknownTypes);
+
+                if (cSharpGraph.OntologySettings.TBoxSettings.CustomobjectsTypeKey != defaultTboxSettings.CustomobjectsTypeKey)
+                    tBoxSettingsStringBuilder.Append($"\n# {nameof(defaultTboxSettings.CustomobjectsTypeKey)}: " + cSharpGraph.OntologySettings.TBoxSettings.CustomobjectsTypeKey);
+
+                if (cSharpGraph.OntologySettings.TBoxSettings.TypeUris?.Any() ?? false)
+                {
+                    string typeUriString = $@"{string.Join($"\n# {nameof(defaultTboxSettings.TypeUris)}: ", cSharpGraph.OntologySettings.TBoxSettings.TypeUris.Select(KV => KV.Key.AssemblyQualifiedName + "; " + KV.Value.ToString() ))}";
+                    tBoxSettingsStringBuilder.Append($"\n# {nameof(defaultTboxSettings.TypeUris)}: " + typeUriString);
+                }
+
+                string tBoxSettingsString = tBoxSettingsStringBuilder.ToString();
+                if (tBoxSettingsString.Any())
+                {
+                    tBoxSettingsString = $"# {nameof(TBoxSettings)}" + tBoxSettingsString + $"\n# {nameof(TBoxSettings)}\n\n";
+                    TTL.Append(tBoxSettingsString);
+                }
+
                 TTL.Append(string.Join("\n\n", cSharpGraph.TTLClasses(localRepositorySettings)));
 
                 TTL.Append("Object Properties".TTLSectionTitle());
@@ -54,12 +80,35 @@ namespace BH.Engine.RDF
                 TTL.Append("Data properties".TTLSectionTitle());
                 TTL.Append(string.Join("\n\n", cSharpGraph.TTLDataProperties(localRepositorySettings)));
 
+                // Write ABOX settings
+
+                ABoxSettings defaultAboxSettings = new ABoxSettings();
+                StringBuilder aBoxSettingsStringBuilder = new StringBuilder();
+
                 if (cSharpGraph.AllIndividuals?.Any() ?? false)
                 {
                     TTL.Append("Individuals".TTLSectionTitle());
+
+                    if (cSharpGraph.OntologySettings.ABoxSettings.IndividualsBaseAddress != defaultAboxSettings.IndividualsBaseAddress)
+                        aBoxSettingsStringBuilder.Append($"\n# {nameof(defaultAboxSettings.IndividualsBaseAddress)}: " + cSharpGraph.OntologySettings.ABoxSettings.IndividualsBaseAddress);
+
+                    if (cSharpGraph.OntologySettings.ABoxSettings.ConsiderDefaultPropertyValues != defaultAboxSettings.ConsiderDefaultPropertyValues)
+                        aBoxSettingsStringBuilder.Append($"\n# {nameof(defaultAboxSettings.ConsiderDefaultPropertyValues)}: " + cSharpGraph.OntologySettings.ABoxSettings.ConsiderDefaultPropertyValues);
+
+                    if (cSharpGraph.OntologySettings.ABoxSettings.ConsiderNullOrEmptyPropertyValues != defaultAboxSettings.ConsiderNullOrEmptyPropertyValues)
+                        aBoxSettingsStringBuilder.Append($"\n# {nameof(defaultAboxSettings.ConsiderNullOrEmptyPropertyValues)}: " + cSharpGraph.OntologySettings.ABoxSettings.ConsiderNullOrEmptyPropertyValues);
+
+                    string aBoxSettingsString = aBoxSettingsStringBuilder.ToString();
+                    if (aBoxSettingsString.Any())
+                    {
+                        aBoxSettingsString = $"# {nameof(ABoxSettings)}" + aBoxSettingsString + $"\n# {nameof(ABoxSettings)}\n\n";
+                        TTL.Append(aBoxSettingsString);
+                    }
+
                     cSharpGraph.TTLIndividuals(localRepositorySettings, TTL);
                 }
             }
+
             catch { }
 
             if (sw != null)

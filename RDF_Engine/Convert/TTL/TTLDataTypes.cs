@@ -27,9 +27,11 @@ namespace BH.Engine.RDF
 
             // TODO: add better guard against null, possibly adding mechanism to provide a defaultDataType URI rather than a Type.
             defaultDataTypeUri = defaultDataTypeUri ?? "https://github.com/BHoM/RDF_Prototypes/commit/ff8ccb68dbba5aeadb4a9a284f141eb1515e169a";
-            
-            string TTLDataType = $"### {defaultDataTypeUri}\n:{typeof(BH.oM.RDF.Base64JsonSerialized).UniqueNodeId()} rdf:type rdfs:Datatype ;";
-            TTLDataType += "\n"+$@"rdfs:label ""{typeof(BH.oM.RDF.Base64JsonSerialized).DescriptiveName()}""@en .";
+
+            string TTLDataType = "";
+            //TTLDataType = $"### {defaultDataTypeUri}";
+            TTLDataType += $"\n<https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/Base64JsonSerialized.cs> rdf:type rdfs:Datatype ;";
+            TTLDataType += "\n" + $@"rdfs:label ""{typeof(BH.oM.RDF.Base64JsonSerialized).DescriptiveName()}""@en .";
 
             return TTLDataType;
         }

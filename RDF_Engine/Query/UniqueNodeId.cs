@@ -29,8 +29,13 @@ namespace BH.Engine.RDF
             if (type.IsList())
                 return "rdf:list";
 
-            return type.FullNameValidChars();
+            return  type.FullNameValidChars(); // $"&namespace={type.Namespace}&object={type.Name}"; 
         }
+
+        //public static string _UniqueNodeId(this CustomObjectType type)
+        //{
+        //    return type.FullNameValidChars();
+        //}
 
         public static string _UniqueNodeId(this TypeInfo typeInfo)
         {

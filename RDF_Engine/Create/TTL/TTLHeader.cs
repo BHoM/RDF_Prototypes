@@ -1,4 +1,7 @@
-﻿using System;
+﻿using BH.Engine.Base;
+using BH.oM.Base;
+using BH.oM.RDF;
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -11,7 +14,7 @@ namespace BH.Engine.RDF
 {
     public static partial class Create
     {
-        public static string TTLHeader(this string ontologyTitle, string ontologyDescription, string ontologyAddress, 
+        public static string TTLHeader(this OntologySettings ontologySettings, string ontologyTitle, string ontologyDescription, string ontologyAddress, 
             bool includeOwl = true, 
             bool includeRdf = true, bool includeRdfs = true, 
             bool includeXml = true, bool includeXsd = true)
@@ -24,14 +27,14 @@ namespace BH.Engine.RDF
             if (includeRdfs) header += "\n@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .";
             if (includeRdfs) header += "\n@prefix dc: <http://purl.org/dc/elements/1.1/> .";
 
-
             header += "\n@base   " + $@"<{ontologyAddress}> .";
+            
 
             header += "\n";
 
             header += "\n"+$@"<{ontologyAddress}> rdf:type owl:Ontology;
-                          dc:title ""{ontologyDescription}""@en;
-                          dc:description ""{ontologyTitle}""@en.";
+                          dc:title ""{ontologyTitle}""@en;
+                          dc:description ""{ontologyDescription}""@en.";
 
             return header;
         }
