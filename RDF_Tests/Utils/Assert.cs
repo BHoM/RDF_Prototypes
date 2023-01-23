@@ -43,7 +43,7 @@ using KellermanSoftware.CompareNetObjects;
 using KellermanSoftware.CompareNetObjects.TypeComparers;
 using FluentAssertions;
 
-namespace BH.Test.RDF
+namespace RDF_Tests.Utils
 {
     /// <summary>
     /// Class to interface with Unit Tests.
@@ -90,12 +90,12 @@ namespace BH.Test.RDF
 
         public static void Single<T>(this IEnumerable<T> iList, string variableName = null)
         {
-            TotalCount(iList, 1, variableName);
+            iList.TotalCount(1, variableName);
         }
 
         public static void Single<T>(this IEnumerable<T> iList, object obj, string variableName = null)
         {
-            TotalCount(iList.Where(o => o.Equals(obj)), 1, variableName);
+            iList.Where(o => o.Equals(obj)).TotalCount(1, variableName);
         }
 
         public static void TotalCount<T>(this IEnumerable<T> iList, int expectedCount, string variableName = null)

@@ -22,7 +22,7 @@
 
 using BH.oM.RDF;
 
-namespace BH.Test.RDF
+namespace RDF_Tests.Utils
 {
     /// <summary>
     /// Base class for tests, with customised settings.
