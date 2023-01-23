@@ -37,6 +37,7 @@ using BH.oM.Structure.Elements;
 using System.Drawing;
 using Point = BH.oM.Geometry.Point;
 using NUnit.Framework;
+using RDF_Tests.Utils;
 
 namespace BH.Test.RDF
 {
