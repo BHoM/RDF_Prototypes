@@ -62,7 +62,7 @@ namespace BH.Engine.RDF
             }
 
             if (type.IsClass)
-                return type.AssemblyQualifiedName.StartsWith("BH.");
+                return type.AssemblyQualifiedName.StartsWith("BH.") || type.BaseType == typeof(CustomObject);
 
             return false;
         }
