@@ -98,7 +98,7 @@ namespace BH.Engine.RDF
 
                     string dataType = idp.Value.GetType().ToOntologyDataType();
 
-                    if (dataType == typeof(Base64JsonSerialized).UniqueNodeId())
+                    if (dataType == typeof(Base64JsonSerialized).UniqueNodeId() )
                         TLLIndividualRelations.Append($"^^:{idp.Value.GetType().ToOntologyDataType()};");
                     else
                         TLLIndividualRelations.Append($"^^{ idp.Value.GetType().ToOntologyDataType()};"); // TODO: insert serialized value here, when the individual's datatype is unknown

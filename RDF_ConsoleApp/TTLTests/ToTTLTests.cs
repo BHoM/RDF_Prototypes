@@ -17,7 +17,14 @@ namespace BH.Test.RDF
 {
     public class ToTTLTests : Test
     {
-        public static void BHoMObject_CustomDataAsProperties()
+        public static void GeometryAsBase64()
+        {
+            Room room = new Room() { Perimeter = new Line(), Location = new Point() };
+
+            string ttl = Compute.TTLGraph(new List<object> { room }, m_ontologySettings);
+        }
+
+            public static void BHoMObject_CustomDataAsProperties()
         {
             BHoMObject bhomObject = new BHoMObject();
             bhomObject.CustomData["SomeExtraDataProperty"] = 111;

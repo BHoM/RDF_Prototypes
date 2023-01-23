@@ -21,6 +21,8 @@ namespace BH.oM.CodeAnalysis.ConsoleApp
             //Compute.PostToRepo(@"G:\My Drive\03_Arbeit\02_HIWI Stellen\03_Architectural_Computing\TTL Files\repo-config.ttl", @"G:\My Drive\03_Arbeit\02_HIWI Stellen\03_Architectural_Computing\TTL Files\BhomOuput.ttl");
             //Compute.StartGraphDB();
 
+            ToTTLTests.GeometryAsBase64();
+
             ToTTLTests.BHoMObject_CustomDataAsProperties();
 
             EqualityTests.RunAll();

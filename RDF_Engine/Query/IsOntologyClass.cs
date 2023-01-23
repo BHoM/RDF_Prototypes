@@ -10,6 +10,7 @@ using System.Threading.Tasks;
 using BH.Engine.Base;
 using BH.Engine.Reflection;
 using BH.oM.Base;
+using BH.oM.Geometry;
 
 namespace BH.Engine.RDF
 {
@@ -35,6 +36,10 @@ namespace BH.Engine.RDF
 
                 if (typeof(FragmentSet).IsAssignableFrom(type))
                     return false;
+
+                if (typeof(IGeometry).IsAssignableFrom(type))
+                    return false;
+
 
                 return true;
             }
