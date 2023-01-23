@@ -37,6 +37,8 @@ using BH.oM.Structure.Elements;
 using System.Drawing;
 using Point = BH.oM.Geometry.Point;
 using NUnit.Framework;
+using BH.oM.Physical.FramingProperties;
+using VDS.RDF.Query.Expressions.Comparison;
 
 namespace BH.Test.RDF
 {
@@ -170,7 +172,9 @@ namespace BH.Test.RDF
         [Test]
         public static void Column()
         {
-            Column randomColumn = BH.Engine.RDF.Testing.Create.RandomObject<Column>();
+            Column randomColumn = new Column();
+            randomColumn.Property = new ConstantFramingProperty() { Material = new oM.Physical.Materials.Material() { Name = "SomeMaterial" } };
+            randomColumn.Location = BH.Engine.RDF.Testing.Create.RandomObject<Arc>();
 
             List<object> objectList = new List<object>() { randomColumn };
             string TTLGraph = objectList.TTLGraph(m_ontologySettings);
