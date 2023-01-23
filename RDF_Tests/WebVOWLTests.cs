@@ -38,6 +38,7 @@ using BH.oM.Physical.Elements;
 using BH.oM.RDF;
 using System.ComponentModel;
 using VDS.RDF.Ontology;
+using NUnit.Framework;
 using DescriptionAttribute = NUnit.Framework.DescriptionAttribute;
 
 namespace BH.Test.RDF

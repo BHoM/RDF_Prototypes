@@ -36,6 +36,7 @@ using VDS.RDF.Ontology;
 using BH.oM.Structure.Elements;
 using System.Drawing;
 using Point = BH.oM.Geometry.Point;
+using NUnit.Framework;
 
 namespace BH.Test.RDF
 {

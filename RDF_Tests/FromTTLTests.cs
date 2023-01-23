@@ -34,6 +34,7 @@ using System.Linq;
 using System.IO;
 using VDS.RDF.Ontology;
 using BH.oM.Structure.Elements;
+using NUnit.Framework;
 
 namespace BH.Test.RDF
 {
