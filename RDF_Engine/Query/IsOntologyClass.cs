@@ -61,12 +61,8 @@ namespace BH.Engine.RDF
                 return true;
             }
 
-            // Keep the following section verbose as it is; easier debugging.
             if (type.IsClass)
-                if (type.Module.ScopeName != "CommonLanguageRuntimeLibrary")
-                    return true;  
-                else
-                    return false; // do not include System types in Ontology.
+                return type.AssemblyQualifiedName.StartsWith("BH.");
 
             return false;
         }

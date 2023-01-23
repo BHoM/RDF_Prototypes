@@ -22,7 +22,7 @@
 
 using System;
 using System.CodeDom;
-using System.CodeDom.Compiler;
+using Microsoft.CodeDom.Providers.DotNetCompilerPlatform;
 using System.Collections;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -31,6 +31,7 @@ using System.Reflection;
 using System.Text;
 using System.Text.RegularExpressions;
 using System.Threading.Tasks;
+using System.IO;
 
 namespace BH.Engine.RDF
 {
@@ -39,7 +40,10 @@ namespace BH.Engine.RDF
 		[Description("Returns the name of a type as it would be written in a C# code file. E.g. for typeof(System.String) returns 'string'.")]
 		public static string GetCodeName(this Type type, bool includeNamespace = false)
 		{
-			m_CodeDomProvider = m_CodeDomProvider ?? CodeDomProvider.CreateProvider("CSharp"); ; // cache provider.
+            string RoslynPath = Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location) + "\\roslyn\\csc.exe";
+            m_CodeDomProvider = new CSharpCodeProvider(new ProviderOptions(RoslynPath, 0));
+
+            m_CodeDomProvider = m_CodeDomProvider ?? new CSharpCodeProvider(); // cache provider.
 
 			var reference = CreateTypeReference(type);
 
@@ -73,6 +77,6 @@ namespace BH.Engine.RDF
 			return reference;
 		}
 
-		private static CodeDomProvider m_CodeDomProvider = null;
+		private static CSharpCodeProvider m_CodeDomProvider = null;
 	}
 }

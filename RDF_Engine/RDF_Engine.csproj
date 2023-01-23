@@ -1,35 +1,7 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
-<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
-  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+﻿<Project Sdk="Microsoft.NET.Sdk">
   <PropertyGroup>
-    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
-    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{9424302A-AAB4-41EA-B109-157BA549DE96}</ProjectGuid>
     <OutputType>Library</OutputType>
-    <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>BH.Engine.RDF</RootNamespace>
-    <AssemblyName>RDF_Engine</AssemblyName>
-    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
-    <FileAlignment>512</FileAlignment>
-    <Deterministic>true</Deterministic>
-    <TargetFrameworkProfile />
-  </PropertyGroup>
-  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
-    <DebugSymbols>true</DebugSymbols>
-    <DebugType>full</DebugType>
-    <Optimize>false</Optimize>
-    <OutputPath>bin\Debug\</OutputPath>
-    <DefineConstants>DEBUG;TRACE</DefineConstants>
-    <ErrorReport>prompt</ErrorReport>
-    <WarningLevel>4</WarningLevel>
-  </PropertyGroup>
-  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
-    <DebugType>pdbonly</DebugType>
-    <Optimize>true</Optimize>
-    <OutputPath>bin\Release\</OutputPath>
-    <DefineConstants>TRACE</DefineConstants>
-    <ErrorReport>prompt</ErrorReport>
-    <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="BHoM">
@@ -41,157 +13,28 @@
     <Reference Include="BHoM_Engine">
       <HintPath>C:\ProgramData\BHoM\Assemblies\BHoM_Engine.dll</HintPath>
     </Reference>
-    <Reference Include="dotNetRDF, Version=2.7.2.0, Culture=neutral, PublicKeyToken=6055ffe4c97cc780, processorArchitecture=MSIL">
-      <HintPath>..\packages\dotNetRDF.2.7.2\lib\net40\dotNetRDF.dll</HintPath>
-    </Reference>
-    <Reference Include="HtmlAgilityPack, Version=1.11.34.0, Culture=neutral, PublicKeyToken=bd319b19eaf3b43a, processorArchitecture=MSIL">
-      <HintPath>..\packages\HtmlAgilityPack.1.11.34\lib\Net45\HtmlAgilityPack.dll</HintPath>
-    </Reference>
-    <Reference Include="netstandard, Version=2.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51" />
-    <Reference Include="Newtonsoft.Json, Version=13.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
-      <HintPath>..\packages\Newtonsoft.Json.13.0.1\lib\net45\Newtonsoft.Json.dll</HintPath>
-    </Reference>
     <Reference Include="Reflection_Engine">
       <HintPath>C:\ProgramData\BHoM\Assemblies\Reflection_Engine.dll</HintPath>
     </Reference>
     <Reference Include="Serialiser_Engine">
       <HintPath>C:\ProgramData\BHoM\Assemblies\Serialiser_Engine.dll</HintPath>
     </Reference>
-    <Reference Include="System" />
-    <Reference Include="System.Configuration" />
-    <Reference Include="System.Core" />
-    <Reference Include="System.Security" />
-    <Reference Include="System.Web" />
-    <Reference Include="System.Xml.Linq" />
-    <Reference Include="System.Data.DataSetExtensions" />
-    <Reference Include="Microsoft.CSharp" />
-    <Reference Include="System.Data" />
-    <Reference Include="System.Net.Http" />
-    <Reference Include="System.Xml" />
-    <Reference Include="VDS.Common, Version=1.10.0.0, Culture=neutral, PublicKeyToken=ab5f4eb908061bf0, processorArchitecture=MSIL">
-      <HintPath>..\packages\VDS.Common.1.10.0\lib\net40-client\VDS.Common.dll</HintPath>
-    </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Compute\SearchAndReplaceString.cs" />
-    <Compile Include="Compute\GetUntilOrEmpty.cs" />
-    <Compile Include="Compute\GetStringBetweenCharacters.cs" />
-    <Compile Include="Compute\GraphDBProcess.cs" />
-    <Compile Include="Compute\PostToRepo.cs" />
-    <Compile Include="Compute\ReadTTL.cs" />
-    <Compile Include="Compute\TTLGraphFromSerialized.cs" />
-    <Compile Include="Compute\TTLGraph.cs" />
-    <Compile Include="Compute\IO\FilesInRepo.cs" />
-    <Compile Include="Compute\CSharpGraph.cs" />
-    <Compile Include="Compute\WebVOWL\WriteWebVOWLOntology.cs" />
-    <Compile Include="Compute\WebVOWL\WriteWebVOWLOntologiesPerNamespace.cs" />
-    <Compile Include="Convert\DotNetRDF\ToCSharpObject.cs" />
-    <Compile Include="Convert\DotNetRDF\ToDotNetRDF.cs" />
-    <Compile Include="Convert\ToBase64JsonSerialized.cs" />
-    <Compile Include="Convert\ToBHoM.cs" />
-    <Compile Include="Convert\TTL\ToTTLGraph.cs" />
-    <Compile Include="Create\BasicOntologySettings.cs" />
-    <Compile Include="Create\Testing\CustomObject.cs" />
-    <Compile Include="Create\Testing\RandomObject.cs" />
-    <Compile Include="Create\Testing\RandomObjects.cs" />
-    <Compile Include="Create\CreateInstance.cs" />
-    <Compile Include="Convert\DotNetRDF\ToCSharpObjects.cs" />
-    <Compile Include="Modify\SplitInLinesAndTabify.cs" />
-    <Compile Include="Query\Code analysis\Local resources\TryGetRepositoryRootPath.cs" />
-    <Compile Include="Query\Code analysis\Local resources\IsValidRepositoryRoot.cs" />
-    <Compile Include="Query\Code analysis\Reflection\ListElementsCommonParentTypes.cs" />
-    <Compile Include="Query\DotNetRDF\EquivalentType.cs" />
-    <Compile Include="Query\DotNetRDF\IndividualOntologyResource.cs" />
-    <Compile Include="Query\DotNetRDF\Individuals.cs" />
-    <Compile Include="Query\GuidFromString.cs" />
-    <Compile Include="Query\IsListOfOntologyClasses.cs" />
-    <Compile Include="Query\SHA256Hash.cs" />
-    <Compile Include="Query\TryGetTypes.cs" />
-    <Compile Include="_Types\ICustomRDFType.cs" />
-    <Compile Include="_Types\ListPropertyType.cs" />
-    <Compile Include="_Types\CustomPropertyInfo.cs" />
-    <Compile Include="_Types\CustomObjectType.cs" />
-    <Compile Include="Query\Code analysis\Reflection\GetInterfacesNoRedundancy.cs" />
-    <Compile Include="Query\Code analysis\Reflection\BaseTypesNoRedundancy.cs" />
-    <Compile Include="Query\GetType.cs" />
-    <Compile Include="Query\IsCustomObjectWithType.cs" />
-    <Compile Include="Query\IndividualType.cs" />
-    <Compile Include="Query\IsDataProperty.cs" />
-    <Compile Include="Query\IsObjectProperty.cs" />
-    <Compile Include="Query\Uri\IndividualUri.cs" />
-    <Compile Include="Log.cs" />
-    <Compile Include="Query\IsDataType.cs" />
-    <Compile Include="Query\Code analysis\Reflection\PropertyDictionary.cs" />
-    <Compile Include="Query\Code analysis\Reflection\DefaultValue.cs" />
-    <Compile Include="Query\Code analysis\Reflection\BaseTypes.cs" />
-    <Compile Include="Query\Code analysis\Reflection\PropertyInfos.cs" />
-    <Compile Include="Query\IsOntologyClass.cs" />
-    <Compile Include="Convert\ToOntologyDataType.cs" />
-    <Compile Include="Query\IndividualId.cs" />
-    <Compile Include="Query\CSharpGraph\DataPropertyStringValue.cs" />
-    <Compile Include="Convert\TTL\TTLObjectProperties.cs" />
-    <Compile Include="Convert\TTL\TTLDataTypes.cs" />
-    <Compile Include="Query\ReplaceLastOccurenceOf.cs" />
-    <Compile Include="Create\TTL\TTLAnnotationProperties.cs" />
-    <Compile Include="Convert\TTL\TTLIndividuals.cs" />
-    <Compile Include="Convert\TTL\TTLDataProperties.cs" />
-    <Compile Include="Convert\TTL\TTLClasses.cs" />
-    <Compile Include="Create\TTL\TTLHeader.cs" />
-    <Compile Include="Create\TTL\TTLSectionTitle.cs" />
-    <Compile Include="Query\IsNullOrEmpty.cs" />
-    <Compile Include="Query\Code analysis\Reflection\IsCollectionOfBHoMTypes.cs" />
-    <Compile Include="Query\Code analysis\Reflection\DescriptionInAttribute.cs" />
-    <Compile Include="Compute\IO\WriteToJsonFile.cs" />
-    <Compile Include="Compute\IO\WriteToXMLFile.cs" />
-    <Compile Include="Compute\IO\LoadAssembliesInDirectory.cs" />
-    <Compile Include="Convert\WebVOWL\AddWebOwlRelationNodes.cs" />
-    <Compile Include="Convert\WebVOWL\AddWebOwlClassNodes.cs" />
-    <Compile Include="Modify\WebVOWL\CreateOntologyClass.cs" />
-    <Compile Include="Modify\WebVOWL\AddToIdTypeArray.cs" />
-    <Compile Include="Query\Code analysis\Reflection\AllNestedTypes.cs" />
-    <Compile Include="Query\Code analysis\Reflection\GetCodeName.cs" />
-    <Compile Include="Query\Code analysis\Reflection\IsGenericTypeWithBHoMArgs.cs" />
-    <Compile Include="Query\Code analysis\Reflection\IsInNamespace.cs" />
-    <Compile Include="Query\Code analysis\Reflection\Namespaces.cs" />
-    <Compile Include="Query\Code analysis\Reflection\BHoMTypes.cs" />
-    <Compile Include="Query\Uri\CombineUris.cs" />
-    <Compile Include="Query\Code analysis\Reflection\DescriptiveName.cs" />
-    <Compile Include="Query\Code analysis\Reflection\FullNameValidChars.cs" />
-    <Compile Include="Query\Code analysis\Reflection\IsBHoMType.cs" />
-    <Compile Include="Query\Code analysis\Reflection\IsBHoMSubclass.cs" />
-    <Compile Include="Query\ConcatenateDictionaryValues.cs" />
-    <Compile Include="Query\Code analysis\Local resources\HasBHoMCopyright.cs" />
-    <Compile Include="Query\Code analysis\Local resources\IsToolkitAssembly.cs" />
-    <Compile Include="Query\Code analysis\Reflection\OMTypesPerNamespace.cs" />
-    <Compile Include="Query\OnlyAlphabeticAndDots.cs" />
-    <Compile Include="Compute\IO\LineNumber.cs" />
-    <Compile Include="Query\Code analysis\Local resources\FilePathFromLocalRepository.cs" />
-    <Compile Include="Query\Code analysis\Reflection\NamespaceGroup.cs" />
-    <Compile Include="Query\Code analysis\Local resources\ToolkitAssemblies.cs" />
-    <Compile Include="Modify\WebVOWL\CreateUriNode.cs" />
-    <Compile Include="Query\WebVOWL\RelationsFromType.cs" />
-    <Compile Include="Query\WebVOWL\DictionaryGraphFromTypeInfos.cs" />
-    <Compile Include="Query\OnlyAlphabetic.cs" />
-    <Compile Include="Convert\TTL\ToWebVOWLJson.cs" />
-    <Compile Include="Query\Code analysis\Reflection\DeclaredProperties.cs" />
-    <Compile Include="Query\Uri\OntologyUri.cs" />
-    <Compile Include="Query\UniqueNodeId.cs" />
-    <Compile Include="Query\Code analysis\Local resources\TryGetAssemblyTypes.cs" />
-    <Compile Include="Query\Code analysis\Reflection\InnermostType.cs" />
-    <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Compute\WebVOWL\WebVOWLJsonPerNamespace.cs" />
+    <PackageReference Include="Microsoft.CodeDom.Providers.DotNetCompilerPlatform" Version="3.6.0" />
+    <PackageReference Include="Microsoft.CSharp" Version="4.7.0" />
+    <PackageReference Include="System.CodeDom" Version="7.0.0" />
+    <PackageReference Include="System.Data.DataSetExtensions" Version="4.5.0" />
+    <PackageReference Include="Microsoft.DotNet.UpgradeAssistant.Extensions.Default.Analyzers" Version="0.4.355802">
+      <PrivateAssets>all</PrivateAssets>
+    </PackageReference>
   </ItemGroup>
   <ItemGroup>
-    <None Include="packages.config" />
+    <ProjectReference Include="..\RDF_oM\RDF_oM.csproj" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\RDF_oM\RDF_oM.csproj">
-      <Project>{35cb5890-7bc1-4f9c-a63f-771f71124d6a}</Project>
-      <Name>RDF_oM</Name>
-    </ProjectReference>
+    <PackageReference Include="dotNetRDF" Version="2.7.2" />
   </ItemGroup>
-  <ItemGroup />
-  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <PropertyGroup>
     <PostBuildEvent>xcopy "$(TargetDir)$(TargetFileName)"  "C:\ProgramData\BHoM\Assemblies" /Y
 xcopy "$(TargetDir)Newtonsoft.Json.dll" "C:\ProgramData\BHoM\Assemblies" /Y
@@ -207,4 +50,11 @@ xcopy "$(SolutionDir)repo-config.ttl" "C:\ProgramData\BHoM" /Y
 
 EXIT 0</PostBuildEvent>
   </PropertyGroup>
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+    <GenerateAssemblyInfo>false</GenerateAssemblyInfo>
+  </PropertyGroup>
+  <ItemGroup>
+    <FrameworkReference Include="Microsoft.AspNetCore.App" />
+  </ItemGroup>
 </Project>
