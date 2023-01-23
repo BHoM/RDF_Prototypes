@@ -1,0 +1,1925 @@
+{
+  "comment": "Generated from BHoM RDF_Prototypes",
+  "namespace": [],
+  "class": [
+    {
+      "id": "BH.oM.Planning.Branch",
+      "type": "owl:Class"
+    },
+    {
+      "id": "BH.oM.Planning.CodeAssembly",
+      "type": "owl:Class"
+    },
+    {
+      "id": "BH.oM.Planning.Commit",
+      "type": "owl:Class"
+    },
+    {
+      "id": "BH.oM.Planning.ConstructionPhase",
+      "type": "owl:Class"
+    },
+    {
+      "id": "BH.oM.Planning.ItemState",
+      "type": "owl:Class"
+    },
+    {
+      "id": "BH.oM.Planning.IPhase",
+      "type": "owl:Class"
+    },
+    {
+      "id": "BH.oM.Planning.Issue",
+      "type": "owl:Class"
+    },
+    {
+      "id": "BH.oM.Planning.Label",
+      "type": "owl:Class"
+    },
+    {
+      "id": "BH.oM.Planning.Milestone",
+      "type": "owl:Class"
+    },
+    {
+      "id": "BH.oM.Planning.PullRequest",
+      "type": "owl:Class"
+    },
+    {
+      "id": "BH.oM.Planning.Repository",
+      "type": "owl:Class"
+    },
+    {
+      "id": "BH.oM.Planning.Branch.LastPusher",
+      "type": "owl:Class"
+    },
+    {
+      "id": "BH.oM.Planning.Branch.Title",
+      "type": "owl:Class"
+    },
+    {
+      "id": "BH.oM.Planning.Branch.RepoName",
+      "type": "owl:Class"
+    },
+    {
+      "id": "BH.oM.Planning.Branch.Protected",
+      "type": "owl:Class"
+    },
+    {
+      "id": "BH.oM.Planning.Branch.LastCommitDate",
+      "type": "owl:Class"
+    },
+    {
+      "id": "BH.oM.Base.IBHoMObject",
+      "type": "owl:Class"
+    },
+    {
+      "id": "BH.oM.Base.IObject",
+      "type": "owl:Class"
+    },
+    {
+      "id": "BH.oM.Base.BHoMObject",
+      "type": "owl:Class"
+    },
+    {
+      "id": "BH.oM.Planning.CodeAssembly.Repository",
+      "type": "owl:Class"
+    },
+    {
+      "id": "BH.oM.Planning.CodeAssembly.References",
+      "type": "owl:Class"
+    },
+    {
+      "id": "BH.oM.Planning.Commit.RepoName",
+      "type": "owl:Class"
+    },
+    {
+      "id": "BH.oM.Planning.Commit.Date",
+      "type": "owl:Class"
+    },
+    {
+      "id": "BH.oM.Planning.Commit.Author",
+      "type": "owl:Class"
+    },
+    {
+      "id": "BH.oM.Planning.Commit.Committer",
+      "type": "owl:Class"
+    },
+    {
+      "id": "BH.oM.Planning.Commit.Additions",
+      "type": "owl:Class"
+    },
+    {
+      "id": "BH.oM.Planning.Commit.Deletions",
+      "type": "owl:Class"
+    },
+    {
+      "id": "BH.oM.Planning.Commit.TotalChanges",
+      "type": "owl:Class"
+    },
+    {
+      "id": "BH.oM.Planning.ConstructionPhase.StartTime",
+      "type": "owl:Class"
+    },
+    {
+      "id": "BH.oM.Planning.ConstructionPhase.EndTime",
+      "type": "owl:Class"
+    },
+    {
+      "id": "BH.oM.Planning.IPhase.StartTime",
+      "type": "rdfs:Datatype"
+    },
+    {
+      "id": "BH.oM.Planning.IPhase.EndTime",
+      "type": "rdfs:Datatype"
+    },
+    {
+      "id": "BH.oM.Planning.Issue.Creator",
+      "type": "owl:Class"
+    },
+    {
+      "id": "BH.oM.Planning.Issue.Assignees",
+      "type": "owl:Class"
+    },
+    {
+      "id": "BH.oM.Planning.Issue.Title",
+      "type": "owl:Class"
+    },
+    {
+      "id": "BH.oM.Planning.Issue.RepoName",
+      "type": "owl:Class"
+    },
+    {
+      "id": "BH.oM.Planning.Issue.Number",
+      "type": "owl:Class"
+    },
+    {
+      "id": "BH.oM.Planning.Issue.CreationDate",
+      "type": "owl:Class"
+    },
+    {
+      "id": "BH.oM.Planning.Issue.MilestoneName",
+      "type": "owl:Class"
+    },
+    {
+      "id": "BH.oM.Planning.Issue.PullRequested",
+      "type": "owl:Class"
+    },
+    {
+      "id": "BH.oM.Planning.Issue.Labels",
+      "type": "owl:Class"
+    },
+    {
+      "id": "BH.oM.Planning.Issue.Url",
+      "type": "owl:Class"
+    },
+    {
+      "id": "BH.oM.Planning.Label.Colour",
+      "type": "owl:Class"
+    },
+    {
+      "id": "BH.oM.Planning.Milestone.DueOn",
+      "type": "owl:Class"
+    },
+    {
+      "id": "BH.oM.Planning.Milestone.State",
+      "type": "owl:Class"
+    },
+    {
+      "id": "BH.oM.Planning.Milestone.Description",
+      "type": "owl:Class"
+    },
+    {
+      "id": "BH.oM.Planning.PullRequest.Creator",
+      "type": "owl:Class"
+    },
+    {
+      "id": "BH.oM.Planning.PullRequest.Title",
+      "type": "owl:Class"
+    },
+    {
+      "id": "BH.oM.Planning.PullRequest.Body",
+      "type": "owl:Class"
+    },
+    {
+      "id": "BH.oM.Planning.PullRequest.HtmlUrl",
+      "type": "owl:Class"
+    },
+    {
+      "id": "BH.oM.Planning.PullRequest.RepoName",
+      "type": "owl:Class"
+    },
+    {
+      "id": "BH.oM.Planning.PullRequest.BranchName",
+      "type": "owl:Class"
+    },
+    {
+      "id": "BH.oM.Planning.PullRequest.Number",
+      "type": "owl:Class"
+    },
+    {
+      "id": "BH.oM.Planning.PullRequest.CreationDate",
+      "type": "owl:Class"
+    },
+    {
+      "id": "BH.oM.Planning.PullRequest.MilestoneName",
+      "type": "owl:Class"
+    },
+    {
+      "id": "BH.oM.Planning.PullRequest.Additions",
+      "type": "owl:Class"
+    },
+    {
+      "id": "BH.oM.Planning.PullRequest.Deletions",
+      "type": "owl:Class"
+    },
+    {
+      "id": "BH.oM.Planning.PullRequest.Reviewers",
+      "type": "owl:Class"
+    },
+    {
+      "id": "BH.oM.Planning.Repository.OpenIssues",
+      "type": "owl:Class"
+    },
+    {
+      "id": "BH.oM.Planning.Repository.OpenPullRequests",
+      "type": "owl:Class"
+    },
+    {
+      "id": "BH.oM.Planning.Repository.ClosedIssues",
+      "type": "owl:Class"
+    },
+    {
+      "id": "BH.oM.Planning.Repository.ClosedPullRequests",
+      "type": "owl:Class"
+    }
+  ],
+  "classAttribute": [
+    {
+      "id": "BH.oM.Planning.Branch",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/Planning_oM/Branch.cs",
+      "label": "Branch (BH.oM.Planning)",
+      "attributes": [
+        "object"
+      ]
+    },
+    {
+      "id": "BH.oM.Planning.CodeAssembly",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/Planning_oM/CodeAssembly.cs",
+      "label": "CodeAssembly (BH.oM.Planning)",
+      "attributes": [
+        "object"
+      ]
+    },
+    {
+      "id": "BH.oM.Planning.Commit",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/Planning_oM/Commit.cs",
+      "label": "Commit (BH.oM.Planning)",
+      "attributes": [
+        "object"
+      ]
+    },
+    {
+      "id": "BH.oM.Planning.ConstructionPhase",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/Planning_oM/Construction/ConstructionPhase.cs",
+      "label": "ConstructionPhase (BH.oM.Planning)",
+      "attributes": [
+        "object"
+      ]
+    },
+    {
+      "id": "BH.oM.Planning.ItemState",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/Planning_oM/Enums/ItemState.cs",
+      "label": "ItemState (BH.oM.Planning)",
+      "attributes": [
+        "object"
+      ]
+    },
+    {
+      "id": "BH.oM.Planning.IPhase",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/Planning_oM/IPhase.cs",
+      "label": "IPhase (BH.oM.Planning)",
+      "attributes": [
+        "object"
+      ]
+    },
+    {
+      "id": "BH.oM.Planning.Issue",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/Planning_oM/Issue.cs",
+      "label": "Issue (BH.oM.Planning)",
+      "attributes": [
+        "object"
+      ]
+    },
+    {
+      "id": "BH.oM.Planning.Label",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/Planning_oM/Label.cs",
+      "label": "Label (BH.oM.Planning)",
+      "attributes": [
+        "object"
+      ]
+    },
+    {
+      "id": "BH.oM.Planning.Milestone",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/Planning_oM/Milestone.cs",
+      "label": "Milestone (BH.oM.Planning)",
+      "attributes": [
+        "object"
+      ]
+    },
+    {
+      "id": "BH.oM.Planning.PullRequest",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/Planning_oM/PullRequest.cs",
+      "label": "PullRequest (BH.oM.Planning)",
+      "attributes": [
+        "object"
+      ]
+    },
+    {
+      "id": "BH.oM.Planning.Repository",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/Planning_oM/Repository.cs",
+      "label": "Repository (BH.oM.Planning)",
+      "attributes": [
+        "object"
+      ]
+    },
+    {
+      "id": "BH.oM.Planning.Branch.LastPusher",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/Planning_oM/Branch.cs#L35",
+      "label": "LastPusher (BH.oM.Planning.Branch.LastPusher)",
+      "attributes": [
+        "datatype"
+      ]
+    },
+    {
+      "id": "BH.oM.Planning.Branch.Title",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/Planning_oM/Branch.cs#L37",
+      "label": "Title (BH.oM.Planning.Branch.Title)",
+      "attributes": [
+        "datatype"
+      ]
+    },
+    {
+      "id": "BH.oM.Planning.Branch.RepoName",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/Planning_oM/Branch.cs#L39",
+      "label": "RepoName (BH.oM.Planning.Branch.RepoName)",
+      "attributes": [
+        "datatype"
+      ]
+    },
+    {
+      "id": "BH.oM.Planning.Branch.Protected",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/Planning_oM/Branch.cs#L41",
+      "label": "Protected (BH.oM.Planning.Branch.Protected)",
+      "attributes": [
+        "datatype"
+      ]
+    },
+    {
+      "id": "BH.oM.Planning.Branch.LastCommitDate",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/Planning_oM/Branch.cs#L43",
+      "label": "LastCommitDate (BH.oM.Planning.Branch.LastCommitDate)",
+      "attributes": [
+        "datatype"
+      ]
+    },
+    {
+      "id": "BH.oM.Base.IBHoMObject",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/BHoM/Interface/IBHoMObject.cs",
+      "label": "IBHoMObject (BH.oM.Base)",
+      "attributes": [
+        "object",
+        "external"
+      ]
+    },
+    {
+      "id": "BH.oM.Base.IObject",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/BHoM/Interface/IObject.cs",
+      "label": "IObject (BH.oM.Base)",
+      "attributes": [
+        "object",
+        "external"
+      ]
+    },
+    {
+      "id": "BH.oM.Base.BHoMObject",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/BHoM/BHoMObject.cs",
+      "label": "BHoMObject (BH.oM.Base)",
+      "attributes": [
+        "external"
+      ]
+    },
+    {
+      "id": "BH.oM.Planning.CodeAssembly.Repository",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/Planning_oM/CodeAssembly.cs#L34",
+      "label": "Repository (BH.oM.Planning.CodeAssembly.Repository)",
+      "attributes": [
+        "datatype"
+      ]
+    },
+    {
+      "id": "BH.oM.Planning.CodeAssembly.References",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/Planning_oM/CodeAssembly.cs#L36",
+      "label": "References (BH.oM.Planning.CodeAssembly.References)",
+      "attributes": [
+        "datatype"
+      ]
+    },
+    {
+      "id": "BH.oM.Planning.Commit.RepoName",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/Planning_oM/Commit.cs#L34",
+      "label": "RepoName (BH.oM.Planning.Commit.RepoName)",
+      "attributes": [
+        "datatype"
+      ]
+    },
+    {
+      "id": "BH.oM.Planning.Commit.Date",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/Planning_oM/Commit.cs#L36",
+      "label": "Date (BH.oM.Planning.Commit.Date)",
+      "attributes": [
+        "datatype"
+      ]
+    },
+    {
+      "id": "BH.oM.Planning.Commit.Author",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/Planning_oM/Commit.cs#L38",
+      "label": "Author (BH.oM.Planning.Commit.Author)",
+      "attributes": [
+        "datatype"
+      ]
+    },
+    {
+      "id": "BH.oM.Planning.Commit.Committer",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/Planning_oM/Commit.cs#L40",
+      "label": "Committer (BH.oM.Planning.Commit.Committer)",
+      "attributes": [
+        "datatype"
+      ]
+    },
+    {
+      "id": "BH.oM.Planning.Commit.Additions",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/Planning_oM/Commit.cs#L42",
+      "label": "Additions (BH.oM.Planning.Commit.Additions)",
+      "attributes": [
+        "datatype"
+      ]
+    },
+    {
+      "id": "BH.oM.Planning.Commit.Deletions",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/Planning_oM/Commit.cs#L44",
+      "label": "Deletions (BH.oM.Planning.Commit.Deletions)",
+      "attributes": [
+        "datatype"
+      ]
+    },
+    {
+      "id": "BH.oM.Planning.Commit.TotalChanges",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/Planning_oM/Commit.cs#L46",
+      "label": "TotalChanges (BH.oM.Planning.Commit.TotalChanges)",
+      "attributes": [
+        "datatype"
+      ]
+    },
+    {
+      "id": "BH.oM.Planning.ConstructionPhase.StartTime",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/Planning_oM/Construction/ConstructionPhase.cs#L34",
+      "label": "StartTime (BH.oM.Planning.ConstructionPhase.StartTime)",
+      "attributes": [
+        "datatype"
+      ]
+    },
+    {
+      "id": "BH.oM.Planning.ConstructionPhase.EndTime",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/Planning_oM/Construction/ConstructionPhase.cs#L36",
+      "label": "EndTime (BH.oM.Planning.ConstructionPhase.EndTime)",
+      "attributes": [
+        "datatype"
+      ]
+    },
+    {
+      "id": "BH.oM.Planning.IPhase.StartTime",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/Planning_oM/IPhase.cs#L30",
+      "label": "StartTime (BH.oM.Planning.IPhase.StartTime)",
+      "attributes": [
+        "datatype"
+      ]
+    },
+    {
+      "id": "BH.oM.Planning.IPhase.EndTime",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/Planning_oM/IPhase.cs#L32",
+      "label": "EndTime (BH.oM.Planning.IPhase.EndTime)",
+      "attributes": [
+        "datatype"
+      ]
+    },
+    {
+      "id": "BH.oM.Planning.Issue.Creator",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/Planning_oM/Issue.cs#L35",
+      "label": "Creator (BH.oM.Planning.Issue.Creator)",
+      "attributes": [
+        "datatype"
+      ]
+    },
+    {
+      "id": "BH.oM.Planning.Issue.Assignees",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/Planning_oM/Issue.cs#L37",
+      "label": "Assignees (BH.oM.Planning.Issue.Assignees)",
+      "attributes": [
+        "datatype"
+      ]
+    },
+    {
+      "id": "BH.oM.Planning.Issue.Title",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/Planning_oM/Issue.cs#L39",
+      "label": "Title (BH.oM.Planning.Issue.Title)",
+      "attributes": [
+        "datatype"
+      ]
+    },
+    {
+      "id": "BH.oM.Planning.Issue.RepoName",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/Planning_oM/Issue.cs#L41",
+      "label": "RepoName (BH.oM.Planning.Issue.RepoName)",
+      "attributes": [
+        "datatype"
+      ]
+    },
+    {
+      "id": "BH.oM.Planning.Issue.Number",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/Planning_oM/Issue.cs#L43",
+      "label": "Number (BH.oM.Planning.Issue.Number)",
+      "attributes": [
+        "datatype"
+      ]
+    },
+    {
+      "id": "BH.oM.Planning.Issue.CreationDate",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/Planning_oM/Issue.cs#L45",
+      "label": "CreationDate (BH.oM.Planning.Issue.CreationDate)",
+      "attributes": [
+        "datatype"
+      ]
+    },
+    {
+      "id": "BH.oM.Planning.Issue.MilestoneName",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/Planning_oM/Issue.cs#L47",
+      "label": "MilestoneName (BH.oM.Planning.Issue.MilestoneName)",
+      "attributes": [
+        "datatype"
+      ]
+    },
+    {
+      "id": "BH.oM.Planning.Issue.PullRequested",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/Planning_oM/Issue.cs#L49",
+      "label": "PullRequested (BH.oM.Planning.Issue.PullRequested)",
+      "attributes": [
+        "datatype"
+      ]
+    },
+    {
+      "id": "BH.oM.Planning.Issue.Labels",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/Planning_oM/Issue.cs#L51",
+      "label": "Labels (BH.oM.Planning.Issue.Labels)",
+      "attributes": [
+        "datatype"
+      ]
+    },
+    {
+      "id": "BH.oM.Planning.Issue.Url",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/Planning_oM/Issue.cs#L53",
+      "label": "Url (BH.oM.Planning.Issue.Url)",
+      "attributes": [
+        "datatype"
+      ]
+    },
+    {
+      "id": "BH.oM.Planning.Label.Colour",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/Planning_oM/Label.cs#L34",
+      "label": "Colour (BH.oM.Planning.Label.Colour)",
+      "attributes": [
+        "datatype"
+      ]
+    },
+    {
+      "id": "BH.oM.Planning.Milestone.DueOn",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/Planning_oM/Milestone.cs",
+      "label": "DueOn (BH.oM.Planning.Milestone.DueOn)",
+      "attributes": [
+        "datatype"
+      ]
+    },
+    {
+      "id": "BH.oM.Planning.Milestone.State",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/Planning_oM/Milestone.cs#L36",
+      "label": "State (BH.oM.Planning.Milestone.State)",
+      "attributes": []
+    },
+    {
+      "id": "BH.oM.Planning.Milestone.Description",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/Planning_oM/Milestone.cs#L38",
+      "label": "Description (BH.oM.Planning.Milestone.Description)",
+      "attributes": [
+        "datatype"
+      ]
+    },
+    {
+      "id": "BH.oM.Planning.PullRequest.Creator",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/Planning_oM/PullRequest.cs#L35",
+      "label": "Creator (BH.oM.Planning.PullRequest.Creator)",
+      "attributes": [
+        "datatype"
+      ]
+    },
+    {
+      "id": "BH.oM.Planning.PullRequest.Title",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/Planning_oM/PullRequest.cs#L37",
+      "label": "Title (BH.oM.Planning.PullRequest.Title)",
+      "attributes": [
+        "datatype"
+      ]
+    },
+    {
+      "id": "BH.oM.Planning.PullRequest.Body",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/Planning_oM/PullRequest.cs#L39",
+      "label": "Body (BH.oM.Planning.PullRequest.Body)",
+      "attributes": [
+        "datatype"
+      ]
+    },
+    {
+      "id": "BH.oM.Planning.PullRequest.HtmlUrl",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/Planning_oM/PullRequest.cs#L41",
+      "label": "HtmlUrl (BH.oM.Planning.PullRequest.HtmlUrl)",
+      "attributes": [
+        "datatype"
+      ]
+    },
+    {
+      "id": "BH.oM.Planning.PullRequest.RepoName",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/Planning_oM/PullRequest.cs#L43",
+      "label": "RepoName (BH.oM.Planning.PullRequest.RepoName)",
+      "attributes": [
+        "datatype"
+      ]
+    },
+    {
+      "id": "BH.oM.Planning.PullRequest.BranchName",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/Planning_oM/PullRequest.cs#L45",
+      "label": "BranchName (BH.oM.Planning.PullRequest.BranchName)",
+      "attributes": [
+        "datatype"
+      ]
+    },
+    {
+      "id": "BH.oM.Planning.PullRequest.Number",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/Planning_oM/PullRequest.cs#L47",
+      "label": "Number (BH.oM.Planning.PullRequest.Number)",
+      "attributes": [
+        "datatype"
+      ]
+    },
+    {
+      "id": "BH.oM.Planning.PullRequest.CreationDate",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/Planning_oM/PullRequest.cs#L49",
+      "label": "CreationDate (BH.oM.Planning.PullRequest.CreationDate)",
+      "attributes": [
+        "datatype"
+      ]
+    },
+    {
+      "id": "BH.oM.Planning.PullRequest.MilestoneName",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/Planning_oM/PullRequest.cs#L51",
+      "label": "MilestoneName (BH.oM.Planning.PullRequest.MilestoneName)",
+      "attributes": [
+        "datatype"
+      ]
+    },
+    {
+      "id": "BH.oM.Planning.PullRequest.Additions",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/Planning_oM/PullRequest.cs#L53",
+      "label": "Additions (BH.oM.Planning.PullRequest.Additions)",
+      "attributes": [
+        "datatype"
+      ]
+    },
+    {
+      "id": "BH.oM.Planning.PullRequest.Deletions",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/Planning_oM/PullRequest.cs#L55",
+      "label": "Deletions (BH.oM.Planning.PullRequest.Deletions)",
+      "attributes": [
+        "datatype"
+      ]
+    },
+    {
+      "id": "BH.oM.Planning.PullRequest.Reviewers",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/Planning_oM/PullRequest.cs#L57",
+      "label": "Reviewers (BH.oM.Planning.PullRequest.Reviewers)",
+      "attributes": [
+        "datatype"
+      ]
+    },
+    {
+      "id": "BH.oM.Planning.Repository.OpenIssues",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/Planning_oM/Repository.cs#L33",
+      "label": "OpenIssues (BH.oM.Planning.Repository.OpenIssues)",
+      "attributes": [
+        "datatype"
+      ]
+    },
+    {
+      "id": "BH.oM.Planning.Repository.OpenPullRequests",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/Planning_oM/Repository.cs#L35",
+      "label": "OpenPullRequests (BH.oM.Planning.Repository.OpenPullRequests)",
+      "attributes": [
+        "datatype"
+      ]
+    },
+    {
+      "id": "BH.oM.Planning.Repository.ClosedIssues",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/Planning_oM/Repository.cs#L37",
+      "label": "ClosedIssues (BH.oM.Planning.Repository.ClosedIssues)",
+      "attributes": [
+        "datatype"
+      ]
+    },
+    {
+      "id": "BH.oM.Planning.Repository.ClosedPullRequests",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/Planning_oM/Repository.cs#L39",
+      "label": "ClosedPullRequests (BH.oM.Planning.Repository.ClosedPullRequests)",
+      "attributes": [
+        "datatype"
+      ]
+    }
+  ],
+  "property": [
+    {
+      "id": "Branch-HasProperty-LastPusher_9400D907C3649E4074ABCF0F08B8B37682D5C3BC99F03419A674BB74C7BBBDFA",
+      "type": "owl:DatatypeProperty"
+    },
+    {
+      "id": "Branch-HasProperty-Title_AB2F312E5550DA18878931D5C52E725F2848DBBB27412C2D9ACBFEBCA08162AE",
+      "type": "owl:DatatypeProperty"
+    },
+    {
+      "id": "Branch-HasProperty-RepoName_15CDAF032DABDEE46FD6E49B1308F04B9CEFA41B531C05AAFAAE4DD944247136",
+      "type": "owl:DatatypeProperty"
+    },
+    {
+      "id": "Branch-HasProperty-Protected_D90239E416E1C5AC36FA58D289588277073A74EE36A88E1F9828F5C3EF1E438D",
+      "type": "owl:DatatypeProperty"
+    },
+    {
+      "id": "Branch-HasProperty-LastCommitDate_DE725E2824A40F158EDA5409DA8DBB1699F65844639AC7C534F4B46D9BCF415D",
+      "type": "owl:DatatypeProperty"
+    },
+    {
+      "id": "Branch-IsA-IBHoMObject_B616CB0FD9C885B3CDE96FA2B8EA0CD9350EDBC5F6D709705151FD5AB5FA9FA8",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "Branch-IsA-IObject_D3CA6E3A302532A393BF98C432C3D9AADFC90FD6FC9513746A141123CEC6DF37",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "Branch-IsSubclassOf-BHoMObject_47940F101F65C59065D32CCBC9011FD1A2501A39ADE23DBDDE51F01891830CCE",
+      "type": "rdfs:subClassOf"
+    },
+    {
+      "id": "CodeAssembly-HasProperty-Repository_96EAED7BB47A0C7334D239BFFA7E35E96E54A3D0E07D1915D5D8D45B3D8CE1D9",
+      "type": "owl:DatatypeProperty"
+    },
+    {
+      "id": "CodeAssembly-HasProperty-References_EA3D907F620B2732A16041E539D14992F25354D59D5EE0EAD795974FC848827C",
+      "type": "owl:DatatypeProperty"
+    },
+    {
+      "id": "CodeAssembly-IsA-IBHoMObject_1D1E9E44283B6784CC0DBBA176CD8FC4F28C3DAC6FD3843A2D87B934285E338C",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "CodeAssembly-IsA-IObject_41EE4FDE5FE31C41D3B0D1774233E65B76442D785890B1CD97ED3945E6CD930F",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "CodeAssembly-IsSubclassOf-BHoMObject_50AD1754491AEFD93E0B0B297352DC1D63874DA2F4428967256C6088C872474F",
+      "type": "rdfs:subClassOf"
+    },
+    {
+      "id": "Commit-HasProperty-RepoName_159C99761B8E115CCD99FCA3CCAF8E15055D8FB7E303BC37597FBFA9EF63B213",
+      "type": "owl:DatatypeProperty"
+    },
+    {
+      "id": "Commit-HasProperty-Date_93ED2CB5CF2E7AAE89FD51FB7BDAC00B9CEB9D6CB4A3F71DBC2BE137C62CE630",
+      "type": "owl:DatatypeProperty"
+    },
+    {
+      "id": "Commit-HasProperty-Author_9136BE04BE76E6CEC379CA274B9118F25336B1ED4DC7800E25A422EE101E1D18",
+      "type": "owl:DatatypeProperty"
+    },
+    {
+      "id": "Commit-HasProperty-Committer_0E6E9B9DBB005910EA82EF1C7E378F8012CC908B589D9CB688912691DCCAB8E3",
+      "type": "owl:DatatypeProperty"
+    },
+    {
+      "id": "Commit-HasProperty-Additions_FA6A6338364594579C478745DA41344198C7D964474E0257C8307C032434B979",
+      "type": "owl:DatatypeProperty"
+    },
+    {
+      "id": "Commit-HasProperty-Deletions_4C712D01AD27472945AF56D06E57BB73B40E393A84D5CA4325DE1495F1D61024",
+      "type": "owl:DatatypeProperty"
+    },
+    {
+      "id": "Commit-HasProperty-TotalChanges_0F77A8AE487492BB966F33502F1DD8855258072152BAB9992EB75180E4A8A1AF",
+      "type": "owl:DatatypeProperty"
+    },
+    {
+      "id": "Commit-IsA-IBHoMObject_65FD34A7BFBA7396C26A7054CA77636E77E2BC0324BC4E0C72B1CAB08D016EF5",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "Commit-IsA-IObject_E25F6F3F581B540585FA3ED872FFEDF3E8DC5A5F8E0E3829474E79CA49784170",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "Commit-IsSubclassOf-BHoMObject_1B5FA972906792EC9949ED2078FC2A763BDD989312EBB09BEC149697239BEA56",
+      "type": "rdfs:subClassOf"
+    },
+    {
+      "id": "ConstructionPhase-HasProperty-StartTime_14D492F996489CF9B902FCDABBBA28D3820A2B0BE303765CB600258FA91A92AA",
+      "type": "owl:DatatypeProperty"
+    },
+    {
+      "id": "ConstructionPhase-HasProperty-EndTime_ACC67A372D677DEAA8EA8F742218F653A51F7F7F65CBA7495C7CF19AC586B7C9",
+      "type": "owl:DatatypeProperty"
+    },
+    {
+      "id": "ConstructionPhase-IsA-IBHoMObject_D4E734C0B9CCB57DF02B2D6EAF6E1114451CF825004AA506EA32B65130E3CC76",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "ConstructionPhase-IsA-IObject_F543EC280D57E5F7EF6E7A01705F9B693BD7892779247C9A6C16C85FC897D5B7",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "ConstructionPhase-IsA-IPhase_D822C2B57537B5753F83FED355605F0957F677C5A32789C08C93E61467AF78E5",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "ConstructionPhase-IsSubclassOf-BHoMObject_0DC43A88FE550DB00E8DEB4CC6372E2ABF73AF1BAC21FCB53FF73F51F52CA7EA",
+      "type": "rdfs:subClassOf"
+    },
+    {
+      "id": "IPhase-RequiresProperty-StartTime_5D32E3DA7F9733B24C585BC236E28EC709DDE55FB8FBC6BBD9710F3047586229",
+      "type": "owl:DatatypeProperty"
+    },
+    {
+      "id": "IPhase-RequiresProperty-EndTime_5F80A6E7DF97F6DD6CFCFF2E4F8BF09814D7A498585CC9EB42C00F7266BDBCF5",
+      "type": "owl:DatatypeProperty"
+    },
+    {
+      "id": "IPhase-IsA-IBHoMObject_220A417D09F56448CB1B3D5FA045879DCEC8A916D452933D2EF079FF849AB92C",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "IPhase-IsA-IObject_67CC311E78A8EAB2EEA16FBBF518E9E57B357687843F6ABDF9B3C41E22FE1126",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "Issue-HasProperty-Creator_7E49010593AD67DB07F0050B65521E53C4FDDC6CE79BFBBEDA02D50172C95766",
+      "type": "owl:DatatypeProperty"
+    },
+    {
+      "id": "Issue-HasProperty-Assignees_377603A6D1E9CF1D0568CDC26E4E5DC7C171DFDB589AF130552F2AF3013F3B53",
+      "type": "owl:DatatypeProperty"
+    },
+    {
+      "id": "Issue-HasProperty-Title_19E435E588E6A5CE08F5C908BEAACCD81C5E1A4F55854A6EA389CAFDC40A6CA7",
+      "type": "owl:DatatypeProperty"
+    },
+    {
+      "id": "Issue-HasProperty-RepoName_544EB0F3ED6A7BA252AD9C0EBE7B35F48FC5D7C51E435833405003275A39226F",
+      "type": "owl:DatatypeProperty"
+    },
+    {
+      "id": "Issue-HasProperty-Number_589977465EF7E1696C2028F98B34F26586662A853070DC387069559A279CA3DC",
+      "type": "owl:DatatypeProperty"
+    },
+    {
+      "id": "Issue-HasProperty-CreationDate_41F47297A2CF3324BFC9E71CB1E292A741295460C106BB3CF9CCDEF787AC644F",
+      "type": "owl:DatatypeProperty"
+    },
+    {
+      "id": "Issue-HasProperty-MilestoneName_043E2FAC4624839B1F02EFC70E069DD94ECB0C189D4B3DB318B83F5D9D7DEF08",
+      "type": "owl:DatatypeProperty"
+    },
+    {
+      "id": "Issue-HasProperty-PullRequested_8CCFB8325695334934757F68BE5FD2C2FE4969C695DF4C8C62DBF25D1FDDD683",
+      "type": "owl:DatatypeProperty"
+    },
+    {
+      "id": "Issue-HasProperty-Labels_A3704EB69E7AC513AC02623570F9D4C427C759796899559E79AB996B747B8B3E",
+      "type": "owl:DatatypeProperty"
+    },
+    {
+      "id": "Issue-HasProperty-Url_8683E16BC74DA41D2B7E31ABA80E3A43F8C443E6DCE74829D852811CC0533AEF",
+      "type": "owl:DatatypeProperty"
+    },
+    {
+      "id": "Issue-IsA-IBHoMObject_6038D10971F02969C71776DB1689F3D01DCE76CF252026CE03A600EE5A2D698D",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "Issue-IsA-IObject_B8E4680DAFF36E794F0E272DDFD1260EFAD88E6321D2E674A6D1877A9478AA63",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "Issue-IsSubclassOf-BHoMObject_3C6577544E67F4CD4831028A85665ECEA03C36DFDBCEBE77A365F02880BF756D",
+      "type": "rdfs:subClassOf"
+    },
+    {
+      "id": "Label-HasProperty-Colour_0ECD4C34704B972B8CF8B287D743521B38CD9BF4177D88F37574B9FA35468820",
+      "type": "owl:DatatypeProperty"
+    },
+    {
+      "id": "Label-IsA-IBHoMObject_9ADCAF3012956A5A644FA2E5FA1B101AE1FF97C99D82140B4B4176ABFDD594E6",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "Label-IsA-IObject_AEF12CF5983A616459D85ED1E9C5BE603090A51A29E1FD0F556401C40A01E790",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "Label-IsSubclassOf-BHoMObject_066BEC7CF209C2F77C18C33FE9DBB2B5C4B1D9DD701F4ACF7BAF3C8CBC8C693F",
+      "type": "rdfs:subClassOf"
+    },
+    {
+      "id": "Milestone-HasProperty-DueOn_0B22FC8D19FB2BEA9426D13BA3864C7ED412192804F0D59DC0E56EF18A168848",
+      "type": "owl:DatatypeProperty"
+    },
+    {
+      "id": "BH.oM.Planning.Milestone-HasProperty-BH.oM.Planning.Milestone.State",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "BH.oM.Planning.Milestone.State-IsA-BH.oM.Planning.ItemState",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "Milestone-HasProperty-Description_D6080BD9A7E37043771FB97F732E591D9DA9749FF94E615BCDA8D49F262DD6D7",
+      "type": "owl:DatatypeProperty"
+    },
+    {
+      "id": "Milestone-IsA-IBHoMObject_84853BF4497C18D10BA85DCD09468E8BC5B342E46462C804ED907AF78185F370",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "Milestone-IsA-IObject_EFC4B511E346F7A184202712488868DC18B5DF04734E0FB0C84B4F98AF3559A2",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "Milestone-IsSubclassOf-BHoMObject_A3AB7FFFACA6E44A58B61D3B37435FF4D9020061AF8FEDBEE9A76491C54A2A5E",
+      "type": "rdfs:subClassOf"
+    },
+    {
+      "id": "PullRequest-HasProperty-Creator_6B1E5735E5012A8CDF03DE289BED9D952BEFB89126F7F3227DFD17840CB6DDCB",
+      "type": "owl:DatatypeProperty"
+    },
+    {
+      "id": "PullRequest-HasProperty-Title_710E1035C7D4A28C975B6A48A0BE79A16C801FF9C11D0B81551C4391E56654F5",
+      "type": "owl:DatatypeProperty"
+    },
+    {
+      "id": "PullRequest-HasProperty-Body_4DE2BB355372F9F3F9BEAB17D8E7A3F37DB3FDBAA2A63B50361CC1D2AF52D221",
+      "type": "owl:DatatypeProperty"
+    },
+    {
+      "id": "PullRequest-HasProperty-HtmlUrl_74FF6BF0C1897E688AA048C4C9FAA6AE80573032B0417E64EDC23B926E9354BE",
+      "type": "owl:DatatypeProperty"
+    },
+    {
+      "id": "PullRequest-HasProperty-RepoName_7624FE53E0936865C6F63C9707A44FA40ADC70233EEDCA66F02114B7C5E2B439",
+      "type": "owl:DatatypeProperty"
+    },
+    {
+      "id": "PullRequest-HasProperty-BranchName_E1646A1A0DF006B02426A4C66A1DC43A92B744D1F0C5F030EAE19200CD607E88",
+      "type": "owl:DatatypeProperty"
+    },
+    {
+      "id": "PullRequest-HasProperty-Number_ED07337839AC153C6D21B1AA07B95D1360CD3FFA199A8F235C9774CA882688A9",
+      "type": "owl:DatatypeProperty"
+    },
+    {
+      "id": "PullRequest-HasProperty-CreationDate_2D047379310EC5F659B9B9D11F40118A8BA5708B70AAE1A127F3074EA1C7E7A4",
+      "type": "owl:DatatypeProperty"
+    },
+    {
+      "id": "PullRequest-HasProperty-MilestoneName_55E070EF4E1E3B31742FFE90809B72BE25812E74480F5F9D1CF23133D1C80BA6",
+      "type": "owl:DatatypeProperty"
+    },
+    {
+      "id": "PullRequest-HasProperty-Additions_2180EB88BA0DCE2FBCBFD96A284736CD1EF8565CD322F1AB8DB20B572A94E9F3",
+      "type": "owl:DatatypeProperty"
+    },
+    {
+      "id": "PullRequest-HasProperty-Deletions_63EA846D8F9ACC099CBA1278CE61B7741D148EAB287689FB34ECE4E5C5C10530",
+      "type": "owl:DatatypeProperty"
+    },
+    {
+      "id": "PullRequest-HasProperty-Reviewers_65323D40107EE2AFB8B4338CF713F162B5825111388A4C5A89CBB9E687540601",
+      "type": "owl:DatatypeProperty"
+    },
+    {
+      "id": "PullRequest-IsA-IBHoMObject_3545B49EFAD48304FCB3FB147143171011A901E01E4A169E41A73D13AAA0ABB3",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "PullRequest-IsA-IObject_0E893DA5B922CBA01DFB195DE1B7263C0A90398ABC742278F27B324340E7F30A",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "PullRequest-IsSubclassOf-BHoMObject_6FD9045A0A0714D17F7D4312B9D33CD4AF33E1DB703692BC696DF7DB394F9C4E",
+      "type": "rdfs:subClassOf"
+    },
+    {
+      "id": "Repository-HasProperty-OpenIssues_4E40F96BAF47BFE1F40A41D21CB7B828BE483291A98B78EB503BCB14801DA9E7",
+      "type": "owl:DatatypeProperty"
+    },
+    {
+      "id": "Repository-HasProperty-OpenPullRequests_EE9B5DD61DEE533F72E09BC45EA37E5C10886289023760C6B07F4A3DE1250EDD",
+      "type": "owl:DatatypeProperty"
+    },
+    {
+      "id": "Repository-HasProperty-ClosedIssues_A731C41A3F272ACDDA2929178CE0A503FB3C53A6FF6F6E885696C90994C98616",
+      "type": "owl:DatatypeProperty"
+    },
+    {
+      "id": "Repository-HasProperty-ClosedPullRequests_F25EE949883523138796BFA5392CF4C0ACD4C06D51FC1D70375CFD4E333C41BE",
+      "type": "owl:DatatypeProperty"
+    },
+    {
+      "id": "Repository-IsA-IBHoMObject_F28ECC6F64EAF810725DB096584ABDE5221B43CE283A8100B41B6F7DA3EBA007",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "Repository-IsA-IObject_3FECD929DB4B5D9F57B8C915909E9D3E12A66C8AB1C867CA99939E429328BDF3",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "Repository-IsSubclassOf-BHoMObject_5A33F78095D5004FE5B06F2A4D3F21497BB483C2A2CC0E4A1281EC0C9CD5F773",
+      "type": "rdfs:subClassOf"
+    }
+  ],
+  "propertyAttribute": [
+    {
+      "id": "Branch-HasProperty-LastPusher_9400D907C3649E4074ABCF0F08B8B37682D5C3BC99F03419A674BB74C7BBBDFA",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/HasProperty.cs",
+      "label": "HasProperty",
+      "attributes": [
+        "datatype"
+      ],
+      "domain": "BH.oM.Planning.Branch",
+      "range": "BH.oM.Planning.Branch.LastPusher"
+    },
+    {
+      "id": "Branch-HasProperty-Title_AB2F312E5550DA18878931D5C52E725F2848DBBB27412C2D9ACBFEBCA08162AE",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/HasProperty.cs",
+      "label": "HasProperty",
+      "attributes": [
+        "datatype"
+      ],
+      "domain": "BH.oM.Planning.Branch",
+      "range": "BH.oM.Planning.Branch.Title"
+    },
+    {
+      "id": "Branch-HasProperty-RepoName_15CDAF032DABDEE46FD6E49B1308F04B9CEFA41B531C05AAFAAE4DD944247136",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/HasProperty.cs",
+      "label": "HasProperty",
+      "attributes": [
+        "datatype"
+      ],
+      "domain": "BH.oM.Planning.Branch",
+      "range": "BH.oM.Planning.Branch.RepoName"
+    },
+    {
+      "id": "Branch-HasProperty-Protected_D90239E416E1C5AC36FA58D289588277073A74EE36A88E1F9828F5C3EF1E438D",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/HasProperty.cs",
+      "label": "HasProperty",
+      "attributes": [
+        "datatype"
+      ],
+      "domain": "BH.oM.Planning.Branch",
+      "range": "BH.oM.Planning.Branch.Protected"
+    },
+    {
+      "id": "Branch-HasProperty-LastCommitDate_DE725E2824A40F158EDA5409DA8DBB1699F65844639AC7C534F4B46D9BCF415D",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/HasProperty.cs",
+      "label": "HasProperty",
+      "attributes": [
+        "datatype"
+      ],
+      "domain": "BH.oM.Planning.Branch",
+      "range": "BH.oM.Planning.Branch.LastCommitDate"
+    },
+    {
+      "id": "Branch-IsA-IBHoMObject_B616CB0FD9C885B3CDE96FA2B8EA0CD9350EDBC5F6D709705151FD5AB5FA9FA8",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/IsA.cs",
+      "label": "IsA",
+      "attributes": [
+        "object"
+      ],
+      "comment": {
+        "undefined": "Can be used to describe that a thing belongs to a class; or that a thing is equivalent to another thing. When used for BHoM types, this describes C# interface implementation."
+      },
+      "domain": "BH.oM.Planning.Branch",
+      "range": "BH.oM.Base.IBHoMObject"
+    },
+    {
+      "id": "Branch-IsA-IObject_D3CA6E3A302532A393BF98C432C3D9AADFC90FD6FC9513746A141123CEC6DF37",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/IsA.cs",
+      "label": "IsA",
+      "attributes": [
+        "object"
+      ],
+      "comment": {
+        "undefined": "Can be used to describe that a thing belongs to a class; or that a thing is equivalent to another thing. When used for BHoM types, this describes C# interface implementation."
+      },
+      "domain": "BH.oM.Planning.Branch",
+      "range": "BH.oM.Base.IObject"
+    },
+    {
+      "id": "Branch-IsSubclassOf-BHoMObject_47940F101F65C59065D32CCBC9011FD1A2501A39ADE23DBDDE51F01891830CCE",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/IsSubclassOf.cs",
+      "label": "IsA",
+      "attributes": [
+        "object"
+      ],
+      "domain": "BH.oM.Planning.Branch",
+      "range": "BH.oM.Base.BHoMObject"
+    },
+    {
+      "id": "CodeAssembly-HasProperty-Repository_96EAED7BB47A0C7334D239BFFA7E35E96E54A3D0E07D1915D5D8D45B3D8CE1D9",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/HasProperty.cs",
+      "label": "HasProperty",
+      "attributes": [
+        "datatype"
+      ],
+      "domain": "BH.oM.Planning.CodeAssembly",
+      "range": "BH.oM.Planning.CodeAssembly.Repository"
+    },
+    {
+      "id": "CodeAssembly-HasProperty-References_EA3D907F620B2732A16041E539D14992F25354D59D5EE0EAD795974FC848827C",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/HasProperty.cs",
+      "label": "HasProperty",
+      "attributes": [
+        "datatype"
+      ],
+      "domain": "BH.oM.Planning.CodeAssembly",
+      "range": "BH.oM.Planning.CodeAssembly.References"
+    },
+    {
+      "id": "CodeAssembly-IsA-IBHoMObject_1D1E9E44283B6784CC0DBBA176CD8FC4F28C3DAC6FD3843A2D87B934285E338C",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/IsA.cs",
+      "label": "IsA",
+      "attributes": [
+        "object"
+      ],
+      "comment": {
+        "undefined": "Can be used to describe that a thing belongs to a class; or that a thing is equivalent to another thing. When used for BHoM types, this describes C# interface implementation."
+      },
+      "domain": "BH.oM.Planning.CodeAssembly",
+      "range": "BH.oM.Base.IBHoMObject"
+    },
+    {
+      "id": "CodeAssembly-IsA-IObject_41EE4FDE5FE31C41D3B0D1774233E65B76442D785890B1CD97ED3945E6CD930F",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/IsA.cs",
+      "label": "IsA",
+      "attributes": [
+        "object"
+      ],
+      "comment": {
+        "undefined": "Can be used to describe that a thing belongs to a class; or that a thing is equivalent to another thing. When used for BHoM types, this describes C# interface implementation."
+      },
+      "domain": "BH.oM.Planning.CodeAssembly",
+      "range": "BH.oM.Base.IObject"
+    },
+    {
+      "id": "CodeAssembly-IsSubclassOf-BHoMObject_50AD1754491AEFD93E0B0B297352DC1D63874DA2F4428967256C6088C872474F",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/IsSubclassOf.cs",
+      "label": "IsA",
+      "attributes": [
+        "object"
+      ],
+      "domain": "BH.oM.Planning.CodeAssembly",
+      "range": "BH.oM.Base.BHoMObject"
+    },
+    {
+      "id": "Commit-HasProperty-RepoName_159C99761B8E115CCD99FCA3CCAF8E15055D8FB7E303BC37597FBFA9EF63B213",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/HasProperty.cs",
+      "label": "HasProperty",
+      "attributes": [
+        "datatype"
+      ],
+      "domain": "BH.oM.Planning.Commit",
+      "range": "BH.oM.Planning.Commit.RepoName"
+    },
+    {
+      "id": "Commit-HasProperty-Date_93ED2CB5CF2E7AAE89FD51FB7BDAC00B9CEB9D6CB4A3F71DBC2BE137C62CE630",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/HasProperty.cs",
+      "label": "HasProperty",
+      "attributes": [
+        "datatype"
+      ],
+      "domain": "BH.oM.Planning.Commit",
+      "range": "BH.oM.Planning.Commit.Date"
+    },
+    {
+      "id": "Commit-HasProperty-Author_9136BE04BE76E6CEC379CA274B9118F25336B1ED4DC7800E25A422EE101E1D18",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/HasProperty.cs",
+      "label": "HasProperty",
+      "attributes": [
+        "datatype"
+      ],
+      "domain": "BH.oM.Planning.Commit",
+      "range": "BH.oM.Planning.Commit.Author"
+    },
+    {
+      "id": "Commit-HasProperty-Committer_0E6E9B9DBB005910EA82EF1C7E378F8012CC908B589D9CB688912691DCCAB8E3",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/HasProperty.cs",
+      "label": "HasProperty",
+      "attributes": [
+        "datatype"
+      ],
+      "domain": "BH.oM.Planning.Commit",
+      "range": "BH.oM.Planning.Commit.Committer"
+    },
+    {
+      "id": "Commit-HasProperty-Additions_FA6A6338364594579C478745DA41344198C7D964474E0257C8307C032434B979",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/HasProperty.cs",
+      "label": "HasProperty",
+      "attributes": [
+        "datatype"
+      ],
+      "domain": "BH.oM.Planning.Commit",
+      "range": "BH.oM.Planning.Commit.Additions"
+    },
+    {
+      "id": "Commit-HasProperty-Deletions_4C712D01AD27472945AF56D06E57BB73B40E393A84D5CA4325DE1495F1D61024",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/HasProperty.cs",
+      "label": "HasProperty",
+      "attributes": [
+        "datatype"
+      ],
+      "domain": "BH.oM.Planning.Commit",
+      "range": "BH.oM.Planning.Commit.Deletions"
+    },
+    {
+      "id": "Commit-HasProperty-TotalChanges_0F77A8AE487492BB966F33502F1DD8855258072152BAB9992EB75180E4A8A1AF",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/HasProperty.cs",
+      "label": "HasProperty",
+      "attributes": [
+        "datatype"
+      ],
+      "domain": "BH.oM.Planning.Commit",
+      "range": "BH.oM.Planning.Commit.TotalChanges"
+    },
+    {
+      "id": "Commit-IsA-IBHoMObject_65FD34A7BFBA7396C26A7054CA77636E77E2BC0324BC4E0C72B1CAB08D016EF5",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/IsA.cs",
+      "label": "IsA",
+      "attributes": [
+        "object"
+      ],
+      "comment": {
+        "undefined": "Can be used to describe that a thing belongs to a class; or that a thing is equivalent to another thing. When used for BHoM types, this describes C# interface implementation."
+      },
+      "domain": "BH.oM.Planning.Commit",
+      "range": "BH.oM.Base.IBHoMObject"
+    },
+    {
+      "id": "Commit-IsA-IObject_E25F6F3F581B540585FA3ED872FFEDF3E8DC5A5F8E0E3829474E79CA49784170",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/IsA.cs",
+      "label": "IsA",
+      "attributes": [
+        "object"
+      ],
+      "comment": {
+        "undefined": "Can be used to describe that a thing belongs to a class; or that a thing is equivalent to another thing. When used for BHoM types, this describes C# interface implementation."
+      },
+      "domain": "BH.oM.Planning.Commit",
+      "range": "BH.oM.Base.IObject"
+    },
+    {
+      "id": "Commit-IsSubclassOf-BHoMObject_1B5FA972906792EC9949ED2078FC2A763BDD989312EBB09BEC149697239BEA56",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/IsSubclassOf.cs",
+      "label": "IsA",
+      "attributes": [
+        "object"
+      ],
+      "domain": "BH.oM.Planning.Commit",
+      "range": "BH.oM.Base.BHoMObject"
+    },
+    {
+      "id": "ConstructionPhase-HasProperty-StartTime_14D492F996489CF9B902FCDABBBA28D3820A2B0BE303765CB600258FA91A92AA",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/HasProperty.cs",
+      "label": "HasProperty",
+      "attributes": [
+        "datatype"
+      ],
+      "domain": "BH.oM.Planning.ConstructionPhase",
+      "range": "BH.oM.Planning.ConstructionPhase.StartTime"
+    },
+    {
+      "id": "ConstructionPhase-HasProperty-EndTime_ACC67A372D677DEAA8EA8F742218F653A51F7F7F65CBA7495C7CF19AC586B7C9",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/HasProperty.cs",
+      "label": "HasProperty",
+      "attributes": [
+        "datatype"
+      ],
+      "domain": "BH.oM.Planning.ConstructionPhase",
+      "range": "BH.oM.Planning.ConstructionPhase.EndTime"
+    },
+    {
+      "id": "ConstructionPhase-IsA-IBHoMObject_D4E734C0B9CCB57DF02B2D6EAF6E1114451CF825004AA506EA32B65130E3CC76",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/IsA.cs",
+      "label": "IsA",
+      "attributes": [
+        "object"
+      ],
+      "comment": {
+        "undefined": "Can be used to describe that a thing belongs to a class; or that a thing is equivalent to another thing. When used for BHoM types, this describes C# interface implementation."
+      },
+      "domain": "BH.oM.Planning.ConstructionPhase",
+      "range": "BH.oM.Base.IBHoMObject"
+    },
+    {
+      "id": "ConstructionPhase-IsA-IObject_F543EC280D57E5F7EF6E7A01705F9B693BD7892779247C9A6C16C85FC897D5B7",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/IsA.cs",
+      "label": "IsA",
+      "attributes": [
+        "object"
+      ],
+      "comment": {
+        "undefined": "Can be used to describe that a thing belongs to a class; or that a thing is equivalent to another thing. When used for BHoM types, this describes C# interface implementation."
+      },
+      "domain": "BH.oM.Planning.ConstructionPhase",
+      "range": "BH.oM.Base.IObject"
+    },
+    {
+      "id": "ConstructionPhase-IsA-IPhase_D822C2B57537B5753F83FED355605F0957F677C5A32789C08C93E61467AF78E5",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/IsA.cs",
+      "label": "IsA",
+      "attributes": [
+        "object"
+      ],
+      "comment": {
+        "undefined": "Can be used to describe that a thing belongs to a class; or that a thing is equivalent to another thing. When used for BHoM types, this describes C# interface implementation."
+      },
+      "domain": "BH.oM.Planning.ConstructionPhase",
+      "range": "BH.oM.Planning.IPhase"
+    },
+    {
+      "id": "ConstructionPhase-IsSubclassOf-BHoMObject_0DC43A88FE550DB00E8DEB4CC6372E2ABF73AF1BAC21FCB53FF73F51F52CA7EA",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/IsSubclassOf.cs",
+      "label": "IsA",
+      "attributes": [
+        "object"
+      ],
+      "domain": "BH.oM.Planning.ConstructionPhase",
+      "range": "BH.oM.Base.BHoMObject"
+    },
+    {
+      "id": "IPhase-RequiresProperty-StartTime_5D32E3DA7F9733B24C585BC236E28EC709DDE55FB8FBC6BBD9710F3047586229",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/RequiresProperty.cs",
+      "label": "RequiresProperty",
+      "attributes": [
+        "datatype"
+      ],
+      "domain": "BH.oM.Planning.IPhase",
+      "range": "BH.oM.Planning.IPhase.StartTime"
+    },
+    {
+      "id": "IPhase-RequiresProperty-EndTime_5F80A6E7DF97F6DD6CFCFF2E4F8BF09814D7A498585CC9EB42C00F7266BDBCF5",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/RequiresProperty.cs",
+      "label": "RequiresProperty",
+      "attributes": [
+        "datatype"
+      ],
+      "domain": "BH.oM.Planning.IPhase",
+      "range": "BH.oM.Planning.IPhase.EndTime"
+    },
+    {
+      "id": "IPhase-IsA-IBHoMObject_220A417D09F56448CB1B3D5FA045879DCEC8A916D452933D2EF079FF849AB92C",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/IsA.cs",
+      "label": "IsA",
+      "attributes": [
+        "object"
+      ],
+      "comment": {
+        "undefined": "Can be used to describe that a thing belongs to a class; or that a thing is equivalent to another thing. When used for BHoM types, this describes C# interface implementation."
+      },
+      "domain": "BH.oM.Planning.IPhase",
+      "range": "BH.oM.Base.IBHoMObject"
+    },
+    {
+      "id": "IPhase-IsA-IObject_67CC311E78A8EAB2EEA16FBBF518E9E57B357687843F6ABDF9B3C41E22FE1126",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/IsA.cs",
+      "label": "IsA",
+      "attributes": [
+        "object"
+      ],
+      "comment": {
+        "undefined": "Can be used to describe that a thing belongs to a class; or that a thing is equivalent to another thing. When used for BHoM types, this describes C# interface implementation."
+      },
+      "domain": "BH.oM.Planning.IPhase",
+      "range": "BH.oM.Base.IObject"
+    },
+    {
+      "id": "Issue-HasProperty-Creator_7E49010593AD67DB07F0050B65521E53C4FDDC6CE79BFBBEDA02D50172C95766",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/HasProperty.cs",
+      "label": "HasProperty",
+      "attributes": [
+        "datatype"
+      ],
+      "domain": "BH.oM.Planning.Issue",
+      "range": "BH.oM.Planning.Issue.Creator"
+    },
+    {
+      "id": "Issue-HasProperty-Assignees_377603A6D1E9CF1D0568CDC26E4E5DC7C171DFDB589AF130552F2AF3013F3B53",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/HasProperty.cs",
+      "label": "HasProperty",
+      "attributes": [
+        "datatype"
+      ],
+      "domain": "BH.oM.Planning.Issue",
+      "range": "BH.oM.Planning.Issue.Assignees"
+    },
+    {
+      "id": "Issue-HasProperty-Title_19E435E588E6A5CE08F5C908BEAACCD81C5E1A4F55854A6EA389CAFDC40A6CA7",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/HasProperty.cs",
+      "label": "HasProperty",
+      "attributes": [
+        "datatype"
+      ],
+      "domain": "BH.oM.Planning.Issue",
+      "range": "BH.oM.Planning.Issue.Title"
+    },
+    {
+      "id": "Issue-HasProperty-RepoName_544EB0F3ED6A7BA252AD9C0EBE7B35F48FC5D7C51E435833405003275A39226F",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/HasProperty.cs",
+      "label": "HasProperty",
+      "attributes": [
+        "datatype"
+      ],
+      "domain": "BH.oM.Planning.Issue",
+      "range": "BH.oM.Planning.Issue.RepoName"
+    },
+    {
+      "id": "Issue-HasProperty-Number_589977465EF7E1696C2028F98B34F26586662A853070DC387069559A279CA3DC",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/HasProperty.cs",
+      "label": "HasProperty",
+      "attributes": [
+        "datatype"
+      ],
+      "domain": "BH.oM.Planning.Issue",
+      "range": "BH.oM.Planning.Issue.Number"
+    },
+    {
+      "id": "Issue-HasProperty-CreationDate_41F47297A2CF3324BFC9E71CB1E292A741295460C106BB3CF9CCDEF787AC644F",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/HasProperty.cs",
+      "label": "HasProperty",
+      "attributes": [
+        "datatype"
+      ],
+      "domain": "BH.oM.Planning.Issue",
+      "range": "BH.oM.Planning.Issue.CreationDate"
+    },
+    {
+      "id": "Issue-HasProperty-MilestoneName_043E2FAC4624839B1F02EFC70E069DD94ECB0C189D4B3DB318B83F5D9D7DEF08",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/HasProperty.cs",
+      "label": "HasProperty",
+      "attributes": [
+        "datatype"
+      ],
+      "domain": "BH.oM.Planning.Issue",
+      "range": "BH.oM.Planning.Issue.MilestoneName"
+    },
+    {
+      "id": "Issue-HasProperty-PullRequested_8CCFB8325695334934757F68BE5FD2C2FE4969C695DF4C8C62DBF25D1FDDD683",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/HasProperty.cs",
+      "label": "HasProperty",
+      "attributes": [
+        "datatype"
+      ],
+      "domain": "BH.oM.Planning.Issue",
+      "range": "BH.oM.Planning.Issue.PullRequested"
+    },
+    {
+      "id": "Issue-HasProperty-Labels_A3704EB69E7AC513AC02623570F9D4C427C759796899559E79AB996B747B8B3E",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/HasProperty.cs",
+      "label": "HasProperty",
+      "attributes": [
+        "datatype"
+      ],
+      "domain": "BH.oM.Planning.Issue",
+      "range": "BH.oM.Planning.Issue.Labels"
+    },
+    {
+      "id": "Issue-HasProperty-Url_8683E16BC74DA41D2B7E31ABA80E3A43F8C443E6DCE74829D852811CC0533AEF",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/HasProperty.cs",
+      "label": "HasProperty",
+      "attributes": [
+        "datatype"
+      ],
+      "domain": "BH.oM.Planning.Issue",
+      "range": "BH.oM.Planning.Issue.Url"
+    },
+    {
+      "id": "Issue-IsA-IBHoMObject_6038D10971F02969C71776DB1689F3D01DCE76CF252026CE03A600EE5A2D698D",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/IsA.cs",
+      "label": "IsA",
+      "attributes": [
+        "object"
+      ],
+      "comment": {
+        "undefined": "Can be used to describe that a thing belongs to a class; or that a thing is equivalent to another thing. When used for BHoM types, this describes C# interface implementation."
+      },
+      "domain": "BH.oM.Planning.Issue",
+      "range": "BH.oM.Base.IBHoMObject"
+    },
+    {
+      "id": "Issue-IsA-IObject_B8E4680DAFF36E794F0E272DDFD1260EFAD88E6321D2E674A6D1877A9478AA63",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/IsA.cs",
+      "label": "IsA",
+      "attributes": [
+        "object"
+      ],
+      "comment": {
+        "undefined": "Can be used to describe that a thing belongs to a class; or that a thing is equivalent to another thing. When used for BHoM types, this describes C# interface implementation."
+      },
+      "domain": "BH.oM.Planning.Issue",
+      "range": "BH.oM.Base.IObject"
+    },
+    {
+      "id": "Issue-IsSubclassOf-BHoMObject_3C6577544E67F4CD4831028A85665ECEA03C36DFDBCEBE77A365F02880BF756D",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/IsSubclassOf.cs",
+      "label": "IsA",
+      "attributes": [
+        "object"
+      ],
+      "domain": "BH.oM.Planning.Issue",
+      "range": "BH.oM.Base.BHoMObject"
+    },
+    {
+      "id": "Label-HasProperty-Colour_0ECD4C34704B972B8CF8B287D743521B38CD9BF4177D88F37574B9FA35468820",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/HasProperty.cs",
+      "label": "HasProperty",
+      "attributes": [
+        "datatype"
+      ],
+      "domain": "BH.oM.Planning.Label",
+      "range": "BH.oM.Planning.Label.Colour"
+    },
+    {
+      "id": "Label-IsA-IBHoMObject_9ADCAF3012956A5A644FA2E5FA1B101AE1FF97C99D82140B4B4176ABFDD594E6",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/IsA.cs",
+      "label": "IsA",
+      "attributes": [
+        "object"
+      ],
+      "comment": {
+        "undefined": "Can be used to describe that a thing belongs to a class; or that a thing is equivalent to another thing. When used for BHoM types, this describes C# interface implementation."
+      },
+      "domain": "BH.oM.Planning.Label",
+      "range": "BH.oM.Base.IBHoMObject"
+    },
+    {
+      "id": "Label-IsA-IObject_AEF12CF5983A616459D85ED1E9C5BE603090A51A29E1FD0F556401C40A01E790",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/IsA.cs",
+      "label": "IsA",
+      "attributes": [
+        "object"
+      ],
+      "comment": {
+        "undefined": "Can be used to describe that a thing belongs to a class; or that a thing is equivalent to another thing. When used for BHoM types, this describes C# interface implementation."
+      },
+      "domain": "BH.oM.Planning.Label",
+      "range": "BH.oM.Base.IObject"
+    },
+    {
+      "id": "Label-IsSubclassOf-BHoMObject_066BEC7CF209C2F77C18C33FE9DBB2B5C4B1D9DD701F4ACF7BAF3C8CBC8C693F",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/IsSubclassOf.cs",
+      "label": "IsA",
+      "attributes": [
+        "object"
+      ],
+      "domain": "BH.oM.Planning.Label",
+      "range": "BH.oM.Base.BHoMObject"
+    },
+    {
+      "id": "Milestone-HasProperty-DueOn_0B22FC8D19FB2BEA9426D13BA3864C7ED412192804F0D59DC0E56EF18A168848",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/HasProperty.cs",
+      "label": "HasProperty",
+      "attributes": [
+        "datatype"
+      ],
+      "domain": "BH.oM.Planning.Milestone",
+      "range": "BH.oM.Planning.Milestone.DueOn"
+    },
+    {
+      "id": "BH.oM.Planning.Milestone-HasProperty-BH.oM.Planning.Milestone.State",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/HasProperty.cs",
+      "label": "HasProperty",
+      "attributes": [
+        "object"
+      ],
+      "domain": "BH.oM.Planning.Milestone",
+      "range": "BH.oM.Planning.Milestone.State"
+    },
+    {
+      "id": "BH.oM.Planning.Milestone.State-IsA-BH.oM.Planning.ItemState",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/IsA.cs",
+      "label": "IsA",
+      "attributes": [
+        "object"
+      ],
+      "domain": "BH.oM.Planning.Milestone.State",
+      "range": "BH.oM.Planning.ItemState"
+    },
+    {
+      "id": "Milestone-HasProperty-Description_D6080BD9A7E37043771FB97F732E591D9DA9749FF94E615BCDA8D49F262DD6D7",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/HasProperty.cs",
+      "label": "HasProperty",
+      "attributes": [
+        "datatype"
+      ],
+      "domain": "BH.oM.Planning.Milestone",
+      "range": "BH.oM.Planning.Milestone.Description"
+    },
+    {
+      "id": "Milestone-IsA-IBHoMObject_84853BF4497C18D10BA85DCD09468E8BC5B342E46462C804ED907AF78185F370",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/IsA.cs",
+      "label": "IsA",
+      "attributes": [
+        "object"
+      ],
+      "comment": {
+        "undefined": "Can be used to describe that a thing belongs to a class; or that a thing is equivalent to another thing. When used for BHoM types, this describes C# interface implementation."
+      },
+      "domain": "BH.oM.Planning.Milestone",
+      "range": "BH.oM.Base.IBHoMObject"
+    },
+    {
+      "id": "Milestone-IsA-IObject_EFC4B511E346F7A184202712488868DC18B5DF04734E0FB0C84B4F98AF3559A2",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/IsA.cs",
+      "label": "IsA",
+      "attributes": [
+        "object"
+      ],
+      "comment": {
+        "undefined": "Can be used to describe that a thing belongs to a class; or that a thing is equivalent to another thing. When used for BHoM types, this describes C# interface implementation."
+      },
+      "domain": "BH.oM.Planning.Milestone",
+      "range": "BH.oM.Base.IObject"
+    },
+    {
+      "id": "Milestone-IsSubclassOf-BHoMObject_A3AB7FFFACA6E44A58B61D3B37435FF4D9020061AF8FEDBEE9A76491C54A2A5E",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/IsSubclassOf.cs",
+      "label": "IsA",
+      "attributes": [
+        "object"
+      ],
+      "domain": "BH.oM.Planning.Milestone",
+      "range": "BH.oM.Base.BHoMObject"
+    },
+    {
+      "id": "PullRequest-HasProperty-Creator_6B1E5735E5012A8CDF03DE289BED9D952BEFB89126F7F3227DFD17840CB6DDCB",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/HasProperty.cs",
+      "label": "HasProperty",
+      "attributes": [
+        "datatype"
+      ],
+      "domain": "BH.oM.Planning.PullRequest",
+      "range": "BH.oM.Planning.PullRequest.Creator"
+    },
+    {
+      "id": "PullRequest-HasProperty-Title_710E1035C7D4A28C975B6A48A0BE79A16C801FF9C11D0B81551C4391E56654F5",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/HasProperty.cs",
+      "label": "HasProperty",
+      "attributes": [
+        "datatype"
+      ],
+      "domain": "BH.oM.Planning.PullRequest",
+      "range": "BH.oM.Planning.PullRequest.Title"
+    },
+    {
+      "id": "PullRequest-HasProperty-Body_4DE2BB355372F9F3F9BEAB17D8E7A3F37DB3FDBAA2A63B50361CC1D2AF52D221",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/HasProperty.cs",
+      "label": "HasProperty",
+      "attributes": [
+        "datatype"
+      ],
+      "domain": "BH.oM.Planning.PullRequest",
+      "range": "BH.oM.Planning.PullRequest.Body"
+    },
+    {
+      "id": "PullRequest-HasProperty-HtmlUrl_74FF6BF0C1897E688AA048C4C9FAA6AE80573032B0417E64EDC23B926E9354BE",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/HasProperty.cs",
+      "label": "HasProperty",
+      "attributes": [
+        "datatype"
+      ],
+      "domain": "BH.oM.Planning.PullRequest",
+      "range": "BH.oM.Planning.PullRequest.HtmlUrl"
+    },
+    {
+      "id": "PullRequest-HasProperty-RepoName_7624FE53E0936865C6F63C9707A44FA40ADC70233EEDCA66F02114B7C5E2B439",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/HasProperty.cs",
+      "label": "HasProperty",
+      "attributes": [
+        "datatype"
+      ],
+      "domain": "BH.oM.Planning.PullRequest",
+      "range": "BH.oM.Planning.PullRequest.RepoName"
+    },
+    {
+      "id": "PullRequest-HasProperty-BranchName_E1646A1A0DF006B02426A4C66A1DC43A92B744D1F0C5F030EAE19200CD607E88",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/HasProperty.cs",
+      "label": "HasProperty",
+      "attributes": [
+        "datatype"
+      ],
+      "domain": "BH.oM.Planning.PullRequest",
+      "range": "BH.oM.Planning.PullRequest.BranchName"
+    },
+    {
+      "id": "PullRequest-HasProperty-Number_ED07337839AC153C6D21B1AA07B95D1360CD3FFA199A8F235C9774CA882688A9",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/HasProperty.cs",
+      "label": "HasProperty",
+      "attributes": [
+        "datatype"
+      ],
+      "domain": "BH.oM.Planning.PullRequest",
+      "range": "BH.oM.Planning.PullRequest.Number"
+    },
+    {
+      "id": "PullRequest-HasProperty-CreationDate_2D047379310EC5F659B9B9D11F40118A8BA5708B70AAE1A127F3074EA1C7E7A4",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/HasProperty.cs",
+      "label": "HasProperty",
+      "attributes": [
+        "datatype"
+      ],
+      "domain": "BH.oM.Planning.PullRequest",
+      "range": "BH.oM.Planning.PullRequest.CreationDate"
+    },
+    {
+      "id": "PullRequest-HasProperty-MilestoneName_55E070EF4E1E3B31742FFE90809B72BE25812E74480F5F9D1CF23133D1C80BA6",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/HasProperty.cs",
+      "label": "HasProperty",
+      "attributes": [
+        "datatype"
+      ],
+      "domain": "BH.oM.Planning.PullRequest",
+      "range": "BH.oM.Planning.PullRequest.MilestoneName"
+    },
+    {
+      "id": "PullRequest-HasProperty-Additions_2180EB88BA0DCE2FBCBFD96A284736CD1EF8565CD322F1AB8DB20B572A94E9F3",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/HasProperty.cs",
+      "label": "HasProperty",
+      "attributes": [
+        "datatype"
+      ],
+      "domain": "BH.oM.Planning.PullRequest",
+      "range": "BH.oM.Planning.PullRequest.Additions"
+    },
+    {
+      "id": "PullRequest-HasProperty-Deletions_63EA846D8F9ACC099CBA1278CE61B7741D148EAB287689FB34ECE4E5C5C10530",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/HasProperty.cs",
+      "label": "HasProperty",
+      "attributes": [
+        "datatype"
+      ],
+      "domain": "BH.oM.Planning.PullRequest",
+      "range": "BH.oM.Planning.PullRequest.Deletions"
+    },
+    {
+      "id": "PullRequest-HasProperty-Reviewers_65323D40107EE2AFB8B4338CF713F162B5825111388A4C5A89CBB9E687540601",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/HasProperty.cs",
+      "label": "HasProperty",
+      "attributes": [
+        "datatype"
+      ],
+      "domain": "BH.oM.Planning.PullRequest",
+      "range": "BH.oM.Planning.PullRequest.Reviewers"
+    },
+    {
+      "id": "PullRequest-IsA-IBHoMObject_3545B49EFAD48304FCB3FB147143171011A901E01E4A169E41A73D13AAA0ABB3",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/IsA.cs",
+      "label": "IsA",
+      "attributes": [
+        "object"
+      ],
+      "comment": {
+        "undefined": "Can be used to describe that a thing belongs to a class; or that a thing is equivalent to another thing. When used for BHoM types, this describes C# interface implementation."
+      },
+      "domain": "BH.oM.Planning.PullRequest",
+      "range": "BH.oM.Base.IBHoMObject"
+    },
+    {
+      "id": "PullRequest-IsA-IObject_0E893DA5B922CBA01DFB195DE1B7263C0A90398ABC742278F27B324340E7F30A",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/IsA.cs",
+      "label": "IsA",
+      "attributes": [
+        "object"
+      ],
+      "comment": {
+        "undefined": "Can be used to describe that a thing belongs to a class; or that a thing is equivalent to another thing. When used for BHoM types, this describes C# interface implementation."
+      },
+      "domain": "BH.oM.Planning.PullRequest",
+      "range": "BH.oM.Base.IObject"
+    },
+    {
+      "id": "PullRequest-IsSubclassOf-BHoMObject_6FD9045A0A0714D17F7D4312B9D33CD4AF33E1DB703692BC696DF7DB394F9C4E",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/IsSubclassOf.cs",
+      "label": "IsA",
+      "attributes": [
+        "object"
+      ],
+      "domain": "BH.oM.Planning.PullRequest",
+      "range": "BH.oM.Base.BHoMObject"
+    },
+    {
+      "id": "Repository-HasProperty-OpenIssues_4E40F96BAF47BFE1F40A41D21CB7B828BE483291A98B78EB503BCB14801DA9E7",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/HasProperty.cs",
+      "label": "HasProperty",
+      "attributes": [
+        "datatype"
+      ],
+      "domain": "BH.oM.Planning.Repository",
+      "range": "BH.oM.Planning.Repository.OpenIssues"
+    },
+    {
+      "id": "Repository-HasProperty-OpenPullRequests_EE9B5DD61DEE533F72E09BC45EA37E5C10886289023760C6B07F4A3DE1250EDD",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/HasProperty.cs",
+      "label": "HasProperty",
+      "attributes": [
+        "datatype"
+      ],
+      "domain": "BH.oM.Planning.Repository",
+      "range": "BH.oM.Planning.Repository.OpenPullRequests"
+    },
+    {
+      "id": "Repository-HasProperty-ClosedIssues_A731C41A3F272ACDDA2929178CE0A503FB3C53A6FF6F6E885696C90994C98616",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/HasProperty.cs",
+      "label": "HasProperty",
+      "attributes": [
+        "datatype"
+      ],
+      "domain": "BH.oM.Planning.Repository",
+      "range": "BH.oM.Planning.Repository.ClosedIssues"
+    },
+    {
+      "id": "Repository-HasProperty-ClosedPullRequests_F25EE949883523138796BFA5392CF4C0ACD4C06D51FC1D70375CFD4E333C41BE",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/HasProperty.cs",
+      "label": "HasProperty",
+      "attributes": [
+        "datatype"
+      ],
+      "domain": "BH.oM.Planning.Repository",
+      "range": "BH.oM.Planning.Repository.ClosedPullRequests"
+    },
+    {
+      "id": "Repository-IsA-IBHoMObject_F28ECC6F64EAF810725DB096584ABDE5221B43CE283A8100B41B6F7DA3EBA007",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/IsA.cs",
+      "label": "IsA",
+      "attributes": [
+        "object"
+      ],
+      "comment": {
+        "undefined": "Can be used to describe that a thing belongs to a class; or that a thing is equivalent to another thing. When used for BHoM types, this describes C# interface implementation."
+      },
+      "domain": "BH.oM.Planning.Repository",
+      "range": "BH.oM.Base.IBHoMObject"
+    },
+    {
+      "id": "Repository-IsA-IObject_3FECD929DB4B5D9F57B8C915909E9D3E12A66C8AB1C867CA99939E429328BDF3",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/IsA.cs",
+      "label": "IsA",
+      "attributes": [
+        "object"
+      ],
+      "comment": {
+        "undefined": "Can be used to describe that a thing belongs to a class; or that a thing is equivalent to another thing. When used for BHoM types, this describes C# interface implementation."
+      },
+      "domain": "BH.oM.Planning.Repository",
+      "range": "BH.oM.Base.IObject"
+    },
+    {
+      "id": "Repository-IsSubclassOf-BHoMObject_5A33F78095D5004FE5B06F2A4D3F21497BB483C2A2CC0E4A1281EC0C9CD5F773",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/IsSubclassOf.cs",
+      "label": "IsA",
+      "attributes": [
+        "object"
+      ],
+      "domain": "BH.oM.Planning.Repository",
+      "range": "BH.oM.Base.BHoMObject"
+    }
+  ]
+}
