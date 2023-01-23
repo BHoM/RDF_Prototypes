@@ -1,0 +1,305 @@
+{
+  "comment": "Generated from BHoM RDF_Prototypes",
+  "namespace": [],
+  "class": [
+    {
+      "id": "BH.oM.Adapters.STL.GeometryGroup",
+      "type": "owl:Class"
+    },
+    {
+      "id": "BH.oM.Adapters.STL.Settings.STLSettings",
+      "type": "owl:Class"
+    },
+    {
+      "id": "BH.oM.Adapters.STL.GeometryGroup.Geometry",
+      "type": "owl:Class"
+    },
+    {
+      "id": "BH.oM.Geometry.IGeometry",
+      "type": "owl:Class"
+    },
+    {
+      "id": "BH.oM.Adapters.STL.GeometryGroup.FileName",
+      "type": "owl:Class"
+    },
+    {
+      "id": "BH.oM.Base.IBHoMObject",
+      "type": "owl:Class"
+    },
+    {
+      "id": "BH.oM.Base.IObject",
+      "type": "owl:Class"
+    },
+    {
+      "id": "BH.oM.Base.BHoMObject",
+      "type": "owl:Class"
+    },
+    {
+      "id": "BH.oM.Adapters.STL.Settings.STLSettings.Directory",
+      "type": "owl:Class"
+    },
+    {
+      "id": "BH.oM.Adapters.STL.Settings.STLSettings.DecimalPlaces",
+      "type": "owl:Class"
+    }
+  ],
+  "classAttribute": [
+    {
+      "id": "BH.oM.Adapters.STL.GeometryGroup",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/STL_oM/GeometryGroup.cs",
+      "label": "GeometryGroup (BH.oM.Adapters.STL)",
+      "attributes": [
+        "object"
+      ],
+      "comment": {
+        "undefined": "This object can be used to group geometry to push to a specific file. Useful if pushing groups of geometry related to specific representations, for example, a group of panels to one file, and a group of bars to another."
+      }
+    },
+    {
+      "id": "BH.oM.Adapters.STL.Settings.STLSettings",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/STL_oM/Settings/STLSettings.cs",
+      "label": "STLSettings (BH.oM.Adapters.STL.Settings)",
+      "attributes": [
+        "object"
+      ]
+    },
+    {
+      "id": "BH.oM.Adapters.STL.GeometryGroup.Geometry",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/STL_oM/GeometryGroup.cs",
+      "label": "Geometry (BH.oM.Adapters.STL.GeometryGroup.Geometry)",
+      "attributes": []
+    },
+    {
+      "id": "BH.oM.Geometry.IGeometry",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/Geometry_oM/Interface/IGeometry.cs",
+      "label": "IGeometry (BH.oM.Geometry)",
+      "attributes": [
+        "object",
+        "external"
+      ],
+      "comment": {
+        "undefined": "The parent interface for all primative geometrical objects.\nIGeometry implements IObject - and not IBHoMObject. Equally primative geometrical objects do not inherit from the base BHoMObject class either. As primatives, the additional base BHoM properties are omitted for both efficency and performace."
+      }
+    },
+    {
+      "id": "BH.oM.Adapters.STL.GeometryGroup.FileName",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/STL_oM/GeometryGroup.cs",
+      "label": "FileName (BH.oM.Adapters.STL.GeometryGroup.FileName)",
+      "attributes": [
+        "datatype"
+      ]
+    },
+    {
+      "id": "BH.oM.Base.IBHoMObject",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/BHoM/Interface/IBHoMObject.cs",
+      "label": "IBHoMObject (BH.oM.Base)",
+      "attributes": [
+        "object",
+        "external"
+      ]
+    },
+    {
+      "id": "BH.oM.Base.IObject",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/BHoM/Interface/IObject.cs",
+      "label": "IObject (BH.oM.Base)",
+      "attributes": [
+        "object",
+        "external"
+      ]
+    },
+    {
+      "id": "BH.oM.Base.BHoMObject",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/BHoM/BHoMObject.cs",
+      "label": "BHoMObject (BH.oM.Base)",
+      "attributes": [
+        "external"
+      ]
+    },
+    {
+      "id": "BH.oM.Adapters.STL.Settings.STLSettings.Directory",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/STL_oM/Settings/STLSettings.cs",
+      "label": "Directory (BH.oM.Adapters.STL.Settings.STLSettings.Directory)",
+      "attributes": [
+        "datatype"
+      ]
+    },
+    {
+      "id": "BH.oM.Adapters.STL.Settings.STLSettings.DecimalPlaces",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/STL_oM/Settings/STLSettings.cs",
+      "label": "DecimalPlaces (BH.oM.Adapters.STL.Settings.STLSettings.DecimalPlaces)",
+      "attributes": [
+        "datatype"
+      ]
+    }
+  ],
+  "property": [
+    {
+      "id": "BH.oM.Adapters.STL.GeometryGroup-HasProperty-BH.oM.Adapters.STL.GeometryGroup.Geometry",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "BH.oM.Adapters.STL.GeometryGroup.Geometry-IsAListOf-BH.oM.Geometry.IGeometry",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "GeometryGroup-HasProperty-FileName_57054E0D34BB2E4AAF5E4C9780E794E381B54B8F3EEC60A1D3BDA06B18C960D6",
+      "type": "owl:DatatypeProperty"
+    },
+    {
+      "id": "GeometryGroup-IsA-IBHoMObject_6BB074A7C305C469CAA06CF252074BBC72BFA2FFBC3844D4F0D591A6B02F561F",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "GeometryGroup-IsA-IObject_68F415BF2C9BBA434FA6AADCE9AB38ECA6427E040466DBDE81081B910DB6E65F",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "GeometryGroup-IsSubclassOf-BHoMObject_07F722915499E3EB882B748161127BA572388BCBAD5E0C29E648BDD07A1533D8",
+      "type": "rdfs:subClassOf"
+    },
+    {
+      "id": "STLSettings-HasProperty-Directory_27D881B759D625FC38E2B84A7561D70267FD2C9723E6D2F715E3A07CF36BCCD7",
+      "type": "owl:DatatypeProperty"
+    },
+    {
+      "id": "STLSettings-HasProperty-DecimalPlaces_E3B3CA441D3C802E4E3F97CCD7D1D5DE8D7483B45B4C21E9326418D9B5E5F391",
+      "type": "owl:DatatypeProperty"
+    },
+    {
+      "id": "STLSettings-IsA-IBHoMObject_7442FABEDEE545A3CC787388862914FFE2F36CA479CEFCA5E2930692DEE903C8",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "STLSettings-IsA-IObject_7AE1280C6BBFF369613BEB50EA56ECD831C561D559E892EB9FBE8208432D67DD",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "STLSettings-IsSubclassOf-BHoMObject_D566F862FEAEC23558A78062F26240F8EFC7CFBC677E278AEC1F19473BEDA70C",
+      "type": "rdfs:subClassOf"
+    }
+  ],
+  "propertyAttribute": [
+    {
+      "id": "BH.oM.Adapters.STL.GeometryGroup-HasProperty-BH.oM.Adapters.STL.GeometryGroup.Geometry",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/HasProperty.cs",
+      "label": "HasProperty",
+      "attributes": [
+        "object"
+      ],
+      "domain": "BH.oM.Adapters.STL.GeometryGroup",
+      "range": "BH.oM.Adapters.STL.GeometryGroup.Geometry"
+    },
+    {
+      "id": "BH.oM.Adapters.STL.GeometryGroup.Geometry-IsAListOf-BH.oM.Geometry.IGeometry",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/IsAListOf.cs",
+      "label": "IsAListOf",
+      "attributes": [
+        "object"
+      ],
+      "domain": "BH.oM.Adapters.STL.GeometryGroup.Geometry",
+      "range": "BH.oM.Geometry.IGeometry"
+    },
+    {
+      "id": "GeometryGroup-HasProperty-FileName_57054E0D34BB2E4AAF5E4C9780E794E381B54B8F3EEC60A1D3BDA06B18C960D6",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/HasProperty.cs",
+      "label": "HasProperty",
+      "attributes": [
+        "datatype"
+      ],
+      "domain": "BH.oM.Adapters.STL.GeometryGroup",
+      "range": "BH.oM.Adapters.STL.GeometryGroup.FileName"
+    },
+    {
+      "id": "GeometryGroup-IsA-IBHoMObject_6BB074A7C305C469CAA06CF252074BBC72BFA2FFBC3844D4F0D591A6B02F561F",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/IsA.cs",
+      "label": "IsA",
+      "attributes": [
+        "object"
+      ],
+      "comment": {
+        "undefined": "Can be used to describe that a thing belongs to a class; or that a thing is equivalent to another thing. When used for BHoM types, this describes C# interface implementation."
+      },
+      "domain": "BH.oM.Adapters.STL.GeometryGroup",
+      "range": "BH.oM.Base.IBHoMObject"
+    },
+    {
+      "id": "GeometryGroup-IsA-IObject_68F415BF2C9BBA434FA6AADCE9AB38ECA6427E040466DBDE81081B910DB6E65F",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/IsA.cs",
+      "label": "IsA",
+      "attributes": [
+        "object"
+      ],
+      "comment": {
+        "undefined": "Can be used to describe that a thing belongs to a class; or that a thing is equivalent to another thing. When used for BHoM types, this describes C# interface implementation."
+      },
+      "domain": "BH.oM.Adapters.STL.GeometryGroup",
+      "range": "BH.oM.Base.IObject"
+    },
+    {
+      "id": "GeometryGroup-IsSubclassOf-BHoMObject_07F722915499E3EB882B748161127BA572388BCBAD5E0C29E648BDD07A1533D8",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/IsSubclassOf.cs",
+      "label": "IsA",
+      "attributes": [
+        "object"
+      ],
+      "domain": "BH.oM.Adapters.STL.GeometryGroup",
+      "range": "BH.oM.Base.BHoMObject"
+    },
+    {
+      "id": "STLSettings-HasProperty-Directory_27D881B759D625FC38E2B84A7561D70267FD2C9723E6D2F715E3A07CF36BCCD7",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/HasProperty.cs",
+      "label": "HasProperty",
+      "attributes": [
+        "datatype"
+      ],
+      "domain": "BH.oM.Adapters.STL.Settings.STLSettings",
+      "range": "BH.oM.Adapters.STL.Settings.STLSettings.Directory"
+    },
+    {
+      "id": "STLSettings-HasProperty-DecimalPlaces_E3B3CA441D3C802E4E3F97CCD7D1D5DE8D7483B45B4C21E9326418D9B5E5F391",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/HasProperty.cs",
+      "label": "HasProperty",
+      "attributes": [
+        "datatype"
+      ],
+      "domain": "BH.oM.Adapters.STL.Settings.STLSettings",
+      "range": "BH.oM.Adapters.STL.Settings.STLSettings.DecimalPlaces"
+    },
+    {
+      "id": "STLSettings-IsA-IBHoMObject_7442FABEDEE545A3CC787388862914FFE2F36CA479CEFCA5E2930692DEE903C8",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/IsA.cs",
+      "label": "IsA",
+      "attributes": [
+        "object"
+      ],
+      "comment": {
+        "undefined": "Can be used to describe that a thing belongs to a class; or that a thing is equivalent to another thing. When used for BHoM types, this describes C# interface implementation."
+      },
+      "domain": "BH.oM.Adapters.STL.Settings.STLSettings",
+      "range": "BH.oM.Base.IBHoMObject"
+    },
+    {
+      "id": "STLSettings-IsA-IObject_7AE1280C6BBFF369613BEB50EA56ECD831C561D559E892EB9FBE8208432D67DD",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/IsA.cs",
+      "label": "IsA",
+      "attributes": [
+        "object"
+      ],
+      "comment": {
+        "undefined": "Can be used to describe that a thing belongs to a class; or that a thing is equivalent to another thing. When used for BHoM types, this describes C# interface implementation."
+      },
+      "domain": "BH.oM.Adapters.STL.Settings.STLSettings",
+      "range": "BH.oM.Base.IObject"
+    },
+    {
+      "id": "STLSettings-IsSubclassOf-BHoMObject_D566F862FEAEC23558A78062F26240F8EFC7CFBC677E278AEC1F19473BEDA70C",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/IsSubclassOf.cs",
+      "label": "IsA",
+      "attributes": [
+        "object"
+      ],
+      "domain": "BH.oM.Adapters.STL.Settings.STLSettings",
+      "range": "BH.oM.Base.BHoMObject"
+    }
+  ]
+}

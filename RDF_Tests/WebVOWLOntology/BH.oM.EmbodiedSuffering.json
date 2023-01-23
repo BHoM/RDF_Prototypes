@@ -1,0 +1,579 @@
+{
+  "comment": "Generated from BHoM RDF_Prototypes",
+  "namespace": [],
+  "class": [
+    {
+      "id": "BH.oM.EmbodiedSuffering.Elements.Country",
+      "type": "owl:Class"
+    },
+    {
+      "id": "BH.oM.EmbodiedSuffering.Elements.ImportSourceType",
+      "type": "owl:Class"
+    },
+    {
+      "id": "BH.oM.EmbodiedSuffering.Elements.LabourExploitationRisk",
+      "type": "owl:Class"
+    },
+    {
+      "id": "BH.oM.EmbodiedSuffering.Elements.MaterialImportSources",
+      "type": "owl:Class"
+    },
+    {
+      "id": "BH.oM.EmbodiedSuffering.Elements.Material",
+      "type": "owl:Class"
+    },
+    {
+      "id": "BH.oM.EmbodiedSuffering.Elements.LabourExploitationRisk.VictimsOfModernSlavery",
+      "type": "owl:Class"
+    },
+    {
+      "id": "BH.oM.EmbodiedSuffering.Elements.LabourExploitationRisk.FreedomOfAssociation",
+      "type": "owl:Class"
+    },
+    {
+      "id": "BH.oM.EmbodiedSuffering.Elements.LabourExploitationRisk.WorkerVoice",
+      "type": "owl:Class"
+    },
+    {
+      "id": "BH.oM.EmbodiedSuffering.Elements.LabourExploitationRisk.SocioEconomicIndicator",
+      "type": "owl:Class"
+    },
+    {
+      "id": "BH.oM.EmbodiedSuffering.Elements.LabourExploitationRisk.Manufacturer",
+      "type": "owl:Class"
+    },
+    {
+      "id": "BH.oM.EmbodiedSuffering.Elements.LabourExploitationRisk.Country",
+      "type": "owl:Class"
+    },
+    {
+      "id": "BH.oM.EmbodiedSuffering.Elements.LabourExploitationRisk.Material",
+      "type": "owl:Class"
+    },
+    {
+      "id": "BH.oM.Base.IBHoMObject",
+      "type": "owl:Class"
+    },
+    {
+      "id": "BH.oM.Base.IObject",
+      "type": "owl:Class"
+    },
+    {
+      "id": "BH.oM.Base.BHoMObject",
+      "type": "owl:Class"
+    },
+    {
+      "id": "BH.oM.EmbodiedSuffering.Elements.MaterialImportSources.Material",
+      "type": "owl:Class"
+    },
+    {
+      "id": "BH.oM.EmbodiedSuffering.Elements.MaterialImportSources.ExportCountries",
+      "type": "owl:Class"
+    },
+    {
+      "id": "BH.oM.EmbodiedSuffering.Elements.MaterialImportSources.ImportRatios",
+      "type": "owl:Class"
+    },
+    {
+      "id": "BH.oM.EmbodiedSuffering.Elements.MaterialImportSources.ImportCountry",
+      "type": "owl:Class"
+    }
+  ],
+  "classAttribute": [
+    {
+      "id": "BH.oM.EmbodiedSuffering.Elements.Country",
+      "iri": "https://github.com/BHoM/EmbodiedSuffering_Toolkit/blob/main/GSA_oM/Enum/Country.cs",
+      "label": "Country (BH.oM.EmbodiedSuffering.Elements)",
+      "attributes": [
+        "object"
+      ],
+      "comment": {
+        "undefined": "A list of countries around the globe derived from: https://www.worldometers.info/geography/alphabetical-list-of-countries/"
+      }
+    },
+    {
+      "id": "BH.oM.EmbodiedSuffering.Elements.ImportSourceType",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/EmbodiedSuffering_oM/Elements/ImportSourceType.cs",
+      "label": "ImportSourceType (BH.oM.EmbodiedSuffering.Elements)",
+      "attributes": [
+        "object"
+      ],
+      "comment": {
+        "undefined": "Enum describing if the ratios for datasets used should be by mass or by cost."
+      }
+    },
+    {
+      "id": "BH.oM.EmbodiedSuffering.Elements.LabourExploitationRisk",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/EmbodiedSuffering_oM/Elements/LabourExploitationRisk.cs",
+      "label": "LabourExploitationRisk (BH.oM.EmbodiedSuffering.Elements)",
+      "attributes": [
+        "object"
+      ],
+      "comment": {
+        "undefined": "An object that estimates the risk of labour exploitation by measuring the number of victims of modern slavery per 1000 people, violations against workers' rights (freedom of association), monitoring worker voice, and other socioeconomic factors that lead to exploitation."
+      }
+    },
+    {
+      "id": "BH.oM.EmbodiedSuffering.Elements.MaterialImportSources",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/EmbodiedSuffering_oM/Elements/MaterialImportSources.cs",
+      "label": "MaterialImportSources (BH.oM.EmbodiedSuffering.Elements)",
+      "attributes": [
+        "object"
+      ],
+      "comment": {
+        "undefined": "An Embodied Suffering object used for defining the import ratios per country for a particular material, utilised in a specific country (e.g. the United States gets all of its timber from Brazil, or that it is 50% from Brazil and 50% from Vietnam.)"
+      }
+    },
+    {
+      "id": "BH.oM.EmbodiedSuffering.Elements.Material",
+      "iri": "https://github.com/BHoM/EmbodiedSuffering_Toolkit/blob/main/Physical_oM/Materials/Material.cs",
+      "label": "Material (BH.oM.EmbodiedSuffering.Elements)",
+      "attributes": [
+        "object"
+      ],
+      "comment": {
+        "undefined": "A list of raw materials from which building materials are created."
+      }
+    },
+    {
+      "id": "BH.oM.EmbodiedSuffering.Elements.LabourExploitationRisk.VictimsOfModernSlavery",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/EmbodiedSuffering_oM/Elements/LabourExploitationRisk.cs",
+      "label": "VictimsOfModernSlavery (BH.oM.EmbodiedSuffering.Elements.LabourExploitationRisk.VictimsOfModernSlavery)",
+      "attributes": [
+        "datatype"
+      ]
+    },
+    {
+      "id": "BH.oM.EmbodiedSuffering.Elements.LabourExploitationRisk.FreedomOfAssociation",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/EmbodiedSuffering_oM/Elements/LabourExploitationRisk.cs",
+      "label": "FreedomOfAssociation (BH.oM.EmbodiedSuffering.Elements.LabourExploitationRisk.FreedomOfAssociation)",
+      "attributes": [
+        "datatype"
+      ]
+    },
+    {
+      "id": "BH.oM.EmbodiedSuffering.Elements.LabourExploitationRisk.WorkerVoice",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/EmbodiedSuffering_oM/Elements/LabourExploitationRisk.cs",
+      "label": "WorkerVoice (BH.oM.EmbodiedSuffering.Elements.LabourExploitationRisk.WorkerVoice)",
+      "attributes": [
+        "datatype"
+      ]
+    },
+    {
+      "id": "BH.oM.EmbodiedSuffering.Elements.LabourExploitationRisk.SocioEconomicIndicator",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/EmbodiedSuffering_oM/Elements/LabourExploitationRisk.cs",
+      "label": "SocioEconomicIndicator (BH.oM.EmbodiedSuffering.Elements.LabourExploitationRisk.SocioEconomicIndicator)",
+      "attributes": [
+        "datatype"
+      ]
+    },
+    {
+      "id": "BH.oM.EmbodiedSuffering.Elements.LabourExploitationRisk.Manufacturer",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/EmbodiedSuffering_oM/Elements/LabourExploitationRisk.cs",
+      "label": "Manufacturer (BH.oM.EmbodiedSuffering.Elements.LabourExploitationRisk.Manufacturer)",
+      "attributes": [
+        "datatype"
+      ]
+    },
+    {
+      "id": "BH.oM.EmbodiedSuffering.Elements.LabourExploitationRisk.Country",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/EmbodiedSuffering_oM/Elements/LabourExploitationRisk.cs",
+      "label": "Country (BH.oM.EmbodiedSuffering.Elements.LabourExploitationRisk.Country)",
+      "attributes": [],
+      "comment": {
+        "undefined": "Name of the country with which the modern slavery metrics are associated."
+      }
+    },
+    {
+      "id": "BH.oM.EmbodiedSuffering.Elements.LabourExploitationRisk.Material",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/EmbodiedSuffering_oM/Elements/LabourExploitationRisk.cs",
+      "label": "Material (BH.oM.EmbodiedSuffering.Elements.LabourExploitationRisk.Material)",
+      "attributes": [],
+      "comment": {
+        "undefined": "The name of the material with which the modern slavery metrics are associated. For example, the timber industry in Brazil. If no country is defined, and the metrics are general, this field shall be marked as undefined."
+      }
+    },
+    {
+      "id": "BH.oM.Base.IBHoMObject",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/BHoM/Interface/IBHoMObject.cs",
+      "label": "IBHoMObject (BH.oM.Base)",
+      "attributes": [
+        "object",
+        "external"
+      ]
+    },
+    {
+      "id": "BH.oM.Base.IObject",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/BHoM/Interface/IObject.cs",
+      "label": "IObject (BH.oM.Base)",
+      "attributes": [
+        "object",
+        "external"
+      ]
+    },
+    {
+      "id": "BH.oM.Base.BHoMObject",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/BHoM/BHoMObject.cs",
+      "label": "BHoMObject (BH.oM.Base)",
+      "attributes": [
+        "external"
+      ]
+    },
+    {
+      "id": "BH.oM.EmbodiedSuffering.Elements.MaterialImportSources.Material",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/EmbodiedSuffering_oM/Elements/MaterialImportSources.cs",
+      "label": "Material (BH.oM.EmbodiedSuffering.Elements.MaterialImportSources.Material)",
+      "attributes": [],
+      "comment": {
+        "undefined": "The name of the material that is imported to a particular country from other countries."
+      }
+    },
+    {
+      "id": "BH.oM.EmbodiedSuffering.Elements.MaterialImportSources.ExportCountries",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/EmbodiedSuffering_oM/Elements/MaterialImportSources.cs",
+      "label": "ExportCountries (BH.oM.EmbodiedSuffering.Elements.MaterialImportSources.ExportCountries)",
+      "attributes": []
+    },
+    {
+      "id": "BH.oM.EmbodiedSuffering.Elements.MaterialImportSources.ImportRatios",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/EmbodiedSuffering_oM/Elements/MaterialImportSources.cs",
+      "label": "ImportRatios (BH.oM.EmbodiedSuffering.Elements.MaterialImportSources.ImportRatios)",
+      "attributes": [
+        "datatype"
+      ]
+    },
+    {
+      "id": "BH.oM.EmbodiedSuffering.Elements.MaterialImportSources.ImportCountry",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/EmbodiedSuffering_oM/Elements/MaterialImportSources.cs",
+      "label": "ImportCountry (BH.oM.EmbodiedSuffering.Elements.MaterialImportSources.ImportCountry)",
+      "attributes": [],
+      "comment": {
+        "undefined": "The name of the country in which the imported materials are utilised."
+      }
+    }
+  ],
+  "property": [
+    {
+      "id": "LabourExploitationRisk-HasProperty-VictimsOfModernSlavery_243B330AF79CAF10A1B9837F79AF7889CE84727209C0A4CF6D8E6B8CD5A64A90",
+      "type": "owl:DatatypeProperty"
+    },
+    {
+      "id": "LabourExploitationRisk-HasProperty-FreedomOfAssociation_2AA12381DC06D92B9337726A481AE3685D1F406C79BF7C31E6A9B1BC46EC0E97",
+      "type": "owl:DatatypeProperty"
+    },
+    {
+      "id": "LabourExploitationRisk-HasProperty-WorkerVoice_12187697E5F09438AC8A997E5669CCF94C4DC2D63CB6B6A70E3A523CC9475209",
+      "type": "owl:DatatypeProperty"
+    },
+    {
+      "id": "LabourExploitationRisk-HasProperty-SocioEconomicIndicator_B6DFA63D10823118187F370FA96343B4E1CDAF2C1BFE1F7E9CAADB524187DB66",
+      "type": "owl:DatatypeProperty"
+    },
+    {
+      "id": "LabourExploitationRisk-HasProperty-Manufacturer_774F132373F0EB53AB9478A334B9D1973F0F15E024FAC855CB7D545F2476DC09",
+      "type": "owl:DatatypeProperty"
+    },
+    {
+      "id": "BH.oM.EmbodiedSuffering.Elements.LabourExploitationRisk-HasProperty-BH.oM.EmbodiedSuffering.Elements.LabourExploitationRisk.Country",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "BH.oM.EmbodiedSuffering.Elements.LabourExploitationRisk.Country-IsA-BH.oM.EmbodiedSuffering.Elements.Country",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "BH.oM.EmbodiedSuffering.Elements.LabourExploitationRisk-HasProperty-BH.oM.EmbodiedSuffering.Elements.LabourExploitationRisk.Material",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "BH.oM.EmbodiedSuffering.Elements.LabourExploitationRisk.Material-IsA-BH.oM.EmbodiedSuffering.Elements.Material",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "LabourExploitationRisk-IsA-IBHoMObject_F7F366FAFC821DE01BBB2055A67962137DED5742702BB2ECF3459C428488618D",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "LabourExploitationRisk-IsA-IObject_DAC960BAB548D531C2902816DC59F3A01AD8E1AF1E53F4602CB31A19A97B47CE",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "LabourExploitationRisk-IsSubclassOf-BHoMObject_A04DF65EE97E53B03D2164E54D584E8C67DF233E149FD1CB094266DA6B493A68",
+      "type": "rdfs:subClassOf"
+    },
+    {
+      "id": "BH.oM.EmbodiedSuffering.Elements.MaterialImportSources-HasProperty-BH.oM.EmbodiedSuffering.Elements.MaterialImportSources.Material",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "BH.oM.EmbodiedSuffering.Elements.MaterialImportSources.Material-IsA-BH.oM.EmbodiedSuffering.Elements.Material",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "BH.oM.EmbodiedSuffering.Elements.MaterialImportSources-HasProperty-BH.oM.EmbodiedSuffering.Elements.MaterialImportSources.ExportCountries",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "BH.oM.EmbodiedSuffering.Elements.MaterialImportSources.ExportCountries-IsAListOf-BH.oM.EmbodiedSuffering.Elements.Country",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "MaterialImportSources-HasProperty-ImportRatios_59039B0C808DCE66AD6A993351D2E6A43DD1126BA9175E0F603EF81336971742",
+      "type": "owl:DatatypeProperty"
+    },
+    {
+      "id": "BH.oM.EmbodiedSuffering.Elements.MaterialImportSources-HasProperty-BH.oM.EmbodiedSuffering.Elements.MaterialImportSources.ImportCountry",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "BH.oM.EmbodiedSuffering.Elements.MaterialImportSources.ImportCountry-IsA-BH.oM.EmbodiedSuffering.Elements.Country",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "MaterialImportSources-IsA-IBHoMObject_005D5EBAB6C94A31944CD3960A1F05195B213553D20F9AA8E4614F42D67AC936",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "MaterialImportSources-IsA-IObject_F186A34F0D101997072D3ED2EFB3F2E0BF49D8C5A7B835E812D9262E5B63EAE6",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "MaterialImportSources-IsSubclassOf-BHoMObject_7BE86CE759FB8CCB11CC5F7A92A8C8238B1843B99953A6CF4802A29C808A1FE9",
+      "type": "rdfs:subClassOf"
+    }
+  ],
+  "propertyAttribute": [
+    {
+      "id": "LabourExploitationRisk-HasProperty-VictimsOfModernSlavery_243B330AF79CAF10A1B9837F79AF7889CE84727209C0A4CF6D8E6B8CD5A64A90",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/HasProperty.cs",
+      "label": "HasProperty",
+      "attributes": [
+        "datatype"
+      ],
+      "domain": "BH.oM.EmbodiedSuffering.Elements.LabourExploitationRisk",
+      "range": "BH.oM.EmbodiedSuffering.Elements.LabourExploitationRisk.VictimsOfModernSlavery"
+    },
+    {
+      "id": "LabourExploitationRisk-HasProperty-FreedomOfAssociation_2AA12381DC06D92B9337726A481AE3685D1F406C79BF7C31E6A9B1BC46EC0E97",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/HasProperty.cs",
+      "label": "HasProperty",
+      "attributes": [
+        "datatype"
+      ],
+      "domain": "BH.oM.EmbodiedSuffering.Elements.LabourExploitationRisk",
+      "range": "BH.oM.EmbodiedSuffering.Elements.LabourExploitationRisk.FreedomOfAssociation"
+    },
+    {
+      "id": "LabourExploitationRisk-HasProperty-WorkerVoice_12187697E5F09438AC8A997E5669CCF94C4DC2D63CB6B6A70E3A523CC9475209",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/HasProperty.cs",
+      "label": "HasProperty",
+      "attributes": [
+        "datatype"
+      ],
+      "domain": "BH.oM.EmbodiedSuffering.Elements.LabourExploitationRisk",
+      "range": "BH.oM.EmbodiedSuffering.Elements.LabourExploitationRisk.WorkerVoice"
+    },
+    {
+      "id": "LabourExploitationRisk-HasProperty-SocioEconomicIndicator_B6DFA63D10823118187F370FA96343B4E1CDAF2C1BFE1F7E9CAADB524187DB66",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/HasProperty.cs",
+      "label": "HasProperty",
+      "attributes": [
+        "datatype"
+      ],
+      "domain": "BH.oM.EmbodiedSuffering.Elements.LabourExploitationRisk",
+      "range": "BH.oM.EmbodiedSuffering.Elements.LabourExploitationRisk.SocioEconomicIndicator"
+    },
+    {
+      "id": "LabourExploitationRisk-HasProperty-Manufacturer_774F132373F0EB53AB9478A334B9D1973F0F15E024FAC855CB7D545F2476DC09",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/HasProperty.cs",
+      "label": "HasProperty",
+      "attributes": [
+        "datatype"
+      ],
+      "domain": "BH.oM.EmbodiedSuffering.Elements.LabourExploitationRisk",
+      "range": "BH.oM.EmbodiedSuffering.Elements.LabourExploitationRisk.Manufacturer"
+    },
+    {
+      "id": "BH.oM.EmbodiedSuffering.Elements.LabourExploitationRisk-HasProperty-BH.oM.EmbodiedSuffering.Elements.LabourExploitationRisk.Country",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/HasProperty.cs",
+      "label": "HasProperty",
+      "attributes": [
+        "object"
+      ],
+      "domain": "BH.oM.EmbodiedSuffering.Elements.LabourExploitationRisk",
+      "range": "BH.oM.EmbodiedSuffering.Elements.LabourExploitationRisk.Country"
+    },
+    {
+      "id": "BH.oM.EmbodiedSuffering.Elements.LabourExploitationRisk.Country-IsA-BH.oM.EmbodiedSuffering.Elements.Country",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/IsA.cs",
+      "label": "IsA",
+      "attributes": [
+        "object"
+      ],
+      "domain": "BH.oM.EmbodiedSuffering.Elements.LabourExploitationRisk.Country",
+      "range": "BH.oM.EmbodiedSuffering.Elements.Country"
+    },
+    {
+      "id": "BH.oM.EmbodiedSuffering.Elements.LabourExploitationRisk-HasProperty-BH.oM.EmbodiedSuffering.Elements.LabourExploitationRisk.Material",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/HasProperty.cs",
+      "label": "HasProperty",
+      "attributes": [
+        "object"
+      ],
+      "domain": "BH.oM.EmbodiedSuffering.Elements.LabourExploitationRisk",
+      "range": "BH.oM.EmbodiedSuffering.Elements.LabourExploitationRisk.Material"
+    },
+    {
+      "id": "BH.oM.EmbodiedSuffering.Elements.LabourExploitationRisk.Material-IsA-BH.oM.EmbodiedSuffering.Elements.Material",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/IsA.cs",
+      "label": "IsA",
+      "attributes": [
+        "object"
+      ],
+      "domain": "BH.oM.EmbodiedSuffering.Elements.LabourExploitationRisk.Material",
+      "range": "BH.oM.EmbodiedSuffering.Elements.Material"
+    },
+    {
+      "id": "LabourExploitationRisk-IsA-IBHoMObject_F7F366FAFC821DE01BBB2055A67962137DED5742702BB2ECF3459C428488618D",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/IsA.cs",
+      "label": "IsA",
+      "attributes": [
+        "object"
+      ],
+      "comment": {
+        "undefined": "Can be used to describe that a thing belongs to a class; or that a thing is equivalent to another thing. When used for BHoM types, this describes C# interface implementation."
+      },
+      "domain": "BH.oM.EmbodiedSuffering.Elements.LabourExploitationRisk",
+      "range": "BH.oM.Base.IBHoMObject"
+    },
+    {
+      "id": "LabourExploitationRisk-IsA-IObject_DAC960BAB548D531C2902816DC59F3A01AD8E1AF1E53F4602CB31A19A97B47CE",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/IsA.cs",
+      "label": "IsA",
+      "attributes": [
+        "object"
+      ],
+      "comment": {
+        "undefined": "Can be used to describe that a thing belongs to a class; or that a thing is equivalent to another thing. When used for BHoM types, this describes C# interface implementation."
+      },
+      "domain": "BH.oM.EmbodiedSuffering.Elements.LabourExploitationRisk",
+      "range": "BH.oM.Base.IObject"
+    },
+    {
+      "id": "LabourExploitationRisk-IsSubclassOf-BHoMObject_A04DF65EE97E53B03D2164E54D584E8C67DF233E149FD1CB094266DA6B493A68",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/IsSubclassOf.cs",
+      "label": "IsA",
+      "attributes": [
+        "object"
+      ],
+      "domain": "BH.oM.EmbodiedSuffering.Elements.LabourExploitationRisk",
+      "range": "BH.oM.Base.BHoMObject"
+    },
+    {
+      "id": "BH.oM.EmbodiedSuffering.Elements.MaterialImportSources-HasProperty-BH.oM.EmbodiedSuffering.Elements.MaterialImportSources.Material",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/HasProperty.cs",
+      "label": "HasProperty",
+      "attributes": [
+        "object"
+      ],
+      "domain": "BH.oM.EmbodiedSuffering.Elements.MaterialImportSources",
+      "range": "BH.oM.EmbodiedSuffering.Elements.MaterialImportSources.Material"
+    },
+    {
+      "id": "BH.oM.EmbodiedSuffering.Elements.MaterialImportSources.Material-IsA-BH.oM.EmbodiedSuffering.Elements.Material",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/IsA.cs",
+      "label": "IsA",
+      "attributes": [
+        "object"
+      ],
+      "domain": "BH.oM.EmbodiedSuffering.Elements.MaterialImportSources.Material",
+      "range": "BH.oM.EmbodiedSuffering.Elements.Material"
+    },
+    {
+      "id": "BH.oM.EmbodiedSuffering.Elements.MaterialImportSources-HasProperty-BH.oM.EmbodiedSuffering.Elements.MaterialImportSources.ExportCountries",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/HasProperty.cs",
+      "label": "HasProperty",
+      "attributes": [
+        "object"
+      ],
+      "domain": "BH.oM.EmbodiedSuffering.Elements.MaterialImportSources",
+      "range": "BH.oM.EmbodiedSuffering.Elements.MaterialImportSources.ExportCountries"
+    },
+    {
+      "id": "BH.oM.EmbodiedSuffering.Elements.MaterialImportSources.ExportCountries-IsAListOf-BH.oM.EmbodiedSuffering.Elements.Country",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/IsAListOf.cs",
+      "label": "IsAListOf",
+      "attributes": [
+        "object"
+      ],
+      "domain": "BH.oM.EmbodiedSuffering.Elements.MaterialImportSources.ExportCountries",
+      "range": "BH.oM.EmbodiedSuffering.Elements.Country"
+    },
+    {
+      "id": "MaterialImportSources-HasProperty-ImportRatios_59039B0C808DCE66AD6A993351D2E6A43DD1126BA9175E0F603EF81336971742",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/HasProperty.cs",
+      "label": "HasProperty",
+      "attributes": [
+        "datatype"
+      ],
+      "domain": "BH.oM.EmbodiedSuffering.Elements.MaterialImportSources",
+      "range": "BH.oM.EmbodiedSuffering.Elements.MaterialImportSources.ImportRatios"
+    },
+    {
+      "id": "BH.oM.EmbodiedSuffering.Elements.MaterialImportSources-HasProperty-BH.oM.EmbodiedSuffering.Elements.MaterialImportSources.ImportCountry",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/HasProperty.cs",
+      "label": "HasProperty",
+      "attributes": [
+        "object"
+      ],
+      "domain": "BH.oM.EmbodiedSuffering.Elements.MaterialImportSources",
+      "range": "BH.oM.EmbodiedSuffering.Elements.MaterialImportSources.ImportCountry"
+    },
+    {
+      "id": "BH.oM.EmbodiedSuffering.Elements.MaterialImportSources.ImportCountry-IsA-BH.oM.EmbodiedSuffering.Elements.Country",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/IsA.cs",
+      "label": "IsA",
+      "attributes": [
+        "object"
+      ],
+      "domain": "BH.oM.EmbodiedSuffering.Elements.MaterialImportSources.ImportCountry",
+      "range": "BH.oM.EmbodiedSuffering.Elements.Country"
+    },
+    {
+      "id": "MaterialImportSources-IsA-IBHoMObject_005D5EBAB6C94A31944CD3960A1F05195B213553D20F9AA8E4614F42D67AC936",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/IsA.cs",
+      "label": "IsA",
+      "attributes": [
+        "object"
+      ],
+      "comment": {
+        "undefined": "Can be used to describe that a thing belongs to a class; or that a thing is equivalent to another thing. When used for BHoM types, this describes C# interface implementation."
+      },
+      "domain": "BH.oM.EmbodiedSuffering.Elements.MaterialImportSources",
+      "range": "BH.oM.Base.IBHoMObject"
+    },
+    {
+      "id": "MaterialImportSources-IsA-IObject_F186A34F0D101997072D3ED2EFB3F2E0BF49D8C5A7B835E812D9262E5B63EAE6",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/IsA.cs",
+      "label": "IsA",
+      "attributes": [
+        "object"
+      ],
+      "comment": {
+        "undefined": "Can be used to describe that a thing belongs to a class; or that a thing is equivalent to another thing. When used for BHoM types, this describes C# interface implementation."
+      },
+      "domain": "BH.oM.EmbodiedSuffering.Elements.MaterialImportSources",
+      "range": "BH.oM.Base.IObject"
+    },
+    {
+      "id": "MaterialImportSources-IsSubclassOf-BHoMObject_7BE86CE759FB8CCB11CC5F7A92A8C8238B1843B99953A6CF4802A29C808A1FE9",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/IsSubclassOf.cs",
+      "label": "IsA",
+      "attributes": [
+        "object"
+      ],
+      "domain": "BH.oM.EmbodiedSuffering.Elements.MaterialImportSources",
+      "range": "BH.oM.Base.BHoMObject"
+    }
+  ]
+}
