@@ -43,7 +43,7 @@ using KellermanSoftware.CompareNetObjects;
 using KellermanSoftware.CompareNetObjects.TypeComparers;
 using FluentAssertions;
 
-namespace RDF_Tests.Utils
+namespace BH.Test.RDF
 {
     /// <summary>
     /// Class to interface with Unit Tests.

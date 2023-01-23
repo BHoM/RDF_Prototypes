@@ -35,7 +35,6 @@ using System.IO;
 using VDS.RDF.Ontology;
 using BH.oM.Structure.Elements;
 using NUnit.Framework;
-using RDF_Tests.Utils;
 
 namespace BH.Test.RDF
 {
