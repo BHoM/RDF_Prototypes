@@ -39,6 +39,7 @@ using Point = BH.oM.Geometry.Point;
 using NUnit.Framework;
 using BH.oM.Physical.FramingProperties;
 using VDS.RDF.Query.Expressions.Comparison;
+using FluentAssertions;
 
 namespace BH.Test.RDF
 {
@@ -172,15 +173,15 @@ namespace BH.Test.RDF
         [Test]
         public static void Column()
         {
-            Column randomColumn = new Column();
-            randomColumn.Property = new ConstantFramingProperty() { Material = new oM.Physical.Materials.Material() { Name = "SomeMaterial" } };
-            randomColumn.Location = BH.Engine.RDF.Testing.Create.RandomObject<Arc>();
+            Column randomColumn = CreateRandomColumn();
 
             List<object> objectList = new List<object>() { randomColumn };
             string TTLGraph = objectList.TTLGraph(m_ontologySettings);
 
             Assert.IsTTLParsable(TTLGraph);
         }
+
+
 
         [Test]
         public static void RoomAndColumn()
@@ -190,7 +191,7 @@ namespace BH.Test.RDF
             room.Location = new Point();
             room.Name = "A room object";
 
-            Column randomColumn = BH.Engine.RDF.Testing.Create.RandomObject<Column>();
+            Column randomColumn = CreateRandomColumn();
 
             List<object> objectList = new List<object>() { room, randomColumn };
             string TTLGraph = objectList.TTLGraph(new OntologySettings());
@@ -245,6 +246,10 @@ namespace BH.Test.RDF
             CustomObject parent = BH.Engine.Base.Create.CustomObject(new Dictionary<string, object>() { { "Type", "Roof" }, { "Tiles", nestedObj1 } });
 
             CSharpGraph cSharpGraph_customObj = Compute.CSharpGraph(new List<object>() { parent }, m_ontologySettings);
+
+            cSharpGraph_customObj.Classes.Where(c => c.Name == "TileMaterial").Should().ContainSingle();
+            cSharpGraph_customObj.Classes.Where(c => c.Name == "SimpleTiles").Should().ContainSingle();
+            cSharpGraph_customObj.Classes.Where(c => c.Name == "Roof").Should().ContainSingle();
 
             Assert.IsNotNull(cSharpGraph_customObj.Classes.Single(c => c.Name == "TileMaterial"));
             Assert.IsNotNull(cSharpGraph_customObj.Classes.Single(c => c.Name == "SimpleTiles"));

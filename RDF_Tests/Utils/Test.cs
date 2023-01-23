@@ -20,7 +20,11 @@
  * along with this code. If not, see <https://www.gnu.org/licenses/lgpl-3.0.html>.      
  */
 
+using BH.oM.Geometry;
+using BH.oM.Physical.Elements;
+using BH.oM.Physical.FramingProperties;
 using BH.oM.RDF;
+using System.Data.Common;
 
 namespace BH.Test.RDF
 {
@@ -34,5 +38,17 @@ namespace BH.Test.RDF
             ABoxSettings = new ABoxSettings() { IndividualsBaseAddress = "individuals.Address" },
             TBoxSettings = new TBoxSettings() { CustomObjectTypesBaseAddress = "CustomObjectTypes.Address" }
         };
+
+        /// <summary>
+        /// Required because RandomObject generally fails with Column, returning invalid customdata key names.
+        /// </summary>
+        protected static Column CreateRandomColumn()
+        {
+            Column randomColumn = new Column();
+            randomColumn.Name = "A column object";
+            randomColumn.Property = new ConstantFramingProperty() { Material = new oM.Physical.Materials.Material() { Name = "SomeMaterial" } };
+            randomColumn.Location = BH.Engine.RDF.Testing.Create.RandomObject<Arc>();
+            return randomColumn;
+        }
     }
 }

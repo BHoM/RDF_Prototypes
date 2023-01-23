@@ -148,7 +148,7 @@ namespace BH.Test.RDF
         [Test]
         public static void Column()
         {
-            Column randomColumn = BH.Engine.RDF.Testing.Create.RandomObject<Column>();
+            Column randomColumn = CreateRandomColumn();
 
             List<object> objectList = new List<object>() { randomColumn };
             string TTLGraph = objectList.TTLGraph(m_ontologySettings);
@@ -169,9 +169,7 @@ namespace BH.Test.RDF
             room.Location = new Point() { X = 401, Y = 402, Z = 403 };
             room.Name = "A room object";
 
-            Column column = new Column();
-            column.Location = new Polyline() { ControlPoints = new List<Point>() { new Point() { X = 501, Y = 502, Z = 503 }, new Point() { X = 601, Y = 602, Z = 603 } } };
-            column.Name = "A column object";
+            Column column = CreateRandomColumn();
 
             List<object> objectList = new List<object>() { room, column };
             string TTLGraph = objectList.TTLGraph(m_ontologySettings);
