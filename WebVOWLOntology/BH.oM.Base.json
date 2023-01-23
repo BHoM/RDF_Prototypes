@@ -1,75 +1,5 @@
 {
-  "header": {
-    "title": "BH.oM.Base namespace visualisation",
-    "iri": "https://github.com/BHoM/RDF_Prototypes",
-    "description": {
-      "undefined": "Ontology representation of the BH.oM.Base namespace. Generated via BHoM RDF_Prototypes."
-    },
-    "author": [
-      "RDF_Prototypes"
-    ]
-  },
-  "comment": "Generated via BHoM RDF_Prototypes",
-  "settings": {
-    "global": {
-      "zoom": "0.28",
-      "translation": [
-        621.17,
-        373.54
-      ],
-      "paused": false
-    },
-    "gravity": {
-      "classDistance": 200,
-      "datatypeDistance": 120
-    },
-    "filter": {
-      "checkBox": [
-        {
-          "id": "datatypeFilterCheckbox",
-          "checked": false
-        },
-        {
-          "id": "objectPropertyFilterCheckbox",
-          "checked": false
-        },
-        {
-          "id": "subclassFilterCheckbox",
-          "checked": false
-        },
-        {
-          "id": "disjointFilterCheckbox",
-          "checked": false
-        },
-        {
-          "id": "setoperatorFilterCheckbox",
-          "checked": false
-        }
-      ],
-      "degreeSliderValue": "0"
-    },
-    "modes": {
-      "checkBox": [
-        {
-          "id": "pickandpinModuleCheckbox",
-          "checked": false
-        },
-        {
-          "id": "nodescalingModuleCheckbox",
-          "checked": true
-        },
-        {
-          "id": "compactnotationModuleCheckbox",
-          "checked": false
-        },
-        {
-          "id": "colorexternalsModuleCheckbox",
-          "checked": true
-        }
-      ],
-      "colorSwitchState": false
-    }
-  },
+  "comment": "Generated from BHoM RDF_Prototypes",
   "namespace": [],
   "class": [
     {
@@ -77,7 +7,7 @@
       "type": "owl:Class"
     },
     {
-      "id": "BH.oM.Base.BHoMGroup`1",
+      "id": "BH.oM.Base.BHoMGroup",
       "type": "owl:Class"
     },
     {
@@ -105,7 +35,7 @@
       "type": "owl:Class"
     },
     {
-      "id": "BH.oM.Base.FragmentSet",
+      "id": "rdf:list",
       "type": "owl:Class"
     },
     {
@@ -169,11 +99,11 @@
       "type": "owl:Class"
     },
     {
-      "id": "BH.oM.Base.Output`1",
+      "id": "BH.oM.Base.Output",
       "type": "owl:Class"
     },
     {
-      "id": "BH.oM.Base.UnderlyingType",
+      "id": "BH.oM.Base.Reflection.UnderlyingType",
       "type": "owl:Class"
     },
     {
@@ -198,6 +128,10 @@
     },
     {
       "id": "BH.oM.Base.Attributes.DefaultValueWarningAttribute",
+      "type": "owl:Class"
+    },
+    {
+      "id": "BH.oM.Base.Attributes.DisplayTextAttribute",
       "type": "owl:Class"
     },
     {
@@ -269,11 +203,11 @@
       "type": "owl:Class"
     },
     {
-      "id": "BH.oM.Base.FragmentSet+<>c",
+      "id": "BH.oM.Base.FragmentSet.c",
       "type": "owl:Class"
     },
     {
-      "id": "BH.oM.Base.Attributes.PreviousInputNamesAttribute+<>c",
+      "id": "BH.oM.Base.Attributes.PreviousInputNamesAttribute.c",
       "type": "owl:Class"
     },
     {
@@ -325,7 +259,7 @@
       "type": "owl:Class"
     },
     {
-      "id": "BH.oM.Base.BHoMGroup`1.Elements",
+      "id": "BH.oM.Base.BHoMGroup.Elements",
       "type": "owl:Class"
     },
     {
@@ -441,15 +375,15 @@
       "type": "owl:Class"
     },
     {
-      "id": "BH.oM.Base.Output`1.Item1",
+      "id": "BH.oM.Base.Output.Item1",
       "type": "owl:Class"
     },
     {
-      "id": "BH.oM.Base.UnderlyingType.Type",
+      "id": "BH.oM.Base.Reflection.UnderlyingType.Type",
       "type": "owl:Class"
     },
     {
-      "id": "BH.oM.Base.UnderlyingType.Depth",
+      "id": "BH.oM.Base.Reflection.UnderlyingType.Depth",
       "type": "owl:Class"
     },
     {
@@ -490,6 +424,10 @@
     },
     {
       "id": "BH.oM.Base.Attributes.DefaultValueWarningAttribute.Warning",
+      "type": "owl:Class"
+    },
+    {
+      "id": "BH.oM.Base.Attributes.DisplayTextAttribute.Text",
       "type": "owl:Class"
     },
     {
@@ -610,7 +548,7 @@
       }
     },
     {
-      "id": "BH.oM.Base.BHoMGroup`1",
+      "id": "BH.oM.Base.BHoMGroup",
       "iri": "https://github.com/BHoM/BHoM/blob/main/BHoM/BHoMGroup.cs",
       "label": "BHoMGroup<T> (BH.oM.Base)",
       "attributes": [
@@ -675,7 +613,7 @@
       ]
     },
     {
-      "id": "BH.oM.Base.FragmentSet",
+      "id": "rdf:list",
       "iri": "https://github.com/BHoM/BHoM/blob/main/BHoM/FragmentSet.cs",
       "label": "FragmentSet (BH.oM.Base)",
       "attributes": [
@@ -821,7 +759,7 @@
       }
     },
     {
-      "id": "BH.oM.Base.Output`1",
+      "id": "BH.oM.Base.Output",
       "iri": "https://github.com/BHoM/BHoM/blob/main/BHoM/Output.cs",
       "label": "Output<T> (BH.oM.Base)",
       "attributes": [
@@ -829,9 +767,9 @@
       ]
     },
     {
-      "id": "BH.oM.Base.UnderlyingType",
-      "iri": "https://github.com/BHoM/BHoM/blob/main/BHoM/UnderlyingType.cs",
-      "label": "UnderlyingType (BH.oM.Base)",
+      "id": "BH.oM.Base.Reflection.UnderlyingType",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/BHoM/Reflection/UnderlyingType.cs",
+      "label": "UnderlyingType (BH.oM.Base.Reflection)",
       "attributes": [
         "object"
       ]
@@ -886,6 +824,14 @@
       "comment": {
         "undefined": "Warning to be generated when an instance of the containing class is generated with this property set to its default value."
       }
+    },
+    {
+      "id": "BH.oM.Base.Attributes.DisplayTextAttribute",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/BHoM/Attributes/DisplayTextAttribute.cs",
+      "label": "DisplayTextAttribute (BH.oM.Base.Attributes)",
+      "attributes": [
+        "object"
+      ]
     },
     {
       "id": "BH.oM.Base.Attributes.FilePathAttribute",
@@ -1045,16 +991,16 @@
       }
     },
     {
-      "id": "BH.oM.Base.FragmentSet+<>c",
-      "iri": "https://github.com/BHoM/3DRepo_Toolkit/blob/main/TDRepo_Adapter/AdapterActions/Execute.cs",
+      "id": "BH.oM.Base.FragmentSet.c",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/Acoustic_oM/Frequency.cs",
       "label": "c (BH.oM.Base)",
       "attributes": [
         "object"
       ]
     },
     {
-      "id": "BH.oM.Base.Attributes.PreviousInputNamesAttribute+<>c",
-      "iri": "https://github.com/BHoM/3DRepo_Toolkit/blob/main/TDRepo_Adapter/AdapterActions/Execute.cs",
+      "id": "BH.oM.Base.Attributes.PreviousInputNamesAttribute.c",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/Acoustic_oM/Frequency.cs",
       "label": "c (BH.oM.Base.Attributes)",
       "attributes": [
         "object"
@@ -1063,7 +1009,7 @@
     {
       "id": "BH.oM.Base.BaseComparisonConfig.PropertyExceptions",
       "iri": "https://github.com/BHoM/BHoM/blob/main/BHoM/BaseComparisonConfig.cs#L34",
-      "label": "PropertyExceptions(BH.oM.Base.BaseComparisonConfig.PropertyExceptions)",
+      "label": "PropertyExceptions (BH.oM.Base.BaseComparisonConfig.PropertyExceptions)",
       "attributes": [
         "datatype"
       ]
@@ -1071,7 +1017,7 @@
     {
       "id": "BH.oM.Base.BaseComparisonConfig.PropertiesToConsider",
       "iri": "https://github.com/BHoM/BHoM/blob/main/BHoM/BaseComparisonConfig.cs#L40",
-      "label": "PropertiesToConsider(BH.oM.Base.BaseComparisonConfig.PropertiesToConsider)",
+      "label": "PropertiesToConsider (BH.oM.Base.BaseComparisonConfig.PropertiesToConsider)",
       "attributes": [
         "datatype"
       ]
@@ -1079,7 +1025,7 @@
     {
       "id": "BH.oM.Base.BaseComparisonConfig.CustomdataKeysExceptions",
       "iri": "https://github.com/BHoM/BHoM/blob/main/BHoM/BaseComparisonConfig.cs#L45",
-      "label": "CustomdataKeysExceptions(BH.oM.Base.BaseComparisonConfig.CustomdataKeysExceptions)",
+      "label": "CustomdataKeysExceptions (BH.oM.Base.BaseComparisonConfig.CustomdataKeysExceptions)",
       "attributes": [
         "datatype"
       ]
@@ -1087,7 +1033,7 @@
     {
       "id": "BH.oM.Base.BaseComparisonConfig.CustomdataKeysToConsider",
       "iri": "https://github.com/BHoM/BHoM/blob/main/BHoM/BaseComparisonConfig.cs#L50",
-      "label": "CustomdataKeysToConsider(BH.oM.Base.BaseComparisonConfig.CustomdataKeysToConsider)",
+      "label": "CustomdataKeysToConsider (BH.oM.Base.BaseComparisonConfig.CustomdataKeysToConsider)",
       "attributes": [
         "datatype"
       ]
@@ -1095,7 +1041,7 @@
     {
       "id": "BH.oM.Base.BaseComparisonConfig.TypeExceptions",
       "iri": "https://github.com/BHoM/BHoM/blob/main/BHoM/BaseComparisonConfig.cs#L53",
-      "label": "TypeExceptions(BH.oM.Base.BaseComparisonConfig.TypeExceptions)",
+      "label": "TypeExceptions (BH.oM.Base.BaseComparisonConfig.TypeExceptions)",
       "attributes": [
         "datatype"
       ]
@@ -1103,7 +1049,7 @@
     {
       "id": "BH.oM.Base.BaseComparisonConfig.NamespaceExceptions",
       "iri": "https://github.com/BHoM/BHoM/blob/main/BHoM/BaseComparisonConfig.cs#L56",
-      "label": "NamespaceExceptions(BH.oM.Base.BaseComparisonConfig.NamespaceExceptions)",
+      "label": "NamespaceExceptions (BH.oM.Base.BaseComparisonConfig.NamespaceExceptions)",
       "attributes": [
         "datatype"
       ]
@@ -1111,7 +1057,7 @@
     {
       "id": "BH.oM.Base.BaseComparisonConfig.MaxNesting",
       "iri": "https://github.com/BHoM/BHoM/blob/main/BHoM/BaseComparisonConfig.cs#L60",
-      "label": "MaxNesting(BH.oM.Base.BaseComparisonConfig.MaxNesting)",
+      "label": "MaxNesting (BH.oM.Base.BaseComparisonConfig.MaxNesting)",
       "attributes": [
         "datatype"
       ]
@@ -1119,7 +1065,7 @@
     {
       "id": "BH.oM.Base.BaseComparisonConfig.MaxPropertyDifferences",
       "iri": "https://github.com/BHoM/BHoM/blob/main/BHoM/BaseComparisonConfig.cs#L64",
-      "label": "MaxPropertyDifferences(BH.oM.Base.BaseComparisonConfig.MaxPropertyDifferences)",
+      "label": "MaxPropertyDifferences (BH.oM.Base.BaseComparisonConfig.MaxPropertyDifferences)",
       "attributes": [
         "datatype"
       ]
@@ -1127,7 +1073,7 @@
     {
       "id": "BH.oM.Base.BaseComparisonConfig.NumericTolerance",
       "iri": "https://github.com/BHoM/BHoM/blob/main/BHoM/BaseComparisonConfig.cs#L70",
-      "label": "NumericTolerance(BH.oM.Base.BaseComparisonConfig.NumericTolerance)",
+      "label": "NumericTolerance (BH.oM.Base.BaseComparisonConfig.NumericTolerance)",
       "attributes": [
         "datatype"
       ]
@@ -1135,13 +1081,13 @@
     {
       "id": "BH.oM.Base.BaseComparisonConfig.PropertyNumericTolerances",
       "iri": "https://github.com/BHoM/BHoM/blob/main/BHoM/BaseComparisonConfig.cs#L76",
-      "label": "PropertyNumericTolerances(BH.oM.Base.BaseComparisonConfig.PropertyNumericTolerances)",
+      "label": "PropertyNumericTolerances (BH.oM.Base.BaseComparisonConfig.PropertyNumericTolerances)",
       "attributes": []
     },
     {
       "id": "BH.oM.Base.BaseComparisonConfig.SignificantFigures",
       "iri": "https://github.com/BHoM/BHoM/blob/main/BHoM/BaseComparisonConfig.cs#L82",
-      "label": "SignificantFigures(BH.oM.Base.BaseComparisonConfig.SignificantFigures)",
+      "label": "SignificantFigures (BH.oM.Base.BaseComparisonConfig.SignificantFigures)",
       "attributes": [
         "datatype"
       ]
@@ -1149,13 +1095,13 @@
     {
       "id": "BH.oM.Base.BaseComparisonConfig.PropertySignificantFigures",
       "iri": "https://github.com/BHoM/BHoM/blob/main/BHoM/BaseComparisonConfig.cs#L88",
-      "label": "PropertySignificantFigures(BH.oM.Base.BaseComparisonConfig.PropertySignificantFigures)",
+      "label": "PropertySignificantFigures (BH.oM.Base.BaseComparisonConfig.PropertySignificantFigures)",
       "attributes": []
     },
     {
-      "id": "BH.oM.Base.BHoMGroup`1.Elements",
+      "id": "BH.oM.Base.BHoMGroup.Elements",
       "iri": "https://github.com/BHoM/BHoM/blob/main/BHoM/BHoMGroup.cs#L33",
-      "label": "Elements(BH.oM.Base.BHoMGroup.Elements)",
+      "label": "Elements (BH.oM.Base.BHoMGroup.Elements)",
       "attributes": [
         "datatype"
       ]
@@ -1163,7 +1109,7 @@
     {
       "id": "BH.oM.Base.BHoMObject.BHoM_Guid",
       "iri": "https://github.com/BHoM/BHoM/blob/main/BHoM/BHoMObject.cs#L34",
-      "label": "BHoM_Guid(BH.oM.Base.BHoMObject.BHoM_Guid)",
+      "label": "BHoM_Guid (BH.oM.Base.BHoMObject.BHoM_Guid)",
       "attributes": [
         "datatype"
       ]
@@ -1171,7 +1117,7 @@
     {
       "id": "BH.oM.Base.BHoMObject.Name",
       "iri": "https://github.com/BHoM/BHoM/blob/main/BHoM/BHoMObject.cs#L36",
-      "label": "Name(BH.oM.Base.BHoMObject.Name)",
+      "label": "Name (BH.oM.Base.BHoMObject.Name)",
       "attributes": [
         "datatype"
       ]
@@ -1179,13 +1125,13 @@
     {
       "id": "BH.oM.Base.BHoMObject.Fragments",
       "iri": "https://github.com/BHoM/BHoM/blob/main/BHoM/BHoMObject.cs#L38",
-      "label": "Fragments(BH.oM.Base.BHoMObject.Fragments)",
+      "label": "Fragments (BH.oM.Base.BHoMObject.Fragments)",
       "attributes": []
     },
     {
       "id": "BH.oM.Base.BHoMObject.Tags",
       "iri": "https://github.com/BHoM/BHoM/blob/main/BHoM/BHoMObject.cs#L40",
-      "label": "Tags(BH.oM.Base.BHoMObject.Tags)",
+      "label": "Tags (BH.oM.Base.BHoMObject.Tags)",
       "attributes": [
         "datatype"
       ]
@@ -1193,7 +1139,7 @@
     {
       "id": "BH.oM.Base.BHoMObject.CustomData",
       "iri": "https://github.com/BHoM/BHoM/blob/main/BHoM/BHoMObject.cs#L42",
-      "label": "CustomData(BH.oM.Base.BHoMObject.CustomData)",
+      "label": "CustomData (BH.oM.Base.BHoMObject.CustomData)",
       "attributes": [
         "datatype"
       ]
@@ -1201,7 +1147,7 @@
     {
       "id": "BH.oM.Base.ComparisonFunctions.PropertyFullNameModifier",
       "iri": "https://github.com/BHoM/BHoM/blob/main/BHoM/ComparisonFunctions.cs#L39",
-      "label": "PropertyFullNameModifier(BH.oM.Base.ComparisonFunctions.PropertyFullNameModifier)",
+      "label": "PropertyFullNameModifier (BH.oM.Base.ComparisonFunctions.PropertyFullNameModifier)",
       "attributes": [
         "datatype"
       ]
@@ -1209,7 +1155,7 @@
     {
       "id": "BH.oM.Base.ComparisonFunctions.PropertyFullNameFilter",
       "iri": "https://github.com/BHoM/BHoM/blob/main/BHoM/ComparisonFunctions.cs#L45",
-      "label": "PropertyFullNameFilter(BH.oM.Base.ComparisonFunctions.PropertyFullNameFilter)",
+      "label": "PropertyFullNameFilter (BH.oM.Base.ComparisonFunctions.PropertyFullNameFilter)",
       "attributes": [
         "datatype"
       ]
@@ -1217,7 +1163,7 @@
     {
       "id": "BH.oM.Base.ComparisonFunctions.CustomDataKeyFilter",
       "iri": "https://github.com/BHoM/BHoM/blob/main/BHoM/ComparisonFunctions.cs#L49",
-      "label": "CustomDataKeyFilter(BH.oM.Base.ComparisonFunctions.CustomDataKeyFilter)",
+      "label": "CustomDataKeyFilter (BH.oM.Base.ComparisonFunctions.CustomDataKeyFilter)",
       "attributes": [
         "datatype"
       ]
@@ -1225,7 +1171,7 @@
     {
       "id": "BH.oM.Base.ComparisonFunctions.PropertyDisplayNameModifier",
       "iri": "https://github.com/BHoM/BHoM/blob/main/BHoM/ComparisonFunctions.cs#L56",
-      "label": "PropertyDisplayNameModifier(BH.oM.Base.ComparisonFunctions.PropertyDisplayNameModifier)",
+      "label": "PropertyDisplayNameModifier (BH.oM.Base.ComparisonFunctions.PropertyDisplayNameModifier)",
       "attributes": [
         "datatype"
       ]
@@ -1233,7 +1179,7 @@
     {
       "id": "BH.oM.Base.ComparisonInclusion.Include",
       "iri": "https://github.com/BHoM/BHoM/blob/main/BHoM/ComparisonInclusion.cs#L44",
-      "label": "Include(BH.oM.Base.ComparisonInclusion.Include)",
+      "label": "Include (BH.oM.Base.ComparisonInclusion.Include)",
       "attributes": [
         "datatype"
       ]
@@ -1241,7 +1187,7 @@
     {
       "id": "BH.oM.Base.ComparisonInclusion.DisplayName",
       "iri": "https://github.com/BHoM/BHoM/blob/main/BHoM/ComparisonInclusion.cs#L47",
-      "label": "DisplayName(BH.oM.Base.ComparisonInclusion.DisplayName)",
+      "label": "DisplayName (BH.oM.Base.ComparisonInclusion.DisplayName)",
       "attributes": [
         "datatype"
       ]
@@ -1249,7 +1195,7 @@
     {
       "id": "BH.oM.Base.Enumeration.Value",
       "iri": "https://github.com/BHoM/BHoM/blob/main/BHoM/Enumeration.cs#L36",
-      "label": "Value(BH.oM.Base.Enumeration.Value)",
+      "label": "Value (BH.oM.Base.Enumeration.Value)",
       "attributes": [
         "datatype"
       ]
@@ -1257,7 +1203,7 @@
     {
       "id": "BH.oM.Base.Enumeration.Description",
       "iri": "https://github.com/BHoM/BHoM/blob/main/BHoM/Enumeration.cs",
-      "label": "Description(BH.oM.Base.Enumeration.Description)",
+      "label": "Description (BH.oM.Base.Enumeration.Description)",
       "attributes": [
         "datatype"
       ]
@@ -1265,7 +1211,7 @@
     {
       "id": "BH.oM.Base.HashFragment.Hash",
       "iri": "https://github.com/BHoM/BHoM/blob/main/BHoM/HashFragment.cs#L41",
-      "label": "Hash(BH.oM.Base.HashFragment.Hash)",
+      "label": "Hash (BH.oM.Base.HashFragment.Hash)",
       "attributes": [
         "datatype"
       ]
@@ -1273,7 +1219,7 @@
     {
       "id": "BH.oM.Base.IAdapterId.Id",
       "iri": "https://github.com/BHoM/BHoM/blob/main/BHoM/Interface/IAdapterId.cs#L32",
-      "label": "Id(BH.oM.Base.IAdapterId.Id)",
+      "label": "Id (BH.oM.Base.IAdapterId.Id)",
       "attributes": [
         "datatype"
       ]
@@ -1281,7 +1227,7 @@
     {
       "id": "BH.oM.Base.IBHoMObject.BHoM_Guid",
       "iri": "https://github.com/BHoM/BHoM/blob/main/BHoM/Interface/IBHoMObject.cs#L30",
-      "label": "BHoM_Guid(BH.oM.Base.IBHoMObject.BHoM_Guid)",
+      "label": "BHoM_Guid (BH.oM.Base.IBHoMObject.BHoM_Guid)",
       "attributes": [
         "datatype"
       ]
@@ -1289,7 +1235,7 @@
     {
       "id": "BH.oM.Base.IBHoMObject.Name",
       "iri": "https://github.com/BHoM/BHoM/blob/main/BHoM/Interface/IBHoMObject.cs#L32",
-      "label": "Name(BH.oM.Base.IBHoMObject.Name)",
+      "label": "Name (BH.oM.Base.IBHoMObject.Name)",
       "attributes": [
         "datatype"
       ]
@@ -1297,7 +1243,7 @@
     {
       "id": "BH.oM.Base.IBHoMObject.Fragments",
       "iri": "https://github.com/BHoM/BHoM/blob/main/BHoM/Interface/IBHoMObject.cs#L34",
-      "label": "Fragments(BH.oM.Base.IBHoMObject.Fragments)",
+      "label": "Fragments (BH.oM.Base.IBHoMObject.Fragments)",
       "attributes": [
         "datatype"
       ]
@@ -1305,7 +1251,7 @@
     {
       "id": "BH.oM.Base.IBHoMObject.Tags",
       "iri": "https://github.com/BHoM/BHoM/blob/main/BHoM/Interface/IBHoMObject.cs#L36",
-      "label": "Tags(BH.oM.Base.IBHoMObject.Tags)",
+      "label": "Tags (BH.oM.Base.IBHoMObject.Tags)",
       "attributes": [
         "datatype"
       ]
@@ -1313,7 +1259,7 @@
     {
       "id": "BH.oM.Base.IBHoMObject.CustomData",
       "iri": "https://github.com/BHoM/BHoM/blob/main/BHoM/Interface/IBHoMObject.cs#L38",
-      "label": "CustomData(BH.oM.Base.IBHoMObject.CustomData)",
+      "label": "CustomData (BH.oM.Base.IBHoMObject.CustomData)",
       "attributes": [
         "datatype"
       ]
@@ -1321,7 +1267,7 @@
     {
       "id": "BH.oM.Base.IEnum.Value",
       "iri": "https://github.com/BHoM/BHoM/blob/main/BHoM/Interface/IEnum.cs#L35",
-      "label": "Value(BH.oM.Base.IEnum.Value)",
+      "label": "Value (BH.oM.Base.IEnum.Value)",
       "attributes": [
         "datatype"
       ]
@@ -1329,7 +1275,7 @@
     {
       "id": "BH.oM.Base.IEnum.Description",
       "iri": "https://github.com/BHoM/BHoM/blob/main/BHoM/Interface/IEnum.cs#L37",
-      "label": "Description(BH.oM.Base.IEnum.Description)",
+      "label": "Description (BH.oM.Base.IEnum.Description)",
       "attributes": [
         "datatype"
       ]
@@ -1337,7 +1283,7 @@
     {
       "id": "BH.oM.Base.IHashFragment.Hash",
       "iri": "https://github.com/BHoM/BHoM/blob/main/BHoM/Interface/IHashFragment.cs#L41",
-      "label": "Hash(BH.oM.Base.IHashFragment.Hash)",
+      "label": "Hash (BH.oM.Base.IHashFragment.Hash)",
       "attributes": [
         "datatype"
       ]
@@ -1345,7 +1291,7 @@
     {
       "id": "BH.oM.Base.IPersistentAdapterId.PersistentId",
       "iri": "https://github.com/BHoM/BHoM/blob/main/BHoM/Interface/IPersistentAdapterId.cs#L35",
-      "label": "PersistentId(BH.oM.Base.IPersistentAdapterId.PersistentId)",
+      "label": "PersistentId (BH.oM.Base.IPersistentAdapterId.PersistentId)",
       "attributes": [
         "datatype"
       ]
@@ -1353,7 +1299,7 @@
     {
       "id": "BH.oM.Base.NamedNumericTolerance.Name",
       "iri": "https://github.com/BHoM/BHoM/blob/main/BHoM/NamedNumericTolerance.cs#L36",
-      "label": "Name(BH.oM.Base.NamedNumericTolerance.Name)",
+      "label": "Name (BH.oM.Base.NamedNumericTolerance.Name)",
       "attributes": [
         "datatype"
       ]
@@ -1361,7 +1307,7 @@
     {
       "id": "BH.oM.Base.NamedNumericTolerance.Tolerance",
       "iri": "https://github.com/BHoM/BHoM/blob/main/BHoM/NamedNumericTolerance.cs#L39",
-      "label": "Tolerance(BH.oM.Base.NamedNumericTolerance.Tolerance)",
+      "label": "Tolerance (BH.oM.Base.NamedNumericTolerance.Tolerance)",
       "attributes": [
         "datatype"
       ]
@@ -1369,7 +1315,7 @@
     {
       "id": "BH.oM.Base.NamedSignificantFigures.Name",
       "iri": "https://github.com/BHoM/BHoM/blob/main/BHoM/NamedSignificantFigures.cs#L36",
-      "label": "Name(BH.oM.Base.NamedSignificantFigures.Name)",
+      "label": "Name (BH.oM.Base.NamedSignificantFigures.Name)",
       "attributes": [
         "datatype"
       ]
@@ -1377,31 +1323,31 @@
     {
       "id": "BH.oM.Base.NamedSignificantFigures.SignificantFigures",
       "iri": "https://github.com/BHoM/BHoM/blob/main/BHoM/NamedSignificantFigures.cs#L39",
-      "label": "SignificantFigures(BH.oM.Base.NamedSignificantFigures.SignificantFigures)",
+      "label": "SignificantFigures (BH.oM.Base.NamedSignificantFigures.SignificantFigures)",
       "attributes": [
         "datatype"
       ]
     },
     {
-      "id": "BH.oM.Base.Output`1.Item1",
+      "id": "BH.oM.Base.Output.Item1",
       "iri": "https://github.com/BHoM/BHoM/blob/main/BHoM/Output.cs#L35",
-      "label": "Item1(BH.oM.Base.Output.Item1)",
+      "label": "Item1 (BH.oM.Base.Output.Item1)",
       "attributes": [
         "datatype"
       ]
     },
     {
-      "id": "BH.oM.Base.UnderlyingType.Type",
-      "iri": "https://github.com/BHoM/BHoM/blob/main/BHoM/UnderlyingType.cs#L37",
-      "label": "Type(BH.oM.Base.UnderlyingType.Type)",
+      "id": "BH.oM.Base.Reflection.UnderlyingType.Type",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/BHoM/Reflection/UnderlyingType.cs#L37",
+      "label": "Type (BH.oM.Base.Reflection.UnderlyingType.Type)",
       "attributes": [
         "datatype"
       ]
     },
     {
-      "id": "BH.oM.Base.UnderlyingType.Depth",
-      "iri": "https://github.com/BHoM/BHoM/blob/main/BHoM/UnderlyingType.cs#L39",
-      "label": "Depth(BH.oM.Base.UnderlyingType.Depth)",
+      "id": "BH.oM.Base.Reflection.UnderlyingType.Depth",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/BHoM/Reflection/UnderlyingType.cs#L39",
+      "label": "Depth (BH.oM.Base.Reflection.UnderlyingType.Depth)",
       "attributes": [
         "datatype"
       ]
@@ -1409,7 +1355,7 @@
     {
       "id": "BH.oM.Base.Debugging.Event.Time",
       "iri": "https://github.com/BHoM/BHoM/blob/main/BHoM/Debugging/Event.cs#L38",
-      "label": "Time(BH.oM.Base.Debugging.Event.Time)",
+      "label": "Time (BH.oM.Base.Debugging.Event.Time)",
       "attributes": [
         "datatype"
       ]
@@ -1417,7 +1363,7 @@
     {
       "id": "BH.oM.Base.Debugging.Event.UtcTime",
       "iri": "https://github.com/BHoM/BHoM/blob/main/BHoM/Debugging/Event.cs#L40",
-      "label": "UtcTime(BH.oM.Base.Debugging.Event.UtcTime)",
+      "label": "UtcTime (BH.oM.Base.Debugging.Event.UtcTime)",
       "attributes": [
         "datatype"
       ]
@@ -1425,7 +1371,7 @@
     {
       "id": "BH.oM.Base.Debugging.Event.StackTrace",
       "iri": "https://github.com/BHoM/BHoM/blob/main/BHoM/Debugging/Event.cs#L42",
-      "label": "StackTrace(BH.oM.Base.Debugging.Event.StackTrace)",
+      "label": "StackTrace (BH.oM.Base.Debugging.Event.StackTrace)",
       "attributes": [
         "datatype"
       ]
@@ -1433,7 +1379,7 @@
     {
       "id": "BH.oM.Base.Debugging.Event.Message",
       "iri": "https://github.com/BHoM/BHoM/blob/main/BHoM/Debugging/Event.cs#L44",
-      "label": "Message(BH.oM.Base.Debugging.Event.Message)",
+      "label": "Message (BH.oM.Base.Debugging.Event.Message)",
       "attributes": [
         "datatype"
       ]
@@ -1441,25 +1387,25 @@
     {
       "id": "BH.oM.Base.Debugging.Event.Type",
       "iri": "https://github.com/BHoM/BHoM/blob/main/BHoM/Debugging/Event.cs#L46",
-      "label": "Type(BH.oM.Base.Debugging.Event.Type)",
+      "label": "Type (BH.oM.Base.Debugging.Event.Type)",
       "attributes": []
     },
     {
       "id": "BH.oM.Base.Debugging.Log.AllEvents",
       "iri": "https://github.com/BHoM/BHoM/blob/main/BHoM/Debugging/Log.cs#L38",
-      "label": "AllEvents(BH.oM.Base.Debugging.Log.AllEvents)",
+      "label": "AllEvents (BH.oM.Base.Debugging.Log.AllEvents)",
       "attributes": []
     },
     {
       "id": "BH.oM.Base.Debugging.Log.CurrentEvents",
       "iri": "https://github.com/BHoM/BHoM/blob/main/BHoM/Debugging/Log.cs#L40",
-      "label": "CurrentEvents(BH.oM.Base.Debugging.Log.CurrentEvents)",
+      "label": "CurrentEvents (BH.oM.Base.Debugging.Log.CurrentEvents)",
       "attributes": []
     },
     {
       "id": "BH.oM.Base.Attributes.AbbreviationAttribute.Name",
       "iri": "https://github.com/BHoM/BHoM/blob/main/BHoM/Attributes/AbbreviationAttribute.cs#L39",
-      "label": "Name(BH.oM.Base.Attributes.AbbreviationAttribute.Name)",
+      "label": "Name (BH.oM.Base.Attributes.AbbreviationAttribute.Name)",
       "attributes": [
         "datatype"
       ]
@@ -1467,7 +1413,7 @@
     {
       "id": "BH.oM.Base.Attributes.AssemblyUrlAttribute.Url",
       "iri": "https://github.com/BHoM/BHoM/blob/main/BHoM/Attributes/AssemblyUrlAttribute.cs#L39",
-      "label": "Url(BH.oM.Base.Attributes.AssemblyUrlAttribute.Url)",
+      "label": "Url (BH.oM.Base.Attributes.AssemblyUrlAttribute.Url)",
       "attributes": [
         "datatype"
       ]
@@ -1475,7 +1421,15 @@
     {
       "id": "BH.oM.Base.Attributes.DefaultValueWarningAttribute.Warning",
       "iri": "https://github.com/BHoM/BHoM/blob/main/BHoM/Attributes/DefaultValueWarningAttribute.cs#L42",
-      "label": "Warning(BH.oM.Base.Attributes.DefaultValueWarningAttribute.Warning)",
+      "label": "Warning (BH.oM.Base.Attributes.DefaultValueWarningAttribute.Warning)",
+      "attributes": [
+        "datatype"
+      ]
+    },
+    {
+      "id": "BH.oM.Base.Attributes.DisplayTextAttribute.Text",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/BHoM/Attributes/DisplayTextAttribute.cs#L39",
+      "label": "Text (BH.oM.Base.Attributes.DisplayTextAttribute.Text)",
       "attributes": [
         "datatype"
       ]
@@ -1483,7 +1437,7 @@
     {
       "id": "BH.oM.Base.Attributes.InputAttribute.Name",
       "iri": "https://github.com/BHoM/BHoM/blob/main/BHoM/Attributes/InputAttribute.cs#L37",
-      "label": "Name(BH.oM.Base.Attributes.InputAttribute.Name)",
+      "label": "Name (BH.oM.Base.Attributes.InputAttribute.Name)",
       "attributes": [
         "datatype"
       ]
@@ -1491,7 +1445,7 @@
     {
       "id": "BH.oM.Base.Attributes.InputAttribute.Description",
       "iri": "https://github.com/BHoM/BHoM/blob/main/BHoM/Attributes/InputAttribute.cs#L39",
-      "label": "Description(BH.oM.Base.Attributes.InputAttribute.Description)",
+      "label": "Description (BH.oM.Base.Attributes.InputAttribute.Description)",
       "attributes": [
         "datatype"
       ]
@@ -1499,13 +1453,13 @@
     {
       "id": "BH.oM.Base.Attributes.InputAttribute.Classification",
       "iri": "https://github.com/BHoM/BHoM/blob/main/BHoM/Attributes/InputAttribute.cs#L41",
-      "label": "Classification(BH.oM.Base.Attributes.InputAttribute.Classification)",
+      "label": "Classification (BH.oM.Base.Attributes.InputAttribute.Classification)",
       "attributes": []
     },
     {
       "id": "BH.oM.Base.Attributes.InputFromProperty.InputName",
       "iri": "https://github.com/BHoM/BHoM/blob/main/BHoM/Attributes/InputFromProperty.cs#L35",
-      "label": "InputName(BH.oM.Base.Attributes.InputFromProperty.InputName)",
+      "label": "InputName (BH.oM.Base.Attributes.InputFromProperty.InputName)",
       "attributes": [
         "datatype"
       ]
@@ -1513,7 +1467,7 @@
     {
       "id": "BH.oM.Base.Attributes.InputFromProperty.PropertyName",
       "iri": "https://github.com/BHoM/BHoM/blob/main/BHoM/Attributes/InputFromProperty.cs#L37",
-      "label": "PropertyName(BH.oM.Base.Attributes.InputFromProperty.PropertyName)",
+      "label": "PropertyName (BH.oM.Base.Attributes.InputFromProperty.PropertyName)",
       "attributes": [
         "datatype"
       ]
@@ -1521,7 +1475,7 @@
     {
       "id": "BH.oM.Base.Attributes.MultiOutputAttribute.Index",
       "iri": "https://github.com/BHoM/BHoM/blob/main/BHoM/Attributes/MultiOutputAttribute.cs#L37",
-      "label": "Index(BH.oM.Base.Attributes.MultiOutputAttribute.Index)",
+      "label": "Index (BH.oM.Base.Attributes.MultiOutputAttribute.Index)",
       "attributes": [
         "datatype"
       ]
@@ -1529,7 +1483,7 @@
     {
       "id": "BH.oM.Base.Attributes.MultiOutputAttribute.Name",
       "iri": "https://github.com/BHoM/BHoM/blob/main/BHoM/Attributes/MultiOutputAttribute.cs#L39",
-      "label": "Name(BH.oM.Base.Attributes.MultiOutputAttribute.Name)",
+      "label": "Name (BH.oM.Base.Attributes.MultiOutputAttribute.Name)",
       "attributes": [
         "datatype"
       ]
@@ -1537,7 +1491,7 @@
     {
       "id": "BH.oM.Base.Attributes.MultiOutputAttribute.Description",
       "iri": "https://github.com/BHoM/BHoM/blob/main/BHoM/Attributes/MultiOutputAttribute.cs#L41",
-      "label": "Description(BH.oM.Base.Attributes.MultiOutputAttribute.Description)",
+      "label": "Description (BH.oM.Base.Attributes.MultiOutputAttribute.Description)",
       "attributes": [
         "datatype"
       ]
@@ -1545,13 +1499,13 @@
     {
       "id": "BH.oM.Base.Attributes.MultiOutputAttribute.Classification",
       "iri": "https://github.com/BHoM/BHoM/blob/main/BHoM/Attributes/MultiOutputAttribute.cs#L43",
-      "label": "Classification(BH.oM.Base.Attributes.MultiOutputAttribute.Classification)",
+      "label": "Classification (BH.oM.Base.Attributes.MultiOutputAttribute.Classification)",
       "attributes": []
     },
     {
       "id": "BH.oM.Base.Attributes.NotImplementedAttribute.Description",
       "iri": "https://github.com/BHoM/BHoM/blob/main/BHoM/Attributes/NotImplementedAttribute.cs#L39",
-      "label": "Description(BH.oM.Base.Attributes.NotImplementedAttribute.Description)",
+      "label": "Description (BH.oM.Base.Attributes.NotImplementedAttribute.Description)",
       "attributes": [
         "datatype"
       ]
@@ -1559,7 +1513,7 @@
     {
       "id": "BH.oM.Base.Attributes.OutputAttribute.Name",
       "iri": "https://github.com/BHoM/BHoM/blob/main/BHoM/Attributes/OutputAttribute.cs#L37",
-      "label": "Name(BH.oM.Base.Attributes.OutputAttribute.Name)",
+      "label": "Name (BH.oM.Base.Attributes.OutputAttribute.Name)",
       "attributes": [
         "datatype"
       ]
@@ -1567,7 +1521,7 @@
     {
       "id": "BH.oM.Base.Attributes.OutputAttribute.Description",
       "iri": "https://github.com/BHoM/BHoM/blob/main/BHoM/Attributes/OutputAttribute.cs#L39",
-      "label": "Description(BH.oM.Base.Attributes.OutputAttribute.Description)",
+      "label": "Description (BH.oM.Base.Attributes.OutputAttribute.Description)",
       "attributes": [
         "datatype"
       ]
@@ -1575,13 +1529,13 @@
     {
       "id": "BH.oM.Base.Attributes.OutputAttribute.Classification",
       "iri": "https://github.com/BHoM/BHoM/blob/main/BHoM/Attributes/OutputAttribute.cs#L41",
-      "label": "Classification(BH.oM.Base.Attributes.OutputAttribute.Classification)",
+      "label": "Classification (BH.oM.Base.Attributes.OutputAttribute.Classification)",
       "attributes": []
     },
     {
       "id": "BH.oM.Base.Attributes.PreviousInputNamesAttribute.Name",
       "iri": "https://github.com/BHoM/BHoM/blob/main/BHoM/Attributes/PreviousInputNamesAttribute.cs#L39",
-      "label": "Name(BH.oM.Base.Attributes.PreviousInputNamesAttribute.Name)",
+      "label": "Name (BH.oM.Base.Attributes.PreviousInputNamesAttribute.Name)",
       "attributes": [
         "datatype"
       ]
@@ -1589,7 +1543,7 @@
     {
       "id": "BH.oM.Base.Attributes.PreviousInputNamesAttribute.PreviousNames",
       "iri": "https://github.com/BHoM/BHoM/blob/main/BHoM/Attributes/PreviousInputNamesAttribute.cs#L41",
-      "label": "PreviousNames(BH.oM.Base.Attributes.PreviousInputNamesAttribute.PreviousNames)",
+      "label": "PreviousNames (BH.oM.Base.Attributes.PreviousInputNamesAttribute.PreviousNames)",
       "attributes": [
         "datatype"
       ]
@@ -1597,7 +1551,7 @@
     {
       "id": "BH.oM.Base.Attributes.PreviousVersionAttribute.PreviousVersionAsText",
       "iri": "https://github.com/BHoM/BHoM/blob/main/BHoM/Attributes/PreviousVersionAttribute.cs#L40",
-      "label": "PreviousVersionAsText(BH.oM.Base.Attributes.PreviousVersionAttribute.PreviousVersionAsText)",
+      "label": "PreviousVersionAsText (BH.oM.Base.Attributes.PreviousVersionAttribute.PreviousVersionAsText)",
       "attributes": [
         "datatype"
       ]
@@ -1605,7 +1559,7 @@
     {
       "id": "BH.oM.Base.Attributes.PreviousVersionAttribute.FromVersion",
       "iri": "https://github.com/BHoM/BHoM/blob/main/BHoM/Attributes/PreviousVersionAttribute.cs#L42",
-      "label": "FromVersion(BH.oM.Base.Attributes.PreviousVersionAttribute.FromVersion)",
+      "label": "FromVersion (BH.oM.Base.Attributes.PreviousVersionAttribute.FromVersion)",
       "attributes": [
         "datatype"
       ]
@@ -1613,7 +1567,7 @@
     {
       "id": "BH.oM.Base.Attributes.ReleasedAttribute.Description",
       "iri": "https://github.com/BHoM/BHoM/blob/main/BHoM/Attributes/ReleasedAttribute.cs#L39",
-      "label": "Description(BH.oM.Base.Attributes.ReleasedAttribute.Description)",
+      "label": "Description (BH.oM.Base.Attributes.ReleasedAttribute.Description)",
       "attributes": [
         "datatype"
       ]
@@ -1621,7 +1575,7 @@
     {
       "id": "BH.oM.Base.Attributes.ReleasedAttribute.FromVersion",
       "iri": "https://github.com/BHoM/BHoM/blob/main/BHoM/Attributes/ReleasedAttribute.cs#L41",
-      "label": "FromVersion(BH.oM.Base.Attributes.ReleasedAttribute.FromVersion)",
+      "label": "FromVersion (BH.oM.Base.Attributes.ReleasedAttribute.FromVersion)",
       "attributes": [
         "datatype"
       ]
@@ -1629,7 +1583,7 @@
     {
       "id": "BH.oM.Base.Attributes.ReplacedAttribute.Description",
       "iri": "https://github.com/BHoM/BHoM/blob/main/BHoM/Attributes/ReplacedAttribute.cs#L40",
-      "label": "Description(BH.oM.Base.Attributes.ReplacedAttribute.Description)",
+      "label": "Description (BH.oM.Base.Attributes.ReplacedAttribute.Description)",
       "attributes": [
         "datatype"
       ]
@@ -1637,7 +1591,7 @@
     {
       "id": "BH.oM.Base.Attributes.ReplacedAttribute.FromVersion",
       "iri": "https://github.com/BHoM/BHoM/blob/main/BHoM/Attributes/ReplacedAttribute.cs#L42",
-      "label": "FromVersion(BH.oM.Base.Attributes.ReplacedAttribute.FromVersion)",
+      "label": "FromVersion (BH.oM.Base.Attributes.ReplacedAttribute.FromVersion)",
       "attributes": [
         "datatype"
       ]
@@ -1645,7 +1599,7 @@
     {
       "id": "BH.oM.Base.Attributes.ReplacedAttribute.ReplacingType",
       "iri": "https://github.com/BHoM/BHoM/blob/main/BHoM/Attributes/ReplacedAttribute.cs#L44",
-      "label": "ReplacingType(BH.oM.Base.Attributes.ReplacedAttribute.ReplacingType)",
+      "label": "ReplacingType (BH.oM.Base.Attributes.ReplacedAttribute.ReplacingType)",
       "attributes": [
         "datatype"
       ]
@@ -1653,7 +1607,7 @@
     {
       "id": "BH.oM.Base.Attributes.ReplacedAttribute.ReplacingMethod",
       "iri": "https://github.com/BHoM/BHoM/blob/main/BHoM/Attributes/ReplacedAttribute.cs#L46",
-      "label": "ReplacingMethod(BH.oM.Base.Attributes.ReplacedAttribute.ReplacingMethod)",
+      "label": "ReplacingMethod (BH.oM.Base.Attributes.ReplacedAttribute.ReplacingMethod)",
       "attributes": [
         "datatype"
       ]
@@ -1661,7 +1615,7 @@
     {
       "id": "BH.oM.Base.Attributes.TargetsAttribute.ValidTypes",
       "iri": "https://github.com/BHoM/BHoM/blob/main/BHoM/Attributes/TargetsAttribute.cs#L41",
-      "label": "ValidTypes(BH.oM.Base.Attributes.TargetsAttribute.ValidTypes)",
+      "label": "ValidTypes (BH.oM.Base.Attributes.TargetsAttribute.ValidTypes)",
       "attributes": [
         "datatype"
       ]
@@ -1669,7 +1623,7 @@
     {
       "id": "BH.oM.Base.Attributes.ToBeRemovedAttribute.Description",
       "iri": "https://github.com/BHoM/BHoM/blob/main/BHoM/Attributes/ToBeRemovedAttribute.cs#L40",
-      "label": "Description(BH.oM.Base.Attributes.ToBeRemovedAttribute.Description)",
+      "label": "Description (BH.oM.Base.Attributes.ToBeRemovedAttribute.Description)",
       "attributes": [
         "datatype"
       ]
@@ -1677,7 +1631,7 @@
     {
       "id": "BH.oM.Base.Attributes.ToBeRemovedAttribute.FromVersion",
       "iri": "https://github.com/BHoM/BHoM/blob/main/BHoM/Attributes/ToBeRemovedAttribute.cs#L42",
-      "label": "FromVersion(BH.oM.Base.Attributes.ToBeRemovedAttribute.FromVersion)",
+      "label": "FromVersion (BH.oM.Base.Attributes.ToBeRemovedAttribute.FromVersion)",
       "attributes": [
         "datatype"
       ]
@@ -1777,7 +1731,7 @@
       "type": "owl:ObjectProperty"
     },
     {
-      "id": "BH.oM.Base.BHoMObject.Fragments-IsA-BH.oM.Base.FragmentSet",
+      "id": "BH.oM.Base.BHoMObject.Fragments-IsA-rdf:list",
       "type": "owl:ObjectProperty"
     },
     {
@@ -2013,23 +1967,23 @@
       "type": "owl:ObjectProperty"
     },
     {
-      "id": "UnderlyingType-HasProperty-Type_4FBBAA719FA03B28FE0C27E422BD393569C9B56C63A26B9DCA5CBC662384A890",
+      "id": "UnderlyingType-HasProperty-Type_902E64DFA961C0C11D48D131A0C95F40B647D3C1B3884B8B4F7A827424AA64A1",
       "type": "owl:DatatypeProperty"
     },
     {
-      "id": "UnderlyingType-HasProperty-Depth_61862501F4DAFA1F745ED5118D81368F4CE7F4659AB6C5A8DF031B29902F3500",
+      "id": "UnderlyingType-HasProperty-Depth_3C5FC365E8948AAF0E1A280F152C944AB8AD9C8F6B20511E1F85E78D0A0072DF",
       "type": "owl:DatatypeProperty"
     },
     {
-      "id": "UnderlyingType-IsA-IBHoMObject_9BCC9E319F70E5B1A46448457AB4B0A4229FD7662BE9D58B9C65F4628DBC3961",
+      "id": "UnderlyingType-IsA-IBHoMObject_47E89DA76E576E5584C584F25FEF7DA251ED2C91213F0B1AB73D0BC4A8D02432",
       "type": "owl:ObjectProperty"
     },
     {
-      "id": "UnderlyingType-IsA-IObject_29D327D8F87BF41852E5A57EE10E74CAF61FB7D554C1D45B2EFC25289DB6642F",
+      "id": "UnderlyingType-IsA-IObject_A7661B9B3BDEAE10C9C57EA005EF1C80AF8555C9BCF73A965C8CC6F66F0A5483",
       "type": "owl:ObjectProperty"
     },
     {
-      "id": "UnderlyingType-IsSubclassOf-BHoMObject_AE87289454CDEEAA476899154019AB28519B4C1EBC8F95350AC91E4CE161B537",
+      "id": "UnderlyingType-IsSubclassOf-BHoMObject_FA3B24801341F263578B47104D99CF56CBFEE532E17487904C2E35035755FDBD",
       "type": "rdfs:subClassOf"
     },
     {
@@ -2130,6 +2084,18 @@
     },
     {
       "id": "DefaultValueWarningAttribute-IsA-IObject_E6C5E6E88FDDC96A3E32B65CA6E59F15F1F71C02EEE39AC4AC59CA8E5E6BA932",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "DisplayTextAttribute-HasProperty-Text_44282C891D910599DF5788AF9FB7B25D197A63A546CD46545F334094F7DF15A0",
+      "type": "owl:DatatypeProperty"
+    },
+    {
+      "id": "DisplayTextAttribute-IsA-IImmutable_50B4BFDB9EE535B4C96F0C89E5894495B3A9A94A934183861F181C47FDE50E39",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "DisplayTextAttribute-IsA-IObject_5CAF671EEBC57267341A6F8C1C0040BDABEE92148730B49F32B6158CF5392350",
       "type": "owl:ObjectProperty"
     },
     {
@@ -2364,7 +2330,7 @@
   "propertyAttribute": [
     {
       "id": "BaseComparisonConfig-HasProperty-PropertyExceptions_EB551779E9D3A68F7B7A3B26AA31A168DA102EE9B8EEE349F565253D191E161E",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/HasProperty.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/HasProperty.cs",
       "label": "HasProperty",
       "attributes": [
         "datatype"
@@ -2374,7 +2340,7 @@
     },
     {
       "id": "BaseComparisonConfig-HasProperty-PropertiesToConsider_38BA2E6A7CBFA11931BE170D300ED318D364747C57F656489B3FFB1515DCE95F",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/HasProperty.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/HasProperty.cs",
       "label": "HasProperty",
       "attributes": [
         "datatype"
@@ -2384,7 +2350,7 @@
     },
     {
       "id": "BaseComparisonConfig-HasProperty-CustomdataKeysExceptions_B347687C8F0B045FEE989FF6B367A97D909A94F39357599E4EA497B901B91B1D",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/HasProperty.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/HasProperty.cs",
       "label": "HasProperty",
       "attributes": [
         "datatype"
@@ -2394,7 +2360,7 @@
     },
     {
       "id": "BaseComparisonConfig-HasProperty-CustomdataKeysToConsider_466C7CB42B5ABA7FCB6CFD40C68DDDB63969409BB0E21E771913A3C1A72D788C",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/HasProperty.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/HasProperty.cs",
       "label": "HasProperty",
       "attributes": [
         "datatype"
@@ -2404,7 +2370,7 @@
     },
     {
       "id": "BaseComparisonConfig-HasProperty-TypeExceptions_948846A864BB4A9628787A357ECBCCBD7A59B4B7AF6837E27668C828D852F0AB",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/HasProperty.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/HasProperty.cs",
       "label": "HasProperty",
       "attributes": [
         "datatype"
@@ -2414,7 +2380,7 @@
     },
     {
       "id": "BaseComparisonConfig-HasProperty-NamespaceExceptions_C01D0639D043B5366C43CF06BECD594535F98D35BCFB6E244D1473AC8ED1ED9D",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/HasProperty.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/HasProperty.cs",
       "label": "HasProperty",
       "attributes": [
         "datatype"
@@ -2424,7 +2390,7 @@
     },
     {
       "id": "BaseComparisonConfig-HasProperty-MaxNesting_13CC83D7840488DC43628F84ED5B8D3CEDE185395673372E8C94ECAB8E403FE6",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/HasProperty.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/HasProperty.cs",
       "label": "HasProperty",
       "attributes": [
         "datatype"
@@ -2434,7 +2400,7 @@
     },
     {
       "id": "BaseComparisonConfig-HasProperty-MaxPropertyDifferences_A345F8CEC000D219C7C2FE5684689069D4521B6A9C0FD0178F1819512BCFF534",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/HasProperty.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/HasProperty.cs",
       "label": "HasProperty",
       "attributes": [
         "datatype"
@@ -2444,7 +2410,7 @@
     },
     {
       "id": "BaseComparisonConfig-HasProperty-NumericTolerance_2D5E3AC0D25DB7159FBB1E2D72C409328ED9EC6536B068E2076383EEE0B01718",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/HasProperty.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/HasProperty.cs",
       "label": "HasProperty",
       "attributes": [
         "datatype"
@@ -2454,7 +2420,7 @@
     },
     {
       "id": "BH.oM.Base.BaseComparisonConfig-HasProperty-BH.oM.Base.BaseComparisonConfig.PropertyNumericTolerances",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/HasProperty.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/HasProperty.cs",
       "label": "HasProperty",
       "attributes": [
         "object"
@@ -2464,7 +2430,7 @@
     },
     {
       "id": "BH.oM.Base.BaseComparisonConfig.PropertyNumericTolerances-IsAListOf-BH.oM.Base.NamedNumericTolerance",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsAListOf.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/IsAListOf.cs",
       "label": "IsAListOf",
       "attributes": [
         "object"
@@ -2474,7 +2440,7 @@
     },
     {
       "id": "BaseComparisonConfig-HasProperty-SignificantFigures_C7D01F98369A22D9A3A58963E87CD5295DA807B8FE9B6810CE9C5AA75A028A6C",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/HasProperty.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/HasProperty.cs",
       "label": "HasProperty",
       "attributes": [
         "datatype"
@@ -2484,7 +2450,7 @@
     },
     {
       "id": "BH.oM.Base.BaseComparisonConfig-HasProperty-BH.oM.Base.BaseComparisonConfig.PropertySignificantFigures",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/HasProperty.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/HasProperty.cs",
       "label": "HasProperty",
       "attributes": [
         "object"
@@ -2494,7 +2460,7 @@
     },
     {
       "id": "BH.oM.Base.BaseComparisonConfig.PropertySignificantFigures-IsAListOf-BH.oM.Base.NamedSignificantFigures",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsAListOf.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/IsAListOf.cs",
       "label": "IsAListOf",
       "attributes": [
         "object"
@@ -2504,7 +2470,7 @@
     },
     {
       "id": "BaseComparisonConfig-IsA-IObject_1E738D061C36A7E74A20738BCEB55EF454DC64CB69B6949412CAF9DA855F20AB",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/IsA.cs",
       "label": "IsA",
       "attributes": [
         "object"
@@ -2517,17 +2483,17 @@
     },
     {
       "id": "BHoMGroup`1-HasProperty-Elements_1B433D56ECF473ACA6F3E924A9C97E94E25E1023777B8A943B719DC1B70E2C5A",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/HasProperty.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/HasProperty.cs",
       "label": "HasProperty",
       "attributes": [
         "datatype"
       ],
-      "domain": "BH.oM.Base.BHoMGroup`1",
-      "range": "BH.oM.Base.BHoMGroup`1.Elements"
+      "domain": "BH.oM.Base.BHoMGroup",
+      "range": "BH.oM.Base.BHoMGroup.Elements"
     },
     {
       "id": "BHoMGroup`1-IsA-IBHoMObject_CCE8430E2225A822170EB8B9009DAF80E12EFF950E4690622772E62FC2232361",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/IsA.cs",
       "label": "IsA",
       "attributes": [
         "object"
@@ -2535,12 +2501,12 @@
       "comment": {
         "undefined": "Can be used to describe that a thing belongs to a class; or that a thing is equivalent to another thing. When used for BHoM types, this describes C# interface implementation."
       },
-      "domain": "BH.oM.Base.BHoMGroup`1",
+      "domain": "BH.oM.Base.BHoMGroup",
       "range": "BH.oM.Base.IBHoMObject"
     },
     {
       "id": "BHoMGroup`1-IsA-IObject_2ABDC7A668FD0B96C2A266BE9A0BA495C8FD8E270060AF74104B7350DB7E2886",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/IsA.cs",
       "label": "IsA",
       "attributes": [
         "object"
@@ -2548,12 +2514,12 @@
       "comment": {
         "undefined": "Can be used to describe that a thing belongs to a class; or that a thing is equivalent to another thing. When used for BHoM types, this describes C# interface implementation."
       },
-      "domain": "BH.oM.Base.BHoMGroup`1",
+      "domain": "BH.oM.Base.BHoMGroup",
       "range": "BH.oM.Base.IObject"
     },
     {
       "id": "BHoMGroup`1-IsA-IBHoMGroup_3F686956741CC3B9E1CBF26F2E9899F4A10870FE199F58F5C88A2803051D5764",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/IsA.cs",
       "label": "IsA",
       "attributes": [
         "object"
@@ -2561,22 +2527,22 @@
       "comment": {
         "undefined": "Can be used to describe that a thing belongs to a class; or that a thing is equivalent to another thing. When used for BHoM types, this describes C# interface implementation."
       },
-      "domain": "BH.oM.Base.BHoMGroup`1",
+      "domain": "BH.oM.Base.BHoMGroup",
       "range": "BH.oM.Base.IBHoMGroup"
     },
     {
       "id": "BHoMGroup`1-IsSubclassOf-BHoMObject_CF94C296B961E1C637B5129F715A8109BAFA549F81646F4B9BBF55E1F1071676",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsSubclassOf.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/IsSubclassOf.cs",
       "label": "IsA",
       "attributes": [
         "object"
       ],
-      "domain": "BH.oM.Base.BHoMGroup`1",
+      "domain": "BH.oM.Base.BHoMGroup",
       "range": "BH.oM.Base.BHoMObject"
     },
     {
       "id": "BHoMObject-HasProperty-BHoM_Guid_8DD4FC3BF42DE45BD6F7CA027731FAF4B6C4EC3EF0408D0AC6D569D7D0BA135C",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/HasProperty.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/HasProperty.cs",
       "label": "HasProperty",
       "attributes": [
         "datatype"
@@ -2586,7 +2552,7 @@
     },
     {
       "id": "BHoMObject-HasProperty-Name_C89BD1918E32C81C301FA4AEAC4F504CCBFA81C34AE9E8B4279BB52E739A9323",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/HasProperty.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/HasProperty.cs",
       "label": "HasProperty",
       "attributes": [
         "datatype"
@@ -2596,7 +2562,7 @@
     },
     {
       "id": "BH.oM.Base.BHoMObject-HasProperty-BH.oM.Base.BHoMObject.Fragments",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/HasProperty.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/HasProperty.cs",
       "label": "HasProperty",
       "attributes": [
         "object"
@@ -2605,18 +2571,18 @@
       "range": "BH.oM.Base.BHoMObject.Fragments"
     },
     {
-      "id": "BH.oM.Base.BHoMObject.Fragments-IsA-BH.oM.Base.FragmentSet",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "id": "BH.oM.Base.BHoMObject.Fragments-IsA-rdf:list",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/IsA.cs",
       "label": "IsA",
       "attributes": [
         "object"
       ],
       "domain": "BH.oM.Base.BHoMObject.Fragments",
-      "range": "BH.oM.Base.FragmentSet"
+      "range": "rdf:list"
     },
     {
       "id": "BHoMObject-HasProperty-Tags_19A34329DC9C6BEB81293950676267062031BE42D49425C47FE2F8176894C4A2",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/HasProperty.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/HasProperty.cs",
       "label": "HasProperty",
       "attributes": [
         "datatype"
@@ -2626,7 +2592,7 @@
     },
     {
       "id": "BHoMObject-HasProperty-CustomData_269F7E4A961EBDA28B63F45CDE1CE26775BE6B188367DC5213B8C6D41DCC7DB0",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/HasProperty.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/HasProperty.cs",
       "label": "HasProperty",
       "attributes": [
         "datatype"
@@ -2636,7 +2602,7 @@
     },
     {
       "id": "BHoMObject-IsA-IBHoMObject_477BD74340BED9FA358EF34710894A1B7B85A097E2332104889663EDF9280D91",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/IsA.cs",
       "label": "IsA",
       "attributes": [
         "object"
@@ -2649,7 +2615,7 @@
     },
     {
       "id": "BHoMObject-IsA-IObject_081E332C7C6E8ECBB04F85F7030F1CE07E4BEBE212DCA03D66D402E1A7C22392",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/IsA.cs",
       "label": "IsA",
       "attributes": [
         "object"
@@ -2662,7 +2628,7 @@
     },
     {
       "id": "ComparisonConfig-IsA-IObject_EDFC2F77CE9BAEBAA9FF59DF0F2712A5EE46460158F5BB0DE8E50B0BC4296D69",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/IsA.cs",
       "label": "IsA",
       "attributes": [
         "object"
@@ -2675,7 +2641,7 @@
     },
     {
       "id": "ComparisonConfig-IsSubclassOf-BaseComparisonConfig_260BBCDC3AE2D08DA1165E361C774991856EFDA80EA6220480523639EC32E684",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsSubclassOf.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/IsSubclassOf.cs",
       "label": "IsA",
       "attributes": [
         "object"
@@ -2685,7 +2651,7 @@
     },
     {
       "id": "ComparisonFunctions-HasProperty-PropertyFullNameModifier_954443A52EB6FFC10A00B0447B6B4C7CB74752C92C1242579DDFFC092206A9BB",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/HasProperty.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/HasProperty.cs",
       "label": "HasProperty",
       "attributes": [
         "datatype"
@@ -2695,7 +2661,7 @@
     },
     {
       "id": "ComparisonFunctions-HasProperty-PropertyFullNameFilter_03EAA8B440BFACF4DE24FA8EB2E4A77228496DBDBD612718BC01C6C525C9B848",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/HasProperty.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/HasProperty.cs",
       "label": "HasProperty",
       "attributes": [
         "datatype"
@@ -2705,7 +2671,7 @@
     },
     {
       "id": "ComparisonFunctions-HasProperty-CustomDataKeyFilter_F4AA5AE6EF7CD180CC596271495632E2339B1B9EE508CCF8B85034AEC6602460",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/HasProperty.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/HasProperty.cs",
       "label": "HasProperty",
       "attributes": [
         "datatype"
@@ -2715,7 +2681,7 @@
     },
     {
       "id": "ComparisonFunctions-HasProperty-PropertyDisplayNameModifier_D112555C890A9EB320A7740F0F078292D3106E1D5089B11AD16A836F2018EDA3",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/HasProperty.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/HasProperty.cs",
       "label": "HasProperty",
       "attributes": [
         "datatype"
@@ -2725,7 +2691,7 @@
     },
     {
       "id": "ComparisonFunctions-IsA-IObject_8982E151CBC6B66ECD75767E7C1613D91B296E75206938A9EA27B12BB7AFA3BA",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/IsA.cs",
       "label": "IsA",
       "attributes": [
         "object"
@@ -2738,7 +2704,7 @@
     },
     {
       "id": "ComparisonInclusion-HasProperty-Include_19289F92C2F33776727A5ECA0E80169425AC79FF19E5B66B55666AEBA16AC31F",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/HasProperty.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/HasProperty.cs",
       "label": "HasProperty",
       "attributes": [
         "datatype"
@@ -2748,7 +2714,7 @@
     },
     {
       "id": "ComparisonInclusion-HasProperty-DisplayName_4B65740C61BC5EBA40E3A3051B87BD2FCB259E9899ADDCE6B3CC6A73042DE0A3",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/HasProperty.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/HasProperty.cs",
       "label": "HasProperty",
       "attributes": [
         "datatype"
@@ -2758,7 +2724,7 @@
     },
     {
       "id": "ComparisonInclusion-IsA-IObject_E82333F0510FC43FE580FFDB510F1CF542E5A59E548EEC6849E5D0731C78CF33",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/IsA.cs",
       "label": "IsA",
       "attributes": [
         "object"
@@ -2771,7 +2737,7 @@
     },
     {
       "id": "CustomObject-IsA-IBHoMObject_56CFB926B452E1436C095CCE5F0B83743B759977AE3399A7771F3FE07117636A",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/IsA.cs",
       "label": "IsA",
       "attributes": [
         "object"
@@ -2784,7 +2750,7 @@
     },
     {
       "id": "CustomObject-IsA-IObject_A9FB99C1DEDFFDDFCD24C1D1FFCBEE785A0D3CA3313301EAAD7567D5A935D4F4",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/IsA.cs",
       "label": "IsA",
       "attributes": [
         "object"
@@ -2797,7 +2763,7 @@
     },
     {
       "id": "CustomObject-IsSubclassOf-BHoMObject_DD53C86DB7F6EE1655FE29EE7588FDF6632C7F31FB4A83A62161290ACF301024",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsSubclassOf.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/IsSubclassOf.cs",
       "label": "IsA",
       "attributes": [
         "object"
@@ -2807,7 +2773,7 @@
     },
     {
       "id": "Enumeration-HasProperty-Value_9395D0872CB89BFF3473550EE65EA584DB32EE701F097D7EC93533A292D2ACB8",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/HasProperty.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/HasProperty.cs",
       "label": "HasProperty",
       "attributes": [
         "datatype"
@@ -2817,7 +2783,7 @@
     },
     {
       "id": "Enumeration-HasProperty-Description_2730B87E2CB6DAAACB936C610EC39ED4331B4C88B72B09A426EDD852D3772940",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/HasProperty.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/HasProperty.cs",
       "label": "HasProperty",
       "attributes": [
         "datatype"
@@ -2827,7 +2793,7 @@
     },
     {
       "id": "Enumeration-IsA-IObject_58567EDC9A5D2E141E2546002E60378B529A28002A1C50E3773E4E2717E80E96",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/IsA.cs",
       "label": "IsA",
       "attributes": [
         "object"
@@ -2840,7 +2806,7 @@
     },
     {
       "id": "Enumeration-IsA-IEnum_B7227DE633F9ACCDE7B9E56ED7F018ABF8CD313847602AE80B03FFAD7AB482F3",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/IsA.cs",
       "label": "IsA",
       "attributes": [
         "object"
@@ -2853,7 +2819,7 @@
     },
     {
       "id": "FragmentSet-IsA-IObject_1C97FE684BA7D8C812D953A63D4514DCB3622FA9F3BA982FE85B22860DBB70BC",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/IsA.cs",
       "label": "IsA",
       "attributes": [
         "object"
@@ -2861,12 +2827,12 @@
       "comment": {
         "undefined": "Can be used to describe that a thing belongs to a class; or that a thing is equivalent to another thing. When used for BHoM types, this describes C# interface implementation."
       },
-      "domain": "BH.oM.Base.FragmentSet",
+      "domain": "rdf:list",
       "range": "BH.oM.Base.IObject"
     },
     {
       "id": "HashFragment-HasProperty-Hash_C8407A319AC2A33D19BFC186767879A54E05AD8EDC9BA3F63FCF39C599E92CC7",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/HasProperty.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/HasProperty.cs",
       "label": "HasProperty",
       "attributes": [
         "datatype"
@@ -2876,7 +2842,7 @@
     },
     {
       "id": "HashFragment-IsA-IHashFragment_E832074BC4206D4CAE991B44C014BBB464538EB69412B54CB4B535B5AE59DBDD",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/IsA.cs",
       "label": "IsA",
       "attributes": [
         "object"
@@ -2889,7 +2855,7 @@
     },
     {
       "id": "HashFragment-IsA-IFragment_D96AD130996595122E92D710E787B4723DE2D6F00831B94B10E073ACC54F6C5A",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/IsA.cs",
       "label": "IsA",
       "attributes": [
         "object"
@@ -2902,7 +2868,7 @@
     },
     {
       "id": "HashFragment-IsA-IObject_DCB6357CD9C8B036CC053353B5ADDEC6CD9A64506823C12526BE3C2E019AD4DF",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/IsA.cs",
       "label": "IsA",
       "attributes": [
         "object"
@@ -2915,7 +2881,7 @@
     },
     {
       "id": "IAdapterId-RequiresProperty-Id_6ED4EE4E715B5A14756EF50221F1EA037B247A949621AFE4D92188603551C998",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/RequiresProperty.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/RequiresProperty.cs",
       "label": "RequiresProperty",
       "attributes": [
         "datatype"
@@ -2925,7 +2891,7 @@
     },
     {
       "id": "IAdapterId-IsA-IFragment_836E0F5D123A90D1E74879CD7D31262557300C40D71F578D77EB919E61FF023D",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/IsA.cs",
       "label": "IsA",
       "attributes": [
         "object"
@@ -2938,7 +2904,7 @@
     },
     {
       "id": "IAdapterId-IsA-IObject_517FD0E92B82EFD61B4669E4F375DC09F5CC99A0E76C04157EAB298C0FCAC609",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/IsA.cs",
       "label": "IsA",
       "attributes": [
         "object"
@@ -2951,7 +2917,7 @@
     },
     {
       "id": "IBHoMGroup-IsA-IBHoMObject_0E5B0144232D6AFBC8A1E59F95EC9579135015C1968B18B8AB74D18A82006E79",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/IsA.cs",
       "label": "IsA",
       "attributes": [
         "object"
@@ -2964,7 +2930,7 @@
     },
     {
       "id": "IBHoMGroup-IsA-IObject_391CF714CC74ACC6108FFA0A9543830FF7285FF455B40FDDAE2BDD5AD0840E31",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/IsA.cs",
       "label": "IsA",
       "attributes": [
         "object"
@@ -2977,7 +2943,7 @@
     },
     {
       "id": "IBHoMObject-RequiresProperty-BHoM_Guid_039E5D358E3C395F8E14B37EC3C7034C9BC0E3B2EDFE4786E167B156E74C4FF3",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/RequiresProperty.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/RequiresProperty.cs",
       "label": "RequiresProperty",
       "attributes": [
         "datatype"
@@ -2987,7 +2953,7 @@
     },
     {
       "id": "IBHoMObject-RequiresProperty-Name_86BBEAC922AD68246B51123A7BEDBF9A5E6A0DB11F7BB1BD5902F7AF9950E4D9",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/RequiresProperty.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/RequiresProperty.cs",
       "label": "RequiresProperty",
       "attributes": [
         "datatype"
@@ -2997,7 +2963,7 @@
     },
     {
       "id": "IBHoMObject-RequiresProperty-Fragments_A6523BE8AF915F8E2D08D565CDA0CE0CD99775DE447A61A08AE951AD28225C7E",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/RequiresProperty.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/RequiresProperty.cs",
       "label": "RequiresProperty",
       "attributes": [
         "datatype"
@@ -3007,7 +2973,7 @@
     },
     {
       "id": "IBHoMObject-RequiresProperty-Tags_3A7A5C423F3B41A141647EB7B411DD05BD7F9C850348BDE9095F5FA5B81320AF",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/RequiresProperty.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/RequiresProperty.cs",
       "label": "RequiresProperty",
       "attributes": [
         "datatype"
@@ -3017,7 +2983,7 @@
     },
     {
       "id": "IBHoMObject-RequiresProperty-CustomData_4E66A342BED43EBD9B1635B11C48F89A3A7849A089121546949CBD4A6BDF7374",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/RequiresProperty.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/RequiresProperty.cs",
       "label": "RequiresProperty",
       "attributes": [
         "datatype"
@@ -3027,7 +2993,7 @@
     },
     {
       "id": "IBHoMObject-IsA-IObject_EEDF8353BA1A2EAE0F2557B81B2128CAB54D75576C711EBDD2E7F7E0D3AA28E8",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/IsA.cs",
       "label": "IsA",
       "attributes": [
         "object"
@@ -3040,7 +3006,7 @@
     },
     {
       "id": "IEnum-RequiresProperty-Value_32CAC26C8A10165998666CD3A0E4C1B9CBBDF76CCF9C8D30747669795062DFA6",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/RequiresProperty.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/RequiresProperty.cs",
       "label": "RequiresProperty",
       "attributes": [
         "datatype"
@@ -3050,7 +3016,7 @@
     },
     {
       "id": "IEnum-RequiresProperty-Description_69B94C27EF83BDBBFB2212746CF2335E44643471AC23C5179F74EB1B7BF99DE4",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/RequiresProperty.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/RequiresProperty.cs",
       "label": "RequiresProperty",
       "attributes": [
         "datatype"
@@ -3060,7 +3026,7 @@
     },
     {
       "id": "IFragment-IsA-IObject_8D6C6AF34C8C525F8A192AA7862D864E35825585E9600347D639372688B5A129",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/IsA.cs",
       "label": "IsA",
       "attributes": [
         "object"
@@ -3073,7 +3039,7 @@
     },
     {
       "id": "IHashFragment-RequiresProperty-Hash_5A19463E4379AC51CAC6B02E28CD5D5374E88F04BE4B0B38EFBAB1938C5EA647",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/RequiresProperty.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/RequiresProperty.cs",
       "label": "RequiresProperty",
       "attributes": [
         "datatype"
@@ -3083,7 +3049,7 @@
     },
     {
       "id": "IHashFragment-IsA-IFragment_B64F8B464ACE170854DD2F48AB5B5316B15DA27791D4C00D30CD8383A8FA9409",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/IsA.cs",
       "label": "IsA",
       "attributes": [
         "object"
@@ -3096,7 +3062,7 @@
     },
     {
       "id": "IHashFragment-IsA-IObject_8C6C63D2498D1976C12522442BF4527834EE10CD13D750FA9D82303FA321515C",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/IsA.cs",
       "label": "IsA",
       "attributes": [
         "object"
@@ -3109,7 +3075,7 @@
     },
     {
       "id": "IImmutable-IsA-IObject_BE7EE041054450E2D5EBB40D005E072E28E8280638CBA8B96E963092B9B8882A",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/IsA.cs",
       "label": "IsA",
       "attributes": [
         "object"
@@ -3122,7 +3088,7 @@
     },
     {
       "id": "IPersistentAdapterId-RequiresProperty-PersistentId_B9287EF81C3D11252797DB15F88B8FF2BD10B1B10F210C52994B26A8EC27B279",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/RequiresProperty.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/RequiresProperty.cs",
       "label": "RequiresProperty",
       "attributes": [
         "datatype"
@@ -3132,7 +3098,7 @@
     },
     {
       "id": "IPersistentAdapterId-IsA-IFragment_4DA12FB424D1EC4DB31FE14F796F0F5EFFD8EF2CAABA6AED227C96F05E7944DA",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/IsA.cs",
       "label": "IsA",
       "attributes": [
         "object"
@@ -3145,7 +3111,7 @@
     },
     {
       "id": "IPersistentAdapterId-IsA-IObject_76A4BE3CB9FEB62EAFA1DB498716A7D3BFBE4ED0DA25F9193CD9DA4949391BB5",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/IsA.cs",
       "label": "IsA",
       "attributes": [
         "object"
@@ -3158,7 +3124,7 @@
     },
     {
       "id": "ISettings-IsA-IObject_36FF1CD50F7DCF381059757748D8998CD2A425076803D5821D4F6B759BDB1BBA",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/IsA.cs",
       "label": "IsA",
       "attributes": [
         "object"
@@ -3171,7 +3137,7 @@
     },
     {
       "id": "ISpecification-IsA-IObject_7D3230EA7E454C522D642565FBD552D6DA18DE8DA09824B523ACEAF933517C2D",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/IsA.cs",
       "label": "IsA",
       "attributes": [
         "object"
@@ -3184,7 +3150,7 @@
     },
     {
       "id": "NamedNumericTolerance-HasProperty-Name_7A1AB3CA9F49B09E4F59E14F8F7D6569B89B341F815D0033A749C8BB76A31176",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/HasProperty.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/HasProperty.cs",
       "label": "HasProperty",
       "attributes": [
         "datatype"
@@ -3194,7 +3160,7 @@
     },
     {
       "id": "NamedNumericTolerance-HasProperty-Tolerance_8C415ED19B9D8EAE4E48DFD626D6125C51B478945B7C64A739968596300F94FA",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/HasProperty.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/HasProperty.cs",
       "label": "HasProperty",
       "attributes": [
         "datatype"
@@ -3204,7 +3170,7 @@
     },
     {
       "id": "NamedNumericTolerance-IsA-IObject_1A4533761DBB5B1A0ED719DA0711C02B37F1F0020924C18AD88FB5334460D654",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/IsA.cs",
       "label": "IsA",
       "attributes": [
         "object"
@@ -3217,7 +3183,7 @@
     },
     {
       "id": "NamedSignificantFigures-HasProperty-Name_7AFA235778E8B23CC6D94440E88EAA9A61213FA1832545F48332DED99CE83141",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/HasProperty.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/HasProperty.cs",
       "label": "HasProperty",
       "attributes": [
         "datatype"
@@ -3227,7 +3193,7 @@
     },
     {
       "id": "NamedSignificantFigures-HasProperty-SignificantFigures_81DD5FC60DE50B2213AFC72F770D06D9D94CD894D399191BF1A75E143A92FF8E",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/HasProperty.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/HasProperty.cs",
       "label": "HasProperty",
       "attributes": [
         "datatype"
@@ -3237,7 +3203,7 @@
     },
     {
       "id": "NamedSignificantFigures-IsA-IObject_6BBB63617E4B9981ADD89840E41598351318765860BC98446CFEBF0760F45413",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/IsA.cs",
       "label": "IsA",
       "attributes": [
         "object"
@@ -3250,17 +3216,17 @@
     },
     {
       "id": "Output`1-HasProperty-Item1_64B9565427AD79A4EDF18CCE9786FD247B1EC288A5777FD550F8535FC7C0A048",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/HasProperty.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/HasProperty.cs",
       "label": "HasProperty",
       "attributes": [
         "datatype"
       ],
-      "domain": "BH.oM.Base.Output`1",
-      "range": "BH.oM.Base.Output`1.Item1"
+      "domain": "BH.oM.Base.Output",
+      "range": "BH.oM.Base.Output.Item1"
     },
     {
       "id": "Output`1-IsA-IObject_C2874536F28A9EC998F487007505562FE01E4C3129BBC31A02422D15FEF6EB8F",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/IsA.cs",
       "label": "IsA",
       "attributes": [
         "object"
@@ -3268,12 +3234,12 @@
       "comment": {
         "undefined": "Can be used to describe that a thing belongs to a class; or that a thing is equivalent to another thing. When used for BHoM types, this describes C# interface implementation."
       },
-      "domain": "BH.oM.Base.Output`1",
+      "domain": "BH.oM.Base.Output",
       "range": "BH.oM.Base.IObject"
     },
     {
       "id": "Output`1-IsA-IOutput_20F013EB817342E71DEC8F9EB2C21C3860F00495CED15C9F05B48BCDBCEE42EA",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/IsA.cs",
       "label": "IsA",
       "attributes": [
         "object"
@@ -3281,32 +3247,32 @@
       "comment": {
         "undefined": "Can be used to describe that a thing belongs to a class; or that a thing is equivalent to another thing. When used for BHoM types, this describes C# interface implementation."
       },
-      "domain": "BH.oM.Base.Output`1",
+      "domain": "BH.oM.Base.Output",
       "range": "BH.oM.Base.IOutput"
     },
     {
-      "id": "UnderlyingType-HasProperty-Type_4FBBAA719FA03B28FE0C27E422BD393569C9B56C63A26B9DCA5CBC662384A890",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/HasProperty.cs",
+      "id": "UnderlyingType-HasProperty-Type_902E64DFA961C0C11D48D131A0C95F40B647D3C1B3884B8B4F7A827424AA64A1",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/HasProperty.cs",
       "label": "HasProperty",
       "attributes": [
         "datatype"
       ],
-      "domain": "BH.oM.Base.UnderlyingType",
-      "range": "BH.oM.Base.UnderlyingType.Type"
+      "domain": "BH.oM.Base.Reflection.UnderlyingType",
+      "range": "BH.oM.Base.Reflection.UnderlyingType.Type"
     },
     {
-      "id": "UnderlyingType-HasProperty-Depth_61862501F4DAFA1F745ED5118D81368F4CE7F4659AB6C5A8DF031B29902F3500",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/HasProperty.cs",
+      "id": "UnderlyingType-HasProperty-Depth_3C5FC365E8948AAF0E1A280F152C944AB8AD9C8F6B20511E1F85E78D0A0072DF",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/HasProperty.cs",
       "label": "HasProperty",
       "attributes": [
         "datatype"
       ],
-      "domain": "BH.oM.Base.UnderlyingType",
-      "range": "BH.oM.Base.UnderlyingType.Depth"
+      "domain": "BH.oM.Base.Reflection.UnderlyingType",
+      "range": "BH.oM.Base.Reflection.UnderlyingType.Depth"
     },
     {
-      "id": "UnderlyingType-IsA-IBHoMObject_9BCC9E319F70E5B1A46448457AB4B0A4229FD7662BE9D58B9C65F4628DBC3961",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "id": "UnderlyingType-IsA-IBHoMObject_47E89DA76E576E5584C584F25FEF7DA251ED2C91213F0B1AB73D0BC4A8D02432",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/IsA.cs",
       "label": "IsA",
       "attributes": [
         "object"
@@ -3314,12 +3280,12 @@
       "comment": {
         "undefined": "Can be used to describe that a thing belongs to a class; or that a thing is equivalent to another thing. When used for BHoM types, this describes C# interface implementation."
       },
-      "domain": "BH.oM.Base.UnderlyingType",
+      "domain": "BH.oM.Base.Reflection.UnderlyingType",
       "range": "BH.oM.Base.IBHoMObject"
     },
     {
-      "id": "UnderlyingType-IsA-IObject_29D327D8F87BF41852E5A57EE10E74CAF61FB7D554C1D45B2EFC25289DB6642F",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "id": "UnderlyingType-IsA-IObject_A7661B9B3BDEAE10C9C57EA005EF1C80AF8555C9BCF73A965C8CC6F66F0A5483",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/IsA.cs",
       "label": "IsA",
       "attributes": [
         "object"
@@ -3327,22 +3293,22 @@
       "comment": {
         "undefined": "Can be used to describe that a thing belongs to a class; or that a thing is equivalent to another thing. When used for BHoM types, this describes C# interface implementation."
       },
-      "domain": "BH.oM.Base.UnderlyingType",
+      "domain": "BH.oM.Base.Reflection.UnderlyingType",
       "range": "BH.oM.Base.IObject"
     },
     {
-      "id": "UnderlyingType-IsSubclassOf-BHoMObject_AE87289454CDEEAA476899154019AB28519B4C1EBC8F95350AC91E4CE161B537",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsSubclassOf.cs",
+      "id": "UnderlyingType-IsSubclassOf-BHoMObject_FA3B24801341F263578B47104D99CF56CBFEE532E17487904C2E35035755FDBD",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/IsSubclassOf.cs",
       "label": "IsA",
       "attributes": [
         "object"
       ],
-      "domain": "BH.oM.Base.UnderlyingType",
+      "domain": "BH.oM.Base.Reflection.UnderlyingType",
       "range": "BH.oM.Base.BHoMObject"
     },
     {
       "id": "Event-HasProperty-Time_83D452FAE06635B943E69C3C249659FBAEAC3FFCB046EC43EF34FE3F7C961D66",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/HasProperty.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/HasProperty.cs",
       "label": "HasProperty",
       "attributes": [
         "datatype"
@@ -3352,7 +3318,7 @@
     },
     {
       "id": "Event-HasProperty-UtcTime_7C10F5566ABD2F7A1786D918D6AFB7AF82C3C061BF93559274CF9375F9309643",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/HasProperty.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/HasProperty.cs",
       "label": "HasProperty",
       "attributes": [
         "datatype"
@@ -3362,7 +3328,7 @@
     },
     {
       "id": "Event-HasProperty-StackTrace_5F0321046067A976CFF6DF83C2A4BE3FE28B47AA229C4269734DF8CA370368A4",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/HasProperty.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/HasProperty.cs",
       "label": "HasProperty",
       "attributes": [
         "datatype"
@@ -3372,7 +3338,7 @@
     },
     {
       "id": "Event-HasProperty-Message_FEBDA17D52372C3F13F42591F82F9DEAE61E45D460A3EE5E7674224A95ED3BA7",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/HasProperty.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/HasProperty.cs",
       "label": "HasProperty",
       "attributes": [
         "datatype"
@@ -3382,7 +3348,7 @@
     },
     {
       "id": "BH.oM.Base.Debugging.Event-HasProperty-BH.oM.Base.Debugging.Event.Type",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/HasProperty.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/HasProperty.cs",
       "label": "HasProperty",
       "attributes": [
         "object"
@@ -3392,7 +3358,7 @@
     },
     {
       "id": "BH.oM.Base.Debugging.Event.Type-IsA-BH.oM.Base.Debugging.EventType",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/IsA.cs",
       "label": "IsA",
       "attributes": [
         "object"
@@ -3402,7 +3368,7 @@
     },
     {
       "id": "Event-IsA-IBHoMObject_1E8D9FFF8F04B13629E38C7A6EAF04351A722D6901C7152C4E5E1D0C94BF8048",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/IsA.cs",
       "label": "IsA",
       "attributes": [
         "object"
@@ -3415,7 +3381,7 @@
     },
     {
       "id": "Event-IsA-IObject_AB36E716CD1852F0AFE990561FD12AB12433B7B24B857D5019E9088A52E33FC1",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/IsA.cs",
       "label": "IsA",
       "attributes": [
         "object"
@@ -3428,7 +3394,7 @@
     },
     {
       "id": "Event-IsSubclassOf-BHoMObject_56FA2E71A24DC676CA55CAEDCBE5F605E1C9309CE26350A359AD12E5C875ECA4",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsSubclassOf.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/IsSubclassOf.cs",
       "label": "IsA",
       "attributes": [
         "object"
@@ -3438,7 +3404,7 @@
     },
     {
       "id": "BH.oM.Base.Debugging.Log-HasProperty-BH.oM.Base.Debugging.Log.AllEvents",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/HasProperty.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/HasProperty.cs",
       "label": "HasProperty",
       "attributes": [
         "object"
@@ -3448,7 +3414,7 @@
     },
     {
       "id": "BH.oM.Base.Debugging.Log.AllEvents-IsAListOf-BH.oM.Base.Debugging.Event",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsAListOf.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/IsAListOf.cs",
       "label": "IsAListOf",
       "attributes": [
         "object"
@@ -3458,7 +3424,7 @@
     },
     {
       "id": "BH.oM.Base.Debugging.Log-HasProperty-BH.oM.Base.Debugging.Log.CurrentEvents",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/HasProperty.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/HasProperty.cs",
       "label": "HasProperty",
       "attributes": [
         "object"
@@ -3468,7 +3434,7 @@
     },
     {
       "id": "BH.oM.Base.Debugging.Log.CurrentEvents-IsAListOf-BH.oM.Base.Debugging.Event",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsAListOf.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/IsAListOf.cs",
       "label": "IsAListOf",
       "attributes": [
         "object"
@@ -3478,7 +3444,7 @@
     },
     {
       "id": "Log-IsA-IBHoMObject_0D0B235290F1ADB935699DDB42AB32D5F0FF8E50BE16FE13EAB5129B034227EC",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/IsA.cs",
       "label": "IsA",
       "attributes": [
         "object"
@@ -3491,7 +3457,7 @@
     },
     {
       "id": "Log-IsA-IObject_3186D27CFE9520FBE097D25EE228916F7BBC6F024D168BEC5DE669D35E0DEBBE",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/IsA.cs",
       "label": "IsA",
       "attributes": [
         "object"
@@ -3504,7 +3470,7 @@
     },
     {
       "id": "Log-IsSubclassOf-BHoMObject_891D54C35899CFEC36F9D257AFDD0CB5D54D55EAC7EDB550DE9B8DC5D85A018B",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsSubclassOf.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/IsSubclassOf.cs",
       "label": "IsA",
       "attributes": [
         "object"
@@ -3514,7 +3480,7 @@
     },
     {
       "id": "AbbreviationAttribute-HasProperty-Name_7F02FBFA4698887958D4BAC22E0ADD22DEC26F9CE5CA142AE21B773A60A165FA",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/HasProperty.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/HasProperty.cs",
       "label": "HasProperty",
       "attributes": [
         "datatype"
@@ -3524,7 +3490,7 @@
     },
     {
       "id": "AbbreviationAttribute-IsA-IImmutable_FC89FC7ED963E00F46E3D71A360BAE5CCF20F399F0E87D2370841FC02670C7C9",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/IsA.cs",
       "label": "IsA",
       "attributes": [
         "object"
@@ -3537,7 +3503,7 @@
     },
     {
       "id": "AbbreviationAttribute-IsA-IObject_CF38A322652AD290D3FDDC5EF62CC79C66ED12027F623751A19408857CAE22A9",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/IsA.cs",
       "label": "IsA",
       "attributes": [
         "object"
@@ -3550,7 +3516,7 @@
     },
     {
       "id": "AssemblyUrlAttribute-HasProperty-Url_1A35159200A23D89DA90364668FCBF509E422097AE7FCFDDEA5EEBEB300C24A2",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/HasProperty.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/HasProperty.cs",
       "label": "HasProperty",
       "attributes": [
         "datatype"
@@ -3560,7 +3526,7 @@
     },
     {
       "id": "AssemblyUrlAttribute-IsA-IImmutable_4161D2D4D9E5FAE5B39DE9508DBCA2099F4809FFF06E2D778321CB6F0F227861",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/IsA.cs",
       "label": "IsA",
       "attributes": [
         "object"
@@ -3573,7 +3539,7 @@
     },
     {
       "id": "AssemblyUrlAttribute-IsA-IObject_5A47B2649C423F4B465054D3E88404680715727A9340B820E50426005938B687",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/IsA.cs",
       "label": "IsA",
       "attributes": [
         "object"
@@ -3586,7 +3552,7 @@
     },
     {
       "id": "DefaultValueWarningAttribute-HasProperty-Warning_CD21DFFEB2B1472E2FA58AE17C3DB00D1C000EC3320FBD6C58A2656B6A0A762A",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/HasProperty.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/HasProperty.cs",
       "label": "HasProperty",
       "attributes": [
         "datatype"
@@ -3596,7 +3562,7 @@
     },
     {
       "id": "DefaultValueWarningAttribute-IsA-IImmutable_4276FFE5D2CBD611CEF89B64C9F45F55606AA0DF0663F4B5498C7C95486A13AC",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/IsA.cs",
       "label": "IsA",
       "attributes": [
         "object"
@@ -3609,7 +3575,7 @@
     },
     {
       "id": "DefaultValueWarningAttribute-IsA-IObject_E6C5E6E88FDDC96A3E32B65CA6E59F15F1F71C02EEE39AC4AC59CA8E5E6BA932",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/IsA.cs",
       "label": "IsA",
       "attributes": [
         "object"
@@ -3621,8 +3587,44 @@
       "range": "BH.oM.Base.IObject"
     },
     {
+      "id": "DisplayTextAttribute-HasProperty-Text_44282C891D910599DF5788AF9FB7B25D197A63A546CD46545F334094F7DF15A0",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/HasProperty.cs",
+      "label": "HasProperty",
+      "attributes": [
+        "datatype"
+      ],
+      "domain": "BH.oM.Base.Attributes.DisplayTextAttribute",
+      "range": "BH.oM.Base.Attributes.DisplayTextAttribute.Text"
+    },
+    {
+      "id": "DisplayTextAttribute-IsA-IImmutable_50B4BFDB9EE535B4C96F0C89E5894495B3A9A94A934183861F181C47FDE50E39",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/IsA.cs",
+      "label": "IsA",
+      "attributes": [
+        "object"
+      ],
+      "comment": {
+        "undefined": "Can be used to describe that a thing belongs to a class; or that a thing is equivalent to another thing. When used for BHoM types, this describes C# interface implementation."
+      },
+      "domain": "BH.oM.Base.Attributes.DisplayTextAttribute",
+      "range": "BH.oM.Base.IImmutable"
+    },
+    {
+      "id": "DisplayTextAttribute-IsA-IObject_5CAF671EEBC57267341A6F8C1C0040BDABEE92148730B49F32B6158CF5392350",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/IsA.cs",
+      "label": "IsA",
+      "attributes": [
+        "object"
+      ],
+      "comment": {
+        "undefined": "Can be used to describe that a thing belongs to a class; or that a thing is equivalent to another thing. When used for BHoM types, this describes C# interface implementation."
+      },
+      "domain": "BH.oM.Base.Attributes.DisplayTextAttribute",
+      "range": "BH.oM.Base.IObject"
+    },
+    {
       "id": "FilePathAttribute-IsSubclassOf-InputClassificationAttribute_5201616E268986ADF2CABFA4ECE731E6362D758B74600D5AA32E05C2E9972762",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsSubclassOf.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/IsSubclassOf.cs",
       "label": "IsA",
       "attributes": [
         "object"
@@ -3632,7 +3634,7 @@
     },
     {
       "id": "FolderPathAttribute-IsSubclassOf-InputClassificationAttribute_AD647A382F02E5807C8AFEC909ED490FBE1ECF18241B069AE0F7643406D38018",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsSubclassOf.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/IsSubclassOf.cs",
       "label": "IsA",
       "attributes": [
         "object"
@@ -3642,7 +3644,7 @@
     },
     {
       "id": "InputAttribute-HasProperty-Name_730C782B3ABFD483834258B702B25DA0F5C9C46DAEFB0930250E8A4C446BDB31",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/HasProperty.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/HasProperty.cs",
       "label": "HasProperty",
       "attributes": [
         "datatype"
@@ -3652,7 +3654,7 @@
     },
     {
       "id": "InputAttribute-HasProperty-Description_A55021B9108BA2E77482AF7D4B9B3DD2ED2ADB0F0A2E3D74A7328C4273F73876",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/HasProperty.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/HasProperty.cs",
       "label": "HasProperty",
       "attributes": [
         "datatype"
@@ -3662,7 +3664,7 @@
     },
     {
       "id": "BH.oM.Base.Attributes.InputAttribute-HasProperty-BH.oM.Base.Attributes.InputAttribute.Classification",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/HasProperty.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/HasProperty.cs",
       "label": "HasProperty",
       "attributes": [
         "object"
@@ -3672,7 +3674,7 @@
     },
     {
       "id": "BH.oM.Base.Attributes.InputAttribute.Classification-IsA-BH.oM.Base.Attributes.InputClassificationAttribute",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/IsA.cs",
       "label": "IsA",
       "attributes": [
         "object"
@@ -3682,7 +3684,7 @@
     },
     {
       "id": "InputAttribute-IsA-IImmutable_94910C708E463AE14A062D8CFA2D485E9E15B9BB2F90C6F22AF92879A572D42B",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/IsA.cs",
       "label": "IsA",
       "attributes": [
         "object"
@@ -3695,7 +3697,7 @@
     },
     {
       "id": "InputAttribute-IsA-IObject_82297C9F497E24EA503F81C8EDE889E8D24379770BCC341C29ED68F50EA5CE39",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/IsA.cs",
       "label": "IsA",
       "attributes": [
         "object"
@@ -3708,7 +3710,7 @@
     },
     {
       "id": "InputFromProperty-HasProperty-InputName_49A41A3E1B6C9BF19273A3F3042AB5DAF52850078902D27FF17F211EBC959465",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/HasProperty.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/HasProperty.cs",
       "label": "HasProperty",
       "attributes": [
         "datatype"
@@ -3718,7 +3720,7 @@
     },
     {
       "id": "InputFromProperty-HasProperty-PropertyName_307A3AA5A47D5A23EE5090D91BDF9F0A00E5EFC0E9268967663AAA96D6C7A888",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/HasProperty.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/HasProperty.cs",
       "label": "HasProperty",
       "attributes": [
         "datatype"
@@ -3728,7 +3730,7 @@
     },
     {
       "id": "InputFromProperty-IsA-IImmutable_B6B8C5AD0588A4D3A151FCDCDAC60739E027846BF158DD3408A9F3E9A52000A9",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/IsA.cs",
       "label": "IsA",
       "attributes": [
         "object"
@@ -3741,7 +3743,7 @@
     },
     {
       "id": "InputFromProperty-IsA-IObject_36A7C1C6969AFC2E372730EB297F4D39E5C67DDC8DFF3CC5C7C82EFE5FEC0EBD",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/IsA.cs",
       "label": "IsA",
       "attributes": [
         "object"
@@ -3754,7 +3756,7 @@
     },
     {
       "id": "MultiOutputAttribute-HasProperty-Index_29BD17083A4F9B03F4E959DB63C8E86C24F800ACC32E5CE3D5A20D0789FA0E85",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/HasProperty.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/HasProperty.cs",
       "label": "HasProperty",
       "attributes": [
         "datatype"
@@ -3764,7 +3766,7 @@
     },
     {
       "id": "MultiOutputAttribute-HasProperty-Name_92928238D2126BB5BC7342DCA089EB418B205C8956B88AC589C5B6A19D5FE6E9",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/HasProperty.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/HasProperty.cs",
       "label": "HasProperty",
       "attributes": [
         "datatype"
@@ -3774,7 +3776,7 @@
     },
     {
       "id": "MultiOutputAttribute-HasProperty-Description_C355C331AF628BA3C79D03D104723C9886973DE03BD2449234A9E4EBCEA45C4F",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/HasProperty.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/HasProperty.cs",
       "label": "HasProperty",
       "attributes": [
         "datatype"
@@ -3784,7 +3786,7 @@
     },
     {
       "id": "BH.oM.Base.Attributes.MultiOutputAttribute-HasProperty-BH.oM.Base.Attributes.MultiOutputAttribute.Classification",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/HasProperty.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/HasProperty.cs",
       "label": "HasProperty",
       "attributes": [
         "object"
@@ -3794,7 +3796,7 @@
     },
     {
       "id": "BH.oM.Base.Attributes.MultiOutputAttribute.Classification-IsA-BH.oM.Base.Attributes.InputClassificationAttribute",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/IsA.cs",
       "label": "IsA",
       "attributes": [
         "object"
@@ -3804,7 +3806,7 @@
     },
     {
       "id": "MultiOutputAttribute-IsA-IImmutable_1E69B008B5BD4C4369E34939E2C846759AA64970BAE218151A14B12325431DC5",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/IsA.cs",
       "label": "IsA",
       "attributes": [
         "object"
@@ -3817,7 +3819,7 @@
     },
     {
       "id": "MultiOutputAttribute-IsA-IObject_E4ADE861830FD17CA4015E80498E440210E7AD22B5A7B9F039FB7FF7B109938A",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/IsA.cs",
       "label": "IsA",
       "attributes": [
         "object"
@@ -3830,7 +3832,7 @@
     },
     {
       "id": "NoAutoConstructorAttribute-IsA-IImmutable_3994402A7D4CE21452B0074A2EC6F9A0FEC6E4EE48516C3E3D217E6731DDFD77",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/IsA.cs",
       "label": "IsA",
       "attributes": [
         "object"
@@ -3843,7 +3845,7 @@
     },
     {
       "id": "NoAutoConstructorAttribute-IsA-IObject_FF3C9D61D266A714A0DA666986C3C40F7B273A108F2E5F76055BD806C3B45D38",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/IsA.cs",
       "label": "IsA",
       "attributes": [
         "object"
@@ -3856,7 +3858,7 @@
     },
     {
       "id": "NotImplementedAttribute-HasProperty-Description_8980306EE0044E2E74C8CFE69CC33D0403F4E3F89243B511B8ABEF144C4F2A43",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/HasProperty.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/HasProperty.cs",
       "label": "HasProperty",
       "attributes": [
         "datatype"
@@ -3866,7 +3868,7 @@
     },
     {
       "id": "NotImplementedAttribute-IsA-IImmutable_90E97D556DD7C084C062578E4C176EDE5D9059A758ADC8301C1D55D413C12BB9",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/IsA.cs",
       "label": "IsA",
       "attributes": [
         "object"
@@ -3879,7 +3881,7 @@
     },
     {
       "id": "NotImplementedAttribute-IsA-IObject_E44DC7A8AF8144055AF2C47F1A5CDBB49405C61E4AC44AAC6C33763C37CB81D9",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/IsA.cs",
       "label": "IsA",
       "attributes": [
         "object"
@@ -3892,7 +3894,7 @@
     },
     {
       "id": "OutputAttribute-HasProperty-Name_4BF4CE26290719CFF36A549A1B485147966D79E7E2909C5D16BD319A27B98F99",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/HasProperty.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/HasProperty.cs",
       "label": "HasProperty",
       "attributes": [
         "datatype"
@@ -3902,7 +3904,7 @@
     },
     {
       "id": "OutputAttribute-HasProperty-Description_ECC7EB9306FFE2EECCE97192CE135CE0403B77464E39671029DD1A3F6E3F263F",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/HasProperty.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/HasProperty.cs",
       "label": "HasProperty",
       "attributes": [
         "datatype"
@@ -3912,7 +3914,7 @@
     },
     {
       "id": "BH.oM.Base.Attributes.OutputAttribute-HasProperty-BH.oM.Base.Attributes.OutputAttribute.Classification",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/HasProperty.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/HasProperty.cs",
       "label": "HasProperty",
       "attributes": [
         "object"
@@ -3922,7 +3924,7 @@
     },
     {
       "id": "BH.oM.Base.Attributes.OutputAttribute.Classification-IsA-BH.oM.Base.Attributes.InputClassificationAttribute",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/IsA.cs",
       "label": "IsA",
       "attributes": [
         "object"
@@ -3932,7 +3934,7 @@
     },
     {
       "id": "OutputAttribute-IsA-IImmutable_A5C980621E433840F840DF3049CB44ADD3BBF903560CD674E5E58C8AE0C41502",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/IsA.cs",
       "label": "IsA",
       "attributes": [
         "object"
@@ -3945,7 +3947,7 @@
     },
     {
       "id": "OutputAttribute-IsA-IObject_50829370773AD2DC96E4563757E106CB46A614DBCAECDFB7CE4187F64BFBC86A",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/IsA.cs",
       "label": "IsA",
       "attributes": [
         "object"
@@ -3958,7 +3960,7 @@
     },
     {
       "id": "PreviousInputNamesAttribute-HasProperty-Name_CD96CE33D0A0FEBD93DF6045B7F9CC6DDA5D43B4FBB41061406466CE0879606D",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/HasProperty.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/HasProperty.cs",
       "label": "HasProperty",
       "attributes": [
         "datatype"
@@ -3968,7 +3970,7 @@
     },
     {
       "id": "PreviousInputNamesAttribute-HasProperty-PreviousNames_A0DCD8195B332652118798C8D0A026D2B121A7489C8A067A7F8EEBE3E10DF3AC",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/HasProperty.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/HasProperty.cs",
       "label": "HasProperty",
       "attributes": [
         "datatype"
@@ -3978,7 +3980,7 @@
     },
     {
       "id": "PreviousInputNamesAttribute-IsA-IImmutable_CD41C4303F2B08346193918BA1D8CFCAC1A8960E4F5ADDA2C4A05A0C348C81C1",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/IsA.cs",
       "label": "IsA",
       "attributes": [
         "object"
@@ -3991,7 +3993,7 @@
     },
     {
       "id": "PreviousInputNamesAttribute-IsA-IObject_C9AE2A5F1BA62ADCF061F3DB50C5CFB699F3BE6FD260EA3D0A76186FFDCC2256",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/IsA.cs",
       "label": "IsA",
       "attributes": [
         "object"
@@ -4004,7 +4006,7 @@
     },
     {
       "id": "PreviousVersionAttribute-HasProperty-PreviousVersionAsText_1BA70E32371D75B1DF5BE7EF8945B94B3E6EA328015B7DBBAF10450B98D8942F",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/HasProperty.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/HasProperty.cs",
       "label": "HasProperty",
       "attributes": [
         "datatype"
@@ -4014,7 +4016,7 @@
     },
     {
       "id": "PreviousVersionAttribute-HasProperty-FromVersion_87328252B7EC8E40303F38DAB059F1D86E77F81633EDA2DF2C49551007D6C509",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/HasProperty.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/HasProperty.cs",
       "label": "HasProperty",
       "attributes": [
         "datatype"
@@ -4024,7 +4026,7 @@
     },
     {
       "id": "PreviousVersionAttribute-IsA-IImmutable_7824692F1307E821D58A29D3C5211999BE73046F25BA0470418A7F541F9820AB",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/IsA.cs",
       "label": "IsA",
       "attributes": [
         "object"
@@ -4037,7 +4039,7 @@
     },
     {
       "id": "PreviousVersionAttribute-IsA-IObject_E64DB429896304EF73159FAE2E57A5B2CB50965AF0F55654E6022D02E33CDB2A",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/IsA.cs",
       "label": "IsA",
       "attributes": [
         "object"
@@ -4050,7 +4052,7 @@
     },
     {
       "id": "ReleasedAttribute-HasProperty-Description_F9707E74C10A4EDEE2F9A6AF7C06E28CF75F951898A947CD213EC8EFCB9314C2",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/HasProperty.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/HasProperty.cs",
       "label": "HasProperty",
       "attributes": [
         "datatype"
@@ -4060,7 +4062,7 @@
     },
     {
       "id": "ReleasedAttribute-HasProperty-FromVersion_9D6456CBD56A97D22146A0607AE10215202759B91D9EEC56737F2F5D87C0AB18",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/HasProperty.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/HasProperty.cs",
       "label": "HasProperty",
       "attributes": [
         "datatype"
@@ -4070,7 +4072,7 @@
     },
     {
       "id": "ReleasedAttribute-IsA-IImmutable_D78B08C0F0D7C2697B2B8B38BA8440430263EF1D9ABE89D2A531FAD70CB64C92",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/IsA.cs",
       "label": "IsA",
       "attributes": [
         "object"
@@ -4083,7 +4085,7 @@
     },
     {
       "id": "ReleasedAttribute-IsA-IObject_F4D2A4CBA29019B99B4D314E870E72433C1680A4F5E8416AF6477B3EF6787A91",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/IsA.cs",
       "label": "IsA",
       "attributes": [
         "object"
@@ -4096,7 +4098,7 @@
     },
     {
       "id": "ReplacedAttribute-HasProperty-Description_2B6E58966A4087E1B0759DFD81B62FE0656B200CEA434B1C226FB707912A7ED2",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/HasProperty.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/HasProperty.cs",
       "label": "HasProperty",
       "attributes": [
         "datatype"
@@ -4106,7 +4108,7 @@
     },
     {
       "id": "ReplacedAttribute-HasProperty-FromVersion_7178846AAD8A7342CDD93A661962431AAAC1B82CE1E9A8830580A16814964134",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/HasProperty.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/HasProperty.cs",
       "label": "HasProperty",
       "attributes": [
         "datatype"
@@ -4116,7 +4118,7 @@
     },
     {
       "id": "ReplacedAttribute-HasProperty-ReplacingType_E50C87F57315CC999BB5706C4C617FF6E74BDF669E0D593EC403250C74388388",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/HasProperty.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/HasProperty.cs",
       "label": "HasProperty",
       "attributes": [
         "datatype"
@@ -4126,7 +4128,7 @@
     },
     {
       "id": "ReplacedAttribute-HasProperty-ReplacingMethod_6A136464B49AB766204188CE67162261920ABDC5855B2AC0FFF6D6E4E17A3A23",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/HasProperty.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/HasProperty.cs",
       "label": "HasProperty",
       "attributes": [
         "datatype"
@@ -4136,7 +4138,7 @@
     },
     {
       "id": "ReplacedAttribute-IsA-IImmutable_ABB2F8280164BB465CE04A89A54AB7B45EE6E8EB3E15C08E6B10ABC9E9101DEF",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/IsA.cs",
       "label": "IsA",
       "attributes": [
         "object"
@@ -4149,7 +4151,7 @@
     },
     {
       "id": "ReplacedAttribute-IsA-IObject_4C1C5E453DCF7A17B6399E526C34857CDDB71B71A27567796D87C68DD00DC3D9",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/IsA.cs",
       "label": "IsA",
       "attributes": [
         "object"
@@ -4162,7 +4164,7 @@
     },
     {
       "id": "RequiredAttribute-IsA-IImmutable_DA675D1E725B55254C7810910FACFC0F846716618AA1BF5D24698FD053D697CE",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/IsA.cs",
       "label": "IsA",
       "attributes": [
         "object"
@@ -4175,7 +4177,7 @@
     },
     {
       "id": "RequiredAttribute-IsA-IObject_F12B8238997301F4EB3F0421BC271AC36A9D6F1C622A378679171A0A413C33E7",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/IsA.cs",
       "label": "IsA",
       "attributes": [
         "object"
@@ -4188,7 +4190,7 @@
     },
     {
       "id": "TargetsAttribute-HasProperty-ValidTypes_209957D5998B4DEA4BDA5B407A0B8F4E1C54730AA85A570D71B0EC159C85E909",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/HasProperty.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/HasProperty.cs",
       "label": "HasProperty",
       "attributes": [
         "datatype"
@@ -4198,7 +4200,7 @@
     },
     {
       "id": "TargetsAttribute-IsA-IImmutable_9BEF8FDF5C3AAE7D754DDB6B776E4EF9D32272AF42427007172BB4EAE93F0239",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/IsA.cs",
       "label": "IsA",
       "attributes": [
         "object"
@@ -4211,7 +4213,7 @@
     },
     {
       "id": "TargetsAttribute-IsA-IObject_9F42679CA6E6CA1280964868B54C2F0416D15AB37BDFACCA72AFFF5A39CEC4F5",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/IsA.cs",
       "label": "IsA",
       "attributes": [
         "object"
@@ -4224,7 +4226,7 @@
     },
     {
       "id": "ToBeRemovedAttribute-HasProperty-Description_E82F27C7A7720A44B70B442F5EF993E34FA4750B76CB1DEA60F612D8F7B496A0",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/HasProperty.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/HasProperty.cs",
       "label": "HasProperty",
       "attributes": [
         "datatype"
@@ -4234,7 +4236,7 @@
     },
     {
       "id": "ToBeRemovedAttribute-HasProperty-FromVersion_FD05F9828380C533816B1E04C029A40815DD8DB4454D97055A56479CD4943FF1",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/HasProperty.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/HasProperty.cs",
       "label": "HasProperty",
       "attributes": [
         "datatype"
@@ -4244,7 +4246,7 @@
     },
     {
       "id": "ToBeRemovedAttribute-IsA-IImmutable_9BB24D2B9C7F6D5F075CA4070E43937116F73E689FE6A627938EF6BF36CE4A44",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/IsA.cs",
       "label": "IsA",
       "attributes": [
         "object"
@@ -4257,7 +4259,7 @@
     },
     {
       "id": "ToBeRemovedAttribute-IsA-IObject_0E1EF343562ECC267F32F7132097843527EA76C609167A559836798103017782",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/IsA.cs",
       "label": "IsA",
       "attributes": [
         "object"

@@ -39,6 +39,14 @@
       "type": "owl:Class"
     },
     {
+      "id": "BH.oM.Facade.Fragments.UValueCavity",
+      "type": "owl:Class"
+    },
+    {
+      "id": "BH.oM.Facade.Fragments.UValueContinuous",
+      "type": "owl:Class"
+    },
+    {
       "id": "BH.oM.Facade.Fragments.UValueFrame",
       "type": "owl:Class"
     },
@@ -143,6 +151,14 @@
       "type": "owl:Class"
     },
     {
+      "id": "BH.oM.Facade.Fragments.UValueCavity.UValue",
+      "type": "owl:Class"
+    },
+    {
+      "id": "BH.oM.Facade.Fragments.UValueContinuous.UValue",
+      "type": "owl:Class"
+    },
+    {
       "id": "BH.oM.Facade.Fragments.UValueFrame.UValue",
       "type": "owl:Class"
     },
@@ -163,7 +179,7 @@
       "type": "owl:Class"
     },
     {
-      "id": "BH.oM.Analytical.Elements.IPanel`2[[BH.oM.Facade.Elements.FrameEdge, Facade_oM, Version=5.0.0.0, Culture=neutral, PublicKeyToken=null],[BH.oM.Facade.Elements.Opening, Facade_oM, Version=5.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+      "id": "BH.oM.Analytical.Elements.IPanel",
       "type": "owl:Class"
     },
     {
@@ -219,7 +235,7 @@
       "type": "owl:Class"
     },
     {
-      "id": "BH.oM.Analytical.Elements.IOpening`1[[BH.oM.Facade.Elements.FrameEdge, Facade_oM, Version=5.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+      "id": "BH.oM.Analytical.Elements.IOpening",
       "type": "owl:Class"
     },
     {
@@ -334,6 +350,28 @@
       ],
       "comment": {
         "undefined": "A Psi value representing the linear joint thermal transmittance in W/m2 along the centerline of a frame edge."
+      }
+    },
+    {
+      "id": "BH.oM.Facade.Fragments.UValueCavity",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/Facade_oM/Fragments/UValueCavity.cs",
+      "label": "UValueCavity (BH.oM.Facade.Fragments)",
+      "attributes": [
+        "object"
+      ],
+      "comment": {
+        "undefined": "A U-Value representing the effective U-Value of cavity insulation. This does not include derating effects from any frame u-values but should be derated for any thermal bridges not modeled."
+      }
+    },
+    {
+      "id": "BH.oM.Facade.Fragments.UValueContinuous",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/Facade_oM/Fragments/UValueContinuous.cs",
+      "label": "UValueContinuous (BH.oM.Facade.Fragments)",
+      "attributes": [
+        "object"
+      ],
+      "comment": {
+        "undefined": "A U-Value representing the effective U-Value of continuous insulation and/or layers (not affected by thermal bridging due to frame u-value)."
       }
     },
     {
@@ -478,7 +516,7 @@
     {
       "id": "BH.oM.Facade.SectionProperties.FrameEdgeProperty.SectionProperties",
       "iri": "https://github.com/BHoM/BHoM/blob/main/Facade_oM/SectionProperties/FrameEdgeProperty.cs#L38",
-      "label": "SectionProperties(BH.oM.Facade.SectionProperties.FrameEdgeProperty.SectionProperties)",
+      "label": "SectionProperties (BH.oM.Facade.SectionProperties.FrameEdgeProperty.SectionProperties)",
       "attributes": []
     },
     {
@@ -501,7 +539,7 @@
     {
       "id": "BH.oM.Facade.Results.OverallUValue.UValue",
       "iri": "https://github.com/BHoM/BHoM/blob/main/Facade_oM/Results/OverallUValue.cs#L39",
-      "label": "UValue(BH.oM.Facade.Results.OverallUValue.UValue)",
+      "label": "UValue (BH.oM.Facade.Results.OverallUValue.UValue)",
       "attributes": [
         "datatype"
       ]
@@ -509,7 +547,7 @@
     {
       "id": "BH.oM.Facade.Results.OverallUValue.ObjectIds",
       "iri": "https://github.com/BHoM/BHoM/blob/main/Facade_oM/Results/OverallUValue.cs#L42",
-      "label": "ObjectIds(BH.oM.Facade.Results.OverallUValue.ObjectIds)",
+      "label": "ObjectIds (BH.oM.Facade.Results.OverallUValue.ObjectIds)",
       "attributes": [
         "datatype"
       ]
@@ -526,7 +564,7 @@
     {
       "id": "BH.oM.Facade.Fragments.ConstructionOffset.OffsetDistance",
       "iri": "https://github.com/BHoM/BHoM/blob/main/Facade_oM/Fragments/ConstructionOffset.cs#L43",
-      "label": "OffsetDistance(BH.oM.Facade.Fragments.ConstructionOffset.OffsetDistance)",
+      "label": "OffsetDistance (BH.oM.Facade.Fragments.ConstructionOffset.OffsetDistance)",
       "attributes": [
         "datatype"
       ]
@@ -543,7 +581,7 @@
     {
       "id": "BH.oM.Facade.Fragments.FrameExtensionBox.BoundingBoxCurve",
       "iri": "https://github.com/BHoM/BHoM/blob/main/Facade_oM/Fragments/FrameExtensionBox.cs#L38",
-      "label": "BoundingBoxCurve(BH.oM.Facade.Fragments.FrameExtensionBox.BoundingBoxCurve)",
+      "label": "BoundingBoxCurve (BH.oM.Facade.Fragments.FrameExtensionBox.BoundingBoxCurve)",
       "attributes": [],
       "comment": {
         "undefined": "ICurve representing the mullion bounding box."
@@ -564,7 +602,7 @@
     {
       "id": "BH.oM.Facade.Fragments.GlazingLocation.GlazingOffsetDistance",
       "iri": "https://github.com/BHoM/BHoM/blob/main/Facade_oM/Fragments/GlazingLocation.cs#L43",
-      "label": "GlazingOffsetDistance(BH.oM.Facade.Fragments.GlazingLocation.GlazingOffsetDistance)",
+      "label": "GlazingOffsetDistance (BH.oM.Facade.Fragments.GlazingLocation.GlazingOffsetDistance)",
       "attributes": [
         "datatype"
       ]
@@ -572,7 +610,7 @@
     {
       "id": "BH.oM.Facade.Fragments.PsiGlassEdge.PsiValue",
       "iri": "https://github.com/BHoM/BHoM/blob/main/Facade_oM/Fragments/PsiGlassEdge.cs#L38",
-      "label": "PsiValue(BH.oM.Facade.Fragments.PsiGlassEdge.PsiValue)",
+      "label": "PsiValue (BH.oM.Facade.Fragments.PsiGlassEdge.PsiValue)",
       "attributes": [
         "datatype"
       ]
@@ -580,7 +618,23 @@
     {
       "id": "BH.oM.Facade.Fragments.PsiJoint.PsiValue",
       "iri": "https://github.com/BHoM/BHoM/blob/main/Facade_oM/Fragments/PsiJoint.cs#L38",
-      "label": "PsiValue(BH.oM.Facade.Fragments.PsiJoint.PsiValue)",
+      "label": "PsiValue (BH.oM.Facade.Fragments.PsiJoint.PsiValue)",
+      "attributes": [
+        "datatype"
+      ]
+    },
+    {
+      "id": "BH.oM.Facade.Fragments.UValueCavity.UValue",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/Facade_oM/Fragments/UValueCavity.cs#L37",
+      "label": "UValue (BH.oM.Facade.Fragments.UValueCavity.UValue)",
+      "attributes": [
+        "datatype"
+      ]
+    },
+    {
+      "id": "BH.oM.Facade.Fragments.UValueContinuous.UValue",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/Facade_oM/Fragments/UValueContinuous.cs#L37",
+      "label": "UValue (BH.oM.Facade.Fragments.UValueContinuous.UValue)",
       "attributes": [
         "datatype"
       ]
@@ -588,7 +642,7 @@
     {
       "id": "BH.oM.Facade.Fragments.UValueFrame.UValue",
       "iri": "https://github.com/BHoM/BHoM/blob/main/Facade_oM/Fragments/UValueFrame.cs#L38",
-      "label": "UValue(BH.oM.Facade.Fragments.UValueFrame.UValue)",
+      "label": "UValue (BH.oM.Facade.Fragments.UValueFrame.UValue)",
       "attributes": [
         "datatype"
       ]
@@ -596,7 +650,7 @@
     {
       "id": "BH.oM.Facade.Fragments.UValueGlassCentre.UValue",
       "iri": "https://github.com/BHoM/BHoM/blob/main/Facade_oM/Fragments/UValueGlassCentre.cs#L38",
-      "label": "UValue(BH.oM.Facade.Fragments.UValueGlassCentre.UValue)",
+      "label": "UValue (BH.oM.Facade.Fragments.UValueGlassCentre.UValue)",
       "attributes": [
         "datatype"
       ]
@@ -604,7 +658,7 @@
     {
       "id": "BH.oM.Facade.Fragments.UValueGlassEdge.UValue",
       "iri": "https://github.com/BHoM/BHoM/blob/main/Facade_oM/Fragments/UValueGlassEdge.cs#L38",
-      "label": "UValue(BH.oM.Facade.Fragments.UValueGlassEdge.UValue)",
+      "label": "UValue (BH.oM.Facade.Fragments.UValueGlassEdge.UValue)",
       "attributes": [
         "datatype"
       ]
@@ -612,17 +666,17 @@
     {
       "id": "BH.oM.Facade.Elements.CurtainWall.ExternalEdges",
       "iri": "https://github.com/BHoM/BHoM/blob/main/Facade_oM/Elements/CurtainWall.cs#L47",
-      "label": "ExternalEdges(BH.oM.Facade.Elements.CurtainWall.ExternalEdges)",
+      "label": "ExternalEdges (BH.oM.Facade.Elements.CurtainWall.ExternalEdges)",
       "attributes": []
     },
     {
       "id": "BH.oM.Facade.Elements.CurtainWall.Openings",
       "iri": "https://github.com/BHoM/BHoM/blob/main/Facade_oM/Elements/CurtainWall.cs#L50",
-      "label": "Openings(BH.oM.Facade.Elements.CurtainWall.Openings)",
+      "label": "Openings (BH.oM.Facade.Elements.CurtainWall.Openings)",
       "attributes": []
     },
     {
-      "id": "BH.oM.Analytical.Elements.IPanel`2[[BH.oM.Facade.Elements.FrameEdge, Facade_oM, Version=5.0.0.0, Culture=neutral, PublicKeyToken=null],[BH.oM.Facade.Elements.Opening, Facade_oM, Version=5.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+      "id": "BH.oM.Analytical.Elements.IPanel",
       "iri": "https://github.com/BHoM/BHoM/blob/main/Analytical_oM/Elements/IPanel.cs",
       "label": "IPanel<FrameEdge,Opening> (BH.oM.Analytical.Elements)",
       "attributes": [
@@ -678,7 +732,7 @@
     {
       "id": "BH.oM.Facade.Elements.FrameEdge.Curve",
       "iri": "https://github.com/BHoM/BHoM/blob/main/Facade_oM/Elements/FrameEdge.cs#L43",
-      "label": "Curve(BH.oM.Facade.Elements.FrameEdge.Curve)",
+      "label": "Curve (BH.oM.Facade.Elements.FrameEdge.Curve)",
       "attributes": [],
       "comment": {
         "undefined": "The curve representing the frame edge location"
@@ -687,7 +741,7 @@
     {
       "id": "BH.oM.Facade.Elements.FrameEdge.FrameEdgeProperty",
       "iri": "https://github.com/BHoM/BHoM/blob/main/Facade_oM/Elements/FrameEdge.cs#L46",
-      "label": "FrameEdgeProperty(BH.oM.Facade.Elements.FrameEdge.FrameEdgeProperty)",
+      "label": "FrameEdgeProperty (BH.oM.Facade.Elements.FrameEdge.FrameEdgeProperty)",
       "attributes": [],
       "comment": {
         "undefined": "The property assigned to this frame edge"
@@ -716,14 +770,14 @@
     },
     {
       "id": "BH.oM.Facade.Elements.Opening.Edges",
-      "iri": null,
-      "label": "Edges(BH.oM.Facade.Elements.Opening.Edges)",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/Facade_oM/Elements/Opening.cs#L43",
+      "label": "Edges (BH.oM.Facade.Elements.Opening.Edges)",
       "attributes": []
     },
     {
       "id": "BH.oM.Facade.Elements.Opening.OpeningConstruction",
-      "iri": null,
-      "label": "OpeningConstruction(BH.oM.Facade.Elements.Opening.OpeningConstruction)",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/Facade_oM/Elements/Opening.cs#L46",
+      "label": "OpeningConstruction (BH.oM.Facade.Elements.Opening.OpeningConstruction)",
       "attributes": [],
       "comment": {
         "undefined": "A construction object providing construction information about the opening - typically glazing construction"
@@ -740,8 +794,8 @@
     },
     {
       "id": "BH.oM.Facade.Elements.Opening.FrameCornerType",
-      "iri": null,
-      "label": "FrameCornerType(BH.oM.Facade.Elements.Opening.FrameCornerType)",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/Facade_oM/Elements/Opening.cs#L49",
+      "label": "FrameCornerType (BH.oM.Facade.Elements.Opening.FrameCornerType)",
       "attributes": [],
       "comment": {
         "undefined": "Frame edge treatment at corners (ie Mitred, Vertical Extends, or Horizontal Extends)"
@@ -749,15 +803,15 @@
     },
     {
       "id": "BH.oM.Facade.Elements.Opening.Type",
-      "iri": null,
-      "label": "Type(BH.oM.Facade.Elements.Opening.Type)",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/Facade_oM/Elements/Opening.cs#L52",
+      "label": "Type (BH.oM.Facade.Elements.Opening.Type)",
       "attributes": [],
       "comment": {
         "undefined": "The type of opening on a panel (e.g. Window, Door). Use OpeningType enum"
       }
     },
     {
-      "id": "BH.oM.Analytical.Elements.IOpening`1[[BH.oM.Facade.Elements.FrameEdge, Facade_oM, Version=5.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+      "id": "BH.oM.Analytical.Elements.IOpening",
       "iri": "https://github.com/BHoM/BHoM/blob/main/Analytical_oM/Elements/IOpening.cs",
       "label": "IOpening<FrameEdge> (BH.oM.Analytical.Elements)",
       "attributes": [
@@ -767,20 +821,20 @@
     },
     {
       "id": "BH.oM.Facade.Elements.Panel.ExternalEdges",
-      "iri": null,
-      "label": "ExternalEdges(BH.oM.Facade.Elements.Panel.ExternalEdges)",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/Facade_oM/Elements/Panel.cs#L47",
+      "label": "ExternalEdges (BH.oM.Facade.Elements.Panel.ExternalEdges)",
       "attributes": []
     },
     {
       "id": "BH.oM.Facade.Elements.Panel.Openings",
-      "iri": null,
-      "label": "Openings(BH.oM.Facade.Elements.Panel.Openings)",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/Facade_oM/Elements/Panel.cs#L50",
+      "label": "Openings (BH.oM.Facade.Elements.Panel.Openings)",
       "attributes": []
     },
     {
       "id": "BH.oM.Facade.Elements.Panel.Construction",
-      "iri": null,
-      "label": "Construction(BH.oM.Facade.Elements.Panel.Construction)",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/Facade_oM/Elements/Panel.cs#L53",
+      "label": "Construction (BH.oM.Facade.Elements.Panel.Construction)",
       "attributes": [],
       "comment": {
         "undefined": "A construction object providing layer and material information for the panel"
@@ -788,8 +842,8 @@
     },
     {
       "id": "BH.oM.Facade.Elements.Panel.Type",
-      "iri": null,
-      "label": "Type(BH.oM.Facade.Elements.Panel.Type)",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/Facade_oM/Elements/Panel.cs#L56",
+      "label": "Type (BH.oM.Facade.Elements.Panel.Type)",
       "attributes": [],
       "comment": {
         "undefined": "The type of surface (e.g. Exterior wall, interior wall, air gap). Use PanelType enum"
@@ -911,6 +965,30 @@
     },
     {
       "id": "PsiJoint-IsA-IObject_94E76EFC8FE03FAE6B2C31331E0A7E15AA8B517BBF0255B32A3CD65A8CB9B104",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "UValueCavity-HasProperty-UValue_CC57B6DE094A4593DA13E42ADD302765290466F200617EEA54DD275A8559A6D7",
+      "type": "owl:DatatypeProperty"
+    },
+    {
+      "id": "UValueCavity-IsA-IFragment_96EF5F4590F0831BCCE782FC2F214B673E3F34FE463251E6ADAF28F5E88EE65E",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "UValueCavity-IsA-IObject_CF23C19B901D51E4A106860CFCDADB840518316A57D20B18E333B90C32BE8AD7",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "UValueContinuous-HasProperty-UValue_6720C465426B659A532B0219324687B1A5BE139B2BA809B8C10F5127FB7A5D9D",
+      "type": "owl:DatatypeProperty"
+    },
+    {
+      "id": "UValueContinuous-IsA-IFragment_41F6A06D79D13D9D95C3DED6C7FDEB2CCCFA3DBA19D0BE826D305C7995D836BC",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "UValueContinuous-IsA-IObject_E1F21AC0D7F57EBC8C2DE2D90EF096BA8117D8DF1F0ACA73B4C1383C60D4DAAE",
       "type": "owl:ObjectProperty"
     },
     {
@@ -1189,7 +1267,7 @@
   "propertyAttribute": [
     {
       "id": "IFacadeObject-IsA-IBHoMObject_1AC641B686D12814A32276B78467D7DC6FC937DF80828E2941465B548B28C61A",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/IsA.cs",
       "label": "IsA",
       "attributes": [
         "object"
@@ -1202,7 +1280,7 @@
     },
     {
       "id": "IFacadeObject-IsA-IObject_A4B06221091F57D9EE5B60E9B26F52750E837E79BAAB18B7003AE449180F0EC1",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/IsA.cs",
       "label": "IsA",
       "attributes": [
         "object"
@@ -1215,7 +1293,7 @@
     },
     {
       "id": "BH.oM.Facade.SectionProperties.FrameEdgeProperty-HasProperty-BH.oM.Facade.SectionProperties.FrameEdgeProperty.SectionProperties",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/HasProperty.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/HasProperty.cs",
       "label": "HasProperty",
       "attributes": [
         "object"
@@ -1225,7 +1303,7 @@
     },
     {
       "id": "BH.oM.Facade.SectionProperties.FrameEdgeProperty.SectionProperties-IsAListOf-BH.oM.Physical.FramingProperties.ConstantFramingProperty",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsAListOf.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/IsAListOf.cs",
       "label": "IsAListOf",
       "attributes": [
         "object"
@@ -1235,7 +1313,7 @@
     },
     {
       "id": "FrameEdgeProperty-IsA-IBHoMObject_635797711FD4A6E585708E62EF283C1D329FB413A0B5EAFF794D822EFD6E099D",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/IsA.cs",
       "label": "IsA",
       "attributes": [
         "object"
@@ -1248,7 +1326,7 @@
     },
     {
       "id": "FrameEdgeProperty-IsA-IObject_51CBFC856A782F55AF77067F309FAEBB4E25DE5F55E7ABD8A0F94243588FC12B",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/IsA.cs",
       "label": "IsA",
       "attributes": [
         "object"
@@ -1261,7 +1339,7 @@
     },
     {
       "id": "FrameEdgeProperty-IsSubclassOf-BHoMObject_A09E4BDE8C8FB4D0B9A7ABADA2E02D43C209D72E96C62519A9B206474A1A5AF2",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsSubclassOf.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/IsSubclassOf.cs",
       "label": "IsA",
       "attributes": [
         "object"
@@ -1271,7 +1349,7 @@
     },
     {
       "id": "OverallUValue-HasProperty-UValue_53C866568555F16C2BC939E700DC438FFEE9DDBBA8E31F70B5412C79DA1F13B4",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/HasProperty.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/HasProperty.cs",
       "label": "HasProperty",
       "attributes": [
         "datatype"
@@ -1281,7 +1359,7 @@
     },
     {
       "id": "OverallUValue-HasProperty-ObjectIds_245B3E80997B0582BAB9D528E36A02B58C391AEABDB5A250D3CF209FA6664D18",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/HasProperty.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/HasProperty.cs",
       "label": "HasProperty",
       "attributes": [
         "datatype"
@@ -1291,7 +1369,7 @@
     },
     {
       "id": "OverallUValue-IsA-IBHoMObject_4ADE5B3B63DE04805568EB0BAA59B11846AD8CC5EF6B3A50D2FA887A30C0105B",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/IsA.cs",
       "label": "IsA",
       "attributes": [
         "object"
@@ -1304,7 +1382,7 @@
     },
     {
       "id": "OverallUValue-IsA-IObject_9E353921415EE9A8E13409C245BFFD1E33FA77220F34D7C5641BF19E36EEB3D0",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/IsA.cs",
       "label": "IsA",
       "attributes": [
         "object"
@@ -1317,7 +1395,7 @@
     },
     {
       "id": "OverallUValue-IsA-IImmutable_AFF7C6386781A7D20CA0A59139D6316E64A0B4E02EBB219490ABF7208B0BF95F",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/IsA.cs",
       "label": "IsA",
       "attributes": [
         "object"
@@ -1330,7 +1408,7 @@
     },
     {
       "id": "OverallUValue-IsSubclassOf-BHoMObject_76D5F0B1C5406831E03FD305E59B224FFDB4AA866B77FF3B876D633810CF27E4",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsSubclassOf.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/IsSubclassOf.cs",
       "label": "IsA",
       "attributes": [
         "object"
@@ -1340,7 +1418,7 @@
     },
     {
       "id": "ConstructionOffset-HasProperty-OffsetDistance_944F1986A93BA308688B86E7E760DD65F4FE19E8482A94FB749EE747F95F1B38",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/HasProperty.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/HasProperty.cs",
       "label": "HasProperty",
       "attributes": [
         "datatype"
@@ -1350,7 +1428,7 @@
     },
     {
       "id": "ConstructionOffset-IsA-IFragment_332773751C5475DB1FE9D3CA1E19949B69877A382369CA1D0055F98B1AA09E24",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/IsA.cs",
       "label": "IsA",
       "attributes": [
         "object"
@@ -1363,7 +1441,7 @@
     },
     {
       "id": "ConstructionOffset-IsA-IObject_9D80F52D23262A7F5D2341C2419B39A61771BE6DD83CE269639E39B4028CB12B",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/IsA.cs",
       "label": "IsA",
       "attributes": [
         "object"
@@ -1376,7 +1454,7 @@
     },
     {
       "id": "BH.oM.Facade.Fragments.FrameExtensionBox-HasProperty-BH.oM.Facade.Fragments.FrameExtensionBox.BoundingBoxCurve",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/HasProperty.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/HasProperty.cs",
       "label": "HasProperty",
       "attributes": [
         "object"
@@ -1386,7 +1464,7 @@
     },
     {
       "id": "BH.oM.Facade.Fragments.FrameExtensionBox.BoundingBoxCurve-IsA-BH.oM.Geometry.ICurve",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/IsA.cs",
       "label": "IsA",
       "attributes": [
         "object"
@@ -1396,7 +1474,7 @@
     },
     {
       "id": "FrameExtensionBox-IsA-IFragment_6D1871F0583509AC18AE2EB97F01CDF3662C8A4C09217F259ABC198EBE2B9BE3",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/IsA.cs",
       "label": "IsA",
       "attributes": [
         "object"
@@ -1409,7 +1487,7 @@
     },
     {
       "id": "FrameExtensionBox-IsA-IObject_BD272DA7193805DD0DE1FC4121F60E6A80C89E1E869F946A02759065C2C7F7C9",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/IsA.cs",
       "label": "IsA",
       "attributes": [
         "object"
@@ -1422,7 +1500,7 @@
     },
     {
       "id": "GlazingLocation-HasProperty-GlazingOffsetDistance_C6D7DEB3499B03E3415B92DD93FFC1E9B5529DF0B87919CD81A544740EB94915",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/HasProperty.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/HasProperty.cs",
       "label": "HasProperty",
       "attributes": [
         "datatype"
@@ -1432,7 +1510,7 @@
     },
     {
       "id": "GlazingLocation-IsA-IFragment_768CD951277238734190998A8CAD05E7CACFF0791904C4096F1E174E6A40E7A0",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/IsA.cs",
       "label": "IsA",
       "attributes": [
         "object"
@@ -1445,7 +1523,7 @@
     },
     {
       "id": "GlazingLocation-IsA-IObject_DCE4F902BF6065D82EB9A54F724689ABCA19EB3F3FECEA6EAA256B43F504753C",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/IsA.cs",
       "label": "IsA",
       "attributes": [
         "object"
@@ -1458,7 +1536,7 @@
     },
     {
       "id": "PsiGlassEdge-HasProperty-PsiValue_C88402870ACA2DE8AAD1B44B466291EFA17369172AB3D0FA391FCDF31C663CFF",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/HasProperty.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/HasProperty.cs",
       "label": "HasProperty",
       "attributes": [
         "datatype"
@@ -1468,7 +1546,7 @@
     },
     {
       "id": "PsiGlassEdge-IsA-IFragment_BA472E0B09F05ED2E1337F96CB2039092D90A11830732363E7143D7F7D593B79",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/IsA.cs",
       "label": "IsA",
       "attributes": [
         "object"
@@ -1481,7 +1559,7 @@
     },
     {
       "id": "PsiGlassEdge-IsA-IObject_BA57EDA02A56CAD778F40D40BCC232D2E8E34E26F7F6773E551E14E08732D697",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/IsA.cs",
       "label": "IsA",
       "attributes": [
         "object"
@@ -1494,7 +1572,7 @@
     },
     {
       "id": "PsiJoint-HasProperty-PsiValue_1222585C95F6588051BFDBEAC54E8F1E20610BB1D96D4C8931BED09A0DCA8D32",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/HasProperty.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/HasProperty.cs",
       "label": "HasProperty",
       "attributes": [
         "datatype"
@@ -1504,7 +1582,7 @@
     },
     {
       "id": "PsiJoint-IsA-IFragment_F3F75CEEC51E09A4CF3B3204AC6F6529CD3DAAA83C7F2C943B51763B98E8D1CF",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/IsA.cs",
       "label": "IsA",
       "attributes": [
         "object"
@@ -1517,7 +1595,7 @@
     },
     {
       "id": "PsiJoint-IsA-IObject_94E76EFC8FE03FAE6B2C31331E0A7E15AA8B517BBF0255B32A3CD65A8CB9B104",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/IsA.cs",
       "label": "IsA",
       "attributes": [
         "object"
@@ -1529,8 +1607,80 @@
       "range": "BH.oM.Base.IObject"
     },
     {
+      "id": "UValueCavity-HasProperty-UValue_CC57B6DE094A4593DA13E42ADD302765290466F200617EEA54DD275A8559A6D7",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/HasProperty.cs",
+      "label": "HasProperty",
+      "attributes": [
+        "datatype"
+      ],
+      "domain": "BH.oM.Facade.Fragments.UValueCavity",
+      "range": "BH.oM.Facade.Fragments.UValueCavity.UValue"
+    },
+    {
+      "id": "UValueCavity-IsA-IFragment_96EF5F4590F0831BCCE782FC2F214B673E3F34FE463251E6ADAF28F5E88EE65E",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/IsA.cs",
+      "label": "IsA",
+      "attributes": [
+        "object"
+      ],
+      "comment": {
+        "undefined": "Can be used to describe that a thing belongs to a class; or that a thing is equivalent to another thing. When used for BHoM types, this describes C# interface implementation."
+      },
+      "domain": "BH.oM.Facade.Fragments.UValueCavity",
+      "range": "BH.oM.Base.IFragment"
+    },
+    {
+      "id": "UValueCavity-IsA-IObject_CF23C19B901D51E4A106860CFCDADB840518316A57D20B18E333B90C32BE8AD7",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/IsA.cs",
+      "label": "IsA",
+      "attributes": [
+        "object"
+      ],
+      "comment": {
+        "undefined": "Can be used to describe that a thing belongs to a class; or that a thing is equivalent to another thing. When used for BHoM types, this describes C# interface implementation."
+      },
+      "domain": "BH.oM.Facade.Fragments.UValueCavity",
+      "range": "BH.oM.Base.IObject"
+    },
+    {
+      "id": "UValueContinuous-HasProperty-UValue_6720C465426B659A532B0219324687B1A5BE139B2BA809B8C10F5127FB7A5D9D",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/HasProperty.cs",
+      "label": "HasProperty",
+      "attributes": [
+        "datatype"
+      ],
+      "domain": "BH.oM.Facade.Fragments.UValueContinuous",
+      "range": "BH.oM.Facade.Fragments.UValueContinuous.UValue"
+    },
+    {
+      "id": "UValueContinuous-IsA-IFragment_41F6A06D79D13D9D95C3DED6C7FDEB2CCCFA3DBA19D0BE826D305C7995D836BC",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/IsA.cs",
+      "label": "IsA",
+      "attributes": [
+        "object"
+      ],
+      "comment": {
+        "undefined": "Can be used to describe that a thing belongs to a class; or that a thing is equivalent to another thing. When used for BHoM types, this describes C# interface implementation."
+      },
+      "domain": "BH.oM.Facade.Fragments.UValueContinuous",
+      "range": "BH.oM.Base.IFragment"
+    },
+    {
+      "id": "UValueContinuous-IsA-IObject_E1F21AC0D7F57EBC8C2DE2D90EF096BA8117D8DF1F0ACA73B4C1383C60D4DAAE",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/IsA.cs",
+      "label": "IsA",
+      "attributes": [
+        "object"
+      ],
+      "comment": {
+        "undefined": "Can be used to describe that a thing belongs to a class; or that a thing is equivalent to another thing. When used for BHoM types, this describes C# interface implementation."
+      },
+      "domain": "BH.oM.Facade.Fragments.UValueContinuous",
+      "range": "BH.oM.Base.IObject"
+    },
+    {
       "id": "UValueFrame-HasProperty-UValue_037FA5BCB88A46B9D346C20BCFAC7E2504915D23D84D2E673F01A82CD9499A1B",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/HasProperty.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/HasProperty.cs",
       "label": "HasProperty",
       "attributes": [
         "datatype"
@@ -1540,7 +1690,7 @@
     },
     {
       "id": "UValueFrame-IsA-IFragment_51EBFFD3E219B87F880275824729BC9212A79FF7BFADB120EDB5E357841670BF",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/IsA.cs",
       "label": "IsA",
       "attributes": [
         "object"
@@ -1553,7 +1703,7 @@
     },
     {
       "id": "UValueFrame-IsA-IObject_7C1F3A0B4E85757F4C39DA4355FD226155482E09D35A71539F1FC0211D6F69DC",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/IsA.cs",
       "label": "IsA",
       "attributes": [
         "object"
@@ -1566,7 +1716,7 @@
     },
     {
       "id": "UValueGlassCentre-HasProperty-UValue_D9DE53A1619861FE3AC3C12918FDEBAF0922A0DC6065CC4F0A21E429283DBF84",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/HasProperty.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/HasProperty.cs",
       "label": "HasProperty",
       "attributes": [
         "datatype"
@@ -1576,7 +1726,7 @@
     },
     {
       "id": "UValueGlassCentre-IsA-IFragment_9679CFDECCF1BACBC4634115B03C9088CF8D3E8D0E5AF6B8BC7CEADA14169787",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/IsA.cs",
       "label": "IsA",
       "attributes": [
         "object"
@@ -1589,7 +1739,7 @@
     },
     {
       "id": "UValueGlassCentre-IsA-IObject_B7EE74A61ED3183C32B2AD80AF59C8766C51709B9DC7E78B9E90A655413ECFE7",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/IsA.cs",
       "label": "IsA",
       "attributes": [
         "object"
@@ -1602,7 +1752,7 @@
     },
     {
       "id": "UValueGlassEdge-HasProperty-UValue_F5083D93D1FB4654FD683597211FC57FF6A064619A1B50B11D7C06B0347E2277",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/HasProperty.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/HasProperty.cs",
       "label": "HasProperty",
       "attributes": [
         "datatype"
@@ -1612,7 +1762,7 @@
     },
     {
       "id": "UValueGlassEdge-IsA-IFragment_2B91B2F0993719C0ED3AABB8334171E7EB7342EBA039CA8D6FC7F55BD56210E7",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/IsA.cs",
       "label": "IsA",
       "attributes": [
         "object"
@@ -1625,7 +1775,7 @@
     },
     {
       "id": "UValueGlassEdge-IsA-IObject_409420A9C2272E2B9965ACC9FC8457F0C622C5AB680E072135FACFAAB366D178",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/IsA.cs",
       "label": "IsA",
       "attributes": [
         "object"
@@ -1638,7 +1788,7 @@
     },
     {
       "id": "BH.oM.Facade.Elements.CurtainWall-HasProperty-BH.oM.Facade.Elements.CurtainWall.ExternalEdges",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/HasProperty.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/HasProperty.cs",
       "label": "HasProperty",
       "attributes": [
         "object"
@@ -1648,7 +1798,7 @@
     },
     {
       "id": "BH.oM.Facade.Elements.CurtainWall.ExternalEdges-IsAListOf-BH.oM.Facade.Elements.FrameEdge",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsAListOf.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/IsAListOf.cs",
       "label": "IsAListOf",
       "attributes": [
         "object"
@@ -1658,7 +1808,7 @@
     },
     {
       "id": "BH.oM.Facade.Elements.CurtainWall-HasProperty-BH.oM.Facade.Elements.CurtainWall.Openings",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/HasProperty.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/HasProperty.cs",
       "label": "HasProperty",
       "attributes": [
         "object"
@@ -1668,7 +1818,7 @@
     },
     {
       "id": "BH.oM.Facade.Elements.CurtainWall.Openings-IsAListOf-BH.oM.Facade.Elements.Opening",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsAListOf.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/IsAListOf.cs",
       "label": "IsAListOf",
       "attributes": [
         "object"
@@ -1678,7 +1828,7 @@
     },
     {
       "id": "CurtainWall-IsA-IBHoMObject_4033C9E0ED5521C768F50DDE9AF451D616A57BA4B7E11E56147DCB3E97956046",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/IsA.cs",
       "label": "IsA",
       "attributes": [
         "object"
@@ -1691,7 +1841,7 @@
     },
     {
       "id": "CurtainWall-IsA-IObject_4D6794B96DEA05CC0E714B574AEEBDEEDB64DD5C35765ABB6FAE372C596E50F6",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/IsA.cs",
       "label": "IsA",
       "attributes": [
         "object"
@@ -1704,7 +1854,7 @@
     },
     {
       "id": "CurtainWall-IsA-IFacadeObject_155FEC94C1216C740CEB2164442CC203189FE4D4B880CCE346CDD5DBDE3F864B",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/IsA.cs",
       "label": "IsA",
       "attributes": [
         "object"
@@ -1717,7 +1867,7 @@
     },
     {
       "id": "CurtainWall-IsA-IPanel`2_5437AD3A9EEA2A7F0CF7733F6918897ED6B4A80E87C6BBE3873494ABD2706BB6",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/IsA.cs",
       "label": "IsA",
       "attributes": [
         "object"
@@ -1726,11 +1876,11 @@
         "undefined": "Can be used to describe that a thing belongs to a class; or that a thing is equivalent to another thing. When used for BHoM types, this describes C# interface implementation."
       },
       "domain": "BH.oM.Facade.Elements.CurtainWall",
-      "range": "BH.oM.Analytical.Elements.IPanel`2[[BH.oM.Facade.Elements.FrameEdge, Facade_oM, Version=5.0.0.0, Culture=neutral, PublicKeyToken=null],[BH.oM.Facade.Elements.Opening, Facade_oM, Version=5.0.0.0, Culture=neutral, PublicKeyToken=null]]"
+      "range": "BH.oM.Analytical.Elements.IPanel"
     },
     {
       "id": "CurtainWall-IsA-IAnalytical_E54822301110A7A3D7F2E21775AD0883429124AB2518B1B488B3CE5697ABC0FE",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/IsA.cs",
       "label": "IsA",
       "attributes": [
         "object"
@@ -1743,7 +1893,7 @@
     },
     {
       "id": "CurtainWall-IsA-IElement2D_0CCF3A46C9DA9CA5D7C3F670B5E5D183412E0E8881171FD546A4E0BD27D6243B",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/IsA.cs",
       "label": "IsA",
       "attributes": [
         "object"
@@ -1756,7 +1906,7 @@
     },
     {
       "id": "CurtainWall-IsA-IElement_627686F4E14FE74C6BF57A2ABC4394355EED1DEE6B28E8348B31BBCE96198348",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/IsA.cs",
       "label": "IsA",
       "attributes": [
         "object"
@@ -1769,7 +1919,7 @@
     },
     {
       "id": "CurtainWall-IsA-IElementM_F764106C0E40B53B3C576431ACFA55F1794A3533E9E178FA53C2B6CFB8E5CC6C",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/IsA.cs",
       "label": "IsA",
       "attributes": [
         "object"
@@ -1782,7 +1932,7 @@
     },
     {
       "id": "CurtainWall-IsSubclassOf-BHoMObject_43EA76C0683EA38658703A3EE5D3FEA9E739072264B3B0372A2D0B74109FE241",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsSubclassOf.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/IsSubclassOf.cs",
       "label": "IsA",
       "attributes": [
         "object"
@@ -1792,7 +1942,7 @@
     },
     {
       "id": "BH.oM.Facade.Elements.FrameEdge-HasProperty-BH.oM.Facade.Elements.FrameEdge.Curve",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/HasProperty.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/HasProperty.cs",
       "label": "HasProperty",
       "attributes": [
         "object"
@@ -1802,7 +1952,7 @@
     },
     {
       "id": "BH.oM.Facade.Elements.FrameEdge.Curve-IsA-BH.oM.Geometry.ICurve",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/IsA.cs",
       "label": "IsA",
       "attributes": [
         "object"
@@ -1812,7 +1962,7 @@
     },
     {
       "id": "BH.oM.Facade.Elements.FrameEdge-HasProperty-BH.oM.Facade.Elements.FrameEdge.FrameEdgeProperty",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/HasProperty.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/HasProperty.cs",
       "label": "HasProperty",
       "attributes": [
         "object"
@@ -1822,7 +1972,7 @@
     },
     {
       "id": "BH.oM.Facade.Elements.FrameEdge.FrameEdgeProperty-IsA-BH.oM.Facade.SectionProperties.FrameEdgeProperty",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/IsA.cs",
       "label": "IsA",
       "attributes": [
         "object"
@@ -1832,7 +1982,7 @@
     },
     {
       "id": "FrameEdge-IsA-IBHoMObject_5C99BE4AF4EBB0F06786212C6843805E74B097496CAA36555096487E094FC6A7",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/IsA.cs",
       "label": "IsA",
       "attributes": [
         "object"
@@ -1845,7 +1995,7 @@
     },
     {
       "id": "FrameEdge-IsA-IObject_29134CB28DD223414D2D2E50C32821656E709C6A0E5F8B4FCC47DC33322AFBF7",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/IsA.cs",
       "label": "IsA",
       "attributes": [
         "object"
@@ -1858,7 +2008,7 @@
     },
     {
       "id": "FrameEdge-IsA-IEdge_C0E619CD06DD7EDC94CB67C32EE865F729DEF92739BBFD5CBF1275E00631EB45",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/IsA.cs",
       "label": "IsA",
       "attributes": [
         "object"
@@ -1871,7 +2021,7 @@
     },
     {
       "id": "FrameEdge-IsA-IAnalytical_C655FC622450F9B3E9AD3384FBB575927B0EC7B8945794359DD25ED34E06A694",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/IsA.cs",
       "label": "IsA",
       "attributes": [
         "object"
@@ -1884,7 +2034,7 @@
     },
     {
       "id": "FrameEdge-IsA-IElement1D_A6A30798DF2C31BCEBFFDA405E10B613D0BBDB5AFF8285E40EDBA7D13E7351EE",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/IsA.cs",
       "label": "IsA",
       "attributes": [
         "object"
@@ -1897,7 +2047,7 @@
     },
     {
       "id": "FrameEdge-IsA-IElement_4B1DC2F591F3AC71E65579D77E2B5D540BF0925456ACF31518D1E2A69BB295A5",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/IsA.cs",
       "label": "IsA",
       "attributes": [
         "object"
@@ -1910,7 +2060,7 @@
     },
     {
       "id": "FrameEdge-IsA-IElementM_ACD1A1579D81F956CA7AE056DF793D16C5443D45F4227B96B57B7CC4D7C8E5FE",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/IsA.cs",
       "label": "IsA",
       "attributes": [
         "object"
@@ -1923,7 +2073,7 @@
     },
     {
       "id": "FrameEdge-IsSubclassOf-BHoMObject_4F03067AB773541CE197DA9292141A3091CD916A5A3FE47DB07876063C907927",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsSubclassOf.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/IsSubclassOf.cs",
       "label": "IsA",
       "attributes": [
         "object"
@@ -1933,7 +2083,7 @@
     },
     {
       "id": "BH.oM.Facade.Elements.Opening-HasProperty-BH.oM.Facade.Elements.Opening.Edges",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/HasProperty.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/HasProperty.cs",
       "label": "HasProperty",
       "attributes": [
         "object"
@@ -1943,7 +2093,7 @@
     },
     {
       "id": "BH.oM.Facade.Elements.Opening.Edges-IsAListOf-BH.oM.Facade.Elements.FrameEdge",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsAListOf.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/IsAListOf.cs",
       "label": "IsAListOf",
       "attributes": [
         "object"
@@ -1953,7 +2103,7 @@
     },
     {
       "id": "BH.oM.Facade.Elements.Opening-HasProperty-BH.oM.Facade.Elements.Opening.OpeningConstruction",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/HasProperty.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/HasProperty.cs",
       "label": "HasProperty",
       "attributes": [
         "object"
@@ -1963,7 +2113,7 @@
     },
     {
       "id": "BH.oM.Facade.Elements.Opening.OpeningConstruction-IsA-BH.oM.Physical.Constructions.IConstruction",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/IsA.cs",
       "label": "IsA",
       "attributes": [
         "object"
@@ -1973,7 +2123,7 @@
     },
     {
       "id": "BH.oM.Facade.Elements.Opening-HasProperty-BH.oM.Facade.Elements.Opening.FrameCornerType",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/HasProperty.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/HasProperty.cs",
       "label": "HasProperty",
       "attributes": [
         "object"
@@ -1983,7 +2133,7 @@
     },
     {
       "id": "BH.oM.Facade.Elements.Opening.FrameCornerType-IsA-BH.oM.Facade.Elements.FrameCornerType",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/IsA.cs",
       "label": "IsA",
       "attributes": [
         "object"
@@ -1993,7 +2143,7 @@
     },
     {
       "id": "BH.oM.Facade.Elements.Opening-HasProperty-BH.oM.Facade.Elements.Opening.Type",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/HasProperty.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/HasProperty.cs",
       "label": "HasProperty",
       "attributes": [
         "object"
@@ -2003,7 +2153,7 @@
     },
     {
       "id": "BH.oM.Facade.Elements.Opening.Type-IsA-BH.oM.Facade.Elements.OpeningType",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/IsA.cs",
       "label": "IsA",
       "attributes": [
         "object"
@@ -2013,7 +2163,7 @@
     },
     {
       "id": "Opening-IsA-IBHoMObject_630A96663FC78C6FF50F020BDF1B1F15BC148DAA5B2285F999F54D51D0BBD2C9",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/IsA.cs",
       "label": "IsA",
       "attributes": [
         "object"
@@ -2026,7 +2176,7 @@
     },
     {
       "id": "Opening-IsA-IObject_AE3A3491FB81ACAF432926262FC7D914AA768F2B836927C2DCF58CC78F217BC4",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/IsA.cs",
       "label": "IsA",
       "attributes": [
         "object"
@@ -2039,7 +2189,7 @@
     },
     {
       "id": "Opening-IsA-IFacadeObject_C11EC222F9180D6EA26B4596CD3CEE3B3F8295BE1D20C0737239B1E9741CDB2E",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/IsA.cs",
       "label": "IsA",
       "attributes": [
         "object"
@@ -2052,7 +2202,7 @@
     },
     {
       "id": "Opening-IsA-IOpening`1_393F6B7F5F0852C5E7DBCF9AD4E1429E616BD942493C93BB1666082B8F3A6A7C",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/IsA.cs",
       "label": "IsA",
       "attributes": [
         "object"
@@ -2061,11 +2211,11 @@
         "undefined": "Can be used to describe that a thing belongs to a class; or that a thing is equivalent to another thing. When used for BHoM types, this describes C# interface implementation."
       },
       "domain": "BH.oM.Facade.Elements.Opening",
-      "range": "BH.oM.Analytical.Elements.IOpening`1[[BH.oM.Facade.Elements.FrameEdge, Facade_oM, Version=5.0.0.0, Culture=neutral, PublicKeyToken=null]]"
+      "range": "BH.oM.Analytical.Elements.IOpening"
     },
     {
       "id": "Opening-IsA-IAnalytical_1E8797D0749F04C8E85756AF2F0AE2BDEAB46E002CA4115D00DDF12301B0E05F",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/IsA.cs",
       "label": "IsA",
       "attributes": [
         "object"
@@ -2078,7 +2228,7 @@
     },
     {
       "id": "Opening-IsA-IElement2D_EDFA6365EED83E60BA280AE18354F705610C8FC4F511E68BAF213D9EA8CD557C",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/IsA.cs",
       "label": "IsA",
       "attributes": [
         "object"
@@ -2091,7 +2241,7 @@
     },
     {
       "id": "Opening-IsA-IElement_8AC230988D8E002849522938021B126DE7C419510364CA0F3DA1EA4508DF6327",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/IsA.cs",
       "label": "IsA",
       "attributes": [
         "object"
@@ -2104,7 +2254,7 @@
     },
     {
       "id": "Opening-IsA-IElementM_56020D5753E1E2F9590B79326F8F9357C779EB3DB4A142EA755FD3D4297FF4E8",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/IsA.cs",
       "label": "IsA",
       "attributes": [
         "object"
@@ -2117,7 +2267,7 @@
     },
     {
       "id": "Opening-IsSubclassOf-BHoMObject_378A44AED5C59F3CA664EDA3555EE3A7CDA350D05062D0D6950BE420BFE92501",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsSubclassOf.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/IsSubclassOf.cs",
       "label": "IsA",
       "attributes": [
         "object"
@@ -2127,7 +2277,7 @@
     },
     {
       "id": "BH.oM.Facade.Elements.Panel-HasProperty-BH.oM.Facade.Elements.Panel.ExternalEdges",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/HasProperty.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/HasProperty.cs",
       "label": "HasProperty",
       "attributes": [
         "object"
@@ -2137,7 +2287,7 @@
     },
     {
       "id": "BH.oM.Facade.Elements.Panel.ExternalEdges-IsAListOf-BH.oM.Facade.Elements.FrameEdge",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsAListOf.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/IsAListOf.cs",
       "label": "IsAListOf",
       "attributes": [
         "object"
@@ -2147,7 +2297,7 @@
     },
     {
       "id": "BH.oM.Facade.Elements.Panel-HasProperty-BH.oM.Facade.Elements.Panel.Openings",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/HasProperty.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/HasProperty.cs",
       "label": "HasProperty",
       "attributes": [
         "object"
@@ -2157,7 +2307,7 @@
     },
     {
       "id": "BH.oM.Facade.Elements.Panel.Openings-IsAListOf-BH.oM.Facade.Elements.Opening",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsAListOf.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/IsAListOf.cs",
       "label": "IsAListOf",
       "attributes": [
         "object"
@@ -2167,7 +2317,7 @@
     },
     {
       "id": "BH.oM.Facade.Elements.Panel-HasProperty-BH.oM.Facade.Elements.Panel.Construction",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/HasProperty.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/HasProperty.cs",
       "label": "HasProperty",
       "attributes": [
         "object"
@@ -2177,7 +2327,7 @@
     },
     {
       "id": "BH.oM.Facade.Elements.Panel.Construction-IsA-BH.oM.Physical.Constructions.IConstruction",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/IsA.cs",
       "label": "IsA",
       "attributes": [
         "object"
@@ -2187,7 +2337,7 @@
     },
     {
       "id": "BH.oM.Facade.Elements.Panel-HasProperty-BH.oM.Facade.Elements.Panel.Type",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/HasProperty.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/HasProperty.cs",
       "label": "HasProperty",
       "attributes": [
         "object"
@@ -2197,7 +2347,7 @@
     },
     {
       "id": "BH.oM.Facade.Elements.Panel.Type-IsA-BH.oM.Facade.Elements.PanelType",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/IsA.cs",
       "label": "IsA",
       "attributes": [
         "object"
@@ -2207,7 +2357,7 @@
     },
     {
       "id": "Panel-IsA-IBHoMObject_B44C9946D75723BBE12C9FA73E93CFCCC6E56658D6F142E3E6FD5EA587115257",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/IsA.cs",
       "label": "IsA",
       "attributes": [
         "object"
@@ -2220,7 +2370,7 @@
     },
     {
       "id": "Panel-IsA-IObject_A04E0EC1395AC8E4E78B952CF742278C86EFA012A303553A61F60CD8F6B0BF2C",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/IsA.cs",
       "label": "IsA",
       "attributes": [
         "object"
@@ -2233,7 +2383,7 @@
     },
     {
       "id": "Panel-IsA-IFacadeObject_0AA35D7F9299F466ED744558DFB29809D059E5137F6EF8AAA7E1D5E12E314C7E",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/IsA.cs",
       "label": "IsA",
       "attributes": [
         "object"
@@ -2246,7 +2396,7 @@
     },
     {
       "id": "Panel-IsA-IPanel`2_18F3E5F2BD14AA1C8F163C3B92B4EBB108F0D6D5FFA8059F18D3BBE9399A0FE4",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/IsA.cs",
       "label": "IsA",
       "attributes": [
         "object"
@@ -2255,11 +2405,11 @@
         "undefined": "Can be used to describe that a thing belongs to a class; or that a thing is equivalent to another thing. When used for BHoM types, this describes C# interface implementation."
       },
       "domain": "BH.oM.Facade.Elements.Panel",
-      "range": "BH.oM.Analytical.Elements.IPanel`2[[BH.oM.Facade.Elements.FrameEdge, Facade_oM, Version=5.0.0.0, Culture=neutral, PublicKeyToken=null],[BH.oM.Facade.Elements.Opening, Facade_oM, Version=5.0.0.0, Culture=neutral, PublicKeyToken=null]]"
+      "range": "BH.oM.Analytical.Elements.IPanel"
     },
     {
       "id": "Panel-IsA-IAnalytical_A3ABB3623107B28E97D6D75C7E3C38CE5346C57F22B346090991CEBAC889D8BA",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/IsA.cs",
       "label": "IsA",
       "attributes": [
         "object"
@@ -2272,7 +2422,7 @@
     },
     {
       "id": "Panel-IsA-IElement2D_D39385F360C1A4356C8C1B869EE957529E87C4BFD1EC0BD526FFE7F0DFEABF15",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/IsA.cs",
       "label": "IsA",
       "attributes": [
         "object"
@@ -2285,7 +2435,7 @@
     },
     {
       "id": "Panel-IsA-IElement_87E384EDD0588E167D12CF9DC31EA0E738ABEBF83C19095785D265C12810188B",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/IsA.cs",
       "label": "IsA",
       "attributes": [
         "object"
@@ -2298,7 +2448,7 @@
     },
     {
       "id": "Panel-IsA-IElementM_7B32E25FDBE7C9213BD450404FC63EB68F59DED2E263AF26FFA1E4751B428BF1",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/IsA.cs",
       "label": "IsA",
       "attributes": [
         "object"
@@ -2311,7 +2461,7 @@
     },
     {
       "id": "Panel-IsSubclassOf-BHoMObject_EEE341A6F67CF93F3A1BE620C902237C795126B70E5111A03259403828DFFB29",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsSubclassOf.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/IsSubclassOf.cs",
       "label": "IsA",
       "attributes": [
         "object"

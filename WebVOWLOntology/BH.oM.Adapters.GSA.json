@@ -55,6 +55,10 @@
       "type": "owl:Class"
     },
     {
+      "id": "BH.oM.Adapters.GSA.Fragments.PanelBoundaryNodeFragment",
+      "type": "owl:Class"
+    },
+    {
       "id": "BH.oM.Adapters.GSA.Analysis.AnalysisStage",
       "type": "owl:Class"
     },
@@ -215,6 +219,22 @@
       "type": "owl:Class"
     },
     {
+      "id": "BH.oM.Physical.Materials.IDensityProvider",
+      "type": "owl:Class"
+    },
+    {
+      "id": "BH.oM.Adapters.GSA.Fragments.PanelBoundaryNodeFragment.ExternalNodes",
+      "type": "owl:Class"
+    },
+    {
+      "id": "BH.oM.Structure.Elements.Node",
+      "type": "owl:Class"
+    },
+    {
+      "id": "BH.oM.Adapters.GSA.Fragments.PanelBoundaryNodeFragment.OpeningNodes",
+      "type": "owl:Class"
+    },
+    {
       "id": "BH.oM.Adapters.GSA.Analysis.AnalysisStage.Elements",
       "type": "owl:Class"
     },
@@ -235,10 +255,6 @@
       "type": "owl:Class"
     },
     {
-      "id": "BH.oM.Structure.Elements.Node",
-      "type": "owl:Class"
-    },
-    {
       "id": "BH.oM.Adapters.GSA.Elements.Spacer.EndNode",
       "type": "owl:Class"
     },
@@ -247,7 +263,7 @@
       "type": "owl:Class"
     },
     {
-      "id": "BH.oM.Analytical.Elements.ILink`1[[BH.oM.Structure.Elements.Node, Structure_oM, Version=5.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+      "id": "BH.oM.Analytical.Elements.ILink",
       "type": "owl:Class"
     },
     {
@@ -390,6 +406,14 @@
       ]
     },
     {
+      "id": "BH.oM.Adapters.GSA.Fragments.PanelBoundaryNodeFragment",
+      "iri": "https://github.com/BHoM/GSA_Toolkit/blob/main/GSA_oM/Fragments/PanelBoundaryNodeFragment.cs",
+      "label": "PanelBoundaryNodeFragment (BH.oM.Adapters.GSA.Fragments)",
+      "attributes": [
+        "object"
+      ]
+    },
+    {
       "id": "BH.oM.Adapters.GSA.Analysis.AnalysisStage",
       "iri": "https://github.com/BHoM/GSA_Toolkit/blob/main/GSA_oM/Analysis/AnalysisStage.cs",
       "label": "AnalysisStage (BH.oM.Adapters.GSA.Analysis)",
@@ -422,7 +446,7 @@
     {
       "id": "BH.oM.Adapters.GSA.DummyTag.IsDummy",
       "iri": "https://github.com/BHoM/GSA_Toolkit/blob/main/GSA_oM/Fragments/DummyTag.cs#L33",
-      "label": "IsDummy(BH.oM.Adapters.GSA.DummyTag.IsDummy)",
+      "label": "IsDummy (BH.oM.Adapters.GSA.DummyTag.IsDummy)",
       "attributes": [
         "datatype"
       ]
@@ -448,7 +472,7 @@
     {
       "id": "BH.oM.Adapters.GSA.GSAId.Id",
       "iri": "https://github.com/BHoM/GSA_Toolkit/blob/main/GSA_oM/Fragments/GSAId.cs#L32",
-      "label": "Id(BH.oM.Adapters.GSA.GSAId.Id)",
+      "label": "Id (BH.oM.Adapters.GSA.GSAId.Id)",
       "attributes": [
         "datatype"
       ]
@@ -465,37 +489,37 @@
     {
       "id": "BH.oM.Adapters.GSA.AnalysisTaskFragment.AnalysisType",
       "iri": "https://github.com/BHoM/GSA_Toolkit/blob/main/GSA_oM/Fragments/AnalysisTaskFragment.cs#L36",
-      "label": "AnalysisType(BH.oM.Adapters.GSA.AnalysisTaskFragment.AnalysisType)",
+      "label": "AnalysisType (BH.oM.Adapters.GSA.AnalysisTaskFragment.AnalysisType)",
       "attributes": []
     },
     {
       "id": "BH.oM.Adapters.GSA.AnalysisTaskFragment.Stage",
       "iri": "https://github.com/BHoM/GSA_Toolkit/blob/main/GSA_oM/Fragments/AnalysisTaskFragment.cs#L39",
-      "label": "Stage(BH.oM.Adapters.GSA.AnalysisTaskFragment.Stage)",
+      "label": "Stage (BH.oM.Adapters.GSA.AnalysisTaskFragment.Stage)",
       "attributes": [
         "datatype"
       ]
     },
     {
       "id": "BH.oM.Adapters.GSA.AnalysisTaskFragment.ResidualForce",
-      "iri": "https://github.com/BHoM/GSA_Toolkit/blob/main/GSA_oM/Fragments/AnalysisTaskFragment.cs",
-      "label": "ResidualForce(BH.oM.Adapters.GSA.AnalysisTaskFragment.ResidualForce)",
+      "iri": "https://github.com/BHoM/GSA_Toolkit/blob/main/GSA_oM/Fragments/AnalysisTaskFragment.cs#L42",
+      "label": "ResidualForce (BH.oM.Adapters.GSA.AnalysisTaskFragment.ResidualForce)",
       "attributes": [
         "datatype"
       ]
     },
     {
       "id": "BH.oM.Adapters.GSA.AnalysisTaskFragment.ResidualMoment",
-      "iri": "https://github.com/BHoM/GSA_Toolkit/blob/main/GSA_oM/Fragments/AnalysisTaskFragment.cs",
-      "label": "ResidualMoment(BH.oM.Adapters.GSA.AnalysisTaskFragment.ResidualMoment)",
+      "iri": "https://github.com/BHoM/GSA_Toolkit/blob/main/GSA_oM/Fragments/AnalysisTaskFragment.cs#L45",
+      "label": "ResidualMoment (BH.oM.Adapters.GSA.AnalysisTaskFragment.ResidualMoment)",
       "attributes": [
         "datatype"
       ]
     },
     {
       "id": "BH.oM.Adapters.GSA.AnalysisTaskFragment.BeamSlendernessEffect",
-      "iri": "https://github.com/BHoM/GSA_Toolkit/blob/main/GSA_oM/Fragments/AnalysisTaskFragment.cs",
-      "label": "BeamSlendernessEffect(BH.oM.Adapters.GSA.AnalysisTaskFragment.BeamSlendernessEffect)",
+      "iri": "https://github.com/BHoM/GSA_Toolkit/blob/main/GSA_oM/Fragments/AnalysisTaskFragment.cs#L48",
+      "label": "BeamSlendernessEffect (BH.oM.Adapters.GSA.AnalysisTaskFragment.BeamSlendernessEffect)",
       "attributes": [
         "datatype"
       ]
@@ -503,19 +527,19 @@
     {
       "id": "BH.oM.Adapters.GSA.GSAConfig.SteelDesign",
       "iri": "https://github.com/BHoM/GSA_Toolkit/blob/main/GSA_oM/Settings/GSAConfig.cs#L39",
-      "label": "SteelDesign(BH.oM.Adapters.GSA.GSAConfig.SteelDesign)",
+      "label": "SteelDesign (BH.oM.Adapters.GSA.GSAConfig.SteelDesign)",
       "attributes": []
     },
     {
       "id": "BH.oM.Adapters.GSA.GSAConfig.ConcreteDesign",
       "iri": "https://github.com/BHoM/GSA_Toolkit/blob/main/GSA_oM/Settings/GSAConfig.cs#L41",
-      "label": "ConcreteDesign(BH.oM.Adapters.GSA.GSAConfig.ConcreteDesign)",
+      "label": "ConcreteDesign (BH.oM.Adapters.GSA.GSAConfig.ConcreteDesign)",
       "attributes": []
     },
     {
       "id": "BH.oM.Adapters.GSA.GSAConfig.Country",
       "iri": "https://github.com/BHoM/GSA_Toolkit/blob/main/GSA_oM/Settings/GSAConfig.cs#L43",
-      "label": "Country(BH.oM.Adapters.GSA.GSAConfig.Country)",
+      "label": "Country (BH.oM.Adapters.GSA.GSAConfig.Country)",
       "attributes": []
     },
     {
@@ -529,7 +553,7 @@
     {
       "id": "BH.oM.Adapters.GSA.SurfaceProperties.FabricPanelProperty.Name",
       "iri": "https://github.com/BHoM/GSA_Toolkit/blob/main/GSA_oM/SurfaceProperties/FabricPanelProperty.cs#L40",
-      "label": "Name(BH.oM.Adapters.GSA.SurfaceProperties.FabricPanelProperty.Name)",
+      "label": "Name (BH.oM.Adapters.GSA.SurfaceProperties.FabricPanelProperty.Name)",
       "attributes": [
         "datatype"
       ]
@@ -537,7 +561,7 @@
     {
       "id": "BH.oM.Adapters.GSA.SurfaceProperties.FabricPanelProperty.Material",
       "iri": "https://github.com/BHoM/GSA_Toolkit/blob/main/GSA_oM/SurfaceProperties/FabricPanelProperty.cs#L43",
-      "label": "Material(BH.oM.Adapters.GSA.SurfaceProperties.FabricPanelProperty.Material)",
+      "label": "Material (BH.oM.Adapters.GSA.SurfaceProperties.FabricPanelProperty.Material)",
       "attributes": [],
       "comment": {
         "undefined": "Fabric material."
@@ -558,7 +582,7 @@
     {
       "id": "BH.oM.Adapters.GSA.SurfaceProperties.FabricPanelProperty.AdditionalMass",
       "iri": "https://github.com/BHoM/GSA_Toolkit/blob/main/GSA_oM/SurfaceProperties/FabricPanelProperty.cs#L46",
-      "label": "AdditionalMass(BH.oM.Adapters.GSA.SurfaceProperties.FabricPanelProperty.AdditionalMass)",
+      "label": "AdditionalMass (BH.oM.Adapters.GSA.SurfaceProperties.FabricPanelProperty.AdditionalMass)",
       "attributes": [
         "datatype"
       ]
@@ -566,7 +590,7 @@
     {
       "id": "BH.oM.Adapters.GSA.SurfaceProperties.FabricPanelProperty.SoapStress",
       "iri": "https://github.com/BHoM/GSA_Toolkit/blob/main/GSA_oM/SurfaceProperties/FabricPanelProperty.cs#L49",
-      "label": "SoapStress(BH.oM.Adapters.GSA.SurfaceProperties.FabricPanelProperty.SoapStress)",
+      "label": "SoapStress (BH.oM.Adapters.GSA.SurfaceProperties.FabricPanelProperty.SoapStress)",
       "attributes": [],
       "comment": {
         "undefined": "Soap stress property if applicable."
@@ -627,7 +651,7 @@
     {
       "id": "BH.oM.Adapters.GSA.SpacerProperties.SpacerProperty.Name",
       "iri": "https://github.com/BHoM/GSA_Toolkit/blob/main/GSA_oM/SpacerProperties/SpacerProperty.cs#L39",
-      "label": "Name(BH.oM.Adapters.GSA.SpacerProperties.SpacerProperty.Name)",
+      "label": "Name (BH.oM.Adapters.GSA.SpacerProperties.SpacerProperty.Name)",
       "attributes": [
         "datatype"
       ]
@@ -635,7 +659,7 @@
     {
       "id": "BH.oM.Adapters.GSA.SpacerProperties.SpacerProperty.Type",
       "iri": "https://github.com/BHoM/GSA_Toolkit/blob/main/GSA_oM/SpacerProperties/SpacerProperty.cs#L42",
-      "label": "Type(BH.oM.Adapters.GSA.SpacerProperties.SpacerProperty.Type)",
+      "label": "Type (BH.oM.Adapters.GSA.SpacerProperties.SpacerProperty.Type)",
       "attributes": [],
       "comment": {
         "undefined": "The type of spacer."
@@ -644,7 +668,7 @@
     {
       "id": "BH.oM.Adapters.GSA.SpacerProperties.SpacerProperty.LengthType",
       "iri": "https://github.com/BHoM/GSA_Toolkit/blob/main/GSA_oM/SpacerProperties/SpacerProperty.cs#L45",
-      "label": "LengthType(BH.oM.Adapters.GSA.SpacerProperties.SpacerProperty.LengthType)",
+      "label": "LengthType (BH.oM.Adapters.GSA.SpacerProperties.SpacerProperty.LengthType)",
       "attributes": [],
       "comment": {
         "undefined": "The spacer leg length type."
@@ -653,7 +677,7 @@
     {
       "id": "BH.oM.Adapters.GSA.SpacerProperties.SpacerProperty.Stiffness",
       "iri": "https://github.com/BHoM/GSA_Toolkit/blob/main/GSA_oM/SpacerProperties/SpacerProperty.cs#L48",
-      "label": "Stiffness(BH.oM.Adapters.GSA.SpacerProperties.SpacerProperty.Stiffness)",
+      "label": "Stiffness (BH.oM.Adapters.GSA.SpacerProperties.SpacerProperty.Stiffness)",
       "attributes": [
         "datatype"
       ]
@@ -661,63 +685,63 @@
     {
       "id": "BH.oM.Adapters.GSA.SpacerProperties.SpacerProperty.Ratio",
       "iri": "https://github.com/BHoM/GSA_Toolkit/blob/main/GSA_oM/SpacerProperties/SpacerProperty.cs#L51",
-      "label": "Ratio(BH.oM.Adapters.GSA.SpacerProperties.SpacerProperty.Ratio)",
+      "label": "Ratio (BH.oM.Adapters.GSA.SpacerProperties.SpacerProperty.Ratio)",
       "attributes": [
         "datatype"
       ]
     },
     {
       "id": "BH.oM.Adapters.GSA.MaterialFragments.Fabric.Name",
-      "iri": "https://github.com/BHoM/GSA_Toolkit/blob/main/GSA_oM/MaterialFragments/Fabric.cs#L21",
-      "label": "Name(BH.oM.Adapters.GSA.MaterialFragments.Fabric.Name)",
+      "iri": "https://github.com/BHoM/GSA_Toolkit/blob/main/GSA_oM/MaterialFragments/Fabric.cs#L43",
+      "label": "Name (BH.oM.Adapters.GSA.MaterialFragments.Fabric.Name)",
       "attributes": [
         "datatype"
       ]
     },
     {
       "id": "BH.oM.Adapters.GSA.MaterialFragments.Fabric.Density",
-      "iri": "https://github.com/BHoM/GSA_Toolkit/blob/main/GSA_oM/MaterialFragments/Fabric.cs#L24",
-      "label": "Density(BH.oM.Adapters.GSA.MaterialFragments.Fabric.Density)",
+      "iri": "https://github.com/BHoM/GSA_Toolkit/blob/main/GSA_oM/MaterialFragments/Fabric.cs#L46",
+      "label": "Density (BH.oM.Adapters.GSA.MaterialFragments.Fabric.Density)",
       "attributes": [
         "datatype"
       ]
     },
     {
       "id": "BH.oM.Adapters.GSA.MaterialFragments.Fabric.DampingRatio",
-      "iri": "https://github.com/BHoM/GSA_Toolkit/blob/main/GSA_oM/MaterialFragments/Fabric.cs#L28",
-      "label": "DampingRatio(BH.oM.Adapters.GSA.MaterialFragments.Fabric.DampingRatio)",
+      "iri": "https://github.com/BHoM/GSA_Toolkit/blob/main/GSA_oM/MaterialFragments/Fabric.cs#L50",
+      "label": "DampingRatio (BH.oM.Adapters.GSA.MaterialFragments.Fabric.DampingRatio)",
       "attributes": [
         "datatype"
       ]
     },
     {
       "id": "BH.oM.Adapters.GSA.MaterialFragments.Fabric.PoissonsRatio",
-      "iri": "https://github.com/BHoM/GSA_Toolkit/blob/main/GSA_oM/MaterialFragments/Fabric.cs#L32",
-      "label": "PoissonsRatio(BH.oM.Adapters.GSA.MaterialFragments.Fabric.PoissonsRatio)",
+      "iri": "https://github.com/BHoM/GSA_Toolkit/blob/main/GSA_oM/MaterialFragments/Fabric.cs#L54",
+      "label": "PoissonsRatio (BH.oM.Adapters.GSA.MaterialFragments.Fabric.PoissonsRatio)",
       "attributes": [
         "datatype"
       ]
     },
     {
       "id": "BH.oM.Adapters.GSA.MaterialFragments.Fabric.WarpModulus",
-      "iri": "https://github.com/BHoM/GSA_Toolkit/blob/main/GSA_oM/MaterialFragments/Fabric.cs#L36",
-      "label": "WarpModulus(BH.oM.Adapters.GSA.MaterialFragments.Fabric.WarpModulus)",
+      "iri": "https://github.com/BHoM/GSA_Toolkit/blob/main/GSA_oM/MaterialFragments/Fabric.cs#L58",
+      "label": "WarpModulus (BH.oM.Adapters.GSA.MaterialFragments.Fabric.WarpModulus)",
       "attributes": [
         "datatype"
       ]
     },
     {
       "id": "BH.oM.Adapters.GSA.MaterialFragments.Fabric.WeftModulus",
-      "iri": "https://github.com/BHoM/GSA_Toolkit/blob/main/GSA_oM/MaterialFragments/Fabric.cs#L40",
-      "label": "WeftModulus(BH.oM.Adapters.GSA.MaterialFragments.Fabric.WeftModulus)",
+      "iri": "https://github.com/BHoM/GSA_Toolkit/blob/main/GSA_oM/MaterialFragments/Fabric.cs#L62",
+      "label": "WeftModulus (BH.oM.Adapters.GSA.MaterialFragments.Fabric.WeftModulus)",
       "attributes": [
         "datatype"
       ]
     },
     {
       "id": "BH.oM.Adapters.GSA.MaterialFragments.Fabric.ShearModulus",
-      "iri": "https://github.com/BHoM/GSA_Toolkit/blob/main/GSA_oM/MaterialFragments/Fabric.cs#L44",
-      "label": "ShearModulus(BH.oM.Adapters.GSA.MaterialFragments.Fabric.ShearModulus)",
+      "iri": "https://github.com/BHoM/GSA_Toolkit/blob/main/GSA_oM/MaterialFragments/Fabric.cs#L66",
+      "label": "ShearModulus (BH.oM.Adapters.GSA.MaterialFragments.Fabric.ShearModulus)",
       "attributes": [
         "datatype"
       ]
@@ -732,45 +756,22 @@
       ]
     },
     {
-      "id": "BH.oM.Adapters.GSA.Analysis.AnalysisStage.Elements",
-      "iri": "https://github.com/BHoM/GSA_Toolkit/blob/main/GSA_oM/Analysis/AnalysisStage.cs#L37",
-      "label": "Elements(BH.oM.Adapters.GSA.Analysis.AnalysisStage.Elements)",
+      "id": "BH.oM.Physical.Materials.IDensityProvider",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/Physical_oM/Materials/IDensityProvider.cs",
+      "label": "IDensityProvider (BH.oM.Physical.Materials)",
       "attributes": [
-        "datatype"
-      ]
-    },
-    {
-      "id": "BH.oM.Adapters.GSA.Analysis.AnalysisStage.Number",
-      "iri": "https://github.com/BHoM/GSA_Toolkit/blob/main/GSA_oM/Analysis/AnalysisStage.cs#L42",
-      "label": "Number(BH.oM.Adapters.GSA.Analysis.AnalysisStage.Number)",
-      "attributes": [
-        "datatype"
-      ]
-    },
-    {
-      "id": "BH.oM.Adapters.GSA.FormFindingProperties.SoapStress1D.Name",
-      "iri": "https://github.com/BHoM/GSA_Toolkit/blob/main/GSA_oM/FormFindingProperties/SoapStress1D.cs#L39",
-      "label": "Name(BH.oM.Adapters.GSA.FormFindingProperties.SoapStress1D.Name)",
-      "attributes": [
-        "datatype"
-      ]
-    },
-    {
-      "id": "BH.oM.Adapters.GSA.FormFindingProperties.SoapStress1D.Stress",
-      "iri": "https://github.com/BHoM/GSA_Toolkit/blob/main/GSA_oM/FormFindingProperties/SoapStress1D.cs#L42",
-      "label": "Stress(BH.oM.Adapters.GSA.FormFindingProperties.SoapStress1D.Stress)",
-      "attributes": [
-        "datatype"
-      ]
-    },
-    {
-      "id": "BH.oM.Adapters.GSA.Elements.Spacer.StartNode",
-      "iri": "https://github.com/BHoM/GSA_Toolkit/blob/main/GSA_oM/Elements/Spacer.cs#L40",
-      "label": "StartNode(BH.oM.Adapters.GSA.Elements.Spacer.StartNode)",
-      "attributes": [],
+        "object",
+        "external"
+      ],
       "comment": {
-        "undefined": "Defines the start position of the element. Note that Nodes can contain Supports which should not be confused with Releases."
+        "undefined": "Interface to be added to IMaterialProperties the specifies the density of the Material the proeprty is attached to."
       }
+    },
+    {
+      "id": "BH.oM.Adapters.GSA.Fragments.PanelBoundaryNodeFragment.ExternalNodes",
+      "iri": "https://github.com/BHoM/GSA_Toolkit/blob/main/GSA_oM/Fragments/PanelBoundaryNodeFragment.cs#L40",
+      "label": "ExternalNodes (BH.oM.Adapters.GSA.Fragments.PanelBoundaryNodeFragment.ExternalNodes)",
+      "attributes": []
     },
     {
       "id": "BH.oM.Structure.Elements.Node",
@@ -785,9 +786,58 @@
       }
     },
     {
+      "id": "BH.oM.Adapters.GSA.Fragments.PanelBoundaryNodeFragment.OpeningNodes",
+      "iri": "https://github.com/BHoM/GSA_Toolkit/blob/main/GSA_oM/Fragments/PanelBoundaryNodeFragment.cs#L42",
+      "label": "OpeningNodes (BH.oM.Adapters.GSA.Fragments.PanelBoundaryNodeFragment.OpeningNodes)",
+      "attributes": [
+        "datatype"
+      ]
+    },
+    {
+      "id": "BH.oM.Adapters.GSA.Analysis.AnalysisStage.Elements",
+      "iri": "https://github.com/BHoM/GSA_Toolkit/blob/main/GSA_oM/Analysis/AnalysisStage.cs#L37",
+      "label": "Elements (BH.oM.Adapters.GSA.Analysis.AnalysisStage.Elements)",
+      "attributes": [
+        "datatype"
+      ]
+    },
+    {
+      "id": "BH.oM.Adapters.GSA.Analysis.AnalysisStage.Number",
+      "iri": "https://github.com/BHoM/GSA_Toolkit/blob/main/GSA_oM/Analysis/AnalysisStage.cs#L42",
+      "label": "Number (BH.oM.Adapters.GSA.Analysis.AnalysisStage.Number)",
+      "attributes": [
+        "datatype"
+      ]
+    },
+    {
+      "id": "BH.oM.Adapters.GSA.FormFindingProperties.SoapStress1D.Name",
+      "iri": "https://github.com/BHoM/GSA_Toolkit/blob/main/GSA_oM/FormFindingProperties/SoapStress1D.cs#L39",
+      "label": "Name (BH.oM.Adapters.GSA.FormFindingProperties.SoapStress1D.Name)",
+      "attributes": [
+        "datatype"
+      ]
+    },
+    {
+      "id": "BH.oM.Adapters.GSA.FormFindingProperties.SoapStress1D.Stress",
+      "iri": "https://github.com/BHoM/GSA_Toolkit/blob/main/GSA_oM/FormFindingProperties/SoapStress1D.cs#L42",
+      "label": "Stress (BH.oM.Adapters.GSA.FormFindingProperties.SoapStress1D.Stress)",
+      "attributes": [
+        "datatype"
+      ]
+    },
+    {
+      "id": "BH.oM.Adapters.GSA.Elements.Spacer.StartNode",
+      "iri": "https://github.com/BHoM/GSA_Toolkit/blob/main/GSA_oM/Elements/Spacer.cs#L40",
+      "label": "StartNode (BH.oM.Adapters.GSA.Elements.Spacer.StartNode)",
+      "attributes": [],
+      "comment": {
+        "undefined": "Defines the start position of the element. Note that Nodes can contain Supports which should not be confused with Releases."
+      }
+    },
+    {
       "id": "BH.oM.Adapters.GSA.Elements.Spacer.EndNode",
       "iri": "https://github.com/BHoM/GSA_Toolkit/blob/main/GSA_oM/Elements/Spacer.cs#L43",
-      "label": "EndNode(BH.oM.Adapters.GSA.Elements.Spacer.EndNode)",
+      "label": "EndNode (BH.oM.Adapters.GSA.Elements.Spacer.EndNode)",
       "attributes": [],
       "comment": {
         "undefined": "Defines the end position of the element. Note that Nodes can contain Supports which should not be confused with Releases."
@@ -796,14 +846,14 @@
     {
       "id": "BH.oM.Adapters.GSA.Elements.Spacer.SpacerProperty",
       "iri": "https://github.com/BHoM/GSA_Toolkit/blob/main/GSA_oM/Elements/Spacer.cs#L46",
-      "label": "SpacerProperty(BH.oM.Adapters.GSA.Elements.Spacer.SpacerProperty)",
+      "label": "SpacerProperty (BH.oM.Adapters.GSA.Elements.Spacer.SpacerProperty)",
       "attributes": [],
       "comment": {
         "undefined": "Spacer property of the spacer, defining the spacer type."
       }
     },
     {
-      "id": "BH.oM.Analytical.Elements.ILink`1[[BH.oM.Structure.Elements.Node, Structure_oM, Version=5.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+      "id": "BH.oM.Analytical.Elements.ILink",
       "iri": "https://github.com/BHoM/BHoM/blob/main/Analytical_oM/Elements/ILink.cs",
       "label": "ILink<Node> (BH.oM.Analytical.Elements)",
       "attributes": [
@@ -1079,8 +1129,32 @@
       "type": "owl:ObjectProperty"
     },
     {
+      "id": "Fabric-IsA-IDensityProvider_2C833F3858668E744697F1BC3863D9A70F7BC9CC05AE17C8CC3A54547FF2506B",
+      "type": "owl:ObjectProperty"
+    },
+    {
       "id": "Fabric-IsSubclassOf-BHoMObject_DFEC340C7952CCC46D4E23F728178F5D4D4FC19FF06FB20116F7C02009E243A5",
       "type": "rdfs:subClassOf"
+    },
+    {
+      "id": "BH.oM.Adapters.GSA.Fragments.PanelBoundaryNodeFragment-HasProperty-BH.oM.Adapters.GSA.Fragments.PanelBoundaryNodeFragment.ExternalNodes",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "BH.oM.Adapters.GSA.Fragments.PanelBoundaryNodeFragment.ExternalNodes-IsAListOf-BH.oM.Structure.Elements.Node",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "PanelBoundaryNodeFragment-HasProperty-OpeningNodes_F2C5ED550023906E670F36A3C237AAE4DB03FFF11E631A64E3F1CA27506B2C84",
+      "type": "owl:DatatypeProperty"
+    },
+    {
+      "id": "PanelBoundaryNodeFragment-IsA-IFragment_89EE5BD33D4CD250E69423F69E1258B5E5A4235F5A76C117D90D589409766051",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "PanelBoundaryNodeFragment-IsA-IObject_999EF8D9CB759861AA9D007EEB7E34D07DB7DB9C5CEEA2DA24E315BEE4360C82",
+      "type": "owl:ObjectProperty"
     },
     {
       "id": "AnalysisStage-HasProperty-Elements_0BE71B832750055DF5AB1D188D1465D7F8D82969FF1F6ECFEE163C85396BA700",
@@ -1182,7 +1256,7 @@
   "propertyAttribute": [
     {
       "id": "DummyTag-HasProperty-IsDummy_C4ADF57493EE0D848E611E560369AC296F35EEB836BABA003046955C26C08564",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/HasProperty.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/HasProperty.cs",
       "label": "HasProperty",
       "attributes": [
         "datatype"
@@ -1192,7 +1266,7 @@
     },
     {
       "id": "DummyTag-IsA-IFragment_664F59DEF9EC88A67FCB49528FFA5289B70EC20A40E0DE965CD2E17073DBB6FF",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/IsA.cs",
       "label": "IsA",
       "attributes": [
         "object"
@@ -1205,7 +1279,7 @@
     },
     {
       "id": "DummyTag-IsA-IObject_B446902AD8147A832D0FAEB55FF67AE67D2C0797BE33F55B70E3F0673F0F760F",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/IsA.cs",
       "label": "IsA",
       "attributes": [
         "object"
@@ -1218,7 +1292,7 @@
     },
     {
       "id": "GSAId-HasProperty-Id_21D9C17850CC20D1438B8AF078E484FF33B333D6DD22EE85050C3640C74709EF",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/HasProperty.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/HasProperty.cs",
       "label": "HasProperty",
       "attributes": [
         "datatype"
@@ -1228,7 +1302,7 @@
     },
     {
       "id": "GSAId-IsA-IAdapterId_815BA80B3536E26FFC186D1EF411FC5813D525CE604776171AE03133A98028BF",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/IsA.cs",
       "label": "IsA",
       "attributes": [
         "object"
@@ -1241,7 +1315,7 @@
     },
     {
       "id": "GSAId-IsA-IFragment_064291C855B0985AD096E6E9408C9C965132FA4E4CD67F006861C4AAB7224D0E",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/IsA.cs",
       "label": "IsA",
       "attributes": [
         "object"
@@ -1254,7 +1328,7 @@
     },
     {
       "id": "GSAId-IsA-IObject_66969D242DDB5393C9E421011533C0467670411DC2CE4DED1805F63B6213C02A",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/IsA.cs",
       "label": "IsA",
       "attributes": [
         "object"
@@ -1267,7 +1341,7 @@
     },
     {
       "id": "BH.oM.Adapters.GSA.AnalysisTaskFragment-HasProperty-BH.oM.Adapters.GSA.AnalysisTaskFragment.AnalysisType",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/HasProperty.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/HasProperty.cs",
       "label": "HasProperty",
       "attributes": [
         "object"
@@ -1277,7 +1351,7 @@
     },
     {
       "id": "BH.oM.Adapters.GSA.AnalysisTaskFragment.AnalysisType-IsA-BH.oM.Adapters.GSA.AnalysisType",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/IsA.cs",
       "label": "IsA",
       "attributes": [
         "object"
@@ -1287,7 +1361,7 @@
     },
     {
       "id": "AnalysisTaskFragment-HasProperty-Stage_86ECB12A62C8F502550B731333C061DDE5FE8F1E446A06DB5BFFD2EE0A39895A",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/HasProperty.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/HasProperty.cs",
       "label": "HasProperty",
       "attributes": [
         "datatype"
@@ -1297,7 +1371,7 @@
     },
     {
       "id": "AnalysisTaskFragment-HasProperty-ResidualForce_69CE5F8E37469E8A10C6634A5B34DD2C6BAFA6618E1BBA62B55991CD3A04DEB7",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/HasProperty.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/HasProperty.cs",
       "label": "HasProperty",
       "attributes": [
         "datatype"
@@ -1307,7 +1381,7 @@
     },
     {
       "id": "AnalysisTaskFragment-HasProperty-ResidualMoment_C8AB3B91B8707FAE2A25129A17EE7C68AC6A119B02BA1E61EA992179A8F7F24E",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/HasProperty.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/HasProperty.cs",
       "label": "HasProperty",
       "attributes": [
         "datatype"
@@ -1317,7 +1391,7 @@
     },
     {
       "id": "AnalysisTaskFragment-HasProperty-BeamSlendernessEffect_AFB6D0DF958D6F431F0F186A04ADD2A36BF3FFDBC3AEA2664A36FC26AAB940D0",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/HasProperty.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/HasProperty.cs",
       "label": "HasProperty",
       "attributes": [
         "datatype"
@@ -1327,7 +1401,7 @@
     },
     {
       "id": "AnalysisTaskFragment-IsA-IFragment_C13679E3796E80EC14252F4C9BF291EC0BE6B15EA7EE56B41E4B0B0288FF011E",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/IsA.cs",
       "label": "IsA",
       "attributes": [
         "object"
@@ -1340,7 +1414,7 @@
     },
     {
       "id": "AnalysisTaskFragment-IsA-IObject_F017B4626C9FF614DAEE26053ADDB7253E2673FA74E62AA201A3BDE937138361",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/IsA.cs",
       "label": "IsA",
       "attributes": [
         "object"
@@ -1353,7 +1427,7 @@
     },
     {
       "id": "BH.oM.Adapters.GSA.GSAConfig-HasProperty-BH.oM.Adapters.GSA.GSAConfig.SteelDesign",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/HasProperty.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/HasProperty.cs",
       "label": "HasProperty",
       "attributes": [
         "object"
@@ -1363,7 +1437,7 @@
     },
     {
       "id": "BH.oM.Adapters.GSA.GSAConfig.SteelDesign-IsA-BH.oM.Adapters.GSA.SteelDesignSpecification",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/IsA.cs",
       "label": "IsA",
       "attributes": [
         "object"
@@ -1373,7 +1447,7 @@
     },
     {
       "id": "BH.oM.Adapters.GSA.GSAConfig-HasProperty-BH.oM.Adapters.GSA.GSAConfig.ConcreteDesign",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/HasProperty.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/HasProperty.cs",
       "label": "HasProperty",
       "attributes": [
         "object"
@@ -1383,7 +1457,7 @@
     },
     {
       "id": "BH.oM.Adapters.GSA.GSAConfig.ConcreteDesign-IsA-BH.oM.Adapters.GSA.ConcreteDesignSpecification",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/IsA.cs",
       "label": "IsA",
       "attributes": [
         "object"
@@ -1393,7 +1467,7 @@
     },
     {
       "id": "BH.oM.Adapters.GSA.GSAConfig-HasProperty-BH.oM.Adapters.GSA.GSAConfig.Country",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/HasProperty.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/HasProperty.cs",
       "label": "HasProperty",
       "attributes": [
         "object"
@@ -1403,7 +1477,7 @@
     },
     {
       "id": "BH.oM.Adapters.GSA.GSAConfig.Country-IsA-BH.oM.Adapters.GSA.Country",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/IsA.cs",
       "label": "IsA",
       "attributes": [
         "object"
@@ -1413,7 +1487,7 @@
     },
     {
       "id": "GSAConfig-IsA-IObject_0C6FB8A8F73CD55B9F057B54E5DFFFD1B16AB33F73A462C46EF20C559A5FC736",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/IsA.cs",
       "label": "IsA",
       "attributes": [
         "object"
@@ -1426,7 +1500,7 @@
     },
     {
       "id": "GSAConfig-IsSubclassOf-ActionConfig_A8605FDF55BC7C82A5D80D69066566BCA6E1AF338D031EC05304839ECCCBDF84",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsSubclassOf.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/IsSubclassOf.cs",
       "label": "IsA",
       "attributes": [
         "object"
@@ -1436,7 +1510,7 @@
     },
     {
       "id": "FabricPanelProperty-HasProperty-Name_E1D28489CCDE32D23B3CEA587F0D7D866B457B1D627C95C1A23DEC808E2D02CA",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/HasProperty.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/HasProperty.cs",
       "label": "HasProperty",
       "attributes": [
         "datatype"
@@ -1446,7 +1520,7 @@
     },
     {
       "id": "BH.oM.Adapters.GSA.SurfaceProperties.FabricPanelProperty-HasProperty-BH.oM.Adapters.GSA.SurfaceProperties.FabricPanelProperty.Material",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/HasProperty.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/HasProperty.cs",
       "label": "HasProperty",
       "attributes": [
         "object"
@@ -1456,7 +1530,7 @@
     },
     {
       "id": "BH.oM.Adapters.GSA.SurfaceProperties.FabricPanelProperty.Material-IsA-BH.oM.Structure.MaterialFragments.IMaterialFragment",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/IsA.cs",
       "label": "IsA",
       "attributes": [
         "object"
@@ -1466,7 +1540,7 @@
     },
     {
       "id": "FabricPanelProperty-HasProperty-AdditionalMass_BFCFCA4A65F6ADCCD27D89365F8C3161FCE438019C29678442E154C9FDF2B40A",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/HasProperty.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/HasProperty.cs",
       "label": "HasProperty",
       "attributes": [
         "datatype"
@@ -1476,7 +1550,7 @@
     },
     {
       "id": "BH.oM.Adapters.GSA.SurfaceProperties.FabricPanelProperty-HasProperty-BH.oM.Adapters.GSA.SurfaceProperties.FabricPanelProperty.SoapStress",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/HasProperty.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/HasProperty.cs",
       "label": "HasProperty",
       "attributes": [
         "object"
@@ -1486,7 +1560,7 @@
     },
     {
       "id": "BH.oM.Adapters.GSA.SurfaceProperties.FabricPanelProperty.SoapStress-IsA-BH.oM.Adapters.GSA.FormFindingProperties.SoapStress2D",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/IsA.cs",
       "label": "IsA",
       "attributes": [
         "object"
@@ -1496,7 +1570,7 @@
     },
     {
       "id": "FabricPanelProperty-IsA-IBHoMObject_0D8AA47AF03E78C1625961055590C5F1A8A3541EF704A87AA584571DA5F6FE82",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/IsA.cs",
       "label": "IsA",
       "attributes": [
         "object"
@@ -1509,7 +1583,7 @@
     },
     {
       "id": "FabricPanelProperty-IsA-IObject_C5E2896124F96A61EE92F00CB11734600631D61B2C6C07B331A2B5FD7B65EA98",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/IsA.cs",
       "label": "IsA",
       "attributes": [
         "object"
@@ -1522,7 +1596,7 @@
     },
     {
       "id": "FabricPanelProperty-IsA-ISurfaceProperty_27AB9362DAFABCEBADCF79D70ACC434D1DE37361685560D19E8FC7EB9FC388EE",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/IsA.cs",
       "label": "IsA",
       "attributes": [
         "object"
@@ -1535,7 +1609,7 @@
     },
     {
       "id": "FabricPanelProperty-IsA-IProperty_94B02F0CB5A393F8EE230E40FE37982D0737D02535DDADD5FFCD9209D096EA4A",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/IsA.cs",
       "label": "IsA",
       "attributes": [
         "object"
@@ -1548,7 +1622,7 @@
     },
     {
       "id": "FabricPanelProperty-IsSubclassOf-BHoMObject_10B8576127224A74D8B8528D992EAB388B3DEB7636C9623B54422EB85DE96BD7",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsSubclassOf.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/IsSubclassOf.cs",
       "label": "IsA",
       "attributes": [
         "object"
@@ -1558,7 +1632,7 @@
     },
     {
       "id": "SpacerProperty-HasProperty-Name_AB3788A29246C92330175CA0B0200C7719CF67C21272B25F8C0C077FE451B2C1",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/HasProperty.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/HasProperty.cs",
       "label": "HasProperty",
       "attributes": [
         "datatype"
@@ -1568,7 +1642,7 @@
     },
     {
       "id": "BH.oM.Adapters.GSA.SpacerProperties.SpacerProperty-HasProperty-BH.oM.Adapters.GSA.SpacerProperties.SpacerProperty.Type",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/HasProperty.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/HasProperty.cs",
       "label": "HasProperty",
       "attributes": [
         "object"
@@ -1578,7 +1652,7 @@
     },
     {
       "id": "BH.oM.Adapters.GSA.SpacerProperties.SpacerProperty.Type-IsA-BH.oM.Adapters.GSA.SpacerType",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/IsA.cs",
       "label": "IsA",
       "attributes": [
         "object"
@@ -1588,7 +1662,7 @@
     },
     {
       "id": "BH.oM.Adapters.GSA.SpacerProperties.SpacerProperty-HasProperty-BH.oM.Adapters.GSA.SpacerProperties.SpacerProperty.LengthType",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/HasProperty.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/HasProperty.cs",
       "label": "HasProperty",
       "attributes": [
         "object"
@@ -1598,7 +1672,7 @@
     },
     {
       "id": "BH.oM.Adapters.GSA.SpacerProperties.SpacerProperty.LengthType-IsA-BH.oM.Adapters.GSA.SpacerLengthType",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/IsA.cs",
       "label": "IsA",
       "attributes": [
         "object"
@@ -1608,7 +1682,7 @@
     },
     {
       "id": "SpacerProperty-HasProperty-Stiffness_69974B6E7251A47367BFEAE70C74D2A5B041FCF957ED352DC162B1DB1A0FA8FC",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/HasProperty.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/HasProperty.cs",
       "label": "HasProperty",
       "attributes": [
         "datatype"
@@ -1618,7 +1692,7 @@
     },
     {
       "id": "SpacerProperty-HasProperty-Ratio_3E392C682FAAEAD47CA71F328F0C3D6B1D8461909015CD2FE66214D93B0DCA26",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/HasProperty.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/HasProperty.cs",
       "label": "HasProperty",
       "attributes": [
         "datatype"
@@ -1628,7 +1702,7 @@
     },
     {
       "id": "SpacerProperty-IsA-IBHoMObject_45FF02B38A35D9F5437D3E2D129C7A9832EEBDACF99C027C6518F65EB8218A68",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/IsA.cs",
       "label": "IsA",
       "attributes": [
         "object"
@@ -1641,7 +1715,7 @@
     },
     {
       "id": "SpacerProperty-IsA-IObject_EC21637D873108CB78B1F49B18FC45B390B7452E664315933FDF2625AF94C673",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/IsA.cs",
       "label": "IsA",
       "attributes": [
         "object"
@@ -1654,7 +1728,7 @@
     },
     {
       "id": "SpacerProperty-IsA-IProperty_8E70EBE2C89FDE4D9DD363E6510E7CAA5993174BE517086DB04BBDD77163D457",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/IsA.cs",
       "label": "IsA",
       "attributes": [
         "object"
@@ -1667,7 +1741,7 @@
     },
     {
       "id": "SpacerProperty-IsSubclassOf-BHoMObject_7C76A9A9B901E899D893E8606CA1195BAA5370CC5A2C155C78D6E1E2A96EAE9E",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsSubclassOf.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/IsSubclassOf.cs",
       "label": "IsA",
       "attributes": [
         "object"
@@ -1677,7 +1751,7 @@
     },
     {
       "id": "Fabric-HasProperty-Name_FA47049B136CA45D6ABE38D15671943D8A9163696781E1B740E432AA7D59F8E6",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/HasProperty.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/HasProperty.cs",
       "label": "HasProperty",
       "attributes": [
         "datatype"
@@ -1687,7 +1761,7 @@
     },
     {
       "id": "Fabric-HasProperty-Density_9AB28EA8A896F1BA6BD29A5667CBF43C00948C31A3EEBD0E733681C40C41052E",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/HasProperty.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/HasProperty.cs",
       "label": "HasProperty",
       "attributes": [
         "datatype"
@@ -1697,7 +1771,7 @@
     },
     {
       "id": "Fabric-HasProperty-DampingRatio_4BF7BA00FA8530F65A2BA56B050C1843C5C65B65EE6AB8E681DD04C335D29A69",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/HasProperty.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/HasProperty.cs",
       "label": "HasProperty",
       "attributes": [
         "datatype"
@@ -1707,7 +1781,7 @@
     },
     {
       "id": "Fabric-HasProperty-PoissonsRatio_86A3349C21507C6837DDE0ED6A1F0FA6AAD70572B0C03CF47719D8BCF5FCC2DB",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/HasProperty.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/HasProperty.cs",
       "label": "HasProperty",
       "attributes": [
         "datatype"
@@ -1717,7 +1791,7 @@
     },
     {
       "id": "Fabric-HasProperty-WarpModulus_6209BED73CE8C28652733C62E9DDE50A47302A813D3B5BF51D7DA8E8E52DB891",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/HasProperty.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/HasProperty.cs",
       "label": "HasProperty",
       "attributes": [
         "datatype"
@@ -1727,7 +1801,7 @@
     },
     {
       "id": "Fabric-HasProperty-WeftModulus_5C3C18890F7ADCF287688D4F3EEC92492B8486653B78DB78D73BBDC9E81AE381",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/HasProperty.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/HasProperty.cs",
       "label": "HasProperty",
       "attributes": [
         "datatype"
@@ -1737,7 +1811,7 @@
     },
     {
       "id": "Fabric-HasProperty-ShearModulus_384FC1E94905B660B7FBCFA1434999397CAFA565E9EE61847383D28521957CAD",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/HasProperty.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/HasProperty.cs",
       "label": "HasProperty",
       "attributes": [
         "datatype"
@@ -1747,7 +1821,7 @@
     },
     {
       "id": "Fabric-IsA-IBHoMObject_09BD53F1DCDB985926880CC9B45D581E9E57D2136D7A6E92CA61658868273B34",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/IsA.cs",
       "label": "IsA",
       "attributes": [
         "object"
@@ -1760,7 +1834,7 @@
     },
     {
       "id": "Fabric-IsA-IObject_CAAD1D9E5B2343D4AFA95CD0AA0C8043CBA15F32DCBED86DFC6CE2C71364A970",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/IsA.cs",
       "label": "IsA",
       "attributes": [
         "object"
@@ -1773,7 +1847,7 @@
     },
     {
       "id": "Fabric-IsA-IMaterialFragment_C34F1C30AAFA11D08E72FABADC1F09EFE612F5F6A0F80393B849CC056DA07D6D",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/IsA.cs",
       "label": "IsA",
       "attributes": [
         "object"
@@ -1786,7 +1860,7 @@
     },
     {
       "id": "Fabric-IsA-IFragment_D5674D9BECBC7410F16D5352F7507E13C22851EC03877710065E389D4579AC2B",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/IsA.cs",
       "label": "IsA",
       "attributes": [
         "object"
@@ -1799,7 +1873,7 @@
     },
     {
       "id": "Fabric-IsA-IMaterialProperties_F09F95D7F8AC052EC51FC45E92CA5BC69A621C98AAD5E5B4D8BF9350F7A0296A",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/IsA.cs",
       "label": "IsA",
       "attributes": [
         "object"
@@ -1812,7 +1886,7 @@
     },
     {
       "id": "Fabric-IsA-IProperty_A90752AA1B7129A791949984D4B7C63C0195B10386A25F7CDD3AEE56E465144B",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/IsA.cs",
       "label": "IsA",
       "attributes": [
         "object"
@@ -1824,8 +1898,21 @@
       "range": "BH.oM.Structure.IProperty"
     },
     {
+      "id": "Fabric-IsA-IDensityProvider_2C833F3858668E744697F1BC3863D9A70F7BC9CC05AE17C8CC3A54547FF2506B",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/IsA.cs",
+      "label": "IsA",
+      "attributes": [
+        "object"
+      ],
+      "comment": {
+        "undefined": "Can be used to describe that a thing belongs to a class; or that a thing is equivalent to another thing. When used for BHoM types, this describes C# interface implementation."
+      },
+      "domain": "BH.oM.Adapters.GSA.MaterialFragments.Fabric",
+      "range": "BH.oM.Physical.Materials.IDensityProvider"
+    },
+    {
       "id": "Fabric-IsSubclassOf-BHoMObject_DFEC340C7952CCC46D4E23F728178F5D4D4FC19FF06FB20116F7C02009E243A5",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsSubclassOf.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/IsSubclassOf.cs",
       "label": "IsA",
       "attributes": [
         "object"
@@ -1834,8 +1921,64 @@
       "range": "BH.oM.Base.BHoMObject"
     },
     {
+      "id": "BH.oM.Adapters.GSA.Fragments.PanelBoundaryNodeFragment-HasProperty-BH.oM.Adapters.GSA.Fragments.PanelBoundaryNodeFragment.ExternalNodes",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/HasProperty.cs",
+      "label": "HasProperty",
+      "attributes": [
+        "object"
+      ],
+      "domain": "BH.oM.Adapters.GSA.Fragments.PanelBoundaryNodeFragment",
+      "range": "BH.oM.Adapters.GSA.Fragments.PanelBoundaryNodeFragment.ExternalNodes"
+    },
+    {
+      "id": "BH.oM.Adapters.GSA.Fragments.PanelBoundaryNodeFragment.ExternalNodes-IsAListOf-BH.oM.Structure.Elements.Node",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/IsAListOf.cs",
+      "label": "IsAListOf",
+      "attributes": [
+        "object"
+      ],
+      "domain": "BH.oM.Adapters.GSA.Fragments.PanelBoundaryNodeFragment.ExternalNodes",
+      "range": "BH.oM.Structure.Elements.Node"
+    },
+    {
+      "id": "PanelBoundaryNodeFragment-HasProperty-OpeningNodes_F2C5ED550023906E670F36A3C237AAE4DB03FFF11E631A64E3F1CA27506B2C84",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/HasProperty.cs",
+      "label": "HasProperty",
+      "attributes": [
+        "datatype"
+      ],
+      "domain": "BH.oM.Adapters.GSA.Fragments.PanelBoundaryNodeFragment",
+      "range": "BH.oM.Adapters.GSA.Fragments.PanelBoundaryNodeFragment.OpeningNodes"
+    },
+    {
+      "id": "PanelBoundaryNodeFragment-IsA-IFragment_89EE5BD33D4CD250E69423F69E1258B5E5A4235F5A76C117D90D589409766051",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/IsA.cs",
+      "label": "IsA",
+      "attributes": [
+        "object"
+      ],
+      "comment": {
+        "undefined": "Can be used to describe that a thing belongs to a class; or that a thing is equivalent to another thing. When used for BHoM types, this describes C# interface implementation."
+      },
+      "domain": "BH.oM.Adapters.GSA.Fragments.PanelBoundaryNodeFragment",
+      "range": "BH.oM.Base.IFragment"
+    },
+    {
+      "id": "PanelBoundaryNodeFragment-IsA-IObject_999EF8D9CB759861AA9D007EEB7E34D07DB7DB9C5CEEA2DA24E315BEE4360C82",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/IsA.cs",
+      "label": "IsA",
+      "attributes": [
+        "object"
+      ],
+      "comment": {
+        "undefined": "Can be used to describe that a thing belongs to a class; or that a thing is equivalent to another thing. When used for BHoM types, this describes C# interface implementation."
+      },
+      "domain": "BH.oM.Adapters.GSA.Fragments.PanelBoundaryNodeFragment",
+      "range": "BH.oM.Base.IObject"
+    },
+    {
       "id": "AnalysisStage-HasProperty-Elements_0BE71B832750055DF5AB1D188D1465D7F8D82969FF1F6ECFEE163C85396BA700",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/HasProperty.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/HasProperty.cs",
       "label": "HasProperty",
       "attributes": [
         "datatype"
@@ -1845,7 +1988,7 @@
     },
     {
       "id": "AnalysisStage-HasProperty-Number_CA658AE0B83721E2C4990A41F273A273B77CC7AAA705F8C1303A743FDAF381FC",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/HasProperty.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/HasProperty.cs",
       "label": "HasProperty",
       "attributes": [
         "datatype"
@@ -1855,7 +1998,7 @@
     },
     {
       "id": "AnalysisStage-IsA-IBHoMObject_80C55E1DC3DE627C0B681391A87BECAD65574A465D1BA99C0875BDC8AAD5158E",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/IsA.cs",
       "label": "IsA",
       "attributes": [
         "object"
@@ -1868,7 +2011,7 @@
     },
     {
       "id": "AnalysisStage-IsA-IObject_AE4550B22FDC7569684FCFD1AA11DB80632CBC6474A75D6EC0B7DDFCB3409EA7",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/IsA.cs",
       "label": "IsA",
       "attributes": [
         "object"
@@ -1881,7 +2024,7 @@
     },
     {
       "id": "AnalysisStage-IsSubclassOf-BHoMObject_16BBC4DE95B8074DC14C1BDE6A4C7F289453020DC4749306F2D07B84901A02D4",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsSubclassOf.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/IsSubclassOf.cs",
       "label": "IsA",
       "attributes": [
         "object"
@@ -1891,7 +2034,7 @@
     },
     {
       "id": "SoapStress1D-HasProperty-Name_A3DB9AC7CF63599720193E147AEE30D8DDAF6A9A6C1C7D16EB4AE408BE5942E5",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/HasProperty.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/HasProperty.cs",
       "label": "HasProperty",
       "attributes": [
         "datatype"
@@ -1901,7 +2044,7 @@
     },
     {
       "id": "SoapStress1D-HasProperty-Stress_23DB91DE389347C69E3633FE61A9177AE5FF8F3C5B3CA65AF87C759123CF6709",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/HasProperty.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/HasProperty.cs",
       "label": "HasProperty",
       "attributes": [
         "datatype"
@@ -1911,7 +2054,7 @@
     },
     {
       "id": "SoapStress1D-IsA-IBHoMObject_E55E8F78BA0AABF304541D5D815C7796426CB176BC82EBEC77498B2C4DF5469A",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/IsA.cs",
       "label": "IsA",
       "attributes": [
         "object"
@@ -1924,7 +2067,7 @@
     },
     {
       "id": "SoapStress1D-IsA-IObject_AE883BED76C54CABB015432485491BE8F987D8FDB3215BC298C548589F0FA196",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/IsA.cs",
       "label": "IsA",
       "attributes": [
         "object"
@@ -1937,7 +2080,7 @@
     },
     {
       "id": "SoapStress1D-IsA-IProperty_BE11655812F33800325BA6B3104AE7AFE4123EF54D4F21A91E5F0B21B908537C",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/IsA.cs",
       "label": "IsA",
       "attributes": [
         "object"
@@ -1950,7 +2093,7 @@
     },
     {
       "id": "SoapStress1D-IsSubclassOf-BHoMObject_A092A68A2E7060ADC31AE844BEA89CD63A4A673081E0A809D7371EC304F2B228",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsSubclassOf.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/IsSubclassOf.cs",
       "label": "IsA",
       "attributes": [
         "object"
@@ -1960,7 +2103,7 @@
     },
     {
       "id": "BH.oM.Adapters.GSA.Elements.Spacer-HasProperty-BH.oM.Adapters.GSA.Elements.Spacer.StartNode",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/HasProperty.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/HasProperty.cs",
       "label": "HasProperty",
       "attributes": [
         "object"
@@ -1970,7 +2113,7 @@
     },
     {
       "id": "BH.oM.Adapters.GSA.Elements.Spacer.StartNode-IsA-BH.oM.Structure.Elements.Node",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/IsA.cs",
       "label": "IsA",
       "attributes": [
         "object"
@@ -1980,7 +2123,7 @@
     },
     {
       "id": "BH.oM.Adapters.GSA.Elements.Spacer-HasProperty-BH.oM.Adapters.GSA.Elements.Spacer.EndNode",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/HasProperty.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/HasProperty.cs",
       "label": "HasProperty",
       "attributes": [
         "object"
@@ -1990,7 +2133,7 @@
     },
     {
       "id": "BH.oM.Adapters.GSA.Elements.Spacer.EndNode-IsA-BH.oM.Structure.Elements.Node",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/IsA.cs",
       "label": "IsA",
       "attributes": [
         "object"
@@ -2000,7 +2143,7 @@
     },
     {
       "id": "BH.oM.Adapters.GSA.Elements.Spacer-HasProperty-BH.oM.Adapters.GSA.Elements.Spacer.SpacerProperty",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/HasProperty.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/HasProperty.cs",
       "label": "HasProperty",
       "attributes": [
         "object"
@@ -2010,7 +2153,7 @@
     },
     {
       "id": "BH.oM.Adapters.GSA.Elements.Spacer.SpacerProperty-IsA-BH.oM.Adapters.GSA.SpacerProperties.SpacerProperty",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/IsA.cs",
       "label": "IsA",
       "attributes": [
         "object"
@@ -2020,7 +2163,7 @@
     },
     {
       "id": "Spacer-IsA-IBHoMObject_D1F804EA895FB48B09AD99C5A424C3E89DF14BC0D324A1869198DF2EC685D48A",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/IsA.cs",
       "label": "IsA",
       "attributes": [
         "object"
@@ -2033,7 +2176,7 @@
     },
     {
       "id": "Spacer-IsA-IObject_0546A83B05DD304900B5CA42839D59CC8AB20E703F5D20940F6EA454807B10E0",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/IsA.cs",
       "label": "IsA",
       "attributes": [
         "object"
@@ -2046,7 +2189,7 @@
     },
     {
       "id": "Spacer-IsA-ILink`1_BAC00B05D560BE4324A6A2848BF2EA2A0E93C4E2C77D75FE346854C3F1E72D08",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/IsA.cs",
       "label": "IsA",
       "attributes": [
         "object"
@@ -2055,11 +2198,11 @@
         "undefined": "Can be used to describe that a thing belongs to a class; or that a thing is equivalent to another thing. When used for BHoM types, this describes C# interface implementation."
       },
       "domain": "BH.oM.Adapters.GSA.Elements.Spacer",
-      "range": "BH.oM.Analytical.Elements.ILink`1[[BH.oM.Structure.Elements.Node, Structure_oM, Version=5.0.0.0, Culture=neutral, PublicKeyToken=null]]"
+      "range": "BH.oM.Analytical.Elements.ILink"
     },
     {
       "id": "Spacer-IsA-IAnalytical_5CA5851C7A04464D0321A293B1BFCC01C9AEF2BC3DF29251130F3D47FAF8D0A8",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/IsA.cs",
       "label": "IsA",
       "attributes": [
         "object"
@@ -2072,7 +2215,7 @@
     },
     {
       "id": "Spacer-IsA-IElement1D_203C7841410CA1BD93A88E706A08D1129AAC61068A78D218D51BFA90E89F82F0",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/IsA.cs",
       "label": "IsA",
       "attributes": [
         "object"
@@ -2085,7 +2228,7 @@
     },
     {
       "id": "Spacer-IsA-IElement_07AA8C4CB98B3BB3E0B6D9A5E090878F2892BCF1AD7EAC176970615153BEA8BD",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/IsA.cs",
       "label": "IsA",
       "attributes": [
         "object"
@@ -2098,7 +2241,7 @@
     },
     {
       "id": "Spacer-IsSubclassOf-BHoMObject_7A2E7BF243806B3AB58F1C623712B2AB13D7C4E537E813E077E21C71FB5B8C65",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsSubclassOf.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/IsSubclassOf.cs",
       "label": "IsA",
       "attributes": [
         "object"

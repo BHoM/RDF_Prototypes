@@ -11,7 +11,15 @@
       "type": "owl:Class"
     },
     {
+      "id": "BH.oM.Physical.Reinforcement.IShapeCode",
+      "type": "owl:Class"
+    },
+    {
       "id": "BH.oM.Physical.Reinforcement.PrimaryReinforcingBar",
+      "type": "owl:Class"
+    },
+    {
+      "id": "BH.oM.Physical.Reinforcement.Reinforcement",
       "type": "owl:Class"
     },
     {
@@ -20,6 +28,14 @@
     },
     {
       "id": "BH.oM.Physical.Reinforcement.Stirrup",
+      "type": "owl:Class"
+    },
+    {
+      "id": "BH.oM.Physical.Reinforcement.BS8666.ShapeCode00",
+      "type": "owl:Class"
+    },
+    {
+      "id": "BH.oM.Physical.Materials.IDensityProvider",
       "type": "owl:Class"
     },
     {
@@ -32,6 +48,10 @@
     },
     {
       "id": "BH.oM.Physical.Materials.MaterialComposition",
+      "type": "owl:Class"
+    },
+    {
+      "id": "BH.oM.Physical.Materials.VolumetricMaterialTakeoff",
       "type": "owl:Class"
     },
     {
@@ -84,6 +104,10 @@
     },
     {
       "id": "BH.oM.Physical.Elements.ISurface",
+      "type": "owl:Class"
+    },
+    {
+      "id": "BH.oM.Physical.Elements.MeshElement",
       "type": "owl:Class"
     },
     {
@@ -151,6 +175,14 @@
       "type": "rdfs:Datatype"
     },
     {
+      "id": "BH.oM.Physical.Reinforcement.IShapeCode.Diameter",
+      "type": "rdfs:Datatype"
+    },
+    {
+      "id": "BH.oM.Physical.Reinforcement.IShapeCode.BendRadius",
+      "type": "rdfs:Datatype"
+    },
+    {
       "id": "BH.oM.Physical.Reinforcement.PrimaryReinforcingBar.CentreCurve",
       "type": "owl:Class"
     },
@@ -172,6 +204,18 @@
     },
     {
       "id": "BH.oM.Base.BHoMObject",
+      "type": "owl:Class"
+    },
+    {
+      "id": "BH.oM.Physical.Reinforcement.Reinforcement.CoordinateSystem",
+      "type": "owl:Class"
+    },
+    {
+      "id": "BH.oM.Geometry.CoordinateSystem.Cartesian",
+      "type": "owl:Class"
+    },
+    {
+      "id": "BH.oM.Physical.Reinforcement.Reinforcement.ShapeCode",
       "type": "owl:Class"
     },
     {
@@ -199,6 +243,30 @@
       "type": "owl:Class"
     },
     {
+      "id": "BH.oM.Physical.Reinforcement.BS8666.ShapeCode00.A",
+      "type": "owl:Class"
+    },
+    {
+      "id": "BH.oM.Physical.Reinforcement.BS8666.ShapeCode00.Diameter",
+      "type": "owl:Class"
+    },
+    {
+      "id": "BH.oM.Physical.Reinforcement.BS8666.ShapeCode00.BendRadius",
+      "type": "owl:Class"
+    },
+    {
+      "id": "BH.oM.Base.IImmutable",
+      "type": "owl:Class"
+    },
+    {
+      "id": "BH.oM.Physical.Materials.IDensityProvider.Density",
+      "type": "rdfs:Datatype"
+    },
+    {
+      "id": "BH.oM.Physical.Materials.Material.Density",
+      "type": "owl:Class"
+    },
+    {
       "id": "BH.oM.Physical.Materials.Material.Properties",
       "type": "owl:Class"
     },
@@ -211,7 +279,11 @@
       "type": "owl:Class"
     },
     {
-      "id": "BH.oM.Base.IImmutable",
+      "id": "BH.oM.Physical.Materials.VolumetricMaterialTakeoff.Materials",
+      "type": "owl:Class"
+    },
+    {
+      "id": "BH.oM.Physical.Materials.VolumetricMaterialTakeoff.Volumes",
       "type": "owl:Class"
     },
     {
@@ -347,6 +419,14 @@
       "type": "rdfs:Datatype"
     },
     {
+      "id": "BH.oM.Physical.Elements.MeshElement.Mesh",
+      "type": "owl:Class"
+    },
+    {
+      "id": "BH.oM.Geometry.Mesh",
+      "type": "owl:Class"
+    },
+    {
       "id": "BH.oM.Physical.Elements.Pile.Location",
       "type": "owl:Class"
     },
@@ -444,6 +524,17 @@
       }
     },
     {
+      "id": "BH.oM.Physical.Reinforcement.IShapeCode",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/Physical_oM/Reinforcement/IShapeCode.cs",
+      "label": "IShapeCode (BH.oM.Physical.Reinforcement)",
+      "attributes": [
+        "object"
+      ],
+      "comment": {
+        "undefined": "Base interface for all ShapeCode objects."
+      }
+    },
+    {
       "id": "BH.oM.Physical.Reinforcement.PrimaryReinforcingBar",
       "iri": "https://github.com/BHoM/BHoM/blob/main/Physical_oM/Reinforcement/PrimaryReinforcingBar.cs",
       "label": "PrimaryReinforcingBar (BH.oM.Physical.Reinforcement)",
@@ -452,6 +543,17 @@
       ],
       "comment": {
         "undefined": "Defining reinforcement running along the element."
+      }
+    },
+    {
+      "id": "BH.oM.Physical.Reinforcement.Reinforcement",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/Structure_oM/SectionProperties/Reinforcement/Deprecated/Reinforcement.cs",
+      "label": "Reinforcement (BH.oM.Physical.Reinforcement)",
+      "attributes": [
+        "object"
+      ],
+      "comment": {
+        "undefined": "The physical reinforcement object containing the ShapeCode(and it's parameters), the diameter and coodinate system. This can be used with a number of Engine methods suchas Centreline and Length."
       }
     },
     {
@@ -474,6 +576,28 @@
       }
     },
     {
+      "id": "BH.oM.Physical.Reinforcement.BS8666.ShapeCode00",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/Physical_oM/Reinforcement/BS8666/ShapeCode00.cs",
+      "label": "ShapeCode00 (BH.oM.Physical.Reinforcement.BS8666)",
+      "attributes": [
+        "object"
+      ],
+      "comment": {
+        "undefined": "A reinforcement bar with shape code 00 to BS 8666:2020 in the XY Plane centred on the Origin and the A parameter aligned with the X axis."
+      }
+    },
+    {
+      "id": "BH.oM.Physical.Materials.IDensityProvider",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/Physical_oM/Materials/IDensityProvider.cs",
+      "label": "IDensityProvider (BH.oM.Physical.Materials)",
+      "attributes": [
+        "object"
+      ],
+      "comment": {
+        "undefined": "Interface to be added to IMaterialProperties the specifies the density of the Material the proeprty is attached to."
+      }
+    },
+    {
       "id": "BH.oM.Physical.Materials.IMaterialProperties",
       "iri": "https://github.com/BHoM/BHoM/blob/main/Physical_oM/Materials/IMaterialProperties.cs",
       "label": "IMaterialProperties (BH.oM.Physical.Materials)",
@@ -487,7 +611,10 @@
       "label": "Material (BH.oM.Physical.Materials)",
       "attributes": [
         "object"
-      ]
+      ],
+      "comment": {
+        "undefined": "Physical material to be used for Takeoffs and asigned to Physical elements. Material is capable of storing discipline specific data in Properties."
+      }
     },
     {
       "id": "BH.oM.Physical.Materials.MaterialComposition",
@@ -498,6 +625,17 @@
       ],
       "comment": {
         "undefined": "Defines the make up of an object through a list of Materials as relative proportions of the total solid volume.\nThere must be the same number of items in both lists, assigning a single Ratio for each Material."
+      }
+    },
+    {
+      "id": "BH.oM.Physical.Materials.VolumetricMaterialTakeoff",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/Physical_oM/Materials/VolumetricMaterialTakeoff.cs",
+      "label": "VolumetricMaterialTakeoff (BH.oM.Physical.Materials)",
+      "attributes": [
+        "object"
+      ],
+      "comment": {
+        "undefined": "Defines the make up of an object through a list of Materials and their corresponding volumes.\nThere must be the same number of items in both lists, assigning a single Volume for each Material."
       }
     },
     {
@@ -605,6 +743,17 @@
       ]
     },
     {
+      "id": "BH.oM.Physical.Elements.MeshElement",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/Physical_oM/Elements/MeshElement.cs",
+      "label": "MeshElement (BH.oM.Physical.Elements)",
+      "attributes": [
+        "object"
+      ],
+      "comment": {
+        "undefined": "Object representing a physical element, defined by a geometrical mesh that represents that element in 3-dimensional space.\nCan commonly store properties and parameters in fragments corresponding to the software from which the element was extracted."
+      }
+    },
+    {
       "id": "BH.oM.Physical.Elements.Pile",
       "iri": "https://github.com/BHoM/BHoM/blob/main/Physical_oM/Elements/Pile.cs",
       "label": "Pile (BH.oM.Physical.Elements)",
@@ -708,7 +857,7 @@
     {
       "id": "BH.oM.Physical.Reinforcement.IReinforcingBar.CentreCurve",
       "iri": "https://github.com/BHoM/BHoM/blob/main/Physical_oM/Reinforcement/IReinforcingBar.cs#L45",
-      "label": "CentreCurve(BH.oM.Physical.Reinforcement.IReinforcingBar.CentreCurve)",
+      "label": "CentreCurve (BH.oM.Physical.Reinforcement.IReinforcingBar.CentreCurve)",
       "attributes": [
         "datatype"
       ]
@@ -716,7 +865,7 @@
     {
       "id": "BH.oM.Physical.Reinforcement.IReinforcingBar.Diameter",
       "iri": "https://github.com/BHoM/BHoM/blob/main/Physical_oM/Reinforcement/IReinforcingBar.cs#L48",
-      "label": "Diameter(BH.oM.Physical.Reinforcement.IReinforcingBar.Diameter)",
+      "label": "Diameter (BH.oM.Physical.Reinforcement.IReinforcingBar.Diameter)",
       "attributes": [
         "datatype"
       ]
@@ -724,7 +873,7 @@
     {
       "id": "BH.oM.Physical.Reinforcement.IReinforcingBar.Material",
       "iri": "https://github.com/BHoM/BHoM/blob/main/Physical_oM/Reinforcement/IReinforcingBar.cs#L50",
-      "label": "Material(BH.oM.Physical.Reinforcement.IReinforcingBar.Material)",
+      "label": "Material (BH.oM.Physical.Reinforcement.IReinforcingBar.Material)",
       "attributes": [
         "datatype"
       ]
@@ -732,7 +881,23 @@
     {
       "id": "BH.oM.Physical.Reinforcement.IReinforcingBar.BendRadius",
       "iri": "https://github.com/BHoM/BHoM/blob/main/Physical_oM/Reinforcement/IReinforcingBar.cs#L54",
-      "label": "BendRadius(BH.oM.Physical.Reinforcement.IReinforcingBar.BendRadius)",
+      "label": "BendRadius (BH.oM.Physical.Reinforcement.IReinforcingBar.BendRadius)",
+      "attributes": [
+        "datatype"
+      ]
+    },
+    {
+      "id": "BH.oM.Physical.Reinforcement.IShapeCode.Diameter",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/Physical_oM/Reinforcement/IShapeCode.cs",
+      "label": "Diameter (BH.oM.Physical.Reinforcement.IShapeCode.Diameter)",
+      "attributes": [
+        "datatype"
+      ]
+    },
+    {
+      "id": "BH.oM.Physical.Reinforcement.IShapeCode.BendRadius",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/Physical_oM/Reinforcement/IShapeCode.cs",
+      "label": "BendRadius (BH.oM.Physical.Reinforcement.IShapeCode.BendRadius)",
       "attributes": [
         "datatype"
       ]
@@ -740,7 +905,7 @@
     {
       "id": "BH.oM.Physical.Reinforcement.PrimaryReinforcingBar.CentreCurve",
       "iri": "https://github.com/BHoM/BHoM/blob/main/Physical_oM/Reinforcement/PrimaryReinforcingBar.cs#L40",
-      "label": "CentreCurve(BH.oM.Physical.Reinforcement.PrimaryReinforcingBar.CentreCurve)",
+      "label": "CentreCurve (BH.oM.Physical.Reinforcement.PrimaryReinforcingBar.CentreCurve)",
       "attributes": [],
       "comment": {
         "undefined": "Centreline of the Reinforcing bar in three-dimensional space. When the BendRadius is sufficient for any kinks in the rebar, this can be defined as a polyline, ommiting any arcs in corners."
@@ -761,7 +926,7 @@
     {
       "id": "BH.oM.Physical.Reinforcement.PrimaryReinforcingBar.Diameter",
       "iri": "https://github.com/BHoM/BHoM/blob/main/Physical_oM/Reinforcement/PrimaryReinforcingBar.cs#L43",
-      "label": "Diameter(BH.oM.Physical.Reinforcement.PrimaryReinforcingBar.Diameter)",
+      "label": "Diameter (BH.oM.Physical.Reinforcement.PrimaryReinforcingBar.Diameter)",
       "attributes": [
         "datatype"
       ]
@@ -769,13 +934,13 @@
     {
       "id": "BH.oM.Physical.Reinforcement.PrimaryReinforcingBar.Material",
       "iri": "https://github.com/BHoM/BHoM/blob/main/Physical_oM/Reinforcement/PrimaryReinforcingBar.cs#L45",
-      "label": "Material(BH.oM.Physical.Reinforcement.PrimaryReinforcingBar.Material)",
+      "label": "Material (BH.oM.Physical.Reinforcement.PrimaryReinforcingBar.Material)",
       "attributes": []
     },
     {
       "id": "BH.oM.Physical.Reinforcement.PrimaryReinforcingBar.BendRadius",
       "iri": "https://github.com/BHoM/BHoM/blob/main/Physical_oM/Reinforcement/PrimaryReinforcingBar.cs#L49",
-      "label": "BendRadius(BH.oM.Physical.Reinforcement.PrimaryReinforcingBar.BendRadius)",
+      "label": "BendRadius (BH.oM.Physical.Reinforcement.PrimaryReinforcingBar.BendRadius)",
       "attributes": [
         "datatype"
       ]
@@ -789,9 +954,39 @@
       ]
     },
     {
+      "id": "BH.oM.Physical.Reinforcement.Reinforcement.CoordinateSystem",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/Structure_oM/SectionProperties/Reinforcement/Deprecated/Reinforcement.cs",
+      "label": "CoordinateSystem (BH.oM.Physical.Reinforcement.Reinforcement.CoordinateSystem)",
+      "attributes": [],
+      "comment": {
+        "undefined": "Position and orientation of the Reinforcement in Space. Refer to the description of the shape codes for how they relate to the coordinate system."
+      }
+    },
+    {
+      "id": "BH.oM.Geometry.CoordinateSystem.Cartesian",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/Geometry_oM/CoordinateSystem/Cartesian.cs",
+      "label": "Cartesian (BH.oM.Geometry.CoordinateSystem)",
+      "attributes": [
+        "object",
+        "external"
+      ],
+      "comment": {
+        "undefined": "A three-dimensional Cartesian coordinate system, as defined by a set of mutually orthogonal unit vectors and a common origin point"
+      }
+    },
+    {
+      "id": "BH.oM.Physical.Reinforcement.Reinforcement.ShapeCode",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/Structure_oM/SectionProperties/Reinforcement/Deprecated/Reinforcement.cs",
+      "label": "ShapeCode (BH.oM.Physical.Reinforcement.Reinforcement.ShapeCode)",
+      "attributes": [],
+      "comment": {
+        "undefined": "The ShapeCode object containing the geometrical parameters of the reinforcement bar."
+      }
+    },
+    {
       "id": "BH.oM.Physical.Reinforcement.ReinforcementFragment.ReinforcingBars",
       "iri": "https://github.com/BHoM/BHoM/blob/main/Physical_oM/Reinforcement/ReinforcementFragment.cs#L35",
-      "label": "ReinforcingBars(BH.oM.Physical.Reinforcement.ReinforcementFragment.ReinforcingBars)",
+      "label": "ReinforcingBars (BH.oM.Physical.Reinforcement.ReinforcementFragment.ReinforcingBars)",
       "attributes": []
     },
     {
@@ -806,7 +1001,7 @@
     {
       "id": "BH.oM.Physical.Reinforcement.Stirrup.CentreCurve",
       "iri": "https://github.com/BHoM/BHoM/blob/main/Physical_oM/Reinforcement/Stirrup.cs#L40",
-      "label": "CentreCurve(BH.oM.Physical.Reinforcement.Stirrup.CentreCurve)",
+      "label": "CentreCurve (BH.oM.Physical.Reinforcement.Stirrup.CentreCurve)",
       "attributes": [],
       "comment": {
         "undefined": "Centreline of the Reinforcing bar in three-dimensional space. When the BendRadius is sufficient for any kinks in the rebar, this can be defined as a polyline, ommiting any arcs in corners."
@@ -815,7 +1010,7 @@
     {
       "id": "BH.oM.Physical.Reinforcement.Stirrup.Diameter",
       "iri": "https://github.com/BHoM/BHoM/blob/main/Physical_oM/Reinforcement/Stirrup.cs#L43",
-      "label": "Diameter(BH.oM.Physical.Reinforcement.Stirrup.Diameter)",
+      "label": "Diameter (BH.oM.Physical.Reinforcement.Stirrup.Diameter)",
       "attributes": [
         "datatype"
       ]
@@ -823,33 +1018,37 @@
     {
       "id": "BH.oM.Physical.Reinforcement.Stirrup.Material",
       "iri": "https://github.com/BHoM/BHoM/blob/main/Physical_oM/Reinforcement/Stirrup.cs#L45",
-      "label": "Material(BH.oM.Physical.Reinforcement.Stirrup.Material)",
+      "label": "Material (BH.oM.Physical.Reinforcement.Stirrup.Material)",
       "attributes": []
     },
     {
       "id": "BH.oM.Physical.Reinforcement.Stirrup.BendRadius",
       "iri": "https://github.com/BHoM/BHoM/blob/main/Physical_oM/Reinforcement/Stirrup.cs#L49",
-      "label": "BendRadius(BH.oM.Physical.Reinforcement.Stirrup.BendRadius)",
+      "label": "BendRadius (BH.oM.Physical.Reinforcement.Stirrup.BendRadius)",
       "attributes": [
         "datatype"
       ]
     },
     {
-      "id": "BH.oM.Physical.Materials.Material.Properties",
-      "iri": "https://github.com/BHoM/BHoM/blob/main/Physical_oM/Materials/Material.cs#L40",
-      "label": "Properties(BH.oM.Physical.Materials.Material.Properties)",
-      "attributes": []
+      "id": "BH.oM.Physical.Reinforcement.BS8666.ShapeCode00.A",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/Physical_oM/Reinforcement/BS8666/ShapeCode00.cs",
+      "label": "A (BH.oM.Physical.Reinforcement.BS8666.ShapeCode00.A)",
+      "attributes": [
+        "datatype"
+      ]
     },
     {
-      "id": "BH.oM.Physical.Materials.MaterialComposition.Materials",
-      "iri": "https://github.com/BHoM/BHoM/blob/main/Physical_oM/Materials/MaterialComposition.cs#L45",
-      "label": "Materials(BH.oM.Physical.Materials.MaterialComposition.Materials)",
-      "attributes": []
+      "id": "BH.oM.Physical.Reinforcement.BS8666.ShapeCode00.Diameter",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/Physical_oM/Reinforcement/BS8666/ShapeCode00.cs",
+      "label": "Diameter (BH.oM.Physical.Reinforcement.BS8666.ShapeCode00.Diameter)",
+      "attributes": [
+        "datatype"
+      ]
     },
     {
-      "id": "BH.oM.Physical.Materials.MaterialComposition.Ratios",
-      "iri": "https://github.com/BHoM/BHoM/blob/main/Physical_oM/Materials/MaterialComposition.cs#L49",
-      "label": "Ratios(BH.oM.Physical.Materials.MaterialComposition.Ratios)",
+      "id": "BH.oM.Physical.Reinforcement.BS8666.ShapeCode00.BendRadius",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/Physical_oM/Reinforcement/BS8666/ShapeCode00.cs",
+      "label": "BendRadius (BH.oM.Physical.Reinforcement.BS8666.ShapeCode00.BendRadius)",
       "attributes": [
         "datatype"
       ]
@@ -864,9 +1063,59 @@
       ]
     },
     {
+      "id": "BH.oM.Physical.Materials.IDensityProvider.Density",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/Physical_oM/Materials/IDensityProvider.cs#L43",
+      "label": "Density (BH.oM.Physical.Materials.IDensityProvider.Density)",
+      "attributes": [
+        "datatype"
+      ]
+    },
+    {
+      "id": "BH.oM.Physical.Materials.Material.Density",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/Physical_oM/Materials/Material.cs#L46",
+      "label": "Density (BH.oM.Physical.Materials.Material.Density)",
+      "attributes": [
+        "datatype"
+      ]
+    },
+    {
+      "id": "BH.oM.Physical.Materials.Material.Properties",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/Physical_oM/Materials/Material.cs#L49",
+      "label": "Properties (BH.oM.Physical.Materials.Material.Properties)",
+      "attributes": []
+    },
+    {
+      "id": "BH.oM.Physical.Materials.MaterialComposition.Materials",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/Physical_oM/Materials/MaterialComposition.cs#L45",
+      "label": "Materials (BH.oM.Physical.Materials.MaterialComposition.Materials)",
+      "attributes": []
+    },
+    {
+      "id": "BH.oM.Physical.Materials.MaterialComposition.Ratios",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/Physical_oM/Materials/MaterialComposition.cs#L49",
+      "label": "Ratios (BH.oM.Physical.Materials.MaterialComposition.Ratios)",
+      "attributes": [
+        "datatype"
+      ]
+    },
+    {
+      "id": "BH.oM.Physical.Materials.VolumetricMaterialTakeoff.Materials",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/Physical_oM/Materials/VolumetricMaterialTakeoff.cs#L41",
+      "label": "Materials (BH.oM.Physical.Materials.VolumetricMaterialTakeoff.Materials)",
+      "attributes": []
+    },
+    {
+      "id": "BH.oM.Physical.Materials.VolumetricMaterialTakeoff.Volumes",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/Physical_oM/Materials/VolumetricMaterialTakeoff.cs#L45",
+      "label": "Volumes (BH.oM.Physical.Materials.VolumetricMaterialTakeoff.Volumes)",
+      "attributes": [
+        "datatype"
+      ]
+    },
+    {
       "id": "BH.oM.Physical.FramingProperties.ConstantFramingProperty.Profile",
       "iri": "https://github.com/BHoM/BHoM/blob/main/Physical_oM/FramingProperties/ConstantFramingProperty.cs#L41",
-      "label": "Profile(BH.oM.Physical.FramingProperties.ConstantFramingProperty.Profile)",
+      "label": "Profile (BH.oM.Physical.FramingProperties.ConstantFramingProperty.Profile)",
       "attributes": []
     },
     {
@@ -884,13 +1133,13 @@
     {
       "id": "BH.oM.Physical.FramingProperties.ConstantFramingProperty.Material",
       "iri": "https://github.com/BHoM/BHoM/blob/main/Physical_oM/FramingProperties/ConstantFramingProperty.cs#L43",
-      "label": "Material(BH.oM.Physical.FramingProperties.ConstantFramingProperty.Material)",
+      "label": "Material (BH.oM.Physical.FramingProperties.ConstantFramingProperty.Material)",
       "attributes": []
     },
     {
       "id": "BH.oM.Physical.FramingProperties.ConstantFramingProperty.OrientationAngle",
       "iri": "https://github.com/BHoM/BHoM/blob/main/Physical_oM/FramingProperties/ConstantFramingProperty.cs#L45",
-      "label": "OrientationAngle(BH.oM.Physical.FramingProperties.ConstantFramingProperty.OrientationAngle)",
+      "label": "OrientationAngle (BH.oM.Physical.FramingProperties.ConstantFramingProperty.OrientationAngle)",
       "attributes": [
         "datatype"
       ]
@@ -898,13 +1147,13 @@
     {
       "id": "BH.oM.Physical.Elements.Beam.Location",
       "iri": "https://github.com/BHoM/BHoM/blob/main/Physical_oM/Elements/Beam.cs#L41",
-      "label": "Location(BH.oM.Physical.Elements.Beam.Location)",
+      "label": "Location (BH.oM.Physical.Elements.Beam.Location)",
       "attributes": []
     },
     {
       "id": "BH.oM.Physical.Elements.Beam.Property",
       "iri": "https://github.com/BHoM/BHoM/blob/main/Physical_oM/Elements/Beam.cs#L42",
-      "label": "Property(BH.oM.Physical.Elements.Beam.Property)",
+      "label": "Property (BH.oM.Physical.Elements.Beam.Property)",
       "attributes": []
     },
     {
@@ -946,43 +1195,43 @@
     {
       "id": "BH.oM.Physical.Elements.Bracing.Location",
       "iri": "https://github.com/BHoM/BHoM/blob/main/Physical_oM/Elements/Bracing.cs#L41",
-      "label": "Location(BH.oM.Physical.Elements.Bracing.Location)",
+      "label": "Location (BH.oM.Physical.Elements.Bracing.Location)",
       "attributes": []
     },
     {
       "id": "BH.oM.Physical.Elements.Bracing.Property",
       "iri": "https://github.com/BHoM/BHoM/blob/main/Physical_oM/Elements/Bracing.cs#L42",
-      "label": "Property(BH.oM.Physical.Elements.Bracing.Property)",
+      "label": "Property (BH.oM.Physical.Elements.Bracing.Property)",
       "attributes": []
     },
     {
       "id": "BH.oM.Physical.Elements.Cable.Location",
       "iri": "https://github.com/BHoM/BHoM/blob/main/Physical_oM/Elements/Cable.cs#L41",
-      "label": "Location(BH.oM.Physical.Elements.Cable.Location)",
+      "label": "Location (BH.oM.Physical.Elements.Cable.Location)",
       "attributes": []
     },
     {
       "id": "BH.oM.Physical.Elements.Cable.Property",
       "iri": "https://github.com/BHoM/BHoM/blob/main/Physical_oM/Elements/Cable.cs#L42",
-      "label": "Property(BH.oM.Physical.Elements.Cable.Property)",
+      "label": "Property (BH.oM.Physical.Elements.Cable.Property)",
       "attributes": []
     },
     {
       "id": "BH.oM.Physical.Elements.Column.Location",
       "iri": "https://github.com/BHoM/BHoM/blob/main/Physical_oM/Elements/Column.cs#L41",
-      "label": "Location(BH.oM.Physical.Elements.Column.Location)",
+      "label": "Location (BH.oM.Physical.Elements.Column.Location)",
       "attributes": []
     },
     {
       "id": "BH.oM.Physical.Elements.Column.Property",
       "iri": "https://github.com/BHoM/BHoM/blob/main/Physical_oM/Elements/Column.cs#L42",
-      "label": "Property(BH.oM.Physical.Elements.Column.Property)",
+      "label": "Property (BH.oM.Physical.Elements.Column.Property)",
       "attributes": []
     },
     {
       "id": "BH.oM.Physical.Elements.Door.Location",
       "iri": "https://github.com/BHoM/BHoM/blob/main/Physical_oM/Elements/Door.cs#L43",
-      "label": "Location(BH.oM.Physical.Elements.Door.Location)",
+      "label": "Location (BH.oM.Physical.Elements.Door.Location)",
       "attributes": []
     },
     {
@@ -1000,7 +1249,7 @@
     {
       "id": "BH.oM.Physical.Elements.Door.Construction",
       "iri": "https://github.com/BHoM/BHoM/blob/main/Physical_oM/Elements/Door.cs#L45",
-      "label": "Construction(BH.oM.Physical.Elements.Door.Construction)",
+      "label": "Construction (BH.oM.Physical.Elements.Door.Construction)",
       "attributes": []
     },
     {
@@ -1018,7 +1267,7 @@
     {
       "id": "BH.oM.Physical.Elements.ExplicitBulk.Volume",
       "iri": "https://github.com/BHoM/BHoM/blob/main/Physical_oM/Elements/ExplicitBulk.cs#L37",
-      "label": "Volume(BH.oM.Physical.Elements.ExplicitBulk.Volume)",
+      "label": "Volume (BH.oM.Physical.Elements.ExplicitBulk.Volume)",
       "attributes": [
         "datatype"
       ]
@@ -1026,37 +1275,37 @@
     {
       "id": "BH.oM.Physical.Elements.ExplicitBulk.MaterialComposition",
       "iri": "https://github.com/BHoM/BHoM/blob/main/Physical_oM/Elements/ExplicitBulk.cs#L38",
-      "label": "MaterialComposition(BH.oM.Physical.Elements.ExplicitBulk.MaterialComposition)",
+      "label": "MaterialComposition (BH.oM.Physical.Elements.ExplicitBulk.MaterialComposition)",
       "attributes": []
     },
     {
       "id": "BH.oM.Physical.Elements.Floor.Location",
       "iri": "https://github.com/BHoM/BHoM/blob/main/Physical_oM/Elements/Floor.cs#L40",
-      "label": "Location(BH.oM.Physical.Elements.Floor.Location)",
+      "label": "Location (BH.oM.Physical.Elements.Floor.Location)",
       "attributes": []
     },
     {
       "id": "BH.oM.Physical.Elements.Floor.Construction",
       "iri": "https://github.com/BHoM/BHoM/blob/main/Physical_oM/Elements/Floor.cs#L41",
-      "label": "Construction(BH.oM.Physical.Elements.Floor.Construction)",
+      "label": "Construction (BH.oM.Physical.Elements.Floor.Construction)",
       "attributes": []
     },
     {
       "id": "BH.oM.Physical.Elements.Floor.Openings",
       "iri": "https://github.com/BHoM/BHoM/blob/main/Physical_oM/Elements/Floor.cs#L42",
-      "label": "Openings(BH.oM.Physical.Elements.Floor.Openings)",
+      "label": "Openings (BH.oM.Physical.Elements.Floor.Openings)",
       "attributes": []
     },
     {
       "id": "BH.oM.Physical.Elements.Floor.Offset",
       "iri": "https://github.com/BHoM/BHoM/blob/main/Physical_oM/Elements/Floor.cs#L43",
-      "label": "Offset(BH.oM.Physical.Elements.Floor.Offset)",
+      "label": "Offset (BH.oM.Physical.Elements.Floor.Offset)",
       "attributes": []
     },
     {
       "id": "BH.oM.Physical.Elements.IFramingElement.Location",
       "iri": "https://github.com/BHoM/BHoM/blob/main/Physical_oM/Elements/IFramingElement.cs#L42",
-      "label": "Location(BH.oM.Physical.Elements.IFramingElement.Location)",
+      "label": "Location (BH.oM.Physical.Elements.IFramingElement.Location)",
       "attributes": [
         "datatype"
       ]
@@ -1064,7 +1313,7 @@
     {
       "id": "BH.oM.Physical.Elements.IFramingElement.Property",
       "iri": "https://github.com/BHoM/BHoM/blob/main/Physical_oM/Elements/IFramingElement.cs#L43",
-      "label": "Property(BH.oM.Physical.Elements.IFramingElement.Property)",
+      "label": "Property (BH.oM.Physical.Elements.IFramingElement.Property)",
       "attributes": [
         "datatype"
       ]
@@ -1072,7 +1321,7 @@
     {
       "id": "BH.oM.Physical.Elements.IOpening.Location",
       "iri": "https://github.com/BHoM/BHoM/blob/main/Physical_oM/Elements/IOpening.cs#L41",
-      "label": "Location(BH.oM.Physical.Elements.IOpening.Location)",
+      "label": "Location (BH.oM.Physical.Elements.IOpening.Location)",
       "attributes": [
         "datatype"
       ]
@@ -1080,7 +1329,7 @@
     {
       "id": "BH.oM.Physical.Elements.ISolid.Geometry",
       "iri": "https://github.com/BHoM/BHoM/blob/main/Physical_oM/Elements/ISolid.cs",
-      "label": "Geometry(BH.oM.Physical.Elements.ISolid.Geometry)",
+      "label": "Geometry (BH.oM.Physical.Elements.ISolid.Geometry)",
       "attributes": [
         "datatype"
       ]
@@ -1088,7 +1337,7 @@
     {
       "id": "BH.oM.Physical.Elements.ISurface.Location",
       "iri": "https://github.com/BHoM/BHoM/blob/main/Physical_oM/Elements/ISurface.cs#L43",
-      "label": "Location(BH.oM.Physical.Elements.ISurface.Location)",
+      "label": "Location (BH.oM.Physical.Elements.ISurface.Location)",
       "attributes": [
         "datatype"
       ]
@@ -1096,7 +1345,7 @@
     {
       "id": "BH.oM.Physical.Elements.ISurface.Construction",
       "iri": "https://github.com/BHoM/BHoM/blob/main/Physical_oM/Elements/ISurface.cs#L44",
-      "label": "Construction(BH.oM.Physical.Elements.ISurface.Construction)",
+      "label": "Construction (BH.oM.Physical.Elements.ISurface.Construction)",
       "attributes": [
         "datatype"
       ]
@@ -1104,7 +1353,7 @@
     {
       "id": "BH.oM.Physical.Elements.ISurface.Openings",
       "iri": "https://github.com/BHoM/BHoM/blob/main/Physical_oM/Elements/ISurface.cs#L45",
-      "label": "Openings(BH.oM.Physical.Elements.ISurface.Openings)",
+      "label": "Openings (BH.oM.Physical.Elements.ISurface.Openings)",
       "attributes": [
         "datatype"
       ]
@@ -1112,51 +1361,72 @@
     {
       "id": "BH.oM.Physical.Elements.ISurface.Offset",
       "iri": "https://github.com/BHoM/BHoM/blob/main/Physical_oM/Elements/ISurface.cs#L46",
-      "label": "Offset(BH.oM.Physical.Elements.ISurface.Offset)",
+      "label": "Offset (BH.oM.Physical.Elements.ISurface.Offset)",
       "attributes": [
         "datatype"
       ]
     },
     {
+      "id": "BH.oM.Physical.Elements.MeshElement.Mesh",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/Physical_oM/Elements/MeshElement.cs#L41",
+      "label": "Mesh (BH.oM.Physical.Elements.MeshElement.Mesh)",
+      "attributes": [],
+      "comment": {
+        "undefined": "Mesh defining the full 3-dimensional geometry of the element."
+      }
+    },
+    {
+      "id": "BH.oM.Geometry.Mesh",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/Geometry_oM/Mesh/Mesh.cs",
+      "label": "Mesh (BH.oM.Geometry)",
+      "attributes": [
+        "object",
+        "external"
+      ],
+      "comment": {
+        "undefined": "A polygon mesh, defined by a list of triangular or quadrilateral Faces and their Vertices."
+      }
+    },
+    {
       "id": "BH.oM.Physical.Elements.Pile.Location",
       "iri": "https://github.com/BHoM/BHoM/blob/main/Physical_oM/Elements/Pile.cs#L41",
-      "label": "Location(BH.oM.Physical.Elements.Pile.Location)",
+      "label": "Location (BH.oM.Physical.Elements.Pile.Location)",
       "attributes": []
     },
     {
       "id": "BH.oM.Physical.Elements.Pile.Property",
       "iri": "https://github.com/BHoM/BHoM/blob/main/Physical_oM/Elements/Pile.cs#L42",
-      "label": "Property(BH.oM.Physical.Elements.Pile.Property)",
+      "label": "Property (BH.oM.Physical.Elements.Pile.Property)",
       "attributes": []
     },
     {
       "id": "BH.oM.Physical.Elements.Roof.Location",
       "iri": "https://github.com/BHoM/BHoM/blob/main/Physical_oM/Elements/Roof.cs#L40",
-      "label": "Location(BH.oM.Physical.Elements.Roof.Location)",
+      "label": "Location (BH.oM.Physical.Elements.Roof.Location)",
       "attributes": []
     },
     {
       "id": "BH.oM.Physical.Elements.Roof.Construction",
       "iri": "https://github.com/BHoM/BHoM/blob/main/Physical_oM/Elements/Roof.cs#L41",
-      "label": "Construction(BH.oM.Physical.Elements.Roof.Construction)",
+      "label": "Construction (BH.oM.Physical.Elements.Roof.Construction)",
       "attributes": []
     },
     {
       "id": "BH.oM.Physical.Elements.Roof.Openings",
       "iri": "https://github.com/BHoM/BHoM/blob/main/Physical_oM/Elements/Roof.cs#L42",
-      "label": "Openings(BH.oM.Physical.Elements.Roof.Openings)",
+      "label": "Openings (BH.oM.Physical.Elements.Roof.Openings)",
       "attributes": []
     },
     {
       "id": "BH.oM.Physical.Elements.Roof.Offset",
       "iri": "https://github.com/BHoM/BHoM/blob/main/Physical_oM/Elements/Roof.cs#L43",
-      "label": "Offset(BH.oM.Physical.Elements.Roof.Offset)",
+      "label": "Offset (BH.oM.Physical.Elements.Roof.Offset)",
       "attributes": []
     },
     {
       "id": "BH.oM.Physical.Elements.SolidBulk.Geometry",
       "iri": "https://github.com/BHoM/BHoM/blob/main/Physical_oM/Elements/SolidBulk.cs",
-      "label": "Geometry(BH.oM.Physical.Elements.SolidBulk.Geometry)",
+      "label": "Geometry (BH.oM.Physical.Elements.SolidBulk.Geometry)",
       "attributes": []
     },
     {
@@ -1174,61 +1444,61 @@
     {
       "id": "BH.oM.Physical.Elements.SolidBulk.MaterialComposition",
       "iri": "https://github.com/BHoM/BHoM/blob/main/Physical_oM/Elements/SolidBulk.cs#L38",
-      "label": "MaterialComposition(BH.oM.Physical.Elements.SolidBulk.MaterialComposition)",
+      "label": "MaterialComposition (BH.oM.Physical.Elements.SolidBulk.MaterialComposition)",
       "attributes": []
     },
     {
       "id": "BH.oM.Physical.Elements.Void.Location",
       "iri": "https://github.com/BHoM/BHoM/blob/main/Physical_oM/Elements/Void.cs#L40",
-      "label": "Location(BH.oM.Physical.Elements.Void.Location)",
+      "label": "Location (BH.oM.Physical.Elements.Void.Location)",
       "attributes": []
     },
     {
       "id": "BH.oM.Physical.Elements.Wall.Location",
       "iri": "https://github.com/BHoM/BHoM/blob/main/Physical_oM/Elements/Wall.cs#L40",
-      "label": "Location(BH.oM.Physical.Elements.Wall.Location)",
+      "label": "Location (BH.oM.Physical.Elements.Wall.Location)",
       "attributes": []
     },
     {
       "id": "BH.oM.Physical.Elements.Wall.Construction",
       "iri": "https://github.com/BHoM/BHoM/blob/main/Physical_oM/Elements/Wall.cs#L41",
-      "label": "Construction(BH.oM.Physical.Elements.Wall.Construction)",
+      "label": "Construction (BH.oM.Physical.Elements.Wall.Construction)",
       "attributes": []
     },
     {
       "id": "BH.oM.Physical.Elements.Wall.Openings",
       "iri": "https://github.com/BHoM/BHoM/blob/main/Physical_oM/Elements/Wall.cs#L42",
-      "label": "Openings(BH.oM.Physical.Elements.Wall.Openings)",
+      "label": "Openings (BH.oM.Physical.Elements.Wall.Openings)",
       "attributes": []
     },
     {
       "id": "BH.oM.Physical.Elements.Wall.Offset",
       "iri": "https://github.com/BHoM/BHoM/blob/main/Physical_oM/Elements/Wall.cs#L43",
-      "label": "Offset(BH.oM.Physical.Elements.Wall.Offset)",
+      "label": "Offset (BH.oM.Physical.Elements.Wall.Offset)",
       "attributes": []
     },
     {
       "id": "BH.oM.Physical.Elements.Window.Location",
       "iri": "https://github.com/BHoM/BHoM/blob/main/Physical_oM/Elements/Window.cs#L42",
-      "label": "Location(BH.oM.Physical.Elements.Window.Location)",
+      "label": "Location (BH.oM.Physical.Elements.Window.Location)",
       "attributes": []
     },
     {
       "id": "BH.oM.Physical.Elements.Window.Construction",
       "iri": "https://github.com/BHoM/BHoM/blob/main/Physical_oM/Elements/Window.cs#L44",
-      "label": "Construction(BH.oM.Physical.Elements.Window.Construction)",
+      "label": "Construction (BH.oM.Physical.Elements.Window.Construction)",
       "attributes": []
     },
     {
       "id": "BH.oM.Physical.Constructions.Construction.Layers",
       "iri": "https://github.com/BHoM/BHoM/blob/main/Physical_oM/Constructions/Construction.cs#L39",
-      "label": "Layers(BH.oM.Physical.Constructions.Construction.Layers)",
+      "label": "Layers (BH.oM.Physical.Constructions.Construction.Layers)",
       "attributes": []
     },
     {
       "id": "BH.oM.Physical.Constructions.Layer.Material",
       "iri": "https://github.com/BHoM/BHoM/blob/main/Physical_oM/Constructions/Layer.cs#L44",
-      "label": "Material(BH.oM.Physical.Constructions.Layer.Material)",
+      "label": "Material (BH.oM.Physical.Constructions.Layer.Material)",
       "attributes": [],
       "comment": {
         "undefined": "The material this layer is made up of"
@@ -1237,7 +1507,7 @@
     {
       "id": "BH.oM.Physical.Constructions.Layer.Thickness",
       "iri": "https://github.com/BHoM/BHoM/blob/main/Physical_oM/Constructions/Layer.cs#L47",
-      "label": "Thickness(BH.oM.Physical.Constructions.Layer.Thickness)",
+      "label": "Thickness (BH.oM.Physical.Constructions.Layer.Thickness)",
       "attributes": [
         "datatype"
       ]
@@ -1274,6 +1544,22 @@
     },
     {
       "id": "IReinforcingBar-IsA-IObject_896E79430F4A88B78F3BDF67350CAD69F7FEF04CB48D456C591E725825ECD6B1",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "IShapeCode-RequiresProperty-Diameter_CD03992E87270239575E1792D19C9D0CDC5BA8BC2238D3DD6ADE54465EBD2935",
+      "type": "owl:DatatypeProperty"
+    },
+    {
+      "id": "IShapeCode-RequiresProperty-BendRadius_7300437B50171D6C41B1014B5A9100777F593456AA19C0DD63B56BD4FAD167DC",
+      "type": "owl:DatatypeProperty"
+    },
+    {
+      "id": "IShapeCode-IsA-IBHoMObject_45D06FBCD5340C120A895D3626DE8B688DF97964FCBA7EFC04ADD69C912E69A8",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "IShapeCode-IsA-IObject_B49E30E027A5E7A299BAC82C4BE25097DFEEC7763694BFAC5A7496147447F606",
       "type": "owl:ObjectProperty"
     },
     {
@@ -1314,6 +1600,34 @@
     },
     {
       "id": "PrimaryReinforcingBar-IsSubclassOf-BHoMObject_61058812DF98DDDCE73DD03910DA3A6A8E3E948B5550176B52C9C9CC0C10005E",
+      "type": "rdfs:subClassOf"
+    },
+    {
+      "id": "BH.oM.Physical.Reinforcement.Reinforcement-HasProperty-BH.oM.Physical.Reinforcement.Reinforcement.CoordinateSystem",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "BH.oM.Physical.Reinforcement.Reinforcement.CoordinateSystem-IsA-BH.oM.Geometry.CoordinateSystem.Cartesian",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "BH.oM.Physical.Reinforcement.Reinforcement-HasProperty-BH.oM.Physical.Reinforcement.Reinforcement.ShapeCode",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "BH.oM.Physical.Reinforcement.Reinforcement.ShapeCode-IsA-BH.oM.Physical.Reinforcement.IShapeCode",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "Reinforcement-IsA-IBHoMObject_E19BA8198CB50300A69530EC5412FBA10FCAFB58A48A3AD7A9108605E399EAAA",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "Reinforcement-IsA-IObject_5948409CE602E2C364F3ABBB0B752395DEB2792CC4CA58D80F3A91CC0ACFE751",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "Reinforcement-IsSubclassOf-BHoMObject_447743BB2D4651943FE821E28011269D733E8FD74636F4343744C3AAF1AE0AB1",
       "type": "rdfs:subClassOf"
     },
     {
@@ -1373,12 +1687,64 @@
       "type": "rdfs:subClassOf"
     },
     {
+      "id": "ShapeCode00-HasProperty-A_8E2513D44FDA151558CD8D809C14403B86404DA207B01FEEF6B8D2F2B059E3A6",
+      "type": "owl:DatatypeProperty"
+    },
+    {
+      "id": "ShapeCode00-HasProperty-Diameter_1CDBBB290DB6C52E9DA0EA3DADEFEB7B50ABA398631380E67209CAD55FB1BA8F",
+      "type": "owl:DatatypeProperty"
+    },
+    {
+      "id": "ShapeCode00-HasProperty-BendRadius_E0B2DA24CF49692B15CC7DAEFEB0BB2D431C209F170D7E8E220AA8E1601DACCD",
+      "type": "owl:DatatypeProperty"
+    },
+    {
+      "id": "ShapeCode00-IsA-IBHoMObject_8B72FA48731C5297F6B545B2D254E2477FA68F67F33D4DBF85420144C273B351",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "ShapeCode00-IsA-IObject_16E7F1B03079334A6D81DB7850A3FD995A3222B95385BD2FF6F0BB0730AD6DFD",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "ShapeCode00-IsA-IShapeCode_B9253AED56DA625EDA40CD33B91F46D729C0B7DCECCFC498027AD701F207CF77",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "ShapeCode00-IsA-IImmutable_8C4D8919D8DC455E954E3EBC247927CA5A1484924570244FE28D2EC5850088BC",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "ShapeCode00-IsSubclassOf-BHoMObject_57B1F7B54CBC1F82AF0EC2ABFD4024CB7FE91658272D375F2CF926DF59ABE9EE",
+      "type": "rdfs:subClassOf"
+    },
+    {
+      "id": "IDensityProvider-RequiresProperty-Density_81EFFE1FB0658712378EB45CD284EE8ED1EA9E8D7CE58CE1BFF945463002F430",
+      "type": "owl:DatatypeProperty"
+    },
+    {
+      "id": "IDensityProvider-IsA-IMaterialProperties_FB6FD36E0669D0231915E389A243C077792FFE34BB34E354899FF0F0C6CA28B8",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "IDensityProvider-IsA-IBHoMObject_BE556D79C179113DE9AF1BA2A0CD527614405FFD3DBC64CAADF70C81745B6F1C",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "IDensityProvider-IsA-IObject_0C23258BDEF8225F830F312BC35B2A77D01555BF2AB5BD3418A28DFB7E5C4C67",
+      "type": "owl:ObjectProperty"
+    },
+    {
       "id": "IMaterialProperties-IsA-IBHoMObject_5B368E3E50CFF9F937A62010ACB2731348F6527BF1E6D099EE503262CFBEC59D",
       "type": "owl:ObjectProperty"
     },
     {
       "id": "IMaterialProperties-IsA-IObject_5BECFEF8417C46C22AC5BE9CA36CCCF77AE23095039B9759080485A257DC24F0",
       "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "Material-HasProperty-Density_D4D1B042D484E213944E6A1A884534FFEE69B017CC8DA10539341FD631CFD012",
+      "type": "owl:DatatypeProperty"
     },
     {
       "id": "BH.oM.Physical.Materials.Material-HasProperty-BH.oM.Physical.Materials.Material.Properties",
@@ -1434,6 +1800,42 @@
     },
     {
       "id": "MaterialComposition-IsSubclassOf-BHoMObject_642F2459387FA86C774D04EB47F16C4914C42118935483793A49643E8E70D35C",
+      "type": "rdfs:subClassOf"
+    },
+    {
+      "id": "BH.oM.Physical.Materials.VolumetricMaterialTakeoff-HasProperty-BH.oM.Physical.Materials.VolumetricMaterialTakeoff.Materials",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "BH.oM.Physical.Materials.VolumetricMaterialTakeoff.Materials-IsAListOf-BH.oM.Physical.Materials.Material",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "VolumetricMaterialTakeoff-HasProperty-Volumes_D8D0C5FAFDE1A5F081E5861831D15F6E25F443F9B4D018333D4AE02DF27E4FF5",
+      "type": "owl:DatatypeProperty"
+    },
+    {
+      "id": "VolumetricMaterialTakeoff-IsA-IBHoMObject_F72BAE8DDFBBB9F0FD5177214D82F35A64084149913C2B8A052531549E78D5A7",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "VolumetricMaterialTakeoff-IsA-IObject_1B683B973F995505FCDC01C88310E6E8C26442ED0B0DADFF0070964D90DC7CE9",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "VolumetricMaterialTakeoff-IsA-IPhysical_3C9622A25C1DEECC87B8F26EF572720DD503C0098C6269B0A949631D01F78998",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "VolumetricMaterialTakeoff-IsA-IImmutable_924EDF76D032FFC1713ACBCFE76E02E61E02D7C7B058A1211BDD17CFBCDD417A",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "VolumetricMaterialTakeoff-IsA-IFragment_C83F032C820E6F7A31FE8B51B182E6A9C89F5108414C5A79A36E20FAB273276E",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "VolumetricMaterialTakeoff-IsSubclassOf-BHoMObject_4685EAC97F558846498CD209C3B18DACBE07E21C0C08545C190B5118D6309965",
       "type": "rdfs:subClassOf"
     },
     {
@@ -1927,6 +2329,26 @@
     {
       "id": "ISurface-IsA-IElementM_AE49DCB966A708872ABAC1CE2026F3BC2AEA1D3D8B54B6EEA9FE0C1AD9B3850E",
       "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "BH.oM.Physical.Elements.MeshElement-HasProperty-BH.oM.Physical.Elements.MeshElement.Mesh",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "BH.oM.Physical.Elements.MeshElement.Mesh-IsA-BH.oM.Geometry.Mesh",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "MeshElement-IsA-IBHoMObject_476B1FBB9333D3E27023E2E3FA94B231EED3E64BB57DEA36DB99755D3BE95462",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "MeshElement-IsA-IObject_7DF4BFE4D2F3A036E168594EE49C3629FB4BF78FCC9C1CA742183DF9BCEB710C",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "MeshElement-IsSubclassOf-BHoMObject_AB300AEE174980EB559887B614E93E47B72E10B5DBA94B4545B96DEC68EDF9F3",
+      "type": "rdfs:subClassOf"
     },
     {
       "id": "BH.oM.Physical.Elements.Pile-HasProperty-BH.oM.Physical.Elements.Pile.Location",
@@ -2296,7 +2718,7 @@
   "propertyAttribute": [
     {
       "id": "IPhysical-IsA-IBHoMObject_419C7F867CE73CD8810D8371C7F84095434068ECDEE394FA168ACDDEB7A4862F",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/IsA.cs",
       "label": "IsA",
       "attributes": [
         "object"
@@ -2309,7 +2731,7 @@
     },
     {
       "id": "IPhysical-IsA-IObject_0243319E3041C4573F3E4B87080DB2CEA935411C9C505E80D944C0994A216738",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/IsA.cs",
       "label": "IsA",
       "attributes": [
         "object"
@@ -2322,7 +2744,7 @@
     },
     {
       "id": "IReinforcingBar-RequiresProperty-CentreCurve_CED375D648606EA66A106854509561A48310E51D2D7035C356E07C47CF1C2B76",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/RequiresProperty.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/RequiresProperty.cs",
       "label": "RequiresProperty",
       "attributes": [
         "datatype"
@@ -2332,7 +2754,7 @@
     },
     {
       "id": "IReinforcingBar-RequiresProperty-Diameter_9ED34949C7B2D87F506D16A0B3E15D76417277304419AE0AF6C44606FED520AB",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/RequiresProperty.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/RequiresProperty.cs",
       "label": "RequiresProperty",
       "attributes": [
         "datatype"
@@ -2342,7 +2764,7 @@
     },
     {
       "id": "IReinforcingBar-RequiresProperty-Material_66419D97CFC230829587D3CECFFCA9BBF254C180F8DD95EA875CB6619237B85A",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/RequiresProperty.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/RequiresProperty.cs",
       "label": "RequiresProperty",
       "attributes": [
         "datatype"
@@ -2352,7 +2774,7 @@
     },
     {
       "id": "IReinforcingBar-RequiresProperty-BendRadius_C4970A7CDF4DCB0664ECD7A24271404D76071EAE5793B8829D6163E237388444",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/RequiresProperty.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/RequiresProperty.cs",
       "label": "RequiresProperty",
       "attributes": [
         "datatype"
@@ -2362,7 +2784,7 @@
     },
     {
       "id": "IReinforcingBar-IsA-IBHoMObject_C49D4967C105BA9C84810794F58FA692EEDDEF5D0213B8FCBB82757BBE05859A",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/IsA.cs",
       "label": "IsA",
       "attributes": [
         "object"
@@ -2375,7 +2797,7 @@
     },
     {
       "id": "IReinforcingBar-IsA-IObject_896E79430F4A88B78F3BDF67350CAD69F7FEF04CB48D456C591E725825ECD6B1",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/IsA.cs",
       "label": "IsA",
       "attributes": [
         "object"
@@ -2387,8 +2809,54 @@
       "range": "BH.oM.Base.IObject"
     },
     {
+      "id": "IShapeCode-RequiresProperty-Diameter_CD03992E87270239575E1792D19C9D0CDC5BA8BC2238D3DD6ADE54465EBD2935",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/RequiresProperty.cs",
+      "label": "RequiresProperty",
+      "attributes": [
+        "datatype"
+      ],
+      "domain": "BH.oM.Physical.Reinforcement.IShapeCode",
+      "range": "BH.oM.Physical.Reinforcement.IShapeCode.Diameter"
+    },
+    {
+      "id": "IShapeCode-RequiresProperty-BendRadius_7300437B50171D6C41B1014B5A9100777F593456AA19C0DD63B56BD4FAD167DC",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/RequiresProperty.cs",
+      "label": "RequiresProperty",
+      "attributes": [
+        "datatype"
+      ],
+      "domain": "BH.oM.Physical.Reinforcement.IShapeCode",
+      "range": "BH.oM.Physical.Reinforcement.IShapeCode.BendRadius"
+    },
+    {
+      "id": "IShapeCode-IsA-IBHoMObject_45D06FBCD5340C120A895D3626DE8B688DF97964FCBA7EFC04ADD69C912E69A8",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/IsA.cs",
+      "label": "IsA",
+      "attributes": [
+        "object"
+      ],
+      "comment": {
+        "undefined": "Can be used to describe that a thing belongs to a class; or that a thing is equivalent to another thing. When used for BHoM types, this describes C# interface implementation."
+      },
+      "domain": "BH.oM.Physical.Reinforcement.IShapeCode",
+      "range": "BH.oM.Base.IBHoMObject"
+    },
+    {
+      "id": "IShapeCode-IsA-IObject_B49E30E027A5E7A299BAC82C4BE25097DFEEC7763694BFAC5A7496147447F606",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/IsA.cs",
+      "label": "IsA",
+      "attributes": [
+        "object"
+      ],
+      "comment": {
+        "undefined": "Can be used to describe that a thing belongs to a class; or that a thing is equivalent to another thing. When used for BHoM types, this describes C# interface implementation."
+      },
+      "domain": "BH.oM.Physical.Reinforcement.IShapeCode",
+      "range": "BH.oM.Base.IObject"
+    },
+    {
       "id": "BH.oM.Physical.Reinforcement.PrimaryReinforcingBar-HasProperty-BH.oM.Physical.Reinforcement.PrimaryReinforcingBar.CentreCurve",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/HasProperty.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/HasProperty.cs",
       "label": "HasProperty",
       "attributes": [
         "object"
@@ -2398,7 +2866,7 @@
     },
     {
       "id": "BH.oM.Physical.Reinforcement.PrimaryReinforcingBar.CentreCurve-IsA-BH.oM.Geometry.ICurve",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/IsA.cs",
       "label": "IsA",
       "attributes": [
         "object"
@@ -2408,7 +2876,7 @@
     },
     {
       "id": "PrimaryReinforcingBar-HasProperty-Diameter_97EB551E8A3560944AD3E144E669BAEFC46F5EEC740513E1E44A29F564026E99",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/HasProperty.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/HasProperty.cs",
       "label": "HasProperty",
       "attributes": [
         "datatype"
@@ -2418,7 +2886,7 @@
     },
     {
       "id": "BH.oM.Physical.Reinforcement.PrimaryReinforcingBar-HasProperty-BH.oM.Physical.Reinforcement.PrimaryReinforcingBar.Material",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/HasProperty.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/HasProperty.cs",
       "label": "HasProperty",
       "attributes": [
         "object"
@@ -2428,7 +2896,7 @@
     },
     {
       "id": "BH.oM.Physical.Reinforcement.PrimaryReinforcingBar.Material-IsA-BH.oM.Physical.Materials.Material",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/IsA.cs",
       "label": "IsA",
       "attributes": [
         "object"
@@ -2438,7 +2906,7 @@
     },
     {
       "id": "PrimaryReinforcingBar-HasProperty-BendRadius_891D28E6AF4B0F5533ED29282C65C8FEE9CC51994428EEDF174E8F64E4B32A2D",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/HasProperty.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/HasProperty.cs",
       "label": "HasProperty",
       "attributes": [
         "datatype"
@@ -2448,7 +2916,7 @@
     },
     {
       "id": "PrimaryReinforcingBar-IsA-IBHoMObject_5A588A73B69EC39CADECB53C8CAFFEBA4C39D1B960B706F286C320BACED39A79",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/IsA.cs",
       "label": "IsA",
       "attributes": [
         "object"
@@ -2461,7 +2929,7 @@
     },
     {
       "id": "PrimaryReinforcingBar-IsA-IObject_B516ED38CC7CFD52AC661AD5A46209ED9AD673BC8DBE6A382C5F5406A1EF93F2",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/IsA.cs",
       "label": "IsA",
       "attributes": [
         "object"
@@ -2474,7 +2942,7 @@
     },
     {
       "id": "PrimaryReinforcingBar-IsA-IReinforcingBar_2D717BE239C443084E90D67C2940BEFF114DB4F36DB566C3C93F127672A6B479",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/IsA.cs",
       "label": "IsA",
       "attributes": [
         "object"
@@ -2487,7 +2955,7 @@
     },
     {
       "id": "PrimaryReinforcingBar-IsSubclassOf-BHoMObject_61058812DF98DDDCE73DD03910DA3A6A8E3E948B5550176B52C9C9CC0C10005E",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsSubclassOf.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/IsSubclassOf.cs",
       "label": "IsA",
       "attributes": [
         "object"
@@ -2496,8 +2964,84 @@
       "range": "BH.oM.Base.BHoMObject"
     },
     {
+      "id": "BH.oM.Physical.Reinforcement.Reinforcement-HasProperty-BH.oM.Physical.Reinforcement.Reinforcement.CoordinateSystem",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/HasProperty.cs",
+      "label": "HasProperty",
+      "attributes": [
+        "object"
+      ],
+      "domain": "BH.oM.Physical.Reinforcement.Reinforcement",
+      "range": "BH.oM.Physical.Reinforcement.Reinforcement.CoordinateSystem"
+    },
+    {
+      "id": "BH.oM.Physical.Reinforcement.Reinforcement.CoordinateSystem-IsA-BH.oM.Geometry.CoordinateSystem.Cartesian",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/IsA.cs",
+      "label": "IsA",
+      "attributes": [
+        "object"
+      ],
+      "domain": "BH.oM.Physical.Reinforcement.Reinforcement.CoordinateSystem",
+      "range": "BH.oM.Geometry.CoordinateSystem.Cartesian"
+    },
+    {
+      "id": "BH.oM.Physical.Reinforcement.Reinforcement-HasProperty-BH.oM.Physical.Reinforcement.Reinforcement.ShapeCode",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/HasProperty.cs",
+      "label": "HasProperty",
+      "attributes": [
+        "object"
+      ],
+      "domain": "BH.oM.Physical.Reinforcement.Reinforcement",
+      "range": "BH.oM.Physical.Reinforcement.Reinforcement.ShapeCode"
+    },
+    {
+      "id": "BH.oM.Physical.Reinforcement.Reinforcement.ShapeCode-IsA-BH.oM.Physical.Reinforcement.IShapeCode",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/IsA.cs",
+      "label": "IsA",
+      "attributes": [
+        "object"
+      ],
+      "domain": "BH.oM.Physical.Reinforcement.Reinforcement.ShapeCode",
+      "range": "BH.oM.Physical.Reinforcement.IShapeCode"
+    },
+    {
+      "id": "Reinforcement-IsA-IBHoMObject_E19BA8198CB50300A69530EC5412FBA10FCAFB58A48A3AD7A9108605E399EAAA",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/IsA.cs",
+      "label": "IsA",
+      "attributes": [
+        "object"
+      ],
+      "comment": {
+        "undefined": "Can be used to describe that a thing belongs to a class; or that a thing is equivalent to another thing. When used for BHoM types, this describes C# interface implementation."
+      },
+      "domain": "BH.oM.Physical.Reinforcement.Reinforcement",
+      "range": "BH.oM.Base.IBHoMObject"
+    },
+    {
+      "id": "Reinforcement-IsA-IObject_5948409CE602E2C364F3ABBB0B752395DEB2792CC4CA58D80F3A91CC0ACFE751",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/IsA.cs",
+      "label": "IsA",
+      "attributes": [
+        "object"
+      ],
+      "comment": {
+        "undefined": "Can be used to describe that a thing belongs to a class; or that a thing is equivalent to another thing. When used for BHoM types, this describes C# interface implementation."
+      },
+      "domain": "BH.oM.Physical.Reinforcement.Reinforcement",
+      "range": "BH.oM.Base.IObject"
+    },
+    {
+      "id": "Reinforcement-IsSubclassOf-BHoMObject_447743BB2D4651943FE821E28011269D733E8FD74636F4343744C3AAF1AE0AB1",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/IsSubclassOf.cs",
+      "label": "IsA",
+      "attributes": [
+        "object"
+      ],
+      "domain": "BH.oM.Physical.Reinforcement.Reinforcement",
+      "range": "BH.oM.Base.BHoMObject"
+    },
+    {
       "id": "BH.oM.Physical.Reinforcement.ReinforcementFragment-HasProperty-BH.oM.Physical.Reinforcement.ReinforcementFragment.ReinforcingBars",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/HasProperty.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/HasProperty.cs",
       "label": "HasProperty",
       "attributes": [
         "object"
@@ -2507,7 +3051,7 @@
     },
     {
       "id": "BH.oM.Physical.Reinforcement.ReinforcementFragment.ReinforcingBars-IsAListOf-BH.oM.Physical.Reinforcement.IReinforcingBar",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsAListOf.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/IsAListOf.cs",
       "label": "IsAListOf",
       "attributes": [
         "object"
@@ -2517,7 +3061,7 @@
     },
     {
       "id": "ReinforcementFragment-IsA-IFragment_757FCD2BC066ED27087B803A088BE1488F2BD4A30E590EF561735C0551995A1B",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/IsA.cs",
       "label": "IsA",
       "attributes": [
         "object"
@@ -2530,7 +3074,7 @@
     },
     {
       "id": "ReinforcementFragment-IsA-IObject_81E9EC37BA1A6FE6527012C528EB804C5F675D633BE5054F973F2ED8EC94F985",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/IsA.cs",
       "label": "IsA",
       "attributes": [
         "object"
@@ -2543,7 +3087,7 @@
     },
     {
       "id": "BH.oM.Physical.Reinforcement.Stirrup-HasProperty-BH.oM.Physical.Reinforcement.Stirrup.CentreCurve",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/HasProperty.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/HasProperty.cs",
       "label": "HasProperty",
       "attributes": [
         "object"
@@ -2553,7 +3097,7 @@
     },
     {
       "id": "BH.oM.Physical.Reinforcement.Stirrup.CentreCurve-IsA-BH.oM.Geometry.ICurve",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/IsA.cs",
       "label": "IsA",
       "attributes": [
         "object"
@@ -2563,7 +3107,7 @@
     },
     {
       "id": "Stirrup-HasProperty-Diameter_27FEA11AF1E2461FBC7CF1DA64BBB8CCF37F2D10C66E1A35943948CB37672024",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/HasProperty.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/HasProperty.cs",
       "label": "HasProperty",
       "attributes": [
         "datatype"
@@ -2573,7 +3117,7 @@
     },
     {
       "id": "BH.oM.Physical.Reinforcement.Stirrup-HasProperty-BH.oM.Physical.Reinforcement.Stirrup.Material",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/HasProperty.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/HasProperty.cs",
       "label": "HasProperty",
       "attributes": [
         "object"
@@ -2583,7 +3127,7 @@
     },
     {
       "id": "BH.oM.Physical.Reinforcement.Stirrup.Material-IsA-BH.oM.Physical.Materials.Material",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/IsA.cs",
       "label": "IsA",
       "attributes": [
         "object"
@@ -2593,7 +3137,7 @@
     },
     {
       "id": "Stirrup-HasProperty-BendRadius_1AEC15B0F6C544690E475F2D9402327FCF65E8BB4FD9A9E6E38C082EB2558978",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/HasProperty.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/HasProperty.cs",
       "label": "HasProperty",
       "attributes": [
         "datatype"
@@ -2603,7 +3147,7 @@
     },
     {
       "id": "Stirrup-IsA-IBHoMObject_FAD1AB2C02C1938F10FE25952F3BEFFF6454AFE46406CE40D32E244A96805DF7",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/IsA.cs",
       "label": "IsA",
       "attributes": [
         "object"
@@ -2616,7 +3160,7 @@
     },
     {
       "id": "Stirrup-IsA-IObject_8F664DFFF1FA5BD515B40E8C10C2907C60E67A16BBCF5A78F2129BF8279C7E2B",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/IsA.cs",
       "label": "IsA",
       "attributes": [
         "object"
@@ -2629,7 +3173,7 @@
     },
     {
       "id": "Stirrup-IsA-IReinforcingBar_EE528B8CBCAE1BA6BAD253A72DAA282F3E8B75016547F7E060488BD555902C84",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/IsA.cs",
       "label": "IsA",
       "attributes": [
         "object"
@@ -2642,7 +3186,7 @@
     },
     {
       "id": "Stirrup-IsSubclassOf-BHoMObject_06C63FD283C078B8372ED31199FBA3C2117C36BDE4F6CEEEF59D25E64F58B15C",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsSubclassOf.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/IsSubclassOf.cs",
       "label": "IsA",
       "attributes": [
         "object"
@@ -2651,8 +3195,149 @@
       "range": "BH.oM.Base.BHoMObject"
     },
     {
+      "id": "ShapeCode00-HasProperty-A_8E2513D44FDA151558CD8D809C14403B86404DA207B01FEEF6B8D2F2B059E3A6",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/HasProperty.cs",
+      "label": "HasProperty",
+      "attributes": [
+        "datatype"
+      ],
+      "domain": "BH.oM.Physical.Reinforcement.BS8666.ShapeCode00",
+      "range": "BH.oM.Physical.Reinforcement.BS8666.ShapeCode00.A"
+    },
+    {
+      "id": "ShapeCode00-HasProperty-Diameter_1CDBBB290DB6C52E9DA0EA3DADEFEB7B50ABA398631380E67209CAD55FB1BA8F",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/HasProperty.cs",
+      "label": "HasProperty",
+      "attributes": [
+        "datatype"
+      ],
+      "domain": "BH.oM.Physical.Reinforcement.BS8666.ShapeCode00",
+      "range": "BH.oM.Physical.Reinforcement.BS8666.ShapeCode00.Diameter"
+    },
+    {
+      "id": "ShapeCode00-HasProperty-BendRadius_E0B2DA24CF49692B15CC7DAEFEB0BB2D431C209F170D7E8E220AA8E1601DACCD",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/HasProperty.cs",
+      "label": "HasProperty",
+      "attributes": [
+        "datatype"
+      ],
+      "domain": "BH.oM.Physical.Reinforcement.BS8666.ShapeCode00",
+      "range": "BH.oM.Physical.Reinforcement.BS8666.ShapeCode00.BendRadius"
+    },
+    {
+      "id": "ShapeCode00-IsA-IBHoMObject_8B72FA48731C5297F6B545B2D254E2477FA68F67F33D4DBF85420144C273B351",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/IsA.cs",
+      "label": "IsA",
+      "attributes": [
+        "object"
+      ],
+      "comment": {
+        "undefined": "Can be used to describe that a thing belongs to a class; or that a thing is equivalent to another thing. When used for BHoM types, this describes C# interface implementation."
+      },
+      "domain": "BH.oM.Physical.Reinforcement.BS8666.ShapeCode00",
+      "range": "BH.oM.Base.IBHoMObject"
+    },
+    {
+      "id": "ShapeCode00-IsA-IObject_16E7F1B03079334A6D81DB7850A3FD995A3222B95385BD2FF6F0BB0730AD6DFD",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/IsA.cs",
+      "label": "IsA",
+      "attributes": [
+        "object"
+      ],
+      "comment": {
+        "undefined": "Can be used to describe that a thing belongs to a class; or that a thing is equivalent to another thing. When used for BHoM types, this describes C# interface implementation."
+      },
+      "domain": "BH.oM.Physical.Reinforcement.BS8666.ShapeCode00",
+      "range": "BH.oM.Base.IObject"
+    },
+    {
+      "id": "ShapeCode00-IsA-IShapeCode_B9253AED56DA625EDA40CD33B91F46D729C0B7DCECCFC498027AD701F207CF77",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/IsA.cs",
+      "label": "IsA",
+      "attributes": [
+        "object"
+      ],
+      "comment": {
+        "undefined": "Can be used to describe that a thing belongs to a class; or that a thing is equivalent to another thing. When used for BHoM types, this describes C# interface implementation."
+      },
+      "domain": "BH.oM.Physical.Reinforcement.BS8666.ShapeCode00",
+      "range": "BH.oM.Physical.Reinforcement.IShapeCode"
+    },
+    {
+      "id": "ShapeCode00-IsA-IImmutable_8C4D8919D8DC455E954E3EBC247927CA5A1484924570244FE28D2EC5850088BC",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/IsA.cs",
+      "label": "IsA",
+      "attributes": [
+        "object"
+      ],
+      "comment": {
+        "undefined": "Can be used to describe that a thing belongs to a class; or that a thing is equivalent to another thing. When used for BHoM types, this describes C# interface implementation."
+      },
+      "domain": "BH.oM.Physical.Reinforcement.BS8666.ShapeCode00",
+      "range": "BH.oM.Base.IImmutable"
+    },
+    {
+      "id": "ShapeCode00-IsSubclassOf-BHoMObject_57B1F7B54CBC1F82AF0EC2ABFD4024CB7FE91658272D375F2CF926DF59ABE9EE",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/IsSubclassOf.cs",
+      "label": "IsA",
+      "attributes": [
+        "object"
+      ],
+      "domain": "BH.oM.Physical.Reinforcement.BS8666.ShapeCode00",
+      "range": "BH.oM.Base.BHoMObject"
+    },
+    {
+      "id": "IDensityProvider-RequiresProperty-Density_81EFFE1FB0658712378EB45CD284EE8ED1EA9E8D7CE58CE1BFF945463002F430",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/RequiresProperty.cs",
+      "label": "RequiresProperty",
+      "attributes": [
+        "datatype"
+      ],
+      "domain": "BH.oM.Physical.Materials.IDensityProvider",
+      "range": "BH.oM.Physical.Materials.IDensityProvider.Density"
+    },
+    {
+      "id": "IDensityProvider-IsA-IMaterialProperties_FB6FD36E0669D0231915E389A243C077792FFE34BB34E354899FF0F0C6CA28B8",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/IsA.cs",
+      "label": "IsA",
+      "attributes": [
+        "object"
+      ],
+      "comment": {
+        "undefined": "Can be used to describe that a thing belongs to a class; or that a thing is equivalent to another thing. When used for BHoM types, this describes C# interface implementation."
+      },
+      "domain": "BH.oM.Physical.Materials.IDensityProvider",
+      "range": "BH.oM.Physical.Materials.IMaterialProperties"
+    },
+    {
+      "id": "IDensityProvider-IsA-IBHoMObject_BE556D79C179113DE9AF1BA2A0CD527614405FFD3DBC64CAADF70C81745B6F1C",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/IsA.cs",
+      "label": "IsA",
+      "attributes": [
+        "object"
+      ],
+      "comment": {
+        "undefined": "Can be used to describe that a thing belongs to a class; or that a thing is equivalent to another thing. When used for BHoM types, this describes C# interface implementation."
+      },
+      "domain": "BH.oM.Physical.Materials.IDensityProvider",
+      "range": "BH.oM.Base.IBHoMObject"
+    },
+    {
+      "id": "IDensityProvider-IsA-IObject_0C23258BDEF8225F830F312BC35B2A77D01555BF2AB5BD3418A28DFB7E5C4C67",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/IsA.cs",
+      "label": "IsA",
+      "attributes": [
+        "object"
+      ],
+      "comment": {
+        "undefined": "Can be used to describe that a thing belongs to a class; or that a thing is equivalent to another thing. When used for BHoM types, this describes C# interface implementation."
+      },
+      "domain": "BH.oM.Physical.Materials.IDensityProvider",
+      "range": "BH.oM.Base.IObject"
+    },
+    {
       "id": "IMaterialProperties-IsA-IBHoMObject_5B368E3E50CFF9F937A62010ACB2731348F6527BF1E6D099EE503262CFBEC59D",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/IsA.cs",
       "label": "IsA",
       "attributes": [
         "object"
@@ -2665,7 +3350,7 @@
     },
     {
       "id": "IMaterialProperties-IsA-IObject_5BECFEF8417C46C22AC5BE9CA36CCCF77AE23095039B9759080485A257DC24F0",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/IsA.cs",
       "label": "IsA",
       "attributes": [
         "object"
@@ -2677,8 +3362,18 @@
       "range": "BH.oM.Base.IObject"
     },
     {
+      "id": "Material-HasProperty-Density_D4D1B042D484E213944E6A1A884534FFEE69B017CC8DA10539341FD631CFD012",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/HasProperty.cs",
+      "label": "HasProperty",
+      "attributes": [
+        "datatype"
+      ],
+      "domain": "BH.oM.Physical.Materials.Material",
+      "range": "BH.oM.Physical.Materials.Material.Density"
+    },
+    {
       "id": "BH.oM.Physical.Materials.Material-HasProperty-BH.oM.Physical.Materials.Material.Properties",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/HasProperty.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/HasProperty.cs",
       "label": "HasProperty",
       "attributes": [
         "object"
@@ -2688,7 +3383,7 @@
     },
     {
       "id": "BH.oM.Physical.Materials.Material.Properties-IsAListOf-BH.oM.Physical.Materials.IMaterialProperties",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsAListOf.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/IsAListOf.cs",
       "label": "IsAListOf",
       "attributes": [
         "object"
@@ -2698,7 +3393,7 @@
     },
     {
       "id": "Material-IsA-IBHoMObject_249110177F9FDFAE3617B5D03FEBADCFAE35B13E643ACAE1870169DE6C8F4E07",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/IsA.cs",
       "label": "IsA",
       "attributes": [
         "object"
@@ -2711,7 +3406,7 @@
     },
     {
       "id": "Material-IsA-IObject_544E3D9FF063A6D3FF5999AA49AA98BE4F2D603CA1B78B86E1AAD3B26D85AE84",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/IsA.cs",
       "label": "IsA",
       "attributes": [
         "object"
@@ -2724,7 +3419,7 @@
     },
     {
       "id": "Material-IsA-IPhysical_F5B3F5AC7A5495028C57A72904F17147D9E0603290844ABB043639761CFE8094",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/IsA.cs",
       "label": "IsA",
       "attributes": [
         "object"
@@ -2737,7 +3432,7 @@
     },
     {
       "id": "Material-IsSubclassOf-BHoMObject_30D75FF63FE547C95364F1AEE3659F574BECDC86ADC7F6C82D466C0FC7B07DC4",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsSubclassOf.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/IsSubclassOf.cs",
       "label": "IsA",
       "attributes": [
         "object"
@@ -2747,7 +3442,7 @@
     },
     {
       "id": "BH.oM.Physical.Materials.MaterialComposition-HasProperty-BH.oM.Physical.Materials.MaterialComposition.Materials",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/HasProperty.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/HasProperty.cs",
       "label": "HasProperty",
       "attributes": [
         "object"
@@ -2757,7 +3452,7 @@
     },
     {
       "id": "BH.oM.Physical.Materials.MaterialComposition.Materials-IsAListOf-BH.oM.Physical.Materials.Material",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsAListOf.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/IsAListOf.cs",
       "label": "IsAListOf",
       "attributes": [
         "object"
@@ -2767,7 +3462,7 @@
     },
     {
       "id": "MaterialComposition-HasProperty-Ratios_39919080CD28BEB4977ACAA1CB7ADF22A57B99415E8ECEEB9A03AEA82B086584",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/HasProperty.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/HasProperty.cs",
       "label": "HasProperty",
       "attributes": [
         "datatype"
@@ -2777,7 +3472,7 @@
     },
     {
       "id": "MaterialComposition-IsA-IBHoMObject_457E046886C8971CD0F82FADECC7140817FEAAE98B69B93B48F0E3CA8DF84D34",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/IsA.cs",
       "label": "IsA",
       "attributes": [
         "object"
@@ -2790,7 +3485,7 @@
     },
     {
       "id": "MaterialComposition-IsA-IObject_2D896E61C3BBB18019677A6E14A70203C937C437CE499F4E69BBEA02A76A1273",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/IsA.cs",
       "label": "IsA",
       "attributes": [
         "object"
@@ -2803,7 +3498,7 @@
     },
     {
       "id": "MaterialComposition-IsA-IPhysical_5E10F58173E1CC6601AF4A102190E8E0CC0467CDF74DF3C27FED9D0446121E43",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/IsA.cs",
       "label": "IsA",
       "attributes": [
         "object"
@@ -2816,7 +3511,7 @@
     },
     {
       "id": "MaterialComposition-IsA-IImmutable_3B0C572A836338A52ECBFD85D21730B66A39FC47D52CE571D27C08CA6E5A81AD",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/IsA.cs",
       "label": "IsA",
       "attributes": [
         "object"
@@ -2829,7 +3524,7 @@
     },
     {
       "id": "MaterialComposition-IsSubclassOf-BHoMObject_642F2459387FA86C774D04EB47F16C4914C42118935483793A49643E8E70D35C",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsSubclassOf.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/IsSubclassOf.cs",
       "label": "IsA",
       "attributes": [
         "object"
@@ -2838,8 +3533,113 @@
       "range": "BH.oM.Base.BHoMObject"
     },
     {
+      "id": "BH.oM.Physical.Materials.VolumetricMaterialTakeoff-HasProperty-BH.oM.Physical.Materials.VolumetricMaterialTakeoff.Materials",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/HasProperty.cs",
+      "label": "HasProperty",
+      "attributes": [
+        "object"
+      ],
+      "domain": "BH.oM.Physical.Materials.VolumetricMaterialTakeoff",
+      "range": "BH.oM.Physical.Materials.VolumetricMaterialTakeoff.Materials"
+    },
+    {
+      "id": "BH.oM.Physical.Materials.VolumetricMaterialTakeoff.Materials-IsAListOf-BH.oM.Physical.Materials.Material",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/IsAListOf.cs",
+      "label": "IsAListOf",
+      "attributes": [
+        "object"
+      ],
+      "domain": "BH.oM.Physical.Materials.VolumetricMaterialTakeoff.Materials",
+      "range": "BH.oM.Physical.Materials.Material"
+    },
+    {
+      "id": "VolumetricMaterialTakeoff-HasProperty-Volumes_D8D0C5FAFDE1A5F081E5861831D15F6E25F443F9B4D018333D4AE02DF27E4FF5",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/HasProperty.cs",
+      "label": "HasProperty",
+      "attributes": [
+        "datatype"
+      ],
+      "domain": "BH.oM.Physical.Materials.VolumetricMaterialTakeoff",
+      "range": "BH.oM.Physical.Materials.VolumetricMaterialTakeoff.Volumes"
+    },
+    {
+      "id": "VolumetricMaterialTakeoff-IsA-IBHoMObject_F72BAE8DDFBBB9F0FD5177214D82F35A64084149913C2B8A052531549E78D5A7",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/IsA.cs",
+      "label": "IsA",
+      "attributes": [
+        "object"
+      ],
+      "comment": {
+        "undefined": "Can be used to describe that a thing belongs to a class; or that a thing is equivalent to another thing. When used for BHoM types, this describes C# interface implementation."
+      },
+      "domain": "BH.oM.Physical.Materials.VolumetricMaterialTakeoff",
+      "range": "BH.oM.Base.IBHoMObject"
+    },
+    {
+      "id": "VolumetricMaterialTakeoff-IsA-IObject_1B683B973F995505FCDC01C88310E6E8C26442ED0B0DADFF0070964D90DC7CE9",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/IsA.cs",
+      "label": "IsA",
+      "attributes": [
+        "object"
+      ],
+      "comment": {
+        "undefined": "Can be used to describe that a thing belongs to a class; or that a thing is equivalent to another thing. When used for BHoM types, this describes C# interface implementation."
+      },
+      "domain": "BH.oM.Physical.Materials.VolumetricMaterialTakeoff",
+      "range": "BH.oM.Base.IObject"
+    },
+    {
+      "id": "VolumetricMaterialTakeoff-IsA-IPhysical_3C9622A25C1DEECC87B8F26EF572720DD503C0098C6269B0A949631D01F78998",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/IsA.cs",
+      "label": "IsA",
+      "attributes": [
+        "object"
+      ],
+      "comment": {
+        "undefined": "Can be used to describe that a thing belongs to a class; or that a thing is equivalent to another thing. When used for BHoM types, this describes C# interface implementation."
+      },
+      "domain": "BH.oM.Physical.Materials.VolumetricMaterialTakeoff",
+      "range": "BH.oM.Physical.IPhysical"
+    },
+    {
+      "id": "VolumetricMaterialTakeoff-IsA-IImmutable_924EDF76D032FFC1713ACBCFE76E02E61E02D7C7B058A1211BDD17CFBCDD417A",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/IsA.cs",
+      "label": "IsA",
+      "attributes": [
+        "object"
+      ],
+      "comment": {
+        "undefined": "Can be used to describe that a thing belongs to a class; or that a thing is equivalent to another thing. When used for BHoM types, this describes C# interface implementation."
+      },
+      "domain": "BH.oM.Physical.Materials.VolumetricMaterialTakeoff",
+      "range": "BH.oM.Base.IImmutable"
+    },
+    {
+      "id": "VolumetricMaterialTakeoff-IsA-IFragment_C83F032C820E6F7A31FE8B51B182E6A9C89F5108414C5A79A36E20FAB273276E",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/IsA.cs",
+      "label": "IsA",
+      "attributes": [
+        "object"
+      ],
+      "comment": {
+        "undefined": "Can be used to describe that a thing belongs to a class; or that a thing is equivalent to another thing. When used for BHoM types, this describes C# interface implementation."
+      },
+      "domain": "BH.oM.Physical.Materials.VolumetricMaterialTakeoff",
+      "range": "BH.oM.Base.IFragment"
+    },
+    {
+      "id": "VolumetricMaterialTakeoff-IsSubclassOf-BHoMObject_4685EAC97F558846498CD209C3B18DACBE07E21C0C08545C190B5118D6309965",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/IsSubclassOf.cs",
+      "label": "IsA",
+      "attributes": [
+        "object"
+      ],
+      "domain": "BH.oM.Physical.Materials.VolumetricMaterialTakeoff",
+      "range": "BH.oM.Base.BHoMObject"
+    },
+    {
       "id": "BH.oM.Physical.FramingProperties.ConstantFramingProperty-HasProperty-BH.oM.Physical.FramingProperties.ConstantFramingProperty.Profile",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/HasProperty.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/HasProperty.cs",
       "label": "HasProperty",
       "attributes": [
         "object"
@@ -2849,7 +3649,7 @@
     },
     {
       "id": "BH.oM.Physical.FramingProperties.ConstantFramingProperty.Profile-IsA-BH.oM.Spatial.ShapeProfiles.IProfile",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/IsA.cs",
       "label": "IsA",
       "attributes": [
         "object"
@@ -2859,7 +3659,7 @@
     },
     {
       "id": "BH.oM.Physical.FramingProperties.ConstantFramingProperty-HasProperty-BH.oM.Physical.FramingProperties.ConstantFramingProperty.Material",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/HasProperty.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/HasProperty.cs",
       "label": "HasProperty",
       "attributes": [
         "object"
@@ -2869,7 +3669,7 @@
     },
     {
       "id": "BH.oM.Physical.FramingProperties.ConstantFramingProperty.Material-IsA-BH.oM.Physical.Materials.Material",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/IsA.cs",
       "label": "IsA",
       "attributes": [
         "object"
@@ -2879,7 +3679,7 @@
     },
     {
       "id": "ConstantFramingProperty-HasProperty-OrientationAngle_C54A441C646007868A6FE3DAEE5FCC45C4B0C00C904ECAA2B40227525F3BE68C",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/HasProperty.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/HasProperty.cs",
       "label": "HasProperty",
       "attributes": [
         "datatype"
@@ -2889,7 +3689,7 @@
     },
     {
       "id": "ConstantFramingProperty-IsA-IBHoMObject_BBE6BBBB2BAB9C547414B3AC9EE4CBC3A21FC19E2D58146A118F4B443DB7F516",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/IsA.cs",
       "label": "IsA",
       "attributes": [
         "object"
@@ -2902,7 +3702,7 @@
     },
     {
       "id": "ConstantFramingProperty-IsA-IObject_7632B1412DEEF8EEAB92F4B164F9A4C8CAF422C25BE86AB8346F552B5BF178DC",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/IsA.cs",
       "label": "IsA",
       "attributes": [
         "object"
@@ -2915,7 +3715,7 @@
     },
     {
       "id": "ConstantFramingProperty-IsA-IFramingElementProperty_32EE351C2DCB719B365874283FCC0CFFE4300C4D81EB740AAA4AE35DC3407D21",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/IsA.cs",
       "label": "IsA",
       "attributes": [
         "object"
@@ -2928,7 +3728,7 @@
     },
     {
       "id": "ConstantFramingProperty-IsSubclassOf-BHoMObject_B89338EE8DB7D519A7DF52AD1F5E2BB44AD63749D6334DAFDF25D69FD1C4E7CC",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsSubclassOf.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/IsSubclassOf.cs",
       "label": "IsA",
       "attributes": [
         "object"
@@ -2938,7 +3738,7 @@
     },
     {
       "id": "IFramingElementProperty-IsA-IBHoMObject_07160C438712D382B02EF9BA254942DC8933C08357795A529A2C7147B29D77CB",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/IsA.cs",
       "label": "IsA",
       "attributes": [
         "object"
@@ -2951,7 +3751,7 @@
     },
     {
       "id": "IFramingElementProperty-IsA-IObject_97C2E933AD697D494FE0B1DDD13B85A9C5EDA833BC63D7B25999DDAED671BDD8",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/IsA.cs",
       "label": "IsA",
       "attributes": [
         "object"
@@ -2964,7 +3764,7 @@
     },
     {
       "id": "BH.oM.Physical.Elements.Beam-HasProperty-BH.oM.Physical.Elements.Beam.Location",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/HasProperty.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/HasProperty.cs",
       "label": "HasProperty",
       "attributes": [
         "object"
@@ -2974,7 +3774,7 @@
     },
     {
       "id": "BH.oM.Physical.Elements.Beam.Location-IsA-BH.oM.Geometry.ICurve",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/IsA.cs",
       "label": "IsA",
       "attributes": [
         "object"
@@ -2984,7 +3784,7 @@
     },
     {
       "id": "BH.oM.Physical.Elements.Beam-HasProperty-BH.oM.Physical.Elements.Beam.Property",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/HasProperty.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/HasProperty.cs",
       "label": "HasProperty",
       "attributes": [
         "object"
@@ -2994,7 +3794,7 @@
     },
     {
       "id": "BH.oM.Physical.Elements.Beam.Property-IsA-BH.oM.Physical.FramingProperties.IFramingElementProperty",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/IsA.cs",
       "label": "IsA",
       "attributes": [
         "object"
@@ -3004,7 +3804,7 @@
     },
     {
       "id": "Beam-IsA-IBHoMObject_85148127ABE835CDFD794E6E6F73E1BF5FD5B5EFD7F62DEC9C5F1E6DBAC1F1EB",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/IsA.cs",
       "label": "IsA",
       "attributes": [
         "object"
@@ -3017,7 +3817,7 @@
     },
     {
       "id": "Beam-IsA-IObject_31A80D21B8E8D9D7F5BA26EBACD6E1EA509D50EF469A64F337E142E216A43497",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/IsA.cs",
       "label": "IsA",
       "attributes": [
         "object"
@@ -3030,7 +3830,7 @@
     },
     {
       "id": "Beam-IsA-IFramingElement_CE6E3D30999ADF8C7AA543DF1E58E3AA723A79585B0E62ACB3C7B448984961E6",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/IsA.cs",
       "label": "IsA",
       "attributes": [
         "object"
@@ -3043,7 +3843,7 @@
     },
     {
       "id": "Beam-IsA-IPhysical_9925FA15E30686AEE813574EC4CD40920A393AA2CEDFA54E2A526F86CEA0C901",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/IsA.cs",
       "label": "IsA",
       "attributes": [
         "object"
@@ -3056,7 +3856,7 @@
     },
     {
       "id": "Beam-IsA-IElement1D_C3625FC78DBD5312F82296AE56E16876BE9DF4B8786D11658C7CB42E291666D6",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/IsA.cs",
       "label": "IsA",
       "attributes": [
         "object"
@@ -3069,7 +3869,7 @@
     },
     {
       "id": "Beam-IsA-IElement_F2FC63DEAE60C0684F55730AF77BBB9702B474FFC2D1A214DB65727C19E11282",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/IsA.cs",
       "label": "IsA",
       "attributes": [
         "object"
@@ -3082,7 +3882,7 @@
     },
     {
       "id": "Beam-IsA-IElementM_B772D8C9946A95C28F41A1B9CEFCA41BC50938F58CF81DC27074C5123DAA72BC",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/IsA.cs",
       "label": "IsA",
       "attributes": [
         "object"
@@ -3095,7 +3895,7 @@
     },
     {
       "id": "Beam-IsSubclassOf-BHoMObject_1F00E32252D2D7A87BD1108EEDAA54BA65F64921E6F7106558B07BCD8F46D8A2",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsSubclassOf.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/IsSubclassOf.cs",
       "label": "IsA",
       "attributes": [
         "object"
@@ -3105,7 +3905,7 @@
     },
     {
       "id": "BH.oM.Physical.Elements.Bracing-HasProperty-BH.oM.Physical.Elements.Bracing.Location",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/HasProperty.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/HasProperty.cs",
       "label": "HasProperty",
       "attributes": [
         "object"
@@ -3115,7 +3915,7 @@
     },
     {
       "id": "BH.oM.Physical.Elements.Bracing.Location-IsA-BH.oM.Geometry.ICurve",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/IsA.cs",
       "label": "IsA",
       "attributes": [
         "object"
@@ -3125,7 +3925,7 @@
     },
     {
       "id": "BH.oM.Physical.Elements.Bracing-HasProperty-BH.oM.Physical.Elements.Bracing.Property",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/HasProperty.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/HasProperty.cs",
       "label": "HasProperty",
       "attributes": [
         "object"
@@ -3135,7 +3935,7 @@
     },
     {
       "id": "BH.oM.Physical.Elements.Bracing.Property-IsA-BH.oM.Physical.FramingProperties.IFramingElementProperty",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/IsA.cs",
       "label": "IsA",
       "attributes": [
         "object"
@@ -3145,7 +3945,7 @@
     },
     {
       "id": "Bracing-IsA-IBHoMObject_25D50F0A08E846E22A5153D968EB66312F009F3C175AE76250F6970776003D4F",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/IsA.cs",
       "label": "IsA",
       "attributes": [
         "object"
@@ -3158,7 +3958,7 @@
     },
     {
       "id": "Bracing-IsA-IObject_8E54B670A3800CACF52113E65D4CCA040E35C8EE0BA96D9CA71E110B919F33CF",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/IsA.cs",
       "label": "IsA",
       "attributes": [
         "object"
@@ -3171,7 +3971,7 @@
     },
     {
       "id": "Bracing-IsA-IFramingElement_F04AAA85303F4B83269187EFD62EB5DD0986C82CDA3CB78493A29BF5F327CA06",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/IsA.cs",
       "label": "IsA",
       "attributes": [
         "object"
@@ -3184,7 +3984,7 @@
     },
     {
       "id": "Bracing-IsA-IPhysical_CD793F9387C59A13813783D16796CB7DD537C186A3D012AECE44B036C1C65BBD",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/IsA.cs",
       "label": "IsA",
       "attributes": [
         "object"
@@ -3197,7 +3997,7 @@
     },
     {
       "id": "Bracing-IsA-IElement1D_1A3A1A829FD1A5E6D9CC6A4B0E6664E958104A6A0FFBD8FE4D70E6FDA1FE86E6",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/IsA.cs",
       "label": "IsA",
       "attributes": [
         "object"
@@ -3210,7 +4010,7 @@
     },
     {
       "id": "Bracing-IsA-IElement_37AFEFA9A5F75DB29790343C57569A7D0AD0A98E8E1C4B19B9FDF61404002069",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/IsA.cs",
       "label": "IsA",
       "attributes": [
         "object"
@@ -3223,7 +4023,7 @@
     },
     {
       "id": "Bracing-IsA-IElementM_1E1DB2FD3C77B08126D64CCB7F69DA54ECCDF851398DACA9CCD377966C51CC6E",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/IsA.cs",
       "label": "IsA",
       "attributes": [
         "object"
@@ -3236,7 +4036,7 @@
     },
     {
       "id": "Bracing-IsSubclassOf-BHoMObject_A7F93FC1602DD57E88070A2316B13139E285AC97661D12F43D40D819C0E3A54D",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsSubclassOf.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/IsSubclassOf.cs",
       "label": "IsA",
       "attributes": [
         "object"
@@ -3246,7 +4046,7 @@
     },
     {
       "id": "BH.oM.Physical.Elements.Cable-HasProperty-BH.oM.Physical.Elements.Cable.Location",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/HasProperty.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/HasProperty.cs",
       "label": "HasProperty",
       "attributes": [
         "object"
@@ -3256,7 +4056,7 @@
     },
     {
       "id": "BH.oM.Physical.Elements.Cable.Location-IsA-BH.oM.Geometry.ICurve",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/IsA.cs",
       "label": "IsA",
       "attributes": [
         "object"
@@ -3266,7 +4066,7 @@
     },
     {
       "id": "BH.oM.Physical.Elements.Cable-HasProperty-BH.oM.Physical.Elements.Cable.Property",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/HasProperty.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/HasProperty.cs",
       "label": "HasProperty",
       "attributes": [
         "object"
@@ -3276,7 +4076,7 @@
     },
     {
       "id": "BH.oM.Physical.Elements.Cable.Property-IsA-BH.oM.Physical.FramingProperties.IFramingElementProperty",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/IsA.cs",
       "label": "IsA",
       "attributes": [
         "object"
@@ -3286,7 +4086,7 @@
     },
     {
       "id": "Cable-IsA-IBHoMObject_F91A732766C30B6EFA9B60F2DBE61F00D4DD08F40E43A0099A67AA9F1D796EAB",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/IsA.cs",
       "label": "IsA",
       "attributes": [
         "object"
@@ -3299,7 +4099,7 @@
     },
     {
       "id": "Cable-IsA-IObject_09C5B18333273D3E4AA38EBE1BA12F8192EA91FBA2875CCA84701E6FCC2F303E",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/IsA.cs",
       "label": "IsA",
       "attributes": [
         "object"
@@ -3312,7 +4112,7 @@
     },
     {
       "id": "Cable-IsA-IFramingElement_2C08452DE981B3149BEF85121A9B6D77ED1C0975D6CB691F67547078FD58018F",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/IsA.cs",
       "label": "IsA",
       "attributes": [
         "object"
@@ -3325,7 +4125,7 @@
     },
     {
       "id": "Cable-IsA-IPhysical_6384FCB66C6B6ECFF1203FFDA627B6DD8A6D53C6BF7B16AA8961E99328D333B5",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/IsA.cs",
       "label": "IsA",
       "attributes": [
         "object"
@@ -3338,7 +4138,7 @@
     },
     {
       "id": "Cable-IsA-IElement1D_23A0521C0D771C5C3799CDAAFA968BE807B31D102A402D8B9BE3B9BC7824FE68",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/IsA.cs",
       "label": "IsA",
       "attributes": [
         "object"
@@ -3351,7 +4151,7 @@
     },
     {
       "id": "Cable-IsA-IElement_D0066B663CE7CA5A725A0EEDEBBDB3B1C1EB2BDA2EBB26A33D429105FF4AFC9B",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/IsA.cs",
       "label": "IsA",
       "attributes": [
         "object"
@@ -3364,7 +4164,7 @@
     },
     {
       "id": "Cable-IsA-IElementM_1BE78B389800DCC55D9076DCA6B96A43DFB579661F8B3E079379F9D2DF04113B",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/IsA.cs",
       "label": "IsA",
       "attributes": [
         "object"
@@ -3377,7 +4177,7 @@
     },
     {
       "id": "Cable-IsSubclassOf-BHoMObject_96398280488DE39C13408972150E4CD75059FB4C9F00C0A8484667E8297C67B2",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsSubclassOf.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/IsSubclassOf.cs",
       "label": "IsA",
       "attributes": [
         "object"
@@ -3387,7 +4187,7 @@
     },
     {
       "id": "BH.oM.Physical.Elements.Column-HasProperty-BH.oM.Physical.Elements.Column.Location",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/HasProperty.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/HasProperty.cs",
       "label": "HasProperty",
       "attributes": [
         "object"
@@ -3397,7 +4197,7 @@
     },
     {
       "id": "BH.oM.Physical.Elements.Column.Location-IsA-BH.oM.Geometry.ICurve",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/IsA.cs",
       "label": "IsA",
       "attributes": [
         "object"
@@ -3407,7 +4207,7 @@
     },
     {
       "id": "BH.oM.Physical.Elements.Column-HasProperty-BH.oM.Physical.Elements.Column.Property",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/HasProperty.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/HasProperty.cs",
       "label": "HasProperty",
       "attributes": [
         "object"
@@ -3417,7 +4217,7 @@
     },
     {
       "id": "BH.oM.Physical.Elements.Column.Property-IsA-BH.oM.Physical.FramingProperties.IFramingElementProperty",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/IsA.cs",
       "label": "IsA",
       "attributes": [
         "object"
@@ -3427,7 +4227,7 @@
     },
     {
       "id": "Column-IsA-IBHoMObject_5F74DD7773B30F0454251657A9564CACE6C27A6E5BC9D9DF8560550F7FF7B258",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/IsA.cs",
       "label": "IsA",
       "attributes": [
         "object"
@@ -3440,7 +4240,7 @@
     },
     {
       "id": "Column-IsA-IObject_C652E2BA1849858873D6EF54AEF820B961EC31D160B02D449FA8587C42678AA3",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/IsA.cs",
       "label": "IsA",
       "attributes": [
         "object"
@@ -3453,7 +4253,7 @@
     },
     {
       "id": "Column-IsA-IFramingElement_B6B6463F34CDF61DCFF51BD10FA2E2585E8653C8E99ABF9D338D786C06F5982A",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/IsA.cs",
       "label": "IsA",
       "attributes": [
         "object"
@@ -3466,7 +4266,7 @@
     },
     {
       "id": "Column-IsA-IPhysical_2A786787DA5E56AD20BEF284521611A7852C59AB989E573D5139A32261225A52",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/IsA.cs",
       "label": "IsA",
       "attributes": [
         "object"
@@ -3479,7 +4279,7 @@
     },
     {
       "id": "Column-IsA-IElement1D_5475F847F3B8A305A74C4A200982DA66A02E050DD53A0DED21E500598EF2D189",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/IsA.cs",
       "label": "IsA",
       "attributes": [
         "object"
@@ -3492,7 +4292,7 @@
     },
     {
       "id": "Column-IsA-IElement_863CCF65281CF500215D83B4959A45223456256F232463047D688B43D65D763B",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/IsA.cs",
       "label": "IsA",
       "attributes": [
         "object"
@@ -3505,7 +4305,7 @@
     },
     {
       "id": "Column-IsA-IElementM_4DC90922741716AF639D445B7BF5AEE79880E0BA34832FD1A3F23F9505DCFA7C",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/IsA.cs",
       "label": "IsA",
       "attributes": [
         "object"
@@ -3518,7 +4318,7 @@
     },
     {
       "id": "Column-IsSubclassOf-BHoMObject_8323BAF7DBAD546181C0342A1473F6EA5EB2881D69822E5AD405C827AC5B122B",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsSubclassOf.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/IsSubclassOf.cs",
       "label": "IsA",
       "attributes": [
         "object"
@@ -3528,7 +4328,7 @@
     },
     {
       "id": "BH.oM.Physical.Elements.Door-HasProperty-BH.oM.Physical.Elements.Door.Location",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/HasProperty.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/HasProperty.cs",
       "label": "HasProperty",
       "attributes": [
         "object"
@@ -3538,7 +4338,7 @@
     },
     {
       "id": "BH.oM.Physical.Elements.Door.Location-IsA-BH.oM.Geometry.ISurface",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/IsA.cs",
       "label": "IsA",
       "attributes": [
         "object"
@@ -3548,7 +4348,7 @@
     },
     {
       "id": "BH.oM.Physical.Elements.Door-HasProperty-BH.oM.Physical.Elements.Door.Construction",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/HasProperty.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/HasProperty.cs",
       "label": "HasProperty",
       "attributes": [
         "object"
@@ -3558,7 +4358,7 @@
     },
     {
       "id": "BH.oM.Physical.Elements.Door.Construction-IsA-BH.oM.Physical.Constructions.IConstruction",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/IsA.cs",
       "label": "IsA",
       "attributes": [
         "object"
@@ -3568,7 +4368,7 @@
     },
     {
       "id": "Door-IsA-IBHoMObject_3EF28E784FEDCCAD6C0D5C787CEC824E8F19416A4AF8A03CE252009AA0B9C66C",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/IsA.cs",
       "label": "IsA",
       "attributes": [
         "object"
@@ -3581,7 +4381,7 @@
     },
     {
       "id": "Door-IsA-IObject_AEE20C052F651AEB98042D92503E434FEED3799FC0D8BE5C23DB12DB1F42C63C",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/IsA.cs",
       "label": "IsA",
       "attributes": [
         "object"
@@ -3594,7 +4394,7 @@
     },
     {
       "id": "Door-IsA-IOpening_BF8B079AEEEFEFD549B1164064CDA5A9D495C00639F595720F4DC1AD990048E2",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/IsA.cs",
       "label": "IsA",
       "attributes": [
         "object"
@@ -3607,7 +4407,7 @@
     },
     {
       "id": "Door-IsA-IPhysical_9A1051B4ED329F744DA64D67F6BE6F0DB3A0DBF8E575838B5F95643E447C9D4D",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/IsA.cs",
       "label": "IsA",
       "attributes": [
         "object"
@@ -3620,7 +4420,7 @@
     },
     {
       "id": "Door-IsA-IElement2D_7B24FAD44C3CB6DC770E73E8CCFE48DAD4A0F377A060C177E248C74602791581",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/IsA.cs",
       "label": "IsA",
       "attributes": [
         "object"
@@ -3633,7 +4433,7 @@
     },
     {
       "id": "Door-IsA-IElement_D89344B036DF0BC10E6DBB97C35A3C0689F13F486300F7B263C21EA8229C5175",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/IsA.cs",
       "label": "IsA",
       "attributes": [
         "object"
@@ -3646,7 +4446,7 @@
     },
     {
       "id": "Door-IsA-IElementM_7E0FB7D976E3D9380386FDDAED387A8E3FA522A19C43C1F7606A4FF6A17740A3",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/IsA.cs",
       "label": "IsA",
       "attributes": [
         "object"
@@ -3659,7 +4459,7 @@
     },
     {
       "id": "Door-IsSubclassOf-BHoMObject_32C3AE9510514E2DB966F1AFA23721D7CD0B9C2DBEF4717F67B1036F54FEB1BB",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsSubclassOf.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/IsSubclassOf.cs",
       "label": "IsA",
       "attributes": [
         "object"
@@ -3669,7 +4469,7 @@
     },
     {
       "id": "ExplicitBulk-HasProperty-Volume_E1F4A825AD5F2C51B7AEB7E1EC358D127F9E14CAEE033E6E0DD884504C4D6041",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/HasProperty.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/HasProperty.cs",
       "label": "HasProperty",
       "attributes": [
         "datatype"
@@ -3679,7 +4479,7 @@
     },
     {
       "id": "BH.oM.Physical.Elements.ExplicitBulk-HasProperty-BH.oM.Physical.Elements.ExplicitBulk.MaterialComposition",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/HasProperty.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/HasProperty.cs",
       "label": "HasProperty",
       "attributes": [
         "object"
@@ -3689,7 +4489,7 @@
     },
     {
       "id": "BH.oM.Physical.Elements.ExplicitBulk.MaterialComposition-IsA-BH.oM.Physical.Materials.MaterialComposition",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/IsA.cs",
       "label": "IsA",
       "attributes": [
         "object"
@@ -3699,7 +4499,7 @@
     },
     {
       "id": "ExplicitBulk-IsA-IBHoMObject_143E02AC7A889285584C3A15EC40B495DE2B1FC3BBC58353A85B58BF5C09D10A",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/IsA.cs",
       "label": "IsA",
       "attributes": [
         "object"
@@ -3712,7 +4512,7 @@
     },
     {
       "id": "ExplicitBulk-IsA-IObject_DD539AF03DB48C291D302DDAAF479AB22BF706642E23B17CB8A039FCCDF9842E",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/IsA.cs",
       "label": "IsA",
       "attributes": [
         "object"
@@ -3725,7 +4525,7 @@
     },
     {
       "id": "ExplicitBulk-IsA-IElementM_D4E5414268982A57405107082D6989DA50C6AF70A9CAE60CD81A9365CE9EA40B",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/IsA.cs",
       "label": "IsA",
       "attributes": [
         "object"
@@ -3738,7 +4538,7 @@
     },
     {
       "id": "ExplicitBulk-IsSubclassOf-BHoMObject_F0BC1C94F8C95A313B03EF1439F1307A2939E38246CED4FF38DCD8CC63125D77",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsSubclassOf.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/IsSubclassOf.cs",
       "label": "IsA",
       "attributes": [
         "object"
@@ -3748,7 +4548,7 @@
     },
     {
       "id": "BH.oM.Physical.Elements.Floor-HasProperty-BH.oM.Physical.Elements.Floor.Location",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/HasProperty.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/HasProperty.cs",
       "label": "HasProperty",
       "attributes": [
         "object"
@@ -3758,7 +4558,7 @@
     },
     {
       "id": "BH.oM.Physical.Elements.Floor.Location-IsA-BH.oM.Geometry.ISurface",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/IsA.cs",
       "label": "IsA",
       "attributes": [
         "object"
@@ -3768,7 +4568,7 @@
     },
     {
       "id": "BH.oM.Physical.Elements.Floor-HasProperty-BH.oM.Physical.Elements.Floor.Construction",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/HasProperty.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/HasProperty.cs",
       "label": "HasProperty",
       "attributes": [
         "object"
@@ -3778,7 +4578,7 @@
     },
     {
       "id": "BH.oM.Physical.Elements.Floor.Construction-IsA-BH.oM.Physical.Constructions.IConstruction",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/IsA.cs",
       "label": "IsA",
       "attributes": [
         "object"
@@ -3788,7 +4588,7 @@
     },
     {
       "id": "BH.oM.Physical.Elements.Floor-HasProperty-BH.oM.Physical.Elements.Floor.Openings",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/HasProperty.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/HasProperty.cs",
       "label": "HasProperty",
       "attributes": [
         "object"
@@ -3798,7 +4598,7 @@
     },
     {
       "id": "BH.oM.Physical.Elements.Floor.Openings-IsAListOf-BH.oM.Physical.Elements.IOpening",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsAListOf.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/IsAListOf.cs",
       "label": "IsAListOf",
       "attributes": [
         "object"
@@ -3808,7 +4608,7 @@
     },
     {
       "id": "BH.oM.Physical.Elements.Floor-HasProperty-BH.oM.Physical.Elements.Floor.Offset",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/HasProperty.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/HasProperty.cs",
       "label": "HasProperty",
       "attributes": [
         "object"
@@ -3818,7 +4618,7 @@
     },
     {
       "id": "BH.oM.Physical.Elements.Floor.Offset-IsA-BH.oM.Physical.Elements.Offset",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/IsA.cs",
       "label": "IsA",
       "attributes": [
         "object"
@@ -3828,7 +4628,7 @@
     },
     {
       "id": "Floor-IsA-IBHoMObject_F9B3F434DE97F37587D8E68DEF82809457CFBA79DCDD1E63E9BFE7CCC69AE393",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/IsA.cs",
       "label": "IsA",
       "attributes": [
         "object"
@@ -3841,7 +4641,7 @@
     },
     {
       "id": "Floor-IsA-IObject_FB3545579C391B25876CC4EEC20985FF108F4C76FFF73B1FCA55F5BF0034F82A",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/IsA.cs",
       "label": "IsA",
       "attributes": [
         "object"
@@ -3854,7 +4654,7 @@
     },
     {
       "id": "Floor-IsA-ISurface_9E7937F905DB38FF5B523EC0A6BB28DCA6A51BD6EC991167CB2129360808DC2C",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/IsA.cs",
       "label": "IsA",
       "attributes": [
         "object"
@@ -3867,7 +4667,7 @@
     },
     {
       "id": "Floor-IsA-IPhysical_1D28F07390FD20D53ADEEF0BA7AD86F8DED46A65C821C397269E3B84C513168D",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/IsA.cs",
       "label": "IsA",
       "attributes": [
         "object"
@@ -3880,7 +4680,7 @@
     },
     {
       "id": "Floor-IsA-IElement2D_3C6EEC37683D810BBD4A13A0F5ECFDB5FF7E86D61951A442E735BB24A8D88D1A",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/IsA.cs",
       "label": "IsA",
       "attributes": [
         "object"
@@ -3893,7 +4693,7 @@
     },
     {
       "id": "Floor-IsA-IElement_7B0045153992047705481BB91DCA20092474511ADD688F114B0BFDCB9EE3ABF8",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/IsA.cs",
       "label": "IsA",
       "attributes": [
         "object"
@@ -3906,7 +4706,7 @@
     },
     {
       "id": "Floor-IsA-IElementM_C42DDF5CD6051C0DDB3EEEBC6B577CE80C29132F7EAE1F4F0510D8C9AF0F4637",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/IsA.cs",
       "label": "IsA",
       "attributes": [
         "object"
@@ -3919,7 +4719,7 @@
     },
     {
       "id": "Floor-IsSubclassOf-BHoMObject_68B2E299CC7358F5516F1F2C9A67C20CF958338EF9C9676D84D7429354A98CAD",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsSubclassOf.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/IsSubclassOf.cs",
       "label": "IsA",
       "attributes": [
         "object"
@@ -3929,7 +4729,7 @@
     },
     {
       "id": "IFramingElement-RequiresProperty-Location_22575592A7C3C877168355BBAAA71A66E9770190F0A04B188950DF70B98CACCB",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/RequiresProperty.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/RequiresProperty.cs",
       "label": "RequiresProperty",
       "attributes": [
         "datatype"
@@ -3939,7 +4739,7 @@
     },
     {
       "id": "IFramingElement-RequiresProperty-Property_6BEC963F7ED33FCD8FEAE4E4C980DC83343C648AE8E6CBF7819E137ED6E728C7",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/RequiresProperty.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/RequiresProperty.cs",
       "label": "RequiresProperty",
       "attributes": [
         "datatype"
@@ -3949,7 +4749,7 @@
     },
     {
       "id": "IFramingElement-IsA-IBHoMObject_77AE17B02233BBFE1664B8DB94B88A06E8550674BE4EF9D91B7E6B841A75AD32",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/IsA.cs",
       "label": "IsA",
       "attributes": [
         "object"
@@ -3962,7 +4762,7 @@
     },
     {
       "id": "IFramingElement-IsA-IObject_EFDB838CDD4241F553F172A22078842C9FF7FF58B66630E774D8215D7CF49606",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/IsA.cs",
       "label": "IsA",
       "attributes": [
         "object"
@@ -3975,7 +4775,7 @@
     },
     {
       "id": "IFramingElement-IsA-IPhysical_60233635B5F4693D4BEBE41EB3EE946362AB69F3B95D30FCC39F7D8C279B52E5",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/IsA.cs",
       "label": "IsA",
       "attributes": [
         "object"
@@ -3988,7 +4788,7 @@
     },
     {
       "id": "IFramingElement-IsA-IElement1D_58367CD25AA17CA577CFAD4FF624D10F8C8F3565C75494DC7A2414D92D9B382F",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/IsA.cs",
       "label": "IsA",
       "attributes": [
         "object"
@@ -4001,7 +4801,7 @@
     },
     {
       "id": "IFramingElement-IsA-IElement_E55454F093DA954725636071165A5D7705635B5CED684440F1018E810F9F18D6",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/IsA.cs",
       "label": "IsA",
       "attributes": [
         "object"
@@ -4014,7 +4814,7 @@
     },
     {
       "id": "IFramingElement-IsA-IElementM_2ACD173EEF2607426B213CC9F1859BFCA9B265EEE74784FB404F40F270995C1C",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/IsA.cs",
       "label": "IsA",
       "attributes": [
         "object"
@@ -4027,7 +4827,7 @@
     },
     {
       "id": "IOpening-RequiresProperty-Location_F33074F9D681DBCBAFC50EB644C987829131F2FB04E06E2E2790042E22CF3042",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/RequiresProperty.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/RequiresProperty.cs",
       "label": "RequiresProperty",
       "attributes": [
         "datatype"
@@ -4037,7 +4837,7 @@
     },
     {
       "id": "IOpening-IsA-IBHoMObject_CF43E16823D7C67B5F26B2EF7D9A1BE73B5C451207AB92C294DBC75D7500F8D9",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/IsA.cs",
       "label": "IsA",
       "attributes": [
         "object"
@@ -4050,7 +4850,7 @@
     },
     {
       "id": "IOpening-IsA-IObject_786FD5BB3479C7338D58A4243DA2DCCEB4AC4AA2BBCDB9715189440CFD130C0C",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/IsA.cs",
       "label": "IsA",
       "attributes": [
         "object"
@@ -4063,7 +4863,7 @@
     },
     {
       "id": "IOpening-IsA-IPhysical_39DF41DED02B30319F14453C95B24B9FAD64E479B81FA8F875064888B2728D1C",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/IsA.cs",
       "label": "IsA",
       "attributes": [
         "object"
@@ -4076,7 +4876,7 @@
     },
     {
       "id": "IOpening-IsA-IElement2D_1658DE7DD370D2AD5E5166B25DC09AE3233348C89F271DBD34A054474DF66CFA",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/IsA.cs",
       "label": "IsA",
       "attributes": [
         "object"
@@ -4089,7 +4889,7 @@
     },
     {
       "id": "IOpening-IsA-IElement_D9F1DD03FFF4F5F0E4AA3258262C550BAD6FC9F5AA0CABF401C07048724E43B9",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/IsA.cs",
       "label": "IsA",
       "attributes": [
         "object"
@@ -4102,7 +4902,7 @@
     },
     {
       "id": "ISolid-RequiresProperty-Geometry_369C97F2BC2BFEE142AFCD70D595724FC921163A444107460E342A7FA872B2A0",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/RequiresProperty.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/RequiresProperty.cs",
       "label": "RequiresProperty",
       "attributes": [
         "datatype"
@@ -4112,7 +4912,7 @@
     },
     {
       "id": "ISolid-IsA-IBHoMObject_3B5E9CB99EC15945BD4E56804DF6F2BE74D0649F0A79912635D9A0FDB7694C6E",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/IsA.cs",
       "label": "IsA",
       "attributes": [
         "object"
@@ -4125,7 +4925,7 @@
     },
     {
       "id": "ISolid-IsA-IObject_A1D15A527E9897C65DF25196D3FF7DCC30B41667B1B4BAC76B3EC16EC309595B",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/IsA.cs",
       "label": "IsA",
       "attributes": [
         "object"
@@ -4138,7 +4938,7 @@
     },
     {
       "id": "ISolid-IsA-IPhysical_6D3FFB0D5166E64F935DCB44E952438595A6706A58F675D1633BBA02E37F1747",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/IsA.cs",
       "label": "IsA",
       "attributes": [
         "object"
@@ -4151,7 +4951,7 @@
     },
     {
       "id": "ISolid-IsA-IElementM_2AFD2570AE2014F188F19370AA2B7129DC07DFBAC3C9DACD8F35C2E098B56D1D",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/IsA.cs",
       "label": "IsA",
       "attributes": [
         "object"
@@ -4164,7 +4964,7 @@
     },
     {
       "id": "ISurface-RequiresProperty-Location_89E12D6B035CAD993A5DF6F4C6D29663F3F2E2F7252127D036BD996A066F42FD",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/RequiresProperty.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/RequiresProperty.cs",
       "label": "RequiresProperty",
       "attributes": [
         "datatype"
@@ -4174,7 +4974,7 @@
     },
     {
       "id": "ISurface-RequiresProperty-Construction_DFFAF65E3D0E985B24D9F1A1B1086773DE9114AF0E4B3ED025D86AA6AE6731EF",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/RequiresProperty.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/RequiresProperty.cs",
       "label": "RequiresProperty",
       "attributes": [
         "datatype"
@@ -4184,7 +4984,7 @@
     },
     {
       "id": "ISurface-RequiresProperty-Openings_641DFD4883C3A73E825473481B886831ACDF9EE69DF3FAF6AA34765337EF37F1",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/RequiresProperty.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/RequiresProperty.cs",
       "label": "RequiresProperty",
       "attributes": [
         "datatype"
@@ -4194,7 +4994,7 @@
     },
     {
       "id": "ISurface-RequiresProperty-Offset_32B2344280E349B7375250CAAF3A46A54308A287AC82D756A59E23DD8133343B",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/RequiresProperty.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/RequiresProperty.cs",
       "label": "RequiresProperty",
       "attributes": [
         "datatype"
@@ -4204,7 +5004,7 @@
     },
     {
       "id": "ISurface-IsA-IBHoMObject_AE0D0F9E829E6473B086B7B04CAE4DCABC86540F98EC4381E5D65E074DD7A110",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/IsA.cs",
       "label": "IsA",
       "attributes": [
         "object"
@@ -4217,7 +5017,7 @@
     },
     {
       "id": "ISurface-IsA-IObject_F5AE762BBCD6379C35FDEF99273060E9D2286983D49BB59CEC6EF87A278CE82E",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/IsA.cs",
       "label": "IsA",
       "attributes": [
         "object"
@@ -4230,7 +5030,7 @@
     },
     {
       "id": "ISurface-IsA-IPhysical_3987BA94048AC90BFD425551AE1AB17D79E7766B704A02B238085C61794E9B7D",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/IsA.cs",
       "label": "IsA",
       "attributes": [
         "object"
@@ -4243,7 +5043,7 @@
     },
     {
       "id": "ISurface-IsA-IElement2D_CE02338DECC1558586C8A16A47201AADC387B315FF09668F0C349BF7E732CF3E",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/IsA.cs",
       "label": "IsA",
       "attributes": [
         "object"
@@ -4256,7 +5056,7 @@
     },
     {
       "id": "ISurface-IsA-IElement_AD2955CDFA15CAEC98E205D37F2A681B4ACC38301E95C0C5A16C5A12F4AE83A4",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/IsA.cs",
       "label": "IsA",
       "attributes": [
         "object"
@@ -4269,7 +5069,7 @@
     },
     {
       "id": "ISurface-IsA-IElementM_AE49DCB966A708872ABAC1CE2026F3BC2AEA1D3D8B54B6EEA9FE0C1AD9B3850E",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/IsA.cs",
       "label": "IsA",
       "attributes": [
         "object"
@@ -4281,8 +5081,64 @@
       "range": "BH.oM.Dimensional.IElementM"
     },
     {
+      "id": "BH.oM.Physical.Elements.MeshElement-HasProperty-BH.oM.Physical.Elements.MeshElement.Mesh",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/HasProperty.cs",
+      "label": "HasProperty",
+      "attributes": [
+        "object"
+      ],
+      "domain": "BH.oM.Physical.Elements.MeshElement",
+      "range": "BH.oM.Physical.Elements.MeshElement.Mesh"
+    },
+    {
+      "id": "BH.oM.Physical.Elements.MeshElement.Mesh-IsA-BH.oM.Geometry.Mesh",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/IsA.cs",
+      "label": "IsA",
+      "attributes": [
+        "object"
+      ],
+      "domain": "BH.oM.Physical.Elements.MeshElement.Mesh",
+      "range": "BH.oM.Geometry.Mesh"
+    },
+    {
+      "id": "MeshElement-IsA-IBHoMObject_476B1FBB9333D3E27023E2E3FA94B231EED3E64BB57DEA36DB99755D3BE95462",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/IsA.cs",
+      "label": "IsA",
+      "attributes": [
+        "object"
+      ],
+      "comment": {
+        "undefined": "Can be used to describe that a thing belongs to a class; or that a thing is equivalent to another thing. When used for BHoM types, this describes C# interface implementation."
+      },
+      "domain": "BH.oM.Physical.Elements.MeshElement",
+      "range": "BH.oM.Base.IBHoMObject"
+    },
+    {
+      "id": "MeshElement-IsA-IObject_7DF4BFE4D2F3A036E168594EE49C3629FB4BF78FCC9C1CA742183DF9BCEB710C",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/IsA.cs",
+      "label": "IsA",
+      "attributes": [
+        "object"
+      ],
+      "comment": {
+        "undefined": "Can be used to describe that a thing belongs to a class; or that a thing is equivalent to another thing. When used for BHoM types, this describes C# interface implementation."
+      },
+      "domain": "BH.oM.Physical.Elements.MeshElement",
+      "range": "BH.oM.Base.IObject"
+    },
+    {
+      "id": "MeshElement-IsSubclassOf-BHoMObject_AB300AEE174980EB559887B614E93E47B72E10B5DBA94B4545B96DEC68EDF9F3",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/IsSubclassOf.cs",
+      "label": "IsA",
+      "attributes": [
+        "object"
+      ],
+      "domain": "BH.oM.Physical.Elements.MeshElement",
+      "range": "BH.oM.Base.BHoMObject"
+    },
+    {
       "id": "BH.oM.Physical.Elements.Pile-HasProperty-BH.oM.Physical.Elements.Pile.Location",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/HasProperty.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/HasProperty.cs",
       "label": "HasProperty",
       "attributes": [
         "object"
@@ -4292,7 +5148,7 @@
     },
     {
       "id": "BH.oM.Physical.Elements.Pile.Location-IsA-BH.oM.Geometry.ICurve",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/IsA.cs",
       "label": "IsA",
       "attributes": [
         "object"
@@ -4302,7 +5158,7 @@
     },
     {
       "id": "BH.oM.Physical.Elements.Pile-HasProperty-BH.oM.Physical.Elements.Pile.Property",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/HasProperty.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/HasProperty.cs",
       "label": "HasProperty",
       "attributes": [
         "object"
@@ -4312,7 +5168,7 @@
     },
     {
       "id": "BH.oM.Physical.Elements.Pile.Property-IsA-BH.oM.Physical.FramingProperties.IFramingElementProperty",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/IsA.cs",
       "label": "IsA",
       "attributes": [
         "object"
@@ -4322,7 +5178,7 @@
     },
     {
       "id": "Pile-IsA-IBHoMObject_9E0F188C77257A8B70304141575300F5B8D2970CE237F4B134E9BE47D5772141",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/IsA.cs",
       "label": "IsA",
       "attributes": [
         "object"
@@ -4335,7 +5191,7 @@
     },
     {
       "id": "Pile-IsA-IObject_A204CC2EBC4DADA940B984C63B1A312B839048FD9373C02255A3C98D9103ED7A",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/IsA.cs",
       "label": "IsA",
       "attributes": [
         "object"
@@ -4348,7 +5204,7 @@
     },
     {
       "id": "Pile-IsA-IFramingElement_ABEC43954D1BEF099FA82D772C2789CE73D1407A7459F10E64999E3AFDB26408",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/IsA.cs",
       "label": "IsA",
       "attributes": [
         "object"
@@ -4361,7 +5217,7 @@
     },
     {
       "id": "Pile-IsA-IPhysical_3AEFB83D1338E3781F85471CBFE5E4ABA4654E5D0E73C5E3E8AA62ED92D38FCB",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/IsA.cs",
       "label": "IsA",
       "attributes": [
         "object"
@@ -4374,7 +5230,7 @@
     },
     {
       "id": "Pile-IsA-IElement1D_1196A6A1B8BD055DBD039252CE7A25F731571CBB225B4BA66A0CEC00CE1FE41A",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/IsA.cs",
       "label": "IsA",
       "attributes": [
         "object"
@@ -4387,7 +5243,7 @@
     },
     {
       "id": "Pile-IsA-IElement_4A6C7D3DFF3743BF257B37C135B4679E39399938DF2816F23BD9CEC03B7CC799",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/IsA.cs",
       "label": "IsA",
       "attributes": [
         "object"
@@ -4400,7 +5256,7 @@
     },
     {
       "id": "Pile-IsA-IElementM_AFF7C70C430D092E711FD4B065CEBA956D506027D4573CA389DDAD5FD883C27A",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/IsA.cs",
       "label": "IsA",
       "attributes": [
         "object"
@@ -4413,7 +5269,7 @@
     },
     {
       "id": "Pile-IsSubclassOf-BHoMObject_3A12CB76F5BE7A05BEF9F42848D5EF444CF9A3E15264B6A9C621A1D25DE11BFA",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsSubclassOf.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/IsSubclassOf.cs",
       "label": "IsA",
       "attributes": [
         "object"
@@ -4423,7 +5279,7 @@
     },
     {
       "id": "BH.oM.Physical.Elements.Roof-HasProperty-BH.oM.Physical.Elements.Roof.Location",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/HasProperty.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/HasProperty.cs",
       "label": "HasProperty",
       "attributes": [
         "object"
@@ -4433,7 +5289,7 @@
     },
     {
       "id": "BH.oM.Physical.Elements.Roof.Location-IsA-BH.oM.Geometry.ISurface",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/IsA.cs",
       "label": "IsA",
       "attributes": [
         "object"
@@ -4443,7 +5299,7 @@
     },
     {
       "id": "BH.oM.Physical.Elements.Roof-HasProperty-BH.oM.Physical.Elements.Roof.Construction",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/HasProperty.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/HasProperty.cs",
       "label": "HasProperty",
       "attributes": [
         "object"
@@ -4453,7 +5309,7 @@
     },
     {
       "id": "BH.oM.Physical.Elements.Roof.Construction-IsA-BH.oM.Physical.Constructions.IConstruction",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/IsA.cs",
       "label": "IsA",
       "attributes": [
         "object"
@@ -4463,7 +5319,7 @@
     },
     {
       "id": "BH.oM.Physical.Elements.Roof-HasProperty-BH.oM.Physical.Elements.Roof.Openings",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/HasProperty.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/HasProperty.cs",
       "label": "HasProperty",
       "attributes": [
         "object"
@@ -4473,7 +5329,7 @@
     },
     {
       "id": "BH.oM.Physical.Elements.Roof.Openings-IsAListOf-BH.oM.Physical.Elements.IOpening",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsAListOf.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/IsAListOf.cs",
       "label": "IsAListOf",
       "attributes": [
         "object"
@@ -4483,7 +5339,7 @@
     },
     {
       "id": "BH.oM.Physical.Elements.Roof-HasProperty-BH.oM.Physical.Elements.Roof.Offset",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/HasProperty.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/HasProperty.cs",
       "label": "HasProperty",
       "attributes": [
         "object"
@@ -4493,7 +5349,7 @@
     },
     {
       "id": "BH.oM.Physical.Elements.Roof.Offset-IsA-BH.oM.Physical.Elements.Offset",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/IsA.cs",
       "label": "IsA",
       "attributes": [
         "object"
@@ -4503,7 +5359,7 @@
     },
     {
       "id": "Roof-IsA-IBHoMObject_3F3B264E17F341EC19620A53DEF7C8C26035A5295C30B3F3C7A3809085E3C83F",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/IsA.cs",
       "label": "IsA",
       "attributes": [
         "object"
@@ -4516,7 +5372,7 @@
     },
     {
       "id": "Roof-IsA-IObject_4730F11095F76C9F4140225C944694AD550E019927CFAC82D75553C7BCD10D06",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/IsA.cs",
       "label": "IsA",
       "attributes": [
         "object"
@@ -4529,7 +5385,7 @@
     },
     {
       "id": "Roof-IsA-ISurface_7DA5B59D66393B356418731D00E6EC6CD056842C2C279CDD8E707CC2CF3E6DC9",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/IsA.cs",
       "label": "IsA",
       "attributes": [
         "object"
@@ -4542,7 +5398,7 @@
     },
     {
       "id": "Roof-IsA-IPhysical_51E0A4E236DB8CA1261222E82EEE707D4671FC829C5E9A8FD0398DD7958121CD",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/IsA.cs",
       "label": "IsA",
       "attributes": [
         "object"
@@ -4555,7 +5411,7 @@
     },
     {
       "id": "Roof-IsA-IElement2D_228521450A03535AFFF5108B44B58C70222DF476ED9D281752D534B9C0B421FF",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/IsA.cs",
       "label": "IsA",
       "attributes": [
         "object"
@@ -4568,7 +5424,7 @@
     },
     {
       "id": "Roof-IsA-IElement_A97DC0D2D2C60B8546B75BF1C3C4316D3F3634D931B3407CEDBA1D25E32EF3C5",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/IsA.cs",
       "label": "IsA",
       "attributes": [
         "object"
@@ -4581,7 +5437,7 @@
     },
     {
       "id": "Roof-IsA-IElementM_D983CA35E957B6CD939AD0A6CD4EA574DFAD2ABC088A60F488FF05ABBE9D748A",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/IsA.cs",
       "label": "IsA",
       "attributes": [
         "object"
@@ -4594,7 +5450,7 @@
     },
     {
       "id": "Roof-IsSubclassOf-BHoMObject_8B1379B351AC2395753EC71F1A966B821A99244C845E14C92442046B4266EF5D",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsSubclassOf.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/IsSubclassOf.cs",
       "label": "IsA",
       "attributes": [
         "object"
@@ -4604,7 +5460,7 @@
     },
     {
       "id": "BH.oM.Physical.Elements.SolidBulk-HasProperty-BH.oM.Physical.Elements.SolidBulk.Geometry",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/HasProperty.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/HasProperty.cs",
       "label": "HasProperty",
       "attributes": [
         "object"
@@ -4614,7 +5470,7 @@
     },
     {
       "id": "BH.oM.Physical.Elements.SolidBulk.Geometry-IsAListOf-BH.oM.Geometry.ISolid",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsAListOf.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/IsAListOf.cs",
       "label": "IsAListOf",
       "attributes": [
         "object"
@@ -4624,7 +5480,7 @@
     },
     {
       "id": "BH.oM.Physical.Elements.SolidBulk-HasProperty-BH.oM.Physical.Elements.SolidBulk.MaterialComposition",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/HasProperty.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/HasProperty.cs",
       "label": "HasProperty",
       "attributes": [
         "object"
@@ -4634,7 +5490,7 @@
     },
     {
       "id": "BH.oM.Physical.Elements.SolidBulk.MaterialComposition-IsA-BH.oM.Physical.Materials.MaterialComposition",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/IsA.cs",
       "label": "IsA",
       "attributes": [
         "object"
@@ -4644,7 +5500,7 @@
     },
     {
       "id": "SolidBulk-IsA-IBHoMObject_CCEA6ABBEF2D141DFA1C892BECDC7A051054FA935E2B0C9A94FC71EC70E152B3",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/IsA.cs",
       "label": "IsA",
       "attributes": [
         "object"
@@ -4657,7 +5513,7 @@
     },
     {
       "id": "SolidBulk-IsA-IObject_C2BFDAFC0486D88DBF9677B9FFC308135F4AEBA1426A6218B12BFC1619F60192",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/IsA.cs",
       "label": "IsA",
       "attributes": [
         "object"
@@ -4670,7 +5526,7 @@
     },
     {
       "id": "SolidBulk-IsA-ISolid_5A709BB996F1EF117C2FF3672B21A804DD2D24E8C9ACC2EEBE47164859754866",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/IsA.cs",
       "label": "IsA",
       "attributes": [
         "object"
@@ -4683,7 +5539,7 @@
     },
     {
       "id": "SolidBulk-IsA-IPhysical_8CA3C136AC10A1308BFB5D165911E08916070634B63AB6DD30099E0751A1A373",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/IsA.cs",
       "label": "IsA",
       "attributes": [
         "object"
@@ -4696,7 +5552,7 @@
     },
     {
       "id": "SolidBulk-IsA-IElementM_F9D808979C5ED035EE0AEE0E204AE44EB29CB712FB12DFB213A67CF9F790FCFC",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/IsA.cs",
       "label": "IsA",
       "attributes": [
         "object"
@@ -4709,7 +5565,7 @@
     },
     {
       "id": "SolidBulk-IsSubclassOf-BHoMObject_1F6ABB41124384FDAFF73867A48AD54E9E4F4CD860BE6BFA24BEC06ACF276B18",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsSubclassOf.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/IsSubclassOf.cs",
       "label": "IsA",
       "attributes": [
         "object"
@@ -4719,7 +5575,7 @@
     },
     {
       "id": "BH.oM.Physical.Elements.Void-HasProperty-BH.oM.Physical.Elements.Void.Location",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/HasProperty.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/HasProperty.cs",
       "label": "HasProperty",
       "attributes": [
         "object"
@@ -4729,7 +5585,7 @@
     },
     {
       "id": "BH.oM.Physical.Elements.Void.Location-IsA-BH.oM.Geometry.ISurface",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/IsA.cs",
       "label": "IsA",
       "attributes": [
         "object"
@@ -4739,7 +5595,7 @@
     },
     {
       "id": "Void-IsA-IBHoMObject_2403E727398AE4C8305BE37F446F8E53FB0436B3CE9B75DB823EBA9AD7F68EBC",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/IsA.cs",
       "label": "IsA",
       "attributes": [
         "object"
@@ -4752,7 +5608,7 @@
     },
     {
       "id": "Void-IsA-IObject_E7A65196B2541F27510CF449D2F61EFE87A9020E8EAC74B1AC2EA959D5B91E37",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/IsA.cs",
       "label": "IsA",
       "attributes": [
         "object"
@@ -4765,7 +5621,7 @@
     },
     {
       "id": "Void-IsA-IOpening_071FC87736EF30B6B9A4E7182918F869C7728294A5547F078AAD9F8AF2D5EA91",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/IsA.cs",
       "label": "IsA",
       "attributes": [
         "object"
@@ -4778,7 +5634,7 @@
     },
     {
       "id": "Void-IsA-IPhysical_DF1E4E389FF6D0B031BCBF355382DD5E0CB3F086C20C15BD1F9A065471964864",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/IsA.cs",
       "label": "IsA",
       "attributes": [
         "object"
@@ -4791,7 +5647,7 @@
     },
     {
       "id": "Void-IsA-IElement2D_572CBD48AE6D7EAA4D66F254F6C0B4E095AEE2D21F0D17DAA175D7C58A474D08",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/IsA.cs",
       "label": "IsA",
       "attributes": [
         "object"
@@ -4804,7 +5660,7 @@
     },
     {
       "id": "Void-IsA-IElement_06F9D4547CDBA22AE794657EC37C43A730F040D9B83E76A7B037BA239F7E47D6",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/IsA.cs",
       "label": "IsA",
       "attributes": [
         "object"
@@ -4817,7 +5673,7 @@
     },
     {
       "id": "Void-IsSubclassOf-BHoMObject_B9278A79A3CE0982FE14A9586A2B82EBEB50F3ACAC7594562C7F847D7014FC9F",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsSubclassOf.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/IsSubclassOf.cs",
       "label": "IsA",
       "attributes": [
         "object"
@@ -4827,7 +5683,7 @@
     },
     {
       "id": "BH.oM.Physical.Elements.Wall-HasProperty-BH.oM.Physical.Elements.Wall.Location",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/HasProperty.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/HasProperty.cs",
       "label": "HasProperty",
       "attributes": [
         "object"
@@ -4837,7 +5693,7 @@
     },
     {
       "id": "BH.oM.Physical.Elements.Wall.Location-IsA-BH.oM.Geometry.ISurface",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/IsA.cs",
       "label": "IsA",
       "attributes": [
         "object"
@@ -4847,7 +5703,7 @@
     },
     {
       "id": "BH.oM.Physical.Elements.Wall-HasProperty-BH.oM.Physical.Elements.Wall.Construction",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/HasProperty.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/HasProperty.cs",
       "label": "HasProperty",
       "attributes": [
         "object"
@@ -4857,7 +5713,7 @@
     },
     {
       "id": "BH.oM.Physical.Elements.Wall.Construction-IsA-BH.oM.Physical.Constructions.IConstruction",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/IsA.cs",
       "label": "IsA",
       "attributes": [
         "object"
@@ -4867,7 +5723,7 @@
     },
     {
       "id": "BH.oM.Physical.Elements.Wall-HasProperty-BH.oM.Physical.Elements.Wall.Openings",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/HasProperty.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/HasProperty.cs",
       "label": "HasProperty",
       "attributes": [
         "object"
@@ -4877,7 +5733,7 @@
     },
     {
       "id": "BH.oM.Physical.Elements.Wall.Openings-IsAListOf-BH.oM.Physical.Elements.IOpening",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsAListOf.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/IsAListOf.cs",
       "label": "IsAListOf",
       "attributes": [
         "object"
@@ -4887,7 +5743,7 @@
     },
     {
       "id": "BH.oM.Physical.Elements.Wall-HasProperty-BH.oM.Physical.Elements.Wall.Offset",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/HasProperty.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/HasProperty.cs",
       "label": "HasProperty",
       "attributes": [
         "object"
@@ -4897,7 +5753,7 @@
     },
     {
       "id": "BH.oM.Physical.Elements.Wall.Offset-IsA-BH.oM.Physical.Elements.Offset",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/IsA.cs",
       "label": "IsA",
       "attributes": [
         "object"
@@ -4907,7 +5763,7 @@
     },
     {
       "id": "Wall-IsA-IBHoMObject_5962BB26BD9DAE6BE3DB305C4632880F80335E711EA76BA08EE61967F2067751",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/IsA.cs",
       "label": "IsA",
       "attributes": [
         "object"
@@ -4920,7 +5776,7 @@
     },
     {
       "id": "Wall-IsA-IObject_CA0DFFC2B0AE0649968647EF24AC9EB044BAFBED1260E449A113852DE6A26133",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/IsA.cs",
       "label": "IsA",
       "attributes": [
         "object"
@@ -4933,7 +5789,7 @@
     },
     {
       "id": "Wall-IsA-ISurface_8E1A640F4B87CC579669D3B24BDD068DAEB0B8B25085D6014B26F39B74D50C3B",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/IsA.cs",
       "label": "IsA",
       "attributes": [
         "object"
@@ -4946,7 +5802,7 @@
     },
     {
       "id": "Wall-IsA-IPhysical_4639081E3E556E484E22469AE85CC1C7FE4B2E14D9E5D581F67B7298ABC290A7",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/IsA.cs",
       "label": "IsA",
       "attributes": [
         "object"
@@ -4959,7 +5815,7 @@
     },
     {
       "id": "Wall-IsA-IElement2D_B654D6F9E6795F6F13E413A05BC048ACE8E4B59631269BE95AA754CB2B644D5B",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/IsA.cs",
       "label": "IsA",
       "attributes": [
         "object"
@@ -4972,7 +5828,7 @@
     },
     {
       "id": "Wall-IsA-IElement_3FBB359A1119BB37AECA6B43D6116AA57E4EA4769DAFDDD69DB7D0A233B186A6",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/IsA.cs",
       "label": "IsA",
       "attributes": [
         "object"
@@ -4985,7 +5841,7 @@
     },
     {
       "id": "Wall-IsA-IElementM_14EA205408B0976695649E9B4F19B9A12B7577A7A86795E8704A4FBFD45BC8F6",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/IsA.cs",
       "label": "IsA",
       "attributes": [
         "object"
@@ -4998,7 +5854,7 @@
     },
     {
       "id": "Wall-IsSubclassOf-BHoMObject_2A5C3915F39F9142F9CFE14DC780C89DE680BB29956AEBBD71262356CC9A8DD6",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsSubclassOf.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/IsSubclassOf.cs",
       "label": "IsA",
       "attributes": [
         "object"
@@ -5008,7 +5864,7 @@
     },
     {
       "id": "BH.oM.Physical.Elements.Window-HasProperty-BH.oM.Physical.Elements.Window.Location",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/HasProperty.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/HasProperty.cs",
       "label": "HasProperty",
       "attributes": [
         "object"
@@ -5018,7 +5874,7 @@
     },
     {
       "id": "BH.oM.Physical.Elements.Window.Location-IsA-BH.oM.Geometry.ISurface",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/IsA.cs",
       "label": "IsA",
       "attributes": [
         "object"
@@ -5028,7 +5884,7 @@
     },
     {
       "id": "BH.oM.Physical.Elements.Window-HasProperty-BH.oM.Physical.Elements.Window.Construction",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/HasProperty.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/HasProperty.cs",
       "label": "HasProperty",
       "attributes": [
         "object"
@@ -5038,7 +5894,7 @@
     },
     {
       "id": "BH.oM.Physical.Elements.Window.Construction-IsA-BH.oM.Physical.Constructions.IConstruction",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/IsA.cs",
       "label": "IsA",
       "attributes": [
         "object"
@@ -5048,7 +5904,7 @@
     },
     {
       "id": "Window-IsA-IBHoMObject_858CCB1C7A19614FDEF2CADA524566FBDDCEF84AD37E98713706C7B1BA51FAB0",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/IsA.cs",
       "label": "IsA",
       "attributes": [
         "object"
@@ -5061,7 +5917,7 @@
     },
     {
       "id": "Window-IsA-IObject_ED9865D3E36D140D16381AECD2D2164515C3BD2048981DCF10C92E66D4D7C14D",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/IsA.cs",
       "label": "IsA",
       "attributes": [
         "object"
@@ -5074,7 +5930,7 @@
     },
     {
       "id": "Window-IsA-IOpening_1194D30269801D2538090DD14EDDA855E7445580C4EEFDCFBA01CE823278DD74",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/IsA.cs",
       "label": "IsA",
       "attributes": [
         "object"
@@ -5087,7 +5943,7 @@
     },
     {
       "id": "Window-IsA-IPhysical_B8CBC175EA36FDF1AFCB3204726E860FD85B422D5AD90939F6818903EBA9E8D8",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/IsA.cs",
       "label": "IsA",
       "attributes": [
         "object"
@@ -5100,7 +5956,7 @@
     },
     {
       "id": "Window-IsA-IElement2D_310A5EAAC192392B63D3F9424AAB0F6F90100FD3BD5157BABD1480AA50A24331",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/IsA.cs",
       "label": "IsA",
       "attributes": [
         "object"
@@ -5113,7 +5969,7 @@
     },
     {
       "id": "Window-IsA-IElement_B8E77BC70B16273DD28B70AC9D083BA03E296BC9E2E352243C90B7751D16E489",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/IsA.cs",
       "label": "IsA",
       "attributes": [
         "object"
@@ -5126,7 +5982,7 @@
     },
     {
       "id": "Window-IsA-IElementM_0C14F9D571A9CD51590C72A863896E2032E52C66F42FBBECCF102902D8319D1E",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/IsA.cs",
       "label": "IsA",
       "attributes": [
         "object"
@@ -5139,7 +5995,7 @@
     },
     {
       "id": "Window-IsSubclassOf-BHoMObject_D1C5184B6725E94C53FD1F3AC975D51B003430ADC0BB5ED02C056A1DC6AECF27",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsSubclassOf.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/IsSubclassOf.cs",
       "label": "IsA",
       "attributes": [
         "object"
@@ -5149,7 +6005,7 @@
     },
     {
       "id": "BH.oM.Physical.Constructions.Construction-HasProperty-BH.oM.Physical.Constructions.Construction.Layers",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/HasProperty.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/HasProperty.cs",
       "label": "HasProperty",
       "attributes": [
         "object"
@@ -5159,7 +6015,7 @@
     },
     {
       "id": "BH.oM.Physical.Constructions.Construction.Layers-IsAListOf-BH.oM.Physical.Constructions.Layer",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsAListOf.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/IsAListOf.cs",
       "label": "IsAListOf",
       "attributes": [
         "object"
@@ -5169,7 +6025,7 @@
     },
     {
       "id": "Construction-IsA-IBHoMObject_6526F2B8F25135F104DB2E6FF791D8439C0FECD07EBA8B1511D91C218AC6AD6F",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/IsA.cs",
       "label": "IsA",
       "attributes": [
         "object"
@@ -5182,7 +6038,7 @@
     },
     {
       "id": "Construction-IsA-IObject_3A21594255D2BDD86097CBC52FA93790C8F60E560B8D68263F1BEB828C31044D",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/IsA.cs",
       "label": "IsA",
       "attributes": [
         "object"
@@ -5195,7 +6051,7 @@
     },
     {
       "id": "Construction-IsA-IConstruction_4EE5B04453B7F5F670C9AFABEC76091E09FD04D2D641D836B930895F3BFCD5A4",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/IsA.cs",
       "label": "IsA",
       "attributes": [
         "object"
@@ -5208,7 +6064,7 @@
     },
     {
       "id": "Construction-IsA-IPhysical_D14DE10730997AC3CD6FF23486DB4A4C077B63EF2EDA9DCDD81A6CE8556907E1",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/IsA.cs",
       "label": "IsA",
       "attributes": [
         "object"
@@ -5221,7 +6077,7 @@
     },
     {
       "id": "Construction-IsSubclassOf-BHoMObject_0AF3B8C1011FAE7D028B784BA6810BE7DD525BB54375C6BD44802E017716A547",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsSubclassOf.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/IsSubclassOf.cs",
       "label": "IsA",
       "attributes": [
         "object"
@@ -5231,7 +6087,7 @@
     },
     {
       "id": "IConstruction-IsA-IBHoMObject_80C149E2AB2539C89FFBCA861F536B2604300E3144669315EFFBE3CC9CE396FF",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/IsA.cs",
       "label": "IsA",
       "attributes": [
         "object"
@@ -5244,7 +6100,7 @@
     },
     {
       "id": "IConstruction-IsA-IObject_3F2AA4993EC262D287D0DFB90D7C95716D3BED3D8980A510F3785E546DA06F4C",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/IsA.cs",
       "label": "IsA",
       "attributes": [
         "object"
@@ -5257,7 +6113,7 @@
     },
     {
       "id": "BH.oM.Physical.Constructions.Layer-HasProperty-BH.oM.Physical.Constructions.Layer.Material",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/HasProperty.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/HasProperty.cs",
       "label": "HasProperty",
       "attributes": [
         "object"
@@ -5267,7 +6123,7 @@
     },
     {
       "id": "BH.oM.Physical.Constructions.Layer.Material-IsA-BH.oM.Physical.Materials.Material",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/IsA.cs",
       "label": "IsA",
       "attributes": [
         "object"
@@ -5277,7 +6133,7 @@
     },
     {
       "id": "Layer-HasProperty-Thickness_5EABB728DBAC0B178FE94B238F659CF1CADB6BE51C63FBC9C2F4D987A223C5CC",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/HasProperty.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/HasProperty.cs",
       "label": "HasProperty",
       "attributes": [
         "datatype"
@@ -5287,7 +6143,7 @@
     },
     {
       "id": "Layer-IsA-IBHoMObject_3E8E4D7C67247E7A2BD8F320BF24C7A8F2EE6ABD029D83322F6B310652E99008",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/IsA.cs",
       "label": "IsA",
       "attributes": [
         "object"
@@ -5300,7 +6156,7 @@
     },
     {
       "id": "Layer-IsA-IObject_027F9F4512B6651796EDC1332DDD6844C710D030EDDF07516C9D98624BA0B7D6",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/IsA.cs",
       "label": "IsA",
       "attributes": [
         "object"
@@ -5313,7 +6169,7 @@
     },
     {
       "id": "Layer-IsA-IPhysical_39ED61EB63BAFEEAFC6C72DE452080A8FA3C385F26BF603B34EAAEEBA57C8F61",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/IsA.cs",
       "label": "IsA",
       "attributes": [
         "object"
@@ -5326,7 +6182,7 @@
     },
     {
       "id": "Layer-IsSubclassOf-BHoMObject_F8627CCB163F089067FE5B7E967F7F727CA2E5B0F1425BC85132A7BBC1873FA4",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsSubclassOf.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/IsSubclassOf.cs",
       "label": "IsA",
       "attributes": [
         "object"

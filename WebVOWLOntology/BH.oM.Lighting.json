@@ -39,7 +39,11 @@
       "type": "owl:Class"
     },
     {
-      "id": "BH.oM.Lighting.Results.Mesh.MeshElementResult.NodeID",
+      "id": "BH.oM.Lighting.Results.Mesh.MeshElementResult.NodeId",
+      "type": "owl:Class"
+    },
+    {
+      "id": "BH.oM.Lighting.Results.Mesh.MeshElementResult.MeshFaceId",
       "type": "owl:Class"
     },
     {
@@ -47,11 +51,7 @@
       "type": "owl:Class"
     },
     {
-      "id": "BH.oM.Lighting.Results.Mesh.MeshElementResult.TimeStep",
-      "type": "owl:Class"
-    },
-    {
-      "id": "BH.oM.Analytical.Results.IObjectIdResult",
+      "id": "BH.oM.Analytical.Results.IMeshElementResult",
       "type": "owl:Class"
     },
     {
@@ -67,11 +67,15 @@
       "type": "owl:Class"
     },
     {
+      "id": "BH.oM.Analytical.Results.IObjectIdResult",
+      "type": "owl:Class"
+    },
+    {
       "id": "BH.oM.Analytical.Results.ICasedResult",
       "type": "owl:Class"
     },
     {
-      "id": "BH.oM.Analytical.Results.ITimeStepResult",
+      "id": "BH.oM.Analytical.Results.IResultSeries",
       "type": "owl:Class"
     },
     {
@@ -83,15 +87,15 @@
       "type": "owl:Class"
     },
     {
-      "id": "BH.oM.Lighting.Results.Mesh.MeshResult.TimeStep",
-      "type": "owl:Class"
-    },
-    {
       "id": "BH.oM.Lighting.Results.Mesh.MeshResult.Results",
       "type": "owl:Class"
     },
     {
-      "id": "BH.oM.Analytical.Results.IResultCollection`1[[BH.oM.Lighting.Results.Mesh.MeshElementResult, Lighting_oM, Version=5.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+      "id": "BH.oM.Analytical.Results.IMeshResult",
+      "type": "owl:Class"
+    },
+    {
+      "id": "BH.oM.Analytical.Results.IResultCollection",
       "type": "owl:Class"
     },
     {
@@ -304,45 +308,45 @@
     {
       "id": "BH.oM.Lighting.Results.Mesh.MeshElementResult.ObjectId",
       "iri": "https://github.com/BHoM/BHoM/blob/main/Lighting_oM/Results/Mesh/MeshElementResult.cs#L39",
-      "label": "ObjectId(BH.oM.Lighting.Results.Mesh.MeshElementResult.ObjectId)",
+      "label": "ObjectId (BH.oM.Lighting.Results.Mesh.MeshElementResult.ObjectId)",
       "attributes": [
         "datatype"
       ]
     },
     {
-      "id": "BH.oM.Lighting.Results.Mesh.MeshElementResult.NodeID",
+      "id": "BH.oM.Lighting.Results.Mesh.MeshElementResult.NodeId",
       "iri": "https://github.com/BHoM/BHoM/blob/main/Lighting_oM/Results/Mesh/MeshElementResult.cs#L42",
-      "label": "NodeID(BH.oM.Lighting.Results.Mesh.MeshElementResult.NodeID)",
+      "label": "NodeId (BH.oM.Lighting.Results.Mesh.MeshElementResult.NodeId)",
+      "attributes": [
+        "datatype"
+      ]
+    },
+    {
+      "id": "BH.oM.Lighting.Results.Mesh.MeshElementResult.MeshFaceId",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/Lighting_oM/Results/Mesh/MeshElementResult.cs#L45",
+      "label": "MeshFaceId (BH.oM.Lighting.Results.Mesh.MeshElementResult.MeshFaceId)",
       "attributes": [
         "datatype"
       ]
     },
     {
       "id": "BH.oM.Lighting.Results.Mesh.MeshElementResult.ResultCase",
-      "iri": "https://github.com/BHoM/BHoM/blob/main/Lighting_oM/Results/Mesh/MeshElementResult.cs#L45",
-      "label": "ResultCase(BH.oM.Lighting.Results.Mesh.MeshElementResult.ResultCase)",
-      "attributes": [
-        "datatype"
-      ]
-    },
-    {
-      "id": "BH.oM.Lighting.Results.Mesh.MeshElementResult.TimeStep",
       "iri": "https://github.com/BHoM/BHoM/blob/main/Lighting_oM/Results/Mesh/MeshElementResult.cs#L48",
-      "label": "TimeStep(BH.oM.Lighting.Results.Mesh.MeshElementResult.TimeStep)",
+      "label": "ResultCase (BH.oM.Lighting.Results.Mesh.MeshElementResult.ResultCase)",
       "attributes": [
         "datatype"
       ]
     },
     {
-      "id": "BH.oM.Analytical.Results.IObjectIdResult",
-      "iri": "https://github.com/BHoM/BHoM/blob/main/Analytical_oM/Results/IObjectIdResult.cs",
-      "label": "IObjectIdResult (BH.oM.Analytical.Results)",
+      "id": "BH.oM.Analytical.Results.IMeshElementResult",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/Analytical_oM/Results/IMeshElementResult.cs",
+      "label": "IMeshElementResult (BH.oM.Analytical.Results)",
       "attributes": [
         "object",
         "external"
       ],
       "comment": {
-        "undefined": "Interface for Results belonging to a particular object. The owning object is identified and correlated to the Results by its ID."
+        "undefined": "Base interface for mesh element results. This is the result for a single discrete node or face of the mesh the result aligns with."
       }
     },
     {
@@ -376,6 +380,18 @@
       ]
     },
     {
+      "id": "BH.oM.Analytical.Results.IObjectIdResult",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/Analytical_oM/Results/IObjectIdResult.cs",
+      "label": "IObjectIdResult (BH.oM.Analytical.Results)",
+      "attributes": [
+        "object",
+        "external"
+      ],
+      "comment": {
+        "undefined": "Interface for Results belonging to a particular object. The owning object is identified and correlated to the Results by its ID."
+      }
+    },
+    {
       "id": "BH.oM.Analytical.Results.ICasedResult",
       "iri": "https://github.com/BHoM/BHoM/blob/main/Analytical_oM/Results/ICasedResult.cs",
       "label": "ICasedResult (BH.oM.Analytical.Results)",
@@ -388,21 +404,21 @@
       }
     },
     {
-      "id": "BH.oM.Analytical.Results.ITimeStepResult",
-      "iri": "https://github.com/BHoM/BHoM/blob/main/Analytical_oM/Results/ITimeStepResult.cs",
-      "label": "ITimeStepResult (BH.oM.Analytical.Results)",
+      "id": "BH.oM.Analytical.Results.IResultSeries",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/Analytical_oM/Results/IResultSeries.cs",
+      "label": "IResultSeries (BH.oM.Analytical.Results)",
       "attributes": [
         "object",
         "external"
       ],
       "comment": {
-        "undefined": "Interface for results that correspond to a particular time step, for example a discrete result from a time history anlysis."
+        "undefined": "Base interface to flag that the result contains a series of results, for example values across each hour of the year and were the amount of data means memory usage is an issue.\nA class inplementing this interface is assumed to have the result values stored on a property that implements the IReadOnlyList<double>.\nA class implementing the IResultItem interface should not implement this interface as well."
       }
     },
     {
       "id": "BH.oM.Lighting.Results.Mesh.MeshResult.ObjectId",
       "iri": "https://github.com/BHoM/BHoM/blob/main/Lighting_oM/Results/Mesh/MeshResult.cs#L42",
-      "label": "ObjectId(BH.oM.Lighting.Results.Mesh.MeshResult.ObjectId)",
+      "label": "ObjectId (BH.oM.Lighting.Results.Mesh.MeshResult.ObjectId)",
       "attributes": [
         "datatype"
       ]
@@ -410,27 +426,31 @@
     {
       "id": "BH.oM.Lighting.Results.Mesh.MeshResult.ResultCase",
       "iri": "https://github.com/BHoM/BHoM/blob/main/Lighting_oM/Results/Mesh/MeshResult.cs#L45",
-      "label": "ResultCase(BH.oM.Lighting.Results.Mesh.MeshResult.ResultCase)",
-      "attributes": [
-        "datatype"
-      ]
-    },
-    {
-      "id": "BH.oM.Lighting.Results.Mesh.MeshResult.TimeStep",
-      "iri": "https://github.com/BHoM/BHoM/blob/main/Lighting_oM/Results/Mesh/MeshResult.cs#L48",
-      "label": "TimeStep(BH.oM.Lighting.Results.Mesh.MeshResult.TimeStep)",
+      "label": "ResultCase (BH.oM.Lighting.Results.Mesh.MeshResult.ResultCase)",
       "attributes": [
         "datatype"
       ]
     },
     {
       "id": "BH.oM.Lighting.Results.Mesh.MeshResult.Results",
-      "iri": "https://github.com/BHoM/BHoM/blob/main/Lighting_oM/Results/Mesh/MeshResult.cs#L51",
-      "label": "Results(BH.oM.Lighting.Results.Mesh.MeshResult.Results)",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/Lighting_oM/Results/Mesh/MeshResult.cs#L48",
+      "label": "Results (BH.oM.Lighting.Results.Mesh.MeshResult.Results)",
       "attributes": []
     },
     {
-      "id": "BH.oM.Analytical.Results.IResultCollection`1[[BH.oM.Lighting.Results.Mesh.MeshElementResult, Lighting_oM, Version=5.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+      "id": "BH.oM.Analytical.Results.IMeshResult",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/Analytical_oM/Results/IMeshResult.cs",
+      "label": "IMeshResult<MeshElementResult> (BH.oM.Analytical.Results)",
+      "attributes": [
+        "object",
+        "external"
+      ],
+      "comment": {
+        "undefined": "Base interface for any Mesh result class which is a collection of discrete MeshElementResults."
+      }
+    },
+    {
+      "id": "BH.oM.Analytical.Results.IResultCollection",
       "iri": "https://github.com/BHoM/BHoM/blob/main/Analytical_oM/Results/IResultCollection.cs",
       "label": "IResultCollection<MeshElementResult> (BH.oM.Analytical.Results)",
       "attributes": [
@@ -443,8 +463,8 @@
     },
     {
       "id": "BH.oM.Lighting.Results.Illuminance.Lux.LuxLevel",
-      "iri": "https://github.com/BHoM/BHoM/blob/main/Lighting_oM/Results/Illuminance/Lux.cs#L44",
-      "label": "LuxLevel(BH.oM.Lighting.Results.Illuminance.Lux.LuxLevel)",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/Lighting_oM/Results/Illuminance/Lux.cs#L45",
+      "label": "LuxLevel (BH.oM.Lighting.Results.Illuminance.Lux.LuxLevel)",
       "attributes": [
         "datatype"
       ]
@@ -452,7 +472,7 @@
     {
       "id": "BH.oM.Lighting.Elements.Luminaire.Position",
       "iri": "https://github.com/BHoM/BHoM/blob/main/Lighting_oM/Elements/Luminaire.cs#L42",
-      "label": "Position(BH.oM.Lighting.Elements.Luminaire.Position)",
+      "label": "Position (BH.oM.Lighting.Elements.Luminaire.Position)",
       "attributes": [],
       "comment": {
         "undefined": "Position of the Luminaire in global Cartesian 3D space."
@@ -473,7 +493,7 @@
     {
       "id": "BH.oM.Lighting.Elements.Luminaire.Type",
       "iri": "https://github.com/BHoM/BHoM/blob/main/Lighting_oM/Elements/Luminaire.cs#L45",
-      "label": "Type(BH.oM.Lighting.Elements.Luminaire.Type)",
+      "label": "Type (BH.oM.Lighting.Elements.Luminaire.Type)",
       "attributes": [
         "datatype"
       ]
@@ -481,7 +501,7 @@
     {
       "id": "BH.oM.Lighting.Elements.Luminaire.Direction",
       "iri": "https://github.com/BHoM/BHoM/blob/main/Lighting_oM/Elements/Luminaire.cs#L48",
-      "label": "Direction(BH.oM.Lighting.Elements.Luminaire.Direction)",
+      "label": "Direction (BH.oM.Lighting.Elements.Luminaire.Direction)",
       "attributes": [],
       "comment": {
         "undefined": "The direction that the Luminaire is oriented towards."
@@ -502,7 +522,7 @@
     {
       "id": "BH.oM.Lighting.Elements.Luminaire.LuminaireType",
       "iri": "https://github.com/BHoM/BHoM/blob/main/Lighting_oM/Elements/Luminaire.cs#L51",
-      "label": "LuminaireType(BH.oM.Lighting.Elements.Luminaire.LuminaireType)",
+      "label": "LuminaireType (BH.oM.Lighting.Elements.Luminaire.LuminaireType)",
       "attributes": [],
       "comment": {
         "undefined": "The Luminaire Type applied to the Luminaire."
@@ -552,7 +572,7 @@
     {
       "id": "BH.oM.Lighting.Elements.LuminaireType.Manufacturer",
       "iri": "https://github.com/BHoM/BHoM/blob/main/Lighting_oM/Elements/LuminaireType.cs#L38",
-      "label": "Manufacturer(BH.oM.Lighting.Elements.LuminaireType.Manufacturer)",
+      "label": "Manufacturer (BH.oM.Lighting.Elements.LuminaireType.Manufacturer)",
       "attributes": [
         "datatype"
       ]
@@ -560,7 +580,7 @@
     {
       "id": "BH.oM.Lighting.Elements.LuminaireType.LuminaireGeometry",
       "iri": "https://github.com/BHoM/BHoM/blob/main/Lighting_oM/Elements/LuminaireType.cs#L41",
-      "label": "LuminaireGeometry(BH.oM.Lighting.Elements.LuminaireType.LuminaireGeometry)",
+      "label": "LuminaireGeometry (BH.oM.Lighting.Elements.LuminaireType.LuminaireGeometry)",
       "attributes": [],
       "comment": {
         "undefined": "Boundary Representation of the LuminaireType's Geometry"
@@ -581,7 +601,7 @@
     {
       "id": "BH.oM.Lighting.Elements.LuminaireType.Load",
       "iri": "https://github.com/BHoM/BHoM/blob/main/Lighting_oM/Elements/LuminaireType.cs#L44",
-      "label": "Load(BH.oM.Lighting.Elements.LuminaireType.Load)",
+      "label": "Load (BH.oM.Lighting.Elements.LuminaireType.Load)",
       "attributes": [
         "datatype"
       ]
@@ -589,7 +609,7 @@
     {
       "id": "BH.oM.Lighting.Elements.LuminaireType.Flux",
       "iri": "https://github.com/BHoM/BHoM/blob/main/Lighting_oM/Elements/LuminaireType.cs#L47",
-      "label": "Flux(BH.oM.Lighting.Elements.LuminaireType.Flux)",
+      "label": "Flux (BH.oM.Lighting.Elements.LuminaireType.Flux)",
       "attributes": [
         "datatype"
       ]
@@ -597,7 +617,7 @@
     {
       "id": "BH.oM.Lighting.Elements.LuminaireType.NumberOfLamps",
       "iri": "https://github.com/BHoM/BHoM/blob/main/Lighting_oM/Elements/LuminaireType.cs#L50",
-      "label": "NumberOfLamps(BH.oM.Lighting.Elements.LuminaireType.NumberOfLamps)",
+      "label": "NumberOfLamps (BH.oM.Lighting.Elements.LuminaireType.NumberOfLamps)",
       "attributes": [
         "datatype"
       ]
@@ -605,7 +625,7 @@
     {
       "id": "BH.oM.Lighting.Elements.LuminaireType.MountingType",
       "iri": "https://github.com/BHoM/BHoM/blob/main/Lighting_oM/Elements/LuminaireType.cs#L53",
-      "label": "MountingType(BH.oM.Lighting.Elements.LuminaireType.MountingType)",
+      "label": "MountingType (BH.oM.Lighting.Elements.LuminaireType.MountingType)",
       "attributes": [
         "datatype"
       ]
@@ -613,7 +633,7 @@
     {
       "id": "BH.oM.Lighting.Elements.LuminaireType.Description",
       "iri": "https://github.com/BHoM/BHoM/blob/main/Lighting_oM/Elements/LuminaireType.cs#L56",
-      "label": "Description(BH.oM.Lighting.Elements.LuminaireType.Description)",
+      "label": "Description (BH.oM.Lighting.Elements.LuminaireType.Description)",
       "attributes": [
         "datatype"
       ]
@@ -621,7 +641,7 @@
     {
       "id": "BH.oM.Lighting.Elements.LuminaireType.Model",
       "iri": "https://github.com/BHoM/BHoM/blob/main/Lighting_oM/Elements/LuminaireType.cs#L59",
-      "label": "Model(BH.oM.Lighting.Elements.LuminaireType.Model)",
+      "label": "Model (BH.oM.Lighting.Elements.LuminaireType.Model)",
       "attributes": [
         "datatype"
       ]
@@ -629,7 +649,7 @@
     {
       "id": "BH.oM.Lighting.Analysis.AnalysisGrid.BoundaryCurve",
       "iri": "https://github.com/BHoM/BHoM/blob/main/Lighting_oM/Analysis/AnalysisGrid.cs#L41",
-      "label": "BoundaryCurve(BH.oM.Lighting.Analysis.AnalysisGrid.BoundaryCurve)",
+      "label": "BoundaryCurve (BH.oM.Lighting.Analysis.AnalysisGrid.BoundaryCurve)",
       "attributes": [],
       "comment": {
         "undefined": "The BoundaryCurve is the outer-most edges of the AnalysisGrid. Nodes should not fall outside of this curve"
@@ -644,25 +664,25 @@
         "external"
       ],
       "comment": {
-        "undefined": "A curve consisting of a continuous chain of straight line segments. The Polyline is considered closed if the first and last ControlPoints are coincident"
+        "undefined": "A curve consisting of a continuous chain of straight line segments. The Polyline is considered closed if the first and last ControlPoints are coincident."
       }
     },
     {
       "id": "BH.oM.Lighting.Analysis.AnalysisGrid.InnerCurves",
       "iri": "https://github.com/BHoM/BHoM/blob/main/Lighting_oM/Analysis/AnalysisGrid.cs#L44",
-      "label": "InnerCurves(BH.oM.Lighting.Analysis.AnalysisGrid.InnerCurves)",
+      "label": "InnerCurves (BH.oM.Lighting.Analysis.AnalysisGrid.InnerCurves)",
       "attributes": []
     },
     {
       "id": "BH.oM.Lighting.Analysis.AnalysisGrid.Nodes",
       "iri": "https://github.com/BHoM/BHoM/blob/main/Lighting_oM/Analysis/AnalysisGrid.cs#L47",
-      "label": "Nodes(BH.oM.Lighting.Analysis.AnalysisGrid.Nodes)",
+      "label": "Nodes (BH.oM.Lighting.Analysis.AnalysisGrid.Nodes)",
       "attributes": []
     },
     {
       "id": "BH.oM.Lighting.Analysis.AnalysisGrid.ID",
       "iri": "https://github.com/BHoM/BHoM/blob/main/Lighting_oM/Analysis/AnalysisGrid.cs#L50",
-      "label": "ID(BH.oM.Lighting.Analysis.AnalysisGrid.ID)",
+      "label": "ID (BH.oM.Lighting.Analysis.AnalysisGrid.ID)",
       "attributes": [
         "datatype"
       ]
@@ -670,7 +690,7 @@
     {
       "id": "BH.oM.Lighting.Analysis.AnalysisGrid.Name",
       "iri": "https://github.com/BHoM/BHoM/blob/main/Lighting_oM/Analysis/AnalysisGrid.cs#L53",
-      "label": "Name(BH.oM.Lighting.Analysis.AnalysisGrid.Name)",
+      "label": "Name (BH.oM.Lighting.Analysis.AnalysisGrid.Name)",
       "attributes": [
         "datatype"
       ]
@@ -678,7 +698,7 @@
     {
       "id": "BH.oM.Lighting.Analysis.Node.Position",
       "iri": "https://github.com/BHoM/BHoM/blob/main/Lighting_oM/Analysis/Node.cs#L39",
-      "label": "Position(BH.oM.Lighting.Analysis.Node.Position)",
+      "label": "Position (BH.oM.Lighting.Analysis.Node.Position)",
       "attributes": [],
       "comment": {
         "undefined": "Position of the node in global Cartesian 3D space."
@@ -687,7 +707,7 @@
     {
       "id": "BH.oM.Lighting.Analysis.Node.ID",
       "iri": "https://github.com/BHoM/BHoM/blob/main/Lighting_oM/Analysis/Node.cs#L42",
-      "label": "ID(BH.oM.Lighting.Analysis.Node.ID)",
+      "label": "ID (BH.oM.Lighting.Analysis.Node.ID)",
       "attributes": [
         "datatype"
       ]
@@ -717,7 +737,11 @@
       "type": "owl:DatatypeProperty"
     },
     {
-      "id": "MeshElementResult-HasProperty-NodeID_0FBAA56706601B84EF7B6ACA4FFD34C443179180D636939B9828A96F6F40DE3F",
+      "id": "MeshElementResult-HasProperty-NodeId_28E0C60CA3E4EBE927C286A9E6B60F6ADB7983C46B02AFE2A7DD15475E82859C",
+      "type": "owl:DatatypeProperty"
+    },
+    {
+      "id": "MeshElementResult-HasProperty-MeshFaceId_5A9C6FAE2D6ECA5F2F7AA04533C179B356B76AD89402533D726E46AD51A7689F",
       "type": "owl:DatatypeProperty"
     },
     {
@@ -725,11 +749,7 @@
       "type": "owl:DatatypeProperty"
     },
     {
-      "id": "MeshElementResult-HasProperty-TimeStep_CAE75588DBA83BC261C4A378444F3B32EEE9D43E1D22693E2F3EA96D4766318E",
-      "type": "owl:DatatypeProperty"
-    },
-    {
-      "id": "MeshElementResult-IsA-IObjectIdResult_10084D57295B70E80A206711BAAA85EEA0EA228D326BCC586F60A13A4EA29072",
+      "id": "MeshElementResult-IsA-IMeshElementResult_AC4EE48C655E3126CB6DAA4F448E22CB24FCEAC71D84B88E06937468C227B236",
       "type": "owl:ObjectProperty"
     },
     {
@@ -745,11 +765,15 @@
       "type": "owl:ObjectProperty"
     },
     {
+      "id": "MeshElementResult-IsA-IObjectIdResult_10084D57295B70E80A206711BAAA85EEA0EA228D326BCC586F60A13A4EA29072",
+      "type": "owl:ObjectProperty"
+    },
+    {
       "id": "MeshElementResult-IsA-ICasedResult_D0F01F9937760EBA16A22079E091E09751797FFB99881CC1A7C078544E217B43",
       "type": "owl:ObjectProperty"
     },
     {
-      "id": "MeshElementResult-IsA-ITimeStepResult_023837119CAD17A9DD6002D5621D76683E8A75FEDFEDCD8C40A6FF48D8B66C39",
+      "id": "MeshElementResult-IsA-IResultSeries_768EA793252868B3747649CB1006A87F15ADC47C18E2D8825AD75B260E7E98CC",
       "type": "owl:ObjectProperty"
     },
     {
@@ -761,15 +785,15 @@
       "type": "owl:DatatypeProperty"
     },
     {
-      "id": "MeshResult-HasProperty-TimeStep_5045737F068DAA9B2056B9842C3E3F157A5E51514FC54967C076A30F92ABCC92",
-      "type": "owl:DatatypeProperty"
-    },
-    {
       "id": "BH.oM.Lighting.Results.Mesh.MeshResult-HasProperty-BH.oM.Lighting.Results.Mesh.MeshResult.Results",
       "type": "owl:ObjectProperty"
     },
     {
       "id": "BH.oM.Lighting.Results.Mesh.MeshResult.Results-IsAListOf-BH.oM.Lighting.Results.Mesh.MeshElementResult",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "MeshResult-IsA-IMeshResult`1_FEB72DAA093DF687C6E4250F6281A047D1E2CA0059A889746ABAA66268A7D4DF",
       "type": "owl:ObjectProperty"
     },
     {
@@ -789,23 +813,19 @@
       "type": "owl:ObjectProperty"
     },
     {
-      "id": "MeshResult-IsA-ICasedResult_3565EB8CF83A20B2F73C8EE9FB777EB4A53C6607A39085D7B7201DE22363AEAF",
-      "type": "owl:ObjectProperty"
-    },
-    {
-      "id": "MeshResult-IsA-ITimeStepResult_C6A968507E4D2B7890BE67BD53C2D4CA3FB856586B385DAB3CE3B041AA2E747B",
-      "type": "owl:ObjectProperty"
-    },
-    {
       "id": "MeshResult-IsA-IResultCollection`1_A84B570C0E00CEEE3FAB38E3BF2848B37A9846B3A2301CF973300B406BFB7C9D",
       "type": "owl:ObjectProperty"
     },
     {
-      "id": "Lux-HasProperty-LuxLevel_945439B99DB19DBD017086D41AFD5C1731EA0E55FC18E9F220E76E8DF8DA4F6B",
+      "id": "MeshResult-IsA-ICasedResult_3565EB8CF83A20B2F73C8EE9FB777EB4A53C6607A39085D7B7201DE22363AEAF",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "Lux-HasProperty-LuxLevel_2477347752E61F3602E6253EA12E4B1C7A7B4EA71E9286D1F088DAAA5CAB1EC2",
       "type": "owl:DatatypeProperty"
     },
     {
-      "id": "Lux-IsA-IObjectIdResult_5556F47ED67C4EDD6BEAD72C03C6FA4C7991FD590BCC894C93B13ED6AD9E11A1",
+      "id": "Lux-IsA-IMeshElementResult_E563B273F18C316FE8B779BE499FD8EB8F2F35A52B29B9C94186D4D9C394484D",
       "type": "owl:ObjectProperty"
     },
     {
@@ -821,11 +841,15 @@
       "type": "owl:ObjectProperty"
     },
     {
+      "id": "Lux-IsA-IObjectIdResult_5556F47ED67C4EDD6BEAD72C03C6FA4C7991FD590BCC894C93B13ED6AD9E11A1",
+      "type": "owl:ObjectProperty"
+    },
+    {
       "id": "Lux-IsA-ICasedResult_0233F0D70797ACCCF2FB1E0CA8A1231937F948A86A96D88387D7F99E007D9755",
       "type": "owl:ObjectProperty"
     },
     {
-      "id": "Lux-IsA-ITimeStepResult_3F3E837CCB65EB1EFE4389E46E414E8BD659270E1FC405DB594ECA8387ABADA9",
+      "id": "Lux-IsA-IResultSeries_F124B232C082FB436F5DCA3065F0A4EB6280B1A86A7DAF2169449C8205A0997B",
       "type": "owl:ObjectProperty"
     },
     {
@@ -1020,7 +1044,7 @@
   "propertyAttribute": [
     {
       "id": "MeshElementResult-HasProperty-ObjectId_81FFC17D28AFBFDD2CE3D51C695C1D78558570F50B0BE2B6F7C9CF033C768197",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/HasProperty.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/HasProperty.cs",
       "label": "HasProperty",
       "attributes": [
         "datatype"
@@ -1029,18 +1053,28 @@
       "range": "BH.oM.Lighting.Results.Mesh.MeshElementResult.ObjectId"
     },
     {
-      "id": "MeshElementResult-HasProperty-NodeID_0FBAA56706601B84EF7B6ACA4FFD34C443179180D636939B9828A96F6F40DE3F",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/HasProperty.cs",
+      "id": "MeshElementResult-HasProperty-NodeId_28E0C60CA3E4EBE927C286A9E6B60F6ADB7983C46B02AFE2A7DD15475E82859C",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/HasProperty.cs",
       "label": "HasProperty",
       "attributes": [
         "datatype"
       ],
       "domain": "BH.oM.Lighting.Results.Mesh.MeshElementResult",
-      "range": "BH.oM.Lighting.Results.Mesh.MeshElementResult.NodeID"
+      "range": "BH.oM.Lighting.Results.Mesh.MeshElementResult.NodeId"
+    },
+    {
+      "id": "MeshElementResult-HasProperty-MeshFaceId_5A9C6FAE2D6ECA5F2F7AA04533C179B356B76AD89402533D726E46AD51A7689F",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/HasProperty.cs",
+      "label": "HasProperty",
+      "attributes": [
+        "datatype"
+      ],
+      "domain": "BH.oM.Lighting.Results.Mesh.MeshElementResult",
+      "range": "BH.oM.Lighting.Results.Mesh.MeshElementResult.MeshFaceId"
     },
     {
       "id": "MeshElementResult-HasProperty-ResultCase_C3869279B7D5F258DF1FD95FC034C1203C9D994E26B43D6D6FEE412C2775FF1D",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/HasProperty.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/HasProperty.cs",
       "label": "HasProperty",
       "attributes": [
         "datatype"
@@ -1049,18 +1083,8 @@
       "range": "BH.oM.Lighting.Results.Mesh.MeshElementResult.ResultCase"
     },
     {
-      "id": "MeshElementResult-HasProperty-TimeStep_CAE75588DBA83BC261C4A378444F3B32EEE9D43E1D22693E2F3EA96D4766318E",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/HasProperty.cs",
-      "label": "HasProperty",
-      "attributes": [
-        "datatype"
-      ],
-      "domain": "BH.oM.Lighting.Results.Mesh.MeshElementResult",
-      "range": "BH.oM.Lighting.Results.Mesh.MeshElementResult.TimeStep"
-    },
-    {
-      "id": "MeshElementResult-IsA-IObjectIdResult_10084D57295B70E80A206711BAAA85EEA0EA228D326BCC586F60A13A4EA29072",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "id": "MeshElementResult-IsA-IMeshElementResult_AC4EE48C655E3126CB6DAA4F448E22CB24FCEAC71D84B88E06937468C227B236",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/IsA.cs",
       "label": "IsA",
       "attributes": [
         "object"
@@ -1069,11 +1093,11 @@
         "undefined": "Can be used to describe that a thing belongs to a class; or that a thing is equivalent to another thing. When used for BHoM types, this describes C# interface implementation."
       },
       "domain": "BH.oM.Lighting.Results.Mesh.MeshElementResult",
-      "range": "BH.oM.Analytical.Results.IObjectIdResult"
+      "range": "BH.oM.Analytical.Results.IMeshElementResult"
     },
     {
       "id": "MeshElementResult-IsA-IResult_659DBD29AD19673C21A153DE50650126F9728B1C75D4F14E741B0EC09D294CEA",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/IsA.cs",
       "label": "IsA",
       "attributes": [
         "object"
@@ -1086,7 +1110,7 @@
     },
     {
       "id": "MeshElementResult-IsA-IObject_F08B5F794C7B8A37980FEE6E8D1B1C2DC02EF51EEDC119EFA17C81505D931EDC",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/IsA.cs",
       "label": "IsA",
       "attributes": [
         "object"
@@ -1099,7 +1123,7 @@
     },
     {
       "id": "MeshElementResult-IsA-IImmutable_6B1FBE1A092CF8C9A39D1DB8CA0B7F38DD7A8B85EBC7ED33448012175A3E74D6",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/IsA.cs",
       "label": "IsA",
       "attributes": [
         "object"
@@ -1111,8 +1135,21 @@
       "range": "BH.oM.Base.IImmutable"
     },
     {
+      "id": "MeshElementResult-IsA-IObjectIdResult_10084D57295B70E80A206711BAAA85EEA0EA228D326BCC586F60A13A4EA29072",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/IsA.cs",
+      "label": "IsA",
+      "attributes": [
+        "object"
+      ],
+      "comment": {
+        "undefined": "Can be used to describe that a thing belongs to a class; or that a thing is equivalent to another thing. When used for BHoM types, this describes C# interface implementation."
+      },
+      "domain": "BH.oM.Lighting.Results.Mesh.MeshElementResult",
+      "range": "BH.oM.Analytical.Results.IObjectIdResult"
+    },
+    {
       "id": "MeshElementResult-IsA-ICasedResult_D0F01F9937760EBA16A22079E091E09751797FFB99881CC1A7C078544E217B43",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/IsA.cs",
       "label": "IsA",
       "attributes": [
         "object"
@@ -1124,8 +1161,8 @@
       "range": "BH.oM.Analytical.Results.ICasedResult"
     },
     {
-      "id": "MeshElementResult-IsA-ITimeStepResult_023837119CAD17A9DD6002D5621D76683E8A75FEDFEDCD8C40A6FF48D8B66C39",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "id": "MeshElementResult-IsA-IResultSeries_768EA793252868B3747649CB1006A87F15ADC47C18E2D8825AD75B260E7E98CC",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/IsA.cs",
       "label": "IsA",
       "attributes": [
         "object"
@@ -1134,11 +1171,11 @@
         "undefined": "Can be used to describe that a thing belongs to a class; or that a thing is equivalent to another thing. When used for BHoM types, this describes C# interface implementation."
       },
       "domain": "BH.oM.Lighting.Results.Mesh.MeshElementResult",
-      "range": "BH.oM.Analytical.Results.ITimeStepResult"
+      "range": "BH.oM.Analytical.Results.IResultSeries"
     },
     {
       "id": "MeshResult-HasProperty-ObjectId_CF1DABD1E9DA487D55F85E8AE18F7898D194FAADDF64DA9346E479FD3A6D9D0B",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/HasProperty.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/HasProperty.cs",
       "label": "HasProperty",
       "attributes": [
         "datatype"
@@ -1148,7 +1185,7 @@
     },
     {
       "id": "MeshResult-HasProperty-ResultCase_6A801A2B9B22DBB9DD88D88453CF74D8C4CA57DD690E282277AB05B185A111F5",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/HasProperty.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/HasProperty.cs",
       "label": "HasProperty",
       "attributes": [
         "datatype"
@@ -1157,18 +1194,8 @@
       "range": "BH.oM.Lighting.Results.Mesh.MeshResult.ResultCase"
     },
     {
-      "id": "MeshResult-HasProperty-TimeStep_5045737F068DAA9B2056B9842C3E3F157A5E51514FC54967C076A30F92ABCC92",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/HasProperty.cs",
-      "label": "HasProperty",
-      "attributes": [
-        "datatype"
-      ],
-      "domain": "BH.oM.Lighting.Results.Mesh.MeshResult",
-      "range": "BH.oM.Lighting.Results.Mesh.MeshResult.TimeStep"
-    },
-    {
       "id": "BH.oM.Lighting.Results.Mesh.MeshResult-HasProperty-BH.oM.Lighting.Results.Mesh.MeshResult.Results",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/HasProperty.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/HasProperty.cs",
       "label": "HasProperty",
       "attributes": [
         "object"
@@ -1178,7 +1205,7 @@
     },
     {
       "id": "BH.oM.Lighting.Results.Mesh.MeshResult.Results-IsAListOf-BH.oM.Lighting.Results.Mesh.MeshElementResult",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsAListOf.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/IsAListOf.cs",
       "label": "IsAListOf",
       "attributes": [
         "object"
@@ -1187,8 +1214,21 @@
       "range": "BH.oM.Lighting.Results.Mesh.MeshElementResult"
     },
     {
+      "id": "MeshResult-IsA-IMeshResult`1_FEB72DAA093DF687C6E4250F6281A047D1E2CA0059A889746ABAA66268A7D4DF",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/IsA.cs",
+      "label": "IsA",
+      "attributes": [
+        "object"
+      ],
+      "comment": {
+        "undefined": "Can be used to describe that a thing belongs to a class; or that a thing is equivalent to another thing. When used for BHoM types, this describes C# interface implementation."
+      },
+      "domain": "BH.oM.Lighting.Results.Mesh.MeshResult",
+      "range": "BH.oM.Analytical.Results.IMeshResult"
+    },
+    {
       "id": "MeshResult-IsA-IObjectIdResult_33A039E22A0EE9062A000103E83F39560BAB17E5DD9EB2A5D6BFDE19AC448699",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/IsA.cs",
       "label": "IsA",
       "attributes": [
         "object"
@@ -1201,7 +1241,7 @@
     },
     {
       "id": "MeshResult-IsA-IResult_E9345DB7CABE504FC164D216D67B31C6C8AA61E08B6123E951D7415794FF8FD4",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/IsA.cs",
       "label": "IsA",
       "attributes": [
         "object"
@@ -1214,7 +1254,7 @@
     },
     {
       "id": "MeshResult-IsA-IObject_1E8A5799DDE75B26064C4BF9E6A9F07698556C7D3FB03D44FD0C10022C8C835F",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/IsA.cs",
       "label": "IsA",
       "attributes": [
         "object"
@@ -1227,7 +1267,7 @@
     },
     {
       "id": "MeshResult-IsA-IImmutable_D1E645E0C1A4B80D95AF04B0888AC726B578C5A67D5D008F8F9A89E48EFDEEA0",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/IsA.cs",
       "label": "IsA",
       "attributes": [
         "object"
@@ -1239,8 +1279,21 @@
       "range": "BH.oM.Base.IImmutable"
     },
     {
+      "id": "MeshResult-IsA-IResultCollection`1_A84B570C0E00CEEE3FAB38E3BF2848B37A9846B3A2301CF973300B406BFB7C9D",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/IsA.cs",
+      "label": "IsA",
+      "attributes": [
+        "object"
+      ],
+      "comment": {
+        "undefined": "Can be used to describe that a thing belongs to a class; or that a thing is equivalent to another thing. When used for BHoM types, this describes C# interface implementation."
+      },
+      "domain": "BH.oM.Lighting.Results.Mesh.MeshResult",
+      "range": "BH.oM.Analytical.Results.IResultCollection"
+    },
+    {
       "id": "MeshResult-IsA-ICasedResult_3565EB8CF83A20B2F73C8EE9FB777EB4A53C6607A39085D7B7201DE22363AEAF",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/IsA.cs",
       "label": "IsA",
       "attributes": [
         "object"
@@ -1252,34 +1305,8 @@
       "range": "BH.oM.Analytical.Results.ICasedResult"
     },
     {
-      "id": "MeshResult-IsA-ITimeStepResult_C6A968507E4D2B7890BE67BD53C2D4CA3FB856586B385DAB3CE3B041AA2E747B",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
-      "label": "IsA",
-      "attributes": [
-        "object"
-      ],
-      "comment": {
-        "undefined": "Can be used to describe that a thing belongs to a class; or that a thing is equivalent to another thing. When used for BHoM types, this describes C# interface implementation."
-      },
-      "domain": "BH.oM.Lighting.Results.Mesh.MeshResult",
-      "range": "BH.oM.Analytical.Results.ITimeStepResult"
-    },
-    {
-      "id": "MeshResult-IsA-IResultCollection`1_A84B570C0E00CEEE3FAB38E3BF2848B37A9846B3A2301CF973300B406BFB7C9D",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
-      "label": "IsA",
-      "attributes": [
-        "object"
-      ],
-      "comment": {
-        "undefined": "Can be used to describe that a thing belongs to a class; or that a thing is equivalent to another thing. When used for BHoM types, this describes C# interface implementation."
-      },
-      "domain": "BH.oM.Lighting.Results.Mesh.MeshResult",
-      "range": "BH.oM.Analytical.Results.IResultCollection`1[[BH.oM.Lighting.Results.Mesh.MeshElementResult, Lighting_oM, Version=5.0.0.0, Culture=neutral, PublicKeyToken=null]]"
-    },
-    {
-      "id": "Lux-HasProperty-LuxLevel_945439B99DB19DBD017086D41AFD5C1731EA0E55FC18E9F220E76E8DF8DA4F6B",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/HasProperty.cs",
+      "id": "Lux-HasProperty-LuxLevel_2477347752E61F3602E6253EA12E4B1C7A7B4EA71E9286D1F088DAAA5CAB1EC2",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/HasProperty.cs",
       "label": "HasProperty",
       "attributes": [
         "datatype"
@@ -1288,8 +1315,8 @@
       "range": "BH.oM.Lighting.Results.Illuminance.Lux.LuxLevel"
     },
     {
-      "id": "Lux-IsA-IObjectIdResult_5556F47ED67C4EDD6BEAD72C03C6FA4C7991FD590BCC894C93B13ED6AD9E11A1",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "id": "Lux-IsA-IMeshElementResult_E563B273F18C316FE8B779BE499FD8EB8F2F35A52B29B9C94186D4D9C394484D",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/IsA.cs",
       "label": "IsA",
       "attributes": [
         "object"
@@ -1298,11 +1325,11 @@
         "undefined": "Can be used to describe that a thing belongs to a class; or that a thing is equivalent to another thing. When used for BHoM types, this describes C# interface implementation."
       },
       "domain": "BH.oM.Lighting.Results.Illuminance.Lux",
-      "range": "BH.oM.Analytical.Results.IObjectIdResult"
+      "range": "BH.oM.Analytical.Results.IMeshElementResult"
     },
     {
       "id": "Lux-IsA-IResult_3D8CF875703A61945BEF42F13D6D5413A0A1EC76C2F7CB4CB2DA7716AB05B79E",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/IsA.cs",
       "label": "IsA",
       "attributes": [
         "object"
@@ -1315,7 +1342,7 @@
     },
     {
       "id": "Lux-IsA-IObject_499D4B68DC8E39C1523CD23832DA83E40CE33B4B628CF6FB722691495E1536AA",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/IsA.cs",
       "label": "IsA",
       "attributes": [
         "object"
@@ -1328,7 +1355,7 @@
     },
     {
       "id": "Lux-IsA-IImmutable_04CDFF32101295A9310A8DDF3B4CBEE5082D3A972F99D4D9DD6052C939667AB5",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/IsA.cs",
       "label": "IsA",
       "attributes": [
         "object"
@@ -1340,8 +1367,21 @@
       "range": "BH.oM.Base.IImmutable"
     },
     {
+      "id": "Lux-IsA-IObjectIdResult_5556F47ED67C4EDD6BEAD72C03C6FA4C7991FD590BCC894C93B13ED6AD9E11A1",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/IsA.cs",
+      "label": "IsA",
+      "attributes": [
+        "object"
+      ],
+      "comment": {
+        "undefined": "Can be used to describe that a thing belongs to a class; or that a thing is equivalent to another thing. When used for BHoM types, this describes C# interface implementation."
+      },
+      "domain": "BH.oM.Lighting.Results.Illuminance.Lux",
+      "range": "BH.oM.Analytical.Results.IObjectIdResult"
+    },
+    {
       "id": "Lux-IsA-ICasedResult_0233F0D70797ACCCF2FB1E0CA8A1231937F948A86A96D88387D7F99E007D9755",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/IsA.cs",
       "label": "IsA",
       "attributes": [
         "object"
@@ -1353,8 +1393,8 @@
       "range": "BH.oM.Analytical.Results.ICasedResult"
     },
     {
-      "id": "Lux-IsA-ITimeStepResult_3F3E837CCB65EB1EFE4389E46E414E8BD659270E1FC405DB594ECA8387ABADA9",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "id": "Lux-IsA-IResultSeries_F124B232C082FB436F5DCA3065F0A4EB6280B1A86A7DAF2169449C8205A0997B",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/IsA.cs",
       "label": "IsA",
       "attributes": [
         "object"
@@ -1363,11 +1403,11 @@
         "undefined": "Can be used to describe that a thing belongs to a class; or that a thing is equivalent to another thing. When used for BHoM types, this describes C# interface implementation."
       },
       "domain": "BH.oM.Lighting.Results.Illuminance.Lux",
-      "range": "BH.oM.Analytical.Results.ITimeStepResult"
+      "range": "BH.oM.Analytical.Results.IResultSeries"
     },
     {
       "id": "Lux-IsSubclassOf-MeshElementResult_C8EFA8D2FCED2CEA5CA8C8D93943401F968DA5D54B296EEF78C8E8825FA1E726",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsSubclassOf.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/IsSubclassOf.cs",
       "label": "IsA",
       "attributes": [
         "object"
@@ -1377,7 +1417,7 @@
     },
     {
       "id": "BH.oM.Lighting.Elements.Luminaire-HasProperty-BH.oM.Lighting.Elements.Luminaire.Position",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/HasProperty.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/HasProperty.cs",
       "label": "HasProperty",
       "attributes": [
         "object"
@@ -1387,7 +1427,7 @@
     },
     {
       "id": "BH.oM.Lighting.Elements.Luminaire.Position-IsA-BH.oM.Geometry.Point",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/IsA.cs",
       "label": "IsA",
       "attributes": [
         "object"
@@ -1397,7 +1437,7 @@
     },
     {
       "id": "Luminaire-HasProperty-Type_D6D2FA7507E299731E4537312308B8B0540B9C6123BEA7932F9893AA71F873B4",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/HasProperty.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/HasProperty.cs",
       "label": "HasProperty",
       "attributes": [
         "datatype"
@@ -1407,7 +1447,7 @@
     },
     {
       "id": "BH.oM.Lighting.Elements.Luminaire-HasProperty-BH.oM.Lighting.Elements.Luminaire.Direction",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/HasProperty.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/HasProperty.cs",
       "label": "HasProperty",
       "attributes": [
         "object"
@@ -1417,7 +1457,7 @@
     },
     {
       "id": "BH.oM.Lighting.Elements.Luminaire.Direction-IsA-BH.oM.Geometry.Vector",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/IsA.cs",
       "label": "IsA",
       "attributes": [
         "object"
@@ -1427,7 +1467,7 @@
     },
     {
       "id": "BH.oM.Lighting.Elements.Luminaire-HasProperty-BH.oM.Lighting.Elements.Luminaire.LuminaireType",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/HasProperty.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/HasProperty.cs",
       "label": "HasProperty",
       "attributes": [
         "object"
@@ -1437,7 +1477,7 @@
     },
     {
       "id": "BH.oM.Lighting.Elements.Luminaire.LuminaireType-IsA-BH.oM.Lighting.Elements.LuminaireType",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/IsA.cs",
       "label": "IsA",
       "attributes": [
         "object"
@@ -1447,7 +1487,7 @@
     },
     {
       "id": "Luminaire-IsA-IBHoMObject_7B2CB398A1374A9D5CF5BE587168BF6501AE85AE95DA79705C046C9634CEE23A",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/IsA.cs",
       "label": "IsA",
       "attributes": [
         "object"
@@ -1460,7 +1500,7 @@
     },
     {
       "id": "Luminaire-IsA-IObject_90A1B9E5DFFAC39C5BB3CA931AB2EFF44F8941D8644B1C5A02229A5A703BA2BC",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/IsA.cs",
       "label": "IsA",
       "attributes": [
         "object"
@@ -1473,7 +1513,7 @@
     },
     {
       "id": "Luminaire-IsA-IElement0D_D932A41D04C2054810587FEE486D6EC3FD12B38B117F9E83DE3CDD680A8D1B45",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/IsA.cs",
       "label": "IsA",
       "attributes": [
         "object"
@@ -1486,7 +1526,7 @@
     },
     {
       "id": "Luminaire-IsA-IElement_677D14FBB0716E5BF7D975A2DE5FFA03FE61F48537EC4A87622732375ED2AD24",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/IsA.cs",
       "label": "IsA",
       "attributes": [
         "object"
@@ -1499,7 +1539,7 @@
     },
     {
       "id": "Luminaire-IsSubclassOf-BHoMObject_CAE713B2C3A73B2674F98E7DD965648B85A52B5EBA90957B38DCF09C66720451",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsSubclassOf.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/IsSubclassOf.cs",
       "label": "IsA",
       "attributes": [
         "object"
@@ -1509,7 +1549,7 @@
     },
     {
       "id": "LuminaireType-HasProperty-Manufacturer_4474AA121EEFBC897B71245697358E5A400DC2342DF096DDC31F7B07A2DD4BD1",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/HasProperty.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/HasProperty.cs",
       "label": "HasProperty",
       "attributes": [
         "datatype"
@@ -1519,7 +1559,7 @@
     },
     {
       "id": "BH.oM.Lighting.Elements.LuminaireType-HasProperty-BH.oM.Lighting.Elements.LuminaireType.LuminaireGeometry",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/HasProperty.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/HasProperty.cs",
       "label": "HasProperty",
       "attributes": [
         "object"
@@ -1529,7 +1569,7 @@
     },
     {
       "id": "BH.oM.Lighting.Elements.LuminaireType.LuminaireGeometry-IsA-BH.oM.Geometry.BoundaryRepresentation",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/IsA.cs",
       "label": "IsA",
       "attributes": [
         "object"
@@ -1539,7 +1579,7 @@
     },
     {
       "id": "LuminaireType-HasProperty-Load_9D977C5473A1858C4D436D84EAF1BDD804A4E80F11C6755339080F732477799D",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/HasProperty.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/HasProperty.cs",
       "label": "HasProperty",
       "attributes": [
         "datatype"
@@ -1549,7 +1589,7 @@
     },
     {
       "id": "LuminaireType-HasProperty-Flux_24718227B16AB5E4167D0314CEB54C739385AD174A036D953AD159A9E9D0D616",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/HasProperty.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/HasProperty.cs",
       "label": "HasProperty",
       "attributes": [
         "datatype"
@@ -1559,7 +1599,7 @@
     },
     {
       "id": "LuminaireType-HasProperty-NumberOfLamps_A22478547E75FD759F717DD5963670ED8A91A0AE6F6180AAB87F6DECA38E2EA9",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/HasProperty.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/HasProperty.cs",
       "label": "HasProperty",
       "attributes": [
         "datatype"
@@ -1569,7 +1609,7 @@
     },
     {
       "id": "LuminaireType-HasProperty-MountingType_3CCA6CC3A7773AB8ADC48DF488A46E92643EEC4655834FD2DFB26560ED2D2557",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/HasProperty.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/HasProperty.cs",
       "label": "HasProperty",
       "attributes": [
         "datatype"
@@ -1579,7 +1619,7 @@
     },
     {
       "id": "LuminaireType-HasProperty-Description_26310344AAEF4B3A25A9D46944F83BEB0819B44F1E1ECA864E4FFDD0A4B94B95",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/HasProperty.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/HasProperty.cs",
       "label": "HasProperty",
       "attributes": [
         "datatype"
@@ -1589,7 +1629,7 @@
     },
     {
       "id": "LuminaireType-HasProperty-Model_607F82B515B25D9B30130006EC8C928161BAC3D60DCE5C9BF7A903ECC7D73503",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/HasProperty.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/HasProperty.cs",
       "label": "HasProperty",
       "attributes": [
         "datatype"
@@ -1599,7 +1639,7 @@
     },
     {
       "id": "LuminaireType-IsA-IBHoMObject_1B781441A0E77D9D500D3EBEEFB924B8C7681668B1FF79CB498428EB3044B4E0",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/IsA.cs",
       "label": "IsA",
       "attributes": [
         "object"
@@ -1612,7 +1652,7 @@
     },
     {
       "id": "LuminaireType-IsA-IObject_080C67FA9BFEEE426A4A2EF265BE30C3AE0287BE8F9E9FCB40CFFA2D0CF4D634",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/IsA.cs",
       "label": "IsA",
       "attributes": [
         "object"
@@ -1625,7 +1665,7 @@
     },
     {
       "id": "LuminaireType-IsSubclassOf-BHoMObject_18FC9E4B56E5BB98750E6002426C215DC112463B93ACAE8D88BDE74D8A2EB6B3",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsSubclassOf.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/IsSubclassOf.cs",
       "label": "IsA",
       "attributes": [
         "object"
@@ -1635,7 +1675,7 @@
     },
     {
       "id": "BH.oM.Lighting.Analysis.AnalysisGrid-HasProperty-BH.oM.Lighting.Analysis.AnalysisGrid.BoundaryCurve",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/HasProperty.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/HasProperty.cs",
       "label": "HasProperty",
       "attributes": [
         "object"
@@ -1645,7 +1685,7 @@
     },
     {
       "id": "BH.oM.Lighting.Analysis.AnalysisGrid.BoundaryCurve-IsA-BH.oM.Geometry.Polyline",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/IsA.cs",
       "label": "IsA",
       "attributes": [
         "object"
@@ -1655,7 +1695,7 @@
     },
     {
       "id": "BH.oM.Lighting.Analysis.AnalysisGrid-HasProperty-BH.oM.Lighting.Analysis.AnalysisGrid.InnerCurves",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/HasProperty.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/HasProperty.cs",
       "label": "HasProperty",
       "attributes": [
         "object"
@@ -1665,7 +1705,7 @@
     },
     {
       "id": "BH.oM.Lighting.Analysis.AnalysisGrid.InnerCurves-IsAListOf-BH.oM.Geometry.Polyline",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsAListOf.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/IsAListOf.cs",
       "label": "IsAListOf",
       "attributes": [
         "object"
@@ -1675,7 +1715,7 @@
     },
     {
       "id": "BH.oM.Lighting.Analysis.AnalysisGrid-HasProperty-BH.oM.Lighting.Analysis.AnalysisGrid.Nodes",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/HasProperty.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/HasProperty.cs",
       "label": "HasProperty",
       "attributes": [
         "object"
@@ -1685,7 +1725,7 @@
     },
     {
       "id": "BH.oM.Lighting.Analysis.AnalysisGrid.Nodes-IsAListOf-BH.oM.Lighting.Analysis.Node",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsAListOf.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/IsAListOf.cs",
       "label": "IsAListOf",
       "attributes": [
         "object"
@@ -1695,7 +1735,7 @@
     },
     {
       "id": "AnalysisGrid-HasProperty-ID_A197C6C3584E61A629AAB274D7DF2B90C067CBAE417B5A2DD7DFF1D87760782D",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/HasProperty.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/HasProperty.cs",
       "label": "HasProperty",
       "attributes": [
         "datatype"
@@ -1705,7 +1745,7 @@
     },
     {
       "id": "AnalysisGrid-HasProperty-Name_21B8ED66A6C216B4AE4C950C0149E628C2B8B3E81E13694B14F40A90C9262D66",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/HasProperty.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/HasProperty.cs",
       "label": "HasProperty",
       "attributes": [
         "datatype"
@@ -1715,7 +1755,7 @@
     },
     {
       "id": "AnalysisGrid-IsA-IBHoMObject_2AEC9F2B366281FE9876A29D1CAD72C832C729DC8203D6E4AE59CFD992CD27F0",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/IsA.cs",
       "label": "IsA",
       "attributes": [
         "object"
@@ -1728,7 +1768,7 @@
     },
     {
       "id": "AnalysisGrid-IsA-IObject_E4D3EAD0E222C207D9252F8C12A99C491356200AEDD8373F0717E93E0553B4F8",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/IsA.cs",
       "label": "IsA",
       "attributes": [
         "object"
@@ -1741,7 +1781,7 @@
     },
     {
       "id": "AnalysisGrid-IsA-IImmutable_D27838488D10DFE4B13D580F8A11FD7432160E2E43154DAB037F8A5EA6D86E91",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/IsA.cs",
       "label": "IsA",
       "attributes": [
         "object"
@@ -1754,7 +1794,7 @@
     },
     {
       "id": "AnalysisGrid-IsSubclassOf-BHoMObject_EDBCDE3C81CA3B659B5F85FFB4934D4A60207547ABA4228D97E8E318223D4D81",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsSubclassOf.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/IsSubclassOf.cs",
       "label": "IsA",
       "attributes": [
         "object"
@@ -1764,7 +1804,7 @@
     },
     {
       "id": "BH.oM.Lighting.Analysis.Node-HasProperty-BH.oM.Lighting.Analysis.Node.Position",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/HasProperty.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/HasProperty.cs",
       "label": "HasProperty",
       "attributes": [
         "object"
@@ -1774,7 +1814,7 @@
     },
     {
       "id": "BH.oM.Lighting.Analysis.Node.Position-IsA-BH.oM.Geometry.Point",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/IsA.cs",
       "label": "IsA",
       "attributes": [
         "object"
@@ -1784,7 +1824,7 @@
     },
     {
       "id": "Node-HasProperty-ID_61C90DC6E572975699F48A5558EE6513C28D8AB032C71896DEEBFA75DA803894",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/HasProperty.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/HasProperty.cs",
       "label": "HasProperty",
       "attributes": [
         "datatype"
@@ -1794,7 +1834,7 @@
     },
     {
       "id": "Node-IsA-IBHoMObject_AB46DF39D81391F150684EE80DF8DF70B1F08A2CAD0E050BA2951F590B6E4058",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/IsA.cs",
       "label": "IsA",
       "attributes": [
         "object"
@@ -1807,7 +1847,7 @@
     },
     {
       "id": "Node-IsA-IObject_5B588B6E8962FE35DB5F1F05F8D569F9D1D4127D85B294B722D1E24265A6CE93",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/IsA.cs",
       "label": "IsA",
       "attributes": [
         "object"
@@ -1820,7 +1860,7 @@
     },
     {
       "id": "Node-IsA-IElement0D_8EB843B809FE2429298757D402557D28F12DAD526912664155E8E81C4538B77D",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/IsA.cs",
       "label": "IsA",
       "attributes": [
         "object"
@@ -1833,7 +1873,7 @@
     },
     {
       "id": "Node-IsA-IElement_7DBEDCEE3C91CC8EDCB8E99F26D640776E21677441FD68F95ABDA15756289AA7",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/IsA.cs",
       "label": "IsA",
       "attributes": [
         "object"
@@ -1846,7 +1886,7 @@
     },
     {
       "id": "Node-IsA-INode_EC525E4627F2B454F6854D8C94C06208EFF8590F54F159B8C7C335CF8986715E",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/IsA.cs",
       "label": "IsA",
       "attributes": [
         "object"
@@ -1859,7 +1899,7 @@
     },
     {
       "id": "Node-IsA-IAnalytical_BDB5A7ED6A0B200AF140416020F2FA234407F827563546C4F0300E3797968F71",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/IsA.cs",
       "label": "IsA",
       "attributes": [
         "object"
@@ -1872,7 +1912,7 @@
     },
     {
       "id": "Node-IsSubclassOf-BHoMObject_91F0FDB71CF41C30E864A8CC8B0AD71D1176BD8935A78D0B819329818E9A211A",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsSubclassOf.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/IsSubclassOf.cs",
       "label": "IsA",
       "attributes": [
         "object"

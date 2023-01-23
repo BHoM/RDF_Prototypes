@@ -3,6 +3,10 @@
   "namespace": [],
   "class": [
     {
+      "id": "BH.oM.CFD.WindCriteria",
+      "type": "owl:Class"
+    },
+    {
       "id": "BH.oM.CFD.Season",
       "type": "owl:Class"
     },
@@ -661,8 +665,19 @@
   ],
   "classAttribute": [
     {
+      "id": "BH.oM.CFD.WindCriteria",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/CFD_oM/WindCriteria.cs",
+      "label": "WindCriteria (BH.oM.CFD)",
+      "attributes": [
+        "object"
+      ],
+      "comment": {
+        "undefined": "Wind criteria with different category values for comfort maps."
+      }
+    },
+    {
       "id": "BH.oM.CFD.Season",
-      "iri": "https://github.com/BHoM/CFD_Toolkit/blob/main/CFD_oM/Enums/Season.cs",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/CFD_oM/Season.cs",
       "label": "Season (BH.oM.CFD)",
       "attributes": [
         "object"
@@ -673,7 +688,7 @@
     },
     {
       "id": "BH.oM.CFD.Weibull.WeibullParameters",
-      "iri": "https://github.com/BHoM/CFD_Toolkit/blob/main/CFD_oM/WeibullObjects/WeibullParameters.cs",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/CFD_oM/Weibull/WeibullParameters.cs",
       "label": "WeibullParameters (BH.oM.CFD.Weibull)",
       "attributes": [
         "object"
@@ -684,7 +699,7 @@
     },
     {
       "id": "BH.oM.CFD.Weibull.WeibullTable",
-      "iri": "https://github.com/BHoM/CFD_Toolkit/blob/main/CFD_oM/WeibullObjects/WeibullTable.cs",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/CFD_oM/Weibull/WeibullTable.cs",
       "label": "WeibullTable (BH.oM.CFD.Weibull)",
       "attributes": [
         "object"
@@ -695,7 +710,7 @@
     },
     {
       "id": "BH.oM.CFD.Harpoon.IHarpoonObject",
-      "iri": "https://github.com/BHoM/CFD_Toolkit/blob/main/CFD_oM/HarpoonObjects/IHarpoonObject.cs",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/CFD_oM/Harpoon/IHarpoonObject.cs",
       "label": "IHarpoonObject (BH.oM.CFD.Harpoon)",
       "attributes": [
         "object"
@@ -703,7 +718,7 @@
     },
     {
       "id": "BH.oM.CFD.Harpoon.HarpoonRunMode",
-      "iri": "https://github.com/BHoM/CFD_Toolkit/blob/main/CFD_oM/Config/HarpoonRunMode.cs",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/CFD_oM/Harpoon/HarpoonRunMode.cs",
       "label": "HarpoonRunMode (BH.oM.CFD.Harpoon)",
       "attributes": [
         "object"
@@ -714,7 +729,7 @@
     },
     {
       "id": "BH.oM.CFD.Harpoon.MeshExtent",
-      "iri": "https://github.com/BHoM/CFD_Toolkit/blob/main/CFD_oM/Enums/MeshExtent.cs",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/CFD_oM/Harpoon/MeshExtent.cs",
       "label": "MeshExtent (BH.oM.CFD.Harpoon)",
       "attributes": [
         "object"
@@ -725,7 +740,7 @@
     },
     {
       "id": "BH.oM.CFD.Harpoon.VolumeHarpoonObject",
-      "iri": "https://github.com/BHoM/CFD_Toolkit/blob/main/CFD_oM/HarpoonObjects/VolumeHarpoonObject.cs",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/CFD_oM/Harpoon/VolumeHarpoonObject.cs",
       "label": "VolumeHarpoonObject (BH.oM.CFD.Harpoon)",
       "attributes": [
         "object"
@@ -733,7 +748,7 @@
     },
     {
       "id": "BH.oM.CFD.Harpoon.HarpoonRunControls",
-      "iri": "https://github.com/BHoM/CFD_Toolkit/blob/main/CFD_oM/HarpoonSettings/HarpoonRunControls.cs",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/CFD_oM/Harpoon/HarpoonRunControls.cs",
       "label": "HarpoonRunControls (BH.oM.CFD.Harpoon)",
       "attributes": [
         "object"
@@ -741,7 +756,7 @@
     },
     {
       "id": "BH.oM.CFD.Harpoon.RefinementSettings",
-      "iri": "https://github.com/BHoM/CFD_Toolkit/blob/main/CFD_oM/HarpoonSettings/RefinementSettings.cs",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/CFD_oM/Harpoon/RefinementSettings.cs",
       "label": "RefinementSettings (BH.oM.CFD.Harpoon)",
       "attributes": [
         "object"
@@ -749,7 +764,7 @@
     },
     {
       "id": "BH.oM.CFD.Harpoon.SurfaceHarpoonObject",
-      "iri": "https://github.com/BHoM/CFD_Toolkit/blob/main/CFD_oM/HarpoonObjects/SurfaceHarpoonObject.cs",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/CFD_oM/Harpoon/SurfaceHarpoonObject.cs",
       "label": "SurfaceHarpoonObject (BH.oM.CFD.Harpoon)",
       "attributes": [
         "object"
@@ -757,7 +772,7 @@
     },
     {
       "id": "BH.oM.CFD.Harpoon.HarpoonSettings",
-      "iri": "https://github.com/BHoM/CFD_Toolkit/blob/main/CFD_oM/HarpoonSettings/HarpoonSettings.cs",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/CFD_oM/Harpoon/HarpoonSettings.cs",
       "label": "HarpoonSettings (BH.oM.CFD.Harpoon)",
       "attributes": [
         "object"
@@ -765,7 +780,7 @@
     },
     {
       "id": "BH.oM.CFD.CFX.UserFunction",
-      "iri": "https://github.com/BHoM/CFD_Toolkit/blob/main/CFD_oM/CFXSettings/UserFunction.cs",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/CFD_oM/CFX/UserFunction.cs",
       "label": "UserFunction (BH.oM.CFD.CFX)",
       "attributes": [
         "object"
@@ -773,7 +788,7 @@
     },
     {
       "id": "BH.oM.CFD.CFX.CFXRunMode",
-      "iri": "https://github.com/BHoM/CFD_Toolkit/blob/main/CFD_oM/Config/CFXRunMode.cs",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/CFD_oM/CFX/CFXRunMode.cs",
       "label": "CFXRunMode (BH.oM.CFD.CFX)",
       "attributes": [
         "object"
@@ -784,7 +799,7 @@
     },
     {
       "id": "BH.oM.CFD.CFX.LengthUnit",
-      "iri": "https://github.com/BHoM/CFD_Toolkit/blob/main/CFD_oM/Enums/LengthUnit.cs",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/CFD_oM/CFX/LengthUnit.cs",
       "label": "LengthUnit (BH.oM.CFD.CFX)",
       "attributes": [
         "object"
@@ -795,7 +810,7 @@
     },
     {
       "id": "BH.oM.CFD.CFX.MonitorVariable",
-      "iri": "https://github.com/BHoM/CFD_Toolkit/blob/main/CFD_oM/Enums/MonitorVariable.cs",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/CFD_oM/CFX/MonitorVariable.cs",
       "label": "MonitorVariable (BH.oM.CFD.CFX)",
       "attributes": [
         "object"
@@ -806,7 +821,7 @@
     },
     {
       "id": "BH.oM.CFD.CFX.ICFXObject",
-      "iri": "https://github.com/BHoM/CFD_Toolkit/blob/main/CFD_oM/CFXObjects/ICFXObject.cs",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/CFD_oM/CFX/ICFXObject.cs",
       "label": "ICFXObject (BH.oM.CFD.CFX)",
       "attributes": [
         "object"
@@ -814,7 +829,7 @@
     },
     {
       "id": "BH.oM.CFD.CFX.MassflowInletBoundary",
-      "iri": "https://github.com/BHoM/CFD_Toolkit/blob/main/CFD_oM/CFXObjects/MassflowInletBoundary.cs",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/CFD_oM/CFX/MassflowInletBoundary.cs",
       "label": "MassflowInletBoundary (BH.oM.CFD.CFX)",
       "attributes": [
         "object"
@@ -822,7 +837,7 @@
     },
     {
       "id": "BH.oM.CFD.CFX.MassflowOutletBoundary",
-      "iri": "https://github.com/BHoM/CFD_Toolkit/blob/main/CFD_oM/CFXObjects/MassflowOutletBoundary.cs",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/CFD_oM/CFX/MassflowOutletBoundary.cs",
       "label": "MassflowOutletBoundary (BH.oM.CFD.CFX)",
       "attributes": [
         "object"
@@ -830,7 +845,7 @@
     },
     {
       "id": "BH.oM.CFD.CFX.Subdomain",
-      "iri": "https://github.com/BHoM/CFD_Toolkit/blob/main/CFD_oM/CFXObjects/Subdomain.cs",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/CFD_oM/CFX/Subdomain.cs",
       "label": "Subdomain (BH.oM.CFD.CFX)",
       "attributes": [
         "object"
@@ -838,7 +853,7 @@
     },
     {
       "id": "BH.oM.CFD.CFX.MonitorPoints",
-      "iri": "https://github.com/BHoM/CFD_Toolkit/blob/main/CFD_oM/CFXSettings/MonitorPoints.cs",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/CFD_oM/CFX/MonitorPoints.cs",
       "label": "MonitorPoints (BH.oM.CFD.CFX)",
       "attributes": [
         "object"
@@ -846,7 +861,7 @@
     },
     {
       "id": "BH.oM.CFD.CFX.PressureBoundary",
-      "iri": "https://github.com/BHoM/CFD_Toolkit/blob/main/CFD_oM/CFXObjects/PressureBoundary.cs",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/CFD_oM/CFX/PressureBoundary.cs",
       "label": "PressureBoundary (BH.oM.CFD.CFX)",
       "attributes": [
         "object"
@@ -854,7 +869,7 @@
     },
     {
       "id": "BH.oM.CFD.CFX.VelocityOutletBoundary",
-      "iri": "https://github.com/BHoM/CFD_Toolkit/blob/main/CFD_oM/CFXObjects/VelocityOutletBoundary.cs",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/CFD_oM/CFX/VelocityOutletBoundary.cs",
       "label": "VelocityOutletBoundary (BH.oM.CFD.CFX)",
       "attributes": [
         "object"
@@ -862,7 +877,7 @@
     },
     {
       "id": "BH.oM.CFD.CFX.VelocityInletBoundary",
-      "iri": "https://github.com/BHoM/CFD_Toolkit/blob/main/CFD_oM/CFXObjects/VelocityInletBoundary.cs",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/CFD_oM/CFX/VelocityInletBoundary.cs",
       "label": "VelocityInletBoundary (BH.oM.CFD.CFX)",
       "attributes": [
         "object"
@@ -870,7 +885,7 @@
     },
     {
       "id": "BH.oM.CFD.CFX.HeatFluxBoundary",
-      "iri": "https://github.com/BHoM/CFD_Toolkit/blob/main/CFD_oM/CFXObjects/HeatFluxBoundary.cs",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/CFD_oM/CFX/HeatFluxBoundary.cs",
       "label": "HeatFluxBoundary (BH.oM.CFD.CFX)",
       "attributes": [
         "object"
@@ -878,7 +893,7 @@
     },
     {
       "id": "BH.oM.CFD.CFX.TemperatureBoundary",
-      "iri": "https://github.com/BHoM/CFD_Toolkit/blob/main/CFD_oM/CFXObjects/TemperatureBoundary.cs",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/CFD_oM/CFX/TemperatureBoundary.cs",
       "label": "TemperatureBoundary (BH.oM.CFD.CFX)",
       "attributes": [
         "object"
@@ -886,7 +901,7 @@
     },
     {
       "id": "BH.oM.CFD.CFX.HeatTransferBoundary",
-      "iri": "https://github.com/BHoM/CFD_Toolkit/blob/main/CFD_oM/CFXObjects/HeatTransferBoundary.cs",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/CFD_oM/CFX/HeatTransferBoundary.cs",
       "label": "HeatTransferBoundary (BH.oM.CFD.CFX)",
       "attributes": [
         "object"
@@ -894,7 +909,7 @@
     },
     {
       "id": "BH.oM.CFD.CFX.AdiabaticBoundary",
-      "iri": "https://github.com/BHoM/CFD_Toolkit/blob/main/CFD_oM/CFXObjects/AdiabaticBoundary.cs",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/CFD_oM/CFX/AdiabaticBoundary.cs",
       "label": "AdiabaticBoundary (BH.oM.CFD.CFX)",
       "attributes": [
         "object"
@@ -902,7 +917,7 @@
     },
     {
       "id": "BH.oM.CFD.CFX.EnergySource",
-      "iri": "https://github.com/BHoM/CFD_Toolkit/blob/main/CFD_oM/CFXObjects/EnergySource.cs",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/CFD_oM/CFX/EnergySource.cs",
       "label": "EnergySource (BH.oM.CFD.CFX)",
       "attributes": [
         "object"
@@ -910,7 +925,7 @@
     },
     {
       "id": "BH.oM.CFD.CFX.SymmetryBoundary",
-      "iri": "https://github.com/BHoM/CFD_Toolkit/blob/main/CFD_oM/CFXObjects/SymmetryBoundary.cs",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/CFD_oM/CFX/SymmetryBoundary.cs",
       "label": "SymmetryBoundary (BH.oM.CFD.CFX)",
       "attributes": [
         "object"
@@ -918,7 +933,7 @@
     },
     {
       "id": "BH.oM.CFD.CFX.IBoundaryCondition",
-      "iri": "https://github.com/BHoM/CFD_Toolkit/blob/main/CFD_oM/CFXObjects/IBoundaryCondition.cs",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/CFD_oM/CFX/IBoundaryCondition.cs",
       "label": "IBoundaryCondition (BH.oM.CFD.CFX)",
       "attributes": [
         "object"
@@ -926,7 +941,7 @@
     },
     {
       "id": "BH.oM.CFD.CFX.DiscreteTransferModel",
-      "iri": "https://github.com/BHoM/CFD_Toolkit/blob/main/CFD_oM/CFXSettings/DiscreteTransferModel.cs",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/CFD_oM/CFX/DiscreteTransferModel.cs",
       "label": "DiscreteTransferModel (BH.oM.CFD.CFX)",
       "attributes": [
         "object"
@@ -934,7 +949,7 @@
     },
     {
       "id": "BH.oM.CFD.CFX.TurbulenceModel",
-      "iri": "https://github.com/BHoM/CFD_Toolkit/blob/main/CFD_oM/Enums/TurbulenceModel.cs",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/CFD_oM/CFX/TurbulenceModel.cs",
       "label": "TurbulenceModel (BH.oM.CFD.CFX)",
       "attributes": [
         "object"
@@ -945,7 +960,7 @@
     },
     {
       "id": "BH.oM.CFD.CFX.MonteCarloModel",
-      "iri": "https://github.com/BHoM/CFD_Toolkit/blob/main/CFD_oM/CFXSettings/MonteCarloModel.cs",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/CFD_oM/CFX/MonteCarloModel.cs",
       "label": "MonteCarloModel (BH.oM.CFD.CFX)",
       "attributes": [
         "object"
@@ -953,7 +968,7 @@
     },
     {
       "id": "BH.oM.CFD.CFX.IRadiantModel",
-      "iri": "https://github.com/BHoM/CFD_Toolkit/blob/main/CFD_oM/CFXSettings/IRadiantModel.cs",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/CFD_oM/CFX/IRadiantModel.cs",
       "label": "IRadiantModel (BH.oM.CFD.CFX)",
       "attributes": [
         "object"
@@ -961,7 +976,7 @@
     },
     {
       "id": "BH.oM.CFD.CFX.ITimescale",
-      "iri": "https://github.com/BHoM/CFD_Toolkit/blob/main/CFD_oM/CFXSettings/ITimescale.cs",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/CFD_oM/CFX/ITimescale.cs",
       "label": "ITimescale (BH.oM.CFD.CFX)",
       "attributes": [
         "object"
@@ -969,7 +984,7 @@
     },
     {
       "id": "BH.oM.CFD.CFX.PhysicalTimescale",
-      "iri": "https://github.com/BHoM/CFD_Toolkit/blob/main/CFD_oM/CFXSettings/PhysicalTimescale.cs",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/CFD_oM/CFX/PhysicalTimescale.cs",
       "label": "PhysicalTimescale (BH.oM.CFD.CFX)",
       "attributes": [
         "object"
@@ -977,7 +992,7 @@
     },
     {
       "id": "BH.oM.CFD.CFX.AutoTimescale",
-      "iri": "https://github.com/BHoM/CFD_Toolkit/blob/main/CFD_oM/CFXSettings/AutoTimescale.cs",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/CFD_oM/CFX/AutoTimescale.cs",
       "label": "AutoTimescale (BH.oM.CFD.CFX)",
       "attributes": [
         "object"
@@ -985,7 +1000,7 @@
     },
     {
       "id": "BH.oM.CFD.CFX.InitialisationSettings",
-      "iri": "https://github.com/BHoM/CFD_Toolkit/blob/main/CFD_oM/CFXSettings/InitialisationSettings.cs",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/CFD_oM/CFX/InitialisationSettings.cs",
       "label": "InitialisationSettings (BH.oM.CFD.CFX)",
       "attributes": [
         "object"
@@ -993,7 +1008,7 @@
     },
     {
       "id": "BH.oM.CFD.CFX.SolverSettings",
-      "iri": "https://github.com/BHoM/CFD_Toolkit/blob/main/CFD_oM/CFXSettings/SolverSettings.cs",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/CFD_oM/CFX/SolverSettings.cs",
       "label": "SolverSettings (BH.oM.CFD.CFX)",
       "attributes": [
         "object"
@@ -1001,7 +1016,7 @@
     },
     {
       "id": "BH.oM.CFD.CFX.OutputSettings",
-      "iri": "https://github.com/BHoM/CFD_Toolkit/blob/main/CFD_oM/CFXSettings/OutputSettings.cs",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/CFD_oM/CFX/OutputSettings.cs",
       "label": "OutputSettings (BH.oM.CFD.CFX)",
       "attributes": [
         "object"
@@ -1009,7 +1024,7 @@
     },
     {
       "id": "BH.oM.CFD.CFX.FluidModelSettings",
-      "iri": "https://github.com/BHoM/CFD_Toolkit/blob/main/CFD_oM/CFXSettings/FluidModelSettings.cs",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/CFD_oM/CFX/FluidModelSettings.cs",
       "label": "FluidModelSettings (BH.oM.CFD.CFX)",
       "attributes": [
         "object"
@@ -1017,7 +1032,7 @@
     },
     {
       "id": "BH.oM.CFD.CFX.CFXSettings",
-      "iri": "https://github.com/BHoM/CFD_Toolkit/blob/main/CFD_oM/CFXSettings/CFXSettings.cs",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/CFD_oM/CFX/CFXSettings.cs",
       "label": "CFXSettings (BH.oM.CFD.CFX)",
       "attributes": [
         "object"
@@ -1025,32 +1040,32 @@
     },
     {
       "id": "BH.oM.CFD.Weibull.WeibullParameters.Direction",
-      "iri": "https://github.com/BHoM/CFD_Toolkit/blob/main/CFD_oM/WeibullObjects/WeibullParameters.cs#L16",
-      "label": "Direction(BH.oM.CFD.Weibull.WeibullParameters.Direction)",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/CFD_oM/Weibull/WeibullParameters.cs",
+      "label": "Direction (BH.oM.CFD.Weibull.WeibullParameters.Direction)",
       "attributes": [
         "datatype"
       ]
     },
     {
       "id": "BH.oM.CFD.Weibull.WeibullParameters.P",
-      "iri": "https://github.com/BHoM/CFD_Toolkit/blob/main/CFD_oM/WeibullObjects/WeibullParameters.cs#L19",
-      "label": "P(BH.oM.CFD.Weibull.WeibullParameters.P)",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/CFD_oM/Weibull/WeibullParameters.cs",
+      "label": "P (BH.oM.CFD.Weibull.WeibullParameters.P)",
       "attributes": [
         "datatype"
       ]
     },
     {
       "id": "BH.oM.CFD.Weibull.WeibullParameters.C",
-      "iri": "https://github.com/BHoM/CFD_Toolkit/blob/main/CFD_oM/WeibullObjects/WeibullParameters.cs#L22",
-      "label": "C(BH.oM.CFD.Weibull.WeibullParameters.C)",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/CFD_oM/Weibull/WeibullParameters.cs",
+      "label": "C (BH.oM.CFD.Weibull.WeibullParameters.C)",
       "attributes": [
         "datatype"
       ]
     },
     {
       "id": "BH.oM.CFD.Weibull.WeibullParameters.K",
-      "iri": "https://github.com/BHoM/CFD_Toolkit/blob/main/CFD_oM/WeibullObjects/WeibullParameters.cs#L25",
-      "label": "K(BH.oM.CFD.Weibull.WeibullParameters.K)",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/CFD_oM/Weibull/WeibullParameters.cs",
+      "label": "K (BH.oM.CFD.Weibull.WeibullParameters.K)",
       "attributes": [
         "datatype"
       ]
@@ -1083,78 +1098,78 @@
     },
     {
       "id": "BH.oM.CFD.Weibull.WeibullTable.Weibulls",
-      "iri": "https://github.com/BHoM/CFD_Toolkit/blob/main/CFD_oM/WeibullObjects/WeibullTable.cs#L16",
-      "label": "Weibulls(BH.oM.CFD.Weibull.WeibullTable.Weibulls)",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/CFD_oM/Weibull/WeibullTable.cs",
+      "label": "Weibulls (BH.oM.CFD.Weibull.WeibullTable.Weibulls)",
       "attributes": []
     },
     {
       "id": "BH.oM.CFD.Harpoon.IHarpoonObject.FileName",
-      "iri": "https://github.com/BHoM/CFD_Toolkit/blob/main/CFD_oM/HarpoonObjects/IHarpoonObject.cs#L13",
-      "label": "FileName(BH.oM.CFD.Harpoon.IHarpoonObject.FileName)",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/CFD_oM/Harpoon/IHarpoonObject.cs",
+      "label": "FileName (BH.oM.CFD.Harpoon.IHarpoonObject.FileName)",
       "attributes": [
         "datatype"
       ]
     },
     {
       "id": "BH.oM.CFD.Harpoon.IHarpoonObject.Directory",
-      "iri": "https://github.com/BHoM/CFD_Toolkit/blob/main/CFD_oM/HarpoonObjects/IHarpoonObject.cs#L14",
-      "label": "Directory(BH.oM.CFD.Harpoon.IHarpoonObject.Directory)",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/CFD_oM/Harpoon/IHarpoonObject.cs",
+      "label": "Directory (BH.oM.CFD.Harpoon.IHarpoonObject.Directory)",
       "attributes": [
         "datatype"
       ]
     },
     {
       "id": "BH.oM.CFD.Harpoon.IHarpoonObject.SurfaceMeshLevel",
-      "iri": "https://github.com/BHoM/CFD_Toolkit/blob/main/CFD_oM/HarpoonObjects/IHarpoonObject.cs#L15",
-      "label": "SurfaceMeshLevel(BH.oM.CFD.Harpoon.IHarpoonObject.SurfaceMeshLevel)",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/CFD_oM/Harpoon/IHarpoonObject.cs",
+      "label": "SurfaceMeshLevel (BH.oM.CFD.Harpoon.IHarpoonObject.SurfaceMeshLevel)",
       "attributes": [
         "datatype"
       ]
     },
     {
       "id": "BH.oM.CFD.Harpoon.IHarpoonObject.LineMeshLevel",
-      "iri": "https://github.com/BHoM/CFD_Toolkit/blob/main/CFD_oM/HarpoonObjects/IHarpoonObject.cs#L16",
-      "label": "LineMeshLevel(BH.oM.CFD.Harpoon.IHarpoonObject.LineMeshLevel)",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/CFD_oM/Harpoon/IHarpoonObject.cs",
+      "label": "LineMeshLevel (BH.oM.CFD.Harpoon.IHarpoonObject.LineMeshLevel)",
       "attributes": [
         "datatype"
       ]
     },
     {
       "id": "BH.oM.CFD.Harpoon.VolumeHarpoonObject.FileName",
-      "iri": "https://github.com/BHoM/CFD_Toolkit/blob/main/CFD_oM/HarpoonObjects/VolumeHarpoonObject.cs#L12",
-      "label": "FileName(BH.oM.CFD.Harpoon.VolumeHarpoonObject.FileName)",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/CFD_oM/Harpoon/VolumeHarpoonObject.cs",
+      "label": "FileName (BH.oM.CFD.Harpoon.VolumeHarpoonObject.FileName)",
       "attributes": [
         "datatype"
       ]
     },
     {
       "id": "BH.oM.CFD.Harpoon.VolumeHarpoonObject.Directory",
-      "iri": "https://github.com/BHoM/CFD_Toolkit/blob/main/CFD_oM/HarpoonObjects/VolumeHarpoonObject.cs#L13",
-      "label": "Directory(BH.oM.CFD.Harpoon.VolumeHarpoonObject.Directory)",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/CFD_oM/Harpoon/VolumeHarpoonObject.cs",
+      "label": "Directory (BH.oM.CFD.Harpoon.VolumeHarpoonObject.Directory)",
       "attributes": [
         "datatype"
       ]
     },
     {
       "id": "BH.oM.CFD.Harpoon.VolumeHarpoonObject.SurfaceMeshLevel",
-      "iri": "https://github.com/BHoM/CFD_Toolkit/blob/main/CFD_oM/HarpoonObjects/VolumeHarpoonObject.cs#L14",
-      "label": "SurfaceMeshLevel(BH.oM.CFD.Harpoon.VolumeHarpoonObject.SurfaceMeshLevel)",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/CFD_oM/Harpoon/VolumeHarpoonObject.cs",
+      "label": "SurfaceMeshLevel (BH.oM.CFD.Harpoon.VolumeHarpoonObject.SurfaceMeshLevel)",
       "attributes": [
         "datatype"
       ]
     },
     {
       "id": "BH.oM.CFD.Harpoon.VolumeHarpoonObject.LineMeshLevel",
-      "iri": "https://github.com/BHoM/CFD_Toolkit/blob/main/CFD_oM/HarpoonObjects/VolumeHarpoonObject.cs#L15",
-      "label": "LineMeshLevel(BH.oM.CFD.Harpoon.VolumeHarpoonObject.LineMeshLevel)",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/CFD_oM/Harpoon/VolumeHarpoonObject.cs",
+      "label": "LineMeshLevel (BH.oM.CFD.Harpoon.VolumeHarpoonObject.LineMeshLevel)",
       "attributes": [
         "datatype"
       ]
     },
     {
       "id": "BH.oM.CFD.Harpoon.VolumeHarpoonObject.Location",
-      "iri": "https://github.com/BHoM/CFD_Toolkit/blob/main/CFD_oM/HarpoonObjects/VolumeHarpoonObject.cs#L16",
-      "label": "Location(BH.oM.CFD.Harpoon.VolumeHarpoonObject.Location)",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/CFD_oM/Harpoon/VolumeHarpoonObject.cs",
+      "label": "Location (BH.oM.CFD.Harpoon.VolumeHarpoonObject.Location)",
       "attributes": []
     },
     {
@@ -1171,30 +1186,30 @@
     },
     {
       "id": "BH.oM.CFD.Harpoon.HarpoonRunControls.HarpoonExePath",
-      "iri": "https://github.com/BHoM/CFD_Toolkit/blob/main/CFD_oM/HarpoonSettings/HarpoonRunControls.cs#L11",
-      "label": "HarpoonExePath(BH.oM.CFD.Harpoon.HarpoonRunControls.HarpoonExePath)",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/CFD_oM/Harpoon/HarpoonRunControls.cs",
+      "label": "HarpoonExePath (BH.oM.CFD.Harpoon.HarpoonRunControls.HarpoonExePath)",
       "attributes": [
         "datatype"
       ]
     },
     {
       "id": "BH.oM.CFD.Harpoon.HarpoonRunControls.HarpoonRunMode",
-      "iri": "https://github.com/BHoM/CFD_Toolkit/blob/main/CFD_oM/HarpoonSettings/HarpoonRunControls.cs#L12",
-      "label": "HarpoonRunMode(BH.oM.CFD.Harpoon.HarpoonRunControls.HarpoonRunMode)",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/CFD_oM/Harpoon/HarpoonRunControls.cs",
+      "label": "HarpoonRunMode (BH.oM.CFD.Harpoon.HarpoonRunControls.HarpoonRunMode)",
       "attributes": []
     },
     {
       "id": "BH.oM.CFD.Harpoon.HarpoonRunControls.MeshFileName",
-      "iri": "https://github.com/BHoM/CFD_Toolkit/blob/main/CFD_oM/HarpoonSettings/HarpoonRunControls.cs#L13",
-      "label": "MeshFileName(BH.oM.CFD.Harpoon.HarpoonRunControls.MeshFileName)",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/CFD_oM/Harpoon/HarpoonRunControls.cs",
+      "label": "MeshFileName (BH.oM.CFD.Harpoon.HarpoonRunControls.MeshFileName)",
       "attributes": [
         "datatype"
       ]
     },
     {
       "id": "BH.oM.CFD.Harpoon.RefinementSettings.RefinementZone",
-      "iri": "https://github.com/BHoM/CFD_Toolkit/blob/main/CFD_oM/HarpoonSettings/RefinementSettings.cs#L14",
-      "label": "RefinementZone(BH.oM.CFD.Harpoon.RefinementSettings.RefinementZone)",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/CFD_oM/Harpoon/RefinementSettings.cs",
+      "label": "RefinementZone (BH.oM.CFD.Harpoon.RefinementSettings.RefinementZone)",
       "attributes": []
     },
     {
@@ -1211,238 +1226,238 @@
     },
     {
       "id": "BH.oM.CFD.Harpoon.RefinementSettings.MeshLevel",
-      "iri": "https://github.com/BHoM/CFD_Toolkit/blob/main/CFD_oM/HarpoonSettings/RefinementSettings.cs#L15",
-      "label": "MeshLevel(BH.oM.CFD.Harpoon.RefinementSettings.MeshLevel)",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/CFD_oM/Harpoon/RefinementSettings.cs",
+      "label": "MeshLevel (BH.oM.CFD.Harpoon.RefinementSettings.MeshLevel)",
       "attributes": [
         "datatype"
       ]
     },
     {
       "id": "BH.oM.CFD.Harpoon.SurfaceHarpoonObject.FileName",
-      "iri": "https://github.com/BHoM/CFD_Toolkit/blob/main/CFD_oM/HarpoonObjects/SurfaceHarpoonObject.cs#L12",
-      "label": "FileName(BH.oM.CFD.Harpoon.SurfaceHarpoonObject.FileName)",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/CFD_oM/Harpoon/SurfaceHarpoonObject.cs",
+      "label": "FileName (BH.oM.CFD.Harpoon.SurfaceHarpoonObject.FileName)",
       "attributes": [
         "datatype"
       ]
     },
     {
       "id": "BH.oM.CFD.Harpoon.SurfaceHarpoonObject.Directory",
-      "iri": "https://github.com/BHoM/CFD_Toolkit/blob/main/CFD_oM/HarpoonObjects/SurfaceHarpoonObject.cs#L13",
-      "label": "Directory(BH.oM.CFD.Harpoon.SurfaceHarpoonObject.Directory)",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/CFD_oM/Harpoon/SurfaceHarpoonObject.cs",
+      "label": "Directory (BH.oM.CFD.Harpoon.SurfaceHarpoonObject.Directory)",
       "attributes": [
         "datatype"
       ]
     },
     {
       "id": "BH.oM.CFD.Harpoon.SurfaceHarpoonObject.SurfaceMeshLevel",
-      "iri": "https://github.com/BHoM/CFD_Toolkit/blob/main/CFD_oM/HarpoonObjects/SurfaceHarpoonObject.cs#L14",
-      "label": "SurfaceMeshLevel(BH.oM.CFD.Harpoon.SurfaceHarpoonObject.SurfaceMeshLevel)",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/CFD_oM/Harpoon/SurfaceHarpoonObject.cs",
+      "label": "SurfaceMeshLevel (BH.oM.CFD.Harpoon.SurfaceHarpoonObject.SurfaceMeshLevel)",
       "attributes": [
         "datatype"
       ]
     },
     {
       "id": "BH.oM.CFD.Harpoon.SurfaceHarpoonObject.LineMeshLevel",
-      "iri": "https://github.com/BHoM/CFD_Toolkit/blob/main/CFD_oM/HarpoonObjects/SurfaceHarpoonObject.cs#L15",
-      "label": "LineMeshLevel(BH.oM.CFD.Harpoon.SurfaceHarpoonObject.LineMeshLevel)",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/CFD_oM/Harpoon/SurfaceHarpoonObject.cs",
+      "label": "LineMeshLevel (BH.oM.CFD.Harpoon.SurfaceHarpoonObject.LineMeshLevel)",
       "attributes": [
         "datatype"
       ]
     },
     {
       "id": "BH.oM.CFD.Harpoon.HarpoonSettings.BaseMeshSize",
-      "iri": "https://github.com/BHoM/CFD_Toolkit/blob/main/CFD_oM/HarpoonSettings/HarpoonSettings.cs#L14",
-      "label": "BaseMeshSize(BH.oM.CFD.Harpoon.HarpoonSettings.BaseMeshSize)",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/CFD_oM/Harpoon/HarpoonSettings.cs",
+      "label": "BaseMeshSize (BH.oM.CFD.Harpoon.HarpoonSettings.BaseMeshSize)",
       "attributes": [
         "datatype"
       ]
     },
     {
       "id": "BH.oM.CFD.Harpoon.HarpoonSettings.MaximumVolumeLevel",
-      "iri": "https://github.com/BHoM/CFD_Toolkit/blob/main/CFD_oM/HarpoonSettings/HarpoonSettings.cs#L15",
-      "label": "MaximumVolumeLevel(BH.oM.CFD.Harpoon.HarpoonSettings.MaximumVolumeLevel)",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/CFD_oM/Harpoon/HarpoonSettings.cs",
+      "label": "MaximumVolumeLevel (BH.oM.CFD.Harpoon.HarpoonSettings.MaximumVolumeLevel)",
       "attributes": [
         "datatype"
       ]
     },
     {
       "id": "BH.oM.CFD.Harpoon.HarpoonSettings.MeshExtent",
-      "iri": "https://github.com/BHoM/CFD_Toolkit/blob/main/CFD_oM/HarpoonSettings/HarpoonSettings.cs#L16",
-      "label": "MeshExtent(BH.oM.CFD.Harpoon.HarpoonSettings.MeshExtent)",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/CFD_oM/Harpoon/HarpoonSettings.cs",
+      "label": "MeshExtent (BH.oM.CFD.Harpoon.HarpoonSettings.MeshExtent)",
       "attributes": []
     },
     {
       "id": "BH.oM.CFD.Harpoon.HarpoonSettings.Farfield",
-      "iri": "https://github.com/BHoM/CFD_Toolkit/blob/main/CFD_oM/HarpoonSettings/HarpoonSettings.cs#L17",
-      "label": "Farfield(BH.oM.CFD.Harpoon.HarpoonSettings.Farfield)",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/CFD_oM/Harpoon/HarpoonSettings.cs",
+      "label": "Farfield (BH.oM.CFD.Harpoon.HarpoonSettings.Farfield)",
       "attributes": []
     },
     {
       "id": "BH.oM.CFD.Harpoon.HarpoonSettings.Refinement",
-      "iri": "https://github.com/BHoM/CFD_Toolkit/blob/main/CFD_oM/HarpoonSettings/HarpoonSettings.cs#L18",
-      "label": "Refinement(BH.oM.CFD.Harpoon.HarpoonSettings.Refinement)",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/CFD_oM/Harpoon/HarpoonSettings.cs",
+      "label": "Refinement (BH.oM.CFD.Harpoon.HarpoonSettings.Refinement)",
       "attributes": []
     },
     {
       "id": "BH.oM.CFD.Harpoon.HarpoonSettings.CustomConfig",
-      "iri": "https://github.com/BHoM/CFD_Toolkit/blob/main/CFD_oM/HarpoonSettings/HarpoonSettings.cs#L19",
-      "label": "CustomConfig(BH.oM.CFD.Harpoon.HarpoonSettings.CustomConfig)",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/CFD_oM/Harpoon/HarpoonSettings.cs",
+      "label": "CustomConfig (BH.oM.CFD.Harpoon.HarpoonSettings.CustomConfig)",
       "attributes": [
         "datatype"
       ]
     },
     {
       "id": "BH.oM.CFD.Harpoon.HarpoonSettings.HarpoonRunControls",
-      "iri": "https://github.com/BHoM/CFD_Toolkit/blob/main/CFD_oM/HarpoonSettings/HarpoonSettings.cs#L20",
-      "label": "HarpoonRunControls(BH.oM.CFD.Harpoon.HarpoonSettings.HarpoonRunControls)",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/CFD_oM/Harpoon/HarpoonSettings.cs",
+      "label": "HarpoonRunControls (BH.oM.CFD.Harpoon.HarpoonSettings.HarpoonRunControls)",
       "attributes": []
     },
     {
       "id": "BH.oM.CFD.CFX.UserFunction.UserFunctionName",
-      "iri": "https://github.com/BHoM/CFD_Toolkit/blob/main/CFD_oM/CFXSettings/UserFunction.cs#L13",
-      "label": "UserFunctionName(BH.oM.CFD.CFX.UserFunction.UserFunctionName)",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/CFD_oM/CFX/UserFunction.cs",
+      "label": "UserFunctionName (BH.oM.CFD.CFX.UserFunction.UserFunctionName)",
       "attributes": [
         "datatype"
       ]
     },
     {
       "id": "BH.oM.CFD.CFX.UserFunction.ArgumentUnit",
-      "iri": "https://github.com/BHoM/CFD_Toolkit/blob/main/CFD_oM/CFXSettings/UserFunction.cs#L14",
-      "label": "ArgumentUnit(BH.oM.CFD.CFX.UserFunction.ArgumentUnit)",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/CFD_oM/CFX/UserFunction.cs",
+      "label": "ArgumentUnit (BH.oM.CFD.CFX.UserFunction.ArgumentUnit)",
       "attributes": [
         "datatype"
       ]
     },
     {
       "id": "BH.oM.CFD.CFX.UserFunction.ResultUnit",
-      "iri": "https://github.com/BHoM/CFD_Toolkit/blob/main/CFD_oM/CFXSettings/UserFunction.cs#L15",
-      "label": "ResultUnit(BH.oM.CFD.CFX.UserFunction.ResultUnit)",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/CFD_oM/CFX/UserFunction.cs",
+      "label": "ResultUnit (BH.oM.CFD.CFX.UserFunction.ResultUnit)",
       "attributes": [
         "datatype"
       ]
     },
     {
       "id": "BH.oM.CFD.CFX.UserFunction.ArgumentValues",
-      "iri": "https://github.com/BHoM/CFD_Toolkit/blob/main/CFD_oM/CFXSettings/UserFunction.cs#L16",
-      "label": "ArgumentValues(BH.oM.CFD.CFX.UserFunction.ArgumentValues)",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/CFD_oM/CFX/UserFunction.cs",
+      "label": "ArgumentValues (BH.oM.CFD.CFX.UserFunction.ArgumentValues)",
       "attributes": [
         "datatype"
       ]
     },
     {
       "id": "BH.oM.CFD.CFX.UserFunction.ResultValues",
-      "iri": "https://github.com/BHoM/CFD_Toolkit/blob/main/CFD_oM/CFXSettings/UserFunction.cs#L17",
-      "label": "ResultValues(BH.oM.CFD.CFX.UserFunction.ResultValues)",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/CFD_oM/CFX/UserFunction.cs",
+      "label": "ResultValues (BH.oM.CFD.CFX.UserFunction.ResultValues)",
       "attributes": [
         "datatype"
       ]
     },
     {
       "id": "BH.oM.CFD.CFX.MassflowInletBoundary.Location",
-      "iri": "https://github.com/BHoM/CFD_Toolkit/blob/main/CFD_oM/CFXObjects/MassflowInletBoundary.cs#L14",
-      "label": "Location(BH.oM.CFD.CFX.MassflowInletBoundary.Location)",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/CFD_oM/CFX/MassflowInletBoundary.cs",
+      "label": "Location (BH.oM.CFD.CFX.MassflowInletBoundary.Location)",
       "attributes": [
         "datatype"
       ]
     },
     {
       "id": "BH.oM.CFD.CFX.MassflowInletBoundary.BoundaryName",
-      "iri": "https://github.com/BHoM/CFD_Toolkit/blob/main/CFD_oM/CFXObjects/MassflowInletBoundary.cs#L15",
-      "label": "BoundaryName(BH.oM.CFD.CFX.MassflowInletBoundary.BoundaryName)",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/CFD_oM/CFX/MassflowInletBoundary.cs",
+      "label": "BoundaryName (BH.oM.CFD.CFX.MassflowInletBoundary.BoundaryName)",
       "attributes": [
         "datatype"
       ]
     },
     {
       "id": "BH.oM.CFD.CFX.MassflowInletBoundary.MassFlowRateInput",
-      "iri": "https://github.com/BHoM/CFD_Toolkit/blob/main/CFD_oM/CFXObjects/MassflowInletBoundary.cs#L16",
-      "label": "MassFlowRateInput(BH.oM.CFD.CFX.MassflowInletBoundary.MassFlowRateInput)",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/CFD_oM/CFX/MassflowInletBoundary.cs",
+      "label": "MassFlowRateInput (BH.oM.CFD.CFX.MassflowInletBoundary.MassFlowRateInput)",
       "attributes": [
         "datatype"
       ]
     },
     {
       "id": "BH.oM.CFD.CFX.MassflowInletBoundary.TemperatureInput",
-      "iri": "https://github.com/BHoM/CFD_Toolkit/blob/main/CFD_oM/CFXObjects/MassflowInletBoundary.cs#L17",
-      "label": "TemperatureInput(BH.oM.CFD.CFX.MassflowInletBoundary.TemperatureInput)",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/CFD_oM/CFX/MassflowInletBoundary.cs",
+      "label": "TemperatureInput (BH.oM.CFD.CFX.MassflowInletBoundary.TemperatureInput)",
       "attributes": [
         "datatype"
       ]
     },
     {
       "id": "BH.oM.CFD.CFX.MassflowOutletBoundary.Location",
-      "iri": "https://github.com/BHoM/CFD_Toolkit/blob/main/CFD_oM/CFXObjects/MassflowOutletBoundary.cs#L14",
-      "label": "Location(BH.oM.CFD.CFX.MassflowOutletBoundary.Location)",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/CFD_oM/CFX/MassflowOutletBoundary.cs",
+      "label": "Location (BH.oM.CFD.CFX.MassflowOutletBoundary.Location)",
       "attributes": [
         "datatype"
       ]
     },
     {
       "id": "BH.oM.CFD.CFX.MassflowOutletBoundary.BoundaryName",
-      "iri": "https://github.com/BHoM/CFD_Toolkit/blob/main/CFD_oM/CFXObjects/MassflowOutletBoundary.cs#L15",
-      "label": "BoundaryName(BH.oM.CFD.CFX.MassflowOutletBoundary.BoundaryName)",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/CFD_oM/CFX/MassflowOutletBoundary.cs",
+      "label": "BoundaryName (BH.oM.CFD.CFX.MassflowOutletBoundary.BoundaryName)",
       "attributes": [
         "datatype"
       ]
     },
     {
       "id": "BH.oM.CFD.CFX.MassflowOutletBoundary.MassFlowRateInput",
-      "iri": "https://github.com/BHoM/CFD_Toolkit/blob/main/CFD_oM/CFXObjects/MassflowOutletBoundary.cs#L16",
-      "label": "MassFlowRateInput(BH.oM.CFD.CFX.MassflowOutletBoundary.MassFlowRateInput)",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/CFD_oM/CFX/MassflowOutletBoundary.cs",
+      "label": "MassFlowRateInput (BH.oM.CFD.CFX.MassflowOutletBoundary.MassFlowRateInput)",
       "attributes": [
         "datatype"
       ]
     },
     {
       "id": "BH.oM.CFD.CFX.Subdomain.Location",
-      "iri": "https://github.com/BHoM/CFD_Toolkit/blob/main/CFD_oM/CFXObjects/Subdomain.cs#L14",
-      "label": "Location(BH.oM.CFD.CFX.Subdomain.Location)",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/CFD_oM/CFX/Subdomain.cs",
+      "label": "Location (BH.oM.CFD.CFX.Subdomain.Location)",
       "attributes": [
         "datatype"
       ]
     },
     {
       "id": "BH.oM.CFD.CFX.Subdomain.BoundaryName",
-      "iri": "https://github.com/BHoM/CFD_Toolkit/blob/main/CFD_oM/CFXObjects/Subdomain.cs#L15",
-      "label": "BoundaryName(BH.oM.CFD.CFX.Subdomain.BoundaryName)",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/CFD_oM/CFX/Subdomain.cs",
+      "label": "BoundaryName (BH.oM.CFD.CFX.Subdomain.BoundaryName)",
       "attributes": [
         "datatype"
       ]
     },
     {
       "id": "BH.oM.CFD.CFX.Subdomain.EnergySourceInput",
-      "iri": "https://github.com/BHoM/CFD_Toolkit/blob/main/CFD_oM/CFXObjects/Subdomain.cs#L16",
-      "label": "EnergySourceInput(BH.oM.CFD.CFX.Subdomain.EnergySourceInput)",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/CFD_oM/CFX/Subdomain.cs",
+      "label": "EnergySourceInput (BH.oM.CFD.CFX.Subdomain.EnergySourceInput)",
       "attributes": [
         "datatype"
       ]
     },
     {
       "id": "BH.oM.CFD.CFX.Subdomain.RadiantSourceInput",
-      "iri": "https://github.com/BHoM/CFD_Toolkit/blob/main/CFD_oM/CFXObjects/Subdomain.cs#L17",
-      "label": "RadiantSourceInput(BH.oM.CFD.CFX.Subdomain.RadiantSourceInput)",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/CFD_oM/CFX/Subdomain.cs",
+      "label": "RadiantSourceInput (BH.oM.CFD.CFX.Subdomain.RadiantSourceInput)",
       "attributes": [
         "datatype"
       ]
     },
     {
       "id": "BH.oM.CFD.CFX.Subdomain.MomentumLossInput",
-      "iri": "https://github.com/BHoM/CFD_Toolkit/blob/main/CFD_oM/CFXObjects/Subdomain.cs#L18",
-      "label": "MomentumLossInput(BH.oM.CFD.CFX.Subdomain.MomentumLossInput)",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/CFD_oM/CFX/Subdomain.cs",
+      "label": "MomentumLossInput (BH.oM.CFD.CFX.Subdomain.MomentumLossInput)",
       "attributes": [
         "datatype"
       ]
     },
     {
       "id": "BH.oM.CFD.CFX.MonitorPoints.Points",
-      "iri": "https://github.com/BHoM/CFD_Toolkit/blob/main/CFD_oM/CFXSettings/MonitorPoints.cs#L15",
-      "label": "Points(BH.oM.CFD.CFX.MonitorPoints.Points)",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/CFD_oM/CFX/MonitorPoints.cs",
+      "label": "Points (BH.oM.CFD.CFX.MonitorPoints.Points)",
       "attributes": []
     },
     {
       "id": "BH.oM.CFD.CFX.MonitorPoints.LengthUnit",
-      "iri": "https://github.com/BHoM/CFD_Toolkit/blob/main/CFD_oM/CFXSettings/MonitorPoints.cs#L18",
-      "label": "LengthUnit(BH.oM.CFD.CFX.MonitorPoints.LengthUnit)",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/CFD_oM/CFX/MonitorPoints.cs",
+      "label": "LengthUnit (BH.oM.CFD.CFX.MonitorPoints.LengthUnit)",
       "attributes": [],
       "comment": {
         "undefined": "Define the length unit of the monitor point coordinates. Default is meters."
@@ -1450,110 +1465,110 @@
     },
     {
       "id": "BH.oM.CFD.CFX.MonitorPoints.MonitorVariables",
-      "iri": "https://github.com/BHoM/CFD_Toolkit/blob/main/CFD_oM/CFXSettings/MonitorPoints.cs#L21",
-      "label": "MonitorVariables(BH.oM.CFD.CFX.MonitorPoints.MonitorVariables)",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/CFD_oM/CFX/MonitorPoints.cs",
+      "label": "MonitorVariables (BH.oM.CFD.CFX.MonitorPoints.MonitorVariables)",
       "attributes": []
     },
     {
       "id": "BH.oM.CFD.CFX.MonitorPoints.Label",
-      "iri": "https://github.com/BHoM/CFD_Toolkit/blob/main/CFD_oM/CFXSettings/MonitorPoints.cs#L24",
-      "label": "Label(BH.oM.CFD.CFX.MonitorPoints.Label)",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/CFD_oM/CFX/MonitorPoints.cs",
+      "label": "Label (BH.oM.CFD.CFX.MonitorPoints.Label)",
       "attributes": [
         "datatype"
       ]
     },
     {
       "id": "BH.oM.CFD.CFX.PressureBoundary.Location",
-      "iri": "https://github.com/BHoM/CFD_Toolkit/blob/main/CFD_oM/CFXObjects/PressureBoundary.cs#L14",
-      "label": "Location(BH.oM.CFD.CFX.PressureBoundary.Location)",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/CFD_oM/CFX/PressureBoundary.cs",
+      "label": "Location (BH.oM.CFD.CFX.PressureBoundary.Location)",
       "attributes": [
         "datatype"
       ]
     },
     {
       "id": "BH.oM.CFD.CFX.PressureBoundary.BoundaryName",
-      "iri": "https://github.com/BHoM/CFD_Toolkit/blob/main/CFD_oM/CFXObjects/PressureBoundary.cs#L15",
-      "label": "BoundaryName(BH.oM.CFD.CFX.PressureBoundary.BoundaryName)",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/CFD_oM/CFX/PressureBoundary.cs",
+      "label": "BoundaryName (BH.oM.CFD.CFX.PressureBoundary.BoundaryName)",
       "attributes": [
         "datatype"
       ]
     },
     {
       "id": "BH.oM.CFD.CFX.PressureBoundary.RelativePressureInput",
-      "iri": "https://github.com/BHoM/CFD_Toolkit/blob/main/CFD_oM/CFXObjects/PressureBoundary.cs#L16",
-      "label": "RelativePressureInput(BH.oM.CFD.CFX.PressureBoundary.RelativePressureInput)",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/CFD_oM/CFX/PressureBoundary.cs",
+      "label": "RelativePressureInput (BH.oM.CFD.CFX.PressureBoundary.RelativePressureInput)",
       "attributes": [
         "datatype"
       ]
     },
     {
       "id": "BH.oM.CFD.CFX.PressureBoundary.TemperatureInput",
-      "iri": "https://github.com/BHoM/CFD_Toolkit/blob/main/CFD_oM/CFXObjects/PressureBoundary.cs#L17",
-      "label": "TemperatureInput(BH.oM.CFD.CFX.PressureBoundary.TemperatureInput)",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/CFD_oM/CFX/PressureBoundary.cs",
+      "label": "TemperatureInput (BH.oM.CFD.CFX.PressureBoundary.TemperatureInput)",
       "attributes": [
         "datatype"
       ]
     },
     {
       "id": "BH.oM.CFD.CFX.VelocityOutletBoundary.Location",
-      "iri": "https://github.com/BHoM/CFD_Toolkit/blob/main/CFD_oM/CFXObjects/VelocityOutletBoundary.cs#L14",
-      "label": "Location(BH.oM.CFD.CFX.VelocityOutletBoundary.Location)",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/CFD_oM/CFX/VelocityOutletBoundary.cs",
+      "label": "Location (BH.oM.CFD.CFX.VelocityOutletBoundary.Location)",
       "attributes": [
         "datatype"
       ]
     },
     {
       "id": "BH.oM.CFD.CFX.VelocityOutletBoundary.BoundaryName",
-      "iri": "https://github.com/BHoM/CFD_Toolkit/blob/main/CFD_oM/CFXObjects/VelocityOutletBoundary.cs#L15",
-      "label": "BoundaryName(BH.oM.CFD.CFX.VelocityOutletBoundary.BoundaryName)",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/CFD_oM/CFX/VelocityOutletBoundary.cs",
+      "label": "BoundaryName (BH.oM.CFD.CFX.VelocityOutletBoundary.BoundaryName)",
       "attributes": [
         "datatype"
       ]
     },
     {
       "id": "BH.oM.CFD.CFX.VelocityOutletBoundary.VelocityInput",
-      "iri": "https://github.com/BHoM/CFD_Toolkit/blob/main/CFD_oM/CFXObjects/VelocityOutletBoundary.cs#L16",
-      "label": "VelocityInput(BH.oM.CFD.CFX.VelocityOutletBoundary.VelocityInput)",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/CFD_oM/CFX/VelocityOutletBoundary.cs",
+      "label": "VelocityInput (BH.oM.CFD.CFX.VelocityOutletBoundary.VelocityInput)",
       "attributes": [
         "datatype"
       ]
     },
     {
       "id": "BH.oM.CFD.CFX.VelocityInletBoundary.Location",
-      "iri": "https://github.com/BHoM/CFD_Toolkit/blob/main/CFD_oM/CFXObjects/VelocityInletBoundary.cs#L14",
-      "label": "Location(BH.oM.CFD.CFX.VelocityInletBoundary.Location)",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/CFD_oM/CFX/VelocityInletBoundary.cs",
+      "label": "Location (BH.oM.CFD.CFX.VelocityInletBoundary.Location)",
       "attributes": [
         "datatype"
       ]
     },
     {
       "id": "BH.oM.CFD.CFX.VelocityInletBoundary.BoundaryName",
-      "iri": "https://github.com/BHoM/CFD_Toolkit/blob/main/CFD_oM/CFXObjects/VelocityInletBoundary.cs#L15",
-      "label": "BoundaryName(BH.oM.CFD.CFX.VelocityInletBoundary.BoundaryName)",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/CFD_oM/CFX/VelocityInletBoundary.cs",
+      "label": "BoundaryName (BH.oM.CFD.CFX.VelocityInletBoundary.BoundaryName)",
       "attributes": [
         "datatype"
       ]
     },
     {
       "id": "BH.oM.CFD.CFX.VelocityInletBoundary.VelocityInput",
-      "iri": "https://github.com/BHoM/CFD_Toolkit/blob/main/CFD_oM/CFXObjects/VelocityInletBoundary.cs#L16",
-      "label": "VelocityInput(BH.oM.CFD.CFX.VelocityInletBoundary.VelocityInput)",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/CFD_oM/CFX/VelocityInletBoundary.cs",
+      "label": "VelocityInput (BH.oM.CFD.CFX.VelocityInletBoundary.VelocityInput)",
       "attributes": [
         "datatype"
       ]
     },
     {
       "id": "BH.oM.CFD.CFX.VelocityInletBoundary.TemperatureInput",
-      "iri": "https://github.com/BHoM/CFD_Toolkit/blob/main/CFD_oM/CFXObjects/VelocityInletBoundary.cs#L17",
-      "label": "TemperatureInput(BH.oM.CFD.CFX.VelocityInletBoundary.TemperatureInput)",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/CFD_oM/CFX/VelocityInletBoundary.cs",
+      "label": "TemperatureInput (BH.oM.CFD.CFX.VelocityInletBoundary.TemperatureInput)",
       "attributes": [
         "datatype"
       ]
     },
     {
       "id": "BH.oM.CFD.CFX.VelocityInletBoundary.Direction",
-      "iri": "https://github.com/BHoM/CFD_Toolkit/blob/main/CFD_oM/CFXObjects/VelocityInletBoundary.cs#L18",
-      "label": "Direction(BH.oM.CFD.CFX.VelocityInletBoundary.Direction)",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/CFD_oM/CFX/VelocityInletBoundary.cs",
+      "label": "Direction (BH.oM.CFD.CFX.VelocityInletBoundary.Direction)",
       "attributes": []
     },
     {
@@ -1570,398 +1585,398 @@
     },
     {
       "id": "BH.oM.CFD.CFX.HeatFluxBoundary.Location",
-      "iri": "https://github.com/BHoM/CFD_Toolkit/blob/main/CFD_oM/CFXObjects/HeatFluxBoundary.cs#L13",
-      "label": "Location(BH.oM.CFD.CFX.HeatFluxBoundary.Location)",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/CFD_oM/CFX/HeatFluxBoundary.cs",
+      "label": "Location (BH.oM.CFD.CFX.HeatFluxBoundary.Location)",
       "attributes": [
         "datatype"
       ]
     },
     {
       "id": "BH.oM.CFD.CFX.HeatFluxBoundary.BoundaryName",
-      "iri": "https://github.com/BHoM/CFD_Toolkit/blob/main/CFD_oM/CFXObjects/HeatFluxBoundary.cs#L14",
-      "label": "BoundaryName(BH.oM.CFD.CFX.HeatFluxBoundary.BoundaryName)",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/CFD_oM/CFX/HeatFluxBoundary.cs",
+      "label": "BoundaryName (BH.oM.CFD.CFX.HeatFluxBoundary.BoundaryName)",
       "attributes": [
         "datatype"
       ]
     },
     {
       "id": "BH.oM.CFD.CFX.HeatFluxBoundary.BothSideCondition",
-      "iri": "https://github.com/BHoM/CFD_Toolkit/blob/main/CFD_oM/CFXObjects/HeatFluxBoundary.cs#L15",
-      "label": "BothSideCondition(BH.oM.CFD.CFX.HeatFluxBoundary.BothSideCondition)",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/CFD_oM/CFX/HeatFluxBoundary.cs",
+      "label": "BothSideCondition (BH.oM.CFD.CFX.HeatFluxBoundary.BothSideCondition)",
       "attributes": [
         "datatype"
       ]
     },
     {
       "id": "BH.oM.CFD.CFX.HeatFluxBoundary.RoughnessInput",
-      "iri": "https://github.com/BHoM/CFD_Toolkit/blob/main/CFD_oM/CFXObjects/HeatFluxBoundary.cs#L16",
-      "label": "RoughnessInput(BH.oM.CFD.CFX.HeatFluxBoundary.RoughnessInput)",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/CFD_oM/CFX/HeatFluxBoundary.cs",
+      "label": "RoughnessInput (BH.oM.CFD.CFX.HeatFluxBoundary.RoughnessInput)",
       "attributes": [
         "datatype"
       ]
     },
     {
       "id": "BH.oM.CFD.CFX.HeatFluxBoundary.HeatFluxInput",
-      "iri": "https://github.com/BHoM/CFD_Toolkit/blob/main/CFD_oM/CFXObjects/HeatFluxBoundary.cs#L17",
-      "label": "HeatFluxInput(BH.oM.CFD.CFX.HeatFluxBoundary.HeatFluxInput)",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/CFD_oM/CFX/HeatFluxBoundary.cs",
+      "label": "HeatFluxInput (BH.oM.CFD.CFX.HeatFluxBoundary.HeatFluxInput)",
       "attributes": [
         "datatype"
       ]
     },
     {
       "id": "BH.oM.CFD.CFX.HeatFluxBoundary.Emissivity",
-      "iri": "https://github.com/BHoM/CFD_Toolkit/blob/main/CFD_oM/CFXObjects/HeatFluxBoundary.cs#L18",
-      "label": "Emissivity(BH.oM.CFD.CFX.HeatFluxBoundary.Emissivity)",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/CFD_oM/CFX/HeatFluxBoundary.cs",
+      "label": "Emissivity (BH.oM.CFD.CFX.HeatFluxBoundary.Emissivity)",
       "attributes": [
         "datatype"
       ]
     },
     {
       "id": "BH.oM.CFD.CFX.HeatFluxBoundary.EnergySource",
-      "iri": "https://github.com/BHoM/CFD_Toolkit/blob/main/CFD_oM/CFXObjects/HeatFluxBoundary.cs#L19",
-      "label": "EnergySource(BH.oM.CFD.CFX.HeatFluxBoundary.EnergySource)",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/CFD_oM/CFX/HeatFluxBoundary.cs",
+      "label": "EnergySource (BH.oM.CFD.CFX.HeatFluxBoundary.EnergySource)",
       "attributes": []
     },
     {
       "id": "BH.oM.CFD.CFX.TemperatureBoundary.Location",
-      "iri": "https://github.com/BHoM/CFD_Toolkit/blob/main/CFD_oM/CFXObjects/TemperatureBoundary.cs#L13",
-      "label": "Location(BH.oM.CFD.CFX.TemperatureBoundary.Location)",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/CFD_oM/CFX/TemperatureBoundary.cs",
+      "label": "Location (BH.oM.CFD.CFX.TemperatureBoundary.Location)",
       "attributes": [
         "datatype"
       ]
     },
     {
       "id": "BH.oM.CFD.CFX.TemperatureBoundary.BoundaryName",
-      "iri": "https://github.com/BHoM/CFD_Toolkit/blob/main/CFD_oM/CFXObjects/TemperatureBoundary.cs#L14",
-      "label": "BoundaryName(BH.oM.CFD.CFX.TemperatureBoundary.BoundaryName)",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/CFD_oM/CFX/TemperatureBoundary.cs",
+      "label": "BoundaryName (BH.oM.CFD.CFX.TemperatureBoundary.BoundaryName)",
       "attributes": [
         "datatype"
       ]
     },
     {
       "id": "BH.oM.CFD.CFX.TemperatureBoundary.BothSideCondition",
-      "iri": "https://github.com/BHoM/CFD_Toolkit/blob/main/CFD_oM/CFXObjects/TemperatureBoundary.cs#L15",
-      "label": "BothSideCondition(BH.oM.CFD.CFX.TemperatureBoundary.BothSideCondition)",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/CFD_oM/CFX/TemperatureBoundary.cs",
+      "label": "BothSideCondition (BH.oM.CFD.CFX.TemperatureBoundary.BothSideCondition)",
       "attributes": [
         "datatype"
       ]
     },
     {
       "id": "BH.oM.CFD.CFX.TemperatureBoundary.RoughnessInput",
-      "iri": "https://github.com/BHoM/CFD_Toolkit/blob/main/CFD_oM/CFXObjects/TemperatureBoundary.cs#L16",
-      "label": "RoughnessInput(BH.oM.CFD.CFX.TemperatureBoundary.RoughnessInput)",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/CFD_oM/CFX/TemperatureBoundary.cs",
+      "label": "RoughnessInput (BH.oM.CFD.CFX.TemperatureBoundary.RoughnessInput)",
       "attributes": [
         "datatype"
       ]
     },
     {
       "id": "BH.oM.CFD.CFX.TemperatureBoundary.TemperatureInput",
-      "iri": "https://github.com/BHoM/CFD_Toolkit/blob/main/CFD_oM/CFXObjects/TemperatureBoundary.cs#L17",
-      "label": "TemperatureInput(BH.oM.CFD.CFX.TemperatureBoundary.TemperatureInput)",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/CFD_oM/CFX/TemperatureBoundary.cs",
+      "label": "TemperatureInput (BH.oM.CFD.CFX.TemperatureBoundary.TemperatureInput)",
       "attributes": [
         "datatype"
       ]
     },
     {
       "id": "BH.oM.CFD.CFX.TemperatureBoundary.Emissivity",
-      "iri": "https://github.com/BHoM/CFD_Toolkit/blob/main/CFD_oM/CFXObjects/TemperatureBoundary.cs#L18",
-      "label": "Emissivity(BH.oM.CFD.CFX.TemperatureBoundary.Emissivity)",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/CFD_oM/CFX/TemperatureBoundary.cs",
+      "label": "Emissivity (BH.oM.CFD.CFX.TemperatureBoundary.Emissivity)",
       "attributes": [
         "datatype"
       ]
     },
     {
       "id": "BH.oM.CFD.CFX.TemperatureBoundary.EnergySource",
-      "iri": "https://github.com/BHoM/CFD_Toolkit/blob/main/CFD_oM/CFXObjects/TemperatureBoundary.cs#L19",
-      "label": "EnergySource(BH.oM.CFD.CFX.TemperatureBoundary.EnergySource)",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/CFD_oM/CFX/TemperatureBoundary.cs",
+      "label": "EnergySource (BH.oM.CFD.CFX.TemperatureBoundary.EnergySource)",
       "attributes": []
     },
     {
       "id": "BH.oM.CFD.CFX.HeatTransferBoundary.Location",
-      "iri": "https://github.com/BHoM/CFD_Toolkit/blob/main/CFD_oM/CFXObjects/HeatTransferBoundary.cs#L13",
-      "label": "Location(BH.oM.CFD.CFX.HeatTransferBoundary.Location)",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/CFD_oM/CFX/HeatTransferBoundary.cs",
+      "label": "Location (BH.oM.CFD.CFX.HeatTransferBoundary.Location)",
       "attributes": [
         "datatype"
       ]
     },
     {
       "id": "BH.oM.CFD.CFX.HeatTransferBoundary.BoundaryName",
-      "iri": "https://github.com/BHoM/CFD_Toolkit/blob/main/CFD_oM/CFXObjects/HeatTransferBoundary.cs#L14",
-      "label": "BoundaryName(BH.oM.CFD.CFX.HeatTransferBoundary.BoundaryName)",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/CFD_oM/CFX/HeatTransferBoundary.cs",
+      "label": "BoundaryName (BH.oM.CFD.CFX.HeatTransferBoundary.BoundaryName)",
       "attributes": [
         "datatype"
       ]
     },
     {
       "id": "BH.oM.CFD.CFX.HeatTransferBoundary.BothSideCondition",
-      "iri": "https://github.com/BHoM/CFD_Toolkit/blob/main/CFD_oM/CFXObjects/HeatTransferBoundary.cs#L15",
-      "label": "BothSideCondition(BH.oM.CFD.CFX.HeatTransferBoundary.BothSideCondition)",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/CFD_oM/CFX/HeatTransferBoundary.cs",
+      "label": "BothSideCondition (BH.oM.CFD.CFX.HeatTransferBoundary.BothSideCondition)",
       "attributes": [
         "datatype"
       ]
     },
     {
       "id": "BH.oM.CFD.CFX.HeatTransferBoundary.RoughnessInput",
-      "iri": "https://github.com/BHoM/CFD_Toolkit/blob/main/CFD_oM/CFXObjects/HeatTransferBoundary.cs#L16",
-      "label": "RoughnessInput(BH.oM.CFD.CFX.HeatTransferBoundary.RoughnessInput)",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/CFD_oM/CFX/HeatTransferBoundary.cs",
+      "label": "RoughnessInput (BH.oM.CFD.CFX.HeatTransferBoundary.RoughnessInput)",
       "attributes": [
         "datatype"
       ]
     },
     {
       "id": "BH.oM.CFD.CFX.HeatTransferBoundary.CoefficientInput",
-      "iri": "https://github.com/BHoM/CFD_Toolkit/blob/main/CFD_oM/CFXObjects/HeatTransferBoundary.cs#L17",
-      "label": "CoefficientInput(BH.oM.CFD.CFX.HeatTransferBoundary.CoefficientInput)",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/CFD_oM/CFX/HeatTransferBoundary.cs",
+      "label": "CoefficientInput (BH.oM.CFD.CFX.HeatTransferBoundary.CoefficientInput)",
       "attributes": [
         "datatype"
       ]
     },
     {
       "id": "BH.oM.CFD.CFX.HeatTransferBoundary.TemperatureInput",
-      "iri": "https://github.com/BHoM/CFD_Toolkit/blob/main/CFD_oM/CFXObjects/HeatTransferBoundary.cs#L18",
-      "label": "TemperatureInput(BH.oM.CFD.CFX.HeatTransferBoundary.TemperatureInput)",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/CFD_oM/CFX/HeatTransferBoundary.cs",
+      "label": "TemperatureInput (BH.oM.CFD.CFX.HeatTransferBoundary.TemperatureInput)",
       "attributes": [
         "datatype"
       ]
     },
     {
       "id": "BH.oM.CFD.CFX.HeatTransferBoundary.Emissivity",
-      "iri": "https://github.com/BHoM/CFD_Toolkit/blob/main/CFD_oM/CFXObjects/HeatTransferBoundary.cs#L19",
-      "label": "Emissivity(BH.oM.CFD.CFX.HeatTransferBoundary.Emissivity)",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/CFD_oM/CFX/HeatTransferBoundary.cs",
+      "label": "Emissivity (BH.oM.CFD.CFX.HeatTransferBoundary.Emissivity)",
       "attributes": [
         "datatype"
       ]
     },
     {
       "id": "BH.oM.CFD.CFX.HeatTransferBoundary.EnergySource",
-      "iri": "https://github.com/BHoM/CFD_Toolkit/blob/main/CFD_oM/CFXObjects/HeatTransferBoundary.cs#L20",
-      "label": "EnergySource(BH.oM.CFD.CFX.HeatTransferBoundary.EnergySource)",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/CFD_oM/CFX/HeatTransferBoundary.cs",
+      "label": "EnergySource (BH.oM.CFD.CFX.HeatTransferBoundary.EnergySource)",
       "attributes": []
     },
     {
       "id": "BH.oM.CFD.CFX.AdiabaticBoundary.Location",
-      "iri": "https://github.com/BHoM/CFD_Toolkit/blob/main/CFD_oM/CFXObjects/AdiabaticBoundary.cs#L13",
-      "label": "Location(BH.oM.CFD.CFX.AdiabaticBoundary.Location)",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/CFD_oM/CFX/AdiabaticBoundary.cs",
+      "label": "Location (BH.oM.CFD.CFX.AdiabaticBoundary.Location)",
       "attributes": [
         "datatype"
       ]
     },
     {
       "id": "BH.oM.CFD.CFX.AdiabaticBoundary.BoundaryName",
-      "iri": "https://github.com/BHoM/CFD_Toolkit/blob/main/CFD_oM/CFXObjects/AdiabaticBoundary.cs#L14",
-      "label": "BoundaryName(BH.oM.CFD.CFX.AdiabaticBoundary.BoundaryName)",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/CFD_oM/CFX/AdiabaticBoundary.cs",
+      "label": "BoundaryName (BH.oM.CFD.CFX.AdiabaticBoundary.BoundaryName)",
       "attributes": [
         "datatype"
       ]
     },
     {
       "id": "BH.oM.CFD.CFX.AdiabaticBoundary.BothSideCondition",
-      "iri": "https://github.com/BHoM/CFD_Toolkit/blob/main/CFD_oM/CFXObjects/AdiabaticBoundary.cs#L15",
-      "label": "BothSideCondition(BH.oM.CFD.CFX.AdiabaticBoundary.BothSideCondition)",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/CFD_oM/CFX/AdiabaticBoundary.cs",
+      "label": "BothSideCondition (BH.oM.CFD.CFX.AdiabaticBoundary.BothSideCondition)",
       "attributes": [
         "datatype"
       ]
     },
     {
       "id": "BH.oM.CFD.CFX.AdiabaticBoundary.RoughnessInput",
-      "iri": "https://github.com/BHoM/CFD_Toolkit/blob/main/CFD_oM/CFXObjects/AdiabaticBoundary.cs#L16",
-      "label": "RoughnessInput(BH.oM.CFD.CFX.AdiabaticBoundary.RoughnessInput)",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/CFD_oM/CFX/AdiabaticBoundary.cs",
+      "label": "RoughnessInput (BH.oM.CFD.CFX.AdiabaticBoundary.RoughnessInput)",
       "attributes": [
         "datatype"
       ]
     },
     {
       "id": "BH.oM.CFD.CFX.AdiabaticBoundary.Emissivity",
-      "iri": "https://github.com/BHoM/CFD_Toolkit/blob/main/CFD_oM/CFXObjects/AdiabaticBoundary.cs#L17",
-      "label": "Emissivity(BH.oM.CFD.CFX.AdiabaticBoundary.Emissivity)",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/CFD_oM/CFX/AdiabaticBoundary.cs",
+      "label": "Emissivity (BH.oM.CFD.CFX.AdiabaticBoundary.Emissivity)",
       "attributes": [
         "datatype"
       ]
     },
     {
       "id": "BH.oM.CFD.CFX.AdiabaticBoundary.EnergySource",
-      "iri": "https://github.com/BHoM/CFD_Toolkit/blob/main/CFD_oM/CFXObjects/AdiabaticBoundary.cs#L18",
-      "label": "EnergySource(BH.oM.CFD.CFX.AdiabaticBoundary.EnergySource)",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/CFD_oM/CFX/AdiabaticBoundary.cs",
+      "label": "EnergySource (BH.oM.CFD.CFX.AdiabaticBoundary.EnergySource)",
       "attributes": []
     },
     {
       "id": "BH.oM.CFD.CFX.EnergySource.EnergyFluxInput",
-      "iri": "https://github.com/BHoM/CFD_Toolkit/blob/main/CFD_oM/CFXObjects/EnergySource.cs#L14",
-      "label": "EnergyFluxInput(BH.oM.CFD.CFX.EnergySource.EnergyFluxInput)",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/CFD_oM/CFX/EnergySource.cs",
+      "label": "EnergyFluxInput (BH.oM.CFD.CFX.EnergySource.EnergyFluxInput)",
       "attributes": [
         "datatype"
       ]
     },
     {
       "id": "BH.oM.CFD.CFX.EnergySource.RadiationFluxInput",
-      "iri": "https://github.com/BHoM/CFD_Toolkit/blob/main/CFD_oM/CFXObjects/EnergySource.cs#L15",
-      "label": "RadiationFluxInput(BH.oM.CFD.CFX.EnergySource.RadiationFluxInput)",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/CFD_oM/CFX/EnergySource.cs",
+      "label": "RadiationFluxInput (BH.oM.CFD.CFX.EnergySource.RadiationFluxInput)",
       "attributes": [
         "datatype"
       ]
     },
     {
       "id": "BH.oM.CFD.CFX.EnergySource.RadiationDirection",
-      "iri": "https://github.com/BHoM/CFD_Toolkit/blob/main/CFD_oM/CFXObjects/EnergySource.cs#L16",
-      "label": "RadiationDirection(BH.oM.CFD.CFX.EnergySource.RadiationDirection)",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/CFD_oM/CFX/EnergySource.cs",
+      "label": "RadiationDirection (BH.oM.CFD.CFX.EnergySource.RadiationDirection)",
       "attributes": []
     },
     {
       "id": "BH.oM.CFD.CFX.SymmetryBoundary.Location",
-      "iri": "https://github.com/BHoM/CFD_Toolkit/blob/main/CFD_oM/CFXObjects/SymmetryBoundary.cs#L13",
-      "label": "Location(BH.oM.CFD.CFX.SymmetryBoundary.Location)",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/CFD_oM/CFX/SymmetryBoundary.cs",
+      "label": "Location (BH.oM.CFD.CFX.SymmetryBoundary.Location)",
       "attributes": [
         "datatype"
       ]
     },
     {
       "id": "BH.oM.CFD.CFX.SymmetryBoundary.BoundaryName",
-      "iri": "https://github.com/BHoM/CFD_Toolkit/blob/main/CFD_oM/CFXObjects/SymmetryBoundary.cs#L14",
-      "label": "BoundaryName(BH.oM.CFD.CFX.SymmetryBoundary.BoundaryName)",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/CFD_oM/CFX/SymmetryBoundary.cs",
+      "label": "BoundaryName (BH.oM.CFD.CFX.SymmetryBoundary.BoundaryName)",
       "attributes": [
         "datatype"
       ]
     },
     {
       "id": "BH.oM.CFD.CFX.DiscreteTransferModel.NumberOfRays",
-      "iri": "https://github.com/BHoM/CFD_Toolkit/blob/main/CFD_oM/CFXSettings/DiscreteTransferModel.cs#L13",
-      "label": "NumberOfRays(BH.oM.CFD.CFX.DiscreteTransferModel.NumberOfRays)",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/CFD_oM/CFX/DiscreteTransferModel.cs",
+      "label": "NumberOfRays (BH.oM.CFD.CFX.DiscreteTransferModel.NumberOfRays)",
       "attributes": [
         "datatype"
       ]
     },
     {
       "id": "BH.oM.CFD.CFX.MonteCarloModel.NumberOfHistories",
-      "iri": "https://github.com/BHoM/CFD_Toolkit/blob/main/CFD_oM/CFXSettings/MonteCarloModel.cs#L13",
-      "label": "NumberOfHistories(BH.oM.CFD.CFX.MonteCarloModel.NumberOfHistories)",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/CFD_oM/CFX/MonteCarloModel.cs",
+      "label": "NumberOfHistories (BH.oM.CFD.CFX.MonteCarloModel.NumberOfHistories)",
       "attributes": [
         "datatype"
       ]
     },
     {
       "id": "BH.oM.CFD.CFX.PhysicalTimescale.TimeInput",
-      "iri": "https://github.com/BHoM/CFD_Toolkit/blob/main/CFD_oM/CFXSettings/PhysicalTimescale.cs#L13",
-      "label": "TimeInput(BH.oM.CFD.CFX.PhysicalTimescale.TimeInput)",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/CFD_oM/CFX/PhysicalTimescale.cs",
+      "label": "TimeInput (BH.oM.CFD.CFX.PhysicalTimescale.TimeInput)",
       "attributes": [
         "datatype"
       ]
     },
     {
       "id": "BH.oM.CFD.CFX.AutoTimescale.Factor",
-      "iri": "https://github.com/BHoM/CFD_Toolkit/blob/main/CFD_oM/CFXSettings/AutoTimescale.cs#L13",
-      "label": "Factor(BH.oM.CFD.CFX.AutoTimescale.Factor)",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/CFD_oM/CFX/AutoTimescale.cs",
+      "label": "Factor (BH.oM.CFD.CFX.AutoTimescale.Factor)",
       "attributes": [
         "datatype"
       ]
     },
     {
       "id": "BH.oM.CFD.CFX.InitialisationSettings.TemperatureInput",
-      "iri": "https://github.com/BHoM/CFD_Toolkit/blob/main/CFD_oM/CFXSettings/InitialisationSettings.cs#L13",
-      "label": "TemperatureInput(BH.oM.CFD.CFX.InitialisationSettings.TemperatureInput)",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/CFD_oM/CFX/InitialisationSettings.cs",
+      "label": "TemperatureInput (BH.oM.CFD.CFX.InitialisationSettings.TemperatureInput)",
       "attributes": [
         "datatype"
       ]
     },
     {
       "id": "BH.oM.CFD.CFX.SolverSettings.Iterations",
-      "iri": "https://github.com/BHoM/CFD_Toolkit/blob/main/CFD_oM/CFXSettings/SolverSettings.cs#L13",
-      "label": "Iterations(BH.oM.CFD.CFX.SolverSettings.Iterations)",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/CFD_oM/CFX/SolverSettings.cs",
+      "label": "Iterations (BH.oM.CFD.CFX.SolverSettings.Iterations)",
       "attributes": [
         "datatype"
       ]
     },
     {
       "id": "BH.oM.CFD.CFX.SolverSettings.Timescale",
-      "iri": "https://github.com/BHoM/CFD_Toolkit/blob/main/CFD_oM/CFXSettings/SolverSettings.cs#L14",
-      "label": "Timescale(BH.oM.CFD.CFX.SolverSettings.Timescale)",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/CFD_oM/CFX/SolverSettings.cs",
+      "label": "Timescale (BH.oM.CFD.CFX.SolverSettings.Timescale)",
       "attributes": []
     },
     {
       "id": "BH.oM.CFD.CFX.SolverSettings.RadiantInterval",
-      "iri": "https://github.com/BHoM/CFD_Toolkit/blob/main/CFD_oM/CFXSettings/SolverSettings.cs#L15",
-      "label": "RadiantInterval(BH.oM.CFD.CFX.SolverSettings.RadiantInterval)",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/CFD_oM/CFX/SolverSettings.cs",
+      "label": "RadiantInterval (BH.oM.CFD.CFX.SolverSettings.RadiantInterval)",
       "attributes": [
         "datatype"
       ]
     },
     {
       "id": "BH.oM.CFD.CFX.OutputSettings.BackupOverwrite",
-      "iri": "https://github.com/BHoM/CFD_Toolkit/blob/main/CFD_oM/CFXSettings/OutputSettings.cs#L13",
-      "label": "BackupOverwrite(BH.oM.CFD.CFX.OutputSettings.BackupOverwrite)",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/CFD_oM/CFX/OutputSettings.cs",
+      "label": "BackupOverwrite (BH.oM.CFD.CFX.OutputSettings.BackupOverwrite)",
       "attributes": [
         "datatype"
       ]
     },
     {
       "id": "BH.oM.CFD.CFX.OutputSettings.BackupInterval",
-      "iri": "https://github.com/BHoM/CFD_Toolkit/blob/main/CFD_oM/CFXSettings/OutputSettings.cs#L14",
-      "label": "BackupInterval(BH.oM.CFD.CFX.OutputSettings.BackupInterval)",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/CFD_oM/CFX/OutputSettings.cs",
+      "label": "BackupInterval (BH.oM.CFD.CFX.OutputSettings.BackupInterval)",
       "attributes": [
         "datatype"
       ]
     },
     {
       "id": "BH.oM.CFD.CFX.FluidModelSettings.TurbulenceModel",
-      "iri": "https://github.com/BHoM/CFD_Toolkit/blob/main/CFD_oM/CFXSettings/FluidModelSettings.cs#L13",
-      "label": "TurbulenceModel(BH.oM.CFD.CFX.FluidModelSettings.TurbulenceModel)",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/CFD_oM/CFX/FluidModelSettings.cs",
+      "label": "TurbulenceModel (BH.oM.CFD.CFX.FluidModelSettings.TurbulenceModel)",
       "attributes": []
     },
     {
       "id": "BH.oM.CFD.CFX.FluidModelSettings.RadiantModel",
-      "iri": "https://github.com/BHoM/CFD_Toolkit/blob/main/CFD_oM/CFXSettings/FluidModelSettings.cs#L14",
-      "label": "RadiantModel(BH.oM.CFD.CFX.FluidModelSettings.RadiantModel)",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/CFD_oM/CFX/FluidModelSettings.cs",
+      "label": "RadiantModel (BH.oM.CFD.CFX.FluidModelSettings.RadiantModel)",
       "attributes": []
     },
     {
       "id": "BH.oM.CFD.CFX.CFXSettings.Buoyancy",
-      "iri": "https://github.com/BHoM/CFD_Toolkit/blob/main/CFD_oM/CFXSettings/CFXSettings.cs#L13",
-      "label": "Buoyancy(BH.oM.CFD.CFX.CFXSettings.Buoyancy)",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/CFD_oM/CFX/CFXSettings.cs",
+      "label": "Buoyancy (BH.oM.CFD.CFX.CFXSettings.Buoyancy)",
       "attributes": [
         "datatype"
       ]
     },
     {
       "id": "BH.oM.CFD.CFX.CFXSettings.FluidModelSettings",
-      "iri": "https://github.com/BHoM/CFD_Toolkit/blob/main/CFD_oM/CFXSettings/CFXSettings.cs#L14",
-      "label": "FluidModelSettings(BH.oM.CFD.CFX.CFXSettings.FluidModelSettings)",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/CFD_oM/CFX/CFXSettings.cs",
+      "label": "FluidModelSettings (BH.oM.CFD.CFX.CFXSettings.FluidModelSettings)",
       "attributes": []
     },
     {
       "id": "BH.oM.CFD.CFX.CFXSettings.InitialisationSettings",
-      "iri": "https://github.com/BHoM/CFD_Toolkit/blob/main/CFD_oM/CFXSettings/CFXSettings.cs#L15",
-      "label": "InitialisationSettings(BH.oM.CFD.CFX.CFXSettings.InitialisationSettings)",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/CFD_oM/CFX/CFXSettings.cs",
+      "label": "InitialisationSettings (BH.oM.CFD.CFX.CFXSettings.InitialisationSettings)",
       "attributes": []
     },
     {
       "id": "BH.oM.CFD.CFX.CFXSettings.SolverSettings",
-      "iri": "https://github.com/BHoM/CFD_Toolkit/blob/main/CFD_oM/CFXSettings/CFXSettings.cs#L16",
-      "label": "SolverSettings(BH.oM.CFD.CFX.CFXSettings.SolverSettings)",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/CFD_oM/CFX/CFXSettings.cs",
+      "label": "SolverSettings (BH.oM.CFD.CFX.CFXSettings.SolverSettings)",
       "attributes": []
     },
     {
       "id": "BH.oM.CFD.CFX.CFXSettings.OutputSettings",
-      "iri": "https://github.com/BHoM/CFD_Toolkit/blob/main/CFD_oM/CFXSettings/CFXSettings.cs#L17",
-      "label": "OutputSettings(BH.oM.CFD.CFX.CFXSettings.OutputSettings)",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/CFD_oM/CFX/CFXSettings.cs",
+      "label": "OutputSettings (BH.oM.CFD.CFX.CFXSettings.OutputSettings)",
       "attributes": []
     },
     {
       "id": "BH.oM.CFD.CFX.CFXSettings.MonitorPoints",
-      "iri": "https://github.com/BHoM/CFD_Toolkit/blob/main/CFD_oM/CFXSettings/CFXSettings.cs#L18",
-      "label": "MonitorPoints(BH.oM.CFD.CFX.CFXSettings.MonitorPoints)",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/CFD_oM/CFX/CFXSettings.cs",
+      "label": "MonitorPoints (BH.oM.CFD.CFX.CFXSettings.MonitorPoints)",
       "attributes": []
     },
     {
       "id": "BH.oM.CFD.CFX.CFXSettings.Expressions",
-      "iri": "https://github.com/BHoM/CFD_Toolkit/blob/main/CFD_oM/CFXSettings/CFXSettings.cs#L19",
-      "label": "Expressions(BH.oM.CFD.CFX.CFXSettings.Expressions)",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/CFD_oM/CFX/CFXSettings.cs",
+      "label": "Expressions (BH.oM.CFD.CFX.CFXSettings.Expressions)",
       "attributes": [
         "datatype"
       ]
     },
     {
       "id": "BH.oM.CFD.CFX.CFXSettings.UserFunctions",
-      "iri": "https://github.com/BHoM/CFD_Toolkit/blob/main/CFD_oM/CFXSettings/CFXSettings.cs#L20",
-      "label": "UserFunctions(BH.oM.CFD.CFX.CFXSettings.UserFunctions)",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/CFD_oM/CFX/CFXSettings.cs",
+      "label": "UserFunctions (BH.oM.CFD.CFX.CFXSettings.UserFunctions)",
       "attributes": []
     }
   ],
@@ -3050,7 +3065,7 @@
   "propertyAttribute": [
     {
       "id": "WeibullParameters-HasProperty-Direction_84A846CDCEC28C5BAFFE3DA7345309EA92EC63E57BFC8676935140FD7CAEA4A2",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/HasProperty.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/HasProperty.cs",
       "label": "HasProperty",
       "attributes": [
         "datatype"
@@ -3060,7 +3075,7 @@
     },
     {
       "id": "WeibullParameters-HasProperty-P_53C8D0A896AB228D2E6638C49FCDBCE312A7F34936524C255D74E69866D004D9",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/HasProperty.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/HasProperty.cs",
       "label": "HasProperty",
       "attributes": [
         "datatype"
@@ -3070,7 +3085,7 @@
     },
     {
       "id": "WeibullParameters-HasProperty-C_C6DDAF3C0FE17E749B5AA1CD819691318BD539A4F4D9A3C652580CA2A4B1271C",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/HasProperty.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/HasProperty.cs",
       "label": "HasProperty",
       "attributes": [
         "datatype"
@@ -3080,7 +3095,7 @@
     },
     {
       "id": "WeibullParameters-HasProperty-K_40662B8FE27EAE5802F04B773A80FCD2912017B86040E9915DA60B412EA35408",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/HasProperty.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/HasProperty.cs",
       "label": "HasProperty",
       "attributes": [
         "datatype"
@@ -3090,7 +3105,7 @@
     },
     {
       "id": "WeibullParameters-IsA-IBHoMObject_42C14C74AC6420069F7713907172CF4E7D235038902243F83CC9636BC1FB2A85",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/IsA.cs",
       "label": "IsA",
       "attributes": [
         "object"
@@ -3103,7 +3118,7 @@
     },
     {
       "id": "WeibullParameters-IsA-IObject_0ABA04428A191AE2E2B804765F82B3CC25EA29082C099ED5E60F4F1DD2DE4458",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/IsA.cs",
       "label": "IsA",
       "attributes": [
         "object"
@@ -3116,7 +3131,7 @@
     },
     {
       "id": "WeibullParameters-IsSubclassOf-BHoMObject_C887D30BBADF979EB6F709E51BB7C7BA16350E20C8599F7B7F51BCD76E54EB0F",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsSubclassOf.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/IsSubclassOf.cs",
       "label": "IsA",
       "attributes": [
         "object"
@@ -3126,7 +3141,7 @@
     },
     {
       "id": "BH.oM.CFD.Weibull.WeibullTable-HasProperty-BH.oM.CFD.Weibull.WeibullTable.Weibulls",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/HasProperty.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/HasProperty.cs",
       "label": "HasProperty",
       "attributes": [
         "object"
@@ -3136,7 +3151,7 @@
     },
     {
       "id": "BH.oM.CFD.Weibull.WeibullTable.Weibulls-IsAListOf-BH.oM.CFD.Weibull.WeibullParameters",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsAListOf.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/IsAListOf.cs",
       "label": "IsAListOf",
       "attributes": [
         "object"
@@ -3146,7 +3161,7 @@
     },
     {
       "id": "WeibullTable-IsA-IBHoMObject_B42F9F98D8A0EF78BAA9189D0C3C67B043C8DEEBEBDBE6A355A60C0D82F6E55C",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/IsA.cs",
       "label": "IsA",
       "attributes": [
         "object"
@@ -3159,7 +3174,7 @@
     },
     {
       "id": "WeibullTable-IsA-IObject_C8F2E3BD90B39F2B27DFC24C1C8CD5AA9F9683383E8DE5AF9020516C3FCBF05C",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/IsA.cs",
       "label": "IsA",
       "attributes": [
         "object"
@@ -3172,7 +3187,7 @@
     },
     {
       "id": "WeibullTable-IsSubclassOf-BHoMObject_A1307E01BA1B7FC8663C2B8CA6F1CD1A2D4E114D25FAEE0B7B9123BB95199918",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsSubclassOf.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/IsSubclassOf.cs",
       "label": "IsA",
       "attributes": [
         "object"
@@ -3182,7 +3197,7 @@
     },
     {
       "id": "IHarpoonObject-RequiresProperty-FileName_14A1B39FF9A8EB74953F8399DB02A851DDF11C196A02C278C6028D5D8ED5F394",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/RequiresProperty.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/RequiresProperty.cs",
       "label": "RequiresProperty",
       "attributes": [
         "datatype"
@@ -3192,7 +3207,7 @@
     },
     {
       "id": "IHarpoonObject-RequiresProperty-Directory_2D4627A2E3F888A2FC6C1FDBED645ECC5DD7D3DA2F4E58E2D04425C9EC0F06D8",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/RequiresProperty.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/RequiresProperty.cs",
       "label": "RequiresProperty",
       "attributes": [
         "datatype"
@@ -3202,7 +3217,7 @@
     },
     {
       "id": "IHarpoonObject-RequiresProperty-SurfaceMeshLevel_40DCCBA4AA7B6590175ACD9FA141F5472B2A3B8C5A9A66210CB695E211CB560B",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/RequiresProperty.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/RequiresProperty.cs",
       "label": "RequiresProperty",
       "attributes": [
         "datatype"
@@ -3212,7 +3227,7 @@
     },
     {
       "id": "IHarpoonObject-RequiresProperty-LineMeshLevel_7B420DBFFCF747C0DC18F253F9C6DC923CD798CB01FFEC232A396F1C9BF96F20",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/RequiresProperty.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/RequiresProperty.cs",
       "label": "RequiresProperty",
       "attributes": [
         "datatype"
@@ -3222,7 +3237,7 @@
     },
     {
       "id": "IHarpoonObject-IsA-IBHoMObject_529ECC50305C5676E18F4A62226A239084EF37E4D0C7B30CCF41F1D6A7333B33",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/IsA.cs",
       "label": "IsA",
       "attributes": [
         "object"
@@ -3235,7 +3250,7 @@
     },
     {
       "id": "IHarpoonObject-IsA-IObject_3EB42F55BDF8B140F394A029BB1AEB4DC7EF8B2A80CDE2EDE28763564778EA53",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/IsA.cs",
       "label": "IsA",
       "attributes": [
         "object"
@@ -3248,7 +3263,7 @@
     },
     {
       "id": "VolumeHarpoonObject-HasProperty-FileName_40E0C45149663BAA1AD2276DF9E768719BE7F7069313648FB6FB40C9ABAD012F",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/HasProperty.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/HasProperty.cs",
       "label": "HasProperty",
       "attributes": [
         "datatype"
@@ -3258,7 +3273,7 @@
     },
     {
       "id": "VolumeHarpoonObject-HasProperty-Directory_456CBF8AC140E8A8E08EB1592DA121E55742C3DE38028BEB05FE283487F3D6EA",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/HasProperty.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/HasProperty.cs",
       "label": "HasProperty",
       "attributes": [
         "datatype"
@@ -3268,7 +3283,7 @@
     },
     {
       "id": "VolumeHarpoonObject-HasProperty-SurfaceMeshLevel_882AE99AC2D68D1E1DBDB1D124C629AA12D25FFCB9B3280FA895F8B46FCB641F",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/HasProperty.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/HasProperty.cs",
       "label": "HasProperty",
       "attributes": [
         "datatype"
@@ -3278,7 +3293,7 @@
     },
     {
       "id": "VolumeHarpoonObject-HasProperty-LineMeshLevel_659C9AE2A5E8D0C18195E1013F2A514954396B887C435ACBCB495001441C90B0",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/HasProperty.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/HasProperty.cs",
       "label": "HasProperty",
       "attributes": [
         "datatype"
@@ -3288,7 +3303,7 @@
     },
     {
       "id": "BH.oM.CFD.Harpoon.VolumeHarpoonObject-HasProperty-BH.oM.CFD.Harpoon.VolumeHarpoonObject.Location",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/HasProperty.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/HasProperty.cs",
       "label": "HasProperty",
       "attributes": [
         "object"
@@ -3298,7 +3313,7 @@
     },
     {
       "id": "BH.oM.CFD.Harpoon.VolumeHarpoonObject.Location-IsA-BH.oM.Geometry.Point",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/IsA.cs",
       "label": "IsA",
       "attributes": [
         "object"
@@ -3308,7 +3323,7 @@
     },
     {
       "id": "VolumeHarpoonObject-IsA-IBHoMObject_BF4BDC31B9EE871EFC9B92DA205ED025E7495262EBE0FD9135F19E99D02C32AC",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/IsA.cs",
       "label": "IsA",
       "attributes": [
         "object"
@@ -3321,7 +3336,7 @@
     },
     {
       "id": "VolumeHarpoonObject-IsA-IObject_4E0534F424D00A9F2472779A3CB2D0FBE57E43787F2A8A7454F2886059A4146B",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/IsA.cs",
       "label": "IsA",
       "attributes": [
         "object"
@@ -3334,7 +3349,7 @@
     },
     {
       "id": "VolumeHarpoonObject-IsA-IHarpoonObject_79DFCB157C76DD8C0796B965C4F5A42FC168A8B1CA59758BED079FDC943FEA50",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/IsA.cs",
       "label": "IsA",
       "attributes": [
         "object"
@@ -3347,7 +3362,7 @@
     },
     {
       "id": "VolumeHarpoonObject-IsSubclassOf-BHoMObject_4B60C4282242CE6EF2412A2D076530D90C6C794A4EE33278E79EB1867288FEAD",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsSubclassOf.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/IsSubclassOf.cs",
       "label": "IsA",
       "attributes": [
         "object"
@@ -3357,7 +3372,7 @@
     },
     {
       "id": "HarpoonRunControls-HasProperty-HarpoonExePath_4661803ABD133A193C0A5D4B3BC12FE761B5255C69B4A53F526C149F9686F1E6",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/HasProperty.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/HasProperty.cs",
       "label": "HasProperty",
       "attributes": [
         "datatype"
@@ -3367,7 +3382,7 @@
     },
     {
       "id": "BH.oM.CFD.Harpoon.HarpoonRunControls-HasProperty-BH.oM.CFD.Harpoon.HarpoonRunControls.HarpoonRunMode",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/HasProperty.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/HasProperty.cs",
       "label": "HasProperty",
       "attributes": [
         "object"
@@ -3377,7 +3392,7 @@
     },
     {
       "id": "BH.oM.CFD.Harpoon.HarpoonRunControls.HarpoonRunMode-IsA-BH.oM.CFD.Harpoon.HarpoonRunMode",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/IsA.cs",
       "label": "IsA",
       "attributes": [
         "object"
@@ -3387,7 +3402,7 @@
     },
     {
       "id": "HarpoonRunControls-HasProperty-MeshFileName_6FBA5CECCB95D3FE4557E3987689BF28AACC7E3E55B57AF1DCB085EAD617C71F",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/HasProperty.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/HasProperty.cs",
       "label": "HasProperty",
       "attributes": [
         "datatype"
@@ -3397,7 +3412,7 @@
     },
     {
       "id": "HarpoonRunControls-IsA-IBHoMObject_BDDE98EA738E504BE8B4D4B45E454A1CF75FF1627AD16AD9FB251A45CD0FDC37",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/IsA.cs",
       "label": "IsA",
       "attributes": [
         "object"
@@ -3410,7 +3425,7 @@
     },
     {
       "id": "HarpoonRunControls-IsA-IObject_ACE2958D41347A5569FA1A74ECF6BBCFF4B0542016A05A27E46EC350F1BB96A5",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/IsA.cs",
       "label": "IsA",
       "attributes": [
         "object"
@@ -3423,7 +3438,7 @@
     },
     {
       "id": "HarpoonRunControls-IsSubclassOf-BHoMObject_8AB623CA56F262F5A4AF5792D5E77BF1A77803D2A0B304BFC069D21AE0CDCE0E",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsSubclassOf.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/IsSubclassOf.cs",
       "label": "IsA",
       "attributes": [
         "object"
@@ -3433,7 +3448,7 @@
     },
     {
       "id": "BH.oM.CFD.Harpoon.RefinementSettings-HasProperty-BH.oM.CFD.Harpoon.RefinementSettings.RefinementZone",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/HasProperty.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/HasProperty.cs",
       "label": "HasProperty",
       "attributes": [
         "object"
@@ -3443,7 +3458,7 @@
     },
     {
       "id": "BH.oM.CFD.Harpoon.RefinementSettings.RefinementZone-IsA-BH.oM.Geometry.BoundingBox",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/IsA.cs",
       "label": "IsA",
       "attributes": [
         "object"
@@ -3453,7 +3468,7 @@
     },
     {
       "id": "RefinementSettings-HasProperty-MeshLevel_C96EF91294A84AE4FFB7B6D2F9DB38942CC95FAA8B2A928B1B4BB5FD85C70D4E",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/HasProperty.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/HasProperty.cs",
       "label": "HasProperty",
       "attributes": [
         "datatype"
@@ -3463,7 +3478,7 @@
     },
     {
       "id": "RefinementSettings-IsA-IBHoMObject_49607BE5B8C7A688F8699B97A3C7EF1331D022F1D98D0E219D70BEDDB82C16AF",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/IsA.cs",
       "label": "IsA",
       "attributes": [
         "object"
@@ -3476,7 +3491,7 @@
     },
     {
       "id": "RefinementSettings-IsA-IObject_881BC337FA6C5A57FA84159822E2FDC6A92D9C3CA74C0E3214306C8CF8484356",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/IsA.cs",
       "label": "IsA",
       "attributes": [
         "object"
@@ -3489,7 +3504,7 @@
     },
     {
       "id": "RefinementSettings-IsSubclassOf-BHoMObject_F51A873DE9B56959FBB7961B925EFBC6B76921A4EE12257FB8FA46BB848BC937",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsSubclassOf.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/IsSubclassOf.cs",
       "label": "IsA",
       "attributes": [
         "object"
@@ -3499,7 +3514,7 @@
     },
     {
       "id": "SurfaceHarpoonObject-HasProperty-FileName_1ECB612A6A2ACD9CBFEB2FF1462BD7C8932E62BBB185AFE6B07D14203DD513DD",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/HasProperty.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/HasProperty.cs",
       "label": "HasProperty",
       "attributes": [
         "datatype"
@@ -3509,7 +3524,7 @@
     },
     {
       "id": "SurfaceHarpoonObject-HasProperty-Directory_8636846589DF80F9697C2FE15768BC5C65AD95C411E8718A1D57B65BDDC5746C",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/HasProperty.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/HasProperty.cs",
       "label": "HasProperty",
       "attributes": [
         "datatype"
@@ -3519,7 +3534,7 @@
     },
     {
       "id": "SurfaceHarpoonObject-HasProperty-SurfaceMeshLevel_F52CB4B4CB1A0AFB4CB2BD68C18636233875058E3C1F6B9E2394CD6F102093A1",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/HasProperty.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/HasProperty.cs",
       "label": "HasProperty",
       "attributes": [
         "datatype"
@@ -3529,7 +3544,7 @@
     },
     {
       "id": "SurfaceHarpoonObject-HasProperty-LineMeshLevel_6F1C457A3ED2BC21B1905B2C6C101E066ABCB3C73989663D4FA0850102EA4413",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/HasProperty.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/HasProperty.cs",
       "label": "HasProperty",
       "attributes": [
         "datatype"
@@ -3539,7 +3554,7 @@
     },
     {
       "id": "SurfaceHarpoonObject-IsA-IBHoMObject_6D03CF6AED5314606FCD183F02E0F534925C77DC68E56F04CA4BA88878BE4415",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/IsA.cs",
       "label": "IsA",
       "attributes": [
         "object"
@@ -3552,7 +3567,7 @@
     },
     {
       "id": "SurfaceHarpoonObject-IsA-IObject_C9CF84EEC5A72B640B6508BD384CBFB220822CF2EB76D531A6E2440547076DC1",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/IsA.cs",
       "label": "IsA",
       "attributes": [
         "object"
@@ -3565,7 +3580,7 @@
     },
     {
       "id": "SurfaceHarpoonObject-IsA-IHarpoonObject_22A2756556F9D2D168EE4B098C57443155C3FA5457AC22A846B196992A81B954",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/IsA.cs",
       "label": "IsA",
       "attributes": [
         "object"
@@ -3578,7 +3593,7 @@
     },
     {
       "id": "SurfaceHarpoonObject-IsSubclassOf-BHoMObject_CE0AF725AE5ECE59C4318EF584850922F81993D1BF7254B5510DE2BE2FE8887A",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsSubclassOf.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/IsSubclassOf.cs",
       "label": "IsA",
       "attributes": [
         "object"
@@ -3588,7 +3603,7 @@
     },
     {
       "id": "HarpoonSettings-HasProperty-BaseMeshSize_6D7AAC01DB8423E00BA5129378425A89A8067454925C61D9A157AF1BAC4FAAC9",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/HasProperty.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/HasProperty.cs",
       "label": "HasProperty",
       "attributes": [
         "datatype"
@@ -3598,7 +3613,7 @@
     },
     {
       "id": "HarpoonSettings-HasProperty-MaximumVolumeLevel_2486E141C355DA26646B7F9045EC595D42AC8F260958EAF282A2B2E73EF42077",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/HasProperty.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/HasProperty.cs",
       "label": "HasProperty",
       "attributes": [
         "datatype"
@@ -3608,7 +3623,7 @@
     },
     {
       "id": "BH.oM.CFD.Harpoon.HarpoonSettings-HasProperty-BH.oM.CFD.Harpoon.HarpoonSettings.MeshExtent",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/HasProperty.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/HasProperty.cs",
       "label": "HasProperty",
       "attributes": [
         "object"
@@ -3618,7 +3633,7 @@
     },
     {
       "id": "BH.oM.CFD.Harpoon.HarpoonSettings.MeshExtent-IsA-BH.oM.CFD.Harpoon.MeshExtent",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/IsA.cs",
       "label": "IsA",
       "attributes": [
         "object"
@@ -3628,7 +3643,7 @@
     },
     {
       "id": "BH.oM.CFD.Harpoon.HarpoonSettings-HasProperty-BH.oM.CFD.Harpoon.HarpoonSettings.Farfield",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/HasProperty.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/HasProperty.cs",
       "label": "HasProperty",
       "attributes": [
         "object"
@@ -3638,7 +3653,7 @@
     },
     {
       "id": "BH.oM.CFD.Harpoon.HarpoonSettings.Farfield-IsA-BH.oM.Geometry.BoundingBox",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/IsA.cs",
       "label": "IsA",
       "attributes": [
         "object"
@@ -3648,7 +3663,7 @@
     },
     {
       "id": "BH.oM.CFD.Harpoon.HarpoonSettings-HasProperty-BH.oM.CFD.Harpoon.HarpoonSettings.Refinement",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/HasProperty.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/HasProperty.cs",
       "label": "HasProperty",
       "attributes": [
         "object"
@@ -3658,7 +3673,7 @@
     },
     {
       "id": "BH.oM.CFD.Harpoon.HarpoonSettings.Refinement-IsAListOf-BH.oM.CFD.Harpoon.RefinementSettings",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsAListOf.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/IsAListOf.cs",
       "label": "IsAListOf",
       "attributes": [
         "object"
@@ -3668,7 +3683,7 @@
     },
     {
       "id": "HarpoonSettings-HasProperty-CustomConfig_58A482E13FF7483C41577D85408DFB49F482B7DD1A870632AD950FCA3BD8B34C",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/HasProperty.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/HasProperty.cs",
       "label": "HasProperty",
       "attributes": [
         "datatype"
@@ -3678,7 +3693,7 @@
     },
     {
       "id": "BH.oM.CFD.Harpoon.HarpoonSettings-HasProperty-BH.oM.CFD.Harpoon.HarpoonSettings.HarpoonRunControls",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/HasProperty.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/HasProperty.cs",
       "label": "HasProperty",
       "attributes": [
         "object"
@@ -3688,7 +3703,7 @@
     },
     {
       "id": "BH.oM.CFD.Harpoon.HarpoonSettings.HarpoonRunControls-IsA-BH.oM.CFD.Harpoon.HarpoonRunControls",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/IsA.cs",
       "label": "IsA",
       "attributes": [
         "object"
@@ -3698,7 +3713,7 @@
     },
     {
       "id": "HarpoonSettings-IsA-IBHoMObject_9EA41250D2322902E2AC98BABFC01C04F42DAC36D967A29C37FD8168A926B231",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/IsA.cs",
       "label": "IsA",
       "attributes": [
         "object"
@@ -3711,7 +3726,7 @@
     },
     {
       "id": "HarpoonSettings-IsA-IObject_B862A50C162FDBF6F80FF8C42ACB2F7F2BDC3DFABD73902573AD226620F479AC",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/IsA.cs",
       "label": "IsA",
       "attributes": [
         "object"
@@ -3724,7 +3739,7 @@
     },
     {
       "id": "HarpoonSettings-IsSubclassOf-BHoMObject_B1CD0182579E027451F5BF97C621F51499D3021EC8CFD47526AF4F9EC2B8B389",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsSubclassOf.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/IsSubclassOf.cs",
       "label": "IsA",
       "attributes": [
         "object"
@@ -3734,7 +3749,7 @@
     },
     {
       "id": "UserFunction-HasProperty-UserFunctionName_E586B78B9976EEAF7F3989A0D3CD7FB866D207A9753DC3142D983FB1AA6102E6",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/HasProperty.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/HasProperty.cs",
       "label": "HasProperty",
       "attributes": [
         "datatype"
@@ -3744,7 +3759,7 @@
     },
     {
       "id": "UserFunction-HasProperty-ArgumentUnit_27127C906FCCF0B97A3F17C57442BD3916483A6432CB8F150767EDE03ED428B6",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/HasProperty.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/HasProperty.cs",
       "label": "HasProperty",
       "attributes": [
         "datatype"
@@ -3754,7 +3769,7 @@
     },
     {
       "id": "UserFunction-HasProperty-ResultUnit_53E739F1D83707E6A4606A321F2B74D344137E1D45774095A4CD39AB90192B75",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/HasProperty.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/HasProperty.cs",
       "label": "HasProperty",
       "attributes": [
         "datatype"
@@ -3764,7 +3779,7 @@
     },
     {
       "id": "UserFunction-HasProperty-ArgumentValues_0BCF71603AEE7A7F45885D91A0280A6F4B4F611CA778309EC99617E5054E397E",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/HasProperty.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/HasProperty.cs",
       "label": "HasProperty",
       "attributes": [
         "datatype"
@@ -3774,7 +3789,7 @@
     },
     {
       "id": "UserFunction-HasProperty-ResultValues_91972198A514C0C27C7253538E649BD2371CBE3E1838EA2E5B0C5945AC4E2865",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/HasProperty.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/HasProperty.cs",
       "label": "HasProperty",
       "attributes": [
         "datatype"
@@ -3784,7 +3799,7 @@
     },
     {
       "id": "UserFunction-IsA-IBHoMObject_324AD53C685CADB9714501305E161A9346D47BF8F5269D8D0B87BD94D4E4F310",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/IsA.cs",
       "label": "IsA",
       "attributes": [
         "object"
@@ -3797,7 +3812,7 @@
     },
     {
       "id": "UserFunction-IsA-IObject_28136477A17271FD2DF9B82074843F48BD8824315EA1AD2F2E9B2572447F6EEF",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/IsA.cs",
       "label": "IsA",
       "attributes": [
         "object"
@@ -3810,7 +3825,7 @@
     },
     {
       "id": "UserFunction-IsSubclassOf-BHoMObject_B4234D8BE0C0E92D8476EFC99EA19FE7DB67D12B8D2153449F8DCE0D9CE328AE",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsSubclassOf.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/IsSubclassOf.cs",
       "label": "IsA",
       "attributes": [
         "object"
@@ -3820,7 +3835,7 @@
     },
     {
       "id": "ICFXObject-IsA-IBHoMObject_9CE6BA31A9165B48BB9457630C87C7E1555303C654B8F419D9CAF2D99438DCC8",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/IsA.cs",
       "label": "IsA",
       "attributes": [
         "object"
@@ -3833,7 +3848,7 @@
     },
     {
       "id": "ICFXObject-IsA-IObject_5D36827C2016D472C349A85E80B4C1BFAC5CDFAB9FAB5C330A963F29DF9C1FF6",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/IsA.cs",
       "label": "IsA",
       "attributes": [
         "object"
@@ -3846,7 +3861,7 @@
     },
     {
       "id": "MassflowInletBoundary-HasProperty-Location_2303A282EC072941A31D8848DBE78BB62DFA99871303DA95335F5C9B8C0CB03F",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/HasProperty.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/HasProperty.cs",
       "label": "HasProperty",
       "attributes": [
         "datatype"
@@ -3856,7 +3871,7 @@
     },
     {
       "id": "MassflowInletBoundary-HasProperty-BoundaryName_B1CB6EE6CA555534BCCD613E665830740D0650EFFC1283743555CEFF68437A84",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/HasProperty.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/HasProperty.cs",
       "label": "HasProperty",
       "attributes": [
         "datatype"
@@ -3866,7 +3881,7 @@
     },
     {
       "id": "MassflowInletBoundary-HasProperty-MassFlowRateInput_9216083E3AD2CCE1D2D5C405FB050BAEC934F11BD2E45D1EB8CDE67D06026B66",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/HasProperty.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/HasProperty.cs",
       "label": "HasProperty",
       "attributes": [
         "datatype"
@@ -3876,7 +3891,7 @@
     },
     {
       "id": "MassflowInletBoundary-HasProperty-TemperatureInput_446D4C479500CA53B05990CC1F9D09C578A83C01CE09042005A62CDA1A611D48",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/HasProperty.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/HasProperty.cs",
       "label": "HasProperty",
       "attributes": [
         "datatype"
@@ -3886,7 +3901,7 @@
     },
     {
       "id": "MassflowInletBoundary-IsA-IBHoMObject_2FF4BA80BD1BCA79F7BEC51E9DC6FE15185A1A64B20C330170B6D5EE0F11A553",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/IsA.cs",
       "label": "IsA",
       "attributes": [
         "object"
@@ -3899,7 +3914,7 @@
     },
     {
       "id": "MassflowInletBoundary-IsA-IObject_3D21E02CA91F890578D93EFB4F8690C2CCBB3F32F9065CB188F1263160A0C086",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/IsA.cs",
       "label": "IsA",
       "attributes": [
         "object"
@@ -3912,7 +3927,7 @@
     },
     {
       "id": "MassflowInletBoundary-IsA-IBoundaryCondition_F7E7C16987FC0F4798004BD0A003B3A9B409D0CFB0A13343B91D63C6B3FA18C3",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/IsA.cs",
       "label": "IsA",
       "attributes": [
         "object"
@@ -3925,7 +3940,7 @@
     },
     {
       "id": "MassflowInletBoundary-IsA-ICFXObject_28EA688900A34CE4B53841D6FAFECE65AF13B289D9F129EEA3878B034C9E9EA6",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/IsA.cs",
       "label": "IsA",
       "attributes": [
         "object"
@@ -3938,7 +3953,7 @@
     },
     {
       "id": "MassflowInletBoundary-IsSubclassOf-BHoMObject_1258BAB5FB56B2212B0639796E88A35D24861A9F137D07FD9335AEBC5649DD08",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsSubclassOf.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/IsSubclassOf.cs",
       "label": "IsA",
       "attributes": [
         "object"
@@ -3948,7 +3963,7 @@
     },
     {
       "id": "MassflowOutletBoundary-HasProperty-Location_BAE9AF4814322432F63D160B6A1FF59BE05996A59855EC28B9FB3D0E7119D847",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/HasProperty.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/HasProperty.cs",
       "label": "HasProperty",
       "attributes": [
         "datatype"
@@ -3958,7 +3973,7 @@
     },
     {
       "id": "MassflowOutletBoundary-HasProperty-BoundaryName_F02B37065CBF4450566BD1A491E6E2B6CF0FCCCB4AD68648F2C578BACBB405F8",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/HasProperty.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/HasProperty.cs",
       "label": "HasProperty",
       "attributes": [
         "datatype"
@@ -3968,7 +3983,7 @@
     },
     {
       "id": "MassflowOutletBoundary-HasProperty-MassFlowRateInput_D7E5DF1507D975200C714BBB5619E77DBCE4CEEE4A6AA61C79CE99B35AFA9AE3",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/HasProperty.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/HasProperty.cs",
       "label": "HasProperty",
       "attributes": [
         "datatype"
@@ -3978,7 +3993,7 @@
     },
     {
       "id": "MassflowOutletBoundary-IsA-IBHoMObject_A871F695485C74BEB390621D1527CD556D916394BCB0F8F4BB38A7AE2F410358",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/IsA.cs",
       "label": "IsA",
       "attributes": [
         "object"
@@ -3991,7 +4006,7 @@
     },
     {
       "id": "MassflowOutletBoundary-IsA-IObject_7759E6258C49EC98F7387BE02266BBB2DFA23DAAF06306765E856DEA93AE51F5",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/IsA.cs",
       "label": "IsA",
       "attributes": [
         "object"
@@ -4004,7 +4019,7 @@
     },
     {
       "id": "MassflowOutletBoundary-IsA-IBoundaryCondition_A87510ABAE064AFA806F0E9E3A46DE0E324ACE4380CD1F0A4EFE8312D2FEDD9F",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/IsA.cs",
       "label": "IsA",
       "attributes": [
         "object"
@@ -4017,7 +4032,7 @@
     },
     {
       "id": "MassflowOutletBoundary-IsA-ICFXObject_7696CA73E27F6B008C45789FA32D2282A66C1ADEC20C3F7EBE343B970F69A191",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/IsA.cs",
       "label": "IsA",
       "attributes": [
         "object"
@@ -4030,7 +4045,7 @@
     },
     {
       "id": "MassflowOutletBoundary-IsSubclassOf-BHoMObject_412A5980A3542FE601DE73C65C8120C1379ACB3D78E52B59F46E362A603AF00A",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsSubclassOf.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/IsSubclassOf.cs",
       "label": "IsA",
       "attributes": [
         "object"
@@ -4040,7 +4055,7 @@
     },
     {
       "id": "Subdomain-HasProperty-Location_399CEE7DF7A9620745F5D5156C988AA6A86D7BE16048E25B1C817A75B1F0F48A",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/HasProperty.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/HasProperty.cs",
       "label": "HasProperty",
       "attributes": [
         "datatype"
@@ -4050,7 +4065,7 @@
     },
     {
       "id": "Subdomain-HasProperty-BoundaryName_6CB169BE5146A084ED8E1D5B2023F7F62905C5471EEA3D1F8FFD16DF1265E117",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/HasProperty.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/HasProperty.cs",
       "label": "HasProperty",
       "attributes": [
         "datatype"
@@ -4060,7 +4075,7 @@
     },
     {
       "id": "Subdomain-HasProperty-EnergySourceInput_75B27A3BE6904BD4064177723E6B99486D550D20870962CB1452C471D10691DE",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/HasProperty.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/HasProperty.cs",
       "label": "HasProperty",
       "attributes": [
         "datatype"
@@ -4070,7 +4085,7 @@
     },
     {
       "id": "Subdomain-HasProperty-RadiantSourceInput_28C8EB617C2B0B2059855B52B966DEA9A144DC8D96F30D4B1E5D35E0FDBA8EC9",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/HasProperty.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/HasProperty.cs",
       "label": "HasProperty",
       "attributes": [
         "datatype"
@@ -4080,7 +4095,7 @@
     },
     {
       "id": "Subdomain-HasProperty-MomentumLossInput_54CDFBBBF397A55216310A42A13B2086FB913C12A6A2377B08C8D8D58E917D9B",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/HasProperty.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/HasProperty.cs",
       "label": "HasProperty",
       "attributes": [
         "datatype"
@@ -4090,7 +4105,7 @@
     },
     {
       "id": "Subdomain-IsA-IBHoMObject_DD925CFF0C503974E6F78EDE980821391942B1DAEBE5517097BD09B68492F169",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/IsA.cs",
       "label": "IsA",
       "attributes": [
         "object"
@@ -4103,7 +4118,7 @@
     },
     {
       "id": "Subdomain-IsA-IObject_4E2F316E1706BC0E30311F26325E60AD9D4BFE71121FBFFFC6B642A94152DE6D",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/IsA.cs",
       "label": "IsA",
       "attributes": [
         "object"
@@ -4116,7 +4131,7 @@
     },
     {
       "id": "Subdomain-IsA-ICFXObject_3F33E6B951BD39C10AF404C4DF87B61EFC47F0EBB75CF9C16F7B06F482104CEE",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/IsA.cs",
       "label": "IsA",
       "attributes": [
         "object"
@@ -4129,7 +4144,7 @@
     },
     {
       "id": "Subdomain-IsSubclassOf-BHoMObject_6383A666B44D304BFC43986095FE2B178357305798191C5FAF8135A4874237EE",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsSubclassOf.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/IsSubclassOf.cs",
       "label": "IsA",
       "attributes": [
         "object"
@@ -4139,7 +4154,7 @@
     },
     {
       "id": "BH.oM.CFD.CFX.MonitorPoints-HasProperty-BH.oM.CFD.CFX.MonitorPoints.Points",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/HasProperty.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/HasProperty.cs",
       "label": "HasProperty",
       "attributes": [
         "object"
@@ -4149,7 +4164,7 @@
     },
     {
       "id": "BH.oM.CFD.CFX.MonitorPoints.Points-IsAListOf-BH.oM.Geometry.Point",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsAListOf.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/IsAListOf.cs",
       "label": "IsAListOf",
       "attributes": [
         "object"
@@ -4159,7 +4174,7 @@
     },
     {
       "id": "BH.oM.CFD.CFX.MonitorPoints-HasProperty-BH.oM.CFD.CFX.MonitorPoints.LengthUnit",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/HasProperty.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/HasProperty.cs",
       "label": "HasProperty",
       "attributes": [
         "object"
@@ -4169,7 +4184,7 @@
     },
     {
       "id": "BH.oM.CFD.CFX.MonitorPoints.LengthUnit-IsA-BH.oM.CFD.CFX.LengthUnit",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/IsA.cs",
       "label": "IsA",
       "attributes": [
         "object"
@@ -4179,7 +4194,7 @@
     },
     {
       "id": "BH.oM.CFD.CFX.MonitorPoints-HasProperty-BH.oM.CFD.CFX.MonitorPoints.MonitorVariables",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/HasProperty.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/HasProperty.cs",
       "label": "HasProperty",
       "attributes": [
         "object"
@@ -4189,7 +4204,7 @@
     },
     {
       "id": "BH.oM.CFD.CFX.MonitorPoints.MonitorVariables-IsAListOf-BH.oM.CFD.CFX.MonitorVariable",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsAListOf.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/IsAListOf.cs",
       "label": "IsAListOf",
       "attributes": [
         "object"
@@ -4199,7 +4214,7 @@
     },
     {
       "id": "MonitorPoints-HasProperty-Label_6A6E0D21779C7EF5C2C4674B6DE76DD0FB83F1C2AFC17E7529828862F9AEB88D",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/HasProperty.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/HasProperty.cs",
       "label": "HasProperty",
       "attributes": [
         "datatype"
@@ -4209,7 +4224,7 @@
     },
     {
       "id": "MonitorPoints-IsA-IBHoMObject_31E11CD25DABB1EF371C43736CC029699C55777B9D2CC2DA43C2E54D27194445",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/IsA.cs",
       "label": "IsA",
       "attributes": [
         "object"
@@ -4222,7 +4237,7 @@
     },
     {
       "id": "MonitorPoints-IsA-IObject_39839E4CDF5645FB3089C9C4810E0F78137D05E170F3B75CEBE4515F2A268027",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/IsA.cs",
       "label": "IsA",
       "attributes": [
         "object"
@@ -4235,7 +4250,7 @@
     },
     {
       "id": "MonitorPoints-IsSubclassOf-BHoMObject_E86AE873B23D991A03B9E927F26711EEB75CBBBA8039534DA7139F9A9F9CDD0C",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsSubclassOf.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/IsSubclassOf.cs",
       "label": "IsA",
       "attributes": [
         "object"
@@ -4245,7 +4260,7 @@
     },
     {
       "id": "PressureBoundary-HasProperty-Location_7D0F00F506720153D5CC10D3A4F5BF5CA48AEF5EC020FBBD43332630BFB60A6C",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/HasProperty.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/HasProperty.cs",
       "label": "HasProperty",
       "attributes": [
         "datatype"
@@ -4255,7 +4270,7 @@
     },
     {
       "id": "PressureBoundary-HasProperty-BoundaryName_E81B4BA4CF31C2AA75DB4187169C856F0E42E1267B1EB854E3772C10293FB9AC",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/HasProperty.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/HasProperty.cs",
       "label": "HasProperty",
       "attributes": [
         "datatype"
@@ -4265,7 +4280,7 @@
     },
     {
       "id": "PressureBoundary-HasProperty-RelativePressureInput_80BC5702B5E79EB4DB61F81E2941C919113033D263107C115A6EDEDEC3F7A682",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/HasProperty.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/HasProperty.cs",
       "label": "HasProperty",
       "attributes": [
         "datatype"
@@ -4275,7 +4290,7 @@
     },
     {
       "id": "PressureBoundary-HasProperty-TemperatureInput_CB9C71AEBBB11E2B86CFCCAD965DDF1CCD3A6E1568CD6A02F662F536660A282F",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/HasProperty.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/HasProperty.cs",
       "label": "HasProperty",
       "attributes": [
         "datatype"
@@ -4285,7 +4300,7 @@
     },
     {
       "id": "PressureBoundary-IsA-IBHoMObject_AE93C31375F7A93E53752F859C8E230A4F6C512EE984FF43480725E6C424B713",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/IsA.cs",
       "label": "IsA",
       "attributes": [
         "object"
@@ -4298,7 +4313,7 @@
     },
     {
       "id": "PressureBoundary-IsA-IObject_58093E0019365DF5373F11DA6FDF4918C2FADE7D84350CA5E139CBA3945D8A07",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/IsA.cs",
       "label": "IsA",
       "attributes": [
         "object"
@@ -4311,7 +4326,7 @@
     },
     {
       "id": "PressureBoundary-IsA-IBoundaryCondition_5CDC8F0B2B32D61738697D249ADF4D13F44F1475670ACC9E557551446EF2E319",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/IsA.cs",
       "label": "IsA",
       "attributes": [
         "object"
@@ -4324,7 +4339,7 @@
     },
     {
       "id": "PressureBoundary-IsA-ICFXObject_D697AA76F3E2EAEF9D0DC67085D2581A3065A122ADF1D656F85EFBBDEA8C7971",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/IsA.cs",
       "label": "IsA",
       "attributes": [
         "object"
@@ -4337,7 +4352,7 @@
     },
     {
       "id": "PressureBoundary-IsSubclassOf-BHoMObject_99F0A94EF7E692497C7BAFF8E7917736F00BF6A882D5C2AB37C13D72CDFB8065",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsSubclassOf.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/IsSubclassOf.cs",
       "label": "IsA",
       "attributes": [
         "object"
@@ -4347,7 +4362,7 @@
     },
     {
       "id": "VelocityOutletBoundary-HasProperty-Location_E7E8ECCF6561803004F10A29EA6387AAE28C8A002E0100E6FC34E57C77085E98",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/HasProperty.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/HasProperty.cs",
       "label": "HasProperty",
       "attributes": [
         "datatype"
@@ -4357,7 +4372,7 @@
     },
     {
       "id": "VelocityOutletBoundary-HasProperty-BoundaryName_C6E2E106016ABEF385EF32EB82644F8D6A5883887A79603D92677492F8096DC5",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/HasProperty.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/HasProperty.cs",
       "label": "HasProperty",
       "attributes": [
         "datatype"
@@ -4367,7 +4382,7 @@
     },
     {
       "id": "VelocityOutletBoundary-HasProperty-VelocityInput_78F09049635BB4377CFC6D12138BEE336498EB5E9FC493FEEEF18E25ECC9FB2B",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/HasProperty.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/HasProperty.cs",
       "label": "HasProperty",
       "attributes": [
         "datatype"
@@ -4377,7 +4392,7 @@
     },
     {
       "id": "VelocityOutletBoundary-IsA-IBHoMObject_ED217D45F3C1F8D6041CFC0FD1517DAB4105E756A27C7D29C0297BE9DC2212DE",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/IsA.cs",
       "label": "IsA",
       "attributes": [
         "object"
@@ -4390,7 +4405,7 @@
     },
     {
       "id": "VelocityOutletBoundary-IsA-IObject_D5CC47D87B4578CDB2FDB044BFCCAE804A8D0955996C0DC6856015DF2B3E81D8",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/IsA.cs",
       "label": "IsA",
       "attributes": [
         "object"
@@ -4403,7 +4418,7 @@
     },
     {
       "id": "VelocityOutletBoundary-IsA-IBoundaryCondition_DEDAA229B00E759F15318F9E5C6DA24444013A617081FA9CDEBF2107D07BC358",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/IsA.cs",
       "label": "IsA",
       "attributes": [
         "object"
@@ -4416,7 +4431,7 @@
     },
     {
       "id": "VelocityOutletBoundary-IsA-ICFXObject_AA116D6080B82B3D9BA9C8C5B4C03D45CC4281EA2A8CE6F4864FD8AEEB813B87",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/IsA.cs",
       "label": "IsA",
       "attributes": [
         "object"
@@ -4429,7 +4444,7 @@
     },
     {
       "id": "VelocityOutletBoundary-IsSubclassOf-BHoMObject_0902F10A9641C70EEF053FCE9969E310408A9565CF68D02BEF4E6668DF0242E3",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsSubclassOf.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/IsSubclassOf.cs",
       "label": "IsA",
       "attributes": [
         "object"
@@ -4439,7 +4454,7 @@
     },
     {
       "id": "VelocityInletBoundary-HasProperty-Location_EEB18619DFA32CAD2C7D79C3F8FB5127E7D651E0DCC6C203FA0DC1532419EAEB",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/HasProperty.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/HasProperty.cs",
       "label": "HasProperty",
       "attributes": [
         "datatype"
@@ -4449,7 +4464,7 @@
     },
     {
       "id": "VelocityInletBoundary-HasProperty-BoundaryName_EFCC8C6A1613ABBC941C2CF62C81EE2F8F8DC7B8B4C05DBF998F6399ABDEF8DA",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/HasProperty.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/HasProperty.cs",
       "label": "HasProperty",
       "attributes": [
         "datatype"
@@ -4459,7 +4474,7 @@
     },
     {
       "id": "VelocityInletBoundary-HasProperty-VelocityInput_520D1622E0018BA82378199ECBE08614CF0ED3E8A1627783B1CB875C5368FE15",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/HasProperty.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/HasProperty.cs",
       "label": "HasProperty",
       "attributes": [
         "datatype"
@@ -4469,7 +4484,7 @@
     },
     {
       "id": "VelocityInletBoundary-HasProperty-TemperatureInput_F8A140E69130DBBDD21B0E327E08C6FD0AEA6DA7A4EC82BB7D5119C2FEC3C9D5",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/HasProperty.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/HasProperty.cs",
       "label": "HasProperty",
       "attributes": [
         "datatype"
@@ -4479,7 +4494,7 @@
     },
     {
       "id": "BH.oM.CFD.CFX.VelocityInletBoundary-HasProperty-BH.oM.CFD.CFX.VelocityInletBoundary.Direction",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/HasProperty.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/HasProperty.cs",
       "label": "HasProperty",
       "attributes": [
         "object"
@@ -4489,7 +4504,7 @@
     },
     {
       "id": "BH.oM.CFD.CFX.VelocityInletBoundary.Direction-IsA-BH.oM.Geometry.Vector",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/IsA.cs",
       "label": "IsA",
       "attributes": [
         "object"
@@ -4499,7 +4514,7 @@
     },
     {
       "id": "VelocityInletBoundary-IsA-IBHoMObject_93F2071C9351AFE82EA1BD176392DC2A90B6786826299B05862AAADA02A89F68",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/IsA.cs",
       "label": "IsA",
       "attributes": [
         "object"
@@ -4512,7 +4527,7 @@
     },
     {
       "id": "VelocityInletBoundary-IsA-IObject_DF3F5391509D6CAF0D48C7F168DC4D4905AB77F8369F21AACCCD3F2257C7B042",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/IsA.cs",
       "label": "IsA",
       "attributes": [
         "object"
@@ -4525,7 +4540,7 @@
     },
     {
       "id": "VelocityInletBoundary-IsA-IBoundaryCondition_DC3C0165E91EF28833F992CCA33286E82FA6D064422AFE0472DD2C98D8770DD8",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/IsA.cs",
       "label": "IsA",
       "attributes": [
         "object"
@@ -4538,7 +4553,7 @@
     },
     {
       "id": "VelocityInletBoundary-IsA-ICFXObject_B1B67E9D0210A842B893DF21BE2D9316167C7C4893E0AB91B8EFA2995226D13E",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/IsA.cs",
       "label": "IsA",
       "attributes": [
         "object"
@@ -4551,7 +4566,7 @@
     },
     {
       "id": "VelocityInletBoundary-IsSubclassOf-BHoMObject_717A3B9ECCEF55345FE0A75A703BB950E32FA273FC9DE5A3F22AADC184F1EFE7",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsSubclassOf.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/IsSubclassOf.cs",
       "label": "IsA",
       "attributes": [
         "object"
@@ -4561,7 +4576,7 @@
     },
     {
       "id": "HeatFluxBoundary-HasProperty-Location_334D20A00194BF9FDF42C936120EC0CE27C59303678640C1CC299F3AF8A326DD",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/HasProperty.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/HasProperty.cs",
       "label": "HasProperty",
       "attributes": [
         "datatype"
@@ -4571,7 +4586,7 @@
     },
     {
       "id": "HeatFluxBoundary-HasProperty-BoundaryName_3BC6A273F8B26ECCD3DFE26337BF425F4318D93D3F550C75B79B3DF5F1FBF873",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/HasProperty.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/HasProperty.cs",
       "label": "HasProperty",
       "attributes": [
         "datatype"
@@ -4581,7 +4596,7 @@
     },
     {
       "id": "HeatFluxBoundary-HasProperty-BothSideCondition_FDE2D8D6E1E998E87F88BB7A2F9B66B7603EDBF3DAAA9624BC3C487C5A85EF03",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/HasProperty.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/HasProperty.cs",
       "label": "HasProperty",
       "attributes": [
         "datatype"
@@ -4591,7 +4606,7 @@
     },
     {
       "id": "HeatFluxBoundary-HasProperty-RoughnessInput_871BBF87C5A7820E8CE0D0B4A08D7060B9DC453D2E81C719316FBDD1B3A87D78",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/HasProperty.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/HasProperty.cs",
       "label": "HasProperty",
       "attributes": [
         "datatype"
@@ -4601,7 +4616,7 @@
     },
     {
       "id": "HeatFluxBoundary-HasProperty-HeatFluxInput_002ADE8CAD86F43E69F22ACC47DC0FEA766C017E46012E10A439667A6A5346B4",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/HasProperty.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/HasProperty.cs",
       "label": "HasProperty",
       "attributes": [
         "datatype"
@@ -4611,7 +4626,7 @@
     },
     {
       "id": "HeatFluxBoundary-HasProperty-Emissivity_3E6CE4CC74F6434CAB0E971B3118C324557FCD498DB1330FA76275C6C71BA5A7",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/HasProperty.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/HasProperty.cs",
       "label": "HasProperty",
       "attributes": [
         "datatype"
@@ -4621,7 +4636,7 @@
     },
     {
       "id": "BH.oM.CFD.CFX.HeatFluxBoundary-HasProperty-BH.oM.CFD.CFX.HeatFluxBoundary.EnergySource",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/HasProperty.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/HasProperty.cs",
       "label": "HasProperty",
       "attributes": [
         "object"
@@ -4631,7 +4646,7 @@
     },
     {
       "id": "BH.oM.CFD.CFX.HeatFluxBoundary.EnergySource-IsA-BH.oM.CFD.CFX.EnergySource",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/IsA.cs",
       "label": "IsA",
       "attributes": [
         "object"
@@ -4641,7 +4656,7 @@
     },
     {
       "id": "HeatFluxBoundary-IsA-IBHoMObject_8558DE424104A68029204EA3553B9F780557565B19B068639E0F4FC5EA377B9B",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/IsA.cs",
       "label": "IsA",
       "attributes": [
         "object"
@@ -4654,7 +4669,7 @@
     },
     {
       "id": "HeatFluxBoundary-IsA-IObject_9D8BA3E726EA03763E99A8A833B0AD4D891D26C970D5ECAC8AD44977CF573F87",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/IsA.cs",
       "label": "IsA",
       "attributes": [
         "object"
@@ -4667,7 +4682,7 @@
     },
     {
       "id": "HeatFluxBoundary-IsA-IBoundaryCondition_0B9CD381788098FAF1AE2B82C544EBFBDF0A431C02E084CE3786F1BA901963B9",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/IsA.cs",
       "label": "IsA",
       "attributes": [
         "object"
@@ -4680,7 +4695,7 @@
     },
     {
       "id": "HeatFluxBoundary-IsA-ICFXObject_CC29E19D589D0A39A7FB90D759419C93555285CA9F32A692B33BE91AD85CDBF2",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/IsA.cs",
       "label": "IsA",
       "attributes": [
         "object"
@@ -4693,7 +4708,7 @@
     },
     {
       "id": "HeatFluxBoundary-IsSubclassOf-BHoMObject_5109C95E81CB5553647DC01A029219B6F4C0339E8D0FA43CDC2100762D06D5EC",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsSubclassOf.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/IsSubclassOf.cs",
       "label": "IsA",
       "attributes": [
         "object"
@@ -4703,7 +4718,7 @@
     },
     {
       "id": "TemperatureBoundary-HasProperty-Location_B297F350F9DF06384DBEE6971D73ACE3CB2949A1AF3DC9435C11F25354112256",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/HasProperty.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/HasProperty.cs",
       "label": "HasProperty",
       "attributes": [
         "datatype"
@@ -4713,7 +4728,7 @@
     },
     {
       "id": "TemperatureBoundary-HasProperty-BoundaryName_956EE399671B96E2F17D6BAAC8114EC891F88EECC0D58D2703B4A92DEB0E9123",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/HasProperty.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/HasProperty.cs",
       "label": "HasProperty",
       "attributes": [
         "datatype"
@@ -4723,7 +4738,7 @@
     },
     {
       "id": "TemperatureBoundary-HasProperty-BothSideCondition_FD5CE46AF4971694385D0879246EED79FCAD4CED094E3098A0F14F8A78B01794",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/HasProperty.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/HasProperty.cs",
       "label": "HasProperty",
       "attributes": [
         "datatype"
@@ -4733,7 +4748,7 @@
     },
     {
       "id": "TemperatureBoundary-HasProperty-RoughnessInput_7D9C588863672EF6741D3E3A01F438BFB06427651B10A6DB7C9DE10D65FF63A8",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/HasProperty.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/HasProperty.cs",
       "label": "HasProperty",
       "attributes": [
         "datatype"
@@ -4743,7 +4758,7 @@
     },
     {
       "id": "TemperatureBoundary-HasProperty-TemperatureInput_F2572D5FDBC47D3B511FBD2DEBF67DC9EE91C823CB74B0EC8EA1B2934178E88F",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/HasProperty.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/HasProperty.cs",
       "label": "HasProperty",
       "attributes": [
         "datatype"
@@ -4753,7 +4768,7 @@
     },
     {
       "id": "TemperatureBoundary-HasProperty-Emissivity_DC634C5E34E1DD90FA9A0806168806656F9F54803952D42A4239D1E707CCD500",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/HasProperty.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/HasProperty.cs",
       "label": "HasProperty",
       "attributes": [
         "datatype"
@@ -4763,7 +4778,7 @@
     },
     {
       "id": "BH.oM.CFD.CFX.TemperatureBoundary-HasProperty-BH.oM.CFD.CFX.TemperatureBoundary.EnergySource",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/HasProperty.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/HasProperty.cs",
       "label": "HasProperty",
       "attributes": [
         "object"
@@ -4773,7 +4788,7 @@
     },
     {
       "id": "BH.oM.CFD.CFX.TemperatureBoundary.EnergySource-IsA-BH.oM.CFD.CFX.EnergySource",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/IsA.cs",
       "label": "IsA",
       "attributes": [
         "object"
@@ -4783,7 +4798,7 @@
     },
     {
       "id": "TemperatureBoundary-IsA-IBHoMObject_9E7518E9E07AD4A93F3B81A7E40E51D48230AF1796FA82E15BD81794862E00F5",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/IsA.cs",
       "label": "IsA",
       "attributes": [
         "object"
@@ -4796,7 +4811,7 @@
     },
     {
       "id": "TemperatureBoundary-IsA-IObject_D9D95399D8B748D8159A4FC1C77B04260CDD686BAFB17404F165627BBAF56056",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/IsA.cs",
       "label": "IsA",
       "attributes": [
         "object"
@@ -4809,7 +4824,7 @@
     },
     {
       "id": "TemperatureBoundary-IsA-IBoundaryCondition_B0B63472295648EE1A10C4DC67BBFCAB7CBA76A936571CA9AD35062B8A2E4A15",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/IsA.cs",
       "label": "IsA",
       "attributes": [
         "object"
@@ -4822,7 +4837,7 @@
     },
     {
       "id": "TemperatureBoundary-IsA-ICFXObject_87626CB0DD8486B3A8E706D0E623EDCDB7AFA7EB4DD0A324995C6CF222A5BDFC",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/IsA.cs",
       "label": "IsA",
       "attributes": [
         "object"
@@ -4835,7 +4850,7 @@
     },
     {
       "id": "TemperatureBoundary-IsSubclassOf-BHoMObject_DDFDF5CEA2BFB36CF4F2E2DBEDEFADEB675274BEDCA7108132FFF6E2574605C6",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsSubclassOf.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/IsSubclassOf.cs",
       "label": "IsA",
       "attributes": [
         "object"
@@ -4845,7 +4860,7 @@
     },
     {
       "id": "HeatTransferBoundary-HasProperty-Location_D982489B99DD5D700E5101924A5CABDF735448595D55E0193CBDA614A7AAD1B6",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/HasProperty.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/HasProperty.cs",
       "label": "HasProperty",
       "attributes": [
         "datatype"
@@ -4855,7 +4870,7 @@
     },
     {
       "id": "HeatTransferBoundary-HasProperty-BoundaryName_6C91C565D93123A37C309E61F8F6E526063BA4CD12DFEF78BD7165F5FA65B760",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/HasProperty.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/HasProperty.cs",
       "label": "HasProperty",
       "attributes": [
         "datatype"
@@ -4865,7 +4880,7 @@
     },
     {
       "id": "HeatTransferBoundary-HasProperty-BothSideCondition_0192ED4F81389028F4EB5EB954262DC794954DC164014F854D93D6C1B0DEECB7",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/HasProperty.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/HasProperty.cs",
       "label": "HasProperty",
       "attributes": [
         "datatype"
@@ -4875,7 +4890,7 @@
     },
     {
       "id": "HeatTransferBoundary-HasProperty-RoughnessInput_2430A886415C730EA9CFF01778A4D37DB4EC98BEE07F503B10FA2E8D4016DBF7",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/HasProperty.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/HasProperty.cs",
       "label": "HasProperty",
       "attributes": [
         "datatype"
@@ -4885,7 +4900,7 @@
     },
     {
       "id": "HeatTransferBoundary-HasProperty-CoefficientInput_B14206D47C2B49464B46A7F4AEBA5B5AAC36AD3C0F04BD27F6CA121C6BABA1B1",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/HasProperty.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/HasProperty.cs",
       "label": "HasProperty",
       "attributes": [
         "datatype"
@@ -4895,7 +4910,7 @@
     },
     {
       "id": "HeatTransferBoundary-HasProperty-TemperatureInput_67CF1BE7C541F54C30E941CBA13C5160F2CE4963F20866B050D26DCC6689CFEC",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/HasProperty.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/HasProperty.cs",
       "label": "HasProperty",
       "attributes": [
         "datatype"
@@ -4905,7 +4920,7 @@
     },
     {
       "id": "HeatTransferBoundary-HasProperty-Emissivity_C33ABBA73A970E3A4479230E5F725E303CDFB5DF43FB9B40D66D3AF44A93D34D",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/HasProperty.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/HasProperty.cs",
       "label": "HasProperty",
       "attributes": [
         "datatype"
@@ -4915,7 +4930,7 @@
     },
     {
       "id": "BH.oM.CFD.CFX.HeatTransferBoundary-HasProperty-BH.oM.CFD.CFX.HeatTransferBoundary.EnergySource",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/HasProperty.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/HasProperty.cs",
       "label": "HasProperty",
       "attributes": [
         "object"
@@ -4925,7 +4940,7 @@
     },
     {
       "id": "BH.oM.CFD.CFX.HeatTransferBoundary.EnergySource-IsA-BH.oM.CFD.CFX.EnergySource",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/IsA.cs",
       "label": "IsA",
       "attributes": [
         "object"
@@ -4935,7 +4950,7 @@
     },
     {
       "id": "HeatTransferBoundary-IsA-IBHoMObject_14ACF0662A35C6AB0622E7DD8B9A2F8B7EC2A4DE3920C4D621AD71E724D27B6C",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/IsA.cs",
       "label": "IsA",
       "attributes": [
         "object"
@@ -4948,7 +4963,7 @@
     },
     {
       "id": "HeatTransferBoundary-IsA-IObject_02FEA4A59E6AFEFA4DBFFA7195E652E3BF482E913480E69264E80931764D9CF3",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/IsA.cs",
       "label": "IsA",
       "attributes": [
         "object"
@@ -4961,7 +4976,7 @@
     },
     {
       "id": "HeatTransferBoundary-IsA-IBoundaryCondition_45ECE27DE97A660E34CB1F826A81CC66C8A2851F2B18B7A24D68FC171DF3E64E",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/IsA.cs",
       "label": "IsA",
       "attributes": [
         "object"
@@ -4974,7 +4989,7 @@
     },
     {
       "id": "HeatTransferBoundary-IsA-ICFXObject_F90015C7B2E0FF3EF133C701CA00D52E805384C05BAF376FC008E4A10FF4D6A8",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/IsA.cs",
       "label": "IsA",
       "attributes": [
         "object"
@@ -4987,7 +5002,7 @@
     },
     {
       "id": "HeatTransferBoundary-IsSubclassOf-BHoMObject_AA5986137A9A11869B4012F8E57892D3B4D7E2488B118AD2ECF46F003716E32B",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsSubclassOf.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/IsSubclassOf.cs",
       "label": "IsA",
       "attributes": [
         "object"
@@ -4997,7 +5012,7 @@
     },
     {
       "id": "AdiabaticBoundary-HasProperty-Location_B3CFDE564388A754ADDF8E975D91AB9FC28390F86A9EF304893DCB816A90433E",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/HasProperty.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/HasProperty.cs",
       "label": "HasProperty",
       "attributes": [
         "datatype"
@@ -5007,7 +5022,7 @@
     },
     {
       "id": "AdiabaticBoundary-HasProperty-BoundaryName_E4FD99EBE1A2FAC49CFE73765B38B9EA6CA619E1D2419DFD5B3ACEF0D53BBF7B",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/HasProperty.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/HasProperty.cs",
       "label": "HasProperty",
       "attributes": [
         "datatype"
@@ -5017,7 +5032,7 @@
     },
     {
       "id": "AdiabaticBoundary-HasProperty-BothSideCondition_2149FF436C21EAFBDF901B7B781CDFD3178460AFD9F7EE8D8587AEC4F4EB6248",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/HasProperty.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/HasProperty.cs",
       "label": "HasProperty",
       "attributes": [
         "datatype"
@@ -5027,7 +5042,7 @@
     },
     {
       "id": "AdiabaticBoundary-HasProperty-RoughnessInput_985FC821E240A5F119D1DD686BCC3323B801C58E34C37B35EC5AF821E35E2C14",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/HasProperty.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/HasProperty.cs",
       "label": "HasProperty",
       "attributes": [
         "datatype"
@@ -5037,7 +5052,7 @@
     },
     {
       "id": "AdiabaticBoundary-HasProperty-Emissivity_B33CB4294F82565598851AC6AC00DE6AF7556B35A4F07D59FAC86E41505B24B5",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/HasProperty.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/HasProperty.cs",
       "label": "HasProperty",
       "attributes": [
         "datatype"
@@ -5047,7 +5062,7 @@
     },
     {
       "id": "BH.oM.CFD.CFX.AdiabaticBoundary-HasProperty-BH.oM.CFD.CFX.AdiabaticBoundary.EnergySource",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/HasProperty.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/HasProperty.cs",
       "label": "HasProperty",
       "attributes": [
         "object"
@@ -5057,7 +5072,7 @@
     },
     {
       "id": "BH.oM.CFD.CFX.AdiabaticBoundary.EnergySource-IsA-BH.oM.CFD.CFX.EnergySource",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/IsA.cs",
       "label": "IsA",
       "attributes": [
         "object"
@@ -5067,7 +5082,7 @@
     },
     {
       "id": "AdiabaticBoundary-IsA-IBHoMObject_F059363900218E36A6CBFF725C731D6C818CAAFEA43F9CE64EB1BECFEC377E8E",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/IsA.cs",
       "label": "IsA",
       "attributes": [
         "object"
@@ -5080,7 +5095,7 @@
     },
     {
       "id": "AdiabaticBoundary-IsA-IObject_A267D34FE09A37F5882B96D63E093C6C363446F0C62C75CD71C35BF82F0CD143",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/IsA.cs",
       "label": "IsA",
       "attributes": [
         "object"
@@ -5093,7 +5108,7 @@
     },
     {
       "id": "AdiabaticBoundary-IsA-IBoundaryCondition_CD69AC1CA772B450A3497B136328CC355DE1DAABACB4666794E4F823AD702CAC",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/IsA.cs",
       "label": "IsA",
       "attributes": [
         "object"
@@ -5106,7 +5121,7 @@
     },
     {
       "id": "AdiabaticBoundary-IsA-ICFXObject_BC2108DD14E55A5BACC2692ED968202F3AE1E74AABD2245F196FFA18D6390BB1",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/IsA.cs",
       "label": "IsA",
       "attributes": [
         "object"
@@ -5119,7 +5134,7 @@
     },
     {
       "id": "AdiabaticBoundary-IsSubclassOf-BHoMObject_7FA62B1EA8D66C4EE96F0C96FB18639B86785EB3747FA914723D4878C6B8D8B0",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsSubclassOf.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/IsSubclassOf.cs",
       "label": "IsA",
       "attributes": [
         "object"
@@ -5129,7 +5144,7 @@
     },
     {
       "id": "EnergySource-HasProperty-EnergyFluxInput_0529CB65C1F5E644C422CC8BAFA151AE0BE9FA34F1E0C1AA25A7850BB00D794F",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/HasProperty.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/HasProperty.cs",
       "label": "HasProperty",
       "attributes": [
         "datatype"
@@ -5139,7 +5154,7 @@
     },
     {
       "id": "EnergySource-HasProperty-RadiationFluxInput_7F1FB8DD9C53D895D2660CDD4A1876EA2CE6C850BE8107B314FF55885880F927",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/HasProperty.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/HasProperty.cs",
       "label": "HasProperty",
       "attributes": [
         "datatype"
@@ -5149,7 +5164,7 @@
     },
     {
       "id": "BH.oM.CFD.CFX.EnergySource-HasProperty-BH.oM.CFD.CFX.EnergySource.RadiationDirection",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/HasProperty.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/HasProperty.cs",
       "label": "HasProperty",
       "attributes": [
         "object"
@@ -5159,7 +5174,7 @@
     },
     {
       "id": "BH.oM.CFD.CFX.EnergySource.RadiationDirection-IsA-BH.oM.Geometry.Vector",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/IsA.cs",
       "label": "IsA",
       "attributes": [
         "object"
@@ -5169,7 +5184,7 @@
     },
     {
       "id": "EnergySource-IsA-IBHoMObject_DD7ED995ACB92E104754170747AA9558B2E889A06F110A2A09B8B7B784B05E4E",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/IsA.cs",
       "label": "IsA",
       "attributes": [
         "object"
@@ -5182,7 +5197,7 @@
     },
     {
       "id": "EnergySource-IsA-IObject_7D4C4434F0404D8B0EB113E19BAF45E0A3AC6A2851489083DCFFFA1C822F9158",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/IsA.cs",
       "label": "IsA",
       "attributes": [
         "object"
@@ -5195,7 +5210,7 @@
     },
     {
       "id": "EnergySource-IsSubclassOf-BHoMObject_12BF5D6ED091AEBFCB9804FC97FA39DAFDB00F9815929F3F6A279AC76B824C4B",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsSubclassOf.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/IsSubclassOf.cs",
       "label": "IsA",
       "attributes": [
         "object"
@@ -5205,7 +5220,7 @@
     },
     {
       "id": "SymmetryBoundary-HasProperty-Location_FEBAE71713B70EB0E2D3BC7DE139467B72E29DADB8E3ECCC87EEB34AA8840FA8",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/HasProperty.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/HasProperty.cs",
       "label": "HasProperty",
       "attributes": [
         "datatype"
@@ -5215,7 +5230,7 @@
     },
     {
       "id": "SymmetryBoundary-HasProperty-BoundaryName_93B875D670E6B5789063F74E1084F23CEE18D19ABD8147DD10A378BD54915D98",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/HasProperty.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/HasProperty.cs",
       "label": "HasProperty",
       "attributes": [
         "datatype"
@@ -5225,7 +5240,7 @@
     },
     {
       "id": "SymmetryBoundary-IsA-IBHoMObject_F82399AF4882E449991DB080C0A6BA120C2BEF769DCB379235FA38BCEEA9A2F6",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/IsA.cs",
       "label": "IsA",
       "attributes": [
         "object"
@@ -5238,7 +5253,7 @@
     },
     {
       "id": "SymmetryBoundary-IsA-IObject_27E37AC5F13B7F2AA3BF6197224C7569C89378DBC834F0BAB4572FDCAC651762",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/IsA.cs",
       "label": "IsA",
       "attributes": [
         "object"
@@ -5251,7 +5266,7 @@
     },
     {
       "id": "SymmetryBoundary-IsA-IBoundaryCondition_A6073DB6FA6BF44258F46DEB4E0A76102BF417D43A2B6C92BBBCD9C56E705164",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/IsA.cs",
       "label": "IsA",
       "attributes": [
         "object"
@@ -5264,7 +5279,7 @@
     },
     {
       "id": "SymmetryBoundary-IsA-ICFXObject_3F53B11441182F1E6F2ED31ACCF61CCE44C98F3AED479F2A31EDAC6C6867EA44",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/IsA.cs",
       "label": "IsA",
       "attributes": [
         "object"
@@ -5277,7 +5292,7 @@
     },
     {
       "id": "SymmetryBoundary-IsSubclassOf-BHoMObject_63898111C0D89ABDE78A1BEBE480F02B0DB5996A269DA588E88B832D10199E85",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsSubclassOf.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/IsSubclassOf.cs",
       "label": "IsA",
       "attributes": [
         "object"
@@ -5287,7 +5302,7 @@
     },
     {
       "id": "IBoundaryCondition-IsA-IBHoMObject_FA0B56A966F1650A308685605C1CB6460B6219BA5F445CD53793E2473C3F06BE",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/IsA.cs",
       "label": "IsA",
       "attributes": [
         "object"
@@ -5300,7 +5315,7 @@
     },
     {
       "id": "IBoundaryCondition-IsA-IObject_7471C13EE8E57B37E7BE1FA475DB488D9A68A19EF8386FB418A945A6288F0C26",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/IsA.cs",
       "label": "IsA",
       "attributes": [
         "object"
@@ -5313,7 +5328,7 @@
     },
     {
       "id": "IBoundaryCondition-IsA-ICFXObject_5D8762971858BE8599889E760BCFD4ECA57BD79F98ECA6027EADCE6C0C5C793D",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/IsA.cs",
       "label": "IsA",
       "attributes": [
         "object"
@@ -5326,7 +5341,7 @@
     },
     {
       "id": "DiscreteTransferModel-HasProperty-NumberOfRays_EE7024B28BCD6489E23E27E743BAA38C963418C110869B0AD264E6289DF7CCBF",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/HasProperty.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/HasProperty.cs",
       "label": "HasProperty",
       "attributes": [
         "datatype"
@@ -5336,7 +5351,7 @@
     },
     {
       "id": "DiscreteTransferModel-IsA-IBHoMObject_D4730A0AE46F10DC13B54C297CDA27A60C69F5FE377B0715D9873B6AB7CEEE49",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/IsA.cs",
       "label": "IsA",
       "attributes": [
         "object"
@@ -5349,7 +5364,7 @@
     },
     {
       "id": "DiscreteTransferModel-IsA-IObject_24F1922CEF13B53DD95F1A1B72B48C5F082BF29D9747C95011A9322F0ABD9E39",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/IsA.cs",
       "label": "IsA",
       "attributes": [
         "object"
@@ -5362,7 +5377,7 @@
     },
     {
       "id": "DiscreteTransferModel-IsA-IRadiantModel_6FBF1EBBDB44A79669FA3987D76EBC4DE7ADE0972FBBDC052438C8C3969B865F",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/IsA.cs",
       "label": "IsA",
       "attributes": [
         "object"
@@ -5375,7 +5390,7 @@
     },
     {
       "id": "DiscreteTransferModel-IsSubclassOf-BHoMObject_57CD00379C42A49B91BE94D8560E8364E9A7C36264C84E345DD9CE43B4B5E05B",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsSubclassOf.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/IsSubclassOf.cs",
       "label": "IsA",
       "attributes": [
         "object"
@@ -5385,7 +5400,7 @@
     },
     {
       "id": "MonteCarloModel-HasProperty-NumberOfHistories_0AECEFCDBCED76E86A24B948C1377649C3DA112F1968BBBC63E05247132B6B36",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/HasProperty.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/HasProperty.cs",
       "label": "HasProperty",
       "attributes": [
         "datatype"
@@ -5395,7 +5410,7 @@
     },
     {
       "id": "MonteCarloModel-IsA-IBHoMObject_D99C6878BE2120F1407B5FB3662042E1A5E537603770AB4C195DE14EDE333EC2",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/IsA.cs",
       "label": "IsA",
       "attributes": [
         "object"
@@ -5408,7 +5423,7 @@
     },
     {
       "id": "MonteCarloModel-IsA-IObject_999F66D89B23766B6D864379B1B012DC92DBAEB06F163F3208A3DA9BFB4D73BB",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/IsA.cs",
       "label": "IsA",
       "attributes": [
         "object"
@@ -5421,7 +5436,7 @@
     },
     {
       "id": "MonteCarloModel-IsA-IRadiantModel_1CFC26C865D88A83D725BED130A473BC8763CE5F96A6E8357E601BCBAAF3C0EE",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/IsA.cs",
       "label": "IsA",
       "attributes": [
         "object"
@@ -5434,7 +5449,7 @@
     },
     {
       "id": "MonteCarloModel-IsSubclassOf-BHoMObject_588990199BD1723E4C2168EF576EE04D99269CF07CE6257147174C71E751E435",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsSubclassOf.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/IsSubclassOf.cs",
       "label": "IsA",
       "attributes": [
         "object"
@@ -5444,7 +5459,7 @@
     },
     {
       "id": "IRadiantModel-IsA-IBHoMObject_62ECC39BB4AEE1015A15B255E8F752275576765EA6B430DFBD098186939412DE",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/IsA.cs",
       "label": "IsA",
       "attributes": [
         "object"
@@ -5457,7 +5472,7 @@
     },
     {
       "id": "IRadiantModel-IsA-IObject_49E0DA8553250067E04CF67958DE741DDEBBCB16F65651BB9979DA2F293352D6",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/IsA.cs",
       "label": "IsA",
       "attributes": [
         "object"
@@ -5470,7 +5485,7 @@
     },
     {
       "id": "ITimescale-IsA-IBHoMObject_8C7E95EA3F6FA2F33783AA171C50CED2813017B8A4F5D16B2CBDEFE22729BC6C",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/IsA.cs",
       "label": "IsA",
       "attributes": [
         "object"
@@ -5483,7 +5498,7 @@
     },
     {
       "id": "ITimescale-IsA-IObject_CA63D6DC1E2D9E3083659CF9F626A0AF554734091B4E56904BE726EFBF24244F",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/IsA.cs",
       "label": "IsA",
       "attributes": [
         "object"
@@ -5496,7 +5511,7 @@
     },
     {
       "id": "PhysicalTimescale-HasProperty-TimeInput_8E0C0537EC85391C813045672653D8ECCE9BF9D1CF873310329D5AAB044EB641",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/HasProperty.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/HasProperty.cs",
       "label": "HasProperty",
       "attributes": [
         "datatype"
@@ -5506,7 +5521,7 @@
     },
     {
       "id": "PhysicalTimescale-IsA-IBHoMObject_FD2C03D52ABC7AAE0907FDF78E08223267B35C33D44349E17770DFA5BA1ACC28",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/IsA.cs",
       "label": "IsA",
       "attributes": [
         "object"
@@ -5519,7 +5534,7 @@
     },
     {
       "id": "PhysicalTimescale-IsA-IObject_9481E330783585EF88B78612C2D6070E7FEFB00458E82B7DDB92D6E1C9B58446",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/IsA.cs",
       "label": "IsA",
       "attributes": [
         "object"
@@ -5532,7 +5547,7 @@
     },
     {
       "id": "PhysicalTimescale-IsA-ITimescale_D6FC11F6642961E95B443725A412AF4CF55EE6EA5D9C94EBCBD3E67348B8E127",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/IsA.cs",
       "label": "IsA",
       "attributes": [
         "object"
@@ -5545,7 +5560,7 @@
     },
     {
       "id": "PhysicalTimescale-IsSubclassOf-BHoMObject_6C4ECDFCE84F0778FC33C6CB74E66FDF35C2F981FBDB949B956D80D25F2B3C81",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsSubclassOf.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/IsSubclassOf.cs",
       "label": "IsA",
       "attributes": [
         "object"
@@ -5555,7 +5570,7 @@
     },
     {
       "id": "AutoTimescale-HasProperty-Factor_52F09FD9BA79A8D275E7C7B3D967E64378D277CE192686856DF0A8332845EC9E",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/HasProperty.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/HasProperty.cs",
       "label": "HasProperty",
       "attributes": [
         "datatype"
@@ -5565,7 +5580,7 @@
     },
     {
       "id": "AutoTimescale-IsA-IBHoMObject_33059E2A9BC66DFFDC7B346E2DE0AD5C4893BB6ABB764C24EE5B51CDB801AF6C",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/IsA.cs",
       "label": "IsA",
       "attributes": [
         "object"
@@ -5578,7 +5593,7 @@
     },
     {
       "id": "AutoTimescale-IsA-IObject_474E94837DDB54FE34D6C5040E8CE605B63BFCE64441705153575679BD651C21",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/IsA.cs",
       "label": "IsA",
       "attributes": [
         "object"
@@ -5591,7 +5606,7 @@
     },
     {
       "id": "AutoTimescale-IsA-ITimescale_2D5B54FCA59955E5015085C3B0763D739BF42BE421A0CB48900C4BCA05DD460D",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/IsA.cs",
       "label": "IsA",
       "attributes": [
         "object"
@@ -5604,7 +5619,7 @@
     },
     {
       "id": "AutoTimescale-IsSubclassOf-BHoMObject_1F481BCA9783458EFDE3151CF242CCDBD8DFD5B1427FE04EE82B266665B50B54",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsSubclassOf.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/IsSubclassOf.cs",
       "label": "IsA",
       "attributes": [
         "object"
@@ -5614,7 +5629,7 @@
     },
     {
       "id": "InitialisationSettings-HasProperty-TemperatureInput_8E227F005417C673996BF9A67B9E3A74D7205BB3FF3F53460D86B51A4B19ADBB",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/HasProperty.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/HasProperty.cs",
       "label": "HasProperty",
       "attributes": [
         "datatype"
@@ -5624,7 +5639,7 @@
     },
     {
       "id": "InitialisationSettings-IsA-IBHoMObject_C2811161D44B4962039865CA4FBBAEE98F7976528D65E93D0BB6AC5E9E4744C6",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/IsA.cs",
       "label": "IsA",
       "attributes": [
         "object"
@@ -5637,7 +5652,7 @@
     },
     {
       "id": "InitialisationSettings-IsA-IObject_5EBACF0159E87B118C0ED88EF52797A6B94BE683E5A5F359DE98124275980F5B",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/IsA.cs",
       "label": "IsA",
       "attributes": [
         "object"
@@ -5650,7 +5665,7 @@
     },
     {
       "id": "InitialisationSettings-IsSubclassOf-BHoMObject_A495B62226F1E1512CD5A601AA56759B6857CEA43517A67A6A22ABEB1C8FBF69",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsSubclassOf.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/IsSubclassOf.cs",
       "label": "IsA",
       "attributes": [
         "object"
@@ -5660,7 +5675,7 @@
     },
     {
       "id": "SolverSettings-HasProperty-Iterations_79095DE2B326B58EBC181A81BFB0F18F5AC9BE5F1B860D15F4D1B3D179FDBE84",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/HasProperty.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/HasProperty.cs",
       "label": "HasProperty",
       "attributes": [
         "datatype"
@@ -5670,7 +5685,7 @@
     },
     {
       "id": "BH.oM.CFD.CFX.SolverSettings-HasProperty-BH.oM.CFD.CFX.SolverSettings.Timescale",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/HasProperty.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/HasProperty.cs",
       "label": "HasProperty",
       "attributes": [
         "object"
@@ -5680,7 +5695,7 @@
     },
     {
       "id": "BH.oM.CFD.CFX.SolverSettings.Timescale-IsA-BH.oM.CFD.CFX.ITimescale",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/IsA.cs",
       "label": "IsA",
       "attributes": [
         "object"
@@ -5690,7 +5705,7 @@
     },
     {
       "id": "SolverSettings-HasProperty-RadiantInterval_4C0DD61912AAE5AA1A5DC8E7080B7572F4644B904C008DA41C5ED2E56DB6EC5C",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/HasProperty.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/HasProperty.cs",
       "label": "HasProperty",
       "attributes": [
         "datatype"
@@ -5700,7 +5715,7 @@
     },
     {
       "id": "SolverSettings-IsA-IBHoMObject_A444D93AE8E0185166D58E43D926F39E58E6C7C8973BA7B9996A07AE24C1F473",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/IsA.cs",
       "label": "IsA",
       "attributes": [
         "object"
@@ -5713,7 +5728,7 @@
     },
     {
       "id": "SolverSettings-IsA-IObject_018E0348CE910F6C2AE3EF7636BEB303ED81C74A3109E33EAB54048EFDF995C6",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/IsA.cs",
       "label": "IsA",
       "attributes": [
         "object"
@@ -5726,7 +5741,7 @@
     },
     {
       "id": "SolverSettings-IsSubclassOf-BHoMObject_7794B84F370C3E162090FFEF49BE199E1557662B81E705A8D92BFB0486DA2830",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsSubclassOf.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/IsSubclassOf.cs",
       "label": "IsA",
       "attributes": [
         "object"
@@ -5736,7 +5751,7 @@
     },
     {
       "id": "OutputSettings-HasProperty-BackupOverwrite_F90F871A3032010557AC0AFBCEA07A48313BC1FC71217FA070D93E22D1A892B0",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/HasProperty.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/HasProperty.cs",
       "label": "HasProperty",
       "attributes": [
         "datatype"
@@ -5746,7 +5761,7 @@
     },
     {
       "id": "OutputSettings-HasProperty-BackupInterval_0423F98C8D6170814346C4AA0DCB97EEA614BD47D0FB5FACEB9CA8BFE869BB7A",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/HasProperty.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/HasProperty.cs",
       "label": "HasProperty",
       "attributes": [
         "datatype"
@@ -5756,7 +5771,7 @@
     },
     {
       "id": "OutputSettings-IsA-IBHoMObject_1EE4A9EDC2DD8F009EA686D135EF39CAD380E39D4B89B54AE6C8373614BD6CC4",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/IsA.cs",
       "label": "IsA",
       "attributes": [
         "object"
@@ -5769,7 +5784,7 @@
     },
     {
       "id": "OutputSettings-IsA-IObject_7C18017A5D8EF61E6A901DF8B51F54A368940495BE6D7C2D4790296C510985A1",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/IsA.cs",
       "label": "IsA",
       "attributes": [
         "object"
@@ -5782,7 +5797,7 @@
     },
     {
       "id": "OutputSettings-IsSubclassOf-BHoMObject_08FF9CAAA2A25513C864B8F43D8B67AC83D1BB72EC9C8F791EC38DCE55A707E6",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsSubclassOf.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/IsSubclassOf.cs",
       "label": "IsA",
       "attributes": [
         "object"
@@ -5792,7 +5807,7 @@
     },
     {
       "id": "BH.oM.CFD.CFX.FluidModelSettings-HasProperty-BH.oM.CFD.CFX.FluidModelSettings.TurbulenceModel",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/HasProperty.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/HasProperty.cs",
       "label": "HasProperty",
       "attributes": [
         "object"
@@ -5802,7 +5817,7 @@
     },
     {
       "id": "BH.oM.CFD.CFX.FluidModelSettings.TurbulenceModel-IsA-BH.oM.CFD.CFX.TurbulenceModel",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/IsA.cs",
       "label": "IsA",
       "attributes": [
         "object"
@@ -5812,7 +5827,7 @@
     },
     {
       "id": "BH.oM.CFD.CFX.FluidModelSettings-HasProperty-BH.oM.CFD.CFX.FluidModelSettings.RadiantModel",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/HasProperty.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/HasProperty.cs",
       "label": "HasProperty",
       "attributes": [
         "object"
@@ -5822,7 +5837,7 @@
     },
     {
       "id": "BH.oM.CFD.CFX.FluidModelSettings.RadiantModel-IsA-BH.oM.CFD.CFX.IRadiantModel",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/IsA.cs",
       "label": "IsA",
       "attributes": [
         "object"
@@ -5832,7 +5847,7 @@
     },
     {
       "id": "FluidModelSettings-IsA-IBHoMObject_C58C92D94582A86AE4FBC4B5A6332F58F836885DCEE66A611087DE281BD22E69",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/IsA.cs",
       "label": "IsA",
       "attributes": [
         "object"
@@ -5845,7 +5860,7 @@
     },
     {
       "id": "FluidModelSettings-IsA-IObject_4B7C60121363893AB7B6418AC0311B14BA168EA150E80F9EC855211AF8D72E08",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/IsA.cs",
       "label": "IsA",
       "attributes": [
         "object"
@@ -5858,7 +5873,7 @@
     },
     {
       "id": "FluidModelSettings-IsSubclassOf-BHoMObject_3C1FB48FF0C31831A6A77F65D0FE40679F86E9A50B0D4D8E7719AD0F720425A6",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsSubclassOf.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/IsSubclassOf.cs",
       "label": "IsA",
       "attributes": [
         "object"
@@ -5868,7 +5883,7 @@
     },
     {
       "id": "CFXSettings-HasProperty-Buoyancy_FADFD46B8C17665FE3DC5616D12299C1AD819C5FA17B560352F4C6C498ACFFFF",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/HasProperty.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/HasProperty.cs",
       "label": "HasProperty",
       "attributes": [
         "datatype"
@@ -5878,7 +5893,7 @@
     },
     {
       "id": "BH.oM.CFD.CFX.CFXSettings-HasProperty-BH.oM.CFD.CFX.CFXSettings.FluidModelSettings",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/HasProperty.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/HasProperty.cs",
       "label": "HasProperty",
       "attributes": [
         "object"
@@ -5888,7 +5903,7 @@
     },
     {
       "id": "BH.oM.CFD.CFX.CFXSettings.FluidModelSettings-IsA-BH.oM.CFD.CFX.FluidModelSettings",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/IsA.cs",
       "label": "IsA",
       "attributes": [
         "object"
@@ -5898,7 +5913,7 @@
     },
     {
       "id": "BH.oM.CFD.CFX.CFXSettings-HasProperty-BH.oM.CFD.CFX.CFXSettings.InitialisationSettings",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/HasProperty.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/HasProperty.cs",
       "label": "HasProperty",
       "attributes": [
         "object"
@@ -5908,7 +5923,7 @@
     },
     {
       "id": "BH.oM.CFD.CFX.CFXSettings.InitialisationSettings-IsA-BH.oM.CFD.CFX.InitialisationSettings",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/IsA.cs",
       "label": "IsA",
       "attributes": [
         "object"
@@ -5918,7 +5933,7 @@
     },
     {
       "id": "BH.oM.CFD.CFX.CFXSettings-HasProperty-BH.oM.CFD.CFX.CFXSettings.SolverSettings",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/HasProperty.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/HasProperty.cs",
       "label": "HasProperty",
       "attributes": [
         "object"
@@ -5928,7 +5943,7 @@
     },
     {
       "id": "BH.oM.CFD.CFX.CFXSettings.SolverSettings-IsA-BH.oM.CFD.CFX.SolverSettings",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/IsA.cs",
       "label": "IsA",
       "attributes": [
         "object"
@@ -5938,7 +5953,7 @@
     },
     {
       "id": "BH.oM.CFD.CFX.CFXSettings-HasProperty-BH.oM.CFD.CFX.CFXSettings.OutputSettings",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/HasProperty.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/HasProperty.cs",
       "label": "HasProperty",
       "attributes": [
         "object"
@@ -5948,7 +5963,7 @@
     },
     {
       "id": "BH.oM.CFD.CFX.CFXSettings.OutputSettings-IsA-BH.oM.CFD.CFX.OutputSettings",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/IsA.cs",
       "label": "IsA",
       "attributes": [
         "object"
@@ -5958,7 +5973,7 @@
     },
     {
       "id": "BH.oM.CFD.CFX.CFXSettings-HasProperty-BH.oM.CFD.CFX.CFXSettings.MonitorPoints",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/HasProperty.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/HasProperty.cs",
       "label": "HasProperty",
       "attributes": [
         "object"
@@ -5968,7 +5983,7 @@
     },
     {
       "id": "BH.oM.CFD.CFX.CFXSettings.MonitorPoints-IsAListOf-BH.oM.CFD.CFX.MonitorPoints",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsAListOf.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/IsAListOf.cs",
       "label": "IsAListOf",
       "attributes": [
         "object"
@@ -5978,7 +5993,7 @@
     },
     {
       "id": "CFXSettings-HasProperty-Expressions_C8BADC1A98D157E5D546B7FD8F470093466D565B7591F4CA3E74830E24173994",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/HasProperty.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/HasProperty.cs",
       "label": "HasProperty",
       "attributes": [
         "datatype"
@@ -5988,7 +6003,7 @@
     },
     {
       "id": "BH.oM.CFD.CFX.CFXSettings-HasProperty-BH.oM.CFD.CFX.CFXSettings.UserFunctions",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/HasProperty.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/HasProperty.cs",
       "label": "HasProperty",
       "attributes": [
         "object"
@@ -5998,7 +6013,7 @@
     },
     {
       "id": "BH.oM.CFD.CFX.CFXSettings.UserFunctions-IsAListOf-BH.oM.CFD.CFX.UserFunction",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsAListOf.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/IsAListOf.cs",
       "label": "IsAListOf",
       "attributes": [
         "object"
@@ -6008,7 +6023,7 @@
     },
     {
       "id": "CFXSettings-IsA-IBHoMObject_CEF6E26E1B9272EBDD485F10ED7D573B5CC72C208C6EC3E1427F8FA1409949AA",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/IsA.cs",
       "label": "IsA",
       "attributes": [
         "object"
@@ -6021,7 +6036,7 @@
     },
     {
       "id": "CFXSettings-IsA-IObject_C844CAC7536D57A8A216200795B58229EE1E015CC0A8F5BAF0D70A286838FFAD",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/IsA.cs",
       "label": "IsA",
       "attributes": [
         "object"
@@ -6034,7 +6049,7 @@
     },
     {
       "id": "CFXSettings-IsSubclassOf-BHoMObject_7F2C7DE00E6FAC4E12C9AFEE80E918C6BC396AAEC2AC0E0033907509E67A8ED5",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsSubclassOf.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/IsSubclassOf.cs",
       "label": "IsA",
       "attributes": [
         "object"

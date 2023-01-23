@@ -19,7 +19,7 @@
       "type": "owl:Class"
     },
     {
-      "id": "BH.oM.Base.FragmentSet",
+      "id": "rdf:list",
       "type": "owl:Class"
     },
     {
@@ -51,7 +51,7 @@
     {
       "id": "BH.oM.Base.BHoMObject.BHoM_Guid",
       "iri": "https://github.com/BHoM/BHoM/blob/main/BHoM/BHoMObject.cs#L34",
-      "label": "BHoM_Guid(BH.oM.Base.BHoMObject.BHoM_Guid)",
+      "label": "BHoM_Guid (BH.oM.Base.BHoMObject.BHoM_Guid)",
       "attributes": [
         "datatype"
       ]
@@ -59,7 +59,7 @@
     {
       "id": "BH.oM.Base.BHoMObject.Name",
       "iri": "https://github.com/BHoM/BHoM/blob/main/BHoM/BHoMObject.cs#L36",
-      "label": "Name(BH.oM.Base.BHoMObject.Name)",
+      "label": "Name (BH.oM.Base.BHoMObject.Name)",
       "attributes": [
         "datatype"
       ]
@@ -67,11 +67,11 @@
     {
       "id": "BH.oM.Base.BHoMObject.Fragments",
       "iri": "https://github.com/BHoM/BHoM/blob/main/BHoM/BHoMObject.cs#L38",
-      "label": "Fragments(BH.oM.Base.BHoMObject.Fragments)",
+      "label": "Fragments (BH.oM.Base.BHoMObject.Fragments)",
       "attributes": []
     },
     {
-      "id": "BH.oM.Base.FragmentSet",
+      "id": "rdf:list",
       "iri": "https://github.com/BHoM/BHoM/blob/main/BHoM/FragmentSet.cs",
       "label": "FragmentSet (BH.oM.Base)",
       "attributes": [
@@ -81,7 +81,7 @@
     {
       "id": "BH.oM.Base.BHoMObject.Tags",
       "iri": "https://github.com/BHoM/BHoM/blob/main/BHoM/BHoMObject.cs#L40",
-      "label": "Tags(BH.oM.Base.BHoMObject.Tags)",
+      "label": "Tags (BH.oM.Base.BHoMObject.Tags)",
       "attributes": [
         "datatype"
       ]
@@ -89,7 +89,7 @@
     {
       "id": "BH.oM.Base.BHoMObject.CustomData",
       "iri": "https://github.com/BHoM/BHoM/blob/main/BHoM/BHoMObject.cs#L42",
-      "label": "CustomData(BH.oM.Base.BHoMObject.CustomData)",
+      "label": "CustomData (BH.oM.Base.BHoMObject.CustomData)",
       "attributes": [
         "datatype"
       ]
@@ -125,7 +125,7 @@
       "type": "owl:ObjectProperty"
     },
     {
-      "id": "BH.oM.Base.BHoMObject.Fragments-IsA-BH.oM.Base.FragmentSet",
+      "id": "BH.oM.Base.BHoMObject.Fragments-IsA-rdf:list",
       "type": "owl:ObjectProperty"
     },
     {
@@ -148,7 +148,7 @@
   "propertyAttribute": [
     {
       "id": "BHoMObject-HasProperty-BHoM_Guid_8DD4FC3BF42DE45BD6F7CA027731FAF4B6C4EC3EF0408D0AC6D569D7D0BA135C",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/HasProperty.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/HasProperty.cs",
       "label": "HasProperty",
       "attributes": [
         "datatype"
@@ -158,7 +158,7 @@
     },
     {
       "id": "BHoMObject-HasProperty-Name_C89BD1918E32C81C301FA4AEAC4F504CCBFA81C34AE9E8B4279BB52E739A9323",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/HasProperty.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/HasProperty.cs",
       "label": "HasProperty",
       "attributes": [
         "datatype"
@@ -168,7 +168,7 @@
     },
     {
       "id": "BH.oM.Base.BHoMObject-HasProperty-BH.oM.Base.BHoMObject.Fragments",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/HasProperty.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/HasProperty.cs",
       "label": "HasProperty",
       "attributes": [
         "object"
@@ -177,18 +177,18 @@
       "range": "BH.oM.Base.BHoMObject.Fragments"
     },
     {
-      "id": "BH.oM.Base.BHoMObject.Fragments-IsA-BH.oM.Base.FragmentSet",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "id": "BH.oM.Base.BHoMObject.Fragments-IsA-rdf:list",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/IsA.cs",
       "label": "IsA",
       "attributes": [
         "object"
       ],
       "domain": "BH.oM.Base.BHoMObject.Fragments",
-      "range": "BH.oM.Base.FragmentSet"
+      "range": "rdf:list"
     },
     {
       "id": "BHoMObject-HasProperty-Tags_19A34329DC9C6BEB81293950676267062031BE42D49425C47FE2F8176894C4A2",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/HasProperty.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/HasProperty.cs",
       "label": "HasProperty",
       "attributes": [
         "datatype"
@@ -198,7 +198,7 @@
     },
     {
       "id": "BHoMObject-HasProperty-CustomData_269F7E4A961EBDA28B63F45CDE1CE26775BE6B188367DC5213B8C6D41DCC7DB0",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/HasProperty.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/HasProperty.cs",
       "label": "HasProperty",
       "attributes": [
         "datatype"
@@ -208,7 +208,7 @@
     },
     {
       "id": "BHoMObject-IsA-IBHoMObject_477BD74340BED9FA358EF34710894A1B7B85A097E2332104889663EDF9280D91",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/IsA.cs",
       "label": "IsA",
       "attributes": [
         "object"
@@ -221,7 +221,7 @@
     },
     {
       "id": "BHoMObject-IsA-IObject_081E332C7C6E8ECBB04F85F7030F1CE07E4BEBE212DCA03D66D402E1A7C22392",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/IsA.cs",
       "label": "IsA",
       "attributes": [
         "object"

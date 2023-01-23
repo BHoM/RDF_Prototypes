@@ -75,11 +75,19 @@
       "type": "owl:Class"
     },
     {
+      "id": "BH.oM.LifeCycleAssessment.Results.ElementResult",
+      "type": "owl:Class"
+    },
+    {
       "id": "BH.oM.LifeCycleAssessment.Results.EnvironmentalMetricResult",
       "type": "owl:Class"
     },
     {
       "id": "BH.oM.LifeCycleAssessment.Results.LifeCycleAssessmentElementResult",
+      "type": "owl:Class"
+    },
+    {
+      "id": "BH.oM.LifeCycleAssessment.Results.MaterialResult",
       "type": "owl:Class"
     },
     {
@@ -311,15 +319,31 @@
       "type": "owl:Class"
     },
     {
-      "id": "BH.oM.LifeCycleAssessment.Results.EnvironmentalMetricResult.Quantity",
+      "id": "BH.oM.LifeCycleAssessment.Results.ElementResult.ObjectId",
       "type": "owl:Class"
     },
     {
-      "id": "BH.oM.LifeCycleAssessment.Results.EnvironmentalMetricResult.Metric",
+      "id": "BH.oM.LifeCycleAssessment.Results.ElementResult.Scope",
       "type": "owl:Class"
     },
     {
-      "id": "BH.oM.Analytical.Results.IObjectIdResult",
+      "id": "BH.oM.LifeCycleAssessment.Results.ElementResult.Category",
+      "type": "owl:Class"
+    },
+    {
+      "id": "BH.oM.LifeCycleAssessment.Results.ElementResult.Phases",
+      "type": "owl:Class"
+    },
+    {
+      "id": "BH.oM.LifeCycleAssessment.Results.ElementResult.Quantity",
+      "type": "owl:Class"
+    },
+    {
+      "id": "BH.oM.LifeCycleAssessment.Results.ElementResult.Metric",
+      "type": "owl:Class"
+    },
+    {
+      "id": "BH.oM.LifeCycleAssessment.Results.ElementResult.MaterialResults",
       "type": "owl:Class"
     },
     {
@@ -331,19 +355,31 @@
       "type": "owl:Class"
     },
     {
+      "id": "BH.oM.Analytical.Results.IObjectResult",
+      "type": "owl:Class"
+    },
+    {
+      "id": "BH.oM.Analytical.Results.IObjectIdResult",
+      "type": "owl:Class"
+    },
+    {
+      "id": "BH.oM.Analytical.Results.IResultItem",
+      "type": "owl:Class"
+    },
+    {
+      "id": "BH.oM.LifeCycleAssessment.Results.EnvironmentalMetricResult.Quantity",
+      "type": "owl:Class"
+    },
+    {
+      "id": "BH.oM.LifeCycleAssessment.Results.EnvironmentalMetricResult.Metric",
+      "type": "owl:Class"
+    },
+    {
       "id": "BH.oM.Analytical.Results.ICasedResult",
       "type": "owl:Class"
     },
     {
       "id": "BH.oM.Analytical.Results.ITimeStepResult",
-      "type": "owl:Class"
-    },
-    {
-      "id": "BH.oM.Analytical.Results.IObjectResult",
-      "type": "owl:Class"
-    },
-    {
-      "id": "BH.oM.Analytical.Results.IResultItem",
       "type": "owl:Class"
     },
     {
@@ -372,6 +408,26 @@
     },
     {
       "id": "BH.oM.LifeCycleAssessment.Results.LifeCycleAssessmentElementResult.EnvironmentalProductDeclaration",
+      "type": "owl:Class"
+    },
+    {
+      "id": "BH.oM.LifeCycleAssessment.Results.MaterialResult.MaterialName",
+      "type": "owl:Class"
+    },
+    {
+      "id": "BH.oM.LifeCycleAssessment.Results.MaterialResult.EnvironmentalProductDeclarationName",
+      "type": "owl:Class"
+    },
+    {
+      "id": "BH.oM.LifeCycleAssessment.Results.MaterialResult.Quantity",
+      "type": "owl:Class"
+    },
+    {
+      "id": "BH.oM.LifeCycleAssessment.Results.MaterialResult.Phases",
+      "type": "owl:Class"
+    },
+    {
+      "id": "BH.oM.LifeCycleAssessment.Results.MaterialResult.Metric",
       "type": "owl:Class"
     },
     {
@@ -624,6 +680,17 @@
       }
     },
     {
+      "id": "BH.oM.LifeCycleAssessment.Results.ElementResult",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/LifeCycleAssessment_oM/Results/ElementResult.cs",
+      "label": "ElementResult (BH.oM.LifeCycleAssessment.Results)",
+      "attributes": [
+        "object"
+      ],
+      "comment": {
+        "undefined": "Result for a single element from a Life Cycle Assessment. Contains total value as well as breakdown per Material/Environmental Product Declaration evaluated."
+      }
+    },
+    {
       "id": "BH.oM.LifeCycleAssessment.Results.EnvironmentalMetricResult",
       "iri": "https://github.com/BHoM/BHoM/blob/main/LifeCycleAssessment_oM/Results/EnvironmentalMetricResult.cs",
       "label": "EnvironmentalMetricResult (BH.oM.LifeCycleAssessment.Results)",
@@ -643,6 +710,17 @@
       ],
       "comment": {
         "undefined": "Base class for a LifeCycleAssessment of a single object. This contains the total quantity of global warming potential, acidification potential, etc. for a whole project."
+      }
+    },
+    {
+      "id": "BH.oM.LifeCycleAssessment.Results.MaterialResult",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/LifeCycleAssessment_oM/Results/MaterialResult.cs",
+      "label": "MaterialResult (BH.oM.LifeCycleAssessment.Results)",
+      "attributes": [
+        "object"
+      ],
+      "comment": {
+        "undefined": "Life Cycle Assessment result for a Material/Environmental Product Declaration evaluated."
       }
     },
     {
@@ -692,7 +770,7 @@
     {
       "id": "BH.oM.LifeCycleAssessment.BuildingBenchmarkingData.High",
       "iri": "https://github.com/BHoM/BHoM/blob/main/LifeCycleAssessment_oM/BuildingBenchmarkingData.cs#L33",
-      "label": "High(BH.oM.LifeCycleAssessment.BuildingBenchmarkingData.High)",
+      "label": "High (BH.oM.LifeCycleAssessment.BuildingBenchmarkingData.High)",
       "attributes": [
         "datatype"
       ]
@@ -700,7 +778,7 @@
     {
       "id": "BH.oM.LifeCycleAssessment.BuildingBenchmarkingData.Average",
       "iri": "https://github.com/BHoM/BHoM/blob/main/LifeCycleAssessment_oM/BuildingBenchmarkingData.cs#L34",
-      "label": "Average(BH.oM.LifeCycleAssessment.BuildingBenchmarkingData.Average)",
+      "label": "Average (BH.oM.LifeCycleAssessment.BuildingBenchmarkingData.Average)",
       "attributes": [
         "datatype"
       ]
@@ -708,7 +786,7 @@
     {
       "id": "BH.oM.LifeCycleAssessment.BuildingBenchmarkingData.Low",
       "iri": "https://github.com/BHoM/BHoM/blob/main/LifeCycleAssessment_oM/BuildingBenchmarkingData.cs#L35",
-      "label": "Low(BH.oM.LifeCycleAssessment.BuildingBenchmarkingData.Low)",
+      "label": "Low (BH.oM.LifeCycleAssessment.BuildingBenchmarkingData.Low)",
       "attributes": [
         "datatype"
       ]
@@ -742,7 +820,7 @@
     {
       "id": "BH.oM.LifeCycleAssessment.EnvironmentalMetric.Field",
       "iri": "https://github.com/BHoM/BHoM/blob/main/LifeCycleAssessment_oM/EnvironmentalMetric.cs#L38",
-      "label": "Field(BH.oM.LifeCycleAssessment.EnvironmentalMetric.Field)",
+      "label": "Field (BH.oM.LifeCycleAssessment.EnvironmentalMetric.Field)",
       "attributes": [],
       "comment": {
         "undefined": "An Environmental Impact Metric filter used to classify the Environmental Metric that is being stored on the EPD."
@@ -751,13 +829,13 @@
     {
       "id": "BH.oM.LifeCycleAssessment.EnvironmentalMetric.Phases",
       "iri": "https://github.com/BHoM/BHoM/blob/main/LifeCycleAssessment_oM/EnvironmentalMetric.cs#L41",
-      "label": "Phases(BH.oM.LifeCycleAssessment.EnvironmentalMetric.Phases)",
+      "label": "Phases (BH.oM.LifeCycleAssessment.EnvironmentalMetric.Phases)",
       "attributes": []
     },
     {
       "id": "BH.oM.LifeCycleAssessment.EnvironmentalMetric.Quantity",
       "iri": "https://github.com/BHoM/BHoM/blob/main/LifeCycleAssessment_oM/EnvironmentalMetric.cs#L44",
-      "label": "Quantity(BH.oM.LifeCycleAssessment.EnvironmentalMetric.Quantity)",
+      "label": "Quantity (BH.oM.LifeCycleAssessment.EnvironmentalMetric.Quantity)",
       "attributes": [
         "datatype"
       ]
@@ -765,7 +843,7 @@
     {
       "id": "BH.oM.LifeCycleAssessment.LifeCycleAssessmentScope.AdditionalNotes",
       "iri": "https://github.com/BHoM/BHoM/blob/main/LifeCycleAssessment_oM/Fragments/LifeCycleAssessmentScope.cs#L38",
-      "label": "AdditionalNotes(BH.oM.LifeCycleAssessment.LifeCycleAssessmentScope.AdditionalNotes)",
+      "label": "AdditionalNotes (BH.oM.LifeCycleAssessment.LifeCycleAssessmentScope.AdditionalNotes)",
       "attributes": [
         "datatype"
       ]
@@ -773,7 +851,7 @@
     {
       "id": "BH.oM.LifeCycleAssessment.LifeCycleAssessmentScope.BiogenicCarbon",
       "iri": "https://github.com/BHoM/BHoM/blob/main/LifeCycleAssessment_oM/Fragments/LifeCycleAssessmentScope.cs#L41",
-      "label": "BiogenicCarbon(BH.oM.LifeCycleAssessment.LifeCycleAssessmentScope.BiogenicCarbon)",
+      "label": "BiogenicCarbon (BH.oM.LifeCycleAssessment.LifeCycleAssessmentScope.BiogenicCarbon)",
       "attributes": [
         "datatype"
       ]
@@ -781,7 +859,7 @@
     {
       "id": "BH.oM.LifeCycleAssessment.LifeCycleAssessmentScope.BuildingLifespan",
       "iri": "https://github.com/BHoM/BHoM/blob/main/LifeCycleAssessment_oM/Fragments/LifeCycleAssessmentScope.cs#L44",
-      "label": "BuildingLifespan(BH.oM.LifeCycleAssessment.LifeCycleAssessmentScope.BuildingLifespan)",
+      "label": "BuildingLifespan (BH.oM.LifeCycleAssessment.LifeCycleAssessmentScope.BuildingLifespan)",
       "attributes": [
         "datatype"
       ]
@@ -789,7 +867,7 @@
     {
       "id": "BH.oM.LifeCycleAssessment.LifeCycleAssessmentScope.ConstructionScopeNew",
       "iri": "https://github.com/BHoM/BHoM/blob/main/LifeCycleAssessment_oM/Fragments/LifeCycleAssessmentScope.cs#L47",
-      "label": "ConstructionScopeNew(BH.oM.LifeCycleAssessment.LifeCycleAssessmentScope.ConstructionScopeNew)",
+      "label": "ConstructionScopeNew (BH.oM.LifeCycleAssessment.LifeCycleAssessmentScope.ConstructionScopeNew)",
       "attributes": [
         "datatype"
       ]
@@ -797,7 +875,7 @@
     {
       "id": "BH.oM.LifeCycleAssessment.LifeCycleAssessmentScope.ConstructionScopeRenovation",
       "iri": "https://github.com/BHoM/BHoM/blob/main/LifeCycleAssessment_oM/Fragments/LifeCycleAssessmentScope.cs#L50",
-      "label": "ConstructionScopeRenovation(BH.oM.LifeCycleAssessment.LifeCycleAssessmentScope.ConstructionScopeRenovation)",
+      "label": "ConstructionScopeRenovation (BH.oM.LifeCycleAssessment.LifeCycleAssessmentScope.ConstructionScopeRenovation)",
       "attributes": [
         "datatype"
       ]
@@ -805,7 +883,7 @@
     {
       "id": "BH.oM.LifeCycleAssessment.LifeCycleAssessmentScope.ContactName",
       "iri": "https://github.com/BHoM/BHoM/blob/main/LifeCycleAssessment_oM/Fragments/LifeCycleAssessmentScope.cs#L53",
-      "label": "ContactName(BH.oM.LifeCycleAssessment.LifeCycleAssessmentScope.ContactName)",
+      "label": "ContactName (BH.oM.LifeCycleAssessment.LifeCycleAssessmentScope.ContactName)",
       "attributes": [
         "datatype"
       ]
@@ -813,7 +891,7 @@
     {
       "id": "BH.oM.LifeCycleAssessment.LifeCycleAssessmentScope.GravityStructuralMaterial",
       "iri": "https://github.com/BHoM/BHoM/blob/main/LifeCycleAssessment_oM/Fragments/LifeCycleAssessmentScope.cs#L56",
-      "label": "GravityStructuralMaterial(BH.oM.LifeCycleAssessment.LifeCycleAssessmentScope.GravityStructuralMaterial)",
+      "label": "GravityStructuralMaterial (BH.oM.LifeCycleAssessment.LifeCycleAssessmentScope.GravityStructuralMaterial)",
       "attributes": [],
       "comment": {
         "undefined": "The primary structural system providing gravity support for the building."
@@ -822,7 +900,7 @@
     {
       "id": "BH.oM.LifeCycleAssessment.LifeCycleAssessmentScope.LateralStructuralMaterial",
       "iri": "https://github.com/BHoM/BHoM/blob/main/LifeCycleAssessment_oM/Fragments/LifeCycleAssessmentScope.cs#L59",
-      "label": "LateralStructuralMaterial(BH.oM.LifeCycleAssessment.LifeCycleAssessmentScope.LateralStructuralMaterial)",
+      "label": "LateralStructuralMaterial (BH.oM.LifeCycleAssessment.LifeCycleAssessmentScope.LateralStructuralMaterial)",
       "attributes": [],
       "comment": {
         "undefined": "The primary structural system providing lateral support for the building."
@@ -831,7 +909,7 @@
     {
       "id": "BH.oM.LifeCycleAssessment.LifeCycleAssessmentScope.LevelOfDevelopment",
       "iri": "https://github.com/BHoM/BHoM/blob/main/LifeCycleAssessment_oM/Fragments/LifeCycleAssessmentScope.cs#L62",
-      "label": "LevelOfDevelopment(BH.oM.LifeCycleAssessment.LifeCycleAssessmentScope.LevelOfDevelopment)",
+      "label": "LevelOfDevelopment (BH.oM.LifeCycleAssessment.LifeCycleAssessmentScope.LevelOfDevelopment)",
       "attributes": [],
       "comment": {
         "undefined": "Typically a term utilised in BIM practices to clearly identify the scope of work being account for. Equivalents for LOD classifications can offen times be linked to design and construction phases common to the projects locale."
@@ -840,13 +918,13 @@
     {
       "id": "BH.oM.LifeCycleAssessment.LifeCycleAssessmentScope.LifeCycleAssessmentPhases",
       "iri": "https://github.com/BHoM/BHoM/blob/main/LifeCycleAssessment_oM/Fragments/LifeCycleAssessmentScope.cs#L65",
-      "label": "LifeCycleAssessmentPhases(BH.oM.LifeCycleAssessment.LifeCycleAssessmentScope.LifeCycleAssessmentPhases)",
+      "label": "LifeCycleAssessmentPhases (BH.oM.LifeCycleAssessment.LifeCycleAssessmentScope.LifeCycleAssessmentPhases)",
       "attributes": []
     },
     {
       "id": "BH.oM.LifeCycleAssessment.LifeCycleAssessmentScope.ProjectType",
       "iri": "https://github.com/BHoM/BHoM/blob/main/LifeCycleAssessment_oM/Fragments/LifeCycleAssessmentScope.cs#L68",
-      "label": "ProjectType(BH.oM.LifeCycleAssessment.LifeCycleAssessmentScope.ProjectType)",
+      "label": "ProjectType (BH.oM.LifeCycleAssessment.LifeCycleAssessmentScope.ProjectType)",
       "attributes": [],
       "comment": {
         "undefined": "A general classification of the buildings primary function. This value is for categorisation purposes only and will not effect the overall results."
@@ -855,7 +933,7 @@
     {
       "id": "BH.oM.LifeCycleAssessment.LifeCycleAssessmentScope.ProjectName",
       "iri": "https://github.com/BHoM/BHoM/blob/main/LifeCycleAssessment_oM/Fragments/LifeCycleAssessmentScope.cs#L71",
-      "label": "ProjectName(BH.oM.LifeCycleAssessment.LifeCycleAssessmentScope.ProjectName)",
+      "label": "ProjectName (BH.oM.LifeCycleAssessment.LifeCycleAssessmentScope.ProjectName)",
       "attributes": [
         "datatype"
       ]
@@ -863,7 +941,7 @@
     {
       "id": "BH.oM.LifeCycleAssessment.LifeCycleAssessmentScope.ProjectArea",
       "iri": "https://github.com/BHoM/BHoM/blob/main/LifeCycleAssessment_oM/Fragments/LifeCycleAssessmentScope.cs#L75",
-      "label": "ProjectArea(BH.oM.LifeCycleAssessment.LifeCycleAssessmentScope.ProjectArea)",
+      "label": "ProjectArea (BH.oM.LifeCycleAssessment.LifeCycleAssessmentScope.ProjectArea)",
       "attributes": [
         "datatype"
       ]
@@ -871,7 +949,7 @@
     {
       "id": "BH.oM.LifeCycleAssessment.LifeCycleAssessmentScope.SeismicDesignCategory",
       "iri": "https://github.com/BHoM/BHoM/blob/main/LifeCycleAssessment_oM/Fragments/LifeCycleAssessmentScope.cs#L78",
-      "label": "SeismicDesignCategory(BH.oM.LifeCycleAssessment.LifeCycleAssessmentScope.SeismicDesignCategory)",
+      "label": "SeismicDesignCategory (BH.oM.LifeCycleAssessment.LifeCycleAssessmentScope.SeismicDesignCategory)",
       "attributes": [],
       "comment": {
         "undefined": "Seismic Design Category is a classification assigned to a structure based on it's occupancy category, and the severity of the design earthquake ground motion. These categories are currently in reference to ASCE 7-05."
@@ -880,7 +958,7 @@
     {
       "id": "BH.oM.LifeCycleAssessment.LifeCycleAssessmentScope.WindSpeedCategory",
       "iri": "https://github.com/BHoM/BHoM/blob/main/LifeCycleAssessment_oM/Fragments/LifeCycleAssessmentScope.cs#L81",
-      "label": "WindSpeedCategory(BH.oM.LifeCycleAssessment.LifeCycleAssessmentScope.WindSpeedCategory)",
+      "label": "WindSpeedCategory (BH.oM.LifeCycleAssessment.LifeCycleAssessmentScope.WindSpeedCategory)",
       "attributes": [],
       "comment": {
         "undefined": "Wind speed category is in reference to the Beaufort Scale of wind speeds. Values are arranged from 0-12 equivalent, 0 being Calm and 12 being Hurricane, and are used only to represent an average site-based, wind condition. Specific informaion on categorisation can be found at https://www.spc.noaa.gov/faq/tornado/beaufort.html"
@@ -889,7 +967,7 @@
     {
       "id": "BH.oM.LifeCycleAssessment.LifeCycleAssessmentScope.Location",
       "iri": "https://github.com/BHoM/BHoM/blob/main/LifeCycleAssessment_oM/Fragments/LifeCycleAssessmentScope.cs#L84",
-      "label": "Location(BH.oM.LifeCycleAssessment.LifeCycleAssessmentScope.Location)",
+      "label": "Location (BH.oM.LifeCycleAssessment.LifeCycleAssessmentScope.Location)",
       "attributes": [],
       "comment": {
         "undefined": "Provide the projects geographic location for database organisation purposes. This value is for categorisation purposes only and will not effect the overall results."
@@ -919,7 +997,7 @@
     {
       "id": "BH.oM.LifeCycleAssessment.Scope.ScopeType",
       "iri": "https://github.com/BHoM/BHoM/blob/main/LifeCycleAssessment_oM/Fragments/Scope.cs#L36",
-      "label": "ScopeType(BH.oM.LifeCycleAssessment.Scope.ScopeType)",
+      "label": "ScopeType (BH.oM.LifeCycleAssessment.Scope.ScopeType)",
       "attributes": [],
       "comment": {
         "undefined": "ScopeType used to describe the objects being evaluated."
@@ -928,7 +1006,7 @@
     {
       "id": "BH.oM.LifeCycleAssessment.HealthProductDeclaration.MasterFormat",
       "iri": "https://github.com/BHoM/BHoM/blob/main/LifeCycleAssessment_oM/HealthProductDeclaration.cs#L33",
-      "label": "MasterFormat(BH.oM.LifeCycleAssessment.HealthProductDeclaration.MasterFormat)",
+      "label": "MasterFormat (BH.oM.LifeCycleAssessment.HealthProductDeclaration.MasterFormat)",
       "attributes": [
         "datatype"
       ]
@@ -936,7 +1014,7 @@
     {
       "id": "BH.oM.LifeCycleAssessment.HealthProductDeclaration.Uniformats",
       "iri": "https://github.com/BHoM/BHoM/blob/main/LifeCycleAssessment_oM/HealthProductDeclaration.cs#L34",
-      "label": "Uniformats(BH.oM.LifeCycleAssessment.HealthProductDeclaration.Uniformats)",
+      "label": "Uniformats (BH.oM.LifeCycleAssessment.HealthProductDeclaration.Uniformats)",
       "attributes": [
         "datatype"
       ]
@@ -944,7 +1022,7 @@
     {
       "id": "BH.oM.LifeCycleAssessment.HealthProductDeclaration.CancerOrange",
       "iri": "https://github.com/BHoM/BHoM/blob/main/LifeCycleAssessment_oM/HealthProductDeclaration.cs#L35",
-      "label": "CancerOrange(BH.oM.LifeCycleAssessment.HealthProductDeclaration.CancerOrange)",
+      "label": "CancerOrange (BH.oM.LifeCycleAssessment.HealthProductDeclaration.CancerOrange)",
       "attributes": [
         "datatype"
       ]
@@ -952,7 +1030,7 @@
     {
       "id": "BH.oM.LifeCycleAssessment.HealthProductDeclaration.DevelopmentalOrange",
       "iri": "https://github.com/BHoM/BHoM/blob/main/LifeCycleAssessment_oM/HealthProductDeclaration.cs#L36",
-      "label": "DevelopmentalOrange(BH.oM.LifeCycleAssessment.HealthProductDeclaration.DevelopmentalOrange)",
+      "label": "DevelopmentalOrange (BH.oM.LifeCycleAssessment.HealthProductDeclaration.DevelopmentalOrange)",
       "attributes": [
         "datatype"
       ]
@@ -960,7 +1038,7 @@
     {
       "id": "BH.oM.LifeCycleAssessment.HealthProductDeclaration.EndocrineOrange",
       "iri": "https://github.com/BHoM/BHoM/blob/main/LifeCycleAssessment_oM/HealthProductDeclaration.cs#L37",
-      "label": "EndocrineOrange(BH.oM.LifeCycleAssessment.HealthProductDeclaration.EndocrineOrange)",
+      "label": "EndocrineOrange (BH.oM.LifeCycleAssessment.HealthProductDeclaration.EndocrineOrange)",
       "attributes": [
         "datatype"
       ]
@@ -968,7 +1046,7 @@
     {
       "id": "BH.oM.LifeCycleAssessment.HealthProductDeclaration.EyeIrritationOrange",
       "iri": "https://github.com/BHoM/BHoM/blob/main/LifeCycleAssessment_oM/HealthProductDeclaration.cs#L38",
-      "label": "EyeIrritationOrange(BH.oM.LifeCycleAssessment.HealthProductDeclaration.EyeIrritationOrange)",
+      "label": "EyeIrritationOrange (BH.oM.LifeCycleAssessment.HealthProductDeclaration.EyeIrritationOrange)",
       "attributes": [
         "datatype"
       ]
@@ -976,7 +1054,7 @@
     {
       "id": "BH.oM.LifeCycleAssessment.HealthProductDeclaration.MammalianOrange",
       "iri": "https://github.com/BHoM/BHoM/blob/main/LifeCycleAssessment_oM/HealthProductDeclaration.cs#L39",
-      "label": "MammalianOrange(BH.oM.LifeCycleAssessment.HealthProductDeclaration.MammalianOrange)",
+      "label": "MammalianOrange (BH.oM.LifeCycleAssessment.HealthProductDeclaration.MammalianOrange)",
       "attributes": [
         "datatype"
       ]
@@ -984,7 +1062,7 @@
     {
       "id": "BH.oM.LifeCycleAssessment.HealthProductDeclaration.MutagenicityOrange",
       "iri": "https://github.com/BHoM/BHoM/blob/main/LifeCycleAssessment_oM/HealthProductDeclaration.cs#L40",
-      "label": "MutagenicityOrange(BH.oM.LifeCycleAssessment.HealthProductDeclaration.MutagenicityOrange)",
+      "label": "MutagenicityOrange (BH.oM.LifeCycleAssessment.HealthProductDeclaration.MutagenicityOrange)",
       "attributes": [
         "datatype"
       ]
@@ -992,7 +1070,7 @@
     {
       "id": "BH.oM.LifeCycleAssessment.HealthProductDeclaration.NeurotoxicityOrange",
       "iri": "https://github.com/BHoM/BHoM/blob/main/LifeCycleAssessment_oM/HealthProductDeclaration.cs#L41",
-      "label": "NeurotoxicityOrange(BH.oM.LifeCycleAssessment.HealthProductDeclaration.NeurotoxicityOrange)",
+      "label": "NeurotoxicityOrange (BH.oM.LifeCycleAssessment.HealthProductDeclaration.NeurotoxicityOrange)",
       "attributes": [
         "datatype"
       ]
@@ -1000,7 +1078,7 @@
     {
       "id": "BH.oM.LifeCycleAssessment.HealthProductDeclaration.OrganToxicantOrange",
       "iri": "https://github.com/BHoM/BHoM/blob/main/LifeCycleAssessment_oM/HealthProductDeclaration.cs#L42",
-      "label": "OrganToxicantOrange(BH.oM.LifeCycleAssessment.HealthProductDeclaration.OrganToxicantOrange)",
+      "label": "OrganToxicantOrange (BH.oM.LifeCycleAssessment.HealthProductDeclaration.OrganToxicantOrange)",
       "attributes": [
         "datatype"
       ]
@@ -1008,7 +1086,7 @@
     {
       "id": "BH.oM.LifeCycleAssessment.HealthProductDeclaration.ReproductiveOrange",
       "iri": "https://github.com/BHoM/BHoM/blob/main/LifeCycleAssessment_oM/HealthProductDeclaration.cs#L43",
-      "label": "ReproductiveOrange(BH.oM.LifeCycleAssessment.HealthProductDeclaration.ReproductiveOrange)",
+      "label": "ReproductiveOrange (BH.oM.LifeCycleAssessment.HealthProductDeclaration.ReproductiveOrange)",
       "attributes": [
         "datatype"
       ]
@@ -1016,7 +1094,7 @@
     {
       "id": "BH.oM.LifeCycleAssessment.HealthProductDeclaration.RespiratoryOrange",
       "iri": "https://github.com/BHoM/BHoM/blob/main/LifeCycleAssessment_oM/HealthProductDeclaration.cs#L44",
-      "label": "RespiratoryOrange(BH.oM.LifeCycleAssessment.HealthProductDeclaration.RespiratoryOrange)",
+      "label": "RespiratoryOrange (BH.oM.LifeCycleAssessment.HealthProductDeclaration.RespiratoryOrange)",
       "attributes": [
         "datatype"
       ]
@@ -1024,7 +1102,7 @@
     {
       "id": "BH.oM.LifeCycleAssessment.HealthProductDeclaration.RespiratoryOccupationalOnlyOrange",
       "iri": "https://github.com/BHoM/BHoM/blob/main/LifeCycleAssessment_oM/HealthProductDeclaration.cs#L45",
-      "label": "RespiratoryOccupationalOnlyOrange(BH.oM.LifeCycleAssessment.HealthProductDeclaration.RespiratoryOccupationalOnlyOrange)",
+      "label": "RespiratoryOccupationalOnlyOrange (BH.oM.LifeCycleAssessment.HealthProductDeclaration.RespiratoryOccupationalOnlyOrange)",
       "attributes": [
         "datatype"
       ]
@@ -1032,7 +1110,7 @@
     {
       "id": "BH.oM.LifeCycleAssessment.HealthProductDeclaration.SkinSensitizationOrange",
       "iri": "https://github.com/BHoM/BHoM/blob/main/LifeCycleAssessment_oM/HealthProductDeclaration.cs#L46",
-      "label": "SkinSensitizationOrange(BH.oM.LifeCycleAssessment.HealthProductDeclaration.SkinSensitizationOrange)",
+      "label": "SkinSensitizationOrange (BH.oM.LifeCycleAssessment.HealthProductDeclaration.SkinSensitizationOrange)",
       "attributes": [
         "datatype"
       ]
@@ -1040,7 +1118,7 @@
     {
       "id": "BH.oM.LifeCycleAssessment.HealthProductDeclaration.CancerRed",
       "iri": "https://github.com/BHoM/BHoM/blob/main/LifeCycleAssessment_oM/HealthProductDeclaration.cs#L47",
-      "label": "CancerRed(BH.oM.LifeCycleAssessment.HealthProductDeclaration.CancerRed)",
+      "label": "CancerRed (BH.oM.LifeCycleAssessment.HealthProductDeclaration.CancerRed)",
       "attributes": [
         "datatype"
       ]
@@ -1048,7 +1126,7 @@
     {
       "id": "BH.oM.LifeCycleAssessment.HealthProductDeclaration.CancerOccupationalOnlyRed",
       "iri": "https://github.com/BHoM/BHoM/blob/main/LifeCycleAssessment_oM/HealthProductDeclaration.cs#L48",
-      "label": "CancerOccupationalOnlyRed(BH.oM.LifeCycleAssessment.HealthProductDeclaration.CancerOccupationalOnlyRed)",
+      "label": "CancerOccupationalOnlyRed (BH.oM.LifeCycleAssessment.HealthProductDeclaration.CancerOccupationalOnlyRed)",
       "attributes": [
         "datatype"
       ]
@@ -1056,7 +1134,7 @@
     {
       "id": "BH.oM.LifeCycleAssessment.HealthProductDeclaration.DevelopmentalRed",
       "iri": "https://github.com/BHoM/BHoM/blob/main/LifeCycleAssessment_oM/HealthProductDeclaration.cs#L49",
-      "label": "DevelopmentalRed(BH.oM.LifeCycleAssessment.HealthProductDeclaration.DevelopmentalRed)",
+      "label": "DevelopmentalRed (BH.oM.LifeCycleAssessment.HealthProductDeclaration.DevelopmentalRed)",
       "attributes": [
         "datatype"
       ]
@@ -1064,7 +1142,7 @@
     {
       "id": "BH.oM.LifeCycleAssessment.HealthProductDeclaration.MutagenicityRed",
       "iri": "https://github.com/BHoM/BHoM/blob/main/LifeCycleAssessment_oM/HealthProductDeclaration.cs#L50",
-      "label": "MutagenicityRed(BH.oM.LifeCycleAssessment.HealthProductDeclaration.MutagenicityRed)",
+      "label": "MutagenicityRed (BH.oM.LifeCycleAssessment.HealthProductDeclaration.MutagenicityRed)",
       "attributes": [
         "datatype"
       ]
@@ -1072,7 +1150,7 @@
     {
       "id": "BH.oM.LifeCycleAssessment.HealthProductDeclaration.PersistantBioaccumulativeToxicantRed",
       "iri": "https://github.com/BHoM/BHoM/blob/main/LifeCycleAssessment_oM/HealthProductDeclaration.cs#L51",
-      "label": "PersistantBioaccumulativeToxicantRed(BH.oM.LifeCycleAssessment.HealthProductDeclaration.PersistantBioaccumulativeToxicantRed)",
+      "label": "PersistantBioaccumulativeToxicantRed (BH.oM.LifeCycleAssessment.HealthProductDeclaration.PersistantBioaccumulativeToxicantRed)",
       "attributes": [
         "datatype"
       ]
@@ -1080,7 +1158,7 @@
     {
       "id": "BH.oM.LifeCycleAssessment.HealthProductDeclaration.ReproductiveRed",
       "iri": "https://github.com/BHoM/BHoM/blob/main/LifeCycleAssessment_oM/HealthProductDeclaration.cs#L52",
-      "label": "ReproductiveRed(BH.oM.LifeCycleAssessment.HealthProductDeclaration.ReproductiveRed)",
+      "label": "ReproductiveRed (BH.oM.LifeCycleAssessment.HealthProductDeclaration.ReproductiveRed)",
       "attributes": [
         "datatype"
       ]
@@ -1088,7 +1166,7 @@
     {
       "id": "BH.oM.LifeCycleAssessment.HealthProductDeclaration.RespiratoryRed",
       "iri": "https://github.com/BHoM/BHoM/blob/main/LifeCycleAssessment_oM/HealthProductDeclaration.cs#L53",
-      "label": "RespiratoryRed(BH.oM.LifeCycleAssessment.HealthProductDeclaration.RespiratoryRed)",
+      "label": "RespiratoryRed (BH.oM.LifeCycleAssessment.HealthProductDeclaration.RespiratoryRed)",
       "attributes": [
         "datatype"
       ]
@@ -1096,7 +1174,7 @@
     {
       "id": "BH.oM.LifeCycleAssessment.HealthProductDeclaration.PersistantBioaccumulativeToxicantPurple",
       "iri": "https://github.com/BHoM/BHoM/blob/main/LifeCycleAssessment_oM/HealthProductDeclaration.cs#L54",
-      "label": "PersistantBioaccumulativeToxicantPurple(BH.oM.LifeCycleAssessment.HealthProductDeclaration.PersistantBioaccumulativeToxicantPurple)",
+      "label": "PersistantBioaccumulativeToxicantPurple (BH.oM.LifeCycleAssessment.HealthProductDeclaration.PersistantBioaccumulativeToxicantPurple)",
       "attributes": [
         "datatype"
       ]
@@ -1104,7 +1182,7 @@
     {
       "id": "BH.oM.LifeCycleAssessment.ProjectLifeCycleAssessment.LCAScope",
       "iri": "https://github.com/BHoM/BHoM/blob/main/LifeCycleAssessment_oM/ProjectLifeCycleAssessment.cs#L38",
-      "label": "LCAScope(BH.oM.LifeCycleAssessment.ProjectLifeCycleAssessment.LCAScope)",
+      "label": "LCAScope (BH.oM.LifeCycleAssessment.ProjectLifeCycleAssessment.LCAScope)",
       "attributes": [],
       "comment": {
         "undefined": "LCA Scope metadata designed to help differentiate between project specifications."
@@ -1113,7 +1191,7 @@
     {
       "id": "BH.oM.LifeCycleAssessment.ProjectLifeCycleAssessment.Elements",
       "iri": "https://github.com/BHoM/BHoM/blob/main/LifeCycleAssessment_oM/ProjectLifeCycleAssessment.cs#L41",
-      "label": "Elements(BH.oM.LifeCycleAssessment.ProjectLifeCycleAssessment.Elements)",
+      "label": "Elements (BH.oM.LifeCycleAssessment.ProjectLifeCycleAssessment.Elements)",
       "attributes": []
     },
     {
@@ -1129,33 +1207,59 @@
       }
     },
     {
-      "id": "BH.oM.LifeCycleAssessment.Results.EnvironmentalMetricResult.Quantity",
-      "iri": "https://github.com/BHoM/BHoM/blob/main/LifeCycleAssessment_oM/Results/EnvironmentalMetricResult.cs#L40",
-      "label": "Quantity(BH.oM.LifeCycleAssessment.Results.EnvironmentalMetricResult.Quantity)",
+      "id": "BH.oM.LifeCycleAssessment.Results.ElementResult.ObjectId",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/LifeCycleAssessment_oM/Results/ElementResult.cs#L40",
+      "label": "ObjectId (BH.oM.LifeCycleAssessment.Results.ElementResult.ObjectId)",
       "attributes": [
         "datatype"
       ]
     },
     {
-      "id": "BH.oM.LifeCycleAssessment.Results.EnvironmentalMetricResult.Metric",
-      "iri": "https://github.com/BHoM/BHoM/blob/main/LifeCycleAssessment_oM/Results/EnvironmentalMetricResult.cs#L43",
-      "label": "Metric(BH.oM.LifeCycleAssessment.Results.EnvironmentalMetricResult.Metric)",
+      "id": "BH.oM.LifeCycleAssessment.Results.ElementResult.Scope",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/LifeCycleAssessment_oM/Results/ElementResult.cs#L43",
+      "label": "Scope (BH.oM.LifeCycleAssessment.Results.ElementResult.Scope)",
       "attributes": [],
       "comment": {
-        "undefined": "The EPD Field selected for evaluation."
+        "undefined": "Scope the object this result was generated from belongs to, e.g. Foundation or Facade"
       }
     },
     {
-      "id": "BH.oM.Analytical.Results.IObjectIdResult",
-      "iri": "https://github.com/BHoM/BHoM/blob/main/Analytical_oM/Results/IObjectIdResult.cs",
-      "label": "IObjectIdResult (BH.oM.Analytical.Results)",
-      "attributes": [
-        "object",
-        "external"
-      ],
+      "id": "BH.oM.LifeCycleAssessment.Results.ElementResult.Category",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/LifeCycleAssessment_oM/Results/ElementResult.cs#L46",
+      "label": "Category (BH.oM.LifeCycleAssessment.Results.ElementResult.Category)",
+      "attributes": [],
       "comment": {
-        "undefined": "Interface for Results belonging to a particular object. The owning object is identified and correlated to the Results by its ID."
+        "undefined": "Category of the object this result was generated from, e.g. Beam or Wall"
       }
+    },
+    {
+      "id": "BH.oM.LifeCycleAssessment.Results.ElementResult.Phases",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/LifeCycleAssessment_oM/Results/ElementResult.cs#L49",
+      "label": "Phases (BH.oM.LifeCycleAssessment.Results.ElementResult.Phases)",
+      "attributes": []
+    },
+    {
+      "id": "BH.oM.LifeCycleAssessment.Results.ElementResult.Quantity",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/LifeCycleAssessment_oM/Results/ElementResult.cs#L52",
+      "label": "Quantity (BH.oM.LifeCycleAssessment.Results.ElementResult.Quantity)",
+      "attributes": [
+        "datatype"
+      ]
+    },
+    {
+      "id": "BH.oM.LifeCycleAssessment.Results.ElementResult.Metric",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/LifeCycleAssessment_oM/Results/ElementResult.cs#L55",
+      "label": "Metric (BH.oM.LifeCycleAssessment.Results.ElementResult.Metric)",
+      "attributes": [],
+      "comment": {
+        "undefined": "The Environmental Product Declaration Field selected for evaluation."
+      }
+    },
+    {
+      "id": "BH.oM.LifeCycleAssessment.Results.ElementResult.MaterialResults",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/LifeCycleAssessment_oM/Results/ElementResult.cs#L58",
+      "label": "MaterialResults (BH.oM.LifeCycleAssessment.Results.ElementResult.MaterialResults)",
+      "attributes": []
     },
     {
       "id": "BH.oM.Analytical.Results.IResult",
@@ -1177,6 +1281,59 @@
         "object",
         "external"
       ]
+    },
+    {
+      "id": "BH.oM.Analytical.Results.IObjectResult",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/Analytical_oM/Results/IObjectResult.cs",
+      "label": "IObjectResult (BH.oM.Analytical.Results)",
+      "attributes": [
+        "object",
+        "external"
+      ],
+      "comment": {
+        "undefined": "Base interface for result classes where the values apply to the entire object referenced to with the ObjectID."
+      }
+    },
+    {
+      "id": "BH.oM.Analytical.Results.IObjectIdResult",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/Analytical_oM/Results/IObjectIdResult.cs",
+      "label": "IObjectIdResult (BH.oM.Analytical.Results)",
+      "attributes": [
+        "object",
+        "external"
+      ],
+      "comment": {
+        "undefined": "Interface for Results belonging to a particular object. The owning object is identified and correlated to the Results by its ID."
+      }
+    },
+    {
+      "id": "BH.oM.Analytical.Results.IResultItem",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/Analytical_oM/Results/IResultItem.cs",
+      "label": "IResultItem (BH.oM.Analytical.Results)",
+      "attributes": [
+        "object",
+        "external"
+      ],
+      "comment": {
+        "undefined": "Base interface to flag that the result is a simple result line.\nA class implementing the IResultItem interface should only contain basic properties such as doubles, ints, strings, DateTime and similar.\nFor instance, a class implementing this interface could be represented as a single row in a table (e.g. Excel or a SQL database) with its properties explicitly readable."
+      }
+    },
+    {
+      "id": "BH.oM.LifeCycleAssessment.Results.EnvironmentalMetricResult.Quantity",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/LifeCycleAssessment_oM/Results/EnvironmentalMetricResult.cs#L40",
+      "label": "Quantity (BH.oM.LifeCycleAssessment.Results.EnvironmentalMetricResult.Quantity)",
+      "attributes": [
+        "datatype"
+      ]
+    },
+    {
+      "id": "BH.oM.LifeCycleAssessment.Results.EnvironmentalMetricResult.Metric",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/LifeCycleAssessment_oM/Results/EnvironmentalMetricResult.cs#L43",
+      "label": "Metric (BH.oM.LifeCycleAssessment.Results.EnvironmentalMetricResult.Metric)",
+      "attributes": [],
+      "comment": {
+        "undefined": "The EPD Field selected for evaluation."
+      }
     },
     {
       "id": "BH.oM.Analytical.Results.ICasedResult",
@@ -1203,33 +1360,9 @@
       }
     },
     {
-      "id": "BH.oM.Analytical.Results.IObjectResult",
-      "iri": "https://github.com/BHoM/BHoM/blob/main/Analytical_oM/Results/IObjectResult.cs",
-      "label": "IObjectResult (BH.oM.Analytical.Results)",
-      "attributes": [
-        "object",
-        "external"
-      ],
-      "comment": {
-        "undefined": "Base interface for result classes where the values apply to the entire object referenced to with the ObjectID."
-      }
-    },
-    {
-      "id": "BH.oM.Analytical.Results.IResultItem",
-      "iri": "https://github.com/BHoM/BHoM/blob/main/Analytical_oM/Results/IResultItem.cs",
-      "label": "IResultItem (BH.oM.Analytical.Results)",
-      "attributes": [
-        "object",
-        "external"
-      ],
-      "comment": {
-        "undefined": "Base interface to flag that the result is a simple result line.\nA class implementing the IResultItem interface should only contain basic properties such as doubles, ints, strings, DateTime and similar.\nFor instance, a class implementing this interface could be represented as a single row in a table (e.g. Excel or a SQL database) with its properties explicitly readable."
-      }
-    },
-    {
       "id": "BH.oM.LifeCycleAssessment.Results.LifeCycleAssessmentElementResult.ObjectId",
       "iri": "https://github.com/BHoM/BHoM/blob/main/LifeCycleAssessment_oM/Results/LifeCycleAssessmentElementResult.cs#L40",
-      "label": "ObjectId(BH.oM.LifeCycleAssessment.Results.LifeCycleAssessmentElementResult.ObjectId)",
+      "label": "ObjectId (BH.oM.LifeCycleAssessment.Results.LifeCycleAssessmentElementResult.ObjectId)",
       "attributes": [
         "datatype"
       ]
@@ -1237,7 +1370,7 @@
     {
       "id": "BH.oM.LifeCycleAssessment.Results.LifeCycleAssessmentElementResult.ResultCase",
       "iri": "https://github.com/BHoM/BHoM/blob/main/LifeCycleAssessment_oM/Results/LifeCycleAssessmentElementResult.cs#L43",
-      "label": "ResultCase(BH.oM.LifeCycleAssessment.Results.LifeCycleAssessmentElementResult.ResultCase)",
+      "label": "ResultCase (BH.oM.LifeCycleAssessment.Results.LifeCycleAssessmentElementResult.ResultCase)",
       "attributes": [
         "datatype"
       ]
@@ -1245,7 +1378,7 @@
     {
       "id": "BH.oM.LifeCycleAssessment.Results.LifeCycleAssessmentElementResult.TimeStep",
       "iri": "https://github.com/BHoM/BHoM/blob/main/LifeCycleAssessment_oM/Results/LifeCycleAssessmentElementResult.cs#L46",
-      "label": "TimeStep(BH.oM.LifeCycleAssessment.Results.LifeCycleAssessmentElementResult.TimeStep)",
+      "label": "TimeStep (BH.oM.LifeCycleAssessment.Results.LifeCycleAssessmentElementResult.TimeStep)",
       "attributes": [
         "datatype"
       ]
@@ -1253,7 +1386,7 @@
     {
       "id": "BH.oM.LifeCycleAssessment.Results.LifeCycleAssessmentElementResult.Scope",
       "iri": "https://github.com/BHoM/BHoM/blob/main/LifeCycleAssessment_oM/Results/LifeCycleAssessmentElementResult.cs#L49",
-      "label": "Scope(BH.oM.LifeCycleAssessment.Results.LifeCycleAssessmentElementResult.Scope)",
+      "label": "Scope (BH.oM.LifeCycleAssessment.Results.LifeCycleAssessmentElementResult.Scope)",
       "attributes": [],
       "comment": {
         "undefined": "Scope the object this result was generated from belongs to, e.g. Foundation or Facade"
@@ -1262,7 +1395,7 @@
     {
       "id": "BH.oM.LifeCycleAssessment.Results.LifeCycleAssessmentElementResult.Category",
       "iri": "https://github.com/BHoM/BHoM/blob/main/LifeCycleAssessment_oM/Results/LifeCycleAssessmentElementResult.cs#L52",
-      "label": "Category(BH.oM.LifeCycleAssessment.Results.LifeCycleAssessmentElementResult.Category)",
+      "label": "Category (BH.oM.LifeCycleAssessment.Results.LifeCycleAssessmentElementResult.Category)",
       "attributes": [],
       "comment": {
         "undefined": "Category of the object this result was generated from, e.g. Beam or Wall"
@@ -1271,19 +1404,58 @@
     {
       "id": "BH.oM.LifeCycleAssessment.Results.LifeCycleAssessmentElementResult.Phases",
       "iri": "https://github.com/BHoM/BHoM/blob/main/LifeCycleAssessment_oM/Results/LifeCycleAssessmentElementResult.cs#L55",
-      "label": "Phases(BH.oM.LifeCycleAssessment.Results.LifeCycleAssessmentElementResult.Phases)",
+      "label": "Phases (BH.oM.LifeCycleAssessment.Results.LifeCycleAssessmentElementResult.Phases)",
       "attributes": []
     },
     {
       "id": "BH.oM.LifeCycleAssessment.Results.LifeCycleAssessmentElementResult.EnvironmentalProductDeclaration",
       "iri": "https://github.com/BHoM/BHoM/blob/main/LifeCycleAssessment_oM/Results/LifeCycleAssessmentElementResult.cs#L58",
-      "label": "EnvironmentalProductDeclaration(BH.oM.LifeCycleAssessment.Results.LifeCycleAssessmentElementResult.EnvironmentalProductDeclaration)",
+      "label": "EnvironmentalProductDeclaration (BH.oM.LifeCycleAssessment.Results.LifeCycleAssessmentElementResult.EnvironmentalProductDeclaration)",
       "attributes": []
+    },
+    {
+      "id": "BH.oM.LifeCycleAssessment.Results.MaterialResult.MaterialName",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/LifeCycleAssessment_oM/Results/MaterialResult.cs#L40",
+      "label": "MaterialName (BH.oM.LifeCycleAssessment.Results.MaterialResult.MaterialName)",
+      "attributes": [
+        "datatype"
+      ]
+    },
+    {
+      "id": "BH.oM.LifeCycleAssessment.Results.MaterialResult.EnvironmentalProductDeclarationName",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/LifeCycleAssessment_oM/Results/MaterialResult.cs#L43",
+      "label": "EnvironmentalProductDeclarationName (BH.oM.LifeCycleAssessment.Results.MaterialResult.EnvironmentalProductDeclarationName)",
+      "attributes": [
+        "datatype"
+      ]
+    },
+    {
+      "id": "BH.oM.LifeCycleAssessment.Results.MaterialResult.Quantity",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/LifeCycleAssessment_oM/Results/MaterialResult.cs#L46",
+      "label": "Quantity (BH.oM.LifeCycleAssessment.Results.MaterialResult.Quantity)",
+      "attributes": [
+        "datatype"
+      ]
+    },
+    {
+      "id": "BH.oM.LifeCycleAssessment.Results.MaterialResult.Phases",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/LifeCycleAssessment_oM/Results/MaterialResult.cs#L49",
+      "label": "Phases (BH.oM.LifeCycleAssessment.Results.MaterialResult.Phases)",
+      "attributes": []
+    },
+    {
+      "id": "BH.oM.LifeCycleAssessment.Results.MaterialResult.Metric",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/LifeCycleAssessment_oM/Results/MaterialResult.cs#L52",
+      "label": "Metric (BH.oM.LifeCycleAssessment.Results.MaterialResult.Metric)",
+      "attributes": [],
+      "comment": {
+        "undefined": "The Environmental Product Declaration Field selected for evaluation."
+      }
     },
     {
       "id": "BH.oM.LifeCycleAssessment.MaterialFragments.EnvironmentalProductDeclaration.Type",
       "iri": "https://github.com/BHoM/BHoM/blob/main/LifeCycleAssessment_oM/MaterialFragments/EnvironmentalProductDeclaration.cs#L41",
-      "label": "Type(BH.oM.LifeCycleAssessment.MaterialFragments.EnvironmentalProductDeclaration.Type)",
+      "label": "Type (BH.oM.LifeCycleAssessment.MaterialFragments.EnvironmentalProductDeclaration.Type)",
       "attributes": [],
       "comment": {
         "undefined": "The Type of Environmental Product Declaration."
@@ -1292,13 +1464,13 @@
     {
       "id": "BH.oM.LifeCycleAssessment.MaterialFragments.EnvironmentalProductDeclaration.EnvironmentalMetric",
       "iri": "https://github.com/BHoM/BHoM/blob/main/LifeCycleAssessment_oM/MaterialFragments/EnvironmentalProductDeclaration.cs#L44",
-      "label": "EnvironmentalMetric(BH.oM.LifeCycleAssessment.MaterialFragments.EnvironmentalProductDeclaration.EnvironmentalMetric)",
+      "label": "EnvironmentalMetric (BH.oM.LifeCycleAssessment.MaterialFragments.EnvironmentalProductDeclaration.EnvironmentalMetric)",
       "attributes": []
     },
     {
       "id": "BH.oM.LifeCycleAssessment.MaterialFragments.EnvironmentalProductDeclaration.QuantityType",
       "iri": "https://github.com/BHoM/BHoM/blob/main/LifeCycleAssessment_oM/MaterialFragments/EnvironmentalProductDeclaration.cs#L51",
-      "label": "QuantityType(BH.oM.LifeCycleAssessment.MaterialFragments.EnvironmentalProductDeclaration.QuantityType)",
+      "label": "QuantityType (BH.oM.LifeCycleAssessment.MaterialFragments.EnvironmentalProductDeclaration.QuantityType)",
       "attributes": [],
       "comment": {
         "undefined": "Note that any EPD that does not contain this parameter will not be evaluated. \nThis metric is based on the declared unit of the reference EPD, i.e. a declared unit of kg refers to QuantityType of mass, a declared unit of m3 refers to a QuantityType of volume, etc. \nAll data should be normalized to metric declared units before integration in the BHoM. \nThe quantity type is a key metric for evaluation methods to function. \nThis property determines how the material is to be evaluated, based on Mass, Volume, Area, Item, or Length."
@@ -1307,7 +1479,7 @@
     {
       "id": "BH.oM.LifeCycleAssessment.MaterialFragments.EnvironmentalProductDeclaration.QuantityTypeValue",
       "iri": "https://github.com/BHoM/BHoM/blob/main/LifeCycleAssessment_oM/MaterialFragments/EnvironmentalProductDeclaration.cs#L54",
-      "label": "QuantityTypeValue(BH.oM.LifeCycleAssessment.MaterialFragments.EnvironmentalProductDeclaration.QuantityTypeValue)",
+      "label": "QuantityTypeValue (BH.oM.LifeCycleAssessment.MaterialFragments.EnvironmentalProductDeclaration.QuantityTypeValue)",
       "attributes": [
         "datatype"
       ]
@@ -1324,7 +1496,7 @@
     {
       "id": "BH.oM.LifeCycleAssessment.Fragments.AdditionalEPDData.Description",
       "iri": "https://github.com/BHoM/BHoM/blob/main/LifeCycleAssessment_oM/Fragments/AdditionalEPDData.cs#L34",
-      "label": "Description(BH.oM.LifeCycleAssessment.Fragments.AdditionalEPDData.Description)",
+      "label": "Description (BH.oM.LifeCycleAssessment.Fragments.AdditionalEPDData.Description)",
       "attributes": [
         "datatype"
       ]
@@ -1332,7 +1504,7 @@
     {
       "id": "BH.oM.LifeCycleAssessment.Fragments.AdditionalEPDData.EndOfLifeTreatment",
       "iri": "https://github.com/BHoM/BHoM/blob/main/LifeCycleAssessment_oM/Fragments/AdditionalEPDData.cs#L37",
-      "label": "EndOfLifeTreatment(BH.oM.LifeCycleAssessment.Fragments.AdditionalEPDData.EndOfLifeTreatment)",
+      "label": "EndOfLifeTreatment (BH.oM.LifeCycleAssessment.Fragments.AdditionalEPDData.EndOfLifeTreatment)",
       "attributes": [
         "datatype"
       ]
@@ -1340,7 +1512,7 @@
     {
       "id": "BH.oM.LifeCycleAssessment.Fragments.AdditionalEPDData.Id",
       "iri": "https://github.com/BHoM/BHoM/blob/main/LifeCycleAssessment_oM/Fragments/AdditionalEPDData.cs#L40",
-      "label": "Id(BH.oM.LifeCycleAssessment.Fragments.AdditionalEPDData.Id)",
+      "label": "Id (BH.oM.LifeCycleAssessment.Fragments.AdditionalEPDData.Id)",
       "attributes": [
         "datatype"
       ]
@@ -1348,7 +1520,7 @@
     {
       "id": "BH.oM.LifeCycleAssessment.Fragments.AdditionalEPDData.IndustryStandards",
       "iri": "https://github.com/BHoM/BHoM/blob/main/LifeCycleAssessment_oM/Fragments/AdditionalEPDData.cs#L43",
-      "label": "IndustryStandards(BH.oM.LifeCycleAssessment.Fragments.AdditionalEPDData.IndustryStandards)",
+      "label": "IndustryStandards (BH.oM.LifeCycleAssessment.Fragments.AdditionalEPDData.IndustryStandards)",
       "attributes": [
         "datatype"
       ]
@@ -1356,7 +1528,7 @@
     {
       "id": "BH.oM.LifeCycleAssessment.Fragments.AdditionalEPDData.Jurisdiction",
       "iri": "https://github.com/BHoM/BHoM/blob/main/LifeCycleAssessment_oM/Fragments/AdditionalEPDData.cs#L46",
-      "label": "Jurisdiction(BH.oM.LifeCycleAssessment.Fragments.AdditionalEPDData.Jurisdiction)",
+      "label": "Jurisdiction (BH.oM.LifeCycleAssessment.Fragments.AdditionalEPDData.Jurisdiction)",
       "attributes": [
         "datatype"
       ]
@@ -1364,7 +1536,7 @@
     {
       "id": "BH.oM.LifeCycleAssessment.Fragments.AdditionalEPDData.LifeSpan",
       "iri": "https://github.com/BHoM/BHoM/blob/main/LifeCycleAssessment_oM/Fragments/AdditionalEPDData.cs#L49",
-      "label": "LifeSpan(BH.oM.LifeCycleAssessment.Fragments.AdditionalEPDData.LifeSpan)",
+      "label": "LifeSpan (BH.oM.LifeCycleAssessment.Fragments.AdditionalEPDData.LifeSpan)",
       "attributes": [
         "datatype"
       ]
@@ -1372,7 +1544,7 @@
     {
       "id": "BH.oM.LifeCycleAssessment.Fragments.AdditionalEPDData.Manufacturer",
       "iri": "https://github.com/BHoM/BHoM/blob/main/LifeCycleAssessment_oM/Fragments/AdditionalEPDData.cs#L52",
-      "label": "Manufacturer(BH.oM.LifeCycleAssessment.Fragments.AdditionalEPDData.Manufacturer)",
+      "label": "Manufacturer (BH.oM.LifeCycleAssessment.Fragments.AdditionalEPDData.Manufacturer)",
       "attributes": [
         "datatype"
       ]
@@ -1380,7 +1552,7 @@
     {
       "id": "BH.oM.LifeCycleAssessment.Fragments.AdditionalEPDData.PlantName",
       "iri": "https://github.com/BHoM/BHoM/blob/main/LifeCycleAssessment_oM/Fragments/AdditionalEPDData.cs#L55",
-      "label": "PlantName(BH.oM.LifeCycleAssessment.Fragments.AdditionalEPDData.PlantName)",
+      "label": "PlantName (BH.oM.LifeCycleAssessment.Fragments.AdditionalEPDData.PlantName)",
       "attributes": [
         "datatype"
       ]
@@ -1388,7 +1560,7 @@
     {
       "id": "BH.oM.LifeCycleAssessment.Fragments.AdditionalEPDData.PostalCode",
       "iri": "https://github.com/BHoM/BHoM/blob/main/LifeCycleAssessment_oM/Fragments/AdditionalEPDData.cs#L58",
-      "label": "PostalCode(BH.oM.LifeCycleAssessment.Fragments.AdditionalEPDData.PostalCode)",
+      "label": "PostalCode (BH.oM.LifeCycleAssessment.Fragments.AdditionalEPDData.PostalCode)",
       "attributes": [
         "datatype"
       ]
@@ -1396,7 +1568,7 @@
     {
       "id": "BH.oM.LifeCycleAssessment.Fragments.AdditionalEPDData.Publisher",
       "iri": "https://github.com/BHoM/BHoM/blob/main/LifeCycleAssessment_oM/Fragments/AdditionalEPDData.cs#L61",
-      "label": "Publisher(BH.oM.LifeCycleAssessment.Fragments.AdditionalEPDData.Publisher)",
+      "label": "Publisher (BH.oM.LifeCycleAssessment.Fragments.AdditionalEPDData.Publisher)",
       "attributes": [
         "datatype"
       ]
@@ -1404,7 +1576,7 @@
     {
       "id": "BH.oM.LifeCycleAssessment.Fragments.AdditionalEPDData.ReferenceYear",
       "iri": "https://github.com/BHoM/BHoM/blob/main/LifeCycleAssessment_oM/Fragments/AdditionalEPDData.cs#L64",
-      "label": "ReferenceYear(BH.oM.LifeCycleAssessment.Fragments.AdditionalEPDData.ReferenceYear)",
+      "label": "ReferenceYear (BH.oM.LifeCycleAssessment.Fragments.AdditionalEPDData.ReferenceYear)",
       "attributes": [
         "datatype"
       ]
@@ -1412,7 +1584,7 @@
     {
       "id": "BH.oM.LifeCycleAssessment.Fragments.EPDDensity.Density",
       "iri": "https://github.com/BHoM/BHoM/blob/main/LifeCycleAssessment_oM/Fragments/EPDDensity.cs#L37",
-      "label": "Density(BH.oM.LifeCycleAssessment.Fragments.EPDDensity.Density)",
+      "label": "Density (BH.oM.LifeCycleAssessment.Fragments.EPDDensity.Density)",
       "attributes": [
         "datatype"
       ]
@@ -1420,7 +1592,7 @@
     {
       "id": "BH.oM.LifeCycleAssessment.Fragments.EPDDimension.Dimension",
       "iri": "https://github.com/BHoM/BHoM/blob/main/LifeCycleAssessment_oM/Fragments/EPDDimension.cs#L35",
-      "label": "Dimension(BH.oM.LifeCycleAssessment.Fragments.EPDDimension.Dimension)",
+      "label": "Dimension (BH.oM.LifeCycleAssessment.Fragments.EPDDimension.Dimension)",
       "attributes": [
         "datatype"
       ]
@@ -1428,7 +1600,7 @@
     {
       "id": "BH.oM.LifeCycleAssessment.Fragments.EPDDimension.SpecifiedDimension",
       "iri": "https://github.com/BHoM/BHoM/blob/main/LifeCycleAssessment_oM/Fragments/EPDDimension.cs#L38",
-      "label": "SpecifiedDimension(BH.oM.LifeCycleAssessment.Fragments.EPDDimension.SpecifiedDimension)",
+      "label": "SpecifiedDimension (BH.oM.LifeCycleAssessment.Fragments.EPDDimension.SpecifiedDimension)",
       "attributes": [
         "datatype"
       ]
@@ -1740,6 +1912,78 @@
       "type": "rdfs:subClassOf"
     },
     {
+      "id": "ElementResult-HasProperty-ObjectId_4B89F24939185CAF82213C25CE360BE60D80C733D3848FF777E97EE5202AC583",
+      "type": "owl:DatatypeProperty"
+    },
+    {
+      "id": "BH.oM.LifeCycleAssessment.Results.ElementResult-HasProperty-BH.oM.LifeCycleAssessment.Results.ElementResult.Scope",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "BH.oM.LifeCycleAssessment.Results.ElementResult.Scope-IsA-BH.oM.LifeCycleAssessment.ScopeType",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "BH.oM.LifeCycleAssessment.Results.ElementResult-HasProperty-BH.oM.LifeCycleAssessment.Results.ElementResult.Category",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "BH.oM.LifeCycleAssessment.Results.ElementResult.Category-IsA-BH.oM.LifeCycleAssessment.ObjectCategory",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "BH.oM.LifeCycleAssessment.Results.ElementResult-HasProperty-BH.oM.LifeCycleAssessment.Results.ElementResult.Phases",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "BH.oM.LifeCycleAssessment.Results.ElementResult.Phases-IsAListOf-BH.oM.LifeCycleAssessment.LifeCycleAssessmentPhases",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "ElementResult-HasProperty-Quantity_46C1F9A3D02472FC7C3ED563FF35AFFAD51D387DB9F9FC5F0E3A401C32012906",
+      "type": "owl:DatatypeProperty"
+    },
+    {
+      "id": "BH.oM.LifeCycleAssessment.Results.ElementResult-HasProperty-BH.oM.LifeCycleAssessment.Results.ElementResult.Metric",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "BH.oM.LifeCycleAssessment.Results.ElementResult.Metric-IsA-BH.oM.LifeCycleAssessment.EnvironmentalProductDeclarationField",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "BH.oM.LifeCycleAssessment.Results.ElementResult-HasProperty-BH.oM.LifeCycleAssessment.Results.ElementResult.MaterialResults",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "BH.oM.LifeCycleAssessment.Results.ElementResult.MaterialResults-IsAListOf-BH.oM.LifeCycleAssessment.Results.MaterialResult",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "ElementResult-IsA-IResult_152439B09A91067B216BEF91A21248FCAF31BE461DD18E154B8FD43A0C69655E",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "ElementResult-IsA-IObject_505FF6D19CC8EA80CA0BAA213CD6BCBAF6170FF7D924B1081544CA4091CD0E3E",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "ElementResult-IsA-IImmutable_54E1B3647707780F0A5E6CD7E5D516158B3D454D8ABB9EE3B22434EE0BD866C9",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "ElementResult-IsA-IObjectResult_876C2C20DA291D716A11EA7E91AC32D9CC1D78CB683B30982F94873467B8D0E5",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "ElementResult-IsA-IObjectIdResult_9AF33FC5943B9B59F2F34EAE83FA8C735ED8A62BF66C69427AB2E8F8513C9195",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "ElementResult-IsA-IResultItem_9DC3E2DB256B99A2A96922F4A5909881FF45A46A10C4E72DC60211AC28462682",
+      "type": "owl:ObjectProperty"
+    },
+    {
       "id": "EnvironmentalMetricResult-HasProperty-Quantity_2787E0B0C6A95DC3D314AD159AE653B16C2F12297FE7E3926F0BA250C347E61A",
       "type": "owl:DatatypeProperty"
     },
@@ -1853,6 +2097,46 @@
     },
     {
       "id": "LifeCycleAssessmentElementResult-IsA-ITimeStepResult_921ACC3C326047D04BDD62F8351624DE42912DCFEC4A008C9DF93E788FF6CD5C",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "MaterialResult-HasProperty-MaterialName_BD564D2FE280354CB93F74DDA028705A8E1FCAB3988DCE637343E72004ABB5B1",
+      "type": "owl:DatatypeProperty"
+    },
+    {
+      "id": "MaterialResult-HasProperty-EnvironmentalProductDeclarationName_4F2FE8934460B73EB03FE4B076E347D747A611E713645C14FC59DC199D6FAA26",
+      "type": "owl:DatatypeProperty"
+    },
+    {
+      "id": "MaterialResult-HasProperty-Quantity_24A2B41363C7654EAB6590F80AF1D274B1C51691F55A274C69C3C4D17A83FDA3",
+      "type": "owl:DatatypeProperty"
+    },
+    {
+      "id": "BH.oM.LifeCycleAssessment.Results.MaterialResult-HasProperty-BH.oM.LifeCycleAssessment.Results.MaterialResult.Phases",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "BH.oM.LifeCycleAssessment.Results.MaterialResult.Phases-IsAListOf-BH.oM.LifeCycleAssessment.LifeCycleAssessmentPhases",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "BH.oM.LifeCycleAssessment.Results.MaterialResult-HasProperty-BH.oM.LifeCycleAssessment.Results.MaterialResult.Metric",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "BH.oM.LifeCycleAssessment.Results.MaterialResult.Metric-IsA-BH.oM.LifeCycleAssessment.EnvironmentalProductDeclarationField",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "MaterialResult-IsA-IResult_329802E4EDB64A04563C28E224C42B5DDBB11B6C8AA7E756A6EE53F0C8ABADFE",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "MaterialResult-IsA-IObject_C34F5FC416E3220A3662BC90D76943971EFD6D4FD1C07D5FE50B0CFCED65616A",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "MaterialResult-IsA-IImmutable_83922725D8B366039B553EE13954AD709805BB667F7DAF6CA53AD219DDA7E9D5",
       "type": "owl:ObjectProperty"
     },
     {
@@ -1983,7 +2267,7 @@
   "propertyAttribute": [
     {
       "id": "BuildingBenchmarkingData-HasProperty-High_B0D9EEA59925B2A44B5D3A8A9261F5D76C0D641791218C8B602EA851701E211B",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/HasProperty.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/HasProperty.cs",
       "label": "HasProperty",
       "attributes": [
         "datatype"
@@ -1993,7 +2277,7 @@
     },
     {
       "id": "BuildingBenchmarkingData-HasProperty-Average_092247E31E274114F76AE202994972296773406DA0D6091A43AB783CC439BDE4",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/HasProperty.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/HasProperty.cs",
       "label": "HasProperty",
       "attributes": [
         "datatype"
@@ -2003,7 +2287,7 @@
     },
     {
       "id": "BuildingBenchmarkingData-HasProperty-Low_1ECAD4C75BFA9657A4D5F70EF7DC75070D5C4BFDD391294A47E9185C74569B0B",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/HasProperty.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/HasProperty.cs",
       "label": "HasProperty",
       "attributes": [
         "datatype"
@@ -2013,7 +2297,7 @@
     },
     {
       "id": "BuildingBenchmarkingData-IsA-IBHoMObject_1F35668D874176C279A074FDF346C0A6D9A8E89B479CC00BEC40C9210C1A5003",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/IsA.cs",
       "label": "IsA",
       "attributes": [
         "object"
@@ -2026,7 +2310,7 @@
     },
     {
       "id": "BuildingBenchmarkingData-IsA-IObject_ACEC629DDB83CCEBCF4281953BD35D311ED16174C0000B5D3D2602488609159F",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/IsA.cs",
       "label": "IsA",
       "attributes": [
         "object"
@@ -2039,7 +2323,7 @@
     },
     {
       "id": "BuildingBenchmarkingData-IsSubclassOf-BHoMObject_7289794857C708BE30A1DF942502CF4BCDB1A1FAE4784851ED2C07FD349711E1",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsSubclassOf.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/IsSubclassOf.cs",
       "label": "IsA",
       "attributes": [
         "object"
@@ -2049,7 +2333,7 @@
     },
     {
       "id": "BH.oM.LifeCycleAssessment.EnvironmentalMetric-HasProperty-BH.oM.LifeCycleAssessment.EnvironmentalMetric.Field",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/HasProperty.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/HasProperty.cs",
       "label": "HasProperty",
       "attributes": [
         "object"
@@ -2059,7 +2343,7 @@
     },
     {
       "id": "BH.oM.LifeCycleAssessment.EnvironmentalMetric.Field-IsA-BH.oM.LifeCycleAssessment.EnvironmentalProductDeclarationField",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/IsA.cs",
       "label": "IsA",
       "attributes": [
         "object"
@@ -2069,7 +2353,7 @@
     },
     {
       "id": "BH.oM.LifeCycleAssessment.EnvironmentalMetric-HasProperty-BH.oM.LifeCycleAssessment.EnvironmentalMetric.Phases",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/HasProperty.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/HasProperty.cs",
       "label": "HasProperty",
       "attributes": [
         "object"
@@ -2079,7 +2363,7 @@
     },
     {
       "id": "BH.oM.LifeCycleAssessment.EnvironmentalMetric.Phases-IsAListOf-BH.oM.LifeCycleAssessment.LifeCycleAssessmentPhases",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsAListOf.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/IsAListOf.cs",
       "label": "IsAListOf",
       "attributes": [
         "object"
@@ -2089,7 +2373,7 @@
     },
     {
       "id": "EnvironmentalMetric-HasProperty-Quantity_FA7D07C6B2D8617D9686A8B3DDFDCB18720355F617B8B433F3E9363495FEC97D",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/HasProperty.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/HasProperty.cs",
       "label": "HasProperty",
       "attributes": [
         "datatype"
@@ -2099,7 +2383,7 @@
     },
     {
       "id": "EnvironmentalMetric-IsA-IBHoMObject_704F9515962F9B7C986DAD18B93A53EACBCC4F77794C8470D475D95BC771B638",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/IsA.cs",
       "label": "IsA",
       "attributes": [
         "object"
@@ -2112,7 +2396,7 @@
     },
     {
       "id": "EnvironmentalMetric-IsA-IObject_ACADC9B50975CFC0330E9A091DA86FB8C6D7040FBAFDD1ACD2A7A5B1B6437EB1",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/IsA.cs",
       "label": "IsA",
       "attributes": [
         "object"
@@ -2125,7 +2409,7 @@
     },
     {
       "id": "EnvironmentalMetric-IsSubclassOf-BHoMObject_08314DC44F820B2276AAF9C04377F9984EA32E8AC2D6FDFEDF84F6B6FB4CCED4",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsSubclassOf.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/IsSubclassOf.cs",
       "label": "IsA",
       "attributes": [
         "object"
@@ -2135,7 +2419,7 @@
     },
     {
       "id": "LifeCycleAssessmentScope-HasProperty-AdditionalNotes_52015D985BA6AD23D31356C4D9C642A38E9E24D25BF61D31283204059D3E693C",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/HasProperty.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/HasProperty.cs",
       "label": "HasProperty",
       "attributes": [
         "datatype"
@@ -2145,7 +2429,7 @@
     },
     {
       "id": "LifeCycleAssessmentScope-HasProperty-BiogenicCarbon_E5D1677C7E3984F157DB68B17AC476A5E4A00991D6EC74E0870C3E8F3518016E",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/HasProperty.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/HasProperty.cs",
       "label": "HasProperty",
       "attributes": [
         "datatype"
@@ -2155,7 +2439,7 @@
     },
     {
       "id": "LifeCycleAssessmentScope-HasProperty-BuildingLifespan_C73B88EE8AFDEB64BED4283C56E2DFA828C82CB541B6919464A4D22A25D0B97B",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/HasProperty.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/HasProperty.cs",
       "label": "HasProperty",
       "attributes": [
         "datatype"
@@ -2165,7 +2449,7 @@
     },
     {
       "id": "LifeCycleAssessmentScope-HasProperty-ConstructionScopeNew_D540847F9B6B071F26E2E79238B1C0E046A89CB88AF6D4560C9246E43E4B172B",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/HasProperty.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/HasProperty.cs",
       "label": "HasProperty",
       "attributes": [
         "datatype"
@@ -2175,7 +2459,7 @@
     },
     {
       "id": "LifeCycleAssessmentScope-HasProperty-ConstructionScopeRenovation_6924CC90A737960E974A82E28EA35BA4BA7CB15C8819D975CAAC1B3B9BED5DED",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/HasProperty.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/HasProperty.cs",
       "label": "HasProperty",
       "attributes": [
         "datatype"
@@ -2185,7 +2469,7 @@
     },
     {
       "id": "LifeCycleAssessmentScope-HasProperty-ContactName_EDB643D3952A9BF956399AE11EB53898C9EE474B6CCA7D3836F0C1246CE678B2",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/HasProperty.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/HasProperty.cs",
       "label": "HasProperty",
       "attributes": [
         "datatype"
@@ -2195,7 +2479,7 @@
     },
     {
       "id": "BH.oM.LifeCycleAssessment.LifeCycleAssessmentScope-HasProperty-BH.oM.LifeCycleAssessment.LifeCycleAssessmentScope.GravityStructuralMaterial",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/HasProperty.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/HasProperty.cs",
       "label": "HasProperty",
       "attributes": [
         "object"
@@ -2205,7 +2489,7 @@
     },
     {
       "id": "BH.oM.LifeCycleAssessment.LifeCycleAssessmentScope.GravityStructuralMaterial-IsA-BH.oM.LifeCycleAssessment.GravityStructuralMaterial",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/IsA.cs",
       "label": "IsA",
       "attributes": [
         "object"
@@ -2215,7 +2499,7 @@
     },
     {
       "id": "BH.oM.LifeCycleAssessment.LifeCycleAssessmentScope-HasProperty-BH.oM.LifeCycleAssessment.LifeCycleAssessmentScope.LateralStructuralMaterial",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/HasProperty.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/HasProperty.cs",
       "label": "HasProperty",
       "attributes": [
         "object"
@@ -2225,7 +2509,7 @@
     },
     {
       "id": "BH.oM.LifeCycleAssessment.LifeCycleAssessmentScope.LateralStructuralMaterial-IsA-BH.oM.LifeCycleAssessment.LateralStructuralMaterial",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/IsA.cs",
       "label": "IsA",
       "attributes": [
         "object"
@@ -2235,7 +2519,7 @@
     },
     {
       "id": "BH.oM.LifeCycleAssessment.LifeCycleAssessmentScope-HasProperty-BH.oM.LifeCycleAssessment.LifeCycleAssessmentScope.LevelOfDevelopment",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/HasProperty.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/HasProperty.cs",
       "label": "HasProperty",
       "attributes": [
         "object"
@@ -2245,7 +2529,7 @@
     },
     {
       "id": "BH.oM.LifeCycleAssessment.LifeCycleAssessmentScope.LevelOfDevelopment-IsA-BH.oM.LifeCycleAssessment.LevelOfDevelopment",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/IsA.cs",
       "label": "IsA",
       "attributes": [
         "object"
@@ -2255,7 +2539,7 @@
     },
     {
       "id": "BH.oM.LifeCycleAssessment.LifeCycleAssessmentScope-HasProperty-BH.oM.LifeCycleAssessment.LifeCycleAssessmentScope.LifeCycleAssessmentPhases",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/HasProperty.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/HasProperty.cs",
       "label": "HasProperty",
       "attributes": [
         "object"
@@ -2265,7 +2549,7 @@
     },
     {
       "id": "BH.oM.LifeCycleAssessment.LifeCycleAssessmentScope.LifeCycleAssessmentPhases-IsAListOf-BH.oM.LifeCycleAssessment.LifeCycleAssessmentPhases",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsAListOf.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/IsAListOf.cs",
       "label": "IsAListOf",
       "attributes": [
         "object"
@@ -2275,7 +2559,7 @@
     },
     {
       "id": "BH.oM.LifeCycleAssessment.LifeCycleAssessmentScope-HasProperty-BH.oM.LifeCycleAssessment.LifeCycleAssessmentScope.ProjectType",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/HasProperty.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/HasProperty.cs",
       "label": "HasProperty",
       "attributes": [
         "object"
@@ -2285,7 +2569,7 @@
     },
     {
       "id": "BH.oM.LifeCycleAssessment.LifeCycleAssessmentScope.ProjectType-IsA-BH.oM.LifeCycleAssessment.ProjectType",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/IsA.cs",
       "label": "IsA",
       "attributes": [
         "object"
@@ -2295,7 +2579,7 @@
     },
     {
       "id": "LifeCycleAssessmentScope-HasProperty-ProjectName_830AB4CD001087A181D4042D931372184EA68EA4BE51FD9A980BA5F1499F2648",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/HasProperty.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/HasProperty.cs",
       "label": "HasProperty",
       "attributes": [
         "datatype"
@@ -2305,7 +2589,7 @@
     },
     {
       "id": "LifeCycleAssessmentScope-HasProperty-ProjectArea_293AF13F45A89351BBE241E2B7E03F18D6262D2D4609454CB74C1932A8AE6F7C",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/HasProperty.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/HasProperty.cs",
       "label": "HasProperty",
       "attributes": [
         "datatype"
@@ -2315,7 +2599,7 @@
     },
     {
       "id": "BH.oM.LifeCycleAssessment.LifeCycleAssessmentScope-HasProperty-BH.oM.LifeCycleAssessment.LifeCycleAssessmentScope.SeismicDesignCategory",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/HasProperty.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/HasProperty.cs",
       "label": "HasProperty",
       "attributes": [
         "object"
@@ -2325,7 +2609,7 @@
     },
     {
       "id": "BH.oM.LifeCycleAssessment.LifeCycleAssessmentScope.SeismicDesignCategory-IsA-BH.oM.LifeCycleAssessment.SeismicDesignCategory",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/IsA.cs",
       "label": "IsA",
       "attributes": [
         "object"
@@ -2335,7 +2619,7 @@
     },
     {
       "id": "BH.oM.LifeCycleAssessment.LifeCycleAssessmentScope-HasProperty-BH.oM.LifeCycleAssessment.LifeCycleAssessmentScope.WindSpeedCategory",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/HasProperty.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/HasProperty.cs",
       "label": "HasProperty",
       "attributes": [
         "object"
@@ -2345,7 +2629,7 @@
     },
     {
       "id": "BH.oM.LifeCycleAssessment.LifeCycleAssessmentScope.WindSpeedCategory-IsA-BH.oM.LifeCycleAssessment.WindSpeedCategory",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/IsA.cs",
       "label": "IsA",
       "attributes": [
         "object"
@@ -2355,7 +2639,7 @@
     },
     {
       "id": "BH.oM.LifeCycleAssessment.LifeCycleAssessmentScope-HasProperty-BH.oM.LifeCycleAssessment.LifeCycleAssessmentScope.Location",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/HasProperty.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/HasProperty.cs",
       "label": "HasProperty",
       "attributes": [
         "object"
@@ -2365,7 +2649,7 @@
     },
     {
       "id": "BH.oM.LifeCycleAssessment.LifeCycleAssessmentScope.Location-IsA-BH.oM.Environment.Climate.Location",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/IsA.cs",
       "label": "IsA",
       "attributes": [
         "object"
@@ -2375,7 +2659,7 @@
     },
     {
       "id": "LifeCycleAssessmentScope-IsA-IFragment_78C823DB0D3E04FA19B721B3BB52C110B76CDF33BCBB0EA63A00F1F6A15B5C7A",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/IsA.cs",
       "label": "IsA",
       "attributes": [
         "object"
@@ -2388,7 +2672,7 @@
     },
     {
       "id": "LifeCycleAssessmentScope-IsA-IObject_6C28F8DBBC3F8BE126A3C1A59F8E6BE5AC1F223E10BC2A23ACAACF17B8723417",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/IsA.cs",
       "label": "IsA",
       "attributes": [
         "object"
@@ -2401,7 +2685,7 @@
     },
     {
       "id": "BH.oM.LifeCycleAssessment.Scope-HasProperty-BH.oM.LifeCycleAssessment.Scope.ScopeType",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/HasProperty.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/HasProperty.cs",
       "label": "HasProperty",
       "attributes": [
         "object"
@@ -2411,7 +2695,7 @@
     },
     {
       "id": "BH.oM.LifeCycleAssessment.Scope.ScopeType-IsA-BH.oM.LifeCycleAssessment.ScopeType",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/IsA.cs",
       "label": "IsA",
       "attributes": [
         "object"
@@ -2421,7 +2705,7 @@
     },
     {
       "id": "Scope-IsA-IFragment_902349F94B849295ACCB7F185A8E31DA5B5A7A4D8AB6FD36E33F15FC18A085C7",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/IsA.cs",
       "label": "IsA",
       "attributes": [
         "object"
@@ -2434,7 +2718,7 @@
     },
     {
       "id": "Scope-IsA-IObject_036B170CD3A1DA81FB3AECF18F2B3EA6B955FE4C53B96D71399004E409670090",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/IsA.cs",
       "label": "IsA",
       "attributes": [
         "object"
@@ -2447,7 +2731,7 @@
     },
     {
       "id": "HealthProductDeclaration-HasProperty-MasterFormat_A398B5A46A0756926D1AFA0FC8157952644242699A5142363CECFBA250AB866B",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/HasProperty.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/HasProperty.cs",
       "label": "HasProperty",
       "attributes": [
         "datatype"
@@ -2457,7 +2741,7 @@
     },
     {
       "id": "HealthProductDeclaration-HasProperty-Uniformats_676E690A7E23607319E30189C0B7EFD9CE459121A64FCE4C502461BCE124BADE",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/HasProperty.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/HasProperty.cs",
       "label": "HasProperty",
       "attributes": [
         "datatype"
@@ -2467,7 +2751,7 @@
     },
     {
       "id": "HealthProductDeclaration-HasProperty-CancerOrange_3464B83EFB25BBF448F37E00DE04CD614F224892E70A11D76F37EDE028265B92",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/HasProperty.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/HasProperty.cs",
       "label": "HasProperty",
       "attributes": [
         "datatype"
@@ -2477,7 +2761,7 @@
     },
     {
       "id": "HealthProductDeclaration-HasProperty-DevelopmentalOrange_F0B9063ADE454E4B265978F9AD2630E82E9E1603BD50BF1D76C3F80367F80ACC",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/HasProperty.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/HasProperty.cs",
       "label": "HasProperty",
       "attributes": [
         "datatype"
@@ -2487,7 +2771,7 @@
     },
     {
       "id": "HealthProductDeclaration-HasProperty-EndocrineOrange_2839CB0855B5630D1BB989A7D0121DA3FF387D7C5AFDEB16D4CDDCFD225EFD6E",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/HasProperty.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/HasProperty.cs",
       "label": "HasProperty",
       "attributes": [
         "datatype"
@@ -2497,7 +2781,7 @@
     },
     {
       "id": "HealthProductDeclaration-HasProperty-EyeIrritationOrange_0C9B0706DDE2BFD0C4B515F79C360BFF01330FBA7CDB90EF4525EBA0B8FB1539",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/HasProperty.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/HasProperty.cs",
       "label": "HasProperty",
       "attributes": [
         "datatype"
@@ -2507,7 +2791,7 @@
     },
     {
       "id": "HealthProductDeclaration-HasProperty-MammalianOrange_A93E2C3043F0C5202DE5A3C30F7E69EB7C93872633E1403BD762D43F554FCAE4",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/HasProperty.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/HasProperty.cs",
       "label": "HasProperty",
       "attributes": [
         "datatype"
@@ -2517,7 +2801,7 @@
     },
     {
       "id": "HealthProductDeclaration-HasProperty-MutagenicityOrange_A35EE7E8C7F648C16BEE15FAB054858329B89EEBDA66757A2BFC74131FDFB7E3",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/HasProperty.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/HasProperty.cs",
       "label": "HasProperty",
       "attributes": [
         "datatype"
@@ -2527,7 +2811,7 @@
     },
     {
       "id": "HealthProductDeclaration-HasProperty-NeurotoxicityOrange_673E5096480A7781E7F052E2C92CD136B89BF1E8E0AC30C1C74B492BA16A0D1B",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/HasProperty.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/HasProperty.cs",
       "label": "HasProperty",
       "attributes": [
         "datatype"
@@ -2537,7 +2821,7 @@
     },
     {
       "id": "HealthProductDeclaration-HasProperty-OrganToxicantOrange_2F95DA822E333E204362366A964F34CAB08F19598C2B2CF9D1B3C70FE7B59B69",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/HasProperty.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/HasProperty.cs",
       "label": "HasProperty",
       "attributes": [
         "datatype"
@@ -2547,7 +2831,7 @@
     },
     {
       "id": "HealthProductDeclaration-HasProperty-ReproductiveOrange_02534F4FE32D6E74C12C362D26347AB2B16B674C83E9778531F0284DFA3D9F22",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/HasProperty.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/HasProperty.cs",
       "label": "HasProperty",
       "attributes": [
         "datatype"
@@ -2557,7 +2841,7 @@
     },
     {
       "id": "HealthProductDeclaration-HasProperty-RespiratoryOrange_1972A471F71A2D78A61AE4FD92E4B9AFA3B9ED93B24AAAA133C9064D8852A592",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/HasProperty.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/HasProperty.cs",
       "label": "HasProperty",
       "attributes": [
         "datatype"
@@ -2567,7 +2851,7 @@
     },
     {
       "id": "HealthProductDeclaration-HasProperty-RespiratoryOccupationalOnlyOrange_6065819D984667BA321E39165C426039D2033DCBC8ED64DA15147B5B6C5B98BE",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/HasProperty.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/HasProperty.cs",
       "label": "HasProperty",
       "attributes": [
         "datatype"
@@ -2577,7 +2861,7 @@
     },
     {
       "id": "HealthProductDeclaration-HasProperty-SkinSensitizationOrange_55CA2A7EC4CCFED70F9848A9FA9103F2C08523DAF29DC7F835A557A0E11A51AD",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/HasProperty.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/HasProperty.cs",
       "label": "HasProperty",
       "attributes": [
         "datatype"
@@ -2587,7 +2871,7 @@
     },
     {
       "id": "HealthProductDeclaration-HasProperty-CancerRed_CFF6E9F7B845F061A64D3BE16D7C9CB86907B95713BC0C671C336DA02A740231",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/HasProperty.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/HasProperty.cs",
       "label": "HasProperty",
       "attributes": [
         "datatype"
@@ -2597,7 +2881,7 @@
     },
     {
       "id": "HealthProductDeclaration-HasProperty-CancerOccupationalOnlyRed_FC84097ABBFFE36C399E0EF717AB9A88FFF777D9A7A384368EB03C961C75A6C9",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/HasProperty.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/HasProperty.cs",
       "label": "HasProperty",
       "attributes": [
         "datatype"
@@ -2607,7 +2891,7 @@
     },
     {
       "id": "HealthProductDeclaration-HasProperty-DevelopmentalRed_C1BAAEE0D4BF0926245D0465900A904548C0CF34ABA80F7F0DA996D02F376FB0",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/HasProperty.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/HasProperty.cs",
       "label": "HasProperty",
       "attributes": [
         "datatype"
@@ -2617,7 +2901,7 @@
     },
     {
       "id": "HealthProductDeclaration-HasProperty-MutagenicityRed_8CC5380004771D7BC18831E77EB3D7039E368952F9181A9E1B7A764DBE0E9753",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/HasProperty.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/HasProperty.cs",
       "label": "HasProperty",
       "attributes": [
         "datatype"
@@ -2627,7 +2911,7 @@
     },
     {
       "id": "HealthProductDeclaration-HasProperty-PersistantBioaccumulativeToxicantRed_112FA7E546E1951D77C259F65BB91738474BD591AF66CAEF2C59EF2A523ACFED",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/HasProperty.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/HasProperty.cs",
       "label": "HasProperty",
       "attributes": [
         "datatype"
@@ -2637,7 +2921,7 @@
     },
     {
       "id": "HealthProductDeclaration-HasProperty-ReproductiveRed_450CF41936304B8C6BB051FC7766FAB327C7D26C5D9D51CBFAA903D590EA7C33",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/HasProperty.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/HasProperty.cs",
       "label": "HasProperty",
       "attributes": [
         "datatype"
@@ -2647,7 +2931,7 @@
     },
     {
       "id": "HealthProductDeclaration-HasProperty-RespiratoryRed_FCE5F090514FCFEEEF6D032993F4BE650514BF1710A6942514CBE7A595FA1A61",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/HasProperty.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/HasProperty.cs",
       "label": "HasProperty",
       "attributes": [
         "datatype"
@@ -2657,7 +2941,7 @@
     },
     {
       "id": "HealthProductDeclaration-HasProperty-PersistantBioaccumulativeToxicantPurple_AF00C246D503A8A233839CC196A2E1F2C974651E7C04BC572AB4DD3604A4221D",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/HasProperty.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/HasProperty.cs",
       "label": "HasProperty",
       "attributes": [
         "datatype"
@@ -2667,7 +2951,7 @@
     },
     {
       "id": "HealthProductDeclaration-IsA-IBHoMObject_26E00A81DCC7D7595EC4BB86280FE708E7737691AFFEA06A2AED05501848724F",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/IsA.cs",
       "label": "IsA",
       "attributes": [
         "object"
@@ -2680,7 +2964,7 @@
     },
     {
       "id": "HealthProductDeclaration-IsA-IObject_E5EB10E5B32C6B919A2FDBE647057BA871749E438397F7E16A1ECA6CE0A718AD",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/IsA.cs",
       "label": "IsA",
       "attributes": [
         "object"
@@ -2693,7 +2977,7 @@
     },
     {
       "id": "HealthProductDeclaration-IsSubclassOf-BHoMObject_941BF5F705D82F75DE365544F01D274CCD5FED621B6CF2C7AE8929ED1EA64E59",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsSubclassOf.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/IsSubclassOf.cs",
       "label": "IsA",
       "attributes": [
         "object"
@@ -2703,7 +2987,7 @@
     },
     {
       "id": "BH.oM.LifeCycleAssessment.ProjectLifeCycleAssessment-HasProperty-BH.oM.LifeCycleAssessment.ProjectLifeCycleAssessment.LCAScope",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/HasProperty.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/HasProperty.cs",
       "label": "HasProperty",
       "attributes": [
         "object"
@@ -2713,7 +2997,7 @@
     },
     {
       "id": "BH.oM.LifeCycleAssessment.ProjectLifeCycleAssessment.LCAScope-IsA-BH.oM.LifeCycleAssessment.LifeCycleAssessmentScope",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/IsA.cs",
       "label": "IsA",
       "attributes": [
         "object"
@@ -2723,7 +3007,7 @@
     },
     {
       "id": "BH.oM.LifeCycleAssessment.ProjectLifeCycleAssessment-HasProperty-BH.oM.LifeCycleAssessment.ProjectLifeCycleAssessment.Elements",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/HasProperty.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/HasProperty.cs",
       "label": "HasProperty",
       "attributes": [
         "object"
@@ -2733,7 +3017,7 @@
     },
     {
       "id": "BH.oM.LifeCycleAssessment.ProjectLifeCycleAssessment.Elements-IsAListOf-BH.oM.Dimensional.IElementM",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsAListOf.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/IsAListOf.cs",
       "label": "IsAListOf",
       "attributes": [
         "object"
@@ -2743,7 +3027,7 @@
     },
     {
       "id": "ProjectLifeCycleAssessment-IsA-IBHoMObject_CF478E3BFED81FC94B340039B12B648198EF1239D76F1BC00DF296DF6862F5C6",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/IsA.cs",
       "label": "IsA",
       "attributes": [
         "object"
@@ -2756,7 +3040,7 @@
     },
     {
       "id": "ProjectLifeCycleAssessment-IsA-IObject_B27959E54B6748AF177567B7B3E50DE1468756A29450BF13C1E11C332A13DFAD",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/IsA.cs",
       "label": "IsA",
       "attributes": [
         "object"
@@ -2769,7 +3053,7 @@
     },
     {
       "id": "ProjectLifeCycleAssessment-IsSubclassOf-BHoMObject_454565286D97630D1A2E058218035FDF18A8DA300B9BE4204E94DD1C259A80F2",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsSubclassOf.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/IsSubclassOf.cs",
       "label": "IsA",
       "attributes": [
         "object"
@@ -2778,8 +3062,206 @@
       "range": "BH.oM.Base.BHoMObject"
     },
     {
+      "id": "ElementResult-HasProperty-ObjectId_4B89F24939185CAF82213C25CE360BE60D80C733D3848FF777E97EE5202AC583",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/HasProperty.cs",
+      "label": "HasProperty",
+      "attributes": [
+        "datatype"
+      ],
+      "domain": "BH.oM.LifeCycleAssessment.Results.ElementResult",
+      "range": "BH.oM.LifeCycleAssessment.Results.ElementResult.ObjectId"
+    },
+    {
+      "id": "BH.oM.LifeCycleAssessment.Results.ElementResult-HasProperty-BH.oM.LifeCycleAssessment.Results.ElementResult.Scope",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/HasProperty.cs",
+      "label": "HasProperty",
+      "attributes": [
+        "object"
+      ],
+      "domain": "BH.oM.LifeCycleAssessment.Results.ElementResult",
+      "range": "BH.oM.LifeCycleAssessment.Results.ElementResult.Scope"
+    },
+    {
+      "id": "BH.oM.LifeCycleAssessment.Results.ElementResult.Scope-IsA-BH.oM.LifeCycleAssessment.ScopeType",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/IsA.cs",
+      "label": "IsA",
+      "attributes": [
+        "object"
+      ],
+      "domain": "BH.oM.LifeCycleAssessment.Results.ElementResult.Scope",
+      "range": "BH.oM.LifeCycleAssessment.ScopeType"
+    },
+    {
+      "id": "BH.oM.LifeCycleAssessment.Results.ElementResult-HasProperty-BH.oM.LifeCycleAssessment.Results.ElementResult.Category",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/HasProperty.cs",
+      "label": "HasProperty",
+      "attributes": [
+        "object"
+      ],
+      "domain": "BH.oM.LifeCycleAssessment.Results.ElementResult",
+      "range": "BH.oM.LifeCycleAssessment.Results.ElementResult.Category"
+    },
+    {
+      "id": "BH.oM.LifeCycleAssessment.Results.ElementResult.Category-IsA-BH.oM.LifeCycleAssessment.ObjectCategory",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/IsA.cs",
+      "label": "IsA",
+      "attributes": [
+        "object"
+      ],
+      "domain": "BH.oM.LifeCycleAssessment.Results.ElementResult.Category",
+      "range": "BH.oM.LifeCycleAssessment.ObjectCategory"
+    },
+    {
+      "id": "BH.oM.LifeCycleAssessment.Results.ElementResult-HasProperty-BH.oM.LifeCycleAssessment.Results.ElementResult.Phases",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/HasProperty.cs",
+      "label": "HasProperty",
+      "attributes": [
+        "object"
+      ],
+      "domain": "BH.oM.LifeCycleAssessment.Results.ElementResult",
+      "range": "BH.oM.LifeCycleAssessment.Results.ElementResult.Phases"
+    },
+    {
+      "id": "BH.oM.LifeCycleAssessment.Results.ElementResult.Phases-IsAListOf-BH.oM.LifeCycleAssessment.LifeCycleAssessmentPhases",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/IsAListOf.cs",
+      "label": "IsAListOf",
+      "attributes": [
+        "object"
+      ],
+      "domain": "BH.oM.LifeCycleAssessment.Results.ElementResult.Phases",
+      "range": "BH.oM.LifeCycleAssessment.LifeCycleAssessmentPhases"
+    },
+    {
+      "id": "ElementResult-HasProperty-Quantity_46C1F9A3D02472FC7C3ED563FF35AFFAD51D387DB9F9FC5F0E3A401C32012906",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/HasProperty.cs",
+      "label": "HasProperty",
+      "attributes": [
+        "datatype"
+      ],
+      "domain": "BH.oM.LifeCycleAssessment.Results.ElementResult",
+      "range": "BH.oM.LifeCycleAssessment.Results.ElementResult.Quantity"
+    },
+    {
+      "id": "BH.oM.LifeCycleAssessment.Results.ElementResult-HasProperty-BH.oM.LifeCycleAssessment.Results.ElementResult.Metric",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/HasProperty.cs",
+      "label": "HasProperty",
+      "attributes": [
+        "object"
+      ],
+      "domain": "BH.oM.LifeCycleAssessment.Results.ElementResult",
+      "range": "BH.oM.LifeCycleAssessment.Results.ElementResult.Metric"
+    },
+    {
+      "id": "BH.oM.LifeCycleAssessment.Results.ElementResult.Metric-IsA-BH.oM.LifeCycleAssessment.EnvironmentalProductDeclarationField",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/IsA.cs",
+      "label": "IsA",
+      "attributes": [
+        "object"
+      ],
+      "domain": "BH.oM.LifeCycleAssessment.Results.ElementResult.Metric",
+      "range": "BH.oM.LifeCycleAssessment.EnvironmentalProductDeclarationField"
+    },
+    {
+      "id": "BH.oM.LifeCycleAssessment.Results.ElementResult-HasProperty-BH.oM.LifeCycleAssessment.Results.ElementResult.MaterialResults",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/HasProperty.cs",
+      "label": "HasProperty",
+      "attributes": [
+        "object"
+      ],
+      "domain": "BH.oM.LifeCycleAssessment.Results.ElementResult",
+      "range": "BH.oM.LifeCycleAssessment.Results.ElementResult.MaterialResults"
+    },
+    {
+      "id": "BH.oM.LifeCycleAssessment.Results.ElementResult.MaterialResults-IsAListOf-BH.oM.LifeCycleAssessment.Results.MaterialResult",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/IsAListOf.cs",
+      "label": "IsAListOf",
+      "attributes": [
+        "object"
+      ],
+      "domain": "BH.oM.LifeCycleAssessment.Results.ElementResult.MaterialResults",
+      "range": "BH.oM.LifeCycleAssessment.Results.MaterialResult"
+    },
+    {
+      "id": "ElementResult-IsA-IResult_152439B09A91067B216BEF91A21248FCAF31BE461DD18E154B8FD43A0C69655E",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/IsA.cs",
+      "label": "IsA",
+      "attributes": [
+        "object"
+      ],
+      "comment": {
+        "undefined": "Can be used to describe that a thing belongs to a class; or that a thing is equivalent to another thing. When used for BHoM types, this describes C# interface implementation."
+      },
+      "domain": "BH.oM.LifeCycleAssessment.Results.ElementResult",
+      "range": "BH.oM.Analytical.Results.IResult"
+    },
+    {
+      "id": "ElementResult-IsA-IObject_505FF6D19CC8EA80CA0BAA213CD6BCBAF6170FF7D924B1081544CA4091CD0E3E",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/IsA.cs",
+      "label": "IsA",
+      "attributes": [
+        "object"
+      ],
+      "comment": {
+        "undefined": "Can be used to describe that a thing belongs to a class; or that a thing is equivalent to another thing. When used for BHoM types, this describes C# interface implementation."
+      },
+      "domain": "BH.oM.LifeCycleAssessment.Results.ElementResult",
+      "range": "BH.oM.Base.IObject"
+    },
+    {
+      "id": "ElementResult-IsA-IImmutable_54E1B3647707780F0A5E6CD7E5D516158B3D454D8ABB9EE3B22434EE0BD866C9",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/IsA.cs",
+      "label": "IsA",
+      "attributes": [
+        "object"
+      ],
+      "comment": {
+        "undefined": "Can be used to describe that a thing belongs to a class; or that a thing is equivalent to another thing. When used for BHoM types, this describes C# interface implementation."
+      },
+      "domain": "BH.oM.LifeCycleAssessment.Results.ElementResult",
+      "range": "BH.oM.Base.IImmutable"
+    },
+    {
+      "id": "ElementResult-IsA-IObjectResult_876C2C20DA291D716A11EA7E91AC32D9CC1D78CB683B30982F94873467B8D0E5",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/IsA.cs",
+      "label": "IsA",
+      "attributes": [
+        "object"
+      ],
+      "comment": {
+        "undefined": "Can be used to describe that a thing belongs to a class; or that a thing is equivalent to another thing. When used for BHoM types, this describes C# interface implementation."
+      },
+      "domain": "BH.oM.LifeCycleAssessment.Results.ElementResult",
+      "range": "BH.oM.Analytical.Results.IObjectResult"
+    },
+    {
+      "id": "ElementResult-IsA-IObjectIdResult_9AF33FC5943B9B59F2F34EAE83FA8C735ED8A62BF66C69427AB2E8F8513C9195",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/IsA.cs",
+      "label": "IsA",
+      "attributes": [
+        "object"
+      ],
+      "comment": {
+        "undefined": "Can be used to describe that a thing belongs to a class; or that a thing is equivalent to another thing. When used for BHoM types, this describes C# interface implementation."
+      },
+      "domain": "BH.oM.LifeCycleAssessment.Results.ElementResult",
+      "range": "BH.oM.Analytical.Results.IObjectIdResult"
+    },
+    {
+      "id": "ElementResult-IsA-IResultItem_9DC3E2DB256B99A2A96922F4A5909881FF45A46A10C4E72DC60211AC28462682",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/IsA.cs",
+      "label": "IsA",
+      "attributes": [
+        "object"
+      ],
+      "comment": {
+        "undefined": "Can be used to describe that a thing belongs to a class; or that a thing is equivalent to another thing. When used for BHoM types, this describes C# interface implementation."
+      },
+      "domain": "BH.oM.LifeCycleAssessment.Results.ElementResult",
+      "range": "BH.oM.Analytical.Results.IResultItem"
+    },
+    {
       "id": "EnvironmentalMetricResult-HasProperty-Quantity_2787E0B0C6A95DC3D314AD159AE653B16C2F12297FE7E3926F0BA250C347E61A",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/HasProperty.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/HasProperty.cs",
       "label": "HasProperty",
       "attributes": [
         "datatype"
@@ -2789,7 +3271,7 @@
     },
     {
       "id": "BH.oM.LifeCycleAssessment.Results.EnvironmentalMetricResult-HasProperty-BH.oM.LifeCycleAssessment.Results.EnvironmentalMetricResult.Metric",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/HasProperty.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/HasProperty.cs",
       "label": "HasProperty",
       "attributes": [
         "object"
@@ -2799,7 +3281,7 @@
     },
     {
       "id": "BH.oM.LifeCycleAssessment.Results.EnvironmentalMetricResult.Metric-IsA-BH.oM.LifeCycleAssessment.EnvironmentalProductDeclarationField",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/IsA.cs",
       "label": "IsA",
       "attributes": [
         "object"
@@ -2809,7 +3291,7 @@
     },
     {
       "id": "EnvironmentalMetricResult-IsA-IObjectIdResult_92AC4C6F39E67B5DE74132C491DF50EA8B292CA181537CBECF00D1E2682431FC",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/IsA.cs",
       "label": "IsA",
       "attributes": [
         "object"
@@ -2822,7 +3304,7 @@
     },
     {
       "id": "EnvironmentalMetricResult-IsA-IResult_58778B63899976C9F97451CFD41664A954DC0E62902A75A94B35EB417C1FB901",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/IsA.cs",
       "label": "IsA",
       "attributes": [
         "object"
@@ -2835,7 +3317,7 @@
     },
     {
       "id": "EnvironmentalMetricResult-IsA-IObject_02534368130FF88C20C1C1CC732C5F4265B772291255B70DF2A656FB527557C2",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/IsA.cs",
       "label": "IsA",
       "attributes": [
         "object"
@@ -2848,7 +3330,7 @@
     },
     {
       "id": "EnvironmentalMetricResult-IsA-IImmutable_235C149C36A4E96051C3188217D5A79AFD9B7ADB44AC0C4F86217D289DB53B21",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/IsA.cs",
       "label": "IsA",
       "attributes": [
         "object"
@@ -2861,7 +3343,7 @@
     },
     {
       "id": "EnvironmentalMetricResult-IsA-ICasedResult_E965EAADD4179C7AB8042BE4CC1820EACA30CD3BF74465325A78F6CBF0251A18",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/IsA.cs",
       "label": "IsA",
       "attributes": [
         "object"
@@ -2874,7 +3356,7 @@
     },
     {
       "id": "EnvironmentalMetricResult-IsA-ITimeStepResult_23A9F816BE5FCB32CF350EC643E81C3F52AC295E7321E1624453FBCE079F432F",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/IsA.cs",
       "label": "IsA",
       "attributes": [
         "object"
@@ -2887,7 +3369,7 @@
     },
     {
       "id": "EnvironmentalMetricResult-IsA-IObjectResult_6DF8506B24E7B0D7C46761B045C9BABCA243B4DD66592B92BB173616FB868AC3",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/IsA.cs",
       "label": "IsA",
       "attributes": [
         "object"
@@ -2900,7 +3382,7 @@
     },
     {
       "id": "EnvironmentalMetricResult-IsA-IResultItem_FFF199A062F93D1EDF399DFE8275B837FAF58EBB518EDB9C109A3824A40E42C2",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/IsA.cs",
       "label": "IsA",
       "attributes": [
         "object"
@@ -2913,7 +3395,7 @@
     },
     {
       "id": "EnvironmentalMetricResult-IsSubclassOf-LifeCycleAssessmentElementResult_9964B3150EE64F2FE644EC788C4F0A2653C8C69ADE6056853939E7A5B6D01BF7",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsSubclassOf.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/IsSubclassOf.cs",
       "label": "IsA",
       "attributes": [
         "object"
@@ -2923,7 +3405,7 @@
     },
     {
       "id": "LifeCycleAssessmentElementResult-HasProperty-ObjectId_2413ACC2E4A1976D04ADFE4D2AE3C415E83211E455BE88B15FF9278818500068",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/HasProperty.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/HasProperty.cs",
       "label": "HasProperty",
       "attributes": [
         "datatype"
@@ -2933,7 +3415,7 @@
     },
     {
       "id": "LifeCycleAssessmentElementResult-HasProperty-ResultCase_F2F5A96BC7263D61CD572C482093899857ABD00C746A2911D0CEB6994DE21B6C",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/HasProperty.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/HasProperty.cs",
       "label": "HasProperty",
       "attributes": [
         "datatype"
@@ -2943,7 +3425,7 @@
     },
     {
       "id": "LifeCycleAssessmentElementResult-HasProperty-TimeStep_D81016EC2A8BBA46D3E360AE46260B2633D7D18858D907FC0C92B07110C9916F",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/HasProperty.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/HasProperty.cs",
       "label": "HasProperty",
       "attributes": [
         "datatype"
@@ -2953,7 +3435,7 @@
     },
     {
       "id": "BH.oM.LifeCycleAssessment.Results.LifeCycleAssessmentElementResult-HasProperty-BH.oM.LifeCycleAssessment.Results.LifeCycleAssessmentElementResult.Scope",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/HasProperty.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/HasProperty.cs",
       "label": "HasProperty",
       "attributes": [
         "object"
@@ -2963,7 +3445,7 @@
     },
     {
       "id": "BH.oM.LifeCycleAssessment.Results.LifeCycleAssessmentElementResult.Scope-IsA-BH.oM.LifeCycleAssessment.ScopeType",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/IsA.cs",
       "label": "IsA",
       "attributes": [
         "object"
@@ -2973,7 +3455,7 @@
     },
     {
       "id": "BH.oM.LifeCycleAssessment.Results.LifeCycleAssessmentElementResult-HasProperty-BH.oM.LifeCycleAssessment.Results.LifeCycleAssessmentElementResult.Category",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/HasProperty.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/HasProperty.cs",
       "label": "HasProperty",
       "attributes": [
         "object"
@@ -2983,7 +3465,7 @@
     },
     {
       "id": "BH.oM.LifeCycleAssessment.Results.LifeCycleAssessmentElementResult.Category-IsA-BH.oM.LifeCycleAssessment.ObjectCategory",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/IsA.cs",
       "label": "IsA",
       "attributes": [
         "object"
@@ -2993,7 +3475,7 @@
     },
     {
       "id": "BH.oM.LifeCycleAssessment.Results.LifeCycleAssessmentElementResult-HasProperty-BH.oM.LifeCycleAssessment.Results.LifeCycleAssessmentElementResult.Phases",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/HasProperty.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/HasProperty.cs",
       "label": "HasProperty",
       "attributes": [
         "object"
@@ -3003,7 +3485,7 @@
     },
     {
       "id": "BH.oM.LifeCycleAssessment.Results.LifeCycleAssessmentElementResult.Phases-IsAListOf-BH.oM.LifeCycleAssessment.LifeCycleAssessmentPhases",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsAListOf.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/IsAListOf.cs",
       "label": "IsAListOf",
       "attributes": [
         "object"
@@ -3013,7 +3495,7 @@
     },
     {
       "id": "BH.oM.LifeCycleAssessment.Results.LifeCycleAssessmentElementResult-HasProperty-BH.oM.LifeCycleAssessment.Results.LifeCycleAssessmentElementResult.EnvironmentalProductDeclaration",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/HasProperty.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/HasProperty.cs",
       "label": "HasProperty",
       "attributes": [
         "object"
@@ -3023,7 +3505,7 @@
     },
     {
       "id": "BH.oM.LifeCycleAssessment.Results.LifeCycleAssessmentElementResult.EnvironmentalProductDeclaration-IsAListOf-BH.oM.LifeCycleAssessment.MaterialFragments.EnvironmentalProductDeclaration",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsAListOf.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/IsAListOf.cs",
       "label": "IsAListOf",
       "attributes": [
         "object"
@@ -3033,7 +3515,7 @@
     },
     {
       "id": "LifeCycleAssessmentElementResult-IsA-IObjectIdResult_1F189A6DB5C84AC91AF2F71F48C6215E02C8CC8523B4E6F1D8C590E98E4413E1",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/IsA.cs",
       "label": "IsA",
       "attributes": [
         "object"
@@ -3046,7 +3528,7 @@
     },
     {
       "id": "LifeCycleAssessmentElementResult-IsA-IResult_0AE3EBA94F34E9AB6A6F7E4737B016DC5C08B2D34CF522F85B3D85D91AEC2722",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/IsA.cs",
       "label": "IsA",
       "attributes": [
         "object"
@@ -3059,7 +3541,7 @@
     },
     {
       "id": "LifeCycleAssessmentElementResult-IsA-IObject_D13D93A2AA4DD1DCF1EEC1AC2F8149F84B9E60FDEC1B9B7D41681AB6B66820BA",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/IsA.cs",
       "label": "IsA",
       "attributes": [
         "object"
@@ -3072,7 +3554,7 @@
     },
     {
       "id": "LifeCycleAssessmentElementResult-IsA-IImmutable_FD9681A7605D9336D3ED6561DB4AA90E7112E6D97406BD12C7461F3B3E26DEA5",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/IsA.cs",
       "label": "IsA",
       "attributes": [
         "object"
@@ -3085,7 +3567,7 @@
     },
     {
       "id": "LifeCycleAssessmentElementResult-IsA-ICasedResult_67675B2F8F7FDEF9963B61A0F91EFB65B3B1FC46018F6E17DCC63F3205DA4BA1",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/IsA.cs",
       "label": "IsA",
       "attributes": [
         "object"
@@ -3098,7 +3580,7 @@
     },
     {
       "id": "LifeCycleAssessmentElementResult-IsA-ITimeStepResult_921ACC3C326047D04BDD62F8351624DE42912DCFEC4A008C9DF93E788FF6CD5C",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/IsA.cs",
       "label": "IsA",
       "attributes": [
         "object"
@@ -3110,8 +3592,117 @@
       "range": "BH.oM.Analytical.Results.ITimeStepResult"
     },
     {
+      "id": "MaterialResult-HasProperty-MaterialName_BD564D2FE280354CB93F74DDA028705A8E1FCAB3988DCE637343E72004ABB5B1",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/HasProperty.cs",
+      "label": "HasProperty",
+      "attributes": [
+        "datatype"
+      ],
+      "domain": "BH.oM.LifeCycleAssessment.Results.MaterialResult",
+      "range": "BH.oM.LifeCycleAssessment.Results.MaterialResult.MaterialName"
+    },
+    {
+      "id": "MaterialResult-HasProperty-EnvironmentalProductDeclarationName_4F2FE8934460B73EB03FE4B076E347D747A611E713645C14FC59DC199D6FAA26",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/HasProperty.cs",
+      "label": "HasProperty",
+      "attributes": [
+        "datatype"
+      ],
+      "domain": "BH.oM.LifeCycleAssessment.Results.MaterialResult",
+      "range": "BH.oM.LifeCycleAssessment.Results.MaterialResult.EnvironmentalProductDeclarationName"
+    },
+    {
+      "id": "MaterialResult-HasProperty-Quantity_24A2B41363C7654EAB6590F80AF1D274B1C51691F55A274C69C3C4D17A83FDA3",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/HasProperty.cs",
+      "label": "HasProperty",
+      "attributes": [
+        "datatype"
+      ],
+      "domain": "BH.oM.LifeCycleAssessment.Results.MaterialResult",
+      "range": "BH.oM.LifeCycleAssessment.Results.MaterialResult.Quantity"
+    },
+    {
+      "id": "BH.oM.LifeCycleAssessment.Results.MaterialResult-HasProperty-BH.oM.LifeCycleAssessment.Results.MaterialResult.Phases",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/HasProperty.cs",
+      "label": "HasProperty",
+      "attributes": [
+        "object"
+      ],
+      "domain": "BH.oM.LifeCycleAssessment.Results.MaterialResult",
+      "range": "BH.oM.LifeCycleAssessment.Results.MaterialResult.Phases"
+    },
+    {
+      "id": "BH.oM.LifeCycleAssessment.Results.MaterialResult.Phases-IsAListOf-BH.oM.LifeCycleAssessment.LifeCycleAssessmentPhases",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/IsAListOf.cs",
+      "label": "IsAListOf",
+      "attributes": [
+        "object"
+      ],
+      "domain": "BH.oM.LifeCycleAssessment.Results.MaterialResult.Phases",
+      "range": "BH.oM.LifeCycleAssessment.LifeCycleAssessmentPhases"
+    },
+    {
+      "id": "BH.oM.LifeCycleAssessment.Results.MaterialResult-HasProperty-BH.oM.LifeCycleAssessment.Results.MaterialResult.Metric",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/HasProperty.cs",
+      "label": "HasProperty",
+      "attributes": [
+        "object"
+      ],
+      "domain": "BH.oM.LifeCycleAssessment.Results.MaterialResult",
+      "range": "BH.oM.LifeCycleAssessment.Results.MaterialResult.Metric"
+    },
+    {
+      "id": "BH.oM.LifeCycleAssessment.Results.MaterialResult.Metric-IsA-BH.oM.LifeCycleAssessment.EnvironmentalProductDeclarationField",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/IsA.cs",
+      "label": "IsA",
+      "attributes": [
+        "object"
+      ],
+      "domain": "BH.oM.LifeCycleAssessment.Results.MaterialResult.Metric",
+      "range": "BH.oM.LifeCycleAssessment.EnvironmentalProductDeclarationField"
+    },
+    {
+      "id": "MaterialResult-IsA-IResult_329802E4EDB64A04563C28E224C42B5DDBB11B6C8AA7E756A6EE53F0C8ABADFE",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/IsA.cs",
+      "label": "IsA",
+      "attributes": [
+        "object"
+      ],
+      "comment": {
+        "undefined": "Can be used to describe that a thing belongs to a class; or that a thing is equivalent to another thing. When used for BHoM types, this describes C# interface implementation."
+      },
+      "domain": "BH.oM.LifeCycleAssessment.Results.MaterialResult",
+      "range": "BH.oM.Analytical.Results.IResult"
+    },
+    {
+      "id": "MaterialResult-IsA-IObject_C34F5FC416E3220A3662BC90D76943971EFD6D4FD1C07D5FE50B0CFCED65616A",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/IsA.cs",
+      "label": "IsA",
+      "attributes": [
+        "object"
+      ],
+      "comment": {
+        "undefined": "Can be used to describe that a thing belongs to a class; or that a thing is equivalent to another thing. When used for BHoM types, this describes C# interface implementation."
+      },
+      "domain": "BH.oM.LifeCycleAssessment.Results.MaterialResult",
+      "range": "BH.oM.Base.IObject"
+    },
+    {
+      "id": "MaterialResult-IsA-IImmutable_83922725D8B366039B553EE13954AD709805BB667F7DAF6CA53AD219DDA7E9D5",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/IsA.cs",
+      "label": "IsA",
+      "attributes": [
+        "object"
+      ],
+      "comment": {
+        "undefined": "Can be used to describe that a thing belongs to a class; or that a thing is equivalent to another thing. When used for BHoM types, this describes C# interface implementation."
+      },
+      "domain": "BH.oM.LifeCycleAssessment.Results.MaterialResult",
+      "range": "BH.oM.Base.IImmutable"
+    },
+    {
       "id": "BH.oM.LifeCycleAssessment.MaterialFragments.EnvironmentalProductDeclaration-HasProperty-BH.oM.LifeCycleAssessment.MaterialFragments.EnvironmentalProductDeclaration.Type",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/HasProperty.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/HasProperty.cs",
       "label": "HasProperty",
       "attributes": [
         "object"
@@ -3121,7 +3712,7 @@
     },
     {
       "id": "BH.oM.LifeCycleAssessment.MaterialFragments.EnvironmentalProductDeclaration.Type-IsA-BH.oM.LifeCycleAssessment.EPDType",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/IsA.cs",
       "label": "IsA",
       "attributes": [
         "object"
@@ -3131,7 +3722,7 @@
     },
     {
       "id": "BH.oM.LifeCycleAssessment.MaterialFragments.EnvironmentalProductDeclaration-HasProperty-BH.oM.LifeCycleAssessment.MaterialFragments.EnvironmentalProductDeclaration.EnvironmentalMetric",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/HasProperty.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/HasProperty.cs",
       "label": "HasProperty",
       "attributes": [
         "object"
@@ -3141,7 +3732,7 @@
     },
     {
       "id": "BH.oM.LifeCycleAssessment.MaterialFragments.EnvironmentalProductDeclaration.EnvironmentalMetric-IsAListOf-BH.oM.LifeCycleAssessment.EnvironmentalMetric",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsAListOf.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/IsAListOf.cs",
       "label": "IsAListOf",
       "attributes": [
         "object"
@@ -3151,7 +3742,7 @@
     },
     {
       "id": "BH.oM.LifeCycleAssessment.MaterialFragments.EnvironmentalProductDeclaration-HasProperty-BH.oM.LifeCycleAssessment.MaterialFragments.EnvironmentalProductDeclaration.QuantityType",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/HasProperty.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/HasProperty.cs",
       "label": "HasProperty",
       "attributes": [
         "object"
@@ -3161,7 +3752,7 @@
     },
     {
       "id": "BH.oM.LifeCycleAssessment.MaterialFragments.EnvironmentalProductDeclaration.QuantityType-IsA-BH.oM.LifeCycleAssessment.QuantityType",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/IsA.cs",
       "label": "IsA",
       "attributes": [
         "object"
@@ -3171,7 +3762,7 @@
     },
     {
       "id": "EnvironmentalProductDeclaration-HasProperty-QuantityTypeValue_8DFD9D20BEF7739120A35C483F68ADA9F3F2B577283DF4C9AC319D6BE4259C9D",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/HasProperty.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/HasProperty.cs",
       "label": "HasProperty",
       "attributes": [
         "datatype"
@@ -3181,7 +3772,7 @@
     },
     {
       "id": "EnvironmentalProductDeclaration-IsA-IBHoMObject_62FE49CBB6EA3B7425B72BBCDBCC4574A922BACC3BDBE6B0DC403DD972C52C4B",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/IsA.cs",
       "label": "IsA",
       "attributes": [
         "object"
@@ -3194,7 +3785,7 @@
     },
     {
       "id": "EnvironmentalProductDeclaration-IsA-IObject_A9546AD3779F13C8D6898D7A549B9ACE9D4B9C7E9AA830E8C6084D94344F3A61",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/IsA.cs",
       "label": "IsA",
       "attributes": [
         "object"
@@ -3207,7 +3798,7 @@
     },
     {
       "id": "EnvironmentalProductDeclaration-IsA-IMaterialProperties_7C841FBF3F05FF2E928F4279AA4266971E32934C4ECC4E878AAEA4E4E1277083",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/IsA.cs",
       "label": "IsA",
       "attributes": [
         "object"
@@ -3220,7 +3811,7 @@
     },
     {
       "id": "EnvironmentalProductDeclaration-IsSubclassOf-BHoMObject_7ABDC8FCC66AA3FC9F80C359AFB53E68BF61F86CD2D67F6AF071E645D347989E",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsSubclassOf.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/IsSubclassOf.cs",
       "label": "IsA",
       "attributes": [
         "object"
@@ -3230,7 +3821,7 @@
     },
     {
       "id": "AdditionalEPDData-HasProperty-Description_E8E55C41A74617E65BFD9702C00D2BB2586126B05BAEDC651C59C7700B8234F5",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/HasProperty.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/HasProperty.cs",
       "label": "HasProperty",
       "attributes": [
         "datatype"
@@ -3240,7 +3831,7 @@
     },
     {
       "id": "AdditionalEPDData-HasProperty-EndOfLifeTreatment_15EFAD43D2A544CF6A92A7E13C25A03DAA6C7ECC73BC69CE1FB4F28ABC3EDD04",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/HasProperty.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/HasProperty.cs",
       "label": "HasProperty",
       "attributes": [
         "datatype"
@@ -3250,7 +3841,7 @@
     },
     {
       "id": "AdditionalEPDData-HasProperty-Id_319AB5E0114CFCC46F2A4E136619CB5A97A86E7AB75BE8B22A08A473636DB7EE",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/HasProperty.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/HasProperty.cs",
       "label": "HasProperty",
       "attributes": [
         "datatype"
@@ -3260,7 +3851,7 @@
     },
     {
       "id": "AdditionalEPDData-HasProperty-IndustryStandards_D9827B1F4F9D33AA0084A40219E44B94427E59F0FF4C3F513FB00AE17EBFEE47",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/HasProperty.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/HasProperty.cs",
       "label": "HasProperty",
       "attributes": [
         "datatype"
@@ -3270,7 +3861,7 @@
     },
     {
       "id": "AdditionalEPDData-HasProperty-Jurisdiction_F589B259C45CF16C39E8EDDC073183121C097B342F5663B89A0D768BE7A58D50",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/HasProperty.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/HasProperty.cs",
       "label": "HasProperty",
       "attributes": [
         "datatype"
@@ -3280,7 +3871,7 @@
     },
     {
       "id": "AdditionalEPDData-HasProperty-LifeSpan_7A5C6BFD01A64184CFE4FCF1F68ACF4368CCF9C6352546CE03EBF3709D262806",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/HasProperty.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/HasProperty.cs",
       "label": "HasProperty",
       "attributes": [
         "datatype"
@@ -3290,7 +3881,7 @@
     },
     {
       "id": "AdditionalEPDData-HasProperty-Manufacturer_28E6DE4B5DD6A9A50FD6B45F7CC8EC5AA38DD40C74DFDFA95B23D6B3773A3E08",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/HasProperty.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/HasProperty.cs",
       "label": "HasProperty",
       "attributes": [
         "datatype"
@@ -3300,7 +3891,7 @@
     },
     {
       "id": "AdditionalEPDData-HasProperty-PlantName_3404F083B0A8A78DD85D6ED4D3BEA095647DAE996FFDD19D39ACB5B2FC8E9319",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/HasProperty.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/HasProperty.cs",
       "label": "HasProperty",
       "attributes": [
         "datatype"
@@ -3310,7 +3901,7 @@
     },
     {
       "id": "AdditionalEPDData-HasProperty-PostalCode_90BA0EC07E6E42E6D3CA568215A5BCF57CCC0967F456237332B96144066D01C1",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/HasProperty.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/HasProperty.cs",
       "label": "HasProperty",
       "attributes": [
         "datatype"
@@ -3320,7 +3911,7 @@
     },
     {
       "id": "AdditionalEPDData-HasProperty-Publisher_67A4D262E593E3113778E301D45D6B4E5D4A7FC5BE417037D80CA404A178DB02",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/HasProperty.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/HasProperty.cs",
       "label": "HasProperty",
       "attributes": [
         "datatype"
@@ -3330,7 +3921,7 @@
     },
     {
       "id": "AdditionalEPDData-HasProperty-ReferenceYear_B1D9EE29C9869382CB0AFE03D0D68FA5EED9B157FCF642E7102831BDA9E6163D",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/HasProperty.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/HasProperty.cs",
       "label": "HasProperty",
       "attributes": [
         "datatype"
@@ -3340,7 +3931,7 @@
     },
     {
       "id": "AdditionalEPDData-IsA-IFragment_8CA1820B58E1CDEA192B8F98A5D45455A6B00D3053A5DA92A17A7FA5F1FB761C",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/IsA.cs",
       "label": "IsA",
       "attributes": [
         "object"
@@ -3353,7 +3944,7 @@
     },
     {
       "id": "AdditionalEPDData-IsA-IObject_0660360BF8C5963AB0D53F4576AD219F1C60A12480C6E89550B8F5DCA92BBFC8",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/IsA.cs",
       "label": "IsA",
       "attributes": [
         "object"
@@ -3366,7 +3957,7 @@
     },
     {
       "id": "EPDDensity-HasProperty-Density_1FCE49D12B813E03954F8A671F818256E5576E44F2109B5F78D5AACFA82ABEAE",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/HasProperty.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/HasProperty.cs",
       "label": "HasProperty",
       "attributes": [
         "datatype"
@@ -3376,7 +3967,7 @@
     },
     {
       "id": "EPDDensity-IsA-IFragment_1471209F64D6150910429E31AC14DF959F22DCC87EB50ED983E925161037A68C",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/IsA.cs",
       "label": "IsA",
       "attributes": [
         "object"
@@ -3389,7 +3980,7 @@
     },
     {
       "id": "EPDDensity-IsA-IObject_33B9FDDF5A30CEE6B90EB3063DE091875111D60EDCAD59B645F7918ADA4BF068",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/IsA.cs",
       "label": "IsA",
       "attributes": [
         "object"
@@ -3402,7 +3993,7 @@
     },
     {
       "id": "EPDDimension-HasProperty-Dimension_21C2918E494DCD6036E5F6AAC3706BECA4226099C4319DE70B041F13735CF733",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/HasProperty.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/HasProperty.cs",
       "label": "HasProperty",
       "attributes": [
         "datatype"
@@ -3412,7 +4003,7 @@
     },
     {
       "id": "EPDDimension-HasProperty-SpecifiedDimension_C9782DA5DB0158999468DE36C9597AC87D7E80FDAF7BE16B06BE5B39FC94D388",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/HasProperty.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/HasProperty.cs",
       "label": "HasProperty",
       "attributes": [
         "datatype"
@@ -3422,7 +4013,7 @@
     },
     {
       "id": "EPDDimension-IsA-IFragment_4212FE2FD062757697AB6A47907A7B353223D9FEE39CB2FFDC5BA11C85D4ECEB",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/IsA.cs",
       "label": "IsA",
       "attributes": [
         "object"
@@ -3435,7 +4026,7 @@
     },
     {
       "id": "EPDDimension-IsA-IObject_BDDB0F36A28EC8E6E7EF148C7717F1FCF01463100C41345FF641A0FD1765FDB4",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/IsA.cs",
       "label": "IsA",
       "attributes": [
         "object"

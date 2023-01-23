@@ -7,6 +7,10 @@
       "type": "owl:Class"
     },
     {
+      "id": "BH.oM.Geometry.BoundaryCurve",
+      "type": "owl:Class"
+    },
+    {
       "id": "BH.oM.Geometry.Circle",
       "type": "owl:Class"
     },
@@ -15,7 +19,19 @@
       "type": "owl:Class"
     },
     {
+      "id": "BH.oM.Geometry.IBoundary",
+      "type": "owl:Class"
+    },
+    {
       "id": "BH.oM.Geometry.ICurve",
+      "type": "owl:Class"
+    },
+    {
+      "id": "BH.oM.Geometry.IPolyCurve",
+      "type": "owl:Class"
+    },
+    {
+      "id": "BH.oM.Geometry.IPolyline",
       "type": "owl:Class"
     },
     {
@@ -28,6 +44,10 @@
     },
     {
       "id": "BH.oM.Geometry.PolyCurve",
+      "type": "owl:Class"
+    },
+    {
+      "id": "BH.oM.Geometry.Polygon",
       "type": "owl:Class"
     },
     {
@@ -159,7 +179,7 @@
       "type": "owl:Class"
     },
     {
-      "id": "BH.oM.Geometry.NurbsCurve+<>c",
+      "id": "BH.oM.Geometry.NurbsCurve.c",
       "type": "owl:Class"
     },
     {
@@ -188,6 +208,14 @@
     },
     {
       "id": "BH.oM.Dimensional.IElement",
+      "type": "owl:Class"
+    },
+    {
+      "id": "BH.oM.Geometry.BoundaryCurve.Curves",
+      "type": "owl:Class"
+    },
+    {
+      "id": "BH.oM.Base.IImmutable",
       "type": "owl:Class"
     },
     {
@@ -248,6 +276,10 @@
     },
     {
       "id": "BH.oM.Geometry.PolyCurve.Curves",
+      "type": "owl:Class"
+    },
+    {
+      "id": "BH.oM.Geometry.Polygon.Vertices",
       "type": "owl:Class"
     },
     {
@@ -312,10 +344,6 @@
     },
     {
       "id": "BH.oM.Geometry.Mesh3D.CellRelation",
-      "type": "owl:Class"
-    },
-    {
-      "id": "BH.oM.Base.IImmutable",
       "type": "owl:Class"
     },
     {
@@ -507,6 +535,10 @@
       "type": "owl:Class"
     },
     {
+      "id": "BH.oM.Dimensional.IElement2D",
+      "type": "owl:Class"
+    },
+    {
       "id": "BH.oM.Geometry.PolySurface.Surfaces",
       "type": "owl:Class"
     },
@@ -588,6 +620,17 @@
       }
     },
     {
+      "id": "BH.oM.Geometry.BoundaryCurve",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/Geometry_oM/Curve/BoundaryCurve.cs",
+      "label": "BoundaryCurve (BH.oM.Geometry)",
+      "attributes": [
+        "object"
+      ],
+      "comment": {
+        "undefined": "Closed, planar, non-self intersecting curve built up of multiple curve segments."
+      }
+    },
+    {
       "id": "BH.oM.Geometry.Circle",
       "iri": "https://github.com/BHoM/BHoM/blob/main/Geometry_oM/Curve/Circle.cs",
       "label": "Circle (BH.oM.Geometry)",
@@ -610,6 +653,17 @@
       }
     },
     {
+      "id": "BH.oM.Geometry.IBoundary",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/Geometry_oM/Curve/IBoundary.cs",
+      "label": "IBoundary (BH.oM.Geometry)",
+      "attributes": [
+        "object"
+      ],
+      "comment": {
+        "undefined": "Base interface for curves that are guarantied to be closed, planar and non-selfintersecting."
+      }
+    },
+    {
       "id": "BH.oM.Geometry.ICurve",
       "iri": "https://github.com/BHoM/BHoM/blob/main/Geometry_oM/Curve/ICurve.cs",
       "label": "ICurve (BH.oM.Geometry)",
@@ -618,6 +672,28 @@
       ],
       "comment": {
         "undefined": "The interface for all one-dimensional geometrical objects."
+      }
+    },
+    {
+      "id": "BH.oM.Geometry.IPolyCurve",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/Geometry_oM/Curve/IPolyCurve.cs",
+      "label": "IPolyCurve (BH.oM.Geometry)",
+      "attributes": [
+        "object"
+      ],
+      "comment": {
+        "undefined": "Base interface for curve types build up of a collection of sub curves."
+      }
+    },
+    {
+      "id": "BH.oM.Geometry.IPolyline",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/Geometry_oM/Curve/IPolyline.cs",
+      "label": "IPolyline (BH.oM.Geometry)",
+      "attributes": [
+        "object"
+      ],
+      "comment": {
+        "undefined": "Base interface for curves built up of a series of connected line segments, defined by a collection of Points."
       }
     },
     {
@@ -654,6 +730,17 @@
       }
     },
     {
+      "id": "BH.oM.Geometry.Polygon",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/Geometry_oM/Curve/Polygon.cs",
+      "label": "Polygon (BH.oM.Geometry)",
+      "attributes": [
+        "object"
+      ],
+      "comment": {
+        "undefined": "Simple Polygon. Closed, planar and non-self intersecting. Can be irregular, convex and/or concave."
+      }
+    },
+    {
       "id": "BH.oM.Geometry.Polyline",
       "iri": "https://github.com/BHoM/BHoM/blob/main/Geometry_oM/Curve/Polyline.cs",
       "label": "Polyline (BH.oM.Geometry)",
@@ -661,7 +748,7 @@
         "object"
       ],
       "comment": {
-        "undefined": "A curve consisting of a continuous chain of straight line segments. The Polyline is considered closed if the first and last ControlPoints are coincident"
+        "undefined": "A curve consisting of a continuous chain of straight line segments. The Polyline is considered closed if the first and last ControlPoints are coincident."
       }
     },
     {
@@ -1003,8 +1090,8 @@
       }
     },
     {
-      "id": "BH.oM.Geometry.NurbsCurve+<>c",
-      "iri": "https://github.com/BHoM/3DRepo_Toolkit/blob/main/TDRepo_Adapter/AdapterActions/Execute.cs",
+      "id": "BH.oM.Geometry.NurbsCurve.c",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/Acoustic_oM/Frequency.cs",
       "label": "c (BH.oM.Geometry)",
       "attributes": [
         "object"
@@ -1013,7 +1100,7 @@
     {
       "id": "BH.oM.Geometry.Arc.CoordinateSystem",
       "iri": "https://github.com/BHoM/BHoM/blob/main/Geometry_oM/Curve/Arc.cs#L37",
-      "label": "CoordinateSystem(BH.oM.Geometry.Arc.CoordinateSystem)",
+      "label": "CoordinateSystem (BH.oM.Geometry.Arc.CoordinateSystem)",
       "attributes": [],
       "comment": {
         "undefined": "Defines Arc centre equal to Origin of the CoordinateSystem, as well as the orientation of the Arc in three-dimensional space, equal to local xy-Plane of the CoordinateSystem."
@@ -1022,7 +1109,7 @@
     {
       "id": "BH.oM.Geometry.Arc.Radius",
       "iri": "https://github.com/BHoM/BHoM/blob/main/Geometry_oM/Curve/Arc.cs#L41",
-      "label": "Radius(BH.oM.Geometry.Arc.Radius)",
+      "label": "Radius (BH.oM.Geometry.Arc.Radius)",
       "attributes": [
         "datatype"
       ]
@@ -1030,7 +1117,7 @@
     {
       "id": "BH.oM.Geometry.Arc.StartAngle",
       "iri": "https://github.com/BHoM/BHoM/blob/main/Geometry_oM/Curve/Arc.cs#L45",
-      "label": "StartAngle(BH.oM.Geometry.Arc.StartAngle)",
+      "label": "StartAngle (BH.oM.Geometry.Arc.StartAngle)",
       "attributes": [
         "datatype"
       ]
@@ -1038,7 +1125,7 @@
     {
       "id": "BH.oM.Geometry.Arc.EndAngle",
       "iri": "https://github.com/BHoM/BHoM/blob/main/Geometry_oM/Curve/Arc.cs#L49",
-      "label": "EndAngle(BH.oM.Geometry.Arc.EndAngle)",
+      "label": "EndAngle (BH.oM.Geometry.Arc.EndAngle)",
       "attributes": [
         "datatype"
       ]
@@ -1077,236 +1164,9 @@
       }
     },
     {
-      "id": "BH.oM.Geometry.Circle.Centre",
-      "iri": "https://github.com/BHoM/BHoM/blob/main/Geometry_oM/Curve/Circle.cs#L36",
-      "label": "Centre(BH.oM.Geometry.Circle.Centre)",
-      "attributes": [],
-      "comment": {
-        "undefined": "Origin point defining location of the Circle in three-dimensional space."
-      }
-    },
-    {
-      "id": "BH.oM.Geometry.Circle.Normal",
-      "iri": "https://github.com/BHoM/BHoM/blob/main/Geometry_oM/Curve/Circle.cs#L39",
-      "label": "Normal(BH.oM.Geometry.Circle.Normal)",
-      "attributes": [],
-      "comment": {
-        "undefined": "Vector perpendicular to the plane in which the Circle lies."
-      }
-    },
-    {
-      "id": "BH.oM.Geometry.Circle.Radius",
-      "iri": "https://github.com/BHoM/BHoM/blob/main/Geometry_oM/Curve/Circle.cs#L43",
-      "label": "Radius(BH.oM.Geometry.Circle.Radius)",
-      "attributes": [
-        "datatype"
-      ]
-    },
-    {
-      "id": "BH.oM.Geometry.Ellipse.Centre",
-      "iri": "https://github.com/BHoM/BHoM/blob/main/Geometry_oM/Curve/Ellipse.cs#L38",
-      "label": "Centre(BH.oM.Geometry.Ellipse.Centre)",
-      "attributes": [],
-      "comment": {
-        "undefined": "Origin point defining location of the Ellipse in three-dimensional space."
-      }
-    },
-    {
-      "id": "BH.oM.Geometry.Ellipse.Axis1",
-      "iri": "https://github.com/BHoM/BHoM/blob/main/Geometry_oM/Curve/Ellipse.cs#L41",
-      "label": "Axis1(BH.oM.Geometry.Ellipse.Axis1)",
-      "attributes": [],
-      "comment": {
-        "undefined": "Together with Axis2 defines orientation in three-dimensional space. Direction only, and not magnitude, matters."
-      }
-    },
-    {
-      "id": "BH.oM.Geometry.Ellipse.Axis2",
-      "iri": "https://github.com/BHoM/BHoM/blob/main/Geometry_oM/Curve/Ellipse.cs#L44",
-      "label": "Axis2(BH.oM.Geometry.Ellipse.Axis2)",
-      "attributes": [],
-      "comment": {
-        "undefined": "Together with Axis1 defines orientation in three-dimensional space. Direction only, and not magnitude, matters."
-      }
-    },
-    {
-      "id": "BH.oM.Geometry.Ellipse.Radius1",
-      "iri": "https://github.com/BHoM/BHoM/blob/main/Geometry_oM/Curve/Ellipse.cs#L48",
-      "label": "Radius1(BH.oM.Geometry.Ellipse.Radius1)",
-      "attributes": [
-        "datatype"
-      ]
-    },
-    {
-      "id": "BH.oM.Geometry.Ellipse.Radius2",
-      "iri": "https://github.com/BHoM/BHoM/blob/main/Geometry_oM/Curve/Ellipse.cs#L52",
-      "label": "Radius2(BH.oM.Geometry.Ellipse.Radius2)",
-      "attributes": [
-        "datatype"
-      ]
-    },
-    {
-      "id": "BH.oM.Geometry.Line.Start",
-      "iri": "https://github.com/BHoM/BHoM/blob/main/Geometry_oM/Curve/Line.cs#L35",
-      "label": "Start(BH.oM.Geometry.Line.Start)",
-      "attributes": []
-    },
-    {
-      "id": "BH.oM.Geometry.Line.End",
-      "iri": "https://github.com/BHoM/BHoM/blob/main/Geometry_oM/Curve/Line.cs#L37",
-      "label": "End(BH.oM.Geometry.Line.End)",
-      "attributes": []
-    },
-    {
-      "id": "BH.oM.Geometry.Line.Infinite",
-      "iri": "https://github.com/BHoM/BHoM/blob/main/Geometry_oM/Curve/Line.cs#L40",
-      "label": "Infinite(BH.oM.Geometry.Line.Infinite)",
-      "attributes": [
-        "datatype"
-      ]
-    },
-    {
-      "id": "BH.oM.Geometry.NurbsCurve.ControlPoints",
-      "iri": "https://github.com/BHoM/BHoM/blob/main/Geometry_oM/Curve/NurbsCurve.cs#L40",
-      "label": "ControlPoints(BH.oM.Geometry.NurbsCurve.ControlPoints)",
-      "attributes": []
-    },
-    {
-      "id": "BH.oM.Geometry.NurbsCurve.Weights",
-      "iri": "https://github.com/BHoM/BHoM/blob/main/Geometry_oM/Curve/NurbsCurve.cs#L43",
-      "label": "Weights(BH.oM.Geometry.NurbsCurve.Weights)",
-      "attributes": [
-        "datatype"
-      ]
-    },
-    {
-      "id": "BH.oM.Geometry.NurbsCurve.Knots",
-      "iri": "https://github.com/BHoM/BHoM/blob/main/Geometry_oM/Curve/NurbsCurve.cs#L48",
-      "label": "Knots(BH.oM.Geometry.NurbsCurve.Knots)",
-      "attributes": [
-        "datatype"
-      ]
-    },
-    {
-      "id": "BH.oM.Geometry.PolyCurve.Curves",
-      "iri": "https://github.com/BHoM/BHoM/blob/main/Geometry_oM/Curve/PolyCurve.cs#L36",
-      "label": "Curves(BH.oM.Geometry.PolyCurve.Curves)",
-      "attributes": []
-    },
-    {
-      "id": "BH.oM.Geometry.Polyline.ControlPoints",
-      "iri": "https://github.com/BHoM/BHoM/blob/main/Geometry_oM/Curve/Polyline.cs#L38",
-      "label": "ControlPoints(BH.oM.Geometry.Polyline.ControlPoints)",
-      "attributes": []
-    },
-    {
-      "id": "BH.oM.Geometry.IntegrationSlice.Width",
-      "iri": "https://github.com/BHoM/BHoM/blob/main/Geometry_oM/Math/IntegrationSlice.cs#L35",
-      "label": "Width(BH.oM.Geometry.IntegrationSlice.Width)",
-      "attributes": [
-        "datatype"
-      ]
-    },
-    {
-      "id": "BH.oM.Geometry.IntegrationSlice.Length",
-      "iri": "https://github.com/BHoM/BHoM/blob/main/Geometry_oM/Math/IntegrationSlice.cs#L37",
-      "label": "Length(BH.oM.Geometry.IntegrationSlice.Length)",
-      "attributes": [
-        "datatype"
-      ]
-    },
-    {
-      "id": "BH.oM.Geometry.IntegrationSlice.Centre",
-      "iri": "https://github.com/BHoM/BHoM/blob/main/Geometry_oM/Math/IntegrationSlice.cs#L39",
-      "label": "Centre(BH.oM.Geometry.IntegrationSlice.Centre)",
-      "attributes": [
-        "datatype"
-      ]
-    },
-    {
-      "id": "BH.oM.Geometry.IntegrationSlice.Placement",
-      "iri": "https://github.com/BHoM/BHoM/blob/main/Geometry_oM/Math/IntegrationSlice.cs#L41",
-      "label": "Placement(BH.oM.Geometry.IntegrationSlice.Placement)",
-      "attributes": [
-        "datatype"
-      ]
-    },
-    {
-      "id": "BH.oM.Geometry.CellRelation.FromCell",
-      "iri": "https://github.com/BHoM/BHoM/blob/main/Geometry_oM/Mesh/CellRelation.cs#L37",
-      "label": "FromCell(BH.oM.Geometry.CellRelation.FromCell)",
-      "attributes": [
-        "datatype"
-      ]
-    },
-    {
-      "id": "BH.oM.Geometry.CellRelation.ToCell",
-      "iri": "https://github.com/BHoM/BHoM/blob/main/Geometry_oM/Mesh/CellRelation.cs#L40",
-      "label": "ToCell(BH.oM.Geometry.CellRelation.ToCell)",
-      "attributes": [
-        "datatype"
-      ]
-    },
-    {
-      "id": "BH.oM.Geometry.Face.A",
-      "iri": "https://github.com/BHoM/BHoM/blob/main/Geometry_oM/Mesh/Face.cs#L36",
-      "label": "A(BH.oM.Geometry.Face.A)",
-      "attributes": [
-        "datatype"
-      ]
-    },
-    {
-      "id": "BH.oM.Geometry.Face.B",
-      "iri": "https://github.com/BHoM/BHoM/blob/main/Geometry_oM/Mesh/Face.cs#L39",
-      "label": "B(BH.oM.Geometry.Face.B)",
-      "attributes": [
-        "datatype"
-      ]
-    },
-    {
-      "id": "BH.oM.Geometry.Face.C",
-      "iri": "https://github.com/BHoM/BHoM/blob/main/Geometry_oM/Mesh/Face.cs#L42",
-      "label": "C(BH.oM.Geometry.Face.C)",
-      "attributes": [
-        "datatype"
-      ]
-    },
-    {
-      "id": "BH.oM.Geometry.Face.D",
-      "iri": "https://github.com/BHoM/BHoM/blob/main/Geometry_oM/Mesh/Face.cs#L45",
-      "label": "D(BH.oM.Geometry.Face.D)",
-      "attributes": [
-        "datatype"
-      ]
-    },
-    {
-      "id": "BH.oM.Geometry.Mesh.Vertices",
-      "iri": "https://github.com/BHoM/BHoM/blob/main/Geometry_oM/Mesh/Mesh.cs#L36",
-      "label": "Vertices(BH.oM.Geometry.Mesh.Vertices)",
-      "attributes": []
-    },
-    {
-      "id": "BH.oM.Geometry.Mesh.Faces",
-      "iri": "https://github.com/BHoM/BHoM/blob/main/Geometry_oM/Mesh/Mesh.cs#L39",
-      "label": "Faces(BH.oM.Geometry.Mesh.Faces)",
-      "attributes": []
-    },
-    {
-      "id": "BH.oM.Geometry.Mesh3D.Vertices",
-      "iri": "https://github.com/BHoM/BHoM/blob/main/Geometry_oM/Mesh/Mesh3D.cs#L37",
-      "label": "Vertices(BH.oM.Geometry.Mesh3D.Vertices)",
-      "attributes": []
-    },
-    {
-      "id": "BH.oM.Geometry.Mesh3D.Faces",
-      "iri": "https://github.com/BHoM/BHoM/blob/main/Geometry_oM/Mesh/Mesh3D.cs#L40",
-      "label": "Faces(BH.oM.Geometry.Mesh3D.Faces)",
-      "attributes": []
-    },
-    {
-      "id": "BH.oM.Geometry.Mesh3D.CellRelation",
-      "iri": "https://github.com/BHoM/BHoM/blob/main/Geometry_oM/Mesh/Mesh3D.cs#L43",
-      "label": "CellRelation(BH.oM.Geometry.Mesh3D.CellRelation)",
+      "id": "BH.oM.Geometry.BoundaryCurve.Curves",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/Geometry_oM/Curve/BoundaryCurve.cs#L42",
+      "label": "Curves (BH.oM.Geometry.BoundaryCurve.Curves)",
       "attributes": []
     },
     {
@@ -1319,9 +1179,248 @@
       ]
     },
     {
+      "id": "BH.oM.Geometry.Circle.Centre",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/Geometry_oM/Curve/Circle.cs#L36",
+      "label": "Centre (BH.oM.Geometry.Circle.Centre)",
+      "attributes": [],
+      "comment": {
+        "undefined": "Origin point defining location of the Circle in three-dimensional space."
+      }
+    },
+    {
+      "id": "BH.oM.Geometry.Circle.Normal",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/Geometry_oM/Curve/Circle.cs#L39",
+      "label": "Normal (BH.oM.Geometry.Circle.Normal)",
+      "attributes": [],
+      "comment": {
+        "undefined": "Vector perpendicular to the plane in which the Circle lies."
+      }
+    },
+    {
+      "id": "BH.oM.Geometry.Circle.Radius",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/Geometry_oM/Curve/Circle.cs#L43",
+      "label": "Radius (BH.oM.Geometry.Circle.Radius)",
+      "attributes": [
+        "datatype"
+      ]
+    },
+    {
+      "id": "BH.oM.Geometry.Ellipse.Centre",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/Geometry_oM/Curve/Ellipse.cs#L38",
+      "label": "Centre (BH.oM.Geometry.Ellipse.Centre)",
+      "attributes": [],
+      "comment": {
+        "undefined": "Origin point defining location of the Ellipse in three-dimensional space."
+      }
+    },
+    {
+      "id": "BH.oM.Geometry.Ellipse.Axis1",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/Geometry_oM/Curve/Ellipse.cs#L41",
+      "label": "Axis1 (BH.oM.Geometry.Ellipse.Axis1)",
+      "attributes": [],
+      "comment": {
+        "undefined": "Together with Axis2 defines orientation in three-dimensional space. Direction only, and not magnitude, matters."
+      }
+    },
+    {
+      "id": "BH.oM.Geometry.Ellipse.Axis2",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/Geometry_oM/Curve/Ellipse.cs#L44",
+      "label": "Axis2 (BH.oM.Geometry.Ellipse.Axis2)",
+      "attributes": [],
+      "comment": {
+        "undefined": "Together with Axis1 defines orientation in three-dimensional space. Direction only, and not magnitude, matters."
+      }
+    },
+    {
+      "id": "BH.oM.Geometry.Ellipse.Radius1",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/Geometry_oM/Curve/Ellipse.cs#L48",
+      "label": "Radius1 (BH.oM.Geometry.Ellipse.Radius1)",
+      "attributes": [
+        "datatype"
+      ]
+    },
+    {
+      "id": "BH.oM.Geometry.Ellipse.Radius2",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/Geometry_oM/Curve/Ellipse.cs#L52",
+      "label": "Radius2 (BH.oM.Geometry.Ellipse.Radius2)",
+      "attributes": [
+        "datatype"
+      ]
+    },
+    {
+      "id": "BH.oM.Geometry.Line.Start",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/Geometry_oM/Curve/Line.cs#L35",
+      "label": "Start (BH.oM.Geometry.Line.Start)",
+      "attributes": []
+    },
+    {
+      "id": "BH.oM.Geometry.Line.End",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/Geometry_oM/Curve/Line.cs#L37",
+      "label": "End (BH.oM.Geometry.Line.End)",
+      "attributes": []
+    },
+    {
+      "id": "BH.oM.Geometry.Line.Infinite",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/Geometry_oM/Curve/Line.cs#L40",
+      "label": "Infinite (BH.oM.Geometry.Line.Infinite)",
+      "attributes": [
+        "datatype"
+      ]
+    },
+    {
+      "id": "BH.oM.Geometry.NurbsCurve.ControlPoints",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/Geometry_oM/Curve/NurbsCurve.cs#L40",
+      "label": "ControlPoints (BH.oM.Geometry.NurbsCurve.ControlPoints)",
+      "attributes": []
+    },
+    {
+      "id": "BH.oM.Geometry.NurbsCurve.Weights",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/Geometry_oM/Curve/NurbsCurve.cs#L43",
+      "label": "Weights (BH.oM.Geometry.NurbsCurve.Weights)",
+      "attributes": [
+        "datatype"
+      ]
+    },
+    {
+      "id": "BH.oM.Geometry.NurbsCurve.Knots",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/Geometry_oM/Curve/NurbsCurve.cs#L48",
+      "label": "Knots (BH.oM.Geometry.NurbsCurve.Knots)",
+      "attributes": [
+        "datatype"
+      ]
+    },
+    {
+      "id": "BH.oM.Geometry.PolyCurve.Curves",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/Geometry_oM/Curve/PolyCurve.cs#L36",
+      "label": "Curves (BH.oM.Geometry.PolyCurve.Curves)",
+      "attributes": []
+    },
+    {
+      "id": "BH.oM.Geometry.Polygon.Vertices",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/Geometry_oM/Curve/Polygon.cs#L43",
+      "label": "Vertices (BH.oM.Geometry.Polygon.Vertices)",
+      "attributes": []
+    },
+    {
+      "id": "BH.oM.Geometry.Polyline.ControlPoints",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/Geometry_oM/Curve/Polyline.cs#L38",
+      "label": "ControlPoints (BH.oM.Geometry.Polyline.ControlPoints)",
+      "attributes": []
+    },
+    {
+      "id": "BH.oM.Geometry.IntegrationSlice.Width",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/Geometry_oM/Math/IntegrationSlice.cs#L35",
+      "label": "Width (BH.oM.Geometry.IntegrationSlice.Width)",
+      "attributes": [
+        "datatype"
+      ]
+    },
+    {
+      "id": "BH.oM.Geometry.IntegrationSlice.Length",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/Geometry_oM/Math/IntegrationSlice.cs#L37",
+      "label": "Length (BH.oM.Geometry.IntegrationSlice.Length)",
+      "attributes": [
+        "datatype"
+      ]
+    },
+    {
+      "id": "BH.oM.Geometry.IntegrationSlice.Centre",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/Geometry_oM/Math/IntegrationSlice.cs#L39",
+      "label": "Centre (BH.oM.Geometry.IntegrationSlice.Centre)",
+      "attributes": [
+        "datatype"
+      ]
+    },
+    {
+      "id": "BH.oM.Geometry.IntegrationSlice.Placement",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/Geometry_oM/Math/IntegrationSlice.cs#L41",
+      "label": "Placement (BH.oM.Geometry.IntegrationSlice.Placement)",
+      "attributes": [
+        "datatype"
+      ]
+    },
+    {
+      "id": "BH.oM.Geometry.CellRelation.FromCell",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/Geometry_oM/Mesh/CellRelation.cs#L37",
+      "label": "FromCell (BH.oM.Geometry.CellRelation.FromCell)",
+      "attributes": [
+        "datatype"
+      ]
+    },
+    {
+      "id": "BH.oM.Geometry.CellRelation.ToCell",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/Geometry_oM/Mesh/CellRelation.cs#L40",
+      "label": "ToCell (BH.oM.Geometry.CellRelation.ToCell)",
+      "attributes": [
+        "datatype"
+      ]
+    },
+    {
+      "id": "BH.oM.Geometry.Face.A",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/Geometry_oM/Mesh/Face.cs#L36",
+      "label": "A (BH.oM.Geometry.Face.A)",
+      "attributes": [
+        "datatype"
+      ]
+    },
+    {
+      "id": "BH.oM.Geometry.Face.B",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/Geometry_oM/Mesh/Face.cs#L39",
+      "label": "B (BH.oM.Geometry.Face.B)",
+      "attributes": [
+        "datatype"
+      ]
+    },
+    {
+      "id": "BH.oM.Geometry.Face.C",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/Geometry_oM/Mesh/Face.cs#L42",
+      "label": "C (BH.oM.Geometry.Face.C)",
+      "attributes": [
+        "datatype"
+      ]
+    },
+    {
+      "id": "BH.oM.Geometry.Face.D",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/Geometry_oM/Mesh/Face.cs#L45",
+      "label": "D (BH.oM.Geometry.Face.D)",
+      "attributes": [
+        "datatype"
+      ]
+    },
+    {
+      "id": "BH.oM.Geometry.Mesh.Vertices",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/Geometry_oM/Mesh/Mesh.cs#L36",
+      "label": "Vertices (BH.oM.Geometry.Mesh.Vertices)",
+      "attributes": []
+    },
+    {
+      "id": "BH.oM.Geometry.Mesh.Faces",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/Geometry_oM/Mesh/Mesh.cs#L39",
+      "label": "Faces (BH.oM.Geometry.Mesh.Faces)",
+      "attributes": []
+    },
+    {
+      "id": "BH.oM.Geometry.Mesh3D.Vertices",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/Geometry_oM/Mesh/Mesh3D.cs#L37",
+      "label": "Vertices (BH.oM.Geometry.Mesh3D.Vertices)",
+      "attributes": []
+    },
+    {
+      "id": "BH.oM.Geometry.Mesh3D.Faces",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/Geometry_oM/Mesh/Mesh3D.cs#L40",
+      "label": "Faces (BH.oM.Geometry.Mesh3D.Faces)",
+      "attributes": []
+    },
+    {
+      "id": "BH.oM.Geometry.Mesh3D.CellRelation",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/Geometry_oM/Mesh/Mesh3D.cs#L43",
+      "label": "CellRelation (BH.oM.Geometry.Mesh3D.CellRelation)",
+      "attributes": []
+    },
+    {
       "id": "BH.oM.Geometry.BoundingBox.Min",
       "iri": "https://github.com/BHoM/BHoM/blob/main/Geometry_oM/Misc/BoundingBox.cs#L37",
-      "label": "Min(BH.oM.Geometry.BoundingBox.Min)",
+      "label": "Min (BH.oM.Geometry.BoundingBox.Min)",
       "attributes": [],
       "comment": {
         "undefined": "The lower bound values for the X, Y and Z coordinates of the Box corner Points."
@@ -1330,7 +1429,7 @@
     {
       "id": "BH.oM.Geometry.BoundingBox.Max",
       "iri": "https://github.com/BHoM/BHoM/blob/main/Geometry_oM/Misc/BoundingBox.cs#L40",
-      "label": "Max(BH.oM.Geometry.BoundingBox.Max)",
+      "label": "Max (BH.oM.Geometry.BoundingBox.Max)",
       "attributes": [],
       "comment": {
         "undefined": "The upper bound values for the X, Y and Z coordinates of the Box corner Points."
@@ -1339,13 +1438,13 @@
     {
       "id": "BH.oM.Geometry.CompositeGeometry.Elements",
       "iri": "https://github.com/BHoM/BHoM/blob/main/Geometry_oM/Misc/CompositeGeometry.cs#L37",
-      "label": "Elements(BH.oM.Geometry.CompositeGeometry.Elements)",
+      "label": "Elements (BH.oM.Geometry.CompositeGeometry.Elements)",
       "attributes": []
     },
     {
       "id": "BH.oM.Geometry.Quaternion.X",
       "iri": "https://github.com/BHoM/BHoM/blob/main/Geometry_oM/Misc/Quaternion.cs#L34",
-      "label": "X(BH.oM.Geometry.Quaternion.X)",
+      "label": "X (BH.oM.Geometry.Quaternion.X)",
       "attributes": [
         "datatype"
       ]
@@ -1353,7 +1452,7 @@
     {
       "id": "BH.oM.Geometry.Quaternion.Y",
       "iri": "https://github.com/BHoM/BHoM/blob/main/Geometry_oM/Misc/Quaternion.cs#L36",
-      "label": "Y(BH.oM.Geometry.Quaternion.Y)",
+      "label": "Y (BH.oM.Geometry.Quaternion.Y)",
       "attributes": [
         "datatype"
       ]
@@ -1361,7 +1460,7 @@
     {
       "id": "BH.oM.Geometry.Quaternion.Z",
       "iri": "https://github.com/BHoM/BHoM/blob/main/Geometry_oM/Misc/Quaternion.cs#L38",
-      "label": "Z(BH.oM.Geometry.Quaternion.Z)",
+      "label": "Z (BH.oM.Geometry.Quaternion.Z)",
       "attributes": [
         "datatype"
       ]
@@ -1369,7 +1468,7 @@
     {
       "id": "BH.oM.Geometry.Quaternion.W",
       "iri": "https://github.com/BHoM/BHoM/blob/main/Geometry_oM/Misc/Quaternion.cs#L40",
-      "label": "W(BH.oM.Geometry.Quaternion.W)",
+      "label": "W (BH.oM.Geometry.Quaternion.W)",
       "attributes": [
         "datatype"
       ]
@@ -1377,7 +1476,7 @@
     {
       "id": "BH.oM.Geometry.SurfaceTrim.Curve3d",
       "iri": "https://github.com/BHoM/BHoM/blob/main/Geometry_oM/Misc/SurfaceTrim.cs#L38",
-      "label": "Curve3d(BH.oM.Geometry.SurfaceTrim.Curve3d)",
+      "label": "Curve3d (BH.oM.Geometry.SurfaceTrim.Curve3d)",
       "attributes": [],
       "comment": {
         "undefined": "Trim Curve in global X, Y, Z coordinates."
@@ -1386,7 +1485,7 @@
     {
       "id": "BH.oM.Geometry.SurfaceTrim.Curve2d",
       "iri": "https://github.com/BHoM/BHoM/blob/main/Geometry_oM/Misc/SurfaceTrim.cs#L41",
-      "label": "Curve2d(BH.oM.Geometry.SurfaceTrim.Curve2d)",
+      "label": "Curve2d (BH.oM.Geometry.SurfaceTrim.Curve2d)",
       "attributes": [],
       "comment": {
         "undefined": "Trim Curve in local surface U, V coordinates."
@@ -1395,7 +1494,7 @@
     {
       "id": "BH.oM.Geometry.TransformMatrix.Matrix",
       "iri": "https://github.com/BHoM/BHoM/blob/main/Geometry_oM/Misc/TransformMatrix.cs#L34",
-      "label": "Matrix(BH.oM.Geometry.TransformMatrix.Matrix)",
+      "label": "Matrix (BH.oM.Geometry.TransformMatrix.Matrix)",
       "attributes": [
         "datatype"
       ]
@@ -1403,13 +1502,13 @@
     {
       "id": "BH.oM.Geometry.BoundaryRepresentation.Surfaces",
       "iri": "https://github.com/BHoM/BHoM/blob/main/Geometry_oM/Solid/BoundaryRepresentation.cs#L40",
-      "label": "Surfaces(BH.oM.Geometry.BoundaryRepresentation.Surfaces)",
+      "label": "Surfaces (BH.oM.Geometry.BoundaryRepresentation.Surfaces)",
       "attributes": []
     },
     {
       "id": "BH.oM.Geometry.BoundaryRepresentation.Volume",
       "iri": "https://github.com/BHoM/BHoM/blob/main/Geometry_oM/Solid/BoundaryRepresentation.cs#L44",
-      "label": "Volume(BH.oM.Geometry.BoundaryRepresentation.Volume)",
+      "label": "Volume (BH.oM.Geometry.BoundaryRepresentation.Volume)",
       "attributes": [
         "datatype"
       ]
@@ -1417,7 +1516,7 @@
     {
       "id": "BH.oM.Geometry.Cone.Centre",
       "iri": "https://github.com/BHoM/BHoM/blob/main/Geometry_oM/Solid/Cone.cs#L36",
-      "label": "Centre(BH.oM.Geometry.Cone.Centre)",
+      "label": "Centre (BH.oM.Geometry.Cone.Centre)",
       "attributes": [],
       "comment": {
         "undefined": "Point defining the centre of the circular base"
@@ -1426,7 +1525,7 @@
     {
       "id": "BH.oM.Geometry.Cone.Axis",
       "iri": "https://github.com/BHoM/BHoM/blob/main/Geometry_oM/Solid/Cone.cs#L39",
-      "label": "Axis(BH.oM.Geometry.Cone.Axis)",
+      "label": "Axis (BH.oM.Geometry.Cone.Axis)",
       "attributes": [],
       "comment": {
         "undefined": "Vector perperdicular to the Cone base. Defines the orientation in three-dimensional space"
@@ -1435,7 +1534,7 @@
     {
       "id": "BH.oM.Geometry.Cone.Radius",
       "iri": "https://github.com/BHoM/BHoM/blob/main/Geometry_oM/Solid/Cone.cs#L43",
-      "label": "Radius(BH.oM.Geometry.Cone.Radius)",
+      "label": "Radius (BH.oM.Geometry.Cone.Radius)",
       "attributes": [
         "datatype"
       ]
@@ -1443,7 +1542,7 @@
     {
       "id": "BH.oM.Geometry.Cone.Height",
       "iri": "https://github.com/BHoM/BHoM/blob/main/Geometry_oM/Solid/Cone.cs#L47",
-      "label": "Height(BH.oM.Geometry.Cone.Height)",
+      "label": "Height (BH.oM.Geometry.Cone.Height)",
       "attributes": [
         "datatype"
       ]
@@ -1451,7 +1550,7 @@
     {
       "id": "BH.oM.Geometry.Cuboid.CoordinateSystem",
       "iri": "https://github.com/BHoM/BHoM/blob/main/Geometry_oM/Solid/Cuboid.cs#L36",
-      "label": "CoordinateSystem(BH.oM.Geometry.Cuboid.CoordinateSystem)",
+      "label": "CoordinateSystem (BH.oM.Geometry.Cuboid.CoordinateSystem)",
       "attributes": [],
       "comment": {
         "undefined": "Defines both the Cuboid centre as the CoordinateSystem Origin, as well as the orientation in three-dimensional space."
@@ -1460,7 +1559,7 @@
     {
       "id": "BH.oM.Geometry.Cuboid.Length",
       "iri": "https://github.com/BHoM/BHoM/blob/main/Geometry_oM/Solid/Cuboid.cs#L40",
-      "label": "Length(BH.oM.Geometry.Cuboid.Length)",
+      "label": "Length (BH.oM.Geometry.Cuboid.Length)",
       "attributes": [
         "datatype"
       ]
@@ -1468,7 +1567,7 @@
     {
       "id": "BH.oM.Geometry.Cuboid.Depth",
       "iri": "https://github.com/BHoM/BHoM/blob/main/Geometry_oM/Solid/Cuboid.cs#L44",
-      "label": "Depth(BH.oM.Geometry.Cuboid.Depth)",
+      "label": "Depth (BH.oM.Geometry.Cuboid.Depth)",
       "attributes": [
         "datatype"
       ]
@@ -1476,7 +1575,7 @@
     {
       "id": "BH.oM.Geometry.Cuboid.Height",
       "iri": "https://github.com/BHoM/BHoM/blob/main/Geometry_oM/Solid/Cuboid.cs#L48",
-      "label": "Height(BH.oM.Geometry.Cuboid.Height)",
+      "label": "Height (BH.oM.Geometry.Cuboid.Height)",
       "attributes": [
         "datatype"
       ]
@@ -1484,7 +1583,7 @@
     {
       "id": "BH.oM.Geometry.Cylinder.Centre",
       "iri": "https://github.com/BHoM/BHoM/blob/main/Geometry_oM/Solid/Cylinder.cs#L36",
-      "label": "Centre(BH.oM.Geometry.Cylinder.Centre)",
+      "label": "Centre (BH.oM.Geometry.Cylinder.Centre)",
       "attributes": [],
       "comment": {
         "undefined": "Point defining the centre of the circular base."
@@ -1493,7 +1592,7 @@
     {
       "id": "BH.oM.Geometry.Cylinder.Axis",
       "iri": "https://github.com/BHoM/BHoM/blob/main/Geometry_oM/Solid/Cylinder.cs#L39",
-      "label": "Axis(BH.oM.Geometry.Cylinder.Axis)",
+      "label": "Axis (BH.oM.Geometry.Cylinder.Axis)",
       "attributes": [],
       "comment": {
         "undefined": "Vector perperdicular to the base. Defines the orientation in three-dimensional space."
@@ -1502,7 +1601,7 @@
     {
       "id": "BH.oM.Geometry.Cylinder.Radius",
       "iri": "https://github.com/BHoM/BHoM/blob/main/Geometry_oM/Solid/Cylinder.cs#L43",
-      "label": "Radius(BH.oM.Geometry.Cylinder.Radius)",
+      "label": "Radius (BH.oM.Geometry.Cylinder.Radius)",
       "attributes": [
         "datatype"
       ]
@@ -1510,7 +1609,7 @@
     {
       "id": "BH.oM.Geometry.Cylinder.Height",
       "iri": "https://github.com/BHoM/BHoM/blob/main/Geometry_oM/Solid/Cylinder.cs#L47",
-      "label": "Height(BH.oM.Geometry.Cylinder.Height)",
+      "label": "Height (BH.oM.Geometry.Cylinder.Height)",
       "attributes": [
         "datatype"
       ]
@@ -1518,7 +1617,7 @@
     {
       "id": "BH.oM.Geometry.Sphere.Centre",
       "iri": "https://github.com/BHoM/BHoM/blob/main/Geometry_oM/Solid/Sphere.cs#L36",
-      "label": "Centre(BH.oM.Geometry.Sphere.Centre)",
+      "label": "Centre (BH.oM.Geometry.Sphere.Centre)",
       "attributes": [],
       "comment": {
         "undefined": "Origin point defining location of the Sphere in three-dimensional space"
@@ -1527,7 +1626,7 @@
     {
       "id": "BH.oM.Geometry.Sphere.Radius",
       "iri": "https://github.com/BHoM/BHoM/blob/main/Geometry_oM/Solid/Sphere.cs#L40",
-      "label": "Radius(BH.oM.Geometry.Sphere.Radius)",
+      "label": "Radius (BH.oM.Geometry.Sphere.Radius)",
       "attributes": [
         "datatype"
       ]
@@ -1535,7 +1634,7 @@
     {
       "id": "BH.oM.Geometry.Torus.Centre",
       "iri": "https://github.com/BHoM/BHoM/blob/main/Geometry_oM/Solid/Torus.cs#L36",
-      "label": "Centre(BH.oM.Geometry.Torus.Centre)",
+      "label": "Centre (BH.oM.Geometry.Torus.Centre)",
       "attributes": [],
       "comment": {
         "undefined": "Origin point defining location of the Torus in three-dimensional space."
@@ -1544,7 +1643,7 @@
     {
       "id": "BH.oM.Geometry.Torus.Axis",
       "iri": "https://github.com/BHoM/BHoM/blob/main/Geometry_oM/Solid/Torus.cs#L39",
-      "label": "Axis(BH.oM.Geometry.Torus.Axis)",
+      "label": "Axis (BH.oM.Geometry.Torus.Axis)",
       "attributes": [],
       "comment": {
         "undefined": "Vector defining the axis of revolution and the orientation of the Torus in three-dimensional space."
@@ -1553,7 +1652,7 @@
     {
       "id": "BH.oM.Geometry.Torus.RadiusMajor",
       "iri": "https://github.com/BHoM/BHoM/blob/main/Geometry_oM/Solid/Torus.cs#L43",
-      "label": "RadiusMajor(BH.oM.Geometry.Torus.RadiusMajor)",
+      "label": "RadiusMajor (BH.oM.Geometry.Torus.RadiusMajor)",
       "attributes": [
         "datatype"
       ]
@@ -1561,7 +1660,7 @@
     {
       "id": "BH.oM.Geometry.Torus.RadiusMinor",
       "iri": "https://github.com/BHoM/BHoM/blob/main/Geometry_oM/Solid/Torus.cs#L47",
-      "label": "RadiusMinor(BH.oM.Geometry.Torus.RadiusMinor)",
+      "label": "RadiusMinor (BH.oM.Geometry.Torus.RadiusMinor)",
       "attributes": [
         "datatype"
       ]
@@ -1569,7 +1668,7 @@
     {
       "id": "BH.oM.Geometry.Extrusion.Curve",
       "iri": "https://github.com/BHoM/BHoM/blob/main/Geometry_oM/Surface/Extrusion.cs#L36",
-      "label": "Curve(BH.oM.Geometry.Extrusion.Curve)",
+      "label": "Curve (BH.oM.Geometry.Extrusion.Curve)",
       "attributes": [],
       "comment": {
         "undefined": "The Extrusion profile curve defining the constant cross sectional shape. Idential curves can be recreated at any point along the Extrusion axis through intersection with the Surface."
@@ -1578,7 +1677,7 @@
     {
       "id": "BH.oM.Geometry.Extrusion.Direction",
       "iri": "https://github.com/BHoM/BHoM/blob/main/Geometry_oM/Surface/Extrusion.cs#L40",
-      "label": "Direction(BH.oM.Geometry.Extrusion.Direction)",
+      "label": "Direction (BH.oM.Geometry.Extrusion.Direction)",
       "attributes": [],
       "comment": {
         "undefined": "The axis along which to translate the profile curve. The Vector magnitude determining the Extrusion length."
@@ -1587,7 +1686,7 @@
     {
       "id": "BH.oM.Geometry.Extrusion.Capped",
       "iri": "https://github.com/BHoM/BHoM/blob/main/Geometry_oM/Surface/Extrusion.cs#L43",
-      "label": "Capped(BH.oM.Geometry.Extrusion.Capped)",
+      "label": "Capped (BH.oM.Geometry.Extrusion.Capped)",
       "attributes": [
         "datatype"
       ]
@@ -1595,19 +1694,19 @@
     {
       "id": "BH.oM.Geometry.Loft.Curves",
       "iri": "https://github.com/BHoM/BHoM/blob/main/Geometry_oM/Surface/Loft.cs#L36",
-      "label": "Curves(BH.oM.Geometry.Loft.Curves)",
+      "label": "Curves (BH.oM.Geometry.Loft.Curves)",
       "attributes": []
     },
     {
       "id": "BH.oM.Geometry.NurbsSurface.ControlPoints",
       "iri": "https://github.com/BHoM/BHoM/blob/main/Geometry_oM/Surface/NurbsSurface.cs#L42",
-      "label": "ControlPoints(BH.oM.Geometry.NurbsSurface.ControlPoints)",
+      "label": "ControlPoints (BH.oM.Geometry.NurbsSurface.ControlPoints)",
       "attributes": []
     },
     {
       "id": "BH.oM.Geometry.NurbsSurface.Weights",
       "iri": "https://github.com/BHoM/BHoM/blob/main/Geometry_oM/Surface/NurbsSurface.cs#L45",
-      "label": "Weights(BH.oM.Geometry.NurbsSurface.Weights)",
+      "label": "Weights (BH.oM.Geometry.NurbsSurface.Weights)",
       "attributes": [
         "datatype"
       ]
@@ -1615,7 +1714,7 @@
     {
       "id": "BH.oM.Geometry.NurbsSurface.UKnots",
       "iri": "https://github.com/BHoM/BHoM/blob/main/Geometry_oM/Surface/NurbsSurface.cs#L48",
-      "label": "UKnots(BH.oM.Geometry.NurbsSurface.UKnots)",
+      "label": "UKnots (BH.oM.Geometry.NurbsSurface.UKnots)",
       "attributes": [
         "datatype"
       ]
@@ -1623,7 +1722,7 @@
     {
       "id": "BH.oM.Geometry.NurbsSurface.VKnots",
       "iri": "https://github.com/BHoM/BHoM/blob/main/Geometry_oM/Surface/NurbsSurface.cs#L51",
-      "label": "VKnots(BH.oM.Geometry.NurbsSurface.VKnots)",
+      "label": "VKnots (BH.oM.Geometry.NurbsSurface.VKnots)",
       "attributes": [
         "datatype"
       ]
@@ -1631,7 +1730,7 @@
     {
       "id": "BH.oM.Geometry.NurbsSurface.UDegree",
       "iri": "https://github.com/BHoM/BHoM/blob/main/Geometry_oM/Surface/NurbsSurface.cs#L54",
-      "label": "UDegree(BH.oM.Geometry.NurbsSurface.UDegree)",
+      "label": "UDegree (BH.oM.Geometry.NurbsSurface.UDegree)",
       "attributes": [
         "datatype"
       ]
@@ -1639,7 +1738,7 @@
     {
       "id": "BH.oM.Geometry.NurbsSurface.VDegree",
       "iri": "https://github.com/BHoM/BHoM/blob/main/Geometry_oM/Surface/NurbsSurface.cs#L57",
-      "label": "VDegree(BH.oM.Geometry.NurbsSurface.VDegree)",
+      "label": "VDegree (BH.oM.Geometry.NurbsSurface.VDegree)",
       "attributes": [
         "datatype"
       ]
@@ -1647,19 +1746,19 @@
     {
       "id": "BH.oM.Geometry.NurbsSurface.InnerTrims",
       "iri": "https://github.com/BHoM/BHoM/blob/main/Geometry_oM/Surface/NurbsSurface.cs#L60",
-      "label": "InnerTrims(BH.oM.Geometry.NurbsSurface.InnerTrims)",
+      "label": "InnerTrims (BH.oM.Geometry.NurbsSurface.InnerTrims)",
       "attributes": []
     },
     {
       "id": "BH.oM.Geometry.NurbsSurface.OuterTrims",
       "iri": "https://github.com/BHoM/BHoM/blob/main/Geometry_oM/Surface/NurbsSurface.cs#L63",
-      "label": "OuterTrims(BH.oM.Geometry.NurbsSurface.OuterTrims)",
+      "label": "OuterTrims (BH.oM.Geometry.NurbsSurface.OuterTrims)",
       "attributes": []
     },
     {
       "id": "BH.oM.Geometry.Pipe.Centreline",
       "iri": "https://github.com/BHoM/BHoM/blob/main/Geometry_oM/Surface/Pipe.cs#L36",
-      "label": "Centreline(BH.oM.Geometry.Pipe.Centreline)",
+      "label": "Centreline (BH.oM.Geometry.Pipe.Centreline)",
       "attributes": [],
       "comment": {
         "undefined": "Defines the central axis perpendicular to the circular cross sections, and thus the path along which the tubular surface follows."
@@ -1668,7 +1767,7 @@
     {
       "id": "BH.oM.Geometry.Pipe.Radius",
       "iri": "https://github.com/BHoM/BHoM/blob/main/Geometry_oM/Surface/Pipe.cs#L40",
-      "label": "Radius(BH.oM.Geometry.Pipe.Radius)",
+      "label": "Radius (BH.oM.Geometry.Pipe.Radius)",
       "attributes": [
         "datatype"
       ]
@@ -1676,15 +1775,15 @@
     {
       "id": "BH.oM.Geometry.Pipe.Capped",
       "iri": "https://github.com/BHoM/BHoM/blob/main/Geometry_oM/Surface/Pipe.cs#L43",
-      "label": "Capped(BH.oM.Geometry.Pipe.Capped)",
+      "label": "Capped (BH.oM.Geometry.Pipe.Capped)",
       "attributes": [
         "datatype"
       ]
     },
     {
       "id": "BH.oM.Geometry.PlanarSurface.ExternalBoundary",
-      "iri": "https://github.com/BHoM/BHoM/blob/main/Geometry_oM/Surface/PlanarSurface.cs#L38",
-      "label": "ExternalBoundary(BH.oM.Geometry.PlanarSurface.ExternalBoundary)",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/Geometry_oM/Surface/PlanarSurface.cs#L39",
+      "label": "ExternalBoundary (BH.oM.Geometry.PlanarSurface.ExternalBoundary)",
       "attributes": [],
       "comment": {
         "undefined": "Closed planar curve defining the outer boundary of the surface."
@@ -1692,20 +1791,32 @@
     },
     {
       "id": "BH.oM.Geometry.PlanarSurface.InternalBoundaries",
-      "iri": "https://github.com/BHoM/BHoM/blob/main/Geometry_oM/Surface/PlanarSurface.cs#L41",
-      "label": "InternalBoundaries(BH.oM.Geometry.PlanarSurface.InternalBoundaries)",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/Geometry_oM/Surface/PlanarSurface.cs#L42",
+      "label": "InternalBoundaries (BH.oM.Geometry.PlanarSurface.InternalBoundaries)",
       "attributes": []
+    },
+    {
+      "id": "BH.oM.Dimensional.IElement2D",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/Dimensional_oM/IElement2D.cs",
+      "label": "IElement2D (BH.oM.Dimensional)",
+      "attributes": [
+        "object",
+        "external"
+      ],
+      "comment": {
+        "undefined": "Enables geometrical operations to be performed on an edge curve based two-dimensional spatial element, whilst preserving all other object properties as unchanged. /nThe interface expects the outline to be constructed of IElement1D elements and allows for internal IElement2D elements.Objects implementing this interface will be required to implement some base methods for getting and setting data in a way that maintains the object's other properties.Documentation detailing required extension methods can be found here: https://github.com/BHoM/documentation/wiki/IElement-required-extension-methods"
+      }
     },
     {
       "id": "BH.oM.Geometry.PolySurface.Surfaces",
       "iri": "https://github.com/BHoM/BHoM/blob/main/Geometry_oM/Surface/PolySurface.cs#L36",
-      "label": "Surfaces(BH.oM.Geometry.PolySurface.Surfaces)",
+      "label": "Surfaces (BH.oM.Geometry.PolySurface.Surfaces)",
       "attributes": []
     },
     {
       "id": "BH.oM.Geometry.Basis.X",
       "iri": "https://github.com/BHoM/BHoM/blob/main/Geometry_oM/Vector/Basis.cs#L36",
-      "label": "X(BH.oM.Geometry.Basis.X)",
+      "label": "X (BH.oM.Geometry.Basis.X)",
       "attributes": [],
       "comment": {
         "undefined": "Unit vector defining local x coordinate axis"
@@ -1714,7 +1825,7 @@
     {
       "id": "BH.oM.Geometry.Basis.Y",
       "iri": "https://github.com/BHoM/BHoM/blob/main/Geometry_oM/Vector/Basis.cs#L39",
-      "label": "Y(BH.oM.Geometry.Basis.Y)",
+      "label": "Y (BH.oM.Geometry.Basis.Y)",
       "attributes": [],
       "comment": {
         "undefined": "Unit vector defining local y coordinate axis"
@@ -1723,7 +1834,7 @@
     {
       "id": "BH.oM.Geometry.Basis.Z",
       "iri": "https://github.com/BHoM/BHoM/blob/main/Geometry_oM/Vector/Basis.cs#L42",
-      "label": "Z(BH.oM.Geometry.Basis.Z)",
+      "label": "Z (BH.oM.Geometry.Basis.Z)",
       "attributes": [],
       "comment": {
         "undefined": "Unit vector defining local z coordinate axis"
@@ -1732,7 +1843,7 @@
     {
       "id": "BH.oM.Geometry.Plane.Origin",
       "iri": "https://github.com/BHoM/BHoM/blob/main/Geometry_oM/Vector/Plane.cs#L35",
-      "label": "Origin(BH.oM.Geometry.Plane.Origin)",
+      "label": "Origin (BH.oM.Geometry.Plane.Origin)",
       "attributes": [],
       "comment": {
         "undefined": "A point through which the plane passes"
@@ -1741,7 +1852,7 @@
     {
       "id": "BH.oM.Geometry.Plane.Normal",
       "iri": "https://github.com/BHoM/BHoM/blob/main/Geometry_oM/Vector/Plane.cs#L38",
-      "label": "Normal(BH.oM.Geometry.Plane.Normal)",
+      "label": "Normal (BH.oM.Geometry.Plane.Normal)",
       "attributes": [],
       "comment": {
         "undefined": "Vector perpendicualar to the plane, defining the orientation in three-dimensional space"
@@ -1750,7 +1861,7 @@
     {
       "id": "BH.oM.Geometry.Point.X",
       "iri": "https://github.com/BHoM/BHoM/blob/main/Geometry_oM/Vector/Point.cs#L37",
-      "label": "X(BH.oM.Geometry.Point.X)",
+      "label": "X (BH.oM.Geometry.Point.X)",
       "attributes": [
         "datatype"
       ]
@@ -1758,7 +1869,7 @@
     {
       "id": "BH.oM.Geometry.Point.Y",
       "iri": "https://github.com/BHoM/BHoM/blob/main/Geometry_oM/Vector/Point.cs#L40",
-      "label": "Y(BH.oM.Geometry.Point.Y)",
+      "label": "Y (BH.oM.Geometry.Point.Y)",
       "attributes": [
         "datatype"
       ]
@@ -1766,7 +1877,7 @@
     {
       "id": "BH.oM.Geometry.Point.Z",
       "iri": "https://github.com/BHoM/BHoM/blob/main/Geometry_oM/Vector/Point.cs#L43",
-      "label": "Z(BH.oM.Geometry.Point.Z)",
+      "label": "Z (BH.oM.Geometry.Point.Z)",
       "attributes": [
         "datatype"
       ]
@@ -1786,7 +1897,7 @@
     {
       "id": "BH.oM.Geometry.Vector.X",
       "iri": "https://github.com/BHoM/BHoM/blob/main/Geometry_oM/Vector/Vector.cs#L38",
-      "label": "X(BH.oM.Geometry.Vector.X)",
+      "label": "X (BH.oM.Geometry.Vector.X)",
       "attributes": [
         "datatype"
       ]
@@ -1794,7 +1905,7 @@
     {
       "id": "BH.oM.Geometry.Vector.Y",
       "iri": "https://github.com/BHoM/BHoM/blob/main/Geometry_oM/Vector/Vector.cs#L42",
-      "label": "Y(BH.oM.Geometry.Vector.Y)",
+      "label": "Y (BH.oM.Geometry.Vector.Y)",
       "attributes": [
         "datatype"
       ]
@@ -1802,7 +1913,7 @@
     {
       "id": "BH.oM.Geometry.Vector.Z",
       "iri": "https://github.com/BHoM/BHoM/blob/main/Geometry_oM/Vector/Vector.cs#L46",
-      "label": "Z(BH.oM.Geometry.Vector.Z)",
+      "label": "Z (BH.oM.Geometry.Vector.Z)",
       "attributes": [
         "datatype"
       ]
@@ -1810,7 +1921,7 @@
     {
       "id": "BH.oM.Geometry.CoordinateSystem.Cartesian.X",
       "iri": "https://github.com/BHoM/BHoM/blob/main/Geometry_oM/CoordinateSystem/Cartesian.cs#L36",
-      "label": "X(BH.oM.Geometry.CoordinateSystem.Cartesian.X)",
+      "label": "X (BH.oM.Geometry.CoordinateSystem.Cartesian.X)",
       "attributes": [],
       "comment": {
         "undefined": "Unit vector defining local x coordinate axis"
@@ -1819,7 +1930,7 @@
     {
       "id": "BH.oM.Geometry.CoordinateSystem.Cartesian.Y",
       "iri": "https://github.com/BHoM/BHoM/blob/main/Geometry_oM/CoordinateSystem/Cartesian.cs#L39",
-      "label": "Y(BH.oM.Geometry.CoordinateSystem.Cartesian.Y)",
+      "label": "Y (BH.oM.Geometry.CoordinateSystem.Cartesian.Y)",
       "attributes": [],
       "comment": {
         "undefined": "Unit vector defining local y coordinate axis"
@@ -1828,7 +1939,7 @@
     {
       "id": "BH.oM.Geometry.CoordinateSystem.Cartesian.Z",
       "iri": "https://github.com/BHoM/BHoM/blob/main/Geometry_oM/CoordinateSystem/Cartesian.cs#L42",
-      "label": "Z(BH.oM.Geometry.CoordinateSystem.Cartesian.Z)",
+      "label": "Z (BH.oM.Geometry.CoordinateSystem.Cartesian.Z)",
       "attributes": [],
       "comment": {
         "undefined": "Unit vector defining local z coordinate axis"
@@ -1837,7 +1948,7 @@
     {
       "id": "BH.oM.Geometry.CoordinateSystem.Cartesian.Origin",
       "iri": "https://github.com/BHoM/BHoM/blob/main/Geometry_oM/CoordinateSystem/Cartesian.cs#L45",
-      "label": "Origin(BH.oM.Geometry.CoordinateSystem.Cartesian.Origin)",
+      "label": "Origin (BH.oM.Geometry.CoordinateSystem.Cartesian.Origin)",
       "attributes": [],
       "comment": {
         "undefined": "Location point in three-dimensional space defining (0,0,0) and the origin for each axis"
@@ -1886,6 +1997,46 @@
       "type": "owl:ObjectProperty"
     },
     {
+      "id": "BH.oM.Geometry.BoundaryCurve-HasProperty-BH.oM.Geometry.BoundaryCurve.Curves",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "BH.oM.Geometry.BoundaryCurve.Curves-IsAListOf-BH.oM.Geometry.ICurve",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "BoundaryCurve-IsA-ICurve_A26D4110AF0E7B5CA8E7A19DED4E1D965037EA319F2A88E89113B191EBD76BD3",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "BoundaryCurve-IsA-IGeometry_2DBDC98EE315623E1AFFC75ECB39FB524B19CE96CA85095EAD4F1AEE6B16C4C1",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "BoundaryCurve-IsA-IObject_BD52C8362854960BBDAFA304FB29C04E3515242BDB90C5FFF587AD7401B86C3E",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "BoundaryCurve-IsA-IElement1D_7E4E087FCACE92AADA9E816D50D6A47CB1E86C99C0B32045BDA7AF9F187104EB",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "BoundaryCurve-IsA-IElement_E28F3BB7D120DB3B11BEC129F3FEEFA6BD0FAB8B0328B0FA5EAC36C99F1FEFF9",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "BoundaryCurve-IsA-IPolyCurve_54B4F46E119E9697E09E7E7127B6A37E434995A348A6114437679AB7DE4CA392",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "BoundaryCurve-IsA-IBoundary_8DAC7CD1AAAD127DC29874EF2097E854C53B893A42094EB5FB10C9D3F85A63F1",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "BoundaryCurve-IsA-IImmutable_E7C96BC6DB7530C428D9BE98AE6C4CFE024A30F155500C1DF388344F92039CA9",
+      "type": "owl:ObjectProperty"
+    },
+    {
       "id": "BH.oM.Geometry.Circle-HasProperty-BH.oM.Geometry.Circle.Centre",
       "type": "owl:ObjectProperty"
     },
@@ -1923,6 +2074,10 @@
     },
     {
       "id": "Circle-IsA-IElement_7DD2563A6625B3E1CDD7C53BD9A9236F81DC8D5F75B4D8CC175785B519D33A95",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "Circle-IsA-IBoundary_578B9C8895388C0D4E7B27B8043B83CF1558F9415FA11CE684DA437DA2491428",
       "type": "owl:ObjectProperty"
     },
     {
@@ -1978,6 +2133,30 @@
       "type": "owl:ObjectProperty"
     },
     {
+      "id": "Ellipse-IsA-IBoundary_A44D12BEFDB4FF510B03829D53006641FC0F08573F6DD0A7B75E9306C921E4C6",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "IBoundary-IsA-ICurve_A3E03AA1C60420FD79AB1D4C625B16324CAC70F3261BAB9916A46B3DDF9E8C24",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "IBoundary-IsA-IGeometry_829B9836B697CD6AA634365F9A7D6A1BD687B7FFFCEB859A49B287B5E6F6E2BC",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "IBoundary-IsA-IObject_C698CE1FD588A15C5BB2C69082B1BE25EC559BA9EDB61A2B5634504C6BEB81BE",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "IBoundary-IsA-IElement1D_32DE4BB92D04A8595D1DA7257D8D8DB2633810877AF0BBB66CA31A96CC150CDE",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "IBoundary-IsA-IElement_7B34FFD507F8C619261C2774142EC84FF913DA542AA82211F7CE7F51C1E97C83",
+      "type": "owl:ObjectProperty"
+    },
+    {
       "id": "ICurve-IsA-IGeometry_A69E7C5F31139255C7B19DBE007D4EC1E8DBD58197B33F5A9DC6E22525897C8C",
       "type": "owl:ObjectProperty"
     },
@@ -1991,6 +2170,46 @@
     },
     {
       "id": "ICurve-IsA-IElement_583086BD96BAEB2FA0A54DFD36046E25037B4E5B72DF104EA179E31A26DBD8A7",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "IPolyCurve-IsA-ICurve_79C27D7B7915F6754405FB35FB874945BF99A417D4516699A58B775D6E98F13E",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "IPolyCurve-IsA-IGeometry_0678EDF6D59CCD126A3A8977FB99F4EE08AC045208BA142945E5B439A078374A",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "IPolyCurve-IsA-IObject_F5C71F9372FDC2D55E3D88EFDD01249685C73EF8A48CCB074C2D6B87CDBEDC46",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "IPolyCurve-IsA-IElement1D_41A108FD4622BD090F24C6115181B4FAB0A8588E45326A790E7C4BFC8985C4AB",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "IPolyCurve-IsA-IElement_58B27BF7B2BA8088FA128C8CAF3DB84C7CBB6EE0409BA1BE711F036F5DDED484",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "IPolyline-IsA-ICurve_5FC563029DFD32657894E72FE10C80E3B701C9DCE2DD7ED2E72F7B0F01E28914",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "IPolyline-IsA-IGeometry_CB60696CCC132E9948494D0730BEDB14C16EC19B1D00E2FFC08E2C55355011D0",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "IPolyline-IsA-IObject_5AEA635048B69CACB4CEB43102E5F6E474662859AEAB1EC4BF7F17BB3CF40321",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "IPolyline-IsA-IElement1D_24F7F0F4DD5A18937051AB628F9F9CBC8CF47224230B0B23C4D59D709F8C30D2",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "IPolyline-IsA-IElement_6F6D7ABDFFF21653DF577A2E44CB8861EE0B09BF70B769804EB025E743E7363E",
       "type": "owl:ObjectProperty"
     },
     {
@@ -2098,6 +2317,50 @@
       "type": "owl:ObjectProperty"
     },
     {
+      "id": "PolyCurve-IsA-IPolyCurve_5130773147236DE1329F09ED6460D426124FC44783E1FB727BA3C71DFD3C92F7",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "BH.oM.Geometry.Polygon-HasProperty-BH.oM.Geometry.Polygon.Vertices",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "BH.oM.Geometry.Polygon.Vertices-IsAListOf-BH.oM.Geometry.Point",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "Polygon-IsA-IPolyline_B3E946F59FD83858FD41584F9686479F17C75DF6B0F9CD93CF8E467CA6E3E0B0",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "Polygon-IsA-ICurve_2046FE7F7B8D80AC95A1B7A93F907E0C3137BB84010F56E01037D477F05E633F",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "Polygon-IsA-IGeometry_33B16303918DB67ECE56B55ED5E1639971C6F8CF40EDB28A17E377E05229C62D",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "Polygon-IsA-IObject_411C1A6ED18F37C90F1D194A46A99686A8569E0AAA1A6A6DF9CB4A650D7C86D1",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "Polygon-IsA-IElement1D_52A39EAD3C445D6E8CA8B2FC283DCA7DCD4D32E61DA3EE75E98002AEAC1F4F53",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "Polygon-IsA-IElement_F086B08CE7FC349234D4CC6B27FFF3143EA8D292DECE56A63552B839B26A2591",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "Polygon-IsA-IBoundary_47FA58F772EFB8458B71ADC004616FE65E81FA2DD36E3E2DCEC17BEA9D10A84C",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "Polygon-IsA-IImmutable_5E6D17CF2ED54513C14D05B1517455B94E52F664E1F803E3FD65C28547C50901",
+      "type": "owl:ObjectProperty"
+    },
+    {
       "id": "BH.oM.Geometry.Polyline-HasProperty-BH.oM.Geometry.Polyline.ControlPoints",
       "type": "owl:ObjectProperty"
     },
@@ -2123,6 +2386,10 @@
     },
     {
       "id": "Polyline-IsA-IElement_60E019E3F3121DEB41F16CE41CD807868124A2D5A406B76E557300FCE7B5A9D7",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "Polyline-IsA-IPolyline_3512C4727DEDC60F2A1B2DA677D14EF4B9524F86B3062E219CCDE45E248C90B6",
       "type": "owl:ObjectProperty"
     },
     {
@@ -2731,6 +2998,14 @@
     },
     {
       "id": "PlanarSurface-IsA-IImmutable_ECD630980514764919726622F43D946FBF8C178B6678E5B0536BE142FA723C6E",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "PlanarSurface-IsA-IElement2D_4A2860189E8530D43934EEE2F3327DB37C0C59AC056B24AA0C2C75E5BF26B29D",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "PlanarSurface-IsA-IElement_B0EFDFB7BC8BF9A0AE20D101F12C5C0FD04047D29DDF2D13DA664A2E64D5A849",
       "type": "owl:ObjectProperty"
     },
     {
@@ -2909,7 +3184,7 @@
   "propertyAttribute": [
     {
       "id": "BH.oM.Geometry.Arc-HasProperty-BH.oM.Geometry.Arc.CoordinateSystem",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/HasProperty.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/HasProperty.cs",
       "label": "HasProperty",
       "attributes": [
         "object"
@@ -2919,7 +3194,7 @@
     },
     {
       "id": "BH.oM.Geometry.Arc.CoordinateSystem-IsA-BH.oM.Geometry.CoordinateSystem.Cartesian",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/IsA.cs",
       "label": "IsA",
       "attributes": [
         "object"
@@ -2929,7 +3204,7 @@
     },
     {
       "id": "Arc-HasProperty-Radius_30A08D025F3C0E4C950FEC6632221C0B18D9D6CCD7720AD4FB53916F592F6654",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/HasProperty.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/HasProperty.cs",
       "label": "HasProperty",
       "attributes": [
         "datatype"
@@ -2939,7 +3214,7 @@
     },
     {
       "id": "Arc-HasProperty-StartAngle_40720F9ECE8560738C63C2250A00C273E900E6C7D459772523A3C000E461FE5B",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/HasProperty.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/HasProperty.cs",
       "label": "HasProperty",
       "attributes": [
         "datatype"
@@ -2949,7 +3224,7 @@
     },
     {
       "id": "Arc-HasProperty-EndAngle_C7AFA86146E31603CEF3A165FF27B772F2A30F83A6C4F0D2C658613B282713FA",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/HasProperty.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/HasProperty.cs",
       "label": "HasProperty",
       "attributes": [
         "datatype"
@@ -2959,7 +3234,7 @@
     },
     {
       "id": "Arc-IsA-ICurve_E124B02D8B760D18818717437F4E8C713FA7D164CC55D3255A9DEF6C44C53EEA",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/IsA.cs",
       "label": "IsA",
       "attributes": [
         "object"
@@ -2972,7 +3247,7 @@
     },
     {
       "id": "Arc-IsA-IGeometry_00EAFB93AF1EB64BACEE337D14F015AE65BEF100B3E5BB708D96B3981CD78AD6",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/IsA.cs",
       "label": "IsA",
       "attributes": [
         "object"
@@ -2985,7 +3260,7 @@
     },
     {
       "id": "Arc-IsA-IObject_DA8846565B9324CAE75A7FD0648E4AF74D3BC6FE899E460D6CACCA668F66832B",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/IsA.cs",
       "label": "IsA",
       "attributes": [
         "object"
@@ -2998,7 +3273,7 @@
     },
     {
       "id": "Arc-IsA-IElement1D_22F138310B3FA8A2A90BC9607EFCA3BCA9CD101E261FC60A1C7D5056051EA14D",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/IsA.cs",
       "label": "IsA",
       "attributes": [
         "object"
@@ -3011,7 +3286,7 @@
     },
     {
       "id": "Arc-IsA-IElement_8B4DFF820C7D4681E3069E56C372E2EEC866094411499F2E130CBF8A1E19BCCD",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/IsA.cs",
       "label": "IsA",
       "attributes": [
         "object"
@@ -3023,8 +3298,132 @@
       "range": "BH.oM.Dimensional.IElement"
     },
     {
+      "id": "BH.oM.Geometry.BoundaryCurve-HasProperty-BH.oM.Geometry.BoundaryCurve.Curves",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/HasProperty.cs",
+      "label": "HasProperty",
+      "attributes": [
+        "object"
+      ],
+      "domain": "BH.oM.Geometry.BoundaryCurve",
+      "range": "BH.oM.Geometry.BoundaryCurve.Curves"
+    },
+    {
+      "id": "BH.oM.Geometry.BoundaryCurve.Curves-IsAListOf-BH.oM.Geometry.ICurve",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/IsAListOf.cs",
+      "label": "IsAListOf",
+      "attributes": [
+        "object"
+      ],
+      "domain": "BH.oM.Geometry.BoundaryCurve.Curves",
+      "range": "BH.oM.Geometry.ICurve"
+    },
+    {
+      "id": "BoundaryCurve-IsA-ICurve_A26D4110AF0E7B5CA8E7A19DED4E1D965037EA319F2A88E89113B191EBD76BD3",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/IsA.cs",
+      "label": "IsA",
+      "attributes": [
+        "object"
+      ],
+      "comment": {
+        "undefined": "Can be used to describe that a thing belongs to a class; or that a thing is equivalent to another thing. When used for BHoM types, this describes C# interface implementation."
+      },
+      "domain": "BH.oM.Geometry.BoundaryCurve",
+      "range": "BH.oM.Geometry.ICurve"
+    },
+    {
+      "id": "BoundaryCurve-IsA-IGeometry_2DBDC98EE315623E1AFFC75ECB39FB524B19CE96CA85095EAD4F1AEE6B16C4C1",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/IsA.cs",
+      "label": "IsA",
+      "attributes": [
+        "object"
+      ],
+      "comment": {
+        "undefined": "Can be used to describe that a thing belongs to a class; or that a thing is equivalent to another thing. When used for BHoM types, this describes C# interface implementation."
+      },
+      "domain": "BH.oM.Geometry.BoundaryCurve",
+      "range": "BH.oM.Geometry.IGeometry"
+    },
+    {
+      "id": "BoundaryCurve-IsA-IObject_BD52C8362854960BBDAFA304FB29C04E3515242BDB90C5FFF587AD7401B86C3E",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/IsA.cs",
+      "label": "IsA",
+      "attributes": [
+        "object"
+      ],
+      "comment": {
+        "undefined": "Can be used to describe that a thing belongs to a class; or that a thing is equivalent to another thing. When used for BHoM types, this describes C# interface implementation."
+      },
+      "domain": "BH.oM.Geometry.BoundaryCurve",
+      "range": "BH.oM.Base.IObject"
+    },
+    {
+      "id": "BoundaryCurve-IsA-IElement1D_7E4E087FCACE92AADA9E816D50D6A47CB1E86C99C0B32045BDA7AF9F187104EB",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/IsA.cs",
+      "label": "IsA",
+      "attributes": [
+        "object"
+      ],
+      "comment": {
+        "undefined": "Can be used to describe that a thing belongs to a class; or that a thing is equivalent to another thing. When used for BHoM types, this describes C# interface implementation."
+      },
+      "domain": "BH.oM.Geometry.BoundaryCurve",
+      "range": "BH.oM.Dimensional.IElement1D"
+    },
+    {
+      "id": "BoundaryCurve-IsA-IElement_E28F3BB7D120DB3B11BEC129F3FEEFA6BD0FAB8B0328B0FA5EAC36C99F1FEFF9",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/IsA.cs",
+      "label": "IsA",
+      "attributes": [
+        "object"
+      ],
+      "comment": {
+        "undefined": "Can be used to describe that a thing belongs to a class; or that a thing is equivalent to another thing. When used for BHoM types, this describes C# interface implementation."
+      },
+      "domain": "BH.oM.Geometry.BoundaryCurve",
+      "range": "BH.oM.Dimensional.IElement"
+    },
+    {
+      "id": "BoundaryCurve-IsA-IPolyCurve_54B4F46E119E9697E09E7E7127B6A37E434995A348A6114437679AB7DE4CA392",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/IsA.cs",
+      "label": "IsA",
+      "attributes": [
+        "object"
+      ],
+      "comment": {
+        "undefined": "Can be used to describe that a thing belongs to a class; or that a thing is equivalent to another thing. When used for BHoM types, this describes C# interface implementation."
+      },
+      "domain": "BH.oM.Geometry.BoundaryCurve",
+      "range": "BH.oM.Geometry.IPolyCurve"
+    },
+    {
+      "id": "BoundaryCurve-IsA-IBoundary_8DAC7CD1AAAD127DC29874EF2097E854C53B893A42094EB5FB10C9D3F85A63F1",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/IsA.cs",
+      "label": "IsA",
+      "attributes": [
+        "object"
+      ],
+      "comment": {
+        "undefined": "Can be used to describe that a thing belongs to a class; or that a thing is equivalent to another thing. When used for BHoM types, this describes C# interface implementation."
+      },
+      "domain": "BH.oM.Geometry.BoundaryCurve",
+      "range": "BH.oM.Geometry.IBoundary"
+    },
+    {
+      "id": "BoundaryCurve-IsA-IImmutable_E7C96BC6DB7530C428D9BE98AE6C4CFE024A30F155500C1DF388344F92039CA9",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/IsA.cs",
+      "label": "IsA",
+      "attributes": [
+        "object"
+      ],
+      "comment": {
+        "undefined": "Can be used to describe that a thing belongs to a class; or that a thing is equivalent to another thing. When used for BHoM types, this describes C# interface implementation."
+      },
+      "domain": "BH.oM.Geometry.BoundaryCurve",
+      "range": "BH.oM.Base.IImmutable"
+    },
+    {
       "id": "BH.oM.Geometry.Circle-HasProperty-BH.oM.Geometry.Circle.Centre",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/HasProperty.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/HasProperty.cs",
       "label": "HasProperty",
       "attributes": [
         "object"
@@ -3034,7 +3433,7 @@
     },
     {
       "id": "BH.oM.Geometry.Circle.Centre-IsA-BH.oM.Geometry.Point",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/IsA.cs",
       "label": "IsA",
       "attributes": [
         "object"
@@ -3044,7 +3443,7 @@
     },
     {
       "id": "BH.oM.Geometry.Circle-HasProperty-BH.oM.Geometry.Circle.Normal",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/HasProperty.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/HasProperty.cs",
       "label": "HasProperty",
       "attributes": [
         "object"
@@ -3054,7 +3453,7 @@
     },
     {
       "id": "BH.oM.Geometry.Circle.Normal-IsA-BH.oM.Geometry.Vector",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/IsA.cs",
       "label": "IsA",
       "attributes": [
         "object"
@@ -3064,7 +3463,7 @@
     },
     {
       "id": "Circle-HasProperty-Radius_9CE096595AA3B5FEF57EACC3FB08255A8E55BE9955DFD378CA56593B3850082D",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/HasProperty.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/HasProperty.cs",
       "label": "HasProperty",
       "attributes": [
         "datatype"
@@ -3074,7 +3473,7 @@
     },
     {
       "id": "Circle-IsA-ICurve_9DCB7E6E3754A88F29B7DE436E0659B45DF0655DD677C6ABCEE331780106E22D",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/IsA.cs",
       "label": "IsA",
       "attributes": [
         "object"
@@ -3087,7 +3486,7 @@
     },
     {
       "id": "Circle-IsA-IGeometry_54E5A33BE4C3C356290652E3967BCBE3E7D1E0C60D469399CC9FECF075FDDD76",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/IsA.cs",
       "label": "IsA",
       "attributes": [
         "object"
@@ -3100,7 +3499,7 @@
     },
     {
       "id": "Circle-IsA-IObject_ADB3BFF95A9E1EE52CCAC3E7F8D4D8B74BC814DD3ABEC8858BF14BF911A9B3EA",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/IsA.cs",
       "label": "IsA",
       "attributes": [
         "object"
@@ -3113,7 +3512,7 @@
     },
     {
       "id": "Circle-IsA-IElement1D_289F4855F6DECAC248056F9C9EB64297FEC719261BEB2DC8B0FB31A40DB51855",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/IsA.cs",
       "label": "IsA",
       "attributes": [
         "object"
@@ -3126,7 +3525,7 @@
     },
     {
       "id": "Circle-IsA-IElement_7DD2563A6625B3E1CDD7C53BD9A9236F81DC8D5F75B4D8CC175785B519D33A95",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/IsA.cs",
       "label": "IsA",
       "attributes": [
         "object"
@@ -3138,8 +3537,21 @@
       "range": "BH.oM.Dimensional.IElement"
     },
     {
+      "id": "Circle-IsA-IBoundary_578B9C8895388C0D4E7B27B8043B83CF1558F9415FA11CE684DA437DA2491428",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/IsA.cs",
+      "label": "IsA",
+      "attributes": [
+        "object"
+      ],
+      "comment": {
+        "undefined": "Can be used to describe that a thing belongs to a class; or that a thing is equivalent to another thing. When used for BHoM types, this describes C# interface implementation."
+      },
+      "domain": "BH.oM.Geometry.Circle",
+      "range": "BH.oM.Geometry.IBoundary"
+    },
+    {
       "id": "BH.oM.Geometry.Ellipse-HasProperty-BH.oM.Geometry.Ellipse.Centre",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/HasProperty.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/HasProperty.cs",
       "label": "HasProperty",
       "attributes": [
         "object"
@@ -3149,7 +3561,7 @@
     },
     {
       "id": "BH.oM.Geometry.Ellipse.Centre-IsA-BH.oM.Geometry.Point",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/IsA.cs",
       "label": "IsA",
       "attributes": [
         "object"
@@ -3159,7 +3571,7 @@
     },
     {
       "id": "BH.oM.Geometry.Ellipse-HasProperty-BH.oM.Geometry.Ellipse.Axis1",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/HasProperty.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/HasProperty.cs",
       "label": "HasProperty",
       "attributes": [
         "object"
@@ -3169,7 +3581,7 @@
     },
     {
       "id": "BH.oM.Geometry.Ellipse.Axis1-IsA-BH.oM.Geometry.Vector",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/IsA.cs",
       "label": "IsA",
       "attributes": [
         "object"
@@ -3179,7 +3591,7 @@
     },
     {
       "id": "BH.oM.Geometry.Ellipse-HasProperty-BH.oM.Geometry.Ellipse.Axis2",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/HasProperty.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/HasProperty.cs",
       "label": "HasProperty",
       "attributes": [
         "object"
@@ -3189,7 +3601,7 @@
     },
     {
       "id": "BH.oM.Geometry.Ellipse.Axis2-IsA-BH.oM.Geometry.Vector",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/IsA.cs",
       "label": "IsA",
       "attributes": [
         "object"
@@ -3199,7 +3611,7 @@
     },
     {
       "id": "Ellipse-HasProperty-Radius1_FB5E2A39F24F690A5E02DD81D071B54E7EA946B955A14FA89635E1DA78558EAC",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/HasProperty.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/HasProperty.cs",
       "label": "HasProperty",
       "attributes": [
         "datatype"
@@ -3209,7 +3621,7 @@
     },
     {
       "id": "Ellipse-HasProperty-Radius2_00FE19F148B2C02B1DB3EB96CB1737A4CA0A8AEBFEBC2ADE08477A8402E10BFA",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/HasProperty.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/HasProperty.cs",
       "label": "HasProperty",
       "attributes": [
         "datatype"
@@ -3219,7 +3631,7 @@
     },
     {
       "id": "Ellipse-IsA-ICurve_FE30ABB0231E4426EA8995CB82EE56EC2F33F98ACB7791C78356086461C28F34",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/IsA.cs",
       "label": "IsA",
       "attributes": [
         "object"
@@ -3232,7 +3644,7 @@
     },
     {
       "id": "Ellipse-IsA-IGeometry_CF631AB0AB312676ACE447A3FCA17D5152CAC9441E776752E66A2A4F9A78DC58",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/IsA.cs",
       "label": "IsA",
       "attributes": [
         "object"
@@ -3245,7 +3657,7 @@
     },
     {
       "id": "Ellipse-IsA-IObject_E5E8DCBE3E550C568DC82302F5F22062194CB53BC34878F1071DABC7B8FA3E9D",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/IsA.cs",
       "label": "IsA",
       "attributes": [
         "object"
@@ -3258,7 +3670,7 @@
     },
     {
       "id": "Ellipse-IsA-IElement1D_3A4D23958667624BBB5AEC7F77B71C3EC2027BD9CBD04509A17DF231327DC3E9",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/IsA.cs",
       "label": "IsA",
       "attributes": [
         "object"
@@ -3271,7 +3683,7 @@
     },
     {
       "id": "Ellipse-IsA-IElement_AAD236F97CF2995EB36E730764B585E017674E6ED4276B032CB9031CA1AB8B54",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/IsA.cs",
       "label": "IsA",
       "attributes": [
         "object"
@@ -3283,8 +3695,86 @@
       "range": "BH.oM.Dimensional.IElement"
     },
     {
+      "id": "Ellipse-IsA-IBoundary_A44D12BEFDB4FF510B03829D53006641FC0F08573F6DD0A7B75E9306C921E4C6",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/IsA.cs",
+      "label": "IsA",
+      "attributes": [
+        "object"
+      ],
+      "comment": {
+        "undefined": "Can be used to describe that a thing belongs to a class; or that a thing is equivalent to another thing. When used for BHoM types, this describes C# interface implementation."
+      },
+      "domain": "BH.oM.Geometry.Ellipse",
+      "range": "BH.oM.Geometry.IBoundary"
+    },
+    {
+      "id": "IBoundary-IsA-ICurve_A3E03AA1C60420FD79AB1D4C625B16324CAC70F3261BAB9916A46B3DDF9E8C24",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/IsA.cs",
+      "label": "IsA",
+      "attributes": [
+        "object"
+      ],
+      "comment": {
+        "undefined": "Can be used to describe that a thing belongs to a class; or that a thing is equivalent to another thing. When used for BHoM types, this describes C# interface implementation."
+      },
+      "domain": "BH.oM.Geometry.IBoundary",
+      "range": "BH.oM.Geometry.ICurve"
+    },
+    {
+      "id": "IBoundary-IsA-IGeometry_829B9836B697CD6AA634365F9A7D6A1BD687B7FFFCEB859A49B287B5E6F6E2BC",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/IsA.cs",
+      "label": "IsA",
+      "attributes": [
+        "object"
+      ],
+      "comment": {
+        "undefined": "Can be used to describe that a thing belongs to a class; or that a thing is equivalent to another thing. When used for BHoM types, this describes C# interface implementation."
+      },
+      "domain": "BH.oM.Geometry.IBoundary",
+      "range": "BH.oM.Geometry.IGeometry"
+    },
+    {
+      "id": "IBoundary-IsA-IObject_C698CE1FD588A15C5BB2C69082B1BE25EC559BA9EDB61A2B5634504C6BEB81BE",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/IsA.cs",
+      "label": "IsA",
+      "attributes": [
+        "object"
+      ],
+      "comment": {
+        "undefined": "Can be used to describe that a thing belongs to a class; or that a thing is equivalent to another thing. When used for BHoM types, this describes C# interface implementation."
+      },
+      "domain": "BH.oM.Geometry.IBoundary",
+      "range": "BH.oM.Base.IObject"
+    },
+    {
+      "id": "IBoundary-IsA-IElement1D_32DE4BB92D04A8595D1DA7257D8D8DB2633810877AF0BBB66CA31A96CC150CDE",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/IsA.cs",
+      "label": "IsA",
+      "attributes": [
+        "object"
+      ],
+      "comment": {
+        "undefined": "Can be used to describe that a thing belongs to a class; or that a thing is equivalent to another thing. When used for BHoM types, this describes C# interface implementation."
+      },
+      "domain": "BH.oM.Geometry.IBoundary",
+      "range": "BH.oM.Dimensional.IElement1D"
+    },
+    {
+      "id": "IBoundary-IsA-IElement_7B34FFD507F8C619261C2774142EC84FF913DA542AA82211F7CE7F51C1E97C83",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/IsA.cs",
+      "label": "IsA",
+      "attributes": [
+        "object"
+      ],
+      "comment": {
+        "undefined": "Can be used to describe that a thing belongs to a class; or that a thing is equivalent to another thing. When used for BHoM types, this describes C# interface implementation."
+      },
+      "domain": "BH.oM.Geometry.IBoundary",
+      "range": "BH.oM.Dimensional.IElement"
+    },
+    {
       "id": "ICurve-IsA-IGeometry_A69E7C5F31139255C7B19DBE007D4EC1E8DBD58197B33F5A9DC6E22525897C8C",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/IsA.cs",
       "label": "IsA",
       "attributes": [
         "object"
@@ -3297,7 +3787,7 @@
     },
     {
       "id": "ICurve-IsA-IObject_85162640A1A8659E9AF1E11C893AFF5F739818424BAD5A3EC0D2E9E1CF38CD95",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/IsA.cs",
       "label": "IsA",
       "attributes": [
         "object"
@@ -3310,7 +3800,7 @@
     },
     {
       "id": "ICurve-IsA-IElement1D_0663E2C5DDDF1636B3747A75B7A348DBFD9730508F55DCE3B74C98789DE469C7",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/IsA.cs",
       "label": "IsA",
       "attributes": [
         "object"
@@ -3323,7 +3813,7 @@
     },
     {
       "id": "ICurve-IsA-IElement_583086BD96BAEB2FA0A54DFD36046E25037B4E5B72DF104EA179E31A26DBD8A7",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/IsA.cs",
       "label": "IsA",
       "attributes": [
         "object"
@@ -3335,8 +3825,138 @@
       "range": "BH.oM.Dimensional.IElement"
     },
     {
+      "id": "IPolyCurve-IsA-ICurve_79C27D7B7915F6754405FB35FB874945BF99A417D4516699A58B775D6E98F13E",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/IsA.cs",
+      "label": "IsA",
+      "attributes": [
+        "object"
+      ],
+      "comment": {
+        "undefined": "Can be used to describe that a thing belongs to a class; or that a thing is equivalent to another thing. When used for BHoM types, this describes C# interface implementation."
+      },
+      "domain": "BH.oM.Geometry.IPolyCurve",
+      "range": "BH.oM.Geometry.ICurve"
+    },
+    {
+      "id": "IPolyCurve-IsA-IGeometry_0678EDF6D59CCD126A3A8977FB99F4EE08AC045208BA142945E5B439A078374A",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/IsA.cs",
+      "label": "IsA",
+      "attributes": [
+        "object"
+      ],
+      "comment": {
+        "undefined": "Can be used to describe that a thing belongs to a class; or that a thing is equivalent to another thing. When used for BHoM types, this describes C# interface implementation."
+      },
+      "domain": "BH.oM.Geometry.IPolyCurve",
+      "range": "BH.oM.Geometry.IGeometry"
+    },
+    {
+      "id": "IPolyCurve-IsA-IObject_F5C71F9372FDC2D55E3D88EFDD01249685C73EF8A48CCB074C2D6B87CDBEDC46",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/IsA.cs",
+      "label": "IsA",
+      "attributes": [
+        "object"
+      ],
+      "comment": {
+        "undefined": "Can be used to describe that a thing belongs to a class; or that a thing is equivalent to another thing. When used for BHoM types, this describes C# interface implementation."
+      },
+      "domain": "BH.oM.Geometry.IPolyCurve",
+      "range": "BH.oM.Base.IObject"
+    },
+    {
+      "id": "IPolyCurve-IsA-IElement1D_41A108FD4622BD090F24C6115181B4FAB0A8588E45326A790E7C4BFC8985C4AB",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/IsA.cs",
+      "label": "IsA",
+      "attributes": [
+        "object"
+      ],
+      "comment": {
+        "undefined": "Can be used to describe that a thing belongs to a class; or that a thing is equivalent to another thing. When used for BHoM types, this describes C# interface implementation."
+      },
+      "domain": "BH.oM.Geometry.IPolyCurve",
+      "range": "BH.oM.Dimensional.IElement1D"
+    },
+    {
+      "id": "IPolyCurve-IsA-IElement_58B27BF7B2BA8088FA128C8CAF3DB84C7CBB6EE0409BA1BE711F036F5DDED484",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/IsA.cs",
+      "label": "IsA",
+      "attributes": [
+        "object"
+      ],
+      "comment": {
+        "undefined": "Can be used to describe that a thing belongs to a class; or that a thing is equivalent to another thing. When used for BHoM types, this describes C# interface implementation."
+      },
+      "domain": "BH.oM.Geometry.IPolyCurve",
+      "range": "BH.oM.Dimensional.IElement"
+    },
+    {
+      "id": "IPolyline-IsA-ICurve_5FC563029DFD32657894E72FE10C80E3B701C9DCE2DD7ED2E72F7B0F01E28914",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/IsA.cs",
+      "label": "IsA",
+      "attributes": [
+        "object"
+      ],
+      "comment": {
+        "undefined": "Can be used to describe that a thing belongs to a class; or that a thing is equivalent to another thing. When used for BHoM types, this describes C# interface implementation."
+      },
+      "domain": "BH.oM.Geometry.IPolyline",
+      "range": "BH.oM.Geometry.ICurve"
+    },
+    {
+      "id": "IPolyline-IsA-IGeometry_CB60696CCC132E9948494D0730BEDB14C16EC19B1D00E2FFC08E2C55355011D0",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/IsA.cs",
+      "label": "IsA",
+      "attributes": [
+        "object"
+      ],
+      "comment": {
+        "undefined": "Can be used to describe that a thing belongs to a class; or that a thing is equivalent to another thing. When used for BHoM types, this describes C# interface implementation."
+      },
+      "domain": "BH.oM.Geometry.IPolyline",
+      "range": "BH.oM.Geometry.IGeometry"
+    },
+    {
+      "id": "IPolyline-IsA-IObject_5AEA635048B69CACB4CEB43102E5F6E474662859AEAB1EC4BF7F17BB3CF40321",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/IsA.cs",
+      "label": "IsA",
+      "attributes": [
+        "object"
+      ],
+      "comment": {
+        "undefined": "Can be used to describe that a thing belongs to a class; or that a thing is equivalent to another thing. When used for BHoM types, this describes C# interface implementation."
+      },
+      "domain": "BH.oM.Geometry.IPolyline",
+      "range": "BH.oM.Base.IObject"
+    },
+    {
+      "id": "IPolyline-IsA-IElement1D_24F7F0F4DD5A18937051AB628F9F9CBC8CF47224230B0B23C4D59D709F8C30D2",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/IsA.cs",
+      "label": "IsA",
+      "attributes": [
+        "object"
+      ],
+      "comment": {
+        "undefined": "Can be used to describe that a thing belongs to a class; or that a thing is equivalent to another thing. When used for BHoM types, this describes C# interface implementation."
+      },
+      "domain": "BH.oM.Geometry.IPolyline",
+      "range": "BH.oM.Dimensional.IElement1D"
+    },
+    {
+      "id": "IPolyline-IsA-IElement_6F6D7ABDFFF21653DF577A2E44CB8861EE0B09BF70B769804EB025E743E7363E",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/IsA.cs",
+      "label": "IsA",
+      "attributes": [
+        "object"
+      ],
+      "comment": {
+        "undefined": "Can be used to describe that a thing belongs to a class; or that a thing is equivalent to another thing. When used for BHoM types, this describes C# interface implementation."
+      },
+      "domain": "BH.oM.Geometry.IPolyline",
+      "range": "BH.oM.Dimensional.IElement"
+    },
+    {
       "id": "BH.oM.Geometry.Line-HasProperty-BH.oM.Geometry.Line.Start",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/HasProperty.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/HasProperty.cs",
       "label": "HasProperty",
       "attributes": [
         "object"
@@ -3346,7 +3966,7 @@
     },
     {
       "id": "BH.oM.Geometry.Line.Start-IsA-BH.oM.Geometry.Point",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/IsA.cs",
       "label": "IsA",
       "attributes": [
         "object"
@@ -3356,7 +3976,7 @@
     },
     {
       "id": "BH.oM.Geometry.Line-HasProperty-BH.oM.Geometry.Line.End",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/HasProperty.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/HasProperty.cs",
       "label": "HasProperty",
       "attributes": [
         "object"
@@ -3366,7 +3986,7 @@
     },
     {
       "id": "BH.oM.Geometry.Line.End-IsA-BH.oM.Geometry.Point",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/IsA.cs",
       "label": "IsA",
       "attributes": [
         "object"
@@ -3376,7 +3996,7 @@
     },
     {
       "id": "Line-HasProperty-Infinite_FC59B62241BDB597C34C3641C13C7D96B30E01485E51264F603496AC8FFD8D64",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/HasProperty.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/HasProperty.cs",
       "label": "HasProperty",
       "attributes": [
         "datatype"
@@ -3386,7 +4006,7 @@
     },
     {
       "id": "Line-IsA-ICurve_2316830E8B29DF0D6BC869323733AAE94D1059BCE8E34FCA39A70B002D529857",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/IsA.cs",
       "label": "IsA",
       "attributes": [
         "object"
@@ -3399,7 +4019,7 @@
     },
     {
       "id": "Line-IsA-IGeometry_2E9013DD59B883AE6BB6AA2EE92270B95A08418BCC63AC42EAFC5206D744DFC4",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/IsA.cs",
       "label": "IsA",
       "attributes": [
         "object"
@@ -3412,7 +4032,7 @@
     },
     {
       "id": "Line-IsA-IObject_78C7C513D6C8A3996AE7BC108B5B37DFFD6AFC02C7CDC09C833789BE261EBB5A",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/IsA.cs",
       "label": "IsA",
       "attributes": [
         "object"
@@ -3425,7 +4045,7 @@
     },
     {
       "id": "Line-IsA-IElement1D_AEC7A788AAA0094722C9F93F5B81CFD244E045259A56D8271697B1AC2F6AD641",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/IsA.cs",
       "label": "IsA",
       "attributes": [
         "object"
@@ -3438,7 +4058,7 @@
     },
     {
       "id": "Line-IsA-IElement_17900B0AE59AEEBEC765FA139CD5F7B0AE905FA130F1709C5A84EF6FF5F72C4C",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/IsA.cs",
       "label": "IsA",
       "attributes": [
         "object"
@@ -3451,7 +4071,7 @@
     },
     {
       "id": "BH.oM.Geometry.NurbsCurve-HasProperty-BH.oM.Geometry.NurbsCurve.ControlPoints",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/HasProperty.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/HasProperty.cs",
       "label": "HasProperty",
       "attributes": [
         "object"
@@ -3461,7 +4081,7 @@
     },
     {
       "id": "BH.oM.Geometry.NurbsCurve.ControlPoints-IsAListOf-BH.oM.Geometry.Point",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsAListOf.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/IsAListOf.cs",
       "label": "IsAListOf",
       "attributes": [
         "object"
@@ -3471,7 +4091,7 @@
     },
     {
       "id": "NurbsCurve-HasProperty-Weights_D37C0B12C1B0E4731ED7CBBC45D02989B801E7880F6828FA3A955E0453D9242C",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/HasProperty.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/HasProperty.cs",
       "label": "HasProperty",
       "attributes": [
         "datatype"
@@ -3481,7 +4101,7 @@
     },
     {
       "id": "NurbsCurve-HasProperty-Knots_9FDFEF7C11AB0BFFC5D5C1834ABE7AE1A4CA5AE1D50282D7B0ECAB6F5926AE1E",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/HasProperty.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/HasProperty.cs",
       "label": "HasProperty",
       "attributes": [
         "datatype"
@@ -3491,7 +4111,7 @@
     },
     {
       "id": "NurbsCurve-IsA-ICurve_C05ED2177D491DCA11FE2E2AD0992742F9151D7537CA98E05DB8FDB2CA358008",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/IsA.cs",
       "label": "IsA",
       "attributes": [
         "object"
@@ -3504,7 +4124,7 @@
     },
     {
       "id": "NurbsCurve-IsA-IGeometry_AF5817F7FD591B18DC85F4F738E0AC56DFFCA9AA43FFDD60CA05CA7AB9DEA103",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/IsA.cs",
       "label": "IsA",
       "attributes": [
         "object"
@@ -3517,7 +4137,7 @@
     },
     {
       "id": "NurbsCurve-IsA-IObject_F3D60D2612809C95CF6FD564C179EBF788FC625B8A618082B4ABE4C49601A836",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/IsA.cs",
       "label": "IsA",
       "attributes": [
         "object"
@@ -3530,7 +4150,7 @@
     },
     {
       "id": "NurbsCurve-IsA-IElement1D_59307F301B9FC33EF07C897390A24E6BEB1A1917E26A5D41B5B4C30503DED418",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/IsA.cs",
       "label": "IsA",
       "attributes": [
         "object"
@@ -3543,7 +4163,7 @@
     },
     {
       "id": "NurbsCurve-IsA-IElement_34EB1446FB5BB5D920DB3B745AAE052C77C41D0694B0A23D901965977E873605",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/IsA.cs",
       "label": "IsA",
       "attributes": [
         "object"
@@ -3556,7 +4176,7 @@
     },
     {
       "id": "BH.oM.Geometry.PolyCurve-HasProperty-BH.oM.Geometry.PolyCurve.Curves",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/HasProperty.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/HasProperty.cs",
       "label": "HasProperty",
       "attributes": [
         "object"
@@ -3566,7 +4186,7 @@
     },
     {
       "id": "BH.oM.Geometry.PolyCurve.Curves-IsAListOf-BH.oM.Geometry.ICurve",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsAListOf.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/IsAListOf.cs",
       "label": "IsAListOf",
       "attributes": [
         "object"
@@ -3576,7 +4196,7 @@
     },
     {
       "id": "PolyCurve-IsA-ICurve_31A2C203259AA1D9C25084AB299E6E8F52C6B28CAC39AC5BCC7BCA56C5D8A197",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/IsA.cs",
       "label": "IsA",
       "attributes": [
         "object"
@@ -3589,7 +4209,7 @@
     },
     {
       "id": "PolyCurve-IsA-IGeometry_573AD2E0D75F7756E84B6C4A9DE6A61A1D589F7EECC3978B3B0E47B346AD709C",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/IsA.cs",
       "label": "IsA",
       "attributes": [
         "object"
@@ -3602,7 +4222,7 @@
     },
     {
       "id": "PolyCurve-IsA-IObject_BAC084BA4911B086FCFFA976DD5224E0CB5267EA0A9F29089FAB3EDF59C0057C",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/IsA.cs",
       "label": "IsA",
       "attributes": [
         "object"
@@ -3615,7 +4235,7 @@
     },
     {
       "id": "PolyCurve-IsA-IElement1D_D900F366755F65F3E68708227368C566037EA56AC23FD484B8B5E4DA266265F1",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/IsA.cs",
       "label": "IsA",
       "attributes": [
         "object"
@@ -3628,7 +4248,7 @@
     },
     {
       "id": "PolyCurve-IsA-IElement_3E75BBD480453CCFE960C4423A51FD6AED0FAE4CB0F74F4535BD436200C63130",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/IsA.cs",
       "label": "IsA",
       "attributes": [
         "object"
@@ -3640,8 +4260,145 @@
       "range": "BH.oM.Dimensional.IElement"
     },
     {
+      "id": "PolyCurve-IsA-IPolyCurve_5130773147236DE1329F09ED6460D426124FC44783E1FB727BA3C71DFD3C92F7",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/IsA.cs",
+      "label": "IsA",
+      "attributes": [
+        "object"
+      ],
+      "comment": {
+        "undefined": "Can be used to describe that a thing belongs to a class; or that a thing is equivalent to another thing. When used for BHoM types, this describes C# interface implementation."
+      },
+      "domain": "BH.oM.Geometry.PolyCurve",
+      "range": "BH.oM.Geometry.IPolyCurve"
+    },
+    {
+      "id": "BH.oM.Geometry.Polygon-HasProperty-BH.oM.Geometry.Polygon.Vertices",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/HasProperty.cs",
+      "label": "HasProperty",
+      "attributes": [
+        "object"
+      ],
+      "domain": "BH.oM.Geometry.Polygon",
+      "range": "BH.oM.Geometry.Polygon.Vertices"
+    },
+    {
+      "id": "BH.oM.Geometry.Polygon.Vertices-IsAListOf-BH.oM.Geometry.Point",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/IsAListOf.cs",
+      "label": "IsAListOf",
+      "attributes": [
+        "object"
+      ],
+      "domain": "BH.oM.Geometry.Polygon.Vertices",
+      "range": "BH.oM.Geometry.Point"
+    },
+    {
+      "id": "Polygon-IsA-IPolyline_B3E946F59FD83858FD41584F9686479F17C75DF6B0F9CD93CF8E467CA6E3E0B0",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/IsA.cs",
+      "label": "IsA",
+      "attributes": [
+        "object"
+      ],
+      "comment": {
+        "undefined": "Can be used to describe that a thing belongs to a class; or that a thing is equivalent to another thing. When used for BHoM types, this describes C# interface implementation."
+      },
+      "domain": "BH.oM.Geometry.Polygon",
+      "range": "BH.oM.Geometry.IPolyline"
+    },
+    {
+      "id": "Polygon-IsA-ICurve_2046FE7F7B8D80AC95A1B7A93F907E0C3137BB84010F56E01037D477F05E633F",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/IsA.cs",
+      "label": "IsA",
+      "attributes": [
+        "object"
+      ],
+      "comment": {
+        "undefined": "Can be used to describe that a thing belongs to a class; or that a thing is equivalent to another thing. When used for BHoM types, this describes C# interface implementation."
+      },
+      "domain": "BH.oM.Geometry.Polygon",
+      "range": "BH.oM.Geometry.ICurve"
+    },
+    {
+      "id": "Polygon-IsA-IGeometry_33B16303918DB67ECE56B55ED5E1639971C6F8CF40EDB28A17E377E05229C62D",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/IsA.cs",
+      "label": "IsA",
+      "attributes": [
+        "object"
+      ],
+      "comment": {
+        "undefined": "Can be used to describe that a thing belongs to a class; or that a thing is equivalent to another thing. When used for BHoM types, this describes C# interface implementation."
+      },
+      "domain": "BH.oM.Geometry.Polygon",
+      "range": "BH.oM.Geometry.IGeometry"
+    },
+    {
+      "id": "Polygon-IsA-IObject_411C1A6ED18F37C90F1D194A46A99686A8569E0AAA1A6A6DF9CB4A650D7C86D1",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/IsA.cs",
+      "label": "IsA",
+      "attributes": [
+        "object"
+      ],
+      "comment": {
+        "undefined": "Can be used to describe that a thing belongs to a class; or that a thing is equivalent to another thing. When used for BHoM types, this describes C# interface implementation."
+      },
+      "domain": "BH.oM.Geometry.Polygon",
+      "range": "BH.oM.Base.IObject"
+    },
+    {
+      "id": "Polygon-IsA-IElement1D_52A39EAD3C445D6E8CA8B2FC283DCA7DCD4D32E61DA3EE75E98002AEAC1F4F53",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/IsA.cs",
+      "label": "IsA",
+      "attributes": [
+        "object"
+      ],
+      "comment": {
+        "undefined": "Can be used to describe that a thing belongs to a class; or that a thing is equivalent to another thing. When used for BHoM types, this describes C# interface implementation."
+      },
+      "domain": "BH.oM.Geometry.Polygon",
+      "range": "BH.oM.Dimensional.IElement1D"
+    },
+    {
+      "id": "Polygon-IsA-IElement_F086B08CE7FC349234D4CC6B27FFF3143EA8D292DECE56A63552B839B26A2591",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/IsA.cs",
+      "label": "IsA",
+      "attributes": [
+        "object"
+      ],
+      "comment": {
+        "undefined": "Can be used to describe that a thing belongs to a class; or that a thing is equivalent to another thing. When used for BHoM types, this describes C# interface implementation."
+      },
+      "domain": "BH.oM.Geometry.Polygon",
+      "range": "BH.oM.Dimensional.IElement"
+    },
+    {
+      "id": "Polygon-IsA-IBoundary_47FA58F772EFB8458B71ADC004616FE65E81FA2DD36E3E2DCEC17BEA9D10A84C",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/IsA.cs",
+      "label": "IsA",
+      "attributes": [
+        "object"
+      ],
+      "comment": {
+        "undefined": "Can be used to describe that a thing belongs to a class; or that a thing is equivalent to another thing. When used for BHoM types, this describes C# interface implementation."
+      },
+      "domain": "BH.oM.Geometry.Polygon",
+      "range": "BH.oM.Geometry.IBoundary"
+    },
+    {
+      "id": "Polygon-IsA-IImmutable_5E6D17CF2ED54513C14D05B1517455B94E52F664E1F803E3FD65C28547C50901",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/IsA.cs",
+      "label": "IsA",
+      "attributes": [
+        "object"
+      ],
+      "comment": {
+        "undefined": "Can be used to describe that a thing belongs to a class; or that a thing is equivalent to another thing. When used for BHoM types, this describes C# interface implementation."
+      },
+      "domain": "BH.oM.Geometry.Polygon",
+      "range": "BH.oM.Base.IImmutable"
+    },
+    {
       "id": "BH.oM.Geometry.Polyline-HasProperty-BH.oM.Geometry.Polyline.ControlPoints",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/HasProperty.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/HasProperty.cs",
       "label": "HasProperty",
       "attributes": [
         "object"
@@ -3651,7 +4408,7 @@
     },
     {
       "id": "BH.oM.Geometry.Polyline.ControlPoints-IsAListOf-BH.oM.Geometry.Point",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsAListOf.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/IsAListOf.cs",
       "label": "IsAListOf",
       "attributes": [
         "object"
@@ -3661,7 +4418,7 @@
     },
     {
       "id": "Polyline-IsA-ICurve_4BF4BB25CB40015F7B72CA3709CA427511ADE6A60165F7C373A80E1B5E1684BD",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/IsA.cs",
       "label": "IsA",
       "attributes": [
         "object"
@@ -3674,7 +4431,7 @@
     },
     {
       "id": "Polyline-IsA-IGeometry_B6EF362D77C322094870090A83448D96A738A95013A9DEB8670AAA2609991698",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/IsA.cs",
       "label": "IsA",
       "attributes": [
         "object"
@@ -3687,7 +4444,7 @@
     },
     {
       "id": "Polyline-IsA-IObject_B550E3349BBC2FBCF855C54928968F0F936FBA9CA455B7DBD18E01F7B586D509",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/IsA.cs",
       "label": "IsA",
       "attributes": [
         "object"
@@ -3700,7 +4457,7 @@
     },
     {
       "id": "Polyline-IsA-IElement1D_FC28B58FA9680933AA5D484ACE1BA5620A74DDD1A05DAE7E154C8C988E8D9C38",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/IsA.cs",
       "label": "IsA",
       "attributes": [
         "object"
@@ -3713,7 +4470,7 @@
     },
     {
       "id": "Polyline-IsA-IElement_60E019E3F3121DEB41F16CE41CD807868124A2D5A406B76E557300FCE7B5A9D7",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/IsA.cs",
       "label": "IsA",
       "attributes": [
         "object"
@@ -3725,8 +4482,21 @@
       "range": "BH.oM.Dimensional.IElement"
     },
     {
+      "id": "Polyline-IsA-IPolyline_3512C4727DEDC60F2A1B2DA677D14EF4B9524F86B3062E219CCDE45E248C90B6",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/IsA.cs",
+      "label": "IsA",
+      "attributes": [
+        "object"
+      ],
+      "comment": {
+        "undefined": "Can be used to describe that a thing belongs to a class; or that a thing is equivalent to another thing. When used for BHoM types, this describes C# interface implementation."
+      },
+      "domain": "BH.oM.Geometry.Polyline",
+      "range": "BH.oM.Geometry.IPolyline"
+    },
+    {
       "id": "IGeometry-IsA-IObject_66E424D15DCBC0BD464F381E7BDD483E842C83F7A4E755F218ECC1224DBB194F",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/IsA.cs",
       "label": "IsA",
       "attributes": [
         "object"
@@ -3739,7 +4509,7 @@
     },
     {
       "id": "IntegrationSlice-HasProperty-Width_D946D1DF2F307D321C0CC87D6460A9619B452954160989D4E38298D9349FF26E",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/HasProperty.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/HasProperty.cs",
       "label": "HasProperty",
       "attributes": [
         "datatype"
@@ -3749,7 +4519,7 @@
     },
     {
       "id": "IntegrationSlice-HasProperty-Length_C0CBB5425377236940304E2BEADC94C66971656165C3A8A96060BDD13BCD3739",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/HasProperty.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/HasProperty.cs",
       "label": "HasProperty",
       "attributes": [
         "datatype"
@@ -3759,7 +4529,7 @@
     },
     {
       "id": "IntegrationSlice-HasProperty-Centre_B33921A98FC28BD8D8909B1DAB78B30E207855A5D6DCCDA9695771E119CE41FE",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/HasProperty.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/HasProperty.cs",
       "label": "HasProperty",
       "attributes": [
         "datatype"
@@ -3769,7 +4539,7 @@
     },
     {
       "id": "IntegrationSlice-HasProperty-Placement_064F40D419A4535E00A8F8DA837EF6F4E755EBE982BA184FD5BEB76E9D9F3DDA",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/HasProperty.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/HasProperty.cs",
       "label": "HasProperty",
       "attributes": [
         "datatype"
@@ -3779,7 +4549,7 @@
     },
     {
       "id": "IntegrationSlice-IsA-IObject_B73E116F50F5891C55D0F435F693764429315F4C4A218B459D70832C6CAB0030",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/IsA.cs",
       "label": "IsA",
       "attributes": [
         "object"
@@ -3792,7 +4562,7 @@
     },
     {
       "id": "CellRelation-HasProperty-FromCell_CC8C8BB39E46F5672CEBB099C1EA65B5BAEFB98EDCCE2FA9B4C1D5AD108FCE7D",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/HasProperty.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/HasProperty.cs",
       "label": "HasProperty",
       "attributes": [
         "datatype"
@@ -3802,7 +4572,7 @@
     },
     {
       "id": "CellRelation-HasProperty-ToCell_CEFF06605E9EDAFC2F22D0C5C8FBEB1E15F686C0471E788D94318EFCD0DF55E6",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/HasProperty.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/HasProperty.cs",
       "label": "HasProperty",
       "attributes": [
         "datatype"
@@ -3812,7 +4582,7 @@
     },
     {
       "id": "CellRelation-IsA-IGeometry_3471213093B05120837ED7C5DF2943300505DD981910DB4EEB861D6DE222C4E1",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/IsA.cs",
       "label": "IsA",
       "attributes": [
         "object"
@@ -3825,7 +4595,7 @@
     },
     {
       "id": "CellRelation-IsA-IObject_7835D7931F982A4447D32DE76ED1C36E9250E776ADAE2D6402A16FBF0DAAA14C",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/IsA.cs",
       "label": "IsA",
       "attributes": [
         "object"
@@ -3838,7 +4608,7 @@
     },
     {
       "id": "Face-HasProperty-A_E254F5056D58442F457D0CFD7E93E72EE16209BDCE43BB9E23D5C4528F8440D1",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/HasProperty.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/HasProperty.cs",
       "label": "HasProperty",
       "attributes": [
         "datatype"
@@ -3848,7 +4618,7 @@
     },
     {
       "id": "Face-HasProperty-B_2000876ED6677DE0127B7B9A3C36119EBA284E79A35DF812ED3648A48D68B7FD",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/HasProperty.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/HasProperty.cs",
       "label": "HasProperty",
       "attributes": [
         "datatype"
@@ -3858,7 +4628,7 @@
     },
     {
       "id": "Face-HasProperty-C_2CA0546FEA69A6B264A0B340E5F30B02C2E2E456E06D2037C3AED76CE3735E89",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/HasProperty.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/HasProperty.cs",
       "label": "HasProperty",
       "attributes": [
         "datatype"
@@ -3868,7 +4638,7 @@
     },
     {
       "id": "Face-HasProperty-D_9FA534B29EDBEF8DC64AC20EBDDF0DC8D6283D98FF4966768EC6466672570221",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/HasProperty.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/HasProperty.cs",
       "label": "HasProperty",
       "attributes": [
         "datatype"
@@ -3878,7 +4648,7 @@
     },
     {
       "id": "Face-IsA-IGeometry_CA85D976A179A3D1E216F0326FECDA765A244614C7B55A59F77DA25AAE6C9E8B",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/IsA.cs",
       "label": "IsA",
       "attributes": [
         "object"
@@ -3891,7 +4661,7 @@
     },
     {
       "id": "Face-IsA-IObject_22761B8090102692CCEE8F75C88D10018DC973B892E4D9A8123C6F45D25FA20B",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/IsA.cs",
       "label": "IsA",
       "attributes": [
         "object"
@@ -3904,7 +4674,7 @@
     },
     {
       "id": "BH.oM.Geometry.Mesh-HasProperty-BH.oM.Geometry.Mesh.Vertices",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/HasProperty.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/HasProperty.cs",
       "label": "HasProperty",
       "attributes": [
         "object"
@@ -3914,7 +4684,7 @@
     },
     {
       "id": "BH.oM.Geometry.Mesh.Vertices-IsAListOf-BH.oM.Geometry.Point",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsAListOf.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/IsAListOf.cs",
       "label": "IsAListOf",
       "attributes": [
         "object"
@@ -3924,7 +4694,7 @@
     },
     {
       "id": "BH.oM.Geometry.Mesh-HasProperty-BH.oM.Geometry.Mesh.Faces",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/HasProperty.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/HasProperty.cs",
       "label": "HasProperty",
       "attributes": [
         "object"
@@ -3934,7 +4704,7 @@
     },
     {
       "id": "BH.oM.Geometry.Mesh.Faces-IsAListOf-BH.oM.Geometry.Face",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsAListOf.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/IsAListOf.cs",
       "label": "IsAListOf",
       "attributes": [
         "object"
@@ -3944,7 +4714,7 @@
     },
     {
       "id": "Mesh-IsA-IGeometry_A08791B19701999519A5CEA11EADE527573F9C8E7058DB555B0F0A0ECC82089F",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/IsA.cs",
       "label": "IsA",
       "attributes": [
         "object"
@@ -3957,7 +4727,7 @@
     },
     {
       "id": "Mesh-IsA-IObject_A6D325C49CEA65BA7F88CEF8300138648D9CDC097DA351B7E04377900392E3BF",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/IsA.cs",
       "label": "IsA",
       "attributes": [
         "object"
@@ -3970,7 +4740,7 @@
     },
     {
       "id": "BH.oM.Geometry.Mesh3D-HasProperty-BH.oM.Geometry.Mesh3D.Vertices",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/HasProperty.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/HasProperty.cs",
       "label": "HasProperty",
       "attributes": [
         "object"
@@ -3980,7 +4750,7 @@
     },
     {
       "id": "BH.oM.Geometry.Mesh3D.Vertices-IsAListOf-BH.oM.Geometry.Point",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsAListOf.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/IsAListOf.cs",
       "label": "IsAListOf",
       "attributes": [
         "object"
@@ -3990,7 +4760,7 @@
     },
     {
       "id": "BH.oM.Geometry.Mesh3D-HasProperty-BH.oM.Geometry.Mesh3D.Faces",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/HasProperty.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/HasProperty.cs",
       "label": "HasProperty",
       "attributes": [
         "object"
@@ -4000,7 +4770,7 @@
     },
     {
       "id": "BH.oM.Geometry.Mesh3D.Faces-IsAListOf-BH.oM.Geometry.Face",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsAListOf.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/IsAListOf.cs",
       "label": "IsAListOf",
       "attributes": [
         "object"
@@ -4010,7 +4780,7 @@
     },
     {
       "id": "BH.oM.Geometry.Mesh3D-HasProperty-BH.oM.Geometry.Mesh3D.CellRelation",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/HasProperty.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/HasProperty.cs",
       "label": "HasProperty",
       "attributes": [
         "object"
@@ -4020,7 +4790,7 @@
     },
     {
       "id": "BH.oM.Geometry.Mesh3D.CellRelation-IsAListOf-BH.oM.Geometry.CellRelation",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsAListOf.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/IsAListOf.cs",
       "label": "IsAListOf",
       "attributes": [
         "object"
@@ -4030,7 +4800,7 @@
     },
     {
       "id": "Mesh3D-IsA-IGeometry_4D45DB10EC119BFB6B31206F3C6077DE640667EEC5E7465FDBFDEC5DA52708E4",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/IsA.cs",
       "label": "IsA",
       "attributes": [
         "object"
@@ -4043,7 +4813,7 @@
     },
     {
       "id": "Mesh3D-IsA-IObject_93DC914E9BF22029AFB482F0BC24C8688074819A18DACE80E33F96D25C52E4F6",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/IsA.cs",
       "label": "IsA",
       "attributes": [
         "object"
@@ -4056,7 +4826,7 @@
     },
     {
       "id": "Mesh3D-IsA-IImmutable_D22EB3E173B9E458D923844CC3E30AD62B615C60A95B630A5D37871BD96EF4EE",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/IsA.cs",
       "label": "IsA",
       "attributes": [
         "object"
@@ -4069,7 +4839,7 @@
     },
     {
       "id": "BH.oM.Geometry.BoundingBox-HasProperty-BH.oM.Geometry.BoundingBox.Min",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/HasProperty.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/HasProperty.cs",
       "label": "HasProperty",
       "attributes": [
         "object"
@@ -4079,7 +4849,7 @@
     },
     {
       "id": "BH.oM.Geometry.BoundingBox.Min-IsA-BH.oM.Geometry.Point",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/IsA.cs",
       "label": "IsA",
       "attributes": [
         "object"
@@ -4089,7 +4859,7 @@
     },
     {
       "id": "BH.oM.Geometry.BoundingBox-HasProperty-BH.oM.Geometry.BoundingBox.Max",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/HasProperty.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/HasProperty.cs",
       "label": "HasProperty",
       "attributes": [
         "object"
@@ -4099,7 +4869,7 @@
     },
     {
       "id": "BH.oM.Geometry.BoundingBox.Max-IsA-BH.oM.Geometry.Point",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/IsA.cs",
       "label": "IsA",
       "attributes": [
         "object"
@@ -4109,7 +4879,7 @@
     },
     {
       "id": "BoundingBox-IsA-IGeometry_BECEA7CF85602B2A845DEA6BBDB8C3A18F6ED06AC858E3F6B01282CEC10BEE89",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/IsA.cs",
       "label": "IsA",
       "attributes": [
         "object"
@@ -4122,7 +4892,7 @@
     },
     {
       "id": "BoundingBox-IsA-IObject_4F2AD5372DC023B0D0CDB1AEFD7EA90BCE888516288D65EE59F6D8C3E86CEBF9",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/IsA.cs",
       "label": "IsA",
       "attributes": [
         "object"
@@ -4135,7 +4905,7 @@
     },
     {
       "id": "BH.oM.Geometry.CompositeGeometry-HasProperty-BH.oM.Geometry.CompositeGeometry.Elements",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/HasProperty.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/HasProperty.cs",
       "label": "HasProperty",
       "attributes": [
         "object"
@@ -4145,7 +4915,7 @@
     },
     {
       "id": "BH.oM.Geometry.CompositeGeometry.Elements-IsAListOf-BH.oM.Geometry.IGeometry",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsAListOf.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/IsAListOf.cs",
       "label": "IsAListOf",
       "attributes": [
         "object"
@@ -4155,7 +4925,7 @@
     },
     {
       "id": "CompositeGeometry-IsA-IGeometry_DFA49A829A59414E969DF5E4B100EC5036EE8268010992D738873AF44C22870E",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/IsA.cs",
       "label": "IsA",
       "attributes": [
         "object"
@@ -4168,7 +4938,7 @@
     },
     {
       "id": "CompositeGeometry-IsA-IObject_09B8C75E988E3EA524524F21A1FA2B21B6B6AB0B0C4FC4AE8BB8E6C794DFCD79",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/IsA.cs",
       "label": "IsA",
       "attributes": [
         "object"
@@ -4181,7 +4951,7 @@
     },
     {
       "id": "Quaternion-HasProperty-X_9FECDA5104E67B70216AD5DF4235F893526E7344BAAA76FFA1D64662B499D01F",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/HasProperty.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/HasProperty.cs",
       "label": "HasProperty",
       "attributes": [
         "datatype"
@@ -4191,7 +4961,7 @@
     },
     {
       "id": "Quaternion-HasProperty-Y_71B8AB378ED2896945A406FD7CC518B82BB9F4015815046E9FF6399847E9C409",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/HasProperty.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/HasProperty.cs",
       "label": "HasProperty",
       "attributes": [
         "datatype"
@@ -4201,7 +4971,7 @@
     },
     {
       "id": "Quaternion-HasProperty-Z_1BACCFC9DED46C263FFF02B4F8DF9609B115C1653E524DCA129E5953D70A2B92",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/HasProperty.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/HasProperty.cs",
       "label": "HasProperty",
       "attributes": [
         "datatype"
@@ -4211,7 +4981,7 @@
     },
     {
       "id": "Quaternion-HasProperty-W_A2047C5C178F8ECBCFED71F87D71FBD0C2628FA0C744669CDD76B59A68A0CD8A",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/HasProperty.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/HasProperty.cs",
       "label": "HasProperty",
       "attributes": [
         "datatype"
@@ -4221,7 +4991,7 @@
     },
     {
       "id": "Quaternion-IsA-IGeometry_6A59491B92299D829A80A8482794EB061BBE6E45AD61B37A783A65AE9DAB2647",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/IsA.cs",
       "label": "IsA",
       "attributes": [
         "object"
@@ -4234,7 +5004,7 @@
     },
     {
       "id": "Quaternion-IsA-IObject_D31D59C0D866CA65B2613888C0B29C179090B11CE9931F6AC72F999C4BB0787B",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/IsA.cs",
       "label": "IsA",
       "attributes": [
         "object"
@@ -4247,7 +5017,7 @@
     },
     {
       "id": "BH.oM.Geometry.SurfaceTrim-HasProperty-BH.oM.Geometry.SurfaceTrim.Curve3d",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/HasProperty.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/HasProperty.cs",
       "label": "HasProperty",
       "attributes": [
         "object"
@@ -4257,7 +5027,7 @@
     },
     {
       "id": "BH.oM.Geometry.SurfaceTrim.Curve3d-IsA-BH.oM.Geometry.ICurve",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/IsA.cs",
       "label": "IsA",
       "attributes": [
         "object"
@@ -4267,7 +5037,7 @@
     },
     {
       "id": "BH.oM.Geometry.SurfaceTrim-HasProperty-BH.oM.Geometry.SurfaceTrim.Curve2d",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/HasProperty.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/HasProperty.cs",
       "label": "HasProperty",
       "attributes": [
         "object"
@@ -4277,7 +5047,7 @@
     },
     {
       "id": "BH.oM.Geometry.SurfaceTrim.Curve2d-IsA-BH.oM.Geometry.ICurve",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/IsA.cs",
       "label": "IsA",
       "attributes": [
         "object"
@@ -4287,7 +5057,7 @@
     },
     {
       "id": "SurfaceTrim-IsA-IGeometry_A7260001CFB4CA61D799DD17E0B1FEC6EF5D4B4E179678822D9F6CF77DEBEC48",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/IsA.cs",
       "label": "IsA",
       "attributes": [
         "object"
@@ -4300,7 +5070,7 @@
     },
     {
       "id": "SurfaceTrim-IsA-IObject_87BDA73B501CBA7B14E1CABD1C2E8F17C2BECE99402237A2785E314F5C779CB9",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/IsA.cs",
       "label": "IsA",
       "attributes": [
         "object"
@@ -4313,7 +5083,7 @@
     },
     {
       "id": "SurfaceTrim-IsA-IImmutable_6A4515D1A8B44D90EF47AE6591290FA1AED009E8D3D9BE178B765DD88BDF648B",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/IsA.cs",
       "label": "IsA",
       "attributes": [
         "object"
@@ -4326,7 +5096,7 @@
     },
     {
       "id": "TransformMatrix-HasProperty-Matrix_F21775354FE41F8E39A099DCC934A5A8DC537DC9913747059609E88744E89435",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/HasProperty.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/HasProperty.cs",
       "label": "HasProperty",
       "attributes": [
         "datatype"
@@ -4336,7 +5106,7 @@
     },
     {
       "id": "TransformMatrix-IsA-IGeometry_AEFC3F30B9A260C5DC976D5ED5C6B1F574DE03DC5506BAC768C5DBC63EBD3589",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/IsA.cs",
       "label": "IsA",
       "attributes": [
         "object"
@@ -4349,7 +5119,7 @@
     },
     {
       "id": "TransformMatrix-IsA-IObject_2224E27A8B6420844F2DFC62C1D5B38E1752C3733668768B704AE35AB027BA46",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/IsA.cs",
       "label": "IsA",
       "attributes": [
         "object"
@@ -4362,7 +5132,7 @@
     },
     {
       "id": "BH.oM.Geometry.BoundaryRepresentation-HasProperty-BH.oM.Geometry.BoundaryRepresentation.Surfaces",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/HasProperty.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/HasProperty.cs",
       "label": "HasProperty",
       "attributes": [
         "object"
@@ -4372,7 +5142,7 @@
     },
     {
       "id": "BH.oM.Geometry.BoundaryRepresentation.Surfaces-IsAListOf-BH.oM.Geometry.ISurface",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsAListOf.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/IsAListOf.cs",
       "label": "IsAListOf",
       "attributes": [
         "object"
@@ -4382,7 +5152,7 @@
     },
     {
       "id": "BoundaryRepresentation-HasProperty-Volume_90842C814FEF0C24C51FB2DF2C8A99B7EAFF1A57DDB82F92D2D30576E2529FB3",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/HasProperty.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/HasProperty.cs",
       "label": "HasProperty",
       "attributes": [
         "datatype"
@@ -4392,7 +5162,7 @@
     },
     {
       "id": "BoundaryRepresentation-IsA-ISolid_B35C3DF94B181DB66288F1A6B308D33FC73B7AA547E3F1C7FB113945E81CA29F",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/IsA.cs",
       "label": "IsA",
       "attributes": [
         "object"
@@ -4405,7 +5175,7 @@
     },
     {
       "id": "BoundaryRepresentation-IsA-IGeometry_091BDA4825DCCA4672C26CA44F3C6A9C49A3F72E659D1AEF6AAF481CAFC09803",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/IsA.cs",
       "label": "IsA",
       "attributes": [
         "object"
@@ -4418,7 +5188,7 @@
     },
     {
       "id": "BoundaryRepresentation-IsA-IObject_DA4A7A00DFFAF48F319B64672CE3E7C7EC49E7831988017E30C7F4588ABFEE58",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/IsA.cs",
       "label": "IsA",
       "attributes": [
         "object"
@@ -4431,7 +5201,7 @@
     },
     {
       "id": "BoundaryRepresentation-IsA-IImmutable_9837FACBF994CD1F7EA67E5CEA1EBEC1E0E74247035E0D671799D64160BA4803",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/IsA.cs",
       "label": "IsA",
       "attributes": [
         "object"
@@ -4444,7 +5214,7 @@
     },
     {
       "id": "BH.oM.Geometry.Cone-HasProperty-BH.oM.Geometry.Cone.Centre",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/HasProperty.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/HasProperty.cs",
       "label": "HasProperty",
       "attributes": [
         "object"
@@ -4454,7 +5224,7 @@
     },
     {
       "id": "BH.oM.Geometry.Cone.Centre-IsA-BH.oM.Geometry.Point",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/IsA.cs",
       "label": "IsA",
       "attributes": [
         "object"
@@ -4464,7 +5234,7 @@
     },
     {
       "id": "BH.oM.Geometry.Cone-HasProperty-BH.oM.Geometry.Cone.Axis",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/HasProperty.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/HasProperty.cs",
       "label": "HasProperty",
       "attributes": [
         "object"
@@ -4474,7 +5244,7 @@
     },
     {
       "id": "BH.oM.Geometry.Cone.Axis-IsA-BH.oM.Geometry.Vector",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/IsA.cs",
       "label": "IsA",
       "attributes": [
         "object"
@@ -4484,7 +5254,7 @@
     },
     {
       "id": "Cone-HasProperty-Radius_F719877384CD0996CB077F97633DC8B9A28C6E3563C5E8270D2F90EDA248A9A9",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/HasProperty.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/HasProperty.cs",
       "label": "HasProperty",
       "attributes": [
         "datatype"
@@ -4494,7 +5264,7 @@
     },
     {
       "id": "Cone-HasProperty-Height_190A35B5C6CC051427AC16755FF90A5873211CC2A7514AA556F581F254B22FA1",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/HasProperty.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/HasProperty.cs",
       "label": "HasProperty",
       "attributes": [
         "datatype"
@@ -4504,7 +5274,7 @@
     },
     {
       "id": "Cone-IsA-ISolid_6A90984A71AAE1A8D923246A1D4D712FF63B0A56ABCD11781945E2C8CB871B98",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/IsA.cs",
       "label": "IsA",
       "attributes": [
         "object"
@@ -4517,7 +5287,7 @@
     },
     {
       "id": "Cone-IsA-IGeometry_588D7F9C62D7DBFE87BBB62C7D951673334C2996740BC4D87BF548CEEB961DAE",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/IsA.cs",
       "label": "IsA",
       "attributes": [
         "object"
@@ -4530,7 +5300,7 @@
     },
     {
       "id": "Cone-IsA-IObject_EA9B3EB2500783BBE0B173DEDFA5806A465D8D2044BEB1DBA57D1BAE9571E9E4",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/IsA.cs",
       "label": "IsA",
       "attributes": [
         "object"
@@ -4543,7 +5313,7 @@
     },
     {
       "id": "BH.oM.Geometry.Cuboid-HasProperty-BH.oM.Geometry.Cuboid.CoordinateSystem",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/HasProperty.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/HasProperty.cs",
       "label": "HasProperty",
       "attributes": [
         "object"
@@ -4553,7 +5323,7 @@
     },
     {
       "id": "BH.oM.Geometry.Cuboid.CoordinateSystem-IsA-BH.oM.Geometry.CoordinateSystem.Cartesian",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/IsA.cs",
       "label": "IsA",
       "attributes": [
         "object"
@@ -4563,7 +5333,7 @@
     },
     {
       "id": "Cuboid-HasProperty-Length_F546467D222D5CD89D959042F17AE4488E07B198459DB6A548C4D5585077D3EE",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/HasProperty.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/HasProperty.cs",
       "label": "HasProperty",
       "attributes": [
         "datatype"
@@ -4573,7 +5343,7 @@
     },
     {
       "id": "Cuboid-HasProperty-Depth_F8BDF4A907455E6EB6EBFFE73D2CAD33360D71650D9DAA550CFB2164375D22F3",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/HasProperty.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/HasProperty.cs",
       "label": "HasProperty",
       "attributes": [
         "datatype"
@@ -4583,7 +5353,7 @@
     },
     {
       "id": "Cuboid-HasProperty-Height_6E2C56C91B1E9C8B30769D5967A360005D11E42F70294A215A206E1112331CCC",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/HasProperty.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/HasProperty.cs",
       "label": "HasProperty",
       "attributes": [
         "datatype"
@@ -4593,7 +5363,7 @@
     },
     {
       "id": "Cuboid-IsA-ISolid_D9CC2E68372B93233A78D0D807F4230455BD8669F0C9DDD931938293FEABD565",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/IsA.cs",
       "label": "IsA",
       "attributes": [
         "object"
@@ -4606,7 +5376,7 @@
     },
     {
       "id": "Cuboid-IsA-IGeometry_F9C621B480DCCFB5979AC14070E371397FD6F691F22DAB7512D2FFC5F70BED10",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/IsA.cs",
       "label": "IsA",
       "attributes": [
         "object"
@@ -4619,7 +5389,7 @@
     },
     {
       "id": "Cuboid-IsA-IObject_FA50FD085F5C15B286AEDDC874A19BE43DC718B12D79900F0686335B0A208561",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/IsA.cs",
       "label": "IsA",
       "attributes": [
         "object"
@@ -4632,7 +5402,7 @@
     },
     {
       "id": "BH.oM.Geometry.Cylinder-HasProperty-BH.oM.Geometry.Cylinder.Centre",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/HasProperty.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/HasProperty.cs",
       "label": "HasProperty",
       "attributes": [
         "object"
@@ -4642,7 +5412,7 @@
     },
     {
       "id": "BH.oM.Geometry.Cylinder.Centre-IsA-BH.oM.Geometry.Point",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/IsA.cs",
       "label": "IsA",
       "attributes": [
         "object"
@@ -4652,7 +5422,7 @@
     },
     {
       "id": "BH.oM.Geometry.Cylinder-HasProperty-BH.oM.Geometry.Cylinder.Axis",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/HasProperty.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/HasProperty.cs",
       "label": "HasProperty",
       "attributes": [
         "object"
@@ -4662,7 +5432,7 @@
     },
     {
       "id": "BH.oM.Geometry.Cylinder.Axis-IsA-BH.oM.Geometry.Vector",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/IsA.cs",
       "label": "IsA",
       "attributes": [
         "object"
@@ -4672,7 +5442,7 @@
     },
     {
       "id": "Cylinder-HasProperty-Radius_7FB04CD8CA41293C9454AB062E34265EAC28FE883E9FF181CDC8F540F66FFB2C",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/HasProperty.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/HasProperty.cs",
       "label": "HasProperty",
       "attributes": [
         "datatype"
@@ -4682,7 +5452,7 @@
     },
     {
       "id": "Cylinder-HasProperty-Height_97C2D87D1AB6EA27ACE0C33A4DF67C31A4DB4593EB65CE78206AB4A8CB4B7201",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/HasProperty.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/HasProperty.cs",
       "label": "HasProperty",
       "attributes": [
         "datatype"
@@ -4692,7 +5462,7 @@
     },
     {
       "id": "Cylinder-IsA-ISolid_6A12131226897D374EDD6E19A6E33F297879BE9633C0A5E5D7647923F47E4A2F",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/IsA.cs",
       "label": "IsA",
       "attributes": [
         "object"
@@ -4705,7 +5475,7 @@
     },
     {
       "id": "Cylinder-IsA-IGeometry_B16A599897DCB5FF5CE068DA7F32911FEDA16E6D7CE334C062F2EF22AA3287E4",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/IsA.cs",
       "label": "IsA",
       "attributes": [
         "object"
@@ -4718,7 +5488,7 @@
     },
     {
       "id": "Cylinder-IsA-IObject_CB24A43FB8BF3B3FF2A72ACA4E06CD12D07AA1A7BD2664F9F4F63DF73934BEBF",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/IsA.cs",
       "label": "IsA",
       "attributes": [
         "object"
@@ -4731,7 +5501,7 @@
     },
     {
       "id": "ISolid-IsA-IGeometry_215D0C1B7AF139E8F276A830E1DA46A684557B38BF9EF5FA27D306E379C16E2E",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/IsA.cs",
       "label": "IsA",
       "attributes": [
         "object"
@@ -4744,7 +5514,7 @@
     },
     {
       "id": "ISolid-IsA-IObject_05189C9DDB071AF44DA01582EF898ECEB1C57C418E24FBCF67EA1E4EFE55B4BC",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/IsA.cs",
       "label": "IsA",
       "attributes": [
         "object"
@@ -4757,7 +5527,7 @@
     },
     {
       "id": "BH.oM.Geometry.Sphere-HasProperty-BH.oM.Geometry.Sphere.Centre",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/HasProperty.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/HasProperty.cs",
       "label": "HasProperty",
       "attributes": [
         "object"
@@ -4767,7 +5537,7 @@
     },
     {
       "id": "BH.oM.Geometry.Sphere.Centre-IsA-BH.oM.Geometry.Point",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/IsA.cs",
       "label": "IsA",
       "attributes": [
         "object"
@@ -4777,7 +5547,7 @@
     },
     {
       "id": "Sphere-HasProperty-Radius_FD0BA0F2205E82CE3637ABF02D7178D927AA3CAD821A66BF1A27258D6C50724E",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/HasProperty.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/HasProperty.cs",
       "label": "HasProperty",
       "attributes": [
         "datatype"
@@ -4787,7 +5557,7 @@
     },
     {
       "id": "Sphere-IsA-ISolid_565CC241719878257B9D444E7593CD8F6F11C76E1F5B0F02F6322469E9700513",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/IsA.cs",
       "label": "IsA",
       "attributes": [
         "object"
@@ -4800,7 +5570,7 @@
     },
     {
       "id": "Sphere-IsA-IGeometry_A0746E356703BB2F115CF32EA1C43B237EB264D1A357B0703C286A3AC9157D10",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/IsA.cs",
       "label": "IsA",
       "attributes": [
         "object"
@@ -4813,7 +5583,7 @@
     },
     {
       "id": "Sphere-IsA-IObject_00BF536D2C202EB99829EE5BE1252608E9901DC448F3A4B99AD82E07A2278C50",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/IsA.cs",
       "label": "IsA",
       "attributes": [
         "object"
@@ -4826,7 +5596,7 @@
     },
     {
       "id": "BH.oM.Geometry.Torus-HasProperty-BH.oM.Geometry.Torus.Centre",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/HasProperty.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/HasProperty.cs",
       "label": "HasProperty",
       "attributes": [
         "object"
@@ -4836,7 +5606,7 @@
     },
     {
       "id": "BH.oM.Geometry.Torus.Centre-IsA-BH.oM.Geometry.Point",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/IsA.cs",
       "label": "IsA",
       "attributes": [
         "object"
@@ -4846,7 +5616,7 @@
     },
     {
       "id": "BH.oM.Geometry.Torus-HasProperty-BH.oM.Geometry.Torus.Axis",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/HasProperty.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/HasProperty.cs",
       "label": "HasProperty",
       "attributes": [
         "object"
@@ -4856,7 +5626,7 @@
     },
     {
       "id": "BH.oM.Geometry.Torus.Axis-IsA-BH.oM.Geometry.Vector",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/IsA.cs",
       "label": "IsA",
       "attributes": [
         "object"
@@ -4866,7 +5636,7 @@
     },
     {
       "id": "Torus-HasProperty-RadiusMajor_CD49A095AFBF9D144F2F5DBB23E15033A0834FFAE6BE45585A35944C70EB834A",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/HasProperty.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/HasProperty.cs",
       "label": "HasProperty",
       "attributes": [
         "datatype"
@@ -4876,7 +5646,7 @@
     },
     {
       "id": "Torus-HasProperty-RadiusMinor_0714503E202A538BF3A55DB69A2D28005FE79AE66E073FB3382A9EBDB5CB5E7A",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/HasProperty.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/HasProperty.cs",
       "label": "HasProperty",
       "attributes": [
         "datatype"
@@ -4886,7 +5656,7 @@
     },
     {
       "id": "Torus-IsA-ISolid_5B3A98F55075E7D4BB5FE5FDA172FF85432D168EFB8DC07A3D27EFDBBBCC3A70",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/IsA.cs",
       "label": "IsA",
       "attributes": [
         "object"
@@ -4899,7 +5669,7 @@
     },
     {
       "id": "Torus-IsA-IGeometry_1BABD72BCF9131AE3C382EF41816222DF6FE48958E662704DC3204F219E58198",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/IsA.cs",
       "label": "IsA",
       "attributes": [
         "object"
@@ -4912,7 +5682,7 @@
     },
     {
       "id": "Torus-IsA-IObject_211196D2C93F847518F117D7954E78797AE8D3519F5A345542D4300A53D88C25",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/IsA.cs",
       "label": "IsA",
       "attributes": [
         "object"
@@ -4925,7 +5695,7 @@
     },
     {
       "id": "BH.oM.Geometry.Extrusion-HasProperty-BH.oM.Geometry.Extrusion.Curve",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/HasProperty.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/HasProperty.cs",
       "label": "HasProperty",
       "attributes": [
         "object"
@@ -4935,7 +5705,7 @@
     },
     {
       "id": "BH.oM.Geometry.Extrusion.Curve-IsA-BH.oM.Geometry.ICurve",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/IsA.cs",
       "label": "IsA",
       "attributes": [
         "object"
@@ -4945,7 +5715,7 @@
     },
     {
       "id": "BH.oM.Geometry.Extrusion-HasProperty-BH.oM.Geometry.Extrusion.Direction",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/HasProperty.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/HasProperty.cs",
       "label": "HasProperty",
       "attributes": [
         "object"
@@ -4955,7 +5725,7 @@
     },
     {
       "id": "BH.oM.Geometry.Extrusion.Direction-IsA-BH.oM.Geometry.Vector",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/IsA.cs",
       "label": "IsA",
       "attributes": [
         "object"
@@ -4965,7 +5735,7 @@
     },
     {
       "id": "Extrusion-HasProperty-Capped_FC637784EF5663EC4E09DE4FDD1B7F2443480345E4D915BE1C9BDC1EE88CCAB1",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/HasProperty.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/HasProperty.cs",
       "label": "HasProperty",
       "attributes": [
         "datatype"
@@ -4975,7 +5745,7 @@
     },
     {
       "id": "Extrusion-IsA-ISurface_D3B2EC9E6BEC330DC2F8E787C24A9276185324EDD07AF3483252475B2C9C301D",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/IsA.cs",
       "label": "IsA",
       "attributes": [
         "object"
@@ -4988,7 +5758,7 @@
     },
     {
       "id": "Extrusion-IsA-IGeometry_43DA270789928E7FBF57B8BEE26588E6F86EAA96808A18C1E75FC66F2DB4D367",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/IsA.cs",
       "label": "IsA",
       "attributes": [
         "object"
@@ -5001,7 +5771,7 @@
     },
     {
       "id": "Extrusion-IsA-IObject_3424171F9FB13333D98BE5A3AFB64BACD3D980F9F5784A483BF6C0D966967BF6",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/IsA.cs",
       "label": "IsA",
       "attributes": [
         "object"
@@ -5014,7 +5784,7 @@
     },
     {
       "id": "ISurface-IsA-IGeometry_E47565D4D8013326C8582B1CCF8463BC652B78EECB06C8259C460EE7CA17EE3A",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/IsA.cs",
       "label": "IsA",
       "attributes": [
         "object"
@@ -5027,7 +5797,7 @@
     },
     {
       "id": "ISurface-IsA-IObject_4A6688E3FB7747FE6A07D4728F0F77B150F74D728F2E9F674B45166FE5FE5445",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/IsA.cs",
       "label": "IsA",
       "attributes": [
         "object"
@@ -5040,7 +5810,7 @@
     },
     {
       "id": "BH.oM.Geometry.Loft-HasProperty-BH.oM.Geometry.Loft.Curves",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/HasProperty.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/HasProperty.cs",
       "label": "HasProperty",
       "attributes": [
         "object"
@@ -5050,7 +5820,7 @@
     },
     {
       "id": "BH.oM.Geometry.Loft.Curves-IsAListOf-BH.oM.Geometry.ICurve",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsAListOf.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/IsAListOf.cs",
       "label": "IsAListOf",
       "attributes": [
         "object"
@@ -5060,7 +5830,7 @@
     },
     {
       "id": "Loft-IsA-ISurface_85C282BF4434EE954F570D5A68465179562D10A3E57604F147DC2B796F826DD8",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/IsA.cs",
       "label": "IsA",
       "attributes": [
         "object"
@@ -5073,7 +5843,7 @@
     },
     {
       "id": "Loft-IsA-IGeometry_A86BCE334611C31BF8FD3C94B791DA79FA6744F9C4F55618C922D5D02E7E3BAE",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/IsA.cs",
       "label": "IsA",
       "attributes": [
         "object"
@@ -5086,7 +5856,7 @@
     },
     {
       "id": "Loft-IsA-IObject_34B9BC19FE12A51A8422E5131A76F3442B48E0A44D49C7C6C42E1B8BA9E389F9",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/IsA.cs",
       "label": "IsA",
       "attributes": [
         "object"
@@ -5099,7 +5869,7 @@
     },
     {
       "id": "BH.oM.Geometry.NurbsSurface-HasProperty-BH.oM.Geometry.NurbsSurface.ControlPoints",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/HasProperty.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/HasProperty.cs",
       "label": "HasProperty",
       "attributes": [
         "object"
@@ -5109,7 +5879,7 @@
     },
     {
       "id": "BH.oM.Geometry.NurbsSurface.ControlPoints-IsAListOf-BH.oM.Geometry.Point",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsAListOf.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/IsAListOf.cs",
       "label": "IsAListOf",
       "attributes": [
         "object"
@@ -5119,7 +5889,7 @@
     },
     {
       "id": "NurbsSurface-HasProperty-Weights_A2123F4AC00E076CD65BC8D4666AF773D2C82A12D379C1905F7E1FCA771E0C35",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/HasProperty.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/HasProperty.cs",
       "label": "HasProperty",
       "attributes": [
         "datatype"
@@ -5129,7 +5899,7 @@
     },
     {
       "id": "NurbsSurface-HasProperty-UKnots_97E85F44BAEE09488C554881B22A046B287752BE9ECCAB7E3A5EDCCD12F28687",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/HasProperty.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/HasProperty.cs",
       "label": "HasProperty",
       "attributes": [
         "datatype"
@@ -5139,7 +5909,7 @@
     },
     {
       "id": "NurbsSurface-HasProperty-VKnots_2946CC1E03039F2A13051A606ABA0DEA6BD86A967A5D91A97755439D40F6FFA0",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/HasProperty.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/HasProperty.cs",
       "label": "HasProperty",
       "attributes": [
         "datatype"
@@ -5149,7 +5919,7 @@
     },
     {
       "id": "NurbsSurface-HasProperty-UDegree_8E1EAD610F4C9010707CA55397AF423010437670D70BCFF2C564A10604E3368E",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/HasProperty.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/HasProperty.cs",
       "label": "HasProperty",
       "attributes": [
         "datatype"
@@ -5159,7 +5929,7 @@
     },
     {
       "id": "NurbsSurface-HasProperty-VDegree_B531E48B6BBFE4D761143AEF546C597A41D8A5402CE04924B897379EFF2D765C",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/HasProperty.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/HasProperty.cs",
       "label": "HasProperty",
       "attributes": [
         "datatype"
@@ -5169,7 +5939,7 @@
     },
     {
       "id": "BH.oM.Geometry.NurbsSurface-HasProperty-BH.oM.Geometry.NurbsSurface.InnerTrims",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/HasProperty.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/HasProperty.cs",
       "label": "HasProperty",
       "attributes": [
         "object"
@@ -5179,7 +5949,7 @@
     },
     {
       "id": "BH.oM.Geometry.NurbsSurface.InnerTrims-IsAListOf-BH.oM.Geometry.SurfaceTrim",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsAListOf.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/IsAListOf.cs",
       "label": "IsAListOf",
       "attributes": [
         "object"
@@ -5189,7 +5959,7 @@
     },
     {
       "id": "BH.oM.Geometry.NurbsSurface-HasProperty-BH.oM.Geometry.NurbsSurface.OuterTrims",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/HasProperty.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/HasProperty.cs",
       "label": "HasProperty",
       "attributes": [
         "object"
@@ -5199,7 +5969,7 @@
     },
     {
       "id": "BH.oM.Geometry.NurbsSurface.OuterTrims-IsAListOf-BH.oM.Geometry.SurfaceTrim",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsAListOf.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/IsAListOf.cs",
       "label": "IsAListOf",
       "attributes": [
         "object"
@@ -5209,7 +5979,7 @@
     },
     {
       "id": "NurbsSurface-IsA-ISurface_1170A755F7980A6D646A40FD6B34AD71AE844E8826FF5B368B423B000D162D8D",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/IsA.cs",
       "label": "IsA",
       "attributes": [
         "object"
@@ -5222,7 +5992,7 @@
     },
     {
       "id": "NurbsSurface-IsA-IGeometry_0D96D0E84A40DECFEDFD92DAA23B2021F8E5E34354D4826EA34A8CEAD46C4F49",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/IsA.cs",
       "label": "IsA",
       "attributes": [
         "object"
@@ -5235,7 +6005,7 @@
     },
     {
       "id": "NurbsSurface-IsA-IObject_1EFCE10A5C13C8080C035CDB55816C37A8555E58D9D63E91E4199CA7499F164B",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/IsA.cs",
       "label": "IsA",
       "attributes": [
         "object"
@@ -5248,7 +6018,7 @@
     },
     {
       "id": "NurbsSurface-IsA-IImmutable_0E37794878C2DE3F4DA909247D2CFA447C5EABA3C1936DA7C4130DF22EEC2B88",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/IsA.cs",
       "label": "IsA",
       "attributes": [
         "object"
@@ -5261,7 +6031,7 @@
     },
     {
       "id": "BH.oM.Geometry.Pipe-HasProperty-BH.oM.Geometry.Pipe.Centreline",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/HasProperty.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/HasProperty.cs",
       "label": "HasProperty",
       "attributes": [
         "object"
@@ -5271,7 +6041,7 @@
     },
     {
       "id": "BH.oM.Geometry.Pipe.Centreline-IsA-BH.oM.Geometry.ICurve",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/IsA.cs",
       "label": "IsA",
       "attributes": [
         "object"
@@ -5281,7 +6051,7 @@
     },
     {
       "id": "Pipe-HasProperty-Radius_09058A0304AF4FAB0CC6FC6F620760783C65C25F66401D9AFE3D67B748D8BC4F",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/HasProperty.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/HasProperty.cs",
       "label": "HasProperty",
       "attributes": [
         "datatype"
@@ -5291,7 +6061,7 @@
     },
     {
       "id": "Pipe-HasProperty-Capped_42610FA7927120D9610E533EC2DE81E48D5A401E95132EBB4E6D0343A6A229B5",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/HasProperty.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/HasProperty.cs",
       "label": "HasProperty",
       "attributes": [
         "datatype"
@@ -5301,7 +6071,7 @@
     },
     {
       "id": "Pipe-IsA-ISurface_591D5A42B2FCD6CD4075E180420F01C6B6BCACB0CE95A6BC890CE902A1E99E46",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/IsA.cs",
       "label": "IsA",
       "attributes": [
         "object"
@@ -5314,7 +6084,7 @@
     },
     {
       "id": "Pipe-IsA-IGeometry_5742ABFD69FB08093E8650B95BFE0910E03BA1D4EEA2868EED6674FCD8F35E73",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/IsA.cs",
       "label": "IsA",
       "attributes": [
         "object"
@@ -5327,7 +6097,7 @@
     },
     {
       "id": "Pipe-IsA-IObject_E059798E9A11A17DC3C09808FE0F8A7926EDDB1017B3870F22F905EE1CB95DF3",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/IsA.cs",
       "label": "IsA",
       "attributes": [
         "object"
@@ -5340,7 +6110,7 @@
     },
     {
       "id": "BH.oM.Geometry.PlanarSurface-HasProperty-BH.oM.Geometry.PlanarSurface.ExternalBoundary",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/HasProperty.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/HasProperty.cs",
       "label": "HasProperty",
       "attributes": [
         "object"
@@ -5350,7 +6120,7 @@
     },
     {
       "id": "BH.oM.Geometry.PlanarSurface.ExternalBoundary-IsA-BH.oM.Geometry.ICurve",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/IsA.cs",
       "label": "IsA",
       "attributes": [
         "object"
@@ -5360,7 +6130,7 @@
     },
     {
       "id": "BH.oM.Geometry.PlanarSurface-HasProperty-BH.oM.Geometry.PlanarSurface.InternalBoundaries",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/HasProperty.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/HasProperty.cs",
       "label": "HasProperty",
       "attributes": [
         "object"
@@ -5370,7 +6140,7 @@
     },
     {
       "id": "BH.oM.Geometry.PlanarSurface.InternalBoundaries-IsAListOf-BH.oM.Geometry.ICurve",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsAListOf.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/IsAListOf.cs",
       "label": "IsAListOf",
       "attributes": [
         "object"
@@ -5380,7 +6150,7 @@
     },
     {
       "id": "PlanarSurface-IsA-ISurface_AD666FDE0D22E9B7AF75EF7F53F30544B11F8E6E88DF508AA471933F728EA498",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/IsA.cs",
       "label": "IsA",
       "attributes": [
         "object"
@@ -5393,7 +6163,7 @@
     },
     {
       "id": "PlanarSurface-IsA-IGeometry_D26013B41DB1F186AE824009AEBBCEF46F265412081F636EBE12CC08EA36CD76",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/IsA.cs",
       "label": "IsA",
       "attributes": [
         "object"
@@ -5406,7 +6176,7 @@
     },
     {
       "id": "PlanarSurface-IsA-IObject_E661C14CE675526455E9685DB57B28FA6E9E11BB1B14AFC4C129D1F4CACEEF37",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/IsA.cs",
       "label": "IsA",
       "attributes": [
         "object"
@@ -5419,7 +6189,7 @@
     },
     {
       "id": "PlanarSurface-IsA-IImmutable_ECD630980514764919726622F43D946FBF8C178B6678E5B0536BE142FA723C6E",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/IsA.cs",
       "label": "IsA",
       "attributes": [
         "object"
@@ -5431,8 +6201,34 @@
       "range": "BH.oM.Base.IImmutable"
     },
     {
+      "id": "PlanarSurface-IsA-IElement2D_4A2860189E8530D43934EEE2F3327DB37C0C59AC056B24AA0C2C75E5BF26B29D",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/IsA.cs",
+      "label": "IsA",
+      "attributes": [
+        "object"
+      ],
+      "comment": {
+        "undefined": "Can be used to describe that a thing belongs to a class; or that a thing is equivalent to another thing. When used for BHoM types, this describes C# interface implementation."
+      },
+      "domain": "BH.oM.Geometry.PlanarSurface",
+      "range": "BH.oM.Dimensional.IElement2D"
+    },
+    {
+      "id": "PlanarSurface-IsA-IElement_B0EFDFB7BC8BF9A0AE20D101F12C5C0FD04047D29DDF2D13DA664A2E64D5A849",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/IsA.cs",
+      "label": "IsA",
+      "attributes": [
+        "object"
+      ],
+      "comment": {
+        "undefined": "Can be used to describe that a thing belongs to a class; or that a thing is equivalent to another thing. When used for BHoM types, this describes C# interface implementation."
+      },
+      "domain": "BH.oM.Geometry.PlanarSurface",
+      "range": "BH.oM.Dimensional.IElement"
+    },
+    {
       "id": "BH.oM.Geometry.PolySurface-HasProperty-BH.oM.Geometry.PolySurface.Surfaces",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/HasProperty.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/HasProperty.cs",
       "label": "HasProperty",
       "attributes": [
         "object"
@@ -5442,7 +6238,7 @@
     },
     {
       "id": "BH.oM.Geometry.PolySurface.Surfaces-IsAListOf-BH.oM.Geometry.ISurface",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsAListOf.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/IsAListOf.cs",
       "label": "IsAListOf",
       "attributes": [
         "object"
@@ -5452,7 +6248,7 @@
     },
     {
       "id": "PolySurface-IsA-ISurface_9C47BB97E42413D02D64D7CDCC3C564872CCEDBD348E4CF743E7A44ABA7485A3",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/IsA.cs",
       "label": "IsA",
       "attributes": [
         "object"
@@ -5465,7 +6261,7 @@
     },
     {
       "id": "PolySurface-IsA-IGeometry_4ADB5CA4B5A3CF2E206D3C12EEC593113A363A85BEE14286F95BCEE638702DD7",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/IsA.cs",
       "label": "IsA",
       "attributes": [
         "object"
@@ -5478,7 +6274,7 @@
     },
     {
       "id": "PolySurface-IsA-IObject_6FD8AF2DF4E832F3AC505B0247CAB0D09D79BCBC7D4EE091570986B6EDEAAE82",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/IsA.cs",
       "label": "IsA",
       "attributes": [
         "object"
@@ -5491,7 +6287,7 @@
     },
     {
       "id": "BH.oM.Geometry.Basis-HasProperty-BH.oM.Geometry.Basis.X",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/HasProperty.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/HasProperty.cs",
       "label": "HasProperty",
       "attributes": [
         "object"
@@ -5501,7 +6297,7 @@
     },
     {
       "id": "BH.oM.Geometry.Basis.X-IsA-BH.oM.Geometry.Vector",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/IsA.cs",
       "label": "IsA",
       "attributes": [
         "object"
@@ -5511,7 +6307,7 @@
     },
     {
       "id": "BH.oM.Geometry.Basis-HasProperty-BH.oM.Geometry.Basis.Y",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/HasProperty.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/HasProperty.cs",
       "label": "HasProperty",
       "attributes": [
         "object"
@@ -5521,7 +6317,7 @@
     },
     {
       "id": "BH.oM.Geometry.Basis.Y-IsA-BH.oM.Geometry.Vector",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/IsA.cs",
       "label": "IsA",
       "attributes": [
         "object"
@@ -5531,7 +6327,7 @@
     },
     {
       "id": "BH.oM.Geometry.Basis-HasProperty-BH.oM.Geometry.Basis.Z",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/HasProperty.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/HasProperty.cs",
       "label": "HasProperty",
       "attributes": [
         "object"
@@ -5541,7 +6337,7 @@
     },
     {
       "id": "BH.oM.Geometry.Basis.Z-IsA-BH.oM.Geometry.Vector",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/IsA.cs",
       "label": "IsA",
       "attributes": [
         "object"
@@ -5551,7 +6347,7 @@
     },
     {
       "id": "Basis-IsA-IGeometry_6E4770799D49EEBF737F3200D0B64297A3B10E1B795E9B9F2261BBDF994410DF",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/IsA.cs",
       "label": "IsA",
       "attributes": [
         "object"
@@ -5564,7 +6360,7 @@
     },
     {
       "id": "Basis-IsA-IObject_D286E2345ABB705DCADA5A1F5BD429D0EB52EF194020DBEB659E6A7EDCD6F04F",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/IsA.cs",
       "label": "IsA",
       "attributes": [
         "object"
@@ -5577,7 +6373,7 @@
     },
     {
       "id": "Basis-IsA-IImmutable_5AF9BC2807FF6D660B94004BE888043B6B5ADA6DBB25BB874EDEBF6DB8D251A2",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/IsA.cs",
       "label": "IsA",
       "attributes": [
         "object"
@@ -5590,7 +6386,7 @@
     },
     {
       "id": "BH.oM.Geometry.Plane-HasProperty-BH.oM.Geometry.Plane.Origin",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/HasProperty.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/HasProperty.cs",
       "label": "HasProperty",
       "attributes": [
         "object"
@@ -5600,7 +6396,7 @@
     },
     {
       "id": "BH.oM.Geometry.Plane.Origin-IsA-BH.oM.Geometry.Point",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/IsA.cs",
       "label": "IsA",
       "attributes": [
         "object"
@@ -5610,7 +6406,7 @@
     },
     {
       "id": "BH.oM.Geometry.Plane-HasProperty-BH.oM.Geometry.Plane.Normal",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/HasProperty.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/HasProperty.cs",
       "label": "HasProperty",
       "attributes": [
         "object"
@@ -5620,7 +6416,7 @@
     },
     {
       "id": "BH.oM.Geometry.Plane.Normal-IsA-BH.oM.Geometry.Vector",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/IsA.cs",
       "label": "IsA",
       "attributes": [
         "object"
@@ -5630,7 +6426,7 @@
     },
     {
       "id": "Plane-IsA-IGeometry_687F95297A9C24919A54CE275AB94E6F5E06D671AA8E6192241560D8C0075BD5",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/IsA.cs",
       "label": "IsA",
       "attributes": [
         "object"
@@ -5643,7 +6439,7 @@
     },
     {
       "id": "Plane-IsA-IObject_73D8E3A4EB9C231A046181EBD646A5047D9D46F675251350CADBDEE806EE400B",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/IsA.cs",
       "label": "IsA",
       "attributes": [
         "object"
@@ -5656,7 +6452,7 @@
     },
     {
       "id": "Point-HasProperty-X_788D49E286D22FB1F6DE1D74A18B8C02F7C2140B1F6A4043B06C5B6000D64DC4",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/HasProperty.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/HasProperty.cs",
       "label": "HasProperty",
       "attributes": [
         "datatype"
@@ -5666,7 +6462,7 @@
     },
     {
       "id": "Point-HasProperty-Y_CE3DDEF15E0E5D2FF83BABCC54B9E401A89C513ABC2B33EC05222E5BE8D07BCF",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/HasProperty.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/HasProperty.cs",
       "label": "HasProperty",
       "attributes": [
         "datatype"
@@ -5676,7 +6472,7 @@
     },
     {
       "id": "Point-HasProperty-Z_F4C6B2D02CCCF85D6FBE52E3F0319C258C55B63400A4A6C68CA45F2023DFA50F",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/HasProperty.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/HasProperty.cs",
       "label": "HasProperty",
       "attributes": [
         "datatype"
@@ -5686,7 +6482,7 @@
     },
     {
       "id": "Point-IsA-IGeometry_C38A9EF9FE87BD15BCE641CA19FF6C005100E68ABE79B7D3269B317D68DE4E07",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/IsA.cs",
       "label": "IsA",
       "attributes": [
         "object"
@@ -5699,7 +6495,7 @@
     },
     {
       "id": "Point-IsA-IObject_1CCA0C759BF6EBFE519433C3C7F27D17A64C43EA3AEA02161769E8440F179917",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/IsA.cs",
       "label": "IsA",
       "attributes": [
         "object"
@@ -5712,7 +6508,7 @@
     },
     {
       "id": "Point-IsA-IElement0D_D1B5AD88511BE63321B993A6E142E3ABB089341B6A59C9F187BFA049BC832B70",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/IsA.cs",
       "label": "IsA",
       "attributes": [
         "object"
@@ -5725,7 +6521,7 @@
     },
     {
       "id": "Point-IsA-IElement_D500A9B1FB9AF66B4AC09A6EF0E680A2C7E711B03DD70936A914927816AD0634",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/IsA.cs",
       "label": "IsA",
       "attributes": [
         "object"
@@ -5738,7 +6534,7 @@
     },
     {
       "id": "Vector-HasProperty-X_13A904B592582F7BBB601C99DB51077DB5F1FB37068F64AAF3D918F68B55D17E",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/HasProperty.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/HasProperty.cs",
       "label": "HasProperty",
       "attributes": [
         "datatype"
@@ -5748,7 +6544,7 @@
     },
     {
       "id": "Vector-HasProperty-Y_0BDE630850923E86B279F65F36D9EA339AFCCA95297DFAFE11B09DDBDBEEA8D3",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/HasProperty.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/HasProperty.cs",
       "label": "HasProperty",
       "attributes": [
         "datatype"
@@ -5758,7 +6554,7 @@
     },
     {
       "id": "Vector-HasProperty-Z_13D6B8760FEF8458D0E01CA91F1477E6A339F27AFED106C555656A27A679A0B3",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/HasProperty.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/HasProperty.cs",
       "label": "HasProperty",
       "attributes": [
         "datatype"
@@ -5768,7 +6564,7 @@
     },
     {
       "id": "Vector-IsA-IGeometry_6F778495CDE74369702E3DDE3DEB6E74B3CC05156A120CED2D8CA2A96389101A",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/IsA.cs",
       "label": "IsA",
       "attributes": [
         "object"
@@ -5781,7 +6577,7 @@
     },
     {
       "id": "Vector-IsA-IObject_0AA1ECA927B78EED5C6408B006D3C383B144811ACAC8826B298F7B1A11E6E5E7",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/IsA.cs",
       "label": "IsA",
       "attributes": [
         "object"
@@ -5794,7 +6590,7 @@
     },
     {
       "id": "BH.oM.Geometry.CoordinateSystem.Cartesian-HasProperty-BH.oM.Geometry.CoordinateSystem.Cartesian.X",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/HasProperty.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/HasProperty.cs",
       "label": "HasProperty",
       "attributes": [
         "object"
@@ -5804,7 +6600,7 @@
     },
     {
       "id": "BH.oM.Geometry.CoordinateSystem.Cartesian.X-IsA-BH.oM.Geometry.Vector",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/IsA.cs",
       "label": "IsA",
       "attributes": [
         "object"
@@ -5814,7 +6610,7 @@
     },
     {
       "id": "BH.oM.Geometry.CoordinateSystem.Cartesian-HasProperty-BH.oM.Geometry.CoordinateSystem.Cartesian.Y",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/HasProperty.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/HasProperty.cs",
       "label": "HasProperty",
       "attributes": [
         "object"
@@ -5824,7 +6620,7 @@
     },
     {
       "id": "BH.oM.Geometry.CoordinateSystem.Cartesian.Y-IsA-BH.oM.Geometry.Vector",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/IsA.cs",
       "label": "IsA",
       "attributes": [
         "object"
@@ -5834,7 +6630,7 @@
     },
     {
       "id": "BH.oM.Geometry.CoordinateSystem.Cartesian-HasProperty-BH.oM.Geometry.CoordinateSystem.Cartesian.Z",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/HasProperty.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/HasProperty.cs",
       "label": "HasProperty",
       "attributes": [
         "object"
@@ -5844,7 +6640,7 @@
     },
     {
       "id": "BH.oM.Geometry.CoordinateSystem.Cartesian.Z-IsA-BH.oM.Geometry.Vector",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/IsA.cs",
       "label": "IsA",
       "attributes": [
         "object"
@@ -5854,7 +6650,7 @@
     },
     {
       "id": "BH.oM.Geometry.CoordinateSystem.Cartesian-HasProperty-BH.oM.Geometry.CoordinateSystem.Cartesian.Origin",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/HasProperty.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/HasProperty.cs",
       "label": "HasProperty",
       "attributes": [
         "object"
@@ -5864,7 +6660,7 @@
     },
     {
       "id": "BH.oM.Geometry.CoordinateSystem.Cartesian.Origin-IsA-BH.oM.Geometry.Point",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/IsA.cs",
       "label": "IsA",
       "attributes": [
         "object"
@@ -5874,7 +6670,7 @@
     },
     {
       "id": "Cartesian-IsA-IGeometry_9E23BA1547AC2F6D5E14058791BEE2B61F79920083092F5BD609575A3D71BCA2",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/IsA.cs",
       "label": "IsA",
       "attributes": [
         "object"
@@ -5887,7 +6683,7 @@
     },
     {
       "id": "Cartesian-IsA-IObject_DB18617AD03AC49B9DD2EC4A1E01DF18517237A7A3EEE94EB3CE23C7E459733D",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/IsA.cs",
       "label": "IsA",
       "attributes": [
         "object"
@@ -5900,7 +6696,7 @@
     },
     {
       "id": "Cartesian-IsA-IImmutable_1E9DF328278BB72DDC13CB7C14B544A922F40798852DE57EEA331292A3335603",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/IsA.cs",
       "label": "IsA",
       "attributes": [
         "object"

@@ -3,6 +3,10 @@
   "namespace": [],
   "class": [
     {
+      "id": "BH.oM.Climate.KoppenClassification",
+      "type": "owl:Class"
+    },
+    {
       "id": "BH.oM.Climate.Series",
       "type": "owl:Class"
     },
@@ -51,11 +55,23 @@
       "type": "owl:Class"
     },
     {
-      "id": "BH.oM.Climate.Series.Index",
+      "id": "BH.oM.Climate.KoppenClassification.Classification",
       "type": "owl:Class"
     },
     {
-      "id": "BH.oM.Climate.Series.Values",
+      "id": "BH.oM.Climate.KoppenClassification.Description",
+      "type": "owl:Class"
+    },
+    {
+      "id": "BH.oM.Climate.KoppenClassification.Group",
+      "type": "owl:Class"
+    },
+    {
+      "id": "BH.oM.Climate.KoppenClassification.PrecipitationType",
+      "type": "owl:Class"
+    },
+    {
+      "id": "BH.oM.Climate.KoppenClassification.LevelOfHeat",
       "type": "owl:Class"
     },
     {
@@ -68,6 +84,14 @@
     },
     {
       "id": "BH.oM.Base.BHoMObject",
+      "type": "owl:Class"
+    },
+    {
+      "id": "BH.oM.Climate.Series.Index",
+      "type": "owl:Class"
+    },
+    {
+      "id": "BH.oM.Climate.Series.Values",
       "type": "owl:Class"
     },
     {
@@ -281,8 +305,19 @@
   ],
   "classAttribute": [
     {
+      "id": "BH.oM.Climate.KoppenClassification",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/Climate_oM/KoppenClassification.cs",
+      "label": "KoppenClassification (BH.oM.Climate)",
+      "attributes": [
+        "object"
+      ],
+      "comment": {
+        "undefined": "A container for properties describing a Köppen climate."
+      }
+    },
+    {
       "id": "BH.oM.Climate.Series",
-      "iri": "https://github.com/BHoM/EnergyPlus_Toolkit/blob/main/EnergyPlus_oM/ZoneHVACAirLoopTerminalUnits/AirTerminalSingleDuctSeriesPIUReheat.cs",
+      "iri": "https://github.com/BuroHappoldEngineering/Climate_Toolkit/blob/main/Analytical_oM/Results/IResultSeries.cs",
       "label": "Series (BH.oM.Climate)",
       "attributes": [
         "object"
@@ -407,17 +442,41 @@
       ]
     },
     {
-      "id": "BH.oM.Climate.Series.Index",
-      "iri": "https://github.com/BHoM/EnergyPlus_Toolkit/blob/main/EnergyPlus_oM/ZoneHVACAirLoopTerminalUnits/AirTerminalSingleDuctSeriesPIUReheat.cs",
-      "label": "Index(BH.oM.Climate.Series.Index)",
+      "id": "BH.oM.Climate.KoppenClassification.Classification",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/Climate_oM/KoppenClassification.cs",
+      "label": "Classification (BH.oM.Climate.KoppenClassification.Classification)",
       "attributes": [
         "datatype"
       ]
     },
     {
-      "id": "BH.oM.Climate.Series.Values",
-      "iri": "https://github.com/BHoM/EnergyPlus_Toolkit/blob/main/EnergyPlus_oM/ZoneHVACAirLoopTerminalUnits/AirTerminalSingleDuctSeriesPIUReheat.cs",
-      "label": "Values(BH.oM.Climate.Series.Values)",
+      "id": "BH.oM.Climate.KoppenClassification.Description",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/Climate_oM/KoppenClassification.cs",
+      "label": "Description (BH.oM.Climate.KoppenClassification.Description)",
+      "attributes": [
+        "datatype"
+      ]
+    },
+    {
+      "id": "BH.oM.Climate.KoppenClassification.Group",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/Climate_oM/KoppenClassification.cs",
+      "label": "Group (BH.oM.Climate.KoppenClassification.Group)",
+      "attributes": [
+        "datatype"
+      ]
+    },
+    {
+      "id": "BH.oM.Climate.KoppenClassification.PrecipitationType",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/Climate_oM/KoppenClassification.cs",
+      "label": "PrecipitationType (BH.oM.Climate.KoppenClassification.PrecipitationType)",
+      "attributes": [
+        "datatype"
+      ]
+    },
+    {
+      "id": "BH.oM.Climate.KoppenClassification.LevelOfHeat",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/Climate_oM/KoppenClassification.cs",
+      "label": "LevelOfHeat (BH.oM.Climate.KoppenClassification.LevelOfHeat)",
       "attributes": [
         "datatype"
       ]
@@ -449,405 +508,453 @@
       ]
     },
     {
+      "id": "BH.oM.Climate.Series.Index",
+      "iri": "https://github.com/BuroHappoldEngineering/Climate_Toolkit/blob/main/Analytical_oM/Results/IResultSeries.cs",
+      "label": "Index (BH.oM.Climate.Series.Index)",
+      "attributes": [
+        "datatype"
+      ]
+    },
+    {
+      "id": "BH.oM.Climate.Series.Values",
+      "iri": "https://github.com/BuroHappoldEngineering/Climate_Toolkit/blob/main/Analytical_oM/Results/IResultSeries.cs",
+      "label": "Values (BH.oM.Climate.Series.Values)",
+      "attributes": [
+        "datatype"
+      ]
+    },
+    {
       "id": "BH.oM.Climate.EnvironmentCondition.DryBulbTemperature",
-      "iri": null,
-      "label": "DryBulbTemperature(BH.oM.Climate.EnvironmentCondition.DryBulbTemperature)",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/Climate_oM/EnvironmentCondition.cs",
+      "label": "DryBulbTemperature (BH.oM.Climate.EnvironmentCondition.DryBulbTemperature)",
       "attributes": [
         "datatype"
       ]
     },
     {
       "id": "BH.oM.Climate.EnvironmentCondition.DewPointTemperature",
-      "iri": null,
-      "label": "DewPointTemperature(BH.oM.Climate.EnvironmentCondition.DewPointTemperature)",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/Climate_oM/EnvironmentCondition.cs",
+      "label": "DewPointTemperature (BH.oM.Climate.EnvironmentCondition.DewPointTemperature)",
       "attributes": [
         "datatype"
       ]
     },
     {
       "id": "BH.oM.Climate.EnvironmentCondition.RelativeHumidity",
-      "iri": null,
-      "label": "RelativeHumidity(BH.oM.Climate.EnvironmentCondition.RelativeHumidity)",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/Climate_oM/EnvironmentCondition.cs",
+      "label": "RelativeHumidity (BH.oM.Climate.EnvironmentCondition.RelativeHumidity)",
       "attributes": [
         "datatype"
       ]
     },
     {
       "id": "BH.oM.Climate.EnvironmentCondition.AtmosphericStationPressure",
-      "iri": null,
-      "label": "AtmosphericStationPressure(BH.oM.Climate.EnvironmentCondition.AtmosphericStationPressure)",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/Climate_oM/EnvironmentCondition.cs",
+      "label": "AtmosphericStationPressure (BH.oM.Climate.EnvironmentCondition.AtmosphericStationPressure)",
       "attributes": [
         "datatype"
       ]
     },
     {
       "id": "BH.oM.Climate.EnvironmentCondition.ExtraterrestrialHorizontalRadiation",
-      "iri": null,
-      "label": "ExtraterrestrialHorizontalRadiation(BH.oM.Climate.EnvironmentCondition.ExtraterrestrialHorizontalRadiation)",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/Climate_oM/EnvironmentCondition.cs",
+      "label": "ExtraterrestrialHorizontalRadiation (BH.oM.Climate.EnvironmentCondition.ExtraterrestrialHorizontalRadiation)",
       "attributes": [
         "datatype"
       ]
     },
     {
       "id": "BH.oM.Climate.EnvironmentCondition.ExtraterrestrialDirectNormalRadiation",
-      "iri": null,
-      "label": "ExtraterrestrialDirectNormalRadiation(BH.oM.Climate.EnvironmentCondition.ExtraterrestrialDirectNormalRadiation)",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/Climate_oM/EnvironmentCondition.cs",
+      "label": "ExtraterrestrialDirectNormalRadiation (BH.oM.Climate.EnvironmentCondition.ExtraterrestrialDirectNormalRadiation)",
       "attributes": [
         "datatype"
       ]
     },
     {
       "id": "BH.oM.Climate.EnvironmentCondition.HorizontalInfraredRadiationIntensity",
-      "iri": null,
-      "label": "HorizontalInfraredRadiationIntensity(BH.oM.Climate.EnvironmentCondition.HorizontalInfraredRadiationIntensity)",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/Climate_oM/EnvironmentCondition.cs",
+      "label": "HorizontalInfraredRadiationIntensity (BH.oM.Climate.EnvironmentCondition.HorizontalInfraredRadiationIntensity)",
       "attributes": [
         "datatype"
       ]
     },
     {
       "id": "BH.oM.Climate.EnvironmentCondition.GlobalHorizontalRadiation",
-      "iri": null,
-      "label": "GlobalHorizontalRadiation(BH.oM.Climate.EnvironmentCondition.GlobalHorizontalRadiation)",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/Climate_oM/EnvironmentCondition.cs",
+      "label": "GlobalHorizontalRadiation (BH.oM.Climate.EnvironmentCondition.GlobalHorizontalRadiation)",
       "attributes": [
         "datatype"
       ]
     },
     {
       "id": "BH.oM.Climate.EnvironmentCondition.DirectNormalRadiation",
-      "iri": null,
-      "label": "DirectNormalRadiation(BH.oM.Climate.EnvironmentCondition.DirectNormalRadiation)",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/Climate_oM/EnvironmentCondition.cs",
+      "label": "DirectNormalRadiation (BH.oM.Climate.EnvironmentCondition.DirectNormalRadiation)",
       "attributes": [
         "datatype"
       ]
     },
     {
       "id": "BH.oM.Climate.EnvironmentCondition.DiffuseHorizontalRadiation",
-      "iri": null,
-      "label": "DiffuseHorizontalRadiation(BH.oM.Climate.EnvironmentCondition.DiffuseHorizontalRadiation)",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/Climate_oM/EnvironmentCondition.cs",
+      "label": "DiffuseHorizontalRadiation (BH.oM.Climate.EnvironmentCondition.DiffuseHorizontalRadiation)",
       "attributes": [
         "datatype"
       ]
     },
     {
       "id": "BH.oM.Climate.EnvironmentCondition.GlobalHorizontalIlluminance",
-      "iri": null,
-      "label": "GlobalHorizontalIlluminance(BH.oM.Climate.EnvironmentCondition.GlobalHorizontalIlluminance)",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/Climate_oM/EnvironmentCondition.cs",
+      "label": "GlobalHorizontalIlluminance (BH.oM.Climate.EnvironmentCondition.GlobalHorizontalIlluminance)",
       "attributes": [
         "datatype"
       ]
     },
     {
       "id": "BH.oM.Climate.EnvironmentCondition.DirectNormalIlluminance",
-      "iri": null,
-      "label": "DirectNormalIlluminance(BH.oM.Climate.EnvironmentCondition.DirectNormalIlluminance)",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/Climate_oM/EnvironmentCondition.cs",
+      "label": "DirectNormalIlluminance (BH.oM.Climate.EnvironmentCondition.DirectNormalIlluminance)",
       "attributes": [
         "datatype"
       ]
     },
     {
       "id": "BH.oM.Climate.EnvironmentCondition.DiffuseHorizontalIlluminance",
-      "iri": null,
-      "label": "DiffuseHorizontalIlluminance(BH.oM.Climate.EnvironmentCondition.DiffuseHorizontalIlluminance)",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/Climate_oM/EnvironmentCondition.cs",
+      "label": "DiffuseHorizontalIlluminance (BH.oM.Climate.EnvironmentCondition.DiffuseHorizontalIlluminance)",
       "attributes": [
         "datatype"
       ]
     },
     {
       "id": "BH.oM.Climate.EnvironmentCondition.ZenithLuminance",
-      "iri": null,
-      "label": "ZenithLuminance(BH.oM.Climate.EnvironmentCondition.ZenithLuminance)",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/Climate_oM/EnvironmentCondition.cs",
+      "label": "ZenithLuminance (BH.oM.Climate.EnvironmentCondition.ZenithLuminance)",
       "attributes": [
         "datatype"
       ]
     },
     {
       "id": "BH.oM.Climate.EnvironmentCondition.WindDirection",
-      "iri": null,
-      "label": "WindDirection(BH.oM.Climate.EnvironmentCondition.WindDirection)",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/Climate_oM/EnvironmentCondition.cs",
+      "label": "WindDirection (BH.oM.Climate.EnvironmentCondition.WindDirection)",
       "attributes": [
         "datatype"
       ]
     },
     {
       "id": "BH.oM.Climate.EnvironmentCondition.WindSpeed",
-      "iri": null,
-      "label": "WindSpeed(BH.oM.Climate.EnvironmentCondition.WindSpeed)",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/Climate_oM/EnvironmentCondition.cs",
+      "label": "WindSpeed (BH.oM.Climate.EnvironmentCondition.WindSpeed)",
       "attributes": [
         "datatype"
       ]
     },
     {
       "id": "BH.oM.Climate.EnvironmentCondition.TotalSkyCover",
-      "iri": null,
-      "label": "TotalSkyCover(BH.oM.Climate.EnvironmentCondition.TotalSkyCover)",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/Climate_oM/EnvironmentCondition.cs",
+      "label": "TotalSkyCover (BH.oM.Climate.EnvironmentCondition.TotalSkyCover)",
       "attributes": [
         "datatype"
       ]
     },
     {
       "id": "BH.oM.Climate.EnvironmentCondition.OpaqueSkyCover",
-      "iri": null,
-      "label": "OpaqueSkyCover(BH.oM.Climate.EnvironmentCondition.OpaqueSkyCover)",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/Climate_oM/EnvironmentCondition.cs",
+      "label": "OpaqueSkyCover (BH.oM.Climate.EnvironmentCondition.OpaqueSkyCover)",
       "attributes": [
         "datatype"
       ]
     },
     {
       "id": "BH.oM.Climate.EnvironmentCondition.Visibility",
-      "iri": null,
-      "label": "Visibility(BH.oM.Climate.EnvironmentCondition.Visibility)",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/Climate_oM/EnvironmentCondition.cs",
+      "label": "Visibility (BH.oM.Climate.EnvironmentCondition.Visibility)",
       "attributes": [
         "datatype"
       ]
     },
     {
       "id": "BH.oM.Climate.EnvironmentCondition.CeilingHeight",
-      "iri": null,
-      "label": "CeilingHeight(BH.oM.Climate.EnvironmentCondition.CeilingHeight)",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/Climate_oM/EnvironmentCondition.cs",
+      "label": "CeilingHeight (BH.oM.Climate.EnvironmentCondition.CeilingHeight)",
       "attributes": [
         "datatype"
       ]
     },
     {
       "id": "BH.oM.Climate.EnvironmentCondition.PrecipitableWater",
-      "iri": null,
-      "label": "PrecipitableWater(BH.oM.Climate.EnvironmentCondition.PrecipitableWater)",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/Climate_oM/EnvironmentCondition.cs",
+      "label": "PrecipitableWater (BH.oM.Climate.EnvironmentCondition.PrecipitableWater)",
       "attributes": [
         "datatype"
       ]
     },
     {
       "id": "BH.oM.Climate.EnvironmentCondition.AerosolOpticalDepth",
-      "iri": null,
-      "label": "AerosolOpticalDepth(BH.oM.Climate.EnvironmentCondition.AerosolOpticalDepth)",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/Climate_oM/EnvironmentCondition.cs",
+      "label": "AerosolOpticalDepth (BH.oM.Climate.EnvironmentCondition.AerosolOpticalDepth)",
       "attributes": [
         "datatype"
       ]
     },
     {
       "id": "BH.oM.Climate.EnvironmentCondition.SnowDepth",
-      "iri": null,
-      "label": "SnowDepth(BH.oM.Climate.EnvironmentCondition.SnowDepth)",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/Climate_oM/EnvironmentCondition.cs",
+      "label": "SnowDepth (BH.oM.Climate.EnvironmentCondition.SnowDepth)",
       "attributes": [
         "datatype"
       ]
     },
     {
       "id": "BH.oM.Climate.EnvironmentCondition.DaysSinceLastSnowfall",
-      "iri": null,
-      "label": "DaysSinceLastSnowfall(BH.oM.Climate.EnvironmentCondition.DaysSinceLastSnowfall)",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/Climate_oM/EnvironmentCondition.cs",
+      "label": "DaysSinceLastSnowfall (BH.oM.Climate.EnvironmentCondition.DaysSinceLastSnowfall)",
       "attributes": [
         "datatype"
       ]
     },
     {
       "id": "BH.oM.Climate.EnvironmentCondition.Albedo",
-      "iri": null,
-      "label": "Albedo(BH.oM.Climate.EnvironmentCondition.Albedo)",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/Climate_oM/EnvironmentCondition.cs",
+      "label": "Albedo (BH.oM.Climate.EnvironmentCondition.Albedo)",
       "attributes": [
         "datatype"
       ]
     },
     {
       "id": "BH.oM.Climate.EnvironmentCondition.LiquidPrecipitationDepth",
-      "iri": null,
-      "label": "LiquidPrecipitationDepth(BH.oM.Climate.EnvironmentCondition.LiquidPrecipitationDepth)",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/Climate_oM/EnvironmentCondition.cs",
+      "label": "LiquidPrecipitationDepth (BH.oM.Climate.EnvironmentCondition.LiquidPrecipitationDepth)",
       "attributes": [
         "datatype"
       ]
     },
     {
       "id": "BH.oM.Climate.EnvironmentCondition.LiquidPrecipitationQuantity",
-      "iri": null,
-      "label": "LiquidPrecipitationQuantity(BH.oM.Climate.EnvironmentCondition.LiquidPrecipitationQuantity)",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/Climate_oM/EnvironmentCondition.cs",
+      "label": "LiquidPrecipitationQuantity (BH.oM.Climate.EnvironmentCondition.LiquidPrecipitationQuantity)",
       "attributes": [
         "datatype"
       ]
     },
     {
       "id": "BH.oM.Climate.PointCondition.Age",
-      "iri": null,
-      "label": "Age(BH.oM.Climate.PointCondition.Age)",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/Climate_oM/PointCondition.cs",
+      "label": "Age (BH.oM.Climate.PointCondition.Age)",
       "attributes": [
         "datatype"
       ]
     },
     {
       "id": "BH.oM.Climate.PointCondition.Gender",
-      "iri": null,
-      "label": "Gender(BH.oM.Climate.PointCondition.Gender)",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/Climate_oM/PointCondition.cs",
+      "label": "Gender (BH.oM.Climate.PointCondition.Gender)",
       "attributes": []
     },
     {
       "id": "BH.oM.Climate.PointCondition.BodyHeightNeutral",
-      "iri": null,
-      "label": "BodyHeightNeutral(BH.oM.Climate.PointCondition.BodyHeightNeutral)",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/Climate_oM/PointCondition.cs",
+      "label": "BodyHeightNeutral (BH.oM.Climate.PointCondition.BodyHeightNeutral)",
       "attributes": [
         "datatype"
       ]
     },
     {
       "id": "BH.oM.Climate.PointCondition.BodyPosition",
-      "iri": null,
-      "label": "BodyPosition(BH.oM.Climate.PointCondition.BodyPosition)",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/Climate_oM/PointCondition.cs",
+      "label": "BodyPosition (BH.oM.Climate.PointCondition.BodyPosition)",
       "attributes": []
     },
     {
       "id": "BH.oM.Climate.PointCondition.BodyOrientation",
-      "iri": null,
-      "label": "BodyOrientation(BH.oM.Climate.PointCondition.BodyOrientation)",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/Climate_oM/PointCondition.cs",
+      "label": "BodyOrientation (BH.oM.Climate.PointCondition.BodyOrientation)",
       "attributes": [
         "datatype"
       ]
     },
     {
       "id": "BH.oM.Climate.PointCondition.ClothingAlbedo",
-      "iri": null,
-      "label": "ClothingAlbedo(BH.oM.Climate.PointCondition.ClothingAlbedo)",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/Climate_oM/PointCondition.cs",
+      "label": "ClothingAlbedo (BH.oM.Climate.PointCondition.ClothingAlbedo)",
       "attributes": []
     },
     {
       "id": "BH.oM.Climate.PointCondition.CloValue",
-      "iri": null,
-      "label": "CloValue(BH.oM.Climate.PointCondition.CloValue)",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/Climate_oM/PointCondition.cs",
+      "label": "CloValue (BH.oM.Climate.PointCondition.CloValue)",
       "attributes": []
     },
     {
       "id": "BH.oM.Climate.PointCondition.GroundReflectivity",
-      "iri": null,
-      "label": "GroundReflectivity(BH.oM.Climate.PointCondition.GroundReflectivity)",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/Climate_oM/PointCondition.cs",
+      "label": "GroundReflectivity (BH.oM.Climate.PointCondition.GroundReflectivity)",
       "attributes": []
     },
     {
       "id": "BH.oM.Climate.PointCondition.MetabolicRate",
-      "iri": null,
-      "label": "MetabolicRate(BH.oM.Climate.PointCondition.MetabolicRate)",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/Climate_oM/PointCondition.cs",
+      "label": "MetabolicRate (BH.oM.Climate.PointCondition.MetabolicRate)",
       "attributes": []
     },
     {
       "id": "BH.oM.Climate.PointCondition.SoilDiffusivity",
-      "iri": null,
-      "label": "SoilDiffusivity(BH.oM.Climate.PointCondition.SoilDiffusivity)",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/Climate_oM/PointCondition.cs",
+      "label": "SoilDiffusivity (BH.oM.Climate.PointCondition.SoilDiffusivity)",
       "attributes": []
     },
     {
       "id": "BH.oM.Climate.PointCondition.AdaptiveComfortClass",
-      "iri": null,
-      "label": "AdaptiveComfortClass(BH.oM.Climate.PointCondition.AdaptiveComfortClass)",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/Climate_oM/PointCondition.cs",
+      "label": "AdaptiveComfortClass (BH.oM.Climate.PointCondition.AdaptiveComfortClass)",
       "attributes": []
     },
     {
       "id": "BH.oM.Climate.PointCondition.TerrainRoughnessLength",
-      "iri": null,
-      "label": "TerrainRoughnessLength(BH.oM.Climate.PointCondition.TerrainRoughnessLength)",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/Climate_oM/PointCondition.cs",
+      "label": "TerrainRoughnessLength (BH.oM.Climate.PointCondition.TerrainRoughnessLength)",
       "attributes": []
     },
     {
       "id": "BH.oM.Climate.PointCondition.ShadingTransmissivity",
-      "iri": null,
-      "label": "ShadingTransmissivity(BH.oM.Climate.PointCondition.ShadingTransmissivity)",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/Climate_oM/PointCondition.cs",
+      "label": "ShadingTransmissivity (BH.oM.Climate.PointCondition.ShadingTransmissivity)",
       "attributes": [
         "datatype"
       ]
     },
     {
       "id": "BH.oM.Climate.PointCondition.SkinTemperatureNeutral",
-      "iri": null,
-      "label": "SkinTemperatureNeutral(BH.oM.Climate.PointCondition.SkinTemperatureNeutral)",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/Climate_oM/PointCondition.cs",
+      "label": "SkinTemperatureNeutral (BH.oM.Climate.PointCondition.SkinTemperatureNeutral)",
       "attributes": [
         "datatype"
       ]
     },
     {
       "id": "BH.oM.Climate.PointCondition.CoreTemperatureNeutral",
-      "iri": null,
-      "label": "CoreTemperatureNeutral(BH.oM.Climate.PointCondition.CoreTemperatureNeutral)",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/Climate_oM/PointCondition.cs",
+      "label": "CoreTemperatureNeutral (BH.oM.Climate.PointCondition.CoreTemperatureNeutral)",
       "attributes": [
         "datatype"
       ]
     },
     {
       "id": "BH.oM.Climate.PointCondition.BodyTemperatureNeutral",
-      "iri": null,
-      "label": "BodyTemperatureNeutral(BH.oM.Climate.PointCondition.BodyTemperatureNeutral)",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/Climate_oM/PointCondition.cs",
+      "label": "BodyTemperatureNeutral (BH.oM.Climate.PointCondition.BodyTemperatureNeutral)",
       "attributes": [
         "datatype"
       ]
     },
     {
       "id": "BH.oM.Climate.PointCondition.SkinBloodFlowNeutral",
-      "iri": null,
-      "label": "SkinBloodFlowNeutral(BH.oM.Climate.PointCondition.SkinBloodFlowNeutral)",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/Climate_oM/PointCondition.cs",
+      "label": "SkinBloodFlowNeutral (BH.oM.Climate.PointCondition.SkinBloodFlowNeutral)",
       "attributes": [
         "datatype"
       ]
     },
     {
       "id": "BH.oM.Climate.PointCondition.BodyWeightNeutral",
-      "iri": null,
-      "label": "BodyWeightNeutral(BH.oM.Climate.PointCondition.BodyWeightNeutral)",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/Climate_oM/PointCondition.cs",
+      "label": "BodyWeightNeutral (BH.oM.Climate.PointCondition.BodyWeightNeutral)",
       "attributes": [
         "datatype"
       ]
     },
     {
       "id": "BH.oM.Climate.PointCondition.BodySurfaceAreaNeutral",
-      "iri": null,
-      "label": "BodySurfaceAreaNeutral(BH.oM.Climate.PointCondition.BodySurfaceAreaNeutral)",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/Climate_oM/PointCondition.cs",
+      "label": "BodySurfaceAreaNeutral (BH.oM.Climate.PointCondition.BodySurfaceAreaNeutral)",
       "attributes": [
         "datatype"
       ]
     },
     {
       "id": "BH.oM.Climate.PointCondition.MetabolicFactorNeutral",
-      "iri": null,
-      "label": "MetabolicFactorNeutral(BH.oM.Climate.PointCondition.MetabolicFactorNeutral)",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/Climate_oM/PointCondition.cs",
+      "label": "MetabolicFactorNeutral (BH.oM.Climate.PointCondition.MetabolicFactorNeutral)",
       "attributes": [
         "datatype"
       ]
     },
     {
       "id": "BH.oM.Climate.PointCondition.SweatingConstant",
-      "iri": null,
-      "label": "SweatingConstant(BH.oM.Climate.PointCondition.SweatingConstant)",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/Climate_oM/PointCondition.cs",
+      "label": "SweatingConstant (BH.oM.Climate.PointCondition.SweatingConstant)",
       "attributes": [
         "datatype"
       ]
     },
     {
       "id": "BH.oM.Climate.PointCondition.VasodilationConstant",
-      "iri": null,
-      "label": "VasodilationConstant(BH.oM.Climate.PointCondition.VasodilationConstant)",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/Climate_oM/PointCondition.cs",
+      "label": "VasodilationConstant (BH.oM.Climate.PointCondition.VasodilationConstant)",
       "attributes": [
         "datatype"
       ]
     },
     {
       "id": "BH.oM.Climate.PointCondition.VasoconstrictionConstant",
-      "iri": null,
-      "label": "VasoconstrictionConstant(BH.oM.Climate.PointCondition.VasoconstrictionConstant)",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/Climate_oM/PointCondition.cs",
+      "label": "VasoconstrictionConstant (BH.oM.Climate.PointCondition.VasoconstrictionConstant)",
       "attributes": [
         "datatype"
       ]
     },
     {
       "id": "BH.oM.Climate.PointCondition.ClothingBodySurfaceAreaIncrease",
-      "iri": null,
-      "label": "ClothingBodySurfaceAreaIncrease(BH.oM.Climate.PointCondition.ClothingBodySurfaceAreaIncrease)",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/Climate_oM/PointCondition.cs",
+      "label": "ClothingBodySurfaceAreaIncrease (BH.oM.Climate.PointCondition.ClothingBodySurfaceAreaIncrease)",
       "attributes": [
         "datatype"
       ]
     },
     {
       "id": "BH.oM.Climate.PointCondition.StefanBoltzmannConstant",
-      "iri": null,
-      "label": "StefanBoltzmannConstant(BH.oM.Climate.PointCondition.StefanBoltzmannConstant)",
+      "iri": "https://github.com/BHoM/BHoM/blob/main/Climate_oM/PointCondition.cs",
+      "label": "StefanBoltzmannConstant (BH.oM.Climate.PointCondition.StefanBoltzmannConstant)",
       "attributes": [
         "datatype"
       ]
     }
   ],
   "property": [
+    {
+      "id": "KoppenClassification-HasProperty-Classification_C080F5C872FCA9333B299BC8D606217044D66BCA85404E64C4D467F9EB708392",
+      "type": "owl:DatatypeProperty"
+    },
+    {
+      "id": "KoppenClassification-HasProperty-Description_A50A0B897C780C5FAD625C79A04BC9380E04D40D5F6BD0B00C39FFDEA9E14072",
+      "type": "owl:DatatypeProperty"
+    },
+    {
+      "id": "KoppenClassification-HasProperty-Group_F14587CB44F7537B204E7678461F8FA0B8188A58C1DB016B26CAEE03E53A76F8",
+      "type": "owl:DatatypeProperty"
+    },
+    {
+      "id": "KoppenClassification-HasProperty-PrecipitationType_CA8A384A8BDE1A8502FF1097921D8288F2A87AD4A1636765EE88044C7A6ADB51",
+      "type": "owl:DatatypeProperty"
+    },
+    {
+      "id": "KoppenClassification-HasProperty-LevelOfHeat_B619EE54EB2C241EB78A34F7D4614C9AAAB15C954A9D8C1E57E05D8794A3F0D7",
+      "type": "owl:DatatypeProperty"
+    },
+    {
+      "id": "KoppenClassification-IsA-IBHoMObject_05CB0F528EAC6B915416EFEA416DA820E7DC700E07EF8B4BFB2A47FD913641D4",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "KoppenClassification-IsA-IObject_3A5CB85295F34FDE32209878265CB3D226FF6FDA37BDD5ABC564ADEDE48D7271",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "KoppenClassification-IsSubclassOf-BHoMObject_2B7B2903BFB87527418B6E30A0C1AAB62A26EFB6DF1468310FE6C06893EB5B15",
+      "type": "rdfs:subClassOf"
+    },
     {
       "id": "Series-HasProperty-Index_A180D0598FA572913D12B73C6FC9C15C599BE42BEE40B0FE2C43769918748E1B",
       "type": "owl:DatatypeProperty"
@@ -1127,8 +1234,94 @@
   ],
   "propertyAttribute": [
     {
+      "id": "KoppenClassification-HasProperty-Classification_C080F5C872FCA9333B299BC8D606217044D66BCA85404E64C4D467F9EB708392",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/HasProperty.cs",
+      "label": "HasProperty",
+      "attributes": [
+        "datatype"
+      ],
+      "domain": "BH.oM.Climate.KoppenClassification",
+      "range": "BH.oM.Climate.KoppenClassification.Classification"
+    },
+    {
+      "id": "KoppenClassification-HasProperty-Description_A50A0B897C780C5FAD625C79A04BC9380E04D40D5F6BD0B00C39FFDEA9E14072",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/HasProperty.cs",
+      "label": "HasProperty",
+      "attributes": [
+        "datatype"
+      ],
+      "domain": "BH.oM.Climate.KoppenClassification",
+      "range": "BH.oM.Climate.KoppenClassification.Description"
+    },
+    {
+      "id": "KoppenClassification-HasProperty-Group_F14587CB44F7537B204E7678461F8FA0B8188A58C1DB016B26CAEE03E53A76F8",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/HasProperty.cs",
+      "label": "HasProperty",
+      "attributes": [
+        "datatype"
+      ],
+      "domain": "BH.oM.Climate.KoppenClassification",
+      "range": "BH.oM.Climate.KoppenClassification.Group"
+    },
+    {
+      "id": "KoppenClassification-HasProperty-PrecipitationType_CA8A384A8BDE1A8502FF1097921D8288F2A87AD4A1636765EE88044C7A6ADB51",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/HasProperty.cs",
+      "label": "HasProperty",
+      "attributes": [
+        "datatype"
+      ],
+      "domain": "BH.oM.Climate.KoppenClassification",
+      "range": "BH.oM.Climate.KoppenClassification.PrecipitationType"
+    },
+    {
+      "id": "KoppenClassification-HasProperty-LevelOfHeat_B619EE54EB2C241EB78A34F7D4614C9AAAB15C954A9D8C1E57E05D8794A3F0D7",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/HasProperty.cs",
+      "label": "HasProperty",
+      "attributes": [
+        "datatype"
+      ],
+      "domain": "BH.oM.Climate.KoppenClassification",
+      "range": "BH.oM.Climate.KoppenClassification.LevelOfHeat"
+    },
+    {
+      "id": "KoppenClassification-IsA-IBHoMObject_05CB0F528EAC6B915416EFEA416DA820E7DC700E07EF8B4BFB2A47FD913641D4",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/IsA.cs",
+      "label": "IsA",
+      "attributes": [
+        "object"
+      ],
+      "comment": {
+        "undefined": "Can be used to describe that a thing belongs to a class; or that a thing is equivalent to another thing. When used for BHoM types, this describes C# interface implementation."
+      },
+      "domain": "BH.oM.Climate.KoppenClassification",
+      "range": "BH.oM.Base.IBHoMObject"
+    },
+    {
+      "id": "KoppenClassification-IsA-IObject_3A5CB85295F34FDE32209878265CB3D226FF6FDA37BDD5ABC564ADEDE48D7271",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/IsA.cs",
+      "label": "IsA",
+      "attributes": [
+        "object"
+      ],
+      "comment": {
+        "undefined": "Can be used to describe that a thing belongs to a class; or that a thing is equivalent to another thing. When used for BHoM types, this describes C# interface implementation."
+      },
+      "domain": "BH.oM.Climate.KoppenClassification",
+      "range": "BH.oM.Base.IObject"
+    },
+    {
+      "id": "KoppenClassification-IsSubclassOf-BHoMObject_2B7B2903BFB87527418B6E30A0C1AAB62A26EFB6DF1468310FE6C06893EB5B15",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/IsSubclassOf.cs",
+      "label": "IsA",
+      "attributes": [
+        "object"
+      ],
+      "domain": "BH.oM.Climate.KoppenClassification",
+      "range": "BH.oM.Base.BHoMObject"
+    },
+    {
       "id": "Series-HasProperty-Index_A180D0598FA572913D12B73C6FC9C15C599BE42BEE40B0FE2C43769918748E1B",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/HasProperty.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/HasProperty.cs",
       "label": "HasProperty",
       "attributes": [
         "datatype"
@@ -1138,7 +1331,7 @@
     },
     {
       "id": "Series-HasProperty-Values_D50948DD4A3A20E8870C9EBF88DE315CBFD087640EB870E694FEE84E2BA71A06",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/HasProperty.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/HasProperty.cs",
       "label": "HasProperty",
       "attributes": [
         "datatype"
@@ -1148,7 +1341,7 @@
     },
     {
       "id": "Series-IsA-IBHoMObject_69D34917A5B64926868FB3C5C33CD2CE958462B0EBF9E330FE053A90EEDB1857",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/IsA.cs",
       "label": "IsA",
       "attributes": [
         "object"
@@ -1161,7 +1354,7 @@
     },
     {
       "id": "Series-IsA-IObject_25BD07382137E7C0CA7AD2C6D1984467348CE5DA9545C46B2935F4AD4E9A609F",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/IsA.cs",
       "label": "IsA",
       "attributes": [
         "object"
@@ -1174,7 +1367,7 @@
     },
     {
       "id": "Series-IsSubclassOf-BHoMObject_1DE6A43B011E715A991D10AA6C074CA1371063FC7E004A4D3F36C9FF74448A45",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsSubclassOf.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/IsSubclassOf.cs",
       "label": "IsA",
       "attributes": [
         "object"
@@ -1184,7 +1377,7 @@
     },
     {
       "id": "EnvironmentCondition-HasProperty-DryBulbTemperature_3C251D905C38FC23C8242C028401E5C2882EF1272ADBF49E02EF03B3150369B9",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/HasProperty.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/HasProperty.cs",
       "label": "HasProperty",
       "attributes": [
         "datatype"
@@ -1194,7 +1387,7 @@
     },
     {
       "id": "EnvironmentCondition-HasProperty-DewPointTemperature_302E9839F2F2FED3706FFD5717716B35144B9BE75B7B74E2358E332E362EF304",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/HasProperty.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/HasProperty.cs",
       "label": "HasProperty",
       "attributes": [
         "datatype"
@@ -1204,7 +1397,7 @@
     },
     {
       "id": "EnvironmentCondition-HasProperty-RelativeHumidity_1488B03A2390A6029752A52CB9A01E013741D2C2711584EDB356CFEFF0E37EC6",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/HasProperty.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/HasProperty.cs",
       "label": "HasProperty",
       "attributes": [
         "datatype"
@@ -1214,7 +1407,7 @@
     },
     {
       "id": "EnvironmentCondition-HasProperty-AtmosphericStationPressure_82242755C97B6698C80E00CCB2C0BA74E3A072A0E9FE02FB4D3479D3AD6D34C3",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/HasProperty.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/HasProperty.cs",
       "label": "HasProperty",
       "attributes": [
         "datatype"
@@ -1224,7 +1417,7 @@
     },
     {
       "id": "EnvironmentCondition-HasProperty-ExtraterrestrialHorizontalRadiation_FBFCD70B2902A3D9E7CE86397C62CF1F6959518A4FDEA9928A653CBBAFE01CCB",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/HasProperty.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/HasProperty.cs",
       "label": "HasProperty",
       "attributes": [
         "datatype"
@@ -1234,7 +1427,7 @@
     },
     {
       "id": "EnvironmentCondition-HasProperty-ExtraterrestrialDirectNormalRadiation_5B8B1096C84035F20A5BE026204BC70B1FB98D3B0C4C04A69F646B905D570B9A",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/HasProperty.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/HasProperty.cs",
       "label": "HasProperty",
       "attributes": [
         "datatype"
@@ -1244,7 +1437,7 @@
     },
     {
       "id": "EnvironmentCondition-HasProperty-HorizontalInfraredRadiationIntensity_601922CD683AE421B30CFE352C92D037333354DC6E339D2C212F7E9D0D07706A",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/HasProperty.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/HasProperty.cs",
       "label": "HasProperty",
       "attributes": [
         "datatype"
@@ -1254,7 +1447,7 @@
     },
     {
       "id": "EnvironmentCondition-HasProperty-GlobalHorizontalRadiation_1667B683AD3E257E9E367302729DF366BC5EA3F4F3820090A6D435A80A053668",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/HasProperty.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/HasProperty.cs",
       "label": "HasProperty",
       "attributes": [
         "datatype"
@@ -1264,7 +1457,7 @@
     },
     {
       "id": "EnvironmentCondition-HasProperty-DirectNormalRadiation_2F42ECEADE31CF5F3216E9F743628C0292807DC2ECC83D04D60D8B6413DA5103",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/HasProperty.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/HasProperty.cs",
       "label": "HasProperty",
       "attributes": [
         "datatype"
@@ -1274,7 +1467,7 @@
     },
     {
       "id": "EnvironmentCondition-HasProperty-DiffuseHorizontalRadiation_8E1EDE635E29F75E7BC80A23A8EDAD56F5ED071D9676A5AC5D58921634CD55C9",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/HasProperty.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/HasProperty.cs",
       "label": "HasProperty",
       "attributes": [
         "datatype"
@@ -1284,7 +1477,7 @@
     },
     {
       "id": "EnvironmentCondition-HasProperty-GlobalHorizontalIlluminance_EA17072B39331338FB1C095DA6A83B8E9259918F0F709DC37BD8E16CB44C389C",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/HasProperty.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/HasProperty.cs",
       "label": "HasProperty",
       "attributes": [
         "datatype"
@@ -1294,7 +1487,7 @@
     },
     {
       "id": "EnvironmentCondition-HasProperty-DirectNormalIlluminance_B397E1415499AE5F44CFC9C1CA2FD76FE0E8A9403778CD2029B299086C438025",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/HasProperty.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/HasProperty.cs",
       "label": "HasProperty",
       "attributes": [
         "datatype"
@@ -1304,7 +1497,7 @@
     },
     {
       "id": "EnvironmentCondition-HasProperty-DiffuseHorizontalIlluminance_5AD76A7BB57ADBCC23F0549410844CDC8BD2DE33893B85B56F132F3CA96ABC03",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/HasProperty.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/HasProperty.cs",
       "label": "HasProperty",
       "attributes": [
         "datatype"
@@ -1314,7 +1507,7 @@
     },
     {
       "id": "EnvironmentCondition-HasProperty-ZenithLuminance_DBF5C50FEC022A202D46F2498FF49EBB589B1449928C2DDF136943627B1096B4",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/HasProperty.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/HasProperty.cs",
       "label": "HasProperty",
       "attributes": [
         "datatype"
@@ -1324,7 +1517,7 @@
     },
     {
       "id": "EnvironmentCondition-HasProperty-WindDirection_EBD1AE7F5B2C97A7E4E94EB92ADA591D3C50CD96278DC82ED9A0820AEEE8C827",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/HasProperty.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/HasProperty.cs",
       "label": "HasProperty",
       "attributes": [
         "datatype"
@@ -1334,7 +1527,7 @@
     },
     {
       "id": "EnvironmentCondition-HasProperty-WindSpeed_EC575BC1EF0BA62EAA14EAFE2F1848E4A518EC2878BA1D875CEA7A801E76520C",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/HasProperty.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/HasProperty.cs",
       "label": "HasProperty",
       "attributes": [
         "datatype"
@@ -1344,7 +1537,7 @@
     },
     {
       "id": "EnvironmentCondition-HasProperty-TotalSkyCover_8580DE1F9083D946878DBAEC6A0E97AB867F5D60E3BE1F463DEA1C139044114B",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/HasProperty.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/HasProperty.cs",
       "label": "HasProperty",
       "attributes": [
         "datatype"
@@ -1354,7 +1547,7 @@
     },
     {
       "id": "EnvironmentCondition-HasProperty-OpaqueSkyCover_8072C42761121F65F1CA8C82A223C72017628511D267483FE67C87AEA99B857D",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/HasProperty.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/HasProperty.cs",
       "label": "HasProperty",
       "attributes": [
         "datatype"
@@ -1364,7 +1557,7 @@
     },
     {
       "id": "EnvironmentCondition-HasProperty-Visibility_73ACD7ED7B7968ED09958DA1FCE914E1948BFB8556036A97EF49CEFC271E2A52",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/HasProperty.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/HasProperty.cs",
       "label": "HasProperty",
       "attributes": [
         "datatype"
@@ -1374,7 +1567,7 @@
     },
     {
       "id": "EnvironmentCondition-HasProperty-CeilingHeight_12539FED6CA73CCEBEF5A98DB6867136F55524ECE5785910E1BBA83737BF60A0",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/HasProperty.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/HasProperty.cs",
       "label": "HasProperty",
       "attributes": [
         "datatype"
@@ -1384,7 +1577,7 @@
     },
     {
       "id": "EnvironmentCondition-HasProperty-PrecipitableWater_675BD1C516621A77C60134D6DBBA3192C73EFFD176BE62473EAA51C8F307B746",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/HasProperty.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/HasProperty.cs",
       "label": "HasProperty",
       "attributes": [
         "datatype"
@@ -1394,7 +1587,7 @@
     },
     {
       "id": "EnvironmentCondition-HasProperty-AerosolOpticalDepth_58E4A82F5701963AA3E3B1B7B0593EB6F5C9E36B4BDF14E83230660332555A61",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/HasProperty.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/HasProperty.cs",
       "label": "HasProperty",
       "attributes": [
         "datatype"
@@ -1404,7 +1597,7 @@
     },
     {
       "id": "EnvironmentCondition-HasProperty-SnowDepth_DA4280D8765DB95024087503FC258EFD7667CA9C663752CC8890B50E83CF49FB",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/HasProperty.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/HasProperty.cs",
       "label": "HasProperty",
       "attributes": [
         "datatype"
@@ -1414,7 +1607,7 @@
     },
     {
       "id": "EnvironmentCondition-HasProperty-DaysSinceLastSnowfall_F20CC418E9D1393833A08D083537951D268E7D9AAB29069CF39FCA00DDC2B52F",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/HasProperty.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/HasProperty.cs",
       "label": "HasProperty",
       "attributes": [
         "datatype"
@@ -1424,7 +1617,7 @@
     },
     {
       "id": "EnvironmentCondition-HasProperty-Albedo_346EC27E22B4CBF4BCD15B69F578FD2C02F9DED117C6C0198363B048DBA307EC",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/HasProperty.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/HasProperty.cs",
       "label": "HasProperty",
       "attributes": [
         "datatype"
@@ -1434,7 +1627,7 @@
     },
     {
       "id": "EnvironmentCondition-HasProperty-LiquidPrecipitationDepth_6866A832E8EAA8C1E40023F24ADBB93F0FA6F36BB41DE753DD98A337FD015525",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/HasProperty.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/HasProperty.cs",
       "label": "HasProperty",
       "attributes": [
         "datatype"
@@ -1444,7 +1637,7 @@
     },
     {
       "id": "EnvironmentCondition-HasProperty-LiquidPrecipitationQuantity_DEA6D98863633F8DFBEF85E41C133C4BB2C8AB0D4A8A704D24B90CA0A2BB0A17",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/HasProperty.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/HasProperty.cs",
       "label": "HasProperty",
       "attributes": [
         "datatype"
@@ -1454,7 +1647,7 @@
     },
     {
       "id": "EnvironmentCondition-IsA-IBHoMObject_9E0EC25F9A3B664F7502CF908B5199A171100E0B4EFBF92A39F9A0699F96E4F0",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/IsA.cs",
       "label": "IsA",
       "attributes": [
         "object"
@@ -1467,7 +1660,7 @@
     },
     {
       "id": "EnvironmentCondition-IsA-IObject_C5BA6C59990FB9493E5287E430D537C6E5F814A384DE05F4F13527DAFD1B9A89",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/IsA.cs",
       "label": "IsA",
       "attributes": [
         "object"
@@ -1480,7 +1673,7 @@
     },
     {
       "id": "EnvironmentCondition-IsSubclassOf-BHoMObject_B27A157D7A6765CBB7C65E1C253E192C4922016795FD49C0BFE276832CDAE421",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsSubclassOf.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/IsSubclassOf.cs",
       "label": "IsA",
       "attributes": [
         "object"
@@ -1490,7 +1683,7 @@
     },
     {
       "id": "PointCondition-HasProperty-Age_227765704C89F8AC20EB77642E5FB639460B7752A0DDEFF3F59F62CD7676633F",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/HasProperty.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/HasProperty.cs",
       "label": "HasProperty",
       "attributes": [
         "datatype"
@@ -1500,7 +1693,7 @@
     },
     {
       "id": "BH.oM.Climate.PointCondition-HasProperty-BH.oM.Climate.PointCondition.Gender",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/HasProperty.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/HasProperty.cs",
       "label": "HasProperty",
       "attributes": [
         "object"
@@ -1510,7 +1703,7 @@
     },
     {
       "id": "BH.oM.Climate.PointCondition.Gender-IsA-BH.oM.Climate.Gender",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/IsA.cs",
       "label": "IsA",
       "attributes": [
         "object"
@@ -1520,7 +1713,7 @@
     },
     {
       "id": "PointCondition-HasProperty-BodyHeightNeutral_D64B16C80AF56E7C30842ACA1DD720173AD612DFFEAB7E5AE9781C35FE3FDA4B",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/HasProperty.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/HasProperty.cs",
       "label": "HasProperty",
       "attributes": [
         "datatype"
@@ -1530,7 +1723,7 @@
     },
     {
       "id": "BH.oM.Climate.PointCondition-HasProperty-BH.oM.Climate.PointCondition.BodyPosition",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/HasProperty.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/HasProperty.cs",
       "label": "HasProperty",
       "attributes": [
         "object"
@@ -1540,7 +1733,7 @@
     },
     {
       "id": "BH.oM.Climate.PointCondition.BodyPosition-IsA-BH.oM.Climate.BodyPosition",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/IsA.cs",
       "label": "IsA",
       "attributes": [
         "object"
@@ -1550,7 +1743,7 @@
     },
     {
       "id": "PointCondition-HasProperty-BodyOrientation_4EC13321025B00270B2A855A1F2DA1CEBCFA5F6087AE9491579535237AF8D13A",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/HasProperty.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/HasProperty.cs",
       "label": "HasProperty",
       "attributes": [
         "datatype"
@@ -1560,7 +1753,7 @@
     },
     {
       "id": "BH.oM.Climate.PointCondition-HasProperty-BH.oM.Climate.PointCondition.ClothingAlbedo",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/HasProperty.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/HasProperty.cs",
       "label": "HasProperty",
       "attributes": [
         "object"
@@ -1570,7 +1763,7 @@
     },
     {
       "id": "BH.oM.Climate.PointCondition.ClothingAlbedo-IsA-BH.oM.Climate.ClothingAlbedo",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/IsA.cs",
       "label": "IsA",
       "attributes": [
         "object"
@@ -1580,7 +1773,7 @@
     },
     {
       "id": "BH.oM.Climate.PointCondition-HasProperty-BH.oM.Climate.PointCondition.CloValue",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/HasProperty.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/HasProperty.cs",
       "label": "HasProperty",
       "attributes": [
         "object"
@@ -1590,7 +1783,7 @@
     },
     {
       "id": "BH.oM.Climate.PointCondition.CloValue-IsA-BH.oM.Climate.CloValue",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/IsA.cs",
       "label": "IsA",
       "attributes": [
         "object"
@@ -1600,7 +1793,7 @@
     },
     {
       "id": "BH.oM.Climate.PointCondition-HasProperty-BH.oM.Climate.PointCondition.GroundReflectivity",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/HasProperty.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/HasProperty.cs",
       "label": "HasProperty",
       "attributes": [
         "object"
@@ -1610,7 +1803,7 @@
     },
     {
       "id": "BH.oM.Climate.PointCondition.GroundReflectivity-IsA-BH.oM.Climate.GroundReflectivity",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/IsA.cs",
       "label": "IsA",
       "attributes": [
         "object"
@@ -1620,7 +1813,7 @@
     },
     {
       "id": "BH.oM.Climate.PointCondition-HasProperty-BH.oM.Climate.PointCondition.MetabolicRate",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/HasProperty.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/HasProperty.cs",
       "label": "HasProperty",
       "attributes": [
         "object"
@@ -1630,7 +1823,7 @@
     },
     {
       "id": "BH.oM.Climate.PointCondition.MetabolicRate-IsA-BH.oM.Climate.MetabolicRate",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/IsA.cs",
       "label": "IsA",
       "attributes": [
         "object"
@@ -1640,7 +1833,7 @@
     },
     {
       "id": "BH.oM.Climate.PointCondition-HasProperty-BH.oM.Climate.PointCondition.SoilDiffusivity",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/HasProperty.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/HasProperty.cs",
       "label": "HasProperty",
       "attributes": [
         "object"
@@ -1650,7 +1843,7 @@
     },
     {
       "id": "BH.oM.Climate.PointCondition.SoilDiffusivity-IsA-BH.oM.Climate.SoilDiffusivity",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/IsA.cs",
       "label": "IsA",
       "attributes": [
         "object"
@@ -1660,7 +1853,7 @@
     },
     {
       "id": "BH.oM.Climate.PointCondition-HasProperty-BH.oM.Climate.PointCondition.AdaptiveComfortClass",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/HasProperty.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/HasProperty.cs",
       "label": "HasProperty",
       "attributes": [
         "object"
@@ -1670,7 +1863,7 @@
     },
     {
       "id": "BH.oM.Climate.PointCondition.AdaptiveComfortClass-IsA-BH.oM.Climate.AdaptiveComfortClass",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/IsA.cs",
       "label": "IsA",
       "attributes": [
         "object"
@@ -1680,7 +1873,7 @@
     },
     {
       "id": "BH.oM.Climate.PointCondition-HasProperty-BH.oM.Climate.PointCondition.TerrainRoughnessLength",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/HasProperty.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/HasProperty.cs",
       "label": "HasProperty",
       "attributes": [
         "object"
@@ -1690,7 +1883,7 @@
     },
     {
       "id": "BH.oM.Climate.PointCondition.TerrainRoughnessLength-IsA-BH.oM.Climate.TerrainRoughnessLength",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/IsA.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/IsA.cs",
       "label": "IsA",
       "attributes": [
         "object"
@@ -1700,7 +1893,7 @@
     },
     {
       "id": "PointCondition-HasProperty-ShadingTransmissivity_BC0BD867B3530C72B21137863CD8FB94A0FD5542AFA22912AD73A7D840F63D04",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/HasProperty.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/HasProperty.cs",
       "label": "HasProperty",
       "attributes": [
         "datatype"
@@ -1710,7 +1903,7 @@
     },
     {
       "id": "PointCondition-HasProperty-SkinTemperatureNeutral_91576211633594811D2A6C4894617E79EC39F6A4B30B1CAC38B0B4F6AFB774EE",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/HasProperty.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/HasProperty.cs",
       "label": "HasProperty",
       "attributes": [
         "datatype"
@@ -1720,7 +1913,7 @@
     },
     {
       "id": "PointCondition-HasProperty-CoreTemperatureNeutral_F76C81FA6ACBDE4D72244233197D742A6EFA2CDAEAC8AD45317B6993E4AAFDFC",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/HasProperty.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/HasProperty.cs",
       "label": "HasProperty",
       "attributes": [
         "datatype"
@@ -1730,7 +1923,7 @@
     },
     {
       "id": "PointCondition-HasProperty-BodyTemperatureNeutral_A0998CBF6019507DCE39BDACFA4EA9BF02AD50D079D2B8966D729FDE05A6FA0B",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/HasProperty.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/HasProperty.cs",
       "label": "HasProperty",
       "attributes": [
         "datatype"
@@ -1740,7 +1933,7 @@
     },
     {
       "id": "PointCondition-HasProperty-SkinBloodFlowNeutral_F158152F0C1473D28C2319B8D7886C388DEB69A5190DCEB6034CB9CFACC48DD6",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/HasProperty.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/HasProperty.cs",
       "label": "HasProperty",
       "attributes": [
         "datatype"
@@ -1750,7 +1943,7 @@
     },
     {
       "id": "PointCondition-HasProperty-BodyWeightNeutral_D54EE0E889E50291FF3996C152A416967873CE66684F8FA0A058CB45D27A2AD4",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/HasProperty.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/HasProperty.cs",
       "label": "HasProperty",
       "attributes": [
         "datatype"
@@ -1760,7 +1953,7 @@
     },
     {
       "id": "PointCondition-HasProperty-BodySurfaceAreaNeutral_5DA4D26744E602A2DF76D96451BA31A090472F0729A92E92BB84FBCA96180EA4",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/HasProperty.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/HasProperty.cs",
       "label": "HasProperty",
       "attributes": [
         "datatype"
@@ -1770,7 +1963,7 @@
     },
     {
       "id": "PointCondition-HasProperty-MetabolicFactorNeutral_C55075BB73F1FAFA28D9E535524F54B98D02C99B41B1BA4E8B7270B6C68CA6CE",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/HasProperty.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/HasProperty.cs",
       "label": "HasProperty",
       "attributes": [
         "datatype"
@@ -1780,7 +1973,7 @@
     },
     {
       "id": "PointCondition-HasProperty-SweatingConstant_E13E3A65FDBD45DB6B65C10E43449E90F07A5AF767AF1794994283A5A7DDB763",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/HasProperty.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/HasProperty.cs",
       "label": "HasProperty",
       "attributes": [
         "datatype"
@@ -1790,7 +1983,7 @@
     },
     {
       "id": "PointCondition-HasProperty-VasodilationConstant_15F21871CA98EDC3A5B79201B09B739EFC6B1465A75B4C7C779C5DC0B187C164",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/HasProperty.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/HasProperty.cs",
       "label": "HasProperty",
       "attributes": [
         "datatype"
@@ -1800,7 +1993,7 @@
     },
     {
       "id": "PointCondition-HasProperty-VasoconstrictionConstant_721478D55DA458CB6ECD61C0E9BB5BB1F55DAFB53F31DF4E177931459EAF8AD0",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/HasProperty.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/HasProperty.cs",
       "label": "HasProperty",
       "attributes": [
         "datatype"
@@ -1810,7 +2003,7 @@
     },
     {
       "id": "PointCondition-HasProperty-ClothingBodySurfaceAreaIncrease_AC956E683D55B7E572D0A4FFDF12983A0AD83438F37745AFCC81067C090BFDA8",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/HasProperty.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/HasProperty.cs",
       "label": "HasProperty",
       "attributes": [
         "datatype"
@@ -1820,7 +2013,7 @@
     },
     {
       "id": "PointCondition-HasProperty-StefanBoltzmannConstant_EEC88711ADB387CF513FBDE4B8A6E6836ECF3A5C37EE61635C2B64F429E3CFF6",
-      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/HasProperty.cs",
+      "iri": "https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/WebVOWL/HasProperty.cs",
       "label": "HasProperty",
       "attributes": [
         "datatype"
