@@ -73,7 +73,7 @@ namespace BH.Test.RDF
 
         public static void IsEqual(object target, object actual)
         {
-            actual.Should().BeEquivalentTo(target);
+            actual.Should().BeEquivalentTo(target, options => options.Excluding(prop => prop.Name == nameof(BH.oM.Base.IBHoMObject.BHoM_Guid)));
         }
 
         public static void IsNotEqual(object target, object actual)
