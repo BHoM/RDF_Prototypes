@@ -294,9 +294,6 @@ namespace BH.Engine.RDF
             // Only individuals that are of types mappable to Ontology classes can be added.
             if (individualType.IsOntologyClass())
             {
-                if (!ontologySettings.ABoxSettings.ConsiderDefaultPropertyValues)
-                    throw new NotImplementedException($"Feature {nameof(ABoxSettings)}.{nameof(ABoxSettings.ConsiderDefaultPropertyValues)} not yet implemented. Please set it to true.");
-
                 // Make sure the individual type is among the ontology classes.
                 individualType.AddToOntology();
 

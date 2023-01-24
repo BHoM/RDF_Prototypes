@@ -46,10 +46,10 @@ namespace BH.oM.RDF
         public override int GetHashCode()
         {
             int A = Individual.GetHashCode();
-            int B = RangeIndividual.GetHashCode();
+            int? B = RangeIndividual?.GetHashCode();
             int C = HasProperty.DomainClass.GetHashCode();
             int D = HasProperty.RangeClass.GetHashCode();
-            return A + B + C + D;
+            return A + B ?? 0 + C + D;
         }
     }
 }

@@ -38,7 +38,7 @@ namespace BH.oM.RDF
     {
         public string OntologyTitle { get; set; } = $"{DateTime.Now.ToString("yyMMdd-HHmmss")}_newBHoMOntology";
         public string OntologyDescription { get; set; } = $"New BHoM ontology";
-        public string OntologyBaseAddress { get; set; } = "http://visualdataweb.org/";
+        public string OntologyBaseAddress { get; set; } = "https://bhom.xyz/ontology";
 
         public TBoxSettings TBoxSettings { get; set; } = new TBoxSettings();
         public ABoxSettings ABoxSettings { get; set; } = new ABoxSettings();
@@ -78,9 +78,6 @@ namespace BH.oM.RDF
     {
         [Description("The base address where the individuals will be hosted.")]
         public string IndividualsBaseAddress { get; set; } = $"http://customizeFrom-OntologySettings.ABoxSettings.{nameof(IndividualsBaseAddress)}";
-
-        [Description("If this is set to true, the ABox Ontology will be assigned an individual also for any Class Property that is set to a default value.")]
-        public bool ConsiderDefaultPropertyValues { get; set; } = true;
 
         [Description("If this is set to true, if an individual's ObjectProperty or Data property is null or an empty collection, it will still be added.")]
         public bool ConsiderNullOrEmptyPropertyValues { get; set; } = false;

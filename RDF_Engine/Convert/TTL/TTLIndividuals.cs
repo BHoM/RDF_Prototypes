@@ -87,7 +87,7 @@ namespace BH.Engine.RDF
                             TLLIndividualRelations.Append($"\t\trdf:_{i} <{individualUri}> ;\n");
                         }
                     }
-                    else if (iop.RangeIndividual.GetType().IsListOfDatatypes())
+                    else if (iop.RangeIndividual?.GetType().IsListOfDatatypes() ?? false)
                     {
                         var individualList = iop.RangeIndividual as IEnumerable;
                         if (individualList.IsNullOrEmpty())

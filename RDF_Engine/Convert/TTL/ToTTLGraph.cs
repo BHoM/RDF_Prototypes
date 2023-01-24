@@ -24,6 +24,7 @@
 using BH.Engine.Base;
 using BH.oM.Base;
 using BH.oM.RDF;
+using Microsoft.Extensions.Primitives;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Linq;
 using System;
@@ -59,7 +60,7 @@ namespace BH.Engine.RDF
             {
                 TTL = new StringBuilder();
 
-                TTL.Append(Create.TTLHeader(cSharpGraph.OntologySettings, cSharpGraph.OntologySettings.OntologyTitle, cSharpGraph.OntologySettings.OntologyDescription, cSharpGraph.OntologySettings.OntologyBaseAddress));
+                TTL.Append(Create.TTLHeader(cSharpGraph.OntologySettings));
 
                 TTL.Append("Annotation Properties".TTLSectionTitle());
                 TTL.Append(string.Join("\n", Create.TTLAnnotationProperties()));
@@ -69,30 +70,7 @@ namespace BH.Engine.RDF
 
                 TTL.Append("Classes".TTLSectionTitle());
 
-                // Write TBOX settings
-                TBoxSettings defaultTboxSettings = new TBoxSettings();
-                StringBuilder tBoxSettingsStringBuilder = new StringBuilder();
-                if (cSharpGraph.OntologySettings.TBoxSettings.TreatCustomObjectsWithTypeKeyAsCustomObjectTypes != defaultTboxSettings.TreatCustomObjectsWithTypeKeyAsCustomObjectTypes)
-                    tBoxSettingsStringBuilder.Append($"\n# {nameof(defaultTboxSettings.TreatCustomObjectsWithTypeKeyAsCustomObjectTypes)}: " + cSharpGraph.OntologySettings.TBoxSettings.TreatCustomObjectsWithTypeKeyAsCustomObjectTypes);
-
-                if (cSharpGraph.OntologySettings.TBoxSettings.DefaultBaseUriForUnknownTypes != defaultTboxSettings.DefaultBaseUriForUnknownTypes)
-                    tBoxSettingsStringBuilder.Append($"\n# {nameof(defaultTboxSettings.DefaultBaseUriForUnknownTypes)}: " + cSharpGraph.OntologySettings.TBoxSettings.DefaultBaseUriForUnknownTypes);
-
-                if (cSharpGraph.OntologySettings.TBoxSettings.CustomobjectsTypeKey != defaultTboxSettings.CustomobjectsTypeKey)
-                    tBoxSettingsStringBuilder.Append($"\n# {nameof(defaultTboxSettings.CustomobjectsTypeKey)}: " + cSharpGraph.OntologySettings.TBoxSettings.CustomobjectsTypeKey);
-
-                if (cSharpGraph.OntologySettings.TBoxSettings.TypeUris?.Any() ?? false)
-                {
-                    string typeUriString = $@"{string.Join($"\n# {nameof(defaultTboxSettings.TypeUris)}: ", cSharpGraph.OntologySettings.TBoxSettings.TypeUris.Select(KV => KV.Key.AssemblyQualifiedName + "; " + KV.Value.ToString() ))}";
-                    tBoxSettingsStringBuilder.Append($"\n# {nameof(defaultTboxSettings.TypeUris)}: " + typeUriString);
-                }
-
-                string tBoxSettingsString = tBoxSettingsStringBuilder.ToString();
-                if (tBoxSettingsString.Any())
-                {
-                    tBoxSettingsString = $"# {nameof(TBoxSettings)}" + tBoxSettingsString + $"\n# {nameof(TBoxSettings)}\n\n";
-                    TTL.Append(tBoxSettingsString);
-                }
+                AddTBoxSettings(cSharpGraph, TTL);
 
                 TTL.Append(string.Join("\n\n", cSharpGraph.TTLClasses(localRepositorySettings)));
 
@@ -102,33 +80,10 @@ namespace BH.Engine.RDF
                 TTL.Append("Data properties".TTLSectionTitle());
                 TTL.Append(string.Join("\n\n", cSharpGraph.TTLDataProperties(localRepositorySettings)));
 
-                // Write ABOX settings
+                AddABoxSettings(cSharpGraph, localRepositorySettings, TTL);
 
-                ABoxSettings defaultAboxSettings = new ABoxSettings();
-                StringBuilder aBoxSettingsStringBuilder = new StringBuilder();
-
-                if (cSharpGraph.AllIndividuals?.Any() ?? false)
-                {
-                    TTL.Append("Individuals".TTLSectionTitle());
-
-                    if (cSharpGraph.OntologySettings.ABoxSettings.IndividualsBaseAddress != defaultAboxSettings.IndividualsBaseAddress)
-                        aBoxSettingsStringBuilder.Append($"\n# {nameof(defaultAboxSettings.IndividualsBaseAddress)}: " + cSharpGraph.OntologySettings.ABoxSettings.IndividualsBaseAddress);
-
-                    if (cSharpGraph.OntologySettings.ABoxSettings.ConsiderDefaultPropertyValues != defaultAboxSettings.ConsiderDefaultPropertyValues)
-                        aBoxSettingsStringBuilder.Append($"\n# {nameof(defaultAboxSettings.ConsiderDefaultPropertyValues)}: " + cSharpGraph.OntologySettings.ABoxSettings.ConsiderDefaultPropertyValues);
-
-                    if (cSharpGraph.OntologySettings.ABoxSettings.ConsiderNullOrEmptyPropertyValues != defaultAboxSettings.ConsiderNullOrEmptyPropertyValues)
-                        aBoxSettingsStringBuilder.Append($"\n# {nameof(defaultAboxSettings.ConsiderNullOrEmptyPropertyValues)}: " + cSharpGraph.OntologySettings.ABoxSettings.ConsiderNullOrEmptyPropertyValues);
-
-                    string aBoxSettingsString = aBoxSettingsStringBuilder.ToString();
-                    if (aBoxSettingsString.Any())
-                    {
-                        aBoxSettingsString = $"# {nameof(ABoxSettings)}" + aBoxSettingsString + $"\n# {nameof(ABoxSettings)}\n\n";
-                        TTL.Append(aBoxSettingsString);
-                    }
-
-                    cSharpGraph.TTLIndividuals(localRepositorySettings, TTL);
-                }
+                TTL.Append("Footer".TTLSectionTitle());
+                TTL.AppendLine($"# {nameof(OntologySettings)}: {cSharpGraph.OntologySettings.ToBase64JsonSerialized()}");
             }
 
             catch { }
@@ -140,6 +95,66 @@ namespace BH.Engine.RDF
             }
 
             return TTL.ToString();
+        }
+
+        // Adds TBox Settings in a human-readable way. The settings are however serialized-deserialized from a specific comment in the header.
+        private static void AddTBoxSettings(CSharpGraph cSharpGraph, StringBuilder TTL)
+        {
+            TBoxSettings defaultTboxSettings = new TBoxSettings();
+            StringBuilder tBoxSettingsStringBuilder = new StringBuilder();
+            if (cSharpGraph.OntologySettings.TBoxSettings.TreatCustomObjectsWithTypeKeyAsCustomObjectTypes != defaultTboxSettings.TreatCustomObjectsWithTypeKeyAsCustomObjectTypes)
+                tBoxSettingsStringBuilder.AppendLine($"# {nameof(defaultTboxSettings.TreatCustomObjectsWithTypeKeyAsCustomObjectTypes)}: " + cSharpGraph.OntologySettings.TBoxSettings.TreatCustomObjectsWithTypeKeyAsCustomObjectTypes);
+
+            if (cSharpGraph.OntologySettings.TBoxSettings.DefaultBaseUriForUnknownTypes != defaultTboxSettings.DefaultBaseUriForUnknownTypes)
+                tBoxSettingsStringBuilder.AppendLine($"# {nameof(defaultTboxSettings.DefaultBaseUriForUnknownTypes)}: " + cSharpGraph.OntologySettings.TBoxSettings.DefaultBaseUriForUnknownTypes);
+
+            if (cSharpGraph.OntologySettings.TBoxSettings.CustomobjectsTypeKey != defaultTboxSettings.CustomobjectsTypeKey)
+                tBoxSettingsStringBuilder.AppendLine($"# {nameof(defaultTboxSettings.CustomobjectsTypeKey)}: " + cSharpGraph.OntologySettings.TBoxSettings.CustomobjectsTypeKey);
+
+            if (cSharpGraph.OntologySettings.TBoxSettings.CustomObjectTypesBaseAddress != defaultTboxSettings.CustomObjectTypesBaseAddress)
+                tBoxSettingsStringBuilder.AppendLine($"# {nameof(defaultTboxSettings.CustomObjectTypesBaseAddress)}: " + cSharpGraph.OntologySettings.TBoxSettings.CustomObjectTypesBaseAddress);
+
+            if (cSharpGraph.OntologySettings.TBoxSettings.TypeUris?.Any() ?? false)
+            {
+                string typeUriString = $@"{string.Join($"\n# {nameof(defaultTboxSettings.TypeUris)}: ", cSharpGraph.OntologySettings.TBoxSettings.TypeUris.Select(KV => KV.Key.AssemblyQualifiedName + "; " + KV.Value.ToString()))}";
+                tBoxSettingsStringBuilder.AppendLine($"# {nameof(defaultTboxSettings.TypeUris)}: " + typeUriString);
+            }
+
+            string tBoxSettingsString = tBoxSettingsStringBuilder.ToString();
+            if (tBoxSettingsString.Any())
+            {
+                TTL.AppendLine($"# {nameof(TBoxSettings)}:");
+                TTL.AppendLine(tBoxSettingsString);
+                TTL.AppendLine();
+            }
+        }
+
+        // Adds TBox Settings in a human-readable way. The settings are however serialized-deserialized from a specific comment in the header.
+        private static void AddABoxSettings(CSharpGraph cSharpGraph, LocalRepositorySettings localRepositorySettings, StringBuilder TTL)
+        {
+            ABoxSettings defaultAboxSettings = new ABoxSettings();
+            StringBuilder aBoxSettingsStringBuilder = new StringBuilder();
+
+            if (cSharpGraph.AllIndividuals?.Any() ?? false)
+            {
+                TTL.Append("Individuals".TTLSectionTitle());
+
+                if (cSharpGraph.OntologySettings.ABoxSettings.IndividualsBaseAddress != defaultAboxSettings.IndividualsBaseAddress)
+                    aBoxSettingsStringBuilder.AppendLine($"# {nameof(defaultAboxSettings.IndividualsBaseAddress)}: " + cSharpGraph.OntologySettings.ABoxSettings.IndividualsBaseAddress);
+
+                if (cSharpGraph.OntologySettings.ABoxSettings.ConsiderNullOrEmptyPropertyValues != defaultAboxSettings.ConsiderNullOrEmptyPropertyValues)
+                    aBoxSettingsStringBuilder.AppendLine($"# {nameof(defaultAboxSettings.ConsiderNullOrEmptyPropertyValues)}: " + cSharpGraph.OntologySettings.ABoxSettings.ConsiderNullOrEmptyPropertyValues);
+
+                string aBoxSettingsString = aBoxSettingsStringBuilder.ToString();
+                if (aBoxSettingsString.Any())
+                {
+                    TTL.AppendLine($"# {nameof(ABoxSettings)}:");
+                    TTL.AppendLine(aBoxSettingsString);
+                    TTL.AppendLine();
+                }
+
+                cSharpGraph.TTLIndividuals(localRepositorySettings, TTL);
+            }
         }
     }
 }

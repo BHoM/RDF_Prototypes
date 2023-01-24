@@ -47,6 +47,9 @@ namespace BH.Engine.RDF
 
         public static bool IsListOfOntologyClasses(this Type sourceType, object sourceObj)
         {
+            if (sourceType == null)
+                return false;
+
             // Make sure the type is a List.
             if (!sourceType.IsList())
                 return false;
@@ -75,7 +78,7 @@ namespace BH.Engine.RDF
 
         public static bool IsListOfOntologyClasses(this IndividualObjectProperty iop)
         {
-            Type rangeType = iop.RangeIndividual.GetType();
+            Type rangeType = iop.RangeIndividual?.GetType();
 
             return IsListOfOntologyClasses(rangeType, iop.RangeIndividual);
         }
