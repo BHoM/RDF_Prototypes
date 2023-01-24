@@ -247,10 +247,6 @@ namespace BH.Test.RDF
 
             CSharpGraph cSharpGraph_customObj = Compute.CSharpGraph(new List<object>() { parent }, m_ontologySettings);
 
-            cSharpGraph_customObj.Classes.Where(c => c.Name == "TileMaterial").Should().ContainSingle();
-            cSharpGraph_customObj.Classes.Where(c => c.Name == "SimpleTiles").Should().ContainSingle();
-            cSharpGraph_customObj.Classes.Where(c => c.Name == "Roof").Should().ContainSingle();
-
             Assert.IsNotNull(cSharpGraph_customObj.Classes.Single(c => c.Name == "TileMaterial"));
             Assert.IsNotNull(cSharpGraph_customObj.Classes.Single(c => c.Name == "SimpleTiles"));
             Assert.IsNotNull(cSharpGraph_customObj.Classes.Single(c => c.Name == "Roof"));

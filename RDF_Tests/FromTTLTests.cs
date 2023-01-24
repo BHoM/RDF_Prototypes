@@ -96,8 +96,7 @@ namespace BH.Test.RDF
                     TypeUris = new Dictionary<Type, string>()
                     {
                         { typeof(Room), "http://someUri.com#room" },
-                        {typeof(CustomObject), "http://someotherUri.com#room" }
-
+                        { typeof(CustomObject), "http://someotherUri.com#room" }
                     }
                 }
             };
