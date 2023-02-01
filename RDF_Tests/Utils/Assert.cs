@@ -48,7 +48,7 @@ namespace BH.Test.RDF
     /// <summary>
     /// Class to interface with Unit Tests.
     /// </summary>
-    public partial class Assert : NUnit.Framework.Assert
+    public partial class Assert 
     {
         public static void IsTTLParsable(string ttl)
         {

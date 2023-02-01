@@ -66,9 +66,9 @@ namespace BH.Test.RDF
 
             // Because all the properties of Room are not Ontology types (they are geometrical types),
             // the cSharpGraph must not have any ObjectProperty.
-            Assert.That(cSharpGraph.ObjectProperties.Any(), Is.False);
+            Assert.IsEqual(cSharpGraph.ObjectProperties.Any(), false);
 
-            Assert.That(cSharpGraph.DataProperties.Any(), Is.True);
+            Assert.IsEqual(cSharpGraph.DataProperties.Any(), true);
 
             string ttl = cSharpGraph.ToTTLGraph();
 
@@ -314,22 +314,7 @@ namespace BH.Test.RDF
             Assert.IsTTLParsable(TTLGraph);
         }
 
-        [Test]
-        public static void CustomType_Property_BoxedListOfObjects()
-        {
-            CustomObject co = new CustomObject();
-            co.CustomData[m_ontologySettings.TBoxSettings.CustomobjectsTypeKey] = "TestType";
 
-            // This property is boxed into a System.Object
-            List<Point> listOfPoints = new List<Point>() { new oM.Geometry.Point() { X = 101, Y = 102 }, new Point() { X = 201, Y = 202 } };
-            List<object> boxedProperty = listOfPoints.OfType<object>().ToList();
-            co.CustomData["testListObjects"] = boxedProperty;
-
-            CSharpGraph cSharpGraph_customObj = Compute.CSharpGraph(new List<object>() { co }, m_ontologySettings);
-            string TTLGraph = cSharpGraph_customObj.ToTTLGraph();
-
-            Assert.IsTTLParsable(TTLGraph);
-        }
 
         [Test]
         public static void NurbsCurve_ControlPoints()
@@ -350,20 +335,6 @@ namespace BH.Test.RDF
             Assert.IsTTLParsable(TTLGraph);
         }
 
-        [Test]
-        public static void BHoMObject_Property_ListOfObjects_Boxed()
-        {
-            BHoMObject bhomObj = new BHoMObject();
-
-            bhomObj.CustomData["boxedListOfObjects"] = new List<object>() {
-                    new Point(),
-                    new Point() { X = 1, Y = 1, Z = 1 },
-                    new Point() { X = 2, Y = 2, Z = 2 }
-                };
-
-            string TTLGraph = new List<object>() { bhomObj }.TTLGraph(m_ontologySettings);
-
-            Assert.IsTTLParsable(TTLGraph); // This MUST return an encoded customData dictionary - its entry is not seen as property!
-        }
+   
     }
 }

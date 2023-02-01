@@ -302,14 +302,17 @@ namespace BH.Engine.RDF
             try
             {
                 convertedValue = System.Convert.ChangeType(value, destinationType);
+                return convertedValue;
             }
             catch { }
 
+
             if (convertedValue == null)
             {
-                if (destinationType == typeof(Guid))
-                    convertedValue = new Guid(value.ToString());
-                else if (typeof(IList).IsAssignableFrom(destinationType))
+                if (destinationType == typeof(Guid) && Guid.TryParse(value.ToString(), out Guid guid))
+                    return guid;
+
+                if (typeof(IList).IsAssignableFrom(destinationType))
                 {
                     List<object> valueList = value as List<object>;
 
@@ -323,20 +326,41 @@ namespace BH.Engine.RDF
                         {
                             Type listType = typeof(List<>).MakeGenericType(listGenericArgument);
                             IList list = Activator.CreateInstance(listType) as IList;
-                            foreach (var item in value as List<object>)
-                                list.Add(item);
+                            IList listOfDeserializedType = null;
+                            foreach (var item in valueList)
+                            {
+                                if (item is string st && Convert.TryDeserializeBase64Json(st, out object innerRes))
+                                {
+                                    // This is required since we decided to separate geometry: DataType lists wouldn't support Base64JsonSerialized as DataType,
+                                    // so we store Base64JsonSerialized as xls:string, and this further check is required.
 
-                            convertedValue = list;
+                                    if (listOfDeserializedType == null)
+                                    {
+                                        listType = typeof(List<>).MakeGenericType(innerRes.GetType());
+                                        listOfDeserializedType = Activator.CreateInstance(listType) as IList;
+                                    }
+
+                                    listOfDeserializedType.Add(innerRes);
+                                }
+                                else
+                                    list.Add(item);
+                            }
+
+                            if (listOfDeserializedType != null)
+                                return listOfDeserializedType;
+                            else
+                                return list;
                         }
                         catch { }
                     }
                 }
             }
 
+            if (value is string str && Convert.TryDeserializeBase64Json(str, out convertedValue))
+                return convertedValue;
+
             // Fallback: try keeping the unconverted value.
-            if (convertedValue == null)
-                convertedValue = value;
-            return convertedValue;
+            return value;
         }
 
         /*************************************/

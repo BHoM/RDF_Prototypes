@@ -111,10 +111,6 @@ namespace BH.Engine.RDF
                 IndividualDataProperty idp = individualRelation as IndividualDataProperty;
                 if (idp != null && idp.Value != null)
                 {
-                    if (idp.Value is IEnumerable)
-                    {
-
-                    }
 
                     TLLIndividualRelations.Append("\n\t\t" + $@":{idp.PropertyInfo.UniqueNodeId()} ""{idp.DataPropertyStringValue()}""");
 

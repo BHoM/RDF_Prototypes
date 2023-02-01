@@ -82,6 +82,8 @@ namespace BH.Engine.RDF
 
                 AddABoxSettings(cSharpGraph, localRepositorySettings, TTL);
 
+                cSharpGraph.TTLIndividuals(localRepositorySettings, TTL);
+
                 TTL.Append("Footer".TTLSectionTitle());
                 TTL.AppendLine($"# {nameof(OntologySettings)}: {cSharpGraph.OntologySettings.ToBase64JsonSerialized()}");
             }
@@ -152,8 +154,6 @@ namespace BH.Engine.RDF
                     TTL.AppendLine(aBoxSettingsString);
                     TTL.AppendLine();
                 }
-
-                cSharpGraph.TTLIndividuals(localRepositorySettings, TTL);
             }
         }
     }
