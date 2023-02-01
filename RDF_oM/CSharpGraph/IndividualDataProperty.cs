@@ -47,7 +47,7 @@ namespace BH.oM.RDF
         public override int GetHashCode()
         {
             int A = Individual.GetHashCode();
-            int B = Value.GetHashCode();
+            int B = Value?.GetHashCode() ?? 0;
             int C = PropertyInfo.PropertyType.GetHashCode();
             int D = PropertyInfo.DeclaringType.GetHashCode();
             int E = PropertyInfo.Name.GetHashCode();

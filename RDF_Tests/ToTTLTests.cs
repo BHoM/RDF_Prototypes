@@ -45,6 +45,36 @@ namespace BH.Test.RDF
 {
     public class ToTTLTests : Test
     {
+        [SetUp]
+        public void SetUp()
+        {
+            m_ontologySettings = new OntologySettings()
+            {
+                ABoxSettings = new ABoxSettings() { IndividualsBaseAddress = "individuals.Address" },
+                TBoxSettings = new TBoxSettings() { CustomObjectTypesBaseAddress = "CustomObjectTypes.Address" }
+            };
+        }
+
+        [Test]
+        public static void GeometryAsBase64()
+        {
+            m_ontologySettings.TBoxSettings.GeometryAsOntologyClass = false;
+
+            Room room = new Room() { Perimeter = new Line(), Location = new Point() };
+
+            CSharpGraph cSharpGraph = Compute.CSharpGraph(new List<object> { room }, m_ontologySettings);
+
+            // Because all the properties of Room are not Ontology types (they are geometrical types),
+            // the cSharpGraph must not have any ObjectProperty.
+            Assert.That(cSharpGraph.ObjectProperties.Any(), Is.False);
+
+            Assert.That(cSharpGraph.DataProperties.Any(), Is.True);
+
+            string ttl = cSharpGraph.ToTTLGraph();
+
+            Assert.IsTTLParsable(ttl);
+        }
+
         [Test]
         public static void BHoMObject_CustomDataAsProperties()
         {

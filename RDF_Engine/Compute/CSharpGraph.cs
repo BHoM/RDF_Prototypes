@@ -95,13 +95,13 @@ namespace BH.Engine.RDF
             //if (type.IsCollectionOfOntologyClasses())
             //    type = type.InnermostType();
 
-            if (type.IsOntologyClass())
+            if (type.IsOntologyClass(tBoxSettings))
                 m_cSharpGraph.Classes.Add(type);
 
             List<Type> parentTypes = type.BaseTypes();
             foreach (var parentType in parentTypes)
             {
-                if (!parentType.IsOntologyClass())
+                if (!parentType.IsOntologyClass(tBoxSettings))
                     continue;
 
                 AddToOntology(parentType);
@@ -155,17 +155,17 @@ namespace BH.Engine.RDF
                 }
             }
 
-            if (!domainType.IsOntologyClass())
+            if (!domainType.IsOntologyClass(ontologySettings.TBoxSettings))
                 return; // do not add Properties of classes that are not Ontology classes (e.g. if domainType is a String, we do not want to add its property Chars).
             else
                 domainType.AddToOntology();
 
-            if (pi.IsObjectProperty())
+            if (pi.IsObjectProperty(ontologySettings.TBoxSettings))
             {
                 // OBJECT PROPERTY RELATION
                 // The relation between Individuals corresponds to an ObjectPropertyRelation (between two Classes of the Ontology).
 
-                if (pi.PropertyType.IsListOfOntologyClasses(individualPropertyValue) && individual != null)
+                if (pi.PropertyType.IsListOfOntologyClasses(individualPropertyValue, ontologySettings.TBoxSettings) && individual != null)
                 {
                     rangeType = new ListPropertyType(individual, pi, ontologySettings.TBoxSettings);
 
@@ -197,7 +197,7 @@ namespace BH.Engine.RDF
                 return;
             }
 
-            if (pi.IsDataProperty())
+            if (pi.IsDataProperty(ontologySettings.TBoxSettings))
             {
                 DataProperty hasPropertyRelation = new DataProperty() { PropertyInfo = pi, DomainClass = domainType, RangeType = rangeType };
                 AddIndividualDataPropertyRelation(individual, pi, ontologySettings, hasPropertyRelation);
@@ -207,7 +207,7 @@ namespace BH.Engine.RDF
         private static void AddIndividualObjectPropertyRelation(object individual, PropertyInfo pi, OntologySettings ontologySettings, ObjectProperty hasPropertyRelation)
         {
             // If the individual is non-null, we will need to add the individuals' relation to the Graph in order to define the A-Box.
-            if (!pi.IsObjectProperty())
+            if (!pi.IsObjectProperty(ontologySettings.TBoxSettings))
             {
                 Log.RecordError("Wrong PropertyInfo specified.");
                 return;
@@ -244,7 +244,7 @@ namespace BH.Engine.RDF
 
         private static void AddIndividualDataPropertyRelation(object individual, PropertyInfo pi, OntologySettings ontologySettings, DataProperty hasPropertyRelation)
         {
-            if (!pi.IsDataProperty())
+            if (!pi.IsDataProperty(ontologySettings.TBoxSettings))
             {
                 Log.RecordError("Wrong PropertyInfo specified.");
                 return;
@@ -292,7 +292,7 @@ namespace BH.Engine.RDF
             ontologySettings = ontologySettings ?? new OntologySettings();
 
             // Only individuals that are of types mappable to Ontology classes can be added.
-            if (individualType.IsOntologyClass())
+            if (individualType.IsOntologyClass(ontologySettings.TBoxSettings))
             {
                 // Make sure the individual type is among the ontology classes.
                 individualType.AddToOntology();
@@ -326,12 +326,12 @@ namespace BH.Engine.RDF
             // add the Individual properties separately.
             var nonDeclaredProps = individualType.GetProperties().Except(properties);
             foreach (var p in nonDeclaredProps)
-                if (p.IsObjectProperty())
+                if (p.IsObjectProperty(ontologySettings.TBoxSettings))
                 {
                     ObjectProperty objectProperty = new ObjectProperty() { DomainClass = p.DeclaringType, RangeClass = p.PropertyType, PropertyInfo = p };
                     AddIndividualObjectPropertyRelation(individual, p, ontologySettings, objectProperty);
                 }
-                else if (p.IsDataProperty())
+                else if (p.IsDataProperty(ontologySettings.TBoxSettings))
                 {
                     DataProperty dataProperty = new DataProperty() { DomainClass = p.DeclaringType, RangeType = p.PropertyType, PropertyInfo = p };
                     AddIndividualDataPropertyRelation(individual, p, ontologySettings, dataProperty);

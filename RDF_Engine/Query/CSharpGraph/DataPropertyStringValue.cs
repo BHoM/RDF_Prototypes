@@ -43,6 +43,9 @@ namespace BH.Engine.RDF
 
         public static string DataPropertyStringValue(object idpValue)
         {
+            if (idpValue == null)
+                return "";
+
             Type individualObjectType = idpValue.GetType();
             if (OntologyDataTypeMap.ToOntologyDataType.ContainsKey(individualObjectType))
                 return idpValue.ToString(); // we can just return the ToString()

@@ -40,6 +40,16 @@ namespace BH.Test.RDF
 {
     public class FromTTLTests : Test
     {
+        [SetUp]
+        public void SetUp()
+        {
+            m_ontologySettings = new OntologySettings()
+            {
+                ABoxSettings = new ABoxSettings() { IndividualsBaseAddress = "individuals.Address" },
+                TBoxSettings = new TBoxSettings() { CustomObjectTypesBaseAddress = "CustomObjectTypes.Address" }
+            };
+        }
+
         [Test]
         public static void BHoMObject_CustomDataAsProperties()
         {
@@ -118,8 +128,12 @@ namespace BH.Test.RDF
         [Test]
         public static void Point()
         {
+            // This test checks a geometry, so we set this to true.
+            m_ontologySettings.TBoxSettings.GeometryAsOntologyClass = true;
+
             Point p = new Point() { X = 101, Y = 102, Z = 103 };
             List<object> objectList = new List<object>() { p };
+
             string TTLGraph = objectList.TTLGraph(m_ontologySettings);
 
             Assert.IsTTLParsable(TTLGraph);
