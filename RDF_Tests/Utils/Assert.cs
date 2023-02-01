@@ -48,7 +48,7 @@ namespace BH.Test.RDF
     /// <summary>
     /// Class to interface with Unit Tests.
     /// </summary>
-    public static partial class Assert
+    public partial class Assert : NUnit.Framework.Assert
     {
         public static void IsTTLParsable(string ttl)
         {
@@ -88,17 +88,17 @@ namespace BH.Test.RDF
                 RecordTestFailure(error);
         }
 
-        public static void Single<T>(this IEnumerable<T> iList, string variableName = null)
+        public static void Single<T>(IEnumerable<T> iList, string variableName = null)
         {
-            iList.TotalCount(1, variableName);
+            TotalCount(iList, 1, variableName);
         }
 
-        public static void Single<T>(this IEnumerable<T> iList, object obj, string variableName = null)
+        public static void Single<T>(IEnumerable<T> iList, object obj, string variableName = null)
         {
-            iList.Where(o => o.Equals(obj)).TotalCount(1, variableName);
+            TotalCount(iList.Where(o => o.Equals(obj)), 1, variableName);
         }
 
-        public static void TotalCount<T>(this IEnumerable<T> iList, int expectedCount, string variableName = null)
+        public static void TotalCount<T>(IEnumerable<T> iList, int expectedCount, string variableName = null)
         {
             int count = iList.Count();
             variableName = string.IsNullOrWhiteSpace(variableName) ? "" : variableName + " ";
