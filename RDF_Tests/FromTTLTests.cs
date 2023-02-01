@@ -51,6 +51,49 @@ namespace BH.Test.RDF
         }
 
         [Test]
+        public static void BHoMObject_Property_ListOfObjects_Boxed()
+        {
+            BHoMObject bhomObj = new BHoMObject();
+
+            bhomObj.CustomData["boxedListOfObjects"] = new List<object>() {
+                    new Point(),
+                    new Point() { X = 1, Y = 1, Z = 1 },
+                    new Point() { X = 2, Y = 2, Z = 2 }
+                };
+
+            CSharpGraph cSharpGraph = Compute.CSharpGraph(new List<object>() { bhomObj }, m_ontologySettings);
+
+            string TTLGraph = cSharpGraph.ToTTLGraph();
+
+            Assert.IsTTLParsable(TTLGraph); // This MUST return an encoded customData dictionary - its entry is not seen as property!
+
+            var objs = Compute.ReadTTL(TTLGraph).Item1;
+
+            Assert.IsEqual(bhomObj, objs.First());
+        }
+
+        [Test]
+        public static void CustomType_Property_BoxedListOfObjects()
+        {
+            CustomObject co = new CustomObject();
+            co.CustomData[m_ontologySettings.TBoxSettings.CustomobjectsTypeKey] = "TestType";
+
+            // This property is boxed into a System.Object
+            List<Point> listOfPoints = new List<Point>() { new oM.Geometry.Point() { X = 101, Y = 102 }, new Point() { X = 201, Y = 202 } };
+            List<object> boxedProperty = listOfPoints.OfType<object>().ToList();
+            co.CustomData["testListObjects"] = boxedProperty;
+
+            CSharpGraph cSharpGraph_customObj = Compute.CSharpGraph(new List<object>() { co }, m_ontologySettings);
+            string TTLGraph = cSharpGraph_customObj.ToTTLGraph();
+
+            Assert.IsTTLParsable(TTLGraph);
+
+            var res = Compute.ReadTTL(TTLGraph).Item1.First();
+
+            Assert.IsEqual(co, res);
+        }
+
+        [Test]
         public static void BHoMObject_CustomDataAsProperties()
         {
             BHoMObject bhomObject = new BHoMObject();
@@ -134,7 +177,9 @@ namespace BH.Test.RDF
             Point p = new Point() { X = 101, Y = 102, Z = 103 };
             List<object> objectList = new List<object>() { p };
 
-            string TTLGraph = objectList.TTLGraph(m_ontologySettings);
+            CSharpGraph cSharpGraph = Compute.CSharpGraph(objectList, m_ontologySettings);
+
+            string TTLGraph = cSharpGraph.ToTTLGraph();
 
             Assert.IsTTLParsable(TTLGraph);
 
@@ -214,6 +259,7 @@ namespace BH.Test.RDF
         [Test]
         public static void CustomObject_MeshProperty()
         {
+
             BH.oM.Geometry.Mesh mesh = new Mesh()
             {
                 Faces = new List<Face>() { new Face() { A = 101, B = 102, C = 103, D = 104 }, new Face() { A = 201, B = 202, C = 203, D = 204 } },
@@ -282,6 +328,9 @@ namespace BH.Test.RDF
         [Test]
         public static void NurbsCurve_PropertyList_OfObjects()
         {
+            // This test checks a geometry, so we set this to true.
+            m_ontologySettings.TBoxSettings.GeometryAsOntologyClass = true;
+
             NurbsCurve nurbs = new NurbsCurve()
             {
                 ControlPoints = new List<Point>()
@@ -321,6 +370,9 @@ namespace BH.Test.RDF
         [Test]
         public static void FEMeshFace_PropertyList_OfPrimitives()
         {
+            // This test checks a geometry, so we set this to true.
+            m_ontologySettings.TBoxSettings.GeometryAsOntologyClass = true;
+
             BH.oM.Structure.Elements.FEMeshFace bhomObj = new BH.oM.Structure.Elements.FEMeshFace();
             bhomObj.NodeListIndices = new List<int>() { 1, 2, 3, 4 };
 

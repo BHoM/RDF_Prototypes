@@ -65,6 +65,20 @@ namespace BH.Engine.RDF
             return decryptedObj;
         }
 
+        public static bool TryDeserializeBase64Json(this string plainTextBytes, out object result)
+        {
+            result = null;
+
+            try
+            {
+                result = FromBase64JsonSerialized(plainTextBytes);
+                return true;
+            }
+            catch { }
+
+            return false;
+        }
+
         // ------------------------------------------- //
 
         private abstract class TypeWrapper

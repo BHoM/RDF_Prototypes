@@ -74,7 +74,7 @@ namespace BH.oM.RDF
 
         [Description("(defaults to false) If true, geometrical Types will be considered as Classes, and therefore Object Properties." +
             "Otherwise, geometrical types are considered as a DataType of type Base64Serialized, and the geometry is encoded as a Data Property.")]
-        public bool GeometryAsOntologyClass { get; set; } = true;
+        public bool GeometryAsOntologyClass { get; set; } = false;
     }
 
     [Description("Settings for the definition of an Ontology's A-Box.")]

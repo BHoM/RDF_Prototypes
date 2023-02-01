@@ -75,7 +75,7 @@ namespace BH.Engine.RDF
         // Private methods
         /***************************************************/
 
-        private static void AddToOntology(this Type type, TBoxSettings tBoxSettings = null)
+        private static void AddToOntology(this Type type, TBoxSettings tBoxSettings)
         {
             tBoxSettings = tBoxSettings ?? new TBoxSettings();
 
@@ -104,7 +104,7 @@ namespace BH.Engine.RDF
                 if (!parentType.IsOntologyClass(tBoxSettings))
                     continue;
 
-                AddToOntology(parentType);
+                AddToOntology(parentType, tBoxSettings);
             }
         }
 
@@ -158,7 +158,15 @@ namespace BH.Engine.RDF
             if (!domainType.IsOntologyClass(ontologySettings.TBoxSettings))
                 return; // do not add Properties of classes that are not Ontology classes (e.g. if domainType is a String, we do not want to add its property Chars).
             else
-                domainType.AddToOntology();
+                domainType.AddToOntology(ontologySettings.TBoxSettings);
+
+
+            if (pi.IsDataProperty(ontologySettings.TBoxSettings))
+            {
+                DataProperty hasPropertyRelation = new DataProperty() { PropertyInfo = pi, DomainClass = domainType, RangeType = rangeType };
+                AddIndividualDataPropertyRelation(individual, pi, ontologySettings, hasPropertyRelation, individualPropertyValue);
+                return;
+            }
 
             if (pi.IsObjectProperty(ontologySettings.TBoxSettings))
             {
@@ -187,24 +195,18 @@ namespace BH.Engine.RDF
                 }
 
                 // Make sure the RangeType is added to the ontology.
-                rangeType.AddToOntology();
+                rangeType.AddToOntology(ontologySettings.TBoxSettings);
 
                 // Add the ObjectProperty to the Graph for the T-Box.
                 ObjectProperty hasPropertyRelation = new ObjectProperty() { PropertyInfo = pi, DomainClass = domainType, RangeClass = rangeType };
                 m_cSharpGraph.ObjectProperties.Add(hasPropertyRelation);
 
-                AddIndividualObjectPropertyRelation(individual, pi, ontologySettings, hasPropertyRelation);
+                AddIndividualObjectPropertyRelation(individual, pi, ontologySettings, hasPropertyRelation, individualPropertyValue);
                 return;
-            }
-
-            if (pi.IsDataProperty(ontologySettings.TBoxSettings))
-            {
-                DataProperty hasPropertyRelation = new DataProperty() { PropertyInfo = pi, DomainClass = domainType, RangeType = rangeType };
-                AddIndividualDataPropertyRelation(individual, pi, ontologySettings, hasPropertyRelation);
             }
         }
 
-        private static void AddIndividualObjectPropertyRelation(object individual, PropertyInfo pi, OntologySettings ontologySettings, ObjectProperty hasPropertyRelation)
+        private static void AddIndividualObjectPropertyRelation(object individual, PropertyInfo pi, OntologySettings ontologySettings, ObjectProperty hasPropertyRelation, object propertyValue = null)
         {
             // If the individual is non-null, we will need to add the individuals' relation to the Graph in order to define the A-Box.
             if (!pi.IsObjectProperty(ontologySettings.TBoxSettings))
@@ -214,15 +216,13 @@ namespace BH.Engine.RDF
             }
 
             if (individual == null) return;
-            object propertyValue = null;
-            try
-            {
-                propertyValue = pi.CanRead ? pi.GetValue(individual) : null;
-            }
-            catch
-            {
+            if (propertyValue == null)
+                try
+                {
+                    propertyValue = pi.CanRead ? pi.GetValue(individual) : null;
+                }
+                catch { }
 
-            }
             if (!ontologySettings.ABoxSettings.ConsiderNullOrEmptyPropertyValues && propertyValue.IsNullOrEmpty())
                 return;
 
@@ -242,7 +242,7 @@ namespace BH.Engine.RDF
             AddIndividualToOntology(propertyValue, ontologySettings);
         }
 
-        private static void AddIndividualDataPropertyRelation(object individual, PropertyInfo pi, OntologySettings ontologySettings, DataProperty hasPropertyRelation)
+        private static void AddIndividualDataPropertyRelation(object individual, PropertyInfo pi, OntologySettings ontologySettings, DataProperty hasPropertyRelation, object propertyValue = null)
         {
             if (!pi.IsDataProperty(ontologySettings.TBoxSettings))
             {
@@ -258,16 +258,13 @@ namespace BH.Engine.RDF
 
             // If the individual is non-null, we will need to add the individuals' relation to the Graph in order to define the A-Box.
             if (individual == null) return;
-            object propertyValue = null;
 
-            try
-            {
-                propertyValue = pi.CanRead ? pi.GetValue(individual) : null;
-            }
-            catch
-            {
-
-            }
+            if (propertyValue == null)
+                try
+                {
+                    propertyValue = pi.CanRead ? pi.GetValue(individual) : null;
+                }
+                catch { }
 
             if (!ontologySettings.ABoxSettings.ConsiderNullOrEmptyPropertyValues && propertyValue.IsNullOrEmpty())
                 return;
@@ -295,7 +292,7 @@ namespace BH.Engine.RDF
             if (individualType.IsOntologyClass(ontologySettings.TBoxSettings))
             {
                 // Make sure the individual type is among the ontology classes.
-                individualType.AddToOntology();
+                individualType.AddToOntology(ontologySettings.TBoxSettings);
 
                 // Add the individual.
                 m_cSharpGraph.AllIndividuals.Add(individual);
@@ -304,7 +301,7 @@ namespace BH.Engine.RDF
             // Get this individual's properties.
             List<PropertyInfo> properties = individualType.GetProperties(BindingFlags.DeclaredOnly | BindingFlags.Instance | BindingFlags.Public).ToList();
             BHoMObject individualAsBHoMObj = individual as BHoMObject;
-            if (individualAsBHoMObj != null && !typeof(CustomObjectType).IsAssignableFrom(individualType))
+            if (individualAsBHoMObj != null && !(individualType is CustomObjectType))
             {
                 // It's not a Custom Type. Let's consider any entry in its CustomData dictionary as an extra property.
                 foreach (var entry in individualAsBHoMObj.CustomData)
@@ -321,6 +318,9 @@ namespace BH.Engine.RDF
 
             // Recurse for properties of this individual.
             properties.AddToOntology(ontologySettings, individual, fromProperty);
+
+            if (individualType is CustomObjectType)
+                return;
 
             // Because the T-Box should only include 'DeclaredOnly' properties,
             // add the Individual properties separately.
