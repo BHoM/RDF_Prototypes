@@ -32,12 +32,14 @@ using System.Threading.Tasks;
 using BH.Engine.Base;
 using BH.Engine.Reflection;
 using BH.oM.Base;
+using BH.oM.Geometry;
 
 namespace BH.Engine.RDF
 {
     public static partial class Query
     {
-        public static bool IsOntologyClass(this Type type)
+
+        public static bool IsOntologyClass(this Type type, bool geometryTypesAsClass = false)
         {
             // This method answers this question:
             // is there (should there be) a Class in the ontology that corresponds to this Type?
@@ -56,6 +58,9 @@ namespace BH.Engine.RDF
                 // ==> Other exceptions like this must be captured here.
 
                 if (typeof(FragmentSet).IsAssignableFrom(type))
+                    return false;
+
+                if (!geometryTypesAsClass && typeof(IGeometry).IsAssignableFrom(type))
                     return false;
 
                 return true;

@@ -71,6 +71,10 @@ namespace BH.oM.RDF
         [Description("Key of the CustomData dictionary that will be sought in CustomObjects. If a value is found there, and if the above option is true," +
             "the value will be used as if the CustomObject was a class called with this value.")]
         public string CustomobjectsTypeKey { get; set; } = "Type";
+
+        [Description("Determines if iGeometry objects are considered as Classes and thus serialized (false) or not (true)")]
+
+        public bool GeometryTypesAsClasses { get; set; } = false;
     }
 
     [Description("Settings for the definition of an Ontology's A-Box.")]

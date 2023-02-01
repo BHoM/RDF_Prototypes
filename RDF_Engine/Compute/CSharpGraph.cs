@@ -95,7 +95,7 @@ namespace BH.Engine.RDF
             //if (type.IsCollectionOfOntologyClasses())
             //    type = type.InnermostType();
 
-            if (type.IsOntologyClass())
+            if (type.IsOntologyClass(tBoxSettings.GeometryTypesAsClasses))
                 m_cSharpGraph.Classes.Add(type);
 
             List<Type> parentTypes = type.BaseTypes();

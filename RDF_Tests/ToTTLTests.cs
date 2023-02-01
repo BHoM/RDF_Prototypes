@@ -335,5 +335,40 @@ namespace BH.Test.RDF
 
             Assert.IsTTLParsable(TTLGraph); // This MUST return an encoded customData dictionary - its entry is not seen as property!
         }
+
+        [Test]
+        public static void Geometry_Serialized()
+        {
+            Room room = new Room() { Location = new Point() { X = 1, Y = 1, Z = 1 } };
+
+            OntologySettings ontologySettings = new OntologySettings();
+            ontologySettings.TBoxSettings.GeometryTypesAsClasses = false;
+
+            CSharpGraph cSharpGraph = Compute.CSharpGraph(new List<object>() { room }, ontologySettings);
+
+            // check for CSharpGraph here
+
+            string TTLGraph = new List<object>() { room }.TTLGraph(ontologySettings);
+
+            // Check for String here
+        }
+
+        [Test]
+        public static void Geometry_Non_Serialized()
+        {
+            Room room = new Room() { Location = new Point() { X = 1, Y = 1, Z = 1 } };
+
+            OntologySettings ontologySettings = new OntologySettings();
+            ontologySettings.TBoxSettings.GeometryTypesAsClasses = true;
+
+            CSharpGraph cSharpGraph = Compute.CSharpGraph(new List<object>() { room }, ontologySettings);
+
+            // check for CSharpGraph here
+
+            string TTLGraph = new List<object>() { room }.TTLGraph(ontologySettings);
+
+            // Check for String here
+
+        }
     }
 }
