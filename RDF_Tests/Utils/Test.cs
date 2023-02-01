@@ -33,11 +33,10 @@ namespace BH.Test.RDF
     /// </summary>
     public abstract partial class Test
     {
-        public static OntologySettings m_ontologySettings = new OntologySettings()
-        {
-            ABoxSettings = new ABoxSettings() { IndividualsBaseAddress = "individuals.Address" },
-            TBoxSettings = new TBoxSettings() { CustomObjectTypesBaseAddress = "CustomObjectTypes.Address" }
-        };
+        /// <summary>
+        /// To be initialized in Test SetUp methods.
+        /// </summary>
+        public static OntologySettings m_ontologySettings = null;
 
         /// <summary>
         /// Required because RandomObject generally fails with Column, returning invalid customdata key names.

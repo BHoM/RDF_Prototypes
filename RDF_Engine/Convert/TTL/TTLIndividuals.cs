@@ -71,7 +71,7 @@ namespace BH.Engine.RDF
                     // First check if the Object Property is a List.
                     // This check is done here rather than at the CSharpGraph stage because not all output formats support lists.
                     // TTL supports lists.
-                    if (iop.IsListOfOntologyClasses())
+                    if (iop.IsListOfOntologyClasses(cSharpGraph.OntologySettings.TBoxSettings))
                     {
                         var individualList = iop.RangeIndividual as IEnumerable<object>;
                         if (individualList.IsNullOrEmpty())
@@ -87,7 +87,7 @@ namespace BH.Engine.RDF
                             TLLIndividualRelations.Append($"\t\trdf:_{i} <{individualUri}> ;\n");
                         }
                     }
-                    else if (iop.RangeIndividual?.GetType().IsListOfDatatypes() ?? false)
+                    else if (iop.RangeIndividual?.GetType().IsListOfDatatypes(cSharpGraph.OntologySettings.TBoxSettings) ?? false)
                     {
                         var individualList = iop.RangeIndividual as IEnumerable;
                         if (individualList.IsNullOrEmpty())
@@ -109,7 +109,7 @@ namespace BH.Engine.RDF
                 }
 
                 IndividualDataProperty idp = individualRelation as IndividualDataProperty;
-                if (idp != null)
+                if (idp != null && idp.Value != null)
                 {
                     if (idp.Value is IEnumerable)
                     {

@@ -37,7 +37,7 @@ namespace BH.Engine.RDF
 {
     public static partial class Query
     {
-        public static bool IsObjectProperty(this PropertyInfo pi)
+        public static bool IsObjectProperty(this PropertyInfo pi, TBoxSettings tBoxSettings)
         {
             // An ontology Object property is a relation between two classes of an ontology.
             // A CSharp PropertyInfo can corresponds to an Object Property if:
@@ -46,7 +46,7 @@ namespace BH.Engine.RDF
             //       2a) can be translated to an Ontology class, OR
             //       2b) is a List of objects, whether it contains objects translatable to Ontology class or DataTypes (https://github.com/BHoM/RDF_Prototypes/issues/17)
 
-            return pi.PropertyType.IsOntologyClass() && pi.DeclaringType.IsOntologyClass() || pi.PropertyType.IsList();
+            return pi.PropertyType.IsOntologyClass(tBoxSettings) && pi.DeclaringType.IsOntologyClass(tBoxSettings) || pi.PropertyType.IsList();
         }
     }
 }

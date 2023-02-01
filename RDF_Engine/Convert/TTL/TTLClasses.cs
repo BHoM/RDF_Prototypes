@@ -50,7 +50,7 @@ namespace BH.Engine.RDF
                 TTLClass += $"\n:{classType.UniqueNodeId()} rdf:type owl:Class;";
 
                 // Subclasses
-                List<Type> parentTypes = classType.BaseTypesNoRedundancy().Where(t => t.IsOntologyClass()).ToList();
+                List<Type> parentTypes = classType.BaseTypesNoRedundancy().Where(t => t.IsOntologyClass(cSharpGraph.OntologySettings.TBoxSettings)).ToList();
 
                 foreach (Type subClass in parentTypes)
                 {

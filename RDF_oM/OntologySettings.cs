@@ -71,6 +71,10 @@ namespace BH.oM.RDF
         [Description("Key of the CustomData dictionary that will be sought in CustomObjects. If a value is found there, and if the above option is true," +
             "the value will be used as if the CustomObject was a class called with this value.")]
         public string CustomobjectsTypeKey { get; set; } = "Type";
+
+        [Description("(defaults to false) If true, geometrical Types will be considered as Classes, and therefore Object Properties." +
+            "Otherwise, geometrical types are considered as a DataType of type Base64Serialized, and the geometry is encoded as a Data Property.")]
+        public bool GeometryAsOntologyClass { get; set; } = true;
     }
 
     [Description("Settings for the definition of an Ontology's A-Box.")]

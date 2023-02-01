@@ -45,7 +45,7 @@ namespace BH.Engine.RDF
             return typeof(IList).IsAssignableFrom(t);
         }
 
-        public static bool IsListOfOntologyClasses(this Type sourceType, object sourceObj)
+        public static bool IsListOfOntologyClasses(this Type sourceType, object sourceObj, TBoxSettings tBoxSettings)
         {
             if (sourceType == null)
                 return false;
@@ -62,7 +62,7 @@ namespace BH.Engine.RDF
 
             // If the List generic arg can be translated to an Ontology class, job done.
             if (genericArgs.First() != typeof(System.Object))
-                return genericArgs.First().IsOntologyClass();
+                return genericArgs.First().IsOntologyClass(tBoxSettings);
 
             // If the List generic arg is System.Object, the objects may still be Ontology classes that have been boxed.
             if (sourceObj != null && genericArgs.First() == typeof(System.Object))
@@ -70,26 +70,26 @@ namespace BH.Engine.RDF
                 List<object> objList = sourceObj as List<object>;
 
                 // Unbox the objects and see if their actual type is an Ontology class.
-                return objList.All(o => o.GetType().IsOntologyClass());
+                return objList.All(o => o.GetType().IsOntologyClass(tBoxSettings));
             }
 
             return false;
         }
 
-        public static bool IsListOfOntologyClasses(this IndividualObjectProperty iop)
+        public static bool IsListOfOntologyClasses(this IndividualObjectProperty iop, TBoxSettings tBoxSettings)
         {
             Type rangeType = iop.RangeIndividual?.GetType();
 
-            return IsListOfOntologyClasses(rangeType, iop.RangeIndividual);
+            return IsListOfOntologyClasses(rangeType, iop.RangeIndividual, tBoxSettings);
         }
 
-        public static bool IsListOfDatatypes(this Type t)
+        public static bool IsListOfDatatypes(this Type t, TBoxSettings tBoxSettings)
         {
             if (t.IsList())
             {
                 Type[] genericArgs = t.GetGenericArguments();
 
-                if (genericArgs.Length == 1 && genericArgs.First().IsDataType())
+                if (genericArgs.Length == 1 && genericArgs.First().IsDataType(tBoxSettings))
                     return true;
             }
 
