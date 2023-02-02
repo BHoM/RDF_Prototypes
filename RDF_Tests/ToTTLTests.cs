@@ -56,6 +56,50 @@ namespace BH.Test.RDF
         }
 
         [Test]
+        public static void Geometry_Serialized()
+        {
+            Room room = new Room();
+            room.Perimeter = new Polyline() { ControlPoints = new List<Point>() { new Point() { X = 5, Y = 5, Z = 5 }, new Point() { X = 99 } } };
+            room.Location = new Point();
+            room.Name = "A room object";
+
+            CSharpGraph cSharpGraph = Compute.CSharpGraph(new List<object>() { room }, new OntologySettings()
+            {
+                TBoxSettings = new TBoxSettings { GeometryAsOntologyClass = false }
+            });
+
+            string TTLGraph = new List<object>() { room }.TTLGraph(m_ontologySettings);
+
+            Assert.IsTrue(!cSharpGraph.ObjectProperties.Any() && !TTLGraph.Contains(room.Location.ToString()));
+
+        }
+
+        [Test]
+        public static void Geometry_Non_Serialized()
+        {
+            Room room = new Room();
+            room.Perimeter = new Polyline() { ControlPoints = new List<Point>() { new Point() { X = 5, Y = 5, Z = 5 }, new Point() { X = 99 } } };
+            room.Location = new Point();
+            room.Name = "A room object";
+
+            CSharpGraph cSharpGraph = Compute.CSharpGraph(new List<object>() { room }, new OntologySettings()
+            {
+                TBoxSettings = new TBoxSettings { GeometryAsOntologyClass = true }
+            });
+
+            Assert.IsTrue(cSharpGraph.Classes.Contains(room.Location.GetType()));
+
+
+            string TTLGraph = new List<object>() { room }.TTLGraph(new OntologySettings()
+            {
+                TBoxSettings = new TBoxSettings { GeometryAsOntologyClass = true }
+            });
+
+            Assert.IsTrue(cSharpGraph.ObjectProperties.Any() && TTLGraph.Contains(room.Location.ToString()));
+
+        }
+
+        [Test]
         public static void GeometryAsBase64()
         {
             m_ontologySettings.TBoxSettings.GeometryAsOntologyClass = false;
