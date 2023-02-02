@@ -101,7 +101,7 @@ namespace BH.Engine.RDF
             List<Type> parentTypes = type.BaseTypes();
             foreach (var parentType in parentTypes)
             {
-                if (!parentType.IsOntologyClass())
+                if (!parentType.IsOntologyClass(tBoxSettings.GeometryTypesAsClasses))
                     continue;
 
                 AddToOntology(parentType);
@@ -155,7 +155,7 @@ namespace BH.Engine.RDF
                 }
             }
 
-            if (!domainType.IsOntologyClass())
+            if (!domainType.IsOntologyClass(ontologySettings.TBoxSettings.GeometryTypesAsClasses))
                 return; // do not add Properties of classes that are not Ontology classes (e.g. if domainType is a String, we do not want to add its property Chars).
             else
                 domainType.AddToOntology();
@@ -292,7 +292,7 @@ namespace BH.Engine.RDF
             ontologySettings = ontologySettings ?? new OntologySettings();
 
             // Only individuals that are of types mappable to Ontology classes can be added.
-            if (individualType.IsOntologyClass())
+            if (individualType.IsOntologyClass(ontologySettings.TBoxSettings.GeometryTypesAsClasses))
             {
                 // Make sure the individual type is among the ontology classes.
                 individualType.AddToOntology();

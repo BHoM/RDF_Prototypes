@@ -40,6 +40,7 @@ using NUnit.Framework;
 using BH.oM.Physical.FramingProperties;
 using VDS.RDF.Query.Expressions.Comparison;
 using FluentAssertions;
+using VDS.RDF.Query.Aggregates.Leviathan;
 
 namespace BH.Test.RDF
 {
@@ -339,35 +340,44 @@ namespace BH.Test.RDF
         [Test]
         public static void Geometry_Serialized()
         {
-            Room room = new Room() { Location = new Point() { X = 1, Y = 1, Z = 1 } };
+            Room room = new Room();
+            room.Perimeter = new Polyline() { ControlPoints = new List<Point>() { new Point() { X = 5, Y = 5, Z = 5 }, new Point() { X = 99 } } };
+            room.Location = new Point();
+            room.Name = "A room object";
 
-            OntologySettings ontologySettings = new OntologySettings();
-            ontologySettings.TBoxSettings.GeometryTypesAsClasses = false;
+            CSharpGraph cSharpGraph = Compute.CSharpGraph(new List<object>() { room }, new OntologySettings()
+            {
+                TBoxSettings = new TBoxSettings { GeometryTypesAsClasses = false }
+            });
 
-            CSharpGraph cSharpGraph = Compute.CSharpGraph(new List<object>() { room }, ontologySettings);
+            string TTLGraph = new List<object>() { room }.TTLGraph(m_ontologySettings);
 
-            // check for CSharpGraph here
-
-            string TTLGraph = new List<object>() { room }.TTLGraph(ontologySettings);
-
-            // Check for String here
+            Assert.IsTrue(!cSharpGraph.ObjectProperties.Any() && !TTLGraph.Contains(room.Location.ToString()));
+            
         }
 
         [Test]
         public static void Geometry_Non_Serialized()
         {
-            Room room = new Room() { Location = new Point() { X = 1, Y = 1, Z = 1 } };
+            Room room = new Room();
+            room.Perimeter = new Polyline() { ControlPoints = new List<Point>() { new Point() { X = 5, Y = 5, Z = 5 }, new Point() { X = 99 } } };
+            room.Location = new Point();
+            room.Name = "A room object";
 
-            OntologySettings ontologySettings = new OntologySettings();
-            ontologySettings.TBoxSettings.GeometryTypesAsClasses = true;
+            CSharpGraph cSharpGraph = Compute.CSharpGraph(new List<object>() { room }, new OntologySettings() 
+            { 
+                TBoxSettings = new TBoxSettings { GeometryTypesAsClasses = true }
+            });
 
-            CSharpGraph cSharpGraph = Compute.CSharpGraph(new List<object>() { room }, ontologySettings);
+            Assert.IsTrue(cSharpGraph.Classes.Contains(room.Location.GetType()));
 
-            // check for CSharpGraph here
 
-            string TTLGraph = new List<object>() { room }.TTLGraph(ontologySettings);
+            string TTLGraph = new List<object>() { room }.TTLGraph(new OntologySettings() 
+            {
+                TBoxSettings = new TBoxSettings { GeometryTypesAsClasses = true }
+            });
 
-            // Check for String here
+            Assert.IsTrue(cSharpGraph.ObjectProperties.Any() && TTLGraph.Contains(room.Location.ToString()));
 
         }
     }
