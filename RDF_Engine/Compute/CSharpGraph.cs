@@ -65,7 +65,7 @@ namespace BH.Engine.RDF
             m_cSharpGraph = new CSharpGraph() { OntologySettings = ontologySettings };
 
             foreach (var type in types)
-                AddToOntology(type, ontologySettings.TBoxSettings);
+                AddToOntology(type, ontologySettings);
 
             return m_cSharpGraph;
         }
@@ -75,10 +75,8 @@ namespace BH.Engine.RDF
         // Private methods
         /***************************************************/
 
-        private static void AddToOntology(this Type type, TBoxSettings tBoxSettings)
+        private static void AddToOntology(this Type type, OntologySettings ontologySettings)
         {
-            tBoxSettings = tBoxSettings ?? new TBoxSettings();
-
             if (type == typeof(CustomObjectType))
                 return; // only add sub-types of CustomObjectType.
 
@@ -95,16 +93,20 @@ namespace BH.Engine.RDF
             //if (type.IsCollectionOfOntologyClasses())
             //    type = type.InnermostType();
 
-            if (type.IsOntologyClass(tBoxSettings))
+            if (type.IsOntologyClass(ontologySettings.TBoxSettings))
                 m_cSharpGraph.Classes.Add(type);
 
+            var props = type.GetProperties(BindingFlags.DeclaredOnly | BindingFlags.Instance | BindingFlags.Public);
+            props.AddToOntology(ontologySettings);
+
+            // Recurse for parent Types.
             List<Type> parentTypes = type.BaseTypes();
             foreach (var parentType in parentTypes)
             {
-                if (!parentType.IsOntologyClass(tBoxSettings))
+                if (!parentType.IsOntologyClass(ontologySettings.TBoxSettings))
                     continue;
 
-                AddToOntology(parentType, tBoxSettings);
+                AddToOntology(parentType, ontologySettings);
             }
         }
 
@@ -158,7 +160,7 @@ namespace BH.Engine.RDF
             if (!domainType.IsOntologyClass(ontologySettings.TBoxSettings))
                 return; // do not add Properties of classes that are not Ontology classes (e.g. if domainType is a String, we do not want to add its property Chars).
             else
-                domainType.AddToOntology(ontologySettings.TBoxSettings);
+                domainType.AddToOntology(ontologySettings);
 
 
             if (pi.IsDataProperty(ontologySettings.TBoxSettings))
@@ -195,7 +197,7 @@ namespace BH.Engine.RDF
                 }
 
                 // Make sure the RangeType is added to the ontology.
-                rangeType.AddToOntology(ontologySettings.TBoxSettings);
+                rangeType.AddToOntology(ontologySettings);
 
                 // Add the ObjectProperty to the Graph for the T-Box.
                 ObjectProperty hasPropertyRelation = new ObjectProperty() { PropertyInfo = pi, DomainClass = domainType, RangeClass = rangeType };
@@ -292,7 +294,7 @@ namespace BH.Engine.RDF
             if (individualType.IsOntologyClass(ontologySettings.TBoxSettings))
             {
                 // Make sure the individual type is among the ontology classes.
-                individualType.AddToOntology(ontologySettings.TBoxSettings);
+                individualType.AddToOntology(ontologySettings);
 
                 // Add the individual.
                 m_cSharpGraph.AllIndividuals.Add(individual);

@@ -178,6 +178,8 @@ namespace BH.Test.RDF
         [Test]
         public static void Point()
         {
+            m_ontologySettings.TBoxSettings.GeometryAsOntologyClass = true;
+
             Point p = new Point() { X = 101, Y = 102, Z = 103 };
             List<object> objectList = new List<object>() { p };
             string TTLGraph = objectList.TTLGraph(m_ontologySettings);

@@ -42,14 +42,6 @@ namespace BH.Engine.RDF
             {
                 var rel = cSharpGraph.ObjectProperties.ElementAt(i);
 
-                string gitHubUri = rel.PropertyInfo.OntologyURI(cSharpGraph.OntologySettings.TBoxSettings, localRepositorySettings)?.ToString();
-
-                if (gitHubUri.IsNullOrEmpty())
-                {
-                    Log.RecordWarning($"Could not add the {nameof(CSharpGraph)}.{nameof(CSharpGraph.ObjectProperties)}: could not compute its URI.");
-                    continue;
-                }
-
                 try
                 {
                     string TTLObjectProperty = "";
@@ -57,8 +49,11 @@ namespace BH.Engine.RDF
                     if (rel.RangeClass == null || rel.PropertyInfo == null)
                         continue;
 
-                    string propertyURI = rel.PropertyInfo.OntologyURI(cSharpGraph.OntologySettings.TBoxSettings, localRepositorySettings).ToString();
-                    TTLObjectProperty += $"\n### {propertyURI}";
+                    if (localRepositorySettings.TryComputeURLFromFilePaths)
+                    {
+                        string propertyURI = rel.PropertyInfo.OntologyURI(cSharpGraph.OntologySettings.TBoxSettings, localRepositorySettings).ToString();
+                        TTLObjectProperty += $"\n### {propertyURI}";
+                    }
                     TTLObjectProperty += $"\n:{rel.PropertyInfo.UniqueNodeId()} rdf:type owl:ObjectProperty ;";
                     TTLObjectProperty += $"\nrdfs:domain :{rel.DomainClass.UniqueNodeId()} ;";
                     TTLObjectProperty += $"\nrdfs:range :{rel.RangeClass.UniqueNodeId()} ;";

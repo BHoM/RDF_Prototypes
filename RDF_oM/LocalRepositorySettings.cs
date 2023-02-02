@@ -35,6 +35,7 @@ namespace BH.oM.RDF
 {
     public class LocalRepositorySettings : IObject
     {
+        public bool TryComputeURLFromFilePaths { get; set; } = true;
         [Description("Path to the root of your local Git folder where the BHoM repository can be found. For example, `C:\\Users\\myUserName\\GitHub`.")]
         public string GitRootPath { get; set; } = "";
         public string CacheRootPath { get; set; } = Directory.GetParent(Directory.GetParent(new Uri(Path.GetDirectoryName(Assembly.GetExecutingAssembly().CodeBase)).LocalPath).FullName).FullName;
