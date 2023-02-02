@@ -102,6 +102,11 @@ namespace BH.Engine.RDF
 
         /***************************************************/
 
+        public static string DescriptiveName(this Assembly assembly)
+        {
+            return assembly.GetName().Name;
+        }
+
         public static string DescriptiveName(this object obj)
         {
             return obj.GetType().DescriptiveName();

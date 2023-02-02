@@ -87,7 +87,7 @@ namespace BH.Engine.RDF
         [Description("Returns the Uri to be used for the Ontology of the input MemberInfo. " +
             "If the input Type is a BHoM type, the Uri will be calculated from the file structure of a local copy of the main BHoM repository, as instructed by the `LocalRepositorySettings` input." +
             "Other Uri options can be found in the `TBoxSettings` input.")]
-        public static Uri OntologyURI(this MemberInfo miToSearch, TBoxSettings tBoxSettings, LocalRepositorySettings repoSettings)
+        public static Uri? OntologyURI(this MemberInfo miToSearch, TBoxSettings tBoxSettings, LocalRepositorySettings repoSettings)
         {
             // Null guards
             if (miToSearch == null)
@@ -114,9 +114,10 @@ namespace BH.Engine.RDF
             }
 
             // Try extracting the Github Uri by deriving it from a fileSystem search for a `.cs` file corresponding to the input Type.
-            Uri result = GithubURIFromLocalRepository(miToSearch as dynamic, tBoxSettings, repoSettings);
+            if (repoSettings.TryComputeURLFromFilePaths)
+                return GithubURIFromLocalRepository(miToSearch as dynamic, tBoxSettings, repoSettings);
 
-            return result;
+            return null;
         }
 
         /***************************************************/
@@ -143,7 +144,10 @@ namespace BH.Engine.RDF
             }
 
             // Try extracting the Github Uri by deriving it from a fileSystem search for a `.cs` file corresponding to the input Type.
-            Uri result = GithubURIFromLocalRepository(typeToSearch, tBoxSettings, repoSettings);
+            Uri result = null;
+            if (repoSettings.TryComputeURLFromFilePaths)
+                result = GithubURIFromLocalRepository(typeToSearch, tBoxSettings, repoSettings);
+            
             if (result != null)
                 return result;
 

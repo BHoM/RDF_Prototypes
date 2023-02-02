@@ -41,12 +41,13 @@ namespace BH.Engine.RDF
         public static List<Assembly> LoadAssembliesInDirectory(string dllDirectory = @"C:\ProgramData\BHoM\Assemblies", 
             bool onlyoMAssemblies = false, 
             bool onlyBHoMAssemblies = true, 
-            bool tryLoadWithoutDependencies = false)
+            bool tryLoadWithoutDependencies = false,
+            SearchOption searchOption = SearchOption.TopDirectoryOnly)
         {
             if (m_cachedAssemblies != null)
                 return m_cachedAssemblies;
 
-            var assemblyFiles = Directory.GetFiles(dllDirectory, "*.dll").ToList();
+            var assemblyFiles = Directory.GetFiles(dllDirectory, "*.dll", searchOption).ToList();
 
             if (onlyoMAssemblies)
                 assemblyFiles = assemblyFiles.Where(name => name.EndsWith("_oM.dll") || name.EndsWith("BHoM.dll")).ToList();

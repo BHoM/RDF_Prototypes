@@ -42,20 +42,23 @@ namespace BH.Engine.RDF
             {
                 var rel = cSharpGraph.DataProperties.ElementAt(i);
 
-                string ontologyUri = rel.PropertyInfo.OntologyURI(cSharpGraph.OntologySettings.TBoxSettings, localRepositorySettings)?.ToString();
+                // Ontology URI not used for Data Types.
+                //string ontologyUri = rel.PropertyInfo.OntologyURI(cSharpGraph.OntologySettings.TBoxSettings, localRepositorySettings)?.ToString();
 
-                if (ontologyUri.IsNullOrEmpty())
-                {
-                    Log.RecordWarning($"Could not add the DataProperty relation `{rel.PropertyInfo.Name}` of type `{rel.PropertyInfo.DeclaringType}`: could not compute its URI.");
-                    continue;
-                }
+                //if (ontologyUri.IsNullOrEmpty())
+                //{
+                //    Log.RecordWarning($"Could not add the DataProperty relation `{rel.PropertyInfo.Name}` of type `{rel.PropertyInfo.DeclaringType}`: could not compute its URI.");
+                //    continue;
+                //}
 
                 try
                 {
                     string TTLDataProperty = "";
 
-                    string propertyURI = rel.PropertyInfo.OntologyURI(cSharpGraph.OntologySettings.TBoxSettings, localRepositorySettings).ToString();
-                    TTLDataProperty += $"\n### {propertyURI}";
+                    string propertyURI = rel.PropertyInfo.OntologyURI(cSharpGraph.OntologySettings.TBoxSettings, localRepositorySettings)?.ToString();
+                    if (!string.IsNullOrWhiteSpace(propertyURI))
+                        TTLDataProperty += $"\n### {propertyURI}";
+
                     TTLDataProperty += $"\n:{rel.PropertyInfo.UniqueNodeId()} rdf:type owl:DatatypeProperty ;";
                     TTLDataProperty += $"\nrdfs:domain :{rel.DomainClass.UniqueNodeId()} ;";
 
