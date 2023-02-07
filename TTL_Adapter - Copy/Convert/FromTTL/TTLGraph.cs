@@ -36,7 +36,7 @@ using BH.Engine.Base;
 using BH.oM.RDF;
 using BH.oM.Base.Attributes;
 
-namespace BH.Engine.RDF
+namespace BH.Adapters.TTL
 {
     public static partial class Compute
     {

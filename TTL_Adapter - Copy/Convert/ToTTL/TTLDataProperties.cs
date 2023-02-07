@@ -20,6 +20,7 @@
  * along with this code. If not, see <https://www.gnu.org/licenses/lgpl-3.0.html>.      
  */
 
+using BH.Engine.RDF;
 using BH.oM.RDF;
 using System;
 using System.Collections;
@@ -30,7 +31,7 @@ using System.Reflection;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace BH.Engine.RDF
+namespace BH.Adapters.TTL
 {
     public static partial class Convert
     {

@@ -20,46 +20,55 @@
  * along with this code. If not, see <https://www.gnu.org/licenses/lgpl-3.0.html>.      
  */
 
-using System;
-using System.Diagnostics;
-using System.IO;
-using System.Linq;
-using System.Net.Http;
-using System.Net.Http.Headers;
+
+using BH.Engine.Base;
 using BH.Engine.RDF;
+using BH.oM.Base;
 using BH.oM.RDF;
-using VDS.RDF;
-using VDS.RDF.Parsing;
-using VDS.RDF.Update;
+using Newtonsoft.Json;
+using Newtonsoft.Json.Linq;
+using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.ComponentModel;
+using System.IO;
+using System.Linq;
 using System.Reflection;
-using BH.Adapters.TTL;
-using Compute = BH.Engine.RDF.Compute;
+using System.Text;
+using System.Threading.Tasks;
+using VDS.RDF.Ontology;
+using VDS.RDF.Parsing;
+using BH.Engine.RDF;
 
-namespace BH.oM.CodeAnalysis.ConsoleApp
+namespace BH.Adapter.RDF
 {
-    public static class Program
+    public static partial class Convert
     {
-        public static void Main(string[] args = null)
+        /***************************************************/
+        /**** Public Methods                            ****/
+        /***************************************************/
+
+        [Description("Converts a TTL string to a DotNetRDF graph object called OntologyGraph.")]
+        public static OntologyGraph ToDotNetRDF(string ttlGraph)
         {
-            var assemblies = Compute.LoadAssembliesInDirectory(@"C:\ProgramData\BHoM\Assemblies",
-                onlyBHoMAssemblies: true, onlyoMAssemblies: true,
-                searchOption: SearchOption.AllDirectories);
+            OntologyGraph g = new OntologyGraph();
 
-            Dictionary<string, Type[]> typesPerAssembly = assemblies.ToDictionary(a => a.DescriptiveName(), a => a.TryGetTypes());
+            TurtleParser turtleParser = new TurtleParser();
+            TextReader reader = new StringReader(ttlGraph);
 
-            LocalRepositorySettings localRepositorySettings = new() { TryComputeURLFromFilePaths = false};
-            OntologySettings ontologySettings = new();
-
-            foreach (var kv in typesPerAssembly)
+            try
             {
-                CSharpGraph cSharpGraph = Engine.RDF.Compute.CSharpGraph(kv.Value.ToList(), ontologySettings);
-
-                string filePath = Path.GetFullPath(Path.Combine("C:/temp/" , kv.Key + ".ttl"));
-                
-                cSharpGraph.ToTTLGraph(localRepositorySettings, filePath);
+                turtleParser.Load(g, reader);
             }
+            catch (Exception e)
+            {
+                Log.RecordError($"Could not convert textual TTL graph to a DotNetRDF OntologyGraph. Error:\n\t{e.ToString().SplitInLinesAndTabify()}");
+            }
+
+            if (new OntologyGraph().Equals(g))
+                return null;
+
+            return g;
         }
     }
 }

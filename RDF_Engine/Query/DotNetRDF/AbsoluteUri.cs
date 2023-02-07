@@ -20,46 +20,30 @@
  * along with this code. If not, see <https://www.gnu.org/licenses/lgpl-3.0.html>.      
  */
 
+using BH.oM.Base;
 using System;
-using System.Diagnostics;
-using System.IO;
-using System.Linq;
-using System.Net.Http;
-using System.Net.Http.Headers;
-using BH.Engine.RDF;
-using BH.oM.RDF;
-using VDS.RDF;
-using VDS.RDF.Parsing;
-using VDS.RDF.Update;
 using System.Collections;
 using System.Collections.Generic;
+using System.ComponentModel;
+using System.Linq;
 using System.Reflection;
-using BH.Adapters.TTL;
-using Compute = BH.Engine.RDF.Compute;
+using System.Text;
+using System.Threading.Tasks;
+using VDS.RDF;
+using VDS.RDF.Ontology;
 
-namespace BH.oM.CodeAnalysis.ConsoleApp
+namespace BH.Engine.RDF
 {
-    public static class Program
+    public static partial class Query
     {
-        public static void Main(string[] args = null)
+        public static Uri AbsoluteUri(this INode node)
         {
-            var assemblies = Compute.LoadAssembliesInDirectory(@"C:\ProgramData\BHoM\Assemblies",
-                onlyBHoMAssemblies: true, onlyoMAssemblies: true,
-                searchOption: SearchOption.AllDirectories);
+            UriNode uriNode = node as UriNode;
 
-            Dictionary<string, Type[]> typesPerAssembly = assemblies.ToDictionary(a => a.DescriptiveName(), a => a.TryGetTypes());
+            if (uriNode == null)
+                return null;
 
-            LocalRepositorySettings localRepositorySettings = new() { TryComputeURLFromFilePaths = false};
-            OntologySettings ontologySettings = new();
-
-            foreach (var kv in typesPerAssembly)
-            {
-                CSharpGraph cSharpGraph = Engine.RDF.Compute.CSharpGraph(kv.Value.ToList(), ontologySettings);
-
-                string filePath = Path.GetFullPath(Path.Combine("C:/temp/" , kv.Key + ".ttl"));
-                
-                cSharpGraph.ToTTLGraph(localRepositorySettings, filePath);
-            }
+            return new Uri(uriNode.Uri.AbsoluteUri);
         }
     }
 }

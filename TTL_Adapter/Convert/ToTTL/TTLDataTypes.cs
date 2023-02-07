@@ -20,46 +20,43 @@
  * along with this code. If not, see <https://www.gnu.org/licenses/lgpl-3.0.html>.      
  */
 
-using System;
-using System.Diagnostics;
-using System.IO;
-using System.Linq;
-using System.Net.Http;
-using System.Net.Http.Headers;
 using BH.Engine.RDF;
 using BH.oM.RDF;
-using VDS.RDF;
-using VDS.RDF.Parsing;
-using VDS.RDF.Update;
+using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.ComponentModel;
+using System.Linq;
 using System.Reflection;
-using BH.Adapters.TTL;
-using Compute = BH.Engine.RDF.Compute;
+using System.Text;
+using System.Threading.Tasks;
 
-namespace BH.oM.CodeAnalysis.ConsoleApp
+namespace BH.Adapters.TTL
 {
-    public static class Program
+    public static partial class Convert
     {
-        public static void Main(string[] args = null)
+        private static List<string> TTLDataTypes(this CSharpGraph cSharpGraph, LocalRepositorySettings r)
         {
-            var assemblies = Compute.LoadAssembliesInDirectory(@"C:\ProgramData\BHoM\Assemblies",
-                onlyBHoMAssemblies: true, onlyoMAssemblies: true,
-                searchOption: SearchOption.AllDirectories);
+            List<string> dataTypes = new List<string>();
 
-            Dictionary<string, Type[]> typesPerAssembly = assemblies.ToDictionary(a => a.DescriptiveName(), a => a.TryGetTypes());
+            dataTypes.Add(DefaultDataTypeForUnknownConversion(cSharpGraph.OntologySettings.TBoxSettings, r));
 
-            LocalRepositorySettings localRepositorySettings = new() { TryComputeURLFromFilePaths = false};
-            OntologySettings ontologySettings = new();
+            return dataTypes;
+        }
 
-            foreach (var kv in typesPerAssembly)
-            {
-                CSharpGraph cSharpGraph = Engine.RDF.Compute.CSharpGraph(kv.Value.ToList(), ontologySettings);
+        private static string DefaultDataTypeForUnknownConversion(TBoxSettings tboxSettings, LocalRepositorySettings r)
+        {
+            string defaultDataTypeUri = typeof(BH.oM.RDF.Base64JsonSerialized).OntologyUri(tboxSettings, r)?.ToString();
 
-                string filePath = Path.GetFullPath(Path.Combine("C:/temp/" , kv.Key + ".ttl"));
-                
-                cSharpGraph.ToTTLGraph(localRepositorySettings, filePath);
-            }
+            // TODO: add better guard against null, possibly adding mechanism to provide a defaultDataType URI rather than a Type.
+            defaultDataTypeUri = defaultDataTypeUri ?? "https://github.com/BHoM/RDF_Prototypes/commit/ff8ccb68dbba5aeadb4a9a284f141eb1515e169a";
+
+            string TTLDataType = "";
+            //TTLDataType = $"### {defaultDataTypeUri}";
+            TTLDataType += $"\n<https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/Base64JsonSerialized.cs> rdf:type rdfs:Datatype ;";
+            TTLDataType += "\n" + $@"rdfs:label ""{typeof(BH.oM.RDF.Base64JsonSerialized).DescriptiveName()}""@en .";
+
+            return TTLDataType;
         }
     }
 }

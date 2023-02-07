@@ -20,46 +20,41 @@
  * along with this code. If not, see <https://www.gnu.org/licenses/lgpl-3.0.html>.      
  */
 
-using System;
-using System.Diagnostics;
-using System.IO;
-using System.Linq;
-using System.Net.Http;
-using System.Net.Http.Headers;
-using BH.Engine.RDF;
-using BH.oM.RDF;
-using VDS.RDF;
-using VDS.RDF.Parsing;
-using VDS.RDF.Update;
-using System.Collections;
-using System.Collections.Generic;
-using System.Reflection;
+using BH.Adapter;
 using BH.Adapters.TTL;
-using Compute = BH.Engine.RDF.Compute;
+using BH.Engine.RDF;
+using BH.oM.Adapter;
+using BH.oM.Base.Attributes;
+using BH.oM.RDF;
+using System;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using VDS.RDF.Ontology;
+using BH.Adapters;
 
-namespace BH.oM.CodeAnalysis.ConsoleApp
+namespace BH.Adapters.TTL
 {
-    public static class Program
+    public partial class TTLAdapter : BHoMAdapter
     {
-        public static void Main(string[] args = null)
+        /***************************************************/
+        /**** Constructors                              ****/
+        /***************************************************/
+
+        public override IEnumerable<object> Pull(oM.Data.Requests.IRequest request, PullType pullType = PullType.AdapterDefault, ActionConfig actionConfig = null)
         {
-            var assemblies = Compute.LoadAssembliesInDirectory(@"C:\ProgramData\BHoM\Assemblies",
-                onlyBHoMAssemblies: true, onlyoMAssemblies: true,
-                searchOption: SearchOption.AllDirectories);
-
-            Dictionary<string, Type[]> typesPerAssembly = assemblies.ToDictionary(a => a.DescriptiveName(), a => a.TryGetTypes());
-
-            LocalRepositorySettings localRepositorySettings = new() { TryComputeURLFromFilePaths = false};
-            OntologySettings ontologySettings = new();
-
-            foreach (var kv in typesPerAssembly)
+            if (!string.IsNullOrEmpty(m_filepath))
             {
-                CSharpGraph cSharpGraph = Engine.RDF.Compute.CSharpGraph(kv.Value.ToList(), ontologySettings);
-
-                string filePath = Path.GetFullPath(Path.Combine("C:/temp/" , kv.Key + ".ttl"));
-                
-                cSharpGraph.ToTTLGraph(localRepositorySettings, filePath);
+                Log.RecordNote($"Pulling objects from file: {m_filepath}.");
+                return new List<object>() { Adapters.TTL.Convert.FromTTL(m_filepath) };
             }
+
+            Log.RecordNote($"To pull from a TTL file, please specify the filepath in the TTL Adapter." +
+                $"If you want to convert a TTL text string to objects, please use the method {nameof(BH.Adapters.TTL.Convert.FromTTL)} ");
+
+            return new List<object>();
         }
     }
 }

@@ -22,6 +22,7 @@
 
 
 using BH.Engine.Base;
+using BH.Engine.RDF;
 using BH.oM.Base;
 using BH.oM.RDF;
 using Microsoft.Extensions.Primitives;
@@ -37,7 +38,7 @@ using System.Reflection;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace BH.Engine.RDF
+namespace BH.Adapters.TTL
 {
     public static partial class Convert
     {
@@ -60,10 +61,10 @@ namespace BH.Engine.RDF
             {
                 TTL = new StringBuilder();
 
-                TTL.Append(Create.TTLHeader(cSharpGraph.OntologySettings));
+                TTL.Append(TTLHeader(cSharpGraph.OntologySettings));
 
                 TTL.Append("Annotation Properties".TTLSectionTitle());
-                TTL.Append(string.Join("\n", Create.TTLAnnotationProperties()));
+                TTL.Append(string.Join("\n", TTLAnnotationProperties()));
 
                 TTL.Append("Datatypes".TTLSectionTitle());
                 TTL.Append(string.Join("\n", cSharpGraph.TTLDataTypes(localRepositorySettings)));

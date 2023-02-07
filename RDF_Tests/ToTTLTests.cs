@@ -40,6 +40,8 @@ using NUnit.Framework;
 using BH.oM.Physical.FramingProperties;
 using VDS.RDF.Query.Expressions.Comparison;
 using FluentAssertions;
+using BH.Adapters.TTL;
+using Compute = BH.Engine.RDF.Compute;
 
 namespace BH.Test.RDF
 {
@@ -142,7 +144,7 @@ namespace BH.Test.RDF
                 }
             };
 
-            string TTLGraph = Compute.TTLGraph(new List<object>() { bhomObject }, m_ontologySettings);
+            string TTLGraph = Adapters.TTL.Compute.TTLGraph(new List<object>() { bhomObject }, m_ontologySettings);
 
             Assert.IsTTLParsable(TTLGraph);
         }

@@ -20,7 +20,7 @@ using System.Xml.Linq;
 using VDS.RDF.Parsing;
 using VDS.RDF.Writing.Formatting;
 
-namespace BH.Engine.RDF
+namespace BH.Adapters.TTL
 {
     public static partial class Compute
     {

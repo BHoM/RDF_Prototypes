@@ -1,0 +1,32 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\RDF_Engine\RDF_Engine.csproj" />
+    <ProjectReference Include="..\RDF_oM\RDF_oM.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Reference Include="Adapter_oM">
+      <HintPath>C:\ProgramData\BHoM\Assemblies\Adapter_oM.dll</HintPath>
+    </Reference>
+    <Reference Include="BHoM">
+      <HintPath>C:\ProgramData\BHoM\Assemblies\BHoM.dll</HintPath>
+    </Reference>
+    <Reference Include="BHoM_Adapter">
+      <HintPath>C:\ProgramData\BHoM\Assemblies\BHoM_Adapter.dll</HintPath>
+    </Reference>
+    <Reference Include="BHoM_Engine">
+      <HintPath>C:\ProgramData\BHoM\Assemblies\BHoM_Engine.dll</HintPath>
+    </Reference>
+    <Reference Include="Data_oM">
+      <HintPath>C:\ProgramData\BHoM\Assemblies\Data_oM.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+
+</Project>

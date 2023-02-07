@@ -20,46 +20,43 @@
  * along with this code. If not, see <https://www.gnu.org/licenses/lgpl-3.0.html>.      
  */
 
-using System;
-using System.Diagnostics;
-using System.IO;
-using System.Linq;
-using System.Net.Http;
-using System.Net.Http.Headers;
-using BH.Engine.RDF;
+using BH.Engine.Base;
+using BH.oM.Base;
 using BH.oM.RDF;
-using VDS.RDF;
-using VDS.RDF.Parsing;
-using VDS.RDF.Update;
+using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.ComponentModel;
+using System.Linq;
 using System.Reflection;
-using BH.Adapters.TTL;
-using Compute = BH.Engine.RDF.Compute;
+using System.Text;
+using System.Threading.Tasks;
 
-namespace BH.oM.CodeAnalysis.ConsoleApp
+namespace BH.Adapters.TTL
 {
-    public static class Program
+    public partial class Convert
     {
-        public static void Main(string[] args = null)
+        private static string TTLHeader(OntologySettings ontologySettings, 
+            bool includeOwl = true, bool includeRdf = true, bool includeRdfs = true, bool includeXml = true, bool includeXsd = true)
         {
-            var assemblies = Compute.LoadAssembliesInDirectory(@"C:\ProgramData\BHoM\Assemblies",
-                onlyBHoMAssemblies: true, onlyoMAssemblies: true,
-                searchOption: SearchOption.AllDirectories);
+            string header = $"@prefix : <{ontologySettings.OntologyBaseAddress}/> .";
+            if (includeOwl) header += "\n@prefix owl: <http://www.w3.org/2002/07/owl#> .";
+            if (includeRdf) header += "\n@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .";
+            if (includeXml) header += "\n@prefix xml: <http://www.w3.org/XML/1998/namespace> .";
+            if (includeXsd) header += "\n@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .";
+            if (includeRdfs) header += "\n@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .";
+            if (includeRdfs) header += "\n@prefix dc: <http://purl.org/dc/elements/1.1/> .";
 
-            Dictionary<string, Type[]> typesPerAssembly = assemblies.ToDictionary(a => a.DescriptiveName(), a => a.TryGetTypes());
+            header += "\n@base   " + $@"<{ontologySettings.OntologyBaseAddress}> .";
+            
 
-            LocalRepositorySettings localRepositorySettings = new() { TryComputeURLFromFilePaths = false};
-            OntologySettings ontologySettings = new();
+            header += "\n";
 
-            foreach (var kv in typesPerAssembly)
-            {
-                CSharpGraph cSharpGraph = Engine.RDF.Compute.CSharpGraph(kv.Value.ToList(), ontologySettings);
+            header += "\n"+$@"<{ontologySettings.OntologyBaseAddress}> rdf:type owl:Ontology;
+                          dc:title ""{ontologySettings.OntologyTitle}""@en;
+                          dc:description ""{ontologySettings.OntologyDescription}""@en.";
 
-                string filePath = Path.GetFullPath(Path.Combine("C:/temp/" , kv.Key + ".ttl"));
-                
-                cSharpGraph.ToTTLGraph(localRepositorySettings, filePath);
-            }
+            return header;
         }
     }
 }

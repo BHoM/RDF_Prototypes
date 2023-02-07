@@ -20,6 +20,7 @@
  * along with this code. If not, see <https://www.gnu.org/licenses/lgpl-3.0.html>.      
  */
 
+using BH.Adapters.TTL;
 using BH.oM.Geometry;
 using BH.oM.Physical.Elements;
 using BH.oM.Physical.FramingProperties;
@@ -33,6 +34,11 @@ namespace BH.Test.RDF
     /// </summary>
     public abstract partial class Test
     {
+        /// <summary>
+        /// To be initialized in Test SetUp methods.
+        /// </summary>
+        public static TTLAdapter m_adapter;
+
         /// <summary>
         /// To be initialized in Test SetUp methods.
         /// </summary>
