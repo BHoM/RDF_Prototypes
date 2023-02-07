@@ -55,20 +55,5 @@ namespace BH.Engine.RDF
         {
             return ToDotNetRDF(TTLOntology).ToCSharpObjects();
         }
-
-        public static Uri AbsoluteUri(this INode node)
-        {
-            UriNode uriNode = node as UriNode;
-
-            if (uriNode == null)
-                return null;
-
-            return new Uri(uriNode.Uri.AbsoluteUri);
-        }
-
-        public static string BHoMSegment(this INode node)
-        {
-            return node.AbsoluteUri()?.Segments?.LastOrDefault();
-        }
     }
 }

@@ -35,11 +35,16 @@ using System.IO;
 using VDS.RDF.Ontology;
 using BH.oM.Structure.Elements;
 using NUnit.Framework;
+using BH.Adapters.TTL;
+using Compute = BH.Engine.RDF.Compute;
+using BH.Adapters.TTL;
+using Convert = BH.Adapters.TTL.Convert;
 
 namespace BH.Test.RDF
 {
     public class FromTTLTests : Test
     {
+
         [SetUp]
         public void SetUp()
         {
@@ -48,6 +53,8 @@ namespace BH.Test.RDF
                 ABoxSettings = new ABoxSettings() { IndividualsBaseAddress = "individuals.Address" },
                 TBoxSettings = new TBoxSettings() { CustomObjectTypesBaseAddress = "CustomObjectTypes.Address" }
             };
+
+            m_adapter = new TTLAdapter(null, m_ontologySettings);
         }
 
         [Test]
@@ -67,7 +74,7 @@ namespace BH.Test.RDF
 
             Assert.IsTTLParsable(TTLGraph); // This MUST return an encoded customData dictionary - its entry is not seen as property!
 
-            var objs = Compute.ReadTTL(TTLGraph).Item1;
+            var objs = Adapters.TTL.Convert.FromTTL(TTLGraph).Item1;
 
             Assert.IsEqual(bhomObj, objs.First());
         }
@@ -88,7 +95,7 @@ namespace BH.Test.RDF
 
             Assert.IsTTLParsable(TTLGraph);
 
-            var res = Compute.ReadTTL(TTLGraph).Item1.First();
+            var res = Convert.FromTTL(TTLGraph).Item1.First();
 
             Assert.IsEqual(co, res);
         }
@@ -116,7 +123,7 @@ namespace BH.Test.RDF
                 }
             };
 
-            string TTLGraph = Compute.TTLGraph(new List<object>() { bhomObject }, m_ontologySettings);
+            string TTLGraph = Adapters.TTL.Compute.TTLGraph(new List<object>() { bhomObject }, m_ontologySettings);
 
             Assert.IsTTLParsable(TTLGraph);
 
@@ -163,7 +170,7 @@ namespace BH.Test.RDF
 
             Assert.IsTTLParsable(TTLGraph);
 
-            Output<List<object>, OntologySettings> bhomObjects_ontologySettings = BH.Engine.RDF.Compute.ReadTTL(TTLGraph);
+            Output<List<object>, OntologySettings> bhomObjects_ontologySettings = BH.Adapters.TTL.Convert.FromTTL(TTLGraph);
 
             Assert.IsEqual(bhomObjects_ontologySettings.Item2, customOntologySettings);
         }
@@ -273,7 +280,7 @@ namespace BH.Test.RDF
 
             Assert.IsTTLParsable(TTLGraph);
 
-            Output<List<object>, OntologySettings> convertedObjs = BH.Engine.RDF.Compute.ReadTTL(TTLGraph);
+            Output<List<object>, OntologySettings> convertedObjs = BH.Adapters.TTL.Convert.FromTTL(TTLGraph);
 
             Assert.IsEqual(customObject1, convertedObjs.Item1.First());
         }

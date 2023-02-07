@@ -37,15 +37,16 @@ using BH.oM.RDF;
 using BH.oM.Base.Attributes;
 using static System.Net.Mime.MediaTypeNames;
 using Newtonsoft.Json.Linq;
+using BH.Engine.RDF;
 
-namespace BH.Engine.RDF
+namespace BH.Adapters.TTL
 {
-    public static partial class Compute
+    public static partial class Convert
     {
         [Description("Reads a TTL ontology and attempts to convert any A-Box individual into its CSharp object equivalent.")]
         [MultiOutputAttribute(0,"KG","Ontology produced whatever")]
         [MultiOutputAttribute(1, "OS", "Ontology Settings used to construct this KG")]
-        public static Output<List<object>, OntologySettings> ReadTTL(string TTLtext)
+        public static Output<List<object>, OntologySettings> FromTTL(string TTLtext)
         {
             if (string.IsNullOrWhiteSpace(TTLtext))
                 return new Output<List<object>, OntologySettings>();
@@ -54,35 +55,35 @@ namespace BH.Engine.RDF
 
             Output<List<object>, OntologySettings> output = new Output<List<object>, OntologySettings>
             {
-                Item1 = Convert.ToCSharpObjects(TTLtext),
+                Item1 = BH.Engine.RDF.Convert.ToCSharpObjects(TTLtext),
                 Item2 = ontologySettings
             };
             return output;
         }
 
-        private static OntologySettings ExtractOntologySettings(string TTLtext)
-        {
-            string ontologySettingsDeclaration = $"# {nameof(OntologySettings)}: ";
-            
-            foreach (var line in TTLtext.SplitToLines())
-            {
-                if (line.Contains(ontologySettingsDeclaration))
-                    return Convert.FromBase64JsonSerialized(line.Replace(ontologySettingsDeclaration, "")) as OntologySettings;
-            }
-
-            return new OntologySettings();
-        }
-
         [Description("Reads a TTL ontology and attempts to convert any A-Box individual into its CSharp object equivalent.")]
-        public static Output<List<object>, OntologySettings> ReadTTL(string TTLfilePath, bool active = false)
+        public static Output<List<object>, OntologySettings> FromTTL(string TTLfilePath, bool active = false)
         {
             if (!active)
                 return new Output<List<object>, OntologySettings>();
 
             string TTLtext = File.ReadAllText(TTLfilePath);
-            Output<List<object>, OntologySettings> readTTLOutput = ReadTTL(TTLtext);
+            Output<List<object>, OntologySettings> readTTLOutput = FromTTL(TTLtext);
 
             return readTTLOutput;
+        }
+
+        private static OntologySettings ExtractOntologySettings(string TTLtext)
+        {
+            string ontologySettingsDeclaration = $"# {nameof(OntologySettings)}: ";
+
+            foreach (var line in TTLtext.SplitToLines())
+            {
+                if (line.Contains(ontologySettingsDeclaration))
+                    return BH.Engine.RDF.Convert.FromBase64JsonSerialized(line.Replace(ontologySettingsDeclaration, "")) as OntologySettings ?? new OntologySettings();
+            }
+
+            return new OntologySettings();
         }
 
         private static IEnumerable<string> SplitToLines(this string input)
@@ -95,7 +96,7 @@ namespace BH.Engine.RDF
             using (System.IO.StringReader reader = new System.IO.StringReader(input))
             {
                 string line;
-                while ((line = reader.ReadLine()) != null)
+                while ((line = reader?.ReadLine()) != null)
                 {
                     yield return line;
                 }

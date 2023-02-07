@@ -20,46 +20,51 @@
  * along with this code. If not, see <https://www.gnu.org/licenses/lgpl-3.0.html>.      
  */
 
-using System;
-using System.Diagnostics;
-using System.IO;
-using System.Linq;
-using System.Net.Http;
-using System.Net.Http.Headers;
 using BH.Engine.RDF;
 using BH.oM.RDF;
-using VDS.RDF;
-using VDS.RDF.Parsing;
-using VDS.RDF.Update;
+using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.ComponentModel;
+using System.Linq;
 using System.Reflection;
-using BH.Adapters.TTL;
-using Compute = BH.Engine.RDF.Compute;
+using System.Text;
+using System.Threading.Tasks;
 
-namespace BH.oM.CodeAnalysis.ConsoleApp
+namespace BH.Adapters.TTL
 {
-    public static class Program
+    public static partial class Convert
     {
-        public static void Main(string[] args = null)
+        private static List<string> TTLClasses(this CSharpGraph cSharpGraph, LocalRepositorySettings localRepositorySettings)
         {
-            var assemblies = Compute.LoadAssembliesInDirectory(@"C:\ProgramData\BHoM\Assemblies",
-                onlyBHoMAssemblies: true, onlyoMAssemblies: true,
-                searchOption: SearchOption.AllDirectories);
+            List<string> TTLClasses = new List<string>();
 
-            Dictionary<string, Type[]> typesPerAssembly = assemblies.ToDictionary(a => a.DescriptiveName(), a => a.TryGetTypes());
-
-            LocalRepositorySettings localRepositorySettings = new() { TryComputeURLFromFilePaths = false};
-            OntologySettings ontologySettings = new();
-
-            foreach (var kv in typesPerAssembly)
+            foreach (var classType in cSharpGraph.Classes)
             {
-                CSharpGraph cSharpGraph = Engine.RDF.Compute.CSharpGraph(kv.Value.ToList(), ontologySettings);
+                string TTLClass = "";
 
-                string filePath = Path.GetFullPath(Path.Combine("C:/temp/" , kv.Key + ".ttl"));
-                
-                cSharpGraph.ToTTLGraph(localRepositorySettings, filePath);
+                // Declaration with Uri
+                string typeUri = classType.OntologyUri(cSharpGraph.OntologySettings.TBoxSettings, localRepositorySettings).ToString();
+                TTLClass += $"### {typeUri}";
+
+                // Class Identifier
+                TTLClass += $"\n:{classType.UniqueNodeId()} rdf:type owl:Class;";
+
+                // Subclasses
+                List<Type> parentTypes = classType.BaseTypesNoRedundancy().Where(t => t.IsOntologyClass(cSharpGraph.OntologySettings.TBoxSettings)).ToList();
+
+                foreach (Type subClass in parentTypes)
+                {
+                    TTLClass += $"\n\t\trdfs:subClassOf :{subClass.UniqueNodeId()};";
+                }
+
+                // Class label
+                TTLClass += "\n\t\t" + $@"rdfs:label ""{classType.DescriptiveName()}""@en .";
+
+                TTLClasses.Add(TTLClass);
             }
+
+            return TTLClasses;
         }
     }
 }

@@ -20,54 +20,55 @@
  * along with this code. If not, see <https://www.gnu.org/licenses/lgpl-3.0.html>.      
  */
 
+
+using BH.Engine.Base;
+using BH.Engine.RDF;
+using BH.oM.Base;
 using BH.oM.RDF;
+using Newtonsoft.Json;
+using Newtonsoft.Json.Linq;
 using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.ComponentModel;
+using System.IO;
 using System.Linq;
 using System.Reflection;
 using System.Text;
 using System.Threading.Tasks;
+using VDS.RDF.Ontology;
+using VDS.RDF.Parsing;
+using BH.Engine.RDF;
 
-namespace BH.Engine.RDF
+namespace BH.Adapter.RDF
 {
     public static partial class Convert
     {
-        private static List<string> TTLObjectProperties(this CSharpGraph cSharpGraph, LocalRepositorySettings localRepositorySettings)
+        /***************************************************/
+        /**** Public Methods                            ****/
+        /***************************************************/
+
+        [Description("Converts a TTL string to a DotNetRDF graph object called OntologyGraph.")]
+        public static OntologyGraph ToDotNetRDF(string ttlGraph)
         {
-            List<string> TTLObjectProperties = new List<string>();
+            OntologyGraph g = new OntologyGraph();
 
-            for (int i = 0; i < cSharpGraph.ObjectProperties.Count; i++)
+            TurtleParser turtleParser = new TurtleParser();
+            TextReader reader = new StringReader(ttlGraph);
+
+            try
             {
-                var rel = cSharpGraph.ObjectProperties.ElementAt(i);
-
-                try
-                {
-                    string TTLObjectProperty = "";
-
-                    if (rel.RangeClass == null || rel.PropertyInfo == null)
-                        continue;
-
-                    if (localRepositorySettings.TryComputeURLFromFilePaths)
-                    {
-                        string propertyURI = rel.PropertyInfo.OntologyURI(cSharpGraph.OntologySettings.TBoxSettings, localRepositorySettings).ToString();
-                        TTLObjectProperty += $"\n### {propertyURI}";
-                    }
-                    TTLObjectProperty += $"\n:{rel.PropertyInfo.UniqueNodeId()} rdf:type owl:ObjectProperty ;";
-                    TTLObjectProperty += $"\nrdfs:domain :{rel.DomainClass.UniqueNodeId()} ;";
-                    TTLObjectProperty += $"\nrdfs:range :{rel.RangeClass.UniqueNodeId()} ;";
-                    TTLObjectProperty += "\n" + $@"rdfs:label ""{rel.PropertyInfo.DescriptiveName()}""@en .";
-
-                    TTLObjectProperties.Add(TTLObjectProperty);
-                }
-                catch (Exception e)
-                {
-                    Log.RecordError($"Could not add the {nameof(CSharpGraph)}.{nameof(CSharpGraph.ObjectProperties)} at position {i}. Error:\n\t{e.ToString()}");
-                }
+                turtleParser.Load(g, reader);
+            }
+            catch (Exception e)
+            {
+                Log.RecordError($"Could not convert textual TTL graph to a DotNetRDF OntologyGraph. Error:\n\t{e.ToString().SplitInLinesAndTabify()}");
             }
 
-            return TTLObjectProperties;
+            if (new OntologyGraph().Equals(g))
+                return null;
+
+            return g;
         }
     }
 }
