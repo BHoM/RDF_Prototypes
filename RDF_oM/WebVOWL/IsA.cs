@@ -28,7 +28,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace BH.oM.RDF
+namespace BH.oM.Adapters.RDF
 {
     [Description("Can be used to describe that a thing belongs to a class; or that a thing is equivalent to another thing. " +
         "When used for BHoM types, this describes C# interface implementation.")]

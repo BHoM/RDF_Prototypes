@@ -28,7 +28,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace BH.oM.RDF
+namespace BH.oM.Adapters.RDF
 {
     [Description("Describes a property that subclasses of a thing must own. Typically represents properties of a C# interface.")]
     public class RequiresProperty : IRelation

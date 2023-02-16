@@ -22,7 +22,7 @@
 
 using System.Reflection;
 
-namespace BH.oM.RDF
+namespace BH.oM.Adapters.RDF
 {
     public class IndividualDataProperty : IndividualRelation
     {

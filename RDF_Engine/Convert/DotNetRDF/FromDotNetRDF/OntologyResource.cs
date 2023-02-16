@@ -21,7 +21,7 @@
  */
 
 using BH.oM.Base;
-using BH.oM.RDF;
+using BH.oM.Adapters.RDF;
 using System;
 using System.Collections;
 using System.Collections.Generic;
@@ -235,7 +235,7 @@ namespace BH.Engine.Adapters.RDF
 
         private static Type GetPropertyType(this string valueName)
         {
-            return BH.oM.RDF.OntologyDataTypeMap.FromOntologyDataType.Where(kv => kv.Key.Contains(valueName.OnlyAlphabetic())).FirstOrDefault().Value ?? typeof(object);
+            return OntologyDataTypeMap.FromOntologyDataType.Where(kv => kv.Key.Contains(valueName.OnlyAlphabetic())).FirstOrDefault().Value ?? typeof(object);
         }
 
         /*************************************/

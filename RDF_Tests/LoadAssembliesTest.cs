@@ -25,7 +25,7 @@ using System;
 using System.Collections.Generic;
 using BH.oM.Geometry;
 using BH.Engine.Adapters.RDF;
-using BH.oM.RDF;
+using BH.oM.Adapters.RDF;
 using BH.oM.Physical.Elements;
 using BH.oM.Base;
 using VDS.RDF;

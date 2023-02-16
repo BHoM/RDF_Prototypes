@@ -22,7 +22,7 @@
 
 
 using BH.oM.Base;
-using BH.oM.RDF;
+using BH.oM.Adapters.RDF;
 using System;
 using System.Collections;
 using System.Collections.Generic;
