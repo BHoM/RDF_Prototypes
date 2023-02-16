@@ -25,6 +25,6 @@
   </ItemGroup>
   <PropertyGroup />
   <Target Name="PostBuild" AfterTargets="PostBuildEvent">
-    <Exec Command="if not &quot;$(ConfigurationName)&quot; == &quot;Test&quot; (xcopy &quot;$(TargetDir)$(TargetFileName)&quot; &quot;$(ProgramData)\BHoM\Assemblies&quot; /Y)&#xD;&#xA;if not &quot;$(ConfigurationName)&quot; == &quot;Test&quot; (robocopy /xc /xn /xo &quot;$(TargetDir.TrimEnd('\'))&quot; &quot;C:\temp\robocopy&quot; *.dll &amp; exit 0)&#xD;&#xA;if not &quot;$(ConfigurationName)&quot; == &quot;Test&quot; (xcopy &quot;$(TargetDir)*.dll&quot; &quot;$(SolutionDir)\Build\&quot; /F /R /Y /I)" />
+    <Exec Command="if not &quot;$(ConfigurationName)&quot; == &quot;Test&quot; (xcopy &quot;$(TargetDir)$(TargetFileName)&quot; &quot;$(ProgramData)\BHoM\Assemblies&quot; /Y)&#xD;&#xA;if not &quot;$(ConfigurationName)&quot; == &quot;Test&quot; (robocopy /xc /xn /xo &quot;$(TargetDir.TrimEnd('\'))&quot; &quot;$(ProgramData)\BHoM\Assemblies&quot; *.dll &amp; exit 0)&#xD;&#xA;if not &quot;$(ConfigurationName)&quot; == &quot;Test&quot; (xcopy &quot;$(TargetDir)*.dll&quot; &quot;$(SolutionDir)\Build\&quot; /F /R /Y /I)" />
   </Target>
 </Project>
