@@ -20,6 +20,8 @@
  * along with this code. If not, see <https://www.gnu.org/licenses/lgpl-3.0.html>.      
  */
 
+using BH.Engine.RDF;
+using BH.oM.RDF;
 using System;
 using System.Collections;
 using System.Collections.Generic;
@@ -29,13 +31,32 @@ using System.Reflection;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace BH.Adapters.TTL
+namespace BH.Engine.Adapters.TTL
 {
-    public partial class TTLAdapter
+    public static partial class Convert
     {
-        private static string TTLSectionTitle(string title)
+        private static List<string> TTLDataTypes(this CSharpGraph cSharpGraph, LocalRepositorySettings r)
         {
-            return $"\n\n\n#################################################################\n#    {title}\n#################################################################\n\n";
+            List<string> dataTypes = new List<string>();
+
+            dataTypes.Add(DefaultDataTypeForUnknownConversion(cSharpGraph.OntologySettings.TBoxSettings, r));
+
+            return dataTypes;
+        }
+
+        private static string DefaultDataTypeForUnknownConversion(TBoxSettings tboxSettings, LocalRepositorySettings r)
+        {
+            string defaultDataTypeUri = typeof(BH.oM.RDF.Base64JsonSerialized).OntologyUri(tboxSettings, r)?.ToString();
+
+            // TODO: add better guard against null, possibly adding mechanism to provide a defaultDataType URI rather than a Type.
+            defaultDataTypeUri = defaultDataTypeUri ?? "https://github.com/BHoM/RDF_Prototypes/commit/ff8ccb68dbba5aeadb4a9a284f141eb1515e169a";
+
+            string TTLDataType = "";
+            //TTLDataType = $"### {defaultDataTypeUri}";
+            TTLDataType += $"\n<https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/Base64JsonSerialized.cs> rdf:type rdfs:Datatype ;";
+            TTLDataType += "\n" + $@"rdfs:label ""{typeof(BH.oM.RDF.Base64JsonSerialized).DescriptiveName()}""@en .";
+
+            return TTLDataType;
         }
     }
 }

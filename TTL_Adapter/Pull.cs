@@ -22,11 +22,9 @@
 
 using BH.Adapter;
 using BH.Adapters.TTL;
-using BH.Engine.RDF;
 using BH.oM.Adapter;
 using BH.oM.Base.Attributes;
 using BH.oM.RDF;
-using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Linq;
@@ -34,6 +32,8 @@ using System.Text;
 using System.Threading.Tasks;
 using VDS.RDF.Ontology;
 using BH.Adapters;
+using BH.Engine.Adapters.TTL;
+using Log = BH.Engine.RDF.Log;
 
 namespace BH.Adapters.TTL
 {
@@ -48,11 +48,11 @@ namespace BH.Adapters.TTL
             if (!string.IsNullOrEmpty(m_filepath))
             {
                 Log.RecordNote($"Pulling objects from file: {m_filepath}.");
-                return new List<object>() { Adapters.TTL.Convert.FromTTL(m_filepath) };
+                return new List<object>() { BH.Engine.Adapters.TTL.Convert.FromTTL(m_filepath) };
             }
 
             Log.RecordNote($"To pull from a TTL file, please specify the filepath in the TTL Adapter." +
-                $"If you want to convert a TTL text string to objects, please use the method {nameof(BH.Adapters.TTL.Convert.FromTTL)} ");
+                $"If you want to convert a TTL text string to objects, please use the method {nameof(BH.Engine.Adapters.TTL.Convert.FromTTL)} ");
 
             return new List<object>();
         }

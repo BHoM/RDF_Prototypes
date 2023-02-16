@@ -40,6 +40,7 @@ using System.ComponentModel;
 using VDS.RDF.Ontology;
 using NUnit.Framework;
 using DescriptionAttribute = NUnit.Framework.DescriptionAttribute;
+using BH.Engine.Adapters.TTL;
 
 namespace BH.Test.RDF
 {

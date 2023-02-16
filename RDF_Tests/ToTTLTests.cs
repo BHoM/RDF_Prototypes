@@ -42,6 +42,7 @@ using VDS.RDF.Query.Expressions.Comparison;
 using FluentAssertions;
 using BH.Adapters.TTL;
 using Compute = BH.Engine.RDF.Compute;
+using BH.Engine.Adapters.TTL;
 
 namespace BH.Test.RDF
 {
@@ -144,7 +145,7 @@ namespace BH.Test.RDF
                 }
             };
 
-            string TTLGraph = Adapters.TTL.Compute.TTLGraph(new List<object>() { bhomObject }, m_ontologySettings);
+            string TTLGraph = Engine.Adapters.TTL.Compute.TTLGraph(new List<object>() { bhomObject }, m_ontologySettings);
 
             Assert.IsTTLParsable(TTLGraph);
         }

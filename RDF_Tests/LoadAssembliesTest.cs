@@ -20,47 +20,59 @@
  * along with this code. If not, see <https://www.gnu.org/licenses/lgpl-3.0.html>.      
  */
 
+using BH.oM.Architecture.Elements;
 using System;
-using System.Diagnostics;
-using System.IO;
-using System.Linq;
-using System.Net.Http;
-using System.Net.Http.Headers;
+using System.Collections.Generic;
+using BH.oM.Geometry;
 using BH.Engine.RDF;
 using BH.oM.RDF;
+using BH.oM.Physical.Elements;
+using BH.oM.Base;
 using VDS.RDF;
 using VDS.RDF.Parsing;
-using VDS.RDF.Update;
-using System.Collections;
-using System.Collections.Generic;
-using System.Reflection;
+using System.Linq;
+using System.IO;
+using VDS.RDF.Ontology;
+using BH.oM.Structure.Elements;
+using System.Drawing;
+using Point = BH.oM.Geometry.Point;
+using NUnit.Framework;
+using BH.oM.Physical.FramingProperties;
+using VDS.RDF.Query.Expressions.Comparison;
+using FluentAssertions;
 using BH.Adapters.TTL;
 using Compute = BH.Engine.RDF.Compute;
 using BH.Engine.Adapters.TTL;
+using Shouldly;
 
-namespace BH.oM.CodeAnalysis.ConsoleApp
+namespace BH.Test.RDF
 {
-    public static class Program
+    public class LoadAssembliesTest : Test
     {
-        public static void Main(string[] args = null)
+        private static System.Reflection.Assembly[] assembliesLoaded = null;
+
+        [OneTimeSetUp]
+        public void OneTimeSetup()
         {
-            var assemblies = Compute.LoadAssembliesInDirectory(@"C:\ProgramData\BHoM\Assemblies",
-                onlyBHoMAssemblies: true, onlyoMAssemblies: true,
-                searchOption: SearchOption.AllDirectories);
+            BH.Engine.RDF.Compute.LoadAssembliesInDirectory(@"C:\ProgramData\BHoM\Assemblies", onlyBHoMAssemblies:true, onlyoMAssemblies:false);
+            assembliesLoaded = AppDomain.CurrentDomain.GetAssemblies();
+        }
 
-            Dictionary<string, Type[]> typesPerAssembly = assemblies.ToDictionary(a => a.DescriptiveName(), a => a.TryGetTypes());
+        [Test]
+        public static void LoadAssemblies_RDF()
+        {
+            var names = assembliesLoaded.Select(a => a.FullName).ToList();
+            var n1 = names.Where(n => n.Contains("RDF_Engine")).ToList();
+            n1.ShouldHaveSingleItem();
+            names.Where(n => n.Contains("RDF_oM")).ShouldHaveSingleItem();
+        }
 
-            LocalRepositorySettings localRepositorySettings = new() { TryComputeURLFromFilePaths = false};
-            OntologySettings ontologySettings = new();
-
-            foreach (var kv in typesPerAssembly)
-            {
-                CSharpGraph cSharpGraph = Engine.RDF.Compute.CSharpGraph(kv.Value.ToList(), ontologySettings);
-
-                string filePath = Path.GetFullPath(Path.Combine("C:/temp/" , kv.Key + ".ttl"));
-                
-                cSharpGraph.ToTTLGraph(localRepositorySettings, filePath);
-            }
+        [Test]
+        public static void LoadAssemblies_TTL()
+        {
+            var names = assembliesLoaded.Select(a => a.FullName).ToList();
+            names.Where(n => n.Contains("TTL_Engine")).ShouldHaveSingleItem();
+            names.Where(n => n.Contains("TTL_Adapter")).ShouldHaveSingleItem();
         }
     }
 }

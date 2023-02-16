@@ -20,42 +20,27 @@
  * along with this code. If not, see <https://www.gnu.org/licenses/lgpl-3.0.html>.      
  */
 
-using BH.Adapter;
-using BH.Adapters.TTL;
-using BH.Engine.RDF;
-using BH.oM.Adapter;
-using BH.oM.Base.Attributes;
-using BH.oM.RDF;
 using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Linq;
+using System.Reflection;
 using System.Text;
 using System.Threading.Tasks;
-using VDS.RDF.Ontology;
-using BH.Adapters;
 
-namespace BH.Adapters.TTL
+namespace BH.Engine.Adapters.TTL
 {
-    public partial class TTLAdapter : BHoMAdapter
+    public partial class Convert
     {
-        /***************************************************/
-        /**** Constructors                              ****/
-        /***************************************************/
-
-        [Description("Adapter for TTL.")]
-        [Output("The created TTL adapter.")]
-        public TTLAdapter(string filepath = null, OntologySettings ontologySettings = null, LocalRepositorySettings localRepositorySettings = null)
+        private static List<string> TTLAnnotationProperties()
         {
-            m_AdapterSettings.DefaultPushType = oM.Adapter.PushType.CreateOnly; // Adapter `Push` Action simply calls "Create" method.
+            List<string> annotationProperties = new List<string>();
 
-            m_filepath = filepath;
-            m_ontologySettings = ontologySettings ?? new OntologySettings();
-            m_localRepositorySettings = localRepositorySettings;
+            annotationProperties.Add("###  http://purl.org/dc/elements/1.1/#description\n<http://purl.org/dc/elements/1.1/#description> rdf:type owl:AnnotationProperty .");
+            annotationProperties.Add("###  http://purl.org/dc/elements/1.1/#title\n<http://purl.org/dc/elements/1.1/#title> rdf:type owl:AnnotationProperty .");
+
+            return annotationProperties;
         }
-
-        private readonly string m_filepath;
-        private OntologySettings m_ontologySettings = new OntologySettings();
-        private readonly LocalRepositorySettings m_localRepositorySettings;
     }
 }
