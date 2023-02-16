@@ -87,7 +87,7 @@ namespace BH.Engine.RDF
         [Description("Returns the Uri to be used for the Ontology of the input MemberInfo. " +
             "If the input Type is a BHoM type, the Uri will be calculated from the file structure of a local copy of the main BHoM repository, as instructed by the `LocalRepositorySettings` input." +
             "Other Uri options can be found in the `TBoxSettings` input.")]
-        public static Uri? OntologyURI(this MemberInfo miToSearch, TBoxSettings tBoxSettings, LocalRepositorySettings repoSettings)
+        public static Uri OntologyURI(this MemberInfo miToSearch, TBoxSettings tBoxSettings, LocalRepositorySettings repoSettings)
         {
             // Null guards
             if (miToSearch == null)

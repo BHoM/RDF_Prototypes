@@ -20,34 +20,54 @@
  * along with this code. If not, see <https://www.gnu.org/licenses/lgpl-3.0.html>.      
  */
 
-using BH.Adapter;
-using BH.Adapters.TTL;
+
+using BH.Engine.Base;
 using BH.Engine.RDF;
-using BH.oM.Adapter;
-using BH.oM.Base.Attributes;
+using BH.oM.Base;
 using BH.oM.RDF;
+using Newtonsoft.Json;
+using Newtonsoft.Json.Linq;
 using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.ComponentModel;
+using System.IO;
 using System.Linq;
+using System.Reflection;
 using System.Text;
 using System.Threading.Tasks;
 using VDS.RDF.Ontology;
-using BH.Adapters;
+using VDS.RDF.Parsing;
 
-namespace BH.Adapters.TTL
+namespace BH.Adapter.RDF
 {
-    public partial class TTLAdapter : BHoMAdapter
+    public static partial class Convert
     {
-        public override List<object> Push(IEnumerable<object> objects, string tag = "", PushType pushType = PushType.AdapterDefault, ActionConfig actionConfig = null)
+        /***************************************************/
+        /**** Public Methods                            ****/
+        /***************************************************/
+
+        [Description("Converts a TTL string to a DotNetRDF graph object called OntologyGraph.")]
+        public static OntologyGraph ToDotNetRDF(string ttlGraph)
         {
-            if (!string.IsNullOrEmpty(m_filepath))
+            OntologyGraph g = new OntologyGraph();
+
+            TurtleParser turtleParser = new TurtleParser();
+            TextReader reader = new StringReader(ttlGraph);
+
+            try
             {
-                Compute.TTLGraph(objects.ToList(), m_filepath, m_ontologySettings, m_localRepositorySettings);
-                return new List<object>() { $"The objects have been written to TTL file at filepath: {m_filepath}" };
+                turtleParser.Load(g, reader);
+            }
+            catch (Exception e)
+            {
+                Log.RecordError($"Could not convert textual TTL graph to a DotNetRDF OntologyGraph. Error:\n\t{e.ToString().SplitInLinesAndTabify()}");
             }
 
-            return new List<object>() { Compute.TTLGraph(objects.ToList(), m_ontologySettings, m_localRepositorySettings) };
+            if (new OntologyGraph().Equals(g))
+                return null;
+
+            return g;
         }
     }
 }

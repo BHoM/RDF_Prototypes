@@ -20,6 +20,8 @@
  * along with this code. If not, see <https://www.gnu.org/licenses/lgpl-3.0.html>.      
  */
 
+using BH.Engine.RDF;
+using BH.oM.RDF;
 using System;
 using System.Collections;
 using System.Collections.Generic;
@@ -29,13 +31,40 @@ using System.Reflection;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace BH.Adapters.TTL
+namespace BH.Engine.Adapters.TTL
 {
-    public partial class TTLAdapter
+    public static partial class Convert
     {
-        private static string TTLSectionTitle(string title)
+        private static List<string> TTLClasses(this CSharpGraph cSharpGraph, LocalRepositorySettings localRepositorySettings)
         {
-            return $"\n\n\n#################################################################\n#    {title}\n#################################################################\n\n";
+            List<string> TTLClasses = new List<string>();
+
+            foreach (var classType in cSharpGraph.Classes)
+            {
+                string TTLClass = "";
+
+                // Declaration with Uri
+                string typeUri = classType.OntologyUri(cSharpGraph.OntologySettings.TBoxSettings, localRepositorySettings).ToString();
+                TTLClass += $"### {typeUri}";
+
+                // Class Identifier
+                TTLClass += $"\n:{classType.UniqueNodeId()} rdf:type owl:Class;";
+
+                // Subclasses
+                List<Type> parentTypes = classType.BaseTypesNoRedundancy().Where(t => t.IsOntologyClass(cSharpGraph.OntologySettings.TBoxSettings)).ToList();
+
+                foreach (Type subClass in parentTypes)
+                {
+                    TTLClass += $"\n\t\trdfs:subClassOf :{subClass.UniqueNodeId()};";
+                }
+
+                // Class label
+                TTLClass += "\n\t\t" + $@"rdfs:label ""{classType.DescriptiveName()}""@en .";
+
+                TTLClasses.Add(TTLClass);
+            }
+
+            return TTLClasses;
         }
     }
 }

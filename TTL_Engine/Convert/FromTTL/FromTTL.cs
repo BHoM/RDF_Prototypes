@@ -39,7 +39,7 @@ using static System.Net.Mime.MediaTypeNames;
 using Newtonsoft.Json.Linq;
 using BH.Engine.RDF;
 
-namespace BH.Adapters.TTL
+namespace BH.Engine.Adapters.TTL
 {
     public static partial class Convert
     {

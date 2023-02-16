@@ -20,55 +20,43 @@
  * along with this code. If not, see <https://www.gnu.org/licenses/lgpl-3.0.html>.      
  */
 
-
 using BH.Engine.Base;
-using BH.Engine.RDF;
 using BH.oM.Base;
 using BH.oM.RDF;
-using Newtonsoft.Json;
-using Newtonsoft.Json.Linq;
 using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.ComponentModel;
-using System.IO;
 using System.Linq;
 using System.Reflection;
 using System.Text;
 using System.Threading.Tasks;
-using VDS.RDF.Ontology;
-using VDS.RDF.Parsing;
-using BH.Engine.RDF;
 
-namespace BH.Adapter.RDF
+namespace BH.Engine.Adapters.TTL
 {
-    public static partial class Convert
+    public partial class Convert
     {
-        /***************************************************/
-        /**** Public Methods                            ****/
-        /***************************************************/
-
-        [Description("Converts a TTL string to a DotNetRDF graph object called OntologyGraph.")]
-        public static OntologyGraph ToDotNetRDF(string ttlGraph)
+        private static string TTLHeader(OntologySettings ontologySettings, 
+            bool includeOwl = true, bool includeRdf = true, bool includeRdfs = true, bool includeXml = true, bool includeXsd = true)
         {
-            OntologyGraph g = new OntologyGraph();
+            string header = $"@prefix : <{ontologySettings.OntologyBaseAddress}/> .";
+            if (includeOwl) header += "\n@prefix owl: <http://www.w3.org/2002/07/owl#> .";
+            if (includeRdf) header += "\n@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .";
+            if (includeXml) header += "\n@prefix xml: <http://www.w3.org/XML/1998/namespace> .";
+            if (includeXsd) header += "\n@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .";
+            if (includeRdfs) header += "\n@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .";
+            if (includeRdfs) header += "\n@prefix dc: <http://purl.org/dc/elements/1.1/> .";
 
-            TurtleParser turtleParser = new TurtleParser();
-            TextReader reader = new StringReader(ttlGraph);
+            header += "\n@base   " + $@"<{ontologySettings.OntologyBaseAddress}> .";
+            
 
-            try
-            {
-                turtleParser.Load(g, reader);
-            }
-            catch (Exception e)
-            {
-                Log.RecordError($"Could not convert textual TTL graph to a DotNetRDF OntologyGraph. Error:\n\t{e.ToString().SplitInLinesAndTabify()}");
-            }
+            header += "\n";
 
-            if (new OntologyGraph().Equals(g))
-                return null;
+            header += "\n"+$@"<{ontologySettings.OntologyBaseAddress}> rdf:type owl:Ontology;
+                          dc:title ""{ontologySettings.OntologyTitle}""@en;
+                          dc:description ""{ontologySettings.OntologyDescription}""@en.";
 
-            return g;
+            return header;
         }
     }
 }

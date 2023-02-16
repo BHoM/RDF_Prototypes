@@ -34,6 +34,9 @@ using System.Text;
 using System.Threading.Tasks;
 using VDS.RDF.Ontology;
 using BH.Adapters;
+using Log = BH.Engine.RDF.Log;
+using Convert = BH.Engine.Adapters.TTL.Convert;
+using Compute = BH.Engine.Adapters.TTL.Compute;
 
 namespace BH.Adapters.TTL
 {

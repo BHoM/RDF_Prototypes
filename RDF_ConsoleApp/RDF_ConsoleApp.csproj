@@ -3,6 +3,7 @@
     <OutputType>Exe</OutputType>
     <RootNamespace>Development</RootNamespace>
     <AssemblyName>Development</AssemblyName>
+    <Configurations>Debug;Release;Test</Configurations>
   </PropertyGroup>
   <PropertyGroup>
     <TargetFramework>net6.0</TargetFramework>
@@ -19,6 +20,9 @@
     <Reference Include="BHoM">
       <SpecificVersion>False</SpecificVersion>
       <HintPath>C:\ProgramData\BHoM\Assemblies\BHoM.dll</HintPath>
+    </Reference>
+    <Reference Include="BHoM_Adapter">
+      <HintPath>..\..\..\..\..\..\ProgramData\BHoM\Assemblies\BHoM_Adapter.dll</HintPath>
     </Reference>
     <Reference Include="BHoM_Engine">
       <SpecificVersion>False</SpecificVersion>
@@ -47,10 +51,11 @@
     <ProjectReference Include="..\RDF_Engine\RDF_Engine.csproj" />
     <ProjectReference Include="..\RDF_oM\RDF_oM.csproj" />
     <ProjectReference Include="..\TTL_Adapter\TTL_Adapter.csproj" />
+    <ProjectReference Include="..\TTL_Engine\TTL_Engine.csproj" />
   </ItemGroup>
   <ItemGroup>
     <PackageReference Include="CompareNETObjects" Version="4.77.0" />
-    <PackageReference Include="dotNetRDF" Version="2.7.2" />
+    <PackageReference Include="dotNetRDF" Version="2.7.5" />
     <PackageReference Include="System.Data.DataSetExtensions" Version="4.5.0" />
     <PackageReference Include="Microsoft.DotNet.UpgradeAssistant.Extensions.Default.Analyzers" Version="0.4.355802">
       <PrivateAssets>all</PrivateAssets>
