@@ -47,6 +47,20 @@ namespace BH.Engine.RDF
             "If you only are interested in the T-Box, use the other CSharpGraph() method that takes in a list of Types.")]
         public static CSharpGraph CSharpGraph(this List<object> objects, OntologySettings ontologySettings)
         {
+            // First, check if the input objects include 1 single CSharpGraph, in which case just return it.
+            // Do not allow to input CSharpGraph objects together with any other kind of object.
+            var inputGraphs = objects.OfType<CSharpGraph>();
+            if (inputGraphs.Any())
+            {
+                if (inputGraphs.Count() != objects.Count())
+                {
+                    Log.RecordError($"Please input either a set of BHoM Objects or 1 single {nameof(CSharpGraph)} object. Not both.");
+                    return null;
+                }
+                else
+                    return inputGraphs.FirstOrDefault();
+            }
+
             m_cSharpGraph = new CSharpGraph() { OntologySettings = ontologySettings };
 
             foreach (var iObject in objects)
