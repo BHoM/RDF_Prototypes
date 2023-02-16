@@ -21,7 +21,7 @@
  */
 
 using BH.Engine.Base;
-using BH.Engine.RDF.Types;
+using BH.Engine.Adapters.RDF.Types;
 using BH.oM.RDF;
 using System;
 using System.Collections;
@@ -31,9 +31,9 @@ using System.Linq;
 using System.Reflection;
 using System.Text;
 using System.Threading.Tasks;
-using Log = BH.Engine.RDF.Log;
+using Log = BH.Engine.Adapters.RDF.Log;
 
-namespace BH.Engine.RDF
+namespace BH.Engine.Adapters.RDF
 {
     public static partial class Query
     {

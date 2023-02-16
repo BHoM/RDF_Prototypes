@@ -34,18 +34,18 @@ using VDS.RDF.Writing;
 using BH.Engine.Base;
 using BH.oM.RDF;
 using BH.oM.Base.Attributes;
-using BH.Engine.RDF.Types;
+using BH.Engine.Adapters.RDF.Types;
 using System.Collections;
 using VDS.RDF.Ontology;
 
-namespace BH.Engine.RDF
+namespace BH.Engine.Adapters.RDF
 {
     public static partial class Compute
     {
         [Description("Returns an ontology graph that includes CSharp objects and types." +
             "This methods takes in a list of objects as an input, so the resulting CSharp graph has both the T-Box and A-Box sections populated." +
             "If you only are interested in the T-Box, use the other CSharpGraph() method that takes in a list of Types.")]
-        public static CSharpGraph CSharpGraph(this List<object> objects, OntologySettings ontologySettings)
+        public static CSharpGraph CSharpGraph(this List<object> objects, OntologySettings ontologySettings = null)
         {
             // First, check if the input objects include 1 single CSharpGraph, in which case just return it.
             // Do not allow to input CSharpGraph objects together with any other kind of object.
@@ -61,6 +61,7 @@ namespace BH.Engine.RDF
                     return inputGraphs.FirstOrDefault();
             }
 
+            ontologySettings = ontologySettings ?? new OntologySettings();
             m_cSharpGraph = new CSharpGraph() { OntologySettings = ontologySettings };
 
             foreach (var iObject in objects)
@@ -74,8 +75,9 @@ namespace BH.Engine.RDF
         [Description("Returns an ontology graph that includes CSharp objects and types. " +
             "This methods takes in a list of Types as an input, so the resulting CSharp graph has only the T-Box." +
             "For a complete graph that also includes the A-Box, use the other CSharpGraph() method that takes in a list of objects.")]
-        public static CSharpGraph CSharpGraph(this List<Type> types, OntologySettings ontologySettings)
+        public static CSharpGraph CSharpGraph(this List<Type> types, OntologySettings ontologySettings = null)
         {
+            ontologySettings = ontologySettings ?? new OntologySettings();
             m_cSharpGraph = new CSharpGraph() { OntologySettings = ontologySettings };
 
             foreach (var type in types)

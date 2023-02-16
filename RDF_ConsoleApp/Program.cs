@@ -26,7 +26,7 @@ using System.IO;
 using System.Linq;
 using System.Net.Http;
 using System.Net.Http.Headers;
-using BH.Engine.RDF;
+using BH.Engine.Adapters.RDF;
 using BH.oM.RDF;
 using VDS.RDF;
 using VDS.RDF.Parsing;
@@ -35,7 +35,7 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Reflection;
 using BH.Adapters.TTL;
-using Compute = BH.Engine.RDF.Compute;
+using Compute = BH.Engine.Adapters.RDF.Compute;
 using BH.Engine.Adapters.TTL;
 
 namespace BH.oM.CodeAnalysis.ConsoleApp
@@ -55,11 +55,11 @@ namespace BH.oM.CodeAnalysis.ConsoleApp
 
             foreach (var kv in typesPerAssembly)
             {
-                CSharpGraph cSharpGraph = Engine.RDF.Compute.CSharpGraph(kv.Value.ToList(), ontologySettings);
+                CSharpGraph cSharpGraph = Engine.Adapters.RDF.Compute.CSharpGraph(kv.Value.ToList(), ontologySettings);
 
                 string filePath = Path.GetFullPath(Path.Combine("C:/temp/" , kv.Key + ".ttl"));
                 
-                cSharpGraph.ToTTLGraph(localRepositorySettings, filePath);
+                cSharpGraph.ToTTL(localRepositorySettings, filePath);
             }
         }
     }

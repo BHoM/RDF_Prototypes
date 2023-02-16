@@ -30,7 +30,7 @@ using System.Linq;
 using System.Reflection;
 using System.Text;
 using System.Threading.Tasks;
-using BH.Engine.RDF;
+using BH.Engine.Adapters.RDF;
 using VDS.RDF;
 using VDS.RDF.Writing;
 using BH.oM.Architecture.Elements;
@@ -54,7 +54,7 @@ namespace BH.Test.RDF
         {
             try
             {
-                OntologyGraph g = BH.Engine.RDF.Convert.ToDotNetRDF(ttl);
+                OntologyGraph g = BH.Engine.Adapters.RDF.Convert.ToDotNetRDF(ttl);
 
                 if (g == null)
                     RecordTestFailure("TTL was not parsable.");

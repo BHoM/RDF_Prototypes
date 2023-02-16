@@ -33,7 +33,7 @@ using System.Threading.Tasks;
 using VDS.RDF;
 using VDS.RDF.Ontology;
 
-namespace BH.Engine.RDF
+namespace BH.Engine.Adapters.RDF
 {
     public static partial class Convert
     {
@@ -41,7 +41,7 @@ namespace BH.Engine.RDF
         /*          Public methods           */
         /*************************************/
 
-        public static object ToCSharpObject(this OntologyResource individual, OntologyGraph dotNetRDFOntology)
+        public static object FromDotNetRDF(this OntologyResource individual, OntologyGraph dotNetRDFOntology)
         {
             if (individual == null || dotNetRDFOntology == null)
                 return null;
@@ -137,7 +137,7 @@ namespace BH.Engine.RDF
                         {
                             Triple listItemTriple = individual.TriplesWithSubject.ElementAt(kv.Value);
                             OntologyResource listIndividual = listItemTriple.Object.IndividualOntologyResource(dotNetRDFOntology);
-                            object convertedIndividual = listIndividual.ToCSharpObject(dotNetRDFOntology);
+                            object convertedIndividual = listIndividual.FromDotNetRDF(dotNetRDFOntology);
                             listValues.Add(convertedIndividual);
                         }
 
@@ -146,7 +146,7 @@ namespace BH.Engine.RDF
                     else
                     {
                         OntologyResource relatedIndividual = uriNode.IndividualOntologyResource(dotNetRDFOntology);
-                        propertyValue = relatedIndividual.ToCSharpObject(dotNetRDFOntology);
+                        propertyValue = relatedIndividual.FromDotNetRDF(dotNetRDFOntology);
                     }
                 }
 

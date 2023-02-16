@@ -32,7 +32,7 @@ using System.Threading.Tasks;
 using BH.Engine.Base;
 using BH.Engine.Reflection;
 
-namespace BH.Engine.RDF
+namespace BH.Engine.Adapters.RDF
 {
     public static partial class Query
     {

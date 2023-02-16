@@ -20,27 +20,35 @@ using System.Xml.Linq;
 using VDS.RDF.Parsing;
 using VDS.RDF.Writing.Formatting;
 
-namespace BH.Engine.Adapters.TTL
+namespace BH.Engine.Adapters.RDF
 {
-    public static partial class Compute
+    public static partial class Convert
     {
-        [Description("Computes a TTL ontology with the input IObjects. The ontology will include both T-Box and A-Box." +
-             "The T-Box is constructed from the Types of the input objects, and their relations, expressed via the CSharp object properties.")]
-        public static Graph SerializeRdf(this object obj, string defaultIri = "http://example.rdf/")
+        /***************************************************/
+        /**** Public Methods                            ****/
+        /***************************************************/
+
+        // Kept private whilst prototyping - either to be removed or made public.
+
+        [Description("Computes a DotNetRDF Graph with the input IObjects via DotNetRDF. Experimental.")]
+        private static Graph Experimental_ToDotNetRDF(this object obj, string defaultIri = "http://example.rdf/")
         {
             var json = Newtonsoft.Json.JsonConvert.SerializeObject(obj);
             return json.XmlOrJsonTextToJsonData().ToRDFGraph(defaultIri);
         }
 
-        public static void SerializeRdfToFile(this object obj, string filepath = @"C:/temp/test.ttl", string defaultIri = "http://example.rdf/")
+        [Description("Computes a TTL ontology with the input IObjects via DotNetRDF. Experimental.")]
+        private static void Experimental_WriteTTLFile(this object obj, string filepath = @"C:/temp/test.ttl", string defaultIri = "http://example.rdf/")
         {
-            Graph g = Compute.SerializeRdf(obj, defaultIri);
+            Graph g = obj.Experimental_ToDotNetRDF(defaultIri);
             CompressingTurtleWriter t = new CompressingTurtleWriter();
             Directory.CreateDirectory(Path.GetDirectoryName(filepath));
             t.Save(g, "C:/temp/test.ttl");
         }
 
-        // --------------------------------- //
+        /***************************************************/
+        /**** Private Methods                           ****/
+        /***************************************************/
 
         private static Dictionary<string, JToken> XmlOrJsonFilenameToJsonData(this string inputFilename)
         {

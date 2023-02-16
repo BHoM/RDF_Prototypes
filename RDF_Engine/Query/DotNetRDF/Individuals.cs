@@ -29,8 +29,9 @@ using System.Reflection;
 using System.Text;
 using System.Threading.Tasks;
 using VDS.RDF.Ontology;
-using Log = BH.Engine.RDF.Log;
-namespace BH.Engine.RDF
+using Log = BH.Engine.Adapters.RDF.Log;
+
+namespace BH.Engine.Adapters.RDF
 {
     public static partial class Query
     {

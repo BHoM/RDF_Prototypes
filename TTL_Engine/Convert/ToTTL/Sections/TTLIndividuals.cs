@@ -20,7 +20,7 @@
  * along with this code. If not, see <https://www.gnu.org/licenses/lgpl-3.0.html>.      
  */
 
-using BH.Engine.RDF;
+using BH.Engine.Adapters.RDF;
 using BH.oM.Base;
 using BH.oM.RDF;
 using System;

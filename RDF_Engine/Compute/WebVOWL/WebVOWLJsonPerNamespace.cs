@@ -30,7 +30,7 @@ using System.Reflection;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace BH.Engine.RDF
+namespace BH.Engine.Adapters.RDF
 {
     public static partial class Compute
     {
@@ -51,7 +51,7 @@ namespace BH.Engine.RDF
             {
                 // Extract a dictionary representation of the BHoM Ontology Graph
                 Dictionary<TypeInfo, List<IRelation>> dictionaryGraph = kv.Value.DictionaryGraphFromTypeInfos();
-                string webVOWLJson = Engine.RDF.Convert.ToWebVOWLJson(dictionaryGraph, settings, new HashSet<string> { kv.Key });
+                string webVOWLJson = Engine.Adapters.RDF.Convert.ToWebVOWLJson(dictionaryGraph, settings, new HashSet<string> { kv.Key });
 
                 result[kv.Key] = webVOWLJson;
             }

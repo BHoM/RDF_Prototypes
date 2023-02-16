@@ -29,7 +29,7 @@ using System.Reflection;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace BH.Engine.RDF.Types
+namespace BH.Engine.Adapters.RDF.Types
 {
     public abstract class ICustomRDFType : Type, IEquatable<Type>
     {

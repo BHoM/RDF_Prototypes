@@ -20,43 +20,38 @@
  * along with this code. If not, see <https://www.gnu.org/licenses/lgpl-3.0.html>.      
  */
 
-using BH.Engine.RDF;
-using BH.oM.RDF;
+
+using BH.oM.Base;
 using System;
-using System.Collections;
 using System.Collections.Generic;
 using System.ComponentModel;
+using System.IO;
 using System.Linq;
 using System.Reflection;
 using System.Text;
 using System.Threading.Tasks;
+using VDS.RDF;
+using VDS.RDF.Writing;
+using BH.Engine.Base;
+using BH.oM.RDF;
+using BH.oM.Base.Attributes;
 
 namespace BH.Engine.Adapters.TTL
 {
-    public static partial class Convert
+    public static partial class Compute
     {
-        private static List<string> TTLDataTypes(this CSharpGraph cSharpGraph, LocalRepositorySettings r)
+        [Description("Computes a TTL T-Box ontology with the input Types." +
+            "To compute an ontology that includes both T-Box and A-Box, use the TTLGraph method that takes a list of IObjects, and provide input objects (instances) instead of Types.")]
+        public static string ToTTL(this List<Type> types, OntologySettings ontologySettings = null, LocalRepositorySettings localRepositorySettings = null)
         {
-            List<string> dataTypes = new List<string>();
+            localRepositorySettings = localRepositorySettings ?? new LocalRepositorySettings();
+            ontologySettings = ontologySettings ?? new OntologySettings();
 
-            dataTypes.Add(DefaultDataTypeForUnknownConversion(cSharpGraph.OntologySettings.TBoxSettings, r));
+            CSharpGraph cSharpGraph = Engine.Adapters.RDF.Compute.CSharpGraph(types, ontologySettings);
 
-            return dataTypes;
-        }
+            string TTL = cSharpGraph.ToTTL(localRepositorySettings);
 
-        private static string DefaultDataTypeForUnknownConversion(TBoxSettings tboxSettings, LocalRepositorySettings r)
-        {
-            string defaultDataTypeUri = typeof(BH.oM.RDF.Base64JsonSerialized).OntologyUri(tboxSettings, r)?.ToString();
-
-            // TODO: add better guard against null, possibly adding mechanism to provide a defaultDataType URI rather than a Type.
-            defaultDataTypeUri = defaultDataTypeUri ?? "https://github.com/BHoM/RDF_Prototypes/commit/ff8ccb68dbba5aeadb4a9a284f141eb1515e169a";
-
-            string TTLDataType = "";
-            //TTLDataType = $"### {defaultDataTypeUri}";
-            TTLDataType += $"\n<https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/Base64JsonSerialized.cs> rdf:type rdfs:Datatype ;";
-            TTLDataType += "\n" + $@"rdfs:label ""{typeof(BH.oM.RDF.Base64JsonSerialized).DescriptiveName()}""@en .";
-
-            return TTLDataType;
+            return TTL;
         }
     }
 }

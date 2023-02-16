@@ -34,13 +34,13 @@ using System.Text;
 using System.Threading.Tasks;
 
 
-namespace BH.Engine.RDF
+namespace BH.Engine.Adapters.RDF
 {
     public static partial class Compute
     {
         public static void WriteWebVOWLOntology(List<string> typeFullNames, LocalRepositorySettings settings, string fileName = null, HashSet<string> exceptions = null, int relationRecursion = 0)
         {
-            List<Assembly> oMassemblies = BH.Engine.RDF.Compute.LoadAssembliesInDirectory(true);
+            List<Assembly> oMassemblies = BH.Engine.Adapters.RDF.Compute.LoadAssembliesInDirectory(true);
 
             // Get the System.Types corresponding to the input typeFullNames
             List<Type> correspondingOmTypes = oMassemblies.BHoMTypes().Where(t => typeFullNames.Contains(t.AsType().FullName)).Select(ti => ti.AsType()).ToList();
@@ -57,7 +57,7 @@ namespace BH.Engine.RDF
             //HashSet<Type> allConnectedBHoMTypes = types.AllNestedTypes();
             //types = types.Concat(allConnectedBHoMTypes).Distinct().ToList();
 
-            List<Assembly> oMassemblies = BH.Engine.RDF.Compute.LoadAssembliesInDirectory(true);
+            List<Assembly> oMassemblies = BH.Engine.Adapters.RDF.Compute.LoadAssembliesInDirectory(true);
             List<TypeInfo> oMTypeInfos = oMassemblies.BHoMTypes().Where(t => types.Contains(t.AsType())).ToList();
 
             WriteWebVOWLOntology(oMTypeInfos, settings, fileName, exceptions, relationRecursion);
@@ -67,7 +67,7 @@ namespace BH.Engine.RDF
         private static void WriteWebVOWLOntology(List<TypeInfo> oMTypes, LocalRepositorySettings settings, string fileName = null, HashSet<string> exceptions = null, int relationRecursion = 0)
         {
             Dictionary<TypeInfo, List<IRelation>> dictionaryGraph = oMTypes.DictionaryGraphFromTypeInfos();
-            string webVOWLJson = Engine.RDF.Convert.ToWebVOWLJson(dictionaryGraph, settings, internalNamespaces: new HashSet<string>(oMTypes.Select(t => t.Namespace)), exceptions: exceptions, relationRecursion: relationRecursion);
+            string webVOWLJson = Engine.Adapters.RDF.Convert.ToWebVOWLJson(dictionaryGraph, settings, internalNamespaces: new HashSet<string>(oMTypes.Select(t => t.Namespace)), exceptions: exceptions, relationRecursion: relationRecursion);
 
             if (string.IsNullOrWhiteSpace(fileName))
                 fileName = string.Join("-", oMTypes.Select(t => t.Name));

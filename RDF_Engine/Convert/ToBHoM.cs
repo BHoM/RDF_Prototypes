@@ -31,7 +31,7 @@ using System.Threading.Tasks;
 using BH.Engine.Reflection;
 using System.Collections;
 
-namespace BH.Engine.RDF
+namespace BH.Engine.Adapters.RDF
 {
     public static partial class Convert
     {

@@ -34,7 +34,7 @@ using BH.Engine.Reflection;
 using BH.oM.Base;
 using BH.oM.Geometry;
 
-namespace BH.Engine.RDF
+namespace BH.Engine.Adapters.RDF
 {
     public static partial class Query
     {

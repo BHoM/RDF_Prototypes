@@ -24,7 +24,7 @@ using BH.oM.Architecture.Elements;
 using System;
 using System.Collections.Generic;
 using BH.oM.Geometry;
-using BH.Engine.RDF;
+using BH.Engine.Adapters.RDF;
 using BH.oM.RDF;
 using BH.oM.Physical.Elements;
 using BH.oM.Base;
@@ -41,7 +41,7 @@ using BH.oM.Physical.FramingProperties;
 using VDS.RDF.Query.Expressions.Comparison;
 using FluentAssertions;
 using BH.Adapters.TTL;
-using Compute = BH.Engine.RDF.Compute;
+using Compute = BH.Engine.Adapters.RDF.Compute;
 using BH.Engine.Adapters.TTL;
 using Shouldly;
 
@@ -54,7 +54,7 @@ namespace BH.Test.RDF
         [OneTimeSetUp]
         public void OneTimeSetup()
         {
-            BH.Engine.RDF.Compute.LoadAssembliesInDirectory(@"C:\ProgramData\BHoM\Assemblies", onlyBHoMAssemblies:true, onlyoMAssemblies:false);
+            BH.Engine.Adapters.RDF.Compute.LoadAssembliesInDirectory(@"C:\ProgramData\BHoM\Assemblies", onlyBHoMAssemblies:true, onlyoMAssemblies:false);
             assembliesLoaded = AppDomain.CurrentDomain.GetAssemblies();
         }
 

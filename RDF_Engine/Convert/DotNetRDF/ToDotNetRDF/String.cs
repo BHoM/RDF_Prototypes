@@ -20,40 +20,53 @@
  * along with this code. If not, see <https://www.gnu.org/licenses/lgpl-3.0.html>.      
  */
 
+
+using BH.Engine.Base;
 using BH.oM.Base;
+using BH.oM.RDF;
+using Newtonsoft.Json;
+using Newtonsoft.Json.Linq;
 using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.ComponentModel;
+using System.IO;
 using System.Linq;
 using System.Reflection;
 using System.Text;
 using System.Threading.Tasks;
-using VDS.RDF;
 using VDS.RDF.Ontology;
+using VDS.RDF.Parsing;
 
-namespace BH.Engine.RDF
+namespace BH.Engine.Adapters.RDF
 {
     public static partial class Convert
     {
-        public static List<object> ToCSharpObjects(this OntologyGraph dotNetRDFOntology)
+        /***************************************************/
+        /**** Public Methods                            ****/
+        /***************************************************/
+
+        [Description("Converts a TTL string to a DotNetRDF graph object called OntologyGraph.")]
+        public static OntologyGraph ToDotNetRDF(string ttlGraph)
         {
-            var topIndividuals = dotNetRDFOntology.IndividualsNoOwner();
+            OntologyGraph g = new OntologyGraph();
 
-            List<object> result = new List<object>();
+            TurtleParser turtleParser = new TurtleParser();
+            TextReader reader = new StringReader(ttlGraph);
 
-            foreach (OntologyResource individual in topIndividuals)
+            try
             {
-                object bhomInstance = individual.ToCSharpObject(dotNetRDFOntology);
-                result.Add(bhomInstance);
+                turtleParser.Load(g, reader);
+            }
+            catch (Exception e)
+            {
+                Log.RecordError($"Could not convert textual TTL graph to a DotNetRDF OntologyGraph. Error:\n\t{e.ToString().SplitInLinesAndTabify()}");
             }
 
-            return result;
-        }
+            if (new OntologyGraph().Equals(g))
+                return null;
 
-        public static List<object> ToCSharpObjects(this string TTLOntology)
-        {
-            return ToDotNetRDF(TTLOntology).ToCSharpObjects();
+            return g;
         }
     }
 }

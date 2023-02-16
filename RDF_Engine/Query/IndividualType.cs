@@ -20,7 +20,7 @@
  * along with this code. If not, see <https://www.gnu.org/licenses/lgpl-3.0.html>.      
  */
 
-using BH.Engine.RDF.Types;
+using BH.Engine.Adapters.RDF.Types;
 using BH.oM.Base;
 using BH.oM.RDF;
 using Newtonsoft.Json;
@@ -33,7 +33,7 @@ using System.Reflection;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace BH.Engine.RDF
+namespace BH.Engine.Adapters.RDF
 {
     public static partial class Query
     {
