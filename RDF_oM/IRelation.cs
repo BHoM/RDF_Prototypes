@@ -29,7 +29,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace BH.oM.RDF
+namespace BH.oM.Adapters.RDF
 {
     [Description("Classes implementing this interface represent a relation between a Subject thing and an Object thing." +
         "The class name will represent the relation predicate.")]

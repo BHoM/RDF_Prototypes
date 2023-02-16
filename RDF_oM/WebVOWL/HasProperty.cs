@@ -28,7 +28,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace BH.oM.RDF
+namespace BH.oM.Adapters.RDF
 {
     [Description("Describes a property owned by a thing or class of things.")]
     public class HasProperty : IRelation

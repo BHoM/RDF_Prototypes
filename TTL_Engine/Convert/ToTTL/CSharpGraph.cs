@@ -24,7 +24,7 @@
 using BH.Engine.Base;
 using BH.Engine.Adapters.RDF;
 using BH.oM.Base;
-using BH.oM.RDF;
+using BH.oM.Adapters.RDF;
 using Microsoft.Extensions.Primitives;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Linq;

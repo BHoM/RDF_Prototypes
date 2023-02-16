@@ -31,7 +31,7 @@ using System.Reflection;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace BH.oM.RDF
+namespace BH.oM.Adapters.RDF
 {
     public class LocalRepositorySettings : IObject
     {

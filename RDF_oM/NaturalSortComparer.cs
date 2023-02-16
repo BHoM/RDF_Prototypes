@@ -28,7 +28,7 @@ using System.Text;
 using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 
-namespace BH.oM.RDF
+namespace BH.oM.Adapters.RDF
 {
     public class NaturalSortComparer<T> : IComparer<string>, IDisposable
     {

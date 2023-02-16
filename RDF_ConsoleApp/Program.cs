@@ -27,7 +27,7 @@ using System.Linq;
 using System.Net.Http;
 using System.Net.Http.Headers;
 using BH.Engine.Adapters.RDF;
-using BH.oM.RDF;
+using BH.oM.Adapters.RDF;
 using VDS.RDF;
 using VDS.RDF.Parsing;
 using VDS.RDF.Update;

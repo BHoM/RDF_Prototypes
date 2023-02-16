@@ -24,7 +24,7 @@ using BH.Adapters.TTL;
 using BH.oM.Geometry;
 using BH.oM.Physical.Elements;
 using BH.oM.Physical.FramingProperties;
-using BH.oM.RDF;
+using BH.oM.Adapters.RDF;
 using System.Data.Common;
 
 namespace BH.Test.RDF

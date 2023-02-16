@@ -29,7 +29,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace BH.oM.RDF
+namespace BH.oM.Adapters.RDF
 {
     [Description("Graph obtained from a collection of CSharp objects via Reflection (metaprogramming)." +
         "The graph is structured in a way that no reflection should be needed when translating it to an Ontology format, e.g. TTL.")]

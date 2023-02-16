@@ -32,7 +32,7 @@ using System.Threading.Tasks;
 using VDS.RDF;
 using VDS.RDF.Writing;
 using BH.Engine.Base;
-using BH.oM.RDF;
+using BH.oM.Adapters.RDF;
 using BH.oM.Base.Attributes;
 using BH.Engine.Adapters.RDF.Types;
 using System.Collections;

@@ -35,7 +35,7 @@ using VDS.RDF;
 using VDS.RDF.Writing;
 using BH.oM.Architecture.Elements;
 using BH.oM.Physical.Elements;
-using BH.oM.RDF;
+using BH.oM.Adapters.RDF;
 using System.ComponentModel;
 using System.Diagnostics;
 using VDS.RDF.Ontology;

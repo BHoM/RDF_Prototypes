@@ -24,7 +24,7 @@ using BH.Adapter;
 using BH.Adapters.TTL;
 using BH.oM.Adapter;
 using BH.oM.Base.Attributes;
-using BH.oM.RDF;
+using BH.oM.Adapters.RDF;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Linq;

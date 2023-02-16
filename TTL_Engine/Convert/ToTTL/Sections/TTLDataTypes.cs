@@ -21,7 +21,7 @@
  */
 
 using BH.Engine.Adapters.RDF;
-using BH.oM.RDF;
+using BH.oM.Adapters.RDF;
 using System;
 using System.Collections;
 using System.Collections.Generic;
@@ -46,7 +46,7 @@ namespace BH.Engine.Adapters.TTL
 
         private static string DefaultDataTypeForUnknownConversion(TBoxSettings tboxSettings, LocalRepositorySettings r)
         {
-            string defaultDataTypeUri = typeof(BH.oM.RDF.Base64JsonSerialized).OntologyUri(tboxSettings, r)?.ToString();
+            string defaultDataTypeUri = typeof(BH.oM.Adapters.RDF.Base64JsonSerialized).OntologyUri(tboxSettings, r)?.ToString();
 
             // TODO: add better guard against null, possibly adding mechanism to provide a defaultDataType URI rather than a Type.
             defaultDataTypeUri = defaultDataTypeUri ?? "https://github.com/BHoM/RDF_Prototypes/commit/ff8ccb68dbba5aeadb4a9a284f141eb1515e169a";
@@ -54,7 +54,7 @@ namespace BH.Engine.Adapters.TTL
             string TTLDataType = "";
             //TTLDataType = $"### {defaultDataTypeUri}";
             TTLDataType += $"\n<https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/Base64JsonSerialized.cs> rdf:type rdfs:Datatype ;";
-            TTLDataType += "\n" + $@"rdfs:label ""{typeof(BH.oM.RDF.Base64JsonSerialized).DescriptiveName()}""@en .";
+            TTLDataType += "\n" + $@"rdfs:label ""{typeof(BH.oM.Adapters.RDF.Base64JsonSerialized).DescriptiveName()}""@en .";
 
             return TTLDataType;
         }
