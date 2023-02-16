@@ -34,13 +34,13 @@ using System.Text;
 using System.Threading.Tasks;
 
 
-namespace BH.Engine.RDF
+namespace BH.Engine.Adapters.RDF
 {
     public static partial class Compute
     {
         public static void WriteWebVOWLOntologiesPerNamespace(LocalRepositorySettings settings)
         {
-            List<Assembly> oMassemblies = BH.Engine.RDF.Compute.LoadAssembliesInDirectory(true);
+            List<Assembly> oMassemblies = BH.Engine.Adapters.RDF.Compute.LoadAssembliesInDirectory(true);
             List<TypeInfo> oMTypes = oMassemblies.BHoMTypes();
             string saveDirRelativeToRepoRoot = settings.SaveDir_RelativeToRoot;
 
@@ -50,7 +50,7 @@ namespace BH.Engine.RDF
             //onlyBaseOmTypes = onlyBaseOmTypes.Where(t => t.Name.Contains("Output"));
             //onlyBaseOmTypes = onlyBaseOmTypes.Where(t => t.Name.Contains("ComparisonConfig"));
 
-            SortedDictionary<string, string> webVOWLJsonsPerNamespace = Engine.RDF.Compute.WebVOWLJsonPerNamespace(oMTypes, settings);
+            SortedDictionary<string, string> webVOWLJsonsPerNamespace = Engine.Adapters.RDF.Compute.WebVOWLJsonPerNamespace(oMTypes, settings);
 
             // Save all generated ontologies to file
             foreach (var kv in webVOWLJsonsPerNamespace)

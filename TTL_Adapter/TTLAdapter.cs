@@ -22,7 +22,7 @@
 
 using BH.Adapter;
 using BH.Adapters.TTL;
-using BH.Engine.RDF;
+using BH.Engine.Adapters.RDF;
 using BH.oM.Adapter;
 using BH.oM.Base.Attributes;
 using BH.oM.RDF;

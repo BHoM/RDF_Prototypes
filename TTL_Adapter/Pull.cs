@@ -33,7 +33,7 @@ using System.Threading.Tasks;
 using VDS.RDF.Ontology;
 using BH.Adapters;
 using BH.Engine.Adapters.TTL;
-using Log = BH.Engine.RDF.Log;
+using Log = BH.Engine.Adapters.RDF.Log;
 
 namespace BH.Adapters.TTL
 {

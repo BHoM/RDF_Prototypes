@@ -33,7 +33,7 @@ using BH.Engine.Base;
 using BH.Engine.Reflection;
 using BH.oM.Base;
 
-namespace BH.Engine.RDF
+namespace BH.Engine.Adapters.RDF
 {
     public static partial class Query
     {

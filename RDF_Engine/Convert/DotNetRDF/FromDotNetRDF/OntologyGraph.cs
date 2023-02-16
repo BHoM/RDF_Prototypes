@@ -20,53 +20,40 @@
  * along with this code. If not, see <https://www.gnu.org/licenses/lgpl-3.0.html>.      
  */
 
-
-using BH.Engine.Base;
 using BH.oM.Base;
-using BH.oM.RDF;
-using Newtonsoft.Json;
-using Newtonsoft.Json.Linq;
 using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.ComponentModel;
-using System.IO;
 using System.Linq;
 using System.Reflection;
 using System.Text;
 using System.Threading.Tasks;
+using VDS.RDF;
 using VDS.RDF.Ontology;
-using VDS.RDF.Parsing;
 
-namespace BH.Engine.RDF
+namespace BH.Engine.Adapters.RDF
 {
     public static partial class Convert
     {
-        /***************************************************/
-        /**** Public Methods                            ****/
-        /***************************************************/
-
-        [Description("Converts a TTL string to a DotNetRDF graph object called OntologyGraph.")]
-        public static OntologyGraph ToDotNetRDF(string ttlGraph)
+        public static List<object> FromDotNetRDF(this OntologyGraph dotNetRDFOntology)
         {
-            OntologyGraph g = new OntologyGraph();
+            var topIndividuals = dotNetRDFOntology.IndividualsNoOwner();
 
-            TurtleParser turtleParser = new TurtleParser();
-            TextReader reader = new StringReader(ttlGraph);
+            List<object> result = new List<object>();
 
-            try
+            foreach (OntologyResource individual in topIndividuals)
             {
-                turtleParser.Load(g, reader);
-            }
-            catch (Exception e)
-            {
-                Log.RecordError($"Could not convert textual TTL graph to a DotNetRDF OntologyGraph. Error:\n\t{e.ToString().SplitInLinesAndTabify()}");
+                object bhomInstance = individual.FromDotNetRDF(dotNetRDFOntology);
+                result.Add(bhomInstance);
             }
 
-            if (new OntologyGraph().Equals(g))
-                return null;
+            return result;
+        }
 
-            return g;
+        public static List<object> ToCSharpObjects(this string TTLOntology)
+        {
+            return ToDotNetRDF(TTLOntology).FromDotNetRDF();
         }
     }
 }

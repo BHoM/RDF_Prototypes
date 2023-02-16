@@ -28,7 +28,7 @@ using System.Threading.Tasks;
 using Newtonsoft.Json.Linq;
 using VDS.RDF.Query.Algebra;
 
-namespace BH.Engine.RDF
+namespace BH.Engine.Adapters.RDF
 {
     public static partial class Convert
     {

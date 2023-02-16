@@ -22,7 +22,7 @@
 
 
 using BH.Engine.Base;
-using BH.Engine.RDF;
+using BH.Engine.Adapters.RDF;
 using BH.oM.Base;
 using BH.oM.RDF;
 using Microsoft.Extensions.Primitives;
@@ -47,7 +47,7 @@ namespace BH.Engine.Adapters.TTL
         /***************************************************/
 
         [Description("Converts a Graph ontological representation of (BHoM) types and their relations into a TTL format.")]
-        public static string ToTTLGraph(this CSharpGraph cSharpGraph, LocalRepositorySettings localRepositorySettings = null, string filepath = null)
+        public static string ToTTL(this CSharpGraph cSharpGraph, LocalRepositorySettings localRepositorySettings = null, string filepath = null)
         {
             localRepositorySettings = localRepositorySettings ?? new LocalRepositorySettings();
 

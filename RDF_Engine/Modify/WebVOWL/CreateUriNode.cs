@@ -33,7 +33,7 @@ using System.Threading.Tasks;
 using VDS.RDF;
 
 
-namespace BH.Engine.RDF
+namespace BH.Engine.Adapters.RDF
 {
     public static partial class Modify
     {

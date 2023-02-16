@@ -20,7 +20,7 @@
  * along with this code. If not, see <https://www.gnu.org/licenses/lgpl-3.0.html>.      
  */
 
-using BH.Engine.RDF;
+using BH.Engine.Adapters.RDF;
 using BH.oM.RDF;
 using System;
 using System.Collections;
@@ -35,40 +35,36 @@ namespace BH.Engine.Adapters.TTL
 {
     public static partial class Convert
     {
-        private static List<string> TTLObjectProperties(this CSharpGraph cSharpGraph, LocalRepositorySettings localRepositorySettings)
+        private static List<string> TTLClasses(this CSharpGraph cSharpGraph, LocalRepositorySettings localRepositorySettings)
         {
-            List<string> TTLObjectProperties = new List<string>();
+            List<string> TTLClasses = new List<string>();
 
-            for (int i = 0; i < cSharpGraph.ObjectProperties.Count; i++)
+            foreach (var classType in cSharpGraph.Classes)
             {
-                var rel = cSharpGraph.ObjectProperties.ElementAt(i);
+                string TTLClass = "";
 
-                try
+                // Declaration with Uri
+                string typeUri = classType.OntologyUri(cSharpGraph.OntologySettings.TBoxSettings, localRepositorySettings).ToString();
+                TTLClass += $"### {typeUri}";
+
+                // Class Identifier
+                TTLClass += $"\n:{classType.UniqueNodeId()} rdf:type owl:Class;";
+
+                // Subclasses
+                List<Type> parentTypes = classType.BaseTypesNoRedundancy().Where(t => t.IsOntologyClass(cSharpGraph.OntologySettings.TBoxSettings)).ToList();
+
+                foreach (Type subClass in parentTypes)
                 {
-                    string TTLObjectProperty = "";
-
-                    if (rel.RangeClass == null || rel.PropertyInfo == null)
-                        continue;
-
-                    if (localRepositorySettings.TryComputeURLFromFilePaths)
-                    {
-                        string propertyURI = rel.PropertyInfo.OntologyURI(cSharpGraph.OntologySettings.TBoxSettings, localRepositorySettings).ToString();
-                        TTLObjectProperty += $"\n### {propertyURI}";
-                    }
-                    TTLObjectProperty += $"\n:{rel.PropertyInfo.UniqueNodeId()} rdf:type owl:ObjectProperty ;";
-                    TTLObjectProperty += $"\nrdfs:domain :{rel.DomainClass.UniqueNodeId()} ;";
-                    TTLObjectProperty += $"\nrdfs:range :{rel.RangeClass.UniqueNodeId()} ;";
-                    TTLObjectProperty += "\n" + $@"rdfs:label ""{rel.PropertyInfo.DescriptiveName()}""@en .";
-
-                    TTLObjectProperties.Add(TTLObjectProperty);
+                    TTLClass += $"\n\t\trdfs:subClassOf :{subClass.UniqueNodeId()};";
                 }
-                catch (Exception e)
-                {
-                    Log.RecordError($"Could not add the {nameof(CSharpGraph)}.{nameof(CSharpGraph.ObjectProperties)} at position {i}. Error:\n\t{e.ToString()}");
-                }
+
+                // Class label
+                TTLClass += "\n\t\t" + $@"rdfs:label ""{classType.DescriptiveName()}""@en .";
+
+                TTLClasses.Add(TTLClass);
             }
 
-            return TTLObjectProperties;
+            return TTLClasses;
         }
     }
 }

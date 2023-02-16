@@ -33,7 +33,7 @@ using VDS.RDF;
 using VDS.RDF.Writing;
 
 
-namespace BH.Engine.RDF
+namespace BH.Engine.Adapters.RDF
 {
     public static partial class Compute
     {

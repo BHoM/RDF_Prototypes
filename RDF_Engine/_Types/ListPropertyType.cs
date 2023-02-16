@@ -20,7 +20,7 @@
  * along with this code. If not, see <https://www.gnu.org/licenses/lgpl-3.0.html>.      
  */
 
-using BH.Engine.RDF;
+using BH.Engine.Adapters.RDF;
 using BH.oM.Base;
 using BH.oM.RDF;
 using System;
@@ -31,7 +31,7 @@ using System.Reflection;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace BH.Engine.RDF.Types
+namespace BH.Engine.Adapters.RDF.Types
 {
     /// <summary>
     /// Type used to represent the type of BH.oM.Base.CustomObject in a CSharpGraph.

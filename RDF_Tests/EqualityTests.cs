@@ -24,7 +24,7 @@ using BH.oM.Architecture.Elements;
 using System;
 using System.Collections.Generic;
 using BH.oM.Geometry;
-using BH.Engine.RDF;
+using BH.Engine.Adapters.RDF;
 using BH.oM.RDF;
 using BH.oM.Physical.Elements;
 using BH.oM.Base;
@@ -64,7 +64,7 @@ namespace BH.Test.RDF
         [Test]
         public static void Column()
         {
-            Column randomColumn = BH.Engine.RDF.Testing.Create.RandomObject<Column>();
+            Column randomColumn = BH.Engine.Adapters.RDF.Testing.Create.RandomObject<Column>();
 
             Assert.IsNotEqual(randomColumn, new Column());
             Assert.IsEqual(randomColumn, randomColumn.DeepClone());
@@ -97,7 +97,7 @@ namespace BH.Test.RDF
         {
             CustomObject customObject = BH.Engine.Base.Create.CustomObject(new Dictionary<string, object>() { { "Type", "Cassette" },
                 { "intProperty", 10 },
-                { "pointProperty", BH.Engine.RDF.Testing.Create.RandomObject<Point>() } });
+                { "pointProperty", BH.Engine.Adapters.RDF.Testing.Create.RandomObject<Point>() } });
 
             Assert.IsEqual(customObject, customObject.DeepClone());
             Assert.IsNotEqual(customObject, new CustomObject());

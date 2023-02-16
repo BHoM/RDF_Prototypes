@@ -20,7 +20,7 @@
  * along with this code. If not, see <https://www.gnu.org/licenses/lgpl-3.0.html>.      
  */
 
-using BH.Engine.RDF;
+using BH.Engine.Adapters.RDF;
 using BH.oM.Base;
 using BH.oM.RDF;
 using System;
@@ -28,7 +28,7 @@ using System.Collections.Generic;
 using System.Globalization;
 using System.Reflection;
 
-namespace BH.Engine.RDF.Types
+namespace BH.Engine.Adapters.RDF.Types
 {
     /// <summary>
     /// Type used to represent the properties of a CustomObjectType type. See the description of CustomObjectType for more info.

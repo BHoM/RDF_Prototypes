@@ -52,7 +52,7 @@ namespace BH.Test.RDF
             Column randomColumn = new Column();
             randomColumn.Name = "A column object";
             randomColumn.Property = new ConstantFramingProperty() { Material = new oM.Physical.Materials.Material() { Name = "SomeMaterial" } };
-            randomColumn.Location = BH.Engine.RDF.Testing.Create.RandomObject<Arc>();
+            randomColumn.Location = BH.Engine.Adapters.RDF.Testing.Create.RandomObject<Arc>();
             return randomColumn;
         }
     }

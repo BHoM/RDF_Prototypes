@@ -28,7 +28,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace BH.Engine.RDF.Testing
+namespace BH.Engine.Adapters.RDF.Testing
 {
     public static partial class Create
     {

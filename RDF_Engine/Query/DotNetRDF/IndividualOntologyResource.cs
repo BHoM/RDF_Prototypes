@@ -31,7 +31,7 @@ using System.Threading.Tasks;
 using VDS.RDF;
 using VDS.RDF.Ontology;
 
-namespace BH.Engine.RDF
+namespace BH.Engine.Adapters.RDF
 {
     public static partial class Query
     {

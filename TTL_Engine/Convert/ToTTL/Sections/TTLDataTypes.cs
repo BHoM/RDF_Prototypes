@@ -20,54 +20,43 @@
  * along with this code. If not, see <https://www.gnu.org/licenses/lgpl-3.0.html>.      
  */
 
-
-using BH.Engine.Base;
-using BH.Engine.RDF;
-using BH.oM.Base;
+using BH.Engine.Adapters.RDF;
 using BH.oM.RDF;
-using Newtonsoft.Json;
-using Newtonsoft.Json.Linq;
 using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.ComponentModel;
-using System.IO;
 using System.Linq;
 using System.Reflection;
 using System.Text;
 using System.Threading.Tasks;
-using VDS.RDF.Ontology;
-using VDS.RDF.Parsing;
 
-namespace BH.Adapter.RDF
+namespace BH.Engine.Adapters.TTL
 {
     public static partial class Convert
     {
-        /***************************************************/
-        /**** Public Methods                            ****/
-        /***************************************************/
-
-        [Description("Converts a TTL string to a DotNetRDF graph object called OntologyGraph.")]
-        public static OntologyGraph ToDotNetRDF(string ttlGraph)
+        private static List<string> TTLDataTypes(this CSharpGraph cSharpGraph, LocalRepositorySettings r)
         {
-            OntologyGraph g = new OntologyGraph();
+            List<string> dataTypes = new List<string>();
 
-            TurtleParser turtleParser = new TurtleParser();
-            TextReader reader = new StringReader(ttlGraph);
+            dataTypes.Add(DefaultDataTypeForUnknownConversion(cSharpGraph.OntologySettings.TBoxSettings, r));
 
-            try
-            {
-                turtleParser.Load(g, reader);
-            }
-            catch (Exception e)
-            {
-                Log.RecordError($"Could not convert textual TTL graph to a DotNetRDF OntologyGraph. Error:\n\t{e.ToString().SplitInLinesAndTabify()}");
-            }
+            return dataTypes;
+        }
 
-            if (new OntologyGraph().Equals(g))
-                return null;
+        private static string DefaultDataTypeForUnknownConversion(TBoxSettings tboxSettings, LocalRepositorySettings r)
+        {
+            string defaultDataTypeUri = typeof(BH.oM.RDF.Base64JsonSerialized).OntologyUri(tboxSettings, r)?.ToString();
 
-            return g;
+            // TODO: add better guard against null, possibly adding mechanism to provide a defaultDataType URI rather than a Type.
+            defaultDataTypeUri = defaultDataTypeUri ?? "https://github.com/BHoM/RDF_Prototypes/commit/ff8ccb68dbba5aeadb4a9a284f141eb1515e169a";
+
+            string TTLDataType = "";
+            //TTLDataType = $"### {defaultDataTypeUri}";
+            TTLDataType += $"\n<https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/Base64JsonSerialized.cs> rdf:type rdfs:Datatype ;";
+            TTLDataType += "\n" + $@"rdfs:label ""{typeof(BH.oM.RDF.Base64JsonSerialized).DescriptiveName()}""@en .";
+
+            return TTLDataType;
         }
     }
 }

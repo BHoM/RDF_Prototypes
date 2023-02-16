@@ -30,7 +30,7 @@ using System.Text;
 using System.Threading.Tasks;
 using VDS.RDF.Ontology;
 
-namespace BH.Engine.RDF
+namespace BH.Engine.Adapters.RDF
 {
     public static partial class Query
     {
@@ -60,7 +60,7 @@ namespace BH.Engine.RDF
             string customTypeName = bhomTypeFullName.Split('.').Last();
 
             // Check if it is a custom type.
-            if (bhomTypeFullName.Contains(typeof(BH.Engine.RDF.Types.CustomObjectType).FullName))
+            if (bhomTypeFullName.Contains(typeof(BH.Engine.Adapters.RDF.Types.CustomObjectType).FullName))
                 return new Types.CustomObjectType(customTypeName);
 
             // See if a match can be found in the complete Type list of BHoM.

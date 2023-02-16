@@ -37,7 +37,7 @@ using BH.oM.RDF;
 using BH.oM.Base.Attributes;
 using static System.Net.Mime.MediaTypeNames;
 using Newtonsoft.Json.Linq;
-using BH.Engine.RDF;
+using BH.Engine.Adapters.RDF;
 
 namespace BH.Engine.Adapters.TTL
 {
@@ -55,7 +55,7 @@ namespace BH.Engine.Adapters.TTL
 
             Output<List<object>, OntologySettings> output = new Output<List<object>, OntologySettings>
             {
-                Item1 = BH.Engine.RDF.Convert.ToCSharpObjects(TTLtext),
+                Item1 = BH.Engine.Adapters.RDF.Convert.ToCSharpObjects(TTLtext),
                 Item2 = ontologySettings
             };
             return output;
@@ -80,7 +80,7 @@ namespace BH.Engine.Adapters.TTL
             foreach (var line in TTLtext.SplitToLines())
             {
                 if (line.Contains(ontologySettingsDeclaration))
-                    return BH.Engine.RDF.Convert.FromBase64JsonSerialized(line.Replace(ontologySettingsDeclaration, "")) as OntologySettings ?? new OntologySettings();
+                    return BH.Engine.Adapters.RDF.Convert.FromBase64JsonSerialized(line.Replace(ontologySettingsDeclaration, "")) as OntologySettings ?? new OntologySettings();
             }
 
             return new OntologySettings();

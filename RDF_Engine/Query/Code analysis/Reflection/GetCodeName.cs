@@ -33,7 +33,7 @@ using System.Threading.Tasks;
 using System.IO;
 using Microsoft.CSharp;
 
-namespace BH.Engine.RDF
+namespace BH.Engine.Adapters.RDF
 {
 	public static partial class Query
 	{

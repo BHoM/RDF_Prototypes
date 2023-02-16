@@ -21,7 +21,7 @@
  */
 
 using BH.Engine.Base;
-using BH.Engine.RDF.Types;
+using BH.Engine.Adapters.RDF.Types;
 using BH.oM.Base;
 using BH.oM.Base.Attributes;
 using BH.oM.RDF;
@@ -36,7 +36,7 @@ using System.Text;
 using System.Threading.Tasks;
 
 
-namespace BH.Engine.RDF
+namespace BH.Engine.Adapters.RDF
 {
     public static partial class Query
     {
@@ -70,7 +70,8 @@ namespace BH.Engine.RDF
             if (string.IsNullOrWhiteSpace(repositoryRoot))
             {
                 Log.RecordNote($"No path specified in in {nameof(LocalRepositorySettings)}.{nameof(LocalRepositorySettings.GitRootPath)}." +
-                    "\nAn attempt to find a valid root path on disk will now be done.");
+                    "\nAn attempt to find a valid root path on disk will now be done." +
+                    "\nIgnore this message if you don't get any error.");
                 TryGetRepositoryRootPath(out repositoryRoot);
             }
 
