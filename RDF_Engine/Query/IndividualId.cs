@@ -42,14 +42,18 @@ namespace BH.Engine.Adapters.RDF
             // If it is an IObject, simply use BHoM's Hash method.
             IObject iObject = individual as IObject;
             if (iObject != null)
-                return BH.Engine.Base.Query.Hash(iObject);
+            {
+                string hash = BH.Engine.Base.Query.Hash(iObject);
+                return GuidFromString(hash).ToString();
 
-            // Otherwise, obtain a static, repeatable Hash by serializing the object, encoding it in Base64, and then computing a hash of the resulting string.
-            // This is slow but should only happen in edge cases.
-            string base64Serialized = Convert.ToBase64JsonSerialized(individual);
-            string base64SerializedHash = Query.SHA256Hash(base64Serialized);
+            }
 
-            return base64SerializedHash;
+            BHoMObject bHoMObject = individual as BHoMObject;
+            if (bHoMObject != null)
+                return bHoMObject.BHoM_Guid.ToString();
+
+            Log.RecordError("Could not query the ID for an individual.");
+            return null;
         }
     }
 }
