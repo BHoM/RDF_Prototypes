@@ -43,6 +43,10 @@ using FluentAssertions;
 using BH.Adapters.TTL;
 using Compute = BH.Engine.Adapters.RDF.Compute;
 using BH.Engine.Adapters.TTL;
+using BH.Engine.Base;
+using Convert = BH.Engine.Adapters.TTL.Convert;
+using BH.Engine.Adapters.TTL;
+
 
 namespace BH.Test.RDF
 {
@@ -384,6 +388,58 @@ namespace BH.Test.RDF
             Assert.IsTTLParsable(TTLGraph);
         }
 
-   
+        [Test]
+        public static void UriGuidBHoMObj()
+        {
+            Room room = new Room();
+            room.Perimeter = new Polyline() { ControlPoints = new List<Point>() { new Point(), new Point() { X = 5 }, new Point() { X = 99 } } };
+            room.Location = new Point();
+            room.Name = "first room object";
+
+            CSharpGraph cSharpGraph = Compute.CSharpGraph(new List<object>() { room }, m_ontologySettings);
+            string TTLGraph = cSharpGraph.ToTTL();
+
+            Assert.IsTrue(TTLGraph.Contains(room.BHoM_Guid.ToString()));
+
+            var res = Convert.FromTTL(TTLGraph);
+            var obj = res.Item1.First();
+            Room roomRedBack = obj as Room;
+
+            Assert.IsEqual(room, roomRedBack);
+
+        }
+
+        [Test]
+        public static void UriGuidIGeometry()
+        {
+            NurbsCurve nurbs = new NurbsCurve()
+            {
+                ControlPoints = new List<Point>()
+                {
+                    new Point(),
+                    new Point() { X = 1, Y = 1, Z = 1 },
+                    new Point() { X = 2, Y = 2, Z = 2 }
+                }
+            };
+
+            CSharpGraph cSharpGraph = Compute.CSharpGraph(new List<object>() { nurbs }, new OntologySettings()
+            {
+                TBoxSettings = new TBoxSettings { GeometryAsOntologyClass = true }
+            });
+            string TTLGraph = cSharpGraph.ToTTL();
+            IObject iObject = nurbs as IObject;
+            string hash = BH.Engine.Base.Query.Hash(iObject);
+            string nurbsGuid = Engine.Adapters.RDF.Query.GuidFromString(hash).ToString();
+
+            Assert.IsTrue(TTLGraph.Contains(nurbsGuid));
+
+            var res = Convert.FromTTL(TTLGraph);
+            var obj = res.Item1.First();
+            NurbsCurve nurbsRedBack = obj as NurbsCurve;
+
+            Assert.IsEqual(nurbs, nurbsRedBack);
+
+
+        }
     }
 }
