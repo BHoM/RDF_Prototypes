@@ -47,7 +47,6 @@ using BH.Engine.Base;
 using Convert = BH.Engine.Adapters.TTL.Convert;
 using BH.Engine.Adapters.TTL;
 
-
 namespace BH.Test.RDF
 {
     public class ToTTLTests : Test
@@ -399,7 +398,8 @@ namespace BH.Test.RDF
             CSharpGraph cSharpGraph = Compute.CSharpGraph(new List<object>() { room }, m_ontologySettings);
             string TTLGraph = cSharpGraph.ToTTL();
 
-            Assert.IsTrue(TTLGraph.Contains(room.BHoM_Guid.ToString()));
+            string roomUrl = Flurl.Url.Combine(cSharpGraph.OntologySettings.ABoxSettings.IndividualsBaseAddress, room.BHoM_Guid.ToString());
+            Assert.IsTrue(TTLGraph.Contains(roomUrl.ToLower()));
 
             var res = Convert.FromTTL(TTLGraph);
             var obj = res.Item1.First();
@@ -431,7 +431,8 @@ namespace BH.Test.RDF
             string hash = BH.Engine.Base.Query.Hash(iObject);
             string nurbsGuid = Engine.Adapters.RDF.Query.GuidFromString(hash).ToString();
 
-            Assert.IsTrue(TTLGraph.Contains(nurbsGuid));
+            string nurbsUrl = Flurl.Url.Combine(cSharpGraph.OntologySettings.ABoxSettings.IndividualsBaseAddress, nurbsGuid.ToString());
+            Assert.IsTrue(TTLGraph.Contains(nurbsUrl.ToLower()));
 
             var res = Convert.FromTTL(TTLGraph);
             var obj = res.Item1.First();
