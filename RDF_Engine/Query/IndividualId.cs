@@ -39,6 +39,10 @@ namespace BH.Engine.Adapters.RDF
             if (individual == null)
                 return null;
 
+            BHoMObject bHoMObject = individual as BHoMObject;
+            if (bHoMObject != null)
+                return bHoMObject.BHoM_Guid.ToString();
+
             // If it is an IObject, simply use BHoM's Hash method.
             IObject iObject = individual as IObject;
             if (iObject != null)
@@ -47,10 +51,6 @@ namespace BH.Engine.Adapters.RDF
                 return GuidFromString(hash).ToString();
 
             }
-
-            BHoMObject bHoMObject = individual as BHoMObject;
-            if (bHoMObject != null)
-                return bHoMObject.BHoM_Guid.ToString();
 
             Log.RecordError("Could not query the ID for an individual.");
             return null;
