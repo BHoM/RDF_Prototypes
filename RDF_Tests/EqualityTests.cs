@@ -136,7 +136,7 @@ namespace BH.Test.RDF
             Assert.IsNotEqual(customObj, clone);
         }
 
-        private static OntologySettings m_ontologySettings = new OntologySettings()
+        private static GraphSettings m_graphSettings = new GraphSettings()
         {
             ABoxSettings = new ABoxSettings() { IndividualsBaseAddress = "individuals.Address" },
             TBoxSettings = new TBoxSettings() { CustomObjectTypesBaseAddress = "CustomObjectTypes.Address" }

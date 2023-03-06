@@ -38,14 +38,14 @@ namespace BH.Engine.Adapters.RDF
 {
     public static partial class Query
     {
-        public static bool IsOntologyClass(this Type type, TBoxSettings tBoxSettings)
+        public static bool IsOntologyClass(this Type type, ABoxSettings aBoxSettings)
         {
             // This method answers this question:
             // is there (should there be) a Class in the ontology that corresponds to this Type?
             // In general, this method should return true for BHoM types (e.g. Column, Bar, etc.), because they mostly correspond to Ontological classes.
             // However, there are particular cases to consider.
 
-            tBoxSettings = tBoxSettings ?? new TBoxSettings();
+            aBoxSettings = aBoxSettings ?? new ABoxSettings();
 
             if (type == null)
                 return false;
@@ -61,7 +61,7 @@ namespace BH.Engine.Adapters.RDF
                 if (typeof(FragmentSet).IsAssignableFrom(type))
                     return false;
 
-                if (!tBoxSettings.GeometryAsOntologyClass && typeof(IGeometry).IsAssignableFrom(type))
+                if (!aBoxSettings.GeometryAsOntologyClass && typeof(IGeometry).IsAssignableFrom(type))
                     return false;
 
                 return true;

@@ -44,14 +44,14 @@ namespace BH.Engine.Adapters.TTL
                 string TTLClass = "";
 
                 // Declaration with Uri
-                string typeUri = classType.OntologyUri(cSharpGraph.OntologySettings.TBoxSettings, localRepositorySettings).ToString();
+                string typeUri = classType.OntologyUri(cSharpGraph.GraphSettings.TBoxSettings, localRepositorySettings).ToString();
                 TTLClass += $"### {typeUri}";
 
                 // Class Identifier
                 TTLClass += $"\n:{classType.UniqueNodeId()} rdf:type owl:Class;";
 
                 // Subclasses
-                List<Type> parentTypes = classType.BaseTypesNoRedundancy().Where(t => t.IsOntologyClass(cSharpGraph.OntologySettings.TBoxSettings)).ToList();
+                List<Type> parentTypes = classType.BaseTypesNoRedundancy().Where(t => t.IsOntologyClass(cSharpGraph.GraphSettings.ABoxSettings)).ToList();
 
                 foreach (Type subClass in parentTypes)
                 {

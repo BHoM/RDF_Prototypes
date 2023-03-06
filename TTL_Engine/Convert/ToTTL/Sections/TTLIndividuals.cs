@@ -45,11 +45,11 @@ namespace BH.Engine.Adapters.TTL
 
                 string TTLIndividual = "";
 
-                string individualUri = individual.IndividualUri(cSharpGraph.OntologySettings).ToString();
+                string individualUri = individual.IndividualUri(cSharpGraph.GraphSettings).ToString();
 
                 TTLIndividual += $"\n### {individualUri}";
                 TTLIndividual += $"\n<{individualUri}> rdf:type owl:NamedIndividual ,";
-                TTLIndividual += $"\n\t\t:{individual.IndividualType(cSharpGraph.OntologySettings.TBoxSettings).UniqueNodeId()} ;";
+                TTLIndividual += $"\n\t\t:{individual.IndividualType(cSharpGraph.GraphSettings.TBoxSettings).UniqueNodeId()} ;";
 
                 TTLIndividual += TLLIndividualRelations(individual, cSharpGraph, localRepositorySettings);
 
@@ -72,13 +72,13 @@ namespace BH.Engine.Adapters.TTL
                     // First check if the Object Property is a List.
                     // This check is done here rather than at the CSharpGraph stage because not all output formats support lists.
                     // TTL supports lists.
-                    if (iop.IsListOfOntologyClasses(cSharpGraph.OntologySettings.TBoxSettings))
+                    if (iop.IsListOfOntologyClasses(cSharpGraph.GraphSettings.ABoxSettings))
                     {
                         var individualList = iop.RangeIndividual as IEnumerable<object>;
                         if (individualList.IsNullOrEmpty())
                             continue;
 
-                        List<string> listIndividualsUris = individualList.Where(o => o != null).Select(o => o.IndividualUri(cSharpGraph.OntologySettings).ToString()).ToList();
+                        List<string> listIndividualsUris = individualList.Where(o => o != null).Select(o => o.IndividualUri(cSharpGraph.GraphSettings).ToString()).ToList();
                         TLLIndividualRelations.Append($"\n\t\t:{iop.HasProperty.PropertyInfo.UniqueNodeId()} rdf:Seq ;\n");
 
                         for (int i = 0; i < listIndividualsUris.Count; i++)
@@ -88,7 +88,7 @@ namespace BH.Engine.Adapters.TTL
                             TLLIndividualRelations.Append($"\t\trdf:_{i} <{individualUri}> ;\n");
                         }
                     }
-                    else if (iop.RangeIndividual?.GetType().IsListOfDatatypes(cSharpGraph.OntologySettings.TBoxSettings) ?? false)
+                    else if (iop.RangeIndividual?.GetType().IsListOfDatatypes(cSharpGraph.GraphSettings.ABoxSettings) ?? false)
                     {
                         var individualList = iop.RangeIndividual as IEnumerable;
                         if (individualList.IsNullOrEmpty())
@@ -104,7 +104,7 @@ namespace BH.Engine.Adapters.TTL
                     }
                     else
 
-                        TLLIndividualRelations.Append($"\n\t\t:{iop.HasProperty.PropertyInfo.UniqueNodeId()} <{iop.RangeIndividual.IndividualUri(cSharpGraph.OntologySettings)}> ;");
+                        TLLIndividualRelations.Append($"\n\t\t:{iop.HasProperty.PropertyInfo.UniqueNodeId()} <{iop.RangeIndividual.IndividualUri(cSharpGraph.GraphSettings)}> ;");
 
                     continue;
                 }

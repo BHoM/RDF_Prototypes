@@ -46,44 +46,44 @@ namespace BH.Engine.Adapters.TTL
         [Description("Reads a TTL ontology and attempts to convert any A-Box individual into its CSharp object equivalent.")]
         [MultiOutputAttribute(0,"KG","Ontology produced whatever")]
         [MultiOutputAttribute(1, "OS", "Ontology Settings used to construct this KG")]
-        public static Output<List<object>, OntologySettings> FromTTL(string TTLtext)
+        public static Output<List<object>, GraphSettings> FromTTL(string TTLtext)
         {
             if (string.IsNullOrWhiteSpace(TTLtext))
-                return new Output<List<object>, OntologySettings>();
+                return new Output<List<object>, GraphSettings>();
 
-            OntologySettings ontologySettings = ExtractOntologySettings(TTLtext);
+            GraphSettings graphSettings = ExtractOntologySettings(TTLtext);
 
-            Output<List<object>, OntologySettings> output = new Output<List<object>, OntologySettings>
+            Output<List<object>, GraphSettings> output = new Output<List<object>, GraphSettings>
             {
                 Item1 = BH.Engine.Adapters.RDF.Convert.ToCSharpObjects(TTLtext),
-                Item2 = ontologySettings
+                Item2 = graphSettings
             };
             return output;
         }
 
         [Description("Reads a TTL ontology and attempts to convert any A-Box individual into its CSharp object equivalent.")]
-        public static Output<List<object>, OntologySettings> FromTTL(string TTLfilePath, bool active = false)
+        public static Output<List<object>, GraphSettings> FromTTL(string TTLfilePath, bool active = false)
         {
             if (!active)
-                return new Output<List<object>, OntologySettings>();
+                return new Output<List<object>, GraphSettings>();
 
             string TTLtext = File.ReadAllText(TTLfilePath);
-            Output<List<object>, OntologySettings> readTTLOutput = FromTTL(TTLtext);
+            Output<List<object>, GraphSettings> readTTLOutput = FromTTL(TTLtext);
 
             return readTTLOutput;
         }
 
-        private static OntologySettings ExtractOntologySettings(string TTLtext)
+        private static GraphSettings ExtractOntologySettings(string TTLtext)
         {
-            string ontologySettingsDeclaration = $"# {nameof(OntologySettings)}: ";
+            string graphSettingsDeclaration = $"# {nameof(GraphSettings)}: ";
 
             foreach (var line in TTLtext.SplitToLines())
             {
-                if (line.Contains(ontologySettingsDeclaration))
-                    return BH.Engine.Adapters.RDF.Convert.FromBase64JsonSerialized(line.Replace(ontologySettingsDeclaration, "")) as OntologySettings ?? new OntologySettings();
+                if (line.Contains(graphSettingsDeclaration))
+                    return BH.Engine.Adapters.RDF.Convert.FromBase64JsonSerialized(line.Replace(graphSettingsDeclaration, "")) as GraphSettings ?? new GraphSettings();
             }
 
-            return new OntologySettings();
+            return new GraphSettings();
         }
 
         private static IEnumerable<string> SplitToLines(this string input)

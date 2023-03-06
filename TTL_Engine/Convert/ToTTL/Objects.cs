@@ -42,12 +42,12 @@ namespace BH.Engine.Adapters.TTL
     {
         [Description("Computes a TTL ontology with the input IObjects. The ontology will include both T-Box and A-Box." +
              "The T-Box is constructed from the Types of the input objects, and their relations, expressed via the CSharp object properties.")]
-        public static void ToTTL(this List<object> objects, string filePath, OntologySettings ontologySettings = null, LocalRepositorySettings localRepositorySettings = null)
+        public static void ToTTL(this List<object> objects, string filePath, GraphSettings graphSettings = null, LocalRepositorySettings localRepositorySettings = null)
         {
             localRepositorySettings = localRepositorySettings ?? new LocalRepositorySettings();
-            ontologySettings = ontologySettings ?? new OntologySettings();
+            graphSettings = graphSettings ?? new GraphSettings();
 
-            CSharpGraph cSharpGraph = Engine.Adapters.RDF.Compute.CSharpGraph(objects, ontologySettings);
+            CSharpGraph cSharpGraph = Engine.Adapters.RDF.Compute.CSharpGraph(objects, graphSettings);
 
             cSharpGraph.ToTTL(localRepositorySettings, filePath);
         }
@@ -55,12 +55,12 @@ namespace BH.Engine.Adapters.TTL
 
         [Description("Computes a TTL ontology with the input IObjects. The ontology will include both T-Box and A-Box." +
             "The T-Box is constructed from the Types of the input objects, and their relations, expressed via the CSharp object properties.")]
-        public static string ToTTL(this List<object> objects, OntologySettings ontologySettings = null, LocalRepositorySettings localRepositorySettings = null)
+        public static string ToTTL(this List<object> objects, GraphSettings graphSettings = null, LocalRepositorySettings localRepositorySettings = null)
         {
             localRepositorySettings = localRepositorySettings ?? new LocalRepositorySettings();
-            ontologySettings = ontologySettings ?? new OntologySettings();
+            graphSettings = graphSettings ?? new GraphSettings();
 
-            CSharpGraph cSharpGraph = Engine.Adapters.RDF.Compute.CSharpGraph(objects, ontologySettings);
+            CSharpGraph cSharpGraph = Engine.Adapters.RDF.Compute.CSharpGraph(objects, graphSettings);
 
             string TTL = cSharpGraph.ToTTL(localRepositorySettings);
 
