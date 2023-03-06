@@ -61,7 +61,7 @@ namespace BH.Engine.Adapters.TTL
             {
                 TTL = new StringBuilder();
 
-                TTL.Append(TTLHeader(cSharpGraph.OntologySettings));
+                TTL.Append(TTLHeader(cSharpGraph.GraphSettings));
 
                 TTL.Append("Annotation Properties".TTLSectionTitle());
                 TTL.Append(string.Join("\n", TTLAnnotationProperties()));
@@ -86,7 +86,7 @@ namespace BH.Engine.Adapters.TTL
                 cSharpGraph.TTLIndividuals(localRepositorySettings, TTL);
 
                 TTL.Append("Footer".TTLSectionTitle());
-                TTL.AppendLine($"# {nameof(OntologySettings)}: {cSharpGraph.OntologySettings.ToBase64JsonSerialized()}");
+                TTL.AppendLine($"# {nameof(GraphSettings)}: {cSharpGraph.GraphSettings.ToBase64JsonSerialized()}");
             }
 
             catch { }
@@ -105,21 +105,21 @@ namespace BH.Engine.Adapters.TTL
         {
             TBoxSettings defaultTboxSettings = new TBoxSettings();
             StringBuilder tBoxSettingsStringBuilder = new StringBuilder();
-            if (cSharpGraph.OntologySettings.TBoxSettings.TreatCustomObjectsWithTypeKeyAsCustomObjectTypes != defaultTboxSettings.TreatCustomObjectsWithTypeKeyAsCustomObjectTypes)
-                tBoxSettingsStringBuilder.AppendLine($"# {nameof(defaultTboxSettings.TreatCustomObjectsWithTypeKeyAsCustomObjectTypes)}: " + cSharpGraph.OntologySettings.TBoxSettings.TreatCustomObjectsWithTypeKeyAsCustomObjectTypes);
+            if (cSharpGraph.GraphSettings.TBoxSettings.TreatCustomObjectsWithTypeKeyAsCustomObjectTypes != defaultTboxSettings.TreatCustomObjectsWithTypeKeyAsCustomObjectTypes)
+                tBoxSettingsStringBuilder.AppendLine($"# {nameof(defaultTboxSettings.TreatCustomObjectsWithTypeKeyAsCustomObjectTypes)}: " + cSharpGraph.GraphSettings.TBoxSettings.TreatCustomObjectsWithTypeKeyAsCustomObjectTypes);
 
-            if (cSharpGraph.OntologySettings.TBoxSettings.DefaultBaseUriForUnknownTypes != defaultTboxSettings.DefaultBaseUriForUnknownTypes)
-                tBoxSettingsStringBuilder.AppendLine($"# {nameof(defaultTboxSettings.DefaultBaseUriForUnknownTypes)}: " + cSharpGraph.OntologySettings.TBoxSettings.DefaultBaseUriForUnknownTypes);
+            if (cSharpGraph.GraphSettings.TBoxSettings.DefaultBaseUriForUnknownTypes != defaultTboxSettings.DefaultBaseUriForUnknownTypes)
+                tBoxSettingsStringBuilder.AppendLine($"# {nameof(defaultTboxSettings.DefaultBaseUriForUnknownTypes)}: " + cSharpGraph.GraphSettings.TBoxSettings.DefaultBaseUriForUnknownTypes);
 
-            if (cSharpGraph.OntologySettings.TBoxSettings.CustomobjectsTypeKey != defaultTboxSettings.CustomobjectsTypeKey)
-                tBoxSettingsStringBuilder.AppendLine($"# {nameof(defaultTboxSettings.CustomobjectsTypeKey)}: " + cSharpGraph.OntologySettings.TBoxSettings.CustomobjectsTypeKey);
+            if (cSharpGraph.GraphSettings.TBoxSettings.CustomobjectsTypeKey != defaultTboxSettings.CustomobjectsTypeKey)
+                tBoxSettingsStringBuilder.AppendLine($"# {nameof(defaultTboxSettings.CustomobjectsTypeKey)}: " + cSharpGraph.GraphSettings.TBoxSettings.CustomobjectsTypeKey);
 
-            if (cSharpGraph.OntologySettings.TBoxSettings.CustomObjectTypesBaseAddress != defaultTboxSettings.CustomObjectTypesBaseAddress)
-                tBoxSettingsStringBuilder.AppendLine($"# {nameof(defaultTboxSettings.CustomObjectTypesBaseAddress)}: " + cSharpGraph.OntologySettings.TBoxSettings.CustomObjectTypesBaseAddress);
+            if (cSharpGraph.GraphSettings.TBoxSettings.CustomObjectTypesBaseAddress != defaultTboxSettings.CustomObjectTypesBaseAddress)
+                tBoxSettingsStringBuilder.AppendLine($"# {nameof(defaultTboxSettings.CustomObjectTypesBaseAddress)}: " + cSharpGraph.GraphSettings.TBoxSettings.CustomObjectTypesBaseAddress);
 
-            if (cSharpGraph.OntologySettings.TBoxSettings.TypeUris?.Any() ?? false)
+            if (cSharpGraph.GraphSettings.TBoxSettings.TypeUris?.Any() ?? false)
             {
-                string typeUriString = $@"{string.Join($"\n# {nameof(defaultTboxSettings.TypeUris)}: ", cSharpGraph.OntologySettings.TBoxSettings.TypeUris.Select(KV => KV.Key.AssemblyQualifiedName + "; " + KV.Value.ToString()))}";
+                string typeUriString = $@"{string.Join($"\n# {nameof(defaultTboxSettings.TypeUris)}: ", cSharpGraph.GraphSettings.TBoxSettings.TypeUris.Select(KV => KV.Key.AssemblyQualifiedName + "; " + KV.Value.ToString()))}";
                 tBoxSettingsStringBuilder.AppendLine($"# {nameof(defaultTboxSettings.TypeUris)}: " + typeUriString);
             }
 
@@ -142,11 +142,11 @@ namespace BH.Engine.Adapters.TTL
             {
                 TTL.Append("Individuals".TTLSectionTitle());
 
-                if (cSharpGraph.OntologySettings.ABoxSettings.IndividualsBaseAddress != defaultAboxSettings.IndividualsBaseAddress)
-                    aBoxSettingsStringBuilder.AppendLine($"# {nameof(defaultAboxSettings.IndividualsBaseAddress)}: " + cSharpGraph.OntologySettings.ABoxSettings.IndividualsBaseAddress);
+                if (cSharpGraph.GraphSettings.ABoxSettings.IndividualsBaseAddress != defaultAboxSettings.IndividualsBaseAddress)
+                    aBoxSettingsStringBuilder.AppendLine($"# {nameof(defaultAboxSettings.IndividualsBaseAddress)}: " + cSharpGraph.GraphSettings.ABoxSettings.IndividualsBaseAddress);
 
-                if (cSharpGraph.OntologySettings.ABoxSettings.ConsiderNullOrEmptyPropertyValues != defaultAboxSettings.ConsiderNullOrEmptyPropertyValues)
-                    aBoxSettingsStringBuilder.AppendLine($"# {nameof(defaultAboxSettings.ConsiderNullOrEmptyPropertyValues)}: " + cSharpGraph.OntologySettings.ABoxSettings.ConsiderNullOrEmptyPropertyValues);
+                if (cSharpGraph.GraphSettings.ABoxSettings.ConsiderNullOrEmptyPropertyValues != defaultAboxSettings.ConsiderNullOrEmptyPropertyValues)
+                    aBoxSettingsStringBuilder.AppendLine($"# {nameof(defaultAboxSettings.ConsiderNullOrEmptyPropertyValues)}: " + cSharpGraph.GraphSettings.ABoxSettings.ConsiderNullOrEmptyPropertyValues);
 
                 string aBoxSettingsString = aBoxSettingsStringBuilder.ToString();
                 if (aBoxSettingsString.Any())

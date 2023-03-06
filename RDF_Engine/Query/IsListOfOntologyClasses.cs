@@ -45,7 +45,7 @@ namespace BH.Engine.Adapters.RDF
             return typeof(IList).IsAssignableFrom(t);
         }
 
-        public static bool IsListOfOntologyClasses(this Type sourceType, object sourceObj, TBoxSettings tBoxSettings)
+        public static bool IsListOfOntologyClasses(this Type sourceType, object sourceObj, ABoxSettings tBoxSettings)
         {
             if (sourceType == null)
                 return false;
@@ -76,20 +76,20 @@ namespace BH.Engine.Adapters.RDF
             return false;
         }
 
-        public static bool IsListOfOntologyClasses(this IndividualObjectProperty iop, TBoxSettings tBoxSettings)
+        public static bool IsListOfOntologyClasses(this IndividualObjectProperty iop, ABoxSettings aBoxSettings)
         {
             Type rangeType = iop.RangeIndividual?.GetType();
 
-            return IsListOfOntologyClasses(rangeType, iop.RangeIndividual, tBoxSettings);
+            return IsListOfOntologyClasses(rangeType, iop.RangeIndividual, aBoxSettings);
         }
 
-        public static bool IsListOfDatatypes(this Type t, TBoxSettings tBoxSettings)
+        public static bool IsListOfDatatypes(this Type t, ABoxSettings aBoxSettings)
         {
             if (t.IsList())
             {
                 Type[] genericArgs = t.GetGenericArguments();
 
-                if (genericArgs.Length == 1 && genericArgs.First().IsDataType(tBoxSettings))
+                if (genericArgs.Length == 1 && genericArgs.First().IsDataType(aBoxSettings))
                     return true;
             }
 

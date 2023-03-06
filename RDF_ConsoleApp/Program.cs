@@ -51,11 +51,11 @@ namespace BH.oM.CodeAnalysis.ConsoleApp
             Dictionary<string, Type[]> typesPerAssembly = assemblies.ToDictionary(a => a.DescriptiveName(), a => a.TryGetTypes());
 
             LocalRepositorySettings localRepositorySettings = new() { TryComputeURLFromFilePaths = false};
-            OntologySettings ontologySettings = new();
+            GraphSettings graphSettings = new();
 
             foreach (var kv in typesPerAssembly)
             {
-                CSharpGraph cSharpGraph = Engine.Adapters.RDF.Compute.CSharpGraph(kv.Value.ToList(), ontologySettings);
+                CSharpGraph cSharpGraph = Engine.Adapters.RDF.Compute.CSharpGraph(kv.Value.ToList(), graphSettings);
 
                 string filePath = Path.GetFullPath(Path.Combine("C:/temp/" , kv.Key + ".ttl"));
                 

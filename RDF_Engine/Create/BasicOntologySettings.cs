@@ -31,9 +31,9 @@ namespace BH.Engine.Adapters.RDF
 {
     public static partial class Create
     {
-        public static OntologySettings BasicOntologySettings(string ontologyTitle, string ontologyDescription, string tBoxURI, string aBoxURI)
+        public static GraphSettings BasicOntologySettings(string ontologyTitle, string ontologyDescription, string tBoxURI, string aBoxURI)
         {
-            return new OntologySettings()
+            return new GraphSettings()
             {
                 TBoxSettings = new TBoxSettings()
                 {
