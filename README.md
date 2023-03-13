@@ -14,7 +14,7 @@ See installation and update instructions in the [Wiki.](https://github.com/BHoM/
 ## Team
 
 ### University of Stuttgart 
-Diellza Elshani, Tenure-Track Prof. Dr. Thomas Wortmann, Chair for Computing in Architecture, [Institute for Computational Design and Construction (ICD)](https://www.icd.uni-stuttgart.de/), University of Stuttgart 
+RA Ph.D. Cand. Diellza Elshani, Stu. Asst. Aaron Wagner, Tenure-Track Prof. Dr. Thomas Wortmann, Chair for Computing in Architecture, [Institute for Computational Design and Construction (ICD)](https://www.icd.uni-stuttgart.de/), University of Stuttgart 
 
 Dr.rer.nat. Daniel Hernández, Prof. Dr. Steffen Staab, Department for Analytic Computing (AC), [Institute for Parallel and Distributed Systems](https://www.ipvs.uni-stuttgart.de/), University of Stuttgart 
 
