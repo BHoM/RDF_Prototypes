@@ -5,7 +5,7 @@
 The deveoped tool helps convert BHoM data to a knowledge graph in any software BHoM supports. BHoM (The Buildings and Habitats object Model) is collaborative framework that runs within several AEC design software, which helps to represent data in a object oriented database model. OWL (Web Ontology Language) provides a standardized and expressive language for representing knowledge and relationships within a domain. It allows for the creation of ontologies, which are formal descriptions of the concepts and relationships within a domain. Additionally, OWL can support reasoning and inference over ontologies, allowing for automated reasoning about the relationships between different concepts and data elements. This can be particularly useful in identifying inconsistencies or gaps in data, or in suggesting additional data sources or mappings that may be needed to support integration efforts. Our BHoM to bhOWL converter is developed as an extension to BHoM framework, and runs within any software that BHoM supports (eg. Grasshopper 3D, Excel, etc.) This dataset contains also example Grasshopper 3D files that exemplify the process of converting BHoM data to bhOWL.
 
 
-(See installation and update instructions in the wiki) [https://github.com/BHoM/RDF_Prototypes/wiki/Installation-and-update-instructions]
+[See installation and update instructions in the wiki] (https://github.com/BHoM/RDF_Prototypes/wiki/Installation-and-update-instructions)
 
 
 ## Team
