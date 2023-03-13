@@ -8,8 +8,7 @@ BHoM (The Buildings and Habitats object Model) is a collaborative framework that
 
 Our BHoM to bhOWL converter is developed as an extension to the BHoM framework and runs within any software that BHoM supports (eg. Grasshopper 3D, Excel, etc.) This dataset also contains example Grasshopper 3D files that exemplify the process of converting BHoM data to bhOWL.
 
-
-[See installation and update instructions in the wiki] (https://github.com/BHoM/RDF_Prototypes/wiki/Installation-and-update-instructions)
+See installation and update instructions in the Wiki: https://github.com/BHoM/RDF_Prototypes/wiki/Installation-and-update-instructions
 
 
 ## Team
