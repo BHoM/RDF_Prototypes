@@ -1,6 +1,6 @@
 # BHoM to bhOWL Converter
 
-"BHoM to bhOWL Converter" is part of ongoing research by University of Stuttgart and Buro Happold. It is developed as part of a research project of the [Cluster of Excellence Integrative Computational Design and Construction for Architecture (IntCDC)](https://www.intcdc.uni-stuttgart.de/). The project's name is: [Knowledge Representation for Multi-Disciplinary Co-Design of Buildings](https://www.intcdc.uni-stuttgart.de/research/research-projects/rp-20/)
+"BHoM to bhOWL Converter" is part of ongoing research by University of Stuttgart and Buro Happold. It is developed as part of a research project of the [Cluster of Excellence Integrative Computational Design and Construction for Architecture (IntCDC)](https://www.intcdc.uni-stuttgart.de/). The project's name is: [Knowledge Representation for Multi-Disciplinary Co-Design of Buildings](https://www.intcdc.uni-stuttgart.de/research/research-projects/rp-20/).
 
 The developed tool helps convert BHoM data to a knowledge graph in any software BHoM supports. As a result, the converter returns a Resource Description Framework (RDF) graph serialized in Terse RDF Triple Language (TTL) format.
 
