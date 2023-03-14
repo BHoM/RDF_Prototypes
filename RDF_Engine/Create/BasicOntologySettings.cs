@@ -31,7 +31,7 @@ namespace BH.Engine.Adapters.RDF
 {
     public static partial class Create
     {
-        public static GraphSettings BasicGraphSettings(string ontologyTitle, string ontologyDescription, string tBoxURI, string aBoxURI, bool deserialzeGeometry = false)
+        public static GraphSettings BasicOntologySettings(string ontologyTitle, string ontologyDescription, string tBoxURI, string aBoxURI)
         {
             return new GraphSettings()
             {
@@ -42,8 +42,7 @@ namespace BH.Engine.Adapters.RDF
                 },
                 ABoxSettings = new ABoxSettings()
                 {
-                    IndividualsBaseAddress = aBoxURI,
-                    GeometryAsOntologyClass = deserialzeGeometry
+                    IndividualsBaseAddress = aBoxURI
                 },
                 OntologyBaseAddress = tBoxURI,
                 OntologyTitle = ontologyTitle,
