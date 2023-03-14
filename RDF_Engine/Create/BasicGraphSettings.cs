@@ -21,6 +21,7 @@
  */
 
 using BH.oM.Adapters.RDF;
+using BH.oM.Base.Attributes;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -33,14 +34,21 @@ namespace BH.Engine.Adapters.RDF
     public static partial class Create
     {
         [Description("Basic Settings for the definition of an Ontology.")]
-        public static GraphSettings BasicGraphSettings(string ontologyTitle, string ontologyDescription, string tBoxURI, string aBoxURI, bool deserializeGeometry = false)
+        [Input("ontologyTitle", "Sets the title of the Ontology.")]
+        [Input("ontologyDescription", "Sets the description of the ontology.")]
+        [Input("tBoxURI", "The base address where the Ontology definition for Custom Types will be hosted. Custom Types are produced when computing an ontology that includes BHoM CustomObjects.")]
+        [Input("aBoxURI", "The base address where the individuals will be hosted.")]
+        [Input("serializeGeoToBase64", "(defaults to false) If true, geometrical Types will be considered as Classes, and therefore Object Properties." +
+            "Otherwise, geometrical types are considered as a DataType of type Base64Serialized, and the geometry is encoded as a Data Property.")]
+
+        public static GraphSettings BasicGraphSettings(string ontologyTitle, string ontologyDescription, string tBoxURI, string aBoxURI, bool serializeGeoToBase64 = false)
         {
             return new GraphSettings()
             {
                 TBoxSettings = new TBoxSettings()
                 {
                     CustomObjectTypesBaseAddress = tBoxURI,
-                    GeometryAsOntologyClass = deserializeGeometry
+                    GeometryAsOntologyClass = serializeGeoToBase64
                 },
                 ABoxSettings = new ABoxSettings()
                 {
