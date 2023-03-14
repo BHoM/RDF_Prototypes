@@ -23,6 +23,7 @@
 using BH.oM.Adapters.RDF;
 using System;
 using System.Collections.Generic;
+using System.ComponentModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -31,14 +32,15 @@ namespace BH.Engine.Adapters.RDF
 {
     public static partial class Create
     {
-        public static OntologySettings BasicOntologySettings(string ontologyTitle, string ontologyDescription, string tBoxURI, string aBoxURI)
+        [Description("Basic Settings for the definition of an Ontology.")]
+        public static GraphSettings BasicGraphSettings(string ontologyTitle, string ontologyDescription, string tBoxURI, string aBoxURI, bool deserializeGeometry = false)
         {
-            return new OntologySettings()
+            return new GraphSettings()
             {
                 TBoxSettings = new TBoxSettings()
                 {
-                    CustomObjectTypesBaseAddress = tBoxURI
-
+                    CustomObjectTypesBaseAddress = tBoxURI,
+                    GeometryAsOntologyClass = deserializeGeometry
                 },
                 ABoxSettings = new ABoxSettings()
                 {

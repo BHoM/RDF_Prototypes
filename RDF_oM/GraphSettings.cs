@@ -34,7 +34,7 @@ using System.Threading.Tasks;
 namespace BH.oM.Adapters.RDF
 {
     [Description("Settings for the definition of an Ontology.")]
-    public class OntologySettings : IObject
+    public class GraphSettings : IObject
     {
         public string OntologyTitle { get; set; } = $"{DateTime.Now.ToString("yyMMdd-HHmmss")}_newBHoMOntology";
         public string OntologyDescription { get; set; } = $"New BHoM ontology";
@@ -43,7 +43,7 @@ namespace BH.oM.Adapters.RDF
         public TBoxSettings TBoxSettings { get; set; } = new TBoxSettings();
         public ABoxSettings ABoxSettings { get; set; } = new ABoxSettings();
 
-        public OntologySettings()
+        public GraphSettings()
         {
             TBoxSettings = new TBoxSettings()
             {
