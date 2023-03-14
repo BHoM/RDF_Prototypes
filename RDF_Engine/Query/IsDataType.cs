@@ -36,9 +36,9 @@ namespace BH.Engine.Adapters.RDF
 {
     public static partial class Query
     {
-        public static bool IsDataType(this Type type, ABoxSettings aBoxSettings)
+        public static bool IsDataType(this Type type, TBoxSettings tBoxSettings)
         {
-            return !type.IsOntologyClass(aBoxSettings);
+            return !type.IsOntologyClass(tBoxSettings);
         }
     }
 }

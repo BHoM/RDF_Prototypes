@@ -51,6 +51,6 @@ namespace BH.oM.Adapters.RDF
         public HashSet<IndividualRelation> IndividualRelations { get; set; } = new HashSet<IndividualRelation>();
 
         [Description("Settings used to compose this Graph ontology.")]
-        public GraphSettings GraphSettings { get; set; }
+        public OntologySettings OntologySettings { get; set; }
     }
 }

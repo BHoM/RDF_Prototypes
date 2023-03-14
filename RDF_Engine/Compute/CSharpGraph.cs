@@ -45,7 +45,7 @@ namespace BH.Engine.Adapters.RDF
         [Description("Returns an ontology graph that includes CSharp objects and types." +
             "This methods takes in a list of objects as an input, so the resulting CSharp graph has both the T-Box and A-Box sections populated." +
             "If you only are interested in the T-Box, use the other CSharpGraph() method that takes in a list of Types.")]
-        public static CSharpGraph CSharpGraph(this List<object> objects, GraphSettings graphSettings = null)
+        public static CSharpGraph CSharpGraph(this List<object> objects, OntologySettings ontologySettings = null)
         {
             // First, check if the input objects include 1 single CSharpGraph, in which case just return it.
             // Do not allow to input CSharpGraph objects together with any other kind of object.
@@ -73,7 +73,7 @@ namespace BH.Engine.Adapters.RDF
             m_cSharpGraph = new CSharpGraph() { GraphSettings = graphSettings };
 
             foreach (var iObject in objects)
-                AddIndividualToOntology(iObject, graphSettings);
+                AddIndividualToOntology(iObject, ontologySettings);
 
             return m_cSharpGraph;
         }
@@ -83,13 +83,13 @@ namespace BH.Engine.Adapters.RDF
         [Description("Returns an ontology graph that includes CSharp objects and types. " +
             "This methods takes in a list of Types as an input, so the resulting CSharp graph has only the T-Box." +
             "For a complete graph that also includes the A-Box, use the other CSharpGraph() method that takes in a list of objects.")]
-        public static CSharpGraph CSharpGraph(this List<Type> types, GraphSettings graphSettings = null)
+        public static CSharpGraph CSharpGraph(this List<Type> types, OntologySettings ontologySettings = null)
         {
-            graphSettings = graphSettings ?? new GraphSettings();
-            m_cSharpGraph = new CSharpGraph() { GraphSettings = graphSettings };
+            ontologySettings = ontologySettings ?? new OntologySettings();
+            m_cSharpGraph = new CSharpGraph() { OntologySettings = ontologySettings };
 
             foreach (var type in types)
-                AddToOntology(type, graphSettings);
+                AddToOntology(type, ontologySettings);
 
             return m_cSharpGraph;
         }
@@ -99,7 +99,7 @@ namespace BH.Engine.Adapters.RDF
         // Private methods
         /***************************************************/
 
-        private static void AddToOntology(this Type type, GraphSettings graphSettings)
+        private static void AddToOntology(this Type type, OntologySettings ontologySettings)
         {
             if (type == typeof(CustomObjectType))
                 return; // only add sub-types of CustomObjectType.
@@ -117,46 +117,46 @@ namespace BH.Engine.Adapters.RDF
             //if (type.IsCollectionOfOntologyClasses())
             //    type = type.InnermostType();
 
-            if (type.IsOntologyClass(graphSettings.ABoxSettings))
+            if (type.IsOntologyClass(ontologySettings.TBoxSettings))
                 m_cSharpGraph.Classes.Add(type);
 
             var props = type.GetProperties(BindingFlags.DeclaredOnly | BindingFlags.Instance | BindingFlags.Public);
-            props.AddToOntology(graphSettings);
+            props.AddToOntology(ontologySettings);
 
             // Recurse for parent Types.
             List<Type> parentTypes = type.BaseTypes();
             foreach (var parentType in parentTypes)
             {
-                if (!parentType.IsOntologyClass(graphSettings.ABoxSettings))
+                if (!parentType.IsOntologyClass(ontologySettings.TBoxSettings))
                     continue;
 
-                AddToOntology(parentType, graphSettings);
+                AddToOntology(parentType, ontologySettings);
             }
         }
 
-        private static void AddToOntology(this IEnumerable<PropertyInfo> pInfos, GraphSettings graphSettings, object obj = null, PropertyInfo fromProperty = null)
+        private static void AddToOntology(this IEnumerable<PropertyInfo> pInfos, OntologySettings ontologySettings, object obj = null, PropertyInfo fromProperty = null)
         {
             foreach (var pi in pInfos)
             {
                 if (pi is CustomPropertyInfo && obj != null)
                 {
                     object individualPropertyValue = pi.GetValue(obj);
-                    AddToOntology((CustomPropertyInfo)pi, graphSettings, obj, fromProperty, individualPropertyValue);
+                    AddToOntology((CustomPropertyInfo)pi, ontologySettings, obj, fromProperty, individualPropertyValue);
                 }
                 else
-                    AddToOntology(pi as dynamic, graphSettings, obj, fromProperty);
+                    AddToOntology(pi as dynamic, ontologySettings, obj, fromProperty);
             }
         }
 
-        private static void AddToOntology(this CustomPropertyInfo customPI, GraphSettings graphSettings, object individual, PropertyInfo fromProperty, object individualPropertyValue)
+        private static void AddToOntology(this CustomPropertyInfo customPI, OntologySettings ontologySettings, object individual, PropertyInfo fromProperty, object individualPropertyValue)
         {
             if (customPI.Name == "Type")
                 return; // do not add the `Type` property to the ontology for Custom Types.
 
-            AddToOntology((PropertyInfo)customPI, graphSettings, individual, fromProperty, individualPropertyValue);
+            AddToOntology((PropertyInfo)customPI, ontologySettings, individual, fromProperty, individualPropertyValue);
         }
 
-        private static void AddToOntology(this PropertyInfo pi, GraphSettings graphSettings, object individual, PropertyInfo individualFromProperty, object individualPropertyValue = null)
+        private static void AddToOntology(this PropertyInfo pi, OntologySettings ontologySettings, object individual, PropertyInfo individualFromProperty, object individualPropertyValue = null)
         {
             // In C#'s Reflection, relations are represented with PropertyInfos.
             // In an ontology, PropertyInfos may correspond to either ObjectProperties or DataProperties.
@@ -181,27 +181,27 @@ namespace BH.Engine.Adapters.RDF
                 }
             }
 
-            if (!domainType.IsOntologyClass(graphSettings.ABoxSettings))
+            if (!domainType.IsOntologyClass(ontologySettings.TBoxSettings))
                 return; // do not add Properties of classes that are not Ontology classes (e.g. if domainType is a String, we do not want to add its property Chars).
             else
-                domainType.AddToOntology(graphSettings);
+                domainType.AddToOntology(ontologySettings);
 
 
-            if (pi.IsDataProperty(graphSettings.ABoxSettings))
+            if (pi.IsDataProperty(ontologySettings.TBoxSettings))
             {
                 DataProperty hasPropertyRelation = new DataProperty() { PropertyInfo = pi, DomainClass = domainType, RangeType = rangeType };
-                AddIndividualDataPropertyRelation(individual, pi, graphSettings, hasPropertyRelation, individualPropertyValue);
+                AddIndividualDataPropertyRelation(individual, pi, ontologySettings, hasPropertyRelation, individualPropertyValue);
                 return;
             }
 
-            if (pi.IsObjectProperty(graphSettings.ABoxSettings))
+            if (pi.IsObjectProperty(ontologySettings.TBoxSettings))
             {
                 // OBJECT PROPERTY RELATION
                 // The relation between Individuals corresponds to an ObjectPropertyRelation (between two Classes of the Ontology).
 
-                if (pi.PropertyType.IsListOfOntologyClasses(individualPropertyValue, graphSettings.ABoxSettings) && individual != null)
+                if (pi.PropertyType.IsListOfOntologyClasses(individualPropertyValue, ontologySettings.TBoxSettings) && individual != null)
                 {
-                    rangeType = new ListPropertyType(individual, pi, graphSettings.TBoxSettings);
+                    rangeType = new ListPropertyType(individual, pi, ontologySettings.TBoxSettings);
 
                     IList list = pi.GetValue(individual) as IList;
 
@@ -211,31 +211,31 @@ namespace BH.Engine.Adapters.RDF
                         {
                             //m_cSharpGraph.AllIndividuals.Add(item);
 
-                            AddIndividualToOntology(item, graphSettings, pi);
+                            AddIndividualToOntology(item, ontologySettings, pi);
 
                             // Recurse for this individual's relations.
                             PropertyInfo[] listItemProps = item?.GetType().GetProperties(BindingFlags.DeclaredOnly | BindingFlags.Instance | BindingFlags.Public) ?? new PropertyInfo[] { };
-                            AddToOntology(listItemProps, graphSettings, item, individualFromProperty);
+                            AddToOntology(listItemProps, ontologySettings, item, individualFromProperty);
                         }
                     }
                 }
 
                 // Make sure the RangeType is added to the ontology.
-                rangeType.AddToOntology(graphSettings);
+                rangeType.AddToOntology(ontologySettings);
 
                 // Add the ObjectProperty to the Graph for the T-Box.
                 ObjectProperty hasPropertyRelation = new ObjectProperty() { PropertyInfo = pi, DomainClass = domainType, RangeClass = rangeType };
                 m_cSharpGraph.ObjectProperties.Add(hasPropertyRelation);
 
-                AddIndividualObjectPropertyRelation(individual, pi, graphSettings, hasPropertyRelation, individualPropertyValue);
+                AddIndividualObjectPropertyRelation(individual, pi, ontologySettings, hasPropertyRelation, individualPropertyValue);
                 return;
             }
         }
 
-        private static void AddIndividualObjectPropertyRelation(object individual, PropertyInfo pi, GraphSettings graphSettings, ObjectProperty hasPropertyRelation, object propertyValue = null)
+        private static void AddIndividualObjectPropertyRelation(object individual, PropertyInfo pi, OntologySettings ontologySettings, ObjectProperty hasPropertyRelation, object propertyValue = null)
         {
             // If the individual is non-null, we will need to add the individuals' relation to the Graph in order to define the A-Box.
-            if (!pi.IsObjectProperty(graphSettings.ABoxSettings))
+            if (!pi.IsObjectProperty(ontologySettings.TBoxSettings))
             {
                 Log.RecordError("Wrong PropertyInfo specified.");
                 return;
@@ -249,7 +249,7 @@ namespace BH.Engine.Adapters.RDF
                 }
                 catch { }
 
-            if (!graphSettings.ABoxSettings.ConsiderNullOrEmptyPropertyValues && propertyValue.IsNullOrEmpty())
+            if (!ontologySettings.ABoxSettings.ConsiderNullOrEmptyPropertyValues && propertyValue.IsNullOrEmpty())
                 return;
 
             IndividualObjectProperty rel = new IndividualObjectProperty()
@@ -265,12 +265,12 @@ namespace BH.Engine.Adapters.RDF
             m_cSharpGraph.IndividualRelations.Add(rel);
 
             // Recurse for the individual's property value, which will be another individual.
-            AddIndividualToOntology(propertyValue, graphSettings);
+            AddIndividualToOntology(propertyValue, ontologySettings);
         }
 
-        private static void AddIndividualDataPropertyRelation(object individual, PropertyInfo pi, GraphSettings graphSettings, DataProperty hasPropertyRelation, object propertyValue = null)
+        private static void AddIndividualDataPropertyRelation(object individual, PropertyInfo pi, OntologySettings ontologySettings, DataProperty hasPropertyRelation, object propertyValue = null)
         {
-            if (!pi.IsDataProperty(graphSettings.ABoxSettings))
+            if (!pi.IsDataProperty(ontologySettings.TBoxSettings))
             {
                 Log.RecordError("Wrong PropertyInfo specified.");
                 return;
@@ -292,7 +292,7 @@ namespace BH.Engine.Adapters.RDF
                 }
                 catch { }
 
-            if (!graphSettings.ABoxSettings.ConsiderNullOrEmptyPropertyValues && propertyValue.IsNullOrEmpty())
+            if (!ontologySettings.ABoxSettings.ConsiderNullOrEmptyPropertyValues && propertyValue.IsNullOrEmpty())
                 return;
 
             IndividualDataProperty rel = new IndividualDataProperty()
@@ -306,19 +306,19 @@ namespace BH.Engine.Adapters.RDF
         }
 
 
-        private static void AddIndividualToOntology(object individual, GraphSettings graphSettings, PropertyInfo fromProperty = null)
+        private static void AddIndividualToOntology(object individual, OntologySettings ontologySettings, PropertyInfo fromProperty = null)
         {
             if (individual == null)
                 return;
 
-            Type individualType = individual.IndividualType(graphSettings.TBoxSettings);
-            graphSettings = graphSettings ?? new GraphSettings();
+            Type individualType = individual.IndividualType(ontologySettings.TBoxSettings);
+            ontologySettings = ontologySettings ?? new OntologySettings();
 
             // Only individuals that are of types mappable to Ontology classes can be added.
-            if (individualType.IsOntologyClass(graphSettings.ABoxSettings))
+            if (individualType.IsOntologyClass(ontologySettings.TBoxSettings))
             {
                 // Make sure the individual type is among the ontology classes.
-                individualType.AddToOntology(graphSettings);
+                individualType.AddToOntology(ontologySettings);
 
                 // Add the individual.
                 m_cSharpGraph.AllIndividuals.Add(individual);
@@ -343,7 +343,7 @@ namespace BH.Engine.Adapters.RDF
             }
 
             // Recurse for properties of this individual.
-            properties.AddToOntology(graphSettings, individual, fromProperty);
+            properties.AddToOntology(ontologySettings, individual, fromProperty);
 
             if (individualType is CustomObjectType)
                 return;
@@ -352,15 +352,15 @@ namespace BH.Engine.Adapters.RDF
             // add the Individual properties separately.
             var nonDeclaredProps = individualType.GetProperties().Except(properties);
             foreach (var p in nonDeclaredProps)
-                if (p.IsObjectProperty(graphSettings.ABoxSettings))
+                if (p.IsObjectProperty(ontologySettings.TBoxSettings))
                 {
                     ObjectProperty objectProperty = new ObjectProperty() { DomainClass = p.DeclaringType, RangeClass = p.PropertyType, PropertyInfo = p };
-                    AddIndividualObjectPropertyRelation(individual, p, graphSettings, objectProperty);
+                    AddIndividualObjectPropertyRelation(individual, p, ontologySettings, objectProperty);
                 }
-                else if (p.IsDataProperty(graphSettings.ABoxSettings))
+                else if (p.IsDataProperty(ontologySettings.TBoxSettings))
                 {
                     DataProperty dataProperty = new DataProperty() { DomainClass = p.DeclaringType, RangeType = p.PropertyType, PropertyInfo = p };
-                    AddIndividualDataPropertyRelation(individual, p, graphSettings, dataProperty);
+                    AddIndividualDataPropertyRelation(individual, p, ontologySettings, dataProperty);
                 }
         }
 

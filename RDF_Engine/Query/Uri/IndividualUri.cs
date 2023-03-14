@@ -34,10 +34,10 @@ namespace BH.Engine.Adapters.RDF
 {
     public static partial class Create
     {
-        public static Uri IndividualUri(this object individual, GraphSettings graphSettings)
+        public static Uri IndividualUri(this object individual, OntologySettings ontologySettings)
         {
             string individualId = individual.IndividualId();
-            string baseAddress = graphSettings.ABoxSettings.IndividualsBaseAddress;
+            string baseAddress = ontologySettings.ABoxSettings.IndividualsBaseAddress;
 
             Uri individualUri = Query.CombineUris(baseAddress, individualId);
 
