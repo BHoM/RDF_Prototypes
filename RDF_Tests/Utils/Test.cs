@@ -48,7 +48,7 @@ namespace BH.Test.RDF
         /// <summary>
         /// To be initialized in Test SetUp methods.
         /// </summary>
-        public static OntologySettings m_ontologySettings = null;
+        public static GraphSettings m_graphSettings = null;
 
         /// <summary>
         /// Required because RandomObject generally fails with Column, returning invalid customdata key names.

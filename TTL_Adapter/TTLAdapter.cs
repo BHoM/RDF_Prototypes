@@ -45,17 +45,17 @@ namespace BH.Adapters.TTL
 
         [Description("Adapter for TTL.")]
         [Output("The created TTL adapter.")]
-        public TTLAdapter(string filepath = null, OntologySettings ontologySettings = null, LocalRepositorySettings localRepositorySettings = null)
+        public TTLAdapter(string filepath = null, GraphSettings graphSettings = null, LocalRepositorySettings localRepositorySettings = null)
         {
             m_AdapterSettings.DefaultPushType = oM.Adapter.PushType.CreateOnly; // Adapter `Push` Action simply calls "Create" method.
 
             m_filepath = filepath;
-            m_ontologySettings = ontologySettings ?? new OntologySettings();
+            m_graphSettings = graphSettings ?? new GraphSettings();
             m_localRepositorySettings = localRepositorySettings;
         }
 
         private readonly string m_filepath;
-        private OntologySettings m_ontologySettings = new OntologySettings();
+        private GraphSettings m_graphSettings = new GraphSettings();
         private readonly LocalRepositorySettings m_localRepositorySettings;
     }
 }

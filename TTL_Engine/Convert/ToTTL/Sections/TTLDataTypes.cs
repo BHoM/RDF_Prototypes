@@ -39,7 +39,7 @@ namespace BH.Engine.Adapters.TTL
         {
             List<string> dataTypes = new List<string>();
 
-            dataTypes.Add(DefaultDataTypeForUnknownConversion(cSharpGraph.OntologySettings.TBoxSettings, r));
+            dataTypes.Add(DefaultDataTypeForUnknownConversion(cSharpGraph.GraphSettings.TBoxSettings, r));
 
             return dataTypes;
         }
