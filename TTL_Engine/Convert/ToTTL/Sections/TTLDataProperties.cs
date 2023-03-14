@@ -56,7 +56,7 @@ namespace BH.Engine.Adapters.TTL
                 {
                     string TTLDataProperty = "";
 
-                    string propertyURI = rel.PropertyInfo.OntologyURI(cSharpGraph.GraphSettings.TBoxSettings, localRepositorySettings)?.ToString();
+                    string propertyURI = rel.PropertyInfo.OntologyURI(cSharpGraph.OntologySettings.TBoxSettings, localRepositorySettings)?.ToString();
                     if (!string.IsNullOrWhiteSpace(propertyURI))
                         TTLDataProperty += $"\n### {propertyURI}";
 
@@ -86,7 +86,7 @@ namespace BH.Engine.Adapters.TTL
 
             // Add the IObject's DataProperty for the Default Data Type
             Type defaultTypeForUnknownConversions = typeof(Base64JsonSerialized);
-            string defaultDataType_IObjectProperty = "\n" + $@"###  {defaultTypeForUnknownConversions.OntologyUri(cSharpGraph.GraphSettings.TBoxSettings, localRepositorySettings)}
+            string defaultDataType_IObjectProperty = "\n" + $@"###  {defaultTypeForUnknownConversions.OntologyUri(cSharpGraph.OntologySettings.TBoxSettings, localRepositorySettings)}
                 {defaultTypeForUnknownConversions.DescriptiveName()} rdf:type owl:DatatypeProperty ;
                 rdfs:domain :IObject ;
                 rdfs:range {defaultTypeForUnknownConversions.UniqueNodeId()} .";

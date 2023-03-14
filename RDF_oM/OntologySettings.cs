@@ -34,7 +34,7 @@ using System.Threading.Tasks;
 namespace BH.oM.Adapters.RDF
 {
     [Description("Settings for the definition of an Ontology.")]
-    public class GraphSettings : IObject
+    public class OntologySettings : IObject
     {
         public string OntologyTitle { get; set; } = $"{DateTime.Now.ToString("yyMMdd-HHmmss")}_newBHoMOntology";
         public string OntologyDescription { get; set; } = $"New BHoM ontology";
@@ -43,7 +43,7 @@ namespace BH.oM.Adapters.RDF
         public TBoxSettings TBoxSettings { get; set; } = new TBoxSettings();
         public ABoxSettings ABoxSettings { get; set; } = new ABoxSettings();
 
-        public GraphSettings()
+        public OntologySettings()
         {
             TBoxSettings = new TBoxSettings()
             {
@@ -70,7 +70,11 @@ namespace BH.oM.Adapters.RDF
 
         [Description("Key of the CustomData dictionary that will be sought in CustomObjects. If a value is found there, and if the above option is true," +
             "the value will be used as if the CustomObject was a class called with this value.")]
-        public string CustomobjectsTypeKey { get; set; } = "Type";  
+        public string CustomobjectsTypeKey { get; set; } = "Type";
+
+        [Description("(defaults to false) If true, geometrical Types will be considered as Classes, and therefore Object Properties." +
+            "Otherwise, geometrical types are considered as a DataType of type Base64Serialized, and the geometry is encoded as a Data Property.")]
+        public bool GeometryAsOntologyClass { get; set; } = false;
     }
 
     [Description("Settings for the definition of an Ontology's A-Box.")]
@@ -81,9 +85,5 @@ namespace BH.oM.Adapters.RDF
 
         [Description("If this is set to true, if an individual's ObjectProperty or Data property is null or an empty collection, it will still be added.")]
         public bool ConsiderNullOrEmptyPropertyValues { get; set; } = false;
-
-        [Description("(defaults to false) If true, geometrical Types will be considered as Classes, and therefore Object Properties." +
-            "Otherwise, geometrical types are considered as a DataType of type Base64Serialized, and the geometry is encoded as a Data Property.")]
-        public bool GeometryAsOntologyClass { get; set; } = false;
     }
 }

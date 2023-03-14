@@ -52,7 +52,7 @@ namespace BH.Engine.Adapters.TTL
 
                     if (localRepositorySettings.TryComputeURLFromFilePaths)
                     {
-                        string propertyURI = rel.PropertyInfo.OntologyURI(cSharpGraph.GraphSettings.TBoxSettings, localRepositorySettings).ToString();
+                        string propertyURI = rel.PropertyInfo.OntologyURI(cSharpGraph.OntologySettings.TBoxSettings, localRepositorySettings).ToString();
                         TTLObjectProperty += $"\n### {propertyURI}";
                     }
                     TTLObjectProperty += $"\n:{rel.PropertyInfo.UniqueNodeId()} rdf:type owl:ObjectProperty ;";

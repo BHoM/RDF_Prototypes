@@ -42,12 +42,12 @@ namespace BH.Engine.Adapters.TTL
     {
         [Description("Computes a TTL T-Box ontology with the input Types." +
             "To compute an ontology that includes both T-Box and A-Box, use the TTLGraph method that takes a list of IObjects, and provide input objects (instances) instead of Types.")]
-        public static string ToTTL(this List<Type> types, GraphSettings graphSettings = null, LocalRepositorySettings localRepositorySettings = null)
+        public static string ToTTL(this List<Type> types, OntologySettings ontologySettings = null, LocalRepositorySettings localRepositorySettings = null)
         {
             localRepositorySettings = localRepositorySettings ?? new LocalRepositorySettings();
-            graphSettings = graphSettings ?? new GraphSettings();
+            ontologySettings = ontologySettings ?? new OntologySettings();
 
-            CSharpGraph cSharpGraph = Engine.Adapters.RDF.Compute.CSharpGraph(types, graphSettings);
+            CSharpGraph cSharpGraph = Engine.Adapters.RDF.Compute.CSharpGraph(types, ontologySettings);
 
             string TTL = cSharpGraph.ToTTL(localRepositorySettings);
 
