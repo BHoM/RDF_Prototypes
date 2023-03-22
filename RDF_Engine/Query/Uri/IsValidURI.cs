@@ -20,46 +20,40 @@
  * along with this code. If not, see <https://www.gnu.org/licenses/lgpl-3.0.html>.      
  */
 
-using BH.Adapters.TTL;
-using BH.oM.Geometry;
-using BH.oM.Physical.Elements;
-using BH.oM.Physical.FramingProperties;
+using BH.Engine.Base;
+using BH.Engine.Adapters.RDF.Types;
+using BH.oM.Base;
+using BH.oM.Base.Attributes;
 using BH.oM.Adapters.RDF;
-using System.Data.Common;
-using BH.Engine.Adapters.RDF;
+using System;
+using System.Collections;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.IO;
+using System.Linq;
+using System.Reflection;
+using System.Text;
+using System.Threading.Tasks;
 
-namespace BH.Test.RDF
+
+namespace BH.Engine.Adapters.RDF
 {
-    /// <summary>
-    /// Base class for tests, with customised settings.
-    /// </summary>
-    public abstract partial class Test
+    public static partial class Query
     {
-        static Test()
+        [Description("Checks whether the input string constitute a valid URI scheme")]
+        public static bool IsValidURI(string uriString, string appendToMessage = null)
         {
-            Log.ThrowExceptions = true;
-        }
+            Uri uriResult;
 
-        /// <summary>
-        /// To be initialized in Test SetUp methods.
-        /// </summary>
-        public static TTLAdapter m_adapter;
+            // Try to create a Uri object from the input string
+            if (!Uri.TryCreate(uriString, UriKind.Absolute, out uriResult))
+            {
+                Log.RecordError($"Invalid URI string. The URI you provided does not start with a valid scheme. For example the URI can start with http://, https:// or doi://. " + appendToMessage, ex:new ArgumentException("Invalid URI string."));
+                return false;
+            }
 
-        /// <summary>
-        /// To be initialized in Test SetUp methods.
-        /// </summary>
-        public static OntologySettings m_ontologySettings = null;
 
-        /// <summary>
-        /// Required because RandomObject generally fails with Column, returning invalid customdata key names.
-        /// </summary>
-        protected static Column CreateRandomColumn()
-        {
-            Column randomColumn = new Column();
-            randomColumn.Name = "A column object";
-            randomColumn.Property = new ConstantFramingProperty() { Material = new oM.Physical.Materials.Material() { Name = "SomeMaterial" } };
-            randomColumn.Location = BH.Engine.Adapters.RDF.Testing.Create.RandomObject<Arc>();
-            return randomColumn;
+            return true;
         }
     }
 }

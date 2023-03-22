@@ -62,6 +62,14 @@ namespace BH.Engine.Adapters.RDF
             }
 
             ontologySettings = ontologySettings ?? new OntologySettings();
+            string messageToAppend = $"Please check your inputs of the {nameof(ontologySettings)} component. ";
+
+            if (!Query.IsValidURI(ontologySettings.OntologyBaseAddress, messageToAppend) || 
+                !Query.IsValidURI(ontologySettings.TBoxSettings.CustomObjectTypesBaseAddress, messageToAppend) ||
+                !Query.IsValidURI(ontologySettings.TBoxSettings.DefaultBaseUriForUnknownTypes, messageToAppend) ||
+                !Query.IsValidURI(ontologySettings.ABoxSettings.IndividualsBaseAddress, messageToAppend))
+                return null;
+
             m_cSharpGraph = new CSharpGraph() { OntologySettings = ontologySettings };
 
             foreach (var iObject in objects)
