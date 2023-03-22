@@ -48,7 +48,11 @@ namespace BH.Engine.Adapters.RDF
                 result.Add(bhomInstance);
             }
 
-            return result;
+            IEnumerable<IBHoMObject> bhomobjs = result.OfType<IBHoMObject>().GroupBy(o => o.BHoM_Guid).Select(g => g.FirstOrDefault());
+            List<object> otherobjects = result.Where(o => !(o is IBHoMObject)).ToList();
+
+            otherobjects.AddRange(bhomobjs);
+            return otherobjects;
         }
 
         public static List<object> ToCSharpObjects(this string TTLOntology)
