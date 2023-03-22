@@ -30,6 +30,7 @@ namespace BH.Engine.Adapters.RDF
 {
     public static class Log
     {
+        public static bool ThrowExceptions { get; set; } = false;
         public static MessageLevel LogLevel { get; set; } = MessageLevel.Debug;
 
         private static List<string> m_allMessages = new List<string>();
@@ -45,8 +46,11 @@ namespace BH.Engine.Adapters.RDF
             ERROR
         }
 
-        public static void RecordError(string error, bool doNotRepeat = false, bool appendToPrevious = false)
+        public static void RecordError(string error, bool doNotRepeat = false, bool appendToPrevious = false, Exception ex = null)
         {
+            if (ThrowExceptions && ex != null)
+                throw ex;
+
             RecordMessage(MessageLevel.ERROR, error, doNotRepeat, appendToPrevious);
         }
 
