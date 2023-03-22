@@ -56,8 +56,8 @@ namespace BH.Test.RDF
         {
             m_ontologySettings = new OntologySettings()
             {
-                ABoxSettings = new ABoxSettings() { IndividualsBaseAddress = "individuals.Address" },
-                TBoxSettings = new TBoxSettings() { CustomObjectTypesBaseAddress = "CustomObjectTypes.Address" }
+                ABoxSettings = new ABoxSettings() { IndividualsBaseAddress = "http://individuals.Address" },
+                TBoxSettings = new TBoxSettings() { CustomObjectTypesBaseAddress = "http://CustomObjectTypes.Address" }
             };
         }
 
@@ -169,7 +169,7 @@ namespace BH.Test.RDF
             List<object> objectList = new List<object>() { room, co };
             string TTLGraph = objectList.ToTTL(new OntologySettings()
             {
-                TBoxSettings = new TBoxSettings { TreatCustomObjectsWithTypeKeyAsCustomObjectTypes = false, CustomObjectTypesBaseAddress = "www.test.de" },
+                TBoxSettings = new TBoxSettings { TreatCustomObjectsWithTypeKeyAsCustomObjectTypes = false, CustomObjectTypesBaseAddress = "http://www.test.de" },
                 ABoxSettings = new ABoxSettings { IndividualsBaseAddress = "https://www.nondefaultURL.com" }
             });
 

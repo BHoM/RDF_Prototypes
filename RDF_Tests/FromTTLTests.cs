@@ -50,8 +50,8 @@ namespace BH.Test.RDF
         {
             m_ontologySettings = new OntologySettings()
             {
-                ABoxSettings = new ABoxSettings() { IndividualsBaseAddress = "individuals.Address" },
-                TBoxSettings = new TBoxSettings() { CustomObjectTypesBaseAddress = "CustomObjectTypes.Address" }
+                ABoxSettings = new ABoxSettings() { IndividualsBaseAddress = "http://individuals.Address" },
+                TBoxSettings = new TBoxSettings() { CustomObjectTypesBaseAddress = "http://CustomObjectTypes.Address" }
             };
 
             m_adapter = new TTLAdapter(null, m_ontologySettings);
