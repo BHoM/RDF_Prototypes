@@ -37,7 +37,11 @@ namespace BH.Engine.Adapters.GraphDB
 {
     public static partial class Compute
     {
-        public static void DeleteRepository(string serverAddress = "http://localhost:7200/", string repositoryName = "BHoMVisualization", bool activate = false)
+        [Description("Delete data from a GraphDB repository using its REST API.")]
+        [Input("serverAddress", "Localhost address where GraphDB is exposed. This can be changed from GraphDB settings file.")]
+        [Input("repositoryName", "GraphDB repository name where the graph data is stored.")]
+        [Input("run", "Activate the deletion.")]
+        public static void DeleteRepository(string serverAddress = "http://localhost:7200/", string repositoryName = "BHoMVisualization", bool run = false)
         {
             var client = new HttpClient();
 
