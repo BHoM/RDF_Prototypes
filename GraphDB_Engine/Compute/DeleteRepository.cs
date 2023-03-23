@@ -37,7 +37,7 @@ namespace BH.Engine.Adapters.GraphDB
 {
     public static partial class Compute
     {
-        public static void DeleteRepository(string serverAddress = "http://localhost:7200/", string repositoryName = "BHoMVisualization", bool activate)
+        public static void DeleteRepository(string serverAddress = "http://localhost:7200/", string repositoryName = "BHoMVisualization", bool activate = false)
         {
             var client = new HttpClient();
 
