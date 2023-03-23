@@ -1,0 +1,58 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+    <AssemblyName>GraphDB_Adapter</AssemblyName>
+    <BaseOutputPath>..\Build\</BaseOutputPath>
+    <AssemblyVersion>6.0.0.0</AssemblyVersion>
+    <Description>https://github.com/BHoM/GraphDB_Toolkit</Description>
+    <Version>5.0.0</Version>
+    <Authors>BHoM</Authors>
+    <Copyright>Copyright © https://github.com/BHoM</Copyright>
+    <RootNamespace>BH.Adapter.GraphDB</RootNamespace>
+    <FileVersion>6.1.0.0</FileVersion>
+	<CopyLocalLockFileAssemblies>true</CopyLocalLockFileAssemblies>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.CSharp" Version="4.7.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\GraphDB_Engine\GraphDB_Engine.csproj" />
+    <ProjectReference Include="..\GraphDB_oM\GraphDB_oM.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Reference Include="Adapter_Engine">
+      <HintPath>C:\ProgramData\BHoM\Assemblies\Adapter_Engine.dll</HintPath>
+      <SpecificVersion>false</SpecificVersion>
+      <Private>false</Private>
+    </Reference>
+    <Reference Include="Adapter_oM">
+      <HintPath>C:\ProgramData\BHoM\Assemblies\Adapter_oM.dll</HintPath>
+      <Private>false</Private>
+      <SpecificVersion>false</SpecificVersion>
+    </Reference>
+    <Reference Include="BHoM">
+      <HintPath>C:\ProgramData\BHoM\Assemblies\BHoM.dll</HintPath>
+      <Private>false</Private>
+      <SpecificVersion>false</SpecificVersion>
+    </Reference>
+    <Reference Include="BHoM_Adapter">
+      <HintPath>C:\ProgramData\BHoM\Assemblies\BHoM_Adapter.dll</HintPath>
+      <Private>false</Private>
+      <SpecificVersion>false</SpecificVersion>
+    </Reference>
+    <Reference Include="BHoM_Engine">
+      <HintPath>C:\ProgramData\BHoM\Assemblies\BHoM_Engine.dll</HintPath>
+      <Private>false</Private>
+      <SpecificVersion>false</SpecificVersion>
+    </Reference>
+  </ItemGroup>
+
+  <Target Name="PostBuild" AfterTargets="PostBuildEvent">
+    <Exec Command="xcopy &quot;$(TargetDir)$(TargetFileName)&quot;  &quot;C:\ProgramData\BHoM\Assemblies&quot; /Y" />
+  </Target>
+
+</Project>

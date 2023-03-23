@@ -20,41 +20,32 @@
  * along with this code. If not, see <https://www.gnu.org/licenses/lgpl-3.0.html>.      
  */
 
+using BH.oM.Adapter;
 using System;
 using System.Collections.Generic;
-using System.ComponentModel;
-using System.Diagnostics;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace BH.Engine.Adapters.RDF
+namespace BH.Adapter.GraphDB
 {
-    public static partial class Compute
+    public partial class GraphDBAdapter : BHoMAdapter
     {
-        [Description("Input filepath to GraphDB.exe on your machine. To start GraphDB switch toggle to True, to close GraphDB switch toggle to False.")]
-
-        public static void GraphDBProcess(string GraphDBfilePath,bool run)
+        // Basic Delete method that deletes objects depending on their Type and Id. 
+        // It gets called by the Push or by the Remove Adapter Actions.
+        // Its implementation is facultative (not needed for a simple export/import scenario). 
+        // Toolkits need to implement (override) this only to get the full CRUD to work.
+        protected override int IDelete(Type type, IEnumerable<object> ids, ActionConfig actionConfig = null)
         {
-            
-            if (run == true)
-            {
-                Process.Start(GraphDBfilePath);
-                //Task.Delay(500).Wait();
-
-            }
-            else if (run == false & Process.GetProcessesByName("GraphDB Desktop").Any())
-            {
-                Process[] processes = Process.GetProcessesByName("GraphDB Desktop");
-                foreach (var process in processes)
-                {
-                    process.Kill();
-                }
-            }
-
+            //Insert code here to enable deletion of specific types of objects with specific ids
+            BH.Engine.Base.Compute.RecordError($"Delete for objects of type {type.Name} is not implemented in {(this as dynamic).GetType().Name}.");
+            return 0;
         }
 
+        // There are more virtual Delete methods you might want to override and implement.
+        // Check the base BHoM_Adapter solution and the wiki for more info.
 
+        /***************************************************/
     }
-       
 }
+
