@@ -53,7 +53,7 @@ namespace BH.Adapter.GraphDB
         [Input("graphSettings", "Settings for the graph creation.")]
         [Input("activate", "To start GraphDB, switch toggle to True.")]
         [Output("The created GraphDB adapter.")]
-        public GraphDBAdapter(string graphDBexePath = "%APPDATA%\\Local\\GraphDB Free\\GraphDB Free.exe", 
+        public GraphDBAdapter(string graphDBexePath = "%APPDATA%\\..\\Local\\GraphDB Free\\GraphDB Free.exe", 
             string repositoryName = "BHoMGraphDBRepo",
             string serverAddress = "http://localhost:7200/", 
             GraphSettings graphSettings = null,
@@ -64,7 +64,7 @@ namespace BH.Adapter.GraphDB
             m_AdapterSettings.DefaultPushType = oM.Adapter.PushType.CreateOnly; // Adapter `Push` Action simply calls "Create" method.
 
             if (activate)
-                BH.Engine.Adapters.GraphDB.Compute.StartGraphDBProcess();
+                BH.Engine.Adapters.GraphDB.Compute.StartGraphDBProcess(graphDBexePath);
 
             this.m_graphDBexePath = graphDBexePath;
             this.m_repositoryName = repositoryName;
