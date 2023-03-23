@@ -64,7 +64,7 @@ namespace BH.Adapter.GraphDB
             m_AdapterSettings.DefaultPushType = oM.Adapter.PushType.CreateOnly; // Adapter `Push` Action simply calls "Create" method.
 
             if (activate)
-                BH.Engine.Adapters.GraphDB.Compute.StartGraphDBProcess(graphDBexePath);
+                BH.Engine.Adapters.GraphDB.Compute.StartGraphDBProcess(graphDBexePath, true);
 
             this.m_graphDBexePath = graphDBexePath;
             this.m_repositoryName = repositoryName;
