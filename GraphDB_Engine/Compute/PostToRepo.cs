@@ -42,7 +42,7 @@ namespace BH.Engine.Adapters.GraphDB
         [Input("serverAddress", "Localhost address where GraphDB is exposed. This can be changed from GraphDB settings file.")]
         [Input("repositoryName", "GraphDB repository name where the graph data is stored.")]
         [Input("run", "Activate the push.")]
-        public static void PostToRepo(string TTLfilePath, string serverAddress = "http://localhost:7200/", string repositoryName = "BHoMVisualization", bool run = false)
+        public static async Task PostToRepo(string TTLfilePath, string serverAddress = "http://localhost:7200/", string repositoryName = "BHoMVisualization", bool run = false)
         {
             if (!run)
             {
@@ -52,24 +52,32 @@ namespace BH.Engine.Adapters.GraphDB
 
             // Documentation in GraphDB: http://localhost:7200/webapi
 
-            // Create Http Client and first Endpoint
-            var client = new HttpClient();
-            var endpointRepoCreate = new Uri(serverAddress + "rest/repositories/");
+            var httpClient = new HttpClient();
 
-            // Get repository config file and turn into HTTP Content
-            FileStream file = File.OpenRead(@"C:\ProgramData\BHoM\repo-config.ttl");
-            HttpContent fileStreamContent = new StreamContent(file);
+            // Set the GraphDB REST API URL for creating a repository
+            string apiUrl = $"{serverAddress}rest/repositories";
 
-            // Add Filetype even necessary?
-            fileStreamContent.Headers.ContentType = new MediaTypeHeaderValue("Turtle/ttl");
 
-            // Create new formData and Add the Config File to it as name config (http://localhost:7200/webapi)
+            // Read the configuration template
+            string configTemplate = File.ReadAllText(@"C:\ProgramData\BHoM\repo-config.ttl");
+            string config = configTemplate.Replace("{{REPOSITORY_ID}}", repositoryName);
+
+            //// Read the configuration template
+            HttpContent fileStreamContent = new StringContent(config, Encoding.UTF8, "application/xml");
+
+            // Create the request content
             var formData = new MultipartFormDataContent();
             formData.Add(fileStreamContent, name: "config", fileName: "repo-config.ttl");
 
-            // Post Respository Request
-            var result = client.PostAsync(endpointRepoCreate, formData).Result;
-            var json = result.Content.ReadAsStringAsync().Result;
+            // Send a POST request to create the repository
+            HttpResponseMessage response = await httpClient.PostAsync(apiUrl, formData);
+
+            // Check if the response is successful
+            if (response.IsSuccessStatusCode)
+                Console.WriteLine($"Repository '{repositoryName}' has been created.");
+            else
+                Console.WriteLine($"Failed to create repository '{repositoryName}': {response.ReasonPhrase}");
+
 
             // Post Data to Repository (also update data)
             String ttlBHoMFile = File.ReadAllText(TTLfilePath);
@@ -77,8 +85,8 @@ namespace BH.Engine.Adapters.GraphDB
             ttlFile.Headers.ContentType = new MediaTypeHeaderValue("text/turtle");
 
             var endpointRepoPostData = new Uri(serverAddress + "repositories/" + repositoryName + "/statements");
-            var resultData = client.PutAsync(endpointRepoPostData, ttlFile).Result;
-            string jsonData = result.Content.ReadAsStringAsync().Result;
+            var resultData = httpClient.PutAsync(endpointRepoPostData, ttlFile).Result;
+            string jsonData = resultData.Content.ReadAsStringAsync().Result;
         }
     }
 }
