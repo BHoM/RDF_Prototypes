@@ -39,6 +39,8 @@ using BH.Adapters.TTL;
 using Compute = BH.Engine.Adapters.RDF.Compute;
 using Convert = BH.Engine.Adapters.TTL.Convert;
 using BH.Engine.Adapters.TTL;
+using AutoBogus;
+using Shouldly;
 
 namespace BH.Test.RDF
 {
@@ -78,6 +80,66 @@ namespace BH.Test.RDF
 
             Assert.IsEqual(bhomObj, objs.First());
         }
+
+
+        [Test]
+        public static void CustomType_WithNestedCustomType()
+        {
+            GraphSettings graphSettings = new GraphSettings() { TBoxSettings = new TBoxSettings() { CustomobjectsTypeKey = "Type" } };
+
+            CustomObject building = new CustomObject();
+            building.CustomData["Type"] = "Building";
+            building.CustomData["BuildingVolume"] = AutoFaker.Generate<Sphere>();
+            building.CustomData["Sunlighthours"] = AutoFaker.Generate<List<int>>();
+
+            CustomObject city = new CustomObject();
+            city.CustomData["Type"] = "City";
+            city.CustomData["HasBuilding"] = building;
+
+            CSharpGraph cSharpGraph_customObj = Compute.CSharpGraph(new List<object>() { city }, m_graphSettings);
+            string TTLGraph = cSharpGraph_customObj.ToTTL();
+
+            Assert.IsTTLParsable(TTLGraph);
+
+            var res = Convert.FromTTL(TTLGraph).Item1.First();
+
+            Assert.IsEqual(city, res);
+        }
+
+
+        [Test]
+        public static void CustomType_WithManyNestedCustomTypes()
+        {
+            GraphSettings graphSettings = new GraphSettings() { TBoxSettings = new TBoxSettings() { CustomobjectsTypeKey = "Type" } };
+
+            CustomObject building = new CustomObject();
+            building.CustomData["Type"] = "Building";
+            building.CustomData["BuildingVolume"] = AutoFaker.Generate<Sphere>();
+            building.CustomData["Sunlighthours"] = AutoFaker.Generate<List<int>>();
+
+            CustomObject building2 = new CustomObject();
+            building2.CustomData["Type"] = "Building";
+            building2.CustomData["BuildingVolume"] = AutoFaker.Generate<Cuboid>();
+            building2.CustomData["Sunlighthours"] = AutoFaker.Generate<List<int>>();
+
+            CustomObject city = new CustomObject();
+            city.CustomData["Type"] = "City";
+            city.CustomData["HasBuilding"] = new List<object>() { building, building2 };
+
+            CSharpGraph cSharpGraph_customObj = Compute.CSharpGraph(new List<object>() { city }, m_graphSettings);
+            string TTLGraph = cSharpGraph_customObj.ToTTL();
+
+            TTLGraph.Contains(":City.HasBuilding rdf:Seq").ShouldBeTrue();
+            TTLGraph.Contains("rdf:_0").ShouldBeTrue();
+            TTLGraph.Contains("rdf:_1").ShouldBeTrue();
+
+            Assert.IsTTLParsable(TTLGraph);
+
+            var res = Convert.FromTTL(TTLGraph).Item1.First();
+
+            Assert.IsEqual(city, res);
+        }
+
 
         [Test]
         public static void CustomType_Property_BoxedListOfObjects()

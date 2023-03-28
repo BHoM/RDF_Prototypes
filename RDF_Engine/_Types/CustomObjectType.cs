@@ -142,7 +142,7 @@ namespace BH.Engine.Adapters.RDF.Types
             foreach (var item in _propertyTypes)
                 customProps.Add(new CustomPropertyInfo(this, item));
 
-            return customProps.ToArray();
+            return customProps.Concat(typeof(IBHoMObject).GetProperties()).ToArray();
         }
 
         public bool Equals(CustomObjectType other)

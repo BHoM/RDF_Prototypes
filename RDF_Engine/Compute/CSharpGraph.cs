@@ -100,7 +100,7 @@ namespace BH.Engine.Adapters.RDF
         // Private methods
         /***************************************************/
 
-        private static void AddToOntology(this Type type, GraphSettings graphSettings)
+        private static void AddToOntology(this Type type, GraphSettings graphSettings, object individual = null)
         {
             if (type == typeof(CustomObjectType))
                 return; // only add sub-types of CustomObjectType.
@@ -122,7 +122,7 @@ namespace BH.Engine.Adapters.RDF
                 m_cSharpGraph.Classes.Add(type);
 
             var props = type.GetProperties(BindingFlags.DeclaredOnly | BindingFlags.Instance | BindingFlags.Public);
-            props.AddToOntology(graphSettings);
+            props.AddToOntology(graphSettings, individual);
 
             // Recurse for parent Types.
             List<Type> parentTypes = type.BaseTypes();
@@ -131,7 +131,7 @@ namespace BH.Engine.Adapters.RDF
                 if (!parentType.IsOntologyClass(graphSettings.TBoxSettings))
                     continue;
 
-                AddToOntology(parentType, graphSettings);
+                AddToOntology(parentType, graphSettings, individual);
             }
         }
 
@@ -188,19 +188,18 @@ namespace BH.Engine.Adapters.RDF
                 domainType.AddToOntology(graphSettings);
 
 
-            if (pi.IsDataProperty(graphSettings.TBoxSettings))
+            if (pi.IsDataProperty(graphSettings.TBoxSettings, individualPropertyValue))
             {
                 DataProperty hasPropertyRelation = new DataProperty() { PropertyInfo = pi, DomainClass = domainType, RangeType = rangeType };
                 AddIndividualDataPropertyRelation(individual, pi, graphSettings, hasPropertyRelation, individualPropertyValue);
                 return;
             }
 
-            if (pi.IsObjectProperty(graphSettings.TBoxSettings))
+            if (pi.IsObjectProperty(graphSettings.TBoxSettings, individualPropertyValue))
             {
                 // OBJECT PROPERTY RELATION
                 // The relation between Individuals corresponds to an ObjectPropertyRelation (between two Classes of the Ontology).
-
-                if (pi.PropertyType.IsListOfOntologyClasses(individualPropertyValue, graphSettings.TBoxSettings) && individual != null)
+                if (pi.PropertyType.IsListOfOntologyClasses(individualPropertyValue, graphSettings.TBoxSettings) ?? false)
                 {
                     rangeType = new ListPropertyType(individual, pi, graphSettings.TBoxSettings);
 
@@ -236,13 +235,9 @@ namespace BH.Engine.Adapters.RDF
         private static void AddIndividualObjectPropertyRelation(object individual, PropertyInfo pi, GraphSettings graphSettings, ObjectProperty hasPropertyRelation, object propertyValue = null)
         {
             // If the individual is non-null, we will need to add the individuals' relation to the Graph in order to define the A-Box.
-            if (!pi.IsObjectProperty(graphSettings.TBoxSettings))
-            {
-                Log.RecordError("Wrong PropertyInfo specified.");
+            if (individual == null) 
                 return;
-            }
 
-            if (individual == null) return;
             if (propertyValue == null)
                 try
                 {
@@ -260,7 +255,7 @@ namespace BH.Engine.Adapters.RDF
                 RangeIndividual = propertyValue
             };
 
-            if (m_cSharpGraph.IndividualRelations.Contains(rel))
+            if (m_cSharpGraph.IndividualRelations.Any(r => r.GetHashCode() == rel.GetHashCode())) // for some reason, equality check still passes here. Enforcing GetHashCode.
                 return;
 
             m_cSharpGraph.IndividualRelations.Add(rel);
@@ -319,7 +314,7 @@ namespace BH.Engine.Adapters.RDF
             if (individualType.IsOntologyClass(graphSettings.TBoxSettings))
             {
                 // Make sure the individual type is among the ontology classes.
-                individualType.AddToOntology(graphSettings);
+                individualType.AddToOntology(graphSettings, individual);
 
                 // Add the individual.
                 m_cSharpGraph.AllIndividuals.Add(individual);

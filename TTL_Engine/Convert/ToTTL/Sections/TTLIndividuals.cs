@@ -72,7 +72,7 @@ namespace BH.Engine.Adapters.TTL
                     // First check if the Object Property is a List.
                     // This check is done here rather than at the CSharpGraph stage because not all output formats support lists.
                     // TTL supports lists.
-                    if (iop.IsListOfOntologyClasses(cSharpGraph.GraphSettings.TBoxSettings))
+                    if (iop.IsListOfOntologyClasses(cSharpGraph.GraphSettings.TBoxSettings) ?? false)
                     {
                         var individualList = iop.RangeIndividual as IEnumerable<object>;
                         if (individualList.IsNullOrEmpty())
