@@ -31,6 +31,7 @@ using System.Text;
 using System.Threading.Tasks;
 using BH.Engine.Adapters.GraphDB;
 using BH.oM.Adapters.RDF;
+using System.Diagnostics;
 
 namespace BH.Adapter.GraphDB
 {
@@ -63,7 +64,8 @@ namespace BH.Adapter.GraphDB
             // For example:
             m_AdapterSettings.DefaultPushType = oM.Adapter.PushType.CreateOnly; // Adapter `Push` Action simply calls "Create" method.
 
-            if (activate)
+            bool isRunning = Process.GetProcesses().Any(p => p.ProcessName.Contains("GraphDB"));
+            if (activate && !isRunning)
                 BH.Engine.Adapters.GraphDB.Compute.StartGraphDBProcess(graphDBexePath, true);
 
             this.m_graphDBexePath = graphDBexePath;
