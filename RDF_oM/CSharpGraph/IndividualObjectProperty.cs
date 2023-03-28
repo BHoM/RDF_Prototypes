@@ -39,7 +39,8 @@ namespace BH.oM.Adapters.RDF
             if (o == null)
                 return false;
 
-            return Individual.Equals(o.Individual) && RangeIndividual.Equals(o.RangeIndividual) &&
+            return Individual.Equals(o.Individual) &&
+                ((RangeIndividual != null && RangeIndividual.Equals(o.RangeIndividual)) || (RangeIndividual == null && o.RangeIndividual == null)) &&
                 HasProperty.DomainClass.Equals(o.HasProperty.DomainClass) && HasProperty.RangeClass.Equals(o.HasProperty.RangeClass);
         }
 

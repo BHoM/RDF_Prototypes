@@ -39,7 +39,8 @@ namespace BH.oM.Adapters.RDF
             if (o == null)
                 return false;
 
-            return Individual.Equals(o.Individual) && Value.Equals(o.Value) &&
+            return Individual.Equals(o.Individual) &&
+                ((Value != null && Value.Equals(o.Value)) || (Value == null && o.Value == null)) &&
                 PropertyInfo.PropertyType == o.PropertyInfo.PropertyType && PropertyInfo.DeclaringType == o.PropertyInfo.DeclaringType &&
                 PropertyInfo.Name.Equals(o.PropertyInfo.Name);
         }
