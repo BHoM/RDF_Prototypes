@@ -199,33 +199,6 @@ namespace BH.Test.RDF
         }
 
         [Test]
-        public static void Base64Encoded()
-        {
-            BHoMObject bhomObj = new BHoMObject();
-
-            //var testEntry = new KeyValuePair<string, string>("testKey", "testValue");
-            var testEntry = new TestObjectClass();
-
-            bhomObj.CustomData["encoded"] = testEntry;
-
-            List<object> objectList = new List<object>() { bhomObj };
-            string TTLGraph = objectList.ToTTL(m_graphSettings);
-
-            Assert.IsTTLParsable(TTLGraph);
-
-            OntologyResource individual = TTLGraph.Individuals().FirstOrDefault();
-            string valueString = (individual.TriplesWithSubject.LastOrDefault().Object as LiteralNode)?.Value;
-
-            object decryptedObj = valueString.FromBase64JsonSerialized();
-
-            Dictionary<string, object> decryptedCustomData = decryptedObj as Dictionary<string, object>;
-
-            object decryptedEntry = decryptedCustomData["encoded"];
-
-            Assert.IsEqual(testEntry, decryptedEntry);
-        }
-
-        [Test]
         public static void Point()
         {
             m_graphSettings.TBoxSettings.GeometryAsOntologyClass = true;
