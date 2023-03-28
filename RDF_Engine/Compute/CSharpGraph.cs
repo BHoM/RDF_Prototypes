@@ -199,7 +199,7 @@ namespace BH.Engine.Adapters.RDF
             {
                 // OBJECT PROPERTY RELATION
                 // The relation between Individuals corresponds to an ObjectPropertyRelation (between two Classes of the Ontology).
-                if (pi.PropertyType.IsListOfOntologyClasses(individualPropertyValue, graphSettings.TBoxSettings) ?? false)
+                if (individual != null && (pi.PropertyType.IsListOfOntologyClasses(individualPropertyValue, graphSettings.TBoxSettings) ?? false))
                 {
                     rangeType = new ListPropertyType(individual, pi, graphSettings.TBoxSettings);
 
