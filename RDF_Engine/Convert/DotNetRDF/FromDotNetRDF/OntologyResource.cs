@@ -47,172 +47,184 @@ namespace BH.Engine.Adapters.RDF
                 return null;
 
             Type individualType = individual.EquivalentType();
-            bool isCustomType = typeof(Types.CustomObjectType).IsAssignableFrom(individualType.GetType());
+            List<PropertyInfo> typeProperties = individualType.GetProperties().ToList();
 
             object resultObject = null;
-
             try
             {
                 resultObject = Activator.CreateInstance(individualType);
             }
             catch (Exception e)
             {
-                Log.RecordWarning($"The conversion does not support the type {individualType.FullName} yet. Error:\n{e.Message}");
+                string message = $"The conversion does not support the type {individualType.FullName} yet. Error:\n{e.Message}";
+                Log.RecordWarning(message, ex: new ArgumentException(message));
                 return null;
             }
 
             if (resultObject == null)
                 return null;
 
-            if (isCustomType)
-                (resultObject as CustomObject).CustomData[new TBoxSettings().CustomobjectsTypeKey] = individualType.Name;
+            bool isCustomType = typeof(Types.CustomObjectType).IsAssignableFrom(individualType.GetType());
 
-            List<PropertyInfo> typeProperties = individualType.GetProperties().ToList();
+            if (isCustomType)
+                ((CustomObject)resultObject).CustomData[new TBoxSettings().CustomobjectsTypeKey] = individualType.Name;
 
             // Get the equivalent properties
-            List<OntologyProperty> propertyNodes = dotNetRDFOntology.OwlProperties.Where(p => p.UsedBy.Any(n => n.Types.Any(uriN => uriN.ToString().Contains(individualType.FullName)))).ToList();
+            var ontprops = dotNetRDFOntology.OwlProperties.Where(p => p.UsedBy.Any(n => n.Types.Any(uriN => uriN.ToString().Contains(individualType.FullName))));
+            HashSet<OntologyProperty> propertyNodes = new HashSet<OntologyProperty>(ontprops);
 
             foreach (OntologyProperty propertyNode in propertyNodes)
             {
-                Triple predicateNode = propertyNode.TriplesWithPredicate
-                    .Where(t => (t.Subject as UriNode)?.Uri.Segments.LastOrDefault() == individual.Resource.Uri().Segments.LastOrDefault())
-                    .FirstOrDefault();
-
-                if (predicateNode == null)
-                    continue;
-
-                string propertyFullName = predicateNode.Predicate.BHoMSegment();
-                object propertyValue = null;
-                Type propertyType = typeof(object);
-
-
-                LiteralNode literalNode = predicateNode.Object as LiteralNode;
-                if (literalNode != null)
-                {
-                    propertyValue = literalNode.GetPropertyValue();
-                    propertyType = literalNode.GetPropertyType();
-                }
-
-                UriNode uriNode = predicateNode.Object as UriNode;
-                if (uriNode != null)
-                {
-                    // Check if it is a List.
-                    // Could not find a more reliable way that checking the uri address for mentions of "rdf" and "seq".
-                    string typeAddress = uriNode.ToString().ToLower();
-                    var typeAddressPortions = typeAddress.Split('#').SelectMany(p => p.Split('-')).SelectMany(p => p.Split('/')).ToList();
-                    if (typeAddressPortions.Contains("rdf") && typeAddressPortions.Contains("seq"))
-                    {
-                        SortedDictionary<int, int> listIdx_tripleIdx = new SortedDictionary<int, int>();
-
-                        bool sequenceStarted = false;
-
-                        for (int i = 0; i < individual.TriplesWithSubject.Count(); i++)
-                        {
-                            Triple triple = individual.TriplesWithSubject.ElementAtOrDefault(i);
-
-                            if (triple.Predicate.Uri().ToString().Contains(propertyFullName))
-                            {
-                                sequenceStarted = true;
-                                continue;
-                            }
-
-                            if (!sequenceStarted)
-                                continue;
-
-                            int rdfListIndexFound = -1;
-                            string predicateUri = (triple?.Predicate as UriNode)?.Uri.ToString();
-                            string listIdxString = predicateUri?.Split('_')?.LastOrDefault();
-
-                            if (int.TryParse(listIdxString, out rdfListIndexFound))
-                                listIdx_tripleIdx[rdfListIndexFound] = i;
-                            else
-                            {
-                                // Reached end of the sequence.
-                                break;
-                            }
-                        }
-
-                        List<object> listValues = new List<object>();
-                        foreach (var kv in listIdx_tripleIdx)
-                        {
-                            Triple listItemTriple = individual.TriplesWithSubject.ElementAt(kv.Value);
-                            OntologyResource listIndividual = listItemTriple.Object.IndividualOntologyResource(dotNetRDFOntology);
-                            object convertedIndividual = listIndividual.FromDotNetRDF(dotNetRDFOntology);
-                            listValues.Add(convertedIndividual);
-                        }
-
-                        propertyValue = listValues;
-                    }
-                    else
-                    {
-                        OntologyResource relatedIndividual = uriNode.IndividualOntologyResource(dotNetRDFOntology);
-                        propertyValue = relatedIndividual.FromDotNetRDF(dotNetRDFOntology);
-                    }
-                }
-
-                if (predicateNode.Object is BlankNode)
-                {
-                    BlankNode listStart = (BlankNode)predicateNode.Object;
-
-                    string nextId = listStart.InternalID;
-
-                    List<object> listValues = new List<object>();
-                    Type listItemsType = null;
-
-                    for (int i = 0; i < dotNetRDFOntology.Triples.Count; i++)
-                    {
-                        Triple triple = dotNetRDFOntology.Triples.ElementAt(i);
-                        BlankNode bn = triple.Subject as BlankNode;
-
-                        if (bn == null)
-                            continue;
-
-                        if (bn.InternalID == nextId)
-                        {
-                            LiteralNode valueNode = triple.Object as LiteralNode;
-
-                            if (valueNode != null)
-                            {
-                                if (listItemsType == null)
-                                    listItemsType = GetPropertyType(valueNode);
-
-                                object listItemValue = ConvertValue(valueNode.GetPropertyValue(), listItemsType);
-                                listValues.Add(listItemValue);
-                                continue;
-                            }
-
-                            BlankNode objectBn = triple.Object as BlankNode;
-
-                            if (objectBn == null)
-                                break;
-
-                            nextId = objectBn.InternalID;
-                        }
-                    }
-
-                    propertyValue = listValues;
-                    propertyType = typeof(List<>).MakeGenericType(listItemsType ?? typeof(object));
-                }
-
-                PropertyInfo correspondingPInfo = typeProperties.FirstOrDefault(pi => pi.FullNameValidChars() == propertyFullName);
-
-                if (correspondingPInfo == null)
-                {
-                    string propertyName = propertyFullName.Split('.').LastOrDefault();
-                    correspondingPInfo = new Types.CustomPropertyInfo(individualType as Types.CustomObjectType, new KeyValuePair<string, Type>(propertyName, propertyType));
-                }
-
-                object convertedValue = ConvertValue(propertyValue, correspondingPInfo.PropertyType);
-
-                SetValueOnResultObject(ref resultObject, correspondingPInfo, convertedValue);
+                resultObject.SetOntologyProperty(propertyNode, dotNetRDFOntology, individual, individualType, typeProperties);
             }
 
             return resultObject;
         }
 
-
         /*************************************/
         /*          Private methods          */
+        /*************************************/
+
+        private static void SetOntologyProperty(this object resultObject, OntologyProperty propertyNode, OntologyGraph dotNetRDFOntology, OntologyResource individual, Type individualType, List<PropertyInfo> typeProperties)
+        {
+            Triple predicateNode = propertyNode.TriplesWithPredicate
+             .Where(t => (t.Subject as UriNode)?.Uri.Segments.LastOrDefault() == individual.Resource.Uri().Segments.LastOrDefault())
+             .FirstOrDefault();
+
+            if (predicateNode == null)
+                return;
+
+            string propertyFullName = predicateNode.Predicate.BHoMSegment();
+            object propertyValue = null;
+            Type propertyType = typeof(object);
+
+            LiteralNode literalNode = predicateNode.Object as LiteralNode;
+            if (literalNode != null)
+            {
+                propertyValue = literalNode.GetPropertyValue();
+                propertyType = literalNode.GetPropertyType();
+            }
+
+            if (propertyFullName.EndsWith(nameof(IBHoMObject.BHoM_Guid)))
+                propertyType = typeof(Guid);
+
+            UriNode uriNode = predicateNode.Object as UriNode;
+            if (uriNode != null)
+            {
+                // Check if it is a List.
+                // Could not find a more reliable way that checking the uri address for mentions of "rdf" and "seq".
+                string typeAddress = uriNode.ToString().ToLower();
+                var typeAddressPortions = typeAddress.Split('#').SelectMany(p => p.Split('-')).SelectMany(p => p.Split('/')).ToList();
+                if (typeAddressPortions.Contains("rdf") && typeAddressPortions.Contains("seq"))
+                {
+                    SortedDictionary<int, int> listIdx_tripleIdx = new SortedDictionary<int, int>();
+
+                    bool sequenceStarted = false;
+
+                    for (int i = 0; i < individual.TriplesWithSubject.Count(); i++)
+                    {
+                        Triple triple = individual.TriplesWithSubject.ElementAtOrDefault(i);
+
+                        if (triple.Predicate.Uri().ToString().Contains(propertyFullName))
+                        {
+                            sequenceStarted = true;
+                            continue;
+                        }
+
+                        if (!sequenceStarted)
+                            continue;
+
+                        int rdfListIndexFound = -1;
+                        string predicateUri = (triple?.Predicate as UriNode)?.Uri.ToString();
+                        string listIdxString = predicateUri?.Split('_')?.LastOrDefault();
+
+                        if (int.TryParse(listIdxString, out rdfListIndexFound))
+                            listIdx_tripleIdx[rdfListIndexFound] = i;
+                        else
+                        {
+                            // Reached end of the sequence.
+                            break;
+                        }
+                    }
+
+                    List<object> listValues = new List<object>();
+                    foreach (var kv in listIdx_tripleIdx)
+                    {
+                        Triple listItemTriple = individual.TriplesWithSubject.ElementAt(kv.Value);
+                        OntologyResource listIndividual = listItemTriple.Object.IndividualOntologyResource(dotNetRDFOntology);
+                        object convertedIndividual = listIndividual.FromDotNetRDF(dotNetRDFOntology);
+                        listValues.Add(convertedIndividual);
+                    }
+
+                    propertyValue = listValues;
+                }
+                else
+                {
+                    OntologyResource relatedIndividual = uriNode.IndividualOntologyResource(dotNetRDFOntology);
+                    propertyValue = relatedIndividual.FromDotNetRDF(dotNetRDFOntology);
+                }
+            }
+
+            if (predicateNode.Object is BlankNode)
+            {
+                BlankNode listStart = (BlankNode)predicateNode.Object;
+
+                string nextId = listStart.InternalID;
+
+                List<object> listValues = new List<object>();
+                Type listItemsType = null;
+
+                for (int i = 0; i < dotNetRDFOntology.Triples.Count; i++)
+                {
+                    Triple triple = dotNetRDFOntology.Triples.ElementAt(i);
+                    BlankNode bn = triple.Subject as BlankNode;
+
+                    if (bn == null)
+                        continue;
+
+                    if (bn.InternalID == nextId)
+                    {
+                        LiteralNode valueNode = triple.Object as LiteralNode;
+
+                        if (valueNode != null)
+                        {
+                            if (listItemsType == null)
+                                listItemsType = GetPropertyType(valueNode);
+
+                            object listItemValue = ConvertValue(valueNode.GetPropertyValue(), listItemsType);
+                            listValues.Add(listItemValue);
+                            continue;
+                        }
+
+                        BlankNode objectBn = triple.Object as BlankNode;
+
+                        if (objectBn == null)
+                            break;
+
+                        nextId = objectBn.InternalID;
+                    }
+                }
+
+                propertyValue = listValues;
+                propertyType = typeof(List<>).MakeGenericType(listItemsType ?? typeof(object));
+            }
+
+            PropertyInfo correspondingPInfo = typeProperties.FirstOrDefault(pi => pi.FullNameValidChars() == propertyFullName);
+
+            var bhomObjProperties = typeof(IBHoMObject).GetProperties().Concat(typeof(BHoMObject).GetProperties());
+            correspondingPInfo = correspondingPInfo ?? bhomObjProperties.SingleOrDefault(p => p.FullNameValidChars().Contains(propertyFullName));
+
+            if (correspondingPInfo == null)
+            {
+                string propertyName = propertyFullName.Split('.').LastOrDefault();
+                correspondingPInfo = new Types.CustomPropertyInfo(individualType as Types.CustomObjectType, new KeyValuePair<string, Type>(propertyName, propertyType));
+            }
+
+            object convertedValue = ConvertValue(propertyValue, correspondingPInfo.PropertyType);
+
+            SetValueOnResultObject(ref resultObject, correspondingPInfo, convertedValue);
+        }
+
         /*************************************/
 
         private static object GetPropertyValue(this LiteralNode literalNode)

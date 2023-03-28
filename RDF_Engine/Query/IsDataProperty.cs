@@ -37,14 +37,15 @@ namespace BH.Engine.Adapters.RDF
 {
     public static partial class Query
     {
-        public static bool IsDataProperty(this PropertyInfo pi, TBoxSettings tBoxSettings)
+        public static bool IsDataProperty(this PropertyInfo pi, TBoxSettings tBoxSettings, object individual = null)
         {
             // An ontology Data property is a relation from a class of an ontology to a Data Type.
             // A CSharp PropertyInfo can corresponds to an Object Property 
             // if the range of the relation (= the property type) is NOT an ontology class,
             // while the domain of the relation (the PropertyInfo's Declaring Type) is an ontology class.
 
-            return pi.PropertyType.IsDataType(tBoxSettings) && pi.DeclaringType.IsOntologyClass(tBoxSettings);
+            return pi.PropertyType.IsDataType(tBoxSettings) && pi.DeclaringType.IsOntologyClass(tBoxSettings)
+                && !(pi.PropertyType.IsListOfOntologyClasses(individual, tBoxSettings) ?? true);
         }
     }
 }

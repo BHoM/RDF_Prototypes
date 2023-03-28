@@ -37,7 +37,7 @@ namespace BH.Engine.Adapters.RDF
 {
     public static partial class Query
     {
-        public static bool IsObjectProperty(this PropertyInfo pi, TBoxSettings tBoxSettings)
+        public static bool IsObjectProperty(this PropertyInfo pi, TBoxSettings tBoxSettings, object individual = null)
         {
             // An ontology Object property is a relation between two classes of an ontology.
             // A CSharp PropertyInfo can corresponds to an Object Property if:
@@ -56,7 +56,7 @@ namespace BH.Engine.Adapters.RDF
             
             // Safer to return the opposite of IsDataProperty().
 
-            return !pi.IsDataProperty(tBoxSettings);
+            return !pi.IsDataProperty(tBoxSettings, individual);
         }
     }
 }

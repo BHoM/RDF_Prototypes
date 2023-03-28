@@ -54,8 +54,11 @@ namespace BH.Engine.Adapters.RDF
             RecordMessage(MessageLevel.ERROR, error, doNotRepeat, appendToPrevious);
         }
 
-        public static void RecordWarning(string warning, bool doNotRepeat = false, bool appendToPrevious = false)
+        public static void RecordWarning(string warning, bool doNotRepeat = false, bool appendToPrevious = false, Exception ex = null)
         {
+            if (ThrowExceptions && ex != null)
+                throw ex;
+
             RecordMessage(MessageLevel.Warning, warning, doNotRepeat, appendToPrevious);
         }
 

@@ -45,10 +45,12 @@ namespace BH.Engine.Adapters.RDF
             return typeof(IList).IsAssignableFrom(t);
         }
 
-        public static bool IsListOfOntologyClasses(this Type sourceType, object sourceObj, TBoxSettings tBoxSettings)
+        public static bool? IsListOfOntologyClasses(this Type sourceType, object sourceObj, TBoxSettings tBoxSettings)
         {
+            tBoxSettings = tBoxSettings ?? new TBoxSettings();
+
             if (sourceType == null)
-                return false;
+                return null;
 
             // Make sure the type is a List.
             if (!sourceType.IsList())
@@ -69,6 +71,9 @@ namespace BH.Engine.Adapters.RDF
             {
                 List<object> objList = sourceObj as List<object>;
 
+                if (objList == null)
+                    return false;
+
                 // Unbox the objects and see if their actual type is an Ontology class.
                 return objList.All(o => o.GetType().IsOntologyClass(tBoxSettings));
             }
@@ -76,7 +81,7 @@ namespace BH.Engine.Adapters.RDF
             return false;
         }
 
-        public static bool IsListOfOntologyClasses(this IndividualObjectProperty iop, TBoxSettings tBoxSettings)
+        public static bool? IsListOfOntologyClasses(this IndividualObjectProperty iop, TBoxSettings tBoxSettings)
         {
             Type rangeType = iop.RangeIndividual?.GetType();
 
