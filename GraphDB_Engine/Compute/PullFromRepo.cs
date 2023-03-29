@@ -41,7 +41,7 @@ namespace BH.Engine.Adapters.GraphDB
     {
 
         [Description("Pulls RDF data from a GraphDB using its SPARQL API.")]
-        public static SparqlResultSet PullFromRepoAsync(string serverAddress = "http://localhost:7200/", string repositoryName = "BHoMVisualization", bool run = false)
+        public static SparqlResultSet PullFromRepo(string serverAddress = "http://localhost:7200/", string repositoryName = "BHoMVisualization", bool run = false)
         {
             if (!run)
             {
