@@ -41,13 +41,15 @@ namespace BH.Adapter.GraphDB
 {
     public partial class GraphDBAdapter : BHoMAdapter
     {
-        public override string Pull(string tag = "")
+        public override IEnumerable<object> Pull(oM.Data.Requests.IRequest request, PullType pullType = PullType.AdapterDefault, ActionConfig actionConfig = null)
         {
-
+            List<object> pullResult = new List<object>();
             // Posts the content of the Turtle file to GraphDB.
-            Compute.PullFromRepo(m_serverAddress, m_repositoryName, true);
+            var result = Compute.PullFromRepo(m_serverAddress, m_repositoryName, true);
 
-            return "return string of ttl file";
+            pullResult.Add(result);
+
+            return pullResult;
         }
     }
 }
