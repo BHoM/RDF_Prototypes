@@ -56,7 +56,7 @@ namespace BH.Engine.Adapters.RDF
             // Custom Type guard
             if (typeof(CustomObjectType).IsAssignableFrom(pi.DeclaringType))
             {
-                Log.RecordError($"Can not compute the code line number of property `{pi.Name}` that is of a {nameof(CustomObjectType)} type.", true);
+                Log.RecordError($"Can not compute the code line number of property `{pi.Name}` that is of a {nameof(CustomObjectType)} type.", doNotRepeat:true);
                 return -1;
             }
 

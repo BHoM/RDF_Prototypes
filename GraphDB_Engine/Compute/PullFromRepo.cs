@@ -75,7 +75,7 @@ namespace BH.Engine.Adapters.GraphDB
             }
             catch (RdfQueryException queryEx)
             {
-                Log.RecordError($"The query was invalid. Message " + queryEx.Message, ex: queryEx);
+                Log.RecordError($"The query was invalid. Message " + queryEx.Message, innerException: queryEx);
             }
 
             // Create a new instance of the SparqlRemoteEndpoint
@@ -92,7 +92,7 @@ namespace BH.Engine.Adapters.GraphDB
             }
             catch (Exception ex)
             {
-                Log.RecordError($"Error querying GraphDB: {ex.Message}", ex: ex );
+                Log.RecordError($"Error querying GraphDB: {ex.Message}", innerException: ex );
                 return null;
             }
         }

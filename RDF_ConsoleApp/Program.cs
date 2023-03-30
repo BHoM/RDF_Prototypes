@@ -37,6 +37,7 @@ using System.Reflection;
 using BH.Adapters.TTL;
 using Compute = BH.Engine.Adapters.RDF.Compute;
 using BH.Engine.Adapters.TTL;
+using BH.Adapters.Markdown;
 
 namespace BH.oM.CodeAnalysis.ConsoleApp
 {
@@ -57,9 +58,17 @@ namespace BH.oM.CodeAnalysis.ConsoleApp
             {
                 CSharpGraph cSharpGraph = Engine.Adapters.RDF.Compute.CSharpGraph(kv.Value.ToList(), graphSettings);
 
-                string filePath = Path.GetFullPath(Path.Combine("C:/temp/" , kv.Key + ".ttl"));
-                
-                cSharpGraph.ToTTL(localRepositorySettings, filePath);
+                string saveFolder = @"C:\temp\MarkdownTests";
+                string filePath = Path.GetFullPath(Path.Combine(saveFolder, kv.Key + ".md"));
+                MarkdownAdapter mdAdapter = new MarkdownAdapter(filePath);
+
+                try
+                {
+                    mdAdapter.Push(kv.Value.ToList());
+                } catch (Exception ex)
+                {
+                    Console.WriteLine($"Could not write Markdown of `{kv.Key}`.");
+                }
             }
         }
     }

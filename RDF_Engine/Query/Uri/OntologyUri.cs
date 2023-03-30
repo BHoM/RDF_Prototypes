@@ -275,7 +275,7 @@ namespace BH.Engine.Adapters.RDF
 
             Uri uri = null;
             if (!Uri.TryCreate(result, UriKind.Absolute, out uri))
-                Log.RecordError($"Could not compose a valid URL for type {t.FullName}", true);
+                Log.RecordError($"Could not compose a valid URL for type {t.FullName}", doNotRepeat: true);
 
             return uri;
         }

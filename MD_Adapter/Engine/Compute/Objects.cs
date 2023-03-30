@@ -36,33 +36,33 @@ using BH.Engine.Base;
 using BH.oM.Adapters.RDF;
 using BH.oM.Base.Attributes;
 
-namespace BH.Engine.Adapters.TTL
+namespace BH.Engine.Adapters.Markdown
 {
-    public static partial class Convert
+    public static partial class Compute
     {
-        [Description("Computes a TTL ontology with the input IObjects. The ontology will include both T-Box and A-Box." +
+        [Description("Computes a Markdown ontology with the input Types, and writes it to a file. The ontology will include T-Box only." +
              "The T-Box is constructed from the Types of the input objects, and their relations, expressed via the CSharp object properties.")]
-        public static void ToTTL(this List<object> objects, string filePath, GraphSettings graphSettings = null, LocalRepositorySettings localRepositorySettings = null)
+        public static void ToMarkdown(this List<Type> types, string filePath, GraphSettings graphSettings = null, LocalRepositorySettings localRepositorySettings = null)
         {
             localRepositorySettings = localRepositorySettings ?? new LocalRepositorySettings();
             graphSettings = graphSettings ?? new GraphSettings();
 
-            CSharpGraph cSharpGraph = Engine.Adapters.RDF.Compute.CSharpGraph(objects, graphSettings);
+            CSharpGraph cSharpGraph = BH.Engine.Adapters.RDF.Compute.CSharpGraph(types, graphSettings);
 
-            cSharpGraph.ToTTL(localRepositorySettings, filePath);
+            cSharpGraph.ToMarkdown(localRepositorySettings, filePath);
         }
 
 
-        [Description("Computes a TTL ontology with the input IObjects. The ontology will include both T-Box and A-Box." +
-            "The T-Box is constructed from the Types of the input objects, and their relations, expressed via the CSharp object properties.")]
-        public static string ToTTL(this List<object> objects, GraphSettings graphSettings = null, LocalRepositorySettings localRepositorySettings = null)
+        [Description("Computes a Markdown ontology with the input Types. The ontology will include T-Box only." +
+             "The T-Box is constructed from the Types of the input objects, and their relations, expressed via the CSharp object properties.")]
+        public static string ToMarkdown(this List<object> objects, GraphSettings graphSettings = null, LocalRepositorySettings localRepositorySettings = null)
         {
             localRepositorySettings = localRepositorySettings ?? new LocalRepositorySettings();
             graphSettings = graphSettings ?? new GraphSettings();
 
-            CSharpGraph cSharpGraph = Engine.Adapters.RDF.Compute.CSharpGraph(objects, graphSettings);
+            CSharpGraph cSharpGraph = BH.Engine.Adapters.RDF.Compute.CSharpGraph(objects, graphSettings);
 
-            string TTL = cSharpGraph.ToTTL(localRepositorySettings);
+            string TTL = cSharpGraph.ToMarkdown(localRepositorySettings);
 
             return TTL;
         }

@@ -20,38 +20,43 @@
  * along with this code. If not, see <https://www.gnu.org/licenses/lgpl-3.0.html>.      
  */
 
-
+using BH.Engine.Base;
 using BH.oM.Base;
+using BH.oM.Adapters.RDF;
 using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.ComponentModel;
-using System.IO;
 using System.Linq;
 using System.Reflection;
 using System.Text;
 using System.Threading.Tasks;
-using VDS.RDF;
-using VDS.RDF.Writing;
-using BH.Engine.Base;
-using BH.oM.Adapters.RDF;
-using BH.oM.Base.Attributes;
 
-namespace BH.Engine.Adapters.TTL
+namespace BH.Engine.Adapters.Markdown
 {
-    public static partial class Convert
+    public partial class Convert
     {
-        [Description("Computes a TTL T-Box ontology with the input Types." +
-            "To compute an ontology that includes both T-Box and A-Box, use the TTLGraph method that takes a list of IObjects, and provide input objects (instances) instead of Types.")]
-        public static string ToTTL(this List<Type> types, GraphSettings graphSettings = null, LocalRepositorySettings localRepositorySettings = null)
+        private static string Header(GraphSettings graphSettings, 
+            bool includeOwl = true, bool includeRdf = true, bool includeRdfs = true, bool includeXml = true, bool includeXsd = true)
         {
-            localRepositorySettings = localRepositorySettings ?? new LocalRepositorySettings();
-            graphSettings = graphSettings ?? new GraphSettings();
+            string header = $"@prefix : <{graphSettings.OntologyBaseAddress}/> .";
+            if (includeOwl) header += "\n@prefix owl: <http://www.w3.org/2002/07/owl#> .";
+            if (includeRdf) header += "\n@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .";
+            if (includeXml) header += "\n@prefix xml: <http://www.w3.org/XML/1998/namespace> .";
+            if (includeXsd) header += "\n@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .";
+            if (includeRdfs) header += "\n@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .";
+            if (includeRdfs) header += "\n@prefix dc: <http://purl.org/dc/elements/1.1/> .";
 
-            CSharpGraph cSharpGraph = Engine.Adapters.RDF.Compute.CSharpGraph(types, graphSettings);
+            header += "\n@base   " + $@"<{graphSettings.OntologyBaseAddress}> .";
+            
 
-            string TTL = cSharpGraph.ToTTL(localRepositorySettings);
+            header += "\n";
 
-            return TTL;
+            header += "\n"+$@"<{graphSettings.OntologyBaseAddress}> rdf:type owl:Ontology;
+                          dc:title ""{graphSettings.OntologyTitle}""@en;
+                          dc:description ""{graphSettings.OntologyDescription}""@en.";
+
+            return header;
         }
     }
 }

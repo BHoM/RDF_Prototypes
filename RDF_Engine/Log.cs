@@ -46,18 +46,33 @@ namespace BH.Engine.Adapters.RDF
             ERROR
         }
 
-        public static void RecordError(string error, bool doNotRepeat = false, bool appendToPrevious = false, Exception ex = null)
+        public static void RecordError(string error, Type exceptionType = null, Exception innerException = null, bool doNotRepeat = false, bool appendToPrevious = false)
         {
-            if (ThrowExceptions && ex != null)
-                throw ex;
+            ThrowIfRequested(error, exceptionType, innerException);
 
             RecordMessage(MessageLevel.ERROR, error, doNotRepeat, appendToPrevious);
         }
 
-        public static void RecordWarning(string warning, bool doNotRepeat = false, bool appendToPrevious = false, Exception ex = null)
+        private static void ThrowIfRequested(string message, Type exceptionType = null, Exception innerException = null)
         {
-            if (ThrowExceptions && ex != null)
-                throw ex;
+            if (!ThrowExceptions)
+                return;
+
+            if (innerException != null)
+                exceptionType = exceptionType ?? typeof(Exception);
+
+            if (exceptionType != null)
+            {
+                Exception e = Activator.CreateInstance(exceptionType, message, innerException) as Exception;
+
+                if (ThrowExceptions && e != null)
+                    throw e;
+            }
+        }
+
+        public static void RecordWarning(string warning, bool doNotRepeat = false, bool appendToPrevious = false, Type exceptionType = null)
+        {
+            ThrowIfRequested(warning, exceptionType);
 
             RecordMessage(MessageLevel.Warning, warning, doNotRepeat, appendToPrevious);
         }

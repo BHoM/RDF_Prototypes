@@ -38,7 +38,7 @@ using System.Reflection;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace BH.Engine.Adapters.TTL
+namespace BH.Engine.Adapters.Markdown
 {
     public static partial class Convert
     {
@@ -47,7 +47,7 @@ namespace BH.Engine.Adapters.TTL
         /***************************************************/
 
         [Description("Converts a Graph ontological representation of (BHoM) types and their relations into a TTL format.")]
-        public static string ToTTL(this CSharpGraph cSharpGraph, LocalRepositorySettings localRepositorySettings = null, string filepath = null)
+        public static string ToMarkdown(this CSharpGraph cSharpGraph, LocalRepositorySettings localRepositorySettings = null, string filepath = null)
         {
             localRepositorySettings = localRepositorySettings ?? new LocalRepositorySettings();
 
@@ -60,11 +60,6 @@ namespace BH.Engine.Adapters.TTL
             try
             {
                 TTL = new StringBuilder();
-
-                TTL.Append(TTLHeader(cSharpGraph.GraphSettings));
-
-                TTL.Append("Annotation Properties".SectionTitle());
-                TTL.Append(string.Join("\n", TTLAnnotationProperties()));
 
                 TTL.Append("Datatypes".SectionTitle());
                 TTL.Append(string.Join("\n", cSharpGraph.TTLDataTypes(localRepositorySettings)));
@@ -80,10 +75,6 @@ namespace BH.Engine.Adapters.TTL
 
                 TTL.Append("Data properties".SectionTitle());
                 TTL.Append(string.Join("\n\n", cSharpGraph.TTLDataProperties(localRepositorySettings)));
-
-                AddABoxSettings(cSharpGraph, localRepositorySettings, TTL);
-
-                cSharpGraph.TTLIndividuals(localRepositorySettings, TTL);
 
                 TTL.Append("Footer".SectionTitle());
                 TTL.AppendLine($"# {nameof(GraphSettings)}: {cSharpGraph.GraphSettings.ToBase64JsonSerialized()}");
@@ -129,32 +120,6 @@ namespace BH.Engine.Adapters.TTL
                 TTL.AppendLine($"# {nameof(TBoxSettings)}:");
                 TTL.AppendLine(tBoxSettingsString);
                 TTL.AppendLine();
-            }
-        }
-
-        // Adds TBox Settings in a human-readable way. The settings are however serialized-deserialized from a specific comment in the header.
-        private static void AddABoxSettings(CSharpGraph cSharpGraph, LocalRepositorySettings localRepositorySettings, StringBuilder TTL)
-        {
-            ABoxSettings defaultAboxSettings = new ABoxSettings();
-            StringBuilder aBoxSettingsStringBuilder = new StringBuilder();
-
-            if (cSharpGraph.AllIndividuals?.Any() ?? false)
-            {
-                TTL.Append("Individuals".SectionTitle());
-
-                if (cSharpGraph.GraphSettings.ABoxSettings.IndividualsBaseAddress != defaultAboxSettings.IndividualsBaseAddress)
-                    aBoxSettingsStringBuilder.AppendLine($"# {nameof(defaultAboxSettings.IndividualsBaseAddress)}: " + cSharpGraph.GraphSettings.ABoxSettings.IndividualsBaseAddress);
-
-                if (cSharpGraph.GraphSettings.ABoxSettings.ConsiderNullOrEmptyPropertyValues != defaultAboxSettings.ConsiderNullOrEmptyPropertyValues)
-                    aBoxSettingsStringBuilder.AppendLine($"# {nameof(defaultAboxSettings.ConsiderNullOrEmptyPropertyValues)}: " + cSharpGraph.GraphSettings.ABoxSettings.ConsiderNullOrEmptyPropertyValues);
-
-                string aBoxSettingsString = aBoxSettingsStringBuilder.ToString();
-                if (aBoxSettingsString.Any())
-                {
-                    TTL.AppendLine($"# {nameof(ABoxSettings)}:");
-                    TTL.AppendLine(aBoxSettingsString);
-                    TTL.AppendLine();
-                }
             }
         }
     }

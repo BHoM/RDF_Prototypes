@@ -56,8 +56,7 @@ namespace BH.Engine.Adapters.RDF
             }
             catch (Exception e)
             {
-                string message = $"The conversion does not support the type {individualType.FullName} yet. Error:\n{e.Message}";
-                Log.RecordWarning(message, ex: new ArgumentException(message));
+                Log.RecordWarning($"The conversion does not support the type {individualType.FullName} yet. Error:\n{e.Message}", exceptionType: typeof(ArgumentException));
                 return null;
             }
 
