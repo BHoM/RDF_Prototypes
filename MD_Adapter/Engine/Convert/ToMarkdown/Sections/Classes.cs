@@ -20,38 +20,51 @@
  * along with this code. If not, see <https://www.gnu.org/licenses/lgpl-3.0.html>.      
  */
 
-
-using BH.oM.Base;
+using BH.Engine.Adapters.RDF;
+using BH.oM.Adapters.RDF;
 using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.ComponentModel;
-using System.IO;
 using System.Linq;
 using System.Reflection;
 using System.Text;
 using System.Threading.Tasks;
-using VDS.RDF;
-using VDS.RDF.Writing;
-using BH.Engine.Base;
-using BH.oM.Adapters.RDF;
-using BH.oM.Base.Attributes;
 
-namespace BH.Engine.Adapters.TTL
+namespace BH.Engine.Adapters.Markdown
 {
     public static partial class Convert
     {
-        [Description("Computes a TTL T-Box ontology with the input Types." +
-            "To compute an ontology that includes both T-Box and A-Box, use the TTLGraph method that takes a list of IObjects, and provide input objects (instances) instead of Types.")]
-        public static string ToTTL(this List<Type> types, GraphSettings graphSettings = null, LocalRepositorySettings localRepositorySettings = null)
+        private static List<string> TTLClasses(this CSharpGraph cSharpGraph, LocalRepositorySettings localRepositorySettings)
         {
-            localRepositorySettings = localRepositorySettings ?? new LocalRepositorySettings();
-            graphSettings = graphSettings ?? new GraphSettings();
+            List<string> TTLClasses = new List<string>();
 
-            CSharpGraph cSharpGraph = Engine.Adapters.RDF.Compute.CSharpGraph(types, graphSettings);
+            foreach (var classType in cSharpGraph.Classes)
+            {
+                string TTLClass = "";
 
-            string TTL = cSharpGraph.ToTTL(localRepositorySettings);
+                // Declaration with Uri
+                string typeUri = classType.OntologyUri(cSharpGraph.GraphSettings.TBoxSettings, localRepositorySettings).ToString();
+                TTLClass += $"### {typeUri}";
 
-            return TTL;
+                // Class Identifier
+                TTLClass += $"\n:{classType.UniqueNodeId()} rdf:type owl:Class;";
+
+                // Subclasses
+                List<Type> parentTypes = classType.BaseTypesNoRedundancy().Where(t => t.IsOntologyClass(cSharpGraph.GraphSettings.TBoxSettings)).ToList();
+
+                foreach (Type subClass in parentTypes)
+                {
+                    TTLClass += $"\n\t\trdfs:subClassOf :{subClass.UniqueNodeId()};";
+                }
+
+                // Class label
+                TTLClass += "\n\t\t" + $@"rdfs:label ""{classType.DescriptiveName()}""@en .";
+
+                TTLClasses.Add(TTLClass);
+            }
+
+            return TTLClasses;
         }
     }
 }

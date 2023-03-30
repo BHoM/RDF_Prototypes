@@ -185,7 +185,7 @@ namespace BH.Test.RDF
                 }
             };
 
-            string TTLGraph = Engine.Adapters.TTL.Compute.ToTTL(new List<object>() { bhomObject }, m_graphSettings);
+            string TTLGraph = Engine.Adapters.TTL.Convert.ToTTL(new List<object>() { bhomObject }, m_graphSettings);
 
             Assert.IsTTLParsable(TTLGraph);
 

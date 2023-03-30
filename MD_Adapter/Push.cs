@@ -20,38 +20,37 @@
  * along with this code. If not, see <https://www.gnu.org/licenses/lgpl-3.0.html>.      
  */
 
-
-using BH.oM.Base;
+using BH.Adapter;
+using BH.Engine.Adapters.RDF;
+using BH.oM.Adapter;
+using BH.oM.Base.Attributes;
+using BH.oM.Adapters.RDF;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
-using System.IO;
 using System.Linq;
-using System.Reflection;
 using System.Text;
 using System.Threading.Tasks;
-using VDS.RDF;
-using VDS.RDF.Writing;
-using BH.Engine.Base;
-using BH.oM.Adapters.RDF;
-using BH.oM.Base.Attributes;
+using VDS.RDF.Ontology;
+using BH.Adapters;
+using Log = BH.Engine.Adapters.RDF.Log;
+using Convert = BH.Engine.Adapters.Markdown.Convert;
+using Compute = BH.Engine.Adapters.Markdown.Compute;
 
-namespace BH.Engine.Adapters.TTL
+namespace BH.Adapters.Markdown
 {
-    public static partial class Convert
+    public partial class MarkdownAdapter : BHoMAdapter
     {
-        [Description("Computes a TTL T-Box ontology with the input Types." +
-            "To compute an ontology that includes both T-Box and A-Box, use the TTLGraph method that takes a list of IObjects, and provide input objects (instances) instead of Types.")]
-        public static string ToTTL(this List<Type> types, GraphSettings graphSettings = null, LocalRepositorySettings localRepositorySettings = null)
+        public override List<object> Push(IEnumerable<object> objects, string tag = "", PushType pushType = PushType.AdapterDefault, ActionConfig actionConfig = null)
         {
-            localRepositorySettings = localRepositorySettings ?? new LocalRepositorySettings();
-            graphSettings = graphSettings ?? new GraphSettings();
+            List<Type> types = objects.OfType<Type>().ToList();
 
-            CSharpGraph cSharpGraph = Engine.Adapters.RDF.Compute.CSharpGraph(types, graphSettings);
+            if (types.Count != objects.Count())
+            {
+                Log.RecordWarning($"The {nameof(MarkdownAdapter)} only supports the Push of Types, not of object instances. It is designed to build only an ontology's T-box.");
+            }
 
-            string TTL = cSharpGraph.ToTTL(localRepositorySettings);
-
-            return TTL;
+            return new List<object>() { Convert.ToMarkdown(types, m_graphSettings, m_localRepositorySettings) };
         }
     }
 }

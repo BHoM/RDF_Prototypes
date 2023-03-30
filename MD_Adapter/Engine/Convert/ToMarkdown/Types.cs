@@ -36,33 +36,20 @@ using BH.Engine.Base;
 using BH.oM.Adapters.RDF;
 using BH.oM.Base.Attributes;
 
-namespace BH.Engine.Adapters.TTL
+namespace BH.Engine.Adapters.Markdown
 {
     public static partial class Convert
     {
-        [Description("Computes a TTL ontology with the input IObjects. The ontology will include both T-Box and A-Box." +
-             "The T-Box is constructed from the Types of the input objects, and their relations, expressed via the CSharp object properties.")]
-        public static void ToTTL(this List<object> objects, string filePath, GraphSettings graphSettings = null, LocalRepositorySettings localRepositorySettings = null)
+        [Description("Computes a TTL T-Box ontology with the input Types." +
+            "To compute an ontology that includes both T-Box and A-Box, use the TTLGraph method that takes a list of IObjects, and provide input objects (instances) instead of Types.")]
+        public static string ToMarkdown(this List<Type> types, GraphSettings graphSettings = null, LocalRepositorySettings localRepositorySettings = null)
         {
             localRepositorySettings = localRepositorySettings ?? new LocalRepositorySettings();
             graphSettings = graphSettings ?? new GraphSettings();
 
-            CSharpGraph cSharpGraph = Engine.Adapters.RDF.Compute.CSharpGraph(objects, graphSettings);
+            CSharpGraph cSharpGraph = Engine.Adapters.RDF.Compute.CSharpGraph(types, graphSettings);
 
-            cSharpGraph.ToTTL(localRepositorySettings, filePath);
-        }
-
-
-        [Description("Computes a TTL ontology with the input IObjects. The ontology will include both T-Box and A-Box." +
-            "The T-Box is constructed from the Types of the input objects, and their relations, expressed via the CSharp object properties.")]
-        public static string ToTTL(this List<object> objects, GraphSettings graphSettings = null, LocalRepositorySettings localRepositorySettings = null)
-        {
-            localRepositorySettings = localRepositorySettings ?? new LocalRepositorySettings();
-            graphSettings = graphSettings ?? new GraphSettings();
-
-            CSharpGraph cSharpGraph = Engine.Adapters.RDF.Compute.CSharpGraph(objects, graphSettings);
-
-            string TTL = cSharpGraph.ToTTL(localRepositorySettings);
+            string TTL = cSharpGraph.ToMarkdown(localRepositorySettings);
 
             return TTL;
         }

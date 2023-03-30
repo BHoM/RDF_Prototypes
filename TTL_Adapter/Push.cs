@@ -36,7 +36,6 @@ using VDS.RDF.Ontology;
 using BH.Adapters;
 using Log = BH.Engine.Adapters.RDF.Log;
 using Convert = BH.Engine.Adapters.TTL.Convert;
-using Compute = BH.Engine.Adapters.TTL.Compute;
 
 namespace BH.Adapters.TTL
 {
@@ -46,12 +45,12 @@ namespace BH.Adapters.TTL
         {
             if (!string.IsNullOrEmpty(m_filepath))
             {
-                Compute.ToTTL(objects.ToList(), m_filepath, m_graphSettings, m_localRepositorySettings);
+                Convert.ToTTL(objects.ToList(), m_filepath, m_graphSettings, m_localRepositorySettings);
                 return new List<object>() { $"The objects have been written to TTL file at filepath: {m_filepath}" + 
                     $"\n\nIf you want to see the TTL output here, disconnect any `filepath` input in the {nameof(TTLAdapter)}." };
             }
 
-            return new List<object>() { Compute.ToTTL(objects.ToList(), m_graphSettings, m_localRepositorySettings) };
+            return new List<object>() { Convert.ToTTL(objects.ToList(), m_graphSettings, m_localRepositorySettings) };
         }
     }
 }

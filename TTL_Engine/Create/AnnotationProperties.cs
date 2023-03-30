@@ -29,11 +29,11 @@ using System.Reflection;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace BH.Engine.Adapters.RDF
+namespace BH.Engine.Adapters.TTL
 {
     public static partial class Create
     {
-        public static List<string> TTLAnnotationProperties()
+        public static List<string> AnnotationProperties()
         {
             List<string> annotationProperties = new List<string>();
 

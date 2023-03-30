@@ -20,38 +20,24 @@
  * along with this code. If not, see <https://www.gnu.org/licenses/lgpl-3.0.html>.      
  */
 
-
-using BH.oM.Base;
+using Markdown_Adapter.oM;
 using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.ComponentModel;
-using System.IO;
 using System.Linq;
 using System.Reflection;
 using System.Text;
 using System.Threading.Tasks;
-using VDS.RDF;
-using VDS.RDF.Writing;
-using BH.Engine.Base;
-using BH.oM.Adapters.RDF;
-using BH.oM.Base.Attributes;
 
-namespace BH.Engine.Adapters.TTL
+namespace BH.Engine.Adapters.Markdown
 {
-    public static partial class Convert
+    public static partial class Create
     {
-        [Description("Computes a TTL T-Box ontology with the input Types." +
-            "To compute an ontology that includes both T-Box and A-Box, use the TTLGraph method that takes a list of IObjects, and provide input objects (instances) instead of Types.")]
-        public static string ToTTL(this List<Type> types, GraphSettings graphSettings = null, LocalRepositorySettings localRepositorySettings = null)
+        public static string SectionTitle(this string title, Heading heading = Heading.H2)
         {
-            localRepositorySettings = localRepositorySettings ?? new LocalRepositorySettings();
-            graphSettings = graphSettings ?? new GraphSettings();
-
-            CSharpGraph cSharpGraph = Engine.Adapters.RDF.Compute.CSharpGraph(types, graphSettings);
-
-            string TTL = cSharpGraph.ToTTL(localRepositorySettings);
-
-            return TTL;
+            string hashes = String.Concat(Enumerable.Repeat('#', (int)heading));
+            return $"\n\n{hashes}{title}\n";
         }
     }
 }

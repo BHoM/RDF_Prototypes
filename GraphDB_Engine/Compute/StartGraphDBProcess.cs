@@ -41,7 +41,7 @@ namespace BH.Engine.Adapters.GraphDB
         {
             if (!System.IO.File.Exists(graphDBexePath))
             {
-                Log.RecordError($"Could not find the {nameof(graphDBexePath)}. Please make sure that the path to the GraphDB executable file is correct.", ex: new ArgumentException());
+                Log.RecordError($"Could not find the {nameof(graphDBexePath)}. Please make sure that the path to the GraphDB executable file is correct.", typeof(ArgumentException));
                 return;
             }
 

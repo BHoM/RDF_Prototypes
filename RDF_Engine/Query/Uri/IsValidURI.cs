@@ -48,10 +48,9 @@ namespace BH.Engine.Adapters.RDF
             // Try to create a Uri object from the input string
             if (!Uri.TryCreate(uriString, UriKind.Absolute, out uriResult))
             {
-                Log.RecordError($"Invalid URI string. The URI you provided does not start with a valid scheme. For example the URI can start with http://, https:// or doi://. " + appendToMessage, ex:new ArgumentException("Invalid URI string."));
+                Log.RecordError($"Invalid URI string. The URI you provided does not start with a valid scheme. For example the URI can start with http://, https:// or doi://. " + appendToMessage, typeof(ArgumentException));
                 return false;
             }
-
 
             return true;
         }

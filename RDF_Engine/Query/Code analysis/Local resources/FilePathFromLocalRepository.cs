@@ -95,7 +95,7 @@ namespace BH.Engine.Adapters.RDF
                 {
                     Log.RecordError($"Could not find Local repository directory on disk at path: {repositoryRoot}." +
                         $"Please specify a valid repository root path in {nameof(LocalRepositorySettings)}.{nameof(LocalRepositorySettings.GitRootPath)}." +
-                        $"A valid 'repository root path' points to a directory that contains, among other repositories, also the BHoM repository.", true);
+                        $"A valid 'repository root path' points to a directory that contains, among other repositories, also the BHoM repository.", doNotRepeat: true);
                     return null;
                 }
             }
