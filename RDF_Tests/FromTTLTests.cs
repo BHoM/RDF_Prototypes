@@ -44,7 +44,7 @@ using Shouldly;
 
 namespace BH.Test.RDF
 {
-    public class FromTTLTests : Test
+    public class FromTTLTests : TestClass
     {
 
         [SetUp]

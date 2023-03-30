@@ -33,9 +33,9 @@ namespace BH.Test.RDF
     /// <summary>
     /// Base class for tests, with customised settings.
     /// </summary>
-    public abstract partial class Test
+    public abstract partial class TestClass
     {
-        static Test()
+        static TestClass()
         {
             Log.ThrowExceptions = true;
         }

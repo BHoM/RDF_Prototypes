@@ -49,7 +49,7 @@ using BH.Engine.Adapters.TTL;
 
 namespace BH.Test.RDF
 {
-    public class ToTTLTests : Test
+    public class ToTTLTests : TestClass
     {
         [SetUp]
         public void SetUp()

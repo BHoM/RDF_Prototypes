@@ -9,7 +9,7 @@ using Shouldly;
 
 namespace RDF_Tests.EngineMethodsTests
 {
-    internal class IsValidURI : BH.Test.RDF.Test
+    internal class IsValidURI : BH.Test.RDF.TestClass
     {
         [Test]
         public static void ValidURITest()
