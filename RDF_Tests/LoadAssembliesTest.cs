@@ -47,7 +47,7 @@ using Shouldly;
 
 namespace BH.Test.RDF
 {
-    public class LoadAssembliesTest : Test
+    public class LoadAssembliesTest : TestClass
     {
         private static System.Reflection.Assembly[] assembliesLoaded = null;
 

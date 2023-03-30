@@ -63,9 +63,13 @@ namespace BH.Engine.Adapters.RDF
 
             if (exceptionType != null)
             {
-                Exception e = Activator.CreateInstance(exceptionType, message, innerException) as Exception;
+                Exception e = null;
+                if (innerException != null)
+                    e = Activator.CreateInstance(exceptionType, message, innerException) as Exception;
+                else
+                    e = Activator.CreateInstance(exceptionType, message) as Exception;
 
-                if (ThrowExceptions && e != null)
+                if (e != null)
                     throw e;
             }
         }
