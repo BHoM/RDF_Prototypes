@@ -41,7 +41,7 @@ namespace BH.Engine.Adapters.GraphDB
     {
 
         [Description("Pulls RDF data from a GraphDB using its SPARQL API.")]
-        public static SparqlResultSet PullFromRepo(string serverAddress = "http://localhost:7200/", string repositoryName = "BHoMVisualization", bool run = false)
+        public static SparqlResultSet PullFromRepo(string queryString = null, string serverAddress = "http://localhost:7200/", string repositoryName = "BHoMVisualization", bool run = false)
         {
             if (!run)
             {
@@ -57,15 +57,8 @@ namespace BH.Engine.Adapters.GraphDB
 
             var endpointRepoPullData = new Uri(serverAddress + "repositories/" + repositoryName);
 
-            //string sparlQueryfullGraph = @"PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
-            //                                PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
-            //                                PREFIX owl: <http://www.w3.org/2002/07/owl#>
-            //                                PREFIX : <http://schema.org>
-            //                                CONSTRUCT {?a ?b ?c}
-            //                                {
-            //                                 ?a ?b ?c.
-            //                                }";
-            string stringQuery = "select * where {?s ?p ?o .} limit 100 ";
+            string stringQuery = queryString ?? "select * where {?s ?p ?o .}";
+
 
             // Check if the query is parsable
             SparqlQueryParser sparqlparser = new SparqlQueryParser();
