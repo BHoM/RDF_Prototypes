@@ -42,6 +42,7 @@ namespace BH.Adapter.GraphDB
         private string m_serverAddress;
         private GraphSettings m_graphSettings;
         private LocalRepositorySettings m_localRepositorySettings;
+        private string m_querySPARQL;
 
         /***************************************************/
         /**** Constructors                              ****/

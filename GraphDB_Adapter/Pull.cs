@@ -45,7 +45,7 @@ namespace BH.Adapter.GraphDB
         {
             List<object> pullResult = new List<object>();
             // Posts the content of the Turtle file to GraphDB.
-            var result = Compute.PullFromRepo(m_serverAddress, m_repositoryName, true);
+            var result = Compute.PullFromRepo(m_querySPARQL,m_serverAddress, m_repositoryName, true);
 
             pullResult.Add(result);
 

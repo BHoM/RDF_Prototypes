@@ -42,12 +42,12 @@ namespace BH.Engine.Adapters.GraphDB
         [Input("serverAddress", "Localhost address where GraphDB is exposed. This can be changed from GraphDB settings file.")]
         [Input("repositoryName", "GraphDB repository name where the graph data is stored.")]
         [Input("run", "Activate the push.")]
-        public static async Task PostToRepo(string TTLfilePath, string serverAddress = "http://localhost:7200/", string repositoryName = "BHoMVisualization", bool run = false)
+        public static bool PostToRepo(string TTLfilePath, string serverAddress = "http://localhost:7200/", string repositoryName = "BHoMVisualization", bool run = false)
         {
             if (!run)
             {
                 Log.RecordWarning("To push data to GraphDB press the Button or switch the Toggle to true");
-                return;
+                return false;
             }
 
             // Documentation in GraphDB: http://localhost:7200/webapi
@@ -70,7 +70,7 @@ namespace BH.Engine.Adapters.GraphDB
             formData.Add(fileStreamContent, name: "config", fileName: "repo-config.ttl");
 
             // Send a POST request to create the repository
-            HttpResponseMessage response = await httpClient.PostAsync(apiUrl, formData);
+            HttpResponseMessage response = httpClient.PostAsync(apiUrl, formData).Result;
 
             // Check if the response is successful
             if (response.IsSuccessStatusCode)
@@ -87,6 +87,7 @@ namespace BH.Engine.Adapters.GraphDB
             var endpointRepoPostData = new Uri(serverAddress + "repositories/" + repositoryName + "/statements");
             var resultData = httpClient.PutAsync(endpointRepoPostData, ttlFile).Result;
             string jsonData = resultData.Content.ReadAsStringAsync().Result;
+            return resultData.IsSuccessStatusCode;
         }
     }
 }
