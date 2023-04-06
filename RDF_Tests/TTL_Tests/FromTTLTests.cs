@@ -75,11 +75,11 @@ namespace RDF_Tests.TTL
 
             string TTLGraph = cSharpGraph.ToTTL();
 
-            Assert.IsTTLParsable(TTLGraph); // This MUST return an encoded customData dictionary - its entry is not seen as property!
+            BHoMAssert.IsTTLParsable(TTLGraph); // This MUST return an encoded customData dictionary - its entry is not seen as property!
 
-            var objs = Engine.Adapters.TTL.Convert.FromTTL(TTLGraph).Item1;
+            var objs = Convert.FromTTL(TTLGraph).Item1;
 
-            Assert.IsEqual(bhomObj, objs.First());
+            bhomObj.ShouldBeEquivalentTo(objs.First());
         }
 
 
@@ -100,11 +100,11 @@ namespace RDF_Tests.TTL
             CSharpGraph cSharpGraph_customObj = new List<object>() { city }.CSharpGraph(m_graphSettings);
             string TTLGraph = cSharpGraph_customObj.ToTTL();
 
-            Assert.IsTTLParsable(TTLGraph);
+            BHoMAssert.IsTTLParsable(TTLGraph);
 
             var res = Convert.FromTTL(TTLGraph).Item1.First();
 
-            Assert.IsEqual(city, res);
+            city.ShouldBeEquivalentTo(res);
         }
 
 
@@ -134,11 +134,11 @@ namespace RDF_Tests.TTL
             TTLGraph.Contains("rdf:_0").ShouldBeTrue();
             TTLGraph.Contains("rdf:_1").ShouldBeTrue();
 
-            Assert.IsTTLParsable(TTLGraph);
+            BHoMAssert.IsTTLParsable(TTLGraph);
 
             var res = Convert.FromTTL(TTLGraph).Item1.First();
 
-            Assert.IsEqual(city, res);
+            city.ShouldBeEquivalentTo(res);
         }
 
 
@@ -149,18 +149,18 @@ namespace RDF_Tests.TTL
             co.CustomData[m_graphSettings.TBoxSettings.CustomobjectsTypeKey] = "TestType";
 
             // This property is boxed into a System.Object
-            List<Point> listOfPoints = new List<Point>() { new oM.Geometry.Point() { X = 101, Y = 102 }, new Point() { X = 201, Y = 202 } };
+            List<Point> listOfPoints = new List<Point>() { new BH.oM.Geometry.Point() { X = 101, Y = 102 }, new Point() { X = 201, Y = 202 } };
             List<object> boxedProperty = listOfPoints.OfType<object>().ToList();
             co.CustomData["testListObjects"] = boxedProperty;
 
             CSharpGraph cSharpGraph_customObj = new List<object>() { co }.CSharpGraph(m_graphSettings);
             string TTLGraph = cSharpGraph_customObj.ToTTL();
 
-            Assert.IsTTLParsable(TTLGraph);
+            BHoMAssert.IsTTLParsable(TTLGraph);
 
             var res = Convert.FromTTL(TTLGraph).Item1.First();
 
-            Assert.IsEqual(co, res);
+            co.ShouldBeEquivalentTo(res);
         }
 
         [Test]
@@ -186,13 +186,13 @@ namespace RDF_Tests.TTL
                 }
             };
 
-            string TTLGraph = Engine.Adapters.TTL.Convert.ToTTL(new List<object>() { bhomObject }, m_graphSettings);
+            string TTLGraph = Convert.ToTTL(new List<object>() { bhomObject }, m_graphSettings);
 
-            Assert.IsTTLParsable(TTLGraph);
+            BHoMAssert.IsTTLParsable(TTLGraph);
 
             var bhomObjects = TTLGraph.ToCSharpObjects();
 
-            Assert.IsEqual(bhomObject, bhomObjects.FirstOrDefault());
+            bhomObject.ShouldBeEquivalentTo(bhomObjects.FirstOrDefault());
         }
 
         [Test]
@@ -202,7 +202,7 @@ namespace RDF_Tests.TTL
 
             CustomObject co = new CustomObject();
             co.CustomData[m_graphSettings.TBoxSettings.CustomobjectsTypeKey] = "TestType";
-            List<Point> listOfObjects = new List<Point>() { new oM.Geometry.Point() { X = 101, Y = 102 }, new Point() { X = 201, Y = 202 } };
+            List<Point> listOfObjects = new List<Point>() { new BH.oM.Geometry.Point() { X = 101, Y = 102 }, new Point() { X = 201, Y = 202 } };
             co.CustomData["testListObjects"] = listOfObjects;
 
             List<object> objectList = new List<object>() { room, co };
@@ -231,11 +231,11 @@ namespace RDF_Tests.TTL
 
             string TTLGraph = objectList.ToTTL(customGraphSettings);
 
-            Assert.IsTTLParsable(TTLGraph);
+            BHoMAssert.IsTTLParsable(TTLGraph);
 
             Output<List<object>, GraphSettings> bhomObjects_graphSettings = Convert.FromTTL(TTLGraph);
 
-            Assert.IsEqual(bhomObjects_graphSettings.Item2, customGraphSettings);
+            BHoMAssert.IsEqual(bhomObjects_graphSettings.Item2, customGraphSettings);
         }
 
         [Test]
@@ -251,11 +251,11 @@ namespace RDF_Tests.TTL
 
             string TTLGraph = cSharpGraph.ToTTL();
 
-            Assert.IsTTLParsable(TTLGraph);
+            BHoMAssert.IsTTLParsable(TTLGraph);
 
             var bhomObjects = TTLGraph.ToCSharpObjects();
 
-            Assert.IsEqual(p, bhomObjects.FirstOrDefault());
+            p.ShouldBeEquivalentTo(bhomObjects.FirstOrDefault());
         }
 
         [Test]
@@ -269,10 +269,10 @@ namespace RDF_Tests.TTL
             List<object> objectList = new List<object>() { room };
             string TTLGraph = objectList.ToTTL(m_graphSettings);
 
-            Assert.IsTTLParsable(TTLGraph);
+            BHoMAssert.IsTTLParsable(TTLGraph);
 
             var bhomObjects = TTLGraph.ToCSharpObjects();
-            Assert.IsEqual(room, bhomObjects.FirstOrDefault());
+            room.ShouldBeEquivalentTo(bhomObjects.FirstOrDefault());
         }
 
         [Test]
@@ -283,10 +283,10 @@ namespace RDF_Tests.TTL
             List<object> objectList = new List<object>() { randomColumn };
             string TTLGraph = objectList.ToTTL(m_graphSettings);
 
-            Assert.IsTTLParsable(TTLGraph);
+            BHoMAssert.IsTTLParsable(TTLGraph);
 
             var bhomObjects = TTLGraph.ToCSharpObjects();
-            Assert.IsEqual(randomColumn, bhomObjects.FirstOrDefault());
+            randomColumn.ShouldBeEquivalentTo(bhomObjects.FirstOrDefault());
         }
 
         [Test]
@@ -304,13 +304,13 @@ namespace RDF_Tests.TTL
             List<object> objectList = new List<object>() { room, column };
             string TTLGraph = objectList.ToTTL(m_graphSettings);
 
-            Assert.IsTTLParsable(TTLGraph);
+            BHoMAssert.IsTTLParsable(TTLGraph);
 
             var bhomObjects = TTLGraph.ToCSharpObjects();
-            Assert.IsEqual(objectList, bhomObjects);
+            BHoMAssert.IsEqual(objectList, bhomObjects);
 
             bhomObjects[1] = new Column();
-            Assert.IsNotEqual(objectList, bhomObjects);
+            BHoMAssert.IsNotEqual(objectList, bhomObjects);
         }
 
         [Test]
@@ -323,7 +323,7 @@ namespace RDF_Tests.TTL
             CSharpGraph cSharpGraph_customObj = new List<object>() { customObject }.CSharpGraph(m_graphSettings);
             string TTLGraph = cSharpGraph_customObj.ToTTL();
 
-            Assert.IsTTLParsable(TTLGraph);
+            BHoMAssert.IsTTLParsable(TTLGraph);
         }
 
         [Test]
@@ -341,11 +341,11 @@ namespace RDF_Tests.TTL
             // No error or exception should be thrown by this call.
             string TTLGraph = new List<object>() { customObject1 }.ToTTL(m_graphSettings);
 
-            Assert.IsTTLParsable(TTLGraph);
+            BHoMAssert.IsTTLParsable(TTLGraph);
 
             Output<List<object>, GraphSettings> convertedObjs = Convert.FromTTL(TTLGraph);
 
-            Assert.IsEqual(customObject1, convertedObjs.Item1.First());
+            customObject1.ShouldBeEquivalentTo(convertedObjs.Item1.First());
         }
 
         [Test]
@@ -356,12 +356,12 @@ namespace RDF_Tests.TTL
 
             // No error or exception should be thrown by this call.
             CSharpGraph cSharpGraph_customObj = new List<object>() { customObject1, customObject2 }.CSharpGraph(m_graphSettings);
-            Assert.Single(cSharpGraph_customObj.Classes.Where(c => c.Name == "Cassette"), "CustomObjectTypes");
-            Assert.TotalCount(cSharpGraph_customObj.AllIndividuals, 2, "AllIndividuals");
+            BHoMAssert.Single(cSharpGraph_customObj.Classes.Where(c => c.Name == "Cassette"), "CustomObjectTypes");
+            BHoMAssert.TotalCount(cSharpGraph_customObj.AllIndividuals, 2, "AllIndividuals");
 
             string TTLGraph = cSharpGraph_customObj.ToTTL();
 
-            Assert.IsTTLParsable(TTLGraph);
+            BHoMAssert.IsTTLParsable(TTLGraph);
         }
 
         [Test]
@@ -370,7 +370,7 @@ namespace RDF_Tests.TTL
             CustomObject customObject1 = BH.Engine.Base.Create.CustomObject(new Dictionary<string, object>() { { "Type", "Cassette" }, { "Prop1", null } });
             CustomObject customObject2 = BH.Engine.Base.Create.CustomObject(new Dictionary<string, object>() { { "Type", "Cassette" }, { "Prop2", null } }); // different property assigned to the same "type"
 
-            Assert.ThrowsException(() => new List<object>() { customObject1, customObject2 }.CSharpGraph(m_graphSettings));
+            BHoMAssert.ThrowsException(() => new List<object>() { customObject1, customObject2 }.CSharpGraph(m_graphSettings));
         }
 
         [Test]
@@ -388,11 +388,11 @@ namespace RDF_Tests.TTL
 
             string TTLGraph = cSharpGraph_customObj.ToTTL();
 
-            Assert.IsTTLParsable(TTLGraph);
+            BHoMAssert.IsTTLParsable(TTLGraph);
 
             var bhomObjects = TTLGraph.ToCSharpObjects();
 
-            Assert.IsEqual(parent, bhomObjects.FirstOrDefault());
+            parent.ShouldBeEquivalentTo(bhomObjects.FirstOrDefault());
         }
 
         [Test]
@@ -414,11 +414,11 @@ namespace RDF_Tests.TTL
             CSharpGraph cSharpGraph_customObj = new List<object>() { nurbs }.CSharpGraph(m_graphSettings);
             string TTLGraph = cSharpGraph_customObj.ToTTL();
 
-            Assert.IsTTLParsable(TTLGraph);
+            BHoMAssert.IsTTLParsable(TTLGraph);
 
             var bhomObjects = TTLGraph.ToCSharpObjects();
 
-            Assert.IsEqual(nurbs, bhomObjects.FirstOrDefault());
+            nurbs.ShouldBeEquivalentTo(bhomObjects.FirstOrDefault());
         }
 
         [Test]
@@ -430,11 +430,11 @@ namespace RDF_Tests.TTL
             CSharpGraph cSharpGraph_customObj = new List<object>() { bhomObj }.CSharpGraph(m_graphSettings);
             string TTLGraph = cSharpGraph_customObj.ToTTL();
 
-            Assert.IsTTLParsable(TTLGraph);
+            BHoMAssert.IsTTLParsable(TTLGraph);
 
             var convertedObj = TTLGraph.ToCSharpObjects().FirstOrDefault();
 
-            Assert.IsEqual(bhomObj.CustomData["listOfPrimitives"], (convertedObj as BHoMObject)?.CustomData["listOfPrimitives"]);
+            bhomObj.CustomData["listOfPrimitives"].ShouldBeEquivalentTo((convertedObj as BHoMObject)?.CustomData["listOfPrimitives"]);
         }
 
         [Test]
@@ -449,11 +449,11 @@ namespace RDF_Tests.TTL
             CSharpGraph cSharpGraph_customObj = new List<object>() { bhomObj }.CSharpGraph(m_graphSettings);
             string TTLGraph = cSharpGraph_customObj.ToTTL();
 
-            Assert.IsTTLParsable(TTLGraph);
+            BHoMAssert.IsTTLParsable(TTLGraph);
 
             var convertedObj = TTLGraph.ToCSharpObjects().FirstOrDefault() as FEMeshFace;
 
-            Assert.IsEqual(bhomObj.NodeListIndices, convertedObj.NodeListIndices);
+            bhomObj.NodeListIndices.ShouldBeEquivalentTo(convertedObj.NodeListIndices);
         }
 
         [Test]
@@ -464,11 +464,11 @@ namespace RDF_Tests.TTL
 
             string TTLGraph = new List<object>() { customObj }.ToTTL(m_graphSettings);
 
-            Assert.IsTTLParsable(TTLGraph);
+            BHoMAssert.IsTTLParsable(TTLGraph);
 
             var convertedObj = TTLGraph.ToCSharpObjects().FirstOrDefault() as CustomObject;
 
-            Assert.IsEqual(customObj.CustomData["listOfPrimitives"], convertedObj.CustomData["listOfPrimitives"]);
+            customObj.CustomData["listOfPrimitives"].ShouldBeEquivalentTo(convertedObj.CustomData["listOfPrimitives"]);
         }
 
         [Test]
@@ -478,11 +478,12 @@ namespace RDF_Tests.TTL
             List<object> objectList = new List<object>() { nonBHoM };
             string TTLGraph = objectList.ToTTL(m_graphSettings, new LocalRepositorySettings());
 
-            Assert.IsTTLParsable(TTLGraph);
+            BHoMAssert.IsTTLParsable(TTLGraph);
 
             var convertedObj = TTLGraph.ToCSharpObjects().FirstOrDefault();
 
-            Assert.IsEqual(nonBHoM, convertedObj);
+            nonBHoM.ShouldBeEquivalentTo(convertedObj);
+
         }
     }
 }

@@ -40,7 +40,7 @@ namespace BH.Engine.Adapters.RDF
     {
         public static void WriteWebVOWLOntologiesPerNamespace(LocalRepositorySettings settings)
         {
-            List<Assembly> oMassemblies = BH.Engine.Adapters.RDF.Compute.LoadAssembliesInDirectory(true);
+            List<Assembly> oMassemblies = BH.Engine.Adapters.RDF.Compute.LoadAssembliesInDirectory(onlyoMAssemblies: true);
             List<TypeInfo> oMTypes = oMassemblies.BHoMTypes();
             string saveDirRelativeToRepoRoot = settings.SaveDir_RelativeToRoot;
 
