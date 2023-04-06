@@ -52,49 +52,49 @@ namespace RDF_Tests.EngineMethodsTests.Convert
             LocalRepositorySettings repoSettings = new LocalRepositorySettings();
             repoSettings.WriteCacheFiles = true;
 
-            Engine.Adapters.RDF.Compute.WriteWebVOWLOntology(new List<string> {
+            Compute.WriteWebVOWLOntology(new List<string> {
                 "BH.oM.Base.BHoMObject",
             }, repoSettings, relationRecursion: 0);
 
-            Engine.Adapters.RDF.Compute.WriteWebVOWLOntology(new List<string> {
+            Compute.WriteWebVOWLOntology(new List<string> {
                 "BH.oM.Base.BHoMObject",
             }, repoSettings, relationRecursion: 1);
 
-            Engine.Adapters.RDF.Compute.WriteWebVOWLOntology(new List<string> {
+            Compute.WriteWebVOWLOntology(new List<string> {
                 "BH.oM.Base.BHoMObject",
             }, repoSettings, relationRecursion: 2);
 
-            Engine.Adapters.RDF.Compute.WriteWebVOWLOntology(new List<string> {
+            Compute.WriteWebVOWLOntology(new List<string> {
                 "BH.oM.Physical.Elements.Column",
             }, repoSettings, relationRecursion: 0);
 
-            Engine.Adapters.RDF.Compute.WriteWebVOWLOntology(new List<string> {
+            Compute.WriteWebVOWLOntology(new List<string> {
                 "BH.oM.Architecture.Elements.Ceiling",
             }, repoSettings, relationRecursion: 0);
 
-            Engine.Adapters.RDF.Compute.WriteWebVOWLOntology(new List<string> {
+            Compute.WriteWebVOWLOntology(new List<string> {
                 "BH.oM.Architecture.Elements.Ceiling",
             }, repoSettings, relationRecursion: 1);
 
-            Engine.Adapters.RDF.Compute.WriteWebVOWLOntology(new List<string> {
+            Compute.WriteWebVOWLOntology(new List<string> {
                 "BH.oM.Architecture.Elements.Ceiling",
             }, repoSettings, relationRecursion: 2);
 
-            Engine.Adapters.RDF.Compute.WriteWebVOWLOntology(new List<string> {
+            Compute.WriteWebVOWLOntology(new List<string> {
                 "BH.oM.Architecture.Elements.Ceiling",
                 "BH.oM.Physical.Elements.Wall",
                 "BH.oM.Architecture.Elements.Room",
                 "BH.oM.Physical.Elements.Column"
             }, repoSettings, relationRecursion: 1);
 
-            Engine.Adapters.RDF.Compute.WriteWebVOWLOntology(new List<string> {
+            Compute.WriteWebVOWLOntology(new List<string> {
                 "BH.oM.Architecture.Elements.Ceiling",
                 "BH.oM.Physical.Elements.Wall",
                 "BH.oM.Architecture.Elements.Room",
                 "BH.oM.Physical.Elements.Column"
             }, repoSettings, relationRecursion: 2);
 
-            Engine.Adapters.RDF.Compute.WriteWebVOWLOntology(new List<string> {
+            Compute.WriteWebVOWLOntology(new List<string> {
                 "BH.oM.Architecture.Elements.Ceiling",
                 "BH.oM.Physical.Elements.Wall",
                 "BH.oM.Architecture.Elements.Room",
@@ -102,7 +102,7 @@ namespace RDF_Tests.EngineMethodsTests.Convert
             }, repoSettings, relationRecursion: 99);
 
 
-            Engine.Adapters.RDF.Compute.WriteWebVOWLOntologiesPerNamespace(repoSettings);
+            Compute.WriteWebVOWLOntologiesPerNamespace(repoSettings);
         }
 
         //[Test]
