@@ -35,8 +35,9 @@ using System.IO;
 using VDS.RDF.Ontology;
 using BH.Engine.Base;
 using NUnit.Framework;
+using BH.Test.RDF;
 
-namespace BH.Test.RDF
+namespace RDF_Tests.Utils.UtilsTests
 {
     public static class EqualityTests
     {
@@ -106,7 +107,7 @@ namespace BH.Test.RDF
         [Test]
         public static void CustomObject_MeshProperty()
         {
-            BH.oM.Geometry.Mesh mesh = new Mesh()
+            Mesh mesh = new Mesh()
             {
                 Faces = new List<Face>() { new Face() { A = 101, B = 102, C = 103, D = 104 }, new Face() { A = 201, B = 202, C = 203, D = 204 } },
                 Vertices = new List<Point>() { new Point() { X = 801, Y = 802, Z = 803 }, new Point() { X = 901, Y = 902, Z = 903 } }

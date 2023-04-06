@@ -42,7 +42,7 @@ using NUnit.Framework;
 using DescriptionAttribute = NUnit.Framework.DescriptionAttribute;
 using BH.Engine.Adapters.TTL;
 
-namespace BH.Test.RDF
+namespace RDF_Tests.EngineMethodsTests.Convert
 {
     public static partial class WebVOWL_Tests
     {
