@@ -46,8 +46,8 @@ namespace RDF_Tests.Utils.UtilsTests
         {
             Point p = new Point() { X = 101, Y = 102, Z = 103 };
 
-            Assert.IsNotEqual(p, new Point());
-            Assert.IsEqual(p, p.DeepClone());
+            BHoMAssert.IsNotEqual(p, new Point());
+            BHoMAssert.IsEqual(p, p.DeepClone());
         }
 
         [Test]
@@ -58,8 +58,8 @@ namespace RDF_Tests.Utils.UtilsTests
             room.Location = new Point() { X = 901, Y = 902, Z = 903 };
             room.Name = "A room object";
 
-            Assert.IsNotEqual(room, new Room());
-            Assert.IsEqual(room, room.DeepClone());
+            BHoMAssert.IsNotEqual(room, new Room());
+            BHoMAssert.IsEqual(room, room.DeepClone());
         }
 
         [Test]
@@ -67,8 +67,8 @@ namespace RDF_Tests.Utils.UtilsTests
         {
             Column randomColumn = BH.Engine.Adapters.RDF.Testing.Create.RandomObject<Column>();
 
-            Assert.IsNotEqual(randomColumn, new Column());
-            Assert.IsEqual(randomColumn, randomColumn.DeepClone());
+            BHoMAssert.IsNotEqual(randomColumn, new Column());
+            BHoMAssert.IsEqual(randomColumn, randomColumn.DeepClone());
         }
 
         [Test]
@@ -87,10 +87,10 @@ namespace RDF_Tests.Utils.UtilsTests
 
             var clonedList = objectList.DeepClone();
 
-            Assert.IsEqual(objectList, clonedList);
+            BHoMAssert.IsEqual(objectList, clonedList);
 
             clonedList[1] = new Column();
-            Assert.IsNotEqual(objectList, clonedList);
+            BHoMAssert.IsNotEqual(objectList, clonedList);
         }
 
         [Test]
@@ -100,8 +100,8 @@ namespace RDF_Tests.Utils.UtilsTests
                 { "intProperty", 10 },
                 { "pointProperty", BH.Engine.Adapters.RDF.Testing.Create.RandomObject<Point>() } });
 
-            Assert.IsEqual(customObject, customObject.DeepClone());
-            Assert.IsNotEqual(customObject, new CustomObject());
+            BHoMAssert.IsEqual(customObject, customObject.DeepClone());
+            BHoMAssert.IsNotEqual(customObject, new CustomObject());
         }
 
         [Test]
@@ -117,10 +117,10 @@ namespace RDF_Tests.Utils.UtilsTests
 
             var clone = customObject1.DeepClone();
 
-            Assert.IsEqual(customObject1, clone);
+            BHoMAssert.IsEqual(customObject1, clone);
 
             clone.CustomData["RoofShape"] = new Mesh();
-            Assert.IsNotEqual(customObject1, clone);
+            BHoMAssert.IsNotEqual(customObject1, clone);
         }
 
         [Test]
@@ -131,10 +131,10 @@ namespace RDF_Tests.Utils.UtilsTests
             customObj.CustomData["listOfPrimitives"] = new List<int>() { 1, 2, 3, 4 };
 
             var clone = customObj.DeepClone();
-            Assert.IsEqual(customObj, clone);
+            BHoMAssert.IsEqual(customObj, clone);
 
             clone.CustomData["listOfPrimitives"] = new List<int>();
-            Assert.IsNotEqual(customObj, clone);
+            BHoMAssert.IsNotEqual(customObj, clone);
         }
 
         private static GraphSettings m_graphSettings = new GraphSettings()

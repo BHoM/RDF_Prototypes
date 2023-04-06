@@ -81,15 +81,6 @@ namespace BH.Engine.Adapters.RDF
 
         // ------------------------------------- //
 
-        public static List<Assembly> LoadAssembliesInDirectory(bool onlyoMAssemblies = true,
-          bool onlyBHoMAssemblies = true,
-          bool tryLoadWithoutDependencies = false)
-        {
-            return LoadAssembliesInDirectory(@"C:\ProgramData\BHoM\Assemblies", onlyoMAssemblies, onlyBHoMAssemblies, tryLoadWithoutDependencies);
-        }
-
-        // ------------------------------------- //
-
         private static bool TryLoadAssemblyFile(string assemblyFile, out Assembly assembly)
         {
             Console.Write($"\nLoading {assemblyFile} with dependencies (LoadFrom): ");
