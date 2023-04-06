@@ -44,8 +44,9 @@ using BH.Adapters.TTL;
 using Compute = BH.Engine.Adapters.RDF.Compute;
 using BH.Engine.Adapters.TTL;
 using Shouldly;
+using BH.Test.RDF;
 
-namespace BH.Test.RDF
+namespace RDF_Tests.Utils.UtilsTests
 {
     public class LoadAssembliesTest : TestClass
     {
@@ -54,7 +55,7 @@ namespace BH.Test.RDF
         [OneTimeSetUp]
         public void OneTimeSetup()
         {
-            BH.Engine.Adapters.RDF.Compute.LoadAssembliesInDirectory(@"C:\ProgramData\BHoM\Assemblies", onlyBHoMAssemblies:true, onlyoMAssemblies:false);
+            Compute.LoadAssembliesInDirectory(@"C:\ProgramData\BHoM\Assemblies", onlyBHoMAssemblies: true, onlyoMAssemblies: false);
             assembliesLoaded = AppDomain.CurrentDomain.GetAssemblies();
         }
 

@@ -46,8 +46,9 @@ using BH.Engine.Adapters.TTL;
 using BH.Engine.Base;
 using Convert = BH.Engine.Adapters.TTL.Convert;
 using BH.Engine.Adapters.TTL;
+using BH.Test.RDF;
 
-namespace BH.Test.RDF
+namespace RDF_Tests.TTL
 {
     public class ToTTLTests : TestClass
     {
@@ -69,7 +70,7 @@ namespace BH.Test.RDF
             room.Location = new Point();
             room.Name = "A room object";
 
-            CSharpGraph cSharpGraph = Compute.CSharpGraph(new List<object>() { room }, new GraphSettings()
+            CSharpGraph cSharpGraph = new List<object>() { room }.CSharpGraph(new GraphSettings()
             {
                 TBoxSettings = new TBoxSettings { GeometryAsOntologyClass = false }
             });
@@ -88,7 +89,7 @@ namespace BH.Test.RDF
             room.Location = new Point();
             room.Name = "A room object";
 
-            CSharpGraph cSharpGraph = Compute.CSharpGraph(new List<object>() { room }, new GraphSettings()
+            CSharpGraph cSharpGraph = new List<object>() { room }.CSharpGraph(new GraphSettings()
             {
                 TBoxSettings = new TBoxSettings { GeometryAsOntologyClass = true }
             });
@@ -112,7 +113,7 @@ namespace BH.Test.RDF
 
             Room room = new Room() { Perimeter = new Line(), Location = new Point() };
 
-            CSharpGraph cSharpGraph = Compute.CSharpGraph(new List<object> { room }, m_graphSettings);
+            CSharpGraph cSharpGraph = new List<object> { room }.CSharpGraph(m_graphSettings);
 
             // Because all the properties of Room are not Ontology types (they are geometrical types),
             // the cSharpGraph must not have any ObjectProperty.
@@ -261,7 +262,7 @@ namespace BH.Test.RDF
                 { "intProperty", 10 },
                 { "pointProperty", BH.Engine.Adapters.RDF.Testing.Create.RandomObject<Point>() } });
 
-            CSharpGraph cSharpGraph_customObj = Compute.CSharpGraph(new List<object>() { customObject }, m_graphSettings);
+            CSharpGraph cSharpGraph_customObj = new List<object>() { customObject }.CSharpGraph(m_graphSettings);
             string TTLGraph = cSharpGraph_customObj.ToTTL();
 
             Assert.IsTTLParsable(TTLGraph);
@@ -275,7 +276,7 @@ namespace BH.Test.RDF
             CustomObject customObject2 = BH.Engine.Base.Create.CustomObject(new Dictionary<string, object>() { { "Type", "Cassette" }, { "Prop1", 999 } }); // same property assigned to the same "type", only with a different value
 
             // No error or exception should be thrown by this call.
-            CSharpGraph cSharpGraph_customObj = Compute.CSharpGraph(new List<object>() { customObject1, customObject2 }, m_graphSettings);
+            CSharpGraph cSharpGraph_customObj = new List<object>() { customObject1, customObject2 }.CSharpGraph(m_graphSettings);
             Assert.Single(cSharpGraph_customObj.Classes.Where(c => c.Name == "Cassette"), "CustomObjectTypes");
             Assert.TotalCount(cSharpGraph_customObj.AllIndividuals, 2, "AllIndividuals");
 
@@ -290,7 +291,7 @@ namespace BH.Test.RDF
             CustomObject customObject1 = BH.Engine.Base.Create.CustomObject(new Dictionary<string, object>() { { "Type", "Cassette" }, { "Prop1", null } });
             CustomObject customObject2 = BH.Engine.Base.Create.CustomObject(new Dictionary<string, object>() { { "Type", "Cassette" }, { "Prop2", null } }); // different property assigned to the same "type"
 
-            Assert.ThrowsException(() => Compute.CSharpGraph(new List<object>() { customObject1, customObject2 }, m_graphSettings));
+            Assert.ThrowsException(() => new List<object>() { customObject1, customObject2 }.CSharpGraph(m_graphSettings));
         }
 
         [Test]
@@ -300,7 +301,7 @@ namespace BH.Test.RDF
             CustomObject nestedObj1 = BH.Engine.Base.Create.CustomObject(new Dictionary<string, object>() { { "Type", "SimpleTiles" }, { "TileDepth", 0.1 }, { "Material", nestedObj2 } });
             CustomObject parent = BH.Engine.Base.Create.CustomObject(new Dictionary<string, object>() { { "Type", "Roof" }, { "Tiles", nestedObj1 } });
 
-            CSharpGraph cSharpGraph_customObj = Compute.CSharpGraph(new List<object>() { parent }, m_graphSettings);
+            CSharpGraph cSharpGraph_customObj = new List<object>() { parent }.CSharpGraph(m_graphSettings);
 
             Assert.IsNotNull(cSharpGraph_customObj.Classes.Single(c => c.Name == "TileMaterial"));
             Assert.IsNotNull(cSharpGraph_customObj.Classes.Single(c => c.Name == "SimpleTiles"));
@@ -319,7 +320,7 @@ namespace BH.Test.RDF
             List<int> listOPrimitives = Enumerable.Range(0, 10).ToList();
             co.CustomData["testListPrimitives"] = listOPrimitives;
 
-            CSharpGraph cSharpGraph_customObj = Compute.CSharpGraph(new List<object>() { co }, m_graphSettings);
+            CSharpGraph cSharpGraph_customObj = new List<object>() { co }.CSharpGraph(m_graphSettings);
             string TTLGraph = cSharpGraph_customObj.ToTTL();
 
             Assert.IsTTLParsable(TTLGraph);
@@ -333,7 +334,7 @@ namespace BH.Test.RDF
             List<Point> listOfObjects = new List<Point>() { new oM.Geometry.Point() { X = 101, Y = 102 }, new Point() { X = 201, Y = 202 } };
             co.CustomData["testListObjects"] = listOfObjects;
 
-            CSharpGraph cSharpGraph_customObj = Compute.CSharpGraph(new List<object>() { co }, m_graphSettings);
+            CSharpGraph cSharpGraph_customObj = new List<object>() { co }.CSharpGraph(m_graphSettings);
             string TTLGraph = cSharpGraph_customObj.ToTTL();
 
             Assert.IsTTLParsable(TTLGraph);
@@ -354,7 +355,7 @@ namespace BH.Test.RDF
                 }
             };
 
-            CSharpGraph cSharpGraph_customObj = Compute.CSharpGraph(new List<object>() { nurbs }, m_graphSettings);
+            CSharpGraph cSharpGraph_customObj = new List<object>() { nurbs }.CSharpGraph(m_graphSettings);
             string TTLGraph = cSharpGraph_customObj.ToTTL();
 
             Assert.IsTTLParsable(TTLGraph);
@@ -368,7 +369,7 @@ namespace BH.Test.RDF
             room.Location = new Point();
             room.Name = "first room object";
 
-            CSharpGraph cSharpGraph = Compute.CSharpGraph(new List<object>() { room }, m_graphSettings);
+            CSharpGraph cSharpGraph = new List<object>() { room }.CSharpGraph(m_graphSettings);
             string TTLGraph = cSharpGraph.ToTTL();
 
             string roomUrl = Flurl.Url.Combine(cSharpGraph.GraphSettings.ABoxSettings.IndividualsBaseAddress, room.BHoM_Guid.ToString());
@@ -395,13 +396,13 @@ namespace BH.Test.RDF
                 }
             };
 
-            CSharpGraph cSharpGraph = Compute.CSharpGraph(new List<object>() { nurbs }, new GraphSettings()
+            CSharpGraph cSharpGraph = new List<object>() { nurbs }.CSharpGraph(new GraphSettings()
             {
                 TBoxSettings = new TBoxSettings { GeometryAsOntologyClass = true }
             });
             string TTLGraph = cSharpGraph.ToTTL();
             IObject iObject = nurbs as IObject;
-            string hash = BH.Engine.Base.Query.Hash(iObject);
+            string hash = iObject.Hash();
             string nurbsGuid = Engine.Adapters.RDF.Query.GuidFromString(hash).ToString();
 
             string nurbsUrl = Flurl.Url.Combine(cSharpGraph.GraphSettings.ABoxSettings.IndividualsBaseAddress, nurbsGuid.ToString());
