@@ -52,37 +52,37 @@ namespace RDF_Tests.GraphDB
         }
 
         //[Test]
-        public void PullFromRepoReadBack() 
-        {
-            string userInput = "PREFIX bh: <https://bhom.xyz/ontology/> SELECT ?predicate ?object WHERE {bh:BH.oM.Architecture.Elements.Room ?predicate ?object.}";
-            var results = BH.Engine.Adapters.GraphDB.Compute.PullFromRepo(userInput, repositoryName: "TestRepository", run: true);
-            results.ShouldNotBeNull();
+        //public void PullFromRepoReadBack() 
+        //{
+        //    string userInput = "PREFIX bh: <https://bhom.xyz/ontology/> SELECT ?predicate ?object WHERE {bh:BH.oM.Architecture.Elements.Room ?predicate ?object.}";
+        //    var results = BH.Engine.Adapters.GraphDB.Compute.PullFromRepo(userInput, repositoryName: "TestRepository", run: true);
+        //    results.ShouldNotBeNull();
 
-            Room room = new Room();
-            CSharpGraph cSharpGraph = Compute.CSharpGraph(new List<object>() { room });
-            string TTLGraph = cSharpGraph.ToTTL();
+        //    Room room = new Room();
+        //    CSharpGraph cSharpGraph = Compute.CSharpGraph(new List<object>() { room });
+        //    string TTLGraph = cSharpGraph.ToTTL();
 
-            IGraph graph = new Graph();
-            INode subject = graph.CreateUriNode(new Uri("https://bhom.xyz/ontology/BH.oM.Architecture.Elements.Room"));
+        //    IGraph graph = new Graph();
+        //    INode subject = graph.CreateUriNode(new Uri("https://bhom.xyz/ontology/BH.oM.Architecture.Elements.Room"));
 
-            foreach (SparqlResult result in results)
-            {
-                INode predicate = result["predicate"].CopyNode(graph);
-                INode obj = result["object"].CopyNode(graph);
+        //    foreach (SparqlResult result in results)
+        //    {
+        //        INode predicate = result["predicate"].CopyNode(graph);
+        //        INode obj = result["object"].CopyNode(graph);
 
-                graph.Assert(new Triple(subject, predicate, obj));
-            }
+        //        graph.Assert(new Triple(subject, predicate, obj));
+        //    }
 
-            CompressingTurtleWriter turtleWriter = new CompressingTurtleWriter();
-            string turtleString;
-            using (System.IO.StringWriter stringWriter = new System.IO.StringWriter())
-            {
-                turtleWriter.Save(graph, stringWriter);
-                turtleString = stringWriter.ToString();
-            }
+        //    CompressingTurtleWriter turtleWriter = new CompressingTurtleWriter();
+        //    string turtleString;
+        //    using (System.IO.StringWriter stringWriter = new System.IO.StringWriter())
+        //    {
+        //        turtleWriter.Save(graph, stringWriter);
+        //        turtleString = stringWriter.ToString();
+        //    }
 
-            var res = BH.Engine.Adapters.TTL.Convert.FromTTL(turtleString);
+        //    var res = BH.Engine.Adapters.TTL.Convert.FromTTL(turtleString);
 
-        }
+        //}
     }
 }
