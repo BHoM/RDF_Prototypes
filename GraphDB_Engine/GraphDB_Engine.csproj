@@ -14,6 +14,18 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Compile Remove="Create\**" />
+    <Compile Remove="Modify\**" />
+    <Compile Remove="Query\**" />
+    <EmbeddedResource Remove="Create\**" />
+    <EmbeddedResource Remove="Modify\**" />
+    <EmbeddedResource Remove="Query\**" />
+    <None Remove="Create\**" />
+    <None Remove="Modify\**" />
+    <None Remove="Query\**" />
+  </ItemGroup>
+
+  <ItemGroup>
     <ProjectReference Include="..\RDF_Engine\RDF_Engine.csproj" />
     <ProjectReference Include="..\RDF_oM\RDF_oM.csproj" />
   </ItemGroup>
@@ -24,12 +36,6 @@
       <Private>false</Private>
       <SpecificVersion>false</SpecificVersion>
     </Reference>
-  </ItemGroup>
-
-  <ItemGroup>
-    <Folder Include="Create\" />
-    <Folder Include="Modify\" />
-    <Folder Include="Query\" />
   </ItemGroup>
 
   <Target Name="PostBuild" AfterTargets="PostBuildEvent">
