@@ -31,9 +31,12 @@ using System.Net.Http;
 using System.Net.Http.Headers;
 using System.Text;
 using System.Threading.Tasks;
+using VDS.RDF;
 using VDS.RDF.Parsing;
 using VDS.RDF.Query;
+using VDS.RDF.Query.Algebra;
 using VDS.RDF.Shacl.Validation;
+using VDS.RDF.Writing;
 
 namespace BH.Engine.Adapters.GraphDB
 {
@@ -41,7 +44,7 @@ namespace BH.Engine.Adapters.GraphDB
     {
 
         [Description("Pulls RDF data from a GraphDB using its SPARQL API.")]
-        public static SparqlResultSet PullFromRepo(string serverAddress = "http://localhost:7200/", string repositoryName = "BHoMVisualization", bool run = false)
+        public static string PullFromRepo(string queryString = null, string serverAddress = "http://localhost:7200/", string repositoryName = "BHoMVisualization", bool run = false)
         {
             if (!run)
             {
@@ -57,15 +60,16 @@ namespace BH.Engine.Adapters.GraphDB
 
             var endpointRepoPullData = new Uri(serverAddress + "repositories/" + repositoryName);
 
-            //string sparlQueryfullGraph = @"PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
-            //                                PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
-            //                                PREFIX owl: <http://www.w3.org/2002/07/owl#>
-            //                                PREFIX : <http://schema.org>
-            //                                CONSTRUCT {?a ?b ?c}
-            //                                {
-            //                                 ?a ?b ?c.
-            //                                }";
-            string stringQuery = "select * where {?s ?p ?o .} limit 100 ";
+            string stringQuery = queryString ?? @"Prefix : <https://bhom.xyz/ontology/> 
+                                                  Prefix owl: <http://www.w3.org/2002/07/owl#> 
+                                                  Prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> 
+                                                  Prefix xml: <http://www.w3.org/XML/1998/namespace> 
+                                                  Prefix xsd: <http://www.w3.org/2001/XMLSchema#> 
+                                                  Prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> 
+                                                  Prefix dc: <http://purl.org/dc/elements/1.1/> 
+                                                  Base   <https://bhom.xyz/ontology> 
+                                                  CONSTRUCT {?a ?b ?c} { ?a ?b ?c. }";
+
 
             // Check if the query is parsable
             SparqlQueryParser sparqlparser = new SparqlQueryParser();
@@ -75,7 +79,7 @@ namespace BH.Engine.Adapters.GraphDB
             }
             catch (RdfQueryException queryEx)
             {
-                Log.RecordError($"The query was invalid. Message " + queryEx.Message, innerException: queryEx);
+                Log.RecordError($"The query was invalid. Message " + queryEx.Message); 
             }
 
             // Create a new instance of the SparqlRemoteEndpoint
@@ -87,12 +91,17 @@ namespace BH.Engine.Adapters.GraphDB
             try
             {
                 // Execute the SPARQL query and get the result
-                SparqlResultSet resultSet = endpoint.QueryWithResultSet(stringQuery);
-                return resultSet;
+                IGraph resultGraph = endpoint.QueryWithResultGraph(stringQuery);
+                var ttlWriter = new CompressingTurtleWriter();
+                using (var stringWriter = new System.IO.StringWriter())
+                {
+                    ttlWriter.Save(resultGraph, stringWriter);
+                    return stringWriter.ToString();
+                }
             }
             catch (Exception ex)
             {
-                Log.RecordError($"Error querying GraphDB: {ex.Message}", innerException: ex );
+                Log.RecordError($"Error querying GraphDB: {ex.Message}"); 
                 return null;
             }
         }
