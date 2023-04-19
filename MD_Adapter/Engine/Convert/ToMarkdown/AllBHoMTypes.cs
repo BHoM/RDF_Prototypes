@@ -20,56 +20,48 @@
  * along with this code. If not, see <https://www.gnu.org/licenses/lgpl-3.0.html>.      
  */
 
+
+using BH.oM.Base;
 using System;
-using System.Collections;
 using System.Collections.Generic;
 using System.ComponentModel;
+using System.IO;
 using System.Linq;
 using System.Reflection;
 using System.Text;
 using System.Threading.Tasks;
+using VDS.RDF;
+using VDS.RDF.Writing;
+using BH.Engine.Base;
+using BH.oM.Adapters.RDF;
+using BH.oM.Base.Attributes;
+using BH.Engine.Adapters.RDF;
 
-
-namespace BH.Engine.Adapters.RDF
+namespace BH.Engine.Adapters.Markdown
 {
-    public static partial class Query
+    public static partial class Convert
     {
-        private static List<TypeInfo> m_cachedOmTypes = null;
-
-        public static List<TypeInfo> BHoMTypes(this IEnumerable<Assembly> oMassemblies)
+        [Description("Computes a TTL T-Box ontology with all BHoM Types found in the BHoM installation folder.")]
+        public static string AllBHoMTypes(this List<Type> types, GraphSettings graphSettings = null, LocalRepositorySettings localRepositorySettings = null)
         {
-            if (m_cachedOmTypes != null)
-                return m_cachedOmTypes;
+            localRepositorySettings = localRepositorySettings ?? new LocalRepositorySettings();
+            graphSettings = graphSettings ?? new GraphSettings();
 
-            // Remove duplicate classes in the same file, e.g. `BH.oM.Base.Output` which has many generics replicas.
-            List<TypeInfo> oMTypes = new List<TypeInfo>();
-            foreach (Assembly a in oMassemblies)
+            // Get the System.Types corresponding to the input typeFullNames
+            IEnumerable<Assembly> oMassemblies = BH.Engine.Adapters.RDF.Compute.LoadAssembliesInDirectory(onlyoMAssemblies:true);
+
+            List<TypeInfo> correspondingOmTypes = oMassemblies.BHoMTypes().ToList();
+
+            foreach (var item in correspondingOmTypes)
             {
-                if (a == null)
-                    continue;
-
-                IEnumerable<TypeInfo> typesDefinedInAssembly = null;
-
-                try
-                {
-                    typesDefinedInAssembly = a.DefinedTypes?.Where(t => t.IsBHoMType());
-                }
-                catch (ReflectionTypeLoadException e)
-                {
-                    Log.RecordError($"Could not load BHoM types from assembly {a.FullName}. Error(s):\n    {string.Join("\n    ", e.LoaderExceptions.Select(le => le.Message))}");
-                }
-
-                if (typesDefinedInAssembly != null)
-                    oMTypes.AddRange(typesDefinedInAssembly);
+                // Group by 
             }
 
-            // Sort loaded type by fullname.
-            oMTypes = oMTypes.GroupBy(t => t.FullName.OnlyAlphabeticAndDots())
-                .Select(g => g.First()).ToList();
+            CSharpGraph cSharpGraph = Engine.Adapters.RDF.Compute.CSharpGraph(types, graphSettings);
 
-            m_cachedOmTypes = oMTypes;
+            string TTL = cSharpGraph.ToMarkdown(localRepositorySettings);
 
-            return oMTypes;
+            return TTL;
         }
     }
 }

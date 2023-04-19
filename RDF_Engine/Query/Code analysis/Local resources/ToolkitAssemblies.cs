@@ -33,7 +33,7 @@ namespace BH.Engine.Adapters.RDF
     public static partial class Query
     {
         [Description("Get all the assemblies belonging to all Toolkits.")]
-        public static Dictionary<string, List<Assembly>> ToolkitAssemblies(this List<Assembly> assemblies, bool includeOm = true, bool includeEngine = true, bool includeAdapter = true)
+        public static Dictionary<string, List<Assembly>> ToolkitAssemblies(this IEnumerable<Assembly> assemblies, bool includeOm = true, bool includeEngine = true, bool includeAdapter = true)
         {
             // The easy way is not reliable. We dont write the name consistently.
             //var gna = assemblies
@@ -73,6 +73,6 @@ namespace BH.Engine.Adapters.RDF
             return allToolkitAssemblies;
         }
 
-        private static Dictionary<List<Assembly>, Dictionary<string, List<Assembly>>> m_cachedToolkitAssemblies = new Dictionary<List<Assembly>, Dictionary<string, List<Assembly>>>();
+        private static Dictionary<IEnumerable<Assembly>, Dictionary<string, List<Assembly>>> m_cachedToolkitAssemblies = new Dictionary<IEnumerable<Assembly>, Dictionary<string, List<Assembly>>>();
     }
 }

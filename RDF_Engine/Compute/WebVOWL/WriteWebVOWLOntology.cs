@@ -40,7 +40,7 @@ namespace BH.Engine.Adapters.RDF
     {
         public static void WriteWebVOWLOntology(List<string> typeFullNames, LocalRepositorySettings settings, string fileName = null, HashSet<string> exceptions = null, int relationRecursion = 0)
         {
-            List<Assembly> oMassemblies = BH.Engine.Adapters.RDF.Compute.LoadAssembliesInDirectory(onlyoMAssemblies: true);
+            IEnumerable<Assembly> oMassemblies = BH.Engine.Adapters.RDF.Compute.LoadAssembliesInDirectory(onlyoMAssemblies: true);
 
             // Get the System.Types corresponding to the input typeFullNames
             List<Type> correspondingOmTypes = oMassemblies.BHoMTypes().Where(t => typeFullNames.Contains(t.AsType().FullName)).Select(ti => ti.AsType()).ToList();
@@ -57,7 +57,7 @@ namespace BH.Engine.Adapters.RDF
             //HashSet<Type> allConnectedBHoMTypes = types.AllNestedTypes();
             //types = types.Concat(allConnectedBHoMTypes).Distinct().ToList();
 
-            List<Assembly> oMassemblies = BH.Engine.Adapters.RDF.Compute.LoadAssembliesInDirectory(onlyoMAssemblies: true);
+            IEnumerable<Assembly> oMassemblies = BH.Engine.Adapters.RDF.Compute.LoadAssembliesInDirectory(onlyoMAssemblies: true);
             List<TypeInfo> oMTypeInfos = oMassemblies.BHoMTypes().Where(t => types.Contains(t.AsType())).ToList();
 
             WriteWebVOWLOntology(oMTypeInfos, settings, fileName, exceptions, relationRecursion);

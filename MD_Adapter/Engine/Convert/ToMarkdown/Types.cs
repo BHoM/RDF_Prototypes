@@ -40,8 +40,7 @@ namespace BH.Engine.Adapters.Markdown
 {
     public static partial class Convert
     {
-        [Description("Computes a TTL T-Box ontology with the input Types." +
-            "To compute an ontology that includes both T-Box and A-Box, use the TTLGraph method that takes a list of IObjects, and provide input objects (instances) instead of Types.")]
+        [Description("Computes a TTL T-Box ontology with the input Types.")]
         public static string ToMarkdown(this List<Type> types, GraphSettings graphSettings = null, LocalRepositorySettings localRepositorySettings = null)
         {
             localRepositorySettings = localRepositorySettings ?? new LocalRepositorySettings();

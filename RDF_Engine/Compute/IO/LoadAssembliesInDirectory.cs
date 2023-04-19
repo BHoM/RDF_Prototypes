@@ -29,6 +29,7 @@ using System.Linq;
 using System.Reflection;
 using System.Text;
 using System.Threading.Tasks;
+using System.Reactive.Linq;
 
 
 namespace BH.Engine.Adapters.RDF
@@ -38,15 +39,23 @@ namespace BH.Engine.Adapters.RDF
         private static List<Assembly> m_cachedAssemblies = null;
 
         [Description("Loads all the assemblies in a directory. Allows to only load BHoM assemblies and/or oM assemblies.")]
-        public static List<Assembly> LoadAssembliesInDirectory(string dllDirectory = @"C:\ProgramData\BHoM\Assemblies", 
-            bool onlyoMAssemblies = false, 
-            bool onlyBHoMAssemblies = true, 
+        public static IEnumerable<Assembly> LoadAssembliesInDirectory(string dllDirectory = @"C:\ProgramData\BHoM\Assemblies",
+            bool onlyoMAssemblies = false,
+            bool onlyBHoMAssemblies = true,
             bool tryLoadWithoutDependencies = false,
             SearchOption searchOption = SearchOption.TopDirectoryOnly)
         {
-            if (m_cachedAssemblies != null)
-                return m_cachedAssemblies;
 
+            return loadAssembliesInDirectory(dllDirectory, onlyoMAssemblies, onlyBHoMAssemblies, tryLoadWithoutDependencies, searchOption).Memoize();
+        }
+
+        [Description("Loads all the assemblies in a directory. Allows to only load BHoM assemblies and/or oM assemblies.")]
+        public static IEnumerable<Assembly> loadAssembliesInDirectory(string dllDirectory = @"C:\ProgramData\BHoM\Assemblies",
+        bool onlyoMAssemblies = false,
+        bool onlyBHoMAssemblies = true,
+        bool tryLoadWithoutDependencies = false,
+        SearchOption searchOption = SearchOption.TopDirectoryOnly)
+        {
             var assemblyFiles = Directory.GetFiles(dllDirectory, "*.dll", searchOption).ToList();
 
             if (onlyoMAssemblies)
@@ -67,16 +76,16 @@ namespace BH.Engine.Adapters.RDF
                 if (assembly == null && !tryLoadWithoutDependencies)
                     TryLoadAssemblyFileWithoutDependencies(assemblyFile, out assembly); // as last resort if it wasn't tried before.
 
-                if (assembly != null)
-                    assemblies.Add(assembly);
+                if (assembly == null)
+                    continue;
+
+                if (onlyBHoMAssemblies && !Query.HasBHoMCopyright(assembly))
+                    continue;
+
+                m_cachedAssemblies.Add(assembly);
+
+                yield return assembly;
             }
-
-            if (onlyBHoMAssemblies)
-                assemblies = assemblies.Where(assembly => Query.HasBHoMCopyright(assembly)).ToList();
-
-            m_cachedAssemblies = assemblies;
-
-            return assemblies;
         }
 
         // ------------------------------------- //
