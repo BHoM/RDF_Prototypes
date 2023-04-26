@@ -35,7 +35,7 @@
   </ItemGroup>
 
   <Target Name="PostBuild" AfterTargets="PostBuildEvent">
-    <Exec Command="if not &quot;$(ConfigurationName)&quot; == &quot;Test&quot; (xcopy &quot;$(TargetDir)*.dll&quot; &quot;$(SolutionDir)Build\&quot; /F /R /Y /I)&#xD;&#xA;if not &quot;$(ConfigurationName)&quot; == &quot;Test&quot; (xcopy &quot;$(TargetDir)$(TargetFileName)&quot; &quot;$(ProgramData)\BHoM\Assemblies&quot; /Y)&#xD;&#xA;if not &quot;$(ConfigurationName)&quot; == &quot;Test&quot; (robocopy /xc /xn /xo &quot;$(TargetDir.TrimEnd('\'))&quot; &quot;C:\Temp\robocopy&quot; *.dll &amp; if %25errorlevel%25 leq 1 exit 0 else exit %25errorlevel%25)" />
+    <Exec Command="xcopy &quot;$(TargetDir)$(TargetFileName).dll&quot; &quot;$(SolutionDir)Build\&quot; /F /R /Y /I&#xD;&#xA;xcopy &quot;$(TargetDir)$(TargetFileName).dll&quot; &quot;$(ProgramData)\BHoM\Assemblies&quot; /Y" />
   </Target>
 
 </Project>
