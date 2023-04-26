@@ -59,7 +59,7 @@ namespace BH.Engine.Adapters.GraphDB
 
 
             // Read the configuration template
-            string configTemplate = File.ReadAllText(@"C:\ProgramData\BHoM\repo-config.ttl");
+            string configTemplate = File.ReadAllText(@"C:\ProgramData\BHoM\Assemblies\repository-config.ttl");
             string config = configTemplate.Replace("{{REPOSITORY_ID}}", repositoryName);
 
             //// Read the configuration template

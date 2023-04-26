@@ -57,8 +57,14 @@
     </Reference>
   </ItemGroup>
 
+  <ItemGroup>
+    <None Update="Config\repository-config.ttl">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+
   <Target Name="PostBuild" AfterTargets="PostBuildEvent">
-    <Exec Command="xcopy &quot;$(TargetDir)$(TargetFileName)&quot;  &quot;$(SolutionDir)Build\&quot; /Y&#xD;&#xA;xcopy &quot;$(TargetDir)$(TargetFileName)&quot;  &quot;C:\ProgramData\BHoM\Assemblies&quot; /Y" />
+    <Exec Command="xcopy &quot;$(TargetDir)$(TargetFileName)&quot; &quot;C:\ProgramData\BHoM\Assemblies&quot; /Y&#xD;&#xA;xcopy &quot;$(ProjectDir)\Config\repository-config.ttl&quot;  &quot;C:\ProgramData\BHoM\Assemblies&quot; /Y&#xD;&#xA;&#xD;&#xA;xcopy &quot;$(TargetDir)$(TargetFileName)&quot; &quot;$(SolutionDir)Build\&quot; /Y&#xD;&#xA;xcopy &quot;$(ProjectDir)\Config\repository-config.ttl&quot;  &quot;$(SolutionDir)Build\&quot; /Y&#xD;&#xA;" />
   </Target>
 
 </Project>
