@@ -26,7 +26,7 @@ if (Test-Path -Path $targetFolder) {
         }
     }
 
-    Write-Output "RDF_Prototypes has been installed successfully."
+    Write-Output "BHoM to bhOWL converter has been installed successfully."
 } else {
     Write-Warning "Target folder does not exist. Please check if BHoM is installed."
 }
