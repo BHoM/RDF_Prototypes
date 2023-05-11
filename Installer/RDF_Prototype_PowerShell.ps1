@@ -1,5 +1,6 @@
 # Variables
 $sourceFolder = Get-Location
+# check if sourceFolder is rdf_prototype
 $targetFolderRelativePath = "BHoM\Assemblies"
 $targetFolder = Join-Path -Path $env:ProgramData -ChildPath $targetFolderRelativePath
 
@@ -25,7 +26,7 @@ if (Test-Path -Path $targetFolder) {
         }
     }
 
-    Write-Output "RDF-Prototype has been installed successfully."
+    Write-Output "RDF_Prototypes has been installed successfully."
 } else {
     Write-Warning "Target folder does not exist. Please check if BHoM is installed."
 }
