@@ -1,6 +1,11 @@
-# BHoM to bhOWL Converter
+# RDF_Prototypes
+## Installation instructions
+See installation and update instructions in the [Wiki.](https://github.com/BHoM/RDF_Prototypes/wiki/Installation-and-update-instructions).
 
-"BHoM to bhOWL Converter" is part of ongoing research by University of Stuttgart and Buro Happold. It is developed as part of a research project of the [Cluster of Excellence Integrative Computational Design and Construction for Architecture (IntCDC)](https://www.intcdc.uni-stuttgart.de/). The project's name is: [Knowledge Representation for Multi-Disciplinary Co-Design of Buildings](https://www.intcdc.uni-stuttgart.de/research/research-projects/rp-20/).
+## Description
+
+This repo contains a "BHoM to bhOWL Converter", one of the products of an ongoing research by University of Stuttgart and Buro Happold.  
+The research and development are done under the [Cluster of Excellence Integrative Computational Design and Construction for Architecture (IntCDC)](https://www.intcdc.uni-stuttgart.de/). The project's name is: [Knowledge Representation for Multi-Disciplinary Co-Design of Buildings](https://www.intcdc.uni-stuttgart.de/research/research-projects/rp-20/).
 
 The developed tool helps convert BHoM data to a knowledge graph in any software BHoM supports. As a result, the converter returns a Resource Description Framework (RDF) graph serialized in Terse RDF Triple Language (TTL) format. The toolkit contains a live connector to GraphDB, a highly efficient and robust graph database with RDF and SPARQL support, compliant with W3C standards.
 
@@ -8,7 +13,7 @@ BHoM (The Buildings and Habitats object Model) is a collaborative framework that
 
 Our BHoM to bhOWL converter is developed as an extension to the BHoM framework and runs within any software that BHoM supports (eg. Grasshopper 3D, Excel, etc.).The resulting graph contains both the Terminology Layer TBox and the Assertional Layer ABox. The dataset also contains Grasshopper 3D files that provide examples of the process of converting BHoM data to bhOWL, connecting to GraphDB for supporting data querying and reasoning.
 
-See installation and update instructions in the [Wiki.](https://github.com/BHoM/RDF_Prototypes/wiki/Installation-and-update-instructions)
+
 
 
 ## Team
