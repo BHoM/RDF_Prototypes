@@ -38,9 +38,8 @@ namespace BH.Engine.Adapters.RDF
         [Input("ontologyDescription", "Sets the description of the ontology.")]
         [Input("tBoxURI", "The base address where the Ontology definition for Custom Types will be hosted. Custom Types are produced when computing an ontology that includes BHoM CustomObjects.")]
         [Input("aBoxURI", "The base address where the individuals will be hosted.")]
-        [Input("serializeGeoToBase64", "(defaults to false) If true, geometrical Types will be considered as Classes, and therefore Object Properties." +
-            "Otherwise, geometrical types are considered as a DataType of type Base64Serialized, and the geometry is encoded as a Data Property.")]
-
+        [Input("serializeGeoToBase64", "(defaults to false) If true, geometrical types are considered as a DataType of type Base64Serialized, and the geometry is encoded as a Data Property." +
+            "Otherwise, geometrical Types will be considered as Classes (i.e. their own type), and therefore are included as Object Properties.")]
         public static GraphSettings BasicGraphSettings(string ontologyTitle, string ontologyDescription, string tBoxURI, string aBoxURI, bool serializeGeoToBase64 = false)
         {
             return new GraphSettings()
@@ -48,7 +47,7 @@ namespace BH.Engine.Adapters.RDF
                 TBoxSettings = new TBoxSettings()
                 {
                     CustomObjectTypesBaseAddress = tBoxURI,
-                    GeometryAsOntologyClass = serializeGeoToBase64
+                    GeometryAsOntologyClass = !serializeGeoToBase64
                 },
                 ABoxSettings = new ABoxSettings()
                 {
