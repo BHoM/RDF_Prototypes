@@ -1,6 +1,14 @@
+# Get the name of the current directory
+$currentDirectory = Split-Path -Leaf -Path (Get-Location)
+
+# Check if the current directory is "RDF_Prototypes"
+if ($currentDirectory -ne "RDF_Prototypes") {
+    Write-Warning "You are not in the 'RDF_Prototypes' directory. Please place both, Offline_installer_script.ps1 and Run_Offline_installer.bat in the RDF_Prototypes directory and run again."
+    exit
+}
+
 # Variables
 $sourceFolder = Get-Location
-# check if sourceFolder is rdf_prototype
 $targetFolderRelativePath = "BHoM\Assemblies"
 $targetFolder = Join-Path -Path $env:ProgramData -ChildPath $targetFolderRelativePath
 
