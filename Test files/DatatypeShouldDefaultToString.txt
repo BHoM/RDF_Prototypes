@@ -1,0 +1,214 @@
+@prefix : <http://schema.org/>.
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix rdf4j: <http://rdf4j.org/schema/rdf4j#> .
+@prefix sesame: <http://www.openrdf.org/schema/sesame#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix fn: <http://www.w3.org/2005/xpath-functions#> .
+@base <http://schema.org/>.
+
+rdf:type a rdf:Property;
+  rdfs:subPropertyOf rdf:type;
+  <http://proton.semanticweb.org/protonsys#transitiveOver> rdfs:subClassOf .
+
+rdfs:subPropertyOf a rdf:Property, owl:TransitiveProperty;
+  rdfs:subPropertyOf rdfs:subPropertyOf;
+  <http://proton.semanticweb.org/protonsys#transitiveOver> rdfs:subPropertyOf .
+
+rdfs:subClassOf a rdf:Property, owl:TransitiveProperty;
+  rdfs:subPropertyOf rdfs:subClassOf;
+  rdfs:domain rdfs:Class;
+  rdfs:range rdfs:Class;
+  <http://proton.semanticweb.org/protonsys#transitiveOver> rdfs:subClassOf .
+
+rdfs:domain a rdf:Property;
+  rdfs:subPropertyOf rdfs:domain;
+  rdfs:range rdfs:Class .
+
+rdfs:range a rdf:Property;
+  rdfs:subPropertyOf rdfs:range;
+  rdfs:range rdfs:Class .
+
+owl:equivalentProperty a owl:SymmetricProperty, owl:TransitiveProperty;
+  rdfs:subPropertyOf rdfs:subPropertyOf;
+  <http://proton.semanticweb.org/protonsys#transitiveOver> owl:equivalentProperty;
+  owl:inverseOf owl:equivalentProperty .
+
+owl:equivalentClass a owl:SymmetricProperty, owl:TransitiveProperty;
+  rdfs:subPropertyOf rdfs:subClassOf;
+  <http://proton.semanticweb.org/protonsys#transitiveOver> owl:equivalentClass;
+  owl:inverseOf owl:equivalentClass .
+
+<http://proton.semanticweb.org/protonsys#transitiveOver> a rdf:Property;
+  rdfs:subPropertyOf <http://proton.semanticweb.org/protonsys#transitiveOver> .
+
+owl:inverseOf a rdf:Property, owl:SymmetricProperty;
+  rdfs:subPropertyOf owl:inverseOf;
+  owl:inverseOf owl:inverseOf .
+
+rdf:subject a rdf:Property;
+  rdfs:domain rdf:Statement .
+
+rdf:predicate a rdf:Property;
+  rdfs:domain rdf:Statement .
+
+rdf:object a rdf:Property;
+  rdfs:domain rdf:Statement .
+
+rdf:first a rdf:Property;
+  rdfs:domain rdf:List .
+
+rdf:rest a rdf:Property;
+  rdfs:domain rdf:List;
+  rdfs:range rdf:List .
+
+rdf:value a rdf:Property .
+
+rdf:nil a rdf:List .
+
+rdfs:label a rdf:Property;
+  rdfs:subPropertyOf rdfs:label;
+  rdfs:range rdfs:Literal .
+
+rdf:XMLLiteral a rdfs:Class, rdfs:Datatype;
+  rdfs:subClassOf rdfs:Literal, rdf:XMLLiteral .
+
+owl:differentFrom a owl:SymmetricProperty;
+  owl:inverseOf owl:differentFrom .
+
+xsd:nonNegativeInteger a rdfs:Class, rdfs:Datatype;
+  rdfs:subClassOf xsd:nonNegativeInteger .
+
+xsd:string a rdfs:Class, rdfs:Datatype;
+  rdfs:subClassOf xsd:string .
+
+rdf:_1 a rdf:Property, rdfs:ContainerMembershipProperty .
+
+<http://purl.org/dc/elements/1.1/title> a rdf:Property;
+  rdfs:subPropertyOf <http://purl.org/dc/elements/1.1/title> .
+
+<http://purl.org/dc/elements/1.1/description> a rdf:Property;
+  rdfs:subPropertyOf <http://purl.org/dc/elements/1.1/description> .
+
+<http://purl.org/dc/elements/1.1/#description> a owl:AnnotationProperty .
+
+<http://purl.org/dc/elements/1.1/#title> a owl:AnnotationProperty .
+
+<https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/Base64JsonSerialized.cs>
+  a rdfs:Class, rdfs:Datatype;
+  rdfs:subClassOf <https://github.com/BHoM/RDF_Prototypes/blob/main/RDF_oM/Base64JsonSerialized.cs>;
+  rdfs:label "Base64JsonSerialized"@en .
+
+<https://individuals.org/187e4151-b1a3-4105-8bee-0a014c1728f5> a owl:NamedIndividual,
+    <https://schema.org/Architect>, <https://schema.org/BH.oM.Base.CustomObject>, <https://schema.org/BH.oM.Base.IBHoMObject>,
+    <https://schema.org/BH.oM.Base.IObject>, <https://schema.org/BH.oM.Base.BHoMObject>;
+  <https://schema.org/Architect.DateOfBirth> "27. March 1886";
+  <https://schema.org/BH.oM.Base.IBHoMObject.BHoM_Guid> "187e4151-b1a3-4105-8bee-0a014c1728f5";
+  <https://schema.org/BH.oM.Base.IBHoMObject.Name> "Ludwig Mies van der Rohe";
+  <https://schema.org/BH.oM.Base.IBHoMObject.CustomData> "ew0KICAiJHR5cGUiOiAiQkguRW5naW5lLkFkYXB0ZXJzLlJERi5Db252ZXJ0K1R5cGVXcmFwcGVyYDFbW1N5c3RlbS5Db2xsZWN0aW9ucy5HZW5lcmljLkRpY3Rpb25hcnlgMltbU3lzdGVtLlN0cmluZywgbXNjb3JsaWJdLFtTeXN0ZW0uT2JqZWN0LCBtc2NvcmxpYl1dLCBtc2NvcmxpYl1dLCBSREZfRW5naW5lIiwNCiAgIlZhbHVlIjogew0KICAgICIkdHlwZSI6ICJTeXN0ZW0uQ29sbGVjdGlvbnMuR2VuZXJpYy5EaWN0aW9uYXJ5YDJbW1N5c3RlbS5TdHJpbmcsIG1zY29ybGliXSxbU3lzdGVtLk9iamVjdCwgbXNjb3JsaWJdXSwgbXNjb3JsaWIiLA0KICAgICJUeXBlIjogIkFyY2hpdGVjdCIsDQogICAgIkRhdGVPZkJpcnRoIjogIjI3LiBNYXJjaCAxODg2Ig0KICB9DQp9"^^<https://schema.org/BH.oM.Adapters.RDF.Base64JsonSerialized>;
+  <https://schema.org/BH.oM.Base.BHoMObject.BHoM_Guid> "187e4151-b1a3-4105-8bee-0a014c1728f5";
+  <https://schema.org/BH.oM.Base.BHoMObject.Name> "Ludwig Mies van der Rohe";
+  <https://schema.org/BH.oM.Base.BHoMObject.CustomData> "ew0KICAiJHR5cGUiOiAiQkguRW5naW5lLkFkYXB0ZXJzLlJERi5Db252ZXJ0K1R5cGVXcmFwcGVyYDFbW1N5c3RlbS5Db2xsZWN0aW9ucy5HZW5lcmljLkRpY3Rpb25hcnlgMltbU3lzdGVtLlN0cmluZywgbXNjb3JsaWJdLFtTeXN0ZW0uT2JqZWN0LCBtc2NvcmxpYl1dLCBtc2NvcmxpYl1dLCBSREZfRW5naW5lIiwNCiAgIlZhbHVlIjogew0KICAgICIkdHlwZSI6ICJTeXN0ZW0uQ29sbGVjdGlvbnMuR2VuZXJpYy5EaWN0aW9uYXJ5YDJbW1N5c3RlbS5TdHJpbmcsIG1zY29ybGliXSxbU3lzdGVtLk9iamVjdCwgbXNjb3JsaWJdXSwgbXNjb3JsaWIiLA0KICAgICJUeXBlIjogIkFyY2hpdGVjdCIsDQogICAgIkRhdGVPZkJpcnRoIjogIjI3LiBNYXJjaCAxODg2Ig0KICB9DQp9"^^<https://schema.org/BH.oM.Adapters.RDF.Base64JsonSerialized> .
+
+<https://schema.org> a owl:Ontology;
+  <http://purl.org/dc/elements/1.1/title> "house modernist architecture"@en;
+  <http://purl.org/dc/elements/1.1/description> "house modernist architecture"@en .
+
+<https://schema.org/Architect> a owl:Class;
+  rdfs:subClassOf <https://schema.org/BH.oM.Base.CustomObject>, <https://schema.org/BH.oM.Base.IBHoMObject>,
+    <https://schema.org/BH.oM.Base.IObject>, <https://schema.org/BH.oM.Base.BHoMObject>;
+  rdfs:label "Architect"@en .
+
+<https://schema.org/BH.oM.Base.CustomObject> a owl:Class;
+  rdfs:subClassOf <https://schema.org/BH.oM.Base.IBHoMObject>, <https://schema.org/BH.oM.Base.IObject>,
+    <https://schema.org/BH.oM.Base.BHoMObject>;
+  rdfs:label "CustomObject"@en .
+
+<https://schema.org/BH.oM.Base.IBHoMObject> a owl:Class;
+  rdfs:subClassOf <https://schema.org/BH.oM.Base.IObject>;
+  rdfs:label "IBHoMObject"@en .
+
+<https://schema.org/BH.oM.Base.IObject> a owl:Class;
+  rdfs:label "IObject"@en .
+
+<https://schema.org/BH.oM.Base.BHoMObject> a owl:Class;
+  rdfs:subClassOf <https://schema.org/BH.oM.Base.IBHoMObject>, <https://schema.org/BH.oM.Base.IObject>;
+  rdfs:label "BHoMObject"@en .
+
+<https://schema.org/Architect.DateOfBirth> a rdf:Property, owl:DatatypeProperty;
+  rdfs:subPropertyOf <https://schema.org/Architect.DateOfBirth>;
+  rdfs:domain <https://schema.org/Architect>;
+  rdfs:range xsd:string;
+  rdfs:label "DateOfBirth"@en .
+
+<https://schema.org/BH.oM.Base.IBHoMObject.BHoM_Guid> a rdf:Property, owl:DatatypeProperty;
+  rdfs:subPropertyOf <https://schema.org/BH.oM.Base.IBHoMObject.BHoM_Guid>;
+  rdfs:domain <https://schema.org/BH.oM.Base.IBHoMObject>;
+  rdfs:range xsd:string;
+  rdfs:label "BHoM_Guid (BH.oM.Base.IBHoMObject.BHoM_Guid)"@en .
+
+<https://schema.org/BH.oM.Base.IBHoMObject.Name> a rdf:Property, owl:DatatypeProperty;
+  rdfs:subPropertyOf <https://schema.org/BH.oM.Base.IBHoMObject.Name>;
+  rdfs:domain <https://schema.org/BH.oM.Base.IBHoMObject>;
+  rdfs:range xsd:string;
+  rdfs:label "Name (BH.oM.Base.IBHoMObject.Name)"@en .
+
+<https://schema.org/BH.oM.Base.IBHoMObject.Fragments> a owl:DatatypeProperty;
+  rdfs:domain <https://schema.org/BH.oM.Base.IBHoMObject>;
+  rdfs:range <https://schema.org/BH.oM.Adapters.RDF.Base64JsonSerialized>;
+  rdfs:label "Fragments (BH.oM.Base.IBHoMObject.Fragments)"@en .
+
+<https://schema.org/BH.oM.Base.IBHoMObject.Tags> a owl:DatatypeProperty;
+  rdfs:domain <https://schema.org/BH.oM.Base.IBHoMObject>;
+  rdfs:range <https://schema.org/BH.oM.Adapters.RDF.Base64JsonSerialized>;
+  rdfs:label "Tags (BH.oM.Base.IBHoMObject.Tags)"@en .
+
+<https://schema.org/BH.oM.Base.IBHoMObject.CustomData> a rdf:Property, owl:DatatypeProperty;
+  rdfs:subPropertyOf <https://schema.org/BH.oM.Base.IBHoMObject.CustomData>;
+  rdfs:domain <https://schema.org/BH.oM.Base.IBHoMObject>;
+  rdfs:range <https://schema.org/BH.oM.Adapters.RDF.Base64JsonSerialized>;
+  rdfs:label "CustomData (BH.oM.Base.IBHoMObject.CustomData)"@en .
+
+<https://schema.org/BH.oM.Base.BHoMObject.BHoM_Guid> a rdf:Property, owl:DatatypeProperty;
+  rdfs:subPropertyOf <https://schema.org/BH.oM.Base.BHoMObject.BHoM_Guid>;
+  rdfs:domain <https://schema.org/BH.oM.Base.IBHoMObject>;
+  rdfs:range xsd:string;
+  rdfs:label "BHoM_Guid (BH.oM.Base.BHoMObject.BHoM_Guid)"@en .
+
+<https://schema.org/BH.oM.Base.BHoMObject.Name> a rdf:Property, owl:DatatypeProperty;
+  rdfs:subPropertyOf <https://schema.org/BH.oM.Base.BHoMObject.Name>;
+  rdfs:domain <https://schema.org/BH.oM.Base.IBHoMObject>;
+  rdfs:range xsd:string;
+  rdfs:label "Name (BH.oM.Base.BHoMObject.Name)"@en .
+
+<https://schema.org/BH.oM.Base.BHoMObject.Fragments> a owl:DatatypeProperty;
+  rdfs:domain <https://schema.org/BH.oM.Base.IBHoMObject>;
+  rdfs:range <https://schema.org/BH.oM.Adapters.RDF.Base64JsonSerialized>;
+  rdfs:label "Fragments (BH.oM.Base.BHoMObject.Fragments)"@en .
+
+<https://schema.org/BH.oM.Base.BHoMObject.Tags> a owl:DatatypeProperty;
+  rdfs:domain <https://schema.org/BH.oM.Base.IBHoMObject>;
+  rdfs:range <https://schema.org/BH.oM.Adapters.RDF.Base64JsonSerialized>;
+  rdfs:label "Tags (BH.oM.Base.BHoMObject.Tags)"@en .
+
+<https://schema.org/BH.oM.Base.BHoMObject.CustomData> a rdf:Property, owl:DatatypeProperty;
+  rdfs:subPropertyOf <https://schema.org/BH.oM.Base.BHoMObject.CustomData>;
+  rdfs:domain <https://schema.org/BH.oM.Base.IBHoMObject>;
+  rdfs:range <https://schema.org/BH.oM.Adapters.RDF.Base64JsonSerialized>;
+  rdfs:label "CustomData (BH.oM.Base.BHoMObject.CustomData)"@en .
+
+rdfs:isDefinedBy rdfs:subPropertyOf rdfs:seeAlso .
+
+rdf:Alt rdfs:subClassOf rdfs:Container .
+
+rdf:Bag rdfs:subClassOf rdfs:Container .
+
+rdf:Seq rdfs:subClassOf rdfs:Container .
+
+rdfs:ContainerMembershipProperty rdfs:subClassOf rdf:Property .
+
+rdfs:Datatype rdfs:subClassOf rdfs:Class .
+
+rdfs:comment rdfs:range rdfs:Literal .
+
