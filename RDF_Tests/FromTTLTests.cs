@@ -41,6 +41,7 @@ using Convert = BH.Engine.Adapters.TTL.Convert;
 using BH.Engine.Adapters.TTL;
 using AutoBogus;
 using Shouldly;
+using System.Reflection;
 
 namespace BH.Test.RDF
 {
@@ -482,6 +483,17 @@ namespace BH.Test.RDF
             var convertedObj = TTLGraph.ToCSharpObjects().FirstOrDefault();
 
             Assert.IsEqual(nonBHoM, convertedObj);
+        }
+
+        [Test]
+        public static void NoDataTypeDefaultsToString()
+        {
+            string path = Path.GetFullPath(Path.Combine(Assembly.GetExecutingAssembly().Location, @"..\..\..\..\..\Test files\DatatypeShouldDefaultToString.txt"));
+            string TTLGraph = File.ReadAllText(path);
+
+            Assert.IsTTLParsable(TTLGraph);
+
+            var bhomObjects = TTLGraph.ToCSharpObjects();
         }
     }
 }

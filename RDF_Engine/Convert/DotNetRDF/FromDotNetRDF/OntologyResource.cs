@@ -231,7 +231,9 @@ namespace BH.Engine.Adapters.RDF
             if (literalNode == null)
                 return null;
 
-            if (literalNode.DataType.AbsolutePath.EndsWith(typeof(Base64JsonSerialized).FullName))
+            if (literalNode.DataType == null)
+                return literalNode.Value; // When the datatype is null, assume this is a string and just return the value (#110).
+            else if (literalNode.DataType.AbsolutePath.EndsWith(typeof(Base64JsonSerialized).FullName))
                 return literalNode.Value.FromBase64JsonSerialized();
             else
                 return literalNode.Value;
@@ -241,6 +243,9 @@ namespace BH.Engine.Adapters.RDF
 
         private static Type GetPropertyType(this LiteralNode literalNode)
         {
+            if (literalNode.DataType == null)
+                return typeof(string); // When the datatype is null, assume this is a string and just return the value (#110).
+
             return GetPropertyType(literalNode.DataType.Fragment);
         }
 
