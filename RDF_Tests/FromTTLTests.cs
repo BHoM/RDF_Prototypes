@@ -488,12 +488,14 @@ namespace BH.Test.RDF
         [Test]
         public static void NoDataTypeDefaultsToString()
         {
+            // Targets https://github.com/BHoM/RDF_Prototypes/issues/110
             string path = Path.GetFullPath(Path.Combine(Assembly.GetExecutingAssembly().Location, @"..\..\..\..\..\Test files\DatatypeShouldDefaultToString.txt"));
             string TTLGraph = File.ReadAllText(path);
 
             Assert.IsTTLParsable(TTLGraph);
 
             var bhomObjects = TTLGraph.ToCSharpObjects();
+            bhomObjects.ShouldNotBeNull();
         }
     }
 }
