@@ -1,21 +1,36 @@
-# Variables
-$zipFileRelativePath = "BHoM\Assemblies\RDF_Prototypes.zip"
-$zipFile = Join-Path -Path $env:ProgramData -ChildPath $zipFileRelativePath
+Write-Host "Before running this script, please make sure any UI software that can run BHoM is closed (Rhino/Excel/Revit/etc.)`n`n"
 
-# Download the zip file to the target location
-# This uses a third-party service to download just the required folder (download-directory.github.io).
-# If the installer does not work properly, check that this service is available.
-Write-Host "Retrieving latest compiled assemblies from GitHub."
-Invoke-WebRequest 'https://download-directory.github.io/?url=https%3A%2F%2Fgithub.com%2FBHoM%2FRDF_Prototypes%2Ftree%2Fmain%2FInstallerDlls' -OutFile $zipFile
-Write-Host "Downloaded the zip file to $zipFile."
+# Set the variables for the repository and directory
+$repository = "BHoM/RDF_Prototypes"
+$directory = "InstallerDLLs"
 
-# Unzip the file into the BHoM\Assemblies directory
-$targetFolderRelativePath = "BHoM\Assemblies"
-$targetFolder = Join-Path -Path $env:ProgramData -ChildPath $targetFolderRelativePath
-Expand-Archive -Path $zipFile -DestinationPath $targetFolder -Force
-Write-Host "Extracted the zip file to $targetFolder."
+# Set the output directory to save the downloaded files
+$outputDirectoryRelativePath = "BHoM\Assemblies"
+$outputDirectory = Join-Path -Path $env:ProgramData -ChildPath $outputDirectoryRelativePath
 
-# Delete the zip file after extraction
-Remove-Item -Path $zipFile
-Write-Host "Deleted the zip file."
-Write-Host "Installation / Update successfull."
+# Make sure the output directory exists
+if (!(Test-Path -Path $outputDirectory)) {
+    throw "The BHoM installation folder seems to be missing. Make sure to run the BHoM installer (http://bhom.xyz) before running this script."
+}
+
+# Get the list of files in the directory
+$filesUrl = "https://api.github.com/repos/$repository/contents/$directory"
+$files = Invoke-RestMethod -Uri $filesUrl
+
+# Download each file
+foreach ($file in $files) {
+    $fileUrl = $file.download_url
+    $filePath = Join-Path -Path $outputDirectory -ChildPath $file.name
+
+    Write-Host "Downloading file: $($file.name)"
+    try
+    {
+        Invoke-WebRequest -Uri $fileUrl -OutFile $filePath
+    }
+    catch 
+    {
+        Write-Error "Error overwriting file $($file.name). Make sure any UI running BHoM is closed (e.g. Rhino, Excel, Revit, etc.),`nand that you have permissions to write files in the BHoM installation folder. Error details:`n"
+    }
+}
+
+Write-Host "`nInstallation / Update done.`n"
