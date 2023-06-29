@@ -46,6 +46,9 @@ using BH.Engine.Adapters.TTL;
 using BH.Engine.Base;
 using Convert = BH.Engine.Adapters.TTL.Convert;
 using BH.Engine.Adapters.TTL;
+using System.Text.RegularExpressions;
+using Shouldly;
+using System.Linq.Expressions;
 
 namespace BH.Test.RDF
 {
@@ -412,8 +415,26 @@ namespace BH.Test.RDF
             NurbsCurve nurbsRedBack = obj as NurbsCurve;
 
             Assert.IsEqual(nurbs, nurbsRedBack);
+        }
 
+        [Test]
+        public static void IndividualsDuplicatedData()
+        {
+            // Targets https://github.com/BHoM/RDF_Prototypes/issues/109
 
+            CustomObject testObj = new CustomObject();
+
+            CSharpGraph cSharpGraph_customObj = Compute.CSharpGraph(new List<object>() { testObj }, m_graphSettings);
+            string TTLGraph = cSharpGraph_customObj.ToTTL();
+
+            Assert.IsTTLParsable(TTLGraph);
+
+            // Check how many times the BHoM_Guid property appears in the TTL text.
+            string guidIndividualProperty = $":BH.oM.Base.BHoMObject.BHoM_Guid \"{testObj.BHoM_Guid}\"^^xsd:string;";
+            int repetitionOfGuidProperty = Regex.Matches(TTLGraph, guidIndividualProperty).Count;
+
+            // Verify that the number of repetitions is equal to 1.
+            repetitionOfGuidProperty.ShouldBe(1); // this fails.
         }
     }
 }

@@ -3,8 +3,10 @@ $zipFileRelativePath = "BHoM\Assemblies\RDF_Prototypes.zip"
 $zipFile = Join-Path -Path $env:ProgramData -ChildPath $zipFileRelativePath
 
 # Download the zip file to the target location
-Write-Host "Retrieving latest release from GitHub."
-Invoke-WebRequest 'https://github.com/BHoM/RDF_Prototypes/releases/latest/download/RDF_Prototypes.zip' -OutFile $zipFile
+# This uses a third-party service to download just the required folder (download-directory.github.io).
+# If the installer does not work properly, check that this service is available.
+Write-Host "Retrieving latest compiled assemblies from GitHub."
+Invoke-WebRequest 'https://download-directory.github.io/?url=https%3A%2F%2Fgithub.com%2FBHoM%2FRDF_Prototypes%2Ftree%2Fmain%2FInstallerDlls' -OutFile $zipFile
 Write-Host "Downloaded the zip file to $zipFile."
 
 # Unzip the file into the BHoM\Assemblies directory
