@@ -62,6 +62,7 @@ namespace BH.Engine.Adapters.RDF
                 assemblyFiles = assemblyFiles.Where(name => name.EndsWith("_oM.dll") || name.EndsWith("BHoM.dll")).ToList();
 
             List<Assembly> assemblies = new List<Assembly>();
+            m_cachedAssemblies = m_cachedAssemblies ?? new List<Assembly>();
 
             foreach (var assemblyFile in assemblyFiles)
             {

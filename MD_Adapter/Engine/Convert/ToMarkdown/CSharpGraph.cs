@@ -66,9 +66,7 @@ namespace BH.Engine.Adapters.Markdown
 
                 TTL.Append("Classes".SectionTitle());
 
-                AddTBoxSettings(cSharpGraph, TTL);
-
-                TTL.Append(string.Join("\n\n", cSharpGraph.TTLClasses(localRepositorySettings)));
+                TTL.Append(string.Join("\n\n", cSharpGraph.MDClasses(localRepositorySettings)));
 
                 TTL.Append("Object Properties".SectionTitle());
                 TTL.Append(string.Join("\n\n", cSharpGraph.TTLObjectProperties(localRepositorySettings)));

@@ -35,7 +35,7 @@ namespace BH.Engine.Adapters.Markdown
 {
     public static partial class Convert
     {
-        private static List<string> TTLClasses(this CSharpGraph cSharpGraph, LocalRepositorySettings localRepositorySettings)
+        private static List<string> MDClasses(this CSharpGraph cSharpGraph, LocalRepositorySettings localRepositorySettings)
         {
             List<string> TTLClasses = new List<string>();
 
@@ -45,7 +45,10 @@ namespace BH.Engine.Adapters.Markdown
 
                 // Declaration with Uri
                 string typeUri = classType.OntologyUri(cSharpGraph.GraphSettings.TBoxSettings, localRepositorySettings).ToString();
-                TTLClass += $"### {typeUri}";
+                TTLClass += $"\n\nIri: {typeUri}";
+                TTLClass += $"\n\nLabel: {classType.DescriptiveName()}";
+                TTLClass += $"\n\nType: Class";
+                TTLClass += $"\n\nDefinition: {classType.GetCustomAttribute<DescriptionAttribute>(false).Description}";
 
                 // Class Identifier
                 TTLClass += $"\n:{classType.UniqueNodeId()} rdf:type owl:Class;";
@@ -53,13 +56,14 @@ namespace BH.Engine.Adapters.Markdown
                 // Subclasses
                 List<Type> parentTypes = classType.BaseTypesNoRedundancy().Where(t => t.IsOntologyClass(cSharpGraph.GraphSettings.TBoxSettings)).ToList();
 
+                TTLClass += "\n### Parent classes";
                 foreach (Type subClass in parentTypes)
                 {
-                    TTLClass += $"\n\t\trdfs:subClassOf :{subClass.UniqueNodeId()};";
+                    TTLClass += $"\n[{subClass.DescriptiveName()}]({subClass.UniqueNodeId()}  ";
                 }
 
-                // Class label
-                TTLClass += "\n\t\t" + $@"rdfs:label ""{classType.DescriptiveName()}""@en .";
+                TTLClass += "\n\n### Object properties";
+
 
                 TTLClasses.Add(TTLClass);
             }
