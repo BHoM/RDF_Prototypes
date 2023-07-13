@@ -42,7 +42,7 @@ namespace BH.Engine.Adapters.GraphDB
         [Input("serverAddress", "Localhost address where GraphDB is exposed. This can be changed from GraphDB settings file.")]
         [Input("repositoryName", "GraphDB repository name where the graph data is stored.")]
         [Input("run", "Activate the push.")]
-        public static async Task PostToRepo(string TTLfilePath, string serverAddress = "http://localhost:7200/", string repositoryName = "BHoMVisualization", bool run = false)
+        public static async Task PostToRepo(string TTLfilePath, string username = "Admin" , string password = "", string serverAddress = "http://localhost:7200/", string repositoryName = "BHoMVisualization", bool run = false)
         {
             if (!run)
             {
@@ -57,6 +57,44 @@ namespace BH.Engine.Adapters.GraphDB
             // Set the GraphDB REST API URL for creating a repository
             string apiUrl = $"{serverAddress}rest/repositories";
 
+
+            // Check if Login is required
+
+            httpClient.DefaultRequestHeaders.Accept.Clear();
+            httpClient.DefaultRequestHeaders.Accept.Add(
+                new System.Net.Http.Headers.MediaTypeWithQualityHeaderValue("application/json"));
+
+            var responseSec = await httpClient.GetAsync(serverAddress + "rest/security");
+
+            if (!responseSec.IsSuccessStatusCode)
+            {
+                Log.RecordWarning("Security request failed");
+                return;
+            }
+
+            var content = await responseSec.Content.ReadAsStringAsync();
+
+            // trigger log in depening on security request result
+
+            if (bool.Parse(content)) 
+            {
+                var byteArray = Encoding.ASCII.GetBytes( username + ":" + password);
+                httpClient.DefaultRequestHeaders.Authorization = new System.Net.Http.Headers.AuthenticationHeaderValue("Basic", System.Convert.ToBase64String(byteArray));
+
+                var responseLogin = await httpClient.GetAsync(serverAddress + "rest/security");
+
+                if (!responseLogin.IsSuccessStatusCode)
+                {
+                    Log.RecordWarning("Login request failed");
+                    return;
+                }
+                var contentLogin = await responseLogin.Content.ReadAsStringAsync();
+                if(!bool.Parse(contentLogin))
+                {
+                    Log.RecordWarning("Login credentials invalid");
+                    return;
+                }
+            }
 
             // Read the configuration template
             string configTemplate = File.ReadAllText(@"C:\ProgramData\BHoM\Assemblies\repository-config.ttl");
@@ -73,11 +111,8 @@ namespace BH.Engine.Adapters.GraphDB
             HttpResponseMessage response = await httpClient.PostAsync(apiUrl, formData);
 
             // Check if the response is successful
-            if (response.IsSuccessStatusCode)
-                Console.WriteLine($"Repository '{repositoryName}' has been created.");
-            else
-                Console.WriteLine($"Failed to create repository '{repositoryName}': {response.ReasonPhrase}");
-
+            if (!response.IsSuccessStatusCode)
+                Log.RecordWarning($"Failed to create repository '{repositoryName}': {response.ReasonPhrase}");
 
             // Post Data to Repository (also update data)
             String ttlBHoMFile = File.ReadAllText(TTLfilePath);

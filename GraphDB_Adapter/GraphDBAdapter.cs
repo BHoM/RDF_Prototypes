@@ -40,6 +40,8 @@ namespace BH.Adapter.GraphDB
         private string m_graphDBexePath;
         private readonly string m_repositoryName;
         private string m_serverAddress;
+        private string m_username;
+        private string m_password;
         private GraphSettings m_graphSettings;
         private LocalRepositorySettings m_localRepositorySettings;
 
@@ -57,6 +59,8 @@ namespace BH.Adapter.GraphDB
         public GraphDBAdapter(string graphDBexePath = null,
             string repositoryName = "BHoMGraphDBRepo",
             string serverAddress = "http://localhost:7200/",
+            string username = "Admin",
+            string password = "",
             GraphSettings graphSettings = null,
             bool activate = false)
         {
@@ -75,6 +79,8 @@ namespace BH.Adapter.GraphDB
             this.m_graphDBexePath = graphDBexePath;
             this.m_repositoryName = repositoryName;
             this.m_serverAddress = serverAddress;
+            this.m_username = username;
+            this.m_password = password;
             this.m_graphSettings = graphSettings ?? new GraphSettings();
             this.m_localRepositorySettings = new LocalRepositorySettings();
         }
