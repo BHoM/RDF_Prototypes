@@ -38,6 +38,8 @@ using BH.Adapters.TTL;
 using Compute = BH.Engine.Adapters.RDF.Compute;
 using BH.Engine.Adapters.TTL;
 using BH.Adapters.Markdown;
+using BH.oM.Structure.Loads;
+using System.ComponentModel;
 
 namespace BH.oM.CodeAnalysis.ConsoleApp
 {
@@ -56,19 +58,50 @@ namespace BH.oM.CodeAnalysis.ConsoleApp
 
             foreach (var kv in typesPerAssembly)
             {
-                CSharpGraph cSharpGraph = Engine.Adapters.RDF.Compute.CSharpGraph(kv.Value.ToList(), graphSettings);
 
-                string saveFolder = @"C:\temp\MarkdownTests";
-                string filePath = Path.GetFullPath(Path.Combine(saveFolder, kv.Key + ".md"));
-                MarkdownAdapter mdAdapter = new MarkdownAdapter(filePath);
+                string saveFolderRoot = @"C:\temp\MarkdownTests";
+                string saveFolder = Path.Combine(saveFolderRoot, kv.Key);
+                Directory.CreateDirectory(saveFolder);
 
-                try
+                foreach (var classType in kv.Value)
                 {
-                    mdAdapter.Push(kv.Value.ToList());
-                } catch (Exception ex)
-                {
-                    Console.WriteLine($"Could not write Markdown of `{kv.Key}`.");
+                    string filePath = Path.GetFullPath(Path.Combine(saveFolder, classType.FullNameValidChars() + ".md"));
+                    string TTLClass = "";
+
+                    // Declaration with Uri
+                    string typeUri = classType.OntologyUri(graphSettings.TBoxSettings, localRepositorySettings).ToString();
+                    TTLClass += $"\n\nIri: {typeUri}";
+                    TTLClass += $"\n\nLabel: {classType.DescriptiveName()}";
+                    TTLClass += $"\n\nType: Class";
+                    TTLClass += $"\n\nDefinition: {classType.GetCustomAttribute<DescriptionAttribute>(false)?.Description}";
+
+                    // Class Identifier
+                    TTLClass += $"\n:{classType.UniqueNodeId()} rdf:type owl:Class;";
+
+                    // Subclasses
+                    List<Type> parentTypes = classType.BaseTypesNoRedundancy().Where(t => t.IsOntologyClass(graphSettings.TBoxSettings)).ToList();
+
+                    TTLClass += "\n### Parent classes";
+                    foreach (Type subClass in parentTypes)
+                    {
+                        TTLClass += $"\n[{subClass.DescriptiveName()}]({subClass.UniqueNodeId()}  ";
+                    }
+
+                    TTLClass += "\n\n### Object properties";
+                    parentType.GetProperties(BindingFlags.DeclaredOnly | BindingFlags.Instance | BindingFlags.Public);
+
+                    File.WriteAllText(filePath, TTLClass);
                 }
+
+                //MarkdownAdapter mdAdapter = new MarkdownAdapter(filePath);
+
+                //try
+                //{
+                //    mdAdapter.Push(kv.Value.ToList());
+                //} catch (Exception ex)
+                //{
+                //    Console.WriteLine($"Could not write Markdown of `{kv.Key}`.");
+                //}
             }
         }
     }
