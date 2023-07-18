@@ -42,6 +42,7 @@ namespace BH.Adapter.GraphDB
         private string m_serverAddress;
         private string m_username;
         private string m_password;
+        private string m_graphName;
         private GraphSettings m_graphSettings;
         private LocalRepositorySettings m_localRepositorySettings;
 
@@ -61,6 +62,7 @@ namespace BH.Adapter.GraphDB
             string serverAddress = "http://localhost:7200/",
             string username = "Admin",
             string password = "",
+            string graphName = "defaultGraph",
             GraphSettings graphSettings = null,
             bool activate = false)
         {
@@ -81,6 +83,7 @@ namespace BH.Adapter.GraphDB
             this.m_serverAddress = serverAddress;
             this.m_username = username;
             this.m_password = password;
+            this.m_graphName = graphName;
             this.m_graphSettings = graphSettings ?? new GraphSettings();
             this.m_localRepositorySettings = new LocalRepositorySettings();
         }

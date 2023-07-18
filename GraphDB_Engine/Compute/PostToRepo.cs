@@ -42,7 +42,7 @@ namespace BH.Engine.Adapters.GraphDB
         [Input("serverAddress", "Localhost address where GraphDB is exposed. This can be changed from GraphDB settings file.")]
         [Input("repositoryName", "GraphDB repository name where the graph data is stored.")]
         [Input("run", "Activate the push.")]
-        public static async Task PostToRepo(string TTLfilePath, string username = "Admin" , string password = "", string serverAddress = "http://localhost:7200/", string repositoryName = "BHoMVisualization", bool run = false)
+        public static async Task PostToRepo(string TTLfilePath, string username = "Admin" , string password = "", string serverAddress = "http://localhost:7200/", string repositoryName = "BHoMVisualization", string graphName = "defaultGraph", bool run = false)
         {
             if (!run)
             {
@@ -119,7 +119,8 @@ namespace BH.Engine.Adapters.GraphDB
             StringContent ttlFile = new StringContent(ttlBHoMFile);
             ttlFile.Headers.ContentType = new MediaTypeHeaderValue("text/turtle");
 
-            var endpointRepoPostData = new Uri(serverAddress + "repositories/" + repositoryName + "/statements");
+
+            var endpointRepoPostData = new Uri(serverAddress + "repositories/" + repositoryName + "/rdf-graphs/" + graphName);
             var resultData = httpClient.PutAsync(endpointRepoPostData, ttlFile).Result;
             string jsonData = resultData.Content.ReadAsStringAsync().Result;
         }

@@ -51,7 +51,7 @@ namespace BH.Adapter.GraphDB
             ttlAdapter.Push(objects);
 
             // Posts the content of the Turtle file to GraphDB.
-            Compute.PostToRepo(TTLfilepath, m_username, m_password, m_serverAddress, m_repositoryName, true);
+            Compute.PostToRepo(TTLfilepath, m_username, m_password, m_serverAddress, m_repositoryName, m_graphName, true);
 
             return objects.ToList();
         }
