@@ -63,6 +63,7 @@ namespace BH.Adapter.GraphDB
             string username = "Admin",
             string password = "",
             string graphName = "defaultGraph",
+            bool clearGraph = false,
             GraphSettings graphSettings = null,
             bool activate = false)
         {

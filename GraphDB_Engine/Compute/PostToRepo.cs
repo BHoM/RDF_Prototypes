@@ -42,7 +42,7 @@ namespace BH.Engine.Adapters.GraphDB
         [Input("serverAddress", "Localhost address where GraphDB is exposed. This can be changed from GraphDB settings file.")]
         [Input("repositoryName", "GraphDB repository name where the graph data is stored.")]
         [Input("run", "Activate the push.")]
-        public static async Task PostToRepo(string TTLfilePath, string username = "Admin" , string password = "", string serverAddress = "http://localhost:7200/", string repositoryName = "BHoMVisualization", string graphName = "defaultGraph", bool run = false)
+        public static async Task PostToRepo(string TTLfilePath, string username = "Admin" , string password = "", string serverAddress = "http://localhost:7200/", string repositoryName = "BHoMVisualization", string graphName = "defaultGraph", bool clearGraph = false, bool run = false)
         {
             if (!run)
             {
@@ -113,6 +113,17 @@ namespace BH.Engine.Adapters.GraphDB
             // Check if the response is successful
             if (!response.IsSuccessStatusCode)
                 Log.RecordWarning($"Failed to create repository '{repositoryName}': {response.ReasonPhrase}");
+
+            // Check if user wants to clear the namedGraph before pushing
+            if (clearGraph==true) 
+            {
+                var clearResponse = await httpClient.DeleteAsync(serverAddress + "repositories/" + repositoryName + "/rdf-graphs/" + graphName);
+                if (!clearResponse.IsSuccessStatusCode)
+                {
+                    Log.RecordWarning("namedGraph was not cleared");
+                    return;
+                }
+            }
 
             // Post Data to Repository (also update data)
             String ttlBHoMFile = File.ReadAllText(TTLfilePath);
