@@ -20,18 +20,13 @@
  * along with this code. If not, see <https://www.gnu.org/licenses/lgpl-3.0.html>.      
  */
 
-using BH.Adapter;
 using BH.Engine.Adapters.RDF;
 using BH.oM.Base.Attributes;
-using System;
-using System.Collections.Generic;
 using System.ComponentModel;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using BH.Engine.Adapters.GraphDB;
 using BH.oM.Adapters.RDF;
 using System.Diagnostics;
+using BH.Engine.Adapters.GraphDBUI;
 
 namespace BH.Adapter.GraphDB
 {
@@ -69,7 +64,10 @@ namespace BH.Adapter.GraphDB
         {
             if (graphDBexePath.IsNullOrEmpty())
                 graphDBexePath = Engine.Adapters.GraphDB.Compute.FindExecutable("GraphDB");
-                
+
+            // Login
+            LoginDataRetriever retriever = new LoginDataRetriever();
+            retriever.RetrieveLoginData();
 
             // The Adapter constructor can be used to configure the Adapter behaviour.
             // For example:
