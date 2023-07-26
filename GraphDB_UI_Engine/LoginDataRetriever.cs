@@ -26,10 +26,10 @@ namespace BH.UI.Engine.GraphDB
             string potentialJsonFile = $"{MakeValidFileName(serverAdress)}.json";
             string jsonFilePath = Path.Combine(Path.GetTempPath(), potentialJsonFile); //C: \Users\Aaron\AppData\Local\Temp\loginData.json
 
-            if (File.Exists(jsonFilePath))
-                return secureStorage.GetCredentials(jsonFilePath);
+            // -------------------------------- UNCOMMENT AFTER DEBUGGING -----------------------------------
+            //if (File.Exists(jsonFilePath))
+            //    return secureStorage.GetCredentials(jsonFilePath);
 
-            // Enable logging in ChromeDriver
 
             IWebDriver driver = new ChromeDriver();
 
