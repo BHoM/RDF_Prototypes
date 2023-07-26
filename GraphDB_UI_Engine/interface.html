@@ -1,4 +1,5 @@
 ﻿
+
 <form id="loginForm" action="/tutorial/action.html">
     <label for="fullname">Username</label><br />
     <input type="text" id="username" name="username"><br />
@@ -7,7 +8,6 @@
     <input type="submit" value="Login">
 </form>
 
-
 <script>
     document.getElementById('loginForm').addEventListener('submit', function (event) {
         event.preventDefault();
@@ -15,10 +15,6 @@
             username: document.getElementById('username').value,
             password: document.getElementById('password').value
         };
-        console.log(JSON.stringify(data));  // Change alert() to console.log()
-
-        // Close the window after a delay
-        setTimeout(function () { window.close(); }, 2000);
+        window.alert(JSON.stringify(data));
     });
 </script>
-

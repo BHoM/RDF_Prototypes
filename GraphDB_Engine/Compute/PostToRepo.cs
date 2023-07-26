@@ -53,7 +53,7 @@ namespace BH.Engine.Adapters.GraphDB
 
             // Login
             LoginDataRetriever retriever = new LoginDataRetriever();
-            string password = retriever.PopUpBrowser(m_serverAddress, m_username);
+            //string password = retriever.PopUpBrowser(m_serverAddress, m_username);
 
             // Documentation in GraphDB: http://localhost:7200/webapi
 

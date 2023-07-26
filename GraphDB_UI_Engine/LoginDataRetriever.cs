@@ -1,29 +1,37 @@
-﻿using Newtonsoft.Json;
+﻿using System;
 using System.Text;
-using System;
 using System.IO;
 using OpenQA.Selenium;
 using OpenQA.Selenium.Chrome;
 using OpenQA.Selenium.Support.UI;
-using System.Threading.Tasks;
-
+using Newtonsoft.Json;
+using Newtonsoft.Json.Linq;
 
 namespace BH.UI.Engine.GraphDB
 {
     public class LoginDataRetriever
     {
-        public string PopUpBrowser() // 1 argument server adress (store json file for each serveraddress) and 2. argument username RETURN credentials
+        public string PopUpBrowser(string serverAdress, string username) // 1 argument server adress (store json file for each serveraddress) and 2. argument username RETURN credentials
         {
+
 
             // check for JSON file (name like server address) if login credentials are already there for URI and username input to the methode
             // if found return cred.
             // if not found -> popup window
             // -> store credentials
-            // return cred.
+            // return cred. 
 
+            SecureStorage secureStorage = new SecureStorage();
 
-            // Create a ChromeDriver instance.
-            IWebDriver driver = new ChromeDriver("C:/path/to/chromedriver.exe");
+            string potentialJsonFile = $"{MakeValidFileName(serverAdress)}.json";
+            string jsonFilePath = Path.Combine(Path.GetTempPath(), potentialJsonFile); //C: \Users\Aaron\AppData\Local\Temp\loginData.json
+
+            if (File.Exists(jsonFilePath))
+                return secureStorage.GetCredentials(jsonFilePath);
+
+            // Enable logging in ChromeDriver
+
+            IWebDriver driver = new ChromeDriver();
 
             // Navigate to the local HTML file (interface.html).
             string url = new Uri(Path.GetFullPath(@"C:\Users\Aaron\Documents\GitHub\RDF_Prototypes\GraphDB_UI_Engine\interface.html")).AbsoluteUri; //replace with generic path
@@ -49,34 +57,40 @@ namespace BH.UI.Engine.GraphDB
             string alertText = alert.Text;
             alert.Accept();
 
-            // Wait for some time to let console log to be generated
-            System.Threading.Thread.Sleep(5000);
-
             // TO-DO finish with json and than switch to credentialcache put into (different function)
             // 
 
             // Parse JSON and save it into the file
-            var logs = driver.Manage().Logs.GetLog(LogType.Browser);
-            foreach (var log in logs)
-            {
-                if (log.Message.Contains("{") && log.Message.Contains("}"))
-                {
-                    var jsonString = log.Message.Substring(log.Message.IndexOf('{'),
-                        log.Message.LastIndexOf('}') - log.Message.IndexOf('{') + 1);
-                    dynamic data = JsonConvert.DeserializeObject(jsonString);
-                    string tempPath = Path.GetTempPath();
-                    string filePath = Path.Combine(tempPath, "loginData.json");
-                    File.WriteAllText(filePath, JsonConvert.SerializeObject(data, Formatting.Indented), Encoding.UTF8);
-                    break;
-                }
-            }
+            dynamic data = JsonConvert.DeserializeObject(alertText);
+
+            string tempPath = Path.GetTempPath();
+            string jsonFile = $"{MakeValidFileName(serverAdress)}.json";
+            string filePath = Path.Combine(tempPath, jsonFile);
+
+            string mystring = JsonConvert.SerializeObject(data, Formatting.Indented); // somehow the deserialized alert is in a weird format
+
+            dynamic parsedJson = JsonConvert.DeserializeObject(mystring);
+
+            string user = parsedJson.username;
+            string pw = parsedJson.password;
+
+            secureStorage.SaveCredentials(user, pw, filePath);
 
             driver.Close();
 
-            // return password but not directly
+            return secureStorage.GetCredentials(filePath);
+        }
+
+        public static string MakeValidFileName(string name)
+        {
+            string invalidChars = System.Text.RegularExpressions.Regex.Escape(new string(System.IO.Path.GetInvalidFileNameChars()));
+            string invalidRegStr = string.Format(@"([{0}]*\.+$)|([{0}]+)", invalidChars);
+
+            return System.Text.RegularExpressions.Regex.Replace(name, invalidRegStr, "_");
         }
 
     }
+
 }
 
 
