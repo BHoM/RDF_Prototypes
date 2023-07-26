@@ -30,12 +30,12 @@ namespace BH.UI.Engine.GraphDB
             //if (File.Exists(jsonFilePath))
             //    return secureStorage.GetCredentials(jsonFilePath);
 
-
-            IWebDriver driver = new ChromeDriver();
-
             // Navigate to the local HTML file (interface.html).
             string url = new Uri(Path.GetFullPath(@"C:\Users\Aaron\Documents\GitHub\RDF_Prototypes\GraphDB_UI_Engine\interface.html")).AbsoluteUri; //replace with generic path
-            driver.Navigate().GoToUrl(url);
+            ChromeOptions options = new ChromeOptions();
+            options.AddArgument("--app=" + url);
+            IWebDriver driver = new ChromeDriver(options);
+            driver.Manage().Window.Size = new System.Drawing.Size(500, 450);
 
 
             // Add a wait for the alert
