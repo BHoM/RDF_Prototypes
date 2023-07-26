@@ -32,6 +32,7 @@ using System.Net.Http.Headers;
 using System.Text;
 using System.Threading.Tasks;
 using VDS.RDF.Shacl.Validation;
+using BH.UI.Engine.GraphDB;
 
 namespace BH.Engine.Adapters.GraphDB
 {
@@ -42,13 +43,17 @@ namespace BH.Engine.Adapters.GraphDB
         [Input("serverAddress", "Localhost address where GraphDB is exposed. This can be changed from GraphDB settings file.")]
         [Input("repositoryName", "GraphDB repository name where the graph data is stored.")]
         [Input("run", "Activate the push.")]
-        public static async Task PostToRepo(string TTLfilePath, string username = "Admin" , string password = "", string serverAddress = "http://localhost:7200/", string repositoryName = "BHoMVisualization", string graphName = "defaultGraph", bool clearGraph = false, bool run = false)
+        public static async Task PostToRepo(string TTLfilePath, string username = "Admin" ,  string serverAddress = "http://localhost:7200/", string repositoryName = "BHoMVisualization", string graphName = "defaultGraph", bool clearGraph = false, bool run = false)
         {
             if (!run)
             {
                 Log.RecordWarning("To push data to GraphDB press the Button or switch the Toggle to true");
                 return;
             }
+
+            // Login
+            LoginDataRetriever retriever = new LoginDataRetriever();
+            string password = retriever.PopUpBrowser(m_serverAddress, m_username);
 
             // Documentation in GraphDB: http://localhost:7200/webapi
 

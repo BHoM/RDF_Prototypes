@@ -26,7 +26,8 @@ using System.ComponentModel;
 using System.Linq;
 using BH.oM.Adapters.RDF;
 using System.Diagnostics;
-using BH.Engine.Adapters.GraphDBUI;
+using BH.UI.Engine.GraphDB;
+//using BH.Engine.Adapters.GraphDBUI;
 
 namespace BH.Adapter.GraphDB
 {
@@ -56,7 +57,6 @@ namespace BH.Adapter.GraphDB
             string repositoryName = "BHoMGraphDBRepo",
             string serverAddress = "http://localhost:7200/",
             string username = "Admin",
-            string password = "",
             string graphName = "defaultGraph",
             bool clearGraph = false,
             GraphSettings graphSettings = null,
@@ -65,9 +65,12 @@ namespace BH.Adapter.GraphDB
             if (graphDBexePath.IsNullOrEmpty())
                 graphDBexePath = Engine.Adapters.GraphDB.Compute.FindExecutable("GraphDB");
 
+            
+
             // Login
             LoginDataRetriever retriever = new LoginDataRetriever();
-            retriever.RetrieveLoginData();
+            string password = retriever.PopUpBrowser(serverAddress, username); 
+
 
             // The Adapter constructor can be used to configure the Adapter behaviour.
             // For example:
@@ -81,7 +84,6 @@ namespace BH.Adapter.GraphDB
             this.m_repositoryName = repositoryName;
             this.m_serverAddress = serverAddress;
             this.m_username = username;
-            this.m_password = password;
             this.m_graphName = graphName;
             this.m_graphSettings = graphSettings ?? new GraphSettings();
             this.m_localRepositorySettings = new LocalRepositorySettings();

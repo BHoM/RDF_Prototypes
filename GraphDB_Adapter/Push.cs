@@ -43,6 +43,7 @@ namespace BH.Adapter.GraphDB
     {
         public override List<object> Push(IEnumerable<object> objects, string tag = "", PushType pushType = PushType.UpdateOrCreateOnly, ActionConfig actionConfig = null)
         {
+
             string userDirectory = Environment.GetFolderPath(Environment.SpecialFolder.UserProfile);
             string TTLfilepath = Path.Combine(userDirectory, $"{DateTime.Now:yyyy-MM-dd_HH-mm-ss}_GraphDBPush.ttl");
 
@@ -50,8 +51,9 @@ namespace BH.Adapter.GraphDB
             TTLAdapter ttlAdapter = new TTLAdapter(TTLfilepath, m_graphSettings, m_localRepositorySettings);
             ttlAdapter.Push(objects);
 
+
             // Posts the content of the Turtle file to GraphDB.
-            Compute.PostToRepo(TTLfilepath, m_username, m_password, m_serverAddress, m_repositoryName, m_graphName, false, true);
+            Compute.PostToRepo(TTLfilepath, m_username, m_serverAddress, m_repositoryName, m_graphName, false, true);
 
             return objects.ToList();
         }
