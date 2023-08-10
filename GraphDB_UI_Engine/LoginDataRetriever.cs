@@ -11,9 +11,8 @@ namespace BH.UI.Engine.GraphDB
 {
     public class LoginDataRetriever
     {
-        public string PopUpBrowser(string serverAdress, string username) // 1 argument server adress (store json file for each serveraddress) and 2. argument username RETURN credentials
+        public string PopUpBrowser(string serverAdress, string username) 
         {
-
 
             // check for JSON file (name like server address) if login credentials are already there for URI and username input to the methode
             // if found return cred.
@@ -21,17 +20,16 @@ namespace BH.UI.Engine.GraphDB
             // -> store credentials
             // return cred. 
 
-            SecureStorage secureStorage = new SecureStorage();
-
             string potentialJsonFile = $"{MakeValidFileName(serverAdress)}.json";
-            string jsonFilePath = Path.Combine(Path.GetTempPath(), potentialJsonFile); //C: \Users\Aaron\AppData\Local\Temp\loginData.json
+            string jsonFilePath = Path.Combine(Path.GetTempPath(), potentialJsonFile); //C:\Users\User\AppData\Local\Temp + Filename
 
+            SecureStorage secureStorage = new SecureStorage();
             // -------------------------------- UNCOMMENT AFTER DEBUGGING -----------------------------------
             //if (File.Exists(jsonFilePath))
-            //    return secureStorage.GetCredentials(jsonFilePath);
+            //    return secureStorage.GetCredentials(jsonFilePath, username);
 
             // Navigate to the local HTML file (interface.html).
-            string url = new Uri(Path.GetFullPath(@"C:\Users\Aaron\Documents\GitHub\RDF_Prototypes\GraphDB_UI_Engine\interface.html")).AbsoluteUri; //replace with generic path
+            string url = new Uri(Path.GetFullPath(@"C:\Users\Aaron\Documents\GitHub\RDF_Prototypes\GraphDB_UI_Engine\interface.html")).AbsoluteUri; //replace with generic path from BHOM Assemblies
             ChromeOptions options = new ChromeOptions();
             options.AddArgument("--app=" + url);
             IWebDriver driver = new ChromeDriver(options);
@@ -78,7 +76,7 @@ namespace BH.UI.Engine.GraphDB
 
             driver.Close();
 
-            return secureStorage.GetCredentials(filePath);
+            return secureStorage.GetCredentials(filePath, username);
         }
 
         public static string MakeValidFileName(string name)

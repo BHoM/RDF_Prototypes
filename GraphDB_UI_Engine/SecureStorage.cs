@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.IO;
 using System.Security.Cryptography;
 using System.Text;
@@ -20,17 +21,24 @@ public class SecureStorage
         File.WriteAllText(filePath, json);
     }
 
-    public string GetCredentials(string filePath)
+    public string GetCredentials(string filePath, string username)
     {
         if (!File.Exists(filePath))
             return null;
 
         var json = File.ReadAllText(filePath);
-        var credentials = JsonConvert.DeserializeObject<Credentials>(json);
+        var credentialsList = JsonConvert.DeserializeObject<List<Credentials>>(json);
 
-        credentials.Password = Decrypt(credentials.Password);
+        foreach (var credentials in credentialsList)
+        {
+            if (credentials.Username == username)
+            {
+                credentials.Password = Decrypt(credentials.Password);
+                return credentials.Password;
+            }
+        }
 
-        return credentials.Password;
+        return null; 
     }
 
     private static string Encrypt(string data)

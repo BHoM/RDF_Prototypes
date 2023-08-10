@@ -51,9 +51,6 @@ namespace BH.Engine.Adapters.GraphDB
                 return;
             }
 
-            // Login
-            LoginDataRetriever retriever = new LoginDataRetriever();
-            //string password = retriever.PopUpBrowser(m_serverAddress, m_username);
 
             // Documentation in GraphDB: http://localhost:7200/webapi
 
@@ -83,7 +80,11 @@ namespace BH.Engine.Adapters.GraphDB
 
             if (bool.Parse(content)) 
             {
-                var byteArray = Encoding.ASCII.GetBytes( username + ":" + password);
+
+                // retrive Login data
+                LoginDataRetriever retriever = new LoginDataRetriever();
+
+                var byteArray = Encoding.ASCII.GetBytes( username + ":" + retriever.PopUpBrowser(serverAddress, username));
                 httpClient.DefaultRequestHeaders.Authorization = new System.Net.Http.Headers.AuthenticationHeaderValue("Basic", System.Convert.ToBase64String(byteArray));
 
                 var responseLogin = await httpClient.GetAsync(serverAddress + "rest/security");
