@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.IO;
 using System.Security.Cryptography;
+using System.Management;
 using System.Text;
 using Newtonsoft.Json;
 using PCLCrypto;
@@ -44,7 +45,8 @@ public class SecureStorage
     private static string Encrypt(string data)
     {
         var provider = WinRTCrypto.SymmetricKeyAlgorithmProvider.OpenAlgorithm(SymmetricAlgorithm.AesCbcPkcs7);
-        var key = provider.CreateSymmetricKey(Encoding.UTF8.GetBytes("sJ1sr3/BgVMz0I4+Hy2jvQ==")); // Key? how to deal with
+        var keyMaterial = GetCpuId(); // Use CPU ID to generate a KEY
+        var key = provider.CreateSymmetricKey(GenerateKey(keyMaterial));
 
         var bytes = WinRTCrypto.CryptographicEngine.Encrypt(key, Encoding.UTF8.GetBytes(data));
 
@@ -54,11 +56,31 @@ public class SecureStorage
     private static string Decrypt(string data)
     {
         var provider = WinRTCrypto.SymmetricKeyAlgorithmProvider.OpenAlgorithm(SymmetricAlgorithm.AesCbcPkcs7);
-        var key = provider.CreateSymmetricKey(Encoding.UTF8.GetBytes("sJ1sr3/BgVMz0I4+Hy2jvQ==")); // Key? how to deal with
+        var keyMaterial = GetCpuId(); // Use CPU ID to generate a KEY
+        var key = provider.CreateSymmetricKey(GenerateKey(keyMaterial));
 
         var bytes = WinRTCrypto.CryptographicEngine.Decrypt(key, Convert.FromBase64String(data));
 
         return Encoding.UTF8.GetString(bytes);
+    }
+
+
+    private static string GetCpuId()
+    {
+        var searcher = new ManagementObjectSearcher("Select * from Win32_Processor");
+        foreach (var obj in searcher.Get())
+        {
+            return obj["ProcessorId"].ToString().Trim();
+        }
+        return string.Empty;
+    }
+
+    static byte[] GenerateKey(string cpuId)
+    {
+        using (var sha256 = SHA256.Create())
+        {
+            return sha256.ComputeHash(Encoding.UTF8.GetBytes(cpuId));
+        }
     }
 }
 
@@ -67,3 +89,5 @@ public class Credentials
     public string Username { get; set; }
     public string Password { get; set; }
 }
+
+

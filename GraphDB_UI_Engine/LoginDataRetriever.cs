@@ -48,12 +48,13 @@ namespace BH.UI.Engine.GraphDB
                 // Update the chromedriver, then retry.
                 new DriverManager().SetUpDriver(new ChromeConfig(), VersionResolveStrategy.MatchingBrowser);
                 driver = new ChromeDriver(options);
+                driver.Manage().Window.Size = new System.Drawing.Size(500, 450);
             }
 
-            if (driver != null)
+            if (driver == null)
                 return null;
 
-            driver.Manage().Window.Size = new System.Drawing.Size(500, 450);
+            
 
 
             // Add a wait for the alert
