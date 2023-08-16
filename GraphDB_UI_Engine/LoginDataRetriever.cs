@@ -6,6 +6,9 @@ using OpenQA.Selenium.Chrome;
 using OpenQA.Selenium.Support.UI;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Linq;
+using WebDriverManager;
+using WebDriverManager.DriverConfigs.Impl;
+using WebDriverManager.Helpers;
 
 namespace BH.UI.Engine.GraphDB
 {
@@ -32,7 +35,24 @@ namespace BH.UI.Engine.GraphDB
             string url = new Uri(Path.GetFullPath(@"C:\Users\Aaron\Documents\GitHub\RDF_Prototypes\GraphDB_UI_Engine\interface.html")).AbsoluteUri; //replace with generic path from BHOM Assemblies
             ChromeOptions options = new ChromeOptions();
             options.AddArgument("--app=" + url);
-            IWebDriver driver = new ChromeDriver(options);
+            IWebDriver driver = null;
+
+
+            new DriverManager().SetUpDriver(new ChromeConfig());
+            try
+            {
+                driver = new ChromeDriver(options);
+            }
+            catch (InvalidOperationException)
+            {
+                // Update the chromedriver, then retry.
+                new DriverManager().SetUpDriver(new ChromeConfig(), VersionResolveStrategy.MatchingBrowser);
+                driver = new ChromeDriver(options);
+            }
+
+            if (driver != null)
+                return null;
+
             driver.Manage().Window.Size = new System.Drawing.Size(500, 450);
 
 
