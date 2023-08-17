@@ -20,11 +20,13 @@
  * along with this code. If not, see <https://www.gnu.org/licenses/lgpl-3.0.html>.      
  */
 
+using BH.Engine.Adapters.RDF;
+using System.Linq;
 using System.Reflection;
 
 namespace BH.oM.Adapters.RDF
 {
-    public class IndividualDataProperty : IndividualRelation
+    public class IndividualDataProperty : IIndividualRelation
     {
         // Each individual needs to link to another individual if it has properties or is owned by another object.
         public object Individual { get; set; }
@@ -39,20 +41,44 @@ namespace BH.oM.Adapters.RDF
             if (o == null)
                 return false;
 
-            return Individual.Equals(o.Individual) &&
-                ((Value != null && Value.Equals(o.Value)) || (Value == null && o.Value == null)) &&
-                PropertyInfo.PropertyType == o.PropertyInfo.PropertyType && PropertyInfo.DeclaringType == o.PropertyInfo.DeclaringType &&
-                PropertyInfo.Name.Equals(o.PropertyInfo.Name);
+            if (!Individual.Equals(o.Individual))
+                return false;
+
+            if (!((Value != null && Value.Equals(o.Value)) || (Value == null && o.Value == null)))
+                return false;
+
+            if (!PropertyInfo.Name.Equals(o.PropertyInfo.Name))
+                return false;
+
+            if (PropertyInfo.PropertyType == o.PropertyInfo.PropertyType)
+                return true;
+
+            if (PropertyInfo.DeclaringType.IsAssignableFrom(o.PropertyInfo.DeclaringType))
+                return true;
+
+            if (o.PropertyInfo.DeclaringType.IsAssignableFrom(PropertyInfo.DeclaringType))
+                return true;
+
+            return false;
         }
 
         public override int GetHashCode()
         {
-            int A = Individual.GetHashCode();
-            int B = Value?.GetHashCode() ?? 0;
-            int C = PropertyInfo.PropertyType.GetHashCode();
-            int D = PropertyInfo.DeclaringType.GetHashCode();
-            int E = PropertyInfo.Name.GetHashCode();
-            return A + B + C + D + E;
+            unchecked
+            {
+                int A = Individual.GetHashCode();
+                int B = Value?.GetHashCode() ?? 0;
+                int C = PropertyInfo.PropertyType.GetHashCode();
+                int D = PropertyInfo.Name.GetHashCode();
+
+                var parentProp = PropertyInfo.DeclaringType.BaseTypes().SelectMany(t => t.GetProperties()).FirstOrDefault(p => p.Name == this.PropertyInfo.Name);
+
+                if (parentProp != null)
+                    return A + B + C + D + parentProp.DeclaringType.GetHashCode();
+                else
+                    return A + B + C + D + PropertyInfo.DeclaringType.GetHashCode();
+
+            }
         }
     }
 }

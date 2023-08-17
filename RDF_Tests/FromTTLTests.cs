@@ -60,6 +60,8 @@ namespace BH.Test.RDF
             m_adapter = new TTLAdapter(null, m_graphSettings);
         }
 
+
+
         [Test]
         public static void BHoMObject_Property_ListOfObjects_Boxed()
         {
@@ -259,6 +261,45 @@ namespace BH.Test.RDF
         }
 
         [Test]
+        public static void Line()
+        {
+            // This test checks a geometry, so we set this to true.
+            m_graphSettings.TBoxSettings.GeometryAsOntologyClass = true;
+
+            Line line = new Line();
+            line.Start = new Point() { X = 101, Y = 102, Z = 103 };
+            line.End = new Point() { X = 202, Y = 202, Z = 203 };
+            line.Infinite = true;
+
+            List<object> objectList = new List<object>() { line };
+            string TTLGraph = objectList.ToTTL(m_graphSettings);
+
+            Assert.IsTTLParsable(TTLGraph);
+
+            var bhomObjects = TTLGraph.ToCSharpObjects();
+            Assert.IsEqual(line, bhomObjects.FirstOrDefault());
+        }
+
+        [Test]
+        public static void Polyline()
+        {
+            // This test checks a geometry, so we set this to true.
+            m_graphSettings.TBoxSettings.GeometryAsOntologyClass = true;
+
+            Polyline line = new Polyline();
+            line.ControlPoints.Add(new Point() { X = 101, Y = 102, Z = 103 });
+            line.ControlPoints.Add(new Point() { X = 202, Y = 202, Z = 203 });
+
+            List<object> objectList = new List<object>() { line };
+            string TTLGraph = objectList.ToTTL(m_graphSettings);
+
+            Assert.IsTTLParsable(TTLGraph);
+
+            var bhomObjects = TTLGraph.ToCSharpObjects();
+            Assert.IsEqual(line, bhomObjects.FirstOrDefault());
+        }
+
+        [Test]
         public static void Room()
         {
             Room room = new Room();
@@ -267,7 +308,8 @@ namespace BH.Test.RDF
             room.Name = "A room object";
 
             List<object> objectList = new List<object>() { room };
-            string TTLGraph = objectList.ToTTL(m_graphSettings);
+            CSharpGraph cSharpGraph = Compute.CSharpGraph(objectList, m_graphSettings);
+            string TTLGraph = cSharpGraph.ToTTL();
 
             Assert.IsTTLParsable(TTLGraph);
 
@@ -302,7 +344,8 @@ namespace BH.Test.RDF
             Column column = CreateRandomColumn();
 
             List<object> objectList = new List<object>() { room, column };
-            string TTLGraph = objectList.ToTTL(m_graphSettings);
+            CSharpGraph cSharpGraph = Compute.CSharpGraph(objectList, m_graphSettings);
+            string TTLGraph = cSharpGraph.ToTTL();
 
             Assert.IsTTLParsable(TTLGraph);
 
@@ -325,6 +368,62 @@ namespace BH.Test.RDF
 
             Assert.IsTTLParsable(TTLGraph);
         }
+
+
+        [Test]
+        public static void UriGuidBHoMObj()
+        {
+            Room room = new Room();
+            room.Perimeter = new Polyline() { ControlPoints = new List<Point>() { new Point(), new Point() { X = 5 }, new Point() { X = 99 } } };
+            room.Location = new Point();
+            room.Name = "first room object";
+
+            CSharpGraph cSharpGraph = Compute.CSharpGraph(new List<object>() { room }, m_graphSettings);
+            string TTLGraph = cSharpGraph.ToTTL();
+
+            string roomUrl = Flurl.Url.Combine(cSharpGraph.GraphSettings.ABoxSettings.IndividualsBaseAddress, room.BHoM_Guid.ToString());
+            Assert.IsTrue(TTLGraph.Contains(roomUrl.ToLower()));
+
+            var res = Convert.FromTTL(TTLGraph);
+            var obj = res.Item1.First();
+            Room roomRedBack = obj as Room;
+
+            Assert.IsEqual(room, roomRedBack);
+
+        }
+
+        [Test]
+        public static void UriGuidIGeometry()
+        {
+            NurbsCurve nurbs = new NurbsCurve()
+            {
+                ControlPoints = new List<Point>()
+                {
+                    new Point(),
+                    new Point() { X = 1, Y = 1, Z = 1 },
+                    new Point() { X = 2, Y = 2, Z = 2 }
+                }
+            };
+
+            CSharpGraph cSharpGraph = Compute.CSharpGraph(new List<object>() { nurbs }, new GraphSettings()
+            {
+                TBoxSettings = new TBoxSettings { GeometryAsOntologyClass = true }
+            });
+            string TTLGraph = cSharpGraph.ToTTL();
+            IObject iObject = nurbs as IObject;
+            string hash = BH.Engine.Base.Query.Hash(iObject);
+            string nurbsGuid = Engine.Adapters.RDF.Query.GuidFromString(hash).ToString();
+
+            string nurbsUrl = Flurl.Url.Combine(cSharpGraph.GraphSettings.ABoxSettings.IndividualsBaseAddress, nurbsGuid.ToString());
+            Assert.IsTrue(TTLGraph.Contains(nurbsUrl.ToLower()));
+
+            var res = Convert.FromTTL(TTLGraph);
+            var obj = res.Item1.First();
+            NurbsCurve nurbsRedBack = obj as NurbsCurve;
+
+            Assert.IsEqual(nurbs, nurbsRedBack);
+        }
+
 
         [Test]
         public static void CustomObject_MeshProperty()

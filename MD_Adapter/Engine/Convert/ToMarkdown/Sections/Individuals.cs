@@ -62,9 +62,9 @@ namespace BH.Engine.Adapters.Markdown
         private static string TLLIndividualRelations(object individual, CSharpGraph cSharpGraph, LocalRepositorySettings localRepositorySettings)
         {
             StringBuilder TLLIndividualRelations = new StringBuilder();
-            IEnumerable<IndividualRelation> individualRelations = cSharpGraph.IndividualRelations.Where(r => r.Individual == individual);
+            IEnumerable<IIndividualRelation> individualRelations = cSharpGraph.IndividualRelations.Where(r => r.Individual == individual);
 
-            foreach (IndividualRelation individualRelation in individualRelations)
+            foreach (IIndividualRelation individualRelation in individualRelations)
             {
                 IndividualObjectProperty iop = individualRelation as IndividualObjectProperty;
                 if (iop != null)

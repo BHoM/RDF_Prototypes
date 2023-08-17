@@ -48,6 +48,7 @@ namespace BH.Engine.Adapters.RDF
 
             Type individualType = individual.EquivalentType();
             List<PropertyInfo> typeProperties = individualType.GetProperties().ToList();
+            typeProperties.AddRange(individualType.BaseTypes().SelectMany(t => t.GetProperties()));
 
             object resultObject = null;
             try
