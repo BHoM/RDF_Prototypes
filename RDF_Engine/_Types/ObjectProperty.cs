@@ -21,38 +21,16 @@
  */
 
 using System;
+using System.ComponentModel;
 
 namespace BH.oM.Adapters.RDF
 {
-    public class IndividualObjectProperty : IndividualRelation
+    [Description("Identifies a relation between two Types in a CSharp graph that is akin to an Object Property relation in an Ontology format." +
+        "If the Range class is set to a Type that is another class in the Ontology, the ObjectProperty relation can be seen as a 'HasProperty' relation.")]
+    public class ObjectProperty : IClassRelation, IObjectProperty // aka "HasProperty" when the range is another class in the Ontology.
     {
-        // Each individual needs to link to another individual if it has properties or is owned by another object.
-        public object Individual { get; set; }
-        public object RangeIndividual { get; set; }
+        public Type DomainClass { get; set; }
 
-        // Class relation corresponding to these Individuals' relation.
-        public ObjectProperty HasProperty { get; set; }
-
-        public override bool Equals(object obj)
-        {
-            IndividualObjectProperty o = obj as IndividualObjectProperty;
-            if (o == null)
-                return false;
-
-            return Individual.Equals(o.Individual) &&
-                ((RangeIndividual != null && RangeIndividual.Equals(o.RangeIndividual)) || (RangeIndividual == null && o.RangeIndividual == null)) &&
-                HasProperty.DomainClass.Equals(o.HasProperty.DomainClass) && HasProperty.RangeClass.Equals(o.HasProperty.RangeClass);
-        }
-
-        public override int GetHashCode()
-        {
-            int A = Individual.GetHashCode();
-            int? B = RangeIndividual?.GetHashCode();
-            int C = HasProperty.DomainClass.AssemblyQualifiedName.GetHashCode();
-            int D = HasProperty.RangeClass.AssemblyQualifiedName.GetHashCode();
-            int hashcode = A + B ?? 0 + C + D;
-
-            return hashcode;
-        }
+        public Type RangeClass { get; set; }
     }
 }

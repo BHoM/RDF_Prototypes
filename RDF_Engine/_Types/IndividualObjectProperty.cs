@@ -20,14 +20,39 @@
  * along with this code. If not, see <https://www.gnu.org/licenses/lgpl-3.0.html>.      
  */
 
-using BH.oM.Base;
-using System.ComponentModel;
+using System;
 
 namespace BH.oM.Adapters.RDF
 {
-    [Description("Base interface for classes representing relations between individuals in a CSharpGraph.")]
-    public interface IndividualRelation // We do not want to implement the IObject interface on this type: no need to expose this to the UI, other than as an output from an `Explode`d CSharpGraph.
+    public class IndividualObjectProperty : IIndividualRelation
     {
-        object Individual { get; set; }
+        // Each individual needs to link to another individual if it has properties or is owned by another object.
+        public object Individual { get; set; }
+        public object RangeIndividual { get; set; }
+
+        // Class relation corresponding to these Individuals' relation.
+        public IObjectProperty HasProperty { get; set; }
+
+        public override bool Equals(object obj)
+        {
+            IndividualObjectProperty o = obj as IndividualObjectProperty;
+            if (o == null)
+                return false;
+
+            return Individual.Equals(o.Individual) &&
+                ((RangeIndividual != null && RangeIndividual.Equals(o.RangeIndividual)) || (RangeIndividual == null && o.RangeIndividual == null)) &&
+                HasProperty.DomainClass.Equals(o.HasProperty.DomainClass) && HasProperty.RangeClass.Equals(o.HasProperty.RangeClass);
+        }
+
+        public override int GetHashCode()
+        {
+            int A = Individual.GetHashCode();
+            int? B = RangeIndividual?.GetHashCode();
+            int C = HasProperty.DomainClass.AssemblyQualifiedName.GetHashCode();
+            int D = HasProperty.RangeClass.AssemblyQualifiedName.GetHashCode();
+            int hashcode = A + B ?? 0 + C + D;
+
+            return hashcode;
+        }
     }
 }

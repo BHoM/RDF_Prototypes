@@ -20,17 +20,14 @@
  * along with this code. If not, see <https://www.gnu.org/licenses/lgpl-3.0.html>.      
  */
 
-using System;
+using BH.oM.Base;
 using System.ComponentModel;
 
 namespace BH.oM.Adapters.RDF
 {
-    [Description("Identifies a relation between two Types in a CSharp graph that is akin to an Object Property relation in an Ontology format." +
-        "If the Range class is set to a Type that is another class in the Ontology, the ObjectProperty relation can be seen as a 'HasProperty' relation.")]
-    public class ObjectProperty : IClassRelation // aka "HasProperty" when the range is another class in the Ontology.
+    [Description("Base interface for classes representing relations between individuals in a CSharpGraph.")]
+    public interface IIndividualRelation // We do not want to implement the IObject interface on this type: no need to expose this to the UI, other than as an output from an `Explode`d CSharpGraph.
     {
-        public Type DomainClass { get; set; }
-
-        public Type RangeClass { get; set; }
+        object Individual { get; set; }
     }
 }

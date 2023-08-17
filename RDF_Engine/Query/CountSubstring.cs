@@ -21,15 +21,35 @@
  */
 
 using BH.oM.Base;
+using BH.oM.Adapters.RDF;
+using System;
+using System.Collections;
+using System.Collections.Generic;
 using System.ComponentModel;
+using System.Linq;
 using System.Reflection;
+using System.Text;
+using System.Threading.Tasks;
+using BH.oM.Base.Attributes;
 
-namespace BH.oM.Adapters.RDF
+namespace BH.Engine.Adapters.RDF
 {
-    [Description("Base abstract class for other classes representing either Object Properties or Data Properties in a CSharpGraph.")]
-    public interface IIClassRelation // We do not want to implement the IObject interface on this type: no need to expose this to the UI, other than as an output from an `Explode`d CSharpGraph.
+    public static partial class Query
     {
-        // CSharp PropertyInfos can be seen as the correspondant to Ontology Object Properties.
-        PropertyInfo PropertyInfo { get; set; }
+        [Description("Count the number of occurrencies of a substring in a text.")]
+        [Input("text", "Text where to look for occurrencies of a substring.")]
+        [Input("substring", "Substring to look for in the text.")]
+        [Output("count", "Number of occurrencies of the substring in the text.")]
+        public static int CountSubstring(this string text, string substring)
+        {
+            int count = 0, minIndex = text.IndexOf(substring, 0);
+            while (minIndex != -1)
+            {
+                minIndex = text.IndexOf(substring, minIndex + substring.Length);
+                count++;
+            }
+
+            return count;
+        }
     }
 }

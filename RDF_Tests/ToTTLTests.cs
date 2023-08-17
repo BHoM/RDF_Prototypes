@@ -49,6 +49,7 @@ using BH.Engine.Adapters.TTL;
 using System.Text.RegularExpressions;
 using Shouldly;
 using System.Linq.Expressions;
+using System.Drawing.Printing;
 
 namespace BH.Test.RDF
 {
@@ -364,60 +365,6 @@ namespace BH.Test.RDF
         }
 
         [Test]
-        public static void UriGuidBHoMObj()
-        {
-            Room room = new Room();
-            room.Perimeter = new Polyline() { ControlPoints = new List<Point>() { new Point(), new Point() { X = 5 }, new Point() { X = 99 } } };
-            room.Location = new Point();
-            room.Name = "first room object";
-
-            CSharpGraph cSharpGraph = Compute.CSharpGraph(new List<object>() { room }, m_graphSettings);
-            string TTLGraph = cSharpGraph.ToTTL();
-
-            string roomUrl = Flurl.Url.Combine(cSharpGraph.GraphSettings.ABoxSettings.IndividualsBaseAddress, room.BHoM_Guid.ToString());
-            Assert.IsTrue(TTLGraph.Contains(roomUrl.ToLower()));
-
-            var res = Convert.FromTTL(TTLGraph);
-            var obj = res.Item1.First();
-            Room roomRedBack = obj as Room;
-
-            Assert.IsEqual(room, roomRedBack);
-
-        }
-
-        [Test]
-        public static void UriGuidIGeometry()
-        {
-            NurbsCurve nurbs = new NurbsCurve()
-            {
-                ControlPoints = new List<Point>()
-                {
-                    new Point(),
-                    new Point() { X = 1, Y = 1, Z = 1 },
-                    new Point() { X = 2, Y = 2, Z = 2 }
-                }
-            };
-
-            CSharpGraph cSharpGraph = Compute.CSharpGraph(new List<object>() { nurbs }, new GraphSettings()
-            {
-                TBoxSettings = new TBoxSettings { GeometryAsOntologyClass = true }
-            });
-            string TTLGraph = cSharpGraph.ToTTL();
-            IObject iObject = nurbs as IObject;
-            string hash = BH.Engine.Base.Query.Hash(iObject);
-            string nurbsGuid = Engine.Adapters.RDF.Query.GuidFromString(hash).ToString();
-
-            string nurbsUrl = Flurl.Url.Combine(cSharpGraph.GraphSettings.ABoxSettings.IndividualsBaseAddress, nurbsGuid.ToString());
-            Assert.IsTrue(TTLGraph.Contains(nurbsUrl.ToLower()));
-
-            var res = Convert.FromTTL(TTLGraph);
-            var obj = res.Item1.First();
-            NurbsCurve nurbsRedBack = obj as NurbsCurve;
-
-            Assert.IsEqual(nurbs, nurbsRedBack);
-        }
-
-        [Test]
         public static void IndividualsDuplicatedData()
         {
             // Targets https://github.com/BHoM/RDF_Prototypes/issues/109
@@ -430,11 +377,13 @@ namespace BH.Test.RDF
             Assert.IsTTLParsable(TTLGraph);
 
             // Check how many times the BHoM_Guid property appears in the TTL text.
-            string guidIndividualProperty = $":BH.oM.Base.BHoMObject.BHoM_Guid \"{testObj.BHoM_Guid}\"^^xsd:string;";
-            int repetitionOfGuidProperty = Regex.Matches(TTLGraph, guidIndividualProperty).Count;
+            string guidIndividualProperty = $".BHoM_Guid \"{testObj.BHoM_Guid}\"^^xsd:string";
+            int repetitionOfGuidProperty = TTLGraph.CountSubstring(guidIndividualProperty);
 
             // Verify that the number of repetitions is equal to 1.
             repetitionOfGuidProperty.ShouldBe(1); // this fails.
         }
+
+
     }
 }

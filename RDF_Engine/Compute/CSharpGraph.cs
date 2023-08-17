@@ -121,11 +121,9 @@ namespace BH.Engine.Adapters.RDF
             if (type.IsOntologyClass(graphSettings.TBoxSettings))
                 m_cSharpGraph.Classes.Add(type);
 
-            var props = type.GetProperties(BindingFlags.DeclaredOnly | BindingFlags.Instance | BindingFlags.Public);
-            props.AddToOntology(graphSettings, individual);
-
             // Recurse for parent Types.
             List<Type> parentTypes = type.BaseTypes();
+            parentTypes.Reverse(); // reverse to get first the interfaces, then the base classes.
             foreach (var parentType in parentTypes)
             {
                 if (!parentType.IsOntologyClass(graphSettings.TBoxSettings))
@@ -133,6 +131,9 @@ namespace BH.Engine.Adapters.RDF
 
                 AddToOntology(parentType, graphSettings, individual);
             }
+
+            var props = type.GetProperties(BindingFlags.DeclaredOnly | BindingFlags.Instance | BindingFlags.Public);
+            props.AddToOntology(graphSettings, individual);
         }
 
         private static void AddToOntology(this IEnumerable<PropertyInfo> pInfos, GraphSettings graphSettings, object obj = null, PropertyInfo fromProperty = null)
@@ -177,6 +178,7 @@ namespace BH.Engine.Adapters.RDF
 
                 if (parentProperties.Any(pp => pp.Name == pi.Name))
                 {
+                    return;
                     domainType = parentType;
                     break;
                 }
@@ -268,14 +270,14 @@ namespace BH.Engine.Adapters.RDF
         {
             if (!pi.IsDataProperty(graphSettings.TBoxSettings))
             {
-                Log.RecordError("Wrong PropertyInfo specified.");
-                return;
+                throw new ArgumentException("Wrong PropertyInfo specified.");
             }
+
             // DATA PROPERTY RELATION
             // We do not have an Ontology class corresponding to the rangeType:
             // this PropertyInfo relation corresponds to a Data property.
 
-            // Add the ObjectProperty to the Graph for the T-Box.
+            // Add the DataProperty to the Graph for the T-Box.
             m_cSharpGraph.DataProperties.Add(hasPropertyRelation);
 
             // If the individual is non-null, we will need to add the individuals' relation to the Graph in order to define the A-Box.
@@ -320,7 +322,7 @@ namespace BH.Engine.Adapters.RDF
                 m_cSharpGraph.AllIndividuals.Add(individual);
             }
 
-            // Get this individual's properties.
+            // Get this individual's *declared only* properties.
             List<PropertyInfo> properties = individualType.GetProperties(BindingFlags.DeclaredOnly | BindingFlags.Instance | BindingFlags.Public).ToList();
             BHoMObject individualAsBHoMObj = individual as BHoMObject;
             if (individualAsBHoMObj != null && !(individualType is CustomObjectType))
@@ -338,24 +340,24 @@ namespace BH.Engine.Adapters.RDF
                 }
             }
 
-            // Recurse for properties of this individual.
+            // Recurse for this individual's *declared only* properties.
             properties.AddToOntology(graphSettings, individual, fromProperty);
 
             if (individualType is CustomObjectType)
                 return;
 
             // Because the T-Box should only include 'DeclaredOnly' properties,
-            // add the Individual properties separately.
+            // add the Individual non-declared properties separately.
             var nonDeclaredProps = individualType.GetProperties().Except(properties);
             foreach (var p in nonDeclaredProps)
                 if (p.IsObjectProperty(graphSettings.TBoxSettings))
                 {
-                    ObjectProperty objectProperty = new ObjectProperty() { DomainClass = p.DeclaringType, RangeClass = p.PropertyType, PropertyInfo = p };
+                    ObjectProperty objectProperty = new ObjectProperty() { DomainClass = individualType, RangeClass = p.PropertyType, PropertyInfo = p };
                     AddIndividualObjectPropertyRelation(individual, p, graphSettings, objectProperty);
                 }
                 else if (p.IsDataProperty(graphSettings.TBoxSettings))
                 {
-                    DataProperty dataProperty = new DataProperty() { DomainClass = p.DeclaringType, RangeType = p.PropertyType, PropertyInfo = p };
+                    DataProperty dataProperty = new DataProperty() { DomainClass = individualType, RangeType = p.PropertyType, PropertyInfo = p };
                     AddIndividualDataPropertyRelation(individual, p, graphSettings, dataProperty);
                 }
         }
