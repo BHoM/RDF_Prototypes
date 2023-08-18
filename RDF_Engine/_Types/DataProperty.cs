@@ -31,8 +31,9 @@ using System.Reflection;
 
 namespace BH.oM.Adapters.RDF
 {
-    [Description("Identifies a relation between two Types in a CSharp graph that is akin to a Data Property relation in an Ontology format." +
-        "The RangeType should be pointing to a Type that does NOT correspond to a class in the Ontology; otherwise, this relation should be an ObjectProperty relation.")]
+    [Description("Identifies a Class Relation between two Types in a CSharpGraph that is akin to a Data Property relation in an Ontology.\n" +
+        "The RangeType must be pointing to a Type that does NOT correspond to a Class in the Ontology " +
+        "(otherwise it would be an ObjectProperty relation).")]
     public class DataProperty : ClassRelation, IDataProperty, IImmutable
     {
         public DataProperty(Type domainClass, Type rangeType, PropertyInfo pi, TBoxSettings tBoxSettings)
