@@ -38,7 +38,12 @@ namespace BH.oM.Adapters.RDF
             if (!(propertyInfo is CustomPropertyInfo) &&
                 !rangeClass.IsOntologyClass(tBoxSettings) &&
                 !rangeClass.IsListOfOntologyClasses(tBoxSettings))
-                Log.RecordError("Cannot create an ObjectProperty with a RangeType that is not a type corresponding to an Ontology Class or to a List of Ontology classes.", typeof(ArgumentException));
+            {
+                Log.RecordError($"Cannot create an ObjectProperty for the property {propertyInfo.FullNameValidChars()} " +
+                   $"because the provided RangeType is {rangeClass.FullNameValidChars()}, which is not a type corresponding to an Ontology Class or to a List of Ontology classes.", typeof(ArgumentException));
+
+                return;
+            }
 
             DomainClass = domainClass;
             RangeType = rangeClass;
