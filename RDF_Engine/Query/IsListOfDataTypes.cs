@@ -37,55 +37,17 @@ namespace BH.Engine.Adapters.RDF
 {
     public static partial class Query
     {
-        public static bool IsListOfOntologyClasses(this Type sourceType, TBoxSettings tBoxSettings, object sourceObj = null)
+        public static bool IsListOfDatatypes(this Type t, TBoxSettings tBoxSettings)
         {
-            tBoxSettings = tBoxSettings ?? new TBoxSettings();
-
-            if (sourceType == null)
-                Log.RecordError($"Argument {nameof(sourceType)} cannot be null", typeof(ArgumentNullException));
-
-            // Make sure the type is a List.
-            if (!sourceType.IsList())
-                return false;
-
-            // Check the List generic argument.
-            Type[] genericArgs = sourceType.GetGenericArguments();
-
-            if (genericArgs.Length != 1)
-                return false;
-
-            // If the List generic arg can be translated to an Ontology class, job done.
-            if (genericArgs.First() != typeof(System.Object))
-                return genericArgs.First().IsOntologyClass(tBoxSettings);
-
-            // If the List generic arg is System.Object, the objects may still be Ontology classes that have been boxed.
-            if (sourceObj != null && genericArgs.First() == typeof(System.Object))
+            if (t.IsList())
             {
-                List<object> objList = sourceObj as List<object>;
+                Type[] genericArgs = t.GetGenericArguments();
 
-                if (objList == null)
-                    return false;
-
-                // Unbox the objects and see if their actual type is an Ontology class.
-                return objList.All(o => o.GetType().IsOntologyClass(tBoxSettings));
+                if (genericArgs.Length == 1 && genericArgs.First().IsDataType(tBoxSettings))
+                    return true;
             }
 
             return false;
-        }
-
-        public static bool? IsListOfOntologyClasses(this IndividualObjectProperty iop, TBoxSettings tBoxSettings)
-        {
-            Type rangeType = iop.RangeIndividual?.GetType();
-
-            return IsListOfOntologyClasses(rangeType, tBoxSettings, iop.RangeIndividual);
-        }
-
-        private static bool IsList(this Type t)
-        {
-            if (t == null)
-                return false;
-
-            return typeof(IList).IsAssignableFrom(t);
         }
     }
 }
