@@ -39,7 +39,12 @@ namespace BH.oM.Adapters.RDF
         public DataProperty(Type domainClass, Type rangeType, PropertyInfo pi, TBoxSettings tBoxSettings)
         {
             if (rangeType.IsOntologyClass(tBoxSettings) || rangeType.IsListOfOntologyClasses(tBoxSettings))
-                Log.RecordError("Cannot create a DataProperty with a RangeType that is a type corresponding to an Ontology Class or a List of Ontology Classes.", typeof(ArgumentException));
+            {
+                Log.RecordError($"Cannot create a DataProperty for the property {pi.FullNameValidChars()} " +
+                       $"because the provided RangeType is {rangeType.FullNameValidChars()}, which is a type corresponding to an Ontology Class or to a List of Ontology classes.", typeof(ArgumentException));
+                
+                return;
+            }
 
             RangeType = rangeType;
             DomainClass = domainClass;
