@@ -36,15 +36,15 @@ namespace BH.oM.Adapters.RDF
     {
         [Description("CSharp PropertyInfos can be seen as the correspondant to Ontology Object Properties." +
             "The propertyInfo must be the one used to construct this relation. Its DeclaringType may differ from the ClassRelation's DomainClass.")]
-        public PropertyInfo PropertyInfo { get; set; }
+        public PropertyInfo PropertyInfo { get; protected set; }
 
         [Description("Type representing the Domain (origin) of the Class Relation. The Domain type will always correspond to an Ontology Class for both Object Properties and Data Properties relations.")]
-        public Type DomainClass { get; set; }
+        public Type DomainClass { get; protected set; }
 
         [Description("Type representing the Range (destination) of the Class Relation. " +
             "The Range type will correspond to an Ontology Class if the Relation is an Object Property," +
             "and to a non-Ontology Class (Data Type) if the Relation is an Data Property.")]
-        public Type RangeType { get; set; }
+        public Type RangeType { get; protected set; }
 
         [Description("The Equals method must consider equal two Relations whose Domain class can be assigned to the other's (other than having the same RangeType and Property Name). " +
             "This is because the Relation should be always considered as originating from the basemost type of the Domain class." +
