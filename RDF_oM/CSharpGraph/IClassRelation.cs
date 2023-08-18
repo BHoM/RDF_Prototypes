@@ -21,15 +21,20 @@
  */
 
 using BH.oM.Base;
+using System;
 using System.ComponentModel;
 using System.Reflection;
 
 namespace BH.oM.Adapters.RDF
 {
     [Description("Base abstract class for other classes representing either Object Properties or Data Properties in a CSharpGraph.")]
-    public interface IIClassRelation // We do not want to implement the IObject interface on this type: no need to expose this to the UI, other than as an output from an `Explode`d CSharpGraph.
+    public interface IClassRelation // We do not want to implement the IObject interface on this type: no need to expose this to the UI, other than as an output from an `Explode`d CSharpGraph.
     {
         // CSharp PropertyInfos can be seen as the correspondant to Ontology Object Properties.
         PropertyInfo PropertyInfo { get; set; }
+
+        Type DomainClass { get; set; }
+
+        Type RangeType { get; set; }
     }
 }

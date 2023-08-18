@@ -27,10 +27,7 @@ namespace BH.oM.Adapters.RDF
 {
     [Description("Identifies a relation between two Types in a CSharp graph that is akin to an Object Property relation in an Ontology format." +
         "If the Range class is set to a Type that is another class in the Ontology, the ObjectProperty relation can be seen as a 'HasProperty' relation.")]
-    public interface IObjectProperty : IIClassRelation // aka "HasProperty" when the range is another class in the Ontology.
+    public interface IObjectProperty : IClassRelation // aka "HasProperty" when the range is another class in the Ontology.
     {
-        Type DomainClass { get; set; }
-
-        Type RangeClass { get; set; }
     }
 }

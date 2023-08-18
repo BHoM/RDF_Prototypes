@@ -41,7 +41,7 @@ namespace BH.oM.Adapters.RDF
 
             return Individual.Equals(o.Individual) &&
                 ((RangeIndividual != null && RangeIndividual.Equals(o.RangeIndividual)) || (RangeIndividual == null && o.RangeIndividual == null)) &&
-                HasProperty.DomainClass.Equals(o.HasProperty.DomainClass) && HasProperty.RangeClass.Equals(o.HasProperty.RangeClass);
+                HasProperty.DomainClass.Equals(o.HasProperty.DomainClass) && HasProperty.RangeType.Equals(o.HasProperty.RangeType);
         }
 
         public override int GetHashCode()
@@ -49,7 +49,7 @@ namespace BH.oM.Adapters.RDF
             int A = Individual.GetHashCode();
             int? B = RangeIndividual?.GetHashCode();
             int C = HasProperty.DomainClass.AssemblyQualifiedName.GetHashCode();
-            int D = HasProperty.RangeClass.AssemblyQualifiedName.GetHashCode();
+            int D = HasProperty.RangeType.AssemblyQualifiedName.GetHashCode();
             int hashcode = A + B ?? 0 + C + D;
 
             return hashcode;
