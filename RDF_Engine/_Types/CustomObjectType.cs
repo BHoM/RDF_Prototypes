@@ -54,21 +54,13 @@ namespace BH.Engine.Adapters.RDF.Types
 
         public override Assembly Assembly { get; }
 
-        public override string FullName { 
-            get; 
-        }
+        public override string FullName { get; }
 
         public override string Namespace { get; }
 
         public override string AssemblyQualifiedName { get; }
 
-        public override Type BaseType { get; }
-
-        public override Type UnderlyingSystemType { get; }
-
-        public override string Name { 
-            get; 
-        }
+        public override string Name { get; }
 
         public new TBoxSettings TBoxSettings { get; }
 
@@ -91,7 +83,7 @@ namespace BH.Engine.Adapters.RDF.Types
                 throw new ArgumentException($"Could not extract the type name for this CustomObject; no value defined for `{typeNameObj}`.");
 
             Type thisClassType = this.GetType();
-            
+
             Name = typeNameObj.ToString();
             RDFTypeName = Name;
 
@@ -101,8 +93,6 @@ namespace BH.Engine.Adapters.RDF.Types
             FullName = Name; // do not prepend this class' namespace or name. Not useful.
             Namespace = thisClassType.Namespace;
             AssemblyQualifiedName = Name;
-            BaseType = typeof(CustomObject);
-            UnderlyingSystemType = typeof(CustomObject);
 
             if (tBoxSettings == null)
                 throw new ArgumentException($"{nameof(TBoxSettings)} was null upon creation of CustomObjectType `{Name}`.");

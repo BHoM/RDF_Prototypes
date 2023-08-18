@@ -21,6 +21,7 @@
  */
 
 using BH.oM.Adapters.RDF;
+using BH.oM.Base;
 using System;
 using System.Collections.Generic;
 using System.Globalization;
@@ -36,5 +37,11 @@ namespace BH.Engine.Adapters.RDF.Types
         public string RDFTypeName { get; protected set; }
 
         public TBoxSettings TBoxSettings { get; protected set; }
+
+        public override Type BaseType => typeof(CustomObject);
+
+        public override Type DeclaringType => typeof(CustomObject);
+
+        public override Type UnderlyingSystemType => typeof(CustomObject);
     }
 }
