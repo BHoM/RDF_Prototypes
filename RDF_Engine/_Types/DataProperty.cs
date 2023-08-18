@@ -42,6 +42,13 @@ namespace BH.oM.Adapters.RDF
 
             RangeType = rangeType;
             DomainClass = domainClass;
+
+            // TODO: we currently rely on the order of property creation in order to ensure the Pi is correct (DomainClass pointing to the basemost type).
+            // In theory, we should be able to do the following without any issue, but it would require a large refactor:
+            //   var baseMostProp = this.DomainClass.BaseTypes().SelectMany(t => t.GetProperties()).FirstOrDefault(p => p.Name == pi.Name);
+            //   PropertyInfo = baseMostProp;
+            // More precisely, we should be able to construct any class relation with just the Domain Type, the Range Type, and a property name (not a piInfo).
+
             PropertyInfo = pi;
         }
     }
