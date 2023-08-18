@@ -47,7 +47,7 @@ namespace BH.Engine.Adapters.TTL
                 {
                     string TTLObjectProperty = "";
 
-                    if (rel.RangeClass == null || rel.PropertyInfo == null)
+                    if (rel.RangeType == null || rel.PropertyInfo == null)
                         continue;
 
                     if (localRepositorySettings.TryComputeURLFromFilePaths)
@@ -57,7 +57,7 @@ namespace BH.Engine.Adapters.TTL
                     }
                     TTLObjectProperty += $"\n:{rel.PropertyInfo.UniqueNodeId()} rdf:type owl:ObjectProperty ;";
                     TTLObjectProperty += $"\nrdfs:domain :{rel.DomainClass.UniqueNodeId()} ;";
-                    TTLObjectProperty += $"\nrdfs:range :{rel.RangeClass.UniqueNodeId()} ;";
+                    TTLObjectProperty += $"\nrdfs:range :{rel.RangeType.UniqueNodeId()} ;";
                     TTLObjectProperty += "\n" + $@"rdfs:label ""{rel.PropertyInfo.DescriptiveName()}""@en .";
 
                     TTLObjectProperties.Add(TTLObjectProperty);

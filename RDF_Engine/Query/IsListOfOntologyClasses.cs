@@ -45,12 +45,12 @@ namespace BH.Engine.Adapters.RDF
             return typeof(IList).IsAssignableFrom(t);
         }
 
-        public static bool? IsListOfOntologyClasses(this Type sourceType, object sourceObj, TBoxSettings tBoxSettings)
+        public static bool IsListOfOntologyClasses(this Type sourceType, TBoxSettings tBoxSettings, object sourceObj = null)
         {
             tBoxSettings = tBoxSettings ?? new TBoxSettings();
 
             if (sourceType == null)
-                return null;
+                Log.RecordError($"Argument {nameof(sourceType)} cannot be null", typeof(ArgumentNullException));
 
             // Make sure the type is a List.
             if (!sourceType.IsList())
@@ -85,7 +85,7 @@ namespace BH.Engine.Adapters.RDF
         {
             Type rangeType = iop.RangeIndividual?.GetType();
 
-            return IsListOfOntologyClasses(rangeType, iop.RangeIndividual, tBoxSettings);
+            return IsListOfOntologyClasses(rangeType, tBoxSettings, iop.RangeIndividual);
         }
 
         public static bool IsListOfDatatypes(this Type t, TBoxSettings tBoxSettings)

@@ -21,15 +21,35 @@
  */
 
 using BH.oM.Base;
+using BH.oM.Adapters.RDF;
+using Newtonsoft.Json;
+using System;
+using System.Collections;
+using System.Collections.Generic;
 using System.ComponentModel;
+using System.Linq;
 using System.Reflection;
+using System.Text;
+using System.Threading.Tasks;
+using AngleSharp.Dom;
 
-namespace BH.oM.Adapters.RDF
+namespace BH.Engine.Adapters.RDF
 {
-    [Description("Base abstract class for other classes representing either Object Properties or Data Properties in a CSharpGraph.")]
-    public abstract class IClassRelation : IIClassRelation // We do not want to implement the IObject interface on this type: no need to expose this to the UI, other than as an output from an `Explode`d CSharpGraph.
+    public static partial class Query
     {
-        // CSharp PropertyInfos can be seen as the correspondant to Ontology Object Properties.
-        public PropertyInfo PropertyInfo { get; set; }
+        public static int GetHashCode(this IClassRelation classRelation, Type RangeType)
+        {
+            unchecked
+            {
+                int hash = RangeType.GetHashCode() + classRelation.PropertyInfo.Name.GetHashCode();
+
+                var parentProp = classRelation.DomainClass.BaseTypes().SelectMany(t => t.GetProperties()).FirstOrDefault(p => p.Name == classRelation.PropertyInfo.Name);
+
+                if (parentProp != null)
+                    return hash + parentProp.DeclaringType.GetHashCode();
+                else
+                    return hash + classRelation.DomainClass.GetHashCode();
+            }
+        }
     }
 }

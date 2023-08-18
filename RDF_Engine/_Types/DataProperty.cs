@@ -20,8 +20,10 @@
  * along with this code. If not, see <https://www.gnu.org/licenses/lgpl-3.0.html>.      
  */
 
+using AngleSharp.Dom;
 using BH.Engine.Adapters.RDF;
 using BH.Engine.Base;
+using BH.oM.Base;
 using System;
 using System.ComponentModel;
 using System.Linq;
@@ -30,41 +32,17 @@ using System.Reflection;
 namespace BH.oM.Adapters.RDF
 {
     [Description("Identifies a relation between two Types in a CSharp graph that is akin to a Data Property relation in an Ontology format." +
-    "The RangeType should be pointing to a Type that does NOT correspond to a class in the Ontology; otherwise, this relation should be an ObjectProperty relation.")]
-    public class DataProperty : IClassRelation, IDataProperty
+        "The RangeType should be pointing to a Type that does NOT correspond to a class in the Ontology; otherwise, this relation should be an ObjectProperty relation.")]
+    public class DataProperty : ClassRelation, IDataProperty, IImmutable
     {
-        public Type DomainClass { get; set; }
-
-        public Type RangeType { get; set; } // In a DataProperty, the range should NOT correspond to an Ontology Class.
-
-        public override bool Equals(object obj)
+        public DataProperty(Type domainClass, Type rangeType, PropertyInfo pi, TBoxSettings tBoxSettings)
         {
-            DataProperty clRel = obj as DataProperty;
-            if (clRel == null)
-                return false;
+            if (rangeType.IsOntologyClass(tBoxSettings) || rangeType.IsListOfOntologyClasses(tBoxSettings))
+                Log.RecordError("Cannot create a DataProperty with a RangeType that is a type corresponding to an Ontology Class or a List of Ontology Classes.", typeof(ArgumentException));
 
-            if (clRel.RangeType != this.RangeType)
-                return false;
-
-            if (DomainClass.IsAssignableFromIncludeGenerics(clRel.DomainClass) || clRel.DomainClass.IsAssignableFromIncludeGenerics(DomainClass))
-                return true;
-
-            return false;
-        }
-
-        public override int GetHashCode()
-        {
-            unchecked
-            {
-                int hash = RangeType.GetHashCode() + this.PropertyInfo.Name.GetHashCode();
-
-                var parentProp = DomainClass.BaseTypes().SelectMany(t => t.GetProperties()).FirstOrDefault(p => p.Name == this.PropertyInfo.Name);
-
-                if (parentProp != null)
-                    return hash + parentProp.DeclaringType.GetHashCode();
-                else
-                    return hash + DomainClass.GetHashCode();
-            }
+            RangeType = rangeType;
+            DomainClass = domainClass;
+            PropertyInfo = pi;
         }
     }
 }

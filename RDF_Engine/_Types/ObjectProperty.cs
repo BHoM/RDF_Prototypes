@@ -20,17 +20,29 @@
  * along with this code. If not, see <https://www.gnu.org/licenses/lgpl-3.0.html>.      
  */
 
+using BH.Engine.Adapters.RDF;
+using BH.Engine.Adapters.RDF.Types;
+using BH.oM.Base;
 using System;
 using System.ComponentModel;
+using System.Reflection;
 
 namespace BH.oM.Adapters.RDF
 {
     [Description("Identifies a relation between two Types in a CSharp graph that is akin to an Object Property relation in an Ontology format." +
         "If the Range class is set to a Type that is another class in the Ontology, the ObjectProperty relation can be seen as a 'HasProperty' relation.")]
-    public class ObjectProperty : IClassRelation, IObjectProperty // aka "HasProperty" when the range is another class in the Ontology.
+    public class ObjectProperty : ClassRelation, IObjectProperty, IImmutable // aka "HasProperty" when the range is another class in the Ontology.
     {
-        public Type DomainClass { get; set; }
+        public ObjectProperty(Type domainClass, Type rangeClass, PropertyInfo propertyInfo, TBoxSettings tBoxSettings)
+        {
+            if (!(propertyInfo is CustomPropertyInfo) &&
+                !rangeClass.IsOntologyClass(tBoxSettings) &&
+                !rangeClass.IsListOfOntologyClasses(tBoxSettings))
+                Log.RecordError("Cannot create an ObjectProperty with a RangeType that is not a type corresponding to an Ontology Class or to a List of Ontology classes.", typeof(ArgumentException));
 
-        public Type RangeClass { get; set; }
+            DomainClass = domainClass;
+            RangeType = rangeClass;
+            PropertyInfo = propertyInfo;
+        }
     }
 }
