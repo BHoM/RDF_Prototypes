@@ -29,8 +29,8 @@ using System.Reflection;
 
 namespace BH.oM.Adapters.RDF
 {
-    [Description("Identifies a relation between two Types in a CSharp graph that is akin to an Object Property relation in an Ontology format." +
-        "If the Range class is set to a Type that is another class in the Ontology, the ObjectProperty relation can be seen as a 'HasProperty' relation.")]
+    [Description("Identifies a relation between two Types in a CSharp graph that is akin to an Object Property relation in an Ontology format. \n" +
+        "The RangeType must be pointing to a Type that corresponds to a Class in the Ontology.")]
     public class ObjectProperty : ClassRelation, IObjectProperty, IImmutable // aka "HasProperty" when the range is another class in the Ontology.
     {
         public ObjectProperty(Type domainClass, Type rangeClass, PropertyInfo propertyInfo, TBoxSettings tBoxSettings)
