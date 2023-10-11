@@ -27,6 +27,7 @@ namespace BH.UI.Engine.GraphDB
             string jsonFilePath = Path.Combine(Path.GetTempPath(), potentialJsonFile); //C:\Users\User\AppData\Local\Temp + Filename
 
             SecureStorage secureStorage = new SecureStorage();
+
             // -------------------------------- UNCOMMENT AFTER DEBUGGING -----------------------------------
             //if (File.Exists(jsonFilePath))
             //    return secureStorage.GetCredentials(jsonFilePath, username);
@@ -38,18 +39,23 @@ namespace BH.UI.Engine.GraphDB
             IWebDriver driver = null;
 
 
-            new DriverManager().SetUpDriver(new ChromeConfig());
             try
             {
+                new DriverManager().SetUpDriver(new ChromeConfig());
                 driver = new ChromeDriver(options);
+
             }
-            catch (InvalidOperationException)
+            catch (Exception e )
             {
+                if (e is InvalidOperationException || e is UnauthorizedAccessException)
+                {                
                 // Update the chromedriver, then retry.
                 new DriverManager().SetUpDriver(new ChromeConfig(), VersionResolveStrategy.MatchingBrowser);
                 driver = new ChromeDriver(options);
                 driver.Manage().Window.Size = new System.Drawing.Size(500, 450);
+                }
             }
+
 
             if (driver == null)
                 return null;

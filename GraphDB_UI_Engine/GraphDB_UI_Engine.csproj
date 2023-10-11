@@ -1,20 +1,28 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
-  <PropertyGroup>
-    <TargetFramework>netstandard2.0</TargetFramework>
-  </PropertyGroup>
+	<PropertyGroup>
+		<TargetFramework>netstandard2.0</TargetFramework>
+		<Configurations>Debug;Release;Test</Configurations>
+		<CopyLocalLockFileAssemblies>true</CopyLocalLockFileAssemblies>
+	</PropertyGroup>
 
-  <ItemGroup>
-    <PackageReference Include="PCLCrypto" Version="2.0.147" />
-    <PackageReference Include="Selenium.WebDriver" Version="4.10.0" />
-	<PackageReference Include="Microsoft.CSharp" Version="4.7.0" />
-	<PackageReference Include="System.Management" Version="8.0.0-preview.7.23375.6" />
-	<PackageReference Include="System.Security.Cryptography.Algorithms" Version="4.3.0" />
-	<PackageReference Include="WebDriverManager" Version="2.17.1" />
-  </ItemGroup>
+	<ItemGroup>
+	  <Compile Remove="LoginDataRetriever - Selenium.cs" />
+	</ItemGroup>
 
-  <Target Name="PostBuild" AfterTargets="PostBuildEvent">
-    <Exec Command="xcopy &quot;$(TargetDir)$(TargetFileName)&quot; &quot;$(SolutionDir)InstallerDLLs\&quot; /Y&#xD;&#xA;&#xD;&#xA;if not &quot;$(ConfigurationName)&quot; == &quot;Test&quot; (xcopy &quot;$(TargetDir)$(TargetFileName)&quot; &quot;C:\ProgramData\BHoM\Assemblies&quot; /Y)" />
-  </Target>
+	<ItemGroup>
+		<PackageReference Include="System.Windows.Forms" />
+		<PackageReference Include="Microsoft.Web.WebView2" Version="1.0.2045.28" />
+		<PackageReference Include="PCLCrypto" Version="2.0.147" />
+		<PackageReference Include="Selenium.WebDriver" Version="4.10.0" />
+		<PackageReference Include="Microsoft.CSharp" Version="4.7.0" />
+		<PackageReference Include="System.Management" Version="8.0.0-preview.7.23375.6" />
+		<PackageReference Include="System.Security.Cryptography.Algorithms" Version="4.3.0" />
+		<PackageReference Include="WebDriverManager" Version="2.17.1" />
+	</ItemGroup>
+
+	<Target Name="PostBuild" AfterTargets="PostBuildEvent">
+		<Exec Command="xcopy &quot;$(TargetDir)$(TargetFileName)&quot; &quot;$(SolutionDir)InstallerDLLs\&quot; /Y&#xD;&#xA;xcopy &quot;$(TargetDir)Microsoft.CSharp.dll&quot; &quot;$(SolutionDir)InstallerDLLs\&quot; /Y&#xD;&#xA;xcopy &quot;$(TargetDir)WebDriver.dll&quot; &quot;$(SolutionDir)InstallerDLLs\&quot; /Y&#xD;&#xA;xcopy &quot;$(TargetDir)PCLCrypto.dll&quot; &quot;$(SolutionDir)InstallerDLLs\&quot; /Y&#xD;&#xA;xcopy &quot;$(TargetDir)System.Text.JSON.dll&quot; &quot;$(SolutionDir)InstallerDLLs\&quot; /Y&#xD;&#xA;xcopy &quot;$(TargetDir)System.Text.Encodings.Web.dll&quot; &quot;$(SolutionDir)InstallerDLLs\&quot; /Y&#xD;&#xA;&#xD;&#xA;&#xD;&#xA;if not &quot;$(ConfigurationName)&quot; == &quot;Test&quot; (xcopy &quot;$(TargetDir)$(TargetFileName)&quot; &quot;C:\ProgramData\BHoM\Assemblies&quot; /Y)&#xD;&#xA;if not &quot;$(ConfigurationName)&quot; == &quot;Test&quot; (xcopy &quot;$(TargetDir)Microsoft.CSharp.dll&quot; &quot;C:\ProgramData\BHoM\Assemblies&quot; /Y)&#xD;&#xA;if not &quot;$(ConfigurationName)&quot; == &quot;Test&quot; (xcopy &quot;$(TargetDir)PCLCrypto.dll&quot; &quot;C:\ProgramData\BHoM\Assemblies&quot; /Y)&#xD;&#xA;if not &quot;$(ConfigurationName)&quot; == &quot;Test&quot; (xcopy &quot;$(TargetDir)WebDriver.dll&quot; &quot;C:\ProgramData\BHoM\Assemblies&quot; /Y)&#xD;&#xA;if not &quot;$(ConfigurationName)&quot; == &quot;Test&quot; (xcopy &quot;$(TargetDir)System.Text.JSON.dll&quot; &quot;C:\ProgramData\BHoM\Assemblies&quot; /Y)&#xD;&#xA;if not &quot;$(ConfigurationName)&quot; == &quot;Test&quot; (xcopy &quot;$(TargetDir)System.Text.Encodings.Web.dll&quot; &quot;C:\ProgramData\BHoM\Assemblies&quot; /Y)" />
+	</Target>
 
 </Project>

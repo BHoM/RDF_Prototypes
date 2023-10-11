@@ -28,6 +28,8 @@ using BH.oM.Adapters.RDF;
 using System.Diagnostics;
 using BH.UI.Engine.GraphDB;
 //using BH.Engine.Adapters.GraphDBUI;
+using System.Windows.Forms;
+using static System.Windows.Forms.DataFormats;
 
 namespace BH.Adapter.GraphDB
 {
@@ -65,11 +67,10 @@ namespace BH.Adapter.GraphDB
             if (graphDBexePath.IsNullOrEmpty())
                 graphDBexePath = Engine.Adapters.GraphDB.Compute.FindExecutable("GraphDB");
 
-            
 
-            // Login
-            LoginDataRetriever retriever = new LoginDataRetriever();
-            string password = retriever.PopUpBrowser(serverAddress, username); 
+
+            // Open Login Windows Form
+
 
 
             // The Adapter constructor can be used to configure the Adapter behaviour.
