@@ -13,9 +13,8 @@ namespace GraphDB_WindowsForms
         public LoginForm()
         {
 
-
             // Set up the form properties
-            this.Text = "DesFab database Login";
+            this.Text = "GraphDB Login";
             this.Width = 400;
             this.Height = 200;
             // Form initialization and controls setup as before...

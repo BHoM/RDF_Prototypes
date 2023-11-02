@@ -70,7 +70,7 @@ namespace BH.Adapter.GraphDB
 
 
             // Open Login Windows Form
-
+            Process.Start("C:\\Users\\Aaron\\Documents\\GitHub\\RDF_Prototypes\\GraphDB_WindowsFroms\\bin\\Debug\\net6.0-windows\\GraphDB_WindowsForms.exe");
 
 
             // The Adapter constructor can be used to configure the Adapter behaviour.
