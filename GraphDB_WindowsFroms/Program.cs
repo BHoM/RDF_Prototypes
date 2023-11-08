@@ -36,7 +36,7 @@ namespace GraphDB_WindowsForms
 
                 SecureStorage secureStorage = new SecureStorage();
                 string tempPath = Path.GetTempPath();
-                string jsonFile = $"{MakeValidFileName(serverAddress)}.json";
+                string jsonFile = $"{MakeValidFileName(serverAddress, username)}.json";
                 string filePath = Path.Combine(tempPath, jsonFile);
 
                 secureStorage.SaveCredentials(username, password, filePath);
@@ -46,12 +46,12 @@ namespace GraphDB_WindowsForms
 
 
 
-        public static string MakeValidFileName(string name)
+        public static string MakeValidFileName(string name, string username)
         {
             string invalidChars = System.Text.RegularExpressions.Regex.Escape(new string(System.IO.Path.GetInvalidFileNameChars()));
             string invalidRegStr = string.Format(@"([{0}]*\.+$)|([{0}]+)", invalidChars);
 
-            return System.Text.RegularExpressions.Regex.Replace(name, invalidRegStr, "_");
+            return System.Text.RegularExpressions.Regex.Replace(name + " " + username, invalidRegStr, "_");
         }
 
     }

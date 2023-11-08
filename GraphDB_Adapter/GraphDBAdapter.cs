@@ -29,6 +29,8 @@ using System.Diagnostics;
 //using BH.Engine.Adapters.GraphDBUI;
 using System.Windows.Forms;
 using static System.Windows.Forms.DataFormats;
+using BH.UI.Engine.GraphDB;
+using System.IO;
 
 namespace BH.Adapter.GraphDB
 {
@@ -63,13 +65,17 @@ namespace BH.Adapter.GraphDB
             GraphSettings graphSettings = null,
             bool activate = false)
         {
+            if (!activate)
+                return;
+
             if (graphDBexePath.IsNullOrEmpty())
                 graphDBexePath = Engine.Adapters.GraphDB.Compute.FindExecutable("GraphDB");
 
 
             // Open Login Windows Form
             bool isRunningLogin = Process.GetProcesses().Any(p => p.ProcessName.Contains("GraphDB_WindowsForms"));
-            if (!isRunningLogin)  
+            bool jsonWithUsername = File.Exists(LoginDataRetriever.ConstructJSONPath(serverAddress, username));
+            if (!isRunningLogin && !jsonWithUsername)  
             {
                 string executablePath = "C:\\Users\\Aaron\\Documents\\GitHub\\RDF_Prototypes\\GraphDB_WindowsFroms\\bin\\Debug\\net6.0-windows\\GraphDB_WindowsForms.exe"; // Update this to your actual file path after building
                 Process.Start(executablePath);

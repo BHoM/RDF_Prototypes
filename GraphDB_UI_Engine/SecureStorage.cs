@@ -28,18 +28,9 @@ public class SecureStorage
             return null;
 
         var json = File.ReadAllText(filePath);
-        var credentialsList = JsonConvert.DeserializeObject<List<Credentials>>(json);
-
-        foreach (var credentials in credentialsList)
-        {
-            if (credentials.Username == username)
-            {
-                credentials.Password = Decrypt(credentials.Password);
-                return credentials.Password;
-            }
-        }
-
-        return null; 
+        var credentials = JsonConvert.DeserializeObject<Credentials>(json);
+        credentials.Password = Decrypt(credentials.Password);
+        return credentials.Password;
     }
 
     private static string Encrypt(string data)
