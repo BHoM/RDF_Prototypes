@@ -26,9 +26,6 @@ using System.ComponentModel;
 using System.Linq;
 using BH.oM.Adapters.RDF;
 using System.Diagnostics;
-//using BH.Engine.Adapters.GraphDBUI;
-using System.Windows.Forms;
-using static System.Windows.Forms.DataFormats;
 using BH.UI.Engine.GraphDB;
 using System.IO;
 
@@ -59,7 +56,7 @@ namespace BH.Adapter.GraphDB
         public GraphDBAdapter(string graphDBexePath = null,
             string repositoryName = "BHoMGraphDBRepo",
             string serverAddress = "http://localhost:7200/",
-            string username = "Admin",
+            string username = "",
             string graphName = "defaultGraph",
             bool clearGraph = false,
             GraphSettings graphSettings = null,

@@ -42,7 +42,7 @@ namespace BH.Engine.Adapters.GraphDB
         [Input("serverAddress", "Localhost address where GraphDB is exposed. This can be changed from GraphDB settings file.")]
         [Input("repositoryName", "GraphDB repository name where the graph data is stored.")]
         [Input("run", "Activate the push.")]
-        public static async Task PostToRepo(string TTLfilePath, string username = "Admin" ,  string serverAddress = "http://localhost:7200/", string repositoryName = "BHoMVisualization", string graphName = "defaultGraph", bool clearGraph = false, bool run = false)
+        public static async Task PostToRepo(string TTLfilePath, string username = "" ,  string serverAddress = "http://localhost:7200/", string repositoryName = "BHoMVisualization", string graphName = "defaultGraph", bool clearGraph = false, bool run = false)
         {
             if (!run)
             {
