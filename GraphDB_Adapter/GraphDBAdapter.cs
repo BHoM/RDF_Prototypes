@@ -26,7 +26,6 @@ using System.ComponentModel;
 using System.Linq;
 using BH.oM.Adapters.RDF;
 using System.Diagnostics;
-using BH.UI.Engine.GraphDB;
 //using BH.Engine.Adapters.GraphDBUI;
 using System.Windows.Forms;
 using static System.Windows.Forms.DataFormats;
@@ -68,9 +67,13 @@ namespace BH.Adapter.GraphDB
                 graphDBexePath = Engine.Adapters.GraphDB.Compute.FindExecutable("GraphDB");
 
 
-
             // Open Login Windows Form
-            Process.Start("C:\\Users\\Aaron\\Documents\\GitHub\\RDF_Prototypes\\GraphDB_WindowsFroms\\bin\\Debug\\net6.0-windows\\GraphDB_WindowsForms.exe");
+            bool isRunningLogin = Process.GetProcesses().Any(p => p.ProcessName.Contains("GraphDB_WindowsForms"));
+            if (!isRunningLogin)  
+            {
+                string executablePath = "C:\\Users\\Aaron\\Documents\\GitHub\\RDF_Prototypes\\GraphDB_WindowsFroms\\bin\\Debug\\net6.0-windows\\GraphDB_WindowsForms.exe"; // Update this to your actual file path after building
+                Process.Start(executablePath);
+            }
 
 
             // The Adapter constructor can be used to configure the Adapter behaviour.

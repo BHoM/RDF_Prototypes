@@ -22,17 +22,16 @@
 
 using BH.Engine.Adapters.RDF;
 using BH.oM.Base.Attributes;
+using BH.UI.Engine.GraphDB;
+using Microsoft.CodeAnalysis.CSharp.Syntax;
 using System;
-using System.Collections.Generic;
 using System.ComponentModel;
+using System.Diagnostics;
 using System.IO;
-using System.Linq;
 using System.Net.Http;
 using System.Net.Http.Headers;
 using System.Text;
 using System.Threading.Tasks;
-using VDS.RDF.Shacl.Validation;
-using BH.UI.Engine.GraphDB;
 
 namespace BH.Engine.Adapters.GraphDB
 {
@@ -83,8 +82,15 @@ namespace BH.Engine.Adapters.GraphDB
 
                 // retrive Login data
                 LoginDataRetriever retriever = new LoginDataRetriever();
+                string password = retriever.RetrievePassword(serverAddress, username);
+                if (string.IsNullOrEmpty(password)) // To-Do put into class for better reuse in pull / graphDBAdapter
+                {
+                    string executablePath = "C:\\Users\\Aaron\\Documents\\GitHub\\RDF_Prototypes\\GraphDB_WindowsFroms\\bin\\Debug\\net6.0-windows\\GraphDB_WindowsForms.exe"; // Update this to your actual file path after building
+                    Process.Start(executablePath);
+                }
 
-                var byteArray = Encoding.ASCII.GetBytes( username + ":" + retriever.PopUpBrowser(serverAddress, username));
+                password = retriever.RetrievePassword(serverAddress, username);
+                var byteArray = Encoding.ASCII.GetBytes( username + ":" + password);
                 httpClient.DefaultRequestHeaders.Authorization = new System.Net.Http.Headers.AuthenticationHeaderValue("Basic", System.Convert.ToBase64String(byteArray));
 
                 var responseLogin = await httpClient.GetAsync(serverAddress + "rest/security");

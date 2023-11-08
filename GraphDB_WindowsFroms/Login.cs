@@ -7,8 +7,10 @@ namespace GraphDB_WindowsForms
     public class LoginForm : Form
     {
         // Public properties to access the user input data from the component
+        public string ServerAddress { get; private set; }
         public string Username { get; private set; }
         public string Password { get; private set; }
+
 
         public LoginForm()
         {
@@ -60,11 +62,26 @@ namespace GraphDB_WindowsForms
                 PasswordChar = '*' // Show asterisks for password input
             };
 
+            Label serverAddressLabel = new Label()
+            {
+                Text = "Server address:",
+                Left = 20,
+                Top = 80,
+                Width = 100
+            };
+
+            TextBox serverAddressTextBox = new TextBox()
+            {
+                Left = 120,
+                Top = 80,
+                Width = 200
+            };
+
             Button button = new Button()
             {
                 Text = "OK",
                 Left = 120,
-                Top = 80,
+                Top = 110,
                 Width = 100
             };
 
@@ -73,6 +90,8 @@ namespace GraphDB_WindowsForms
             this.Controls.Add(usernameTextBox);
             this.Controls.Add(passwordLabel);
             this.Controls.Add(passwordTextBox);
+            this.Controls.Add(serverAddressLabel);
+            this.Controls.Add(serverAddressTextBox);
             this.Controls.Add(button);
 
             // Attach the button's click event handler
@@ -81,6 +100,7 @@ namespace GraphDB_WindowsForms
                 // Access the user's input data here
                 Username = usernameTextBox.Text;
                 Password = passwordTextBox.Text;
+                ServerAddress = serverAddressTextBox.Text;
 
                 // Close the form with a result indicating the "OK" button was clicked
                 this.DialogResult = DialogResult.OK;

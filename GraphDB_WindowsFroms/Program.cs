@@ -1,3 +1,5 @@
+using BH.UI.Engine.GraphDB;
+
 namespace GraphDB_WindowsForms
 {
     internal static class Program
@@ -6,21 +8,50 @@ namespace GraphDB_WindowsForms
         ///  The main entry point for the application.
         /// </summary>
         [STAThread]
-        static void Main()
+        static void Main(string[] args)
         {
+            string serverAddress = null;
+
+            if (args.Length > 0)
+            {
+                serverAddress = args[0];
+            }
+
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
 
             LoginForm loginForm = new LoginForm();
 
+
+            // Runs after loginform successfully closes
             if (loginForm.ShowDialog() == DialogResult.OK)
             {
-                // If you had a main form you wanted to display after successful login:
-                // Application.Run(new MainForm());
+                string username = loginForm.Username;
+                string password = loginForm.Password;
+                if (string.IsNullOrEmpty(serverAddress))
+                {
+                    serverAddress = loginForm.ServerAddress;
+                }
 
-                // If not, and you just wanted to show the login form and then exit if it closes:
-                // Do nothing here, the application will exit after this block.
+
+                SecureStorage secureStorage = new SecureStorage();
+                string tempPath = Path.GetTempPath();
+                string jsonFile = $"{MakeValidFileName(serverAddress)}.json";
+                string filePath = Path.Combine(tempPath, jsonFile);
+
+                secureStorage.SaveCredentials(username, password, filePath);
             }
+        }
+
+
+
+
+        public static string MakeValidFileName(string name)
+        {
+            string invalidChars = System.Text.RegularExpressions.Regex.Escape(new string(System.IO.Path.GetInvalidFileNameChars()));
+            string invalidRegStr = string.Format(@"([{0}]*\.+$)|([{0}]+)", invalidChars);
+
+            return System.Text.RegularExpressions.Regex.Replace(name, invalidRegStr, "_");
         }
 
     }
