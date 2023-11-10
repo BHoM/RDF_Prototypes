@@ -83,11 +83,8 @@ namespace BH.Engine.Adapters.GraphDB
                 // retrive Login data
                 LoginDataRetriever retriever = new LoginDataRetriever();
                 string password = retriever.RetrievePassword(serverAddress, username);
-                if (string.IsNullOrEmpty(password)) // To-Do put into class for better reuse in pull / graphDBAdapter
-                {
-                    string executablePath = "C:\\Users\\Aaron\\Documents\\GitHub\\RDF_Prototypes\\GraphDB_WindowsFroms\\bin\\Debug\\net6.0-windows\\GraphDB_WindowsForms.exe"; // Update this to your actual file path after building
-                    Process.Start(executablePath);
-                }
+                // if (string.IsNullOrEmpty(password)) // To-Do put into class for better reuse in pull / graphDBAdapter to-do password check
+                
 
                 password = retriever.RetrievePassword(serverAddress, username);
                 var byteArray = Encoding.ASCII.GetBytes( username + ":" + password);
