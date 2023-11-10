@@ -1,0 +1,44 @@
+﻿<!--<form id="loginForm" action="/tutorial/action.html">
+    <label for="fullname">Username</label><br />
+    <input type="text" id="username" name="username"><br />
+    <label for="password">Password</label><br />
+    <input type="password" id="password" name="password"><br />
+    <input type="submit" value="Login">
+</form>-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="Style.css">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Form</title>
+</head>
+<body>
+    <div class="container">
+        <h2>Login</h2>
+        <form id="loginForm" action="/tutorial/action.html">
+            <input type="text" name="username" id="username" placeholder="username">
+            <input type="password" name="password" id="password" placeholder="password">
+            <div class="btns">
+                <button type="submit">Login</button>
+            </div>
+
+        </form>
+    </div>
+</body>
+</html>
+
+<script>
+    document.getElementById('loginForm').addEventListener('submit', function (event) {
+        event.preventDefault();
+        var data = {
+            username: document.getElementById('username').value,
+            password: document.getElementById('password').value
+        };
+        window.alert(JSON.stringify(data));
+    });
+</script>
+
+

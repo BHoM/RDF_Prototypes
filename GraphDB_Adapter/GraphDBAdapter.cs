@@ -20,18 +20,14 @@
  * along with this code. If not, see <https://www.gnu.org/licenses/lgpl-3.0.html>.      
  */
 
-using BH.Adapter;
 using BH.Engine.Adapters.RDF;
 using BH.oM.Base.Attributes;
-using System;
-using System.Collections.Generic;
 using System.ComponentModel;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using BH.Engine.Adapters.GraphDB;
 using BH.oM.Adapters.RDF;
 using System.Diagnostics;
+using BH.UI.Engine.GraphDB;
+using System.IO;
 
 namespace BH.Adapter.GraphDB
 {
@@ -40,6 +36,9 @@ namespace BH.Adapter.GraphDB
         private string m_graphDBexePath;
         private readonly string m_repositoryName;
         private string m_serverAddress;
+        private string m_username;
+        private string m_password;
+        private string m_graphName;
         private GraphSettings m_graphSettings;
         private LocalRepositorySettings m_localRepositorySettings;
 
@@ -57,12 +56,28 @@ namespace BH.Adapter.GraphDB
         public GraphDBAdapter(string graphDBexePath = null,
             string repositoryName = "BHoMGraphDBRepo",
             string serverAddress = "http://localhost:7200/",
+            string username = "",
+            string graphName = "defaultGraph",
+            bool clearGraph = false,
             GraphSettings graphSettings = null,
             bool activate = false)
         {
+            if (!activate)
+                return;
+
             if (graphDBexePath.IsNullOrEmpty())
                 graphDBexePath = Engine.Adapters.GraphDB.Compute.FindExecutable("GraphDB");
-                
+
+
+            // Open Login Windows Form
+            bool isRunningLogin = Process.GetProcesses().Any(p => p.ProcessName.Contains("GraphDB_WindowsForms"));
+            bool jsonWithUsername = File.Exists(LoginDataRetriever.ConstructJSONPath(serverAddress, username));
+            if (!isRunningLogin && !jsonWithUsername)  
+            {
+                string executablePath = "C:\\Users\\Aaron\\Documents\\GitHub\\RDF_Prototypes\\GraphDB_WindowsFroms\\bin\\Debug\\net6.0-windows\\GraphDB_WindowsForms.exe"; // Update this to your actual file path after building
+                Process.Start(executablePath);
+            }
+
 
             // The Adapter constructor can be used to configure the Adapter behaviour.
             // For example:
@@ -75,6 +90,8 @@ namespace BH.Adapter.GraphDB
             this.m_graphDBexePath = graphDBexePath;
             this.m_repositoryName = repositoryName;
             this.m_serverAddress = serverAddress;
+            this.m_username = username;
+            this.m_graphName = graphName;
             this.m_graphSettings = graphSettings ?? new GraphSettings();
             this.m_localRepositorySettings = new LocalRepositorySettings();
         }

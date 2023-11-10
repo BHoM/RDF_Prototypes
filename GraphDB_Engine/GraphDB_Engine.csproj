@@ -11,6 +11,7 @@
     <RootNamespace>BH.Engine.Adapters.GraphDB</RootNamespace>
     <FileVersion>6.1.0.0</FileVersion>
 	<CopyLocalLockFileAssemblies>true</CopyLocalLockFileAssemblies>
+	<OutputType>Library</OutputType>
   </PropertyGroup>
 
   <ItemGroup>
@@ -26,6 +27,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\GraphDB_UI_Engine\GraphDB_UI_Engine.csproj" />
     <ProjectReference Include="..\RDF_Engine\RDF_Engine.csproj" />
     <ProjectReference Include="..\RDF_oM\RDF_oM.csproj" />
   </ItemGroup>

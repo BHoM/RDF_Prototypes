@@ -22,16 +22,16 @@
 
 using BH.Engine.Adapters.RDF;
 using BH.oM.Base.Attributes;
+using BH.UI.Engine.GraphDB;
+using Microsoft.CodeAnalysis.CSharp.Syntax;
 using System;
-using System.Collections.Generic;
 using System.ComponentModel;
+using System.Diagnostics;
 using System.IO;
-using System.Linq;
 using System.Net.Http;
 using System.Net.Http.Headers;
 using System.Text;
 using System.Threading.Tasks;
-using VDS.RDF.Shacl.Validation;
 
 namespace BH.Engine.Adapters.GraphDB
 {
@@ -42,13 +42,14 @@ namespace BH.Engine.Adapters.GraphDB
         [Input("serverAddress", "Localhost address where GraphDB is exposed. This can be changed from GraphDB settings file.")]
         [Input("repositoryName", "GraphDB repository name where the graph data is stored.")]
         [Input("run", "Activate the push.")]
-        public static async Task PostToRepo(string TTLfilePath, string serverAddress = "http://localhost:7200/", string repositoryName = "BHoMVisualization", bool run = false)
+        public static async Task PostToRepo(string TTLfilePath, string username = "" ,  string serverAddress = "http://localhost:7200/", string repositoryName = "BHoMVisualization", string graphName = "defaultGraph", bool clearGraph = false, bool run = false)
         {
             if (!run)
             {
                 Log.RecordWarning("To push data to GraphDB press the Button or switch the Toggle to true");
                 return;
             }
+
 
             // Documentation in GraphDB: http://localhost:7200/webapi
 
@@ -57,6 +58,52 @@ namespace BH.Engine.Adapters.GraphDB
             // Set the GraphDB REST API URL for creating a repository
             string apiUrl = $"{serverAddress}rest/repositories";
 
+
+            // Check if Login is required
+
+            httpClient.DefaultRequestHeaders.Accept.Clear();
+            httpClient.DefaultRequestHeaders.Accept.Add(
+                new System.Net.Http.Headers.MediaTypeWithQualityHeaderValue("application/json"));
+
+            var responseSec = await httpClient.GetAsync(serverAddress + "rest/security");
+
+            if (!responseSec.IsSuccessStatusCode)
+            {
+                Log.RecordWarning("Security request failed");
+                return;
+            }
+
+            var content = await responseSec.Content.ReadAsStringAsync();
+
+            // trigger log in depening on security request result
+
+            if (bool.Parse(content)) 
+            {
+
+                // retrive Login data
+                LoginDataRetriever retriever = new LoginDataRetriever();
+                string password = retriever.RetrievePassword(serverAddress, username);
+                // if (string.IsNullOrEmpty(password)) // To-Do put into class for better reuse in pull / graphDBAdapter to-do password check
+                
+
+                password = retriever.RetrievePassword(serverAddress, username);
+                var byteArray = Encoding.ASCII.GetBytes( username + ":" + password);
+                httpClient.DefaultRequestHeaders.Authorization = new System.Net.Http.Headers.AuthenticationHeaderValue("Basic", System.Convert.ToBase64String(byteArray));
+
+                var responseLogin = await httpClient.GetAsync(serverAddress + "rest/security");
+
+                if (!responseLogin.IsSuccessStatusCode)
+                {
+                    Log.RecordWarning("Login request failed");
+                    return;
+                }
+                var contentLogin = await responseLogin.Content.ReadAsStringAsync();
+                if(!bool.Parse(contentLogin))
+                {
+                    Log.RecordWarning("Login credentials invalid");
+                    return;
+                }
+            }
 
             // Read the configuration template
             string configTemplate = File.ReadAllText(@"C:\ProgramData\BHoM\Assemblies\repository-config.ttl");
@@ -73,18 +120,27 @@ namespace BH.Engine.Adapters.GraphDB
             HttpResponseMessage response = await httpClient.PostAsync(apiUrl, formData);
 
             // Check if the response is successful
-            if (response.IsSuccessStatusCode)
-                Console.WriteLine($"Repository '{repositoryName}' has been created.");
-            else
-                Console.WriteLine($"Failed to create repository '{repositoryName}': {response.ReasonPhrase}");
+            if (!response.IsSuccessStatusCode)
+                Log.RecordWarning($"Failed to create repository '{repositoryName}': {response.ReasonPhrase}");
 
+            // Check if user wants to clear the namedGraph before pushing
+            if (clearGraph==true) 
+            {
+                var clearResponse = await httpClient.DeleteAsync(serverAddress + "repositories/" + repositoryName + "/rdf-graphs/" + graphName);
+                if (!clearResponse.IsSuccessStatusCode)
+                {
+                    Log.RecordWarning("namedGraph was not cleared");
+                    return;
+                }
+            }
 
             // Post Data to Repository (also update data)
             String ttlBHoMFile = File.ReadAllText(TTLfilePath);
             StringContent ttlFile = new StringContent(ttlBHoMFile);
             ttlFile.Headers.ContentType = new MediaTypeHeaderValue("text/turtle");
 
-            var endpointRepoPostData = new Uri(serverAddress + "repositories/" + repositoryName + "/statements");
+
+            var endpointRepoPostData = new Uri(serverAddress + "repositories/" + repositoryName + "/rdf-graphs/" + graphName);
             var resultData = httpClient.PutAsync(endpointRepoPostData, ttlFile).Result;
             string jsonData = resultData.Content.ReadAsStringAsync().Result;
         }
