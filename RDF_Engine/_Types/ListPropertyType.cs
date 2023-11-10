@@ -58,10 +58,6 @@ namespace BH.Engine.Adapters.RDF.Types
 
         public override string AssemblyQualifiedName { get; }
 
-        public override Type BaseType { get; }
-
-        public override Type UnderlyingSystemType { get; }
-
         public override string Name { get; }
 
 
@@ -87,8 +83,6 @@ namespace BH.Engine.Adapters.RDF.Types
             Assembly = thisClassType.Assembly;
             Namespace = thisClassType.Namespace;
             AssemblyQualifiedName = thisClassType.AssemblyQualifiedName;
-            BaseType = typeof(CustomObject);
-            UnderlyingSystemType = typeof(CustomObject);
 
             if (tBoxSettings == null)
                 throw new ArgumentException($"{nameof(TBoxSettings)} was null upon creation of CustomObjectType `{Name}`.");
@@ -207,7 +201,7 @@ namespace BH.Engine.Adapters.RDF.Types
 
         protected override TypeAttributes GetAttributeFlagsImpl()
         {
-            throw new NotImplementedException();
+            return TypeAttributes.Public | TypeAttributes.Class;
         }
 
         protected override bool IsArrayImpl()

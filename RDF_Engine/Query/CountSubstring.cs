@@ -20,28 +20,36 @@
  * along with this code. If not, see <https://www.gnu.org/licenses/lgpl-3.0.html>.      
  */
 
-using BH.oM.Adapters.RDF;
 using BH.oM.Base;
+using BH.oM.Adapters.RDF;
 using System;
+using System.Collections;
 using System.Collections.Generic;
-using System.Globalization;
+using System.ComponentModel;
 using System.Linq;
 using System.Reflection;
 using System.Text;
 using System.Threading.Tasks;
+using BH.oM.Base.Attributes;
 
-namespace BH.Engine.Adapters.RDF.Types
+namespace BH.Engine.Adapters.RDF
 {
-    public abstract class ICustomRDFType : Type, IEquatable<Type>
+    public static partial class Query
     {
-        public string RDFTypeName { get; protected set; }
+        [Description("Count the number of occurrencies of a substring in a text.")]
+        [Input("text", "Text where to look for occurrencies of a substring.")]
+        [Input("substring", "Substring to look for in the text.")]
+        [Output("count", "Number of occurrencies of the substring in the text.")]
+        public static int CountSubstring(this string text, string substring)
+        {
+            int count = 0, minIndex = text.IndexOf(substring, 0);
+            while (minIndex != -1)
+            {
+                minIndex = text.IndexOf(substring, minIndex + substring.Length);
+                count++;
+            }
 
-        public TBoxSettings TBoxSettings { get; protected set; }
-
-        public override Type BaseType => typeof(CustomObject);
-
-        public override Type DeclaringType => typeof(CustomObject);
-
-        public override Type UnderlyingSystemType => typeof(CustomObject);
+            return count;
+        }
     }
 }

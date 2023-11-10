@@ -20,6 +20,7 @@
  * along with this code. If not, see <https://www.gnu.org/licenses/lgpl-3.0.html>.      
  */
 
+using BH.oM.Base.Attributes;
 using System;
 using System.Collections;
 using System.Collections.Generic;
@@ -35,7 +36,11 @@ namespace BH.Engine.Adapters.RDF
     {
         public static Dictionary<Type, List<Type>> m_cachedBaseTypes = new Dictionary<Type, List<Type>>();
 
-        [Description("Gets all implemented interfaces and any base type of a given type.")]
+        [Description("Gets all base classes and implemented interfaces of a given type." +
+            "The order is important: the output list returns first all inherited base classes, then all implemented interfaces." +
+            "This method does not recurse for the parent base types. The method performs caching for faster retrievals after the first.")]
+        [Input("type", "Input type.")]
+        [Output("baseTypes", "List of all inherited base classes, followed by all implemented interfaces.")]
         public static List<Type> BaseTypes(this Type type)
         {
             List<Type> baseTypes = new List<Type>();
@@ -48,11 +53,11 @@ namespace BH.Engine.Adapters.RDF
             else
                 baseTypes = new List<Type>();
 
-            baseTypes.AddRange(type.GetInterfaces());
-
             Type baseType = type.BaseType;
             if (baseType != null)
                 baseTypes.Add(baseType);
+
+            baseTypes.AddRange(type.GetInterfaces());
 
             m_cachedBaseTypes[type] = baseTypes;
 

@@ -20,14 +20,34 @@
  * along with this code. If not, see <https://www.gnu.org/licenses/lgpl-3.0.html>.      
  */
 
-using BH.oM.Base;
+using BH.oM.Adapters.RDF;
+using System;
+using System.Collections;
+using System.Collections.Generic;
 using System.ComponentModel;
+using System.Linq;
+using System.Reflection;
+using System.Text;
+using System.Threading.Tasks;
+using BH.Engine.Base;
+using BH.Engine.Reflection;
+using BH.oM.Base;
 
-namespace BH.oM.Adapters.RDF
+namespace BH.Engine.Adapters.RDF
 {
-    [Description("Base interface for classes representing relations between individuals in a CSharpGraph.")]
-    public interface IndividualRelation // We do not want to implement the IObject interface on this type: no need to expose this to the UI, other than as an output from an `Explode`d CSharpGraph.
+    public static partial class Query
     {
-        object Individual { get; set; }
+        public static bool IsListOfDatatypes(this Type t, TBoxSettings tBoxSettings)
+        {
+            if (t.IsList())
+            {
+                Type[] genericArgs = t.GetGenericArguments();
+
+                if (genericArgs.Length == 1 && genericArgs.First().IsDataType(tBoxSettings))
+                    return true;
+            }
+
+            return false;
+        }
     }
 }

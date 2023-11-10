@@ -45,7 +45,7 @@ namespace BH.Engine.Adapters.RDF
             // while the domain of the relation (the PropertyInfo's Declaring Type) is an ontology class.
 
             return pi.PropertyType.IsDataType(tBoxSettings) && pi.DeclaringType.IsOntologyClass(tBoxSettings)
-                && !(pi.PropertyType.IsListOfOntologyClasses(individual, tBoxSettings) ?? true);
+                && !pi.PropertyType.IsListOfOntologyClasses(tBoxSettings, individual);
         }
     }
 }

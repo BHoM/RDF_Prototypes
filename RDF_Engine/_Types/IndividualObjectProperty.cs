@@ -20,28 +20,39 @@
  * along with this code. If not, see <https://www.gnu.org/licenses/lgpl-3.0.html>.      
  */
 
-using BH.oM.Adapters.RDF;
-using BH.oM.Base;
 using System;
-using System.Collections.Generic;
-using System.Globalization;
-using System.Linq;
-using System.Reflection;
-using System.Text;
-using System.Threading.Tasks;
 
-namespace BH.Engine.Adapters.RDF.Types
+namespace BH.oM.Adapters.RDF
 {
-    public abstract class ICustomRDFType : Type, IEquatable<Type>
+    public class IndividualObjectProperty : IIndividualRelation
     {
-        public string RDFTypeName { get; protected set; }
+        // Each individual needs to link to another individual if it has properties or is owned by another object.
+        public object Individual { get; set; }
+        public object RangeIndividual { get; set; }
 
-        public TBoxSettings TBoxSettings { get; protected set; }
+        // Class relation corresponding to these Individuals' relation.
+        public IObjectProperty HasProperty { get; set; }
 
-        public override Type BaseType => typeof(CustomObject);
+        public override bool Equals(object obj)
+        {
+            IndividualObjectProperty o = obj as IndividualObjectProperty;
+            if (o == null)
+                return false;
 
-        public override Type DeclaringType => typeof(CustomObject);
+            return Individual.Equals(o.Individual) &&
+                ((RangeIndividual != null && RangeIndividual.Equals(o.RangeIndividual)) || (RangeIndividual == null && o.RangeIndividual == null)) &&
+                HasProperty.DomainClass.Equals(o.HasProperty.DomainClass) && HasProperty.RangeType.Equals(o.HasProperty.RangeType);
+        }
 
-        public override Type UnderlyingSystemType => typeof(CustomObject);
+        public override int GetHashCode()
+        {
+            int A = Individual.GetHashCode();
+            int? B = RangeIndividual?.GetHashCode();
+            int C = HasProperty.DomainClass.AssemblyQualifiedName.GetHashCode();
+            int D = HasProperty.RangeType.AssemblyQualifiedName.GetHashCode();
+            int hashcode = A + B ?? 0 + C + D;
+
+            return hashcode;
+        }
     }
 }

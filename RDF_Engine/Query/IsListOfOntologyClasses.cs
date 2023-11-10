@@ -37,20 +37,12 @@ namespace BH.Engine.Adapters.RDF
 {
     public static partial class Query
     {
-        public static bool IsList(this Type t)
-        {
-            if (t == null)
-                return false;
-
-            return typeof(IList).IsAssignableFrom(t);
-        }
-
-        public static bool? IsListOfOntologyClasses(this Type sourceType, object sourceObj, TBoxSettings tBoxSettings)
+        public static bool IsListOfOntologyClasses(this Type sourceType, TBoxSettings tBoxSettings, object sourceObj = null)
         {
             tBoxSettings = tBoxSettings ?? new TBoxSettings();
 
             if (sourceType == null)
-                return null;
+                Log.RecordError($"Argument {nameof(sourceType)} cannot be null", typeof(ArgumentNullException));
 
             // Make sure the type is a List.
             if (!sourceType.IsList())
@@ -85,20 +77,15 @@ namespace BH.Engine.Adapters.RDF
         {
             Type rangeType = iop.RangeIndividual?.GetType();
 
-            return IsListOfOntologyClasses(rangeType, iop.RangeIndividual, tBoxSettings);
+            return IsListOfOntologyClasses(rangeType, tBoxSettings, iop.RangeIndividual);
         }
 
-        public static bool IsListOfDatatypes(this Type t, TBoxSettings tBoxSettings)
+        private static bool IsList(this Type t)
         {
-            if (t.IsList())
-            {
-                Type[] genericArgs = t.GetGenericArguments();
+            if (t == null)
+                return false;
 
-                if (genericArgs.Length == 1 && genericArgs.First().IsDataType(tBoxSettings))
-                    return true;
-            }
-
-            return false;
+            return typeof(IList).IsAssignableFrom(t);
         }
     }
 }

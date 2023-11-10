@@ -20,39 +20,14 @@
  * along with this code. If not, see <https://www.gnu.org/licenses/lgpl-3.0.html>.      
  */
 
-using System.Reflection;
+using System;
+using System.ComponentModel;
 
 namespace BH.oM.Adapters.RDF
 {
-    public class IndividualDataProperty : IndividualRelation
+    [Description("Identifies a relation between two Types in a CSharp graph that is akin to an Object Property relation in an Ontology format." +
+        "If the Range class is set to a Type that is another class in the Ontology, the ObjectProperty relation can be seen as a 'HasProperty' relation.")]
+    public interface IObjectProperty : IClassRelation // aka "HasProperty" when the range is another class in the Ontology.
     {
-        // Each individual needs to link to another individual if it has properties or is owned by another object.
-        public object Individual { get; set; }
-        public object Value { get; set; }
-
-        // PropertyInfo that generated this Data property of this individual.
-        public PropertyInfo PropertyInfo { get; set; }
-
-        public override bool Equals(object obj)
-        {
-            IndividualDataProperty o = obj as IndividualDataProperty;
-            if (o == null)
-                return false;
-
-            return Individual.Equals(o.Individual) &&
-                ((Value != null && Value.Equals(o.Value)) || (Value == null && o.Value == null)) &&
-                PropertyInfo.PropertyType == o.PropertyInfo.PropertyType && PropertyInfo.DeclaringType == o.PropertyInfo.DeclaringType &&
-                PropertyInfo.Name.Equals(o.PropertyInfo.Name);
-        }
-
-        public override int GetHashCode()
-        {
-            int A = Individual.GetHashCode();
-            int B = Value?.GetHashCode() ?? 0;
-            int C = PropertyInfo.PropertyType.GetHashCode();
-            int D = PropertyInfo.DeclaringType.GetHashCode();
-            int E = PropertyInfo.Name.GetHashCode();
-            return A + B + C + D + E;
-        }
     }
 }

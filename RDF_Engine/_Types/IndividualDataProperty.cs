@@ -20,39 +20,65 @@
  * along with this code. If not, see <https://www.gnu.org/licenses/lgpl-3.0.html>.      
  */
 
-using System;
+using BH.Engine.Adapters.RDF;
+using System.Linq;
+using System.Reflection;
 
 namespace BH.oM.Adapters.RDF
 {
-    public class IndividualObjectProperty : IndividualRelation
+    public class IndividualDataProperty : IIndividualRelation
     {
         // Each individual needs to link to another individual if it has properties or is owned by another object.
         public object Individual { get; set; }
-        public object RangeIndividual { get; set; }
+        public object Value { get; set; }
 
-        // Class relation corresponding to these Individuals' relation.
-        public ObjectProperty HasProperty { get; set; }
+        // PropertyInfo that generated this Data property of this individual.
+        public PropertyInfo PropertyInfo { get; set; }
 
         public override bool Equals(object obj)
         {
-            IndividualObjectProperty o = obj as IndividualObjectProperty;
+            IndividualDataProperty o = obj as IndividualDataProperty;
             if (o == null)
                 return false;
 
-            return Individual.Equals(o.Individual) &&
-                ((RangeIndividual != null && RangeIndividual.Equals(o.RangeIndividual)) || (RangeIndividual == null && o.RangeIndividual == null)) &&
-                HasProperty.DomainClass.Equals(o.HasProperty.DomainClass) && HasProperty.RangeClass.Equals(o.HasProperty.RangeClass);
+            if (!Individual.Equals(o.Individual))
+                return false;
+
+            if (!((Value != null && Value.Equals(o.Value)) || (Value == null && o.Value == null)))
+                return false;
+
+            if (!PropertyInfo.Name.Equals(o.PropertyInfo.Name))
+                return false;
+
+            if (PropertyInfo.PropertyType == o.PropertyInfo.PropertyType)
+                return true;
+
+            if (PropertyInfo.DeclaringType.IsAssignableFrom(o.PropertyInfo.DeclaringType))
+                return true;
+
+            if (o.PropertyInfo.DeclaringType.IsAssignableFrom(PropertyInfo.DeclaringType))
+                return true;
+
+            return false;
         }
 
         public override int GetHashCode()
         {
-            int A = Individual.GetHashCode();
-            int? B = RangeIndividual?.GetHashCode();
-            int C = HasProperty.DomainClass.AssemblyQualifiedName.GetHashCode();
-            int D = HasProperty.RangeClass.AssemblyQualifiedName.GetHashCode();
-            int hashcode = A + B ?? 0 + C + D;
+            unchecked
+            {
+                int A = Individual.GetHashCode();
+                int B = Value?.GetHashCode() ?? 0;
+                int C = PropertyInfo.PropertyType.GetHashCode();
+                int D = PropertyInfo.Name.GetHashCode();
 
-            return hashcode;
+                var parentProp = PropertyInfo.DeclaringType.BaseTypes().SelectMany(t => t.GetProperties()).FirstOrDefault(p => p.Name == this.PropertyInfo.Name);
+
+                if (parentProp != null)
+                    return A + B + C + D + parentProp.DeclaringType.GetHashCode();
+                else
+                    return A + B + C + D + PropertyInfo.DeclaringType.GetHashCode();
+
+            }
         }
     }
 }

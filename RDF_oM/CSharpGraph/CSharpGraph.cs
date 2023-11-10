@@ -39,16 +39,16 @@ namespace BH.oM.Adapters.RDF
         public HashSet<Type> Classes { get; set; } = new HashSet<Type>();
 
         [Description("Relations between Classes that will correspond to Object Properties when translating to an Ontology format. This is part of the T-Box.")]
-        public HashSet<ObjectProperty> ObjectProperties { get; set; } = new HashSet<ObjectProperty>();
+        public HashSet<IObjectProperty> ObjectProperties { get; set; } = new HashSet<IObjectProperty>();
 
         [Description("Relations between Classes that will correspond to Data Properties when translating to an Ontology format. This is part of the T-Box.")]
-        public HashSet<DataProperty> DataProperties { get; set; } = new HashSet<DataProperty>();
+        public HashSet<IDataProperty> DataProperties { get; set; } = new HashSet<IDataProperty>();
 
         [Description("CSharp objects for which the T-Box relations and classes were defined. This is part of the A-Box.")]
         public HashSet<object> AllIndividuals { get; set; } = new HashSet<object>();
 
         [Description("Relations between the objects instances based on the T-Box relations and classes. This is part of the A-Box.")]
-        public HashSet<IndividualRelation> IndividualRelations { get; set; } = new HashSet<IndividualRelation>();
+        public HashSet<IIndividualRelation> IndividualRelations { get; set; } = new HashSet<IIndividualRelation>();
 
         [Description("Settings used to compose this Graph ontology.")]
         public GraphSettings GraphSettings { get; set; }
