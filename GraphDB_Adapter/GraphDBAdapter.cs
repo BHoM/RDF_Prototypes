@@ -74,7 +74,7 @@ namespace BH.Adapter.GraphDB
             bool jsonWithUsername = File.Exists(LoginDataRetriever.ConstructJSONPath(serverAddress, username));
             if (!isRunningLogin && !jsonWithUsername)  
             {
-                string executablePath = "C:\\Users\\Aaron\\Documents\\GitHub\\RDF_Prototypes\\GraphDB_WindowsFroms\\bin\\Debug\\net6.0-windows\\GraphDB_WindowsForms.exe"; // Update this to your actual file path after building
+                string executablePath = @"C:\ProgramData\BHoM\Assemblies\GraphDB_WindowsForms.exe";
                 Process.Start(executablePath);
             }
 
