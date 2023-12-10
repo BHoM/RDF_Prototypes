@@ -12,4 +12,8 @@
     <ProjectReference Include="..\GraphDB_UI_Engine\GraphDB_UI_Engine.csproj" />
   </ItemGroup>
 
+  <Target Name="PostBuild" AfterTargets="PostBuildEvent">
+    <Exec Command="xcopy &quot;$(TargetDir)$(ProjectName).exe&quot; &quot;C:\ProgramData\BHoM\Assemblies\&quot; /Y /I&#xD;&#xA;" />
+  </Target>
+
 </Project>
