@@ -13,7 +13,7 @@
   </ItemGroup>
 
   <Target Name="PostBuild" AfterTargets="PostBuildEvent">
-    <Exec Command="xcopy &quot;$(TargetDir)$(TargetFileName)&quot; &quot;$(SolutionDir)InstallerDLLs\&quot; /Y&#xD;&#xA;&#xD;&#xA;&#xD;&#xA;if not &quot;$(ConfigurationName)&quot; == &quot;Test&quot; (xcopy &quot;$(TargetDir)$(TargetFileName)&quot; &quot;C:\ProgramData\BHoM\Assemblies&quot; /Y)&#xD;&#xA;if not &quot;$(ConfigurationName)&quot; == &quot;Test&quot; (xcopy &quot;$(TargetDir)$(ProjectName).exe&quot; &quot;C:\ProgramData\BHoM\Assemblies\&quot; /Y /I)&#xD;&#xA;" />
+    <Exec Command="xcopy &quot;$(TargetDir)$(TargetFileName)&quot; &quot;$(SolutionDir)InstallerDLLs\&quot; /Y&#xD;&#xA;xcopy &quot;$(TargetDir)$(ProjectName).exe&quot; &quot;$(SolutionDir)InstallerDLLs\&quot; /Y&#xD;&#xA;&#xD;&#xA;if not &quot;$(ConfigurationName)&quot; == &quot;Test&quot; (xcopy &quot;$(TargetDir)$(TargetFileName)&quot; &quot;C:\ProgramData\BHoM\Assemblies&quot; /Y)&#xD;&#xA;if not &quot;$(ConfigurationName)&quot; == &quot;Test&quot; (xcopy &quot;$(TargetDir)$(ProjectName).exe&quot; &quot;C:\ProgramData\BHoM\Assemblies\&quot; /Y /I)&#xD;&#xA;" />
   </Target>
 
 </Project>
