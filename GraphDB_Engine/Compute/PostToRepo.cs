@@ -55,6 +55,12 @@ namespace BH.Engine.Adapters.GraphDB
 
             var httpClient = new HttpClient();
 
+
+            if (!Uri.TryCreate(serverAddress, UriKind.Absolute, out Uri validServerAddress))
+            {
+                Log.RecordError($"Invalid URI input in {nameof(serverAddress)}");
+            }
+
             // Set the GraphDB REST API URL for creating a repository
             string apiUrl = $"{serverAddress}rest/repositories";
 
