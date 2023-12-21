@@ -28,6 +28,8 @@ using BH.oM.Adapters.RDF;
 using System.Diagnostics;
 using BH.UI.Engine.GraphDB;
 using System.IO;
+using System.Runtime.InteropServices.ComTypes;
+using System.Net.Http.Headers;
 
 namespace BH.Adapter.GraphDB
 {
@@ -41,6 +43,7 @@ namespace BH.Adapter.GraphDB
         private string m_graphName;
         private GraphSettings m_graphSettings;
         private LocalRepositorySettings m_localRepositorySettings;
+        private string m_gdbAuthetificationHeader;
 
         /***************************************************/
         /**** Constructors                              ****/
@@ -61,10 +64,10 @@ namespace BH.Adapter.GraphDB
             bool clearGraph = false,
             GraphSettings graphSettings = null,
             bool activate = false)
+            
         {
             if (!activate)
                 return;
-
             if (graphDBexePath.IsNullOrEmpty())
                 graphDBexePath = Engine.Adapters.GraphDB.Compute.FindExecutable("GraphDB");
 

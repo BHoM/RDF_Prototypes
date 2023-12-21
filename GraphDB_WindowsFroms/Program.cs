@@ -1,4 +1,6 @@
+using System.Text;
 using BH.UI.Engine.GraphDB;
+using Newtonsoft.Json;
 
 namespace GraphDB_WindowsForms
 {
@@ -26,35 +28,43 @@ namespace GraphDB_WindowsForms
             // Runs after loginform successfully closes
             if (loginForm.ShowDialog() == DialogResult.OK)
             {
-                string username = loginForm.Username;
-                string password = loginForm.Password;
+                var credentials = new
+                {
+                    username = loginForm.Username,
+                password = loginForm.Password
+                };
+
                 if (string.IsNullOrEmpty(serverAddress))
                 {
                     serverAddress = loginForm.ServerAddress;
                 }
 
+                // TO-DO: API call here for authentification token -> if not successfull start again -> if successfull, store token in Adapter?
+                var client = new HttpClient();
 
-                SecureStorage secureStorage = new SecureStorage();
-                string tempPath = Path.GetTempPath();
-                string jsonFile = $"{MakeValidFileName(serverAddress, username)}.json";
-                string filePath = Path.Combine(tempPath, jsonFile);
+                // Set the base address for HTTP requests
+                client.BaseAddress = new Uri(serverAddress); //TO-DO throw exception if url is not valid
 
-                secureStorage.SaveCredentials(username, password, filePath);
+                // Serialize the credentials object to JSON
+                var json = JsonConvert.SerializeObject(credentials);
+                var content = new StringContent(json, Encoding.UTF8, "application/json");
+
+                // Send a POST request to the login endpoint
+                var response =  client.PostAsync("rest/login", content);
+                
+                if (!response.Result.IsSuccessStatusCode)
+                {
+                    var statusCode = response.Result.StatusCode; // might not have a statusCode depending if there is an exception like endpoint doesnt exist
+                    // open login again and display status code from request ( e.g 401 invalid credentials)
+                }
+
+                // Retrieve the authentication header from the response
+                if (response.Result.Headers.TryGetValues("authorization", out var authHeaders))
+                {
+                    string authToken = string.Join("Authorization: ", authHeaders);
+                    // Return gdbToken and use like ('Authorization: GDB eyJ1c2VybmFtZSI6ImFkbWlu...')
+                }
             }
         }
-
-
-
-
-        public static string MakeValidFileName(string name, string username)
-        {
-            string invalidChars = System.Text.RegularExpressions.Regex.Escape(new string(System.IO.Path.GetInvalidFileNameChars()));
-            string invalidRegStr = string.Format(@"([{0}]*\.+$)|([{0}]+)", invalidChars);
-
-            return System.Text.RegularExpressions.Regex.Replace(name + " " + username, invalidRegStr, "_");
-        }
-
     }
-
-
 }
