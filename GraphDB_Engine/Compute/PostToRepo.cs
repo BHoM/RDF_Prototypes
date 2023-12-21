@@ -42,12 +42,12 @@ namespace BH.Engine.Adapters.GraphDB
         [Input("serverAddress", "Localhost address where GraphDB is exposed. This can be changed from GraphDB settings file.")]
         [Input("repositoryName", "GraphDB repository name where the graph data is stored.")]
         [Input("run", "Activate the push.")]
-        public static async Task PostToRepo(string TTLfilePath, string username = "" ,  string serverAddress = "http://localhost:7200/", string repositoryName = "BHoMVisualization", string graphName = "defaultGraph", bool clearGraph = false, bool run = false)
+        public static async Task<bool> PostToRepo(string TTLfilePath, string username = "" ,  string serverAddress = "http://localhost:7200/", string repositoryName = "BHoMVisualization", string graphName = "defaultGraph", bool clearGraph = false, bool run = false)
         {
             if (!run)
             {
                 Log.RecordWarning("To push data to GraphDB press the Button or switch the Toggle to true");
-                return;
+                return false;
             }
 
 
@@ -76,7 +76,7 @@ namespace BH.Engine.Adapters.GraphDB
             if (!responseSec.IsSuccessStatusCode)
             {
                 Log.RecordWarning("Security request failed");
-                return;
+                return false;
             }
 
             var content = await responseSec.Content.ReadAsStringAsync();
@@ -101,13 +101,13 @@ namespace BH.Engine.Adapters.GraphDB
                 if (!responseLogin.IsSuccessStatusCode)
                 {
                     Log.RecordWarning("Login request failed");
-                    return;
+                    return false;
                 }
                 var contentLogin = await responseLogin.Content.ReadAsStringAsync();
                 if(!bool.Parse(contentLogin))
                 {
                     Log.RecordWarning("Login credentials invalid");
-                    return;
+                    return false    ;
                 }
             }
 
@@ -136,7 +136,7 @@ namespace BH.Engine.Adapters.GraphDB
                 if (!clearResponse.IsSuccessStatusCode)
                 {
                     Log.RecordWarning("namedGraph was not cleared");
-                    return;
+                    return false;
                 }
             }
 
@@ -147,8 +147,10 @@ namespace BH.Engine.Adapters.GraphDB
 
 
             var endpointRepoPostData = new Uri(serverAddress + "repositories/" + repositoryName + "/rdf-graphs/" + graphName);
-            var resultData = httpClient.PutAsync(endpointRepoPostData, ttlFile).Result;
-            string jsonData = resultData.Content.ReadAsStringAsync().Result;
+            var resultData = await httpClient.PutAsync(endpointRepoPostData, ttlFile);
+            //string jsonData = resultData.Content.ReadAsStringAsync().Result;
+
+            return true;
         }
     }
 }

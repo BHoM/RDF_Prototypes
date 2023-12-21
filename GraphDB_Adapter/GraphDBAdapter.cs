@@ -39,6 +39,7 @@ namespace BH.Adapter.GraphDB
         private string m_username;
         private string m_password;
         private string m_graphName;
+        private int m_pushTimeoutMillisec;
         private GraphSettings m_graphSettings;
         private LocalRepositorySettings m_localRepositorySettings;
 
@@ -59,6 +60,7 @@ namespace BH.Adapter.GraphDB
             string username = "",
             string graphName = "defaultGraph",
             bool clearGraph = false,
+            int pushTimeoutMillisec = 10000,
             GraphSettings graphSettings = null,
             bool activate = false)
         {
@@ -92,6 +94,7 @@ namespace BH.Adapter.GraphDB
             this.m_serverAddress = serverAddress;
             this.m_username = username;
             this.m_graphName = graphName;
+            this.m_pushTimeoutMillisec = pushTimeoutMillisec;
             this.m_graphSettings = graphSettings ?? new GraphSettings();
             this.m_localRepositorySettings = new LocalRepositorySettings();
         }

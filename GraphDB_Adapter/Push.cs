@@ -51,9 +51,18 @@ namespace BH.Adapter.GraphDB
             TTLAdapter ttlAdapter = new TTLAdapter(TTLfilepath, m_graphSettings, m_localRepositorySettings);
             ttlAdapter.Push(objects);
 
+            // Start the actual task we care about (don't await it)
+            Task<bool> task = Compute.PostToRepo(TTLfilepath, m_username, m_serverAddress, m_repositoryName, m_graphName, false, true);
+            // Create the timeout task (don't await it)
+            var timeoutTask = Task.Delay(m_pushTimeoutMillisec);
+            // Run the task and timeout in parallel, return the Task that completes first
+            Task.WhenAny(task, timeoutTask).Wait();
+            if (task.Status != TaskStatus.RanToCompletion)
+            {
+                Log.RecordError($"Encountered timeout for Push, to increase timeout duration, increase in {nameof(GraphDBAdapter)}");
+                return null;
+            }
 
-            // Posts the content of the Turtle file to GraphDB.
-            Compute.PostToRepo(TTLfilepath, m_username, m_serverAddress, m_repositoryName, m_graphName, false, true).Wait();
 
             return objects.ToList();
         }
