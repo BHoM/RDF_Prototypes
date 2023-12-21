@@ -58,6 +58,7 @@ namespace BH.Adapter.GraphDB
             for (int step = 0; step < totalSteps; step++)
             {
                 Task.Delay(pollingIncrement).Wait();
+                task.Wait(pollingIncrement); // try to force wait, because the task's Status doesn't switch to RanToCompletion even if it finished.
 
                 if (task.Status == TaskStatus.RanToCompletion)
                     break;
