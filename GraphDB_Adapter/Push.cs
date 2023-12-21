@@ -53,15 +53,22 @@ namespace BH.Adapter.GraphDB
 
             // Start the actual task we care about (don't await it)
             Task<bool> task = Compute.PostToRepo(TTLfilepath, m_username, m_serverAddress, m_repositoryName, m_graphName, false, true);
-            // Create the timeout task (don't await it)
-            var timeoutTask = Task.Delay(m_pushTimeoutMillisec);
-            // Run the task and timeout in parallel, return the Task that completes first
-            Task.WhenAny(task, timeoutTask).Wait();
-            if (task.Status != TaskStatus.RanToCompletion)
-            {
-                Log.RecordError($"Encountered timeout for Push, to increase timeout duration, increase in {nameof(GraphDBAdapter)}");
-                return null;
-            }
+
+            // AL: Keep these comments for reference.
+            // The below code should work, but for some reason PostToRepo doesn't state its completion.
+            // So we cannot wait for it to complete -- we are forced to return from the Push even though we don't know about its actual completion.
+            // This highlights the need for async Adapter methods in BHoM. 
+
+            //// Create the timeout task (don't await it)
+            //var timeoutTask = Task.Delay(m_pushTimeoutMillisec);
+            //// Run the task and timeout in parallel
+            //Task.WhenAny(task, timeoutTask).Wait();
+
+            //if (task.Status != TaskStatus.RanToCompletion)
+            //{
+            //    Log.RecordError($"Encountered timeout for Push, to increase timeout duration, increase in {nameof(GraphDBAdapter)}");
+            //    return null;
+            //}
 
 
             return objects.ToList();
