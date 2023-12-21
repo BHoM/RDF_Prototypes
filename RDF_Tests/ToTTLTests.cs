@@ -387,11 +387,14 @@ namespace BH.Test.RDF
         [Test]
         public static void List_polycurveObj()
         {
-            PolyCurve polyCurve = new PolyCurve();
-            var lines = new List<Line>();
-            lines.Add(new Line() { Start = new Point() { X = 0, Y = 0, Z = 0 }, End = new Point() { X = 1, Y = 1, Z = 1 } } );
-            lines.Add(new Line() { Start = new Point() { X = 1, Y = 1, Z = 1 }, End = new Point() { X = 2, Y = 2, Z = 2 } } );
-            polyCurve.Curves = lines.OfType<ICurve>().ToList();
+            PolyCurve polyCurve = new PolyCurve()
+            {
+                Curves = new List<ICurve>
+                {
+                    new Line() { Start = new Point() { X = 1, Y = 1, Z = 0 }, End = new Point() { X = 2, Y = 1, Z = 0 } },
+                    new Line() { Start = new Point() { X = 2, Y = 1, Z = 0 }, End = new Point() { X = 3, Y = 1, Z = 0 } }
+                }
+            };
 
             GraphSettings settings = new GraphSettings() { TBoxSettings = new TBoxSettings() { GeometryAsOntologyClass = true }  };
 
