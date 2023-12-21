@@ -43,6 +43,7 @@ namespace BH.Adapter.GraphDB
     {
         public override List<object> Push(IEnumerable<object> objects, string tag = "", PushType pushType = PushType.UpdateOrCreateOnly, ActionConfig actionConfig = null)
         {
+
             string userDirectory = Environment.GetFolderPath(Environment.SpecialFolder.UserProfile);
             string TTLfilepath = Path.Combine(userDirectory, $"{DateTime.Now:yyyy-MM-dd_HH-mm-ss}_GraphDBPush.ttl");
 
@@ -52,23 +53,16 @@ namespace BH.Adapter.GraphDB
 
             // Start the actual task we care about (don't await it)
             Task<bool> task = Compute.PostToRepo(TTLfilepath, m_username, m_serverAddress, m_repositoryName, m_graphName, false, true);
-
-            int pollingIncrement = 500;
-            int totalSteps = m_pushTimeoutMillisec / pollingIncrement;
-            for (int step = 0; step < totalSteps; step++)
-            {
-                Task.Delay(pollingIncrement).Wait();
-
-                if (task.Status == TaskStatus.RanToCompletion)
-                    break;
-            }
-
-            // If at the end of the polling we still haven't completed, return an error.
+            // Create the timeout task (don't await it)
+            var timeoutTask = Task.Delay(m_pushTimeoutMillisec);
+            // Run the task and timeout in parallel, return the Task that completes first
+            Task.WhenAny(task, timeoutTask).Wait();
             if (task.Status != TaskStatus.RanToCompletion)
             {
                 Log.RecordError($"Encountered timeout for Push, to increase timeout duration, increase in {nameof(GraphDBAdapter)}");
                 return null;
             }
+
 
             return objects.ToList();
         }
