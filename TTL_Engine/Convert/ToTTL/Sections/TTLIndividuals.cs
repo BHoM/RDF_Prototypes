@@ -51,7 +51,7 @@ namespace BH.Engine.Adapters.TTL
                 TTLIndividual += $"\n<{individualUri}> rdf:type owl:NamedIndividual ,";
                 TTLIndividual += $"\t:{individual.IndividualType(cSharpGraph.GraphSettings.TBoxSettings).UniqueNodeId()} ;";
 
-                TTLIndividual += TLLIndividualRelations(individual, cSharpGraph, localRepositorySettings); 
+                TTLIndividual += TLLIndividualRelation(individual, cSharpGraph, localRepositorySettings); 
 
                 TTLIndividual = TTLIndividual.EnsureEndingDot();
 
@@ -59,7 +59,7 @@ namespace BH.Engine.Adapters.TTL
             }
         }
 
-        private static string TLLIndividualRelations(object individual, CSharpGraph cSharpGraph, LocalRepositorySettings localRepositorySettings)
+        private static string TLLIndividualRelation(object individual, CSharpGraph cSharpGraph, LocalRepositorySettings localRepositorySettings)
         {
             StringBuilder TLLIndividualRelations = new StringBuilder();
             IEnumerable<IIndividualRelation> individualRelations = cSharpGraph.IndividualRelations.Where(r => r.Individual == individual);
@@ -82,22 +82,30 @@ namespace BH.Engine.Adapters.TTL
                         TLLIndividualRelations.Append($"\n\t\t:{iop.HasProperty.PropertyInfo.UniqueNodeId()} <{individualParentUri}seq>. \n\n"); // Remove rdf:Seq and replace with indURI + seq
 
                         TLLIndividualRelations.Append($"\n### {individualParentUri}seq");
-                        TLLIndividualRelations.Append($"\n<{individualParentUri}seq>. rdf:type owl:NamedIndividual, \t:rdf:Seq;\n");
+                        TLLIndividualRelations.Append($"\n<{individualParentUri}seq> rdf:type owl:NamedIndividual, \t:rdf:Seq;\n");
 
                         List<string> listIndividualsUris = individualList.Where(o => o != null).Select(o => o.IndividualUri(cSharpGraph.GraphSettings).ToString()).ToList();
                         for (int i = 0; i < listIndividualsUris.Count; i++)
                         {
                             string individualUri = listIndividualsUris[i];
 
-                            TLLIndividualRelations.Append($"\t\t\trdf:_{i} <{individualUri}> ;\n"); // subindividuals are added here
+                            if(i != listIndividualsUris.Count)
+                                TLLIndividualRelations.Append($"\t\t\trdf:_{i} <{individualUri}> ;\n"); // subindividuals are added here
+                            else
+                                TLLIndividualRelations.Append($"\t\t\trdf:_{i} <{individualUri}> .\n"); // last individual
                         }
 
                         for (int i = 0; i < listIndividualsUris.Count; i++) // individuals again here with geometry
                         {
                             string individualUri = listIndividualsUris[i];
+                            var currentIndividual = individualList.ToList()[i];
 
                             TLLIndividualRelations.Append($"\n### {individualUri}"); 
-                            TLLIndividualRelations.Append($"\n<{individualUri}> rdf:type owl:NamedIndividual, \t{individualList.ToList()[i]};\n");
+                            TLLIndividualRelations.Append($"\n<{individualUri}> rdf:type owl:NamedIndividual, \t{currentIndividual};\n");
+
+                            TLLIndividualRelations.Append(TLLIndividualRelation(currentIndividual, cSharpGraph, localRepositorySettings));
+
+
                         }
                         
 

@@ -404,6 +404,24 @@ namespace BH.Test.RDF
 
             Assert.IsTTLParsable(TTLGraph);
         }
+
+        [Test]
+        public static void ListOfNumbers()
+        {
+            List<int> numbers = new List<int>();
+            numbers.Add(1);
+            numbers.Add(2);
+            numbers.Add(3);
+
+            CustomObject co = new CustomObject();
+            co.CustomData[m_graphSettings.TBoxSettings.CustomobjectsTypeKey] = "TestType";
+            co.CustomData["testListNumbers"] = numbers;
+
+            CSharpGraph cSharpGraph_customObj = Compute.CSharpGraph(new List<object>() { co }, m_graphSettings);
+            string TTLGraph = cSharpGraph_customObj.ToTTL();
+
+            Assert.IsTTLParsable(TTLGraph);
+        }
     }
 }
 
