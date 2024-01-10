@@ -100,8 +100,8 @@ namespace BH.Engine.Adapters.TTL
                             string individualUri = listIndividualsUris[i];
                             var currentIndividual = individualList.ToList()[i];
 
-                            TLLIndividualRelations.Append($"\n### {individualUri}"); 
-                            TLLIndividualRelations.Append($"\n<{individualUri}> rdf:type owl:NamedIndividual, \t{currentIndividual};\n");
+                            TLLIndividualRelations.Append($"\n\n### {individualUri}"); 
+                            TLLIndividualRelations.Append($"\n<{individualUri}> rdf:type owl:NamedIndividual, \t{currentIndividual};");
 
                             TLLIndividualRelations.Append(TLLIndividualRelation(currentIndividual, cSharpGraph, localRepositorySettings));
 
