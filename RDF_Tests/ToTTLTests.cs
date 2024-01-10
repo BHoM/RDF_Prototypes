@@ -50,6 +50,7 @@ using System.Text.RegularExpressions;
 using Shouldly;
 using System.Linq.Expressions;
 using System.Drawing.Printing;
+using static System.Net.WebRequestMethods;
 
 namespace BH.Test.RDF
 {
@@ -396,7 +397,7 @@ namespace BH.Test.RDF
                 }
             };
 
-            GraphSettings settings = new GraphSettings() { TBoxSettings = new TBoxSettings() { GeometryAsOntologyClass = true }  };
+            GraphSettings settings = new GraphSettings() { TBoxSettings = new TBoxSettings() { GeometryAsOntologyClass = true }, ABoxSettings = new ABoxSettings() { IndividualsBaseAddress = "https://uni-stuttgart.de/" } };
 
             CSharpGraph cSharpGraph_customObj = Compute.CSharpGraph(new List<object>() { polyCurve }, settings);
             string TTLGraph = cSharpGraph_customObj.ToTTL();

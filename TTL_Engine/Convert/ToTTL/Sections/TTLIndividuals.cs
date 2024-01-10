@@ -49,7 +49,7 @@ namespace BH.Engine.Adapters.TTL
 
                 TTLIndividual += $"\n### {individualUri}";
                 TTLIndividual += $"\n<{individualUri}> rdf:type owl:NamedIndividual ,";
-                TTLIndividual += $"\n\t\t:{individual.IndividualType(cSharpGraph.GraphSettings.TBoxSettings).UniqueNodeId()} ;";
+                TTLIndividual += $"\t:{individual.IndividualType(cSharpGraph.GraphSettings.TBoxSettings).UniqueNodeId()} ;";
 
                 TTLIndividual += TLLIndividualRelations(individual, cSharpGraph, localRepositorySettings); 
 
