@@ -89,7 +89,7 @@ namespace BH.Engine.Adapters.TTL
                         {
                             string individualUri = listIndividualsUris[i];
 
-                            if(i != listIndividualsUris.Count)
+                            if(i != listIndividualsUris.Count-1)
                                 TLLIndividualRelations.Append($"\t\t\trdf:_{i} <{individualUri}> ;\n"); // subindividuals are added here
                             else
                                 TLLIndividualRelations.Append($"\t\t\trdf:_{i} <{individualUri}> .\n"); // last individual
@@ -104,8 +104,8 @@ namespace BH.Engine.Adapters.TTL
                             TLLIndividualRelations.Append($"\n<{individualUri}> rdf:type owl:NamedIndividual, \t{currentIndividual};");
 
                             TLLIndividualRelations.Append(TLLIndividualRelation(currentIndividual, cSharpGraph, localRepositorySettings));
-
-
+                            TLLIndividualRelations.Remove(TLLIndividualRelations.Length-1,1);
+                            TLLIndividualRelations.Append(".");
                         }
                         
 
