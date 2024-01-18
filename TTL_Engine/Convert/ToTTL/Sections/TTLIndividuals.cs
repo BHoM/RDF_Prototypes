@@ -101,7 +101,7 @@ namespace BH.Engine.Adapters.TTL
                             var currentIndividual = individualList.ToList()[i];
 
                             TLLIndividualRelations.Append($"\n\n### {individualUri}"); 
-                            TLLIndividualRelations.Append($"\n<{individualUri}> rdf:type owl:NamedIndividual, \t{currentIndividual};");
+                            TLLIndividualRelations.Append($"\n<{individualUri}> rdf:type owl:NamedIndividual, \t:{currentIndividual};");
 
                             TLLIndividualRelations.Append(TLLIndividualRelation(currentIndividual, cSharpGraph, localRepositorySettings));
                             TLLIndividualRelations.Remove(TLLIndividualRelations.Length-1,1);
