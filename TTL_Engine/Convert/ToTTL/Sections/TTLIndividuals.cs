@@ -79,7 +79,7 @@ namespace BH.Engine.Adapters.TTL
                             continue;
 
                         string individualParentUri = individual.IndividualUri(cSharpGraph.GraphSettings).ToString(); // variable name not optimal
-                        TLLIndividualRelations.Append($"\n\t\t:{iop.HasProperty.PropertyInfo.UniqueNodeId()} <{individualParentUri}seq>. \n\n"); // Remove rdf:Seq and replace with indURI + seq
+                        TLLIndividualRelations.Append($"\n\t\t:{iop.HasProperty.PropertyInfo.UniqueNodeId()} <{individualParentUri}seq>. \n\n"); 
 
                         TLLIndividualRelations.Append($"\n### {individualParentUri}seq");
                         TLLIndividualRelations.Append($"\n<{individualParentUri}seq> rdf:type owl:NamedIndividual, \t:rdf:Seq;\n");
