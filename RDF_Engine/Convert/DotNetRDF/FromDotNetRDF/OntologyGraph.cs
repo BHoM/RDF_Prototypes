@@ -20,6 +20,7 @@
  * along with this code. If not, see <https://www.gnu.org/licenses/lgpl-3.0.html>.      
  */
 
+using BH.oM.Adapters.RDF;
 using BH.oM.Base;
 using System;
 using System.Collections;
@@ -36,8 +37,10 @@ namespace BH.Engine.Adapters.RDF
 {
     public static partial class Convert
     {
-        public static List<object> FromDotNetRDF(this OntologyGraph dotNetRDFOntology)
+        
+        public static List<object> FromDotNetRDF(this OntologyGraph dotNetRDFOntology, GraphSettings graphSettings)
         {
+            m_graphSettings = graphSettings ?? new GraphSettings();
             var topIndividuals = dotNetRDFOntology.IndividualsNoOwner();
 
             List<object> result = new List<object>();
@@ -55,9 +58,7 @@ namespace BH.Engine.Adapters.RDF
             return otherobjects;
         }
 
-        public static List<object> ToCSharpObjects(this string TTLOntology)
-        {
-            return ToDotNetRDF(TTLOntology).FromDotNetRDF();
-        }
+        private static GraphSettings m_graphSettings;
+
     }
 }

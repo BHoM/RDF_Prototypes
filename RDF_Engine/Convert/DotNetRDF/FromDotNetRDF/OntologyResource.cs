@@ -19,7 +19,6 @@
  * You should have received a copy of the GNU Lesser General Public License     
  * along with this code. If not, see <https://www.gnu.org/licenses/lgpl-3.0.html>.      
  */
-
 using BH.oM.Base;
 using BH.oM.Adapters.RDF;
 using System;
@@ -32,6 +31,7 @@ using System.Text;
 using System.Threading.Tasks;
 using VDS.RDF;
 using VDS.RDF.Ontology;
+using VDS.RDF.Query.Algebra;
 
 namespace BH.Engine.Adapters.RDF
 {
@@ -114,25 +114,40 @@ namespace BH.Engine.Adapters.RDF
                 // Check if it is a List.
                 // Could not find a more reliable way that checking the uri address for mentions of "rdf" and "seq".
                 string typeAddress = uriNode.ToString().ToLower();
-                var typeAddressPortions = typeAddress.Split('#').SelectMany(p => p.Split('-')).SelectMany(p => p.Split('/')).ToList();
-                if (typeAddressPortions.Contains("rdf") && typeAddressPortions.Contains("seq"))
+                
+                if (typeAddress.EndsWith(m_graphSettings.ABoxSettings.SequenceIndentifierSuffix)) // TODO: make more robust with more unique characters, i.e. change the ToTTL method and this check.
                 {
+                    // We know it's a list.
                     SortedDictionary<int, int> listIdx_tripleIdx = new SortedDictionary<int, int>();
 
-                    bool sequenceStarted = false;
-
+                    Triple triplePointingToListNode = null;
                     for (int i = 0; i < individual.TriplesWithSubject.Count(); i++)
                     {
                         Triple triple = individual.TriplesWithSubject.ElementAtOrDefault(i);
 
                         if (triple.Predicate.Uri().ToString().Contains(propertyFullName))
                         {
-                            sequenceStarted = true;
+                            triplePointingToListNode = individual.TriplesWithSubject.ElementAt(i);
+                        }
+                    }
+
+                    var listNode = triplePointingToListNode.Object;
+
+                    // Get all the triples in the Graph.
+                    var allTriples = dotNetRDFOntology.Triples;
+
+                    // TODO: Find the triples that have as a subject the listNode
+                    var triplesWithListNodeSubject = allTriples.Where(t => t.Subject.Uri() == listNode.Uri()).ToList();
+
+                    for (int i = 0; i < triplesWithListNodeSubject.Count(); i++)
+                    {
+                        Triple triple = triplesWithListNodeSubject.ElementAtOrDefault(i);
+
+                        if (!triple.Predicate.Uri().ToString().Contains("_")) // TODO: the check needs to be more robust.
+                        {
+                            // I.e. we need to verify that `Uri().ToString()` ends with an underscore followed by any integer number.
                             continue;
                         }
-
-                        if (!sequenceStarted)
-                            continue;
 
                         int rdfListIndexFound = -1;
                         string predicateUri = (triple?.Predicate as UriNode)?.Uri.ToString();
@@ -150,7 +165,7 @@ namespace BH.Engine.Adapters.RDF
                     List<object> listValues = new List<object>();
                     foreach (var kv in listIdx_tripleIdx)
                     {
-                        Triple listItemTriple = individual.TriplesWithSubject.ElementAt(kv.Value);
+                        Triple listItemTriple = triplesWithListNodeSubject.ElementAt(kv.Value);
                         OntologyResource listIndividual = listItemTriple.Object.IndividualOntologyResource(dotNetRDFOntology);
                         object convertedIndividual = listIndividual.FromDotNetRDF(dotNetRDFOntology);
                         listValues.Add(convertedIndividual);

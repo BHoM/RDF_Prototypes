@@ -35,16 +35,25 @@ using VDS.RDF.Writing;
 using BH.Engine.Base;
 using BH.oM.Adapters.RDF;
 using BH.oM.Base.Attributes;
-using static System.Net.Mime.MediaTypeNames;
 using Newtonsoft.Json.Linq;
 using BH.Engine.Adapters.RDF;
+using VDS.RDF.Ontology;
 
 namespace BH.Engine.Adapters.TTL
 {
     public static partial class Convert
     {
         [Description("Reads a TTL ontology and attempts to convert any A-Box individual into its CSharp object equivalent.")]
-        [MultiOutputAttribute(0,"KG","Ontology produced whatever")]
+        public static List<object> ToCSharpObjects(this string TTLOntology, GraphSettings graphSettings = null)
+        {
+            graphSettings = graphSettings ?? ExtractOntologySettings(TTLOntology);
+
+            OntologyGraph ont = BH.Engine.Adapters.RDF.Convert.ToDotNetRDF(TTLOntology);
+            return BH.Engine.Adapters.RDF.Convert.FromDotNetRDF(ont, graphSettings);
+        }
+
+        [Description("Reads a TTL ontology and attempts to convert any A-Box individual into its CSharp object equivalent.")]
+        [MultiOutputAttribute(0,"KG","Ontology produced")]
         [MultiOutputAttribute(1, "OS", "Ontology Settings used to construct this KG")]
         public static Output<List<object>, GraphSettings> FromTTL(string TTLtext)
         {
@@ -55,7 +64,7 @@ namespace BH.Engine.Adapters.TTL
 
             Output<List<object>, GraphSettings> output = new Output<List<object>, GraphSettings>
             {
-                Item1 = BH.Engine.Adapters.RDF.Convert.ToCSharpObjects(TTLtext),
+                Item1 = BH.Engine.Adapters.TTL.Convert.ToCSharpObjects(TTLtext, graphSettings),
                 Item2 = graphSettings
             };
             return output;
@@ -73,7 +82,7 @@ namespace BH.Engine.Adapters.TTL
             return readTTLOutput;
         }
 
-        private static GraphSettings ExtractOntologySettings(string TTLtext)
+        public static GraphSettings ExtractOntologySettings(string TTLtext)
         {
             string graphSettingsDeclaration = $"# {nameof(GraphSettings)}: ";
 

@@ -50,6 +50,7 @@ using System.Text.RegularExpressions;
 using Shouldly;
 using System.Linq.Expressions;
 using System.Drawing.Printing;
+using static System.Net.WebRequestMethods;
 
 namespace BH.Test.RDF
 {
@@ -384,7 +385,43 @@ namespace BH.Test.RDF
             repetitionOfGuidProperty.ShouldBe(1); // this fails.
         }
 
+        [Test]
+        public static void List_polycurveObj()
+        {
+            PolyCurve polyCurve = new PolyCurve()
+            {
+                Curves = new List<ICurve>
+                {
+                    new Line() { Start = new Point() { X = 1, Y = 1, Z = 0 }, End = new Point() { X = 2, Y = 1, Z = 0 } },
+                    new Line() { Start = new Point() { X = 2, Y = 1, Z = 0 }, End = new Point() { X = 3, Y = 1, Z = 0 } }
+                }
+            };
 
+            GraphSettings settings = new GraphSettings() { TBoxSettings = new TBoxSettings() { GeometryAsOntologyClass = true }, ABoxSettings = new ABoxSettings() { IndividualsBaseAddress = "https://uni-stuttgart.de/" } };
+
+            CSharpGraph cSharpGraph_customObj = Compute.CSharpGraph(new List<object>() { polyCurve }, settings);
+            string TTLGraph = cSharpGraph_customObj.ToTTL();
+
+            Assert.IsTTLParsable(TTLGraph);
+        }
+
+        [Test]
+        public static void ListOfNumbers()
+        {
+            List<int> numbers = new List<int>();
+            numbers.Add(1);
+            numbers.Add(2);
+            numbers.Add(3);
+
+            CustomObject co = new CustomObject();
+            co.CustomData[m_graphSettings.TBoxSettings.CustomobjectsTypeKey] = "TestType";
+            co.CustomData["testListNumbers"] = numbers;
+
+            CSharpGraph cSharpGraph_customObj = Compute.CSharpGraph(new List<object>() { co }, m_graphSettings);
+            string TTLGraph = cSharpGraph_customObj.ToTTL();
+
+            Assert.IsTTLParsable(TTLGraph);
+        }
     }
 }
 
