@@ -63,6 +63,7 @@ namespace BH.Engine.Adapters.TTL
         {
             StringBuilder TLLIndividualRelations = new StringBuilder();
             IEnumerable<IIndividualRelation> individualRelations = cSharpGraph.IndividualRelations.Where(r => r.Individual == individual);
+            var aboxsettings = cSharpGraph.GraphSettings.ABoxSettings;
 
             foreach (IIndividualRelation individualRelation in individualRelations)
             {
@@ -77,12 +78,12 @@ namespace BH.Engine.Adapters.TTL
                         var individualList = iop.RangeIndividual as IEnumerable<object>;
                         if (individualList.IsNullOrEmpty())
                             continue;
-
+                        
                         string individualParentUri = individual.IndividualUri(cSharpGraph.GraphSettings).ToString(); // variable name not optimal
-                        TLLIndividualRelations.Append($"\n\t\t:{iop.HasProperty.PropertyInfo.UniqueNodeId()} <{individualParentUri}seq>. \n\n"); 
+                        TLLIndividualRelations.Append($"\n\t\t:{iop.HasProperty.PropertyInfo.UniqueNodeId()} <{individualParentUri}{aboxsettings.SequenceIndentifierSuffix}>. \n\n"); 
 
-                        TLLIndividualRelations.Append($"\n### {individualParentUri}seq");
-                        TLLIndividualRelations.Append($"\n<{individualParentUri}seq> rdf:type owl:NamedIndividual, \t:rdf:Seq;\n");
+                        TLLIndividualRelations.Append($"\n### {individualParentUri}{aboxsettings.SequenceIndentifierSuffix}");
+                        TLLIndividualRelations.Append($"\n<{individualParentUri}{aboxsettings.SequenceIndentifierSuffix}> rdf:type owl:NamedIndividual, \t:rdf:Seq;\n");
 
                         List<string> listIndividualsUris = individualList.Where(o => o != null).Select(o => o.IndividualUri(cSharpGraph.GraphSettings).ToString()).ToList();
                         for (int i = 0; i < listIndividualsUris.Count; i++)

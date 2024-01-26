@@ -133,7 +133,7 @@ namespace BH.Test.RDF
             string TTLGraph = cSharpGraph_customObj.ToTTL();
 
             TTLGraph.Contains(":City.HasBuilding").ShouldBeTrue();
-            TTLGraph.Contains(city.BHoM_Guid.ToString() + "seq").ShouldBeTrue();
+            TTLGraph.Contains(city.BHoM_Guid.ToString() + m_graphSettings.ABoxSettings.SequenceIndentifierSuffix).ShouldBeTrue();
             TTLGraph.Contains("rdf:_0").ShouldBeTrue();
             TTLGraph.Contains("rdf:_1").ShouldBeTrue();
 

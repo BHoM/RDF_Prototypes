@@ -85,5 +85,8 @@ namespace BH.oM.Adapters.RDF
 
         [Description("If this is set to true, if an individual's ObjectProperty or Data property is null or an empty collection, it will still be added.")]
         public bool ConsiderNullOrEmptyPropertyValues { get; set; } = false;
+
+        [Description("Suffix used in the identifiers pointing to indivuals list of data.")]
+        public string SequenceIndentifierSuffix { get; set; } = "bhom_seq";
     }
 }

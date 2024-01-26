@@ -115,8 +115,8 @@ namespace BH.Engine.Adapters.RDF
                 // Check if it is a List.
                 // Could not find a more reliable way that checking the uri address for mentions of "rdf" and "seq".
                 string typeAddress = uriNode.ToString().ToLower();
-
-                if (typeAddress.EndsWith("seq")) // TODO: make more robust with more unique characters, i.e. change the ToTTL method and this check.
+                
+                if (typeAddress.EndsWith(m_graphSettings.ABoxSettings.SequenceIndentifierSuffix)) // TODO: make more robust with more unique characters, i.e. change the ToTTL method and this check.
                 {
                     // We know it's a list.
                     SortedDictionary<int, int> listIdx_tripleIdx = new SortedDictionary<int, int>();
