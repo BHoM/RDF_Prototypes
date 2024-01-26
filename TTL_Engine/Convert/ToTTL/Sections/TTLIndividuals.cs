@@ -49,9 +49,9 @@ namespace BH.Engine.Adapters.TTL
 
                 TTLIndividual += $"\n### {individualUri}";
                 TTLIndividual += $"\n<{individualUri}> rdf:type owl:NamedIndividual ,";
-                TTLIndividual += $"\n\t\t:{individual.IndividualType(cSharpGraph.GraphSettings.TBoxSettings).UniqueNodeId()} ;";
+                TTLIndividual += $"\t:{individual.IndividualType(cSharpGraph.GraphSettings.TBoxSettings).UniqueNodeId()} ;";
 
-                TTLIndividual += TLLIndividualRelations(individual, cSharpGraph, localRepositorySettings);
+                TTLIndividual += TLLIndividualRelation(individual, cSharpGraph, localRepositorySettings); 
 
                 TTLIndividual = TTLIndividual.EnsureEndingDot();
 
@@ -59,10 +59,11 @@ namespace BH.Engine.Adapters.TTL
             }
         }
 
-        private static string TLLIndividualRelations(object individual, CSharpGraph cSharpGraph, LocalRepositorySettings localRepositorySettings)
+        private static string TLLIndividualRelation(object individual, CSharpGraph cSharpGraph, LocalRepositorySettings localRepositorySettings)
         {
             StringBuilder TLLIndividualRelations = new StringBuilder();
             IEnumerable<IIndividualRelation> individualRelations = cSharpGraph.IndividualRelations.Where(r => r.Individual == individual);
+            var aboxsettings = cSharpGraph.GraphSettings.ABoxSettings;
 
             foreach (IIndividualRelation individualRelation in individualRelations)
             {
@@ -77,16 +78,38 @@ namespace BH.Engine.Adapters.TTL
                         var individualList = iop.RangeIndividual as IEnumerable<object>;
                         if (individualList.IsNullOrEmpty())
                             continue;
+                        
+                        string individualParentUri = individual.IndividualUri(cSharpGraph.GraphSettings).ToString(); // variable name not optimal
+                        TLLIndividualRelations.Append($"\n\t\t:{iop.HasProperty.PropertyInfo.UniqueNodeId()} <{individualParentUri}{aboxsettings.SequenceIndentifierSuffix}>. \n\n"); 
+
+                        TLLIndividualRelations.Append($"\n### {individualParentUri}{aboxsettings.SequenceIndentifierSuffix}");
+                        TLLIndividualRelations.Append($"\n<{individualParentUri}{aboxsettings.SequenceIndentifierSuffix}> rdf:type owl:NamedIndividual, \t:rdf:Seq;\n");
 
                         List<string> listIndividualsUris = individualList.Where(o => o != null).Select(o => o.IndividualUri(cSharpGraph.GraphSettings).ToString()).ToList();
-                        TLLIndividualRelations.Append($"\n\t\t:{iop.HasProperty.PropertyInfo.UniqueNodeId()} rdf:Seq ;\n");
-
                         for (int i = 0; i < listIndividualsUris.Count; i++)
                         {
                             string individualUri = listIndividualsUris[i];
 
-                            TLLIndividualRelations.Append($"\t\trdf:_{i} <{individualUri}> ;\n");
+                            if(i != listIndividualsUris.Count-1)
+                                TLLIndividualRelations.Append($"\t\t\trdf:_{i} <{individualUri}> ;\n"); // subindividuals are added here
+                            else
+                                TLLIndividualRelations.Append($"\t\t\trdf:_{i} <{individualUri}> .\n"); // last individual
                         }
+
+                        for (int i = 0; i < listIndividualsUris.Count; i++) // individuals again here with geometry
+                        {
+                            string individualUri = listIndividualsUris[i];
+                            var currentIndividual = individualList.ToList()[i];
+
+                            TLLIndividualRelations.Append($"\n\n### {individualUri}"); 
+                            TLLIndividualRelations.Append($"\n<{individualUri}> rdf:type owl:NamedIndividual, \t:{currentIndividual};");
+
+                            TLLIndividualRelations.Append(TLLIndividualRelation(currentIndividual, cSharpGraph, localRepositorySettings));
+                            TLLIndividualRelations.Remove(TLLIndividualRelations.Length-1,1);
+                            TLLIndividualRelations.Append(".");
+                        }
+                        
+
                     }
                     else if (iop.RangeIndividual?.GetType().IsListOfDatatypes(cSharpGraph.GraphSettings.TBoxSettings) ?? false)
                     {
