@@ -420,6 +420,34 @@ namespace BH.Test.RDF
             CSharpGraph cSharpGraph_customObj = Compute.CSharpGraph(new List<object>() { co }, m_graphSettings);
             string TTLGraph = cSharpGraph_customObj.ToTTL();
 
+            //TTLGraph.Contains(co.BHoM_Guid.ToString() + m_graphSettings.ABoxSettings.SequenceIndentifierSuffix).ShouldBeTrue();
+            TTLGraph.Contains($"rdf:_0 \"{numbers[0]}\"^^xsd:integer;").ShouldBeTrue();
+            TTLGraph.Contains($"rdf:_1 \"{numbers[1]}\"^^xsd:integer;").ShouldBeTrue();
+            TTLGraph.Contains($"rdf:_2 \"{numbers[2]}\"^^xsd:integer.").ShouldBeTrue();
+
+            Assert.IsTTLParsable(TTLGraph);
+        }
+
+        [Test]
+        public static void ListOfStrings()
+        {
+            List<string> strings = new List<string>();
+            strings.Add("Apple");
+            strings.Add("Banana");
+            strings.Add("Cherry");
+
+            CustomObject co = new CustomObject();
+            co.CustomData[m_graphSettings.TBoxSettings.CustomobjectsTypeKey] = "TestType";
+            co.CustomData["testListStrings"] = strings;
+
+            CSharpGraph cSharpGraph_customObj = Compute.CSharpGraph(new List<object>() { co }, m_graphSettings);
+            string TTLGraph = cSharpGraph_customObj.ToTTL();
+
+            //TTLGraph.Contains(co.BHoM_Guid.ToString() + m_graphSettings.ABoxSettings.SequenceIndentifierSuffix).ShouldBeTrue();
+            TTLGraph.Contains($"rdf:_0 \"{strings[0]}\"^^xsd:string;").ShouldBeTrue();
+            TTLGraph.Contains($"rdf:_1 \"{strings[1]}\"^^xsd:string;").ShouldBeTrue();
+            TTLGraph.Contains($"rdf:_2 \"{strings[2]}\"^^xsd:string.").ShouldBeTrue();
+
             Assert.IsTTLParsable(TTLGraph);
         }
     }
