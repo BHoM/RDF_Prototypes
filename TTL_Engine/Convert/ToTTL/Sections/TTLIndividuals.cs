@@ -31,6 +31,7 @@ using System.Linq;
 using System.Reflection;
 using System.Text;
 using System.Threading.Tasks;
+using VDS.RDF;
 
 namespace BH.Engine.Adapters.TTL
 {
@@ -143,7 +144,29 @@ namespace BH.Engine.Adapters.TTL
                     if (dataType == typeof(Base64JsonSerialized).UniqueNodeId())
                         TLLIndividualRelations.Append($"^^:{idp.Value.GetType().ToOntologyDataType()};");
                     else
-                        TLLIndividualRelations.Append($"^^{ idp.Value.GetType().ToOntologyDataType()};"); // TODO: insert serialized value here, when the individual's datatype is unknown
+                    {
+                        TLLIndividualRelations.Append($"^^{idp.Value.GetType().ToOntologyDataType()};"); // TODO: insert serialized value here, when the individual's datatype is unknown
+
+                        
+                        if (idp.Individual.IsCustomObjectWithTypeKey(cSharpGraph.GraphSettings.TBoxSettings))
+                        {
+                            var customObject = (CustomObject) idp.Individual;
+                            //customObject.CustomData;
+                        }
+                        var individualList = idp.Individual as IEnumerable<object>; // cast idp.Individual.CustomData[1] as List but not accessable?!
+                        if (individualList.IsNullOrEmpty())
+                            continue;
+
+                        string individualParentUri = individual.IndividualUri(cSharpGraph.GraphSettings).ToString(); 
+                        TLLIndividualRelations.Append($"\n\t\t:{iop.HasProperty.PropertyInfo.UniqueNodeId()} <{individualParentUri}{aboxsettings.SequenceIndentifierSuffix}>. \n\n");
+
+                        TLLIndividualRelations.Append($"\n### {individualParentUri}{aboxsettings.SequenceIndentifierSuffix}");
+                        TLLIndividualRelations.Append($"\n<{individualParentUri}{aboxsettings.SequenceIndentifierSuffix}> rdf:type owl:NamedIndividual, \t:rdf:Seq;\n");
+
+                        List<string> listIndividualsUris = individualList.Where(o => o != null).Select(o => o.IndividualUri(cSharpGraph.GraphSettings).ToString()).ToList();
+                        
+                    }
+
 
                     continue;
                 }
