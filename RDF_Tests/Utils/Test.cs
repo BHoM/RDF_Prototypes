@@ -39,7 +39,7 @@ namespace BH.Test.RDF
         static TestClass()
         {
             // Call a geometry_engine method to make sure we have it at runtime when running tests.
-            BH.Engine.Geometry.Query.GeometryHash(new BHoMObject(), null);
+            BH.Engine.Geometry.Query.Angle(new Arc());
             Log.ThrowExceptions = true;
         }
 
