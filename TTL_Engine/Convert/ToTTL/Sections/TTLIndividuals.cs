@@ -146,25 +146,28 @@ namespace BH.Engine.Adapters.TTL
                             if (individualList.IsNullOrEmpty())
                                 continue;
 
-                            string individualParentUri = individual.IndividualUri(cSharpGraph.GraphSettings).ToString(); // variable name not optimal
-                            TLLIndividualRelations.Append($"\n\t\t:{cpi.UniqueNodeId()} <{individualParentUri}{aboxsettings.SequenceIndentifierSuffix}>. \n\n");
-
-                            TLLIndividualRelations.Append($"\n### {individualParentUri}{aboxsettings.SequenceIndentifierSuffix}");
-                            TLLIndividualRelations.Append($"\n<{individualParentUri}{aboxsettings.SequenceIndentifierSuffix}> rdf:type owl:NamedIndividual, :rdf:Seq;\n");
-
-                            List<string> listIndividualsUris = individualList.Where(o => o != null).Select(o => o.IndividualUri(cSharpGraph.GraphSettings).ToString()).ToList();
-                            for (int i = 0; i < listIndividualsUris.Count; i++)
+                            if (BH.Engine.Reflection.Query.IsPrimitive(individualList.FirstOrDefault().GetType()))
                             {
-                                string individualUri = listIndividualsUris[i];
+                                string individualParentUri = individual.IndividualUri(cSharpGraph.GraphSettings).ToString(); // variable name not optimal
+                                TLLIndividualRelations.Append($"\n\t\t:{cpi.UniqueNodeId()} <{individualParentUri}{aboxsettings.SequenceIndentifierSuffix}>. \n\n");
 
-                                var listItem = individualList.ElementAt(i);
-                                var listItemOntologyType = listItem.GetType().ToOntologyDataType();
-                                string closingPunctuation = i != listIndividualsUris.Count - 1 ? ";" : ".";
+                                TLLIndividualRelations.Append($"\n### {individualParentUri}{aboxsettings.SequenceIndentifierSuffix}");
+                                TLLIndividualRelations.Append($"\n<{individualParentUri}{aboxsettings.SequenceIndentifierSuffix}> rdf:type owl:NamedIndividual, :rdf:Seq;\n");
 
-                                TLLIndividualRelations.Append($"\t\t\trdf:_{i + 1} \"{listItem}\"^^{listItemOntologyType}{closingPunctuation}\n"); // subindividuals are added here
+                                List<string> listIndividualsUris = individualList.Where(o => o != null).Select(o => o.IndividualUri(cSharpGraph.GraphSettings).ToString()).ToList();
+                                for (int i = 0; i < listIndividualsUris.Count; i++)
+                                {
+                                    string individualUri = listIndividualsUris[i];
+
+                                    var listItem = individualList.ElementAt(i);
+                                    var listItemOntologyType = listItem.GetType().ToOntologyDataType();
+                                    string closingPunctuation = i != listIndividualsUris.Count - 1 ? ";" : ".";
+
+                                    TLLIndividualRelations.Append($"\t\t\trdf:_{i + 1} \"{listItem}\"^^{listItemOntologyType}{closingPunctuation}\n"); // subindividuals are added here
+                                }
+
+                                continue;
                             }
-
-                            continue;
                         }
                     }
 
