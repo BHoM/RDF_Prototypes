@@ -172,9 +172,19 @@ namespace BH.Engine.Adapters.RDF
                         object convertedIndividual;
 
                         if (listIndividual == null && listItemTriple.Object is VDS.RDF.LiteralNode literal)
-                             convertedIndividual = literal.Value;
+                        {
+                            // Take the literal and convert it to the correct type.
+                            string XsdTypeName = literal.DataType.Fragment.TrimStart('#');
+                            if (OntologyDataTypeMap.FromOntologyDataType.TryGetValue(XsdTypeName, out Type typeToConvertTo))
+                                convertedIndividual = System.Convert.ChangeType(literal.Value, typeToConvertTo);
+                            else
+                            {
+                                // It's either a string, or we keep its string value.
+                                convertedIndividual = literal.Value;
+                            }
+                        }
                         else
-                             convertedIndividual = listIndividual.FromDotNetRDF(dotNetRDFOntology);
+                            convertedIndividual = listIndividual.FromDotNetRDF(dotNetRDFOntology);
                         
                         listValues.Add(convertedIndividual);
                     }
