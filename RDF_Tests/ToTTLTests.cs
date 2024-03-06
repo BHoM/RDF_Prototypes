@@ -421,9 +421,9 @@ namespace BH.Test.RDF
             string TTLGraph = cSharpGraph_customObj.ToTTL();
 
             //TTLGraph.Contains(co.BHoM_Guid.ToString() + m_graphSettings.ABoxSettings.SequenceIndentifierSuffix).ShouldBeTrue();
-            TTLGraph.Contains($"rdf:_0 \"{numbers[0]}\"^^xsd:integer;").ShouldBeTrue();
-            TTLGraph.Contains($"rdf:_1 \"{numbers[1]}\"^^xsd:integer;").ShouldBeTrue();
-            TTLGraph.Contains($"rdf:_2 \"{numbers[2]}\"^^xsd:integer.").ShouldBeTrue();
+            TTLGraph.Contains($"rdf:_1 \"{numbers[0]}\"^^xsd:integer;").ShouldBeTrue();
+            TTLGraph.Contains($"rdf:_2 \"{numbers[1]}\"^^xsd:integer;").ShouldBeTrue();
+            TTLGraph.Contains($"rdf:_3 \"{numbers[2]}\"^^xsd:integer.").ShouldBeTrue();
 
             Assert.IsTTLParsable(TTLGraph);
         }
@@ -444,9 +444,9 @@ namespace BH.Test.RDF
             string TTLGraph = cSharpGraph_customObj.ToTTL();
 
             //TTLGraph.Contains(co.BHoM_Guid.ToString() + m_graphSettings.ABoxSettings.SequenceIndentifierSuffix).ShouldBeTrue();
-            TTLGraph.Contains($"rdf:_0 \"{strings[0]}\"^^xsd:string;").ShouldBeTrue();
-            TTLGraph.Contains($"rdf:_1 \"{strings[1]}\"^^xsd:string;").ShouldBeTrue();
-            TTLGraph.Contains($"rdf:_2 \"{strings[2]}\"^^xsd:string.").ShouldBeTrue();
+            TTLGraph.Contains($"rdf:_1 \"{strings[0]}\"^^xsd:string;").ShouldBeTrue();
+            TTLGraph.Contains($"rdf:_2 \"{strings[1]}\"^^xsd:string;").ShouldBeTrue();
+            TTLGraph.Contains($"rdf:_3 \"{strings[2]}\"^^xsd:string.").ShouldBeTrue();
 
             Assert.IsTTLParsable(TTLGraph);
         }

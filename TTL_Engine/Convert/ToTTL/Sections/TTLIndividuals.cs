@@ -93,9 +93,9 @@ namespace BH.Engine.Adapters.TTL
                             string individualUri = listIndividualsUris[i];
 
                             if(i != listIndividualsUris.Count-1)
-                                TLLIndividualRelations.Append($"\t\t\trdf:_{i} <{individualUri}> ;\n"); // subindividuals are added here
+                                TLLIndividualRelations.Append($"\t\t\trdf:_{i+1} <{individualUri}> ;\n"); // subindividuals are added here
                             else
-                                TLLIndividualRelations.Append($"\t\t\trdf:_{i} <{individualUri}> .\n"); // last individual
+                                TLLIndividualRelations.Append($"\t\t\trdf:_{i+1} <{individualUri}> .\n"); // last individual
                         }
 
                         for (int i = 0; i < listIndividualsUris.Count; i++) // individuals again here with geometry
@@ -161,7 +161,7 @@ namespace BH.Engine.Adapters.TTL
                                 var listItemOntologyType = listItem.GetType().ToOntologyDataType();
                                 string closingPunctuation = i != listIndividualsUris.Count - 1 ? ";" : ".";
 
-                                TLLIndividualRelations.Append($"\t\t\trdf:_{i} \"{listItem}\"^^{listItemOntologyType}{closingPunctuation}\n"); // subindividuals are added here
+                                TLLIndividualRelations.Append($"\t\t\trdf:_{i + 1} \"{listItem}\"^^{listItemOntologyType}{closingPunctuation}\n"); // subindividuals are added here
                             }
 
                             continue;
