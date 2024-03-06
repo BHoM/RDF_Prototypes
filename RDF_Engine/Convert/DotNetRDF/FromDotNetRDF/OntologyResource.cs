@@ -88,6 +88,14 @@ namespace BH.Engine.Adapters.RDF
 
         private static void SetOntologyProperty(this object resultObject, OntologyProperty propertyNode, OntologyGraph dotNetRDFOntology, OntologyResource individual, Type individualType, List<PropertyInfo> typeProperties)
         {
+            if (!propertyNode.Label.FirstOrDefault()?.Value.Contains("BH.oM") ?? false)
+            { 
+                // This is a custom property.
+                // We should skip it because its deserialization is already covered 
+                // by the CustomData dictionary deserialization.
+                return; 
+            }
+
             Triple predicateNode = propertyNode.TriplesWithPredicate
              .Where(t => (t.Subject as UriNode)?.Uri.Segments.LastOrDefault() == individual.Resource.Uri().Segments.LastOrDefault())
              .FirstOrDefault();
