@@ -32,6 +32,7 @@ using System.Threading.Tasks;
 using VDS.RDF;
 using VDS.RDF.Ontology;
 using VDS.RDF.Query.Algebra;
+using VDS.RDF.Nodes;
 
 namespace BH.Engine.Adapters.RDF
 {
@@ -167,7 +168,14 @@ namespace BH.Engine.Adapters.RDF
                     {
                         Triple listItemTriple = triplesWithListNodeSubject.ElementAt(kv.Value);
                         OntologyResource listIndividual = listItemTriple.Object.IndividualOntologyResource(dotNetRDFOntology);
-                        object convertedIndividual = listIndividual.FromDotNetRDF(dotNetRDFOntology);
+
+                        object convertedIndividual;
+
+                        if (listIndividual == null && listItemTriple.Object is VDS.RDF.LiteralNode literal)
+                             convertedIndividual = literal.Value;
+                        else
+                             convertedIndividual = listIndividual.FromDotNetRDF(dotNetRDFOntology);
+                        
                         listValues.Add(convertedIndividual);
                     }
 
