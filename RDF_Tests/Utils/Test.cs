@@ -27,16 +27,19 @@ using BH.oM.Physical.FramingProperties;
 using BH.oM.Adapters.RDF;
 using System.Data.Common;
 using BH.Engine.Adapters.RDF;
+using BH.oM.Base;
 
 namespace BH.Test.RDF
 {
     /// <summary>
     /// Base class for tests, with customised settings.
     /// </summary>
-    public abstract partial class TestClass
+    public abstract partial class TestClass 
     {
         static TestClass()
         {
+            // Call a geometry_engine method to make sure we have it at runtime when running tests.
+            BH.Engine.Geometry.Query.GeometryHash(new BHoMObject(), null);
             Log.ThrowExceptions = true;
         }
 
