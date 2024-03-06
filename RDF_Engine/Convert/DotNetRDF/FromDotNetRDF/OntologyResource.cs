@@ -32,6 +32,7 @@ using System.Threading.Tasks;
 using VDS.RDF;
 using VDS.RDF.Ontology;
 using VDS.RDF.Query.Algebra;
+using VDS.RDF.Nodes;
 
 namespace BH.Engine.Adapters.RDF
 {
@@ -87,6 +88,14 @@ namespace BH.Engine.Adapters.RDF
 
         private static void SetOntologyProperty(this object resultObject, OntologyProperty propertyNode, OntologyGraph dotNetRDFOntology, OntologyResource individual, Type individualType, List<PropertyInfo> typeProperties)
         {
+            if (!propertyNode.Label.FirstOrDefault()?.Value.Contains("BH.oM") ?? false)
+            { 
+                // This is a custom property.
+                // We should skip it because its deserialization is already covered 
+                // by the CustomData dictionary deserialization.
+                return; 
+            }
+
             Triple predicateNode = propertyNode.TriplesWithPredicate
              .Where(t => (t.Subject as UriNode)?.Uri.Segments.LastOrDefault() == individual.Resource.Uri().Segments.LastOrDefault())
              .FirstOrDefault();
@@ -167,7 +176,24 @@ namespace BH.Engine.Adapters.RDF
                     {
                         Triple listItemTriple = triplesWithListNodeSubject.ElementAt(kv.Value);
                         OntologyResource listIndividual = listItemTriple.Object.IndividualOntologyResource(dotNetRDFOntology);
-                        object convertedIndividual = listIndividual.FromDotNetRDF(dotNetRDFOntology);
+
+                        object convertedIndividual;
+
+                        if (listIndividual == null && listItemTriple.Object is VDS.RDF.LiteralNode literal)
+                        {
+                            // Take the literal and convert it to the correct type.
+                            string XsdTypeName = literal.DataType.Fragment.TrimStart('#');
+                            if (OntologyDataTypeMap.FromOntologyDataType.TryGetValue(XsdTypeName, out Type typeToConvertTo))
+                                convertedIndividual = System.Convert.ChangeType(literal.Value, typeToConvertTo);
+                            else
+                            {
+                                // It's either a string, or we keep its string value.
+                                convertedIndividual = literal.Value;
+                            }
+                        }
+                        else
+                            convertedIndividual = listIndividual.FromDotNetRDF(dotNetRDFOntology);
+                        
                         listValues.Add(convertedIndividual);
                     }
 
