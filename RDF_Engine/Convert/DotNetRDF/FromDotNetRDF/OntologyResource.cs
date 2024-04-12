@@ -80,6 +80,8 @@ namespace BH.Engine.Adapters.RDF
             }
 
             return resultObject;
+
+
         }
 
         /*************************************/
