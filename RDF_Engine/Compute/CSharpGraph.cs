@@ -65,11 +65,11 @@ namespace BH.Engine.Adapters.RDF
 
             string messageToAppend = $"Please check your inputs of the {nameof(graphSettings)} component. ";
 
-            if (!Query.IsValidURI(graphSettings.OntologyBaseAddress, messageToAppend) || 
+            if (!Query.IsValidURI(graphSettings.OntologyBaseAddress, messageToAppend) ||
                 !Query.IsValidURI(graphSettings.TBoxSettings.CustomObjectTypesBaseAddress, messageToAppend) ||
                 !Query.IsValidURI(graphSettings.TBoxSettings.DefaultBaseUriForUnknownTypes, messageToAppend) ||
                 !Query.IsValidURI(graphSettings.ABoxSettings.IndividualsBaseAddress, messageToAppend))
-                return null;
+                throw new ArgumentException("Invalid URL set in the OntologyBaseAddress, CustomObjectTypesBaseAddress, DefaultBaseUriForUnknownTypes or IndividualsBaseAddress.");
 
             m_cSharpGraph = new CSharpGraph() { GraphSettings = graphSettings };
 
