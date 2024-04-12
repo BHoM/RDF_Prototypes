@@ -426,9 +426,11 @@ namespace BH.Test.RDF
         }
 
 
-        [Test]
-        public static void CustomObject_MeshProperty()
+        [TestCase(false)]
+        [TestCase(true)]
+        public static void CustomObject_MeshProperty(bool geometryAsOntologyClass)
         {
+            m_graphSettings.TBoxSettings.GeometryAsOntologyClass = geometryAsOntologyClass;
 
             BH.oM.Geometry.Mesh mesh = new Mesh()
             {
