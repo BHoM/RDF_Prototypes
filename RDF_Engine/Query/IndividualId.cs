@@ -48,9 +48,16 @@ namespace BH.Engine.Adapters.RDF
             IObject iObject = individual as IObject;
             if (iObject != null)
             {
-                string hash = BH.Engine.Base.Query.Hash(iObject);
-                return GuidFromString(hash).ToString();
-
+                string hash;
+                try
+                {
+                    hash = BH.Engine.Base.Query.Hash(iObject);
+                    return GuidFromString(hash).ToString();
+                }
+                catch
+                {
+                    return Guid.NewGuid().ToString();
+                }
             }
 
             if (!individual.GetType().IsPrimitive())
