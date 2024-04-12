@@ -29,6 +29,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Reflection;
 using System.Threading.Tasks;
+using BH.Engine.Reflection;
 
 namespace BH.Engine.Adapters.RDF
 {
@@ -52,7 +53,8 @@ namespace BH.Engine.Adapters.RDF
 
             }
 
-            Log.RecordError("Could not query the ID for an individual.");
+            if (!individual.GetType().IsPrimitive())
+                Log.RecordError("Could not query the ID for an individual.");
             return null;
         }
     }
