@@ -75,10 +75,10 @@ namespace BH.Engine.Adapters.RDF
             {
                 // Read the filesystem and get the .cs files.
                 files = Directory.GetFiles(gitRootPath, "*.cs", SearchOption.AllDirectories);
-                files = files.Where(f => 
-                    !f.Contains("TemporaryGeneratedFile_") && 
-                    !f.EndsWith("AssemblyInfo.cs") && 
-                    !f.EndsWith("Resources.Designer.cs") && 
+                files = files.Where(f =>
+                    !f.Contains("TemporaryGeneratedFile_") &&
+                    !f.EndsWith("AssemblyInfo.cs") &&
+                    !f.EndsWith("Resources.Designer.cs") &&
                     !f.EndsWith("AssemblyAttributes.cs") &&
                     !(f.Contains("packages") && !f.Contains("src")) // removes nuget package source files
                     ).ToArray();
@@ -94,10 +94,14 @@ namespace BH.Engine.Adapters.RDF
             if ((settings.WriteCacheFiles && files != null && !string.IsNullOrWhiteSpace(cacheFilePath)) || !cacheFileReadCorrectly)
             {
                 if (File.Exists(cacheFilePath))
-                    File.Delete(cacheFilePath);
+                    try
+                    {
+                        File.Delete(cacheFilePath);
 
-                Directory.CreateDirectory(Path.GetDirectoryName(cacheFilePath));
-                File.WriteAllLines(cacheFilePath, files);
+                        Directory.CreateDirectory(Path.GetDirectoryName(cacheFilePath));
+                        File.WriteAllLines(cacheFilePath, files);
+                    }
+                    catch { }
             }
 
             // Cache in memory.
