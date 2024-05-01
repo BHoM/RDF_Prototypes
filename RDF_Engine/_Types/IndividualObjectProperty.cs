@@ -48,9 +48,9 @@ namespace BH.oM.Adapters.RDF
         {
             int A = Individual.GetHashCode();
             int? B = RangeIndividual?.GetHashCode();
-            int C = HasProperty.DomainClass.AssemblyQualifiedName.GetHashCode();
-            int D = HasProperty.RangeType.AssemblyQualifiedName.GetHashCode();
-            int hashcode = A + B ?? 0 + C + D;
+            int? C = HasProperty.DomainClass?.AssemblyQualifiedName.GetHashCode();
+            int? D = HasProperty.RangeType?.AssemblyQualifiedName.GetHashCode();
+            int hashcode = A + B ?? + C ?? 0 + D ?? 0;
 
             return hashcode;
         }

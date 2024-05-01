@@ -74,7 +74,10 @@ namespace BH.Engine.Adapters.RDF
             m_cSharpGraph = new CSharpGraph() { GraphSettings = graphSettings };
 
             foreach (var iObject in objects)
-                AddIndividualToOntology(iObject, graphSettings);
+                if (iObject is Type t)
+                    AddToOntology(t, graphSettings);
+                else
+                    AddIndividualToOntology(iObject, graphSettings);
 
             return m_cSharpGraph;
         }

@@ -54,20 +54,50 @@ namespace BH.oM.CodeAnalysis.ConsoleApp
             LocalRepositorySettings localRepositorySettings = new() { TryComputeURLFromFilePaths = false};
             GraphSettings graphSettings = new();
 
+            bool ttlExport = true;
+            bool markdownExport = false;
+
             foreach (var kv in typesPerAssembly)
             {
-                CSharpGraph cSharpGraph = Engine.Adapters.RDF.Compute.CSharpGraph(kv.Value.ToList(), graphSettings);
+                //CSharpGraph cSharpGraph = Engine.Adapters.RDF.Compute.CSharpGraph(kv.Value.ToList(), graphSettings);
 
-                string saveFolder = @"C:\temp\MarkdownTests";
-                string filePath = Path.GetFullPath(Path.Combine(saveFolder, kv.Key + ".md"));
-                MarkdownAdapter mdAdapter = new MarkdownAdapter(filePath);
+                string saveFolder = @"C:\temp\";
+                string filePath = "";
 
-                try
+                if (ttlExport)
+                    try
+                    {
+                        string dir = Path.Combine(saveFolder, "TTLFullBHoMOntology");
+                        if (!Directory.Exists(dir))
+                            Directory.CreateDirectory(dir);
+                        filePath = Path.GetFullPath(Path.Combine(dir, kv.Key));
+
+                        var adapter = new TTLAdapter(filePath + ".ttl");
+                        adapter.Push(kv.Value.ToList());
+                        Console.WriteLine($"Successfully created {filePath}.");
+                    }
+                    catch (Exception ex)
+                    {
+                        Console.WriteLine($"Could export `{kv.Key}` to {filePath}.");
+                    }
+
+                if (markdownExport)
                 {
-                    mdAdapter.Push(kv.Value.ToList());
-                } catch (Exception ex)
-                {
-                    Console.WriteLine($"Could not write Markdown of `{kv.Key}`.");
+                    try
+                    {
+                        string dir = Path.Combine(saveFolder, "MarkdownFullBHoMOntology");
+                        if (!Directory.Exists(dir))
+                            Directory.CreateDirectory(dir);
+                        filePath = Path.GetFullPath(Path.Combine(dir, kv.Key));
+
+                        var adapter = new MarkdownAdapter(filePath + ".md");
+                        adapter.Push(kv.Value.ToList());
+                    }
+                    catch (Exception ex)
+                    {
+                        Console.WriteLine($"Could export `{kv.Key}` to {filePath}.");
+                        Console.WriteLine($"Successfully created {filePath}.");
+                    }
                 }
             }
         }
